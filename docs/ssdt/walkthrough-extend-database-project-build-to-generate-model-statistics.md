@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523422"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102040"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten, um Modellstatistiken zu generieren
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken
 Sie können einen Erstellungs-Contributor erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein Datenbankprojekt erstellen. In dieser exemplarischen Vorgehensweise erstellen Sie einen Erstellungs-Contributor mit der Bezeichnung ModelStatistics, von dem Statistiken über das SQL-Datenbankmodell ausgegeben werden, wenn Sie ein Datenbankprojekt erstellen. Da von diesem Erstellungs-Contributor beim Erstellen Parameter übernommen werden, sind einige zusätzliche Schritte erforderlich.  
   
 In dieser exemplarischen Vorgehensweise führen Sie folgende Hauptaufgaben aus:  
@@ -438,7 +438,7 @@ Zum Erstellen eines Erstellungs-Contributors führen Sie folgende Aufgaben aus:
   
 3.  Klicken Sie auf **Assembly signieren**.  
   
-4.  Klicken Sie unter **Schlüsseldatei mit starkem Namen auswählen:** auf **<New>**.  
+4.  Klicken Sie unter **Schlüsseldatei mit starkem Namen auswählen:** auf **<New>** .  
   
 5.  Geben Sie im Dialogfeld **Schlüssel für einen starken Namen erstellen** unter **Schlüsseldateiname** **MyRefKey**ein.  
   
@@ -493,7 +493,7 @@ Dazu haben Sie zwei Möglichkeiten:
   
     1.  Navigieren Sie zu %Programme%\MSBuild\\.  
   
-    2.  Erstellen Sie einen neuen Ordner namens „MyContributors“, in dem Ihre Zieledateien gespeichert werden.  
+    2.  Erstellen Sie einen neuen Ordner namens „MyContributors“, in dem Ihre Zieldateien gespeichert werden.  
   
     3.  Erstellen Sie eine neue Datei „MyContributors.targets“ in diesem Verzeichnis, fügen Sie den folgenden Text hinzu, und speichern Sie dann die Datei:  
   
@@ -525,7 +525,7 @@ Nach dem Durchführen einer dieser Vorgehensweisen können Sie MSBuild verwenden
   
 1.  Klicken Sie in Visual Studio mit der rechten Maustaste auf Ihre Projekt, und wählen Sie „Neu erstellen”. Dadurch wird das Projekt neu erstellt. Sie sollten die generierten Modellstatistiken sehen, die die Ausgabe in der Erstellungsausgabe enthalten und in ModelStatistics.xml gespeichert werden. Beachten Sie, dass Sie möglicherweise im Projektmappen-Explorer „Alle Dateien anzeigen“ wählen müssen, um die XML-Datei zu sehen.  
   
-2.  Klicken Sie im **Startmenü** auf **Alle Programme**, klicken Sie auf **Microsoft Visual Studio<Visual Studio Version>**, auf **Visual Studio Tools** und dann auf **Visual Studio-Eingabeaufforderung (<Visual Studio Version>)**.  
+2.  Öffnen Sie die Eingabeaufforderung von Visual Studio: Klicken Sie im **Startmenü** auf **Alle Programme**, klicken Sie auf **Microsoft Visual Studio <Visual Studio Version>** , auf **Visual Studio-Tools** und dann auf **Visual Studio-Eingabeaufforderung (<Visual Studio Version>)** .  
   
 3.  Navigieren Sie in der Eingabeaufforderung zu dem Ordner, der Ihr SQL-Projekt enthält.  
   
@@ -591,7 +591,7 @@ Relationships
 ## <a name="next-steps"></a>Next Steps  
 Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Datei durchzuführen. Dies ist nur ein Beispiel eines Erstellungs-Contributors. Sie können beispielsweise einen Erstellungs-Contributor erstellen, um eine Datenwörterbuch-Datei als Teil Ihres Builds auszugeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts zum Analysieren des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

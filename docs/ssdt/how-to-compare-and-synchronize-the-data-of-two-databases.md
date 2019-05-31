@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Vergleichen und Synchronisieren der Daten von zwei Datenbanken | Microsoft-Dokumentation'
+title: 'Gewusst wie: Vergleichen und Synchronisieren der Daten aus zwei Datenbanken | Microsoft-Dokumentation'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.datacompare.watermark.f1
 - sql.data.tools.datacompare.connection.objectselection.f1
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a481e5c603f5bf427b7d86dd19203fd899694b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a7c0599cf45e822dfca7cef48414512fffa4a74
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685728"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090124"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Vorgehensweise: Vergleichen und Synchronisieren der Daten von zwei Datenbanken
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Gewusst wie: Vergleichen und Synchronisieren von Daten aus zwei Datenbanken
 Sie können die Daten aus zwei Datenbanken vergleichen. Die zu vergleichenden Datenbanken werden als *Quelle* und *Ziel* bezeichnet.  
   
 > [!NOTE]  
@@ -39,7 +39,7 @@ Nach Abschluss des Vergleichs haben Sie folgende Möglichkeiten:
 Weitere Informationen finden Sie unter [Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> Sie können auch das *Schema* von zwei Datenbanken oder von zwei Versionen der gleichen Datenbank vergleichen. Weitere Informationen finden Sie unter [Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> Sie können auch das *Schema* von zwei Datenbanken oder von zwei Versionen der gleichen Datenbank vergleichen. Weitere Informationen finden Sie unter [Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
 ## <a name="CompareDatabaseData"></a>Vergleichen von Datenbankdaten  
   
@@ -127,7 +127,7 @@ Nach dem Vergleich der Daten in zwei Datenbanken können Sie die Datenbanken syn
   
 5.  (Optional) Klicken Sie auf **Skript generieren**.  
   
-    Ein Transact\-SQL-Editorfenster wird geöffnet. Es enthält das Skript in der *Datenbearbeitungssprache (Data Manipulation Language, DML)*, das zum Aktualisieren des Ziels verwendet wird.  
+    Ein Transact\-SQL-Editorfenster wird geöffnet. Es enthält das Skript in der *Datenbearbeitungssprache (Data Manipulation Language, DML)* , das zum Aktualisieren des Ziels verwendet wird.  
   
 6.  Klicken Sie auf **Ziel aktualisieren**, um unterschiedliche, fehlende oder neue Datensätze zu synchronisieren.  
   
@@ -166,6 +166,6 @@ Nach dem Vergleich der Daten in zwei Datenbanken können Sie die Datenbanken syn
   
     Die Daten der ausgewählten Datensätze im Ziel werden mit den Daten aus den entsprechenden Datensätzen der Quelle aktualisiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
   

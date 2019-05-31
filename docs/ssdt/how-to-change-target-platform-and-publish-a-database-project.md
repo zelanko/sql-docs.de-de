@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516701"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090104"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts
 Sie können die SQL Server-Zielversion für Ihr SSDT-Datenbankprojekt (SQL Server Data Tools) in jede unterstützte SQL Server-Instanz (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 oder SQL Azure) ändern. Hierdurch können Sie die Datenbankentwicklung in einem einzelnen Projekt bündeln, das Projekt jedoch bei Bedarf in mehreren SQL Server-Instanzen veröffentlichen.  
@@ -41,7 +41,7 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
 2.  Fügen Sie an das Ende der `ON [PRIMARY]` -Anweisung `CREATE TABLE` an.  
   
-3.  Beachten Sie, dass im Bereich **Fehlerliste** der folgende Fehler angezeigt wird: „SQL70015: "Dateigruppenverweis und Partitionierungsschema" wird in SQL Azure nicht unterstützt.“  
+3.  Beachten Sie, dass der folgende Fehler im Bereich **Fehlerliste** angezeigt wird:  SQL70015: 'Filegroup reference and partitioning scheme' is not supported in SQL Azure. („Dateigruppenverweis und Partitionierungsschema“ wird in SQL Azure nicht unterstützt)  
   
     SSDT überprüft das Skript automatisch auf Grundlage der Zielplattform. Da Dateigruppen in SQL Azure nicht unterstützt werden, gibt SSDT in diesem Fall einen Fehler zurück. Eine Liste der in SQL Azure nicht unterstützten Transact\-SQL-Anweisungen finden Sie unter [Teilweise unterstützte Transact-SQL-Anweisungen (Microsoft Azure SQL-Datenbank)](https://msdn.microsoft.com/library/ee336267.aspx).  
   

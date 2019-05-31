@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: polybase
@@ -9,12 +9,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 38cdc41469112ed1bfab44e801e5e448b034a9c8
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: e9d3cee432adea10c4a92198a7e8486d2e8ee27f
+ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265247"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65198050"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
@@ -73,14 +74,14 @@ Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung f�
 1. Suchen Sie die Datei **yarn-site.xml** im Installationspfad von SQL Server. In der Regel lautet der Pfad:  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf\  
    ```  
 
 1. Suchen Sie auf dem Hadoop-Computer die analoge Datei im Hadoop-Konfigurationsverzeichnis. Suchen Sie in der Datei den Wert des Konfigurationsschlüssels „yarn.application.classpath.“, und kopieren Sie diesen.  
   
-1. Suchen Sie auf dem SQL Server-Computer in der Datei **yarn.site.xml** die Eigenschaft **yarn.application.classpath** . Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
+1. Suchen Sie auf dem SQL Server-Computer in der Datei **yarn-site.xml** die Eigenschaft **yarn.application.classpath**. Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
   
-1. Für alle CDH 5.X-Versionen müssen Sie die Konfigurationsparameter „mapreduce.application.classpath“ entweder ans Ende der Datei „yarn.site.xml“ oder in die Datei „mapred-site.xml“ einfügen. HortonWorks enthält diese Konfigurationen in den yarn.application.classpath-Konfigurationen. Weitere Beispiele finden Sie unter [PolyBase-Konfiguration](../../relational-databases/polybase/polybase-configuration.md).
+1. Für alle CDH 5.X-Versionen müssen Sie die Konfigurationsparameter „mapreduce.application.classpath“ entweder ans Ende der Datei „yarn-site.xml“ oder in die Datei „mapred-site.xml“ einfügen. HortonWorks enthält diese Konfigurationen in den yarn.application.classpath-Konfigurationen. Weitere Beispiele finden Sie unter [PolyBase-Konfiguration](../../relational-databases/polybase/polybase-configuration.md).
 
 ## <a name="configure-an-external-table"></a>Konfigurieren einer externen Tabelle
 

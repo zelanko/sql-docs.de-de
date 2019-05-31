@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server | Microsoft-Dokumentation
+title: Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server (CEIP) | Microsoft-Dokumentation
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: b616c8f3a41d960ecd04ac1407014aa2bfa3ce29
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582713"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372759"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server"></a>Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -55,6 +55,12 @@ Schauen Sie sich [Kundenfeedback zu SQL Server unter Linux](https://docs.microso
 
 > [!NOTE]
 > Sie können das Senden von Informationen an Microsoft nur in bezahlten Versionen von SQL Server deaktivieren.
+
+## <a name="remarks"></a>Remarks
+ - Das Entfernen oder Deaktivieren des CEIP-Diensts für SQL wird nicht unterstützt. 
+ - Das Entfernen von CEIP-Ressourcen für SQL aus der Clustergruppe wird nicht unterstützt. 
+
+Informationen zur Deaktivierung der Datensammlung finden Sie unter [Aktivieren oder Deaktivieren der lokalen Überwachung](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off).
 
 ## <a name="error-and-usage-reporting-application"></a>Anwendung „Fehler- und Verwendungsberichterstellung“ 
 

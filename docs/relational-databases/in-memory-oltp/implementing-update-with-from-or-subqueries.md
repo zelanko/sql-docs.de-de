@@ -12,37 +12,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d8b2d57affda47622722ccefde214e5c2e61d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6af025104d3d17ba7856df7739539ea065e4c197
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653300"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104987"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementieren von UPDATE mit FROM oder Unterabfragen
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Nativ kompilierte T-SQL-Module bieten keine Unterstützung für die FROM-Klausel und unterstützen keine Unterabfragen in UPDATE-Anweisungen (sie werden in SELECT unterstützt). UPDATE-Anweisungen mit der FROM-Klausel werden normalerweise verwendet, um Informationen in einer Tabelle, die auf einem Tabellenwertparameter (table-valued parameter; TVP) basiert, oder Spalten in einer Tabelle in einem AFTER-Trigger zu aktualisieren. 
+
+
+In einem nativ kompilierten T-SQL-Modul werden folgende Syntaxelemente *nicht* von der UPDATE-Anweisung in Transact-SQL unterstützt:
+
+- FROM-Klausel
+- Unterabfragen
+
+Im Gegensatz dazu werden die vorherigen Elemente in nativ kompilierten Modulen von der SELECT-Anweisung *unterstützt*.
+
+UPDATE-Anweisungen mit einer FROM-Klausel werden oft verwendet, um Informationen in einer Tabelle, die auf einem Tabellenwertparameter (table-valued parameter; TVP) basiert, oder Spalten in einer Tabelle in einem AFTER-Trigger zu aktualisieren.
 
 Ein Updateszenario, das auf einem Tabellenwertparameter basiert, finden Sie unter [Implementieren von MERGE-Funktionalität in einer nativ kompilierten gespeicherten Prozedur](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md). 
 
-Das nachstehende Beispiel veranschaulicht ein in einem Trigger ausgeführtes Update. Die Tabellenspalte „LastUpdated“ wird mithilfe des AFTER-Triggers auf das aktuelle Datum bzw. die aktuelle Uhrzeit aktualisiert. Das Problem kann umgangen werden, indem Sie eine Tabellenvariable mit einer Identitätsspalte und eine WHILE-Schleife einsetzen, die die Zeilen der Tabellenvariablen durchläuft und einzelne Updates ausführt.
-  
-Dies ist die ursprüngliche T-SQL UPDATE-Anweisung:  
-  
-  
-  
-   ```
+Im folgende Beispiel wird ein in einem Trigger ausgeführtes Update veranschaulicht. In der Tabelle wird die Spalte „LastUpdated“ mithilfe der AFTER-Anweisung auf das aktuelle Datums-/Uhrzeitformat nach dem Update festgelegt. Die Problemumgehung führt mithilfe der folgenden Elemente einzelne Updates aus:
+
+- Eine Tabellenvariable, die eine IDENTITY-Spalte aufweist.
+- Eine WHILE-Schleife zum Durchlaufen der Zeilen in der Tabellenvariablen.
+
+Dies ist die ursprüngliche T-SQL UPDATE-Anweisung:
+
+   ```sql
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
    ```
-  
-  
 
-Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke Problemumgehung. Die Problemumgehung wird in einem nativ kompilierten Trigger implementiert. Beachten Sie unbedingt:  
+Der T-SQL-Beispielcode im folgenden Block veranschaulicht eine leistungsstarke Problemumgehung. Die Problemumgehung wird in einem nativ kompilierten Trigger implementiert. Beachten Sie unbedingt:  
   
 - Den Typen namens dbo.Type1, der einen speicheroptimierten Tabellentyp darstellt.  
 - Die WHILE-Schleife im Trigger.  
@@ -50,13 +59,13 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
   
   
   
- ```
+ ```sql
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
-    -----------------------------  
-    -- Table and table type
+    -----------------------------
+    -- Table and table type.
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -78,9 +87,10 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
     )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
-    ----------------------------- 
-    -- trigger that contains the workaround for UPDATE with FROM 
-    -----------------------------  
+    ----------------------------------------
+    -- Trigger that contains the workaround
+    -- for UPDATE with FROM.
+    ----------------------------------------
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
@@ -120,9 +130,9 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
       END  
     END  
     go  
-    -----------------------------  
-    -- Test to verify functionality
-    -----------------------------  
+    ---------------------------------
+    -- Test to verify functionality.
+    ---------------------------------
   
     SET NOCOUNT ON;  
   
@@ -157,6 +167,4 @@ Der T-SQL-Beispielcode in diesem Abschnitt veranschaulicht eine leistungsstarke 
     AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
     AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
     ****/  
-  
-  
  ```

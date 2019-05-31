@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1f2fba2b5c2c0f978973eb015674b9b83af806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664018"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090241"
 ---
-# <a name="how-to-fix-errors"></a>Vorgehensweise: Beheben von Fehlern
+# <a name="how-to-fix-errors"></a>Gewusst wie: Beheben von Fehlern
 Im Bereich "Fehlerliste" werden alle Bereitstellungs- und Buildfehler angezeigt. Wenn Sie Datenbankentitäten und ihre Definitionen bearbeiten, werden durch die Bearbeitung im Transact\-SQL-Editor oder Tabellen-Designer verursachte Syntax- und Semantikfehler ebenfalls in der Liste angezeigt. Die Fehlerliste wird dynamisch aktualisiert, wenn Sie Skripts auf unterschiedlichen Registerkarten bearbeiten. Sie können dann die identifizierten Fehler für die weitere Problembehandlung nachverfolgen.  
   
 > [!WARNING]  
@@ -32,7 +32,7 @@ Im Bereich "Fehlerliste" werden alle Bereitstellungs- und Buildfehler angezeigt.
   
 3.  Beachten Sie, dass im Bereich **Fehlerliste** am unteren Bildschirmrand sofort eine Warnung und ein Fehler mit folgendem Text angezeigt werden.  
   
-**Warnung SQL71502: Funktion: [dbo].[GetProductsBySupplier] enthält einen nicht aufgelösten Verweis auf ein Objekt. Entweder ist das Objekt nicht vorhanden, oder der Verweis ist mehrdeutig, da er auf die folgenden Objekte verweisen könnte: [dbo].[Product].[p]::[ShelfLife] oder [dbo].[Product].[ShelfLife]. Fehler SQL71501: CHECK-Einschränkung: [dbo].[CK_Product_ShelfLife] enthält einen nicht aufgelösten Verweis auf das Objekt „[dbo].[Product].[ShelfLife]“.**  
+**Warnung SQL71502: Funktion: [dbo].[GetProductsBySupplier] enthält einen nicht aufgelösten Verweis auf ein Objekt. Entweder ist das Objekt nicht vorhanden, oder der Verweis ist mehrdeutig, da er auf die folgenden Objekte verweisen könnte: [dbo].[Product].[p]::[ShelfLife] oder [dbo].[Product].[ShelfLife]. Fehler SQL71501: Check Constraint: [dbo].[CK_Product_ShelfLife] has an unresolved reference to object [dbo].[Product].[ShelfLife]. (CHECK-Einschränkung: [dbo].[CK_Product_ShelfLife] weist einen nicht aufgelösten Verweis auf das Objekt [dbo].[Product].[ShelfLife] auf)**  
   
 4.  Sie können mit der rechten Maustaste auf die **Fehlerliste** klicken, um mit den Kontextmenüs die Ergebnisse zu sortieren und die anzuzeigenden Einträge sowie die Informationsspalten zu filtern, die für jeden Eintrag angezeigt werden sollen.  
   
@@ -44,6 +44,6 @@ Im Bereich "Fehlerliste" werden alle Bereitstellungs- und Buildfehler angezeigt.
   
 7.  Beachten Sie, dass sofort nach dem Beheben der Probleme die Warnung und der Fehler nicht mehr in der **Fehlerliste** angezeigt werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Verwenden des Transact-SQL-Editors zum Bearbeiten und Ausführen von Skripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  
   

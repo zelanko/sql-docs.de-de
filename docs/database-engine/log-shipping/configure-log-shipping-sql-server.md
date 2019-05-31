@@ -13,12 +13,12 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703808"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105968"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Konfigurieren des Protokollversands (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47703808"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47703808"
   
 5.  Geben Sie in das Feld **Geben Sie den Netzwerkpfad zum Sicherungsordner an** den Netzwerkpfad für die Freigabe ein, die Sie für den Ordner der Transaktionsprotokollsicherung erstellt haben.  
   
-6.  Falls sich der Sicherungsordner auf dem primären Server befindet, geben Sie in das Feld **Wenn sich der Sicherungsordner auf dem primären Server befindet, geben Sie den lokalen Pfad zum Ordner ein** den lokalen Pfad zum Sicherungsordner ein. (Wenn sich der Sicherungsordner nicht auf dem primären Server befindet, können Sie dieses Feld leer lassen.)  
+6.  **Wenn sich der Sicherungsordner auf dem primären Server befindet, geben Sie einen lokalen Pfad in das Feld „Sicherungsordner“ ein.** (Wenn sich der Sicherungsordner nicht auf dem primären Server befindet, können Sie dieses Feld leer lassen.)  
   
     > [!IMPORTANT]  
     >  Falls das Konto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst auf dem primären Server unter dem lokalen Systemkonto ausgeführt wird, müssen Sie den Sicherungsordner auf dem primären Server erstellen und einen lokalen Pfad zu diesem Ordner angeben.  
@@ -79,7 +79,7 @@ ms.locfileid: "47703808"
   
 8.  Beachten Sie den Sicherungszeitplan im Feld **Zeitplan** unter **Sicherungsauftrag**. Wenn Sie den Zeitplan für Ihre Installation anpassen möchten, klicken Sie auf **Zeitplan** , und passen Sie den Zeitplan des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bei Bedarf an.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Beim Erstellen einer Protokollversandkonfiguration können Sie das Verhalten der Sicherungskomprimierung von Protokollsicherungen durch Auswahl einer der folgenden Optionen steuern: **Standardservereinstellung verwenden**, **Sicherung komprimieren**oder **Sicherung nicht komprimieren**. Weitere Informationen finden Sie unter [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird die [Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Wenn Sie eine Protokollversandkonfiguration erstellen, können Sie das Verhalten der Sicherungskomprimierung von Protokollsicherungen steuern, indem Sie eine der folgenden Optionen auswählen: **Standardservereinstellung verwenden**, **Sicherung komprimieren** oder **Sicherung nicht komprimieren**. Weitere Informationen finden Sie unter [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Klicken Sie auf **OK**.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "47703808"
   
 -   [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Protokollversandtabellen und gespeicherte Prozeduren](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird | Microsoft-Dokumentation'
+title: 'Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird | Microsoft-Dokumentation'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681288"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099559"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Vorgehensweise: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird
 Sie können Komponententests so anpassen, dass sie im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt werden. Bei diesem Ansatz können Sie für alle vom Test durchgeführten Änderungen ein Rollback ausführen, nachdem der Test beendet wurde. Die Vorgehensweise wird in folgenden Verfahren erläutert:  
   
 -   Erstellen einer Transaktion in Ihrem Transact\-SQL-Testskript, das **BEGIN TRANSACTION** und **ROLLBACK TRANSACTION** verwendet  
@@ -156,7 +156,7 @@ In diesem Beispiel verwenden Sie zusammen mit dem [System.Transactions.Transacti
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>So starten Sie den Distributed Transaction Coordinator-Dienst  
-In einigen Verfahren in diesem Thema werden Typen in der System.Transactions-Assembly verwendet. Bevor Sie diese Verfahren ausführen, müssen Sie sicherstellen, dass der Distributed Transaction Coordinator-Dienst auf dem Computer ausgeführt wird, auf dem die Komponententests laufen. Andernfalls tritt bei den Tests ein Fehler mit folgender Fehlermeldung auf: „Die Testmethode *Projektname*.*Testname*.*Methodenname* hat eine Ausnahme ausgelöst: System.Data.SqlClient.SqlException: MS DTC auf dem Server "*Computername*" ist nicht verfügbar.“  
+In einigen Verfahren in diesem Thema werden Typen in der System.Transactions-Assembly verwendet. Bevor Sie diese Verfahren ausführen, müssen Sie sicherstellen, dass der Distributed Transaction Coordinator-Dienst auf dem Computer ausgeführt wird, auf dem die Komponententests laufen. Andernfalls wird bei dem Test ein Fehler mit der folgenden Fehlermeldung ausgelöst: "Test method *ProjectName*.*TestName*.*MethodName* threw exception: System.Data.SqlClient.SqlException: MSDTC ist auf dem Server *Computername* nicht verfügbar“.  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>So starten Sie den Distributed Transaction Coordinator-Dienst  
   
@@ -173,6 +173,6 @@ In einigen Verfahren in diesem Thema werden Typen in der System.Transactions-Ass
 > [!IMPORTANT]  
 > Folgender Fehler kann ausgegeben werden, obwohl der Distributed Transaction Controller-Dienst gestartet wurde: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. In diesem Fall muss der Distributed Transaction Controller für den Netzwerkzugriff konfiguriert werden. Weitere Informationen finden Sie unter [Aktivieren des DTC-Netzwerkzugriffs](https://go.microsoft.com/fwlink/?LinkId=193916).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   

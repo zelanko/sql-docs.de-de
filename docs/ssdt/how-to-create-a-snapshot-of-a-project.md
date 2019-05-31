@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530784"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098078"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Gewusst wie: Erstellen einer Momentaufnahme eines Projekts
 Eine **Datenschichtanwendungs-Datei** stellt eine schreibgeschützte Darstellung des Datenbankschemas zum Zeitpunkt seiner Erstellung dar. Sie wird im Grunde als Datenbankschema behandelt, aus dem Sie die Schemaobjekte zurück in ein Projekt importieren können. Sie können es auch mit dem Schema einer Datenbank oder eines Projekts vergleichen und die Datenbank bzw. das Projekt so aktualisieren, dass das in der Momentaufnahme definierte Schema widergespiegelt wird.  
@@ -52,7 +52,7 @@ Bei einem Benutzerfehler in einem Quellendatenbankprojekt können Sie das Quellp
 3.  Klicken Sie auf der Seite **Zusammenfassung** auf **Fertig stellen**. Beachten Sie im **Projektmappen-Explorer**, dass die gelöschte Tabelle im Projekt wiederhergestellt wurde.  
   
     > [!WARNING]  
-    > Mit der Importmomentaufnahme werden alle Datenbankentitäten im Momentaufnahmeschema in das Projekt importiert. Daher können nun Entitäten doppelt vorhanden sein. Alle Tabellen und Sichten enthalten nun eine zusätzliche Kopie ihrer selbst, die den Namen <ObjectName_1> aufweist. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die einzelnen doppelt vorhandenen Objekte, und wählen Sie **Löschen** aus, um sie aus dem Projekt zu entfernen.  
+    > Mit der Importmomentaufnahme werden alle Datenbankentitäten im Momentaufnahmeschema in das Projekt importiert. Daher können nun Entitäten doppelt vorhanden sein. Alle Tabellen und Ansichten enthalten nun z. B. eine zusätzliche Kopie ihrer selbst mit dem Namen <ObjectName_1>. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die einzelnen doppelt vorhandenen Objekte, und wählen Sie **Löschen** aus, um sie aus dem Projekt zu entfernen.  
   
 ### <a name="to-compare-snapshots"></a>So vergleichen Sie Momentaufnahmen  
   
@@ -64,6 +64,6 @@ Bei einem Benutzerfehler in einem Quellendatenbankprojekt können Sie das Quellp
   
     Sie können die Unterschiede zu anderen Momentaufnahmen auf einfache Weise mit dem Schemavergleich auffinden. So können Sie den Fortschritt des Projekts während des Entwicklungsprozesses bestimmen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

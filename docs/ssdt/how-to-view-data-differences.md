@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6c913ffa52c07091e4eec45f6013a3540edfe810
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614267"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095926"
 ---
 # <a name="how-to-view-data-differences"></a>Gewusst wie: Anzeigen von Datenunterschieden
 Nach dem Vergleich der Daten in zwei Datenbanken werden alle verglichenen *Datenbankobjekte* sowie deren Status aufgeführt. Sie können auch Ergebnisse für die Datensätze in den einzelnen Objekten (gruppiert nach Status) anzeigen.  
@@ -35,6 +35,6 @@ Nachdem Sie sich die Unterschiede angesehen haben, können Sie einige oder alle 
   
     -   Wenn Sie Ergebnisse für Datensätze innerhalb eines bestimmten Objekts anzeigen möchten, klicken Sie im Hauptergebnisbereich auf das gewünschte Objekt, und klicken Sie anschließend im Bereich mit der Datensatzansicht auf eine Registerkarte. Jede Registerkarte zeigt sämtliche Datensätze innerhalb des Objekts, die einen bestimmten Status besitzen: Unterschiedliche Datensätze, Nur in der Quelle, Nur im Ziel oder Identische Datensätze. Die Daten sind nach Datensatz und Spalte sortiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

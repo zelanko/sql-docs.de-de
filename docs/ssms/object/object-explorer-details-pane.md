@@ -16,15 +16,15 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9dfa6ac6a609b5bc562267383371fcd19a73215b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56cc6461f56dfa21b27a8cb9d7992a0c46627e9c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760288"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095270"
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +89,7 @@ Details zum Objekt-Explorer unterstützt die Mehrfachauswahl von Objekten. Wenn 
 ## <a name="sql-server-object-search"></a>SQL Server-Objektsuche  
 Platzhalter  
   
--   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen von Text mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Suchbereich  
   
@@ -99,6 +99,6 @@ Große Objektsätze
   
 -   Das Durchsuchen von großen Objektsätzen kann einige Zeit in Anspruch nehmen und die Serverleistung verringern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Objekt-Explorers](../../ssms/object/object-explorer.md)  
   

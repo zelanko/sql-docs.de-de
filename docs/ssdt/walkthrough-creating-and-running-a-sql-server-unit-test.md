@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305958"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101940"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 In dieser exemplarischen Vorgehensweise erstellen Sie einen SQL Server-Komponententest, mit dem das Verhalten mehrerer gespeicherter Prozeduren überprüft wird. Mithilfe von SQL Server-Komponententests können Codefehler, die u.U. ein fehlerhaftes Anwendungsverhalten verursachen, leichter identifiziert werden. SQL Server-Komponententests und -Anwendungstests können im Rahmen einer automatisierten Testreihe ausgeführt werden.  
@@ -242,7 +242,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage se
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>So importieren Sie ein Datenbankschema aus einem Skript  
   
-1.  Klicken Sie im Menü **Projekt** auf **Importieren** und dann auf **Skript (\*.sql)**.  
+1.  Klicken Sie im Menü **Projekt** auf **Importieren** und dann auf **Skript (\*.sql)** .  
   
 2.  Klicken Sie auf **Weiter** , nachdem Sie die Informationen auf der Willkommensseite gelesen haben.  
   
@@ -302,11 +302,11 @@ Die sehr einfache Datenbank enthält die beiden Tabellen „Customer“ und „O
   
 -   uspNewCustomer: Diese gespeicherte Prozedur fügt der Tabelle „Customer“ einen Datensatz hinzu, durch den die Spalten „YTDOrders“ und „YTDSales“ des Kunden auf 0 (null) festgelegt werden.  
   
--   uspPlaceNewOrder: Diese gespeicherte Prozedur fügt der Tabelle „Orders“ für den angegebenen Kunden einen Datensatz hinzu und aktualisiert den Wert von „YTDOrders“ im entsprechenden Datensatz der Tabelle „Customer“.  
+-   uspPlaceNewOrder: Diese gespeicherte Prozedur fügt der Tabelle Orders für den angegebenen Kunden einen Datensatz hinzu und aktualisiert den Wert von YTDOrders im entsprechenden Datensatz der Tabelle Customer.  
   
 -   uspFillOrder: Diese gespeicherte Prozedur aktualisiert einen Datensatz in der Tabelle „Orders“, indem der Status von „O“ in „F“ geändert wird, und erhöht den Betrag für „YTDSales“ im entsprechenden Datensatz der Tabelle „Customer“.  
   
--   uspCancelOrder: Diese gespeicherte Prozedur aktualisiert einen Datensatz in der Tabelle „Orders“, indem der Status von „O“ in „X“ geändert wird, und verringert den Betrag für „YTDOrders“ im entsprechenden Datensatz der Tabelle „Customer“.  
+-   uspCancelOrder: Diese gespeicherte Prozedur aktualisiert einen Datensatz in der Tabelle Orders, indem der Status von "O" in "X" geändert wird, und verringert den Betrag für YTDOrders im entsprechenden Datensatz der Tabelle Customer.  
   
 -   uspShowOrderDetails: Diese gespeicherte Prozedur verknüpft die Tabelle Orders mit der Tabelle Customer und zeigt die Datensätze für einen bestimmten Kunden an.  
   
@@ -315,11 +315,11 @@ Die sehr einfache Datenbank enthält die beiden Tabellen „Customer“ und „O
   
 Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zustand aufweist. Mit den von Ihnen erstellten Tests werden folgende Bedingungen überprüft:  
   
--   uspNewCustomer: Überprüft, ob die Tabelle „Customer“ nach Ausführung der gespeicherten Prozedur eine Zeile enthält.  
+-   uspNewCustomer: Überprüft, ob die Tabelle Customer nach Ausführung der gespeicherten Prozedur eine Zeile enthält.  
   
 -   uspPlaceNewOrder: Geben Sie für den Kunden mit „CustomerID“ 1 eine Bestellung im Wert von 100 US-Dollar auf. Vergewissern Sie sich, dass der Betrag für „YTDOrders“ für diesen Kunden „100“ und dass der Betrag für „YTDSales“ 0 (null) beträgt.  
   
--   uspFillOrder: Geben Sie für den Kunden mit „CustomerID“ 1 eine Bestellung im Wert von 50 US-Dollar auf. Führen Sie die Bestellung aus. Vergewissern Sie sich, dass die Beträge für „YTDOrders“ und „YTDSales“ beide „50“ lauten.  
+-   uspFillOrder: Geben Sie für den Kunden mit CustomerID 1 eine Bestellung im Wert von 50 US-Dollar auf. Führen Sie die Bestellung aus. Vergewissern Sie sich, dass die Beträge für „YTDOrders“ und „YTDSales“ beide „50“ lauten.  
   
 -   uspShowOrderDetails: Geben Sie für den Kunden mit „CustomerID“ 1 Bestellungen im Wert von 100, 50 und 5 US-Dollar auf. Vergewissern Sie sich, dass von uspShowOrderDetails die richtige Anzahl von Spalten zurückgegeben wird und dass das Resultset die erwartete Prüfsumme aufweist.  
   
@@ -556,7 +556,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
 4.  Klicken Sie im Bereich **Testbedingungen** in der Liste auf **Erwartetes Schema** , und klicken Sie dann auf **Testbedingung hinzufügen**.  
   
-5.  Klicken Sie im Fenster **Eigenschaften** in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen (**…**).  
+5.  Klicken Sie im Fenster **Eigenschaften** in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen ( **…** ).  
   
 6.  Geben Sie im Dialogfeld **Konfiguration für expectedSchemaCondition1** eine Verbindung mit der Datenbank an. Wenn Sie beispielsweise den Standardbereitstellungsspeicherort, d.h. LocalDB, verwendet haben, würden Sie auf **Neue Verbindung** klicken und **(LocalDB)\Projects** angeben. Wählen Sie anschließend den Namen der Datenbank aus.  
   
@@ -621,7 +621,7 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
 13. Klicken Sie im Bereich **Testbedingungen** in der Liste auf **Datenprüfsumme** , und klicken Sie dann auf **Testbedingung hinzufügen**.  
   
-14. Klicken Sie im Fenster **Eigenschaften** in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen (**…**).  
+14. Klicken Sie im Fenster **Eigenschaften** in der Eigenschaft **Konfiguration** auf die Schaltfläche zum Durchsuchen ( **…** ).  
   
 15. Geben Sie im Dialogfeld **Konfiguration für checksumCondition1** eine Verbindung mit der Datenbank an.  
   
@@ -717,13 +717,13 @@ Zu Testbeginn wird davon ausgegangen, dass die Datenbank einen fehlerfreien Zust
   
     Der Test verläuft erfolgreich, da bei der Ausführung der **SELECT** -Anweisung eine Zeile zurückgegeben wird.  
   
-5.  Wiederholen Sie Schritt 3 für die Tests „Sales_uspPlaceNewOrderTest“, „Sales_uspFillOrderTest“ und „Sales_uspShowOrderDetailsTest“. Die Ergebnisse sollten wie folgt lauten:  
+5.  Wiederholen Sie Schritt 3 für die Tests Sales_uspPlaceNewOrderTest, Sales_uspFillOrderTest und Sales_uspShowOrderDetailsTest. Die Ergebnisse sollten wie folgt lauten:  
   
     |Test|Erwartete Ergebnisse|  
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Erfolgreich|  
     |Sales_uspShowOrderDetailsTest|Erfolgreich|  
-    |Sales_uspFillOrderTest|Es tritt der folgende Fehler auf: "Fehler bei ScalarValueCondition Condition (scalarValueCondition2): ResultSet 1 Zeile 1 Spalte 1: die Werte stimmen nicht überein, tatsächlich '-100', erwartet '100'. " Dieser Fehler tritt auf, weil die Definition der gespeicherten Prozedur einen geringfügigen Fehler enthält.|  
+    |Sales_uspFillOrderTest|Es tritt der folgende Fehler auf: „ScalarValueCondition Condition (scalarValueCondition2) Failed: ResultSet 1 Row 1 Column 1: values do not match, actual '-100' expected '100'.“ (Fehler bei ScalarValueCondition-Bedingung (scalarValueCondition2): ResultSet 1 Zeile 1 Spalte 1: die Werte stimmen nicht überein, tatsächlich '-100', erwartet '100') Dieser Fehler tritt auf, weil die Definition der gespeicherten Prozedur einen geringfügigen Fehler enthält.|  
   
     Im nächsten Schritt berichtigen Sie den Fehler und führen den Text erneut aus.  
   

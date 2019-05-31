@@ -1,18 +1,18 @@
 ---
 title: Migrieren einer Reporting Services-Installation (einheitlicher Modus) | Microsoft-Dokumentation
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: fe461a189bcf7a123db40674a5cd035621151999
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712421"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570707"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
 
@@ -38,9 +38,10 @@ Dieses Thema erklärt die Schritte zum Migrieren einer der folgenden unterstütz
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 Informationen zum Migrieren einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung im SharePoint-Modus finden Sie unter [Migrieren einer Installation von Reporting Services &#40;SharePoint-Modus&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+
+::: moniker-end
   
  Eine Migration wird als das Verschieben von Anwendungsdatendateien in eine neue SQL Server-Instanz definiert. Die folgenden häufigen Ursachen erfordern das Migrieren der Installation:  
   
@@ -89,7 +90,7 @@ Informationen zum Migrieren einer [!INCLUDE[ssRSnoversion](../../includes/ssrsno
   
 * Schreiben Sie Code, in dem der WMI-Anbieter aufgerufen wird, um Daten von einer Datenbank in eine andere Datenbank zu kopieren. Weitere Informationen zu diesem Verfahren finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-* Wenn nur wenige Elemente vorliegen, können Sie die Berichte, Berichtsmodelle und freigegebenen Datenquellen vom Berichts-Designer, Modell-Designer und Berichts-Generator aus erneut auf dem neuen Berichtsserver veröffentlichen. Sie müssen Rollenzuweisungen, Abonnements, freigegebene Zeitpläne, Zeitpläne für Berichtmomentaufnahmen, benutzerdefinierte Eigenschaften, die Sie für Berichte und andere Elemente festlegen, Modellelementsicherheit und Eigenschaften, die Sie auf dem Berichtsserver festlegen, erneut erstellen. Bereiten Sie sich darauf vor, dass Sie Ihren Berichtsverlauf und Ihre Protokolldaten zur Berichtsausführung verlieren, wenn Sie diese Aktionen durchführen.
+* Wenn nur wenige Elemente vorliegen, können Sie die Berichte und freigegebenen Datenquellen vom Berichts-Designer, Modell-Designer und Berichts-Generator aus erneut auf dem neuen Berichtsserver veröffentlichen. Sie müssen Rollenzuweisungen, Abonnements, freigegebene Zeitpläne, Zeitpläne für Berichtmomentaufnahmen, benutzerdefinierte Eigenschaften, die Sie für Berichte und andere Elemente festlegen, Modellelementsicherheit und Eigenschaften, die Sie auf dem Berichtsserver festlegen, erneut erstellen. Bereiten Sie sich darauf vor, dass Sie Ihren Berichtsverlauf und Ihre Protokolldaten zur Berichtsausführung verlieren, wenn Sie diese Aktionen durchführen.
   
 ## <a name="bkmk_before_you_start"></a> Vorbereitungen
 

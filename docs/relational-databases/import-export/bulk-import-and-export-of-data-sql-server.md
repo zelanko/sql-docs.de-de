@@ -22,16 +22,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server]
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a1a8a8beb6f39db8aa7f3b72189870e26762dca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 598cfebd686bdd271b283e5a3bbde26233720c78
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533542"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946591"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "52533542"
   
 |Methode|und Beschreibung|Importiert Daten|Exportiert Daten|  
 |------------|-----------------|------------------|------------------|  
-|[bcp (Hilfsprogramm)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Ein Befehlszeilenprogramm (Bcp.exe), mit dem Massenexporte und -importe von Daten ausgeführt und Formatdateien generiert werden können.|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|[BULK INSERT-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, mit der Daten direkt aus einer Datendatei in eine Datenbanktabelle oder nicht partitionierte Sicht importiert werden.|Benutzerkontensteuerung|nein|  
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|Benutzerkontensteuerung|nein| 
-|[SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|Der Assistent erstellt einfache Pakete, die Daten zwischen vielen häufigen Datenformaten, einschließlich Datenbanken, Kalkulationstabellen und Textdateien, importieren und exportieren.|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+|[bcp (Hilfsprogramm)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Ein Befehlszeilenprogramm (Bcp.exe), mit dem Massenexporte und -importe von Daten ausgeführt und Formatdateien generiert werden können.|Ja|Ja|  
+|[BULK INSERT-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, mit der Daten direkt aus einer Datendatei in eine Datenbanktabelle oder nicht partitionierte Sicht importiert werden.|Ja|Nein|  
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, bei der mit dem OPENROWSET-Massenrowsetanbieter ein Massenimport von Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle ausgeführt wird. Dabei wird die OPENROWSET(BULK…)-Funktion angegeben, um Daten in einer INSERT-Anweisung auszuwählen.|Ja|Nein| 
+|[SQL Server-Import/Export-Assistent](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|Der Assistent erstellt einfache Pakete, die Daten zwischen vielen häufigen Datenformaten, einschließlich Datenbanken, Kalkulationstabellen und Textdateien, importieren und exportieren.|Ja|Ja|  
   
 > [!IMPORTANT]
 > CSV (Comma-Separated Value)-Dateien werden von SQL Server-Massenimportvorgängen nicht unterstützt. In manchen Fällen kann jedoch eine CSV-Datei als Datendatei für einen Massenimport von Daten in SQL Server verwendet werden. Das Feldabschlusszeichen einer CSV-Datei muss kein Komma sein. Weitere Informationen finden Sie unter [Vorbereiten von Daten für den Massenexport oder -import (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
@@ -80,7 +80,7 @@ ms.locfileid: "52533542"
 |[Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Erstellen einer Formatdatei (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[Massenimport von Daten mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[Auslassen eines Datenfelds mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)|
  
   
-## <a name="more-information"></a>Weitere Informationen.  
+## <a name="more-information"></a>Weitere Informationen  
  [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [Beispiele für den Massenimport und -export von XML-Dokumenten &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)   
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)   

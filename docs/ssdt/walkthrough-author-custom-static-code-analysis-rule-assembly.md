@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b5dcb7c6c40c17cf2cfa68d493217359511b93b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406237"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090166"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Exemplarische Vorgehensweise – Erstellen einer Assembly für eine benutzerdefinierte statische Codeanalyseregel für SQL Server
 Diese exemplarische Vorgehensweise veranschaulicht die erforderlichen Schritte zum Erstellen einer SQL Server-Codeanalyseregel. Die in dieser exemplarischen Vorgehensweise erstellte Regel wird dazu verwendet, WAITFOR DELAY-Anweisungen in gespeicherten Prozeduren, Triggern und Funktionen zu verhindern.  
@@ -495,7 +495,7 @@ Jetzt , da Sie die Hilfsklassen hinzugefügt haben, die von der benutzerdefinier
   
 3.  Klicken Sie auf **Assembly signieren**.  
   
-4.  Klicken Sie unter **Schlüsseldatei mit starkem Namen auswählen:** auf **<New>**.  
+4.  Klicken Sie unter **Schlüsseldatei mit starkem Namen auswählen:** auf **<New>** .  
   
 5.  Geben Sie im Dialogfeld **Schlüssel für einen starken Namen erstellen** unter **Schlüsseldateiname** „MyRefKey“ ein.  
   
@@ -539,8 +539,8 @@ Die neue Regel wird schließlich im SQL Server-Projekt angezeigt. So zeigen Sie 
   
 3.  Klicken Sie auf **Codeanalyse**. Jetzt sollte eine neue Kategorie mit dem Namen „RuleSamples.CategorySamples“ angezeigt werden.  
   
-4.  Erweitern Sie „RuleSamples.CategorySamples“. Jetzt sollten Sie diese Zeichenfolge sehen „SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions“.  
+4.  Erweitern Sie „RuleSamples.CategorySamples“. Folgendes sollte angezeigt werden: „SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions“ (Vermeiden Sie die WAITFOR DELAY-Anweisung in gespeicherten Prozeduren, Triggern und Funktionen).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Übersicht der Erweiterbarkeit um Regeln für die Datenbank-Codeanalyse](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
   

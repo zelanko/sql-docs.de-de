@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535852"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450090"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Upgraden von Always On-Verfügbarkeitsgruppen-Replikatsinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:
 - [Überprüfen, ob Change Data Capture oder Replikation für Datenbanken der Verfügbarkeitsgruppe verwendet wird](#special-steps-for-change-data-capture-or-replication): Wurden Datenbanken in der Verfügbarkeitsgruppe für Change Data Capture (CDC) aktiviert, befolgen Sie diese [Anweisungen](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->Das Kombinieren verschiedener Versionen von SQL Server-Instanzen in derselben Verfügbarkeitsgruppe wird nur bei einem parallelen Upgrade unterstützt, das ein Upgrade für die vorhandenen Replikate durchführt. Eine höhere Version einer SQL Server-Instanz kann also nicht als neues Replikat zu einer bestehenden Verfügbarkeitsgruppe hinzugefügt werden. Ein SQL Server 2017-Replikat kann beispielsweise nicht zu einer bestehenden SQL Server 2016-Verfügbarkeitsgruppe hinzugefügt werden. Die einzige unterstützte Methode zum Migrieren einer neuen Version der SQL Server-Instanz mithilfe von Verfügbarkeitsgruppen besteht im Verwenden einer verteilten Verfügbarkeitsgruppe in SQL Server 2016 Enterprise Edition oder höher.
+>Das Mischen verschiedener SQL Server-Instanzen innerhalb einer Verfügbarkeitsgruppe wird außerhalb von parallelen Upgrades nicht unterstützt und sollten in diesem Zustand nicht länger bestehen, da das Upgrade schnell ausgeführt werden sollte. Alternativ können Sie auch eine verteilte Verfügbarkeitsgruppe verwenden, um SQL Server 2016 upzugraden.
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>Grundlegendes zu parallelen Upgrades für Verfügbarkeitsgruppen  
 Beachten Sie folgende Richtlinien, wenn Sie Serverupgrades oder -updates durchführen, um die Downtime und den Datenverlust Ihrer Verfügbarkeitsgruppen zu minimieren:  

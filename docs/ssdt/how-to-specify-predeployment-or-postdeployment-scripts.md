@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05a0fa6029a1995c8d6e8104e4638d4b41100f35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731248"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098474"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Gewusst wie: Festlegen von Skripts vor und nach der Bereitstellung
-Skripts vor und nach der Bereitstellung führen Transact\-SQL-Anweisungen vor und nach dem Hauptbereitstellungsskript aus, das vom Datenbankprojekt generiert wird. Ein Projekt kann nur ein Skript vor und ein Skript nach der Bereitstellung aufweisen. Diese Skripts können für mehrere Zwecke verwendet werden. Zum Beispiel:  
+Skripts vor und nach der Bereitstellung führen Transact\-SQL-Anweisungen vor und nach dem Hauptbereitstellungsskript aus, das vom Datenbankprojekt generiert wird. Ein Projekt kann nur ein Skript vor und ein Skript nach der Bereitstellung aufweisen. Diese Skripts können für mehrere Zwecke verwendet werden. Beispiel:  
   
 -   Ein Skript vor der Bereitstellung kann Daten aus einer Tabelle kopieren, die in eine temporäre Tabelle geändert wird, bevor die Daten neu formatiert und auf die geänderte Tabelle in einem Skript nach der Bereitstellung angewendet werden.  
   
@@ -46,7 +46,7 @@ END
   
     Der Transact\-SQL-Editor wird geöffnet und zeigt den Inhalt der Datei an.  
   
-Sie können SQLCMD-Syntax und -Variablen in Ihren Skripten verwenden und diese in den Eigenschaften des Datenbankprojekts festlegen. Zum Beispiel:  
+Sie können SQLCMD-Syntax und -Variablen in Ihren Skripten verwenden und diese in den Eigenschaften des Datenbankprojekts festlegen. Beispiel:  
   
 -   Sie können SQLCMD-Syntax verwenden, um den Inhalt einer Datei in ein Skript vor oder nach der Bereitstellung einzuschließen. Die Dateien werden in der Reihenfolge, in der Sie sie festlegen, eingeschlossen und ausgeführt: `:r .\myfile.sql`  
   
@@ -59,6 +59,6 @@ Sie können SQLCMD-Syntax und -Variablen in Ihren Skripten verwenden und diese i
   
 Weitere Informationen zur Verwendung von SQLCMD in Skripts finden Sie unter [Datenbankprojekteinstellungen](../ssdt/database-project-settings.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Projektorientierte Offlinedatenbankentwicklung](../ssdt/project-oriented-offline-database-development.md)  
   

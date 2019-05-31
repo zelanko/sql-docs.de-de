@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652872"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096862"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Vorgehensweise: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Gewusst wie: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
 Der Tabellen-Designer bietet gemeinsam mit dem Transact\-SQL-Editor eine visuelle Oberfläche zum Erstellen und Bearbeiten von Tabellenstrukturen, einschließlich tabellenspezifischer Programmierobjekte, für SQL Server-Datenbanken.  Er wird gestartet, wenn Sie eine neue Tabelle für eine verbundene Datenbank oder ein Projekt erstellen oder wenn Sie im SQL Server-Objekt-Explorer oder Projektmappen-Explorer auf eine Tabelle doppelklicken, um sie zu bearbeiten.  
   
 Der Designer besteht aus dem Spaltenraster, dem Skriptbereich und dem Kontextbereich. Im Spaltenraster werden alle Spalten in der Tabelle aufgelistet. In diesem Raster können Sie Spalten hinzufügen, bearbeiten und löschen.  Im Kontextbereich erhalten Sie eine logische Ansicht der Tabellendefinition (Schlüssel, Indizes, Einschränkungen, Trigger usw.). Hier können Sie ein Objekt auswählen, um dessen Beziehungen zu einzelnen Spalten hervorzuheben. In diesem Bereich können Sie der Tabelle außerdem neue Objekte hinzufügen und die Eigenschaften eines ausgewählten Objekts im Eigenschaftenraster bearbeiten. Im Skriptbereich wird die Definition der Tabellenstruktur angezeigt, und das Skript des ausgewählten Objekts wird im Kontextbereich oder Spaltenraster hervorgehoben. Sie können das Skript bearbeiten, während daneben das Spaltenraster und der Kontextbereich angezeigt werden. Alle Änderungen in einem der drei Bereiche werden sofort in den anderen beiden Bereichen übernommen.  
@@ -56,6 +56,6 @@ Der Designer besteht aus dem Spaltenraster, dem Skriptbereich und dem Kontextber
   
     Beachten Sie, dass das Erstellen und Bearbeiten von Datenbankentitäten für ein Offlineprojekt auf die gleiche Weise wie für eine verbundene Datenbank erfolgt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorgehensweise: Erstellen von Datenbankobjekten mit dem Tabellen-Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

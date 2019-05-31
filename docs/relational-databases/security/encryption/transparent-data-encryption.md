@@ -1,7 +1,7 @@
 ---
 title: Transparente Datenverschlüsselung (TDE) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,14 +19,14 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: d944c2192e73fd0cb887d0491ecba707a90ff7b5
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185126"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527348"
 ---
-# <a name="transparent-data-encryption-tde"></a>Transparente Datenverschlüsselung (TDE)
+# <a name="transparent-data-encryption-tde"></a>TDE (Transparent Data Encryption)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   *Transparente Datenverschlüsselung* (Transparent Data Encryption, TDE) verschlüsselt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-, [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]- und [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] -Datendateien, bekannt als „Verschlüsselung ruhender Daten“. Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Wenn jedoch physische Medien (etwa Laufwerke oder Sicherungsbänder) gestohlen werden, muss ein böswilliger Benutzer die Datenbank einfach nur wieder herstellen und kann dann die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -63,7 +63,7 @@ ms.locfileid: "54185126"
   
  Die folgende Abbildung zeigt die Architektur der TDE-Verschlüsselung. Nur die Datenbankebenenelemente (der Datenbankverschlüsselungsschlüssel und die ALTER DATABASE-Teile können vom Benutzer bei der Verwendung von TDE in [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]konfiguriert werden.  
   
- ![Zeigt die im Thema beschriebene Hierarchie an.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Displays the hierarchy described in the topic.")  
+ ![Zeigt die im Thema beschriebene Hierarchie an.](../../../relational-databases/security/encryption/media/tde-architecture.png "Displays the hierarchy described in the topic.")  
   
 ## <a name="using-transparent-data-encryption"></a>Verwenden der transparenten Datenverschlüsselung  
  Führen Sie folgende Schritte aus, um TDE zu verwenden:  
@@ -226,9 +226,29 @@ GO
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Transparente Datenverschlüsselung und FILESTREAM-Daten  
  FILESTREAM-Daten werden nicht verschlüsselt, auch dann nicht, wenn TDE aktiviert ist.  
+
+<a name="scan-suspend-resume"></a>
+
+## <a name="transparent-data-encryption-tde-scan"></a>TDE-Überprüfung (Transparent Data Encryption)
+
+Damit Transparent Data Encryption (TDE) für eine Datenbank aktiviert werden kann, muss [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Verschlüsselungsüberprüfung durchführen, bei der alle Seiten aus den Datendateien in den Pufferpool gelesen und die verschlüsselten Seiten dann auf den Datenträger geschrieben werden. Mit [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] wurde die Syntax für das Anhalten und Fortsetzen des TDE-Scans eingeführt, mit der Sie den Scan während unternehmenskritischen Zeiten oder hoher Auslastung des Systems anhalten und später fortsetzen können, damit Benutzer über mehr Kontrolle über den Verschlüsselungsscan verfügen.
+
+Verwenden Sie die folgende Syntax, um den TDE-Verschlüsselungsscan anzuhalten:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+Auf ähnliche Weise können Sie den TDE-Verschlüsselungsscan mithilfe der folgenden Syntax fortsetzen:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+`encryption_scan_state` wurde der dynamischen Verwaltungssicht `sys.dm_database_encryption_keys` hinzugefügt, um den aktuellen Status des Verschlüsselungsscans anzuzeigen. Außerdem wurde eine neue Spalte namens `encryption_scan_modify_date` hinzugefügt, die das Datum und die Uhrzeit der letzten Änderung des Status des Verschlüsselungsscans enthält. Beachten Sie außerdem, dass beim Start eine Meldung im Fehlerprotokoll protokolliert wird, die angibt, dass ein vorhandener Scan pausiert wurde, wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz neu gestartet wird, während die Verschlüsselungsüberprüfung angehalten ist.
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparente Datenverschlüsselung und Pufferpoolerweiterung  
- Dateien, die mit der Pufferpoolerweiterung (BPE, Buffer Pool Extension) zusammenhängen, werden bei der Verschlüsselung der Datenbank mit TDE nicht verschlüsselt. Für mit BPE zusammenhängende Dateien müssen Sie Verschlüsselungstools auf Dateisystemebene, wie Bitlocker oder EFS, verwenden.  
+ Dateien, die mit der Pufferpoolerweiterung (BPE, Buffer Pool Extension) zusammenhängen, werden bei der Verschlüsselung der Datenbank mit TDE nicht verschlüsselt. Für mit BPE zusammenhängende Dateien müssen Sie Verschlüsselungstools auf Dateisystemebene verwenden, z. B. Bitlocker oder EFS.  
   
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparente Datenverschlüsselung und In-Memory OLTP  
  TDE kann auf einer Datenbank aktiviert werden, die über In-Memory OLTP-Objekte verfügt. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] werden In-Memory OLTP-Protokolldatensätze und Daten verschlüsselt, wenn TDE aktiviert ist. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] werden In-Memory OLTP-Protokolldatensätze verschlüsselt, wenn TDE aktiviert ist, aber Dateien in der MEMORY_OPTIMIZED_DATA-Dateigruppe werden nicht verschlüsselt.  
@@ -242,8 +262,7 @@ GO
  [Transparente Datenverschlüsselung in Azure SQL-Datenbank](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
  [Erste Schritte mit transparenter Datenverschlüsselung (TDE) in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
  [SQL Server-Verschlüsselung](../../../relational-databases/security/encryption/sql-server-encryption.md)  
- 
-  [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
+ [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;#40;Datenbank-Engine&amp;#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
    
 ## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

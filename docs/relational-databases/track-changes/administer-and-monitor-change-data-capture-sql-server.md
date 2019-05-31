@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d460fcffef089e77825feb19b13602b3a118d20
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991903"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099969"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
 
@@ -176,6 +176,11 @@ Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datensam
   
 4. Greifen Sie in dem Data Warehouse, das Sie in Schritt 1 konfiguriert haben, auf die Tabelle custom_snapshots.cdc_log_scan_data zu. Diese Tabelle stellt eine Verlaufs-Momentaufnahme der Daten von Protokollscansitzungen bereit. Sie können diese Daten verwenden, um die Latenzzeit, den Durchsatz und andere Leistungskennzahlen in Abhängigkeit der Zeit zu analysieren.  
   
+## <a name="ScriptUpgrade"></a> Skriptupgrademodus
+
+Wenn Sie kumulative Updates oder Service Packs auf eine Instanz anwenden, kann die Instanz beim erneuten Starten im Skriptupgrademodus gestartet werden. In diesem Modus führt SQL Server einen Schritt zum Analysieren und Aktualisieren von internen CDC-Tabellen aus, wodurch Objekte wie Indizes in Capture-Tabellen gegebenenfalls neu erstellt werden. Abhängig von der Menge der enthaltenen Daten kann dieser Schritt einige Zeit in Anspruch nehmen oder hohen Transaktionsprotokollverbrauch für aktivierte CDC-Datenbanken verursachen.
+
+
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)

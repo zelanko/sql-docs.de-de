@@ -10,24 +10,24 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9e0abe651d44c045f3ab92c5388aa740216cff0b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396883"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099586"
 ---
-# <a name="how-to-work-with-clr-database-objects"></a>Vorgehensweise: Arbeiten mit CLR-Datenbankobjekten
+# <a name="how-to-work-with-clr-database-objects"></a>Gewusst wie: Arbeiten mit CLR-Datenbankobjekten
 Neben der Programmiersprache Transact\-SQL können Sie .NET Framework-Sprachen zum Erstellen von Datenbankobjekten verwenden, durch die Daten abgerufen und aktualisiert werden. Datenbankobjekte, die in verwaltetem Code geschrieben sind, werden als SQL Server-CLR-Datenbankobjekte (Common Language Runtime) bezeichnet. Eine Erläuterung der Vorteile bei der Verwendung von CLR-Datenbankobjekten in SQL Server sowie der Kriterien für die Wahl zwischen Transact\-SQL und CLR finden Sie unter [Vorteile der CLR-Integration](../relational-databases/clr-integration/clr-integration-overview.md) und [Vorteile von verwaltetem Code bei der Erstellung von Datenbankobjekten](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
   
 Zum Erstellen eines CLR-Datenbankobjekts in SQL Server Data Tools erstellen Sie ein Datenbankprojekt und fügen ihm dann ein CLR-Datenbankobjekt hinzu. Im Unterschied zu früheren Versionen von Visual Studio müssen Sie kein eigenes CLR-Projekt erstellen und dann einen Verweis vom Datenbankprojekt auf dieses CLR-Projekt hinzufügen. Wenn Sie das Datenbankprojekt erstellen und veröffentlichen, werden die CLR-Objekte zur selben Zeit automatisch im Projekt veröffentlicht. Nachdem Sie die CLR-Objekte veröffentlicht haben, können sie wie jedes andere Datenbankobjekt aufgerufen und ausgeführt werden.  
   
 Die Eigenschaftenseiten CLR und CLR Build enthalten viele Einstellungen zum Verwenden von CLR-Datenbankobjekten im Projekt. Insbesondere enthält die Eigenschaftenseite CLR eine Berechtigungsstufeneinstellung zum Festlegen von Berechtigungen für die CLR-Assembly. Sie enthält außerdem die Einstellung DDL generieren, um zu steuern, ob DDL für die dem Projekt hinzugefügten CLR-Datenbankobjekte generiert wird. Die Eigenschaftenseite CLR Build enthält alle Compileroptionen, die Sie festlegen können, um die Kompilierung des CLR-Codes im Projekt zu konfigurieren. Sie können auf diese Eigenschaftenseiten zugreifen, indem Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt klicken und **Eigenschaften** auswählen.  
   
-Zum Aktivieren des Debuggens von CLR-Datenbankobjekten öffnen Sie den **SQL Server-Objekt-Explorer**. Klicken Sie mit der rechten Maustaste auf den Server mit den CLR-Datenbankartefakten, die Sie debuggen möchten, und wählen Sie **SQL/CLR-Debuggen zulassen** aus. Es wird ein Meldungsfeld mit folgender Warnung angezeigt: "Beachten Sie, dass während des Debuggens alle verwalteten Threads auf diesem Server beendet werden. Möchten Sie das SQL CLR-Debugging auf diesem Server aktivieren?“ Beim Debuggen von CLR-Datenbankobjekten werden durch Unterbrechen der Ausführung alle Threads auf dem Server unterbrochen. Dies hat Auswirkungen auf andere Benutzer. Daher sollten Sie Anwendungen für CLR-Datenbankobjekte nicht auf einem Produktionsserver debuggen. Außerdem sollten Sie berücksichtigen, dass die Einstellungen nicht mehr im **SQL Server-Objekt-Explorer** geändert werden können, sobald Sie mit dem Debuggen begonnen haben. Im **SQL Server-Objekt-Explorer** vorgenommene Änderungen werden erst beim Start der nächsten Debugsitzung wirksam.  
+Zum Aktivieren des Debuggens von CLR-Datenbankobjekten öffnen Sie den **SQL Server-Objekt-Explorer**. Klicken Sie mit der rechten Maustaste auf den Server mit den CLR-Datenbankartefakten, die Sie debuggen möchten, und wählen Sie **SQL/CLR-Debuggen zulassen** aus. Es wird ein Meldungsfeld mit folgender Warnung angezeigt: „Beachten Sie, dass während des Debuggens alle verwalteten Threads auf diesem Server beendet werden.“ Möchten Sie das SQL CLR-Debugging auf diesem Server aktivieren?“ Beim Debuggen von CLR-Datenbankobjekten werden durch Unterbrechen der Ausführung alle Threads auf dem Server unterbrochen. Dies hat Auswirkungen auf andere Benutzer. Daher sollten Sie Anwendungen für CLR-Datenbankobjekte nicht auf einem Produktionsserver debuggen. Außerdem sollten Sie berücksichtigen, dass die Einstellungen nicht mehr im **SQL Server-Objekt-Explorer** geändert werden können, sobald Sie mit dem Debuggen begonnen haben. Im **SQL Server-Objekt-Explorer** vorgenommene Änderungen werden erst beim Start der nächsten Debugsitzung wirksam.  
   
 Weitere Informationen über die Anforderungen zum Erstellen von CLR-Datenbankobjekten finden Sie in den entsprechenden Themen unter [Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx).  
   
@@ -101,7 +101,7 @@ Weitere Informationen über die Anforderungen zum Erstellen von CLR-Datenbankobj
   
 5.  Ändern Sie die Eingabe in **425 312 1222**, und verlassen Sie das Feld mit der TAB-TASTE. Beachten Sie, dass die Eingabe jetzt akzeptiert wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Vorteile der CLR-Integration](../relational-databases/clr-integration/clr-integration-overview.md)  
 [Vorteile der Verwendung von verwaltetem Code beim Erstellen von Datenbankobjekten](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
 [Erstellen von Datenbankobjekten mit CLR-Integration (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx)  

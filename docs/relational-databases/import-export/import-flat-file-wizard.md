@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8573984e58f3442f1536dfd3c4deeabc4636fa2
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 773492f038339a561a1f73ff48f5d1a88b72cadc
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217818"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946432"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistent zum Importieren von Flatfiles in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,26 +54,26 @@ Für den Zweck dieses Tutorials können Sie gerne Ihre eigene Flatfile verwenden
 
 ![Assistent: Excel](media/import-flat-file-wizard/importffexample.png)
 
-### <a name="step-1-access-wizard-and-intro-page"></a>Schritt 1: Öffnen Sie den Assistenten und die Einführungsseite.
+### <a name="step-1-access-wizard-and-intro-page"></a>Schritt 1: Öffnen des Assistenten und der Einführungsseite
 Öffnen Sie den Assistenten, wie [hier](#started) beschrieben wird.
 
 Die erste Seite des Assistenten ist die Startseite. Wenn Sie diese Seite nicht mehr anzeigen möchten, klicken Sie einfach auf **Diese Anfangsseite nicht mehr anzeigen**.
 
 ![Assistent: Einführung](media/import-flat-file-wizard/importffintro.png)
 
-### <a name="step-2-specify-input-file"></a>Schritt 2: Geben Sie die Eingabedatei an.
+### <a name="step-2-specify-input-file"></a>Schritt 2: Angeben der Eingabedatei
 Klicken Sie auf „Durchsuchen“, um die Eingabedatei auszuwählen. Der Assistent sucht standardmäßig nach CSV- und TXT-Dateien. 
 
 Der neue Tabellenname muss eindeutig sein, andernfalls lässt der Assistent Sie nicht fortfahren.
 
 ![Assistent: Angabe](media/import-flat-file-wizard/importffspecify.png)
 
-### <a name="step-3-preview-data"></a>Schritt 3: Zeigen Sie eine Vorschau der Daten an.
+### <a name="step-3-preview-data"></a>Schritt 3: Datenvorschau
 Der Assistent generiert eine Vorschau, die für die ersten 50 Zeilen angezeigt werden kann. Wenn Probleme auftreten, klicken Sie auf „Abbrechen“. Fahren Sie andernfalls mit der nächsten Seite fort.
 
 ![Assistent: Vorschau](media/import-flat-file-wizard/importffpreview.png)
 
-### <a name="step-4-modify-columns"></a>Schritt 4: Ändern Sie Spalten.
+### <a name="step-4-modify-columns"></a>Schritt 4: Bearbeiten von Spalten
 Der Assistent identifiziert die richtigen Spaltennamen, Datentypen usw. Hier können Sie die Felder bearbeiten, wenn sie nicht korrekt sind (z.B. muss der Datentyp „float“ anstatt von „int“ lauten).
 
 Fahren Sie fort, wenn Sie fertig sind.

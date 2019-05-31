@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.projectconversion.dialog
 - sql.data.tools.ImportDAC
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5853dcc142dbee73846617fc3c32e876978f6609
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 93c4e141dc48c87214fc6de764d0b2ff33ebe9b9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398573"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098242"
 ---
-# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Vorgehensweise: Konvertieren von Visual Studio 2010-Datenbankprojekten in SQL Server-Datenbankprojekte und Umleiten auf eine andere Plattform
+# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Gewusst wie: Konvertieren von Visual Studio 2010-Datenbankprojekten in SQL Server-Datenbankprojekte und Neuzuweisen zu einer anderen Plattform
 In SQL Server Data Tools (SSDT) können Sie vorhandene, in Visual Studio 2010 erstellte SQL Server-Datenbank-, CLR- und Datenschichtanwendungs-Projekte in das neue SQL Server-Datenbankprojekt konvertieren. Dadurch können Sie die Vorteile der neuen Datenbankentwicklungsfunktionen von SSDT nutzen, z.B. verbesserte Transact\-SQL-Bearbeitungsfunktionen sowie die Möglichkeit, ein Projekt in Microsoft SQL Server 2012 und SQL Azure mit Codeüberprüfung neu zuzuweisen. Bei diesem Prozess werden Objekte (Tabellen, Sichten, gespeicherte Prozeduren, Eigenschaftendateien oder Skripts), die über einen entsprechenden Typ in SSDT verfügen, einschließlich ihrer Berechtigungen und DAC-Richtliniendateien, konvertiert. Artefakte, die nicht konvertiert werden können, werden in einem Konvertierungsprotokollbericht markiert.  
   
 In der folgenden Tabelle sind alle Projektartefakte aufgelistet, die von SSDT konvertiert bzw. nicht konvertiert werden können.  
@@ -40,7 +40,7 @@ In der folgenden Tabelle sind alle Projektartefakte aufgelistet, die von SSDT ko
   
 2.  Der Assistent **In SQL Server-Datenbankprojekt konvertieren** wird automatisch geöffnet. Aktivieren Sie die Option **In SQL Server-Datenbankprojekt konvertieren**, und klicken Sie auf **OK**. Die Standardeinstellung zum Sichern von vorhandenen Dateien muss aktiviert sein.  
   
-3.  Ein Konvertierungsbericht wird automatisch generiert. In diesem werden alle Dateien aufgelistet, die konvertiert wurden. Um weitere Informationen zum Konvertierungsprozess zu erhalten, klicken Sie auf das **+**-Zeichen neben dem Projektdateinamen.  
+3.  Ein Konvertierungsbericht wird automatisch generiert. In diesem werden alle Dateien aufgelistet, die konvertiert wurden. Um weitere Informationen zum Konvertierungsprozess zu erhalten, klicken Sie auf das **+** -Zeichen neben dem Projektdateinamen.  
   
 4.  Sie werden im **Projektmappen-Explorer** feststellen, dass alle Projektdateien, Eigenschaftendateien und Schemaobjekten konvertiert wurden.  
   
@@ -50,6 +50,6 @@ In der folgenden Tabelle sind alle Projektartefakte aufgelistet, die von SSDT ko
   
 2.  Wählen Sie in der Dropdownliste **Zielplattform** eine der von SSDT unterstützten Plattformen aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorgehensweise: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

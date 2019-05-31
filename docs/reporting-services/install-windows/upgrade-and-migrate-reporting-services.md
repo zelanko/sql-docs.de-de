@@ -1,36 +1,39 @@
 ---
 title: Aktualisieren und Migrieren von Reporting Services | Microsoft-Dokumentation
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
-ms.openlocfilehash: e1c32d07408f9eaf2beeaff5d92865520b49f08d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dc205f966d0e5556f8dc6f722190d477b5d89327
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583363"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570736"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   Dieser Artikel dient zur Übersicht über die Upgrade- und Migrationsoptionen für SQL Server Reporting Services. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer SQL Server Reporting Services-Bereitstellung:  
-  
+ 
 -   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als „direktes“ Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie weiter unten in diesem Dokument im Abschnitt „Migration vom einheitlichen Modus zum SharePoint-Modus“.  
   
 -   **Migrieren:** Sie installieren und konfigurieren eine neue SharePoint-Umgebung, kopieren Ihre Berichtselemente und Ressourcen in die neue Umgebung und konfigurieren die neue Umgebung für die Verwendung der vorhandenen Inhalte. Eine einfachere Form der Migration besteht darin, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken, die Konfigurationsdateien und (falls Sie den SharePoint-Modus verwenden) die SharePoint-Inhaltsdatenbanken zu kopieren.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus
-  
+
+> [!NOTE]
+> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
+   
 ##  <a name="bkmk_known_issues"></a> Bekannte Upgradeprobleme und Best Practices  
  Eine ausführliche Liste der unterstützten Editionen und Versionen, die aktualisiert werden können, finden Sie unter [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
@@ -220,7 +223,7 @@ ms.locfileid: "59583363"
   
 -   Schreiben Sie Code, in dem der WMI-Anbieter aufgerufen wird, um Daten von einer Datenbank in eine andere Datenbank zu kopieren. Weitere Informationen zu diesem Verfahren finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
--   Wenn nur wenige Elemente vorliegen, können Sie die Berichte, Berichtsmodelle und freigegebenen Datenquellen vom Berichts-Designer, Modell-Designer und Berichts-Generator aus erneut auf dem neuen Berichtsserver veröffentlichen. Sie müssen Rollenzuweisungen, Abonnements, freigegebene Zeitpläne, Zeitpläne für Berichtmomentaufnahmen, benutzerdefinierte Eigenschaften, die Sie für Berichte und andere Elemente festlegen, Modellelementsicherheit und Eigenschaften, die Sie auf dem Berichtsserver festlegen, erneut erstellen. Die Protokolldaten über Berichtsverlauf und Berichtsausführung gehen verloren.  
+-   Wenn nur wenige Elemente vorliegen, können Sie die Berichte und freigegebenen Datenquellen vom Berichts-Designer, Modell-Designer und Berichts-Generator aus erneut auf dem neuen Berichtsserver veröffentlichen. Sie müssen Rollenzuweisungen, Abonnements, freigegebene Zeitpläne, Zeitpläne für Berichtmomentaufnahmen, benutzerdefinierte Eigenschaften, die Sie für Berichte und andere Elemente festlegen, Modellelementsicherheit und Eigenschaften, die Sie auf dem Berichtsserver festlegen, erneut erstellen. Die Protokolldaten über Berichtsverlauf und Berichtsausführung gehen verloren.  
   
   
 ##  <a name="bkmk_additional_resources"></a> Zusätzliche Ressourcen  

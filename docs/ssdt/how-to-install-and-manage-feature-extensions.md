@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b77952b6c0d5985f4f93a7f3e81ced856e9907ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613228"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099679"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Gewusst wie: Installieren und Verwalten von Funktionserweiterungen
 Sie können Regeln zum Analysieren von Datenbankcode, Bedingungen für Datenbankkomponententests und Erstellungs-/Bereitstellungs-Contributors hinzufügen, um die Funktionalität von Visual Studio-Editionen, einschließlich SQL Server Data Tools, zu erweitern. Bevor eine Funktionserweiterung verwendet werden kann, muss sie jedoch installiert werden, unabhängig davon, ob die zu installierende Erweiterung von Ihnen oder einer anderen Person erstellt wurde.  
@@ -37,7 +37,7 @@ Erweiterungen können außerdem als Teil der Befehlszeilendienste ausgeführt we
 |Erweiterungstyp|Befehlszeilendienst|Installationsordner|  
 |------------------|------------------------|------------------|  
 |Benutzerdefinierte Testbedingung für SQL Server-Komponententests|MSBuild/MSTest kann zum Ausführen von Komponententests an der Developer-Eingabeaufforderung für Visual Studio 2013 und in ähnlichen Befehlszeilentools verwendet werden.|Gleich wie für die interne Ausführung in Visual Studio.|  
-|Erstellungs-Contributors<br /><br />Bereitstellungs-Contributors|[SqlPackage.exe](../tools/sqlpackage.md) oder durch Verwendung von Deploy- oder Publish-Zielen von MSBuild beim Erstellen eines Datenbankprojekts.|MSBuild: Gleich wie für die interne Ausführung in Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): Wenn sie sich im Visual Studio-Verzeichnis befindet, das gleiche wie vorher.<br /><br />Wenn sich „SqlPackage.exe“ und andere DACFx-DLLs außerhalb dieses Verzeichnisses befinden, sollten Erweiterungen entweder im gleichen Verzeichnis oder unter „C:\Programme (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions“ platziert werden.|  
+|Erstellungs-Contributors<br /><br />Bereitstellungs-Contributors|[SqlPackage.exe](../tools/sqlpackage.md) oder durch Verwendung von Deploy- oder Publish-Zielen von MSBuild beim Erstellen eines Datenbankprojekts.|MSBuild: Gleich wie für die interne Ausführung in Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): Gleich wie zuvor, sofern im Visual Studio-Verzeichnis gespeichert.<br /><br />Wenn sich „SqlPackage.exe“ und andere DACFx-DLLs außerhalb dieses Verzeichnisses befinden, sollten Erweiterungen entweder im gleichen Verzeichnis oder unter „C:\Programme (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions“ platziert werden.|  
 |Regeln für die statische Codeanalyse|MSBuild kann zum Erstellen des Projekts und zum Ausführen der statischen Codeanalyse verwendet werden.<br /><br />Darüber hinaus können Sie die Codeanalyse mithilfe einer CodeAnalysisService-API aus eigenen Anwendungen heraus ausführen. Die Suchregeln für Erweiterungen funktionieren in diesem Fall genau wie bei der Verwendung von „SqlPackage.exe“.|Das gleiche gilt für Erstellungs- und Bereitstellung-Contributors|  
   
 > [!NOTE]  
@@ -56,6 +56,6 @@ Um das Risiko zu minimieren, sollten Sie nur Erweiterungen aus bekannten Quellen
 ## <a name="to-install-a-custom-feature-extension"></a>So installieren Sie eine benutzerdefinierte Funktionserweiterung  
 Kopieren Sie die signierte Assembly (.dll) in den richtigen Installationsordner. Schließen Sie Visual Studio, und öffnen Sie es wieder. Die Erweiterung sollte jetzt verfügbar sein.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erweitern der Datenbankfunktionen](../ssdt/extending-the-database-features.md)  
   

@@ -9,19 +9,23 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0703c95824224f8200a43a38ad5990971c6b7911
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282534"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717562"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Ausführen eines SSIS-Pakets mit PowerShell
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In diesem Schnellstart wird dargestellt, wie Sie mit einem PowerShell-Skript eine Verbindung zu einem Datenbankserver herstellen und ein SSIS-Paket ausführen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Ein Azure SQL-Datenbankserver überwacht Port 1433. Wenn Sie versuchen, eine Verbindung mit einem Azure SQL-Datenbankserver innerhalb einer Unternehmensfirewall herzustellen, muss dieser Port in der Unternehmensfirewall geöffnet sein, damit Sie eine Verbindung herstellen können.
+Ein Azure SQL-Datenbank-Server überwacht Port 1433. Wenn Sie versuchen, eine Verbindung mit einem Azure SQL-Datenbank-Server innerhalb einer Unternehmensfirewall herzustellen, muss dieser Port in der Unternehmensfirewall geöffnet sein, damit Sie eine Verbindung herstellen können.
 
 ## <a name="supported-platforms"></a>Unterstützte Plattformen
 
@@ -37,18 +41,28 @@ Anhand der Informationen in diesem Schnellstart können Sie unter Linux keine SS
 
 Um das Paket auf Azure SQL-Datenbank auszuführen, rufen Sie die Verbindungsinformationen ab, die für eine Verbindungsherstellung mit der SSIS-Katalogdatenbank (SSISDB) benötigt werden. Sie benötigen den vollqualifizierten Servernamen und die Anmeldeinformationen für die folgenden Prozeduren.
 
-1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an.
+1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/) an.
 2. Wählen Sie aus dem Menü auf der linken Seite **SQL-Datenbanken** aus, und klicken Sie auf der Seite **SQL-Datenbanken** auf die SSISDB-Datenbank. 
 3. Überprüfen Sie auf der **Übersichtsseite** Ihrer Datenbank den vollqualifizierten Servernamen. Zeigen Sie auf den Servernamen, damit die Option **Klicken Sie zum Kopieren** angezeigt wird. 
-4. Wenn Sie die Anmeldeinformationen für Ihren Azure SQL-Datenbankserver vergessen, navigieren Sie zur Seite „SQL Datenbankserver“, damit der Serveradministratorname angezeigt wird. Sie können das Kennwort falls erforderlich zurücksetzen.
+4. Wenn Sie die Anmeldeinformationen für Ihren Azure SQL-Datenbank-Server vergessen, navigieren Sie zur Seite „SQL Datenbank-Server“, damit der Serveradministratorname angezeigt wird. Sie können das Kennwort falls erforderlich zurücksetzen.
 5. Klicken Sie auf **Datenbank-Verbindungszeichenfolgen anzeigen**.
 6. Überprüfen Sie die vollständige **ADO.NET**-Verbindungszeichenfolge.
+
+## <a name="ssis-powershell-provider"></a>SSIS-PowerShell-Anbieter
+Sie können den SSIS-PowerShell-Anbieter verwenden, um eine Verbindung mit dem SSIS-Katalog herzustellen und Pakete in diesem auszuführen.
+
+Nachfolgend finden Sie ein grundlegendes Beispiel zum Ausführen von SSIS-Paketen in einem Paketkatalog mithilfe des SSIS-PowerShell-Anbieters.
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>PowerShell-Skript
 Geben Sie am Anfang des folgenden Skripts geeignete Werte für die Variablen an, und führen Sie das Skript aus, um das SSIS-Paket auszuführen.
 
 > [!NOTE]
-> In diesem Beispiel wird die Windows-Authentifizierung verwendet. Ersetzen Sie das Argument `Integrated Security=SSPI;` durch `User ID=<user name>;Password=<password>;`, um die SQL Server-Authentifizierung zu verwenden. Wenn Sie eine Verbindung mit einem Azure SQL-Datenbankserver herstellen, können Sie keine Windows-Authentifizierung verwenden. 
+> In diesem Beispiel wird die Windows-Authentifizierung verwendet. Ersetzen Sie das Argument `Integrated Security=SSPI;` durch `User ID=<user name>;Password=<password>;`, um die SQL Server-Authentifizierung zu verwenden. Wenn Sie eine Verbindung mit einem Azure SQL-Datenbank-Server herstellen, können Sie keine Windows-Authentifizierung verwenden. 
 
 ```powershell
 # Variables

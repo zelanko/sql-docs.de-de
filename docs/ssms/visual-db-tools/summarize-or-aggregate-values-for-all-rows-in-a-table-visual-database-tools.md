@@ -11,15 +11,15 @@ helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68b5acfe67f0fc8f1408a50a09f48ee9515e3cb9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535507"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105679"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Wertzusammenfassung oder -aggregation für alle Zeilen in einer Tabelle (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Wenn Sie für alle Zeilen in einer Tabelle einen einzigen Aggregatwert erstellen
   
     Der Abfrage- und Sicht-Designer weist der Spalte, die zusammengefasst wird, automatisch einen Spaltenalias zu. Sie können diesen Alias durch einen aussagekräftigeren Alias ersetzen. Ausführliche Informationen finden Sie unter [Erstellen von Spaltenaliasen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-4.  Wählen Sie in der **Gruppieren nach**-Rasterspalte die gewünschte Aggregatfunktion aus, z. B.: **SUM**, **AVG**, **MIN**, **MAX**, **COUNT**. Wenn im Resultset nur eindeutige Zeilen aggregiert werden sollen, wählen Sie eine Aggregatfunktion mit den DISTINCT-Optionen aus, z. B. **Min Distinct**. Verwenden Sie nicht **Gruppieren nach**, **Ausdruck**oder **Wobei**, da diese Optionen bei einer Aggregation aller Zeilen nicht anwendbar sind.  
+4.  Wählen Sie in der Rasterspalte **Gruppieren nach** die gewünschte Aggregatfunktion aus, z. B.: **Sum**, **Avg**, **Min**, **Max**, **Count**. Wenn im Resultset nur eindeutige Zeilen aggregiert werden sollen, wählen Sie eine Aggregatfunktion mit den DISTINCT-Optionen aus, z. B. **Min Distinct**. Verwenden Sie nicht **Gruppieren nach**, **Ausdruck**oder **Wobei**, da diese Optionen bei einer Aggregation aller Zeilen nicht anwendbar sind.  
   
     Der Abfrage- und Sicht-Designer ersetzt den Spaltennamen in der Anweisung im [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) durch die angegebene Aggregatfunktion. Die SQL-Anweisung könnte z. B. folgendermaßen aussehen:  
   
@@ -79,7 +79,7 @@ Bei Ausführung der Abfrage werden die angegebenen Aggregationen im Ergebnisbere
 > [!NOTE]  
 > Der Abfrage- und Sicht-Designer behält die Aggregatfunktionen so lange als Bestandteil der SQL-Anweisung im SQL-Bereich bei, bis Sie den Gruppieren nach-Modus explizit ausschalten. Wenn Sie daher den Typ der Abfrage ändern oder ändern, welche Tabellen bzw. Tabellenwertobjekte im Diagrammbereich vorhanden sind, kann die resultierende Abfrage unter Umständen ungültige Aggregatfunktionen enthalten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Sortieren und Gruppieren von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

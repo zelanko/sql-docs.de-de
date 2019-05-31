@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832998"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097439"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Exemplarische Vorgehensweise: Verwenden einer benutzerdefinierten Testbedingung zur Überprüfung der Ergebnisse einer gespeicherten Prozedur
-In dieser exemplarischen Vorgehensweise zu Funktionserweiterungen erstellen Sie eine Testbedingung und überprüfen deren Funktionsfähigkeit, indem Sie einen SQL Server-Komponententest erstellen. In diesem Verfahren wird ein Klassenbibliotheksprojekt für die Testbedingung erstellt und die Testbedingung signiert und installiert. Wenn Sie bereits eine Testbedingung haben, die aktualisiert werden soll, lesen Sie [Gewusst wie: Durchführen eines Upgrades für eine benutzerdefinierte Visual Studio 2010-Testbedingung von einem älteren Release auf SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
+In dieser exemplarischen Vorgehensweise zu Funktionserweiterungen erstellen Sie eine Testbedingung und überprüfen deren Funktionsfähigkeit, indem Sie einen SQL Server-Komponententest erstellen. In diesem Verfahren wird ein Klassenbibliotheksprojekt für die Testbedingung erstellt und die Testbedingung signiert und installiert. Falls Sie bereits über eine Testbedingung verfügen und diese aktualisieren möchten, finden Sie unter dem folgenden Link weitere Informationen: [Vorgehensweise: Aktualisieren einer benutzerdefinierten Visual Studio 2010-Testbedingung von einer älteren Version auf SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
   
@@ -54,7 +54,7 @@ Als Nächstes signieren Sie das Projekt.
   
 2.  Aktivieren Sie auf der Registerkarte **Signierung** das Kontrollkästchen **Assembly signieren**.  
   
-3.  Klicken Sie im Feld **Schlüsseldatei mit starkem Namen wählen** auf **\<Neu...>**.  
+3.  Klicken Sie im Feld **Schlüsseldatei mit starkem Namen wählen** auf **\<Neu...>** .  
   
     Das Dialogfeld **Schlüssel mit starkem Namen erstellen** wird geöffnet.  
   
@@ -121,7 +121,7 @@ Benennen Sie jetzt **Class1** in **ResultSetColumnCountCondition**, und leiten S
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Fügen Sie [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) hinzu. Weitere Informationen zu UnitTesting.Conditions.ExportTestConditionAttribute finden Sie unter [Gewusst wie: Erstellen von Testbedingungen für den SQL Server Komponententest-Designer](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md).  
+5.  Fügen Sie [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) hinzu. Unter [Vorgehensweise: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) erhalten Sie weitere Informationen über UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -381,7 +381,7 @@ Jetzt muss ein Komponententest erstellt werden. So erstellen Sie einen SQL Serve
   
 6.  Klicken Sie auf **Abbrechen**, um den Komponententest zu erstellen, ohne dass das Testprojekt für die Verwendung einer Datenbankverbindung konfiguriert wird. Der leere Test wird im SQL Server-Komponententest-Designer angezeigt. Dem Testprojekt wird eine Visual C\#-Quellcodedatei hinzugefügt.  
   
-    Weitere Informationen zum Erstellen und Konfigurieren von Datenbankkomponententests mit Datenbankverbindungen finden Sie unter [Gewusst wie: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
+    Weitere Informationen zum Erstellen und Konfigurieren von Datenbankkomponententests mit Datenbankverbindungen finden Sie unter [Vorgehensweise: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
   
 7.  Klicken Sie auf **Klicken Sie zum Erstellen hierauf**, um die Erstellung des Komponententests abzuschließen. Die neue Testbedingung wird im SQL Server-Projekt angezeigt.  
   
@@ -400,8 +400,8 @@ So zeigen Sie die neue Testbedingung an
   
 5.  Konfigurieren Sie im Fenster **Eigenschaften** die Eigenschaften „Count“, „Enabled“ und „ResultSet“.  
   
-    Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Testbedingungen zu SQL Server-Komponententests](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+    Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Testbedingungen zu SQL Server-Komponententests](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
   

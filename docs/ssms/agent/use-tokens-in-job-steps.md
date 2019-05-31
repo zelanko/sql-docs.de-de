@@ -14,16 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: c6a48d0eb6abae94ba6e3c54e0aa5b0b6b874371
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342879"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089440"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "58342879"
 ## <a name="understanding-using-tokens"></a>Grundlegendes zum Verwenden von Token  
   
 > [!IMPORTANT]  
-> Jeder Windows-Benutzer mit Schreibberechtigungen für das Windows-Ereignisprotokoll kann auf Auftragsschritte zugreifen, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen oder WMI-Warnungen aktiviert werden. Zur Vermeidung dieses Sicherheitsrisikos sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Tokens, die in von Warnungen aktivierten Aufträgen verwendet werden können, standardmäßig deaktiviert. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** und **WMI(**_Eigenschaft_**)**. Beachten Sie, dass in dieser Version die Verwendung von Token auf alle Warnungen ausgeweitet ist.  
+> Jeder Windows-Benutzer mit Schreibberechtigungen für das Windows-Ereignisprotokoll kann auf Auftragsschritte zugreifen, die durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen oder WMI-Warnungen aktiviert werden. Zur Vermeidung dieses Sicherheitsrisikos sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Tokens, die in von Warnungen aktivierten Aufträgen verwendet werden können, standardmäßig deaktiviert. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** und **WMI(** _Eigenschaft_ **)** . Beachten Sie, dass in dieser Version die Verwendung von Token auf alle Warnungen ausgeweitet ist.  
 >   
 > Wenn Sie diese Token verwenden müssen, stellen Sie zuvor sicher, dass ausschließlich Mitglieder von vertrauenswürdigen Windows-Sicherheitsgruppen, wie der Administratorengruppe, über Schreibberechtigungen für das Ereignisprotokoll des Computers verfügen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Klicken Sie dann zum Aktivieren dieser Token im Objekt-Explorer mit der rechten Maustaste auf **SQL Server-Agent** , wählen Sie **Eigenschaften**, und wählen Sie anschließend auf der Seite **Warnungssystem** die Option **Token für alle Auftragsantworten auf Warnungen ersetzen** aus.  
   
@@ -78,30 +78,30 @@ In der folgenden Tabelle sind die vom [!INCLUDE[ssNoVersion](../../includes/ssno
 |**(MSSA)**|Name des Master-SQLServerAgent-Diensts.|  
 |**(OSCMD)**|Das Präfix des Programms, das zur Ausführung der **CmdExec** -Auftragsschritte verwendet wird.|  
 |**(SQLDIR)**|Verzeichnis, in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Der Standardwert lautet "C:\Programme\Microsoft SQL Server\MSSQL".|  
-|**(SQLLOGDIR)**|Ersetzungstoken für den Pfad des SQL Server-Fehlerprotokollordners, beispielsweise $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Ersetzungstoken für den Pfad des SQL Server-Fehlerprotokollordners, beispielsweise $(ESCAPE_SQUOTE(SQLLOGDIR)). Dieses Token ist nur in SQL Server 2014 und höher verfügbar.|  
 |**(STEPCT)**|Die Angabe, wie oft dieser Schritt ausgeführt wurde (ohne Abbrüche). Mit diesem Token kann der Schrittbefehl den Abbruch einer aus mehreren Schritten bestehenden Schleife erzwingen.|  
 |**(STEPID)**|Schritt-ID.|  
 |**(SRVR)**|Name des Computers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Wenn es sich bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz um eine benannte Instanz handelt, ist auch der Name der Instanz angegeben.|  
 |**(TIME)**|Die aktuelle Zeit (im Format HHMMSS).|  
 |**(STRTTM)**|Uhrzeit (im Format HHMMSS), zu der die Ausführung des Auftrags begonnen hat.|  
 |**(STRTDT)**|Datum (im Format YYYYMMDD), an dem die Ausführung des Auftrags begonnen hat.|  
-|**(WMI(**_Eigenschaft_**))**|Bei Aufträgen, die als Antwort auf WMI-Warnungen ausgeführt werden, ist dies der Wert der durch *property*angegebenen Eigenschaft. In `$(WMI(DatabaseName))` ist beispielsweise der Wert der **DatabaseName** -Eigenschaft für das WMI-Ereignis angegeben, das die Ausführung der Warnung verursacht hat.|  
+|**(WMI(** _Eigenschaft_ **))**|Bei Aufträgen, die als Antwort auf WMI-Warnungen ausgeführt werden, ist dies der Wert der durch *property*angegebenen Eigenschaft. In `$(WMI(DatabaseName))` ist beispielsweise der Wert der **DatabaseName** -Eigenschaft für das WMI-Ereignis angegeben, das die Ausführung der Warnung verursacht hat.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server-Agent-Escapemakros  
   
 |Escapemakros|und Beschreibung|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(**_token\_name_**))**|Umgeht einfache Anführungszeichen (') in der Token-Ersetzungszeichenfolge. Ein einfaches Anführungszeichen wird durch zwei einfache Anführungszeichen ersetzt.|  
-|**$(ESCAPE_DQUOTE(**_token\_name_**))**|Umgeht doppelte Anführungszeichen (") in der Token-Ersetzungszeichenfolge. Ein doppeltes Anführungszeichen wird durch zwei doppelte Anführungszeichen ersetzt.|  
-|**$(ESCAPE_RBRACKET(**_token\_name_**))**|Umgeht rechte eckige Klammern (]) in der Token-Ersetzungszeichenfolge. Ersetzt jede rechte eckige Klammer durch zwei rechte eckige Klammern.|  
-|**$(ESCAPE_NONE(**_token\_name_**))**|Ersetzt Token, ohne irgendein Zeichen in der Zeichenfolge zu umgehen. Dieses Makro wird zur Unterstützung der Abwärtskompatibilität in Umgebungen bereitgestellt, in denen Token-Ersetzungszeichenfolgen nur von vertrauenswürdigen Benutzern erwartet werden. Weitere Informationen finden Sie weiter unten im Abschnitt zum Aktualisieren von Auftragsschritten für die Verwendung von Makros.|  
+|**$(ESCAPE_SQUOTE(** _token\_name_ **))**|Umgeht einfache Anführungszeichen (') in der Token-Ersetzungszeichenfolge. Ein einfaches Anführungszeichen wird durch zwei einfache Anführungszeichen ersetzt.|  
+|**$(ESCAPE_DQUOTE(** _token\_name_ **))**|Umgeht doppelte Anführungszeichen (") in der Token-Ersetzungszeichenfolge. Ein doppeltes Anführungszeichen wird durch zwei doppelte Anführungszeichen ersetzt.|  
+|**$(ESCAPE_RBRACKET(** _token\_name_ **))**|Umgeht rechte eckige Klammern (]) in der Token-Ersetzungszeichenfolge. Ersetzt jede rechte eckige Klammer durch zwei rechte eckige Klammern.|  
+|**$(ESCAPE_NONE(** _token\_name_ **))**|Ersetzt Token, ohne irgendein Zeichen in der Zeichenfolge zu umgehen. Dieses Makro wird zur Unterstützung der Abwärtskompatibilität in Umgebungen bereitgestellt, in denen Token-Ersetzungszeichenfolgen nur von vertrauenswürdigen Benutzern erwartet werden. Weitere Informationen finden Sie weiter unten im Abschnitt zum Aktualisieren von Auftragsschritten für die Verwendung von Makros.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Aktualisieren von Auftragsschritten für die Verwendung von Makros  
 Die folgende Tabelle beschreibt, wie die symbolische Ersetzung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent behandelt wird. Um die Tokenersetzung durch Warnungen ein- oder auszuschalten, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **SQL Server-Agent** , wählen Sie **Eigenschaften**, und aktivieren bzw. deaktivieren Sie anschließend auf der Seite **Warnungssystem** das Kontrollkästchen **Token für alle Auftragsantworten auf Warnungen ersetzen** .  
   
 |Tokensyntax|Tokenersetzung durch Warnungen aktiviert|Tokenersetzung durch Warnungen deaktiviert|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE-Makro verwendet|Alle Token in Auftragsschritten werden erfolgreich ersetzt.|Durch Warnungen aktivierte Token werden nicht ersetzt. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**und **WMI(**_Eigenschaft_**)**. Andere, statische Token werden erfolgreich ersetzt.|  
+|ESCAPE-Makro verwendet|Alle Token in Auftragsschritten werden erfolgreich ersetzt.|Durch Warnungen aktivierte Token werden nicht ersetzt. Dabei handelt es sich um folgende Token: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**und **WMI(** _Eigenschaft_ **)** . Andere, statische Token werden erfolgreich ersetzt.|  
 |Kein ESCAPE-Makro verwendet|Alle Auftragsschritte mit Token werden nicht ausgeführt.|Alle Auftragsschritte mit Token werden nicht ausgeführt.|  
   
 ## <a name="token-syntax-update-examples"></a>Beispiele für Updates der Tokensyntax  

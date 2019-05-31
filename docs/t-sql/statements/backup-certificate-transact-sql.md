@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774901"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,24 +70,33 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *path_to_file*  
- Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der das Zertifikat gespeichert werden soll. Dieser Pfad kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Standardmäßig wird der Pfad zum DATA-Ordner von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
-  
- *path_to_private_key_file*  
- Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der der private Schlüssel gespeichert werden soll. Dieser Pfad kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Standardmäßig wird der Pfad zum DATA-Ordner von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
+ *certname*  
+ Der Name des Zertifikats für die Sicherung.
 
- *encryption_password*  
+ TO FILE = '*path_to_file*'  
+ Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der das Zertifikat gespeichert werden soll. Dieser Pfad kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Wenn nur ein Dateiname angegeben ist, wird die Datei im Standardordner für Benutzerdaten der Instanz gespeichert (entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-DATA-Ordner oder nicht). Für SQL Server Express LocalDB entspricht der standardmäßige Benutzerdatenordner der Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, das die Instanz erstellt hat.  
+
+ WITH PRIVATE KEY gibt an, dass der private Schlüssel des Zertifikats in einer Datei gespeichert werden muss. Diese Klausel ist optional.
+
+ FILE = '*path_to_private_key_file*'  
+ Gibt den vollständigen Pfad einschließlich des Dateinamens zu der Datei an, in der der private Schlüssel gespeichert werden soll. Dieser Pfad kann ein lokaler Pfad oder ein UNC-Pfad zu einer Netzwerkadresse sein. Wenn nur ein Dateiname angegeben ist, wird die Datei im Standardordner für Benutzerdaten der Instanz gespeichert (entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-DATA-Ordner oder nicht). Für SQL Server Express LocalDB entspricht der standardmäßige Benutzerdatenordner der Instanz dem von der Umgebungsvariable `%USERPROFILE%` angegebenen Pfad für das Konto, das die Instanz erstellt hat.  
+
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  Das Kennwort, das zum Verschlüsseln des privaten Schlüssels verwendet wird, bevor der Schlüssel in die Sicherungsdatei geschrieben wird. Das Kennwort unterliegt Komplexitätsüberprüfungen.  
   
- *decryption_password*  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  Das Kennwort, das zum Entschlüsseln des privaten Schlüssels verwendet wird, bevor der Schlüssel gesichert wird. Dieses Argument ist nicht erforderlich, wenn das Zertifikat mit dem Hauptschlüssel verschlüsselt ist. 
   
 ## <a name="remarks"></a>Remarks  
  Falls der private Schlüssel mit einem Kennwort in der Datenbank verschlüsselt wird, muss das Kennwort für die Entschlüsselung angegeben werden.  
   
- Bei der Sicherung des privaten Schlüssels in einer Datei ist eine Verschlüsselung erforderlich. Das Kennwort, mit dem das Zertifikat geschützt wird, ist nicht dasselbe Kennwort, mit dem der private Schlüssel des Zertifikats verschlüsselt wird.  
-  
- Ein gesichertes Zertifikat kann mithilfe der [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)-Anweisung wiederhergestellt werden.
+ Bei der Sicherung des privaten Schlüssels in einer Datei ist eine Verschlüsselung erforderlich. Das Kennwort, mit dem der private Schlüssel in der Datei geschützt wird, ist nicht dasselbe Kennwort, mit dem der private Schlüssel des Zertifikats in der Datenbank verschlüsselt wird.  
+
+ Private Schlüssel werden im PVK-Dateiformat gespeichert.
+
+ Verwenden Sie zum Wiederherstellen eines gesicherten Zertifikats mit oder ohne privatem Schlüssel die [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)-Anweisung.
+ 
+ Verwenden Sie zum Wiederherstellen eines privaten Schlüssels in einem vorhandenen Zertifikat in der Datenbank die [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)-Anweisung.
  
  Bei einer Sicherung werden die Dateien für das Dienstkonto der SQL Server-Instanz der ACL hinzugefügt. Wenn Sie das Zertifikat auf einem Server wiederherstellen müssen, der unter einem anderen Konto ausgeführt wird, müssen Sie die Berechtigungen für die Dateien so anpassen, dass sie von dem neuen Konto gelesen werden können. 
   
@@ -129,6 +138,10 @@ GO
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)  
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

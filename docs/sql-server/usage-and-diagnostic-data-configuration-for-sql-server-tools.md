@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server-Tools | Microsoft-Dokumentation
+title: Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server-Tools (CEIP) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243514"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376855"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server-Tools
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server-Tools (CEIP)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Cust
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Abonnieren und Kündigen des CEIP für SQL Server Data Tools  
 
- Das Programm zur Verbesserung der Benutzerfreundlichkeit soll Microsoft dabei helfen, seine Produkte im Lauf der Zeit zu verbessern. Dieses Programm sammelt Informationen zur Computerhardware und dazu, wie Benutzer unser Produkt verwenden, ohne die Benutzer bei ihren Aufgaben am Computer zu unterbrechen. Die gesammelten Informationen helfen Microsoft dabei, zu identifizieren, welche Funktionen verbessert werden müssen. In diesem Dokument wird beschrieben, wie Sie Ihr Einverständnis im CEIP für SQL Server Data Tools (SSDT) in Visual Studio 2017, Visual Studio 2015 und Visual Studio 2013 widerrufen bzw. neu erteilen können.  
+ Das Programm zur Verbesserung der Benutzerfreundlichkeit soll Microsoft dabei helfen, seine Produkte im Lauf der Zeit zu verbessern. Dieses Programm sammelt Informationen zur Computerhardware und dazu, wie Benutzer unser Produkt verwenden, ohne die Benutzer bei ihren Aufgaben am Computer zu unterbrechen. Die gesammelten Informationen helfen Microsoft dabei, zu identifizieren, welche Funktionen verbessert werden müssen. In diesem Dokument wird beschrieben, wie Sie Ihr Einverständnis im CEIP für SQL Server Data Tools (SSDT) in Visual Studio 2017, Visual Studio 2015 und Visual Studio 2013 widerrufen bzw. neu erteilen können.  Informationen zum Deaktivieren von CEIP für SQL Server finden Sie unter [Aktivieren oder Deaktivieren der lokalen Überwachung](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off).
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Auswahl und Kontrolle über das CEIP und SQL Server Data Tools in Visual Studio 2017
 

@@ -1,7 +1,7 @@
 ---
 title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/01/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: c21fb619391701d3506c3c73f9acf699f4c5d54f
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305338"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774837"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,9 +115,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> Sind Columnstore-Indizes vorhanden, müssen Sie die Columnstore-Statistikindizes gemäß [Überlegungen, wenn Sie die Abfragen mit Columnstore-Indizes für Klondatenbanken optimieren](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) aktualisieren, bevor Sie den **DBCC CLONEDATABASE**-Befehl ausführen.  Ab SQL Server 2019 sind die im oben genannten Artikel beschriebenen manuellen Schritte nicht mehr erforderlich, da der Befehl **DBCC CLONEDATABASE** diese Informationen automatisch erfasst.
+> Sind Columnstore-Indizes vorhanden, müssen Sie die Columnstore-Statistikindizes gemäß [Überlegungen, wenn Sie die Abfragen mit Columnstore-Indizes für Klondatenbanken optimieren](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294) aktualisieren, bevor Sie den **DBCC CLONEDATABASE**-Befehl ausführen.  Ab SQL Server 2019 sind die im oben genannten Artikel beschriebenen manuellen Schritte nicht mehr erforderlich, da der Befehl **DBCC CLONEDATABASE** diese Informationen automatisch erfasst.
 
-Informationen bezüglich der Datensicherheit bei geklonten Datenbanken finden Sie unter [Understanding data security in cloned databases created using DBCC CLONEDATABASE](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
+<a name="ctp23"></a>
+
+## <a name="stats-blob-for-columnstore-indexes"></a>Statistikblobs für Columnstore-Indizes
+
+In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] erfasst `DBCC CLONEDATABASE` automatisch die Statistikblobs für Columnstore-Indizes, sodass keine manuellen Schritte erforderlich sind.`DBCC CLONEDATABASE` erstellt eine rein schemabasierte Kopie einer Datenbank, die alle Elemente enthält, die zum Behandeln von Problemen mit der Abfrageleistung erforderlich sind, ohne das Daten kopiert werden. In älteren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurden beim Befehl nicht die Statistiken kopiert, die für die Problembehandlung bei Columnstore-Indexabfragen erforderlich sind, weshalb manuelle Schritte zur Erfassung dieser Informationen nötig waren.
+
+Informationen bezüglich der Datensicherheit bei geklonten Datenbanken finden Sie unter [Understanding data security in cloned databases created using DBCC CLONEDATABASE](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287).
 
 ## <a name="internal-database-snapshot"></a>Interne Datenbankmomentaufnahme
 In DBCC CLONEDATABASE wird eine interne Datenbankmomentaufnahme der Quelldatenbank verwendet, um die Transaktionskonsistenz zu erreichen, die zum Ausführen des Kopiervorgangs erforderlich ist. Durch Verwenden dieser Momentaufnahme werden beim Ausführen dieser Befehle Blockierungs- und Parallelitätsprobleme verhindert. Ist das Erstellen einer Momentaufnahme nicht möglich, schlägt DBCC CLONEDATABASE fehl. 

@@ -38,15 +38,15 @@ f1_keywords:
 - sql.data.tools.dbassemblyinfo
 - sql.data.tools.extendedpropertieseditor.dialog
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143580"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099384"
 ---
 # <a name="database-project-settings"></a>Datenbankprojekteinstellungen
 Mit Datenbankprojekteinstellungen werden Aspekte der Datenbank-, Debug- und Buildkonfigurationen gesteuert. Diese Einstellungen werden in die folgenden Kategorien eingeteilt.  
@@ -222,7 +222,7 @@ Mit diesen Einstellungen können Sie das Debuggen des Datenbankprojekts steuern.
 |Zielverbindungszeichenfolge|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Gibt die Verbindungsinformationen für den Datenbankserver an, der für die angegebene Buildkonfiguration verwendet werden soll. Die Standardverbindungszeichenfolge bezieht sich auf eine dynamisch erstellte SQL Server LocalDB-Instanz und -Datenbank.|  
 |Datenbankeigenschaften bereitstellen|Ja|Gibt an, ob die Einstellungen in DatabaseProperties.DatabaseProperties bereitgestellt oder aktualisiert werden, wenn Sie das Datenbankprojekt bereitstellen.|  
 |Datenbank immer neu erstellen|Nein|Gibt an, ob die Datenbank gelöscht und neu erstellt wird, anstatt ein inkrementelles Upgrade durchzuführen. Dieses Kontrollkästchen können Sie beispielsweise aktivieren, wenn Sie Datenbankkomponententests für eine neue Bereitstellung der Datenbank ausführen möchten. Wenn dieses Kontrollkästchen deaktiviert wird, wird die vorhandene Datenbank nicht gelöscht und neu erstellt, sondern aktualisiert.|  
-|Inkrementelle Bereitstellung blockieren, wenn Datenverlust auftreten könnte|Ja|Gibt an, ob die Bereitstellung angehalten wird, wenn ein Update Datenverluste verursachen kann. Wenn dieses Kontrollkästchen aktiviert ist, verursachen Änderungen, die zu Datenverlusten führen, das Beenden der Bereitstellung mit einem Fehler, der den Datenverlust verhindert. Die Bereitstellung wird beispielsweise beendet, wenn eine `varchar(50)` -Spalte in `varchar(30)`geändert wird.<br /><br />**HINWEIS:** Die Bereitstellung wird nur blockiert, wenn die Tabellen, in denen es zu einem Datenverlust kommen kann, Daten enthalten. Die Bereitstellung wird fortgesetzt, wenn keine Daten verloren gehen können.|  
+|Inkrementelle Bereitstellung blockieren, wenn Datenverlust auftreten könnte|Ja|Gibt an, ob die Bereitstellung angehalten wird, wenn ein Update Datenverluste verursachen kann. Wenn dieses Kontrollkästchen aktiviert ist, verursachen Änderungen, die zu Datenverlusten führen, das Beenden der Bereitstellung mit einem Fehler, der den Datenverlust verhindert. Die Bereitstellung wird beispielsweise beendet, wenn eine `varchar(50)` -Spalte in `varchar(30)`geändert wird.<br /><br />**HINWEIS:** Die Bereitstellung wird nur blockiert, wenn die Tabellen, in denen es zu einem Datenverlust kommen könnte, Daten enthalten. Die Bereitstellung wird fortgesetzt, wenn keine Daten verloren gehen können.|  
 |DROP-Objekte im Ziel, aber nicht im Projekt|nein|Gibt an, ob Objekte, die sich in der Zieldatenbank, aber nicht im Datenbankprojekt befinden, im Rahmen des Bereitstellungsskripts gelöscht werden sollen. Sie können einige Dateien im Projekt ausschließen, um sie vorübergehend aus dem Buildskript zu entfernen. Sie können jedoch die vorhandenen Versionen solcher Objekte in der Zieldatenbank belassen. Dieses Kontrollkästchen hat keine Auswirkung, wenn das Kontrollkästchen **Datenbank immer neu erstellen** aktiviert ist, da die Datenbank gelöscht wird.|  
 |CLR-Typen nicht mit ALTER ASSEMBLY-Anweisungen aktualisieren|Nein|Gibt an, ob CLR (Common Language Runtime)-Typen mit ALTER ASSEMBLY-Anweisungen aktualisiert werden oder ob stattdessen das Objekt, das den CLR-Typ instanziiert, gelöscht und beim Bereitstellen von Änderungen neu erstellt wird.|  
 |Erweitert...|Nein|Befehlsschaltfläche, die Ihnen das Angeben von Optionen ermöglicht, die Ereignisse und das Verhalten der Bereitstellung steuern.|  

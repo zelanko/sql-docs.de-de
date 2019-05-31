@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Durchführen eines Upgrade für eine benutzerdefinierte Visual Studio 2010-Testbedingung von einer älteren Version auf SQL Server Data Tools | Microsoft-Dokumentation'
+title: 'Gewusst wie: Durchführen eines Upgrades für eine benutzerdefinierte Visual Studio 2010-Testbedingung von einer älteren Version auf SQL Server Data Tools | Microsoft-Dokumentation'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95ef5fb0ab3443abbaddd47794d7458d0308d5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773958"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098386"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Vorgehensweise: Aktualisieren einer benutzerdefinierten Visual Studio 2010-Testbedingung von einer älteren Version auf SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Gewusst wie: Durchführen eines Upgrades für eine benutzerdefinierten Visual Studio 2010-Testbedingung von einem älteren Release auf SQL Server Data Tools
 Zur Verwendung einer Testbedingung, die in einer Version vor SQL Server Data Tools erstellt wurde, muss ein Upgrade durchgeführt werden:  
   
 -   [Aktualisieren von Verweisen](#UpdateReferences)  
@@ -50,7 +50,7 @@ So aktualisieren Sie die Projektverweise
   
 8.  Klicken Sie im Menü **Projekt** auf **Projekt entladen**.  
   
-9. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das **Projekt**, und wählen Sie `project_name`**.csproj** **bearbeiten** aus.  
+9. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das **Projekt**, und wählen Sie `project_name` **.csproj** **bearbeiten** aus.  
   
 10. Fügen Sie nach dem Import von `Microsoft.CSharp.targets` folgende Import-Anweisung hinzu:  
   
@@ -142,6 +142,6 @@ Entfernen Sie den Assemblyverweis auf die alte Testbedingung.
   
 Fügen Sie dem Projekt einen neuen SQL Server-Komponententest hinzu, um einen Assemblyverweis auf die Testbedingung, für die ein Upgrade durchgeführt wurde, im Projekt zu erstellen. Zum Erstellen des Verweises muss eine Testklasse hinzugefügt werden. Nachdem der Verweis hinzugefügt wurde, können Sie die Testklasse löschen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
   

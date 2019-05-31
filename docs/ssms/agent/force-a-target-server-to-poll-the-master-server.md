@@ -13,16 +13,16 @@ helpviewer_keywords:
 - master servers [SQL Server], polling
 - target servers [SQL Server], polling the master server
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0f3c9d209055bc05ff53c64f354b282e32be8c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49408bfe22bf05e6315b9598c0b65f5c02b791de
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740498"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096544"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der [!INCLUDE[ssNoVersi
 > [!NOTE]  
 > Wenn der Zielserver versucht, den Auftragsstatus durch Hochladen zu übertragen, und dabei nicht auf den Masterserver zugreifen kann, bleibt der Auftragsstatus so lange im Spooler (in der Warteschlange), bis der Masterserver wieder zur Verfügung steht.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Sicherheit](#Security)  
+-   **Vorbereitungen:**  [Beschränkungen](#Restrictions), [Sicherheit](#Security)  
   
--   **Erzwingen, dass ein Zielserver den Masterserver abruft:** [SQL Server Management Studio](#SSMS)  
+-   **So erzwingen Sie, dass ein Zielserver den Masterserver abruft mit:** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

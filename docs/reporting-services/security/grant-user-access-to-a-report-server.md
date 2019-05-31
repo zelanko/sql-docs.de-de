@@ -1,8 +1,8 @@
 ---
 title: Gewähren von Benutzerzugriff auf einen Berichtsserver | Microsoft-Dokumentation
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021854"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449691"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Gewähren von Benutzerzugriff auf einen Berichtsserver
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021854"
 
  **Berichtsserver im SharePoint-Modus:** Für Berichtsserver, die für den integrierten SharePoint-Modus konfiguriert sind, muss der Zugriff von einer SharePoint-Website mit SharePoint-Berechtigungen konfiguriert werden. Die Berechtigungsebenen der SharePoint-Website legen den Zugriff auf Berichtsserverinhalt und -vorgänge fest. Sie müssen Websiteadministrator sein, um Berechtigungen auf einer SharePoint-Website gewähren zu können. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Berichtsserver im einheitlichen Modus:** In diesem Thema liegt der Schwerpunkt auf einem für den einheitlichen Modus konfigurierten Berichtsserver und der Verwendung des Webportals zum Zuweisen von Benutzern zu Rollen. Die folgenden beiden Rollen stehen zur Verfügung:
+ **Berichtsserver im einheitlichen Modus:** In diesem Artikel liegt der Schwerpunkt auf einem für den einheitlichen Modus konfigurierten Berichtsserver und der Verwendung des Webportals zum Zuweisen von Benutzern zu Rollen. Die folgenden beiden Rollen stehen zur Verfügung:
 
 - Rollen auf Elementebene werden verwendet, um Berichtsserverinhalte, Abonnements, Berichtsverarbeitung und Berichtsverlauf anzuzeigen, hinzuzufügen und zu verwalten. Rollenzuweisungen auf Elementebene werden im Stammknoten (dem Stammordner) oder in bestimmten Ordnern oder Elementen weiter unten in der Hierarchie definiert.
 
@@ -61,7 +61,7 @@ ms.locfileid: "50021854"
 
 5. Klicken Sie auf **Gruppe oder Benutzer hinzufügen**.
 
-6. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>. 
+6. Geben Sie unter **Gruppe oder Benutzer** ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>.
 
     > [!NOTE]
     > Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.
@@ -95,10 +95,8 @@ ms.locfileid: "50021854"
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Erstellen und Verwalten von Rollenzuweisungen](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Neue Rollenzuweisung: Seite „Rollenzuweisung bearbeiten“ &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Sicherheit (Eigenschaftenseite) &#40;Elemente, Berichts-Manager&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[Rollenzuweisungen](../../reporting-services/security/role-assignments.md)   
+[Create and Manage Role Assignments (Erstellen und Verwalten von Rollenzuweisungen)](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Role Assignments (Rollenzuweisungen)](../../reporting-services/security/role-assignments.md)  
 [Rollendefinitionen](../../reporting-services/security/role-definitions.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

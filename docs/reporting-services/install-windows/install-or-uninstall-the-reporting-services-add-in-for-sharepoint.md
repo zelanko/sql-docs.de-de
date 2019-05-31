@@ -5,21 +5,21 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 55c88749d84290636fd6a9fc3ac3866f5499450f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 855991a52d2f531f559620427d4a3fc29fd79f35
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775966"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  Führen Sie das Installationspaket für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte (rsSharePoint.msi) auf den SharePoint-Servern aus, um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen innerhalb einer SharePoint-Bereitstellung zu aktivieren. Zu den Features gehören Power View, ein Berichts-Viewer-Webpart, ein URL-Proxyendpunkt, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Inhaltstypen sowie Anwendungsseiten, mit deren Hilfe Berichte, Berichtsmodelle, Datenquellen und andere Berichtsserverinhalte auf einer SharePoint-Website erstellt, angezeigt und verwaltet werden können. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist eine erforderliche Komponente für Berichtsserver, die im SharePoint-Modus ausgeführt werden. Führen Sie zum Installieren des Add-Ins entweder den SQL Server 2016-Setup-Assistenten aus, oder laden Sie „rsSharePoint.msi“ über das SQL Server 2016 Feature Pack herunter. Eine Liste der Versionen der Add-In- und Downloadseiten finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+  Führen Sie das Installationspaket für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte (rsSharePoint.msi) auf den SharePoint-Servern aus, um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen innerhalb einer SharePoint-Bereitstellung zu aktivieren. Zu den Features gehören Power View, ein Berichts-Viewer-Webpart, ein URL-Proxyendpunkt, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Inhaltstypen sowie Anwendungsseiten, mit deren Hilfe Berichte, Datenquellen und andere Berichtsserverinhalte auf einer SharePoint-Website erstellt, angezeigt und verwaltet werden können. Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte ist eine erforderliche Komponente für Berichtsserver, die im SharePoint-Modus ausgeführt werden. Führen Sie zum Installieren des Add-Ins entweder den SQL Server 2016-Setup-Assistenten aus, oder laden Sie „rsSharePoint.msi“ über das SQL Server 2016 Feature Pack herunter. Eine Liste der Versionen der Add-In- und Downloadseiten finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 > [!NOTE]
 > Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
@@ -77,7 +77,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  Konfigurieren Sie die Berichtsservereinstellungen und die Funktionsaktivierung in der SharePoint-Zentraladministration. zugreifen. Weitere Informationen zum Installieren und Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md).  
+3.  Konfigurieren Sie die Berichtsservereinstellungen und die Funktionsaktivierung in der SharePoint-Zentraladministration. erforderlich. Weitere Informationen zum Installieren und Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md).  
   
 ###  <a name="bkmk_files_only_installation"></a> "Nur-Datei"-Installation  
  Wenn die Dateien installiert, die Installationsphase mit benutzerdefinierten Aktionen jedoch übersprungen werden soll, führen Sie die Datei rssharepoint.msi über die Befehlszeile mit der SKIPCA-Option aus:  
@@ -101,7 +101,7 @@ Rssharepoint.msi /?
   
     1.  Wechseln Sie zu dem Ordner, in dem die Datei **rsCustomAction.exe**enthalten ist. Diese Datei wird bei der ausschließlichen Installation von Dateien des Add-Ins auf den Computer kopiert. **rsCustomAction.exe** befindet sich im Verzeichnis **%Temp%** . Geben Sie an der Eingabeaufforderung Folgendes ein, um zur Datei zu navigieren:  
   
-         **CD %temp%**.  
+         **CD %temp%** .  
   
          Die Datei sollte sich hier befinden: **\Benutzer\\<Ihr Name\>\AppData\Local\Temp**.  
   
@@ -267,7 +267,7 @@ Rssharepoint.msi /?
 ## <a name="configuring-reporting-services"></a>Konfigurieren von Reporting Services  
  Nachdem das Add-In auf allen erforderlichen Computern installiert wurde, muss der Berichtsserver über die SharePoint-Zentraladministration konfiguriert werden. Die erforderlichen Schritte richten sich nach der Reihenfolge, in der die verschiedenen Technologien installiert wurden. Weitere Informationen finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md) und [Reporting Services Report Server &#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md)   
 [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  

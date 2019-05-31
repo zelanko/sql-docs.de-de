@@ -12,16 +12,16 @@ helpviewer_keywords:
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ba2b92e32f5429a873016bdea3f2643dd644292
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: fc65ce77ecedb8b5587ab68fb532e72224ca6067
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696902"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095494"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ In diesem Thema wird das Festlegen der Frequenz für den [!INCLUDE[msCoName](../
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   **Festlegen des Abrufintervalls für Zielserver mit:** [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **So legen Sie das Abrufintervall für Zielserver fest mit:** [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
 Auf jedem Server kann gleichzeitig eine Instanz des gleichen Auftrags ausgeführt werden. Jeder Zielserver ruft in regelmäßigen Abständen den Masterserver ab, lädt eine Kopie aller neuen Aufträge herunter, die dem Zielserver zugewiesen wurden, und trennt dann die Verbindung. Der Zielserver führt den Auftrag lokal aus und stellt dann erneut eine Verbindung mit dem Masterserver her, um den Auftragsergebnisstatus hochzuladen.  
@@ -72,6 +72,6 @@ Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Securit
   
 3.  Verwenden Sie im Abfragefenster die gespeicherte Systemprozedur [sp_post_msx_operation (Transact-SQL)](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) , um das Abrufintervall für Zielserver festzulegen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [sysdownloadlist](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  
   

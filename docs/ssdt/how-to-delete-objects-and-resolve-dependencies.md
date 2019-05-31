@@ -12,15 +12,15 @@ f1_keywords:
 - sql.data.tools.dropdatabaseconfirmation.dialog
 - sql.data.tools.dropmultipledatabasesconfirmation.dialog
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1c52b2bcd700d4b7399fe27c79063f4b27d4e68a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676168"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090215"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>Gewusst wie: Löschen von Objekten und Auflösen von Abhängigkeiten
 Wenn Sie ein Objekt im **SQL Server-Objekt-Explorer** umbenennen oder löschen, erkennt SQL Server Data Tools automatisch alle zugehörigen Abhängigkeitsobjekte und bereitet ein ALTER-Skript vor, um die Abhängigkeit entsprechend umzubenennen oder zu löschen.  
@@ -47,7 +47,7 @@ Wenn Sie ein Objekt im **SQL Server-Objekt-Explorer** umbenennen oder löschen, 
     > [!WARNING]  
     > Skriptbasierte Abhängigkeiten (z. B. Verweise aus einer Sicht auf eine Tabelle) und gespeicherte Prozeduren werden von SSDT nicht automatisch aktualisiert. Nach dem Umbenennen können Sie anhand des Bereichs **Fehlerliste** alle anderen Abhängigkeiten suchen und diese manuell korrigieren.  
   
-5.  Wenden Sie die Änderung gemäß den Schritten im vorherigen Verfahren [Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) an.  
+5.  Übernehmen Sie die Änderungen, indem Sie die Schritte in der vorherigen Prozedur [Vorgehensweise: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) ausführen.  
   
 6.  Klicken Sie im **SQL Server-Objekt-Explorer** erneut mit der rechten Maustaste auf die Tabelle **Customers**, und wählen Sie die Option **Daten anzeigen** aus. Beachten Sie, dass Tabellendaten nach dem Umbenennungsvorgang unverändert beibehalten sind.  
   

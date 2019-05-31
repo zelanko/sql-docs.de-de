@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 21096819ebd7a54ab8f4505ad980c0e6a5266d6f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670464"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098106"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Gewusst wie: Herstellen einer Verbindung mit einer Datenbank und Durchsuchen vorhandener Objekte
 Eine häufige Aufgabe für Datenbankadministratoren und -entwickler besteht darin, eine Verbindung mit einer Livedatenbank herzustellen, deren Schema zu entwerfen oder zu durchsuchen und auf die enthaltenen Objekte abzufragen. Der SQL Server-Objekt-Explorer in Visual Studio enthält nun einen dedizierten Knoten **SQL Server**, unter dem sämtliche verbundenen SQL Server-Instanzen zusammen mit ihren Datenbanken in einer Hierarchie gruppiert sind, die der von SSMS ähnelt. Die verbundenen SQL Server-Instanzen können lokale Instanzen (z.B. eine ausgeführte SQL Server 2008-Instanz) oder eine externe SQL Azure-Instanz darstellen.  

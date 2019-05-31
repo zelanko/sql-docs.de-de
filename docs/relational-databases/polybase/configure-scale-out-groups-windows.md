@@ -1,6 +1,6 @@
 ---
 title: Verbessern von PolyBase-Erweiterungsgruppen unter Windows | Microsoft-Dokumentation
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: ab93c4a4ea1a09fa9af8adea765b342d7ac9f340
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417481"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774721"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Verbessern von PolyBase-Erweiterungsgruppen unter Windows
 
@@ -52,7 +53,7 @@ Hier erfahren Sie, wie Sie eine PolyBase-Gruppe mit den folgenden Informationen 
   
    - PQTH4A-CMP02  
   
-2. Domänenkonto: *PQTH4A\PolyBaseUser*  
+2. Domänenkonto: *PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>Installieren von SQL Server mit PolyBase auf allen Computern
 
@@ -88,7 +89,7 @@ Nachdem das Setup abgeschlossen ist, können beide Computer als PolyBase-Gruppen
   
 4. Fahren Sie die PolyBase-Engine herunter, und starten Sie den PolyBase-Datenverschiebedienst neu.
   
-## <a name="optional-remove-a-compute-node"></a>Optional: Entfernen eines Computeknotens  
+## <a name="optional-remove-a-compute-node"></a>Optional: Entfernen eines Serverknotens  
   
 1. Stellen Sie eine Verbindung mit dem Computeknoten SQL Server (PQTH4A-CMP02) her.
   

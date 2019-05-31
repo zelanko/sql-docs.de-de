@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erweitern der Datenbankprojektbereitstellung zum Analysieren des Bereitstellungsplans | Microsoft-Dokumentation'
+title: 'Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts zum Analysieren des Bereitstellungsplans | Microsoft-Dokumentation'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512610"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097457"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts für die Analyse des Bereitstellungsplans
 Sie können Bereitstellungs-Contributors erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein SQL-Projekt bereitstellen. Sie können DeploymentPlanModifier oder DeploymentPlanExecutor erstellen. Verwenden Sie DeploymentPlanModifier, um den Plan zu ändern, bevor er ausgeführt wird, und DeploymentPlanExecutor, um Vorgänge durchzuführen, während der Plan ausgeführt wird. In dieser exemplarischen Vorgehensweise erstellen Sie einen DeploymentPlanExecutor mit der Bezeichnung DeploymentUpdateReportContributor, der einen Bericht über die Aktionen erstellt, die beim Bereitstellen eines Datenbankprojekts ausgeführt werden. Da dieser Erstellungs-Contributor einen Parameter akzeptiert, mit dem gesteuert wird, ob der Bericht erstellt wird, müssen Sie einen weiteren erforderlichen Schritt durchführen.  
   
 In dieser exemplarischen Vorgehensweise führen Sie folgende Hauptaufgaben aus:  
@@ -526,7 +526,7 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
     |-----------------|--------------------|  
     |Klassenmember|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport-Methode|XmlWriter und XmlWriterSettings|  
-    |ReportPlanOperations-Methode|Interessante Typen: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Es gibt zahlreiche andere Schritte. Eine vollständige Liste der Schritte finden Sie in der API-Dokumentation.|  
+    |ReportPlanOperations-Methode|Wichtige Typen enthalten Folgendes: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Es gibt zahlreiche andere Schritte. Eine vollständige Liste der Schritte finden Sie in der API-Dokumentation.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -540,7 +540,7 @@ Zum Erstellen eines Bereitstellungs-Contributors führen Sie folgende Aufgaben a
   
 3.  Klicken Sie auf **Assembly signieren**.  
   
-4.  Klicken Sie unter **Schlüsseldatei mit starkem Namen auswählen:** auf **<New>**.  
+4.  Klicken Sie unter **Schlüsseldatei mit starkem Namen auswählen:** auf **<New>** .  
   
 5.  Geben Sie im Dialogfeld **Schlüssel für einen starken Namen erstellen** unter **Schlüsseldateiname** **MyRefKey**ein.  
   
@@ -586,7 +586,7 @@ Die zweite Methode ist das Erstellen einer Zieledatei, die die erforderlichen Co
   
 1.  Navigieren Sie zu %Programme%\MSBuild.  
   
-2.  Erstellen Sie einen neuen Ordner namens „MyContributors“, in dem Ihre Zieledateien gespeichert werden.  
+2.  Erstellen Sie einen neuen Ordner namens „MyContributors“, in dem Ihre Zieldateien gespeichert werden.  
   
 3.  Erstellen Sie in diesem Verzeichnis eine neue Datei namens „MyContributors.targets“, fügen Sie den folgenden Text hinzu, und speichern Sie die Datei:  
   
@@ -740,8 +740,8 @@ Ihr Projekt kann in Visual Studio normal veröffentlicht oder bereitgestellt wer
 ## <a name="next-steps"></a>Next Steps  
 Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Dateien durchzuführen. Dies ist nur ein Beispiel für einen [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Sie können auch einen [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) erstellen, um einen Bereitstellungsplan zu ändern, bevor er ausgeführt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Exemplarische Vorgehensweise: Erweitern eines Datenbankprojektbuilds zum Generieren von Modellstatistiken](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Exemplarische Vorgehensweise: Erweitern einer Datenbankprojektbereitstellung zum Bearbeiten des Bereitstellungsplans](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+[Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Exemplarische Vorgehensweise: Erweitern der Bereitstellung von Datenbankprojekten zum Ändern des Bereitstellungsplans](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

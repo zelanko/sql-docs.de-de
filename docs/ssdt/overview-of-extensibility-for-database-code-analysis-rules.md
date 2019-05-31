@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 42896bb62b5566c955c86c43618a8f64e4968b5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 32462daf6d747b278be788d2364e01c2e8912114
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405867"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101928"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Übersicht der Erweiterbarkeit um Regeln für die Datenbank-Codeanalyse
 Visual Studio-Editionen, die SQL Server Data Tools enthalten, beinhalten Regeln für die Codeanalyse, um Transact\-SQL-Warnungen zu Entwurf, Benennung und Leistung in Ihrem Datenbankcode zu melden. Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren von Datenbankcode zum Verbessern der Codequalität](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  
@@ -30,7 +30,7 @@ Das folgende Diagramm veranschaulicht die Interaktion der Regeln zur Datenbankco
   
 ![Komponenten von Regeln zur Datenbankcodeanalyse](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Komponenten von Regeln zur Datenbankcodeanalyse")  
   
-Wenn Sie die Funktion für Regeln zur Datenbankcodeanalyse verwenden, entweder durch direktes Ausführen der statischen Codeanalyse (weitere Informationen finden Sie unter [Gewusst wie: Analysieren von Transact-SQL-Code auf Codefehler](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) oder durch Erstellen eines Builds, werden alle Regeln geladen und entsprechend ihrer Konfiguration in Ihrem Projekt verwendet. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren und Deaktivieren bestimmter Regeln für die statische Analyse von Datenbankcode](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). Der Erweiterungs-Manager lädt außerdem alle benutzerdefinierten Regelassemblys, die von Ihnen erstellt und registriert wurden. Weitere Informationen finden Sie unter [Gewusst wie: Installieren und Verwalten von Funktionserweiterungen](../ssdt/how-to-install-and-manage-feature-extensions.md).  
+Wenn Sie die Datenbankfunktion der Codeanalyseregeln entweder direkt durch Ausführen der statischen Codeanalyse (weitere Informationen finden Sie unter [Vorgehensweise: Analysieren von Transact-SQL-Code auf Codefehler](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) oder durch Ausführen eines Builds verwenden, werden alle Regeln gemäß der Konfiguration in Ihrem Projekt geladen und verwendet. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren und Deaktivieren bestimmter Regeln für die statische Analyse von Datenbankcode](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). Der Erweiterungs-Manager lädt außerdem alle benutzerdefinierten Regelassemblys, die von Ihnen erstellt und registriert wurden. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Verwalten von Funktionserweiterungen](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
 Eine benutzerdefinierte Klasse von Codeanalyseregeln erbt von [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). Die benutzerdefinierte Regelklasse kann über ihren Regelausführungskontext auf eine Reihe von nützlichen Objekten zugreifen. Dazu gehören:  
   
@@ -44,6 +44,6 @@ Eine benutzerdefinierte Klasse von Codeanalyseregeln erbt von [SqlCodeAnalysisRu
   
 Ein Dac.CodeAnalysis.SqlRuleProblem wird von der Regel erstellt, um alle von ihr möglicherweise gefundenen Probleme darzustellen. Bei der Erstellung werden das relevante Dac.Model.TSqlObject und ein mögliches Element in der [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx)-Darstellung an den Konstruktor übergeben und dazu verwendet, die Position des Problems in Ihren Quellcodedateien zu bestimmen. Am Ende der Analyse werden alle genannten Probleme an den Fehler-Manager übergeben und in der Fehlerliste angezeigt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erweitern der Datenbankfunktionen](../ssdt/extending-the-database-features.md)  
   

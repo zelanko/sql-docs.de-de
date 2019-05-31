@@ -11,33 +11,17 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872320"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104923"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Der Leistungsaspekt der Always On-Verfügbarkeitsgruppen ist entscheidend, um die Vereinbarung zum Servicelevel (SLA) für Ihre unternehmenskritischen Datenbanken zu erfüllen. Wenn Sie den Vorgang bei Verfügbarkeitsgruppen zum Senden von Protokollen an sekundäre Replikate verstehen, können Sie die Recovery Time Objective (RTO) und Recovery Point Objective (RPO) Ihrer Verfügbarkeitsimplementierung besser einschätzen und Engpässe bei leistungsschwachen Verfügbarkeitsgruppen oder Replikaten ausfindig machen. In diesem Artikel werden der Synchronisierungsprozess und die Berechnung einiger der wichtigsten Metriken beschrieben. Zudem enthält der Artikel Links zu einigen allgemeinen leistungsbezogenen Problembehandlungsszenarien.  
-  
- Die folgenden Themen werden erörtert:  
-  
--   [Datensynchronisierungsprozess](#data-synchronization-process)  
-  
--   [Flusssteuerungsgates](#flow-control-gates)  
-  
--   [Einschätzen der Failoverzeit (RTO)](#estimating-failover-time-rto)  
-  
--   [Einschätzen des möglichen Datenverlusts (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [Überwachen von RTO und RPO](#monitoring-for-rto-and-rpo)  
-  
--   [Leistungsbezogene Problembehandlungsszenarien](#BKMK_SCENARIOS)  
-  
--   [Nützliche erweiterte Ereignisse](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>Datensynchronisierungsprozess  
  Um die Zeit bis zur vollständigen Synchronisierung einzuschätzen und den Engpass zu identifizieren, müssen Sie den Synchronisierungsprozess verstehen. Leistungsengpässe können an einer beliebigen Stelle im Prozess auftreten. Durch die Ermittlung des Engpasses können Sie den zugrunde liegenden Problemen besser auf den Grund gehen. Der folgende Abbildung und Tabelle veranschaulichen den Datensynchronisierungsprozess:  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872320"
 |**Sequenz**|**Beschreibung des Schritts**|**Kommentare**|**Nützliche Metriken**|  
 |1|Protokollgenerierung|Protokolldaten werden auf den Datenträger geleert. Dieses Protokoll muss in die sekundären Replikate repliziert werden. Die Protokolldatensätze werden in die Sendewarteschlange eingereiht.|[SQL Server: Datenbank > Geleerte Protokollbytes/Sekunde](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Erfassung|Für jede Datenbank werden Protokolle erfasst und an die entsprechende Partnerwarteschlange gesendet (eine pro Datenbankreplikatspaar). Dieser Erfassungsprozess wird fortlaufend ausgeführt, solange das Verfügbarkeitsreplikat verbunden ist und die Datenverschiebung nicht aus irgendeinem Grund angehalten wird. Der Status des Datenbankreplikatspaar lautet entweder „Wird synchronisiert“ oder „Synchronisiert“. Wenn die Nachrichten beim Erfassungsprozess nicht schnell genug überprüft und in die Warteschlange eingereiht werden können, führt dies zum Anwachsen der Protokollsendewarteschlange.|[SQL Server: Verfügbarkeitsreplikat > An Replikat gesendete Bytes/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md): Eine Aggregation der Summe aller Datenbanknachrichten in der Warteschlange für dieses Verfügbarkeitsreplikat.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) und [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/s) für das primäre Replikat|  
-|3|Send|Die Nachrichten in jeder Datenbankreplikatswarteschlange werden aus der Warteschlange entfernt und über das Netzwerk an das entsprechende sekundäre Replikat gesendet.|[SQL Server: Verfügbarkeitsreplikat >An den Transport gesendete Bytes/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md) und [SQL Server: Verfügbarkeitsreplikat > Nachrichtenbestätigungszeit](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms)|  
+|3|Send|Die Nachrichten in jeder Datenbankreplikatswarteschlange werden aus der Warteschlange entfernt und über das Netzwerk an das entsprechende sekundäre Replikat gesendet.|[SQL Server: Verfügbarkeitsreplikat > An den Transport gesendete Bytes/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Empfang und Zwischenspeicherung|Jedes sekundäre Replikat empfängt und speichert die Nachricht zwischen.|Leistungsindikator [SQL Server: Verfügbarkeitsreplikat > Empfangene Protokollbytes/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Festschreibung|Ein Protokoll wird zur Festschreibung für das sekundäre Replikat geleert. Nach der Protokollleerung wird eine Bestätigung an das primäre Replikat zurückgesendet.<br /><br /> Ist das Protokoll festgeschrieben, wurde ein Datenverlust abgewendet.|Leistungsindikator [SQL Server: Datenbank > Geleerte Protokollbytes/Sekunde](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Wartetyp [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Wiederholen|Wiederholen Sie die geleerten Seiten auf dem sekundären Replikat. Seiten werden in der Wiederholungswarteschlange beibehalten, während sie darauf warten, wiederholt zu werden.|[SQL Server: Datenbankreplikat > Wiederholte Bytes/Sekunde](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) und [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Wartetyp [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  

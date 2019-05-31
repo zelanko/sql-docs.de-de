@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780348"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098170"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Gewusst wie: Erstellen von neuen Datenbankobjekten mit Abfragen
+# <a name="how-to-create-new-database-objects-using-queries"></a>Gewusst wie: Erstellen von neuen Datenbankobjekten mithilfe von Abfragen
 Falls Sie es vorziehen, Sichten, gespeicherte Prozeduren, Funktionen, Trigger oder benutzerdefinierte Typen mithilfe von Skripts zu erstellen oder zu bearbeiten, können Sie den Transact\-SQL-Editor verwenden. Der Transact\-SQL-Editor bietet Unterstützung für IntelliSense und andere Sprachen. Weitere Informationen finden Sie unter [Verwenden des Transact-SQL-Editors zum Bearbeiten und Ausführen von Skripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 Der Transact\-SQL-Editor wird aufgerufen, wenn Sie eine Datenbankentität in einer verbundenen Datenbank oder einem Projekt über das Kontextmenü **Code anzeigen** öffnen. Er wird auch automatisch geöffnet, wenn Sie das Kontextmenü **Neue Abfrage** im SQL Server-Objekt-Explorer aufrufen und wenn Sie einem Datenbankprojekt ein neues Skriptobjekt hinzufügen. Wenn Sie mit keiner Datenbank verbunden sind, aber eine Abfrage für eine Datenbank ausführen möchten, können Sie auch das Dialogfeld **Neue Abfrageverbindung** verwenden, indem Sie im Menü **SQL** das Menü **Transact-SQL-Editor** auswählen, um eine Verbindung mit einer Datenbank herzustellen und den Transact\-SQL-Editor zu starten.  
@@ -90,7 +90,7 @@ Der Transact\-SQL-Editor wird aufgerufen, wenn Sie eine Datenbankentität in ein
   
 2.  Erweitern Sie im SQL Server-Objekt-Explorer unter dem Knoten **Trade** den Knoten **Sicht**, um die soeben erstellte neue Sicht zu suchen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Verwalten von Tabellen, Beziehungen und Beheben von Fehlern](../ssdt/manage-tables-relationships-and-fix-errors.md)  
 [Verwenden des Transact-SQL-Editors zum Bearbeiten und Ausführen von Skripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  
   

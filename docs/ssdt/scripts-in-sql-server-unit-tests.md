@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751627"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101901"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Skripts in SQL Server-Komponententests
 Jeder SQL Server-Komponententest enthält eine einzelne Aktion für Vortest, Test und Nachtest. Jede dieser Aktionen enthält wiederum folgende Elemente:  
@@ -61,7 +61,7 @@ Mit dem TestInitialize-Skript können Sie die Testdatenbank vorbereiten, und mit
 ## <a name="pre-test-and-post-test-scripts"></a>Vortest- und Nachtestskripts  
 Die Skripts, die den Vortest- und Nachtestaktionen zugeordnet sind, unterscheiden sich wahrscheinlich von Komponententest zu Komponententest. Sie können diese Skripts verwenden, um inkrementelle Änderungen an der Datenbank vorzunehmen und diese Änderungen dann zu bereinigen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
   

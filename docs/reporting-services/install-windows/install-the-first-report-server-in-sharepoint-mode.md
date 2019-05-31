@@ -4,15 +4,15 @@ ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e65d1f965b45d808ba68a9cdffc87fad6f08814
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775766"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installieren des ersten Berichtsservers im SharePoint-Modus
 
@@ -410,7 +410,7 @@ Darüber hinaus muss das von der Reporting Services-Dienstanwendung verwendete S
  Die Reporting Services-Datenwarnungsfunktion sendet Warnungen in E-Mail-Nachrichten. Um E-Mails übermitteln zu können, müssen Sie unter Umständen Ihre Reporting Services-Dienstanwendung konfigurieren und die E-Mail-Übermittlungserweiterung für die Dienstanwendung ändern. Die E-Mail-Einstellungen sind erforderlich, wenn Sie beabsichtigen, die E-Mail-Übermittlungserweiterung für die Reporting Services-Abonnementfunktion zu verwenden. Weitere Informationen finden Sie unter [Configure E-mail for a Reporting Services Service Application (SharePoint 2013 and SharePoint 2016) (Konfigurieren von E-Mails für eine Reporting Services-Dienstanwendung (SharePoint 2013 und SharePoint 2016))](https://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>Hinzufügen von Reporting Services-Inhaltstypen zu Inhaltsbibliotheken  
- Reporting Services stellt vordefinierte Inhaltstypen bereit, die zum Verwalten freigegebener Datenquellendateien (RSDS), Berichtsmodelldateien (SMDL) und Berichts-Generator-Berichtsdefinitionsdateien (RDL) verwendet werden können. Wenn einer Bibliothek ein Inhaltstyp ( **Berichts-Generator-Bericht**, **Berichtsmodell**und **Berichtsdatenquelle** ) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+ Reporting Services stellt vordefinierte Inhaltstypen bereit, die zum Verwalten freigegebener Datenquellendateien (RSDS) und Berichts-Generator-Berichtsdefinitionsdateien (RDL) verwendet werden können. Wenn einer Bibliothek ein Inhaltstyp (**Berichts-Generator-Bericht** und **Berichtsdatenquelle**) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können. Weitere Informationen finden Sie unter [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>Aktivieren des Features zur Berichtsserver-Dateisynchronisierung  
  Wenn Benutzer häufig veröffentlichte Berichtselemente direkt in SharePoint-Dokumentbibliotheken hochladen, ist das Feature zur **Berichtsserver-Dateisynchronisierung** auf Websiteebene hilfreich. Die Dateisynchronisierungsfunktion synchronisiert den Berichtsserverkatalog regelmäßiger mit Elementen in Dokumentbibliotheken. Weitere Informationen finden Sie unter [Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in der SharePoint-Zentraladministration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  

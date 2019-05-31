@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 547fb6e8bc880fc98d4cf1f3592e550edfaab735
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666249"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101960"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Datenbank-Build und -Bereitstellung anpassen durch Verwendung von Erstellungs- und Bereitstellungs-Contributors
 Visual Studio bietet Erweiterungspunkte, mit deren Hilfe Sie das Verhalten der Erstellungs- und Bereitstellungsaktionen für Datenbankprojekte ändern können.  
@@ -47,9 +47,9 @@ Darüber hinaus können Sie angepasste Name/Wert-Argumentpaare aus Ihrem Contrib
   
 |**Allgemeine Aufgaben**|**Hilfreiche Themen**|  
 |--------------------|--------------------------|  
-|**Weitere Informationen zu den Erweiterbarkeitspunkten**: Informieren Sie sich über die Basisklassen für die Implementierung von Erstellungs- und Bereitstellungs-Contributors.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**Erstellen von Beispiel-Contributors**: Lernen Sie die erforderlichen Schritte zum Erstellen eines Erstellungs- oder Bereitstellungs-Contributors kennen. In diesen exemplarischen Vorgehensweisen lernen Sie Folgendes:<br /><br />–   Erstellen eines Erstellungs-Contributors zum Generieren eines Berichts mit einer Liste aller im Modell enthaltenen Elemente<br />–   Erstellen eines Bereitstellungs-Contributors zum Ändern des Bereitstellungsplans vor dessen Ausführung<br />–   Erstellen eines Bereitstellungs-Contributors zum Generieren eines Bereitstellungsberichts beim Bereitstellen eines SQL-Projekts<br /><br />Contributors können alle in einer einzelnen Assembly oder in mehreren Assemblys erstellt werden – je nachdem, wie Sie die Contributors auf Ihr Team verteilen möchten.|[Exemplarische Vorgehensweise: Erweitern eines Datenbankprojektbuilds zum Generieren von Modellstatistiken](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Exemplarische Vorgehensweise: Erweitern einer Datenbankprojektbereitstellung zum Bearbeiten des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**Weitere Informationen über Erweiterungspunkte:** Informieren Sie sich über die Basisklassen für die Implementierung von Mitwirkenden an der Erstellung und Bereitstellung.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**Beispielmitwirkende erstellen:** Lernen Sie die erforderlichen Schritte zum Erstellen eines Mitwirkenden an der Erstellung oder Bereitstellung kennen. In diesen exemplarischen Vorgehensweisen lernen Sie Folgendes:<br /><br />–   Erstellen eines Erstellungs-Contributors zum Generieren eines Berichts mit einer Liste aller im Modell enthaltenen Elemente<br />–   Erstellen eines Bereitstellungs-Contributors zum Ändern des Bereitstellungsplans vor dessen Ausführung<br />–   Erstellen eines Bereitstellungs-Contributors zum Generieren eines Bereitstellungsberichts beim Bereitstellen eines SQL-Projekts<br /><br />Contributors können alle in einer einzelnen Assembly oder in mehreren Assemblys erstellt werden – je nachdem, wie Sie die Contributors auf Ihr Team verteilen möchten.|[Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Exemplarische Vorgehensweise: Erweitern der Bereitstellung von Datenbankprojekten zum Ändern des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts zum Analysieren des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Definieren benutzerdefinierter Bedingungen für SQL-Komponententests](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
   

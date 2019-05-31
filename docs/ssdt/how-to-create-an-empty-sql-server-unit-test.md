@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681238"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098041"
 ---
-# <a name="how-to-create-an-empty-sql-server-unit-test"></a>Vorgehensweise: Erstellen eines leeren SQL Server-Komponententests
-Schließen Sie Komponententests in das Datenbankprojekt ein, um sicherzustellen, dass vorhandene Funktionen nicht durch Änderungen an Datenbankobjekten beeinträchtigt werden. Bei den folgenden Vorgehensweisen wird das Erstellen von SQL Server-Komponententests für beliebige Datenbankobjekte erläutert. SQL Server Data Tools bietet ein gewisses Maß an ergänzender Unterstützung für Datenbankfunktionen, Trigger und gespeicherte Prozeduren. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
+# <a name="how-to-create-an-empty-sql-server-unit-test"></a>Gewusst wie: Erstellen eines leeren SQL Server-Komponententests
+Schließen Sie Komponententests in das Datenbankprojekt ein, um sicherzustellen, dass vorhandene Funktionen nicht durch Änderungen an Datenbankobjekten beeinträchtigt werden. Bei den folgenden Vorgehensweisen wird das Erstellen von SQL Server-Komponententests für beliebige Datenbankobjekte erläutert. SQL Server Data Tools bietet ein gewisses Maß an ergänzender Unterstützung für Datenbankfunktionen, Trigger und gespeicherte Prozeduren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
-Wenn Sie einen SQL Server-Komponententest anhand der ersten Prozedur erstellen, wird automatisch ein Testprojekt erstellt, sofern noch kein Testprojekt vorhanden ist. Wenn bereits Testprojekte vorhanden sind, können Sie einem dieser Projekte entweder den neuen Test hinzufügen oder ein neues Testprojekt erstellen. Weitere Informationen zu Testprojekten finden Sie unter [Gewusst wie: Erstellen eines Testprojekts für SQL Server-Datenbankkomponententests](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md).  
+Wenn Sie einen SQL Server-Komponententest anhand der ersten Prozedur erstellen, wird automatisch ein Testprojekt erstellt, sofern noch kein Testprojekt vorhanden ist. Wenn bereits Testprojekte vorhanden sind, können Sie einem dieser Projekte entweder den neuen Test hinzufügen oder ein neues Testprojekt erstellen. Weitere Informationen zu Testprojekten finden Sie unter [Vorgehensweise: Erstellen eines Testprojekts für SQL Server-Datenbank-Unittests](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md).  
   
 Es gibt zwei Methoden zum Erstellen eines SQL Server-Komponententests:  
   
@@ -81,7 +81,7 @@ Es gibt zwei Methoden zum Erstellen eines SQL Server-Komponententests:
   
 1.  Öffnen Sie eine vorhandene SQL Server-Komponententestklasse im **SQL Server-Komponententest-Designer**. Sie greifen auf den **SQL Server-Komponententest-Designer** zu, indem Sie auf die Quellcodedatei eines Komponententests im **Projektmappen-Explorer** doppelklicken.  
   
-2.  Klicken Sie auf der Navigationsleiste auf das Pluszeichen (**+**), um das Dialogfeld **Namen für Komponententest angeben** anzuzeigen.  
+2.  Klicken Sie auf der Navigationsleiste auf das Pluszeichen ( **+** ), um das Dialogfeld **Namen für Komponententest angeben** anzuzeigen.  
   
 3.  Geben Sie einen Namen ein, und klicken Sie auf **OK**.  
   
@@ -96,10 +96,10 @@ Nachdem Sie das Testprojekt konfiguriert und den Komponententest erstellt haben,
 -   Fügen Sie Testbedingungen oder eine andere Bestätigungsanweisung hinzu, um die Skriptergebnisse zu überprüfen.  
   
 > [!NOTE]  
-> Die Testbedingung „Nicht eindeutig“ ist die Standardbedingung, die jedem Test hinzugefügt wird. Diese Testbedingung wird eingeschlossen, um anzuzeigen, dass die Testüberprüfung nicht implementiert wurde. Löschen Sie diese Testbedingung aus dem Test, nachdem Sie weitere Testbedingungen hinzugefügt haben. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Testbedingungen zu Datenbankkomponententests](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
+> Die Testbedingung „Nicht eindeutig“ ist die Standardbedingung, die jedem Test hinzugefügt wird. Diese Testbedingung wird eingeschlossen, um anzuzeigen, dass die Testüberprüfung nicht implementiert wurde. Löschen Sie diese Testbedingung aus dem Test, nachdem Sie weitere Testbedingungen hinzugefügt haben. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Testbedingungen zu Datenbankkomponententests](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Gewusst wie: Ausführen von SQL Server-Komponententests](../ssdt/how-to-run-sql-server-unit-tests.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorgehensweise: Ausführen von SQL Server-Komponententests](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Erstellen von Komponententests](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

@@ -1,7 +1,7 @@
 ---
-title: 'PDO:: Prepare | Microsoft-Dokumentation'
+title: PDO::prepare | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 04/25/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,135 +11,140 @@ ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 583ed80add549b5d90cff2aba24e25fb6e2050f9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7eac30ff1391ba5c56099cf7c59fa89b1368f115
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606400"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105877"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Bereitet eine Anweisung für die Ausführung vor.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-  
-PDOStatement PDO::prepare ( $statement [, array(key_pair)] )  
-```  
-  
-#### <a name="parameters"></a>Parameter  
-$*statement*: Eine Zeichenfolge, die die SQL-Anweisung enthält.  
-  
-*key_pair:* Ein Array, das einen Attributnamen und einen Wert enthält. Weitere Informationen finden Sie im Abschnitt zu den Hinweisen.  
-  
-## <a name="return-value"></a>Rückgabewert  
-Bei Erfolg wird ein PDOStatement-Objekt zurückgegeben. Bei einem Fehler wird entweder ein PDOException-Objekt oder „false“ zurückgegeben, abhängig vom Wert für PDO::ATTR_ERRMODE.  
-  
-## <a name="remarks"></a>Remarks  
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] wertet keine vorbereiteten Anweisungen vor der Ausführung aus.  
-  
-In der folgenden Tabelle sind die möglichen Werte für *key_pair* aufgelistet.  
-  
-|Key|und Beschreibung|  
-|-------|---------------|  
-|PDO::ATTR_CURSOR|Definiert das Cursorverhalten. Der Standardwert ist „PDO::CURSOR_FWDONLY“. Mit „PDO::CURSOR_SCROLL“ ist der Cursor statisch.<br /><br />Beispiel: `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Wenn Sie „PDO::CURSOR_SCROLL“ verwenden, können wie nachstehend beschrieben Sie auch „PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE“ verwenden.<br /><br />Weitere Informationen zu Ergebnismengen und Cursorn im PDO_SQLSRV-Treiber finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
-|PDO::ATTR_EMULATE_PREPARES|Dieses Attribut wird standardmäßig "false" kann von dieser geändert werden `PDO::ATTR_EMULATE_PREPARES => true`. Finden Sie unter [emulieren vorbereiten](#emulate-prepare) Einzelheiten und Beispiel.|
-|PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (Standard)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
-|PDO::SQLSRV_ATTR_DIRECT_QUERY|Wird hierfür der Wert „true“ festgelegt, werden Abfragen direkt ausgeführt. Der Wert „false“ sorgt dafür, dass vorbereitete Anweisungen ausgeführt werden. Weitere Informationen zu PDO::SQLSRV_ATTR_DIRECT_QUERY finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
-|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Weitere Informationen finden Sie unter [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|  
-  
-Wenn Sie „PDO::CURSOR_SCROLL“ verwenden, können Sie auch „PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE“ verwenden. Beispiel:  
-  
-```  
-array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_DYNAMIC));  
-```  
-  
-In der folgenden Tabelle sind die möglichen Werte für „PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE“ aufgelistet.  
-  
-|value|und Beschreibung|  
-|---------|---------------|  
-|PDO::SQLSRV_CURSOR_BUFFERED|Erstellt einen clientseitigen statischen Cursor (gepuffert). Weitere Informationen zu clientseitigen Cursorn finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
-|PDO::SQLSRV_CURSOR_DYNAMIC|Erstellt einen serverseitigen (gepufferten) dynamischen Cursor, der es Ihnen erlaubt, auf Zeilen in beliebiger Reihenfolge zuzugreifen und Änderungen in der Datenbank widerspiegelt.|  
-|PDO::SQLSRV_CURSOR_KEYSET_DRIVEN|Erstellt einen serverseitigen Keysetcursor. Ein Keysetcursor aktualisiert nach dem Löschen einer Zeile aus einer Tabelle nicht die Zeilenanzahl (eine gelöschte Zeile wird ohne Werte zurückgegeben).|  
-|PDO::SQLSRV_CURSOR_STATIC|Erstellt einen serverseitigen statischen Cursor, der es Ihnen zwar erlaubt, auf Zeilen in beliebiger Reihenfolge zuzugreifen, aber die Änderungen in der Datenbank nicht widerspiegelt.<br /><br />„PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL“ ist standardmäßig mit „PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC“ vorbelegt.|  
-  
-Sie können ein PDOStatement-Objekt schließen, indem Sie dafür den Wert NULL festlegen.  
-  
-## <a name="example"></a>Beispiel  
-In diesem Beispiel wird erläutert, wie Sie die Methode „PDO::prepare“ mit Parametermarkern und einem Vorwärtscursor verwenden.  
-  
-```  
-<?php  
-$database = "Test";  
-$server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
-  
-$col1 = 'a';  
-$col2 = 'b';  
-  
-$query = "insert into Table1(col1, col2) values(?, ?)";  
-$stmt = $conn->prepare( $query, array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY, PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 1  ) );  
-$stmt->execute( array( $col1, $col2 ) );  
-print $stmt->rowCount();  
-echo "\n";  
-  
-$query = "insert into Table1(col1, col2) values(:col1, :col2)";  
-$stmt = $conn->prepare( $query, array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY, PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 1  ) );  
-$stmt->execute( array( ':col1' => $col1, ':col2' => $col2 ) );  
-print $stmt->rowCount();  
-  
-$stmt = null  
-?>  
-```  
+Bereitet eine Anweisung für die Ausführung vor.
 
-## <a name="example"></a>Beispiel  
-In diesem Beispiel wird veranschaulicht, wie Sie die PDO::prepare-Methode mit einem clientseitigen Cursor verwenden. Ein Beispiel für einen serverseitigen Cursor finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
-  
-```  
-<?php  
-$database = "AdventureWorks";  
-$server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
-  
-$query = "select * from Person.ContactType";  
-$stmt = $conn->prepare( $query, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));  
-$stmt->execute();  
-  
-echo "\n";  
-  
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
-   print "$row[Name]\n";  
-}  
-echo "\n..\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_BOTH, PDO::FETCH_ORI_FIRST );  
-print_r($row);  
-  
-$row = $stmt->fetch( PDO::FETCH_ASSOC, PDO::FETCH_ORI_REL, 1 );  
-print "$row[Name]\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT );  
-print "$row[1]\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_PRIOR );  
-print "$row[1]..\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_ABS, 0 );  
-print_r($row);  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );  
-print_r($row);  
-?>  
-```  
+## <a name="syntax"></a>Syntax
+
+```
+PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
+```
+
+#### <a name="parameters"></a>Parameter
+$*statement*: Eine Zeichenfolge, die die SQL-Anweisung enthält.
+
+*key_pair:* Ein Array, das einen Attributnamen und einen Wert enthält. Weitere Informationen finden Sie im Abschnitt zu den Hinweisen.
+
+## <a name="return-value"></a>Rückgabewert
+Bei Erfolg wird ein PDOStatement-Objekt zurückgegeben. Bei einem Fehler wird entweder ein PDOException-Objekt oder „false“ zurückgegeben, abhängig vom Wert für `PDO::ATTR_ERRMODE`.
+
+## <a name="remarks"></a>Remarks
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] wertet keine vorbereiteten Anweisungen vor der Ausführung aus.
+
+In der folgenden Tabelle sind die möglichen Werte für *key_pair* aufgelistet.
+
+|Key|und Beschreibung|
+|-------|---------------|
+|PDO::ATTR_CURSOR|Definiert das Cursorverhalten. Der Standardwert ist `PDO::CURSOR_FWDONLY`, ein nicht scrollbarer Vorwärtscursor. `PDO::CURSOR_SCROLL` ist ein scrollbarer Cursor.<br /><br />Beispiel: `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Bei Einstellung auf `PDO::CURSOR_SCROLL` können Sie dann mit `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` den Typ des scrollbaren Cursors einstellen, der unten beschrieben wird.<br /><br />Weitere Informationen zu Ergebnismengen und Cursorn im PDO_SQLSRV-Treiber finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|
+|PDO::ATTR_EMULATE_PREPARES|Dieses Attribut lautet standardmäßig „false“, kann aber durch `PDO::ATTR_EMULATE_PREPARES => true` geändert werden. Details und ein Beispiel finden Sie unter [Emulate_Prepare](#emulate-prepare).|
+|PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|Gibt den Typ des scrollbaren Cursors an. Gilt nur, wenn `PDO::ATTR_CURSOR` auf `PDO::CURSOR_SCROLL` gesetzt ist. Unten finden Sie die Werte, die dieses Attribut annehmen kann.|
+|PDO::SQLSRV_ATTR_DECIMAL_PLACES|Gibt die Anzahl der Dezimalstellen beim Formatieren abgerufener Geldwerte (vom Typ „money“) an. Diese Option funktioniert nur, wenn `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` auf „true“ festgelegt ist. Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
+|PDO::SQLSRV_ATTR_DIRECT_QUERY|Wird hierfür der Wert „true“ festgelegt, werden Abfragen direkt ausgeführt. Der Wert „false“ sorgt dafür, dass vorbereitete Anweisungen ausgeführt werden. Weitere Informationen zu `PDO::SQLSRV_ATTR_DIRECT_QUERY` finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
+|PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (Standard)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Gibt an, ob Datums- und Uhrzeittypen als [PHP-DateTime-Objekte](http://php.net/manual/en/class.datetime.php) abgerufen werden sollen. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Verarbeitet die Abrufe numerischer Werte aus Spalten mit numerischen SQL-Typen. Weitere Informationen finden Sie unter [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
+|PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Gibt an, ob Dezimalzeichenfolgen gegebenenfalls führende Nullen hinzugefügt werden sollen. Bei Festlegung erlaubt diese Option der Option `PDO::SQLSRV_ATTR_DECIMAL_PLACES` das Formatieren von Datentypen vom Typ „money“. Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
+|PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Weitere Informationen finden Sie unter [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
+
+Bei Verwendung von `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` können Sie mit `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` den Typ des Cursors festlegen. Übergeben Sie beispielsweise folgendes Array an PDO::prepare, um einen dynamischen Cursor festzulegen:
+```
+array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_DYNAMIC));
+```
+In der folgenden Tabelle sind die möglichen Werte für `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` aufgeführt. Weitere Informationen zu scrollbaren Cursorn finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
+
+|value|und Beschreibung|
+|---------|---------------|
+|PDO::SQLSRV_CURSOR_BUFFERED|Erstellt einen clientseitigen (gepufferten) statischen Cursor, der das Resultset auf dem Clientcomputer in den Arbeitsspeicher puffert.|
+|PDO::SQLSRV_CURSOR_DYNAMIC|Erstellt einen serverseitigen (gepufferten) dynamischen Cursor, der es Ihnen erlaubt, auf Zeilen in beliebiger Reihenfolge zuzugreifen und Änderungen in der Datenbank widerspiegelt.|
+|PDO::SQLSRV_CURSOR_KEYSET|Erstellt einen serverseitigen Keysetcursor. Ein Keysetcursor aktualisiert nach dem Löschen einer Zeile aus einer Tabelle nicht die Zeilenanzahl (eine gelöschte Zeile wird ohne Werte zurückgegeben).|
+|PDO::SQLSRV_CURSOR_STATIC|Erstellt einen serverseitigen statischen Cursor, der es Ihnen zwar erlaubt, auf Zeilen in beliebiger Reihenfolge zuzugreifen, aber die Änderungen in der Datenbank nicht widerspiegelt.<br /><br />`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` impliziert `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC`.|
+
+Sie können ein PDOStatement-Objekt schließen, indem Sie `unset` aufrufen:
+```
+unset($stmt);
+```
+
+## <a name="example"></a>Beispiel
+In diesem Beispiel wird erläutert, wie Sie PDO::prepare mit Parametermarkern und einem Vorwärtscursor verwenden.
+
+```
+<?php
+$database = "Test";
+$server = "(local)";
+$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");
+
+$col1 = 'a';
+$col2 = 'b';
+
+$query = "insert into Table1(col1, col2) values(?, ?)";
+$stmt = $conn->prepare( $query, array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY, PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 1  ) );
+$stmt->execute( array( $col1, $col2 ) );
+print $stmt->rowCount();
+echo "\n";
+
+$query = "insert into Table1(col1, col2) values(:col1, :col2)";
+$stmt = $conn->prepare( $query, array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY, PDO::SQLSRV_ATTR_QUERY_TIMEOUT => 1  ) );
+$stmt->execute( array( ':col1' => $col1, ':col2' => $col2 ) );
+print $stmt->rowCount();
+
+unset($stmt);
+?>
+```
+
+## <a name="example"></a>Beispiel
+Dieses Beispiel zeigt die Verwendung von PDO::prepare mit einem serverseitigen statischen Cursor. Ein Beispiel für einen clientseitigen Cursor finden Sie unter [Cursortypen &#40;PDO_SQLSRV-Treiber&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
+
+```
+<?php
+$database = "AdventureWorks";
+$server = "(local)";
+$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");
+
+$query = "select * from Person.ContactType";
+$stmt = $conn->prepare( $query, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
+$stmt->execute();
+
+echo "\n";
+
+while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
+   print "$row[Name]\n";
+}
+echo "\n..\n";
+
+$row = $stmt->fetch( PDO::FETCH_BOTH, PDO::FETCH_ORI_FIRST );
+print_r($row);
+
+$row = $stmt->fetch( PDO::FETCH_ASSOC, PDO::FETCH_ORI_REL, 1 );
+print "$row[Name]\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT );
+print "$row[1]\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_PRIOR );
+print "$row[1]..\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_ABS, 0 );
+print_r($row);
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );
+print_r($row);
+?>
+```
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a>Beispiel 
+## <a name="example"></a>Beispiel
 
-Dieses Beispiel zeigt, wie die Methode PDO :: prepare mit `PDO::ATTR_EMULATE_PREPARES` auf true gesetzt wird. 
+Dieses Beispiel zeigt, wie PDO::prepare verwendet wird, wenn `PDO::ATTR_EMULATE_PREPARES` auf „true“ gesetzt ist.
 
 ```
 <?php
@@ -153,8 +158,8 @@ $pdo_options = array();
 $pdo_options[PDO::ATTR_EMULATE_PREPARES] = true;
 $pdo_options[PDO::SQLSRV_ATTR_ENCODING] = PDO::SQLSRV_ENCODING_UTF8;
 
-$stmt = $conn->prepare("CREATE TABLE TEST([id] [int] IDENTITY(1,1) NOT NULL, 
-                                          [name] nvarchar(max))", 
+$stmt = $conn->prepare("CREATE TABLE TEST([id] [int] IDENTITY(1,1) NOT NULL,
+                                          [name] nvarchar(max))",
                                           $pdo_options);
 $stmt->execute();
 
@@ -177,7 +182,7 @@ unset($conn);
 ?>
 ```
 
-Der PDO_SQLSRV-Treiber ersetzt alle Platzhalter intern mit den Parametern, die gebunden werden, indem [PDOStatement::bindParam()](../../connect/php/pdostatement-bindparam.md). Aus diesem Grund wird eine SQL-Abfragezeichenfolge mit keine Platzhalter an den Server gesendet. Betrachten Sie dieses Beispiel
+Der PDO_SQLSRV-Treiber ersetzt intern alle Platzhalter durch die Parameter, die durch [PDOStatement::bindParam()](../../connect/php/pdostatement-bindparam.md) gebunden sind. Daher wird eine SQL-Abfragezeichenfolge ohne Platzhalter an den Server gesendet. Sehen Sie sich folgendes Beispiel an:
 
 ```
 $statement = $PDO->prepare("INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)");
@@ -186,7 +191,7 @@ $statement->bindParam(:con_name, "Tom B. Erichsen");
 $statement->execute();
 ```
 
-Mit `PDO::ATTR_EMULATE_PREPARES` festgelegt auf "false" (der Standardfall), die Daten an die Datenbank gesendet werden:
+Wenn `PDO::ATTR_EMULATE_PREPARES` auf „false“ gesetzt ist (der Standardfall), werden diese Daten an die Datenbank gesendet:
 
 ```
 "INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)"
@@ -194,38 +199,38 @@ Information on :cus_name parameter
 Information on :con_name parameter
 ```
 
-Der Server wird die Abfrage, die über das Feature für die parametrisierte Abfrage für das Binden von Parametern ausführen. Auf der anderen Seite mit `PDO::ATTR_EMULATE_PREPARES` auf True festgelegt, die an den Server gesendete Abfrage ist im Wesentlichen:
+Die Abfrage wird mit einer parametrisierten Abfragefunktion für Bindungsparameter ausgeführt. Wenn jedoch `PDO::ATTR_EMULATE_PREPARES` auf „true“ gesetzt ist, sieht die an den Server gesendete Abfrage in etwa so aus:
 
 ```
 "INSERT into Customers (CustomerName, ContactName) VALUES ('Cardinal', 'Tom B. Erichsen')"
 ```
 
-Festlegen von `PDO::ATTR_EMULATE_PREPARES` auf "true" einige Einschränkungen in SQL Server kann umgangen werden. SQL Server unterstützt beispielsweise keine benannten oder positionellen Parameter in einige Transact-SQL-Klauseln. Darüber hinaus verfügt SQL Server maximal 2100 Bindungsparameter.
+Durch das Festlegen von `PDO::ATTR_EMULATE_PREPARES` auf „true“ können einige Einschränkungen in SQL Server umgangen werden. Beispielsweise werden in einigen Transact-SQL-Klauseln von SQL Server keine benannten oder positionellen Parameter unterstützt. Darüber hinaus begrenzt SQL Server die Bindung auf höchstens 2.100 Parameter.
 
 > [!NOTE]
-> Mit Emulate bereitet auf True festgelegt, die Sicherheit von parametrisierten Abfragen ist nicht aktiv. Ihre Anwendung sollte deshalb sicherstellen, dass die an den bzw. die Parameter gebunden Daten keinen bösartigen Transact-SQL-Code enthalten.
+> Wenn EMULATE_PREPARES auf „true“ gesetzt ist, kommt der Sicherheitsgewinn durch parametrisierte Anfragen nicht zum Tragen. Ihre Anwendung sollte deshalb sicherstellen, dass die an den bzw. die Parameter gebunden Daten keinen bösartigen Transact-SQL-Code enthalten.
 
 ### <a name="encoding"></a>Codierung
 
-Wenn der Benutzer möchte zum Binden von Parametern mit verschiedenen Codierungen (z. B. UTF-8 oder binär), sollte der Benutzer eindeutig angeben der Codierung in PHP-Skripts.
+Wenn der Benutzer Parameter mit unterschiedlichen Codierungen (z. B. UTF-8 oder binär) binden möchte, sollte er die Codierung im PHP-Skript eindeutig angeben.
 
-Der PDO_SQLSRV-Treiber überprüft zuerst, die angegebene Codierung `PDO::bindParam()` (z. B. `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`). 
+Der PDO_SQLSRV-Treiber überprüft zunächst die in `PDO::bindParam()` angegebene Codierung (z. B. `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`).
 
-Wenn der Treiber wurde nicht gefunden, überprüft werden, wenn Codierung, im festgelegt ist `PDO::prepare()` oder `PDOStatement::setAttribute()`. Andernfalls wird der Treiber die angegebene Codierung verwenden `PDO::__construct()` oder `PDO::setAttribute()`.
+Wenn sie nicht gefunden wird, prüft der Treiber, ob eine Codierung in `PDO::prepare()` oder `PDOStatement::setAttribute()` festgelegt ist. Andernfalls verwendet der Treiber die in `PDO::__construct()` oder `PDO::setAttribute()` angegebene Codierung.
 
 ### <a name="limitations"></a>Einschränkungen
 
-Wie Sie sehen können, erfolgt die Bindung intern durch den Treiber. Eine gültige Abfrage wird für die Ausführung ohne Parameter an den Server gesendet. Im Vergleich zu im Normalfall, führen einige Einschränkungen, wenn das Feature für die parametrisierte Abfrage nicht verwendet wird.
+Wie Sie sehen können, erfolgt die Bindung intern durch den Treiber. Eine gültige Abfrage wird zur Ausführung ohne Parameter an den Server gesendet. Verglichen mit dem Normalfall ergeben sich einige Einschränkungen, wenn die parametrisierte Abfragefunktion nicht verwendet wird.
 
-- Es funktioniert nicht für Parameter, die als gebunden wurden `PDO::PARAM_INPUT_OUTPUT`.
-    - Wenn der Benutzer gibt `PDO::PARAM_INPUT_OUTPUT` in `PDO::bindParam()`, eine PDO-Ausnahme ausgelöst wird.
-- Es funktioniert nicht für Parameter, die als Ausgabeparameter gebunden sind.
-    - Wenn der Benutzer eine vorbereitete Anweisung mit Platzhaltern erstellt gelten für das Output-Parameter (, also müssen ein Gleichheitszeichen unmittelbar nach dem ein Platzhalter, z. B. `SELECT ? = COUNT(*) FROM Table1`), eine PDO-Ausnahme ausgelöst wird.
-    - Wenn eine vorbereitete Anweisung eine gespeicherte Prozedur mit einem Platzhalter als Argument für ein Output-Parameter aufruft, wird keine Ausnahme ausgelöst, da der Treiber den Output-Parameter nicht erkannt werden. Die Variable, die der Benutzer für den Ausgabeparameter bleibt jedoch unverändert.
-- Doppelte Platzhalter für einen binären codierten Parameter funktioniert nicht
+- Sie funktioniert nicht für Parameter, die als `PDO::PARAM_INPUT_OUTPUT` gebunden sind.
+    - Wenn der Benutzer `PDO::PARAM_INPUT_OUTPUT` in `PDO::bindParam()` angibt, wird eine PDO-Ausnahme ausgelöst.
+- Sie funktioniert nicht für Parameter, die als Ausgabeparameter gebunden sind.
+    - Wenn der Benutzer eine vorbereitete Anweisung mit Platzhaltern erstellt, die für Ausgabeparameter bestimmt sind (d. h. ein Gleichheitszeichen unmittelbar nach einem Platzhalter, wie `SELECT ? = COUNT(*) FROM Table1`), wird eine PDO-Ausnahme ausgelöst.
+    - Wenn eine vorbereitete Anweisung eine gespeicherte Prozedur mit einem Platzhalter als Argument für einen Ausgabeparameter aufruft, wird keine Ausnahme ausgelöst, da der Treiber den Ausgabeparameter nicht erkennen kann. Die Variable, die der Benutzer für den Ausgabeparameter bereitstellt, bleibt jedoch unverändert.
+- Doppelte Platzhalter für einen binär kodierten Parameter funktionieren nicht.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen
 [PDO-Klasse](../../connect/php/pdo-class.md)
 
-[PDO](https://php.net/manual/book.pdo.php)  
-  
+[PDO](https://php.net/manual/book.pdo.php)
+

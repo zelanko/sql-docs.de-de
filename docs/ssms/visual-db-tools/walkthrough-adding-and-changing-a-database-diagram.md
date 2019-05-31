@@ -12,15 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 177c3e0e4dcd6e632b82501441fdb240bcc19b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e55163886d39fc59cd8ce8787088f3645fb7e51
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787498"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105599"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
 3.  Klicken Sie mit der rechten Maustaste auf den Knoten Datenbankdiagramme, und wählen Sie **Neues Datenbankdiagramm** aus.  
   
-    Wenn die Datenbank nicht über die zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
+    Wenn die Datenbank nicht über die erforderlichen Objekte zum Erstellen von Diagrammen verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
   
     Das Dialogfeld **Tabelle hinzufügen** wird angezeigt.  
   
@@ -60,7 +60,7 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
 1.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle. Zeigen Sie im Kontextmenü auf **Tabellensicht**, und klicken Sie dann auf **Standard**.  
   
-    Im Tabellenraster werden drei Spalten angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
+    Im Tabellenraster werden drei Spalten angezeigt: **Spaltenname**, **Datentyp** und **Null-Werte zulassen**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle, klicken Sie auf **Tabellensicht** , und wählen Sie **Schlüssel**aus.  
   
@@ -74,13 +74,13 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
 2.  Klicken Sie im Dialogfeld **Namen auswählen** auf **OK** , um den Standardnamen **Table1**zu übernehmen.  
   
-    Ein neues Tabellenraster mit drei Spalten wird angezeigt: **Spaltenname**, **Datentyp**und **NULL-Werte zulassen**.  
+    Es wird ein neues Tabellenraster mit drei Spalten angezeigt: **Spaltenname**, **Datentyp** und **Null-Werte zulassen**.  
   
 3.  Fügen Sie **Table1**folgende Informationen hinzu:  
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|Überprüft|  
+    |**T1col1**|**ssNoversion**|Überprüft|  
     |**T1col2**|**varchar(50)**|Überprüft|  
     |**T1col3**|**float**|Überprüft|  
   
@@ -123,7 +123,7 @@ Im Datenbank-Designer können Sie CHECK-Einschränkungen hinzufügen und Beziehu
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |-------------------|-----------------|-------------------|  
-    |**T2col1**|**int**|nicht aktiviert|  
+    |**T2col1**|**ssNoversion**|nicht aktiviert|  
     |**T2col2**|**varchar(50)**|Überprüft|  
     |**T2col3**|**xml**|Überprüft|  
   
@@ -208,7 +208,7 @@ Hierbei handelt es sich um ein einfaches Diagramm, das nur zwei vorhandene und z
   
 -   Kopieren des Diagramms in eine Bitmap  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Anpassen des Umfangs der in Diagrammen angezeigten Informationen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
 [Einrichten im Datenbankdiagramm-Designer &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Hinzufügen von Tabellen zu Diagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  

@@ -16,12 +16,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bbdc659100477b7a4d5edae427ba74c76365ea3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8c43cd13760808822b2c0332584799383eab5e39
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776258"
 ---
 # <a name="identity-and-access-control-replication"></a>Identität und Zugriffssteuerung (Replikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,8 @@ ms.locfileid: "54135980"
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation
 Geben Sie bei der Replikationskonfiguration Anmeldeinformationen und Kennwörter für Replikations-Agents an. Nach der Replikationskonfiguration können Sie die Anmeldenamen und -kennwörter ändern. Weitere Informationen finden Sie unter [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md). Wenn Sie das Kennwort für ein von einem Replikations-Agent verwendetes Konto ändern, führen Sie [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md) aus.  
+
+Die Verwendung gruppenverwalteter Dienstkonten (group Managed Service Accounts, gMSA) wird ab SQL Server 2014 unterstützt. Weitere Informationen finden Sie im Blogartikel [Replication and group Managed Service Accounts (Replikation und gruppenverwaltete Dienstkonten)](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/).
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Mindern von Bedrohungen und Sicherheitsrisiken &#40;Replikation&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Sicherheitsmodell des Replikations-Agents](../../../relational-databases/replication/security/replication-agent-security-model.md)   

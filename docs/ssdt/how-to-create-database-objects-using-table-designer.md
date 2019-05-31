@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396143"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098148"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Vorgehensweise: Erstellen von Datenbankobjekten mit dem Tabellen-Designer
+# <a name="how-to-create-database-objects-using-table-designer"></a>Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer
 Der neue Knoten **SQL Server** im **SQL Server-Objekt-Explorer** ähnelt dem in SSMS nicht nur visuell. Sie können neue Objekte auch mit Kontextmenüs erstellen, die wie ihre Äquivalente in SSMS funktionieren.  
   
 Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen. Ebenso können Sie im neuen Tabellen-Designer eine bestimmte Datenbank auswählen und erstellen sowie Tabellendefinitionen und die zugehörigen Programmierobjekte direkt bearbeiten. Vom Tabellen-Designer können Sie in einen Skriptbereich wechseln, in dem Sie das Skript direkt bearbeiten können, von dem diese Tabelle definiert wird.  
@@ -57,7 +57,7 @@ Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen.
 5.  Fügen Sie eine weitere neue Spalte hinzu. Geben Sie **Address** im Feld **Name** und **nvarchar (MAX)** im Feld **Datentyp** ein, und deaktivieren Sie die Option **NULL-Werte zulassen**.  
   
     > [!WARNING]  
-    > Wenn Sie Objekte aus einer verbundenen Datenbank bearbeiten, speichern Sie sie nicht auf dem lokalen Laufwerk. Um die Änderungen ordnungsgemäß in der Datenbank zu speichern, führen Sie die Schritte im nächsten Verfahren [Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) aus.  
+    > Wenn Sie Objekte aus einer verbundenen Datenbank bearbeiten, speichern Sie sie nicht auf dem lokalen Laufwerk. Speichern Sie die Änderungen an der Datenbank ordnungsgemäß, indem Sie die Schritte in der nächsten Prozedur [Vorgehensweise: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) ausführen.  
   
 6.  Führen Sie die obigen Schritte erneut aus, um eine weitere Tabelle mit dem Namen **Customer** zu erstellen. Fügen Sie der Tabelle "Customer" mithilfe des Spaltenrasters die folgenden Spalten hinzu. Achten Sie darauf, dass Sie das Skript so ändern, dass der Name der Tabelle `[dbo].[Customer]` lautet.  
   
@@ -110,6 +110,6 @@ Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen.
     CONSTRAINT [FK_Products_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [dbo].[Customer] ([Id])  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Verwalten von Tabellen, Beziehungen und Beheben von Fehlern](../ssdt/manage-tables-relationships-and-fix-errors.md)  
   

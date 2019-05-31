@@ -2,7 +2,7 @@
 title: UTF-8-Unterstützung im OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
 description: UTF-8-Unterstützung im OLE DB-Treiber für SQL Server
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: 4a30b233190817faee581106db5c8a18695a00d1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: HT
+ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583013"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775172"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>UTF-8-Unterstützung im OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "59583013"
 
 Microsoft OLE DB-Treiber für SQL Server (Version 18.2.1) bietet Unterstützung für die UTF-8-Servercodierung. Informationen zur UTF-8-Unterstützung von SQL Server finden Sie unter:
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8-Unterstützung](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
+- [UTF-8-Unterstützung](#ctp23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Einfügen von Daten in eine UTF-8-codierte CHAR- oder VARCHAR-Spalte
 Wenn Sie einen Eingabeparameterpuffer für das Einfügen erstellen, wird der Puffer mithilfe eines Arrays von [DBBINDING-Strukturen](https://go.microsoft.com/fwlink/?linkid=2071182) beschrieben. Jede DBBINDING-Struktur ordnet dem Puffer des Consumers einen einzelnen Parameter zu und enthält Informationen wie z. B. Länge und Typ des Datenwerts. Für einen Eingabeparameterpuffer des Typs CHAR sollte der *wType* der DBBINDING-Struktur auf DBTYPE_STR festgelegt werden. Für einen Eingabeparameterpuffer des Typs WCHAR sollte der *wType* der DBBINDING-Struktur auf DBTYPE_WSTR festgelegt werden.
@@ -46,7 +46,25 @@ Wenn Sie einen Puffer für abgerufene Daten erstellen, wird der Puffer mithilfe 
 Für den Puffertypindikator DBTYPE_STR konvertiert der Treiber die UTF-8-codierten Daten in die Clientcodierung. Der Benutzer sollte sicherstellen, dass die Clientcodierung die Daten aus der UTF-8-codierten Spalte darstellen kann. Andernfalls können Daten verloren gehen.
 
 Für den Puffertypindikator DBTYPE_WSTR konvertiert der Treiber die UTF-8-codierten Daten in die UTF-16-Codierung.
-  
+
+<a name="ctp23"></a>
+
+### <a name="utf-8-support-sql-server-2019-ctp-23"></a>UTF-8-Unterstützung (SQL Server 2019 CTP 2.3)
+
+Mit [!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] wird die vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 als Import- oder Exportcodierung oder als Sortierung für Textdaten auf Datenbank- oder Spaltenebene eingeführt. UTF-8 ist für die Datentypen `CHAR` und `VARCHAR` zulässig und ist bei der Erstellung oder Änderung einer Objektsortierung in eine Sortierung mit dem Suffix `UTF8` aktiviert.
+
+Beispiel: `LATIN1_GENERAL_100_CI_AS_SC` in `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. Die in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführte UTF-8-Codierung ist nur für Windows-Sortierungen verfügbar, die Sonderzeichen unterstützen. `NCHAR` und `NVARCHAR` lassen nur die UTF-16-Codierung zu und bleiben unverändert.
+
+Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Speichereinsparungen ermöglichen. Die Änderung eines vorhandenen Spaltendatentyps mit ASCII-Zeichen (lateinisch) von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die gleiche Unicode-Zeichenfolge erfordert.
+
+Weitere Informationen finden Sie unter [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
+
+**CTP 2.1** unterstützt nun die Auswahl der UTF-8-Sortierung als Standard während des [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]-Setups.
+
+**CTP 2.2** unterstützt nun die Verwendung von UTF-8-Zeichencodierung mit SQL Server-Replikation.
+
+**CTP 2.3** unterstützt nun die Verwendung von UTF-8-Zeichencodierung mit BIN2-Sortierung (UTF8_BIN2).
+
 ## <a name="see-also"></a>Weitere Informationen  
 [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md) 
 

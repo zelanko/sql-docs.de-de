@@ -28,16 +28,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797040"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095336"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
 Erstellt einen Anmeldenamen für SQL Server, SQL-Datenbank, SQL Data Warehouse oder Analytics Platform System-Datenbanken. Klicken Sie auf eine der folgenden Registerkarten, um Syntax, Argumente, Hinweise, Berechtigungen und Beispiele für eine bestimmte Version anzuzeigen.
+
+CREATE LOGIN nimmt an Transaktionen teil. Wenn CREATE LOGIN innerhalb einer Transaktion ausgeführt wird, für die dann ein Rollback ausgeführt wird, wird ein Rollback für die Erstellung von Anmeldedaten ausgeführt. Die erstellten Anmeldedaten können erst verwendet werden, nachdem die Transaktion committet wurde, wenn sie innerhalb einer Transaktion ausgeführt werden.
 
 Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -49,7 +51,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -86,9 +88,9 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>Argumente
 
-*login_name* Gibt den Anmeldenamen an, der erstellt wird. Es gibt vier Arten von Anmeldenamen: SQL Server-Anmeldungen, Windows-Anmeldenamen, Anmeldenamen mit zugeordneten Zertifikaten sowie Anmeldenamen mit zugeordneten asymmetrischen Schlüsseln. Wenn Sie Anmeldenamen erstellen, die von einem Windows-Domänenkonto zugeordnet werden, müssen Sie den Benutzeranmeldenamen einer Version vor Windows 2000 im Format [\<domainName>\\<login_name>] verwenden. Sie können keine UPN im Format login_name@DomainName verwenden. Ein Beispiel hierzu finden Sie unter „Beispiel D“ weiter unten in diesem Artikel. Anmeldenamen für die Authentifizierung sind vom Typ **sysname**. Sie müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und dürfen keinen „**\\**“ enthalten. Windows-Anmeldenamen können '**\\**'-Zeichen enthalten. Anmeldenamen auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt.
+*login_name* Gibt den Anmeldenamen an, der erstellt wird. Es gibt vier Arten von Anmeldenamen: SQL Server-Anmeldungen, Windows-Anmeldenamen, Anmeldenamen mit zugeordneten Zertifikaten sowie Anmeldenamen mit zugeordneten asymmetrischen Schlüsseln. Wenn Sie Anmeldenamen erstellen, die von einem Windows-Domänenkonto zugeordnet werden, müssen Sie den Benutzeranmeldenamen einer Version vor Windows 2000 im Format [\<domainName>\\<login_name>] verwenden. Sie können keine UPN im Format login_name@DomainName verwenden. Ein Beispiel hierzu finden Sie unter „Beispiel D“ weiter unten in diesem Artikel. Anmeldenamen für die Authentifizierung sind vom Typ **sysname**. Sie müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und dürfen keinen „ **\\** “ enthalten. Windows-Anmeldenamen können ' **\\** '-Zeichen enthalten. Anmeldenamen auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt.
 
-PASSWORD **=**'*Kennwort*' Gilt nur für SQL Server-Anmeldungen. Gibt das Kennwort für den Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab SQL Server 2012 (11.x) werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
+PASSWORD **=** '*Kennwort*' Gilt nur für SQL Server-Anmeldungen. Gibt das Kennwort für den Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab SQL Server 2012 (11.x) werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
 
 Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten.
 
@@ -98,13 +100,13 @@ HASHED Gilt nur für SQL Server-Anmeldenamen. Gibt an, dass das nach dem PASSWOR
 
 MUST_CHANGE Gilt nur für SQL Server-Anmeldenamen. Wenn diese Option angegeben wird, wird der Benutzer von SQL Server zur Eingabe eines neuen Kennworts aufgefordert, wenn der neue Anmeldename zum ersten Mal verwendet wird.
 
-CREDENTIAL **=**_credential\_name_ Die Anmeldeinformationen, die dem neuen SQL Server-Anmeldenamen zugeordnet werden sollen. Die Anmeldeinformationen müssen bereits auf dem Server vorhanden sein. Momentan verknüpft diese Option nur die Anmeldeeinformationen mit einem Anmeldenamen. Der Anmeldung eines Systemadministrators können keine Anmeldeinformationen zugeordnet werden.
+CREDENTIAL **=** _credential\_name_ Die Anmeldeinformationen, die dem neuen SQL Server-Anmeldenamen zugeordnet werden sollen. Die Anmeldeinformationen müssen bereits auf dem Server vorhanden sein. Momentan verknüpft diese Option nur die Anmeldeeinformationen mit einem Anmeldenamen. Der Anmeldung eines Systemadministrators können keine Anmeldeinformationen zugeordnet werden.
 
-SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. SID des Anmeldenamens für SQL Server: ein 16-Byte-Literalwert (**binary(16)**) basierend auf einer GUID. Beispiel: `SID = 0x14585E90117152449347750164BA00A7`.
+SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. SID des Anmeldenamens für SQL Server: ein 16-Byte-Literalwert (**binary(16)** ) basierend auf einer GUID. Beispiel: `SID = 0x14585E90117152449347750164BA00A7`.
 
-DEFAULT_DATABASE **=**_database_ Gibt die Standarddatenbank an, die dem Anmeldenamen zugewiesen werden soll. Wenn diese Option nicht enthalten ist, wird die Standarddatenbank als „master“ festgelegt.
+DEFAULT_DATABASE **=** _database_ Gibt die Standarddatenbank an, die dem Anmeldenamen zugewiesen werden soll. Wenn diese Option nicht enthalten ist, wird die Standarddatenbank als „master“ festgelegt.
 
-DEFAULT_LANGUAGE **=**_language_ Gibt die Standardsprache an, die dem Anmeldenamen zugewiesen werden soll. Wenn diese Option nicht enthalten ist, wird die aktuelle Standardsprache des Servers als Standardsprache festgelegt. Wenn die Standardsprache des Servers zu einem späteren Zeitpunkt geändert wird, wird die Standardsprache des Anmeldenamens nicht geändert.
+DEFAULT_LANGUAGE **=** _language_ Gibt die Standardsprache an, die dem Anmeldenamen zugewiesen werden soll. Wenn diese Option nicht enthalten ist, wird die aktuelle Standardsprache des Servers als Standardsprache festgelegt. Wenn die Standardsprache des Servers zu einem späteren Zeitpunkt geändert wird, wird die Standardsprache des Anmeldenamens nicht geändert.
 
 CHECK_EXPIRATION **=** { ON | **OFF** } Gilt nur für SQL Server-Anmeldenamen. Gibt an, ob die Richtlinie für das Ablaufen von Kennwörtern für diesen Anmeldenamen erzwungen werden soll. Der Standardwert ist OFF.
 
@@ -257,7 +259,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_**|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|** _\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_ **|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -279,11 +281,11 @@ CREATE LOGIN login_name
 
 *login_name* Gibt den Anmeldenamen an, der erstellt wird. Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken unterstützt nur SQL-Anmeldungen.
 
-PASSWORD **='** password**'* Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
+PASSWORD **='** password* *'* Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
 
 Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten.
 
-SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)**) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Remarks
 
@@ -299,7 +301,7 @@ SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für An
 
 Die **CREATE LOGIN**-Anweisung muss die einzige Anweisung in einem Batch sein.
 
-In einigen Methoden zum Herstellen einer Verbindung mit SQL-Datenbank, z.B. **sqlcmd**, müssen Sie den Servernamen von SQL-Datenbank mit der *\<login>*@*\<server>*-Notation an den Anmeldenamen in der Verbindungszeichenfolge anfügen. Wenn Ihr Anmeldename beispielsweise `login1` und der vollqualifizierte Name des Servers von SQL-Datenbank `servername.database.windows.net` lautet, sollte der Parameter *username* der Verbindungszeichenfolge `login1@servername` lauten. Da die Gesamtlänge des *username*-Parameters 128 Zeichen beträgt, ist *login_name* auf 127 Zeichen abzüglich der Länge des Servernamens beschränkt. Im Beispiel darf `login_name` nur 117 Zeichen lang sein, da `servername` 10 Zeichen enthält.
+In einigen Methoden zum Herstellen einer Verbindung mit SQL-Datenbank, z.B. **sqlcmd**, müssen Sie den Servernamen von SQL-Datenbank mit der *\<login>* @ *\<server>* -Notation an den Anmeldenamen in der Verbindungszeichenfolge anfügen. Wenn Ihr Anmeldename beispielsweise `login1` und der vollqualifizierte Name des Servers von SQL-Datenbank `servername.database.windows.net` lautet, sollte der Parameter *username* der Verbindungszeichenfolge `login1@servername` lauten. Da die Gesamtlänge des *username*-Parameters 128 Zeichen beträgt, ist *login_name* auf 127 Zeichen abzüglich der Länge des Servernamens beschränkt. Im Beispiel darf `login_name` nur 117 Zeichen lang sein, da `servername` 10 Zeichen enthält.
 
 In SQL-Datenbank muss eine Verbindung mit der Masterdatenbank bestehen, um einen Anmeldenamen erstellen zu können.
 
@@ -377,7 +379,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL-Datenbank<br />verwaltete Instanz \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|** _\* SQL-Datenbank<br />verwaltete Instanz \*_ **|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -410,7 +412,7 @@ PASSWORD **=** '*password*' Gibt das Kennwort für den SQL-Anmeldenamen an, der 
 
 Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten.
 
-SID **=** *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für SQL Server-Authentifizierungsanmeldungen. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)**) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID **=** *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für SQL Server-Authentifizierungsanmeldungen. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Remarks
 
@@ -558,7 +560,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ **|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -580,11 +582,11 @@ CREATE LOGIN login_name
 
 *login_name* Gibt den Anmeldenamen an, der erstellt wird. Die Azure SQL-Datenbank unterstützt nur SQL-Anmeldenamen.
 
-PASSWORD **='** password**'* Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
+PASSWORD **='** password* *'* Gibt das Kennwort für den SQL-Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
 
 Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten.
 
- SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL Data Warehouse ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)**) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+ SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL Data Warehouse ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Remarks
 
@@ -598,7 +600,7 @@ Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter
 
 Die **CREATE LOGIN**-Anweisung muss die einzige Anweisung in einem Batch sein.
 
-Bei einigen Methoden zum Herstellen einer Verbindung mit SQL Data Warehouse, z.B. **sqlcmd**, müssen Sie den Servernamen von SQL Data Warehouse mit der *\<login>*@*\<server>*-Notation an den Anmeldenamen in der Verbindungszeichenfolge anfügen. Wenn Ihr Anmeldenamen beispielsweise `login1` und der vollqualifizierte Name des SQL Data Warehouse-Servers `servername.database.windows.net` lautet, sollte der Parameter *username* der Verbindungszeichenfolge `login1@servername` lauten. Da die Gesamtlänge des *username*-Parameters 128 Zeichen beträgt, ist *login_name* auf 127 Zeichen abzüglich der Länge des Servernamens beschränkt. Im Beispiel darf `login_name` nur 117 Zeichen lang sein, da `servername` 10 Zeichen enthält.
+Bei einigen Methoden zum Herstellen einer Verbindung mit SQL Data Warehouse, z.B. **sqlcmd**, müssen Sie den Servernamen von SQL Data Warehouse mit der *\<login>* @ *\<server>* -Notation an den Anmeldenamen in der Verbindungszeichenfolge anfügen. Wenn Ihr Anmeldenamen beispielsweise `login1` und der vollqualifizierte Name des SQL Data Warehouse-Servers `servername.database.windows.net` lautet, sollte der Parameter *username* der Verbindungszeichenfolge `login1@servername` lauten. Da die Gesamtlänge des *username*-Parameters 128 Zeichen beträgt, ist *login_name* auf 127 Zeichen abzüglich der Länge des Servernamens beschränkt. Im Beispiel darf `login_name` nur 117 Zeichen lang sein, da `servername` 10 Zeichen enthält.
 
 In SQL Data Warehouse muss eine Verbindung mit der Masterdatenbank bestehen, um einen Anmeldenamen erstellen zu können.
 
@@ -672,7 +674,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ **
 
 &nbsp;
 
@@ -695,9 +697,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>Argumente
 
-*login_name* Gibt den Anmeldenamen an, der erstellt wird. Es gibt vier Arten von Anmeldenamen: SQL Server-Anmeldungen, Windows-Anmeldenamen, Anmeldenamen mit zugeordneten Zertifikaten sowie Anmeldenamen mit zugeordneten asymmetrischen Schlüsseln. Wenn Sie Anmeldenamen erstellen, die von einem Windows-Domänenkonto zugeordnet werden, müssen Sie den Benutzeranmeldenamen einer Version vor Windows 2000 im Format [\<domainName>\\<login_name>] verwenden. Sie können keine UPN im Format login_name@DomainName verwenden. Ein Beispiel hierzu finden Sie unter „Beispiel D“ weiter unten in diesem Artikel. Anmeldenamen für die Authentifizierung sind vom Typ **sysname**. Sie müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und dürfen keinen „**\\**“ enthalten. Windows-Anmeldenamen können '**\\**'-Zeichen enthalten. Anmeldenamen auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt.
+*login_name* Gibt den Anmeldenamen an, der erstellt wird. Es gibt vier Arten von Anmeldenamen: SQL Server-Anmeldungen, Windows-Anmeldenamen, Anmeldenamen mit zugeordneten Zertifikaten sowie Anmeldenamen mit zugeordneten asymmetrischen Schlüsseln. Wenn Sie Anmeldenamen erstellen, die von einem Windows-Domänenkonto zugeordnet werden, müssen Sie den Benutzeranmeldenamen einer Version vor Windows 2000 im Format [\<domainName>\\<login_name>] verwenden. Sie können keine UPN im Format login_name@DomainName verwenden. Ein Beispiel hierzu finden Sie unter „Beispiel D“ weiter unten in diesem Artikel. Anmeldenamen für die Authentifizierung sind vom Typ **sysname**. Sie müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und dürfen keinen „ **\\** “ enthalten. Windows-Anmeldenamen können ' **\\** '-Zeichen enthalten. Anmeldenamen auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt.
 
-PASSWORD **='**_Kennwort_' Gilt nur für SQL Server-Anmeldungen. Gibt das Kennwort für den Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab SQL Server 2012 (11.x) werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
+PASSWORD **='** _Kennwort_' Gilt nur für SQL Server-Anmeldungen. Gibt das Kennwort für den Anmeldenamen an, der erstellt wird. Verwenden Sie ein sicheres Kennwort. Weitere Informationen finden Sie unter [Sichere Kennwörter](../../relational-databases/security/strong-passwords.md) und [Kennwortrichtlinie](../../relational-databases/security/password-policy.md). Ab SQL Server 2012 (11.x) werden gespeicherte Kennwortinformationen mithilfe der SHA-512-Komponente des mit Salt verschlüsselten Kennworts berechnet.
 
 Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter sollten immer mindestens acht Zeichen lang sein und dürfen 128 Zeichen nicht überschreiten. Kennwörter dürfen a-z, A-Z, 0-9 und die meisten nicht alphanumerischen Zeichen einschließen. Kennwörter dürfen keine einfachen Anführungszeichen oder *login_name* enthalten.
 

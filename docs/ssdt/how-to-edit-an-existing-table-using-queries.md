@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b9687226caec47161fb42038994be279a89becc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659578"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090237"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Vorgehensweise: Bearbeiten einer vorhandenen Tabelle mit Abfragen
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Gewusst wie: Bearbeiten einer vorhandenen Tabelle mithilfe von Abfragen
 Sie können die Definition einer Tabelle oder ihre Daten bearbeiten, indem Sie eine Transact\-SQL-Abfrage schreiben. Verwenden Sie zum Anzeigen oder visuellen Eingeben von Daten in einer Tabelle den Daten-Editor, wie unter [Entwicklung verbundener Datenbanken](../ssdt/connected-database-development.md) beschrieben wird.  
   
 > [!WARNING]  
@@ -32,7 +32,7 @@ Sie können die Definition einer Tabelle oder ihre Daten bearbeiten, indem Sie e
   
 3.  Überprüfen Sie das Feld **NULL-Werte zulassen** für die Spalte **Address**. Beachten Sie, dass der entsprechende Code im Skriptbereich sofort in `NULL` geändert wird.  
   
-4.  Aktualisieren Sie die Datenbank gemäß den Schritten im Thema [Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) an.  
+4.  Aktualisieren Sie die Datenbank, indem Sie die Schritte im Thema [Vorgehensweise: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) befolgen.  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>So füllen Sie mit einer Transact\-SQL-Abfrage neue Tabellen mit Daten auf  
   
@@ -78,7 +78,7 @@ Sie können die Definition einer Tabelle oder ihre Daten bearbeiten, indem Sie e
     GO  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Verwalten von Tabellen, Beziehungen und Beheben von Fehlern](../ssdt/manage-tables-relationships-and-fix-errors.md)  
 [Verwenden des Transact-SQL-Editors zum Bearbeiten und Ausführen von Skripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  
   

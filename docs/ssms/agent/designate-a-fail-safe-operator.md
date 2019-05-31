@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ea7a499e2d0577b8ac0d57cbb0f530958af9ff8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501981"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096521"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Bestimmen eines Ausfallsicherheitsoperators
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Ausfallsicherheitsope
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   
-3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents >**_Servername_ unter **Seite auswählen** auf **Warnungssystem**.  
+3.  Klicken Sie im Dialogfeld **Eigenschaften des SQL Server-Agents >** _Servername_ unter **Seite auswählen** auf **Warnungssystem**.  
   
 4.  Aktivieren Sie unter **Ausfallsicherheitsoperator**die Option **Ausfallsicherheitsoperator aktivieren**.  
   
 5.  Wählen Sie in der Liste **Operator** den Operator aus, den Sie als ausfallsicher bestimmen möchten.  
   
-6.  Aktivieren Sie entweder eines oder alle der folgenden Kontrollkästchen – **E-Mail**, **Pager**oder **NET SEND**–, um zu bestimmen, wie der Operator benachrichtigt wird.  
+6.  Aktivieren Sie entweder eines oder alle der folgenden Kontrollkästchen, um zu bestimmen, wie der Operator benachrichtigt wird: **E-Mail**, **Pager** oder **NET SEND**.  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

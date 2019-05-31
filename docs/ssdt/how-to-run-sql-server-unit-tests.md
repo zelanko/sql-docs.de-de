@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b5d26b38b4fef4f108a67194e4af775154d32a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b838503365dde968f938efb46c940f3a66ce4357
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677879"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098458"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests
+# <a name="how-to-run-sql-server-unit-tests"></a>Gewusst wie: Ausführen von SQL Server-Komponententests
 Sie können einen SQL Server-Komponententest auf verschiedene Weisen ausführen, indem Sie z.B. das Eingabeaufforderungsfenster oder verschiedene andere Fenster verwenden.  
   
 > [!NOTE]  
@@ -56,9 +56,9 @@ Welche Möglichkeiten verfügbar sind, hängt von der installierten Software ab,
   
 Durch diesen Schritt werden alle Tests im aktuellen Testlauf ausgeführt. Sobald Sie einen Testlauf starten, wird das Fenster **Testergebnisse** mit dem Status des Testlaufs angezeigt. In diesem Fenster sind sowohl die aktiven als auch die abgeschlossenen Tests enthalten. Weitere Informationen finden Sie unter [Interpretieren der Ergebnisse von SQL Server-Komponententests](../ssdt/interpreting-sql-server-unit-test-results.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Ausführen von SQL Server-Komponententests](../ssdt/running-sql-server-unit-tests.md)  
-[Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Vorgehensweise: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Ausführen von automatisierten Tests in der Befehlszeile (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [Testen der Anwendung (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

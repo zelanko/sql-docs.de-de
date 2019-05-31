@@ -1,21 +1,21 @@
 ---
 title: Entwickeln mit REST-APIs für Reporting Services | Microsoft-Dokumentation
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d4f4af8dc03713046915f61effc684003303aaa9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254695"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502740"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Entwickeln mit REST-APIs für Reporting Services
 
@@ -33,10 +33,10 @@ Ein REST-API-Anforderung/Antwort-Paar kann in fünf Komponenten gegliedert werde
 
 * Der **Anforderungs-URI**, der aus `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}` besteht. Obwohl der Header der Anforderungsnachricht den Anforderungs-URI enthält, erwähnen wir ihn an dieser Stelle extra, da es für viele Sprachen und Frameworks erforderlich ist, diesen separat der Anforderungsnachricht zu entnehmen.
 
-    * URI-Schema: Gibt das Protokoll an, das zum Übertragen der Anforderung verwendet wird. Zum Beispiel: `http` oder `https`.
-    * URI-Host: Gibt den Domänennamen oder die IP-Adresse des Servers an, auf dem der REST-Dienstendpunkt gehostet wird. Zum Beispiel: `myserver.contoso.com`.
-    * Ressourcenpfad: Gibt die Ressource oder die Ressourcenauflistung an, die möglicherweise mehrere Segmente enthält, die vom Dienst zur Bestimmung der Auswahl dieser Ressourcen verwendet werden. Beispielsweise kann `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` verwendet werden, um angegebene Eigenschaften für CatalogItem zu verwenden.
-    * Abfragezeichenfolge (optional): Stellt zusätzliche, einfache Parameter wie die API-Version oder die Kriterien der Ressourcenauswahl bereit.
+    * URI-Schema: gibt das Protokoll an, das zum Übertragen der Anforderung verwendet wird. Zum Beispiel: `http` oder `https`.
+    * URI-Host: gibt den Domänennamen oder die IP-Adresse des Servers an, auf dem die REST-Dienstendpunkte gehostet werden. Zum Beispiel: `myserver.contoso.com`.
+    * Ressourcenpfad: gibt die Ressource oder die Ressourcenauflistung an, die möglicherweise mehrere Segmente enthalten, die vom Dienst zur Bestimmung der Auswahl dieser Ressourcen verwendet werden. Beispielsweise kann `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` verwendet werden, um angegebene Eigenschaften für CatalogItem zu verwenden.
+    * Abfragezeichenfolge (optional): stellt zusätzliche, einfache Parameter wie die API-Version oder die Kriterien der Ressourcenauswahl bereit.
 
 * Nachrichtenheaderfelder mit HTTP-Anforderungen:
 
@@ -56,7 +56,7 @@ Ein REST-API-Anforderung/Antwort-Paar kann in fünf Komponenten gegliedert werde
 
 ## <a name="api-documentation"></a>API-Dokumentation
 
-Eine moderne REST-API benötigt auch eine moderne API-Dokumentation. Die REST-API wird auf der Grundlage der OpenAPI-Spezifikation erstellt (auch als Swagger-Spezifikation bezeichnet), und die Dokumentation ist auf dem [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) verfügbar. Neben der API-Dokumentation finden Sie auf dem SwaggerHub auch Anweisungen zum Generieren einer Clientbibliothek in der Sprache Ihrer Wahl: JavaScript, TypeScript, C#, Java, Python, Ruby, usw.
+Eine moderne REST-API benötigt auch eine moderne API-Dokumentation. Die REST-API basiert auf der OpenAPI-Spezifikation (auch Swagger-Spezifikation genannt). Die Dokumentation ist unter [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) verfügbar. Neben der API-Dokumentation finden Sie auf dem SwaggerHub auch Anweisungen zum Generieren einer Clientbibliothek in der Sprache Ihrer Wahl: JavaScript, TypeScript, C#, Java, Python, Ruby, usw.
 
 ## <a name="testing-api-calls"></a>Testen von API-Aufrufen
 

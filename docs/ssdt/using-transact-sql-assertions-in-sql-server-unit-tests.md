@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543902"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102009"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
 In einem SQL Server-Komponententest wird ein Transact\-SQL-Testskript ausgeführt, von dem ein Ergebnis zurückgegeben wird. In einigen Fällen werden die Ergebnisse als Resultset zurückgegeben. Sie können die Ergebnisse mithilfe von Testbedingungen überprüfen. Beispielsweise können Sie eine Testbedingung verwenden, um zu überprüfen, wie viele Zeilen in einem bestimmten Resultset zurückgegeben wurden, bzw. um zu ermitteln, wie lange ein bestimmter Test gedauert hat. Weitere Informationen zu Testbedingungen finden Sie unter [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -57,7 +57,7 @@ Erläuterungen:
   
 Nicht festgelegte Parameter werden ignoriert. Sie übergeben diese Parameter an die RAISERROR-Anweisung im Datenbankcode. Wenn Sie MatchFirstError = true angeben, entspricht das Attribut jedem SqlError in der Ausnahme. Das Standardverhalten („MatchFirstError = true“) besteht darin, dass nur der erste aufgetretene Fehler vom Attribut verglichen wird.  
   
-Ein Beispiel dafür, wie erwartete Ausnahmen und ein negativer SQL Server-Komponententest verwendet werden, finden Sie unter [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Ein Beispiel zur Verwendung erwarteter Ausnahmen und einen negativen SQL Server-Komponententest finden Sie unter [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>Die RAISERROR-Anweisung  
   
@@ -79,11 +79,11 @@ Dabei gilt:
   
 @ErrorState ist eine willkürliche ganze Zahl zwischen 1 und 127. Sie können diese ganze Zahl verwenden, um Vorkommen eines einzelnen Fehlers zu unterscheiden, die an verschiedenen Stellen im Code vorkommen.  
   
-Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Ein Beispiel zur Verwendung von RAISERROR in einem SQL Server-Komponententest finden Sie im Thema [Gewusst wie: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Ein Beispiel für die Verwendung von RAISERROR in einem SQL Server-Komponententest finden Sie im Thema [Vorgehensweise: Schreiben eines SQL Server-Komponententests, der im Gültigkeitsbereich einer einzelnen Transaktion ausgeführt wird](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Gewusst wie: Öffnen eines SQL Server-Komponententests zur Bearbeitung](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Vorgehensweise: Öffnen eines SQL Server-Komponententests zur Bearbeitung](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.proxy.general.f1
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d33f7a468dfcff6274c4a48cfd367ea4c64226e1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 072910b06ed75a5aad53bb6f51f0d62224144459
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696068"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088777"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>Proxyeigenschaften – Neues Proxykonto (Seite „Allgemein“)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51696068"
 
 Mithilfe dieser Seite können Sie die Eigenschaften für ein Proxykonto für den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent anzeigen und ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
 **Proxyname**  
 Geben Sie den Namen des Proxys ein.  
   
@@ -37,7 +37,7 @@ Geben Sie den Namen des Proxys ein.
 Geben Sie den Namen der Anmeldeinformationen für den Proxy ein.  
   
 > [!NOTE]  
-> Der eingegebene Anmeldeinformationsname muss der Name von vorhandenen Anmeldeinformationen sein. Informationen zum Erstellen von Anmeldeinformationen finden Sie unter [Vorgehensweise: Erstellen eines Proxykontos (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
+> Der eingegebene Anmeldeinformationsname muss der Name von vorhandenen Anmeldeinformationen sein. Informationen zum Erstellen von Anmeldeinformationen finden Sie unter [How to: Create a Credential (Vorgehensweise: Erstellen von Anmeldeinformationen)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586).  
   
 **...**  
 Öffnet das Dialogfeld **Anmeldeinformationen auswählen** .  
@@ -51,6 +51,6 @@ Wählen Sie die Subsysteme aus, auf die das Proxykonto zugreifen kann.
 **Auftragsschritte erneut zuweisen an**  
 Wählen Sie den Proxy aus, dem die Auftragsschritte neu zugewiesen werden sollen. Die Liste ist aktiviert, wenn Sie den Zugriff auf ein Subsystem aufheben, auf das der Proxy vorher zugreifen konnte.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen eines Proxys für den SQL Server-Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], creating
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d1be35274e41f259f0213d866bf91151d820f9d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 452cec6a4cfcf5f1f85a4e05f6522007851a31ca
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415997"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095532"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Erstellen eines Proxys für den SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto 
   
 #### <a name="Permissions"></a>Berechtigungen  
   
--   Nur Mitglieder der festen Serverrolle **sysadmin** haben die Berechtigung zum Erstellen, Ändern oder Löschen von Proxykonten. Benutzer, die nicht Mitglieder der festen Serverrolle **sysadmin** sind, müssen zur Verwendung von Proxys einer der folgenden festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents in der **msdb** -Datenbank hinzugefügt werden: **SQLAgentUserRole**, **SQLAgentReaderRole**oder **SQLAgentOperatorRole**.  
+-   Nur Mitglieder der festen Serverrolle **sysadmin** haben die Berechtigung zum Erstellen, Ändern oder Löschen von Proxykonten. Benutzer, die nicht Mitglied der festen Serverrolle **sysadmin** sind, müssen zur Verwendung von Proxys einer der folgenden festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents in der **msdb**-Datenbank hinzugefügt werden: **SQLAgentUserRole**, **SQLAgentReaderRole** oder **SQLAgentOperatorRole**.  
   
 -   Erfordert die **ALTER ANY CREDENTIAL** -Berechtigung, wenn für den Proxy zusätzlich eine Anmeldeinformation erstellt wird.  
   

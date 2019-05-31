@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9600287fb847dcea4f24c565a843e9757e364c5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973830"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105242"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,7 @@ In der folgenden Tabelle sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversi
 Die folgenden Features wirken mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unter bestimmten Einschränkungen zusammen. Weitere Informationen finden Sie in den verknüpften Themen.
 
 - Datenbankübergreifende Transaktionen/verteilte Transaktionen ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] und Windows Server 2016). Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+- Der [Systemdatensammler für Abfragestatistiken](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) kann nicht zuverlässig in einer Umgebung mit nicht lesbaren sekundären Replikaten ausgeführt werden. Zur Verwendung des Systemdatensammler für Abfragestatistiken müssen Sie für alle sekundären Verfügbarkeitsgruppenreplikate den [Lesezugriff](configure-read-only-access-on-an-availability-replica-sql-server.md) erlauben. 
 
 ## <a name="NoInterop"></a> Funktionen, die nicht mit Always On-Verfügbarkeitsgruppen zusammenwirken
 

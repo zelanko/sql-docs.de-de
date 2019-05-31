@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c36a1b7235b1a323bbace94762411aa2c71df15b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526711"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094262"
 ---
 # <a name="load-files-into-filetables"></a>Laden von Dateien in FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "52526711"
 |Aktueller Speicherort von Dateien|Optionen für die Migration|  
 |-------------------------------|---------------------------|  
 |Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Informationen über die Dateien.|Da eine FileTable im Windows-Dateisystem als Ordner angezeigt wird, können Sie Dateien mithilfe einer der verfügbaren Methoden zum Verschieben oder Kopieren von Dateien ganz einfach in eine neue FileTable laden. Zu diesen Methoden gehören Windows-Explorer, Befehlszeilenoptionen, einschließlich „xcopy“ und „robocopy“, sowie benutzerdefinierte Skripts oder Anwendungen.<br /><br /> Sie können einen vorhandenen Ordner nicht in eine FileTable konvertieren.|  
-|Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Tabelle von Metadaten, die Zeiger auf die Dateien enthält.|Der erste Schritt besteht darin, die Dateien mithilfe einer der oben erwähnten Methoden zu verschieben oder zu kopieren.<br /><br /> Der zweite Schritt besteht darin, die vorhandene Tabelle von Metadaten so zu aktualisieren, dass diese auf den neuen Speicherort der Dateien zeigt.<br /><br /> Weitere Informationen finden Sie in diesem Artikel unter [Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable](#HowToMigrateFiles).|  
+|Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Tabelle von Metadaten, die Zeiger auf die Dateien enthält.|Der erste Schritt besteht darin, die Dateien mithilfe einer der oben erwähnten Methoden zu verschieben oder zu kopieren.<br /><br /> Der zweite Schritt besteht darin, die vorhandene Tabelle von Metadaten so zu aktualisieren, dass diese auf den neuen Speicherort der Dateien zeigt.<br /><br /> Weitere Informationen finden Sie unter [Example: Migrieren von Dateien aus dem Dateisystem in eine Dateitabelle](#HowToMigrateFiles) in diesem Artikel.|  
   
-###  <a name="HowToLoadNew"></a> Vorgehensweise: Laden von Dateien in eine FileTable  
+###  <a name="HowToLoadNew"></a> Vorgehensweise: Laden von Dateien in eine Dateitabelle  
 Sie können die folgenden Methoden verwenden, um Dateien in eine FileTable zu laden:  
   
 -   Drag & Drop von Dateien aus den Quellordnern in den neuen FileTable-Ordner in Windows-Explorer.  
@@ -43,7 +43,7 @@ Sie können die folgenden Methoden verwenden, um Dateien in eine FileTable zu la
   
 -   Schreiben Sie eine benutzerdefinierte Anwendung in C# oder Visual Basic.NET, um die Dateien zu verschieben oder zu kopieren. Rufen Sie Methoden aus dem Namespace **System.IO** auf.  
   
-###  <a name="HowToMigrateFiles"></a> Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable  
+###  <a name="HowToMigrateFiles"></a> Beispiel: Migrieren von Dateien aus dem Dateisystem in eine Dateitabelle  
  In diesem Szenario werden die Dateien im Dateisystem gespeichert, und Sie verfügen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine Tabelle mit Metadaten, die Zeiger auf die Dateien enthält. Sie möchten die Dateien in eine FileTable verschieben und den ursprünglichen UNC-Pfad für jede Datei in den Metadaten durch den FileTable-UNC-Pfad ersetzen. Die Funktion [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) hilft Ihnen, dieses Ziel zu erreichen.  
   
  Nehmen Sie für dieses Beispiel an, dass eine Datenbanktabelle, **PhotoMetadata**, vorhanden ist, die Daten zu Fotos enthält. Diese Tabelle enthält eine Spalte **UNCPath** des Typs **varchar**(512), der den tatsächlichen UNC-Pfad zu einer JPG-Datei enthält.  
@@ -99,7 +99,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) mit IGNORE_CONSTRAINTS-Klausel.  
   
-###  <a name="HowToBulkLoad"></a> Vorgehensweise: Massenladen von Dateien in eine FileTable  
+###  <a name="HowToBulkLoad"></a> Vorgehensweise: Massenladen von Dateien in eine Dateitabelle  
  Sie können verschiedene Methoden zum Massenladen von Dateien in eine FileTable verwenden:  
   
 -   **bcp**  
@@ -114,7 +114,7 @@ UPDATE PhotoMetadata
   
     -   Deaktivieren Sie den FileTable-Namespace, und führen Sie den Aufruf ohne die **CHECK_CONSTRAINTS** -Klausel aus. Aktivieren Sie dann den FileTable-Namespace erneut.  
   
--   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK...)**.  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK...)** .  
   
     -   Aufruf mit der **IGNORE_CONSTRAINTS** -Klausel.  
   
@@ -122,10 +122,10 @@ UPDATE PhotoMetadata
   
  Informationen zum Deaktivieren der FileTable-Einschränkungen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Vorgehensweise: Deaktivieren von FileTable-Einschränkungen zum Massenladen  
+###  <a name="disabling"></a> Vorgehensweise: Deaktivieren von Dateitabellen-Einschränkungen zum Massenladen  
  Um Dateien in einem Massenvorgang in eine FileTable zu laden und dabei den Aufwand zu vermeiden, die systemdefinierten Einschränkungen zu erzwingen, können Sie die Einschränkungen vorübergehend deaktivieren. Weitere Informationen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Zugreifen auf FileTables mit Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [Zugreifen auf FileTables mit Datei-E/A-APIs](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

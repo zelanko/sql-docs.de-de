@@ -1,7 +1,7 @@
 ---
 title: Sortierung und Unicode-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206439"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775028"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,15 +147,20 @@ Um die in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] verfügbare
     
     -   Sortierungen von Version 100    
     
-    -   Sortierungen der Version 140    
+    -   Sortierungen der Version 140   
+    
+    -   Die binäre Sortierung BIN2<sup>1</sup>
     
 -   Das UTF8-Flag kann auf folgende Sortierungen nicht angewendet werden:    
     
     -   Sortierungen der Version 90, die keine ergänzenden Zeichen (\_SC) oder Variierungsauswahlzeichen (\_VSS) unterstützen    
     
-    -   Die binären Sortierungen BIN und BIN2    
+    -   Die binären Sortierungen BIN und BIN2<sup>2</sup>    
     
-    -   Die SQL\*-Sortierungen       
+    -   Die SQL\*-Sortierungen  
+    
+<sup>1</sup> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Bis [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 Zum Abwägen der Vor- und Nachteile von Unicode- und Nicht-Unicode-Datentypen müssen Sie das Szenario testen und die Leistungsunterschiede in Ihrer Umgebung messen. Es ist ratsam, die Sortierung zu standardisieren, die für die Systeme in Ihrem Unternehmen verwendet wird, und so weit wie möglich Unicode-Server und -Clients bereitzustellen.    
     
@@ -245,7 +250,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 Alle neuen Sortierungen verfügen über integrierte Unterstützung für ergänzende Zeichen, sodass keine der neuen Sortierungen das SC-Flag besitzt (oder benötigt).
 
 Diese Sortierungen werden in Indizes der Datenbank-Engine, in für den Arbeitsspeicher optimierten Tabellen, in Columnstore-Indizes und in nativ kompilierten Modulen unterstützt.
-    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>Unterstützung für UTF-8
+
+Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird die vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 als Import- oder Exportcodierung oder als Sortierung für Textdaten auf Datenbank- oder Spaltenebene eingeführt. UTF-8 ist für die Datentypen `CHAR` und `VARCHAR` zulässig und ist bei der Erstellung oder Änderung einer Objektsortierung in eine Sortierung mit dem Suffix `UTF8` aktiviert. 
+
+Beispiel: `LATIN1_GENERAL_100_CI_AS_SC` in `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. Die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführte UTF-8-Codierung ist nur für Windows-Sortierungen verfügbar, die Sonderzeichen unterstützen. `NCHAR` und `NVARCHAR` lassen nur die UTF-16-Codierung zu und bleiben unverändert.
+
+Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Speichereinsparungen ermöglichen. Die Änderung eines vorhandenen Spaltendatentyps mit ASCII-Zeichen (lateinisch) von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die gleiche Unicode-Zeichenfolge erfordert.
+
 ##  <a name="Related_Tasks"></a> Verwandte Aufgaben    
     
 |Task|Thema|    
@@ -260,6 +275,7 @@ Diese Sortierungen werden in Indizes der Datenbank-Engine, in für den Arbeitssp
 ##  <a name="Related_Content"></a> Verwandte Inhalte    
 [Bewährte Methoden für die Sortierungsänderung bei SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [Bewährte Methode in SQL Server für die Migration zu Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) – wird nicht mehr angeboten   
 [Website des Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

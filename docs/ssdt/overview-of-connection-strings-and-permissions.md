@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a61361460513e546e459aa6183b8081f510d8ed7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646868"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102033"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Übersicht über Verbindungszeichenfolgen und Berechtigungen
 Zum Ausführen von SQL Server-Komponententests muss eine Verbindung mit einem Datenbankserver hergestellt werden, indem eine oder zwei spezifische Verbindungszeichenfolgen verwendet werden. Jede Verbindungszeichenfolge stellt ein Konto dar. Das Konto muss über spezifische Berechtigungen zum Ausführen einer oder mehrerer Aufgaben in einem bestimmten Skript im Rahmen des Tests verfügen. Sie können diese Zeichenfolgen im Dialogfeld **SQL Server-Testkonfiguration** angeben oder die Datei „app.config“ für das Testprojekt manuell bearbeiten.  
@@ -45,7 +45,7 @@ Das Testskript wird mit der Berechtigungsstufe "Ausführungskontext" ausgeführt
   
 Da für die Verbindung, die für das Skript der Nachtestaktion verwendet wird, höhere Berechtigungen gelten, können Sie in diesem Rahmen eine Überprüfung ausführen. Außerdem können Sie in diesem Skript Skriptbefehle zum Testen von Berechtigungen ausführen. Weitere Informationen zu Berechtigungen finden Sie im Artikel [Erforderliche Berechtigungen für SQL Server Data Tools](../ssdt/required-permissions-for-sql-server-data-tools.md) im Abschnitt zu SQL Server-Komponententests.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Skripts in SQL Server-Komponententests](../ssdt/scripts-in-sql-server-unit-tests.md)  
 [SQL Server-Komponententestdateien](../ssdt/sql-server-unit-test-files.md)  

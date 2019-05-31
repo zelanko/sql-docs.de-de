@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c92421a2c29964683489c93b59e98a398d9262
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c9f4f22990a4fb1fa3fdb78241cf2989027e7106
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661249"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106272"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Die schrittweise Wiederherstellung wird für Datenbanken mit speicheroptimierten Tabellen unterstützt, allerdings mit der im Folgenden beschriebenen Einschränkung. Weitere Informationen zur schrittweisen Sicherung und Wiederherstellung finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) und [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
@@ -46,59 +47,107 @@ ms.locfileid: "51661249"
 ## <a name="samples"></a>Beispiele  
  In den Beispielen wird das folgende Schema verwendet:  
   
-```  
-CREATE DATABASE imoltp  
-ON PRIMARY (name = imoltp_primary1, filename = 'c:\data\imoltp_data1.mdf')  
-LOG ON (name = imoltp_log, filename = 'c:\data\imoltp_log.ldf')  
+```sql
+CREATE DATABASE imoltp
+    ON PRIMARY (
+        name = imoltp_primary1,
+        filename = 'c:\data\imoltp_data1.mdf')
+    LOG ON (
+        name = imoltp_log,
+        filename = 'c:\data\imoltp_log.ldf');
+    GO  
+  
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_primary2,
+        filename = 'c:\data\imoltp_data2.ndf');
 GO  
   
-ALTER DATABASE imoltp ADD FILE (name = imoltp_primary2, filename = 'c:\data\imoltp_data2.ndf')  
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_secondary;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_secondary,
+        filename = 'c:\data\imoltp_secondary.ndf')
+            TO FILEGROUP imoltp_secondary;
 GO  
   
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_secondary  
-ALTER DATABASE imoltp ADD FILE (name = imoltp_secondary, filename = 'c:\data\imoltp_secondary.ndf') TO FILEGROUP imoltp_secondary  
-GO  
-  
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod2') TO FILEGROUP imoltp_mod   
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_mod
+    CONTAINS MEMORY_OPTIMIZED_DATA;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod1',
+        filename = 'c:\data\imoltp_mod1')
+            TO FILEGROUP imoltp_mod;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod2',
+        filename = 'c:\data\imoltp_mod2')
+            TO FILEGROUP imoltp_mod;
 GO  
 ```  
   
 ### <a name="backup"></a>Sicherung  
- Dieses Beispiel veranschaulicht, wie die primäre Dateigruppe und die speicheroptimierte Dateigruppe gesichert werden. Sie müssen die primäre und speicheroptimierte Dateigruppe zusammen angeben.  
+ Dieses Beispiel veranschaulicht, wie die primäre und die speicheroptimierte Dateigruppe gesichert werden. Sie müssen die primäre und speicheroptimierte Dateigruppe zusammen angeben.  
   
-```  
-backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\data\imoltp.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    to disk = 'c:\data\imoltp.dmp'
+    with init;
+```
   
  Das folgende Beispiel veranschaulicht, dass eine Dateigruppensicherung, die keine primäre und speicheroptimierte Dateigruppe umfasst, ähnlich wie bei Datenbanken ohne speicheroptimierte Tabellen funktioniert. Mit dem folgenden Befehl wird die sekundäre Dateigruppe gesichert.  
   
-```  
-backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'imoltp_secondary'
+    to disk = 'c:\data\imoltp_secondary.dmp'
+    with init;
+```
   
 ### <a name="restore"></a>Wiederherstellung  
  Im folgenden Beispiel wird gezeigt, wie die primäre Dateigruppe und speicheroptimierte Dateigruppe zusammen wiederhergestellt werden.  
-  
-```  
-restore database imoltp filegroup = 'primary', filegroup = 'imoltp_mod'   
-from disk='c:\data\imoltp.dmp' with partial, norecovery  
-  
---restore the transaction log  
- RESTORE LOG [imoltp] FROM DISK = N'c:\data\imoltp_log.dmp' WITH  FILE = 1,  NOUNLOAD,  STATS = 10  
-GO  
-```  
+
+```sql
+RESTORE database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    from disk = 'c:\data\imoltp.dmp'
+    with
+        partial,
+        norecovery;
+
+-- Restore the transaction log.
+
+RESTORE LOG [imoltp]
+    FROM DISK = N'c:\data\imoltp_log.dmp'
+    WITH
+        FILE = 1,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
   
  Das nächste Beispiel veranschaulicht, dass eine Dateigruppenwiederherstellung, die keine primäre und speicheroptimierte Dateigruppe umfasst, ähnlich wie bei Datenbanken ohne speicheroptimierte Tabellen funktioniert.  
   
-```  
-RESTORE DATABASE [imoltp] FILE = N'imoltp_secondary'   
-FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOAD,  STATS = 10  
-GO  
-```  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+```sql
+RESTORE DATABASE [imoltp]
+    FILE = N'imoltp_secondary'
+    FROM DISK = N'c:\data\imoltp_secondary.dmp'
+    WITH
+        FILE = 1,
+        RECOVERY,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
+
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen speicheroptimierter Tabellen](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
-  
+

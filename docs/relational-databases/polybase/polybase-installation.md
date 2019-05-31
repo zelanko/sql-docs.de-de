@@ -11,12 +11,13 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872300"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775052"
 ---
 # <a name="install-polybase-on-windows"></a>Installieren von PolyBase unter Windows
 
@@ -40,15 +41,16 @@ Besuchen Sie [SQL Server Evaluation](https://www.microsoft.com/evalcenter/evalua
    
 - Für PolyBase muss TCP/IP aktiviert sein, um ordnungsgemäß funktionieren zu können. TCP/IP ist standardmäßig in allen Editionen von SQL Server aktiviert. Davon ausgenommen sind nur die Editionen Developer und Express SQL Server. Damit PolyBase auch in den Developer- und Express-Versionen ordnungsgemäß funktionieren kann, müssen Sie die TCP/IP-Konnektivität aktivieren. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-- MSVC++ 2012 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > PolyBase kann nur auf einer SQL Server-Instanz pro Computer installiert werden.
-> 
-> [!IMPORTANT]
-> 
-> Wenn Sie die Weitergabeberechnungsfunktion für Hadoop verwenden möchten, muss der Hadoop-Zielcluster über die Kernkomponenten von HDFS (Hadoop Distributed File System), YARN und MapReduce verfügen. Dabei muss der Auftragsverlaufserver aktiviert sein. PolyBase übermittelt die Weitergabeabfrage über MapReduc und ruft den Status über den Auftragsverlaufserver ab. Wenn keine dieser Komponenten vorhanden ist, tritt bei der Abfrage ein Fehler auf.
+
+
+>[!NOTE]
+>Damit Sie PolyBase verwenden können, müssen Sie über Berechtigungen auf Systemadministrator- oder CONTROL SERVER-Ebene für die Datenbank verfügen.
+
+>[!IMPORTANT]
+>Wenn Sie die Weitergabeberechnungsfunktion für Hadoop verwenden möchten, muss der Hadoop-Zielcluster über die Kernkomponenten von HDFS (Hadoop Distributed File System), YARN und MapReduce verfügen. Dabei muss der Auftragsverlaufserver aktiviert sein. PolyBase übermittelt die Weitergabeabfrage über MapReduc und ruft den Status über den Auftragsverlaufserver ab. Wenn keine dieser Komponenten vorhanden ist, tritt bei der Abfrage ein Fehler auf.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>Einzelknoten oder PolyBase-Erweiterungsgruppe
 
@@ -74,11 +76,10 @@ Wenn Sie PolyBase einmal installiert haben, können Sie dies nicht mehr ändern.
    ![PolyBase-Dienste](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
 4. Konfigurieren Sie auf der Seite „Serverkonfiguration“ die **SQL Server-PolyBase-Engine** und den **SQL Server PolyBase-Datenverschiebungsdienst** so, dass beide unter demselben Domänenkonto ausgeführt werden.  
-   
-   > [!IMPORTANT] 
-   >
+
+   >[!IMPORTANT]
    >In einer PolyBase-Erweiterungsgruppe müssen die PolyBase-Engine und der PolyBase-Datenverschiebungsdienst auf allen Knoten unter dem gleichen Domänenkonto ausgeführt werden. Weitere Informationen finden Sie unter [PolyBase scale-out groups (PolyBase-Erweiterungsgruppen)](#enable).
-   
+
 5. Wählen Sie auf der PolyBase-Konfigurationsseite eine der beiden Optionen aus. Weitere Informationen finden Sie unter [PolyBase scale-out groups (PolyBase-Erweiterungsgruppen)](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
    - Verwenden Sie die SQL Server-Instanz als eigenständige, für PolyBase aktivierte Instanz.  
@@ -91,8 +92,7 @@ Wenn Sie PolyBase einmal installiert haben, können Sie dies nicht mehr ändern.
    
 6. Geben Sie auf der Seite PolyBase-Konfiguration den Portbereich mit mindestens sechs Ports an. SQL Server-Setup weist die ersten sechs verfügbaren Ports aus diesem Bereich zu.  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > Nach der Installation müssen Sie das [PolyBase-Feature aktivieren](#enable).
 
 

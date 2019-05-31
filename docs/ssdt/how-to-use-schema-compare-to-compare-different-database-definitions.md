@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs | Microsoft-Dokumentation'
+title: 'Gewusst wie: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs | Microsoft-Dokumentation'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668548"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095933"
 ---
-# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Gewusst wie: Vergleichen von Datenbankdefinitionen mithilfe des Schemavergleichs
+# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs
 SQL Server Data Tools (SSDT) enthält ein Hilfsprogramm für den Schemavergleich, mit dem Sie zwei Datenbankdefinitionen vergleichen können.  Bei der Quelle und dem Ziel des Vergleichs kann es sich um eine beliebige Kombination von verbundener Datenbank, SQL Server-Datenbankprojekt bzw. -Momentaufnahme oder DACPAC-Datei handeln.  Die Ergebnisse des Vergleichs werden als Satz von Aktionen angezeigt, die für das Ziel ausgeführt werden müssen, damit es mit der Quelle identisch ist.  Nach Abschluss des Vergleichs können Sie das Ziel direkt aktualisieren (wenn das Ziel ein Projekt oder eine Datenbank ist) oder ein Updateskript generieren, das den gleichen Zweck erfüllt.  
   
 Die Unterschiede zwischen Quelle und Ziel werden zur einfachen Überprüfung in einem Raster angezeigt.  Sie können einen Drilldown auf die einzelnen Unterschiede im Ergebnisraster oder im Skriptformular ausführen und sie überprüfen.  Anschließend können Sie bestimmte Unterschiede selektiv ausschließen.  
@@ -71,7 +71,7 @@ In der folgenden Prozedur wird das Schema eines Datenbankprojekts mit einer verb
   
 7.  Suchen Sie in der Gruppe `Products` die Tabelle `Tables`. Klicken Sie auf die Zeile, und beachten Sie, dass im Bereich **Objektdefinitionen** die Quell- und Zieldefinition der Tabelle angezeigt werden, wobei die Unterschiede markiert sind. Sie können auch im Bereich **Ergebnisse** die Tabellenzeile `Products` erweitern, um die Elemente in der Tabelle zu untersuchen, die unterschiedlich sind.  
   
-8.  Standardmäßig sind im Anwendungsbereich der Aktion "Ziel aktualisieren" alle Unterschiede enthalten. Sie können Unterschiede ausschließen, die nicht synchronisiert werden sollen. Hierzu deaktivieren Sie in der Mitte jeder Zeile die Spalte **Aktion**. Sie können auch im Bereich „Schema“ mit der rechten Maustaste auf eine Zeile klicken und **Ausschließen** auswählen. Die jeweilige Zeile wird sofort abgeblendet. Beim Aktualisieren der Zieldatenbank wird diese Zeile bei ausstehenden Änderungen nicht berücksichtigt.  
+8.  Standardmäßig sind im Anwendungsbereich der Aktion "Ziel aktualisieren" alle Unterschiede enthalten. Sie können Unterschiede ausschließen, die nicht synchronisiert werden sollen. Hierzu deaktivieren Sie in der Mitte jeder Zeile die Spalte **Aktion**. Sie können auch im Bereich „Schema“ mit der rechten Maustaste auf eine Zeile klicken und **Ausschließen** auswählen. Beachten Sie, dass die Zeile sofort ausgegraut wird. Beim Aktualisieren der Zieldatenbank wird diese Zeile bei ausstehenden Änderungen nicht berücksichtigt.  
   
     Sie können auch mit der rechten Maustaste auf eine Gruppenzeile klicken und **Alle ausschließen** oder **Alle einschließen** auswählen. Dies entspricht dem Markieren bzw. Aufheben der Markierung aller Unterschiede in der Gruppe. Wenn Sie Ergebnisse nach Schema gruppieren, empfiehlt sich dieses Verfahren, um alle Änderungen an einem bestimmten Schema einzuschließen oder auszuschließen.  
   

@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42a486a50e49e2d64024355617e77a84833edba9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: aede830ed407fcd7dddba4d2d9446b6510e84c8a
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326541"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774940"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -126,17 +126,18 @@ CREATE CERTIFICATE certificate_name
 > [!IMPORTANT]
 > Das Erstellen eines Zertifikats aus einer Datei oder mithilfe von Dateien mit privaten Schlüsseln wird in Azure SQL-Datenbank nicht unterstützt.
   
+ BINARY =*asn_encoded_certificate*  
+ Mit ASN verschlüsselte Zertifikatbytes, die als binäre Konstante angegeben sind.  
+ **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
  WITH PRIVATE KEY  
- Gibt an, dass der private Schlüssel des Zertifikats in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen wird. Diese Klausel ist nur gültig, wenn das Zertifikat aus einer Datei erstellt wird. Zum Laden des privaten Schlüssels einer Assembly können Sie [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) verwenden.  
+ Gibt an, dass der private Schlüssel des Zertifikats in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen wird. Diese Klausel ist ungültig, wenn das Zertifikat aus einer Assembly erstellt wird. Verwenden Sie [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md), um den privaten Schlüssel eines aus einer Assembly erstellten Zertifikats zu laden.  
   
  FILE ='*path_to_private_key*'  
  Gibt den vollständigen Pfad einschließlich des Dateinamens für den privaten Schlüssel an. *path_to_private_key* kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein. Die Datei wird im Sicherheitskontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkontos ausgeführt. Dieses Konto muss über die erforderlichen Dateisystemberechtigungen verfügen.  
   
 > [!IMPORTANT]  
 >  Diese Option ist in einer enthaltenen Datenbank oder in Azure SQL-Datenbank nicht verfügbar.  
-  
- asn_encoded_certificate  
- Mit ASN verschlüsselte Zertifikatbits, die als binäre Konstante angegeben sind.  
   
  BINARY =*private_key_bits*  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -162,7 +163,7 @@ CREATE CERTIFICATE certificate_name
  Stellt das Zertifikat für den Initiator einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dialogkonversation zur Verfügung. Der Standardwert ist ON.  
   
 ## <a name="remarks"></a>Remarks  
- Ein Zertifikat ist ein sicherungsfähiges Element auf Datenbankebene, das dem X.509-Standard entspricht und X.509 V1-Felder unterstützt. CREATE CERTIFICATE kann ein Zertifikat aus einer Datei oder Assembly laden. Mit dieser Anweisung kann auch ein Schlüsselpaar generiert und ein selbstsigniertes Zertifikat erstellt werden.  
+ Ein Zertifikat ist ein sicherungsfähiges Element auf Datenbankebene, das dem X.509-Standard entspricht und X.509 V1-Felder unterstützt. CREATE CERTIFICATE kann ein Zertifikat aus einer Datei, binären Konstante oder Assembly laden. Mit dieser Anweisung kann auch ein Schlüsselpaar generiert und ein selbstsigniertes Zertifikat erstellt werden.  
   
  Der private Schlüssel muss \<= 2500 Byte in einem verschlüsselten Format betragen. Private Schlüssel, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert werden, umfassen 1024 Bit bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 2048 Bit. Private Schlüssel, die aus einer externen Quelle importiert werden, haben eine minimale Länge von 384 Bits und eine maximale Länge von 4.096 Bits. Die Länge eines importierten privaten Schlüssels muss ein ganzzahliges Produkt von 64 Bits sein. Die für TDE verwendeten Zertifikate sind auf die private Schlüsselgröße von 3456 Bits beschränkt.  
   
@@ -233,7 +234,10 @@ GO
 ```  
 > [!IMPORTANT]
 > Azure SQL-Datenbank bietet keine Unterstützung für das Erstellen eines Zertifikats aus einer Datei.
-   
+
+> [!IMPORTANT]
+> Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] verhindert die Serverkonfigurationsoption [„CLR Strict Security“](../../database-engine/configure-windows/clr-strict-security.md) das Laden von Assemblys, ohne diese zuerst deren Sicherheit einzurichten. Laden Sie das Zertifikat, erstellen Sie einen Anmeldenamen, weisen Sie `UNSAFE ASSEMBLY` diesem Anmeldenamen zu, und laden Sie dann die Assembly.
+
 ### <a name="d-creating-a-self-signed-certificate"></a>D. Erstellen eines selbstsignierten Zertifikats  
  Das folgende Beispiel erstellt ein Zertifikat mit dem Namen `Shipping04`, ohne ein Verschlüsselungskennwort anzugeben. Dieses Beispiel kann mit [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwendet werden.
   
@@ -251,6 +255,8 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
  [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

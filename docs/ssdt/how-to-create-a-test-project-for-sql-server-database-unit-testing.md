@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen eines Testprojekts für SQL Server-Datenbankkomponententests | Microsoft-Dokumentation'
+title: 'Gewusst wie: Erstellen eines Testprojekts für SQL Server-Datenbank-Unittests | Microsoft-Dokumentation'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336099"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098069"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Vorgehensweise: Erstellen eines Testprojekts für SQL Server-Datenbankkomponententests
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Gewusst wie: Erstellen eines Testprojekts für SQL Server-Datenbankkomponententests
 Bevor Sie mit dem Schreiben von Komponententests beginnen können, durch die Datenbankobjekte ausgewertet werden, müssen Sie erst ein Testprojekt erstellen. Das Projekt enthält SQL Server-Komponententests, kann jedoch auch andere Testtypen enthalten.  
   
 Sie können alle SQL Server-Komponententests für ein bestimmtes Datenbankprojekt in einem einzelnen Testprojekt platzieren. Möglicherweise möchten Sie jedoch zusätzliche Testprojekte erstellen, je nachdem, wie die Antwort auf die folgenden Fragen ausfällt:  
@@ -29,7 +29,7 @@ Sie können alle SQL Server-Komponententests für ein bestimmtes Datenbankprojek
 |Müssen verschiedene SQL Server-Komponententests zur Testausführung oder Testüberprüfung auf verschiedene Datenbankverbindungen zugreifen?|Falls ja, benötigen Sie mehr als ein Testprojekt. Es kann nur maximal eine Datenbankverbindung für die Testausführung angegeben werden. Sie können jedoch eine andere Datenbankverbindung für die Testüberprüfung angeben.|  
 |Möchten Sie für verschiedene Komponententests unterschiedliche Datenbankprojekte bereitstellen?|Falls ja, benötigen Sie mehr als ein Testprojekt. Von einem Testprojekt kann nur ein einzelnes Datenbankprojekt bereitgestellt werden.|  
   
-Weitere Informationen zu den einzelnen Fragen finden Sie unter [Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Anstatt mehrere Testprojekte zu erstellen, können Sie auch eine eigene [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx)-Implementierung „Microsoft.Data.Schema.UnitTesting.DatabaseTestService“ bereitstellen.  
+Weitere Informationen zu den einzelnen Fragen finden Sie unter [Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Anstatt mehrere Testprojekte zu erstellen, können Sie auch eine eigene [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx)-Implementierung „Microsoft.Data.Schema.UnitTesting.DatabaseTestService“ bereitstellen.  
   
 Es gibt drei Möglichkeiten, um einer Projektmappe, in der ein Datenbankprojekt enthalten ist, ein Testprojekt hinzuzufügen:  
   
@@ -53,8 +53,8 @@ Die einzelnen Methoden werden in den folgenden Prozeduren vorgestellt.
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>So erstellen Sie ein Testprojekt mit einer SQL Server-Komponententestklasse  
   
--   Führen Sie die Vorgehensweise durch, die unter [Gewusst wie: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) oder [Gewusst wie: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md) beschrieben wird.  
+-   Führen Sie die unter [Vorgehensweise: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) oder [Vorgehensweise: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md) beschriebenen Schritte aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   

@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737668"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090096"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Gewusst wie: Vornehmen von Änderungen an Datenbankobjekten durch Umbenennen und Umgestalten
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Gewusst wie: Vornehmen von Änderungen an Datenbankobjekten durch Umbenennen und Refactoring
 Mit dem Kontextmenü „Umgestalten“ im Transact\-SQL-Editor können Sie ein Objekt umbenennen oder in ein anderes Schema verschieben. Außerdem können Sie eine Vorschau aller betroffenen Bereiche anzeigen, bevor Sie einen Commit für die Änderung ausführen. Mithilfe des Menüs „Umgestalten“ können Sie auch alle Verweise auf Datenbankobjekte vollständig qualifizieren, und Sie können Platzhalterzeichen in `SELECT`-Anweisungen im Datenbankprojekt erweitern.  
   
 > [!NOTE]  

@@ -3,22 +3,21 @@ title: Erstellen von Clientanwendungen für FILESTREAM-Daten | Microsoft Dokumen
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0699d7d270536c81b254694be5fad273bbc207dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20573362cc8eb41c3b6741bbc6efb8f6a3f9c9f5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671809"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094291"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Erstellen von Clientanwendungen für FILESTREAM-Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "51671809"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) gibt ein Token zurück, das die aktuelle Transaktion einer Sitzung darstellt. Anwendungen verwenden dieses Token, um FILESTREAM-Dateisystem-Streamingvorgänge an die Transaktion zu binden.  
   
--   Die [OpenSqlFilestream-API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) bezieht ein Win32-Dateihandle. Die Anwendung verwendet dieses Handle, um die FILESTREAM-Daten zu streamen, und kann das Handle dann an die folgenden Win32-APIs weitergeben: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)oder [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Wenn die Anwendung mit dem Handle irgendeine andere API anruft, wird ein ERROR_ACCESS_DENIED-Fehler zurückgegeben. Die Anwendung sollte das Handle mit [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)schließen.  
+-   Die [OpenSqlFilestream-API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) bezieht ein Win32-Dateihandle. Die Anwendung verwendet das Handle zum Streamen der FILESTREAM-Daten und kann das Handle dann an die folgenden Win32-APIs übergeben: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) oder [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Wenn die Anwendung mit dem Handle irgendeine andere API anruft, wird ein ERROR_ACCESS_DENIED-Fehler zurückgegeben. Die Anwendung sollte das Handle mit [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)schließen.  
   
  Alle Zugriffe auf FILESTREAM-Datencontainer müssen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktion erfolgen. [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen können auch in der gleichen Transaktion ausgeführt werden, damit die SQL-Daten mit den FILESTREAM-Daten konsistent bleiben.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "51671809"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="handle"></a> Abrufen eines Win32-Dateihandles  
- Um ein Win32-Dateihandle abzurufen, rufen Sie die OpenSqlFilestream-API auf. Diese API wird aus der Datei sqlncli.dll exportiert. Das zurückgegebene Handle kann an eine der folgenden Win32-APIs übergeben werden: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)oder [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Die folgenden Beispiele veranschaulichen, wie Sie ein Win32-Handle abrufen und zum Lesen und Schreiben von FILESTREAM BLOB-Daten verwenden.  
+ Um ein Win32-Dateihandle abzurufen, rufen Sie die OpenSqlFilestream-API auf. Diese API wird aus der Datei sqlncli.dll exportiert. Das zurückgegebene Handle kann an eine der folgenden Win32-APIs übergeben werden: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) oder [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Die folgenden Beispiele veranschaulichen, wie Sie ein Win32-Handle abrufen und zum Lesen und Schreiben von FILESTREAM BLOB-Daten verwenden.  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
@@ -87,7 +86,7 @@ ms.locfileid: "51671809"
   
 -   Wenn eine Anwendung das SMB (Server Message Block)-Protokoll verwendet, sollten FILESTREAM-BLOB-Daten in einem Vielfachen von 60 KB gelesen werden, um die Leistung zu optimieren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [Zugreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Binary Large Object &#40;BLOB&#41;-Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   

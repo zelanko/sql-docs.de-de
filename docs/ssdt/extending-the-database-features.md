@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0e1efe0db32b167214521e1af3b9a1e941480d2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a0271ff900ced1331308db67fc23d488a83caa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764258"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096938"
 ---
 # <a name="extending-the-database-features"></a>Erweitern der Datenbankfunktionen
 Mithilfe von Funktionserweiterungen können Sie Funktionen, wie etwa Komponententests und Datenbankcodeanalyse, selbst erweitern. Weitere Informationen finden Sie in folgenden Themen:  
@@ -27,8 +27,8 @@ Mithilfe von Funktionserweiterungen können Sie Funktionen, wie etwa Komponenten
   
 -   [Übersicht der Erweiterbarkeit um Regeln für die Datenbank-Codeanalyse](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
   
--   [Gewusst wie: Installieren und Verwalten von Funktionserweiterungen](../ssdt/how-to-install-and-manage-feature-extensions.md)  
+-   [Vorgehensweise: Installieren und Verwalten von Funktionserweiterungen](../ssdt/how-to-install-and-manage-feature-extensions.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
   

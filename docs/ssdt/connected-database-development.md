@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 536dbcddf73d8b6af5e1106a7eb279cc1db22f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fc970a214c001e00703ddaa79438d59e31e487
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655888"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105770"
 ---
 # <a name="connected-database-development"></a>Entwicklung verbundener Datenbanken
 In diesem Abschnitt werden Funktionen von SQL Server Data Tools zum Entwerfen und Abfragen einer verbundenen Datenbank beschrieben.  
@@ -32,15 +32,15 @@ Entwickler können jetzt mit dem SQL Server-Objekt-Explorer in Visual Studio Dat
   
 |Thema|und Beschreibung|  
 |---------|---------------|  
-|[Gewusst wie: Herstellen einer Verbindung mit einer Datenbank und Durchsuchen vorhandener Objekte](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|Stellen Sie eine Verbindung mit einer Datenbank her, und durchsuchen Sie ihre Entitäten.|  
-|[Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)|Verwenden Sie den neuen Tabellen-Designer, um Tabellen zu entwerfen und Tabellenbeziehungen zu verwalten.|  
-|[Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)|Aktualisieren Sie eine verbundene Datenbank, ohne ALTER-Skripts zu schreiben.|  
+|[Vorgehensweise: Herstellen einer Verbindung mit einer Datenbank und Durchsuchen vorhandener Objekte](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|Stellen Sie eine Verbindung mit einer Datenbank her, und durchsuchen Sie ihre Entitäten.|  
+|[Vorgehensweise: Erstellen von Datenbankobjekten mit dem Tabellen-Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)|Verwenden Sie den neuen Tabellen-Designer, um Tabellen zu entwerfen und Tabellenbeziehungen zu verwalten.|  
+|[Vorgehensweise: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)|Aktualisieren Sie eine verbundene Datenbank, ohne ALTER-Skripts zu schreiben.|  
 |[Dialogfeld „Sortieren und filtern“](../ssdt/filter-and-sort-dialog-box.md)|Geben Sie an, welche Daten in der Datenansicht angezeigt werden sollen.|  
-|[Gewusst wie: Erstellen von neuen Datenbankobjekten mit Abfragen](../ssdt/how-to-create-new-database-objects-using-queries.md)|Verwenden Sie den Transact\-SQL-Editor zum Bearbeiten und Ausführen von Transact\-SQL-Skripts.|  
-|[Gewusst wie: Bearbeiten einer vorhandenen Tabelle mit Abfragen](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Schreiben Sie Transact\-SQL-Skripts, um die Definition einer Tabelle zu bearbeiten oder eine Tabelle mit Daten aufzufüllen.|  
-|[Gewusst wie: Anzeigen und Bearbeiten von Daten in einer Tabelle](../ssdt/how-to-view-and-edit-data-in-a-table.md)|Verwenden Sie den Daten-Editor, um Daten in einer Tabelle anzuzeigen oder einzugeben.|  
-|[Gewusst wie: Löschen von Objekten und Auflösen von Abhängigkeiten](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)|Benennen Sie Datenbankentitäten um, oder löschen Sie sie, und lassen Sie Objektabhängigkeiten automatisch von SQL Server Data Tools auflösen.|  
-|[Gewusst wie: Klonen einer vorhandenen Datenbank](../ssdt/how-to-clone-an-existing-database.md)|Erstellen Sie eine Entwicklungsdatenbank aus einer Produktionsdatenbank.|  
+|[Vorgehensweise: Erstellen von neuen Datenbankobjekten mit Abfragen](../ssdt/how-to-create-new-database-objects-using-queries.md)|Verwenden Sie den Transact\-SQL-Editor zum Bearbeiten und Ausführen von Transact\-SQL-Skripts.|  
+|[Vorgehensweise: Bearbeiten einer vorhandenen Tabelle mit Abfragen](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Schreiben Sie Transact\-SQL-Skripts, um die Definition einer Tabelle zu bearbeiten oder eine Tabelle mit Daten aufzufüllen.|  
+|[Vorgehensweise: Anzeigen und Bearbeiten von Daten in einer Tabelle](../ssdt/how-to-view-and-edit-data-in-a-table.md)|Verwenden Sie den Daten-Editor, um Daten in einer Tabelle anzuzeigen oder einzugeben.|  
+|[Vorgehensweise: Löschen von Objekten und Auflösen von Abhängigkeiten](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)|Benennen Sie Datenbankentitäten um, oder löschen Sie sie, und lassen Sie Objektabhängigkeiten automatisch von SQL Server Data Tools auflösen.|  
+|[Vorgehensweise: Klonen einer vorhandenen Datenbank](../ssdt/how-to-clone-an-existing-database.md)|Erstellen Sie eine Entwicklungsdatenbank aus einer Produktionsdatenbank.|  
 |[Extrahieren, Veröffentlichen und Registrieren von DACPAC-Dateien](../ssdt/extract-publish-and-register-dacpac-files.md)|Beschreibt das Extrahieren und Veröffentlichen von DACPAC-Dateien.|  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  

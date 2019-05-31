@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Windows domain accounts [SQL Server]
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 264de74dbc3ee09cd333ceb4815c77890938894b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9991405a69aa43a7452d65003e2ef149c8dbc074
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697868"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104901"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Auswählen eines Kontos für den SQL Server-Agent-Dienst
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,24 +90,24 @@ In der folgenden Tabelle werden die Windows-Kontotypen aufgelistet, die für den
 |Lokales Systemkonto (NT AUTHORITY\System)|Supported<br /><br />Siehe Einschränkung 2 weiter unten.|Nicht unterstützt|Supported<br /><br />Siehe Einschränkung 2 weiter unten.|  
 |Lokales Dienstkonto (NT AUTHORITY\LocalService)|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Einschränkung 1: Verwenden von Nichtadministratorkonten für die Multiserververwaltung  
-Beim Eintragen von Zielservern auf einem Masterserver kann ein Fehler mit einer Fehlermeldung, die der folgenden ähnlich ist, auftreten: "Fehler beim Eintragen."  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Einschränkung 1: Verwenden von Nichtadministratorkonten für die Multiserververwaltung  
+Beim Eintragen von Zielservern für einem Masterserver kann ein Fehler mit der folgenden Fehlermeldung auftreten: "The enlist operation failed." (Fehler beim Eintragungsvorgang)  
   
-Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienste neu, um diesen Fehler zu beheben. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6).  
+Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienste neu, um diesen Fehler zu beheben. Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6).  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Einschränkung 2: Verwenden des lokalen Systemkontos für die Multiserververwaltung  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Einschränkung 2: Verwenden des lokalen Systemkontos für die Multiserververwaltung  
 Die Multiserververwaltung wird bei Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts unter dem lokalen Systemkonto nur dann unterstützt, wenn sich der Masterserver und der Zielserver auf demselben Computer befinden. Wenn Sie diese Konfiguration verwenden, wird beim Eintragen der Zielserver auf dem Masterserver etwa die folgende Meldung zurückgegeben:  
   
 „Stellen Sie sicher, dass das Agentstartkonto für *<Zielserver-Computername>* Rechte zur Anmeldung als Zielserver besitzt.“  
   
 Sie können diese zu Informationszwecken ausgegebene Meldung ignorieren. Der Eintragungsvorgang wird dennoch erfolgreich abgeschlossen. Weitere Informationen finden Sie unter [Erstellen einer Multiserverumgebung](../../ssms/agent/create-a-multiserver-environment.md).  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Einschränkung 3: Verwenden des Netzwerkdienstkontos als SQL Server-Benutzer  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Einschränkung 3: Verwenden des Netzwerkdienstkontos als SQL Server-Benutzer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent wird möglicherweise nicht gestartet, wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst unter dem Netzwerkdienstkonto ausführen und dem Netzwerkdienstkonto explizit der Zugriff auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer erteilt wurde.  
   
 Starten Sie den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, neu, um diesen Fehler zu beheben. Dies muss nur einmal erfolgen.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Einschränkung 4: Verwenden des Netzwerkdienstkontos bei Ausführung von SQL Server Reporting Services auf demselben Computer  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Einschränkung 4: Verwenden des Netzwerkdienstkontos bei der Ausführung von SQL Server Reporting Services auf demselben Computer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent wird möglicherweise nicht gestartet, wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst unter dem Netzwerkdienstkonto ausführen und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ebenfalls auf demselben Computer ausgeführt wird.  
   
 Starten Sie den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, neu, um diesen Fehler zu beheben. Starten Sie anschließend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienste neu. Dies muss nur einmal erfolgen.  
@@ -119,12 +119,12 @@ Starten Sie den Computer, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 **So geben Sie das Mailprofil für den SQL Server-Agent an**  
   
--   [Vorgehensweise: Konfigurieren der Verwendung von Datenbank-E-Mail für SQL Server-Agent-Mail (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Vorgehensweise: Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails (SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um anzugeben, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beim Start des Betriebssystems starten soll.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Einrichten von Windows-Dienstkonten](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 [Verwalten von Diensten mit SQL-Computer-Manager](https://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)  

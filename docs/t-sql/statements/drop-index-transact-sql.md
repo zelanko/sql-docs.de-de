@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 60d44f92bc039914ed2fd983c65d53f9d7865fb6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132450"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503447"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +70,7 @@ DROP INDEX [ IF EXISTS ]
     [ owner_name. ] table_or_view_name.index_name  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_clustered_index_option> ::=  
 {  
@@ -100,16 +97,13 @@ DROP INDEX
     index_name ON <object>  
   
 <object> ::=   
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] table_name  
+DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -180,7 +174,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] unterstützt „default“ als Dateigruppenname.  
   
  Gibt einen Speicherort an, an den die Datenzeilen verschoben werden, die sich zurzeit auf der Blattebene des gruppierten Index befinden. Die Daten werden in einen Heap an den neuen Speicherort verschoben. Als neuen Speicherort können Sie entweder ein Partitionsschema oder eine Dateigruppe angeben, das Partitionsschema oder die Dateigruppe muss jedoch bereits vorhanden sein. MOVE TO ist für indizierte Sichten oder nicht gruppierte Indizes nicht gültig. Wird kein Partitionsschema oder keine Dateigruppe angegeben, dann befindet sich die daraus resultierende Tabelle entsprechend der Definition für den gruppierten Index im Partitionsschema oder in der Dateigruppe.  
@@ -203,9 +197,9 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  Gibt den Standardspeicherort für die resultierende Tabelle an.  
   
 > [!NOTE]
->  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt werden, wie in MOVE TO **"** default **"** oder MOVE TO **[** default **]**. Wenn **"** default **"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt werden, wie in MOVE TO **"** default **"** oder MOVE TO **[** default **]** . Wenn **"** default **"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt einen Speicherort an, an den die FILESTREAM-Tabelle verschoben wird, die sich zurzeit auf der Blattebene des gruppierten Index befindet. Die Daten werden in einen Heap an den neuen Speicherort verschoben. Als neuen Speicherort können Sie entweder ein Partitionsschema oder eine Dateigruppe angeben, das Partitionsschema oder die Dateigruppe muss jedoch bereits vorhanden sein. FILESTREAM ON ist für indizierte Sichten oder nicht gruppierte Indizes unzulässig. Wird kein Partitionsschema angegeben, werden die Daten in demselben Partitionsschema platziert, das für den gruppierten Index definiert war.  
@@ -222,7 +216,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  Gibt den Standardspeicherort für FILESTREAM-Daten an.  
   
 > [!NOTE]
->  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt werden, wie in MOVE TO **"** default **"** oder MOVE TO **[** default **]**. Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt werden, wie in MOVE TO **"** default **"** oder MOVE TO **[** default **]** . Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
  Wenn ein nicht gruppierter Index gelöscht wird, wird die Indexdefinition aus den Metadaten entfernt, und die Indexdatenseiten (in der B-Struktur) werden aus den Datenbankdateien entfernt. Wenn ein gruppierter Index gelöscht wird, wird die Indexdefinition aus den Metadaten entfernt und die auf der Blattebene des gruppierten Indexes gespeicherten Datenzeilen werden in der daraus resultierenden, nicht sortierten Tabelle (Heap) gespeichert. Der gesamte Speicherplatz, der vorher für den Index benötigt wurde, wird wieder freigegeben. Dieser Speicherplatz kann dann für beliebige Datenbankobjekte verwendet werden.  
@@ -231,7 +225,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Wenn der gruppierte Index einer indizierten Sicht gelöscht wird, dann werden alle nicht gruppierten Indizes und automatisch erstellten Statistiken dieser Sicht automatisch gelöscht. Manuell erstellte Statistiken werden nicht gelöscht.  
   
- Die Syntax _table\_or\_view\_name_**.**_index\_name_ wird aus Gründen der Abwärtskompatibilität beibehalten. XML-Indizes oder räumliche Indizes können mit abwärtskompatibler Syntax nicht gelöscht werden.  
+ Die Syntax _table\_or\_view\_name_ **.** _index\_name_ wird aus Gründen der Abwärtskompatibilität beibehalten. XML-Indizes oder räumliche Indizes können mit abwärtskompatibler Syntax nicht gelöscht werden.  
   
  Werden Indizes mit 128 oder mehr Blöcken gelöscht, verzögert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Aufhebung der Seitenzuordnungen und der dazugehörigen Sperren, bis ein Commit für die Transaktion ausgeführt wurde.  
   
@@ -244,7 +238,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Wenn Sie ONLINE = ON angeben, werden Abfragen und Änderungen der zugrunde liegenden Daten und dazugehörigen nicht gruppierten Indizes nicht von den DROP INDEX-Transaktion blockiert. Online kann jeweils nur ein gruppierter Index gelöscht werden. Eine vollständige Beschreibung der Option ONLINE finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- Sie können einen gruppierten Index nicht online löschen, wenn der Index für eine Sicht deaktiviert ist oder in den Datenzeilen auf Blattebene die Spalten **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** oder **xml** enthält.  
+ Sie können einen gruppierten Index nicht online löschen, wenn der Index für eine Sicht deaktiviert ist oder in den Datenzeilen auf Blattebene die Spalten **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** oder **xml** enthält.  
   
  Für das Verwenden der Optionen ONLINE = ON und MOVE TO wird zusätzlicher temporärer Speicherplatz benötigt.  
   
@@ -261,10 +255,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 Wenn ein gruppierter Index OFFLINE gelöscht wird, werden nur die oberen Ebenen des gruppierten Index entfernt. Daher wird dieser Vorgang ziemlich schnell ausgeführt. Wenn ein gruppierter Index ONLINE gelöscht wird, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Heap zwei Mal neu, ein Mal für Schritt 1 und ein Mal für Schritt 2. Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>XML-Indizes  
- Optionen können nicht angegeben werden, wenn Sie einen XML-Index löschen. Darüber hinaus können Sie die Syntax _table\_or\_view\_name_**.**_index\_name_ nicht verwenden. Wird ein primärer XML-Index gelöscht, werden alle dazugehörigen sekundären XML-Indizes automatisch gelöscht. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Optionen können nicht angegeben werden, wenn Sie einen XML-Index löschen. Darüber hinaus können Sie die Syntax _table\_or\_view\_name_ **.** _index\_name_ nicht verwenden. Wird ein primärer XML-Index gelöscht, werden alle dazugehörigen sekundären XML-Indizes automatisch gelöscht. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Räumliche Indizes  
- Räumliche Indizes werden nur für Tabellen unterstützt. Wenn Sie einen räumlichen Index löschen, können Sie weder Optionen angeben noch **.**_index\_name_ verwenden. Die korrekte Syntax lautet wie folgt:  
+ Räumliche Indizes werden nur für Tabellen unterstützt. Wenn Sie einen räumlichen Index löschen, können Sie weder Optionen angeben noch **.** _index\_name_ verwenden. Die korrekte Syntax lautet wie folgt:  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

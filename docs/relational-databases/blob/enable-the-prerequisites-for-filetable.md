@@ -3,22 +3,21 @@ title: Aktivieren der erforderlichen Komponenten für FileTable | Microsoft-Doku
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
 manager: craigg
-ms.openlocfilehash: 0080302b493845165e90fff3c6f10dc065a6d89c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79de94cb3474a49e47ff6eee9fcd13a54ff73de9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624698"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094344"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ GO
   
  In der FileTable-Ordnerhierarchie wird dieses Verzeichnis auf Datenbankebene das untergeordnete Element des Freigabenamens, das für FILESTREAM auf Instanzebene angegeben wurde, und das übergeordnete Element von den in der Datenbank erstellten FileTables. Weitere Informationen finden Sie unter [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
-###  <a name="HowToDirectory"></a> Vorgehensweise: Angeben eines Verzeichnisses für FileTables auf Datenbankebene  
+###  <a name="HowToDirectory"></a> Vorgehensweise: Angeben eines Verzeichnisses für Dateitabellen auf Datenbankebene  
  Der angegebene Name muss in der Instanz für Verzeichnisse auf Datenbankebene eindeutig sein.  
   
  **Angeben eines Verzeichnisses für FileTables mit Transact-SQL**  

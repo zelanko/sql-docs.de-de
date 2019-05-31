@@ -23,15 +23,15 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 783eb070efcbafa2b8ec3685d66b080c420cc768
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980346"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946785"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE: Triggerfunktionen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  Die IF UPDATE(*spalte*)-Klausel funktioniert genauso wie eine IF-, IF…ELSE- oder WHILE-Klausel und kann den BEGIN…END-Block verwenden. Weitere Informationen finden Sie unter [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung &#40;Transact-SQL&#41;)](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) kann überall innerhalb des Texts eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Triggers verwendet werden.  
+ 
+Wenn ein Trigger für eine Spalte gilt, wird der Wert `UPDATED` als `true` oder `1` zurückgegeben. Dies ist auch der Fall, wenn der Spaltenwert unverändert bleibt. Dies wurde mit Absicht so eingerichtet und der Trigger sollte eine Geschäftslogik implementieren, die bestimmt, ob der Einfügungs-/Update-/Löschvorgang zulässig ist oder nicht. 
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel erstellt einen Trigger, der eine Meldung an den Client ausgibt, wenn jemand versucht, die `StateProvinceID`- oder `PostalCode`-Spalten der `Address`-Tabelle zu aktualisieren.  

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden von Microsoft SQL Server 2012-Objekten im Projekt | Microsoft-Dokumentation'
+title: 'Gewusst wie: Verwenden von Microsoft SQL Server 2012-Objekten in einem Projekt | Microsoft-Dokumentation'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397092"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098406"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Vorgehensweise: Verwenden von Microsoft SQL Server 2012-Objekten im Projekt
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Gewusst wie: Verwenden von Microsoft SQL Server 2012-Objekten im Projekt
 In diesem Beispiel fügen Sie einem Datenbankprojekt, das auf Microsoft SQL Server 2012 zeigt, ein Sequenzobjekt hinzu.  
   
 In Microsoft SQL Server 2012 werden Sequenzen eingeführt. Als Sequenz wird ein benutzerdefiniertes schemagebundenes Objekt bezeichnet, das eine Sequenz numerischer Werte anhand der Spezifikation generiert, mit der die Sequenz erstellt wurde. Die Sequenz von numerischen Werten wird in aufsteigender oder absteigender Reihenfolge in einem definierten Intervall generiert, und je nach Anforderung wird ein Zyklus (Wiederholungen) ausgeführt.  Weitere Informationen zu Sequenzobjekten finden Sie unter [Sequenznummern](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Informationen zu Neuerungen in Microsoft SQL Server 2012 finden Sie unter [What's New in SQL Server 2012 (Neuigkeiten zu SQL Server 2012)](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
@@ -44,9 +44,9 @@ In Microsoft SQL Server 2012 werden Sequenzen eingeführt. Als Sequenz wird ein 
     CACHE 10  
     ```  
   
-4.  Wenn die Zielplattform des Projekts nicht auf Microsoft SQL Server 2012 festgelegt ist, wird in der **Fehlerliste** ein Syntaxfehler für die `CREATE SEQUENCE`-Anweisung angezeigt. Um dies zu korrigieren, befolgen Sie die Anweisungen zum Ändern der Zielplattform im Thema [Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md).  
+4.  Wenn die Zielplattform des Projekts nicht auf Microsoft SQL Server 2012 festgelegt ist, wird in der **Fehlerliste** ein Syntaxfehler für die `CREATE SEQUENCE`-Anweisung angezeigt. Wenn Sie diesen Fehler beheben möchten, führen Sie die unter [Vorgehensweise: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) beschriebenen Schritte aus, um die Zielplattform entsprechend zu ändern.  
   
-5.  Befolgen Sie die Anweisungen im Thema [Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md), um das Projekt in einer Datenbank in Ihrem verbundenen Microsoft SQL Server 2012-Server zu veröffentlichen.  
+5.  Führen Sie die unter [Vorgehensweise: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) beschriebenen Schritte aus, um das Projekt in einer Datenbank in Ihrer verbundenen Microsoft SQL Server 2012-Instanz zu veröffentlichen.  
   
 ### <a name="to-use-the-new-sequence-object"></a>So verwenden Sie das neue Sequenzobjekt  
   

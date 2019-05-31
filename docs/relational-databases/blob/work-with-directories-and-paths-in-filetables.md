@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c13eb6089e9be42733782c54d757a0e3035fe6f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c8f458f0405feec07a33a2355d117752c3b10e80
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418450"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094172"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Arbeiten mit Verzeichnissen und Pfaden in FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52418450"
 |Ermitteln eines absoluten oder relativen UNC-Pfades für eine Datei oder ein Verzeichnis in einer FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |Ermitteln des ID-Wertes "path_locator" für die angegebene Datei bzw. das angegebene Verzeichnis in einer FileTable unter Angabe des Pfades.|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Vorgehensweise: Relative Pfade für portablen Code verwenden  
+##  <a name="BestPracticeRelativePaths"></a> Vorgehensweise: Verwenden von relativen Pfaden für portablen Code  
  Um Code und Anwendungen vom aktuellen Computer und von der Datenbank unabhängig zu halten, sollten Sie keinen Code schreiben, der auf absoluten Dateipfaden basiert. Rufen Sie stattdessen den vollständigen Pfad für eine Datei mit der Funktion [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) und der Funktion [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)zur Laufzeit ab, wie im folgenden Beispiel gezeigt. Die **GetFileNamespacePath** -Funktion gibt standardmäßig den relativen Pfad der Datei unter dem Stammpfad der Datenbank zurück.  
   
 ```sql  
@@ -108,7 +108,7 @@ GO
   
 -   Bei allen Zugriffen auf FILESTREAM- oder FileTable-Daten über Dateisystem-APIs sollten VNNs statt der Computernamen verwendet werden. Weitere Informationen finden Sie unter [FILESTREAM und FileTable bei AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktivieren der erforderlichen Komponenten für FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [Erstellen, Ändern und Löschen von FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Zugreifen auf FileTables mit Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   

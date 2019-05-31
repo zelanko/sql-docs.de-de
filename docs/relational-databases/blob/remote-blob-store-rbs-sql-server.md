@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a4748e76ac377e87003f2b811753db5de1cbe02
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 589edbc9b3f19597a84a3393f693078bca89dee7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393655"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094182"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -229,7 +229,7 @@ FROM [mssqlrbs_resources].[rbs_internal_blob_store_credentials];
 SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Remoteblobspeicher und Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   

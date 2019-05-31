@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980416"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502867"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -208,7 +207,7 @@ ALTER INDEX { index_name | ALL }
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] unterstützt das dreiteilige Namensformat „database_name.[schema_name].table_or_view_name“, wenn „database_name“ die aktuelle Datenbank bzw. „tempdb“ ist und „table_or_view_name“ mit # beginnt.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  Gibt an, dass der Index mit denselben Spalten, demselben Indextyp, demselben Eindeutigkeitsattribut und derselben Sortierreihenfolge neu erstellt wird. Diese Klausel entspricht [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). Mit REBUILD wird ein deaktivierter Index aktiviert. Durch das Neuerstellen eines gruppierten Indexes erfolgt nicht die Neuerstellung von zugeordneten nicht gruppierten Indizes, es sei denn, das Schlüsselwort ALL ist angegeben. Wenn keine Indexoptionen angegeben sind, werden die vorhandenen Werte der Indexoptionen angewendet, die in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) gespeichert sind. Für alle Indexoptionen, deren Werte nicht in **sys.indexes** gespeichert sind, wird der Standardwert angewendet, der in der Argumentdefinition der Option angegeben ist.  
   
  Wenn ALL angegeben ist und die zugrunde liegende Tabelle ein Heap ist, hat die Neuerstellung keine Auswirkungen auf die Tabelle. Alle nicht gruppierten Indizes, die der Tabelle zugeordnet sind, werden neu erstellt.  
@@ -245,9 +244,9 @@ PARTITION
    
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- Die Partitionsnummer eines partitionierten Indexes, der neu erstellt oder neu organisiert werden soll. *partition_number* ist ein konstanter Ausdruck, der auf Variablen verweisen kann. Dazu gehören Variablen eines benutzerdefinierten Typs oder Funktionen und benutzerdefinierte Funktionen, es kann jedoch nicht auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verwiesen werden. *partition_number* muss vorhanden sein. Andernfalls schlägt die Anweisung fehl.  
+ Die Partitionsnummer eines partitionierten Indexes, der neu erstellt oder neu organisiert werden soll. *partition_number* ist ein konstanter Ausdruck, der auf Variablen verweisen kann. Bei diesen Variablen kann es sich um Funktionen und benutzerdefinierte Variablen oder Funktionen handeln, die jedoch nicht auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verweisen können. *partition_number* muss vorhanden sein. Andernfalls schlägt die Anweisung fehl.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -308,7 +307,7 @@ Mit COMPRESS_ALL_ROW_GROUPS kann die Übernahme von OPEN- oder CLOSED-Delta-Zeil
   
 -   Mit der Einstellung OFF wird die Übernahme aller CLOSED-Zeilengruppen in den Columnstore erzwungen.  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  Gibt Indexoptionen ohne das Neuerstellen oder Neuorganisieren des Indexes an. SET kann für einen deaktivierten Index nicht angegeben werden.  
   
 PAD_INDEX = { ON | OFF }  
@@ -329,7 +328,7 @@ FILLFACTOR = *fillfactor*
  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- Gibt einen Prozentsatz an, der anzeigt, wie weit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
+ Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
   
  Eine explizite FILLFACTOR-Einstellung gilt nur bei der erstmaligen Erstellung oder bei der Neuerstellung des Indexes. [!INCLUDE[ssDE](../../includes/ssde-md.md)] hält den angegebenen Prozentsatz des Speicherplatzes nicht dynamisch auf den Seiten frei. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
@@ -422,7 +421,7 @@ FILLFACTOR = *fillfactor*
   
 -   Eine Teilmenge eines partitionierten Indexes (ein vollständiger partitionierter Index kann online neu erstellt werden).  
 
--  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] vor V12 und SQL Server vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] lassen die `ONLINE`-Option für Erstellungs- oder Neuerstellungsvorgänge für gruppierte Indizes nicht zu, wenn die Basistabelle **varchar(max)**- oder **varbinary(max)**-Spalten enthält.
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] vor V12 und SQL Server vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] lassen die `ONLINE`-Option für Erstellungs- oder Neuerstellungsvorgänge für gruppierte Indizes nicht zu, wenn die Basistabelle **varchar(max)** - oder **varbinary(max)** -Spalten enthält.
 
 RESUMABLE **=** { ON | **OFF**}
 
@@ -528,7 +527,7 @@ Der Standardwert ist 0 Minuten.
   
  Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -538,7 +537,7 @@ Der Standardwert ist 0 Minuten.
   
 -   Geben Sie die Nummer der Partition an, beispielsweise: ON PARTITIONS (2).  
   
--   Geben Sie die Partitionsnummern mehrerer einzelner Partitionen durch Trennzeichen getrennt an, beispielsweise: ON PARTITIONS (1, 5).  
+-   Geben Sie die Partitionsnummern mehrerer einzelner Partitionen durch Kommas getrennt an, beispielsweise: ON PARTITIONS (1, 5).  
   
 -   Geben Sie sowohl Bereiche als auch einzelne Partitionen an: ON PARTITIONS (2, 4, 6 TO 8).  
   
@@ -735,8 +734,7 @@ Die folgenden Funktionen sind für Indexneuerstellungsvorgänge deaktiviert:
    -    ALTER TABLE-Befehl mithilfe von Indexneuerstellung  
    -    Der DDL-Befehl kann mit „RESUMEABLE = ON“ nicht innerhalb einer expliziten Transaktion ausgeführt werden (kann nicht Teil des Blocks „tran ... commit  block“ sein).
    -    Erstellen eines Index, der mindestens eine berechnete Spalte oder TIMESTAMP-Spalte als Schlüsselspalte besitzt
--   Sollte die Basistabelle mindestens eine LOB-Spalte besitzen, dann ist für die Indexneuerstellung eines fortsetzbaren gruppierten Index eine Sch-M-Sperre zu Beginn dieses Vorgangs erforderlich.
-   -    Die Option SORT_IN_TEMPDB=ON wird für den fortsetzbaren Index nicht unterstützt. 
+-   Sollte die Basistabelle mindestens eine LOB-Spalte besitzen, dann ist für die Indexneuerstellung eines fortsetzbaren gruppierten Index eine Sch-M-Sperre zu Beginn dieses Vorgangs erforderlich. 
 
 > [!NOTE]
 > Der DDL-Befehl wird so lange ausgeführt, bis er entweder abgeschlossen ist, angehalten wird oder ein Fehler auftritt. Wenn der Befehl angehalten wird, wird ein Fehler ausgelöst, der meldet, dass der Vorgang angehalten wurde und dass die Indexerstellung nicht abgeschlossen wurde. Weitere Informationen zum aktuellen Indexstatus finden Sie unter [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Tritt ein Fehler auf, wird auch hier eine Fehlermeldung ausgegeben. 
@@ -1006,7 +1004,7 @@ ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;
 ```  
   
 ### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Neuerstellen aller Indizes einer Tabelle und Angeben von Optionen  
- Im folgenden Beispiel wird das Schlüsselwort ALL angegeben. Dadurch werden alle Indizes neu erstellt, die der Production.Product[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Tabelle in der -Datenbank zugeordnet sind. Es werden drei Optionen angegeben.  
+ Im folgenden Beispiel wird das Schlüsselwort ALL angegeben. Dadurch werden alle Indizes neu erstellt, die der Production.Product-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zugeordnet sind. Es werden drei Optionen angegeben.  
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -1111,7 +1109,7 @@ REBUILD Partition = 5
 GO  
 ```  
   
-### <a name="i-changing-the-compression-setting-of-an-index"></a>I. Ändern der Komprimierungseinstellung eines Indexes  
+### <a name="i-changing-the-compression-setting-of-an-index"></a>I. IÄndern der Komprimierungseinstellung eines Index  
  Im folgenden Beispiel wird ein Index für eine nicht partitionierte rowstore-Tabelle neu erstellt.  
   
 ```sql

@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666759"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090182"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests
 Indem Sie das Testprojekt konfigurieren, können Sie mehrere Einstellungen zur Steuerung der Ausführung von SQL Server-Komponententests angeben. Diese Konfigurationseinstellungen werden in der Datei app.config des Testprojekts gespeichert. Wenn Sie diese Datei direkt bearbeiten, werden die neuen Werte im Dialogfeld Testkonfiguration angezeigt.  
   
 Eine Projektmappe kann mehrere Testprojekte enthalten. Jedes Testprojekt enthält eine Datei app.config (also einen Satz von Konfigurationseinstellungen). Folglich kann eine Projektmappe verschiedene Sätze von Komponententests (einen Satz für jedes Testprojekt) enthalten, deren Ausführung unterschiedlich konfiguriert ist.  
@@ -82,7 +82,7 @@ Diese Einstellungen steuern, auf welche Weise der Test mit der zu testenden Date
   
 6.  Erstellen Sie das Komponententestprojekt erneut, um die Konfigurationsänderungen anzuwenden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

@@ -3,7 +3,6 @@ title: Erstellen, Ändern und Löschen von FileTables | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
@@ -12,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfe7ea1c88a6d7118be63314824a479bd108f070
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542376"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094356"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52542376"
   
 -   Die Namen, die für die 3 automatisch erstellten PRIMARY KEY- und UNIQUE-Einschränkungen verwendet werden sollen.  
   
-###  <a name="HowToCreate"></a> Vorgehensweise: Erstellen einer FileTable  
+###  <a name="HowToCreate"></a> Vorgehensweise: Erstellen einer Dateitabelle  
  **Erstellen einer FileTable mit Transact-SQL**  
  Erstellen Sie eine FileTable, indem Sie die Option [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) mit der Option **AS FileTable** aufrufen. Da eine FileTable ein festes Schema hat, müssen Sie keine Liste von Spalten angeben. Sie können die folgenden beiden Einstellungen für die neue FileTable angeben:  
   
@@ -109,7 +108,7 @@ GO
   
  Informationen zum Aktivieren bzw. Deaktivieren des FileTable-Namespace (einschließlich der systemdefinierten Einschränkungen) mithilfe der ALTER TABLE-Anweisung finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="HowToChange"></a> Vorgehensweise: Ändern des Verzeichnisses für eine FileTable  
+###  <a name="HowToChange"></a> Vorgehensweise: Ändern des Verzeichnisses für eine Dateitabelle  
  **Ändern des Verzeichnisses für eine FileTable mit Transact-SQL**  
  Rufen Sie die ALTER TABLE-Anweisung auf, und geben Sie einen gültigen neuen Wert für die SET-Option von **FILETABLE_DIRECTORY** an.  
   
@@ -137,7 +136,7 @@ GO
   
  Beim Löschen einer FileTable werden auch die folgenden Objekte gelöscht:  
   
--   Alle Spalten der FileTable und alle der Tabelle zugeordneten Objekte, z. B. Indizes, Einschränkungen und Trigger, werden ebenfalls gelöscht.  
+-   Alle Spalten der FileTable und alle der Tabelle zugeordneten Objekte, z. B. Indizes, Einschränkungen und Trigger, werden ebenfalls gelöscht.  
   
 -   Das FileTable-Verzeichnis und die Unterverzeichnisse, die es enthielt, aus der FILESTREAM-Datei und der Verzeichnishierarchie der Datenbank.  
   
@@ -183,7 +182,7 @@ GO
   
 -   *\<uniquifier>* ist eine vom System generierte Zeichenfolge, die den Namen eindeutig macht. Diese Zeichenfolge kann den FileTable-Namen und einen eindeutigen Bezeichner enthalten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

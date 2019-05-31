@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.dbprojectwizard.general
 - sql.data.tools.dbprojectwizard.summary
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96effd7670d22461f6c347c9220f7a3c26b7f611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e4c14a1e4f0ef2196cf2cebfd5e1c531cf7878e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624518"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101945"
 ---
 # <a name="project-oriented-offline-database-development"></a>Projektorientierte Offlinedatenbankentwicklung
 In diesem Abschnitt werden die Funktionen von SQL Server Data Tools (SSDT) zum Erstellen, Debuggen und Veröffentlichen von Datenbankprojekten beschrieben.  
@@ -37,18 +37,18 @@ Mit SSDT können Sie ein Offlinedatenbankprojekt erstellen und Schemaänderungen
 |[Dialogfeld „Datenbankverweis hinzufügen“](../ssdt/add-database-reference-dialog-box.md)|Beschreibt verschiedene Verfahren zum Hinzufügen eines Datenbankverweises.|  
 |[Dialogfeld „Nach Updates suchen“](../ssdt/check-for-updates-dialog-box.md)|Beschreibt, wie SQL Server Data Tools nach Produktupdates suchen kann.|  
 |[Datenbankprojekteinstellungen](../ssdt/database-project-settings.md)|Beschreibt verschiedene Projekteinstellungen, die Aspekte der Datenbank- und Buildkonfiguration steuern.|  
-|[Gewusst wie: Durchsuchen von Objekten in einem SQL Server-Datenbankprojekt](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|Der SQL Server-Objekt-Explorer in Visual Studio enthält jetzt einen dedizierten Projektknoten, unter dem sämtliche in der Projektmappe enthaltenen SQL Server-Datenbankprojekte in einer Hierarchie gruppiert sind, die SQL Server Management Studio ähnelt.|  
+|[Vorgehensweise: Durchsuchen von Objekten in einem SQL Server-Datenbankprojekt](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|Der SQL Server-Objekt-Explorer in Visual Studio enthält jetzt einen dedizierten Projektknoten, unter dem sämtliche in der Projektmappe enthaltenen SQL Server-Datenbankprojekte in einer Hierarchie gruppiert sind, die SQL Server Management Studio ähnelt.|  
 |[Das Fenster „Datentoolvorgänge“](../ssdt/data-tools-operations-window.md)|Beschreibt das Fenster **Datentoolvorgänge** , in dem der Status einiger Vorgänge und ggf. Fehlermeldungen angezeigt werden.|  
 |[Optionen des Transact-SQL-Editors](../ssdt/transact-sql-editor-options.md)|Beschreibt die Transact\-SQL-Optionen.|  
-|[Gewusst wie: Erstellen eines neuen Datenbankprojekts](../ssdt/how-to-create-a-new-database-project.md)|Erstellen Sie ein Datenbankprojekt, und importieren Sie ein vorhandenes Datenbankschema.|  
-|[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Vergleichen Sie die Schemas einer Datenbank und eines Projekts, und synchronisieren Sie sie.|  
-|[Gewusst wie: Erstellen und Bereitstellen in einer lokalen Datenbank](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Verwenden Sie die lokale bedarfsgesteuerte SQL Server-Instanz, die beim Debuggen eines Datenbankprojekts aktiviert wird.|  
-|[Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Ändern Sie die SQL Server-Zielplattform für das Projekt in eine unterstützte SQL Server-Instanz, und überprüfen Sie die Syntax.|  
-|[Gewusst wie: Erstellen einer Momentaufnahme eines Projekts](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Erstellen Sie einen schreibgeschützten Proxy des Datenbankschemas, und stellen Sie bei der Anwendung unerwünschter Änderungen auf das Projekt das Quellprojekt wieder her.|  
-|[Gewusst wie: Verwenden von Microsoft SQL Server 2012-Objekten im Projekt](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Fügen Sie dem Projekt ein neues Sequenzobjekt hinzu.|  
-|[Gewusst wie: Arbeiten mit CLR-Datenbankobjekten](../ssdt/how-to-work-with-clr-database-objects.md)|Erstellen und veröffentlichen Sie CLR-Objekte im SQL Server Data Tools-Datenbankprojekt.|  
-|[Gewusst wie: Konvertieren von Visual Studio 2010-Datenbankprojekten in SQL Server-Datenbankprojekte und Neuzuweisen zu einer anderen Plattform](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Konvertieren Sie vorhandene, in Visual Studio 2010 erstellte SQL Server-Datenbank-, CLR-Objekt- und Datenschichtanwendungs-Projekte in das SQL Server Data Tools-Datenbankprojekt.|  
-|[Gewusst wie: Festlegen von Skripts vor und nach der Bereitstellung](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Erläutert die Verwendung von Skripts, die Sie vor oder nach der Bereitstellung einer Datenbank ausführen möchten.|  
+|[Vorgehensweise: Erstellen eines neuen Datenbankprojekts](../ssdt/how-to-create-a-new-database-project.md)|Erstellen Sie ein Datenbankprojekt, und importieren Sie ein vorhandenes Datenbankschema.|  
+|[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Vergleichen Sie die Schemas einer Datenbank und eines Projekts, und synchronisieren Sie sie.|  
+|[Vorgehensweise: Erstellen und Bereitstellen in einer lokalen Datenbank](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Verwenden Sie die lokale bedarfsgesteuerte SQL Server-Instanz, die beim Debuggen eines Datenbankprojekts aktiviert wird.|  
+|[Vorgehensweise: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Ändern Sie die SQL Server-Zielplattform für das Projekt in eine unterstützte SQL Server-Instanz, und überprüfen Sie die Syntax.|  
+|[Vorgehensweise: Erstellen einer Momentaufnahme eines Projekts](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Erstellen Sie einen schreibgeschützten Proxy des Datenbankschemas, und stellen Sie bei der Anwendung unerwünschter Änderungen auf das Projekt das Quellprojekt wieder her.|  
+|[Vorgehensweise: Verwenden von Microsoft SQL Server 2012-Objekten im Projekt](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Fügen Sie dem Projekt ein neues Sequenzobjekt hinzu.|  
+|[Vorgehensweise: Arbeiten mit CLR-Datenbankobjekten](../ssdt/how-to-work-with-clr-database-objects.md)|Erstellen und veröffentlichen Sie CLR-Objekte im SQL Server Data Tools-Datenbankprojekt.|  
+|[Vorgehensweise: Konvertieren von Visual Studio 2010-Datenbankprojekten in SQL Server-Datenbankprojekte und Neuzuweisen zu einer anderen Plattform](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Konvertieren Sie vorhandene, in Visual Studio 2010 erstellte SQL Server-Datenbank-, CLR-Objekt- und Datenschichtanwendungs-Projekte in das SQL Server Data Tools-Datenbankprojekt.|  
+|[Vorgehensweise: Festlegen von Skripts vor und nach der Bereitstellung](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Erläutert die Verwendung von Skripts, die Sie vor oder nach der Bereitstellung einer Datenbank ausführen möchten.|  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 [Verwalten von Tabellen, Beziehungen und Beheben von Fehlern](../ssdt/manage-tables-relationships-and-fix-errors.md)  

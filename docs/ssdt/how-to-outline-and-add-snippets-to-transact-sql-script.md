@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526065"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099659"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Vorgehensweise: Gliedern und Hinzufügen von Ausschnitten zu Transact-SQL-Skripts
-SQL Server Data Tools enthält eine Codebibliothek mit Codeausschnitten, die in die Anwendung eingefügt werden können. Jeder Ausschnitt führt einen kompletten Skripttask aus, z. B. das Erstellen einer Funktion, einer Tabelle, eines Triggers, eines Index, einer Sicht, eines benutzerdefinierten Datentyps usw. Sie können mit wenigen Mausklicks einen Codeausschnitt in Ihren Quellcode einfügen. Diese Ausschnitte erhöhen die Produktivität, da Sie weniger Zeit für die Eingabe benötigen.  
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Gewusst wie: Gliedern und Hinzufügen von Ausschnitten zu Transact-SQL-Skripts
+SQL Server Data Tools enthält eine Codebibliothek mit Codeausschnitten, die in die Anwendung eingefügt werden können. Jeder Ausschnitt führt einen kompletten Skripttask aus, z. B. das Erstellen einer Funktion, einer Tabelle, eines Triggers, eines Index, einer Ansicht, eines benutzerdefinierten Datentyps usw. Sie können mit wenigen Mausklicks einen Codeausschnitt in Ihren Quellcode einfügen. Diese Ausschnitte erhöhen die Produktivität, da Sie weniger Zeit für die Eingabe benötigen.  
   
 Wenn Sie nach dem geeigneten Ausschnitt suchen müssen, können Sie die Ausschnittauswahl verwenden, in der kategorisierte Listen von Ausschnitten zur Auswahl stehen. Sobald Sie dem Code den Ausschnitt hinzugefügt haben, müssen möglicherweise Teile des Codes angepasst werden, indem z. B. Variablennamen durch besser geeignete Namen ersetzt werden oder die tatsächliche Logik einer gespeicherten Prozedur eingefügt wird. Sie werden feststellen, dass zu diesem Zweck im eingefügten Codeausschnitt ein oder mehrere Ersetzungspunkte hervorgehoben werden. Wenn Sie den Mauszeiger auf den Ersetzungspunkt setzen, wird in einer QuickInfo erläutert, wie Sie den Code ändern können.  
   
@@ -42,7 +42,7 @@ Standardmäßig wird im Transact\-SQL-Editor der gesamte Text angezeigt, Sie kö
   
 ### <a name="to-outline-code"></a>So gliedern Sie Code  
   
-1.  Beachten Sie das **-**-Zeichen neben der CREATE TABLE-Anweisung. Klicken Sie auf das **-**-Zeichen neben einem Abschnitt im Skript, um ihn auszublenden.  
+1.  Beachten Sie das **-** -Zeichen neben der CREATE TABLE-Anweisung. Klicken Sie auf das **-** -Zeichen neben einem Abschnitt im Skript, um ihn auszublenden.  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Transact\-SQL-Editor, und wählen Sie **Gliedern** und dann **Gliederung entfernen** aus, um die Gliederungsinformationen ohne Auswirkungen auf den zugrunde liegenden Code im Editor zu entfernen.  
   

@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63202466"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -53,13 +53,15 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 > |||
 > |---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
+> |** _\* SQL Server \*_ ** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
 
 &nbsp;
 
 ## <a name="sql-server"></a>SQL Server
 
 Datenbankspiegelung, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] und Kompatibilitätsgrade sind zwar `SET`-Optionen, werden aufgrund ihres Umfangs jedoch in separaten Artikeln beschrieben. Weitere Informationen finden Sie unter [ALTER DATABASE-Datenbankspiegelung](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) und [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+
+Datenbankweit gültige Konfigurationen werden zum Festlegen mehrerer Datenbankkonfigurationen auf der Ebene einzelner Datenbanken verwendet. Weitere Informationen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!NOTE]
 > Viele DATABASE SET-Optionen können mithilfe von [SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md) konfiguriert werden; häufig werden sie bei der Verbindung von Anwendungen konfiguriert. Die **ALTER DATABASE SET**-Werte werden durch SET-Optionen auf Sitzungsebene überschrieben. Die unten beschriebenen Datenbankoptionen entsprechen Werten, die für Sitzungen festgelegt werden können, von denen explizit keine weiteren Werte für SET-Optionen bereitgestellt werden.
@@ -362,7 +364,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_auto_
 
 Weitere Informationen dazu, wann synchrone bzw. asynchrone Statistikupdates verwendet werden sollten, finden Sie im Abschnitt „Verwenden der datenbankweiten Statistikoptionen“ unter [Statistiken](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
 **Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Aktiviert bzw. deaktiviert die Option `FORCE_LAST_GOOD_PLAN`automatische Optimierung[ für ](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -872,7 +874,7 @@ Ist OFF festgelegt, wirkt sich diese Einstellung nur auf die Definition neuer Sp
 > [!IMPORTANT]
 > In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.
 
-**char(_n_)**- und **binary(_n_)**-Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)**- und **binary(_n_)**-Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
+**char(_n_)** - und **binary(_n_)** -Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)** - und **binary(_n_)** -Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
 
   Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für ANSI_PADDING. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die ANSI_PADDING für die Sitzung auf ON festgelegt wird. Die Clients führen die Anweisung aus, wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -948,7 +950,7 @@ Der Status dieser Option kann mithilfe der Spalte „is_recursive_triggers_on“
 
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.
 
 SECONDS Gibt an, dass *target_recovery_time* die Anzahl von Sekunden darstellt.
 
@@ -1148,7 +1150,7 @@ SET QUERY_STORE = ON
 
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken \*_ ** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
@@ -1360,7 +1362,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_auto_
 
 Weitere Informationen dazu, wann synchrone bzw. asynchrone Statistikupdates verwendet werden sollten, finden Sie im Abschnitt „Verwenden der datenbankweiten Statistikoptionen“ unter [Statistiken](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
 **Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Steuert automatische Optionen [für die automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -1606,7 +1608,7 @@ Ist OFF festgelegt, wirkt sich diese Einstellung nur auf die Definition neuer Sp
 > [!IMPORTANT]
 > In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.
 
-**char(_n_)**- und **binary(_n_)**-Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)**- und **binary(_n_)**-Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
+**char(_n_)** - und **binary(_n_)** -Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)** - und **binary(_n_)** -Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
 
   Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für ANSI_PADDING. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die ANSI_PADDING für die Sitzung auf ON festgelegt wird. Die Clients führen die Anweisung aus, wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -1680,7 +1682,7 @@ Der Status dieser Option kann mithilfe der Spalte „is_recursive_triggers_on“
 
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.
 
 SECONDS Gibt an, dass *target_recovery_time* die Anzahl von Sekunden darstellt.
 
@@ -1834,7 +1836,7 @@ SET QUERY_STORE = ON
 
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _\* SQL-Datenbank<br />verwaltete Instanz \*_ ** &nbsp;|
 
 &nbsp;
 
@@ -2028,7 +2030,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_auto_
 
 Weitere Informationen dazu, wann synchrone bzw. asynchrone Statistikupdates verwendet werden sollten, finden Sie im Abschnitt „Verwenden der datenbankweiten Statistikoptionen“ unter [Statistiken](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
 **Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Aktiviert bzw. deaktiviert die Option `FORCE_LAST_GOOD_PLAN`automatische Optimierung[ für ](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -2244,7 +2246,7 @@ Ist OFF festgelegt, wirkt sich diese Einstellung nur auf die Definition neuer Sp
 > [!IMPORTANT]
 > In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.
 
-**char(_n_)**- und **binary(_n_)**-Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)**- und **binary(_n_)**-Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
+**char(_n_)** - und **binary(_n_)** -Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)** - und **binary(_n_)** -Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
 
   Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für ANSI_PADDING. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die ANSI_PADDING für die Sitzung auf ON festgelegt wird. Die Clients führen die Anweisung aus, wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2318,7 +2320,7 @@ Der Status dieser Option kann mithilfe der Spalte „is_recursive_triggers_on“
 
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.
 
 SECONDS Gibt an, dass *target_recovery_time* die Anzahl von Sekunden darstellt.
 

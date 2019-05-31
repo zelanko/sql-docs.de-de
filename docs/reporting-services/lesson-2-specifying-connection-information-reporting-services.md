@@ -1,64 +1,69 @@
 ---
 title: 'Lektion 2: Angeben von Verbindungsinformationen (Reporting Services) | Microsoft-Dokumentation'
-ms.date: 05/23/2016
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: da47a0fd587d48dd9d932504d6a5cd45d0d54664
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294698"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106062"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lektion 2: Angeben von Verbindungsinformationen (Reporting Services)
-Nachdem Sie Ihrem Tutorial-Projekt in Lektion 1 einen paginierten Bericht von [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] hinzugefügt haben, müssen Sie eine *Datenquelle* erstellen. Bei dieser handelt es sich um Verbindungsinformationen, mit denen der Bericht auf Daten aus einer relationalen Datenbank, einer mehrdimensionalen Datenbank oder einer sonstigen Ressource zugreift.  
-  
-In dieser Lektion verwenden Sie die Beispieldatenbank [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] als Datenquelle. In diesem Tutorial wird davon ausgegangen, dass diese Datenbank in einer Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] auf Ihrem lokalen Computer installiert ist.  
-  
-### <a name="to-set-up-a-connection"></a>So richten Sie eine Verbindung ein  
-  
-1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Data Source**.  
-Zum Anzeigen des **Berichtsdatenbereichs** klicken Sie im Menü **Ansicht** auf **Berichtsdaten**.  
 
-    ![ssrs-table-tutorial-2-new-data-source](../reporting-services/media/ssrs-table-tutorial-2-new-data-source.png)
+In Lektion 1 haben Sie gelernt, wie Sie Ihrem Tutorialprojekt einen paginierten [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)]-Bericht hinzufügen.
   
-   2.  Geben Sie im Feld **Name**den Namen *AdventureWorks2014*ein.  
-  
-3.  Stellen Sie sicher, dass **Eingebettete Verbindung** aktiviert ist.  
-  
-4.  Wählen Sie unter **Typ**die Option **Microsoft SQL Server**aus.  
-  
-5.  Geben Sie für **Verbindungszeichenfolge**Folgendes ein:  
-  
-    ```  
-    Data source=localhost; initial catalog=AdventureWorks2014  
-    ```  
-  
-     Bei dieser Verbindungszeichenfolge wird davon ausgegangen, dass [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], der Berichtsserver und die [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Datenbank zusammen auf dem lokalen Computer installiert sind und Sie über die Berechtigung verfügen, sich bei der [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Datenbank anzumelden. Wenn die AdventureWorks2014-Datenbank nicht auf dem lokalen Computer vorhanden ist, ändern Sie die Verbindungszeichenfolge, und ersetzen Sie *localhost* durch den Namen Ihrer Datenbankserverinstanz.
-  
-     >[!NOTE]  
-    >Wenn Sie [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services oder eine benannte Instanz verwenden, muss die Verbindungszeichenfolge Instanzinformationen einschließen:  
-    >  
-    >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
-    >  
-    >Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter: [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-     
-  
-6.  Klicken Sie im linken Bereich auf **Anmeldeinformationen** , und klicken Sie auf **Windows-Authentifizierung verwenden (integrierte Sicherheit)**.  
-  
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Die Datenquelle **AdventureWorks2014** wird dem **Berichtsdatenbereich** hinzugefügt.  
-![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
-## <a name="next-task"></a>Nächste Aufgabe  
-Sie haben erfolgreich eine Verbindung mit der [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] -Beispieldatenbank definiert. Als Nächstes erstellen Sie den Bericht. Siehe [Lektion 3: Definieren eines Datasets für den Tabellenbericht &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
-  
-## <a name="see-also"></a>Weitere Informationen  
-[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
-  
-  
+In dieser Lektion definieren Sie eine *Datenquelle*. Diese Verbindungsinformation wird von einem Bericht benötigt, um auf Daten aus einer relationalen Datenbank oder anderen Quellen zugreifen zu können.
 
+Für diesen Bericht wird die Beispieldatenbank „AdventureWorks2016“ als Datenquelle hinzugefügt. In diesem Tutorial wird davon ausgegangen, dass die Datenbank in der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] auf Ihrem lokalen Computer installiert ist.  
+
+## <a name="to-set-up-a-connection"></a>So richten Sie eine Verbindung ein  
+
+1. Klicken Sie im Bereich **Berichtsdaten** auf **Neu** > **Datenquelle**. Wird der Bereich **Berichtsdaten** nicht angezeigt, klicken Sie im Menü **Ansicht** auf **Berichtsdaten**.
+
+    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+
+    Das Dialogfeld **Datenquelleneigenschaften** wird geöffnet mit dem Abschnitt **Allgemein**.
+
+    ![Dialogfeld „Datenquelleneigenschaften“](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
+
+2. Geben Sie in das Textfeld **Name** den Begriff „AdventureWorks2016“ ein.
+
+3. Aktivieren Sie das Optionsfeld **Eingebettete Verbindung**.
+
+4. Wählen Sie im Dropdownfeld **Typ** die Option „Microsoft SQL Server“ aus.
+  
+5. Geben Sie in das Textfeld **Verbindungszeichenfolge** folgende Zeichenfolge ein:
+
+    `Data source=localhost; initial catalog=AdventureWorks2016`
+
+    > [!NOTE]
+    > Bei dieser Verbindungszeichenfolge wird davon ausgegangen, dass der Berichtsserver [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und die Datenbank „AdventureWorks2016“ auf demselben lokalen Computer installiert sind.
+    >
+    >Ist dies nicht der Fall, ändern Sie die Verbindungszeichenfolge, und ersetzen Sie „localhost“ durch den Namen Ihres Datenbankservers/Ihrer Datenbankinstanz. Wenn Sie [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] oder eine benannte SQL Server-Instanz verwenden, müssen Sie die Verbindungszeichenfolge so ändern, dass sie Instanzinformationen enthält. Beispiel:
+    >
+    > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2016`
+    >
+    > Weitere Informationen zu Verbindungszeichenfolgen finden Sie im Abschnitt `See also` weiter unten.
+
+6. Klicken Sie auf die Registerkarte **Anmeldeinformationen**, und wählen Sie im Abschnitt **Anmeldeinformationen ändern, mit denen eine Verbindung mit der Datenquelle hergestellt wird** das Optionsfeld **Windows-Authentifizierung verwenden (integrierte Sicherheit)** aus.
+
+7. Klicken Sie auf **OK**, um den Vorgang abzuschließen.
+
+Im Berichts-Designer wird die Datenquelle „AdventureWorks2016“ dem Bereich **Berichtsdaten** hinzugefügt.
+
+![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
+
+## <a name="next-steps"></a>Nächste Schritte
+
+In dieser Lektion haben Sie erfolgreich eine Verbindung mit der Beispieldatenbank „AdventureWorks2016“ definiert. Weiter mit [Lektion 3: Definieren eines Datasets für den Tabellenbericht &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).
+
+## <a name="see-also"></a>Siehe auch
+
+[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

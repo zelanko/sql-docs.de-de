@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63203061"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,7 +50,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||||
 |---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -72,6 +72,9 @@ ALTER DATABASE Der aktuelle Artikel behandelt die Syntax und weitere Information
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) Stellt die Syntax und weitere Informationen zu den ALTER DATABASE-Optionen für [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] zum Konfigurieren einer sekundären Datenbank auf einem sekundären Replikat einer Always On-Verfügbarkeitsgruppe bereit.
 
 [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) stellt die Syntax und weitere Informationen für die SET-Optionen von ALTER DATABASE bereit, die sich auf die Datenbank-Kompatibilitätsgrade beziehen.
+
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+Stellt die Syntax für datenbankweit gültige Konfigurationen bereit, die für einzelne Einstellungen auf Datenbankebene wie Abfrageoptimierung und Abfrageausführung verwendet werden. 
 
 ## <a name="syntax"></a>Syntax
 
@@ -131,7 +134,7 @@ CURRENT
 
 Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.
 
-MODIFY NAME **=**_new_database_name_     
+MODIFY NAME **=** _new_database_name_     
 Benennt die Datenbank in den angegebenen Namen *new_database_name* um.
 
 COLLATE *collation_name*    
@@ -144,12 +147,12 @@ Beim Erstellen von Datenbanken mit einer von der Standardsortierung abweichenden
 
 Weitere Informationen zu den Namen von Windows- und SQL-Sortierungen finden Sie unter [COLLATE](~/t-sql/statements/collations.md).
 
-**\<delayed_durability_option> ::=**      
+**\<delayed_durability_option> ::=**       
 **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md) und [Steuern der Transaktionsdauerhaftigkeit](../../relational-databases/logs/control-transaction-durability.md).
 
-**\<file_and_filegroup_options>::=**     
+**\<file_and_filegroup_options>::=**      
 Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen für Dateien und Dateigruppen](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 ## <a name="remarks"></a>Remarks
@@ -274,7 +277,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken \*_ ** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -374,7 +377,7 @@ Der Name der Datenbank, die geändert werden soll.
 CURRENT        
 Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.
 
-MODIFY NAME **=**_new_database_name_      
+MODIFY NAME **=** _new_database_name_      
 Benennt die Datenbank in den angegebenen Namen *new_database_name* um. Im folgenden Beispiel wird der Name einer Datenbank von `db1` in `db2` geändert:
 
 ```sql
@@ -661,7 +664,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql.md?view=azuresqldb-current)|** _\* SQL-Datenbank<br />verwaltete Instanz \*_ ** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -781,7 +784,7 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -899,7 +902,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
 ||||||
 
 &nbsp;

@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532759"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484335"
 ---
 # <a name="install-sql-server-database-engine"></a>Installieren der SQL Server-Datenbank-Engine
 
@@ -37,7 +37,7 @@ Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../include
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   Replikation – optionale Komponente  
+-   [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md) – optionale Komponente  
 
 -   [Machine Learning Services (datenbankintern) mit R und Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) – optionale Komponente
 
@@ -47,6 +47,9 @@ Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../include
   
     > [!NOTE]  
     >  In dieser Version wird durch Aktivieren des Kontrollkästchens **Data Quality Services** während des Setups DQS (Data Quality Services)-Server nicht installiert. Sie müssen nach der Installation weitere Schritte ausführen, um DQS-Server zu installieren. Weitere Informationen finden Sie unter [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
+    
+- [PolyBase-Abfragedienst für externe Daten](../../relational-databases/polybase/polybase-guide.md) – optionale Komponente 
+
   
  In vielen typischen Benutzerszenarien sind die folgenden zusätzlichen Funktionen als Optionen verfügbar:  
   

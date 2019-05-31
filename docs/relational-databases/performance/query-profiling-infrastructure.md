@@ -1,7 +1,7 @@
 ---
 title: Profilerstellungsinfrastruktur für Abfragen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645562"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568270"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ Die *Profilerstellungsinfrastruktur für Abfrageausführungsstatistiken* (Standa
 - [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> Die Verwendung von Live-Abfragestatistiken mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] nutzt die Standard-Profilerstellungsinfrastruktur.    
-> Wenn in höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die [einfache Profilerstellungsinfrastruktur](#lwp) aktiviert ist, wird sie von Live-Abfragestatistiken anstelle der Standardprofilerstellung genutzt.
+> Wenn Sie auf die Schaltfläche *Live-Abfragestatistik einschließen* in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] klicken, wird die Standard-Profilerstellungsinfrastruktur verwendet.    
+> Ist die [Lightweight-Infrastruktur zur Profilerstellung](#lwp) in höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert, wird sie von Live-Abfragestatistiken anstelle der Standardprofilerstellung verwendet, wenn diese über den [Aktivitätsmonitor](../../relational-databases/performance-monitor/activity-monitor.md) oder durch direktes Abfragen der [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)-DMV angezeigt werden. 
 
 Die folgenden Methoden zum globalen Erfassen von Ausführungsplaninformationen für **alle Sitzungen** nutzen die Standard-Profilerstellungsinfrastruktur:
 
@@ -121,11 +121,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] enthält eine neu überarbeitete Version der einfachen Profilerstellung, die Informationen zur Anzahl der Zeilen für alle Ausführungen erfasst. Einfache Profilerstellung ist für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] standardmäßig aktiviert, und das Ablaufverfolgungsflag 7412 besitzt keine Auswirkungen.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] enthält eine neu überarbeitete Version der einfachen Profilerstellung, die Informationen zur Anzahl der Zeilen für alle Ausführungen erfasst. Einfache Profilerstellung ist für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] standardmäßig aktiviert, und das Ablaufverfolgungsflag 7412 besitzt keine Auswirkungen. Die Lightweight-Profilerstellung kann mithilfe der [datenbankweit gültigen Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING auf Datenbankebene deaktiviert werden: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
-Eine neue DMF ([sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)) wird eingeführt, um das Äquivalent des letzten bekannten, tatsächlichen Ausführungsplans für die meisten Abfragen zurückzugeben. Im Gegensatz zum Ereignis *query_post_execution_showplan*, das die Standardprofilerstellung nutzt, erfasst das neue erweiterte Ereignis *query_post_execution_plan_profile* das Äquivalent eines tatsächlichen Ausführungsplans mithilfe einfacher Profilerstellung. 
+Die neue dynamische Verwaltungsfunktion [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) wird eingeführt, um das Äquivalent des letzten bekannten, tatsächlichen Ausführungsplans für die meisten Abfragen zurückzugeben. Diese heißt *Abfrageplanstatistik*. Die letzte Abfrageplanstatistik kann auf Datenbankebene mithilfe der [datenbankweit gültigen Konfiguration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS deaktiviert werden: `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-Sie können eine Beispielsitzung wie im folgenden Beispiel mithilfe des erweiterten Ereignisses *query_post_execution_plan_profile* konfigurieren:
+Im Gegensatz zum Ereignis *query_post_execution_showplan*, das die Standardprofilerstellung nutzt, erfasst das neue erweiterte Ereignis *query_post_execution_plan_profile* das Äquivalent eines tatsächlichen Ausführungsplans mithilfe einfacher Profilerstellung. Sie können eine Beispielsitzung wie im folgenden Beispiel mithilfe des erweiterten Ereignisses *query_post_execution_plan_profile* konfigurieren:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -142,6 +142,34 @@ WITH (MAX_MEMORY=4096 KB,
   MEMORY_PARTITION_MODE=NONE,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
+```
+
+#### <a name="example-1---extended-event-session-using-standard-profiling"></a>Beispiel 1: Erweiterte Ereignissitzung mit der Standardprofilerstellung
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>Beispiel 2: Erweiterte Ereignissitzung mit der einfachen Profilerstellung
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
 ## <a name="remarks"></a>Remarks

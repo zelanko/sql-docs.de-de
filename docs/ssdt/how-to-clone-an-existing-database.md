@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 683d8f082a41b328f9cf86134cee0440e2ca3e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818760"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090110"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Vorgehensweise: Klonen einer vorhandenen Datenbank
-In dieser Aufgabe werden einige der in den vorherigen Prozeduren eingeführten Schritte verwendet, um eine neue Datenbank zu erstellen und vorhandene Daten in diese zu portieren. Darüber hinaus werden die Schritte durchgeführt, die unter [Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) beschrieben werden, um das Schema einer Quell- und das einer Projektdatenbank zu synchronisieren.  
+# <a name="how-to-clone-an-existing-database"></a>Gewusst wie: Klonen von vorhandenen Datenbanken
+In dieser Aufgabe werden einige der in den vorherigen Prozeduren eingeführten Schritte verwendet, um eine neue Datenbank zu erstellen und vorhandene Daten in diese zu portieren. Darüber hinaus werden die Schritte durchgeführt, die unter [Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) beschrieben werden, um das Schema einer Quell- und einer Projektdatenbank zu synchronisieren.  
   
 Mit diesen Schritten können Sie auf einfache Weise eine Entwicklungs- oder Testdatenbank aus einer Produktionsdatenbank mit identischem Schema und identischen Daten erstellen. Anschließend können Sie mit der Entwicklung der Testdatenbank in einem verbundenen Modus fortfahren oder ein Datenbankprojekt für Offlineentwicklung und -tests erstellen. Hierbei muss der Betrieb der Produktionsdatenbank nicht unterbrochen werden.  
   
@@ -34,7 +34,7 @@ Mit diesen Schritten können Sie auf einfache Weise eine Entwicklungs- oder Test
   
 3.  Benennen Sie die neue Datenbank in **TradeDev** um.  
   
-4.  Klicken Sie mit der rechten Maustaste auf die Datenbank **Trade** im **SQL Server-Objekt-Explorer**, und klicken Sie auf **Schemavergleich**. Führen Sie die Schritte im Thema [Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) durch, und wählen Sie dabei die ursprüngliche Datenbank **Trade** als Quelle und die neue Datenbank **TradeDev** als Ziel aus. Dadurch wird **TradeDev** mit dem Schema aus **Trade** aktualisiert.  
+4.  Klicken Sie mit der rechten Maustaste auf die Datenbank **Trade** im **SQL Server-Objekt-Explorer**, und klicken Sie auf **Schemavergleich**. Führen Sie die unter [Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) beschriebenen Schritte aus, und wählen Sie dabei die ursprüngliche Datenbank **Trade** als Quelle und die neue Datenbank **TradeDev** als Ziel aus. Dadurch wird **TradeDev** mit dem Schema aus **Trade** aktualisiert.  
   
 ### <a name="to-replicate-data"></a>So replizieren Sie Daten  
   
@@ -54,6 +54,6 @@ Mit diesen Schritten können Sie auf einfache Weise eine Entwicklungs- oder Test
   
 7.  Überprüfen Sie mithilfe des Daten-Editors, ob alle Tabellen in der neuen Datenbank `TradeDev` aufgefüllt wurden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

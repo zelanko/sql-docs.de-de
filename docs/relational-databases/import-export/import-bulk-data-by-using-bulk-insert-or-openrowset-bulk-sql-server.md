@@ -19,16 +19,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c4fdd3b1512d64cb8c702e00ba89aed02d5abb0a
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542443"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946583"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52542443"
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Wenn OPENROWSET(BULK...) in einer INSERT-Anweisung verwendet wird, werden damit auch Tabellenhinweise unterstützt. Zusätzlich zu den regulären Tabellenhinweisen, z. B. TABLOCK, sind für die BULK-Klausel die folgenden speziellen Tabellenhinweise möglich: IGNORE_CONSTRAINTS (ignoriert nur die CHECK-Einschränkungen), IGNORE_TRIGGERS, KEEPDEFAULTS und KEEPIDENTITY. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ Wenn OPENROWSET(BULK...) in einer INSERT-Anweisung verwendet wird, werden damit auch Tabellenhinweise unterstützt. Zusätzlich zu den regulären Tabellenhinweisen wie TABLOCK kann die BULK-Klausel die folgenden spezialisierten Tabellenhinweise akzeptieren: IGNORE_CONSTRAINTS (ignoriert nur die CHECK-Einschränkungen), IGNORE_TRIGGERS, KEEPDEFAULTS und KEEPIDENTITY. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Informationen zu den zusätzlichen Verwendungsmöglichkeiten der Option BULK finden Sie unter [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52542443"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows können so konfiguriert werden, dass von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz eine Verbindung mit einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz hergestellt wird, indem die Anmeldeinformationen eines authentifizierten Windows-Benutzers weitergeleitet werden. Diese Anordnung wird als *Identitätswechsel* oder *Delegierung*bezeichnet. Es ist wichtig zu wissen, wie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version die Sicherheit für den Benutzeridentitätswechsel verarbeitet wird, wenn Sie BULK INSERT oder OPENROWSET verwenden. Durch einen Benutzeridentitätswechsel kann sich die Datendatei auf einem anderen Computer befinden als der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess oder der Benutzer selbst. Wenn beispielsweise ein Benutzer auf **Computer_A** Zugriff auf eine Datendatei hat, die sich auf **Computer_B**befindet, und die Delegierung der Anmeldeinformationen entsprechend festgelegt ist, kann der Benutzer eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz herstellen, die auf **Computer_C**ausgeführt wird, auf die Datendatei auf **Computer_B**zugreifen und einen Massenimport von Daten aus der Datei in eine Tabelle auf **Computer_C**ausführen.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Massenimport aus einer Remotedatendatei  
- Die Datendatei muss zwischen zwei Computern freigegeben sein, um mithilfe von BULK INSERT oder INSERT...SELECT \* FROM OPENROWSET(BULK...) den Massenimport von Daten von einem Computer zum anderen auszuführen. Verwenden Sie zum Angeben einer freigegebenen Datendatei den UNC-Namen (Universal Naming Convention) im allgemeinen Format **\\\\**_Servername_**\\**_Freigabename_**\\**_Pfad_**\\**_Dateiname_. Zudem muss das Konto, mit dem auf die Datendatei zugegriffen wird, über die Berechtigungen verfügen, die zum Lesen der Datei auf dem Remotedatenträger erforderlich sind.  
+ Die Datendatei muss zwischen zwei Computern freigegeben sein, um mithilfe von BULK INSERT oder INSERT...SELECT \* FROM OPENROWSET(BULK...) den Massenimport von Daten von einem Computer zum anderen auszuführen. Verwenden Sie zum Angeben einer freigegebenen Datendatei den UNC-Namen (Universal Naming Convention) im allgemeinen Format **\\\\** _Servername_ **\\** _Freigabename_ **\\** _Pfad_ **\\** _Dateiname_. Zudem muss das Konto, mit dem auf die Datendatei zugegriffen wird, über die Berechtigungen verfügen, die zum Lesen der Datei auf dem Remotedatenträger erforderlich sind.  
   
  Beispielsweise wird mithilfe der folgenden `BULK INSERT` -Anweisung ein Massenimport von Daten aus der Datendatei `SalesOrderDetail` in die `AdventureWorks` -Tabelle der `newdata.txt`-Datenbank ausgeführt. Diese Datendatei befindet sich im freigegebenen Ordner `\dailyorders` auf dem `salesforce`-Netzwerkfreigabeverzeichnis des `computer2`-Systems.  
   

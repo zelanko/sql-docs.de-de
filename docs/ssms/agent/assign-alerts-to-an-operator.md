@@ -15,16 +15,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: edaebbf5d6b8f0f5e91e1fc4cd2f3a719363053c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b889b3c391bde7e064eab49c3791fa05cdf1e674
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695709"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104397"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,9 +75,9 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können Operatoren Warnungen 
   
 4.  Klicken Sie mit der rechten Maustaste auf den Operator, dem Sie eine Warnung zuweisen möchten, wählen Sie **Eigenschaften**aus, und wählen Sie die Seite **Benachrichtigungen** aus.  
   
-5.  Wählen Sie im Dialogfeld _operator\_name_**-Eigenschaften** unter **Seite auswählen** die Option **Benachrichtigungen**aus.  
+5.  Wählen Sie im Dialogfeld _operator\_name_ **-Eigenschaften** unter **Seite auswählen** die Option **Benachrichtigungen**aus.  
   
-6.  Wählen Sie unter **Benachrichtigungen an diesen Benutzer anzeigen von**die Option **Warnung** aus, um eine Liste der Warnungen anzuzeigen, die an diesen Operator gesendet wurden, oder wählen Sie **Aufträge** aus, um eine Liste der Aufträge anzuzeigen, von denen Benachrichtigungen an diesen Operator gesendet werden. Aktivieren Sie mindestens eines der folgenden Kontrollkästchen, um die Benachrichtigungsmethode für jede Benachrichtigung zu definieren: **E-Mail**, **Pager**oder **NET SEND**.  
+6.  Wählen Sie unter **Benachrichtigungen an diesen Benutzer anzeigen von**die Option **Warnung** aus, um eine Liste der Warnungen anzuzeigen, die an diesen Operator gesendet wurden, oder wählen Sie **Aufträge** aus, um eine Liste der Aufträge anzuzeigen, von denen Benachrichtigungen an diesen Operator gesendet werden. Aktivieren Sie mindestens eines der folgenden Kontrollkästchen, um die Benachrichtigungsmethode für jede Benachrichtigung zu definieren: **E-Mail**, **Pager** oder **NET SEND**.  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

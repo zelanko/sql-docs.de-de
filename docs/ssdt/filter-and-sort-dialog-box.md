@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datafilterdialog.dialog
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c230b7cbf3d9e3c4297acecc5262a4315af03578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56ca7cf78cce14c198d78121d175159d90a6aa7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846522"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096925"
 ---
 # <a name="filter-and-sort-dialog-box"></a>Dialogfeld „Filtern und Sortieren“
-Im SQL Server-Objekt-Explorer können Sie mit der rechten Maustaste auf eine Tabelle oder Sicht klicken und auf **Daten anzeigen** klicken (weitere Informationen finden Sie unter [Gewusst wie: Anzeigen und Bearbeiten von Daten in einer Tabelle](../ssdt/how-to-view-and-edit-data-in-a-table.md)). Seit dem SQL Server Data Tools-Release von März 2014 verfügt der **Daten-Editor** über eine Schaltfläche namens „Sortieren und filtern“ in der Symbolleiste. Sie können die Daten ändern, die in einer Tabelle oder Ansicht angezeigt wird.  
+Im SQL Server-Objekt-Explorer können Sie mit der rechten Maustaste auf eine Tabelle oder Ansicht und dann auf **Daten anzeigen** klicken (weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen und Bearbeiten von Daten in einer Tabelle](../ssdt/how-to-view-and-edit-data-in-a-table.md)). Seit dem SQL Server Data Tools-Release von März 2014 verfügt der **Daten-Editor** über eine Schaltfläche namens „Sortieren und filtern“ in der Symbolleiste. Sie können die Daten ändern, die in einer Tabelle oder Ansicht angezeigt wird.  
   
 Im Dialogfeld **Sortieren und filtern** können Sie angeben, welche Daten im **Daten-Editor** angezeigt werden:  
   
@@ -37,6 +37,6 @@ Im Dialogfeld **Sortieren und filtern** können Sie angeben, welche Daten im **D
   
 Ferner können Sie auf eine Zeile klicken und im Dialogfeld **Sortieren und filtern** einen Vorgang für eine Zeile auswählen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Entwicklung verbundener Datenbanken](../ssdt/connected-database-development.md)  
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - alerts [SQL Server], responding to
 - responding to alerts
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2d8632c99b150d21e2558bf6e35c26f4fcf240ae
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 48712714fb837a769153870404257403184087c0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698265"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096698"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Nur Mitglieder der festen Serverrolle **sysadmin** können die Antwort auf eine 
   
 6.  Aktivieren Sie das Kontrollkästchen **Auftrag ausführen** , und wählen Sie aus der Liste unter dem Kontrollkästchen **Auftrag ausführen** einen Auftrag aus, der ausgeführt werden soll, wenn die Warnung angezeigt wird. Sie können einen neuen Auftrag erstellen, indem Sie auf **Neuer Auftrag**klicken. Um weitere Informationen zu dem Auftrag anzuzeigen, klicken Sie auf **Auftrag anzeigen**. Weitere Informationen zu den verfügbaren Optionen in den Dialogfeldern **Neuer Auftrag** und **Auftragseigenschaften** - _Auftragsname_ finden Sie unter [Erstellen eines Auftrags](../../ssms/agent/create-a-job.md) und [Anzeigen eines Auftrags](../../ssms/agent/view-a-job.md).  
   
-7.  Aktivieren Sie das Kontrollkästchen **Operatoren benachrichtigen** , sofern Sie Operatoren benachrichtigen möchten, wenn eine Warnung aktiviert ist. Wählen Sie in der Liste **Operator**mindestens eine der folgenden Methoden für die Benachrichtigung eines Operators bzw. von Operatoren aus: **E-Mail**, **Pager**oder **NET SEND**. Sie können einen neuen Operator erstellen, indem Sie auf **Neuer Operator**klicken. Um weitere Informationen über einen Operator anzuzeigen, klicken Sie auf **Operator anzeigen**. Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Neuer Operator** und im Dialogfeld zum **Anzeigen von Operatoreigenschaften** unter [Create an Operator](../../ssms/agent/create-an-operator.md) und [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md).  
+7.  Aktivieren Sie das Kontrollkästchen **Operatoren benachrichtigen** , sofern Sie Operatoren benachrichtigen möchten, wenn eine Warnung aktiviert ist. Wählen Sie in der Liste **Operator** mindestens eine der folgenden Methoden für die Benachrichtigung des Operators oder der Operatoren aus: **E-Mail**, **Pager** oder **NET SEND**. Sie können einen neuen Operator erstellen, indem Sie auf **Neuer Operator**klicken. Um weitere Informationen über einen Operator anzuzeigen, klicken Sie auf **Operator anzeigen**. Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Neuer Operator** und im Dialogfeld zum **Anzeigen von Operatoreigenschaften** unter [Create an Operator](../../ssms/agent/create-an-operator.md) und [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md).  
   
 8.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

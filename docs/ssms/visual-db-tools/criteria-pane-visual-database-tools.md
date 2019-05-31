@@ -16,15 +16,15 @@ helpviewer_keywords:
 - grid showing query options [SQL Server]
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f6beffa273fbb08c8d4c4066eac3e08f52ed4c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a4df3e9ed712975aa6d372dbc9afc3ce76bbeaa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514053"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095207"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Kriterienbereich (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,14 +55,14 @@ Welche Informationen genau im Kriterienbereich angezeigt werden, ist abhängig v
   
 Wenn der Kriterienbereich nicht sichtbar ist, klicken Sie mit der rechten Maustaste auf den Designer, zeigen Sie auf **Bereich**, und klicken Sie dann auf **Kriterien**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
   
-|**Column**|**Abfragetyp**|**Beschreibung**|  
+|**Spalte**|**Abfragetyp**|**Beschreibung**|  
 |--------------|------------------|-------------------|  
 |Spalte|All|Zeigt entweder den Namen einer in der Abfrage verwendeten Datenspalte oder den Ausdruck für eine berechnete Spalte an. Diese Spalte ist gesperrt und bleibt somit bei einem horizontalen Bildlauf immer sichtbar.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt entweder einen alternativen Namen für eine Spalte an oder den Namen, den Sie für eine berechnete Spalte verwenden können.|  
 |Tabelle|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Gibt den Namen der Tabelle oder des Objekts mit Tabellenstruktur für die zugeordnete Datenspalte an. Diese Spalte ist bei berechneten Spalten leer.|  
-|Ausgabe|SELECT, INSERT FROM, MAKE TABLE|Gibt an, ob eine Datenspalte in der Abfrageausgabe aufgeführt wird oder nicht.<br /><br />Hinweis: Wenn dies in der Datenbank zulässig ist, können Sie eine Datenspalte in Sortier- oder Suchklauseln verwenden, ohne die Spalte im Resultset anzuzeigen.|  
+|Ausgabe|SELECT, INSERT FROM, MAKE TABLE|Gibt an, ob eine Datenspalte in der Abfrageausgabe aufgeführt wird oder nicht.<br /><br />Hinweis: Wenn dies in der Datenbank zulässig ist, können Sie eine Datenspalte für Sortier- oder Suchklauseln verwenden, ohne die Spalte im Resultset anzuzeigen.|  
 |Sortiertyp|SELECT, INSERT FROM|Gibt an, dass die zugeordnete Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird. Zeigt außerdem an, ob aufsteigend oder absteigend sortiert wird.|  
 |Sortierreihenfolge|SELECT, INSERT FROM|Gibt die Sortierpriorität für Datenspalten an, die zum Sortieren des Resultsets verwendet werden. Wenn Sie die Sortierreihenfolge für eine Datenspalte ändern, wird die Sortierreihenfolge für alle anderen Spalten entsprechend aktualisiert.|  
 |Gruppieren nach|SELECT, INSERT FROM, MAKE TABLE|Gibt an, dass die zugeordnete Datenspalte zum Erstellen einer Aggregatabfrage verwendet wird. Diese Datenblattspalte wird nur angezeigt, wenn Sie im Menü **Extras** die Option **Gruppieren nach** ausgewählt oder im SQL-Bereich eine GROUP BY-Klausel hinzugefügt haben.<br /><br />In der Standardeinstellung ist der Wert dieser Spalte auf **Gruppieren nach**gesetzt, und die Spalte ist Teil der GROUP BY-Klausel.<br /><br />Wenn Sie in eine Zelle in dieser Spalte wechseln und eine Aggregatfunktion auf die zugeordnete Datenspalte anwenden, wird für den sich ergebenden Ausdruck eine Ausgabespalte zum Resultset hinzugefügt.|  
@@ -71,7 +71,7 @@ Wenn der Kriterienbereich nicht sichtbar ist, klicken Sie mit der rechten Mausta
 |Anfügen|INSERT FROM|Gibt den Namen der Zieldatenspalte für die zugeordnete Datenspalte an. Wenn Sie eine INSERT FROM-Abfrage erstellen, versucht der Abfrage- und Sicht-Designer, die Quelle einer übereinstimmenden Zieldatenspalte zuzuordnen. Wenn der Abfrage- und Sicht-Designer keine Übereinstimmung finden kann, müssen Sie den Spaltennamen angeben.|  
 |Neuer Wert|UPDATE, INSERT INTO|Gibt den Wert an, der in der zugeordneten Spalte gesetzt werden soll. Geben Sie einen Literalwert oder einen Ausdruck ein.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Diagrammbereich &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
 [Regeln für das Eingeben von Suchwerten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  

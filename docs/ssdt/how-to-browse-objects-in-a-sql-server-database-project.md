@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb91033c6853926dd3eb0a88197801875bda8a1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 948749635ebec1106d6b950a65c9f6429d01888a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657190"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103242"
 ---
-# <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Vorgehensweise: Durchsuchen von Objekten in einem SQL Server-Datenbankprojekt
+# <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Gewusst wie: Durchsuchen von Objekten in einem SQL Server-Datenbankprojekt
 Der SQL Server-Objekt-Explorer in Visual Studio enthält jetzt einen dedizierten Projektknoten, unter dem sämtliche in der Projektmappe enthaltenen SQL Server-Datenbankprojekte in einer Hierarchie gruppiert sind, die SQL Server Management Studio ähnelt.  
   
 ## <a name="to-browse-objects-in-a-project-instance"></a>So durchsuchen Sie Objekte in einer Projektinstanz  
@@ -29,6 +29,6 @@ Der SQL Server-Objekt-Explorer in Visual Studio enthält jetzt einen dedizierten
   
 3.  Erweitern Sie im **SQL Server-Objekt-Explorer** den Knoten **Projekte**, um alle derzeit in der Projektmappe enthaltenen SQL Server-Datenbankprojekte unter dem Knoten **Projekte** anzuzeigen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Entwicklung verbundener Datenbanken](../ssdt/connected-database-development.md)  
   

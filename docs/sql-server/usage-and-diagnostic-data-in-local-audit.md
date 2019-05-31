@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582764"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372439"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Lokale Überwachung für SQL Server-Nutzungs- und -Diagnosedatensammlung (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>Einführung
 
-Microsoft SQL Server enthält internetfähige Features, die Daten über Ihren Computer oder Ihr Gerät erfassen und senden können. Die zugehörigen Informationen werden als *Standardcomputerinformationen* bezeichnet. Die Komponente „Lokale Überwachung“ der [SQL Server-Nutzungs- und -Diagnosedatensammlung](https://support.microsoft.com/kb/3153756) schreibt die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner. Der Zweck der lokalen Überwachung besteht darin, dass Kunden die von Microsoft mit dem Feature erfassten Daten einsehen können, um die Compliance sowie die Einhaltung von behördlichen Bestimmungen oder Datenschutzbestimmungen zu überprüfen.  
+Microsoft SQL Server enthält internetfähige Features, die Daten über Ihren Computer oder Ihr Gerät erfassen und senden können. Die zugehörigen Informationen werden als *Standardcomputerinformationen* bezeichnet. Die Komponente „Lokale Überwachung“ der [SQL Server-Nutzungs- und -Diagnosedatensammlung](usage-and-diagnostic-data-configuration-for-sql-server.md) schreibt die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner. Der Zweck der lokalen Überwachung besteht darin, dass Kunden die von Microsoft mit dem Feature erfassten Daten einsehen können, um die Compliance sowie die Einhaltung von behördlichen Bestimmungen oder Datenschutzbestimmungen zu überprüfen.  
 
 Seit SQL Server 2016 CU2 kann die lokale Überwachung auf der Instanzebene für SQL Server-Datenbank-Engine und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4 und SQL Server 2016 SP1 ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, bieten keine Funktion zur lokalen Überwachung der Nutzungs- und Diagnosedatensammlung.
+
+## <a name="remarks"></a>Remarks
+
+ - Das Entfernen oder Deaktivieren des CEIP-Diensts für SQL wird nicht unterstützt. 
+ - Das Entfernen von CEIP-Ressourcen für SQL aus der Clustergruppe wird nicht unterstützt. 
+
+Informationen zur Deaktivierung der Datensammlung finden Sie unter [Aktivieren oder Deaktivieren der lokalen Überwachung](#turning-local-audit-on-or-off).
 
 ## <a name="prerequisites"></a>Voraussetzungen 
 
@@ -58,7 +65,7 @@ Führen Sie die folgenden Schritte aus, um das Anmeldekonto für den SQL Server-
  
 1. Starten Sie die Konsole **Dienste**. Wählen Sie dazu die **Windows-Taste + R** auf der Tastatur aus, um das Dialogfeld **Ausführen** zu öffnen. Geben Sie dann *services.msc* in das Textfeld ein, und wählen **OK** aus, um die Konsole **Dienste** zu starten.  
 
-2. Navigieren Sie zu dem entsprechenden Dienst. Suchen Sie z. B. für die Datenbank-Engine nach **SQL Server CEIP-Dienst**  **(*Name Ihrer Instanz*)**. Suchen Sie für Analysis Services nach **SQL Server Analysis Services CEIP**  **(*Name Ihrer Instanz*)**. Suchen Sie für Integration Services nach **SQL Server Integration Services-CEIP-Dienst**.
+2. Navigieren Sie zu dem entsprechenden Dienst. Suchen Sie z. B. für die Datenbank-Engine nach **SQL Server CEIP-Dienst**  **(*Name Ihrer Instanz*)** . Suchen Sie für Analysis Services nach **SQL Server Analysis Services CEIP**  **(*Name Ihrer Instanz*)** . Suchen Sie für Integration Services nach **SQL Server Integration Services-CEIP-Dienst**.
 
 3. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie **Eigenschaften**aus. 
 
@@ -66,7 +73,7 @@ Führen Sie die folgenden Schritte aus, um das Anmeldekonto für den SQL Server-
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Konfigurieren Sie einen neuen Ordner für die Dateien der lokalen Überwachung.    
 
-Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in den die Protokolle von der lokalen Überwachung geschrieben werden. Der vollständige Pfad zum Verzeichnis der lokalen Überwachung für eine Standardinstanz der Datenbank-Engine wäre beispielsweise: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Erstellen Sie einen neuen Ordner (Verzeichnis für die lokale Überwachung), in den die Protokolle von der lokalen Überwachung geschrieben werden. Der vollständige Pfad zum Verzeichnis der lokalen Überwachung für eine Standardinstanz der Datenbank-Engine wäre beispielsweise: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >Konfigurieren Sie den Verzeichnispfad für die lokale Überwachung außerhalb des SQL Server-Installationspfads, um zu vermeiden, dass die Überwachungsfunktionen und das Patchen zu potenziellen Problemen mit SQL Server führen.
@@ -133,7 +140,7 @@ Nachdem Sie die Schritte zur Vorkonfiguration abgeschlossen haben, können Sie d
 
 1. Klicken Sie mit der rechten Maustaste auf **UserRequestedLocalAuditDirectory**, und wählen Sie *Ändern* aus. 
 
-1. Geben Sie den Pfad für die lokale Überwachung ein, um diese zu aktivieren. Beispiel: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
+1. Geben Sie den Pfad für die lokale Überwachung ein, um diese zu aktivieren. Beispiel: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* .
  
     Um die lokale Überwachung zu deaktivieren, löschen Sie den Wert in **UserRequestedLocalAuditDirectory**.
 
@@ -145,8 +152,8 @@ Das SQL Server-CEIP sollte die Einstellung für die lokale Überwachung sofort e
 
 1. Navigieren Sie zu dem entsprechenden Dienst. 
 
-    - Für die Datenbank-Engine verwenden Sie **SQL Server CEIP-Dienst (*Name-Ihrer-Instanz*)**.     
-    - Verwenden Sie für Analysis Services **SQL Server Analysis Services CEIP (*Name Ihrer Instanz*)**.
+    - Für die Datenbank-Engine verwenden Sie **SQL Server CEIP-Dienst (*Name-Ihrer-Instanz*)** .     
+    - Verwenden Sie für Analysis Services **SQL Server Analysis Services CEIP (*Name Ihrer Instanz*)** .
     - Für Integration Services: 
         - Für SQL 2016 verwenden Sie *SQL Server Integration Services CEIP-Dienst 13.0*.
         - Für SQL 2017 verwenden Sie *SQL Server Integration Services CEIP-Dienst 14.0*.

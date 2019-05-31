@@ -12,16 +12,16 @@ helpviewer_keywords:
 - target servers [SQL Server], encryption
 - multiserver environments [SQL Server], setting encryption options on target servers
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dd6e43157f8b822f62b915a5f09079ee8368cf25
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ea6458989062ef87ed113134c0984cab356f63d0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699838"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099867"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Festlegen von Verschlüsselungsoptionen auf Zielservern
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51699838"
 
 Wenn Sie für die verschlüsselte SSL-Kommunikation (Secure Sockets Layer) zwischen Masterservern und einigen oder allen Zielservern kein Zertifikat verwenden können, aber den Kanal zwischen diesen verschlüsseln möchten, müssen Sie auf dem Zielserver die erforderliche Sicherheitsstufe konfigurieren.  
   
-Zum Konfigurieren der für einen bestimmten Kommunikationskanal zwischen einem Master- und einem Zielserver erforderlichen geeigneten Sicherheitsstufe legen Sie den Registrierungsunterschlüssel **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*instance_name*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent auf dem Zielserver auf einen der folgenden Werte fest. Der Wert von \<*Instanz_Name*> ist **MSSQL.**_n_. Beispiel: **MSSQL.1** oder **MSSQL.3**.  
+Zum Konfigurieren der für einen bestimmten Kommunikationskanal zwischen einem Master- und einem Zielserver erforderlichen geeigneten Sicherheitsstufe legen Sie den Registrierungsunterschlüssel **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*instance_name*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent auf dem Zielserver auf einen der folgenden Werte fest. Der Wert von \<*Instanz_Name*> ist **MSSQL.** _n_. Beispiel: **MSSQL.1** oder **MSSQL.3**.  
   
 |value|und Beschreibung|  
 |---------|---------------|  
@@ -44,6 +44,6 @@ Wenn **1** oder **2** angegeben wird, muss SSL sowohl auf dem Master- als auch a
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Vorgehensweise: Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine (SQL Server-Konfigurations-Manager).](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorgehensweise: Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
   

@@ -1,7 +1,7 @@
 ---
 title: Übersicht über Wiederherstellungsvorgänge (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242041"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461818"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,9 +91,9 @@ ms.locfileid: "54242041"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Datenwiederherstellung|Vollständige Wiederherstellung (falls das Protokoll verfügbar ist).|Gefahr des Datenverlusts.|Alle Daten seit der letzten vollständigen Sicherung oder differenziellen Sicherung gehen verloren.|  
 |Wiederherstellung bis zu einem bestimmten Zeitpunkt|Jeder von den Protokollsicherungen abgedeckte Zeitpunkt.|Nicht zulässig, wenn die Protokollsicherung massenprotokollierte Änderungen enthält.|Wird nicht unterstützt.|  
-|File restore **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
-|Page restore **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Keine.|  
-|Schrittweise Wiederherstellung (Dateigruppenebene) **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
+|File restore **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
+|Page restore **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Keine.|  
+|Schrittweise Wiederherstellung (Dateigruppenebene) **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
   
  **\*** Verfügbar nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -155,7 +155,22 @@ ms.locfileid: "54242041"
 -   [Wiederherstellungsberater: Einführung](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> Verbesserte Wiederherstellung von Datenbanken
+
+Mit SQL Server 2019, Vorschauversion CTP 2.3 wird die [Verbesserte Wiederherstellung von Datenbanken](/azure/sql-database/sql-database-accelerated-database-recovery/) für lokale SQL Server-Infrastrukturen eingeführt. Durch die verbesserte Wiederherstellung von Datenbanken wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der Wiederherstellungsprozess der SQL Server-Datenbank-Engine vollständig überarbeitet. Die [Datenbankwiederherstellung](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) wird von SQL Server für alle Datenbanken verwendet, damit diese Transaktionen im gleichen bzw. fehlerfreien Zustand starten. Eine Datenbank, für die die verbesserte Datenbankwiederherstellung aktiviert wurde, wird nach einem Failover oder einem nicht sauberen Herunterfahren deutlich schneller wiederhergestellt. 
+
+Sie können die datenbankbasierte beschleunigte Wiederherstellung für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 oder höher mithilfe der folgenden Syntax aktivieren:
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> Sie benötigen diese Syntax nicht, um das Feature in Azure SQL-Datenbank zu verwenden. Dort ist es standardmäßig aktiviert.
+
+Wenn Sie kritische Datenbanken besitzen, die für große Transaktionen anfällig sind, können Sie dieses Feature während der Vorschauphase testen. Senden Sie Feedback an das [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Team](<https://aka.ms/sqlfeedback>).
+
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
  Keine.  
   

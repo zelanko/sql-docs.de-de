@@ -12,15 +12,15 @@ helpviewer_keywords:
 - removing tables
 - dropping tables
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96acb5b28a1043bf6a3229c0f072011e5ef1d7a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 86a6b43febf6e56797bd8b240389c14019464a40
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700761"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088678"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Entfernen von Tabellen aus Datenbankdiagrammen (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Sie können eine Tabelle aus einem Datenbankdiagramm entfernen. Durch das Entfer
   
 Anschließend wird die Tabelle aus dem Diagramm entfernt, besteht jedoch weiterhin in der Datenbank.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Vorgehensweise: Löschen von Tabellen aus einer Datenbank (Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+[Vorgehensweise: Löschen von Tabellen (Datenbank-Engine)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

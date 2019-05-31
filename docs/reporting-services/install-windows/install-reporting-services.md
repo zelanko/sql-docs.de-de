@@ -4,15 +4,15 @@ ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712651"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502688"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Installieren von SQL Server Reporting Services (2017 und höher)
 
@@ -124,7 +124,13 @@ Sie müssen den TCP-Port öffnen, den Sie für die URLs Ihres Webdienstes und Ih
 
 ## <a name="related-information"></a>Verwandte Informationen
 
-Informationen zur Installation von SQL Server Reporting Services im einheitlichen Modus finden Sie unter [Install Reporting Services native mode report server (Installieren des Reporting Services-Berichtsservers im einheitlichen Modus)](install-reporting-services-native-mode-report-server.md). Informationen zur Installation von SQL Server 2016 Reporting Services (und Vorgängerversionen) im SharePoint-Integrationsmodus finden Sie unter [Install the first Report Server in SharePoint mode (Installieren des ersten Berichtsservers im SharePoint-Modus)](install-the-first-report-server-in-sharepoint-mode.md).
+Informationen zur Installation von SQL Server Reporting Services im einheitlichen Modus finden Sie unter [Install Reporting Services native mode report server (Installieren des Reporting Services-Berichtsservers im einheitlichen Modus)](install-reporting-services-native-mode-report-server.md). 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+Informationen zur Installation von SQL Server 2016 Reporting Services (und Vorgängerversionen) im SharePoint-Integrationsmodus finden Sie unter [Install the first Report Server in SharePoint mode (Installieren des ersten Berichtsservers im SharePoint-Modus)](install-the-first-report-server-in-sharepoint-mode.md).
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Nächste Schritte
 

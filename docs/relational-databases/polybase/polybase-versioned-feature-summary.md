@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a20544fb4f19611071f28b7cfc5f16fd7e462ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775948"
 ---
 # <a name="polybase-features-and-limitations"></a>Features und Einschränkungen von PolyBase
 
@@ -31,16 +31,16 @@ In dieser Tabelle werden die wichtigsten Features für PolyBase sowie die Produk
 ||||||
 |-|-|-|-|-|   
 |**Feature**|**SQL Server 2016**|**Azure SQL-Datenbank**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
-|Hadoop-Daten abfragen mit [!INCLUDE[tsql](../../includes/tsql-md.md)]|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|
-|Daten aus Hadoop importieren|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|
-|Daten für Hadoop exportieren  |Benutzerkontensteuerung|nein|nein| Benutzerkontensteuerung|
-|Abfragen von, Importieren aus und Exportieren in Microsoft Azure HDInsights |nein|nein|nein|nein
-|Abfrageberechnungen auf Hadoop verlagern|Benutzerkontensteuerung|nein|nein|Benutzerkontensteuerung|  
-|Daten aus Azure Blob Storage importieren|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|Benutzerkontensteuerung| 
-|Daten aus Azure Blob Storage exportieren|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Daten aus Azure Data Lake Store importieren|nein|nein|Benutzerkontensteuerung|nein|    
-|Daten aus Azure Data Lake Store exportieren|nein|nein|Benutzerkontensteuerung|nein|
-|PolyBase-Abfragen über Microsoft BI-Tools ausführen|Benutzerkontensteuerung|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|   
+|Hadoop-Daten abfragen mit [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|Nein|Ja|
+|Daten aus Hadoop importieren|Ja|Nein|Nein|Ja|
+|Daten für Hadoop exportieren  |Ja|Nein|Nein| Ja|
+|Abfragen von, Importieren aus und Exportieren in Microsoft Azure HDInsights |Nein|Nein|Nein|Nein
+|Abfrageberechnungen auf Hadoop verlagern|Ja|Nein|Nein|Ja|  
+|Daten aus Azure Blob Storage importieren|Ja|Nein|Ja|Ja| 
+|Daten aus Azure Blob Storage exportieren|Ja|Nein|Ja|Ja|  
+|Daten aus Azure Data Lake Store importieren|Nein|Nein|Ja|Nein|    
+|Daten aus Azure Data Lake Store exportieren|Nein|Nein|Ja|Nein|
+|PolyBase-Abfragen über Microsoft BI-Tools ausführen|Ja|Nein|Ja|Ja|   
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Von der Weitergabeberechnung unterstützte T-SQL-Operatoren
 
@@ -49,18 +49,20 @@ In SQL Server und APS können nicht alle T-SQL-Operatoren an den Hadoop-Cluster 
 ||||
 |-|-|-| 
 |**Operatortyp**|**Weitergabe an Hadoop möglich**|**Weitergabe an Blob Storage möglich**|
-|Spaltenprojektionen|Benutzerkontensteuerung|nein|
-|Prädikate|Benutzerkontensteuerung|nein|
-|Aggregate|Teilweise|nein|
-|Joins zwischen externen Tabellen|nein|nein|
-|Joins zwischen externen und lokalen Tabellen|nein|nein|
-|Sortierungen|nein|nein|
+|Spaltenprojektionen|Ja|Nein|
+|Prädikate|Ja|Nein|
+|Aggregate|Teilweise|Nein|
+|Joins zwischen externen Tabellen|Nein|Nein|
+|Joins zwischen externen und lokalen Tabellen|Nein|Nein|
+|Sortierungen|Nein|Nein|
 
 Bei einer partiellen Aggregation muss eine endgültige Aggregation vorhanden sein, nachdem die Daten SQL Server erreicht haben. Ein Teil dieser Aggregation ist in Hadoop verfügbar. Dies ist eine häufig verwendete Methode zum Berechnen von Aggregationen in MPP-Systemen (Massively Parallel Processing = massive Parallelverarbeitung).  
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
 PolyBase weist folgende Einschränkungen auf:
+
+- Damit Sie PolyBase verwenden können, müssen Sie über Berechtigungen auf Systemadministrator- oder CONTROL SERVER-Ebene für die Datenbank verfügen.
 
 - Die maximale Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, darf in SQL Server nicht mehr als 32 KB und in Azure SQL Data Warehouse nicht mehr als 1 MB betragen.
 

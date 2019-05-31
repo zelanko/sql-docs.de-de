@@ -1,7 +1,7 @@
 ---
 title: Überwachung und Problembehandlung für PolyBase | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ''
@@ -15,16 +15,17 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c8c6922aca2d291527412e3384fe6682ba26556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 70d6be59845433719cc462326d1135c77d34beee
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687508"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776147"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Überwachung und Problembehandlung für PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Verwenden Sie die in diesem Thema vorgestellten Methoden, um in PolyBase eine Problembehandlung durchzuführen.
 
@@ -34,7 +35,7 @@ Verwenden Sie die hier aufgelisteten Katalogsichten, um PolyBase-Vorgänge zu ve
 
 |||  
 |-|-|  
-|Anzeigen|und Beschreibung|  
+|Sicht|und Beschreibung|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|Identifiziert externe Tabellen.|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|Identifiziert externe Datenquellen.|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|Identifiziert externe Dateiformate.|  
@@ -218,7 +219,7 @@ Nachdem Sie eine Gruppe von Computern als Teil einer PolyBase-Erweiterungsgruppe
 
 PolyBase ist heute nicht mehr mit Hochverfügbarkeitsdiensten für Namenknoten wie Zookeeper oder KNOX verbunden. Es gibt jedoch eine bewährte Problemumgehung, die verwendet werden kann, um die Funktionalität bereitzustellen.
 
-Problemumgehung: Verwenden Sie den DNS-Namen, um Verbindungen zum aktiven Namenknoten umzuleiten. Dafür müssen Sie sicherstellen, dass die externe Datenquelle einen DNS-Namen verwendet, um mit dem Namenknoten zu kommunizieren. Wenn ein Failover des Namenknotens auftritt, müssen Sie die IP-Adresse ändern, die dem DNS-Namen zugeordnet ist, der in der Definition der externen Datenquelle verwendet wird. Dadurch werden alle neuen Verbindungen zum richtigen Namenknoten umgeleitet. Vorhandene Verbindungen schlagen fehl, wenn ein Failover auftritt. Ein „Takt“ kann den aktiven Namenknoten pingen, um diesen Prozess zu automatisieren. Wenn der Takt fehlschlägt, ist anzunehmen, dass ein Failover aufgetreten ist, und ein automatischer Wechsel zur sekundären IP-Adresse kann vorgenommen werden.
+Problemumgehung: Verwenden Sie den DNS-Namen, um Verbindungen zum aktiven Namensknoten umzuleiten. Dafür müssen Sie sicherstellen, dass die externe Datenquelle einen DNS-Namen verwendet, um mit dem Namenknoten zu kommunizieren. Wenn ein Failover des Namenknotens auftritt, müssen Sie die IP-Adresse ändern, die dem DNS-Namen zugeordnet ist, der in der Definition der externen Datenquelle verwendet wird. Dadurch werden alle neuen Verbindungen zum richtigen Namenknoten umgeleitet. Vorhandene Verbindungen schlagen fehl, wenn ein Failover auftritt. Ein „Takt“ kann den aktiven Namenknoten pingen, um diesen Prozess zu automatisieren. Wenn der Takt fehlschlägt, ist anzunehmen, dass ein Failover aufgetreten ist, und ein automatischer Wechsel zur sekundären IP-Adresse kann vorgenommen werden.
 
 ## <a name="error-messages-and-possible-solutions"></a>Fehlermeldungen und mögliche Lösungen
 

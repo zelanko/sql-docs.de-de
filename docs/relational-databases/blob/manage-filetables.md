@@ -11,21 +11,21 @@ helpviewer_keywords:
 - FileTables [SQL Server], security
 - FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1d2d1dbd025db3a72251435133149cdc80275f0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ab88dfa27c63607c312b2a3c757b04cd076745a9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411777"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094157"
 ---
 # <a name="manage-filetables"></a>Verwalten von FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Beschreibt allgemeine administrative Tasks zum Verwalten von FileTables.  
   
-##  <a name="HowToEnumerate"></a> Vorgehensweise: Abrufen einer Liste von FileTables und verbundenen Objekten  
+##  <a name="HowToEnumerate"></a>Vorgehensweise: Abrufen einer Liste von FileTable-Objekten und damit in Verbindung stehenden Objekten  
  Um eine Liste von FileTables abzurufen, fragen Sie eine der folgenden Katalogsichten ab:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -107,7 +107,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="visible"></a> Vorgehensweise: Sicherstellen der Sichtbarkeit der FileTables in einer Datenbank  
+###  <a name="visible"></a> Vorgehensweise: Sicherstellen der Sichtbarkeit der FileTable-Objekte in einer Datenbank  
  Ein Verzeichnis auf Datenbankebene und die FileTable-Verzeichnisse darunter sind sichtbar, wenn alle folgenden Bedingungen zutreffen:  
   
 1.  FILESTREAM ist auf Instanzebene aktiviert.  
@@ -162,7 +162,7 @@ GO
 > [!WARNING]  
 >  Durch das Abbrechen geöffneter Dateihandles verlieren Benutzer möglicherweise nicht gespeicherte Daten. Dieses Verhalten ist mit dem Verhalten des Dateisystems selbst konsistent.  
   
-###  <a name="HowToListOpen"></a> Vorgehensweise: Abrufen einer Liste von einer FileTable zugeordneten offenen Dateihandles  
+###  <a name="HowToListOpen"></a> Vorgehensweise: Abrufen einer Liste von einem FileTable-Objekt zugeordneten offenen Dateihandles  
  Rufen Sie die Katalogsicht [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) ab.  
   
 ```sql  
@@ -170,7 +170,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Vorgehensweise: Abbrechen von einer FileTable zugeordneten offenen Dateihandles  
+###  <a name="HowToKill"></a> Vorgehensweise: Abbrechen von einem FileTable-Objekt zugeordneten offenen Dateihandles  
  Rufen Sie die gespeicherte Prozedur [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) mit den entsprechenden Argumenten auf, um alle offenen Dateihandles in der Datenbank oder FileTable oder ein bestimmtes Handle abzubrechen.  
   
 ```sql  
@@ -189,7 +189,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> Vorgehensweise: Identifizieren der von FileTables abgehaltenen Sperren  
+###  <a name="HowToIdentifyLocks"></a> Vorgehensweise: Identifizieren der von FileTable-Objekten abgehaltenen Sperren  
  Die meisten von FileTables abgehaltenen Sperren entsprechen Dateien, die von Anwendungen geöffnet wurden.  
   
  **So identifizieren Sie geöffnete Dateien und die zugeordneten Sperren**  
@@ -232,6 +232,6 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC und FileTables  
  Sie können die Einschränkungen für eine FileTable, einschließlich systemdefinierter Einschränkungen, mithilfe von DBCC CHECKCONSTRAINTS überprüfen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [FileTable-Kompatibilität mit anderen SQL Server-Funktionen](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  

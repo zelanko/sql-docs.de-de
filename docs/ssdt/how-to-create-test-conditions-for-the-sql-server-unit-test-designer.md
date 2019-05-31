@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400034"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090268"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Vorgehensweise: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Gewusst wie: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer
 Mit der erweiterbaren [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse können neue Testbedingungen erstellt werden. Beispielsweise können Sie eine neue Testbedingung erstellen, mit der die Anzahl der Spalten oder die Werte in einem Resultset überprüft werden.  
   
 ## <a name="to-create-a-test-condition"></a>So erstellen Sie eine Testbedingung  
@@ -49,7 +49,7 @@ Im folgenden Verfahren wird erläutert, wie Sie eine Testbedingung erstellen, di
   
 10. Leiten Sie die Klasse von der [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx)-Klasse ab.  
   
-11. Signieren Sie die Assembly mit einem starken Namen. Weitere Informationen finden Sie unter [Gewusst wie: Signieren einer Assembly mit einem starken Namen](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Signieren Sie die Assembly mit einem starken Namen. Weitere Informationen finden Sie unter [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Erstellen Sie die Klassenbibliothek.  
   
@@ -179,7 +179,7 @@ Die Klasse für die benutzerdefinierte Testbedingung erbt von der [TestCondition
 |Attributparameter|Position|und Beschreibung|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|Gibt die Zeichenfolge im Kombinationsfeld „Testbedingungen“ an. Dieser Name muss eindeutig sein. Wenn zwei Bedingungen über denselben Anzeigenamen verfügen, wird die erste gefundene Bedingung angezeigt, und im Fehler-Manager von Visual Studio wird eine Warnung ausgegeben.|  
-|ImplementingType|2|Dieser Parameter wird verwendet, um die Erweiterung eindeutig zu identifizieren. Er muss in Anpassung an den Typ geändert werden, für den das Attribut verwendet wird. In diesem Beispiel wird der Typ **ResultSetColumnCountCondition** verwendet. Verwenden Sie daher **typeof(ResultSetColumnCountCondition)**. Falls Sie den Typ **NewTestCondition** verwenden, verwenden Sie **typeof(NewTestCondition)**.|  
+|ImplementingType|2|Dieser Parameter wird verwendet, um die Erweiterung eindeutig zu identifizieren. Er muss in Anpassung an den Typ geändert werden, für den das Attribut verwendet wird. In diesem Beispiel wird der Typ **ResultSetColumnCountCondition** verwendet. Verwenden Sie daher **typeof(ResultSetColumnCountCondition)** . Falls Sie den Typ **NewTestCondition** verwenden, verwenden Sie **typeof(NewTestCondition)** .|  
   
 In diesem Beispiel fügen Sie zwei Eigenschaften hinzu. Benutzer der benutzerdefinierten Testbedingung können die ResultSet-Eigenschaft verwenden, um das Resultset anzugeben, dessen Spaltenanzahl überprüft werden soll. Anschließend kann mit der Count-Eigenschaft die erwartete Spaltenanzahl angegeben werden.  
   
@@ -203,6 +203,6 @@ Für jedes Testskript wird nur ein einzelner Batch unterstützt. Daher wird durc
   
 Sie müssen die Klassenbibliothek festlegen, die die zu signierende Testbedingung enthält. Verwenden Sie dazu die Projekteigenschaften auf der Registerkate Signierung.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
   

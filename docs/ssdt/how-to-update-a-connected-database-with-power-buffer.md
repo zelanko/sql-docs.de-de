@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1b5a5c1a20f52d9a0060e54ce38f6cca816a63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9663829f679eeb0c829a94be00c86a7f1e0544af
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396787"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098419"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Gewusst wie: Aktualisieren einer verbundenen Datenbank mithilfe von Power Buffer
 Mit der Power Buffer-Technologie von SQL Server Data Tools können Sie einfach Änderungen auf die verbundene Datenbank anwenden, indem Sie sämtliche Bearbeitungen in der aktuellen Sitzung speichern. Alle durch die Bearbeitung im Power Buffer-Fenster (im Transact\-SQL-Editor oder Tabellen-Designer) verursachten Fehler werden sofort im Bereich **Fehlerliste** angezeigt, sodass Sie die identifizierten Fehler zur weiteren Problembehandlung verfolgen können. Sie können die ausstehenden Änderungen überprüfen, bevor Sie diese auf die Datenbank anwenden. Während des Updates erstellt SSDT automatisch ein ALTER-Skript auf Grundlage der Bearbeitungen und weist Sie auf alle potenziellen Probleme hin. Sie können dann sämtliche Änderungen, die bisher in allen geöffneten Power Buffer-Fenstern vorgenommen wurden, auf dieselbe Datenbank anwenden oder das ALTER-Skript speichern, um die Änderungen bereitzustellen.  
   
 SSDT berücksichtigt außerdem alle Änderungen, die außerhalb von Visual Studio am Datenbankschema vorgenommen wurden. Wenn Sie z.B. in SQL Server Management Studio einer vorhandenen Datenbank eine neue Tabelle hinzufügen, wird diese Änderung sofort im SQL Server-Objekt-Explorer in Visual Studio angezeigt, ohne dass eine manuelle Aktualisierung erforderlich ist. Die Abweichungserkennung stellt sicher, dass im SQL Server-Objekt-Explorer immer die aktuelle Schemadefinition einer Datenbank angezeigt wird. Beachten Sie, dass Datenbankobjekte, die im Tabellen-Designer oder Transact\-SQL-Editor zur Bearbeitung geöffnet sind, nicht anhand von Änderungen aktualisiert werden, die außerhalb von Visual Studio vorgenommen wurden.  
@@ -62,6 +62,6 @@ Bei den folgenden Vorgehensweisen werden die Entitäten verwendet, die in vorher
   
 5.  Klicken Sie mit der rechten Maustaste auf **Table_1**, und klicken Sie auf **Löschen**. Klicken Sie im Dialogfeld **Vorschau der Datenbankupdates** auf **Datenbank aktualisieren**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Gewusst wie: Beheben von Fehlern](../ssdt/how-to-fix-errors.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Vorgehensweise: Beheben von Fehlern](../ssdt/how-to-fix-errors.md)  
   
