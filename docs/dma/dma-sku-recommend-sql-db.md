@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106083"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413629"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifizieren Sie das Recht Azure SQL-Datenbank/verwaltete Instanz SKU für Ihre lokale Datenbank
 
@@ -41,7 +41,7 @@ Im folgenden werden die Anweisungen, um die Ihnen helfen, bestimmen die Azure SQ
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Herunterladen und installieren Sie die neueste Version des [DMA](https://aka.sm/get-dma). Wenn Sie bereits eine frühere Version des Tools verfügen, öffnen Sie sie aus, und werden Sie aufgefordert, DMA aktualisieren.
+- Herunterladen und installieren Sie die neueste Version des [DMA](https://aka.ms/get-dma). Wenn Sie bereits eine frühere Version des Tools verfügen, öffnen Sie sie aus, und werden Sie aufgefordert, DMA aktualisieren.
 - Stellen Sie sicher, dass Ihr Computer verfügt über [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher, das Ausführen aller Skripts erforderlich ist. Informationen zu Findoug, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und installieren Sie Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Stellen Sie sicher, dass Ihr Computer über das Azure Powershell-Modul installiert verfügt. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell-Moduls](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Überprüfen Sie, ob die PowerShell-Datei **SkuRecommendationDataCollectionScript.ps1**, die erforderlich ist, um das Erfassen der Leistungsindikatoren im Ordner "DMA" installiert ist.

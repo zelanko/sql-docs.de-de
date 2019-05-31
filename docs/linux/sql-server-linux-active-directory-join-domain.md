@@ -10,12 +10,12 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243584"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413342"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server auf einem Linux-Host zu einer Active Directory-Domäne beitreten
 
@@ -57,7 +57,7 @@ Wenn entweder der Name Überprüfungen ein Fehler auftritt, aktualisieren Sie di
    ```
 
    > [!NOTE]
-   > Die Netzwerkschnittstelle `eth0`, unterscheiden sich für verschiedene Computer. Um herauszufinden, welche Sie verwenden, führen Sie **"ifconfig"**. Kopieren Sie die Schnittstelle, die eine IP-Adresse und die gesendeten und empfangenen Bytes hat.
+   > Die Netzwerkschnittstelle `eth0`, unterscheiden sich für verschiedene Computer. Um herauszufinden, welche Sie verwenden, führen Sie **"ifconfig"** . Kopieren Sie die Schnittstelle, die eine IP-Adresse und die gesendeten und empfangenen Bytes hat.
 
 1. Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
 
@@ -95,7 +95,7 @@ Wenn entweder der Name Überprüfungen ein Fehler auftritt, aktualisieren Sie di
    nameserver **<AD domain controller IP address>**
    ```
 
-1. Wenn Sie dennoch den Domänencontroller pingen können, finden Sie den vollqualifizierten Domänennamen und IP-Adresse des Domänencontrollers aus. Eine Beispiel-Domänenname ist **DC1. "Contoso.com"**. Fügen Sie den folgenden Eintrag **/Etc/Hosts**:
+1. Wenn Sie dennoch den Domänencontroller pingen können, finden Sie den vollqualifizierten Domänennamen und IP-Adresse des Domänencontrollers aus. Eine Beispiel-Domänenname ist **DC1. "Contoso.com"** . Fügen Sie den folgenden Eintrag **/Etc/Hosts**:
 
    ```/etc/hosts
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
@@ -139,7 +139,7 @@ Diese Methode verknüpft, die SQL Server-Host auf ein AD-Domäne mit **Realmd** 
 
 Verwenden Sie die folgenden Schritte aus, um eine SQL Server-Host zu einer Active Directory-Domäne zu verknüpfen:
 
-1. Verwendung [Realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md) auf den Hostcomputer aus Ihrer AD-Domäne beitreten. Sie müssen zuerst beide installieren die **Realmd** und Kerberos-Client-Pakete auf dem SQL Server-Hostcomputer, die mit Ihrer Linux-Distribution-Paket-Manager:
+1. Verwendung [Realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) auf den Hostcomputer aus Ihrer AD-Domäne beitreten. Sie müssen zuerst beide installieren die **Realmd** und Kerberos-Client-Pakete auf dem SQL Server-Hostcomputer, die mit Ihrer Linux-Distribution-Paket-Manager:
 
    **RHEL:**
 
@@ -179,7 +179,7 @@ Verwenden Sie die folgenden Schritte aus, um eine SQL Server-Host zu einer Activ
 
    SQL Server verwendet SSSD und NSS für die Zuordnung von Benutzerkonten und-Gruppen zu Sicherheits-IDs (SIDs). SSSD muss konfiguriert und für SQL Server zum erfolgreichen Erstellen von AD-Anmeldungen wird ausgeführt. **Realmd** in der Regel wird automatisch als Teil der Domäne beizutreten, aber in einigen Fällen müssen Sie diese separat.
 
-   Weitere Informationen finden Sie unter Vorgehensweise [Manuelles Konfigurieren des SSSD](https://access.redhat.com/articles/3023951), und [Konfigurieren des NSS zum Arbeiten mit SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Weitere Informationen finden Sie unter Vorgehensweise [Manuelles Konfigurieren des SSSD](https://access.redhat.com/articles/3023951), und [Konfigurieren des NSS zum Arbeiten mit SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Stellen Sie sicher, dass Sie jetzt Informationen zu einem Benutzer in der Domäne erfasst werden können und Sie ein Kerberos-Ticket als dieser Benutzer abrufen können. Im folgenden Beispiel wird **Id**, [Kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), und [Klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) Befehle für diese.
 
