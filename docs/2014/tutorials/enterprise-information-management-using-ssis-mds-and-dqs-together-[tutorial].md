@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489728"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429034"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Enterprise Information Management mit SSIS, MDS und DQS [Lernprogramm]
   Das Verwalten von Informationen in einem Unternehmen schließt in der Regel die Integration von Daten im gesamten Unternehmen und darüber hinaus ein, außerdem Bereinigen der Daten, Abgleichen der Daten zum Entfernen aller Duplikate, Standardisieren der Daten, Erweitern der Daten, Sicherstellen, dass die Daten gesetzliche und Kompatibilitätsanforderungen erfüllen, und Speichern der Daten an einem zentralen Ort mit allen erforderlichen Sicherheitseinstellungen.  
@@ -62,9 +62,9 @@ ms.locfileid: "65489728"
   
 5.  Installieren Sie **Master Data Services-Add-in für Excel** (32-Bit oder 64-Bit-basierend auf der Version von Excel auf Ihrem Computer haben) aus [hier](https://www.microsoft.com/download/details.aspx?id=29064). Führen Sie zum Ermitteln der Version von Excel auf Ihrem Computer installierten **Excel**, klicken Sie auf **Datei** auf der Menüleiste, und klicken Sie auf **helfen** die Version im rechten Bereich angezeigt. Beachten Sie, dass Sie Visual Studio 2010-Tools für Office-Laufzeit zu installieren, bevor Sie das Excel-Add-in installieren müssen.  
   
-6.  (Optional) Erstellen Sie ein Konto mit [Windows Azure Marketplace](https://datamarket.azure.com/). Eine der Aufgaben in diesem Tutorial benötigen Sie ein **Azure Marketplace** (ursprünglich die Bezeichnung **Data Market**) Konto. Sie können diese Aufgabe überspringen und mit der folgenden Aufgabe fortfahren.  
+6.  (Optional) Erstellen Sie ein Konto mit [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Eine der Aufgaben in diesem Tutorial benötigen Sie ein **Azure Marketplace** (ursprünglich die Bezeichnung **Data Market**) Konto. Sie können diese Aufgabe überspringen und mit der folgenden Aufgabe fortfahren.  
   
-7.  Laden Sie die Datei Suppliers.xls aus [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=271504).  
+7.  Laden Sie die Datei Suppliers.xls aus [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  DQS lässt nicht zu exportieren, die Bereinigung- oder abgleichsergebnisse in eine Excel-Datei bei Verwendung von **64-Bit-Version von Excel**. Es handelt sich um ein bekanntes Problem. Führen Sie folgende Schritte aus, um dieses Problem zu umgehen:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "65489728"
 |Lektion|Kurze Beschreibung|Für die Bearbeitung voraussichtlich benötigte Zeit (in Minuten)|  
 |------------|-----------------------|------------------------------------------------|  
 |[Lektion 1: Erstellen der DQS-Wissensdatenbank ' Suppliers '](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|In dieser Lektion erstellen Sie eine DQS-Wissensdatenbank namens **Lieferanten**.|60|  
-|[Lektion 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank ' Suppliers '](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|In dieser Lektion erstellen und führen Sie ein DQS-Projekt, um die Lieferantendaten in einer Excel-Datei mit bereinigen die **Lieferanten** Wissensdatenbank, die Sie in der ersten Lektion erstellt haben.|45|  
+|[Lektion 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank ' Suppliers '](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|In dieser Lektion erstellen und führen Sie ein DQS-Projekt, um die Lieferantendaten in einer Excel-Datei mit bereinigen die **Lieferanten** Wissensdatenbank, die Sie in der ersten Lektion erstellt haben.|45|  
 |[Lektion 3: Abgleich von Daten zu entfernen, um Duplikate aus der Lieferantenliste](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|In dieser Lektion erstellen Sie ein DQS-Projekt, um einen Abgleich auszuführen und so Duplikate in der bereinigten Lieferantenliste zu identifizieren und daraus zu entfernen.|45|  
 |[Lektion 4: Speichern von Lieferantendaten in MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|In dieser Lektion Sie die bereinigten und abgeglichenen Lieferantendaten zu Master Data Services (MDS) mit Hochladen der **MDS-Add-in für Excel**.|45|  
 |[Lesson 5: Automatisierung der Bereinigung und Abgleich mit SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|In dieser Lektion erstellen Sie eine SSIS-Lösung, die Eingabedaten mithilfe von DQS bereinigt, die bereinigten Daten abgleicht, um Duplikate zu entfernen, und die bereinigten und abgeglichenen Daten automatisch in MDS speichert.|75|  

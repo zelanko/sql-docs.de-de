@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_exec_query_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072354"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429026"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,10 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 |**min_spills**|**bigint**|Die minimale Anzahl der Seiten, die diese Abfrage immer eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Die maximale Anzahl der Seiten, die diese Abfrage immer eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|Gesamtanzahl der remote-Seite Server Lesevorgänge für Ausführungen dieses Plans seit der Kompilierung.<br /><br /> **Gilt für:** Azure SQL DB Hyperskalierung |  
+|**last_page_server_reads**|**bigint**|Die Anzahl der entfernten Server Seitenlesevorgänge bei der letzten Ausführung des Plans.<br /><br /> **Gilt für:** Azure SQL DB Hyperskalierung |  
+|**min_page_server_reads**|**bigint**|Minimale Anzahl von remote-Seitenserver liest, die diesem Plan immer eine einzelne Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Azure SQL DB Hyperskalierung |  
+|**max_page_server_reads**|**bigint**|Maximale Anzahl von remote-Seitenserver liest, die diesem Plan immer eine einzelne Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Azure SQL DB Hyperskalierung |  
 > [!NOTE]
 > <sup>1</sup> für systemintern kompilierte gespeicherte Prozeduren bei der Sammlung von Statistiken aktiviert ist, wird worker_time in Millisekunden. Wenn die Abfrage in weniger als einer Millisekunde ausgeführt wird, wird der Wert 0 sein.  
   

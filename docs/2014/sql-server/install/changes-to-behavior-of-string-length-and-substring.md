@@ -10,12 +10,12 @@ ms.assetid: 2119b7ba-2e52-44bf-ac57-82c2d46a48ff
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c29b1bd036debc4285f8b0fa0b3cc68bdeb3449
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 18643dfc11d2b1b1d875a19c478f9ec8cbdd5be6
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66096625"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428848"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>Änderungen am Verhalten von string-length und substring
   Die [String-Length-Funktion &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) und [substring-Funktion &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) Funktionen möglicherweise andere Ergebnisse, wenn mit XML-Datenbanken verwendet werden, enthalten zurück Ersatzzeichen enthalten.  
@@ -27,6 +27,6 @@ ms.locfileid: "66096625"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

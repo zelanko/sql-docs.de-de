@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503844"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454673"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Verwalten und Integrieren von Machine Learning-Workloads auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ Konten mit minimalprivilegien während des Setups erstellt und platziert Sie in 
 Greifen als ein DBA der, Sie datensicherheit für SQL Server verwenden können, um anzugeben, die über die Berechtigung zum Ausführen von Skripts verfügt, und in Aufträgen verwendete Daten unter den gleichen Sicherheitsrollen verwaltet werden, die steuern, über T-SQL-Abfragen. Als Systemadministrator können Sie explizit verweigern **SQLRUserGroup** Zugriff auf sensible Daten auf dem lokalen Server durch Erstellen von ACLs.
 
 >[!NOTE]
-> In der Standardeinstellung die **SQLRUserGroup** verfügt nicht über einen Anmeldenamen oder Berechtigungen in SQL Server selbst. Workerkonten eine Anmeldung für den Datenzugriff benötigen, müssen Sie ihn selbst erstellen. Supportanfragen über ein Skript bei der Ausführung für Daten oder Vorgänge in der Datenbank-Engine-Instanz, wenn die Identität des Benutzers ein Windows-Benutzer ist und die Verbindungszeichenfolge einen vertrauenswürdigen Benutzer gibt ist ein Szenario, das speziell für die Erstellung einer Anmeldung aufgerufen werden. Weitere Informationen finden Sie unter [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+> In der Standardeinstellung die **SQLRUserGroup** verfügt nicht über einen Anmeldenamen oder Berechtigungen in SQL Server selbst. Workerkonten eine Anmeldung für den Datenzugriff benötigen, müssen Sie ihn selbst erstellen. Supportanfragen über ein Skript bei der Ausführung für Daten oder Vorgänge in der Datenbank-Engine-Instanz, wenn die Identität des Benutzers ein Windows-Benutzer ist und die Verbindungszeichenfolge einen vertrauenswürdigen Benutzer gibt ist ein Szenario, das speziell für die Erstellung einer Anmeldung aufgerufen werden. Weitere Informationen finden Sie unter [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## <a name="disable-script-execution"></a>Deaktivieren Sie die Ausführung des Skripts
 

@@ -1,7 +1,7 @@
 ---
 title: dm_exec_function_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013206"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428951"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,6 +68,10 @@ ms.locfileid: "63013206"
 |**last_elapsed_time**|**bigint**|Verstrichene Zeit in Mikrosekunden, die für die letzte abgeschlossene Ausführung dieser Funktion.|  
 |**min_elapsed_time**|**bigint**|Mindestens verstrichene Zeit, die in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
 |**max_elapsed_time**|**bigint**|Maximal verstrichene Zeit, die in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
+|**total_page_server_reads**|**bigint**|Gesamtanzahl der remote-Seite Server Lesevorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
+|**last_physical_reads**|**bigint**|Die Anzahl der RAS-Server-Seitenlesevorgänge bei der letzten Ausführung die Funktion ausgeführt wurde.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
+|**min_physical_reads**|**bigint**|Minimale Anzahl von remote-Seitenserver liest, dass diese Funktion eine einzelne Ausführung bisherige.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
+|**max_physical_reads**|**bigint**|Maximale Anzahl von remote-Seitenserver liest, dass diese Funktion eine einzelne Ausführung bisherige.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|
   
 ## <a name="permissions"></a>Berechtigungen  
 

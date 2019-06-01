@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: bc9762470b6e2a836c29f53ebfc3ffeadbcc381f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65095945"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454694"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installieren von SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +71,7 @@ Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. W
 3. Auf der **Funktionsauswahl** Seite, wählen Sie die folgenden Optionen:
 
    - Wählen Sie **Datenbankmoduldienste**. Die Datenbank-Engine ist in den einzelnen Instanzen erforderlich, das Machine Learning verwendet.
-   - Wählen Sie **R Services (Datenbankintern)**. Installiert die Unterstützung für in der Datenbank mithilfe von R.
+   - Wählen Sie **R Services (Datenbankintern)** . Installiert die Unterstützung für in der Datenbank mithilfe von R.
     
      ![R Services Funktionsauswahl](media/2016setup-rsvcs-features.png "wählen Sie diese Funktionen für R Services In der Datenbank")
 
@@ -216,7 +216,7 @@ Auf Instanzebene kann zusätzliche Konfigurationsschritte Folgendes umfassen:
 In der Datenbank benötigen Sie möglicherweise die folgenden konfigurationsupdates:
 
 * [Vergabe von Benutzerberechtigungen für SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
-* [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
+* [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
 > Nicht alle aufgeführten Änderungen sind erforderlich, und keine kann erforderlich sein. Anforderungen basieren auf Ihre Sicherheitsschema, auf dem SQL Server, und wie Sie erwarten, dass Benutzer eine Verbindung mit der Datenbank herstellen und Ausführen externer Skripts installiert. Weitere Tipps zur Problembehandlung finden Sie hier: [Häufig gestellte Fragen zu Upgrade und Installation](../r/upgrade-and-installation-faq-sql-server-r-services.md)

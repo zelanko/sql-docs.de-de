@@ -11,18 +11,18 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450030"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454727"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
 **[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
 
-## <a name="may-2019"></a>Mai 2019
+## <a name="may-2019"></a>Mai 2019
 
 8 Mai 2019 &nbsp;  /  &nbsp; Version: 1.7.0 
 
@@ -101,7 +101,7 @@ ms.locfileid: "65450030"
 
 | Ändern | Details |
 | :----- | :------ |
-| Hinzugefügt **Admin Pack für SQL Server** Erweiterungspaket. | Dies erleichtert es, SQL Server-Administratoraufgaben Erweiterungen zu installieren. Dies schließt Folgendes ein:<br/>&bull; &nbsp; [SQL Server-Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server-Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Hinzugefügt **Admin Pack für SQL Server** Erweiterungspaket. | Dies erleichtert es, SQL Server-Administratoraufgaben Erweiterungen zu installieren. Dies schließt Folgendes ein:<br/>&bull; &nbsp; [SQL Server-Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server-Import](sql-server-import-extension.md?view=sql-server-2017) |
 | Hinzugefügte Filter erweitert ereignisunterstützung in Profiler-Erweiterung. | &nbsp; |
 | Hinzugefügte speichern als XML-Funktion, die T-SQL-Ergebnisse als XML speichern können. | &nbsp; |
 | Datenebenen-Anwendungs-Assistent-Verbesserungen hinzugefügt. | &bull; &nbsp; Hinzugefügte Skript Schaltfläche "generieren"<br/>&bull; &nbsp; Hinzugefügte Ansicht, die Warnungen eines möglichen Datenverlusts während der Bereitstellung zu erhalten. |

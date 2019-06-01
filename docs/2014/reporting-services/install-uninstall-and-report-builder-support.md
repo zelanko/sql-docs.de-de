@@ -12,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 084d90ad20dbd1955894f20524e6f040231f5ae9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66108948"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454599"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installation, Deinstallation und Unterstützung des Berichts-Generators
   Der Berichts-Generator ist ein Berichterstellungstool, das Sie zum Erstellen, Aktualisieren und Freigeben von Berichten, Berichtsteilen und freigegebenen Datasets verwenden können. Der Berichts-Generator ist in zwei Versionen verfügbar: als eigenständige Version und als [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]-Version. Die eigenständige Version wird von Ihnen oder einem Administrator auf dem Computer installiert. Die [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] -Version wird automatisch mit [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] installiert und vom Berichts-Manager oder von einer in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website auf den Computer heruntergeladen.  
@@ -152,7 +152,7 @@ ms.locfileid: "66108948"
   
  Durch eine zusätzliche Konfiguration ist der Berichtsserver jedoch für Benutzer des Berichts-Generators verfügbar. Sie können [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -URLs den vertrauenswürdigen Websites hinzufügen. Standardmäßig wird Internet Explorer 7.0 oder höher unter Windows Vista, Windows Server 2008 und Windows 7 im geschützten Modus ausgeführt. Der geschützte Modus ist eine Funktion, die verhindert, dass Browseranforderungen auf demselben Computer ausgeführte Prozesse auf hoher Ebene erreichen. Sie können den geschützten Modus für die Berichtsserveranwendungen deaktivieren, indem Sie sie als vertrauenswürdige Sites hinzufügen. Für diese Änderung benötigen Sie Administratorberechtigungen.  
   
- Weitere Informationen zum Konfigurieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], finden Sie unter [Konfigurations-Manager für Reporting Services &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) in die [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf "MSDN.Microsoft.com".  
+ Weitere Informationen zum Konfigurieren von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], finden Sie unter [Konfigurations-Manager für Reporting Services &#40;del&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) in die [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf "MSDN.Microsoft.com".  
   
   
 ##  <a name="SampleDatabases"></a> SQL Server-Beispieldatenbanken  
