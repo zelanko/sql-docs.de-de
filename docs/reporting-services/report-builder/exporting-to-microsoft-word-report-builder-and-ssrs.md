@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581227"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413565"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
 
@@ -53,7 +53,7 @@ ms.locfileid: "65581227"
 ##  <a name="DocumentProperties"></a> Dokumenteigenschaften  
  Der Word-Renderer schreibt die folgenden Metadaten in die DOCX-Datei.  
   
-|Berichtselementeigenschaften|Beschreibung|  
+|Berichtselementeigenschaften|und Beschreibung|  
 |-------------------------------|-----------------|  
 |Berichtstitel (Berichtstitel)|Titel|  
 |Autor des Berichts|Author|  
@@ -151,7 +151,7 @@ ms.locfileid: "65581227"
 > [!IMPORTANT]  
 >  Die [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003-Renderingerweiterung (.doc) ist veraltet. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 sowie [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit dem installierten Office Compatibility Pack für Word, Excel und PowerPoint. Weitere Informationen finden Sie unter [Microsoft Office Compatibility Pack für Word, Excel und PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
+ Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 sowie [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit dem installierten Office Compatibility Pack für Word, Excel und PowerPoint. Weitere Informationen finden Sie unter [Microsoft Office Compatibility Pack für Word, Excel und PowerPoint](https://www.microsoft.com/download/details.aspx?id=12439).  
   
  Die frühere Version der Word-Renderingerweiterung, die kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ist, wird in Word 2003 umbenannt. Nur die Word-Renderingerweiterung ist standardmäßig verfügbar. Sie müssen die Reporting Services-Konfigurationsdateien aktualisieren, um die Word 2003-Renderingerweiterung verfügbar zu machen. Der Inhaltstyp von Dateien, die vom Word 2003-Renderer generiert werden, ist **application/vnd.ms-word** , und die Dateinamenerweiterung der Dateien lautet „.doc“.  
   
