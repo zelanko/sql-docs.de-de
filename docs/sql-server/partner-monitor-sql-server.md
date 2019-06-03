@@ -9,12 +9,12 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: a3e9c7ba359134dfb4509eb47b65e8c7d28bb962
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: b1814c42d2177d3f030e172dea1d9d64a9ca8ecd
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657336"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413498"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server-Überwachungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer S
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft-Überwachungspartner
 
-| Partner | Beschreibung | Links |
+| Partner | und Beschreibung | Links |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL-Diagnose-Manager ist eine leistungsstarke Lösung zur Leistungsüberwachung und Diagnose, die Administratoren proaktiv warnt, wenn Probleme bei der Integrität, Leistung oder Verfügbarkeit in SQL Server-Umgebungen auftreten – und das alles in einer zentralen Konsole.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight auf SQL Server Enterprise: Garantierte Höchstleistung rund um die Uhr mit nicht übereinstimmender Überwachung, Diagnose und der Optimierung der SQL Server-Umgebungen. Spotlight bietet Ihnen Zugriff auf die benötigten Details für die optimale Eignung Ihrer SQL Server-Datenbanken. Erhalten Sie intuitive Übersichten über Integrität und Leistung, automatische Warnungen und Aktionen sowie Unterstützung für mobile Geräte.|[Marketplace][quest_marketplace]<br>[Website][quest_website]<br>[Video][quest_video] | |
@@ -88,6 +88,6 @@ Nähere Informationen über einige unserer anderen Partner finden Sie unter [Par
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
 
 <!--LinkedIn-->
-[sentryone_linkedin]:https://www.linkedin.com/company/sentryone 
+[sentryone_linkedin]:https://www.linkedin.com/company/sentryone
 [redgate_linkedin]:https://www.linkedin.com/company/red-gate-software/
 [solarwinds_linkedin]:https://linkedin.com/showcase/solarwinds-database-performance
