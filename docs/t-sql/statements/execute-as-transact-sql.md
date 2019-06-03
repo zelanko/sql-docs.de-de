@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 007ae07fd58f5f508fd80e17640a3f0e1cb59f1a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b5bb549859bf6177571b080033b09419c5eed90d
+ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326592"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221161"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,14 +78,14 @@ ms.locfileid: "54326592"
  Weitere Informationen finden Sie unter [Angeben eines Benutzer- oder Anmeldenamens](#_user) weiter unten in diesem Thema.  
   
  NO REVERT  
- Gibt an, dass der Kontextwechsel nicht auf den vorherigen Kontext zurückgesetzt werden kann. Die **NO REVERT**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.  
+ Gibt an, dass der Kontextwechsel nicht auf den vorherigen Kontext zurückgesetzt werden kann. Die **NO REVERT**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.
   
  Weitere Informationen zum Zurücksetzen auf den vorherigen Kontext finden Sie unter [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@**_varbinary_variable_  
- Gibt an, dass der Ausführungskontext nur auf den vorherigen Kontext zurückgesetzt werden kann, wenn die aufrufende REVERT WITH COOKIE-Anweisung den richtigen **@**_varbinary_variable_-Wert enthält. [!INCLUDE[ssDE](../../includes/ssde-md.md)] übergibt das Cookie an **@**_varbinary_variable_. Die **COOKIE INTO**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.  
+ COOKIE INTO **@** _varbinary_variable_  
+ Gibt an, dass der Ausführungskontext nur auf den vorherigen Kontext zurückgesetzt werden kann, wenn die aufrufende REVERT WITH COOKIE-Anweisung den richtigen **@** _varbinary_variable_-Wert enthält. [!INCLUDE[ssDE](../../includes/ssde-md.md)] übergibt das Cookie an **@** _varbinary_variable_. Die **COOKIE INTO**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.  
   
- **@** _varbinary_variable_ entspricht **varbinary(8000)**.  
+ **@** _varbinary_variable_ entspricht **varbinary(8000)** .  
   
 > [!NOTE]  
 >  Der **OUTPUT**-Cookieparameter ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(100)** zurück. Anwendungen müssen **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einem zukünftigen Release erhöht wird.  
@@ -126,9 +126,11 @@ Wenn der Benutzer verwaist ist (der zugeordnete Anmeldename ist nicht mehr vorha
 >  Die EXECUTE AS-Anweisung kann erfolgreich sein, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Namen auflösen kann. Wenn ein Domänenbenutzer vorhanden ist, kann Windows den Benutzer für [!INCLUDE[ssDE](../../includes/ssde-md.md)] möglicherweise auflösen, obwohl der Windows-Benutzer keinen Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat. Dies kann zu einer Bedingung führen, in der eine Anmeldung ohne Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anscheinend nicht angemeldet ist, obwohl die Anmeldung für den Identitätswechsel nur Berechtigungen besitzt, die public oder guest gewährt wurden.  
   
 ## <a name="using-with-no-revert"></a>Verwenden von WITH NO REVERT  
- Wenn die EXECUTE AS-Anweisung die optionale WITH NO REVERT-Klausel enthält, kann der Ausführungskontext einer Sitzung nicht mithilfe von REVERT oder durch Ausführen einer anderen EXECUTE AS-Anweisung zurückgesetzt werden. Der von der Anweisung festgelegte Kontext bleibt aktiv, bis die Sitzung gelöscht wird.  
+ Wenn die EXECUTE AS-Anweisung die optionale WITH NO REVERT-Klausel enthält, kann der Ausführungskontext einer Sitzung nicht mithilfe von REVERT oder durch Ausführen einer anderen EXECUTE AS-Anweisung zurückgesetzt werden. Der von der Anweisung festgelegte Kontext bleibt aktiv, bis die Sitzung gelöscht wird.   Beachten Sie, dass bei aktiviertem Verbindungspooling `sp_reset_connection` einen Fehler erzeugt und die Verbindung gelöscht wird.  Die Fehlermeldung im Ereignisprotokoll lautet:
+ 
+> Die Verbindung wurde gelöscht, weil der Prinzipal, von dem sie geöffnet wurde, die Identität für einen neuen Sicherheitskontext angenommen und versucht hat, die Verbindung mit diesem Sicherheitskontext zurückzusetzen. Dieses Szenario wird nicht unterstützt. Weitere Informationen finden Sie in der On unter "Identitätswechsel (Übersicht)".
   
- Wenn die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben wurde, übergibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den Cookiewert an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable*-Wert enthält.  
+ Wenn die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben wurde, übergibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den Cookiewert an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable* -Wert enthält.  
   
  Diese Option ist in einer Umgebung nützlich, in der Verbindungspools verwendet werden. Mithilfe von Verbindungspools wird eine Gruppe von Datenbankverbindungen verwaltet, die von Anwendungen auf einem Anwendungsserver wiederverwendet werden können. Da nur der Aufrufer der EXECUTE AS-Anweisung den an *@varbinary_variable* übergebenen Wert kennt, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext von keinem anderen Benutzer geändert werden kann.  
   

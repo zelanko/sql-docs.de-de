@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d809a311458cb1fbd3a92243f5daeabd34ebc99b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013501"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982070"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,14 +71,14 @@ Der **sql_variant**-Datentyp steht im oberen Bereich in der Hierarchieliste der 
 |**datetime**|Datum und Uhrzeit|  
 |**smalldatetime**|Datum und Uhrzeit|  
 |**Datum**|Datum und Uhrzeit|  
-|**Uhrzeit**|Datum und Uhrzeit|  
+|**time**|Datum und Uhrzeit|  
 |**float**|Ungefährer numerischer Wert|  
 |**real**|Ungefährer numerischer Wert|  
 |**decimal**|Genauer numerischer Wert|  
 |**money**|Genauer numerischer Wert|  
 |**smallmoney**|Genauer numerischer Wert|  
 |**bigint**|Genauer numerischer Wert|  
-|**int**|Genauer numerischer Wert|  
+|**ssNoversion**|Genauer numerischer Wert|  
 |**smallint**|Genauer numerischer Wert|  
 |**tinyint**|Genauer numerischer Wert|  
 |**bit**|Genauer numerischer Wert|  
@@ -109,7 +109,9 @@ In der folgenden Tabelle werden die Typen von Werten aufgelistet, die nicht mith
 |**image**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**Geometrie**|  
-|Benutzerdefinierte Typen|**datetimeoffset**|  
+|Benutzerdefinierte Typen|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> Bei SQL Server 2012 und höher ist **datetimeoffset** nicht eingeschränkt.
 
 ## <a name="examples"></a>Beispiele  
 

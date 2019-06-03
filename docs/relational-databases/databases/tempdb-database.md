@@ -2,7 +2,7 @@
 title: tempdb-Datenbank | Microsoft-Dokumentation
 description: Dieser Artikel enthält Details zur Konfiguration und Verwendung der tempdb-Datenbank in SQL Server und Azure SQL-Datenbank.
 ms.custom: P360
-ms.date: 02/14/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65a1afa2bf72c53f2ce656afb7f397dd10be9ef6
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265367"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994239"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 
@@ -215,6 +215,43 @@ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird die **tempdb**-Leistun
 Weitere Informationen zu Verbesserungen der Leistung in tempdb finden Sie im folgenden Blogartikel:
 
 [TEMPDB – Files and Trace Flags and Updates, Oh My! (TEMPDB: Dateien, Ablaufverfolgungsflags und Updates)](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
+## <a name="memory-optimized-tempdb-metadata"></a>Speicheroptimierte TempDB-Metadaten
+
+Bislang stellten TempDB-Metadatenkonflikte einen Engpass für die Skalierbarkeit vieler Workloads auf SQL Server dar. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Zur Verwendung dieser neuen Funktion führen Sie das folgende Skript aus:
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+Damit diese Konfigurationsänderung wirksam wird, muss der Dienst neu gestartet werden.
+
+Bei dieser Implementierung sind einige Einschränkungen zu beachten:
+
+1. Das Ein- und Ausschalten dieser Funktion ist nicht dynamisch. Aufgrund der systeminternen Änderungen, die an der Struktur von tempdb vorgenommen werden müssen, ist zum Aktivieren bzw. Deaktivieren der Funktion ein Neustart erforderlich.
+2. Eine einzelne Transaktion kann nicht auf speicheroptimierte Tabellen in mehreren Datenbanken zugreifen.  Das bedeutet, dass Transaktionen, bei denen eine speicheroptimierte Tabelle in einer Benutzerdatenbank beteiligt ist, nicht innerhalb derselben Transaktion auf TempDB-Systemsichten zugreifen können.  Wenn Sie versuchen, in derselben Transaktion wie eine speicheroptimierte Tabelle in einer Benutzerdatenbank auf TempDB-Systemsichten zuzugreifen, wird die folgende Fehlermeldung angezeigt:
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    Beispiel:
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. Abfragen für speicheroptimierte Tabellen unterstützen keine Sperr- und Isolationshinweise, sodass bei Abfragen für speicheroptimierte TempDB-Katalogsichten Sperr- und Isolationshinweise nicht berücksichtigt werden. Wie bei anderen Systemkatalogsichten in SQL Server erfolgen alle Transaktionen für Systemsichten in READ COMMITTED-Isolation (oder in diesem Fall in READ COMMITTED SNAPSHOT-Isolation).
+4. Wenn speicheroptimierte tempdb-Metadaten aktiviert sind, können möglicherweise Probleme mit Columnstore-Indizes für temporäre Tabellen auftreten. Bei dieser Vorschauversion empfiehlt es sich, Columnstore-Indizes für temporäre Tabellen bei Verwendung speicheroptimierter tempdb-Metadaten zu vermeiden.
+
+> [!NOTE] 
+> Diese Einschränkungen gelten nur beim Verweisen auf TempDB-Systemsichten, und Sie können beim Zugriff auf eine speicheroptimierte Tabelle in einer Benutzerdatenbank bei Bedarf eine temporäre Tabelle in derselben Transaktion erstellen.
+
+Mit dem folgenden T-SQL-Befehl können Sie überprüfen, ob TempDB speicheroptimiert ist:
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Kapazitätsplanung für tempdb in SQL Server
 

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromText (geometry Data Type)
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: da888409c10249e6ef110af1762fb69a3350b630
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d8f890adb1fb44d8e293a8d6cfc5e0c0d5c16c5
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800469"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938636"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *multilinestring_tagged_text*  
- Die WKT-Darstellung der **geometryMultiLineString**-Instanz, die zurückgegeben werden soll. *multilinestring_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
+ Die WKT-Darstellung der **geometryMultiLineString**-Instanz, die zurückgegeben werden soll. *multilinestring_tagged_text* ist ein **nvarchar(max)** -Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryMultiLineString**-Instanz darstellt, die Sie zurückgeben möchten.  
@@ -64,7 +64,7 @@ SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7
   
  `SELECT @g.ToString();`  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Statische geometry-Methoden des OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

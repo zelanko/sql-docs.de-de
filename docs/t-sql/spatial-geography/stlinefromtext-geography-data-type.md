@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2cf74f1bcb275b932965812d90222b505f6abaa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a35f92c3565ea63c115a4d1ecfd0f09c19fe86a2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642108"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936694"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *linestring_tagged_text*  
- Die WKT-Darstellung der **geographyLineString**-Instanz, die zurückgegeben werden soll. *linestring_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
+ Die WKT-Darstellung der **geographyLineString**-Instanz, die zurückgegeben werden soll. *linestring_tagged_text* ist ein **nvarchar(max)** -Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyLineString**-Instanz darstellt, die Sie zurückgeben möchten.  
@@ -63,7 +63,7 @@ SET @g = geography::STLineFromText('LINESTRING(-122.360 47.656, -122.343 47.656 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

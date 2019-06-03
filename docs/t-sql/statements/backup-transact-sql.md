@@ -43,20 +43,20 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c764f90d21300ee5c537265de86a10971d9c0991
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828240"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175312"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
-Dient zum Sichern einer SQL-Datenbank.
+Eine SQL-Datenbank wird gesichert.
 
 Klicken Sie auf eine der folgenden Registerkarten, um Syntax, Argumente, Hinweise, Berechtigungen und Beispiele für eine bestimmte SQL-Version anzuzeigen, mit der Sie arbeiten.
 
@@ -70,12 +70,12 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||
 |---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
 
-## <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 Sichert eine vollständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, um eine Datenbanksicherung zu erstellen, oder eine oder mehrere Dateien oder Dateigruppen, um eine Dateisicherung (BACKUP DATABASE) zu erstellen. Sichert bei Verwendung des vollständigen oder massenprotokollierten Wiederherstellungsmodells auch das Transaktionsprotokoll der Datenbank, um eine Protokollsicherung (BACKUP LOG) zu erstellen.
 
@@ -200,16 +200,16 @@ Eine Protokollsicherung können Sie auf eine bestimmte Zeit oder Transaktion in 
 > [!NOTE]
 > Nach einer normalen Protokollsicherung sind einige Transaktionsprotokolldatensätze inaktiv, sofern Sie nicht `WITH NO_TRUNCATE` oder `COPY_ONLY` angeben. Das Protokoll wird abgeschnitten, nachdem alle Datensätze innerhalb mindestens einer virtuellen Protokolldatei deaktiviert werden. Wenn das Protokoll nach routinemäßigen Protokollsicherungen nicht abgeschnitten wird, wird das Abschneiden des Protokolls möglicherweise verzögert. Weitere Informationen finden Sie in [Faktoren, die die Protokollkürzung verzögern können](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
 
-{ _database\_name_ | **@**_database\_name\_var_ } Die Datenbank, aus der das Transaktionsprotokoll, die Teildatenbank oder die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen (**@**_database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante (**@**_database\_name\_var_**=**_database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
+{ _database\_name_ |  **@** _database\_name\_var_ } Die Datenbank, aus der das Transaktionsprotokoll, die Teildatenbank oder die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen ( **@** _database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante ( **@** _database\_name\_var_ **=** _database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
 
 > [!NOTE]
 > Eine Sicherung der Spiegeldatenbank in einer Datenbank-Spiegelungspartnerschaft ist nicht möglich.
 
-\<file_or_filegroup> [ **,**...*n* ] Wird nur mit BACKUP DATABASE verwendet. Gibt eine Datenbankdatei oder eine Dateigruppe in einer Datenbank an, die in einer Dateisicherung enthalten sein soll, oder gibt eine schreibgeschützte Datei oder Dateigruppe an, die in einer Teilsicherung enthalten sein soll.
+\<file_or_filegroup> [ **,** ...*n* ] Wird nur mit BACKUP DATABASE verwendet. Gibt eine Datenbankdatei oder eine Dateigruppe in einer Datenbank an, die in einer Dateisicherung enthalten sein soll, oder gibt eine schreibgeschützte Datei oder Dateigruppe an, die in einer Teilsicherung enthalten sein soll.
 
-FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ } Der logische Name einer Datei oder einer Variablen, deren Wert dem logischen Namen einer Datei entspricht, die in der Sicherung enthalten sein soll.
+FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } Der logische Name einer Datei oder einer Variablen, deren Wert dem logischen Namen einer Datei entspricht, die in der Sicherung enthalten sein soll.
 
-FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } Der logische Name einer Dateigruppe oder einer Variablen, deren Wert dem logischen Namen einer Dateigruppe entspricht, die in der Sicherung enthalten sein soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.
+FILEGROUP **=** { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } Der logische Name einer Dateigruppe oder einer Variablen, deren Wert dem logischen Namen einer Dateigruppe entspricht, die in der Sicherung enthalten sein soll. Beim einfachen Wiederherstellungsmodell wird die Dateigruppensicherung nur für eine schreibgeschützte Dateigruppe unterstützt.
 
 > [!NOTE]
 > Verwenden Sie Dateisicherungen dann, wenn eine Datenbanksicherung aufgrund der Datenbankgröße und aufgrund von Leistungsanforderungen nicht möglich ist. Das NUL-Gerät kann zum Testen der Leistung von Sicherungen verwendet werden, sollte aber nicht in Produktionsumgebungen eingesetzt werden.
@@ -218,28 +218,28 @@ FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_v
 
 Weitere Informationen finden Sie unter [Vollständige Dateisicherungen](../../relational-databases/backup-restore/full-file-backups-sql-server.md) und [Sichern von Dateien und Dateigruppen](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ] Gibt eine Teilsicherung an. Eine Teilsicherung umfasst alle Dateien mit Lese-/Schreibzugriff in einer Datenbank: die primäre Dateigruppe und alle beliebigen sekundären Dateigruppen mit Lese-/Schreibzugriff sowie auch alle angegebenen schreibgeschützten Dateien oder Dateigruppen.
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ..._n_ ] ] Gibt eine Teilsicherung an. Eine Teilsicherung umfasst alle Dateien mit Lese-/Schreibzugriff in einer Datenbank: die primäre Dateigruppe und alle beliebigen sekundären Dateigruppen mit Lese-/Schreibzugriff sowie auch alle angegebenen schreibgeschützten Dateien oder Dateigruppen.
 
 READ_WRITE_FILEGROUPS Gibt an, dass alle Dateigruppen mit Lese-/Schreibzugriff in der Teilsicherung gesichert werden sollen. Wenn die Datenbank schreibgeschützt ist, umfasst READ_WRITE_FILEGROUPS nur die primäre Dateigruppe.
 
 > [!IMPORTANT]
 > Durch das explizite Auflisten der Dateigruppen mit Lese-/Schreibzugriff mithilfe von FILEGROUP anstelle von READ_WRITE_FILEGROUPS wird eine Dateisicherung erstellt.
 
-FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ } Der logische Name einer schreibgeschützten Dateigruppe oder einer Variablen, deren Wert dem logischen Namen einer schreibgeschützten Dateigruppe entspricht, die in der Teilsicherung enthalten sein soll. Weitere Informationen finden Sie unter "\<file_or_filegroup>" weiter oben in diesem Thema.
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } Der logische Name einer schreibgeschützten Dateigruppe oder einer Variablen, deren Wert dem logischen Namen einer schreibgeschützten Dateigruppe entspricht, die in der Teilsicherung enthalten sein soll. Weitere Informationen finden Sie unter "\<file_or_filegroup>" weiter oben in diesem Thema.
 
 *n* Ein Platzhalter, der anzeigt, dass mehrere schreibgeschützte Dateigruppen in einer durch Trennzeichen getrennten Liste angegeben werden können.
 
 Weitere Informationen zu Sicherungen des Protokollfragments finden Sie unter [Teilsicherungen](../../relational-databases/backup-restore/partial-backups-sql-server.md).
 
-TO \<backup_device> [ **,**...*n* ]Gibt an, dass es sich bei dem zugehörigen Satz von [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) entweder um einen nicht gespiegelten Mediensatz handelt oder um den ersten Spiegel innerhalb eines gespiegelten Mediensatzes (für den eine oder mehrere MIRROR TO-Klauseln deklariert sind).
+TO \<backup_device> [ **,** ...*n* ]Gibt an, dass es sich bei dem zugehörigen Satz von [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) entweder um einen nicht gespiegelten Mediensatz handelt oder um den ersten Spiegel innerhalb eines gespiegelten Mediensatzes (für den eine oder mehrere MIRROR TO-Klauseln deklariert sind).
 
 \<sicherungsmedium>
 
 Gibt ein logisches oder physisches Sicherungsmedium an, das für den Sicherungsvorgang verwendet werden soll.
 
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Gilt für:** SQL Server: Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Bei Angabe in Form einer Variablen (@*logical_device_name_var*) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (@_logical\_device\_name\_var_**=** logical backup device name) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
+{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **Gilt für:** SQL Server: Der logische Name des Sicherungsmediums, auf dem die Datenbank gesichert wird. Der logische Name muss den Regeln für Bezeichner entsprechen. Bei Angabe in Form einer Variablen (@*logical_device_name_var*) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante (@_logical\_device\_name\_var_ **=** logical backup device name) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
 
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **Gilt für:** DISK, TAPE und URL gelten für SQL Server.
+{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **Gilt für:** DISK, TAPE und URL gelten für SQL Server.
 Gibt eine Datenträgerdatei oder ein Bandmedium oder einen Microsoft Azure-BLOB-Speicherdienst an. Das URL-Format wird zum Erstellen von Sicherungen in Microsoft Azure Storage verwendet. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Ein Tutorial finden Sie unter [Tutorial: SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage-Dienst](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
 
 > [!NOTE]
@@ -261,7 +261,7 @@ Weitere Informationen finden Sie unter [Sicherungsmedien](../../relational-datab
 
 *n* Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste möglicherweise bis zu 64 Sicherungsmedien angegeben werden.
 
-MIRROR TO \<backup_device> [ **,**...*n* ] Gibt einen Satz von bis zu drei sekundären Sicherungsmedien an, die die in der TO-Klausel angegebenen Sicherungsmedien spiegeln. Die MIRROR TO-Klausel muss denselben Typ und dieselbe Anzahl von Sicherungsdateien angeben wie die TO-Klausel. Die maximale Anzahl von MIRROR TO-Klauseln lautet drei.
+MIRROR TO \<backup_device> [ **,** ...*n* ] Gibt einen Satz von bis zu drei sekundären Sicherungsmedien an, die die in der TO-Klausel angegebenen Sicherungsmedien spiegeln. Die MIRROR TO-Klausel muss denselben Typ und dieselbe Anzahl von Sicherungsdateien angeben wie die TO-Klausel. Die maximale Anzahl von MIRROR TO-Klauseln lautet drei.
 
 Diese Option ist nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar.
 
@@ -342,25 +342,25 @@ COMPRESSION Aktiviert die Sicherungskomprimierung explizit.
 
 NO_COMPRESSION Deaktiviert die Sicherungskomprimierung explizit.
 
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ } Gibt den freien Text an, der als Beschreibung des Sicherungssatzes verwendet wird. Die Zeichenfolge kann maximal 255 Zeichen haben.
+DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ } Gibt den freien Text an, der als Beschreibung des Sicherungssatzes verwendet wird. Die Zeichenfolge kann maximal 255 Zeichen haben.
 
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ } Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.
+NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.
 
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ } Gibt an, wann der Sicherungssatz für diese Sicherung überschrieben werden kann. Wenn beide Optionen verwendet werden, hat RETAINDAYS Vorrang vor EXPIREDATE.
+{ EXPIREDATE **='** _date_ **'** | RETAINDAYS **=** _days_ } Gibt an, wann der Sicherungssatz für diese Sicherung überschrieben werden kann. Wenn beide Optionen verwendet werden, hat RETAINDAYS Vorrang vor EXPIREDATE.
 
 Wenn keine der Optionen angegeben wird, wird das Ablaufdatum durch die Konfigurationseinstellung **media retention** bestimmt. Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
 
 > [!IMPORTANT]
 > Diese Optionen verhindern nur, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Datei überschreibt. Bänder können mit anderen Methoden gelöscht werden, und Dateien auf einem Datenträger können mit entsprechenden Betriebssystembefehlen gelöscht werden. Weitere Informationen zur Prüfung des Ablaufdatums finden Sie unter SKIP und FORMAT in diesem Thema.
 
-EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ } Gibt an, wann der Sicherungssatz abläuft und überschrieben werden kann. Bei Angabe in Form einer Variablen (@_date\_var_) muss das Datum dem konfigurierten **datetime**-Systemformat entsprechen und als eines der folgenden Elemente angegeben werden:
+EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } Gibt an, wann der Sicherungssatz abläuft und überschrieben werden kann. Bei Angabe in Form einer Variablen (@_date\_var_) muss das Datum dem konfigurierten **datetime**-Systemformat entsprechen und als eines der folgenden Elemente angegeben werden:
 
 - Eine Zeichenfolgekonstante (@_date\_var_ **=** date)
 - Eine Variable mit einem Zeichenfolgen-Datentyp (mit Ausnahme der Datentypen **ntext** oder **text**)
 - Eine **smalldatetime**-Variable
 - Eine **datetime**-Variable
 
-Zum Beispiel:
+Beispiel:
 
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
@@ -370,7 +370,7 @@ Informationen zum Angeben der **datetime**-Werte finden Sie unter [Datums- und U
 > [!NOTE]
 > Zum Ignorieren des Ablaufdatums verwenden Sie die Option `SKIP`.
 
-RETAINDAYS **=** { *days* | **@**_days\_var_ } Gibt die Anzahl von Tagen an, die verstreichen müssen, bevor diese Sicherungsmedien überschrieben werden können. Bei Angabe als Variable (**@**_days\_var_) muss der Wert als Integer angegeben werden.
+RETAINDAYS **=** { *days* |  **@** _days\_var_ } Gibt die Anzahl von Tagen an, die verstreichen müssen, bevor diese Sicherungsmedien überschrieben werden können. Bei Angabe als Variable ( **@** _days\_var_) muss der Wert als Integer angegeben werden.
 
 **Mediensatzoptionen**
 
@@ -415,11 +415,11 @@ FORMAT Gibt an, dass ein neuer Mediensatz erstellt werden kann. FORMAT bewirkt, 
 
 Durch die Angabe von FORMAT ist `SKIP` impliziert. `SKIP` muss nicht explizit angegeben werden.
 
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } Gibt die freie Textbeschreibung des Mediensatzes an, die aus maximal 255 Zeichen bestehen kann.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Gibt die freie Textbeschreibung des Mediensatzes an, die aus maximal 255 Zeichen bestehen kann.
 
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ } Gibt den Mediennamen für den gesamten Sicherungsmediensatz an. Der Medienname darf nicht mehr als 128 Zeichen umfassen. Wird `MEDIANAME` angegeben, muss dieser Name dem vorher angegebenen Mediennamen auf den Sicherungsvolumes entsprechen. Wird er nicht angegeben, oder ist die Option SKIP festgelegt, findet keine Prüfung des Mediennamens statt.
+MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Gibt den Mediennamen für den gesamten Sicherungsmediensatz an. Der Medienname darf nicht mehr als 128 Zeichen umfassen. Wird `MEDIANAME` angegeben, muss dieser Name dem vorher angegebenen Mediennamen auf den Sicherungsvolumes entsprechen. Wird er nicht angegeben, oder ist die Option SKIP festgelegt, findet keine Prüfung des Mediennamens statt.
 
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ } Legt die physische Blockgröße in Bytes fest. Die unterstützten Größen sind 512, 1024, 2048, 4096, 8192, 16.384, 32.768 und 65.536 (64 KB) Bytes. Der Standardwert ist 65.536 für Bandmedien und andernfalls 512. In der Regel ist diese Option nicht erforderlich, da von BACKUP automatisch eine Blockgröße ausgewählt wird, die für das Medium geeignet ist. Mit der expliziten Angabe einer Blockgröße wird die automatische Wahl der Blockgröße überschrieben.
+BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ } Legt die physische Blockgröße in Bytes fest. Die unterstützten Größen sind 512, 1024, 2048, 4096, 8192, 16.384, 32.768 und 65.536 (64 KB) Bytes. Der Standardwert ist 65.536 für Bandmedien und andernfalls 512. In der Regel ist diese Option nicht erforderlich, da von BACKUP automatisch eine Blockgröße ausgewählt wird, die für das Medium geeignet ist. Mit der expliziten Angabe einer Blockgröße wird die automatische Wahl der Blockgröße überschrieben.
 
 Geben Sie beim Erstellen einer Sicherung, die Sie auf eine CD-ROM kopieren und von dieser wiederherstellen möchten, BLOCKSIZE=2048 an.
 
@@ -428,14 +428,14 @@ Geben Sie beim Erstellen einer Sicherung, die Sie auf eine CD-ROM kopieren und v
 
 **Datenübertragungsoptionen**
 
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ } Gibt die Gesamtanzahl von E/A-Puffern an, die für den Sicherungsvorgang verwendet werden sollen. Sie können eine beliebige positive ganze Zahl angeben. Eine große Pufferanzahl kann jedoch wegen eines ungeeigneten virtuellen Adressraumes im Prozess Sqlservr.exe zu Fehlern aufgrund von nicht genügend Arbeitsspeicher führen.
+BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } Gibt die Gesamtanzahl von E/A-Puffern an, die für den Sicherungsvorgang verwendet werden sollen. Sie können eine beliebige positive ganze Zahl angeben. Eine große Pufferanzahl kann jedoch wegen eines ungeeigneten virtuellen Adressraumes im Prozess Sqlservr.exe zu Fehlern aufgrund von nicht genügend Arbeitsspeicher führen.
 
 Der gesamte von den Puffern belegte Speicherplatz wird durch *buffercount/maxtransfersize* bestimmt.
 
 > [!NOTE]
 > Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
 
 > [!NOTE]
 > Wenn beim Erstellen von Sicherungen mithilfe des SQL Writer-Diensts für die Datenbank [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) konfiguriert ist oder [speicheroptimierte Dateigruppen](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) enthält, dann sollte `MAXTRANSFERSIZE` zum Zeitpunkt der Wiederherstellung größer als oder gleich der `MAXTRANSFERSIZE` sein, die beim Erstellen der Sicherung verwendet wurde.
@@ -749,6 +749,7 @@ Dieser Abschnitt enthält die folgenden Beispiele:
 - G. [Sichern auf einen vorhandenen gespiegelten Mediensatz](#existing_mirrored_media_set)
 - H. [Erstellen einer komprimierten Sicherung in einem neuen Mediensatz](#creating_compressed_backup_new_media_set)
 - I. [Sichern in den Microsoft Azure BLOB-Speicherdienst](#url)
+- J. [Überwachen des Fortschritts einer BACKUP-Anweisung](#backup_progress)
 
 > [!NOTE]
 > In den Themen über die Vorgehensweisen bei der Sicherung sind weitere Beispiele aufgeführt. Weitere Informationen finden Sie unter [Übersicht über Sicherungen](../../relational-databases/backup-restore/backup-overview-sql-server.md).
@@ -895,6 +896,17 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
+### <a name="backup_progress"></a> J. Überwachen des Fortschritts von BACKUP-Anweisungen
+
+Die folgende Abfrage gibt Informationen zu den aktuell ausgeführten BACKUP-Anweisungen zurück:
+```sql
+SELECT query = a.text, start_time, percent_complete,
+    eta = dateadd(second,estimated_completion_time/1000, getdate())
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+WHERE r.command LIKE 'BACKUP%'
+```
+
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md)
@@ -919,7 +931,7 @@ WITH STATS = 5;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL-Datenbank<br />verwaltete Instanz \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -970,7 +982,7 @@ DATABASE Gibt eine vollständige Datenbanksicherung an. Während einer Datenbank
 
 Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zur Wiederherstellung automatischer Sicherungen der verwalteten Azure SQL-Datenbank-Instanz finden Sie unter [SQL Database Restore (SQL-Datenbank-Wiederherstellung)](https://docs.microsoft.com/azure/sql-database/sql-database-restore).
 
-{ *database_name* | **@**_database\_name\_var_ } ist die Datenbank, aus der die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen (**@**_database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante (**@**_database\_name\_var_**=**_database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
+{ *database_name* |  **@** _database\_name\_var_ } ist die Datenbank, aus der die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen ( **@** _database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante ( **@** _database\_name\_var_ **=** _database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
 
 Weitere Informationen finden Sie unter [Vollständige Dateisicherungen](../../relational-databases/backup-restore/full-file-backups-sql-server.md) und [Sichern von Dateien und Dateigruppen](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
@@ -1014,26 +1026,26 @@ COMPRESSION Aktiviert die Sicherungskomprimierung explizit.
 
 NO_COMPRESSION Deaktiviert die Sicherungskomprimierung explizit.
 
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ } Gibt den freien Text an, der als Beschreibung des Sicherungssatzes verwendet wird. Die Zeichenfolge kann maximal 255 Zeichen haben.
+DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ } Gibt den freien Text an, der als Beschreibung des Sicherungssatzes verwendet wird. Die Zeichenfolge kann maximal 255 Zeichen haben.
 
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ } Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.
+NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Gibt den Namen des Sicherungssatzes an. Namen können maximal 128 Zeichen haben. Wird NAME nicht angegeben, erhält der Sicherungssatz einen leeren Namen.
 
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } Gibt die freie Textbeschreibung des Mediensatzes an, die aus maximal 255 Zeichen bestehen kann.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Gibt die freie Textbeschreibung des Mediensatzes an, die aus maximal 255 Zeichen bestehen kann.
 
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ } Gibt den Mediennamen für den gesamten Sicherungsmediensatz an. Der Medienname darf nicht mehr als 128 Zeichen umfassen. Wird `MEDIANAME` angegeben, muss dieser Name dem vorher angegebenen Mediennamen auf den Sicherungsvolumes entsprechen. Wird er nicht angegeben, oder ist die Option SKIP festgelegt, findet keine Prüfung des Mediennamens statt.
+MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Gibt den Mediennamen für den gesamten Sicherungsmediensatz an. Der Medienname darf nicht mehr als 128 Zeichen umfassen. Wird `MEDIANAME` angegeben, muss dieser Name dem vorher angegebenen Mediennamen auf den Sicherungsvolumes entsprechen. Wird er nicht angegeben, oder ist die Option SKIP festgelegt, findet keine Prüfung des Mediennamens statt.
 
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ } Legt die physische Blockgröße in Bytes fest. Die unterstützten Größen sind 512, 1024, 2048, 4096, 8192, 16.384, 32.768 und 65.536 (64 KB) Bytes. Der Standardwert ist 65.536 für Bandmedien und andernfalls 512. In der Regel ist diese Option nicht erforderlich, da von BACKUP automatisch eine Blockgröße ausgewählt wird, die für das Medium geeignet ist. Mit der expliziten Angabe einer Blockgröße wird die automatische Wahl der Blockgröße überschrieben.
+BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ } Legt die physische Blockgröße in Bytes fest. Die unterstützten Größen sind 512, 1024, 2048, 4096, 8192, 16.384, 32.768 und 65.536 (64 KB) Bytes. Der Standardwert ist 65.536 für Bandmedien und andernfalls 512. In der Regel ist diese Option nicht erforderlich, da von BACKUP automatisch eine Blockgröße ausgewählt wird, die für das Medium geeignet ist. Mit der expliziten Angabe einer Blockgröße wird die automatische Wahl der Blockgröße überschrieben.
 
 **Datenübertragungsoptionen**
 
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ } Gibt die Gesamtanzahl von E/A-Puffern an, die für den Sicherungsvorgang verwendet werden sollen. Sie können eine beliebige positive ganze Zahl angeben. Eine große Pufferanzahl kann jedoch wegen eines ungeeigneten virtuellen Adressraumes im Prozess Sqlservr.exe zu Fehlern aufgrund von nicht genügend Arbeitsspeicher führen.
+BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } Gibt die Gesamtanzahl von E/A-Puffern an, die für den Sicherungsvorgang verwendet werden sollen. Sie können eine beliebige positive ganze Zahl angeben. Eine große Pufferanzahl kann jedoch wegen eines ungeeigneten virtuellen Adressraumes im Prozess Sqlservr.exe zu Fehlern aufgrund von nicht genügend Arbeitsspeicher führen.
 
 Der gesamte von den Puffern belegte Speicherplatz wird durch *buffercount/maxtransfersize* bestimmt.
 
 > [!NOTE]
 > Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
 
 > [!NOTE]
 > Für [Transparente Datenverschlüsselung (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)-fähige Datenbanken mit einer einzelnen Datendatei ist der standardmäßige `MAXTRANSFERSIZE`-Wert 65536 (64 KB). Für nicht mit TDE verschlüsselte Datenbanken ist der `MAXTRANSFERSIZE`-Standardwert 1048576 (1 MB) bei Verwendung der Sicherung auf DISK und 65536 (64 KB) bei Verwendung von VDI oder TAPE.
@@ -1104,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
 
 &nbsp;
 
@@ -1151,11 +1163,11 @@ TO DISK = '\\\\*UNC_path*\\*backup_directory*' Netzwerkpfad und Verzeichnis, in 
 - Die maximale Länge des UNC-Pfads und des Sicherungsverzeichnisnamens beträgt 200 Zeichen.
 - Der Server oder Host muss als IP-Adresse angegeben werden. Sie können ihn nicht als Host- oder Servernamen angeben.
 
-DESCRIPTION = **'**_Text_**'** Gibt eine Textbeschreibung der Datensicherung an. Die maximale Länge des Texts beträgt 255 Zeichen.
+DESCRIPTION = **'** _Text_ **'** Gibt eine Textbeschreibung der Datensicherung an. Die maximale Länge des Texts beträgt 255 Zeichen.
 
 Die Beschreibung wird in den Metadaten gespeichert und angezeigt, wenn der Sicherungsheader mit RESTORE HEADERONLY wiederhergestellt wird.
 
-NAME = **'**_backup \_name_**'** Gibt den Namen des Sicherungssatzes an. Der Sicherungsname kann vom Datenbanknamen abweichen.
+NAME = **'** _backup \_name_ **'** Gibt den Namen des Sicherungssatzes an. Der Sicherungsname kann vom Datenbanknamen abweichen.
 
 - Namen können maximal 128 Zeichen haben.
 - Sie können keinen Pfad einschließen.
@@ -1166,7 +1178,7 @@ Der Name wird in den Metadaten gespeichert und angezeigt, wenn der Sicherungshea
 
 DIFFERENTIAL Gibt an, dass eine differenzielle Sicherung einer Benutzerdatenbank durchgeführt werden soll. Wenn nicht angegeben, ist die Standardeinstellung eine vollständige Sicherung. Der Name der differenziellen Sicherung muss nicht mit dem Namen der vollständigen Sicherung übereinstimmen. Zum Nachverfolgen der differenziellen Sicherung und der zugehörigen vollständigen Sicherung sollten Sie den gleichen Namen verwenden und "full" oder "diff" anfügen.
 
-Zum Beispiel:
+Beispiel:
 
 `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`
 

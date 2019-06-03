@@ -18,15 +18,15 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5f411b829f55473c71cbdbcbfc91ebf52ebef80e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206159"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946591"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 > [!NOTE]
 >  Die folgenden Eigenschaften werden in zukünftigen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr bereitgestellt: **ConnectTimeout**, **DataTimeout** und **ResourceUsage**. Vermeiden Sie die Verwendung dieser Eigenschaften in Neuentwicklungen, und planen Sie die Änderung von Anwendungen, die diese Eigenschaften derzeit verwenden.  
   
-|Eigenschaft|Wert|  
+|Eigenschaft|value|  
 |--------------|-----------|  
 |**ResourceUsage**|Gibt 0 zurück. Wird nur aus Gründen der Abwärtskompatibilität unterstützt.|  
 |**connecttimeout**|Gibt 0 zurück. Wird nur aus Gründen der Abwärtskompatibilität unterstützt.|  
@@ -59,7 +59,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 |**VerifySignature**|Gibt an, ob der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search-Dienst ausschließlich signierte Binärdateien lädt. Standardmäßig werden nur vertrauenswürdige signierte Binärdateien geladen.<br /><br /> 0 = Es wird nicht überprüft, ob Binärdateien signiert sind.<br /><br /> 1 = Es wird überprüft, ob ausschließlich vertrauenswürdige signierte Binärdateien geladen werden.|  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+ **ssNoversion**  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird geprüft, ob nur signierte Binärdateien geladen werden. Der Rückgabewert gibt an, dass diese Überprüfung nicht stattfindet.  
