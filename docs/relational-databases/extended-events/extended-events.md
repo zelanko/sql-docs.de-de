@@ -1,7 +1,7 @@
 ---
 title: Übersicht über erweiterte Ereignisse (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df39a9a3992fb424bf0f50b2d60548ce0e55ade7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477665"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175669"
 ---
 # <a name="extended-events-overview"></a>Übersicht über erweiterte Ereignisse
 
@@ -39,7 +39,7 @@ Weitere Informationen zu erweiterten Ereignissen finden Sie hier: [Schnellstart:
   
  In der folgenden Tabelle werden die Konzepte von "Erweiterte Ereignisse" beschrieben.  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Pakete für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Beschreibt die Pakete für erweiterte Ereignisse, in denen Objekte enthalten sind, mit denen Daten beim Ausführen einer Sitzung für erweiterte Ereignisse abgerufen und verarbeitet werden.|  
 |[Ziele für erweiterte Ereignisse von SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Beschreibt die Ereignisconsumer, die während einer Ereignissitzung Daten empfangen können.|  
@@ -111,5 +111,4 @@ Durch Verwenden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] od
  [Überwachen von Datenebenenanwendungen](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [Dynamische Verwaltungssichten für erweiterte Ereignisse](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Katalogsichten für erweiterte Ereignisse &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
-  
-  
+ [XELite: Plattformübergreifende Bibliothek zum Lesen von XEvents aus XEL-Dateien oder SQL-Livestreams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/) (Veröffentlicht: Mai 2019).  

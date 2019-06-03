@@ -1,7 +1,7 @@
 ---
 title: Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/04/2016
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478165"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198347"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
 
@@ -42,7 +42,7 @@ In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Ereignis
 
 In diesem Artikel wird ebenfalls davon ausgegangen, dass Sie eine möglichst aktuelle monatliche Version von SSMS installiert haben. Hier finden Sie Hilfe zur Installation:
 
-- [Herunterladen von SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+- [Herunterladen von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 
@@ -133,7 +133,7 @@ Die Option **Zieldaten anzeigen** zeigt die Daten an, die bisher erfasst wurden.
 
 Im Bereich **Objekt-Explorer** können Sie die Knoten erweitern und dann mit der rechten Maustaste auf folgende Optionen klicken:
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > *[Ihr_Zielknoten]* > **Zieldaten anzeigen**.
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  >  *[Ihr_Zielknoten]*  > **Zieldaten anzeigen**.
 
 
 Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt. Dies wird im folgenden Screenshot gezeigt.
@@ -153,7 +153,7 @@ Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt.
 Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit anzeigen, so wie sie vom Ziel empfangen werden.
 
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Livedaten anzeigen**.
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  > **Livedaten anzeigen**.
 
 
 ![Ihre Sitzung > Livedaten anzeigen](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -161,7 +161,7 @@ Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit a
 
 Die Datenanzeige wird in einem von Ihnen angegebenen Intervall aktualisiert. Siehe **Maximale Verteilungslatenzzeit** unter:
 
-- **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**
+- **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**
 
 
 
@@ -318,4 +318,6 @@ Das Ereignis **query_post_execution_showplan** ermöglicht Ihnen die Anzeige des
 
 ![Abfrageplan mit Eigenschaftenliste für einen Knoten](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
+## <a name="see-also"></a>Siehe auch
 
+[XELite: Plattformübergreifende Bibliothek zum Lesen von XEvents aus XEL-Dateien oder SQL-Livestreams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/) (Veröffentlicht: Mai 2019).

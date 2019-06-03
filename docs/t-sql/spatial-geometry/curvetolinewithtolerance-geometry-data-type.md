@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5d265392606722f621d6a10e9d649340824596ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30264ebeef5a398d677abbb2bc380a68c69893d4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824508"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938129"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
 |----------------------------|---------------------------|  
 |Leere geometry-Instanz|Leere Instanz von **GeometryCollection**|  
 |**Point** und **MultiPoint**|**Point** -Instanz|  
-|**MultiPoint**|Instanz von**Point** oder **MultiPoint** |  
+|**MultiPoint**|Instanz von**Point** oder **MultiPoint**|  
 |**CircularString**, **CompoundCurve**oder **LineString**|**LineString** -Instanz|  
-|**MultiLineString**|Instanz von**LineString** oder **MultiLineString** |  
+|**MultiLineString**|Instanz von**LineString** oder **MultiLineString**|  
 |**CurvePolygon** und **Polygon**|**Polygon** -Instanz|  
-|**MultiPolygon**|Instanz von**Polygon** oder **MultiPolygon** |  
+|**MultiPolygon**|Instanz von**Polygon** oder **MultiPolygon**|  
 |**GeometryCollection** mit einer einzelnen Instanz, die kein Kreisbogensegment enthält|Die Instanz, die im **GeometryCollection** enthalten ist, bestimmt den Typ der Instanz, die zurückgegeben wird.|  
 |**GeometryCollection** mit einer einzelnen eindimensionalen Instanz eines Kreisbogensegments (**CircularString**, **CompoundCurve**)|**LineString** -Instanz|  
 |**GeometryCollection** mit einer einzelnen zweidimensionalen Instanz eines Kreisbogensegments (**CurvePolygon**)|**Polygon** -Instanz|  
@@ -116,7 +116,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
  ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CurveToLineWithTolerance &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
  [STCurveToLine &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   

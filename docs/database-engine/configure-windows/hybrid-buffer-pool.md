@@ -1,7 +1,7 @@
 ---
 title: Hybrider Pufferpool | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -11,29 +11,92 @@ ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
 manager: craigg
-ms.openlocfilehash: a8098c38b72ba44ab973fe5564b93740252bafc6
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5e36363347d9d491f541715dffa3cce731cc1efc
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560307"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993550"
 ---
 # <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Mit SQL Server 2019 CTP 2.1 wird ein neues Feature in der SQL Server-Datenbank-Engine eingeführt, mit dem direkt auf Datenseiten in den auf einem Gerät mit persistentem Speicher (PMEM) gespeicherten Datenbankdateien zugegriffen werden kann. 
+Mit dem hybriden Pufferpool kann die Datenbank-Engine direkt auf Datenseiten in Datenbankdateien zugreifen, die auf Geräten mit persistentem Speicher (PMEM) gespeichert sind. Dieses Feature wird in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] eingeführt.
 
-In einem herkömmlichen System ohne persistenten Speicher werden Data-Seiten von SQL Server im Pufferpool zwischengespeichert. Mit dem hybriden Pufferpool kopiert SQL Server die Seite nicht in den DRAM-basierten Teil des Pufferpools, stattdessen wird direkt in der Datenbankdatei (die sich auf einem PMEM-Gerät befindet) auf die Seite verwiesen. Der Zugriff auf Datendateien in PMEM für den hybriden Pufferpool erfolgt mit der im Speicher abgebildeten E/A, auch bekannt als „Enlightenment“.
+Bei einem herkömmlichen System ohne PMEM werden Datenseiten von SQL Server im Pufferpool zwischengespeichert. Bei Verwendung des hybriden Pufferpools kopiert SQL Server die Seite nicht in den DRAM-basierten Teil des Pufferpools, sondern greift stattdessen direkt auf die Seite in der Datenbankdatei auf einem PMEM-Gerät zu. Der Zugriff auf Datendateien auf PMEM-Geräten für den hybriden Pufferpool erfolgt mit der im Speicher abgebildeten E/A, die auch als *Optimierung* von Datendateien in SQL Server bezeichnet wird.
 
-Auf einem PMEM-Gerät kann nur auf nicht modifizierte Seiten direkt verwiesen werden. Wenn eine Seite geändert wird, wird sie in DRAM gespeichert und dann letztendlich zurück auf das PMEM-Gerät geschrieben.
+Auf einem PMEM-Gerät kann nur auf nicht modifizierte Seiten direkt zugegriffen werden. Wenn eine Seite als geändert markiert ist, wird sie in den DRAM-Pufferpool kopiert, bevor sie schließlich zurück auf das PMEM-Gerät geschrieben und als nicht modifiziert markiert wird. Dies findet während normaler Prüfpunktvorgänge statt.
 
-Dieses Feature ist sowohl für Windows als auch für Linux verfügbar.
+Die Funktion für hybriden Pufferpool ist für Windows und Linux verfügbar. Das PMEM-Gerät muss mit einem Dateisystem formatiert sein, das DAX (DirectAccess) unterstützt. Die Dateisystem XFS, EXT4, NTFS und ReFS bieten Unterstützung für DAX. SQL Server erkennt automatisch, ob sich Datendateien auf einem entsprechend formatierten PMEM-Gerät befinden, und führt die Speicherzuordnung im Benutzerbereich beim Start aus, wenn eine neue Datenbank angefügt, wiederhergestellt oder erstellt wird, oder wenn die Funktion für hybriden Pufferpool aktiviert ist.
 
-## <a name="enable-hybrid-buffer-pool"></a>Aktivieren des hybridem Pufferpools
+Weitere Informationen zur Windows Server-Unterstützung für PMEM (auch als Speicherklassenspeicher (SCM) bezeichnet) finden Sie unter [Bereitstellen von persistentem Speicher unter Windows Server](/windows-server/storage/storage-spaces/deploy-pmem/).
 
-Bei der CTP-Version 2.1 müssen Sie das Startablaufverfolgungsflag 809 aktivieren, um den hybriden Pufferpool zu verwenden.
+Weitere Informationen zum Konfigurieren von SQL Server unter Linux für PMEM-Geräte finden Sie unter [Bereitstellen von persistentem Speicher](../../linux/sql-server-linux-configure-pmem.md).
+
+## <a name="enable-hybrid-buffer-pool"></a>Aktivieren des hybriden Pufferpools
+
+Mit [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] wird DDL (Dynamic Data Language) zum Steuern des hybriden Pufferpools eingeführt.
+
+Im folgenden Beispiel wird der hybride Pufferpool für eine Instanz von SQL Server aktiviert:
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+```
+
+Standardmäßig ist der hybride Pufferpool im Instanzbereich deaktiviert.
+
+Im folgenden Beispiel wird der hybride Pufferpool für eine bestimmte Datenbank aktiviert.
+
+```sql
+ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = ON;
+```
+
+Standardmäßig ist der hybride Pufferpool im Datenbankbereich aktiviert.
+
+## <a name="disable-hybrid-buffer-pool"></a>Deaktivieren des hybriden Pufferpools
+
+Im folgenden Beispiel wird der hybride Pufferpool für eine Instanz von SQL Server deaktiviert:
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
+```
+
+Standardmäßig ist der hybride Pufferpool im Instanzbereich deaktiviert.
+
+Im folgenden Beispiel wird der hybride Pufferpool für eine bestimmte Datenbank deaktiviert.
+
+```sql
+ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
+```
+
+Standardmäßig ist der hybride Pufferpool im Datenbankbereich aktiviert.
+
+## <a name="view-hybrid-buffer-pool-configuration"></a>Anzeigen der Konfiguration des hybriden Pufferpools
+
+Das folgende Beispiel gibt den aktuellen Status der Systemkonfiguration des hybriden Pufferpools für eine Instanz von SQL Server zurück.
+
+```sql
+SELECT *
+FROM sys.configurations
+WHERE
+    name = 'hybrid_buffer_pool';
+```
+
+Das folgende Beispiel gibt zwei Tabellen zurück:
+
+- Die erste Tabelle zeigt den aktuellen Status der Systemkonfiguration des hybriden Pufferpools für eine Instanz von SQL Server.
+- In der zweiten Tabelle sind die Datenbanken und die Einstellung auf Datenbankebene für den hybriden Pufferpool (`is_memory_optimized_enabled`) aufgeführt.
+
+```sql
+SELECT * FROM sys.configurations WHERE name = 'hybrid_buffer_pool';
+
+SELECT name, is_memory_optimized_enabled FROM sys.databases;
+```
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Bewährte Methoden für den hybriden Pufferpool
 
-* Verwendenden Sie beim Formatieren Ihres PMEM-Geräts unter Windows die größte verfügbare Größe der Zuordnungseinheit für NTFS (2 MB in Windows Server 2019), und stellen Sie sicher, dass das Gerät für DAX (DirectAccess) aktiviert wurde.
-  
+Verwenden Sie beim Formatieren Ihres PMEM-Geräts unter Windows die größte verfügbare Zuordnungseinheit für NTFS oder ReFS (2 MB in Windows Server 2019), und stellen Sie sicher, dass das Gerät für DAX (DirectAccess) formatiert wurde.
+
+Wenn die Einstellung des Serverbereichs für den hybriden Pufferpool deaktiviert ist, wird der hybride Pufferpool von keiner Benutzerdatenbank verwendet.
+
+Wenn die Einstellung des Serverbereichs für den hybriden Pufferpool aktiviert ist, können Sie die Verwendung des hybriden Pufferpools für einzelne Benutzerdatenbanken deaktivieren. Dazu führen Sie die Schritte zum Deaktivieren des hybriden Pufferpools auf Datenbereichsebene für diese Benutzerdatenbanken aus.

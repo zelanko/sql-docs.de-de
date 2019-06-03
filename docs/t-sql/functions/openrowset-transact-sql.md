@@ -22,16 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 3a6e2d51b9a2926f6d542ce3da5fc1c916881918
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531095"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944804"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 kann sich „d
 > [!NOTE]  
 > Es wird empfohlen, dass Sie für jede Spalte in einer Formatdatei einen Sortierungsnamen angeben, außer wenn die 65001-Option Priorität vor der Angabe von Sortierung/Codepage haben soll.  
   
-|CODEPAGE-Wert|Beschreibung|  
+|CODEPAGE-Wert|und Beschreibung|  
 |--------------------|-----------------|  
 |ACP|Konvertiert Spalten vom Datentyp **char**, **varchar** oder **text** von der ANSI-/[!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Codepage (ISO 1252) in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage.|  
 |OEM (Standard)|Konvertiert Spalten vom Datentyp **char**, **varchar** oder **text** von der OEM-Codepage des Systems in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Codepage.|  
@@ -192,10 +192,10 @@ Es handelt sich um eine benannte externe Datenquelle, die auf den Azure Blob-Spe
   
  Wenn die tatsächlichen Zeilen in der Datendatei nicht entsprechend der angegebenen Reihenfolge sortiert sind oder wenn der UNIQUE-Hinweis angegeben wird und doppelte Schlüssel vorhanden sind, wird ein Fehler zurückgegeben.  
   
- Spaltenaliase sind erforderlich, wenn ORDER verwendet wird. Die Spaltenaliasliste muss auf die abgeleitete Tabelle verweisen, auf die von der BULK-Klausel zugegriffen wird. Die Spaltennamen, die in der ORDER-Klausel angegeben sind, verweisen auf diese Spaltenaliasliste. Spalten mit großen Werttypen (**varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml**) und großen Objekttypen (LOB) (**text**, **ntext** und **image**) können nicht angegeben werden.  
+ Spaltenaliase sind erforderlich, wenn ORDER verwendet wird. Die Spaltenaliasliste muss auf die abgeleitete Tabelle verweisen, auf die von der BULK-Klausel zugegriffen wird. Die Spaltennamen, die in der ORDER-Klausel angegeben sind, verweisen auf diese Spaltenaliasliste. Spalten mit großen Werttypen (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml**) und großen Objekttypen (LOB) (**text**, **ntext** und **image**) können nicht angegeben werden.  
   
  SINGLE_BLOB  
- Gibt die Inhalte von *data_file* als einzelne Zeile, als einspaltiges Rowset des **varbinary(max)**-Typs zurück.  
+ Gibt die Inhalte von *data_file* als einzelne Zeile, als einspaltiges Rowset des **varbinary(max)** -Typs zurück.  
   
 > [!IMPORTANT]  
 > Es wird empfohlen, XML-Daten anstelle von mit SINGLE_CLOB und SINGLE_NCLOB ausschließlich mithilfe der SINGLE_BLOB-Option zu importieren, da nur SINGLE_BLOB alle Windows-Codierungskonvertierungen unterstützt.  
@@ -232,7 +232,7 @@ Gibt ein Zeichen an, das als Anführungszeichen in der CSV-Datei verwendet wird.
   
  Beim Zugriff auf OLE DB-Remotedatenquellen wird die Anmelde-ID vertrauenswürdiger Verbindungen nicht automatisch von dem Server delegiert, auf dem der Client mit dem Server verbunden ist, der abgefragt wird. Die Authentifizierungsdelegierung muss konfiguriert sein.  
   
- Der Katalog- und Schemaname sind erforderlich, falls der OLE DB-Anbieter mehrere Kataloge und Schemas in der angegebenen Datenquelle unterstützt. Die Angabe von Werten für _catalog_ und _schema_ kann entfallen, falls diese vom OLE DB-Anbieter nicht unterstützt werden. Falls der Anbieter nur Schemanamen unterstützt, muss ein zweiteiliger Name im Format _schema_**.**_object_ angegeben werden. Falls der Anbieter nur Katalognamen unterstützt, muss ein dreiteiliger Name im Format _catalog_**.**_schema_**.**_object_ angegeben werden. Dreiteilige Namen müssen für Pass-Through-Abfragen angegeben werden, für die der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet wird. Weitere Informationen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Der Katalog- und Schemaname sind erforderlich, falls der OLE DB-Anbieter mehrere Kataloge und Schemas in der angegebenen Datenquelle unterstützt. Die Angabe von Werten für _catalog_ und _schema_ kann entfallen, falls diese vom OLE DB-Anbieter nicht unterstützt werden. Falls der Anbieter nur Schemanamen unterstützt, muss ein zweiteiliger Name im Format _schema_ **.** _object_ angegeben werden. Falls der Anbieter nur Katalognamen unterstützt, muss ein dreiteiliger Name im Format _catalog_ **.** _schema_ **.** _object_ angegeben werden. Dreiteilige Namen müssen für Pass-Through-Abfragen angegeben werden, für die der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwendet wird. Weitere Informationen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  Für die Argumente von `OPENROWSET` können keine Variablen verwendet werden.  
   
@@ -265,7 +265,7 @@ Gibt ein Zeichen an, das als Anführungszeichen in der CSV-Datei verwendet wird.
 > Für die Verwendung von `OPENROWSET` ist es wichtig, nachvollziehen zu können, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Identitätswechseln umgegangen wird. Weitere Informationen zu Überlegungen zur Sicherheit finden Sie unter [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Massenimport von SQLCHAR-, SQLNCHAR- oder SQLBINARY-Daten  
- Wenn keine maximale Länge für SQLCHAR-, SQLNCHAR- oder SQLBINARY-Daten angegeben wird, geht OPENROWSET(BULK...) davon aus, dass sie 8000 Bytes nicht überschreitet. Wenn sich die zu importierenden Daten in einem LOB-Datenfeld befinden, das Objekte vom Typ **varchar(max)**, **nvarchar(max)** oder **varbinary(max)** mit mehr als 8000 Bytes enthält, müssen Sie eine XML-Formatdatei verwenden, die die maximale Länge für das Datenfeld definiert. Um die maximale Länge anzugeben, bearbeiten Sie die Formatdatei, und deklarieren Sie das Attribut MAX_LENGTH.  
+ Wenn keine maximale Länge für SQLCHAR-, SQLNCHAR- oder SQLBINARY-Daten angegeben wird, geht OPENROWSET(BULK...) davon aus, dass sie 8000 Bytes nicht überschreitet. Wenn sich die zu importierenden Daten in einem LOB-Datenfeld befinden, das Objekte vom Typ **varchar(max)** , **nvarchar(max)** oder **varbinary(max)** mit mehr als 8000 Bytes enthält, müssen Sie eine XML-Formatdatei verwenden, die die maximale Länge für das Datenfeld definiert. Um die maximale Länge anzugeben, bearbeiten Sie die Formatdatei, und deklarieren Sie das Attribut MAX_LENGTH.  
   
 > [!NOTE]  
 > Bei einer automatisch generierten Formatdatei wird die Länge oder maximale Länge für ein LOB-Feld nicht angeben. Sie können eine Formatdatei jedoch bearbeiten und die Länge oder maximale Länge manuell angeben.  

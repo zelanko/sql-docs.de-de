@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c8296ca538f9daac6b0e05aae6f8124bfe2abb62
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242243"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947059"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE-Anweisungen – HEADERYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -102,7 +102,7 @@ FROM <backup_device>
 |**UserName**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang ausgeführt hat.|  
 |**ServerName**|**nvarchar(128)**|Name des Servers, der den Sicherungssatz geschrieben hat.|  
 |**DatabaseName**|**nvarchar(128)**|Name der Datenbank, die gesichert wurde.|  
-|**DatabaseVersion**|**int**|Version der Datenbank, von der die Sicherung erstellt wurde.|  
+|**DatabaseVersion**|**ssNoversion**|Version der Datenbank, von der die Sicherung erstellt wurde.|  
 |**DatabaseCreationDate**|**datetime**|Datum und Uhrzeit der Erstellung der Datenbank.|  
 |**BackupSize**|**numeric(20,0)**|Größe der Sicherung in Bytes.|  
 |**FirstLSN**|**numeric(25,0)**|Protokollfolgenummer des ersten Protokolldatensatzes im Sicherungssatz.|  
@@ -113,15 +113,15 @@ FROM <backup_device>
 |**BackupFinishDate**|**datetime**|Datum und Uhrzeit des Endes des Sicherungsvorgangs.|  
 |**SortOrder**|**smallint**|Sortierreihenfolge für den Server. Diese Spalte gilt nur für Datenbanksicherungen. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**CodePage**|**smallint**|Servercodepage; das ist der vom Server verwendete Zeichensatz.|  
-|**UnicodeLocaleId**|**int**|Serverseitige Konfigurationsoptionen für die Unicode-Gebietsschema-ID, die für die Sortierung von Unicode-Zeichendaten verwendet wird. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
-|**UnicodeComparisonStyle**|**int**|Serverseitige Konfigurationsoption für die Unicode-Vergleichsart, die zusätzliche Steuerungsmöglichkeiten im Vergleich zur Sortierung von Unicode-Daten bereitstellt. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**UnicodeLocaleId**|**ssNoversion**|Serverseitige Konfigurationsoptionen für die Unicode-Gebietsschema-ID, die für die Sortierung von Unicode-Zeichendaten verwendet wird. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**UnicodeComparisonStyle**|**ssNoversion**|Serverseitige Konfigurationsoption für die Unicode-Vergleichsart, die zusätzliche Steuerungsmöglichkeiten im Vergleich zur Sortierung von Unicode-Daten bereitstellt. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**CompatibilityLevel**|**tinyint**|Einstellung des Kompatibilitätsgrades der Datenbank, von der aus die Sicherung erstellt wurde.|  
-|**SoftwareVendorId**|**int**|ID des Softwareanbieters. Für SQL Server lautet diese Nummer **4608** (oder im Hexadezimalformat **0x1200**).|  
-|**SoftwareVersionMajor**|**int**|Wichtigste Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
-|**SoftwareVersionMinor**|**int**|Untergeordnete Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
-|**SoftwareVersionBuild**|**int**|Buildnummer des Servers, der den Sicherungssatz erstellt hat.|  
+|**SoftwareVendorId**|**ssNoversion**|ID des Softwareanbieters. Für SQL Server lautet diese Nummer **4608** (oder im Hexadezimalformat **0x1200**).|  
+|**SoftwareVersionMajor**|**ssNoversion**|Wichtigste Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
+|**SoftwareVersionMinor**|**ssNoversion**|Untergeordnete Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
+|**SoftwareVersionBuild**|**ssNoversion**|Buildnummer des Servers, der den Sicherungssatz erstellt hat.|  
 |**MachineName**|**nvarchar(128)**|Name des Computers, der den Sicherungsvorgang ausgeführt hat.|  
-|**Flags**|**int**|Die Bedeutungen der einzelnen Flagbits, wenn diese auf **1** festgelegt sind, lauten folgendermaßen:<br /><br /> **1** = Protokollsicherung enthält massenprotokollierte Vorgänge.<br /><br /> **2** = Momentaufnahmesicherung<br /><br /> **4** = Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br /><br /> **8** = Datenbank war zum Zeitpunkt der Sicherung im Einzelbenutzermodus.<br /><br /> **16** = Sicherung enthält Sicherungsprüfsummen.<br /><br /> **32** = Datenbank war zum Zeitpunkt der Sicherung beschädigt; trotz der Fehler wurde die Fortsetzung des Sicherungsvorgangs angefordert.<br /><br /> **64** = Sicherung des Protokollfragments.<br /><br /> **128** = Sicherung des Protokollfragments mit unvollständigen Metadaten.<br /><br /> **256** = Sicherung des Protokollfragments mithilfe von NORECOVERY.<br /><br /> **Wichtig:** Anstelle von **Flags** sollten die einzelnen booleschen Spalten (weiter unten von **HasBulkLoggedData** bis **IsCopyOnly** aufgeführt) verwendet werden.|  
+|**Flags**|**ssNoversion**|Die Bedeutungen der einzelnen Flagbits, wenn diese auf **1** festgelegt sind, lauten folgendermaßen:<br /><br /> **1** = Protokollsicherung enthält massenprotokollierte Vorgänge.<br /><br /> **2** = Momentaufnahmesicherung<br /><br /> **4** = Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br /><br /> **8** = Datenbank war zum Zeitpunkt der Sicherung im Einzelbenutzermodus.<br /><br /> **16** = Sicherung enthält Sicherungsprüfsummen.<br /><br /> **32** = Datenbank war zum Zeitpunkt der Sicherung beschädigt; trotz der Fehler wurde die Fortsetzung des Sicherungsvorgangs angefordert.<br /><br /> **64** = Sicherung des Protokollfragments.<br /><br /> **128** = Sicherung des Protokollfragments mit unvollständigen Metadaten.<br /><br /> **256** = Sicherung des Protokollfragments mithilfe von NORECOVERY.<br /><br /> **Wichtig:** Anstelle von **Flags** sollten die einzelnen booleschen Spalten (weiter unten von **HasBulkLoggedData** bis **IsCopyOnly** aufgeführt) verwendet werden.|  
 |**BindingID**|**uniqueidentifier**|Bindungs-ID für die Datenbank. Sie entspricht dem Wert von **sys.database_recovery_status database_guid**. Wenn eine Datenbank wiederhergestellt wird, wird ein neuer Wert zugewiesen. Weitere Informationen finden Sie unter **FamilyGUID** (weiter unten).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID für den letzten Wiederherstellungs-Verzweigungspunkt. Diese Spalte entspricht dem Wert von **last_recovery_fork_guid** in der [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)-Tabelle.<br /><br /> Bei Datensicherungen ist **RecoveryForkID** mit **FirstRecoveryForkID** identisch.|  
 |**Sortierung**|**nvarchar(128)**|Die von der Datenbank verwendete Sortierung.|  
@@ -147,10 +147,10 @@ FROM <backup_device>
 |**containment**|**tinyint** not NULL|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Zeigt den Kapselungsstatus der Datenbank an.<br /><br /> 0 = Datenbankkapselung ist deaktiviert<br /><br /> 1 = Datenbank ist in Teilkapselung|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Der Verschlüsselungsalgorithmus, der zum Verschlüsseln der Sicherung verwendet wird. NO_Encryption gibt an, dass die Sicherung nicht verschlüsselt wurde. Wenn Sie der richtige Wert nicht bestimmt werden kann sollte der Wert NULL sein.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
-|**EncryptorType**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
+|**EncryptorType**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
 > [!NOTE]  
->  Wenn für die Sicherungssätze Kennwörter definiert sind, gibt RESTORE HEADERONLY vollständige Informationen nur für den Sicherungssatz zurück, dessen Kennwort mit dem Kennwort übereinstimmt, das mit der Befehlsoption PASSWORD angegeben wird. Außerdem gibt RESTORE HEADERONLY die vollständigen Informationen zu ungeschützten Sicherungssätzen zurück. Für die anderen auf dem Medium befindlichen kennwortgeschützten Sicherungssätze wird die **BackupName**-Spalte auf '**_Password Protected_**' festgelegt; alle anderen Spalten weisen den Wert NULL auf.  
+>  Wenn für die Sicherungssätze Kennwörter definiert sind, gibt RESTORE HEADERONLY vollständige Informationen nur für den Sicherungssatz zurück, dessen Kennwort mit dem Kennwort übereinstimmt, das mit der Befehlsoption PASSWORD angegeben wird. Außerdem gibt RESTORE HEADERONLY die vollständigen Informationen zu ungeschützten Sicherungssätzen zurück. Für die anderen auf dem Medium befindlichen kennwortgeschützten Sicherungssätze wird die **BackupName**-Spalte auf ' **_Password Protected_** ' festgelegt; alle anderen Spalten weisen den Wert NULL auf.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Ein Client kann RESTORE HEADERONLY zum Abrufen aller Headerinformationen für alle Sicherungen auf einem bestimmten Sicherungsmedium verwenden. Für jede Sicherung auf dem Sicherungsmedium sendet der Server die Headerinformationen als Zeile zurück.  

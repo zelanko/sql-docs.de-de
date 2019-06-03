@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 377c2d95564e7348bdfb5de9480c7c7f5004c7f7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711181"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938159"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -50,12 +50,12 @@ Mit Secure Enclaves schützt Always Encrypted die Vertraulichkeit von Daten und 
 
 - **Direkte Verschlüsselung**: Kryptografische Vorgänge für vertrauliche Daten, wie z.B. die anfängliche Datenverschlüsselung oder das Rotieren eines Spaltenverschlüsselungsschlüssels, werden innerhalb der Secure Enclave ausgeführt und erfordern kein Verschieben der Daten an einen Ort außerhalb der Datenbank. Sie können die direkte Verschlüsselung mit der Transact-SQL-Anweisung ALTER TABLE ausführen. Sie benötigen keine Tools wie etwa den Always Encrypted-Assistenten in SSMS oder das PowerShell-Cmdlet „Set-SqlColumnEncryption“.
 
-- **Umfangreiche Berechnungen (Vorschau)**: Vorgänge in verschlüsselten Spalten, wie z.B. Musterabgleich (das LIKE-Prädikat) und Bereichsvergleiche, werden innerhalb der Secure Enclave unterstützt. Damit lässt sich Always Encrypted für eine Vielzahl von Anwendungen und Szenarien verwenden, bei denen solche Berechnungen innerhalb des Datenbanksystems ausgeführt werden müssen.
+- **Umfangreiche Berechnungen (Vorschau)** : Vorgänge in verschlüsselten Spalten, wie z.B. Musterabgleich (das LIKE-Prädikat) und Bereichsvergleiche, werden innerhalb der Secure Enclave unterstützt. Damit lässt sich Always Encrypted für eine Vielzahl von Anwendungen und Szenarien verwenden, bei denen solche Berechnungen innerhalb des Datenbanksystems ausgeführt werden müssen.
 
 > [!IMPORTANT]
 > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] stehen für umfangreiche Berechnungen noch einige Leistungsoptimierungen aus. Zudem weisen solche Berechnungen eine eingeschränkte Funktionalität auf (z.B. keine Indizierung) und sind derzeit standardmäßig deaktiviert. Informationen zum Aktivieren umfangreicher Berechnungen finden Sie unter [Aktivieren von umfangreichen Berechnungen](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] verwendet Always Encrypted über [Virtualisierungsbasierte Sicherheit (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) abgesicherte Secure Enclaves (auch als VSM-Enclaves bezeichnet) im Windows-Arbeitsspeicher.
+In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] verwendet Always Encrypted über [Virtualisierungsbasierte Sicherheit (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) abgesicherte Secure Enclaves (auch als VSM-Enclaves bezeichnet) im Windows-Arbeitsspeicher.
 
 ## <a name="secure-enclave-attestation"></a>Nachweis von Secure Enclaves
 
@@ -141,6 +141,6 @@ Die folgenden Einschränkungen gelten für die aktuelle Vorschau, eine Lösung i
 
 - Für umfangreiche Berechnungen für Nicht-Unicode-Zeichenfolgenspalten (char, varchar) muss eine BIN2-Sortierung auf Datenbankebene festgelegt werden. Weitere Informationen finden Sie bei den besonderen Überlegungen für Nicht-Unicode-Zeichenfolgenspalten unter [Verwalten von Sortierungen](configure-always-encrypted-enclaves.md#manage-collations).
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Next Steps
 
-- Richten Sie Ihre Testumgebung ein, und testen Sie die Funktionalität von Always Encrypted mit Secure Enclaves in SSMS. Weitere Informationen finden Sie unter [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Informationen zum Einrichten Ihrer Testumgebung mit anschließendem Testen der Funktionalität von Always Encrypted mit Secure Enclaves in SSMS finden Sie unter [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

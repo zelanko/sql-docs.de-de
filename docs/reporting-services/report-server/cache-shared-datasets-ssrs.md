@@ -1,6 +1,6 @@
 ---
 title: Zwischenspeichern von freigegebenen Datasets (SSRS) | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582217"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175602"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Zwischenspeichern von freigegebenen Datasets (SSRS)
   Abfrageergebnisse für ein freigegebenes Dataset können in einen Cache kopiert werden, um konsistente Daten für mehrere Berichte bereitzustellen und die Antwortzeit für die Datasetabfrage zu verbessern. Freigegebene Datasets können ähnlich wie Berichte so konfiguriert werden, dass sie bei der erstmaligen Verwendung oder nach einem angegebenen Zeitplan zwischengespeichert werden.  
@@ -51,7 +51,7 @@ ms.locfileid: "65582217"
   
  Während die Abfrageergebnisse für eine bestimmte Parameterkombination im Cache enthalten sind, verwendet jeder Bericht, dessen Verarbeitung gestartet wird und der einen Verweis auf das freigegebene Dataset mit den jeweiligen Parameterwerten enthält, die zwischengespeicherten Daten.  
   
- Sie können angeben, wie lange die Daten im Cache beibehalten werden, bevor sie ungültig werden. Weitere Informationen finden Sie unter [Zwischenspeichern (Seite), Freigegebene Datasets &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ Sie können angeben, wie lange die Daten im Cache beibehalten werden, bevor sie ungültig werden. Weitere Informationen finden Sie unter [Arbeiten mit freigegebenen Datasets](../../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="preloading-the-cache"></a>Vorabladen des Caches  
  Sie können den Cache vorab laden, indem Sie einen Cacheaktualisierungsplan erstellen. Mit einem Aktualisierungsplan können Sie unter Verwendung eines elementspezifischen Zeitplans oder eines freigegebenen Zeitplans angeben, wie oft der Cache aktualisiert werden soll. Damit nicht mehrere Cacheeinträge für das gleiche Element gespeichert werden, sollte der angegebene Zeitplan genügend Zeit zur Abfrageverarbeitung in der externen Datenquelle vorsehen. Wenn die Abfrageausführung z. B. 20 Minuten benötigt, sollte der Aktualisierungszeitplan größer als 20 Minuten sein. Weitere Informationen finden Sie unter [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "65582217"
   
 -   Sie benötigen die ReadPolicy-Berechtigung und UpdatePolicy-Berechtigung für das freigegebene Dataset.  
   
- Cacheaktualisierungspläne können sowohl auf freigegebene Datasets als auch auf Berichte angewendet werden. Weitere Informationen finden Sie unter [Optionen zur Cacheaktualisierung (Berichts-Manager)](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Cacheaktualisierungspläne können sowohl auf freigegebene Datasets als auch auf Berichte angewendet werden. Weitere Informationen finden Sie unter [Zwischenspeichern von Berichten &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)bestand darin die einzige Möglichkeit, den Cache vorab zu laden.  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Bedingungen, die zum Ablaufen des Caches führen  
  Die folgenden Bedingungen können bewirken, dass ein Cache für ein freigegebenes Dataset ungültig wird.  
@@ -93,7 +93,7 @@ ms.locfileid: "65582217"
   
  Aktualisierungen an Cacheaktualisierungsplänen für freigegebene Datasets haben keinen Einfluss auf Berichte, die bereits verarbeitet werden. Aktualisierungen an einem Cacheaktualisierungsplan wirken sich nur auf zukünftig gestartete Berichte aus, die auf das freigegebene Dataset verweisen.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von freigegebenen Datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>Siehe auch
   
+ [Verwalten von freigegebenen Datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
   

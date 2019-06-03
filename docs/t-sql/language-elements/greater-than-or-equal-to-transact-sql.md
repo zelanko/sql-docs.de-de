@@ -21,23 +21,23 @@ helpviewer_keywords:
 - greater than or equal to operator (>=)
 - '>= (greater than or equal to operator)'
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f946a30bf575ab9217a1f97f07d2b8c21580d63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 721a7795f027e3641e3a8f5ab2c740e17c9cff57
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618548"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982284"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (größer oder gleich) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Vergleicht zwei Ausdrücke nach dem Kriterium größer als oder gleich (ein Vergleichsoperator).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ expression >= expression
   
 ## <a name="arguments"></a>Argumente  
  *expression*  
- Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Beide Ausdrücke müssen implizit konvertierbare Datentypen besitzen. Die Konvertierung hängt von den [Rangfolgeregeln für Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md) ab.  
+ Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Beide Ausdrücke müssen implizit konvertierbare Datentypen besitzen. Die Konvertierung folgt den [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Boolean  
@@ -86,7 +86,7 @@ DepartmentID Name
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [= &#40;Equals&#41; &#40;Transact-SQL&#41; (= &#40;ist gleich&#41; &#40;Transact-SQL&#41;)](../../t-sql/language-elements/equals-transact-sql.md)   

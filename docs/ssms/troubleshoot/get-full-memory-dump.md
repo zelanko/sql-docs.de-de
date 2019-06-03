@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: ff78af4ffcfe530ba28d47ec57852486523f859a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822508"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983128"
 ---
 # <a name="get-full-memory-dump"></a>Erhalten eines vollständigen Speicherabbilds
 
@@ -88,6 +88,15 @@ Führen Sie zum Erfassen von Diagnoseinformationen für die Problembehandlung ei
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. Komprimieren Sie den Ordner in eine ZIP-Datei.
+
+## <a name="share-the-information"></a>Freigeben der Informationen
+
+1. Zum Freigeben der Informationen für das SSMS-Team protokollieren Sie das Problem auf https://aka.ms/sqlfeedback.
+
+2. Geben Sie dann die erfasste Speicherabbilddatei auf OneDrive (oder Ähnlichem) frei, von wo die Datei abgerufen werden kann.
+
+    > [!Important]
+    > Speicherabbilddateien können vertrauliche Informationen enthalten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

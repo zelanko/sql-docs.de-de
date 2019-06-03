@@ -1,7 +1,7 @@
 ---
 title: FOR XML (SQL Server) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/03/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: d21557ca1157c8331ce9a5175619097b962d13f2
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f0cc7033845f55a6df33a58d7b100c8a59926821
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429326"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175099"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Eine SELECT-Abfrage gibt Ergebnisse als Rowset zurück. Sie können optional die formalen Ergebnisse einer SQL-Abfrage als XML abrufen, indem Sie die FOR XML-Klausel in der Abfrage angeben. Die FOR XML-Klausel kann in Abfragen der obersten Ebene sowie in Unterabfragen verwendet werden. Die FOR XML-Klausel der obersten Ebene kann nur in der SELECT-Anweisung verwendet werden. In Unterabfragen kann FOR XML in den INSERT-, UPDATE- und DELETE-Anweisungen verwendet werden. Die Klausel kann auch in Zuweisungsanweisungen verwendet werden.
+Eine SELECT-Abfrage gibt Ergebnisse als Rowset zurück. Sie können optional die formalen Ergebnisse einer SQL-Abfrage als XML abrufen, indem Sie die FOR XML-Klausel in der Abfrage angeben. Die FOR XML-Klausel kann in Abfragen der obersten Ebene sowie in Unterabfragen verwendet werden. Die FOR XML-Klausel der obersten Ebene kann nur in der SELECT-Anweisung verwendet werden. In Unterabfragen kann FOR XML in den INSERT-, UPDATE- und DELETE-Anweisungen verwendet werden. FOR XML kann auch in Zuweisungsanweisungen verwendet werden.
 
 In einer FOR XML-Klausel geben Sie einen der folgenden Modi an:
 
@@ -69,7 +69,7 @@ SELECT Cust.CustomerID,
 FROM Sales.Customer Cust 
 INNER JOIN Sales.SalesOrderHeader OrderHeader
 ON Cust.CustomerID = OrderHeader.CustomerID
-FOR XML AUTO
+FOR XML AUTO;
 ```
 
 ## <a name="the-for-xml-clause-and-server-names"></a>Die FOR XML-Klausel und Servernamen
@@ -88,7 +88,7 @@ SELECT TOP 1 LastName
 
 **Lokaler Server**: &nbsp; Wenn `ServerName` ein lokaler Server ist, gibt die Abfrage folgenden Text zurück:
 
-```console
+```xml
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```
 
@@ -96,7 +96,7 @@ SELECT TOP 1 LastName
 
 **Netzwerkserver**: &nbsp; Wenn `ServerName` ein Netzwerkserver ist, gibt die Abfrage folgenden Text zurück:
 
-```console
+```xml
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />
 ```
 
@@ -112,7 +112,7 @@ SELECT TOP 1 LastName
 
 Die Abfrage ist jetzt eindeutig und gibt den folgenden Text zurück:
 
-```console
+```xml
 <x LastName="Achong"/>
 ```
 

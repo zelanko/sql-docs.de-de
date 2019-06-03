@@ -22,15 +22,15 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 28078c267d7d4a6ec1b5601c5982b20db006e56c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62b1c5c80e48ad4633b8ce1a5affb43bd36a6257
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641508"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943432"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47641508"
   
  **Wichtig** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) und [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md). Wenn die PERMISSIONS-Funktion weiterhin verwendet wird, verlangsamt sich möglicherweise die Leistung.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,7 +56,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  Dies ist der optionale Name einer Spalte, für die Berechtigungsinformationen zurückgegeben werden. Bei der Spalte muss es sich um einen gültigen Spaltennamen in der durch *objectid* angegebenen Tabelle handeln.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  Mithilfe von PERMISSIONS kann festgestellt werden, ob der aktuelle Benutzer über die Berechtigungen verfügt, die zum Ausführen einer Anweisung oder zum Erteilen einer Berechtigung für einen anderen Benutzer mithilfe von GRANT erforderlich sind.  
@@ -143,7 +143,7 @@ ELSE
    PRINT 'You may not GRANT INSERT permissions on Person.Address.';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   

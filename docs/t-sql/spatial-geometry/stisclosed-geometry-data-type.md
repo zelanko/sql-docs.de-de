@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsClosed (geometry Data Type)
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5be28fe6b1533c6920c83171130a2d4104784fe2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1212beb7f65789ec986c45af1d1a2b2c3eb8d83f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779142"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938832"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (geometry-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Gibt 1 zurück, wenn die Ausgangs- und Endpunkte der angegebenen **geometry**-In
  Alle **Polygon** -Instanzen werden als geschlossen betrachtet.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird eine `LineString`-Instanz erstellt und `STIsClosed()` verwendet, um zu überprüfen, ob die `LineString`-Instanz geschlossen ist.  
+ Im folgenden Beispiel wird eine `LineString` -Instanz erstellt und `STIsClosed()` verwendet, um zu überprüfen, ob die `LineString` -Instanz geschlossen ist.  
   
 ```  
 DECLARE @g geometry;  
@@ -56,7 +56,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

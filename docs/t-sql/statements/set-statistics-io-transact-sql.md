@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760123"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983087"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,20 +56,20 @@ SET STATISTICS IO { ON | OFF }
   
 |Ausgabeelement|Bedeutung|  
 |-----------------|-------------|  
-|**Tabelle**|Der Name der Tabelle.|  
+|**Table**|Der Name der Tabelle.|  
 |**Scananzahl**|Die Anzahl von Suchen oder Scans, die nach Erreichen der Blattebene in beliebiger Richtung gestartet wurden, um alle Werte zum Erstellen des letzten Datasets für die Ausgabe abzurufen.<br /><br /> Die Scananzahl beträgt „0“ (null), wenn der verwendete Index ein eindeutiger Index oder ein gruppierter Index für eine Primärschlüsselspalte ist und Sie nur einen Wert suchen. Beispiel: `WHERE Primary_Key_Column = <value>`.<br /><br /> Die Scananzahl beträgt „1“, wenn Sie anhand eines nicht eindeutig gruppierten Index, der für eine Nicht-Primärschlüsselspalte definiert ist, nach einem Wert suchen. Auf diese Weise wird nach doppelten Werten eines Schlüsselwerts gesucht, der als Suchwert verwendet wird. Beispiel: `WHERE Clustered_Index_Key_Column = <value>`.<br /><br /> Die Scananzahl ist „N“, wenn „N“ der Anzahl unterschiedlicher Suchen oder Scans entspricht, die auf der Blattebene nach links oder rechts gestartet wurden, nachdem ein Schlüsselwert anhand des Indexschlüssels ermittelt wurde.|  
 |**Logische Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten|  
 |**Physische Lesevorgänge**|Anzahl der vom Datenträger gelesenen Seiten|  
 |**Read-Ahead-Lesevorgänge**|Anzahl der Seiten, die für die Abfrage im Cache platziert wurden|  
-|**Logische LOB-Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten des Typs **text**, **ntext**, **image** oder eines Typs für umfangreiche Werte (z.B. **varchar(max)**, **nvarchar(max)** und **varbinary(max)**).|  
-|**Physische LOB-Lesevorgänge**|Anzahl der Seiten des Typs **text**, **ntext**, **image** oder eines Typs für umfangreiche Werte, die vom Datenträger gelesen wurden.|  
-|**Read-Ahead-LOB-Lesevorgänge**|Anzahl der Seiten des Typs **text**, **ntext**, **image** oder eines Typs für umfangreiche Wertdaten, die für die Abfrage im Cache platziert wurden.|  
-  
- Die Einstellung von SET STATISTICS IO wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
-  
+|**Logische LOB-Lesevorgänge**|Anzahl der aus dem Datencache gelesenen Seiten Umfasst **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** oder Columnstore-Indexseiten.|  
+|**Physische LOB-Lesevorgänge**|Anzahl der vom Datenträger gelesenen Seiten Umfasst **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** oder Columnstore-Indexseiten.|  
+|**Read-Ahead-LOB-Lesevorgänge**|Anzahl der Seiten, die für die Abfrage im Cache platziert wurden Umfasst **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** oder Columnstore-Indexseiten.|
+
+ Die Einstellung von SET STATISTICS IO wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.
+
 > [!NOTE]  
->  Wenn Transact-SQL-Anweisungen LOB-Spalten abrufen, kann es vorkommen, dass bestimmte LOB-Abrufvorgänge die LOB-Struktur mehrere Male durchlaufen müssen. Dadurch meldet SET STATISTICS IO möglicherweise mehr logische Lesevorgänge als erwartet.  
-  
+> Wenn Transact-SQL-Anweisungen LOB-Spalten abrufen, kann es vorkommen, dass bestimmte LOB-Abrufvorgänge die LOB-Struktur mehrere Male durchlaufen müssen. Dadurch meldet SET STATISTICS IO möglicherweise mehr logische Lesevorgänge als erwartet.
+
 ## <a name="permissions"></a>Berechtigungen  
  Für die Verwendung von SET STATISTICS IO müssen die Benutzer über die geeigneten Berechtigungen zum Ausführen der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung verfügen. Die SHOWPLAN-Berechtigung ist nicht erforderlich.  
   

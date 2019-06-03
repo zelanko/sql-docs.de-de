@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2308cc29c0cbbee8b72177e573d51239c9f8f5de
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480326"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981166"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,8 @@ Die folgenden [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Funkti
 |Sichern und Wiederherstellen|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD ist weiterhin veraltet. BACKUP { DATABASE &#124; LOG } WITH PASSWORD und BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD werden eingestellt.|Keine.|BACKUP DATABASE oder LOG WITH PASSWORD<br /><br /> BACKUP DATABASE oder LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |Kompatibilitätsgrad|Upgrade von Version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Wenn eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version aus der [Unterstützung](https://aka.ms/sqllifecycle) herausfällt, wird der zugehörige Datenbankkompatibilitätsgrad als veraltet markiert. Wir werden jedoch so lange wie möglich Anwendungen unterstützen, die für irgendeinen unterstützten Datenbankkompatibilitätsgrad zertifiziert sind, um die Upgrades zu vereinfachen. Weitere Informationen zu den Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Datenbank-Kompatibilitätsgrad 100|108|  
 |Datenbankobjekte|Funktionalität zum Zurückgeben von Resultsets von Triggern|None|Zurückgeben von Ergebnissen aus Triggern|12|  
-|Verschlüsselung|Die Verschlüsselung mit RC4 oder RC4_128 ist veraltet. Die Entfernung ist für die nächste Version geplant. Die Entschlüsselung von RC4 und RC4_128 sind nicht veraltet.|Verwenden Sie einen anderen Verschlüsselungsalgorithmus, z. B. AES.|Veralteter Verschlüsselungsalgorithmus|253|  
+|Verschlüsselung|Die Verschlüsselung mit RC4 oder RC4_128 ist veraltet. Die Entfernung ist für die nächste Version geplant. Die Entschlüsselung von RC4 und RC4_128 sind nicht veraltet.|Verwenden Sie einen anderen Verschlüsselungsalgorithmus, z. B. AES.|Veralteter Verschlüsselungsalgorithmus|253|    
+|Hashalgorithmen|Die Verwendung von MD2, MD4, MD5, SHA und SHA1 ist veraltet.|Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist.|Veralteter Hashalgorithmus|None|  
 |Remoteserver|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern. sp_addserver kann nur mit der lokalen Option verwendet werden.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |Remoteserver|\@\@remserver|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|None|None|  
 |Remoteserver|SET REMOTE_PROC_TRANSACTIONS|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -78,8 +79,8 @@ Die folgenden [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Funkti
 |Datentypen|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |Datentypen|**timestamp** -Syntax für **rowversion** -Datentyp|**rowversion** -Datentypsyntax|timestamp|158|  
 |Datentypen|Fähigkeit, NULL-Werte in **timestamp** -Spalten einzufügen|Verwenden Sie stattdessen DEFAULT.|INSERT NULL in TIMESTAMP-Spalten|179|  
-|Datentypen|Tabellenoption 'text in row'|Verwenden Sie stattdessen die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)**. Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Tabellenoption 'text in row'|9|  
-|Datentypen|Datentypen:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Verwenden Sie stattdessen die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** .|Datentypen: **text**, **ntext** oder **image**.|4|  
+|Datentypen|Tabellenoption 'text in row'|Verwenden Sie stattdessen die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** . Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Tabellenoption 'text in row'|9|  
+|Datentypen|Datentypen:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Verwenden Sie stattdessen die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** .|Datentypen: **text**, **ntext** oder **image**.|4|  
 |Datenbankverwaltung|sp_attach_db<br /><br /> sp_attach_single_file_db|CREATE DATABASE-Anweisung mit der FOR ATTACH-Option. Verwenden Sie die FOR ATTACH_REBUILD_LOG-Option, um mehrere Protokolldateien neu zu erstellen, wenn mindestens eine Datei einen neuen Speicherort aufweist.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Datenbankobjekte|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|DEFAULT-Schlüsselwort in CREATE TABLE und ALTER TABLE|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Datenbankobjekte|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CHECK-Schlüsselwort in CREATE TABLE und ALTER TABLE|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -99,7 +100,6 @@ Die folgenden [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] -Funkti
 |Programmierung der erweiterten gespeicherten Prozedur|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|Verwenden Sie stattdessen die CLR-Integration.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Erweiterte gespeicherte Prozeduren|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Verwenden Sie CREATE_LOGIN<br /><br /> Verwenden Sie DROP LOGIN und das IsIntegratedSecurityOnly-Argument von SERVERPROPERTY.|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
 |Funktionen|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Hashalgorithmen|Die Algorithmen MD2, MD4, MD5, SHA und SHA1. Diese sollten nicht verwendet werden.|Verwenden Sie SHA2_256 oder SHA2_512.|Veralteter Hashalgorithmus||  
 |Hohe Verfügbarkeit|Datenbankspiegelung|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> Wenn die Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)]nicht unterstützt, verwenden Sie den Protokollversand.|DATABASE_MIRRORING|267|  
 |Indexoptionen|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Indexoptionen|CREATE TABLE-, ALTER TABLE- oder CREATE INDEX-Syntax ohne Klammern um die Optionen|Schreiben Sie Anweisung so um, dass sie die aktuelle Syntax verwendet.|INDEX_OPTION|33|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB method
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f5dc6b841fd0f19f418a6c1b479231fe2cbc3539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5dc363a4b22bbd8fb8cd808d615174072fe26cc
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661098"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936623"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *WKB_multipoint*  
- Die WKB-Darstellung der **geographyMultiPoint**-Instanz, die zurückgegeben werden soll. *WKB_multipoint* ist ein **varbinary(max)**-Ausdruck.  
+ Die WKB-Darstellung der **geographyMultiPoint**-Instanz, die zurückgegeben werden soll. *WKB_multipoint* ist ein **varbinary(max)** -Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyMultiPoint**-Instanz darstellt, die Sie zurückgeben möchten.  
@@ -63,7 +63,7 @@ SET @g = geography::STMPointFromWKB(0x0104000000020000000101000000D7A3703D0A975E
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

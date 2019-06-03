@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromText method
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fa121faac168a2d3729145eb9b87d5e4e4416fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 318f58fb2bde2d60c1937191a54fec49caabf4c6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845078"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936571"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumente  
  *multipolygon_tagged_text*  
- Die WKT-Darstellung der **geographyMultiPolygon**-Instanz, die zurückgegeben werden soll. *multipolygon_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
+ Die WKT-Darstellung der **geographyMultiPolygon**-Instanz, die zurückgegeben werden soll. *multipolygon_tagged_text* ist ein **nvarchar(max)** -Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyMultiPolygon**-Instanz darstellt, die zurückgegeben werden soll.  
@@ -47,7 +47,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 ## <a name="return-types"></a>Rückgabetypen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
- Rückgabetyp: **Sql Geography**  
+ CLR-Rückgabetyp: **Sql Geography**  
   
  OGC-Typ: **MultiPolygon**  
   
@@ -63,7 +63,7 @@ SET @g = geography::STMPolyFromText('MULTIPOLYGON(((-122.358 47.653, -122.348 47
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

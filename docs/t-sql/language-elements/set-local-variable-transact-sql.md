@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 20febb0b33e0da08d8620232195e183c7c5162f3
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572823"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981768"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>Argumente  
 **@** _local_variable_  
-Der Name einer Variablen eines beliebigen Typs mit Ausnahme von **cursor**, **text**, **ntext**, **image** oder **table**. Variablennamen müssen mit einem at-Zeichen (**@**) beginnen. Variablennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen.  
+Der Name einer Variablen eines beliebigen Typs mit Ausnahme von **cursor**, **text**, **ntext**, **image** oder **table**. Variablennamen müssen mit einem at-Zeichen ( **@** ) beginnen. Variablennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen.  
   
 *property_name*  
 Eigenschaft eines benutzerdefinierten Typs.  
@@ -80,9 +80,9 @@ Eigenschaft eines benutzerdefinierten Typs.
 Der Name eines benutzerdefinierten CLR-Typs (Common Language Runtime).  
   
 `{ . | :: }`  
-Gibt eine Methode für einen benutzerdefinierten CLR-Typ an. Verwenden Sie bei einer Instanzmethode (nicht statisch) einen Punkt (**.**). Verwenden Sie bei einer statischen Methode zwei Doppelpunkte(**::**). Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
+Gibt eine Methode für einen benutzerdefinierten CLR-Typ an. Verwenden Sie bei einer Instanzmethode (nicht statisch) einen Punkt ( **.** ). Verwenden Sie bei einer statischen Methode zwei Doppelpunkte( **::** ). Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
   
-_method_name_ **(** _argument_ [ **,**... *n* ] **)**  
+_method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 Methode eines benutzerdefinierten Typs, die ein oder mehrere Argumente umfassen kann, um den Status einer Instanz eines Typs zu ändern. Statische Methoden müssen öffentlich sein.  
   
 **@** _SQLCLR_local_variable_  
@@ -167,14 +167,14 @@ READ ONLY
 Verhindert, dass Updates über diesen Cursor erfolgen. Auf den Cursor kann nicht in einer WHERE CURRENT OF-Klausel in einer UPDATE- oder DELETE-Anweisung verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann. Dieses Schlüsselwort unterscheidet sich vom vorherigen READ_ONLY durch das Leerzeichen zwischen READ und ONLY anstelle eines Unterstriches.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *column_name* [**,**...*n*] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn keine Liste angegeben wird, können alle Spalten aktualisiert werden, es sei denn, der Cursor wurde mit der Option READ ONLY definiert.  
+Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *column_name* [ **,** ...*n*] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn keine Liste angegeben wird, können alle Spalten aktualisiert werden, es sei denn, der Cursor wurde mit der Option READ ONLY definiert.  
   
 ## <a name="remarks"></a>Remarks  
 Nach dem Deklarieren einer Variablen wird diese auf NULL initialisiert. Verwenden Sie die SET-Anweisung, um einer deklarierten Variablen einen anderen Wert als NULL zuzuweisen. Die SET-Anweisung, die der Variablen einen Wert zuweist, gibt einen einzelnen Wert zurück. Wenn Sie mehrere Variablen initialisieren, verwenden Sie eine separate SET-Anweisung für jede lokale Variable.  
   
 Sie können Variablen nur in Ausdrücken verwenden, nicht anstelle von Objektnamen oder Schlüsselwörtern. Um dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zu erstellen, verwenden Sie EXECUTE.  
   
-Die Syntaxregeln für SET **@**_cursor_variable_ schließen die Schlüsselwörter LOCAL und GLOBAL nicht ein. Wenn Sie die Syntax SET **@**_cursor_variable_ = CURSOR... verwenden, wird der Cursor je nach Einstellung der Datenbankoption „default to local cursor“ als GLOBAL oder LOCAL erstellt.  
+Die Syntaxregeln für SET **@** _cursor_variable_ schließen die Schlüsselwörter LOCAL und GLOBAL nicht ein. Wenn Sie die Syntax SET **@** _cursor_variable_ = CURSOR... verwenden, wird der Cursor je nach Einstellung der Datenbankoption „default to local cursor“ als GLOBAL oder LOCAL erstellt.  
   
 Cursorvariablen sind stets lokal, selbst wenn sie auf einen globalen Cursor verweisen. Wenn eine Cursorvariable auf einen globalen Cursor verweist, besitzt der Cursor einen globalen und einen lokalen Verweis. Weitere Informationen finden Sie unter Beispiel C.  
   
@@ -185,7 +185,7 @@ Sie können den Verbundzuweisungsoperator stets verwenden, wenn auf der rechten 
 Verwenden Sie keine Variable in einer SELECT-Anweisung, um Werte zu verketten (d. h., um Aggregatwerte zu berechnen). Dies kann zu unerwarteten Abfrageergebnissen führen. Dies liegt daran, dass alle Ausdrücke in der SELECT-Liste (einschließlich Zuweisungen) für jede Ausgabezeile nicht zwangsläufig nur einmal ausgeführt werden. Weitere Informationen finden Sie in diesem [KB-Artikel](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET **@**_local_variable_ verwenden.  
+Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET **@** _local_variable_ verwenden.  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 866afe80cb6c93260b43eb3150b12df78ad813e5
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9052c8192f7ea9e8fb7155a027344742a443a1b3
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334767"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175704"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT – FOR Clause (Transact-SQL)
 
@@ -179,7 +179,7 @@ JSON
  XML  
  Gibt an, dass die Ergebnisse einer Abfrage als XML-Dokument zurückgegeben werden. Einer der folgenden XML-Modi muss angegeben werden: RAW, AUTO, EXPLICIT. Weitere Informationen zu XML-Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
   
- RAW [ **('**_ElementName_**')** ]  
+ RAW [ **('** _ElementName_ **')** ]  
  Verwendet das Abfrageergebnis und transformiert jede Zeile des Resultsets in ein XML-Element mit dem generischen Bezeichner \<row /> als Elementtag. Sie können optional einen Namen für das Zeilenelement angeben. Die resultierende XML-Ausgabe verwendet den angegebenen *ElementName* als das für jede Zeile generierte Zeilenelement. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).
   
  AUTO  
@@ -210,20 +210,23 @@ _Verhindern von unerwünschten Zeilenumbrüchen:_ Möglicherweise verwenden Sie 
 
 <!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
 
- XMLSCHEMA [ **('**_TargetNameSpaceURI_**')** ]  
+ XMLSCHEMA [ **('** _TargetNameSpaceURI_ **')** ]  
  Gibt das XSD-Inlineschema zurück. Beim Angeben dieser Direktive können Sie optional einen Zielnamespace-URI angeben, der den angegebenen Namespace im Schema zurückgibt. Weitere Informationen finden Sie unter [Generieren eines XSD-Inlineschemas](../../relational-databases/xml/generate-an-inline-xsd-schema.md).  
   
  ELEMENTS  
  Gibt an, dass die Spalten als Unterelemente zurückgegeben werden. Andernfalls werden sie XML-Attributen zugeordnet. Diese Option wird nur in den Modi RAW, AUTO und PATH unterstützt. Weitere Informationen finden Sie unter [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  XSINIL  
- Gibt an, dass ein Element, dessen Attribut **xsi:nil** auf **TRUE** festgelegt ist, für NULL-Spaltenwerte erstellt wird. Diese Option kann nur mit der ELEMENTS-Anweisung angegeben werden. Weitere Informationen finden Sie unter [Generieren von Elementen für NULL-Werte mithilfe des XSINIL-Parameters](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).  
+ Gibt an, dass ein Element, dessen Attribut **xsi:nil** auf **TRUE** festgelegt ist, für NULL-Spaltenwerte erstellt wird. Diese Option kann nur mit der ELEMENTS-Anweisung angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:
+
+- [Generieren von NULL-Werten mithilfe des XSINIL-Parameters](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)
+- [FOR XML in der SELECT-Anweisung](../../relational-databases/xml/for-xml-sql-server.md)
   
  ABSENT  
  Gibt an, dass dem XML-Ergebnis für NULL-Spaltenwerte keine entsprechenden XML-Elemente hinzugefügt werden. Diese Option kann nur mit der ELEMENTS-Direktive angegeben werden.  
   
- PATH [ **('**_ElementName_**')** ]  
- Generiert für jede Zeile im Resultset einen \<row>-Elementwrapper. Sie können optional einen Elementnamen für den \<row>-Elementwrapper angeben. Bei einer leeren Zeichenfolge, wie z.B. FOR XML PATH (**''**) ), wird kein Wrapperelement generiert. Die Verwendung von PATH kann eine einfachere Alternative zu mithilfe der EXPLICIT-Direktive geschriebenen Abfragen darstellen. Weitere Informationen finden Sie unter [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
+ PATH [ **('** _ElementName_ **')** ]  
+ Generiert für jede Zeile im Resultset einen \<row>-Elementwrapper. Sie können optional einen Elementnamen für den \<row>-Elementwrapper angeben. Bei einer leeren Zeichenfolge, wie z.B. FOR XML PATH ( **''** ) ), wird kein Wrapperelement generiert. Die Verwendung von PATH kann eine einfachere Alternative zu mithilfe der EXPLICIT-Direktive geschriebenen Abfragen darstellen. Weitere Informationen finden Sie unter [Verwenden des PATH-Modus mit FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md).  
   
  BINARY BASE64  
  Gibt an, dass die Abfrage die Binärdaten im BINARY BASE64-Format codiert zurückgibt. Zum Abrufen von Binärdaten im RAW- oder EXPLICIT-Modus muss diese Option angegeben werden. Im AUTO-Modus ist sie die Standardeinstellung.  
@@ -231,7 +234,7 @@ _Verhindern von unerwünschten Zeilenumbrüchen:_ Möglicherweise verwenden Sie 
  TYPE  
  Gibt an, dass die Abfrage Ergebnisse als **XML**-Typ zurückgibt. Weitere Informationen finden Sie unter [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md).  
   
- ROOT [ **('**_RootName_**')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  Gibt an, dass ein einzelnes Element der obersten Ebene dem als Ergebnis zurückgegebenen XML-Dokument hinzugefügt wird. Optional können Sie den zu generierenden Stammelementnamen angeben. Wenn der optionale Stammelementname angegeben wird, wird das \<root>-Standardelement hinzugefügt.  
   
  Weitere Informationen finden Sie unter [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md).  
@@ -267,7 +270,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  Schließen Sie NULL-Werte in die JSON-Ausgabe ein, indem Sie die Option **INCLUDE_NULL_VALUES** mit der **FOR JSON**-Klausel angeben. Wenn Sie diese Option nicht angeben, enthält die Ausgabe in den Abfrageergebnissen keine JSON-Eigenschaften für NULL-Werte. Weitere Informationen und Beispiele finden Sie unter [Include Null Values in JSON Output with the INCLUDE_NULL_VALUES Option &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md) (Einschließen von NULL-Werten in die JSON-Ausgabe mit der Option INCLUDE_NULL_VALUES (SQL Server)).  
   
- ROOT [ **('**_RootName_**')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  Fügen Sie ein einzelnes Element der obersten Ebene zur JSON-Ausgabe hinzu, indem Sie die Option **ROOT** mit der **FOR JSON**-Klausel angeben. Wenn Sie die Option **ROOT** nicht angeben, besitzt die JSON-Ausgabe kein Stammelement. Weitere Informationen und Beispiele finden Sie unter [Add a Root Node to JSON Output with the ROOT Option &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md) (Hinzufügen eines Stammknotens zur JSON-Ausgabe mithilfe der ROOT-Option (SQL Server)).  
   
  WITHOUT_ARRAY_WRAPPER  

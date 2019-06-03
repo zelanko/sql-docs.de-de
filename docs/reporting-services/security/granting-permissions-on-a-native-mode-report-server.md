@@ -1,6 +1,6 @@
 ---
 title: Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579827"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175635"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bestimmt mithilfe der rollenbasierten Autorisierung und eines Authentifizierungssubsystems, wer Vorgänge ausführen und auf Elemente auf einem Berichtsserver zugreifen kann. Die rollenbasierte Autorisierung teilt die Aktionen, die ein Benutzer oder eine Gruppe ausführen kann, in Rollen ein. Die Authentifizierung basiert auf der integrierten Windows-Authentifizierung oder auf einem von Ihnen bereitgestellten benutzerdefinierten Authentifizierungsmodul. Bei beiden Authentifizierungstypen können vordefinierte oder benutzerdefinierte Rollen verwendet werden.  
@@ -41,9 +41,9 @@ ms.locfileid: "65579827"
   
 2.  Identifizieren Sie, für welche Benutzer und Gruppen der Zugriff auf den Berichtsserver erforderlich ist und auf welcher Ebene. Die meisten Benutzer sollten der **Browser** -Rolle oder der **Berichts-Generator** -Rolle zugewiesen werden. Eine kleinere Anzahl von Benutzern sollte der **Verleger** -Rolle zugewiesen werden. **Inhalts-Manager**sollten nur sehr wenige Benutzer zugewiesen werden.  
   
-3.  Weisen Sie mithilfe des Berichts-Managers im Stammordner (dem Ordner auf der obersten Ebene der Ordnerhierarchie des Berichtsservers) Rollen für jeden Benutzer oder jede Gruppe zu, der bzw. die Zugriff benötigt.  
+3.  Verwenden Sie das Webportal, um im Stammordner (dem Ordner auf der obersten Ebene der Ordnerhierarchie des Berichtsservers) Rollen für jeden Benutzer oder jede Gruppe zuzuweisen, der bzw. die Zugriff benötigt.  
   
-4.  Erstellen Sie auf Websiteebene im Berichts-Manager auf der Seite „Siteeinstellungen“ für jeden Benutzer und jede Gruppe mithilfe der vordefinierten Rollen **Systembenutzer** und **Systemadministrator**eine Rollenzuweisung auf Systemebene.  
+4.  Erstellen Sie im Webportal auf der Seite „Websiteeinstellungen“ mithilfe der vordefinierten Rollen **Systembenutzer** und **Systemadministrator** eine Rollenzuweisung auf Systemebene für jeden Benutzer und jede Gruppe.  
   
 5.  Erstellen Sie nach Bedarf zusätzliche Rollenzuweisungen für bestimmte Ordner, Berichte und andere Elemente. Erstellen Sie keine große Anzahl von Rollenzuweisungen. Wenn Sie zu viele Rollenzuweisungen erstellen, ist es schwierig, den Überblick über die verschiedenen Berechtigungsebenen der einzelnen Benutzer zu behalten.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "65579827"
 |Tool|Aufgaben|  
 |----------|-----------|  
 |Management Studio - zum Anzeigen, Ändern, Erstellen und Löschen von Rollendefinitionen|[Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Berichts-Manager - zum Zuweisen von Benutzern und Gruppen zu Rollen|[Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Das Webportal – zum Zuweisen von Benutzern und Gruppen zu Rollen|[Gewähren von Benutzerzugriff auf einen Berichtsserver](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Ändern oder Löschen einer Rollenzuweisung](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Vordefinierte Rollen](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentifizierung mit dem Berichtsserver](../../reporting-services/security/authentication-with-the-report-server.md)   

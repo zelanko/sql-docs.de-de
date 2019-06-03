@@ -16,21 +16,21 @@ helpviewer_keywords:
 - PERCENTILE_DISC function
 - analytic functions,PERCENTILE_DISC
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ae6754923dcb22a64251b351f013069b3a681fb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6a514a1d1e3db96e3943b600b3de17d2184e9955
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291818"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943518"
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Berechnet für sortierte Werte in einem gesamten Rowset oder innerhalb bestimmter Partitionen eines Rowsets in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein bestimmtes Quantil. Für den angegebenen Quantilwert sortiert *P*, PERCENTILE_DISC die Ausdruckswerte in der ORDER BY-Klausel. Es wird dann der Wert mit dem kleinsten angegebenen CUME_DIST-Wert (in Bezug auf die gleiche Sortierspezifikation) zurückgegeben, der größer oder gleich *P* ist. Beispiel: PERCENTILE_DISC (0.5) berechnet das 50. Quantil (d. h. den Mittelwert) eines Ausdrucks. PERCENTILE_DISC berechnet das Quantil auf Grundlage einer diskreten Verteilung der Spaltenwerte. Das Ergebnis entspricht einem bestimmten Wert in der Spalte.  
+  Berechnet für sortierte Werte in einem gesamten Rowset oder innerhalb bestimmter Partitionen eines Rowsets in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein bestimmtes Quantil. Für den angegebenen Quantilwert sortiert *P*, PERCENTILE_DISC die Ausdruckswerte in der ORDER BY-Klausel. Es wird dann der Wert mit dem kleinsten angegebenen CUME_DIST-Wert (in Bezug auf die gleiche Sortierspezifikation) zurückgegeben, der größer oder gleich *P* ist. Beispiel: PERCENTILE_DISC (0.5) berechnet das 50. Quantil (d.h. den Mittelwert) eines Ausdrucks. PERCENTILE_DISC berechnet das Quantil auf Grundlage einer diskreten Verteilung der Spaltenwerte. Das Ergebnis entspricht einem bestimmten Wert in der Spalte.  
   
  ![Symbol zum Artikellink](../../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41; (Transact-SQL-Syntaxkonventionen (Transact-SQL))](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -20,22 +20,22 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169210"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947956"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Wertet die gültige Berechtigung des aktuellen Benutzers für ein sicherungsfähiges Element aus. Eine verwandte Funktion ist [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Der Name des sicherungsfähigen Elements. Wenn das sicherungsfähige Element der Server selbst ist, sollte dieser Wert auf NULL festgelegt werden. *securable* ist ein Skalarausdruck vom Typ **sysname**. Es gibt keinen Standardwert.  
   
  *securable_class*  
- Der Name der Klasse des sicherungsfähigen Elements, für das die Berechtigung getestet wird. *securable_class* ist ein Skalarausdruck vom Typ **nvarchar(60)**.  
+ Der Name der Klasse des sicherungsfähigen Elements, für das die Berechtigung getestet wird. *securable_class* ist ein Skalarausdruck vom Typ **nvarchar(60)** .  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] muss das securable_class-Argument auf einen der folgenden Werte festgelegt werden: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** oder **USER**.  
   
@@ -61,15 +61,15 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Ein optionaler Skalarausdruck vom Typ **sysname**, der den Namen der sicherungsfähigen untergeordneten Entität darstellt, mit der die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
   
 > [!NOTE]  
->  In den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dürfen in untergeordneten sicherungsfähigen Elementen keine eckigen Klammern in der Form **'[**_Name des untergeordneten sicherungsfähigen Elements_**]'** verwendet werden. Verwenden Sie stattdessen **'**_Name des untergeordneten sicherungsfähigen Elements_**'**.  
+>  In den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dürfen in untergeordneten sicherungsfähigen Elementen keine eckigen Klammern in der Form **'[** _Name des untergeordneten sicherungsfähigen Elements_ **]'** verwendet werden. Verwenden Sie stattdessen **'** _Name des untergeordneten sicherungsfähigen Elements_ **'** .  
   
  *sub-securable_class*  
- Ein optionaler Skalarausdruck vom Datentyp **nvarchar(60)**, der die Klasse der sicherungsfähigen untergeordneten Entität darstellt, für die die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
+ Ein optionaler Skalarausdruck vom Datentyp **nvarchar(60)** , der die Klasse der sicherungsfähigen untergeordneten Entität darstellt, für die die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
   
  Das sub-securable_class-Argument ist in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nur gültig, wenn das securable_class-Argument auf **OBJECT** festgelegt ist. Wenn das securable_class-Argument auf **OBJECT** festgelegt ist, muss das sub-securable_class-Argument auf **COLUMN** festgelegt werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **int**  
+ **ssNoversion**  
   
  Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
@@ -180,10 +180,10 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
- [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine &amp;amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Berechtigungshierarchie &amp;#40;Datenbank-Engine &amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
   

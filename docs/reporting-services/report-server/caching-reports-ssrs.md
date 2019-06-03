@@ -1,6 +1,6 @@
 ---
 title: Zwischenspeichern von Berichten (SSRS) | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580444"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175590"
 ---
 # <a name="caching-reports-ssrs"></a>Zwischenspeichern von Berichten (SSRS)
   Ein Berichtsserver kann eine Kopie eines verarbeiteten Berichts zwischenspeichern und diese anzeigen, wenn ein Benutzer den Bericht öffnet. Für den Benutzer ist der einzige Hinweis darauf, dass es sich bei dem Bericht um eine zwischengespeicherte Kopie handelt, das Datum und die Uhrzeit des Berichts. Wenn der Bericht kein aktuelles Datum oder keine aktuelle Uhrzeit aufweist und es sich um keine Momentaufnahme handelt, wurde der Bericht aus dem Cache abgerufen.  
@@ -67,13 +67,12 @@ ms.locfileid: "65580444"
   
  Falls ein Bericht aus irgendeinem Grund nicht aus einer zwischengespeicherten Instanz generiert werden kann (z. B., wenn die von einem Benutzer angegebenen Parameterwerte von den Werten abweichen, mit denen der zwischengespeicherte Bericht erstellt wird), führt der Berichtsserver den Bericht erneut aus.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Konzepte von Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Vorabladen des Caches &#40;Berichts-Manager&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Konzepte von Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Vorabladen des Caches](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Zeitpläne](../../reporting-services/subscriptions/schedules.md)   
  [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Optionen zur Cacheaktualisierung &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: GRANT (Datenbankberechtigungen) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27e9827672947572d05bfea4ed09c1712e7b079d
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: c6db8e7818cbcbba732828f0efd5177b8ab84870
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828400"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993473"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT (Datenbankberechtigungen) (Transact-SQL)
 
@@ -104,7 +104,7 @@ Gibt einen Datenbankbenutzer an, der einem asymmetrischen Schlüssel zugeordnet 
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
-> Durch eine Kombination von ALTER- und REFERENCE-Berechtigungen würde in manchen Fällen zugelassen, dass der Empfänger Daten anzeigt oder Funktionen ausführt, für die er nicht autorisiert ist. Zum Beispiel: Ein Benutzer mit ALTER-Berechtigung für eine Tabelle und REFERENCE-Berechtigung für eine Funktion kann eine berechnete Spalte für eine Funktion erstellen und ausführen lassen. In diesem Fall benötigt der Benutzer auch die SELECT-Berechtigung für die berechnete Spalte.
+> Durch eine Kombination von ALTER- und REFERENCE-Berechtigungen würde in manchen Fällen zugelassen, dass der Empfänger Daten anzeigt oder Funktionen ausführt, für die er nicht autorisiert ist. Beispiel: Ein Benutzer mit ALTER-Berechtigung für eine Tabelle und REFERENCE-Berechtigung für eine Funktion kann eine berechnete Spalte für eine Funktion erstellen und ausführen lassen. In diesem Fall benötigt der Benutzer auch die SELECT-Berechtigung für die berechnete Spalte.
 
 Eine Datenbank ist ein sicherungsfähiges Element auf dem Server, der das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für eine Datenbank erteilt werden können, sind in der folgenden Tabelle aufgeführt. Außerdem enthält die Tabelle die allgemeineren Berechtigungen, die implizit enthalten sind.
 
@@ -175,6 +175,7 @@ Eine Datenbank ist ein sicherungsfähiges Element auf dem Server, der das überg
 |Delete|CONTROL|CONTROL SERVER|
 |Führen Sie|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Gilt für**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE EXTERNAL SCRIPT <br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|

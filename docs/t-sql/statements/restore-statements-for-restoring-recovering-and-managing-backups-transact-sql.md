@@ -19,16 +19,16 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 476d6d4ca92b806f0973983de5815f57782076e8
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d094b8540609810d134c52fb5755b21db4fc0f6b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242181"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947113"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>RESTORE-Anweisungen für das Wiederherstellen und Verwalten von Sicherungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -40,7 +40,7 @@ ms.locfileid: "54242181"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|-Anweisung.|Beschreibung|  
+|-Anweisung.|und Beschreibung|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|Beschreibt die Transact-SQL-Anweisungen RESTORE DATABASE und RESTORE LOG, die für die Wiederherstellung einer Datenbank mithilfe von mit dem BACKUP-Befehl erstellten Sicherungen verwendet werden. RESTORE DATABASE wird für Datenbanken unter allen Wiederherstellungsmodellen verwendet. RESTORE LOG wird nur unter dem vollständigen und dem massenprotokollierten Wiederherstellungsmodell verwendet. Mithilfe von RESTORE DATABASE kann außerdem eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt werden.|  
 |[RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|Dokumentiert die Argumente, die in den Abschnitten "Syntax" der RESTORE-Anweisung beschrieben werden, sowie die der zugeordneten Gruppe von Hilfsanweisungen: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY und RESTORE VERIFYONLY. Die meisten der Argumente werden nur von einer Untermenge dieser sechs Anweisungen unterstützt. Die Unterstützung für jedes Argument wird in der Beschreibung des Arguments angezeigt.|  

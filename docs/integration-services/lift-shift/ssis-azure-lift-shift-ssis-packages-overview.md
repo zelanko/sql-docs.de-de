@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 4c9c881cbbefc5fa8fb9f0810a5c8ea26f375a56
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: cd4b7a4901ed294c4698c4edc23d73a6cd497e58
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65721469"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014976"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
 
@@ -46,9 +46,9 @@ Der wichtigste Unterschied ist die Trennung des Speichers von Runtime. Azure Dat
 
 **Bereitstellen:** Bevor Sie SSIS-Pakete in Azure bereitstellen und ausführen können, müssen Sie die SSIS-Katalogdatenbank (SSISDB) und Azure SSIS Integration Runtime bereitstellen.
 
--   Führen Sie zum Bereitstellen von SSIS in Azure im Azure-Portal die erforderlichen Schritte in diesem Artikel aus:  [Bereitstellen der Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+-   Führen Sie zum Bereitstellen von SSIS in Azure im Azure-Portal die erforderlichen Schritte in diesem Artikel aus: [Bereitstellen der Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
 
--   Führen Sie zum Bereitstellen von SSIS in Azure mit PowerShell die erforderlichen Schritte in diesem Artikel aus:  [Bereitstellen der Azure-SSIS Integration Runtime in Azure Data Factory mit PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
+-   Führen Sie zum Bereitstellen von SSIS in Azure mit PowerShell die erforderlichen Schritte in diesem Artikel aus: [Bereitstellen der Azure-SSIS Integration Runtime in Azure Data Factory mit PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
 
 Sie müssen Azure SSIS IR nur einmal bereitstellen. Danach können Sie vertraute Tools wie SQL Server Data Tools (SSDT) und SQL Server Management Studio (SSMS) für das Bereitstellen, Konfigurieren, Ausführen, Überwachen, Planen und Verwalten von Paketen verwenden.
 

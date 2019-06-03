@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9b590e2a1ba1c3362b86b195c4b1a5fcb7d63bd
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662794"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948975"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Ein Ausdruck, der den Namen des Volltextkatalogs enthält.
 _property_  
 Ein Ausdruck, der den Namen der Volltext-Katalogeigenschaft enthält. In der folgenden Tabelle finden Sie eine Liste der Eigenschaften und eine Beschreibung der zurückgegebenen Informationen.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Einstellung für die Unterscheidung nach Akzent.<br /><br /> 0 = Keine Unterscheidung nach Akzent<br /><br /> 1 = Unterscheidung nach Akzent|  
 |**IndexSize**|Logische Größe des Volltextkatalogs in Megabyte (MB). Enthält die Größe des semantischen Schlüsselausdrucks und von Dokumentähnlichkeitsindizes.<br /><br /> Weitere Informationen finden Sie unter "Hinweise" weiter unten in diesem Thema.|  
@@ -60,12 +60,12 @@ Ein Ausdruck, der den Namen der Volltext-Katalogeigenschaft enthält. In der fol
 |**LogSize**|Wird nur aus Gründen der Abwärtskompatibilität unterstützt. Es wird immer 0 zurückgegeben.<br /><br /> Größe (in Bytes) der kombinierten Gruppe von Fehlerprotokollen, die mit einem Volltextkatalog des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search-Diensts verbunden sind.|  
 |**MergeStatus**|Gibt an, ob eine Masterzusammenführung ausgeführt wird.<br /><br /> 0 = Masterzusammenführung wird nicht ausgeführt<br /><br /> 1 = Masterzusammenführung wird ausgeführt|  
 |**PopulateCompletionAge**|Anzahl von Sekunden, die zwischen dem 01.01.1990, 00:00:00 Uhr, und der Beendigung des letzten Auffüllens des Volltextindex verstrichen sind.<br /><br /> Wird nur für vollständige und inkrementelle Durchforstungsvorgänge aktualisiert. Gibt 0 zurück, wenn keine Auffüllung aufgetreten ist.|  
-|**PopulateStatus**|0 = Im Leerlauf.<br /><br /> 1 = Vollständiges Auffüllen wird ausgeführt<br /><br /> 2 = Angehalten<br /><br /> 3 = Gedrosselt<br /><br /> 4 = Wird wiederhergestellt<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Inkrementelles Auffüllen wird ausgeführt<br /><br /> 7 = Index wird erstellt<br /><br /> 8 = Datenträger voll Angehalten.<br /><br /> 9 = Änderungsprotokollierung|  
+|**PopulateStatus**|0 = Im Leerlauf<br /><br /> 1 = Vollständiges Auffüllen wird ausgeführt<br /><br /> 2 = Angehalten<br /><br /> 3 = Gedrosselt<br /><br /> 4 = Wird wiederhergestellt<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Inkrementelles Auffüllen wird ausgeführt<br /><br /> 7 = Index wird erstellt<br /><br /> 8 = Der Datenträger ist voll. Angehalten.<br /><br /> 9 = Änderungsprotokollierung|  
 |**UniqueKeyCount**|Anzahl der eindeutigen Schlüssel im Volltextkatalog.|  
 |**ImportStatus**|Gibt an, ob der Volltextkatalog importiert wird.<br /><br /> 0 = Der Volltextkatalog wird nicht importiert.<br /><br /> 1 = Der Volltextkatalog wird importiert.|  
   
 ## <a name="return-types"></a>Rückgabetypen  
-**int**  
+**ssNoversion**  
   
 ## <a name="exceptions"></a>Ausnahmen  
 Gibt NULL zurück, wenn ein Fehler auftritt oder ein Aufrufer nicht über die Berechtigungen zum Anzeigen des Objekts verfügt.  

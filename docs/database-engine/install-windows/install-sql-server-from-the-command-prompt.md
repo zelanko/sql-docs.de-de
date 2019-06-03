@@ -1,7 +1,7 @@
 ---
 title: Installieren von SQL Server von der Eingabeaufforderung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bc2d05b54added3ac8ce57746eb89cbd9d1efd8d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537422"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993699"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installieren von SQL Server von der Eingabeaufforderung
 
@@ -189,7 +189,7 @@ Entwickeln Sie anhand der folgenden Richtlinien Installationsbefehle mit der ric
 ##  <a name="Install"></a> Installationsparameter  
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Installation.  
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Installationsworkflow anzugeben.<br /><br /> Unterstützte Werte: **Install**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> |Unterdrückt das Anzeigen des Datenschutzhinweises. Durch die Verwendung dieses Flags stimmen Sie dem [Datenschutzhinweis](../../sql-server/sql-server-privacy.md) zu.  |  
@@ -261,6 +261,7 @@ Entwickeln Sie anhand der folgenden Richtlinien Installationsbefehle mit der ric
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Optional**|Gibt das Verzeichnis für die Datendateien der Benutzerdatenbanken an.<br /><br /> Standardwert: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **Optional**|Aktiviert die sofortige Dateiinitialisierung für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto. Überlegungen zu Sicherheit und Leistung finden Sie unter [Sofortige Datenbankdateiinitialisierung](../../relational-databases/databases/database-instant-file-initialization.md).<br /><br /> Standardwert: „False“<br /><br /> Optionaler Wert: „True“|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Optional**|Gibt das Verzeichnis für die Protokolldateien der Benutzerdatenbanken an.<br /><br /> Standardwert: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **Optional** Wenn diese Einstellung bei unbeaufsichtigten (automatischen) Installationen ausgelassen wird, entspricht MAXDOP den [Richtlinien für den max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). |Gibt den max. Grad an Parallelität an, der bestimmt, wie viele Prozessoren eine einzelne Anweisung während der Ausführung verwenden kann. Erst ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] verfügbar. <br /><br /> Der Standardwert entspricht den [Richtlinien für den max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).|
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **Optional**|Gibt die Zugriffsebene für die FILESTREAM-Funktion an. Unterstützte Werte:<br /><br /> 0 = FILESTREAM-Unterstützung für diese Instanz deaktivieren. (Standardwert)<br /><br /> 1 = FILESTREAM für den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff aktivieren.<br /><br /> 2 = FILESTREAM für den [!INCLUDE[tsql](../../includes/tsql-md.md)] - und E/A-Streamingzugriff auf Datei aktivieren. (Nicht gültig für Clusterszenarien)<br /><br /> 3 = Streamingzugriff von Remoteclients auf FILESTREAM-Daten zulassen.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **Optional**<br /><br /> **Erforderlich, wenn FILESTREAMLEVEL größer als 1 ist.**|Gibt den Namen der Windows-Freigabe an, in der die FILESTREAM-Daten gespeichert werden.|  
 |SQL Server-Volltext|/FTSVCACCOUNT<br /><br /> **Optional**|Gibt das Konto für den Volltextfilter-Startprogrammdienst an.<br /><br /> Dieser Parameter wird in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] oder höher ignoriert. Mithilfe der ServiceSID wird die Kommunikation zwischen SQL Server und dem Volltextfilter-Daemon gesichert. Wenn die Werte nicht bereitgestellt werden, wird der Volltextfilter-Startprogrammdienst deaktiviert. Sie müssen den SQL Server-Dienstkontroll-Manager verwenden, um das Dienstkonto zu ändern und die Volltextfunktion zu aktivieren.<br /><br /> Standardwert: Lokales Dienstkonto|  
@@ -292,7 +293,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>Parameter für die Imagevorbereitung  
  Verwenden Sie die Parameter in der folgenden Tabelle, um Befehlszeilenskripts zur Vorbereitung einer Instanz von SQL Server zu entwickeln, ohne sie zu konfigurieren. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Installationsworkflow anzugeben.<br /><br /> Unterstützte Werte: **PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
@@ -325,7 +326,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>Parameter für den Imageabschluss  
  Verwenden Sie die Parameter in der folgenden Tabelle, um Befehlszeilenskripts zum Abschließen und Konfigurieren einer vorbereiteten Instanz von SQL Server zu entwickeln. 
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Installationsworkflow anzugeben.<br /><br /> Unterstützte Werte: **CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
@@ -390,7 +391,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> Upgradeparameter  
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für Upgrades. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Installationsworkflow anzugeben. Unterstützte Werte:<br /><br /> **Upgrade**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> Der **EditionUpgrade** -Wert wird verwendet, um für eine vorhandene Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ein Upgrade auf eine andere Edition auszuführen. Weitere Informationen zu unterstützten Versions- und Editionsupgrades finden Sie unter [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
@@ -428,7 +429,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> Reparaturparameter  
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Reparatur. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Reparaturworkflow anzugeben.<br /><br /> Unterstützte Werte: **Repair**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ENU<br /><br /> **Optional**|Verwenden Sie diesen Parameter, um die englische Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] unter einem lokalisierten Betriebssystem zu installieren, wenn die Installationsmedien Language Packs sowohl für Englisch als auch für die Sprache des Betriebssystems einschließen.|  
@@ -452,7 +453,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> Parameter für die Neuerstellung einer Systemdatenbank  
  Verwenden Sie die in der folgenden Tabelle aufgeführten Parameter, um Befehlszeilenskripts zur Neuerstellung der Systemdatenbanken master, model, msdb und tempdb zu entwickeln. Weitere Informationen finden Sie unter [Neuerstellen von Systemdatenbanken](../../relational-databases/databases/rebuild-system-databases.md). 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Workflow für das erneute Erstellen der Datenbank anzugeben.<br /><br /> Unterstützte Werte: **Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/INSTANCENAME<br /><br /> **Erforderlich**|Gibt einen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanznamen an.<br /><br /> Weitere Informationen finden Sie unter [Instance Configuration](../../database-engine/install-windows/install-sql-server.md).|  
@@ -471,7 +472,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> Deinstallationsparameter  
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Deinstallation. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Deinstallationsworkflow anzugeben.<br /><br /> Unterstützte Werte: **Deinstallieren**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/CONFIGURATIONFILE<br /><br /> **Optional**|Gibt die zu verwendende [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) an.|  
@@ -601,7 +602,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>Vorbereiten von Failoverclusterparametern  
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Failoverclustervorbereitung. Hierbei handelt es sich um den ersten Schritt bei der erweiterten Clusterinstallation, für den die Failoverclusterinstanzen auf allen Knoten des Failoverclusters vorbereitet werden müssen. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)unterstützt. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Vorbereitungsworkflow des Failoverclusters anzugeben.<br /><br /> Unterstützter Wert: **PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
@@ -666,7 +667,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>Abschließende Failoverclusterparameter  
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für das Abschließen von Failoverclustern. Dies ist der zweite Schritt der erweiterten Failovercluster-Installationsoption. Nachdem Sie die Vorbereitung für alle Failoverclusterknoten ausgeführt haben, führen Sie diesen Befehl für den Knoten aus, der den (oder die) freigegebenen Datenträger besitzt. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)unterstützt. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Workflow für das Abschließen des Failoverclusters anzugeben.<br /><br /> Unterstützter Wert: **CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ENU<br /><br /> **Optional**|Verwenden Sie diesen Parameter, um die englische Version von SQL Server unter einem lokalisierten Betriebssystem zu installieren, wenn die Installationsmedien sowohl Language Packs für Englisch als auch für die Sprache des Betriebssystems enthalten.|  
@@ -729,7 +730,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>Parameter für das Aktualisieren von Failoverclustern  
  Entwickeln Sie mit den in der folgenden Tabelle aufgelisteten Parametern Befehlszeilenskripts für die Failoverclusterupgrades. Weitere Informationen finden Sie unter [Aktualisieren einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Failoverclusterinstanz (Setup)](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) und [Always On-Failoverclusterinstanzen (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Installationsworkflow anzugeben.<br /><br /> Unterstützter Wert: **Upgrade**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
@@ -759,7 +760,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a> Parameter zum Hinzufügen von Knoten  
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für AddNode. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den AddNode-Workflow anzugeben.<br /><br /> Unterstützter Wert: **AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
@@ -804,7 +805,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>Parameter zum Entfernen von Knoten  
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für RemoveNode. Um einen Failovercluster zu deinstallieren, müssen Sie RemoveNode für jeden Failoverclusterknoten ausführen. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)unterstützt. 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|Beschreibung|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Komponente|Parameter|und Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den RemoveNode-Workflow anzugeben.<br /><br /> Unterstützter Wert: **RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Setupsteuerelement|/CONFIGURATIONFILE<br /><br /> **Optional**|Gibt die zu verwendende [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) an.|  
@@ -842,7 +843,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> Funktionsparameter  
  Um bestimmte Funktionen zu installieren, verwenden Sie den /FEATURES-Parameter und geben in der folgenden Tabelle die übergeordnete Funktion oder die Funktionswerte an. Eine Liste der Funktionen, die von den SQL Server-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
-|Parameter übergeordneter Funktionen|Funktionsparameter|Beschreibung|  
+|Parameter übergeordneter Funktionen|Funktionsparameter|und Beschreibung|  
 |:---|:---|:---|  
 |SQL||Installiert [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replikation, Volltext und [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)].|  
 ||SQLEngine|Installiert nur das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
@@ -877,7 +878,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>Beispiele für Funktionsparameter:  
   
-|Parameter und Werte|Beschreibung| 
+|Parameter und Werte|und Beschreibung| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|Installiert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] ohne Replikation und Volltext.|  
 |/FEATURES=SQLEngine,FullText|Installiert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] und Volltext.|  
@@ -890,7 +891,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  Die AllFeatures_WithDefaults-Rolle ist das Standardverhalten für Editionen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] und reduziert die Anzahl der Dialogfelder, die dem Benutzer angezeigt werden. Sie kann bei der Installation einer anderen SQL Server-Edition als [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]in der Befehlszeile angegeben werden. 
   
-|Rolle|Beschreibung|Installiert...|  
+|Rolle|und Beschreibung|Installiert...|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|Installiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als benannte Instanz von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in einer vorhandenen [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Farm oder auf einem eigenständigen Server.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Berechnungs-Engine, vorkonfiguriert für Datenspeicherung und Verarbeitung im Arbeitsspeicher.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Projektmappenpakete<br /><br /> Installationsprogramm für den [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]<br /><br /> SQL Server-Onlinedokumentation|  
 |SPI_AS_NewFarm|Installiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und [!INCLUDE[ssDE](../../includes/ssde-md.md)] als benannte Instanz von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in einer neuen und nicht konfigurierten Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Farm oder auf einem eigenständigen Server. SQL Server-Setup konfiguriert die Farm während der Installation der Funktionsrolle.|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Berechnungs-Engine, vorkonfiguriert für Datenspeicherung und Verarbeitung im Arbeitsspeicher.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Projektmappenpakete<br /><br /> SQL Server-Onlinedokumentation<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> Konfigurationstools<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

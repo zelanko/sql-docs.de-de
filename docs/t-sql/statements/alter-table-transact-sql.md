@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/07/2019
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: c15cff20feb4fd3f9ef5057babaad884de022975
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502863"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943296"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -450,8 +450,8 @@ Für die geänderte Spalte gilt Folgendes:
 
 Der Datentyp von **text**-, **ntext**- und **image**-Spalten kann nur auf die folgende Weise geändert werden:
 
-- **text** in **varchar(max)**, **nvarchar(max)** oder **xml**
-- **ntext** in **varchar(max)**, **nvarchar(max)** oder **xml**
+- **text** in **varchar(max)** , **nvarchar(max)** oder **xml**
+- **ntext** in **varchar(max)** , **nvarchar(max)** oder **xml**
 - **image** in **varbinary(max)**
 
 Änderungen des Datentyps können Datenänderungen zur Folge haben. Beispielsweise kann die Änderung einer Spalte vom Datentyp **nchar** oder **nvarchar** in **char** oder **varchar** zur Konvertierung erweiterter Zeichen führen. Weitere Informationen finden Sie unter [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). Das Reduzieren der Genauigkeit und der Dezimalstellen einer Spalte kann zum Abschneiden von Daten führen.
@@ -469,7 +469,7 @@ Wenn Sie Always Encrypted mit Secure Enclaves verwenden, können Sie alle Versch
 
 *column_name* Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name* darf maximal 128 Zeichen lang sein. Bei neuen Spalten, die mit einem **timestamp**-Datentyp erstellt wurden, ist *column_name* nicht erforderlich. Der Name **timestamp** wird verwendet, wenn Sie *column_name* nicht für eine Spalte vom Datentyp **timestamp** angeben.
 
-[ _type\_schema\_name_**.** ] _type\_name_ Der neue Datentyp für die geänderte Spalte oder der Datentyp für die hinzugefügte Spalte. *type_name* kann für vorhandene Spalten von partitionierten Tabellen nicht angegeben werden. *type_name* kann einen der folgenden Typen aufweisen:
+[ _type\_schema\_name_ **.** ] _type\_name_ Der neue Datentyp für die geänderte Spalte oder der Datentyp für die hinzugefügte Spalte. *type_name* kann für vorhandene Spalten von partitionierten Tabellen nicht angegeben werden. *type_name* kann einen der folgenden Typen aufweisen:
 
 - Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp.
 - Ein Aliasdatentyp, der auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp basiert. Aliasdatentypen werden mit der CREATE TYPE-Anweisung erstellt, bevor sie in einer Tabellendefinition verwendet werden können.
@@ -673,12 +673,12 @@ Weitere Informationen finden Sie unter [Funktionsweise von Onlineindexvorgängen
 > [!NOTE]
 > Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Weitere Informationen finden Sie unter [Editionen und unterstützte Features von SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) und unter [Editionen und unterstützte Features von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** } **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** } **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt einen Speicherort an, an den die Datenzeilen verschoben werden sollen, die sich aktuell auf der Blattebene des gruppierten Indexes befinden. Die Tabelle wird an den neuen Speicherort verschoben. Diese Option gilt nur für Einschränkungen, durch die ein gruppierter Index erstellt wird.
 
 > [!NOTE]
-> In diesem Zusammenhang ist „default“ kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt werden, wie in MOVE TO **"** default **"** oder MOVE TO **[** default **]**. Wenn **"** default **"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> In diesem Zusammenhang ist „default“ kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt werden, wie in MOVE TO **"** default **"** oder MOVE TO **[** default **]** . Wenn **"** default **"** angegeben ist, muss die QUOTED_IDENTIFIER-Option in der aktuellen Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 { CHECK | NOCHECK } CONSTRAINT Gibt an, dass *contraint_name* aktiviert oder deaktiviert wird. Diese Option kann nur mit FOREIGN KEY- und CHECK-Einschränkungen verwendet werden. Wenn NOCHECK angegeben wird, wird die Einschränkung deaktiviert, und zukünftige Einfügungen oder Updates der Spalte werden nicht anhand der Einschränkungsbedingungen überprüft. DEFAULT-, PRIMARY KEY- und UNIQUE-Einschränkungen können nicht deaktiviert werden.
 
@@ -698,12 +698,12 @@ Diese Option ist nur dann verfügbar, wenn die Änderungsnachverfolgung für die
 
 Um die Änderungsnachverfolgung zu aktivieren, muss die Tabelle über einen Primärschlüssel verfügen.
 
-WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**
+WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)** 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt an, ob die [!INCLUDE[ssDE](../../includes/ssde-md.md)] verfolgt, welche Spalten mit Änderungsnachverfolgung aktualisiert wurden. Der Standardwert ist OFF.
 
-SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Verlagert einen Datenblock auf eine der folgenden Arten:
 
@@ -727,7 +727,7 @@ Informationen zu **SWITCH**-Einschränkungen beim Verwenden von Replikaten finde
 
 Nicht gruppierte Columnstore-Indizes für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 und für Versionen von SQL-Datenbank vor V12 waren schreibgeschützt. Nicht gruppierte Columnstore-Indizes müssen im aktuellen Format erneut erstellt werden (das aktualisiert werden kann), bevor PARTITION-Vorgänge ausgeführt werden können.
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** | **"** NULL **"** }**)**
+SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)** 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). `FILESTREAM` wird von [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nicht unterstützt.
 
 Gibt an, wo FILESTREAM-Daten gespeichert werden.
@@ -740,17 +740,17 @@ Wenn *partition_scheme_name* angegeben wurde, gelten die Regeln für [CREATE TAB
 
 **"** default **"** gibt die FILESTREAM-Dateigruppe mit dem DEFAULT-Eigenschaftensatz an. Wenn keine FILESTREAM-Dateigruppe vorhanden ist, tritt ein Fehler auf.
 
-**"** NULL **"** gibt an, dass alle Verweise auf FILESTREAM-Dateigruppen für die Tabelle entfernt werden. Alle FILESTREAM-Spalten müssen zuerst gelöscht werden. Verwenden Sie SET FILESTREAM_ON **="** NULL **"**, um alle mit einer Tabelle verknüpften FILESTREAM-Daten zu löschen.
+**"** NULL **"** gibt an, dass alle Verweise auf FILESTREAM-Dateigruppen für die Tabelle entfernt werden. Alle FILESTREAM-Spalten müssen zuerst gelöscht werden. Verwenden Sie SET FILESTREAM_ON **="** NULL **"** , um alle mit einer Tabelle verknüpften FILESTREAM-Daten zu löschen.
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]) ] } **)** **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Deaktiviert oder aktiviert die Systemversionsverwaltung einer Tabelle. Das System überprüft, ob die Einschränkungsanfoderungen des Datentyps, der NULL-Zulässigkeit und des Primärschlüssels für die Systemversionierung eingehalten wurden, um die Systemversionierung einer Tabelle zu ermöglichen. Wenn das Argument HISTORY_TABLE nicht verwendet wird, generiert das System eine neue Verlaufstabelle, die dem Schema der aktuellen Tabelle entspricht, erstellt eine Verknüpfung zwischen den beiden Tabellen und ermöglicht dem System, den Verlauf von jedem Datensatz der aktuellen Tabelle in der Verlaufstabelle aufzuzeichnen. Der Name dieser Verlaufstabelle ist dann `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Wenn Sie das Argument HISTORY_TABLE verwenden, um eine Verknüpfung mit einer vorhandenen Verlaufstabelle zu erstellen und diese zu verwenden, erstellt das System eine Verknüpfung zwischen der aktuellen Tabelle und der angegebenen Tabelle. Wenn Sie eine Verknüpfung mit einer vorhandenen Verlaufstabelle erstellen, können Sie eine Datenkonsistenzprüfung durchführen. Diese Datenkonsistenzprüfung stellt sicher, dass vorhandene Datensätze nicht überlappen. Die Datenkonsistenzprüfung ist standardmäßig aktiviert. Weitere Informationen finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **Gilt für**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt die endliche oder unendliche Aufbewahrungsdauer für Verlaufsdaten in temporalen Tabellen an. Wenn sie weggelassen wird, wird von einer unendlichen Vermerkdauer ausgegangen.
 
-SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**
+SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)** 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Gibt die zulässigen Methoden der Sperrenausweitung für eine Tabelle an.
@@ -929,7 +929,7 @@ Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition ist das 
 
 Während die vorhandenen Zeilen auf den in Metadaten gespeicherten Wert verweisen, wird der Standardwert für alle neu eingefügten Zeilen in der Zeile gespeichert, ohne einen anderen Wert für die Spalte anzugeben. Der in Metadaten gespeicherte Standardwert wird in eine vorhandene Zeile verschoben, wenn die Zeile aktualisiert wird (auch wenn die tatsächliche Spalte nicht in der UPDATE-Anweisung angegeben wird) oder wenn die Tabelle oder der gruppierte Index neu erstellt wird.
 
-Spalten vom Typ **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** oder CLR UDTS können nicht in einem Onlinevorgang hinzugefügt werden. Eine Spalte kann nicht online hinzugefügt werden, wenn dies dazu führt, dass die maximal mögliche Zeilengröße den Grenzwert von 8.060 Byte überschreitet. Die Spalte wird in diesem Fall als Offlinevorgang hinzugefügt.
+Spalten vom Typ **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** oder CLR UDTS können nicht in einem Onlinevorgang hinzugefügt werden. Eine Spalte kann nicht online hinzugefügt werden, wenn dies dazu führt, dass die maximal mögliche Zeilengröße den Grenzwert von 8.060 Byte überschreitet. Die Spalte wird in diesem Fall als Offlinevorgang hinzugefügt.
 
 ## <a name="parallel-plan-execution"></a>Ausführung paralleler Pläne
 

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromText method
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: ffa6eb3ef24c9b31da43097444abf5f174cac5c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbb07f0854f775d1f4a64bc561b49fb9654dc140
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798688"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936627"
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
 ## <a name="arguments"></a>Argumente  
  *multipoint_tagged_text*  
- Die WKT-Darstellung der **geographyMultiPoint**-Instanz, die zurückgegeben werden soll. *multipoint_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
+ Die WKT-Darstellung der **geographyMultiPoint**-Instanz, die zurückgegeben werden soll. *multipoint_tagged_text* ist ein **nvarchar(max)** -Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyMultiPoint**-Instanz darstellt, die Sie zurückgeben möchten.  
@@ -63,7 +63,7 @@ SET @g = geography::STMPointFromText('MULTIPOINT(-122.360 47.656, -122.343 47.65
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Statische geography-Methoden des OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

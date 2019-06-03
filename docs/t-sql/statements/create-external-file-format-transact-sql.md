@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161642"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175029"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -171,7 +171,7 @@ PolyBase verwendet das benutzerdefinierte Datumsformat nur für den Import der D
   
 -   DateTimeOffset: „JJJJ-MM-TT HH:mm:ss“  
   
--   Uhrzeit: 'HH:mm:ss'  
+-   Time: 'HH:mm:ss'  
   
 In der folgenden Tabelle finden Sie **Beispiele für Datumsformate**:
   
@@ -183,7 +183,7 @@ Hinweise zur Tabelle:
   
 -   Die Angabe von AM oder PM (tt) ist nicht erforderlich. Der Standardwert ist AM.
   
-|Datumstyp|Beispiel|Beschreibung|  
+|Datumstyp|Beispiel|und Beschreibung|  
 |---------------|-------------|-----------------|  
 |datetime|DATE_FORMAT = 'JJJJ-MM-TT HH:mm:ss.fff'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 24 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden und 3 Ziffern für Millisekunden.|  
 |datetime|DATE_FORMAT = 'JJJJ-MM-TT hh:mm:ss.ffftt'|Neben dem Jahr, dem Monat und dem Tag umfasst dieses Datumsformat 00 bis 12 Stunden, 00 bis 59 Minuten, 00 bis 59 Sekunden, 3 Ziffern für Millisekunden und AM bzw. am oder PM bzw. pm. |  
@@ -244,7 +244,7 @@ Hinweise zur Tabelle:
  Speichern Sie alle fehlenden Werte als NULL-Werte. Alle NULL-Werte, die durch Verwendung des Worts NULL in der durch Trennzeichen getrennten Textdatei gespeichert werden, werden als Zeichenfolge „NULL“ importiert.
   
    Encoding = {'UTF8' | 'UTF16'}  
- In Azure SQL Data Warehouse kann PolyBase UTF8- und UTF16-LE-codierte, durch Trennzeichen getrennte Textdateien lesen. In SQL Server und PDW unterstützt PolyBase nicht das Lesen UTF16-codierter Dateien.
+ In Azure SQL Data Warehouse und PDW (APS CU7.4) kann PolyBase UTF8- und UTF16-LE-codierte, durch Trennzeichen getrennte Textdateien lesen. In SQL Server unterstützt PolyBase nicht das Lesen UTF16-codierter Dateien.
   
  DATA_COMPRESSION = *data_compression_method*  
  Gibt die Datenkomprimierungsmethode für die externen Daten an. Wenn DATA_COMPRESSION nicht angegeben ist, stellen dekomprimierte Daten den Standard dar.

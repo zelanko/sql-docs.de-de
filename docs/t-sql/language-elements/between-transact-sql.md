@@ -20,23 +20,23 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e384d2835bcb28487757384543298d5a20144cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768472"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980080"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt einen zu testenden Bereich an.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -182,7 +182,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  Durch die Abfrage werden die erwarteten Zeilen abgerufen, da die Datumswerte in der Abfrage und die **datetime**-Werte in der `RateChangeDate`-Spalte ohne den Zeitteil des Datums angegeben wurden. Wenn der Zeitteil nicht angegeben wird, wird standardmäßig 0:00 Uhr verwendet. Beachten Sie, dass eine Zeile mit einen Zeitteil, der nach 0:00 Uhr am Datum 2002-01-05 liegt, von dieser Abfrage nicht zurückgegeben wird, da das Datum außerhalb des Bereichs liegt.  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [&#62; &#40;Greater Than&#41; &#40;Transact-SQL&#41; (&#62; &#40;Größer als&#41; &#40;Transact-SQL&#41;)](../../t-sql/language-elements/greater-than-transact-sql.md)   
  [&#60; &#40;Less Than&#41; &#40;Transact-SQL&#41; (&#60; &#40;Kleiner als&#41; &#40;Transact-SQL&#41;)](../../t-sql/language-elements/less-than-transact-sql.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

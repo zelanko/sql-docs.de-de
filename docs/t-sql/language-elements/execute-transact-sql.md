@@ -28,16 +28,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641021"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982354"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ Führt eine Befehlszeichenfolge oder eine Zeichenfolge in einem [!INCLUDE[tsql](
 > [!IMPORTANT]  
 >  Bevor Sie EXECUTE mit einer Zeichenfolge aufrufen, sollten Sie die Zeichenfolge überprüfen. Führen Sie auf keinen Fall einen aus Benutzereingaben erstellten Befehl aus, der nicht zuvor überprüft wurde.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -259,7 +259,7 @@ Wenn Sie ein einzelnes Wort übergeben, das nicht mit `@` beginnt und nicht in A
  Gibt den im Modul definierten Standardwert des Parameters an. Wenn das Modul einen Wert für einen Parameter erwartet, der keinen definierten Standardwert aufweist, und entweder ein Parameter fehlt oder das DEFAULT-Schlüsselwort angegeben ist, tritt ein Fehler auf.  
   
  @*string_variable*  
- Der Name einer lokalen Variablen. @*string_variable* kann den Datentyp **char**, **varchar**, **nchar** oder **nvarchar** aufweisen. Hierzu zählen auch die **(max)**-Datentypen.  
+ Der Name einer lokalen Variablen. @*string_variable* kann den Datentyp **char**, **varchar**, **nchar** oder **nvarchar** aufweisen. Hierzu zählen auch die **(max)** -Datentypen.  
   
  [N] '*tsql_string*'  
  Eine konstante Zeichenfolge. *tsql_string* kann einen beliebigen **nvarchar**- oder **varchar**-Datentyp aufweisen. Wird das N angegeben, wird die Zeichenfolge als Datentyp **nvarchar** interpretiert.  
@@ -725,12 +725,12 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [Hilfsprogramm „osql“](../../tools/osql-utility.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)   
