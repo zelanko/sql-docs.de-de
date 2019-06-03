@@ -14,12 +14,12 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bcacf7ab799ef36ab0f28bcc78ad27be2afe67c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2c4381ddbbe0a218b6fc53d8e054017b66068b59
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65102714"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454552"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Mit Microsoft Azure Storage verbinden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ Geben Sie die folgenden Informationen zum Windows Azure-Konto an, und klicken Si
 1.  **Speicherkonto** – Geben Sie den Speicherkontonamen an.
 
    >[!NOTE]
-   > Sie können nur Verbindungen zu [allgemeinen Speicherkonten](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services) herstellen. Die Verbindungserstellung zu anderen Arten von Speicherkonten kann zu einem Fehler wie dem folgenden führen:
+   > Sie können nur Verbindungen zu [allgemeinen Speicherkonten](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services) herstellen. Die Verbindungserstellung zu anderen Arten von Speicherkonten kann zu einem Fehler wie dem folgenden führen:
    >
    >  The value for one of the HTTP headers is not in the correct format. (Das Format von einem der Werte des HTTP-Headers ist nicht korrekt.) (Microsoft.SqlServer.StorageClient).
    >

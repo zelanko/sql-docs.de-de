@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04c7d8564b739bd593b84c3925e3d7491a1bbca8
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: 3139f841d1ef7c75decbc5a3dbab34fb333d289c
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198074"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428999"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -231,7 +231,7 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Objekt-Explorer|Logik zum Anfordern einer Bestätigung beim Umbenennen einer Datenbank für alle Schemaobjekte wurde erweitert (die Einstellung kann konfiguriert werden).|
 |Objekt-Explorer|Die richtigen Escapezeichen wurden in die Filterung des Objekt-Explorers hinzugefügt. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/36678803. |
 |Objekt-Explorer|Die Ansicht in den Details zum Objekt-Explorer wurde verbessert bzw. Fehler wurden behoben, um Zahlen mit geeigneten Trennzeichen anzuzeigen. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/32900944. |
-|Objekt-Explorer|Ein Problem innerhalb des Kontextmenüs im Knoten „Tabellen“ bei einer Verbindung mit SQL Express wurde behoben, bei dem das Flyoutmenü „Neu“ fehlte, Graph-Tabellen fehlerhaft aufgelistet wurden und die Tabelle mit Systemversionsverwaltung fehlte. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/37245529.|
+|Objekt-Explorer|Ein Problem innerhalb des Kontextmenüs im Knoten „Tabellen“ bei einer Verbindung mit SQL Express wurde behoben, bei dem das Flyoutmenü „Neu“ fehlte, Graph-Tabellen fehlerhaft aufgelistet wurden und die Tabelle mit Systemversionsverwaltung fehlte. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/37245529. |
 |Skripterstellung für Objekte|Allgemeine Leistungsverbesserungen: Das Generieren von Skripts von „WideWorldImporters“ dauert nur die Hälfte die Zeit im Vergleich zu SSMS 17.7.|
 |Skripterstellung für Objekte|Bei der Skripterstellung für Objekte werden die datenbankbezogenen Konfigurationen mit Standardwerten weggelassen.|
 |Skripterstellung für Objekte|Generieren Sie bei der Skripterstellung kein dynamisches T-SQL. Siehe https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391. |

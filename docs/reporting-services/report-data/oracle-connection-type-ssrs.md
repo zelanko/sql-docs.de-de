@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3dd35c6630c825e5341246170f6e96d61a47de4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1cf0134d4c71111537a9d7c020c03f77d9377fd1
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577898"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413434"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle-Verbindungstyp (SSRS)
 Wenn Sie Daten aus einer Oracle-Datenbank im Bericht verwenden möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "Oracle" basiert. Dieser integrierte Datenquellentyp verwendet direkt den Oracle-Datenanbieter und erfordert eine Oracle-Clientsoftwarekomponente.
 
 Um die Oracle-Clienttools zu installieren, gehen Sie folgendermaßen vor:
  
-1.  Navigieren Sie zur [Oracle-Downloadwebsite](https://www.oracle.com/us/products/tools/index-090165.html).
+1.  Navigieren Sie zur [Oracle-Downloadwebsite](https://www.oracle.com/downloads/).
 2.  Laden Sie das ODAC 12c-Release 4 (12.1.0.2.4) für Windows (64 Bit für einen Server, 32 Bit für die Tools) herunter.
 3.  Installieren Sie den Datenanbieter für .NET 4.
   

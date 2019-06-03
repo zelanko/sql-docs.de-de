@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+Title: 'Lernprogramm: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio'
 description: Ein Tutorial für die Herstellung einer Verbindung zu einer SQL Server-Instanz durch Verwendung von SQL Server Management Studio und Ausführen grundlegender T-SQL-Abfragen
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,12 +11,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 21f6d4c689a30dc60fc103f7e881ae5499baafa8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 034e0663065003a47245ad71b602ec8bfb256df3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802496"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454458"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Lernprogramm: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio
 
@@ -68,7 +68,7 @@ Um zu prüfen, ob eine Verbindung mit SQL Server erfolgreich hergestellt wurde, 
 - Herstellen einer Verbindung mit einer SQL Azure-Datenbank – in diesem Fall „msftestserver.database.windows.net“: ![Herstellen einer Verbindung mit einer SQL Azure-Datenbank](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > In diesem Tutorial haben Sie zuvor die *Windows-Authentifizierung* verwendet, um eine Verbindung mit Ihrer lokalen SQL Server-Instanz herzustellen. Diese Methode wird aber für SQL Azure-Datenbanken nicht unterstützt. Daher ist in diesem Bild gezeigt, wie über SQL-Authentifizierung eine Verbindung mit der SQL Azure-Datenbank hergestellt wird. Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) und [SQL Azure-Authentifizierung](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
+  > In diesem Tutorial haben Sie zuvor die *Windows-Authentifizierung* verwendet, um eine Verbindung mit Ihrer lokalen SQL Server-Instanz herzustellen. Diese Methode wird aber für SQL Azure-Datenbanken nicht unterstützt. Daher ist in diesem Bild gezeigt, wie über SQL-Authentifizierung eine Verbindung mit der SQL Azure-Datenbank hergestellt wird. Weitere Informationen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../relational-databases/security/choose-an-authentication-mode.md) und [SQL Azure-Authentifizierung](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management). 
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
 Erstellen Sie mithilfe folgender Schritte eine Datenbank namens „TutorialDB“: 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718425"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454580"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -68,7 +68,7 @@ Führen Sie die Anweisungen zur Einrichtung und Konfiguration der SSISDB-Unterst
 Außerdem müssen Sie einen Verfügbarkeitsgruppenlistener für die Verfügbarkeitsgruppe erstellen, zu der Sie SSISDB hinzufügen. Vgl. [Create or Configure an Availability Group Listener (Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners)](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts
-Aktualisieren Sie die Konfigurationsdatei des Scale Out Masterdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) auf dem Primär- und dem Sekundärknoten. Aktualisieren Sie **SqlServerName** auf *[DNS des Verfügbarkeitsgruppenlisteners],[Port]*.
+Aktualisieren Sie die Konfigurationsdatei des Scale Out Masterdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) auf dem Primär- und dem Sekundärknoten. Aktualisieren Sie **SqlServerName** auf *[DNS des Verfügbarkeitsgruppenlisteners],[Port]* .
 
 ## <a name="6-enable-package-execution-logging"></a>6. Aktualisieren Sie die Ausführungsprotokollierung.
 
@@ -99,7 +99,7 @@ Rufen Sie die gespeicherte Prozedur `[catalog].[update_logdb_info]` mithilfe der
 
 Auf virtuellen Azure-Computern erfordert diese Konfiguration zusätzliche Schritte. Eine vollständige Erläuterung dieser Konzepte und dieser Schritte ist nicht Gegenstand dieses Artikels.
 
-1.  Sie müssen eine Azure-Domäne einrichten. Windows Server-Failoverclustering erfordert, dass alle Computer im Cluster Mitglieder derselben Domäne sind. Weitere Informationen finden Sie unter [Enable Azure Active Directory Domain Services using the Azure portal (Aktivieren von Azure Active Directory Domain Services über das Azure-Portal)](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+1.  Sie müssen eine Azure-Domäne einrichten. Windows Server-Failoverclustering erfordert, dass alle Computer im Cluster Mitglieder derselben Domäne sind. Weitere Informationen finden Sie unter [Enable Azure Active Directory Domain Services using the Azure portal (Aktivieren von Azure Active Directory Domain Services über das Azure-Portal)](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
 
 2. Sie müssen einen Azure Load Balancer einrichten. Dies ist für den Verfügbarkeitsgruppenlistener erforderlich. Weitere Informationen finden Sie unter [Tutorial: Ausgleichen der internen Datenverkehrslast mithilfe eines Lastenausgleichs im Tarif „Basic“ über das Azure-Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
