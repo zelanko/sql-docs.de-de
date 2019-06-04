@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_exec_procedure_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013415"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462663"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "63013415"
 > [!NOTE]
 > Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_procedure_stats**.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, in der sich die gespeicherte Prozedur befindet.|  
 |**object_id**|**int**|Objekt-ID der gespeicherten Prozedur.|  
@@ -77,6 +77,10 @@ ms.locfileid: "63013415"
 |**min_spills**|**bigint**|Die minimale Anzahl von Seiten, auf denen diese gespeicherte Prozedur verfügt über eine einzelne Ausführung jemals überlaufen.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Die maximale Anzahl von Seiten, auf denen diese gespeicherte Prozedur einmal eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.<br /><br />**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|Die Gesamtanzahl der Seitenserver Lesevorgänge für Ausführungen dieser gespeicherten Prozedur seit der Kompilierung.<br /><br /> **Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank|  
+|**last_page_server_reads**|**bigint**|Die Anzahl der Seitenlesevorgänge-Server ausgeführt, der letzten Ausführung die gespeicherte Prozedur ausgeführt wurde.<br /><br /> **Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank|  
+|**min_page_server_reads**|**bigint**|Die minimale Anzahl von Seitenserver liest, dass diese gespeicherte Prozedur eine einzelne Ausführung bisherige.<br /><br /> **Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank|  
+|**max_page_server_reads**|**bigint**|Die maximale Anzahl von Seitenserver liest, dass diese gespeicherte Prozedur eine einzelne Ausführung bisherige.<br /><br /> **Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank|  
   
  <sup>1</sup> für systemintern kompilierte gespeicherte Prozeduren bei der Sammlung von Statistiken aktiviert ist, wird worker_time in Millisekunden. Wird die Abfrage in weniger als einer Millisekunde ausgeführt, lautet der Wert 0.  
   

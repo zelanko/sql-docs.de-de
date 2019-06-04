@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87be8cba02cac7f0ff6b1cd0fa966241745e5483
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072234"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462525"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "58072234"
 
 Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID der Sitzung, auf die sich diese Anforderung bezieht. Lässt keine NULL-Werte zu.|  
 |request_id|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig. Lässt keine NULL-Werte zu.|  
@@ -95,12 +95,13 @@ Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion
 |parallel_worker_count |**int** |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl der reservierten parallelen Arbeitsthreads, wenn dies eine parallele Abfrage ist.  |  
 |external_script_request_id |**uniqueidentifier** |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die externen Skript-Anforderungs-ID der aktuellen Anforderung zugeordnet ist. |  
 |is_resumable |**bit** |**Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt an, ob die Anforderung eines fortsetzbaren Indexvorgangs. |  
-|page_resource |**binary(8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Ressource für die Seite "Wenn die `wait_resource` Spalte enthält eine Seite. |
+|page_resource |**binary(8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Eine 8-Byte-hexadezimale Darstellung der Ressource für die Seite "Wenn die `wait_resource` Spalte enthält eine Seite. |  
+|page_server_reads|**bigint**|**Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank<br /><br /> Die Anzahl der Server Seitenlesevorgänge, die von dieser Anforderung ausgeführten. Lässt keine NULL-Werte zu.|  
 
 ## <a name="remarks"></a>Hinweise 
 Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.
 
-Beim Ausführen von paralleler Anforderungen in [Zeilenmodus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeitsthread zum Koordinieren der Arbeitsthreads, die zum Abschließen der Aufgaben, die ihnen zugewiesene verantwortlich. In dieser DMV ist nur der koordinatorthread für die Anforderung angezeigt. Die Spalten **liest**, **schreibt**, **Logical_reads**, und **Row_count** sind **nicht aktualisiert** für die koordinatorthread. Die Spalten **"wait_type"**, **"wait_time"**, **Last_wait_type**, **Wait_resource**, und **Granted_query_memory** sind **nur dann aktualisiert,** für den koordinatorthread. Weitere Informationen finden Sie unter den [Handbuch zur Architektur und Thread](../../relational-databases/thread-and-task-architecture-guide.md).
+Beim Ausführen von paralleler Anforderungen in [Zeilenmodus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeitsthread zum Koordinieren der Arbeitsthreads, die zum Abschließen der Aufgaben, die ihnen zugewiesene verantwortlich. In dieser DMV ist nur der koordinatorthread für die Anforderung angezeigt. Die Spalten **liest**, **schreibt**, **Logical_reads**, und **Row_count** sind **nicht aktualisiert** für die koordinatorthread. Die Spalten **"wait_type"** , **"wait_time"** , **Last_wait_type**, **Wait_resource**, und **Granted_query_memory** sind **nur dann aktualisiert,** für den koordinatorthread. Weitere Informationen finden Sie unter den [Handbuch zur Architektur und Thread](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Berechtigungen
 Wenn der Benutzer hat `VIEW SERVER STATE` -Berechtigung auf dem Server, sieht der Benutzer alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, andernfalls sieht der Benutzer nur die aktuelle Sitzung. `VIEW SERVER STATE` kann nicht gewährt werden, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] damit `sys.dm_exec_requests` ist immer auf die aktuelle Verbindung beschränkt.

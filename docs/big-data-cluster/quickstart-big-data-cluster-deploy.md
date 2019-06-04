@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2c0e00ab14cad3d300a09ecc697b2468f1d7d4ce
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993396"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462794"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -30,7 +30,7 @@ Die hier verwendete Standard big Data-Clusterbereitstellung besteht aus einer In
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Ein Azure-Abonnement.
 - [Big Data-Tools](deploy-big-data-tools.md):
@@ -73,7 +73,7 @@ Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungss
 
 1. Wenn Sie aufgefordert werden, geben Sie die folgenden Informationen an:
 
-   | Wert | Description |
+   | Wert | Beschreibung |
    |---|---|
    | **Azure-Abonnement-ID** | Die Azure-Abonnement-ID, der für AKS verwendet werden soll. Sie können alle Ihre Abonnements und die dazugehörigen IDs auflisten, indem Sie Ausführung `az account list` in einer anderen Befehlszeile. |
    | **Azure-Ressourcengruppe** | Der Gruppenname des Azure-Ressource für die AKS-Cluster zu erstellen. |
@@ -87,7 +87,7 @@ Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungss
    | **Benutzerkonten** | Benutzername für den Controllerbenutzer (Standard: **Admin**). |
 
    > [!IMPORTANT]
-   > Der Standardwert **Standard_L8s** Größe für den Computer möglicherweise nicht verfügbar in jeder Azure-Region. Wenn Sie eine andere computergröße auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf die Knoten im Cluster angefügt werden, kann größer als oder gleich 24. Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 24 persistentes Volume Ansprüche. Z. B. die [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) VM-Größe unterstützt 32 angefügte Datenträger aus, sodass Sie big Data-Cluster mit einem einzelnen Knoten der Größe des Computers bewerten können.
+   > Der Standardwert **Standard_L8s** Größe für den Computer möglicherweise nicht verfügbar in jeder Azure-Region. Wenn Sie eine andere computergröße auswählen, stellen Sie sicher, dass die Gesamtzahl von Datenträgern, die auf die Knoten im Cluster angefügt werden, kann größer als oder gleich 24. Jeder Anspruch persistentes Volume im Cluster erfordert einen angeschlossenen Datenträger. Big Data-Cluster erfordert derzeit 24 persistentes Volume Ansprüche. Z. B. die [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) VM-Größe unterstützt 32 angefügte Datenträger aus, sodass Sie big Data-Cluster mit einem einzelnen Knoten der Größe des Computers bewerten können.
 
    > [!NOTE]
    > Die `sa` Konto ist ein Systemadministrator für die master SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen der Bereitstellung der `MSSQL_SA_PASSWORD` Umgebungsvariable ist mit sichtbaren `echo $MSSQL_SA_PASSWORD` im Container Masterinstanz. Aus Sicherheitsgründen ändern Ihre `sa` Kennwort für die master-Instanz nach der Bereitstellung. Weitere Informationen finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).

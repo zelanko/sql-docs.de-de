@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66428951"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462544"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "66428951"
 > Erste Abfrage von **dm_exec_function_stats** kann zu ungenauen Ergebnissen führen, wenn eine arbeitsauslastung, die gerade ausgeführt wird, auf dem Server vorhanden ist. Erneutes Ausführen der Abfrage liefert unter Umständen genauere Ergebnisse.  
   
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Datenbank-ID, die in der die Funktion befindet.|  
 |**object_id**|**int**|Objekt-ID der Funktion.|  
@@ -68,10 +68,10 @@ ms.locfileid: "66428951"
 |**last_elapsed_time**|**bigint**|Verstrichene Zeit in Mikrosekunden, die für die letzte abgeschlossene Ausführung dieser Funktion.|  
 |**min_elapsed_time**|**bigint**|Mindestens verstrichene Zeit, die in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
 |**max_elapsed_time**|**bigint**|Maximal verstrichene Zeit, die in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
-|**total_page_server_reads**|**bigint**|Gesamtanzahl der remote-Seite Server Lesevorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
-|**last_physical_reads**|**bigint**|Die Anzahl der RAS-Server-Seitenlesevorgänge bei der letzten Ausführung die Funktion ausgeführt wurde.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
-|**min_physical_reads**|**bigint**|Minimale Anzahl von remote-Seitenserver liest, dass diese Funktion eine einzelne Ausführung bisherige.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
-|**max_physical_reads**|**bigint**|Maximale Anzahl von remote-Seitenserver liest, dass diese Funktion eine einzelne Ausführung bisherige.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|
+|**total_page_server_reads**|**bigint**|Gesamtanzahl der Seite Server Lesevorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
+|**last_page_server_reads**|**bigint**|Anzahl der Seitenlesevorgänge-Server ausgeführt, der letzten Ausführung die Funktion ausgeführt wurde.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
+|**min_page_server_reads**|**bigint**|Minimale Anzahl von Seitenserver liest, dass diese Funktion eine einzelne Ausführung bisherige.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
+|**max_page_server_reads**|**bigint**|Maximale Anzahl von Seitenserver liest, dass diese Funktion eine einzelne Ausführung bisherige.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|
   
 ## <a name="permissions"></a>Berechtigungen  
 

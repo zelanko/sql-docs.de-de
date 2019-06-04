@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_db_partition_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025106"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462657"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "63025106"
   Gibt Informationen zu Seiten- und Zeilenzahlen für jede Partition in der aktuellen Datenbank zurück.  
   
 > [!NOTE]  
->  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **Sys. dm_pdw_nodes_db_partition_stats**.  
+>  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **Sys. dm_pdw_nodes_db_partition_stats**. Die Partition_id in Sys. dm_pdw_nodes_db_partition_stats unterscheidet sich von der Partition_id in der sys.partitions-Katalogsicht für Azure SQL Data Warehouse.
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|Die ID der Partition. Sie ist innerhalb einer Datenbank eindeutig. Dies ist der gleiche Wert wie die **Partition_id** in die **sys.partitions** Katalogsicht|  
+|**partition_id**|**bigint**|Die ID der Partition. Sie ist innerhalb einer Datenbank eindeutig. Dies ist der gleiche Wert wie die **Partition_id** in die **sys.partitions** Katalogsicht mit Ausnahme von Azure SQL Data Warehouse.|  
 |**object_id**|**int**|Objekt-ID der Tabelle oder der indizierten Sicht, in der die Partition enthalten ist.|  
 |**index_id**|**int**|ID des Heaps oder Indexes, in dem die Partition enthalten ist.<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index.<br /><br /> > 1 = nicht gruppierter Index|  
 |**partition_number**|**int**|Auf 1 basierende Partitionsnummer im Index oder Heap.|  
 |**in_row_data_page_count**|**bigint**|Anzahl der Seiten, die zum Speichern von Daten innerhalb einer Zeile dieser Partition verwendet werden. Falls die Partition Teil eines Heaps ist, gibt der Wert die Anzahl von Datenseiten im Heap an. Falls die Partition Teil eines Indexes ist, gibt der Wert die Anzahl der Seiten auf Blattebene an. (Die Seiten des inneren Blatts in der B-Struktur sind in der Zählung nicht enthalten.) IAM (Index Allocation Map)-Seiten sind in beiden Fällen nicht enthalten. Immer 0 für einen speicheroptimierten xVelocity-columnstore-Index.|  
 |**in_row_used_page_count**|**bigint**|Gesamtanzahl der Seiten, die zum Speichern und Verwalten der Daten in Zeilen in dieser Partition verwendet werden. Dazu gehören die Seiten der B-Struktur, IAM-Seiten und alle Seiten in enthalten die **In_row_data_page_count** Spalte. Immer 0 für einen columnstore-Index.|  
 |**in_row_reserved_page_count**|**bigint**|Gesamtanzahl der Seiten, die zum Speichern und Verwalten der Daten in Zeilen in dieser Partition reserviert sind, unabhängig davon, ob die Seiten verwendet werden. Immer 0 für einen columnstore-Index.|  
-|**lob_used_page_count**|**bigint**|Anzahl der Seiten zum Speichern und Verwalten von Out-of-Row- **Text**, **Ntext**, **Image**, **varchar(max)**, **Nvarchar (max)** , **'varbinary(max)'**, und **Xml** Spalten innerhalb der Partition. IAM-Seiten sind eingeschlossen.<br /><br /> Gesamtzahl von LOBs, die zum Speichern und Verwalten des columnstore-Index in der Partition verwendet werden.|  
-|**lob_reserved_page_count**|**bigint**|Gesamtzahl der Seiten, die zum Speichern und Verwalten von Out-of-Row reserviert **Text**, **Ntext**, **Image**, **varchar(max)**,  **nvarchar(max)**, **'varbinary(max)'**, und **Xml** Spalten innerhalb der Partition, unabhängig davon, ob die Seiten verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Gesamtzahl von LOBs, die zum Speichern und Verwalten eines columnstore-Index in der Partition reserviert wurden.|  
+|**lob_used_page_count**|**bigint**|Anzahl der Seiten zum Speichern und Verwalten von Out-of-Row- **Text**, **Ntext**, **Image**, **varchar(max)** , **Nvarchar (max)** , **'varbinary(max)'** , und **Xml** Spalten innerhalb der Partition. IAM-Seiten sind eingeschlossen.<br /><br /> Gesamtzahl von LOBs, die zum Speichern und Verwalten des columnstore-Index in der Partition verwendet werden.|  
+|**lob_reserved_page_count**|**bigint**|Gesamtzahl der Seiten, die zum Speichern und Verwalten von Out-of-Row reserviert **Text**, **Ntext**, **Image**, **varchar(max)** ,  **nvarchar(max)** , **'varbinary(max)'** , und **Xml** Spalten innerhalb der Partition, unabhängig davon, ob die Seiten verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Gesamtzahl von LOBs, die zum Speichern und Verwalten eines columnstore-Index in der Partition reserviert wurden.|  
 |**row_overflow_used_page_count**|**bigint**|Anzahl der Seiten zum Speichern und Verwalten von Zeilenüberlauf **Varchar**, **Nvarchar**, **Varbinary**, und **Sql_variant** Spalten in der Partition. IAM-Seiten sind eingeschlossen.<br /><br /> Immer 0 für einen columnstore-Index.|  
 |**row_overflow_reserved_page_count**|**bigint**|Gesamtzahl der Seiten, die zum Speichern und Verwalten von Zeilenüberlauf reserviert **Varchar**, **Nvarchar**, **Varbinary**, und **Sql_variant** die Spalten innerhalb der Partition, unabhängig davon, ob die Seiten verwendet werden. IAM-Seiten sind eingeschlossen.<br /><br /> Immer 0 für einen columnstore-Index.|  
 |**used_page_count**|**bigint**|Gesamtanzahl der für die Partition verwendeten Seiten. Berechnet als **In_row_used_page_count** + **Lob_used_page_count** + **Row_overflow_used_page_count**.|  

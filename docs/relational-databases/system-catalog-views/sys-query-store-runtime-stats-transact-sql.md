@@ -1,7 +1,7 @@
 ---
 title: Sys. query_store_runtime_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/23/2019
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: dd25f70c7cf3d34a4411cc15802437d97f5f8190
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65980058"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462725"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Enthält Informationen zu der Common Language Runtime die Informationen für die Abfrage.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|Bezeichner der Zeile für die Laufzeit-Ausführungsstatistik für den **Plan_id**, **Execution_type** und **Runtime_stats_interval_id**. Es ist nur für die letzten Runtime Statistics Intervalle eindeutig. Für die aktuell aktiven Intervalls möglicherweise mehrere Zeilen, die Laufzeitstatistiken für den Plan verweist darstellt **Plan_id**, mit dem dargestellt wird, indem Sie Ausführung **Execution_type**. In der Regel stellt eine Zeile Clientlaufzeit-Statistik, die geleert werden, auf dem Datenträger, während andere (s) im Speicher enthaltenen Status darstellen. Daher zum Abrufen der tatsächlichen Status für jedes Intervall, müssen Sie aggregierte Metriken Gruppieren nach **Plan_id**, **Execution_type** und **Runtime_stats_interval_id**.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
 |**plan_id**|**bigint**|Fremdschlüssel. Verknüpft mit [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
@@ -93,7 +93,12 @@ ms.locfileid: "65980058"
 |**last_log_bytes_used**|**bigint**|Anzahl der Bytes im Protokoll von der letzten Ausführung des Abfrageplans, in dem aggregationsintervall verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
 |**min_log_bytes_used**|**bigint**|Minimale Anzahl von Bytes in das Datenbankprotokoll, die von der Abfrageplan in aggregationsintervalls verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
 |**max_log_bytes_used**|**bigint**|Maximale Anzahl von Bytes in das Datenbankprotokoll, die von der Abfrageplan in aggregationsintervalls verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_log_bytes_used**|**float**|Standardabweichung der die Anzahl der Bytes im Datenbankprotokoll von innerhalb des aggregationsintervalls eines Abfrageplans verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_log_bytes_used**|**float**|Standardabweichung der die Anzahl der Bytes im Datenbankprotokoll von innerhalb des aggregationsintervalls eines Abfrageplans verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**avg_page_server_io_reads**|**float**|Durchschnittliche Anzahl der Seitenlesevorgänge Server-e/a für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank</br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
+|**last_page_server_io_reads**|**bigint**|Letzte Anzahl Seite Server e/a-Lesevorgänge für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank </br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
+|**min_page_server_io_reads**|**bigint**|Minimale Anzahl der Seitenlesevorgänge Server-e/a für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank </br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
+|**max_page_server_io_reads**|**bigint**|Maximale Anzahl der Seitenlesevorgänge Server-e/a für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank </br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
+|**stdev_page_server_io_reads**|**float**|Anzahl der Seitenserver e/a-Lesevorgänge auf Standardabweichung für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank </br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die **VIEW DATABASE STATE** Berechtigung.  

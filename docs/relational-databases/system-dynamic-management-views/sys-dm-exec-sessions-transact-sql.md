@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 49638971a01d2082938d4759bb9f597d7bfdf254
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535190"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462628"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,6 +90,7 @@ ms.locfileid: "52535190"
 |authenticating_database_id|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID der Datenbank, die den Prinzipal authentifiziert. Bei Anmeldungen beträgt der Wert 0. Für Benutzer von eigenständigen Datenbanken ist der Wert die Datenbank-ID der eigenständigen Datenbank.|  
 |open_transaction_count|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl der offenen Transaktionen pro Sitzung.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|page_server_reads|**bigint**|**Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank<br /><br /> Anzahl der Seitenlesevorgänge-Server ausgeführt, die von Anforderungen in dieser Sitzung oder während dieser Sitzung. Lässt keine NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Alle Benutzer kann ihre eigenen Informationen sehen.  

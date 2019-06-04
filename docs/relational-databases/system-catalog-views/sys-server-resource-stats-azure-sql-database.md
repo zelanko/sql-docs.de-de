@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2a0a1f82685cb107902c8065f2f696f615ad3930
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62744072"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462774"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Die **sys.server_resource_stats** Ansicht hat verschiedene Definitionen abhängi
   
  Die folgende Tabelle beschreibt die verfügbaren Spalten bei einem Server mit der Version 12:  
   
-|Spalte|Datentyp|Description|  
+|Spalte|Datentyp|Beschreibung|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|UTC-Zeit, die den Anfang des 15-Sekunden-Intervalls reporting|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des 15-Sekunden-Intervalls reporting|
@@ -55,7 +55,7 @@ Die **sys.server_resource_stats** Ansicht hat verschiedene Definitionen abhängi
 
  
 > [!TIP]  
->  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen für die verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen für die verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
     
 ## <a name="permissions"></a>Berechtigungen  
  Die Ansicht kann auf alle Benutzerrollen mit Berechtigungen zum Herstellen einer Verbindung mit der **master** Datenbank.  
@@ -79,4 +79,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Siehe auch  
- [Verwaltete Instanz von Dienstebenen](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [Verwaltete Instanz von Dienstebenen](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
