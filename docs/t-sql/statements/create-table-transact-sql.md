@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: bf05845ce09fab783692d6b5c63f60fd91a98997
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503726"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036900"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -396,7 +396,7 @@ Gibt an, dass die Spalten vom Typ **text**, **ntext**, **image**, **xml**, **var
 `TEXTIMAGE_ON` ist nicht zulässig, wenn die Tabelle keine Spalten für umfangreiche Werte enthält. `TEXTIMAGE_ON` darf nicht angegeben werden, wenn *partition_scheme* angegeben wird. Wenn **"default"** angegeben oder `TEXTIMAGE_ON` nicht angegeben wird, werden die Spalten für umfangreiche Werte in der Standarddateigruppe gespeichert. Die in `CREATE TABLE` angegebene Speicherung von Spaltendaten mit großen Werten kann nachfolgend nicht mehr geändert werden.
 
 > [!NOTE]
-> Varchar(max), nvarchar(max), varbinary(max), XML und große UDT-Werte werden bis zu einem Höchstwert von 8.000 Bytes direkt in der Datenzeile gespeichert, sofern der Wert die Größe des Datensatzes nicht überschreitet. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Der Standardwert ist 0 (null).
+> Varchar(max), nvarchar(max), varbinary(max), XML und große UDT-Werte werden bis zu einem Höchstwert von 8.000 Bytes direkt in der Datenzeile gespeichert, sofern der Wert die Größe des Datensatzes nicht überschreitet. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Null (0) ist der Standardwert, der angibt, dass alle Werte direkt in der Datenzeile gespeichert werden.
 >
 > `TEXTIMAGE_ON` ändert nur den Speicherort des LOB-Speicherbereichs. Dies beeinträchtigt in Zeilen gespeicherte Daten nicht. Verwenden Sie große Werttypen von „sp_tableoption“ außerhalb der Zeilen, um den gesamten LOB-Wert außerhalb der Zeile zu speichern.
 >

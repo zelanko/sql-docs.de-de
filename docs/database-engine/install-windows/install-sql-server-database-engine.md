@@ -1,7 +1,7 @@
 ---
 title: Installation der Datenbank-Engine von SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,26 +13,26 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 80de284e9ac06e7481848325db7c1557524dc166
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65484335"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994199"
 ---
 # <a name="install-sql-server-database-engine"></a>Installieren der SQL Server-Datenbank-Engine
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+## <a name="overview"></a>Übersicht
 Bei der Komponente [!INCLUDE[ssDE](../../includes/ssde-md.md)] von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt es sich um den zentralen Dienst zum Speichern, Verarbeiten und Sichern von Daten. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bietet gesteuerten Zugriff und eine zügige Transaktionsverarbeitung und erfüllt damit die Anforderungen selbst der anspruchsvollsten datenlastigen Anwendungen des Unternehmens.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu 50 Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem einzelnen Computer. Um eine typische [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation durchzuführen, gehen Sie auf die Seite [Install SQL Server from the Installation Wizard &#40;Setup&#41; (Installieren von SQL Server mit dem Installations-Assistenten &#40;Setup&#41;)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 >[!IMPORTANT]
 >Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
-  
-## <a name="related-features"></a>Verwandte Funktionen
 
+## <a name="features"></a>Funktionen
 Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf der Seite Zu installierende Komponenten die Option** -Datenbank-Engine[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen, werden folgenden Funktionen installiert:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -48,27 +48,23 @@ Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../include
     > [!NOTE]  
     >  In dieser Version wird durch Aktivieren des Kontrollkästchens **Data Quality Services** während des Setups DQS (Data Quality Services)-Server nicht installiert. Sie müssen nach der Installation weitere Schritte ausführen, um DQS-Server zu installieren. Weitere Informationen finden Sie unter [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
     
-- [PolyBase-Abfragedienst für externe Daten](../../relational-databases/polybase/polybase-guide.md) – optionale Komponente 
+- [PolyBase-Abfragedienst für externe Daten](../../relational-databases/polybase/polybase-guide.md) – optionale Komponente Ab SQL Server 2019 ist der Java-Connector auch für HDFS-Datenquellen (Hadoop Distributed File System) verfügbar.
 
   
  In vielen typischen Benutzerszenarien sind die folgenden zusätzlichen Funktionen als Optionen verfügbar:  
   
--   Data Quality Client  
-  
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-  
--   Konnektivitätskomponenten  
-  
--   Programmiermodelle  
-  
--   Verwaltungstools  
-  
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
-  
+-   Data Quality Client
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
+-   Konnektivitätskomponenten
+-   Programmiermodelle
+-   Verwaltungstools
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 -   Dokumentationskomponenten  
   
+
 > [!NOTE]  
 >  Standardmäßig werden Beispieldatenbanken und Beispielcode nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups installiert. Informationen zur Installation von Beispieldatenbanken und Beispielcode finden Sie unter [Microsoft SQL Server Samples (Beispiele für Microsoft SQL Server)](../../sample/microsoft-sql-server-samples.md). Ältere Beispiele finden Sie auf der [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843)-Seite.  
+
   
 ## <a name="see-also"></a>Siehe auch  
  [Editionen und unterstützten Funktionen von SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
