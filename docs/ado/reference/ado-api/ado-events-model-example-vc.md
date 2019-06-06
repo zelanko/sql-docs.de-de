@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248979"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718554"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO-Ereignismodell – Beispiel (VC++)
 Der Visual C++-Teil [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md) bietet eine allgemeine Beschreibung von der ADO-Ereignismodell instanziieren. Im folgenden ist ein spezifisches Beispiel instanziieren Sie das Ereignismodell in der Umgebung erstellt, indem die **#import** Richtlinie.  
@@ -29,7 +29,7 @@ Der Visual C++-Teil [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide
   
 -   Die **#import** Richtlinie löst **Typedef**des, Methode Signatur-Datentypen und Modifizierer auf ihre grundlegenden Formen.  
   
--   Die reinen virtuellen Methoden, die überschrieben werden, müssen alle über das Präfix von "**Raw_**".  
+-   Die reinen virtuellen Methoden, die überschrieben werden, müssen alle über das Präfix von "**Raw_** ".  
   
  Teil des Codes Codierungsstil einfach widerspiegelt.  
   

@@ -382,6 +382,8 @@
               items:
                 - name: Erstellen und Verwalten von Measures
                   href: ../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md
+            - name: Berechnungsgruppen
+              href: ../analysis-services/tabular-models/calculation-groups.md
             - name: KPIs (Key Performance Indicators)
               href: ../analysis-services/tabular-models/kpis-ssas-tabular.md
               items:
@@ -2480,7 +2482,7 @@
                       href: ../mdx/username-mdx.md
                     - name: ValidMeasure
                       href: ../mdx/validmeasure-mdx.md
-                    - name: Wert
+                    - name: value
                       href: ../mdx/value-mdx.md
                     - name: Var
                       href: ../mdx/var-mdx.md

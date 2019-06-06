@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 01d18e643dd769daa22309bb6c3df6407ab9043f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217680"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719170"
 ---
 # <a name="open-method-ado-connection"></a>Open-Methode (ADO-Verbindung)
 Öffnet eine Verbindung mit einer Datenquelle.  
@@ -37,23 +37,23 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Parameter  
  *ConnectionString*  
- Dies ist optional. Ein **Zeichenfolge** -Wert, der Verbindungsinformationen enthält. Finden Sie unter den ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft für Informationen zu gültigen Einstellungen.  
+ Optional. Ein **Zeichenfolge** -Wert, der Verbindungsinformationen enthält. Finden Sie unter den ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft für Informationen zu gültigen Einstellungen.  
   
  *UserID*  
- Dies ist optional. Ein **Zeichenfolge** Wert, der einen Benutzernamen ein, verwenden Sie beim Herstellen der Verbindung enthält.  
+ Optional. Ein **Zeichenfolge** Wert, der einen Benutzernamen ein, verwenden Sie beim Herstellen der Verbindung enthält.  
   
  *Kennwort*  
- Dies ist optional. Ein **Zeichenfolge** -Wert, ein Kennwort beim Herstellen der Verbindung enthält.  
+ Optional. Ein **Zeichenfolge** -Wert, ein Kennwort beim Herstellen der Verbindung enthält.  
   
- *Optionen*  
- Dies ist optional. Ein [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) Wert, der bestimmt, ob diese Methode nach dem zurückgeben soll (synchron) oder vor (asynchron) die Verbindung hergestellt wird.  
+ *Options*  
+ Optional. Ein [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) Wert, der bestimmt, ob diese Methode nach dem zurückgeben soll (synchron) oder vor (asynchron) die Verbindung hergestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
  Mithilfe der **öffnen** Methode für eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt stellt die physische Verbindung mit einer Datenquelle her. Nach dem erfolgreichen dieser Methode Abschluss ist die Verbindung, und Sie können Befehle für diese und die Ergebnisse zu verarbeiten.  
   
  Verwenden Sie das optionale *"ConnectionString"* Argument entweder eine Verbindungszeichenfolge mit einer Reihe von *Argument* *= Value* durch Semikolons getrennte Anweisungen oder ein Datei oder ein Verzeichnis mit einer URL bezeichnete Ressource. Die **"ConnectionString"** -Eigenschaft erbt automatisch den Wert für die *"ConnectionString"* Argument. Aus diesem Grund können Sie entweder die **"ConnectionString"** Eigenschaft der **Verbindung** Objekt vor dem Öffnen, oder verwenden Sie die *"ConnectionString"* Argument festzulegen oder zu überschreiben die aktuellen Parameter während der **öffnen** Methodenaufruf.  
   
- Wenn Sie den Benutzernamen und Kennwort des Informationen sowohl in übergeben die *"ConnectionString"* Argument und den optionalen *"UserID"* und *Kennwort* Argumente, die *"UserID"*  und *Kennwort* Argumente überschreiben die Werte im angegebenen *"ConnectionString"*.  
+ Wenn Sie den Benutzernamen und Kennwort des Informationen sowohl in übergeben die *"ConnectionString"* Argument und den optionalen *"UserID"* und *Kennwort* Argumente, die *"UserID"*  und *Kennwort* Argumente überschreiben die Werte im angegebenen *"ConnectionString"* .  
   
  Wenn Sie Ihre Vorgänge über ein offenes geschlossen haben **Verbindung**, verwenden Sie die [schließen](../../../ado/reference/ado-api/close-method-ado.md) Methode, um eine kostenlose zugeordnete Systemressourcen. Schließen ein Objekt entfernt es nicht aus dem Arbeitsspeicher. Sie können die Einstellungen zu ändern und die **öffnen** Methode, um sie später erneut öffnen. Um ein Objekt vom Arbeitsspeicher vollständig zu vermeiden, legen Sie die Objektvariable auf *nichts*.  
   
