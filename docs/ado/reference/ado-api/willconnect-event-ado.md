@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22d30e389c61a66d417ad5baec99a8834a754047
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 01b5c20668f97c80ae5abdcbb213914c012c7359
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642521"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710058"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect-Ereignis (ADO)
 Die **WillConnect** Ereignis wird immer dann aufgerufen, bevor eine Verbindung gestartet wird.  
@@ -46,8 +46,8 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *Kennwort*  
  Ein **Zeichenfolge** , ein Kennwort für die ausstehende Verbindung enthält.  
   
- *Optionen*  
- Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *"ConnectionString"*. Ihre einzige Option **AdAsyncOpen**.  
+ *Options*  
+ Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *"ConnectionString"* . Ihre einzige Option **AdAsyncOpen**.  
   
  *adStatus*  
  Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert.  
@@ -60,7 +60,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  Die [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt für die dieser ereignisbenachrichtigung angewendet wird. Änderungen an den Parametern des der **Verbindung** durch die **WillConnect** -Ereignishandler hat keine Auswirkungen auf die **Verbindung**.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn **WillConnect** aufgerufen wird, die *"ConnectionString"*, *"UserID"*, *Kennwort*, und *Optionen* Parameter werden festgelegt, auf die Werte, die hergestellt, indem der Vorgang, der dieses Ereignis (die Verbindung steht aus), und kann geändert werden, bevor das Ereignis zurückgegeben. **WillConnect** möglicherweise zurück, eine Anforderung, dass die ausstehende verbindungsanforderung abgebrochen werden.  
+ Wenn **WillConnect** aufgerufen wird, die *"ConnectionString"* , *"UserID"* , *Kennwort*, und *Optionen* Parameter werden festgelegt, auf die Werte, die hergestellt, indem der Vorgang, der dieses Ereignis (die Verbindung steht aus), und kann geändert werden, bevor das Ereignis zurückgegeben. **WillConnect** möglicherweise zurück, eine Anforderung, dass die ausstehende verbindungsanforderung abgebrochen werden.  
   
  Wenn dieses Ereignis abgebrochen wird, **ConnectComplete** wird mit aufgerufen werden, dessen *AdStatus* Parametersatz zu **AdStatusErrorsOccurred**.  
   

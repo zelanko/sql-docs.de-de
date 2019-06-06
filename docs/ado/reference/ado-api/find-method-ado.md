@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028136"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697955"
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
 Sucht eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Zeile, die die angegebenen Kriterien erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilenposition auf den gefundenen Datensatz festgelegt. Andernfalls wird die Position festgelegt, oder zum Ende (Start) von der **Recordset**.  
@@ -45,12 +45,12 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Optional *.* Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf die aktuelle Zeile oder die nächste verfügbare Zeile in die Richtung für die Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** lautet der Wert **AdSearchForward**. Bei einer nicht erfolgreiche Suche wird am Anfang der **Recordset** lautet der Wert **AdSearchBackward**.  
   
  *Start*  
- Dies ist optional. Ein **Variant** Lesezeichen, das als Anfangsposition für die Suche funktioniert.  
+ Optional. Ein **Variant** Lesezeichen, das als Anfangsposition für die Suche funktioniert.  
   
 ## <a name="remarks"></a>Hinweise  
  Kann nur ein einzelner Spaltennamen angegeben werden, *Kriterien*. Diese Methode unterstützt keine Suche nach mehreren Spalten.  
   
- Der Vergleichsoperator im *Kriterien* möglicherweise "**>**"(größer als),"**\<**" (kleiner als), "=" (gleich), "> =" (größer als oder gleich) "< =" (kleiner als oder gleich), "<>" (ungleich), oder "like" (Mustervergleich).  
+ Der Vergleichsoperator im *Kriterien* möglicherweise " **>** "(größer als)," **\<** " (kleiner als), "=" (gleich), "> =" (größer als oder gleich) "< =" (kleiner als oder gleich), "<>" (ungleich), oder "like" (Mustervergleich).  
   
  Der Wert in *Kriterien* kann eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte werden in einfache Anführungszeichen oder "#" (Nummernzeichen) ein (z. B. "State ="WA"" oder "Status = #WA #"). Date-Werte als "#" (Nummernzeichen) ein Trennzeichen (z. B. "Start_date > #7/22/97 #"). Diese Werte können Stunden, Minuten und Sekunden an, dass Zeitstempel enthalten, sollten keine Millisekunden oder kommt es zu Fehlern.  
   

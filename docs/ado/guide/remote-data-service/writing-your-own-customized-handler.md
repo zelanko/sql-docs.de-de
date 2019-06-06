@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155911"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699405"
 ---
 # <a name="writing-your-own-customized-handler"></a>Schreiben Ihres eigenen benutzerdefinierten Handlers
 Sie möchten Ihre eigenen Handler schreiben, wenn Sie einen IIS-Server-Administrator, möchte die standardmäßige RDS zu unterstützen sind, aber mehr Kontrolle über die benutzeranforderungen und Zugriffsrechte.  
@@ -32,7 +32,7 @@ Sie möchten Ihre eigenen Handler schreiben, wenn Sie einen IIS-Server-Administr
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler-Schnittstelle  
  Diese Schnittstelle verfügt über zwei Methoden, **GetRecordset** und **Reconnect**. Beide Methoden erfordern, die die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft festgelegt werden, um **AdUseClient**.  
   
- Beide Methoden verwenden Argumente, die nach dem ersten Komma in angezeigt werden. die "**Handler =**" Schlüsselwort. Z. B. `"Handler=progid,arg1,arg2;"` übergibt Argumentzeichenfolge `"arg1,arg2"`, und `"Handler=progid"` wird ein null-Argument übergeben.  
+ Beide Methoden verwenden Argumente, die nach dem ersten Komma in angezeigt werden. die "**Handler =** " Schlüsselwort. Z. B. `"Handler=progid,arg1,arg2;"` übergibt Argumentzeichenfolge `"arg1,arg2"`, und `"Handler=progid"` wird ein null-Argument übergeben.  
   
 ## <a name="getrecordset-method"></a>GetRecordset-Methode  
  Diese Methode fragt die Datenquelle und erstellt ein neues [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt mit den angegebenen Argumenten. Die **Recordset** muss geöffnet sein, mit **AdLockBatchOptimistic** und müssen nicht asynchron geöffnet werden.  

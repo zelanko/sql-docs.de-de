@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184806"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697922"
 ---
 # <a name="execute-method-ado-command"></a>Execute-Methode (ADO-Befehl)
 Führt die Abfrage, SQL-Anweisung oder gespeicherte Prozedur, die im angegebenen die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oder [' CommandStream '](../../../ado/reference/ado-api/commandstream-property-ado.md) Eigenschaft der [Befehlsobjekt](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -39,13 +39,13 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>Parameter  
  *RecordsAffected*  
- Dies ist optional. Ein **lange** Variablen zu dem der Anbieter gibt die Anzahl der Datensätze, die der Vorgang betroffen. Die *RecordsAffected* Parameter gilt nur für die Aktionsabfragen oder gespeicherte Prozeduren. *RecordsAffected* ist nicht die Anzahl der von einer Abfrage zurückgeben oder der gespeicherten Prozedur zurückgegebenen Datensätze zurück. Verwenden Sie zum Abrufen dieser Informationen die [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) Eigenschaft. Die **Execute** Methode gibt nicht die richtige Informationen bei Verwendung mit **AdAsyncExecute**, einfach weil bei ein Befehl asynchron ausgeführt wird, die Anzahl der betroffenen Datensätze möglicherweise noch nicht bekannt zum Zeitpunkt zurückgegeben der Methode.  
+ Optional. Ein **lange** Variablen zu dem der Anbieter gibt die Anzahl der Datensätze, die der Vorgang betroffen. Die *RecordsAffected* Parameter gilt nur für die Aktionsabfragen oder gespeicherte Prozeduren. *RecordsAffected* ist nicht die Anzahl der von einer Abfrage zurückgeben oder der gespeicherten Prozedur zurückgegebenen Datensätze zurück. Verwenden Sie zum Abrufen dieser Informationen die [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) Eigenschaft. Die **Execute** Methode gibt nicht die richtige Informationen bei Verwendung mit **AdAsyncExecute**, einfach weil bei ein Befehl asynchron ausgeführt wird, die Anzahl der betroffenen Datensätze möglicherweise noch nicht bekannt zum Zeitpunkt zurückgegeben der Methode.  
   
  *Parameter*  
- Dies ist optional. Ein **Variant** Array von Parameterwerten, die zusammen mit der Eingabezeichenfolge oder den Stream, die im angegebenen **CommandText** oder **' CommandStream '**. (Output-Parameter gibt nicht korrekten Werte, wenn dieses Argument übergeben.)  
+ Optional. Ein **Variant** Array von Parameterwerten, die zusammen mit der Eingabezeichenfolge oder den Stream, die im angegebenen **CommandText** oder **' CommandStream '** . (Output-Parameter gibt nicht korrekten Werte, wenn dieses Argument übergeben.)  
   
- *Optionen*  
- Dies ist optional. Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll, die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oder [' CommandStream '](../../../ado/reference/ado-api/commandstream-property-ado.md) Eigenschaft der [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt. Ein Bitmaskenwert mit möglich [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) und/oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte. Beispielsweise können Sie **AdCmdText** und **AdExecuteNoRecords** in Verbindung, wenn Sie den Wert des ADO möchten die **CommandText** -Eigenschaft, wie Text, und Geben Sie an, dass der Befehl sollte verwerfen und keine Datensätze, die ausgegeben werden könnten zurück, wenn der Befehlstext ausgeführt wird.  
+ *Options*  
+ Optional. Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll, die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oder [' CommandStream '](../../../ado/reference/ado-api/commandstream-property-ado.md) Eigenschaft der [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt. Ein Bitmaskenwert mit möglich [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) und/oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte. Beispielsweise können Sie **AdCmdText** und **AdExecuteNoRecords** in Verbindung, wenn Sie den Wert des ADO möchten die **CommandText** -Eigenschaft, wie Text, und Geben Sie an, dass der Befehl sollte verwerfen und keine Datensätze, die ausgegeben werden könnten zurück, wenn der Befehlstext ausgeführt wird.  
   
 > [!NOTE]
 >  Verwenden der **ExecuteOptionEnum** Wert **AdExecuteNoRecords** zur Verbesserung der Leistung durch Minimierung der internen Verarbeitung. Wenn **AdExecuteStream** angegeben wurde, die Optionen **AdAsyncFetch** und **AdAsynchFetchNonBlocking** werden ignoriert. Verwenden Sie nicht die **CommandTypeEnum** Werte **AdCmdFile** oder **AdCmdTableDirect** mit **Execute**. Diese Werte können nur verwendet werden, als Optionen, mit der [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) und [Requery](../../../ado/reference/ado-api/requery-method.md) Methoden eine **Recordset**.  
@@ -53,7 +53,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>Hinweise  
  Mit der **ausführen** Methode für eine **Befehl** -Objekt ausgeführt wird, die Abfrage der **CommandText** Eigenschaft oder **' CommandStream '** die Eigenschaft des Objekts.  
   
- Ergebnisse werden zurückgegeben, einem **Recordset** (standardmäßig) oder als zeichendatenstrom an binären Informationen. Geben Sie zum Abrufen eines binären Streams **AdExecuteStream** in *Optionen*, geben Sie dann einen Datenstrom durch Festlegen von **Command.Properties ("Output Stream")**. Ein ADO **Stream** Objekt angegeben werden, um die Ergebnisse zu erhalten, oder einen anderen Stream-Objekt, z. B. das IIS-Response-Objekt angegeben werden. Wenn kein Stream vor dem Aufruf angegeben wurde **Execute** mit **AdExecuteStream**, ein Fehler auftritt. Die Position des Streams bei der Rückgabe von **Execute** ist Anbieter spezifisch.  
+ Ergebnisse werden zurückgegeben, einem **Recordset** (standardmäßig) oder als zeichendatenstrom an binären Informationen. Geben Sie zum Abrufen eines binären Streams **AdExecuteStream** in *Optionen*, geben Sie dann einen Datenstrom durch Festlegen von **Command.Properties ("Output Stream")** . Ein ADO **Stream** Objekt angegeben werden, um die Ergebnisse zu erhalten, oder einen anderen Stream-Objekt, z. B. das IIS-Response-Objekt angegeben werden. Wenn kein Stream vor dem Aufruf angegeben wurde **Execute** mit **AdExecuteStream**, ein Fehler auftritt. Die Position des Streams bei der Rückgabe von **Execute** ist Anbieter spezifisch.  
   
  Der Anbieter gibt zurück, wenn der Befehl nicht beabsichtigt ist, Zurückgeben von Ergebnissen (z. B. ein UPDATE für SQL-Abfrage) **nichts** so lange wie die Option **AdExecuteNoRecords** angegeben ist; andernfalls ausführen gibt ein geschlossen **Recordset**. Einige Sprachen können Sie diesen Rückgabewert ignoriert werden sollen, wenn kein **Recordset** erwünscht ist.  
   

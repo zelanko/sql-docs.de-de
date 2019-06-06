@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 951f43a2842162aa00f664dc83b754d06d8aafb2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0f423eb2d06ccdc925402d0db5d8a459f7ffdd5d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065538"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698928"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection-Eigenschaft (ADO)
 Gibt an, zu dem [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt das angegebene [Befehl](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), oder [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt derzeit gehört.  
@@ -46,7 +46,7 @@ Gibt an, zu dem [Verbindung](../../../ado/reference/ado-api/connection-object-ad
   
  Wenn die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung von der **Befehl** Objekt enthält Parameter, die vom Anbieter bereitgestellten, die die Auflistung wird gelöscht, wenn Sie festlegen, die **ActiveConnection** Eigenschaft, um *nichts* oder einem anderen **Verbindung** Objekt. Bei der Erstellung manuell [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekte aus, und verwenden sie zum Füllen der **Parameter** Auflistung von der **Befehl** Objekt, und legen die **ActiveConnection**  Eigenschaft *nichts* oder einem anderen **Verbindung** Objekt / / Blätter der **Parameter** Auflistung intakt.  
   
- Schließen der **Verbindung** Objekt, mit dem eine **Befehl** Objekt wird verknüpft legt die **ActiveConnection** Eigenschaft *"Nothing"*. Wenn diese Eigenschaft auf ein geschlossenes **Verbindung** Objekt wird ein Fehler generiert.  
+ Schließen der **Verbindung** Objekt, mit dem eine **Befehl** Objekt wird verknüpft legt die **ActiveConnection** Eigenschaft *"Nothing"* . Wenn diese Eigenschaft auf ein geschlossenes **Verbindung** Objekt wird ein Fehler generiert.  
   
 ## <a name="recordset"></a>Recordset  
  Für offene **Recordset** Objekte oder **Recordset** Objekte, deren [Quelle](../../../ado/reference/ado-api/source-property-ado-recordset.md) -Eigenschaftensatz auf einen gültigen **Befehl** -Objekt, das **ActiveConnection** Eigenschaft ist schreibgeschützt. Andernfalls ist sie Lese-/Schreibzugriff.  

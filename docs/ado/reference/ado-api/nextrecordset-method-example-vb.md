@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 848034e40a4b3a7c98cd59eb7204c7f00b147b67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9b49dcdca30b9dcc9a56a9b19ae1f1dda54d8d27
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242718"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707287"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset-Methode – Beispiel (VB)
 Dieses Beispiel verwendet die [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) Methode zum Anzeigen der Daten in einem Recordset, die eine zusammengesetzte befehlsanweisung setzt sich aus drei Separate verwendet **wählen** Anweisungen.  

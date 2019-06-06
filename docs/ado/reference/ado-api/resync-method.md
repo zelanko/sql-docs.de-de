@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68ca8ac6d223100f437a7ba0ca8bf7776953d40a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 251c2f67861dd996ac78efc9a8e599d7ec191072
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062268"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711555"
 ---
 # <a name="resync-method"></a>Resync-Methode
 Aktualisiert die Daten in der aktuellen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt oder [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einem [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt, aus der zugrunde liegenden Datenbank.  
@@ -38,10 +38,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Dies ist optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der bestimmt, wie viele Datensätze der **Resync** Methode wirkt sich auf. Der Standardwert ist **AdAffectAll**. Dieser Wert ist nicht verfügbar, mit der **Resync** -Methode der der **Felder** Auflistung von einem **Datensatz** Objekt.  
+ Optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der bestimmt, wie viele Datensätze der **Resync** Methode wirkt sich auf. Der Standardwert ist **AdAffectAll**. Dieser Wert ist nicht verfügbar, mit der **Resync** -Methode der der **Felder** Auflistung von einem **Datensatz** Objekt.  
   
  *ResyncValues*  
- Dies ist optional. Ein [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) Wert, der angibt, ob die zugrunde liegende Werte überschrieben werden. Der Standardwert ist **AdResyncAllValues**.  
+ Optional. Ein [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) Wert, der angibt, ob die zugrunde liegende Werte überschrieben werden. Der Standardwert ist **AdResyncAllValues**.  
   
 ## <a name="remarks"></a>Hinweise  
   

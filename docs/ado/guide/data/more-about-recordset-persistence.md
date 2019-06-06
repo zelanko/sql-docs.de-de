@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88fcf471b2f853a5e1a874c29d2192c17d23b113
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161584"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701945"
 ---
 # <a name="more-about-recordset-persistence"></a>Weitere Informationen zur Beibehaltung von Recordsets
 Das ADO-Recordset-Objekt unterstützt das Speichern von einem **Recordset** Objekt in einer Datei mithilfe der [speichern](../../../ado/reference/ado-api/save-method.md) Methode. Möglicherweise existiert, die dauerhaft gespeicherte Datei auf einem lokalen Laufwerk, Server oder als URL für eine Web site. Später kann die Datei wiederhergestellt werden, entweder mit der [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode der der **Recordset** Objekt oder die [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) -Methode der der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt.  

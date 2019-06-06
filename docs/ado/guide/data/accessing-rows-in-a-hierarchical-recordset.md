@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83b8334b4891d0b12cac59030ebf7fced871c5dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ed329c1ddab0f8f3b6481bb0b001599528534aeb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294359"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701105"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Zugreifen auf Zeilen in einem hierarchischen Recordset (Beispiel)
 Das folgende Beispiel zeigt die Schritte in einer hierarchischen Zeilen mit Zugriff zum [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -32,7 +32,7 @@ Das folgende Beispiel zeigt die Schritte in einer hierarchischen Zeilen mit Zugr
 
 4.  Die innere Schleife zeigt vier Felder aus jeder Zeile in der angefügten **Recordset**.
 
- Die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) -Eigenschaftensatz auf **"false"** zur Veranschaulichung, damit Sie sehen im Kapitel über das Ändern explizit in jeder Iteration der äußeren Schleife. Um das Codebeispiel effizienter zu gestalten, können Sie die Zuweisung in Schritt 3 vor der ersten Zeile in Schritt 2: verschieben, damit die Zuweisung wird nur einmal ausgeführt. Legen Sie dann die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) Eigenschaft **"true"**, sodass *RstTitleAuthor* implizit automatisch ändert und im entsprechenden Kapitel immer *Rst* in eine neue Zeile verschoben wird.
+ Die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) -Eigenschaftensatz auf **"false"** zur Veranschaulichung, damit Sie sehen im Kapitel über das Ändern explizit in jeder Iteration der äußeren Schleife. Um das Codebeispiel effizienter zu gestalten, können Sie die Zuweisung in Schritt 3 vor der ersten Zeile in Schritt 2: verschieben, damit die Zuweisung wird nur einmal ausgeführt. Legen Sie dann die [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) Eigenschaft **"true"** , sodass *RstTitleAuthor* implizit automatisch ändert und im entsprechenden Kapitel immer *Rst* in eine neue Zeile verschoben wird.
 
 ## <a name="example"></a>Beispiel
 

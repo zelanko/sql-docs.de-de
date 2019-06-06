@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 967ccb49cd2bbaa805420e7c982cc11721931022
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472824"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702345"
 ---
 # <a name="boundaries-of-a-recordset"></a>Grenzen eines Recordsets
 **Recordset** unterstützt die **BOF** und **EOF** Eigenschaften, die Anfang und Ende des Datasets skizziert. Sie können sich vorstellen **BOF** und **EOF** als "phantom"-Datensätze, die am Anfang und Ende des positioniert sind die **Recordset**. Zählen von **BOF** und **EOF**, unser Beispiel **Recordset** sieht nun wie folgt:  
@@ -35,7 +35,7 @@ ms.locfileid: "62472824"
 |74|Longlife Tofu|10.0000|  
 |EOF|||  
   
- Wechselt von ein Cursor hinter dem letzten Datensatz, **EOF** nastaven NA hodnotu **"true"** ist, andernfalls der Wert ist **"false"**. Auf ähnliche Weise, wenn der Cursor springt vor dem ersten Datensatz, **BOF** nastaven NA hodnotu **"true"** ist, andernfalls der Wert ist **"false"**. Diese Eigenschaften werden häufig zum Aufzählen der Datensätze im Dataset verwendet, wie im folgenden JScript-Codefragment veranschaulicht.  
+ Wechselt von ein Cursor hinter dem letzten Datensatz, **EOF** nastaven NA hodnotu **"true"** ist, andernfalls der Wert ist **"false"** . Auf ähnliche Weise, wenn der Cursor springt vor dem ersten Datensatz, **BOF** nastaven NA hodnotu **"true"** ist, andernfalls der Wert ist **"false"** . Diese Eigenschaften werden häufig zum Aufzählen der Datensätze im Dataset verwendet, wie im folgenden JScript-Codefragment veranschaulicht.  
   
 ```  
 while (objRecordset.EOF != true)   
@@ -55,7 +55,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- Wenn beide **BOF** und **EOF** sind **"true"**, **Recordset** Objekt leer ist. Beide Eigenschaften werden **"false"** für ein neu geöffneten, nicht leeres **Recordset** Objekt. Können Sie die **BOF** und **EOF** Eigenschaften zusammen, um zu bestimmen, ob eine **Recordset** Objekt ist leer oder nicht, wie in der folgenden JScript-Codefragment.  
+ Wenn beide **BOF** und **EOF** sind **"true"** , **Recordset** Objekt leer ist. Beide Eigenschaften werden **"false"** für ein neu geöffneten, nicht leeres **Recordset** Objekt. Können Sie die **BOF** und **EOF** Eigenschaften zusammen, um zu bestimmen, ob eine **Recordset** Objekt ist leer oder nicht, wie in der folgenden JScript-Codefragment.  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  

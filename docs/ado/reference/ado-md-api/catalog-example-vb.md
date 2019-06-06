@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cd049d17c3050937d288aca7b6a353c15421386
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cf8feed39632d7d69f54aa8dee28e0d74c73b831
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062678"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709803"
 ---
 # <a name="catalog-example-vb"></a>Katalog-Beispiel (VB)
 Diese Visual Basic-Projekt erstellt einen neuen Cube mit MDX. Klicken Sie dann dokumentiert die Struktur eines Cubes in Microsoft Word-Dokument.  

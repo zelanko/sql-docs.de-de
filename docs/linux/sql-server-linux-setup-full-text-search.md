@@ -1,21 +1,20 @@
 ---
 title: Installieren von SQL Server-Volltextsuche unter Linux | Microsoft-Dokumentation
-description: Dieser Artikel beschreibt, wie Sie SQL Server-Volltextsuche unter Linux zu installieren.
+description: In diesem Artikel wird beschrieben, wie die SQL Server-Volltextsuche unter Linux installiert wird.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: d16a399ceb6a2c22599d7a95396d49f21e378eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809738"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705047"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
 
@@ -47,9 +46,9 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie dann auf die in diesem Artikel beschriebenen offline-Installation Schritten [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Führen Sie dann die im Artikel [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Schritte für die Offlineinstallation aus.
 
-## <a name="ubuntu">Installieren unter Ubuntu</a>
+## <a name="ubuntu">Installation unter Ubuntu</a>
 
 Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Volltextsuche** unter Ubuntu. 
 
@@ -65,9 +64,9 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie dann auf die in diesem Artikel beschriebenen offline-Installation Schritten [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Führen Sie dann die im Artikel [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Schritte für die Offlineinstallation aus.
 
-## <a name="SLES">Installieren unter SLES</a>
+## <a name="SLES">Installation unter SLES</a>
 
 Verwenden Sie die folgenden Befehle zum Installieren der **Mssql-Server-Volltextsuche** unter SUSE Linux Enterprise Server. 
 
@@ -82,7 +81,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Verwenden Sie dann auf die in diesem Artikel beschriebenen offline-Installation Schritten [Installieren von SQL Server](sql-server-linux-setup.md#offline).
+Eine offline-Installation, suchen Sie nach der Paketdownload "Volltextsuche" in der [Anmerkungen zu dieser Version](sql-server-linux-release-notes.md). Führen Sie dann die im Artikel [Installieren von SQL Server](sql-server-linux-setup.md#offline) beschriebenen Schritte für die Offlineinstallation aus.
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
@@ -148,7 +147,7 @@ Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search
 
 Volltextsuche funktioniert auch mit dem Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierter Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu filtern, finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server werden die folgenden Filter installiert:
+Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltext_system_components 'Filter'** . Für SQL Server werden die folgenden Filter installiert:
 
 | Komponentenname | Klassen-ID | Version |
 |---|---|---|
@@ -160,72 +159,72 @@ Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltex
 |ASP | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |aspx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.asx | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|BAS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.bas | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |BAT | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |bcp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|sql_Dateiname | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.cc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |CLS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.csa | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |CSS | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|CSV | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.csv | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.DBS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|DEF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |".dic" | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.DOS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dos | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |DSP | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.FAQ | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.fky | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.HHC | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.h | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.hhc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|".hta" | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.hta | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.HTML | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htw | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |HTX | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.hxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|Fügen | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.i | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ibq | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |ICS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |IDL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.IDQ | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.idq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.Inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|INF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|INI | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.Inl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.inf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.ini | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.inl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.INX | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |".jav" | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |Java | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.KCI | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.js | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.kci | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.lgN | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|M3U | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |MAK | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ODC | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ODL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |PL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.PRC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |RC | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|RC2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rc2 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |RCT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|REG | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.reg | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |RGS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|RTF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|RUL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.rtf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.SCC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.shtm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
@@ -237,17 +236,17 @@ Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltex
 |STM | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.TAB | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tdl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|TLH | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tlh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.tli | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|TRG | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.trg | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |TXT | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|UDF | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.udf | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.UDT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |auch URL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|Benutzerprofilpfad | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vbs | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.viw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|VSCT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.vsct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vsixlangpack | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |vsixmanifest | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vspscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

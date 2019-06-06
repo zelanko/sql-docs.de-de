@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9d1322d872d5e05de4c7f142804fe2f1390b9859
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472696"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700886"
 ---
 # <a name="command-streams"></a>Command-Datenströme
 ADO hat immer die Eingabe des Befehls unterstützt, im Zeichenfolgenformat angegeben werden, indem die **CommandText** Eigenschaft. Als Alternative mit ADO 2.7 oder höher, Sie können auch verwenden einen Datenstrom von Informationen für die Eingabe des Befehls durch Zuweisen des Streams, in der **' CommandStream '** Eigenschaft. Sie können ein ADO zuweisen **Stream** Objekt oder ein beliebiges Objekt, das die COM unterstützt **IStream** Schnittstelle.  

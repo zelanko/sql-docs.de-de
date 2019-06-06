@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 506d98acd28b38d0ce8867f96229632a306ae680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda200cccdaadb4db30b95289c2e16982a4e1f4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812149"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713135"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Massenkopieren von Daten mit Bcp für den SQL Server unter Linux
 
@@ -39,7 +38,7 @@ In diesem Artikel lernen Sie Folgendes:
 
 ## <a name="import-data-with-bcp"></a>Importieren von Daten mit bcp
 
-In diesem Tutorial erstellen Sie einer Beispieldatenbank und eine Tabelle in der lokalen SQL Server-Instanz (**"localhost"**) und dann `bcp` , in dem Beispiel für die Tabelle aus einer Textdatei auf dem Datenträger zu laden.
+In diesem Tutorial erstellen Sie einer Beispieldatenbank und eine Tabelle in der lokalen SQL Server-Instanz ( **"localhost"** ) und dann `bcp` , in dem Beispiel für die Tabelle aus einer Textdatei auf dem Datenträger zu laden.
 
 ### <a name="create-a-sample-database-and-table"></a>Erstellen einer Beispieldatenbank und eine Tabelle
 
@@ -47,7 +46,7 @@ Wir erstellen zunächst eine Beispieldatenbank mit einer einfachen Tabelle, die 
 
 1. Öffnen Sie auf Ihrer Linux-Feld ein Befehl-Terminal ein.
 
-2. Kopieren Sie die folgenden Befehle in der terminal-Fenster. Diese Befehle verwenden die **Sqlcmd** Befehlszeilen-Hilfsprogramm zum Erstellen einer Beispieldatenbank (**BcpSampleDB**) und eine Tabelle (**TestEmployees**) in der lokalen SQL Server-Instanz (**"localhost"**). Ersetzen Sie die `username` und `<your_password>` vor dem Ausführen der Befehle nach Bedarf.
+2. Kopieren Sie die folgenden Befehle in der terminal-Fenster. Diese Befehle verwenden die **Sqlcmd** Befehlszeilen-Hilfsprogramm zum Erstellen einer Beispieldatenbank (**BcpSampleDB**) und eine Tabelle (**TestEmployees**) in der lokalen SQL Server-Instanz ( **"localhost"** ). Ersetzen Sie die `username` und `<your_password>` vor dem Ausführen der Befehle nach Bedarf.
 
 Erstellen Sie die Datenbank **BcpSampleDB**:
 ```bash 
@@ -81,7 +80,7 @@ Dies sollte Folgendes in Ihrem Terminalfenster angezeigt werden:
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Importieren von Daten aus der Quelldatendatei
-Kopieren Sie die folgenden Befehle in der terminal-Fenster. Dieser Befehl verwendet `bcp` für die Verbindung mit der lokalen SQL Server-Instanz (**"localhost"**) und importieren Sie die Daten aus der Datendatei (**~/test_data.txt**) in die Tabelle (**TestEmployees** ) in der Datenbank (**BcpSampleDB**). Denken Sie daran, ersetzen Sie den Benutzernamen und `<your_password>` vor dem Ausführen der Befehle nach Bedarf.
+Kopieren Sie die folgenden Befehle in der terminal-Fenster. Dieser Befehl verwendet `bcp` für die Verbindung mit der lokalen SQL Server-Instanz ( **"localhost"** ) und importieren Sie die Daten aus der Datendatei ( **~/test_data.txt**) in die Tabelle (**TestEmployees** ) in der Datenbank (**BcpSampleDB**). Denken Sie daran, ersetzen Sie den Benutzernamen und `<your_password>` vor dem Ausführen der Befehle nach Bedarf.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','

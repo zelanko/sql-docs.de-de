@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634012"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712897"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux Cluster mit freigegebenen Datenträgern werden für SQL Server.
 
@@ -319,7 +318,7 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
    sudo pcs cluster start --all
    ```
 
-   > RHEL-HA-Add-On wurde für das umgrenzen der Agents für VMWare und KVM. Umgrenzung muss für alle anderen Hypervisoren deaktiviert werden. Deaktivieren des umgrenzungs-Agents wird in produktionsumgebungen nicht empfohlen. Zum Zeitpunkt der Zeitrahmen gibt es keine Umgrenzung-Agents für Hyper-v oder in der Cloud-Umgebungen. Wenn Sie eine dieser Konfigurationen ausführen, müssen Sie Umgrenzung zu deaktivieren. \**Dies wird nicht in einem Produktionssystem empfohlen.**
+   > RHEL-HA-Add-On wurde für das umgrenzen der Agents für VMWare und KVM. Umgrenzung muss für alle anderen Hypervisoren deaktiviert werden. Deaktivieren des umgrenzungs-Agents wird in produktionsumgebungen nicht empfohlen. Zum Zeitpunkt der Zeitrahmen gibt es keine Umgrenzung-Agents für Hyper-v oder in der Cloud-Umgebungen. Wenn Sie eine dieser Konfigurationen ausführen, müssen Sie Umgrenzung zu deaktivieren. \**Dies wird nicht in einem Produktionssystem empfohlen.* *
 
    Der folgende Befehl deaktiviert die umgrenzungs-Agents.
 

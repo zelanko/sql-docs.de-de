@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9a64460b2d04f1d6957a181657af7255d64cc829
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524910"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705064"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Konfigurieren von Failover-Clusterinstanz - iSCSI - SQL Server unter Linux
 
@@ -53,7 +52,7 @@ Weitere Informationen zu iSCSI-Initiator für die unterstützten Distributionen 
 
     - iface.net_ifacename ist der Name der Netzwerkkarte aus, wie in das Betriebssystem.
     - iface.hwaddress ist die MAC-Adresse, der den eindeutigen Namen, der für diese Schnittstelle, die unten erstellt wird.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Sehen Sie sich folgendes Beispiel an:
@@ -246,7 +245,7 @@ Weitere Informationen zu iSCSI-Initiator für die unterstützten Distributionen 
     
    *    Geben Sie `exit` kein Stammverzeichnis sein.
 
-   *    Starten Sie SqlServer. Wenn alles richtig kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß SQL Server zeigen sollte, wie gestartet.
+   *    Start SQL Server. Wenn alles richtig kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß SQL Server zeigen sollte, wie gestartet.
 
     ```bash
     sudo systemctl start mssql-server

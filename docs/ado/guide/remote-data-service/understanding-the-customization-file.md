@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955803"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704132"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
-Jeder Überschrift des Abschnitts in der Anpassungsdatei besteht aus eckige Klammern (**[]**), die einen Typ und die Parameter enthält. Die vier Abschnitt sind gekennzeichnet durch die Literalzeichenfolgen **verbinden**, **Sql**, **Userlist**, oder **Protokolle**. Der Parameter ist der literalen Zeichenfolge, die Standardeinstellung, eine vom Benutzer angegebenen Bezeichner oder "nothing".  
+Jeder Überschrift des Abschnitts in der Anpassungsdatei besteht aus eckige Klammern ( **[]** ), die einen Typ und die Parameter enthält. Die vier Abschnitt sind gekennzeichnet durch die Literalzeichenfolgen **verbinden**, **Sql**, **Userlist**, oder **Protokolle**. Der Parameter ist der literalen Zeichenfolge, die Standardeinstellung, eine vom Benutzer angegebenen Bezeichner oder "nothing".  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -55,7 +55,7 @@ identifier
   
  Ein bestimmter Abschnitt wird in den folgenden Situationen verwendet:  
   
--   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients verbunden sind, Schlüsselwort "**Datenquelle =**_Wert_", entspricht einer **verbinden** Abschnitts-ID *.*  
+-   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients verbunden sind, Schlüsselwort "**Datenquelle =** _Wert_", entspricht einer **verbinden** Abschnitts-ID *.*  
   
 -   Ein **Sql** Abschnitt wird verwendet, wenn die Client-Befehlszeichenfolge eine Zeichenfolge enthält, die entspricht einer **Sql** Abschnitt Bezeichner.  
   

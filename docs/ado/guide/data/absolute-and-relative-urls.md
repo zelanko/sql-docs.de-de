@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802940"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702655"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
-Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann sein, eine Datei, Verzeichnis, HTML-Seite, Image, Programm usw.*.*  
+Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann sein, eine Datei, Verzeichnis, HTML-Seite, Image, Programm usw. *.*  
   
  Ein *absolute URL* enthält alle Informationen, die erforderlich sind, um eine Ressource zu suchen.  
   
@@ -53,7 +53,7 @@ Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im 
   
  Bei ADO 2.7 oder höher kann eine absolute URL auch einen Kontext definieren. Z. B., wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt wird geöffnet, mit einer absoluten URL, eine **Verbindung** -Objekt implizit erstellt, um die durch die URL angegebene Ressource darstellen.  
   
- Eine absolute URL, die einen Kontext definiert kann angegeben werden, der *ActiveConnection* Parameter, der die **Datensatz** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Eine absolute URL kann auch angegeben werden, als Wert für die "URL**=**"-Schlüsselwort in der **Verbindung** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode  *"ConnectionString"* Parameter, und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode *ActiveConnection* Parameter.  
+ Eine absolute URL, die einen Kontext definiert kann angegeben werden, der *ActiveConnection* Parameter, der die **Datensatz** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Eine absolute URL kann auch angegeben werden, als Wert für die "URL **=** "-Schlüsselwort in der **Verbindung** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode  *"ConnectionString"* Parameter, und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode *ActiveConnection* Parameter.  
   
  Kontext kann auch definiert werden, indem Sie öffnen ein **Datensatz** oder **Recordset** -Objekt, ein Verzeichnis darstellt, da diese Objekte bereits über einen implizit oder explizit deklarierten verfügen **Verbindung**  -Objekt, das Kontext gibt.  
   
@@ -86,7 +86,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB-Anbieter bereitgestellte URL-Schemas  
  Der erste Teil einer vollqualifizierten URL ist die *Schema* , die Zugriff auf die Ressource identifiziert, nach dem Rest der URL verwendet wird. Beispiele sind HTTP (Hypertext Transfer Protocol) und FTP (File Transfer Protocol).  
   
- ADO unterstützt OLE DB-Anbieter, die ihre eigenen URL-Schemas zu erkennen. Z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* die "veröffentlicht" Windows 2000-Dateien, greift auf das vorhandene HTTP-Schema erkannt.  
+ ADO unterstützt OLE DB-Anbieter, die ihre eigenen URL-Schemas zu erkennen. Z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *,* die "veröffentlicht" Windows 2000-Dateien, greift auf das vorhandene HTTP-Schema erkannt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

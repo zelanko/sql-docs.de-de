@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d70dcba3d373b195950f90b6ef82c3d670844bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d11a8d5d775499246bd8af709764dec3f2ad61e8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309204"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698518"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord-Methode (ADO)
 Kopiert eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) an einen anderen Speicherort.  
@@ -42,16 +42,16 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  Optional. Ein **Zeichenfolge** -Wert, der eine URL, geben Sie den Speicherort enthält, in denen *Quelle* kopiert werden.  
   
  *UserName*  
- Dies ist optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält bei Bedarf den Zugriff auf gewährt *Ziel*.  
+ Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält bei Bedarf den Zugriff auf gewährt *Ziel*.  
   
  *Kennwort*  
  Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält bei Bedarf überprüft *Benutzername*.  
   
- *Optionen*  
- Dies ist optional. Ein [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) Wert mit Standardwert **AdCopyUnspecified**. Gibt das Verhalten dieser Methode.  
+ *Options*  
+ Optional. Ein [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) Wert mit Standardwert **AdCopyUnspecified**. Gibt das Verhalten dieser Methode.  
   
  *Async*  
- Dies ist optional. Ein **booleschen** -Wert, wenn **"true"**, gibt an, dass dieser Vorgang asynchron sein sollte.  
+ Optional. Ein **booleschen** -Wert, wenn **"true"** , gibt an, dass dieser Vorgang asynchron sein sollte.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **Zeichenfolge** -Wert, der in der Regel den Wert zurückgibt *Ziel*. Der genaue zurückgegebene Wert ist jedoch vom Anbieter abhängig.  

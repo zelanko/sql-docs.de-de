@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fcc44037ac746621c044bca755fd9b957356dc38
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281898"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705792"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions-Methode (ADOX)
 Gibt an, die Berechtigungen für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) oder [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) für ein Objekt.  
@@ -50,10 +50,10 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Ein **lange** Wert, der eine Bitmaske sein kann von einem oder mehreren der der [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) Konstanten, die die festzulegenden Rechte angibt.  
   
  *Erben*  
- Dies ist optional. Ein **lange** Wert möglich von der [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten, der angibt, wie Objekte erben diese Berechtigungen. Der Standardwert ist **AdInheritNone**.  
+ Optional. Ein **lange** Wert möglich von der [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten, der angibt, wie Objekte erben diese Berechtigungen. Der Standardwert ist **AdInheritNone**.  
   
  *ObjectTypeId*  
- Dies ist optional. Ein **Variant** Wert, der die GUID für einen Anbieter-Objekttyp angibt, die nicht vom OLE DB-Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
+ Optional. Ein **Variant** Wert, der die GUID für einen Anbieter-Objekttyp angibt, die nicht vom OLE DB-Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Anbieter das Festlegen von Zugriffsrechten für Gruppen oder Benutzer nicht unterstützt wird, tritt ein Fehler auf.  

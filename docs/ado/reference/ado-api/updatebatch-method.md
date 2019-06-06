@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e39b7094b4b4543b60431f847ed792f18ace31f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 11c930efdffe5eb685494843f2b0abe7b753ea3d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63040816"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710417"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch-Methode
 Schreibt alle ausstehenden BatchUpdates auf den Datenträger.  
@@ -36,10 +36,10 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Dies ist optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der angibt, wie viele Datensätze der **UpdateBatch** Methode wirkt sich auf.  
+ Optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der angibt, wie viele Datensätze der **UpdateBatch** Methode wirkt sich auf.  
   
  *PreserveStatus*  
- Dies ist optional. Ein **booleschen** -Wert, der angibt, ob lokale geändert wird, wie durch die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft Commit ausgeführt werden soll. Wenn dieser Wert, um festgelegt ist **"true"**, **Status** Eigenschaft jedes Datensatzes bleibt unverändert, nachdem das Update abgeschlossen ist.  
+ Optional. Ein **booleschen** -Wert, der angibt, ob lokale geändert wird, wie durch die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) Eigenschaft Commit ausgeführt werden soll. Wenn dieser Wert, um festgelegt ist **"true"** , **Status** Eigenschaft jedes Datensatzes bleibt unverändert, nachdem das Update abgeschlossen ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **UpdateBatch** Methode, die beim Ändern einer **Recordset** Objekt im Modus "Batch-Update", übertragen alle Änderungen, die einer **Recordset** Objekt, das der zugrunde liegenden Datenbank.  

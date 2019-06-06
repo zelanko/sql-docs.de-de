@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bc17df7bad00205803b33cb4af17cb3c6ddaac56
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63199763"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701285"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB Simple-Anbieter (Übersicht)
 Der Microsoft OLE DB Simple Anbieter (OSP) ermöglicht ADO auf Daten zugreifen, für die ein Anbieter geschrieben wurde mithilfe, der [OLE DB Simple Anbieter (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Einfache Anbieter dienen zum Zugreifen auf Datenquellen, die nur grundlegende OLE DB-Unterstützung, z. B. in-Memory-Arrays oder XML-Dokumenten erfordern.

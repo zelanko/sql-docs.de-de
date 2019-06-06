@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7741cc84b27991cc0831e5e28f397f46d22020a6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719752"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701215"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping Service für OLE DB-Übersicht
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "62719752"
 
 |Name der dynamischen Eigenschaft|Description|
 |---------------------------|-----------------|
-|**Eindeutige umformen Namen**|Gibt an, ob **Recordset** Objekte mit doppelten Werten für ihre **Reshape Name** Eigenschaften sind zulässig. Wenn diese dynamische Eigenschaft **"true"** und ein neues **Recordset** wird erstellt, mit demselben Namen wie eine vorhandene benutzerdefinierte umformen **Recordset**, klicken Sie dann die neue  **Recordset** umformen-Namen des Objekts wird geändert, um sie eindeutig zu machen. Wenn diese Eigenschaft **"false"** und ein neues **Recordset** wird erstellt, mit demselben Namen wie des vorhandenen benutzerdefinierten umformen **Recordset**, beide **Recordset**  Objekte weisen den gleichen umformen-Namen. Aus diesem Grund keine **Recordset** können umgeformt werden, solange beide Objekte vorhanden sind.<br /><br /> Der Standardwert der Eigenschaft ist **"false"**.|
+|**Eindeutige umformen Namen**|Gibt an, ob **Recordset** Objekte mit doppelten Werten für ihre **Reshape Name** Eigenschaften sind zulässig. Wenn diese dynamische Eigenschaft **"true"** und ein neues **Recordset** wird erstellt, mit demselben Namen wie eine vorhandene benutzerdefinierte umformen **Recordset**, klicken Sie dann die neue  **Recordset** umformen-Namen des Objekts wird geändert, um sie eindeutig zu machen. Wenn diese Eigenschaft **"false"** und ein neues **Recordset** wird erstellt, mit demselben Namen wie des vorhandenen benutzerdefinierten umformen **Recordset**, beide **Recordset**  Objekte weisen den gleichen umformen-Namen. Aus diesem Grund keine **Recordset** können umgeformt werden, solange beide Objekte vorhanden sind.<br /><br /> Der Standardwert der Eigenschaft ist **"false"** .|
 |**Datenanbieter**|Gibt den Namen des Anbieters, die Zeilen zum Strukturieren bereitgestellt werden. Dieser Wert kann keine sein, wenn ein Anbieter nicht zum Bereitstellen von Zeilen verwendet wird.|
 
  Sie können auch beschreibbare dynamische Eigenschaften festlegen, durch deren Namen als Schlüsselwörter in der Verbindungszeichenfolge angeben. In Microsoft Visual Basic, z. B. Festlegen der **Datenanbieter** dynamische Eigenschaft auf "MSDASQL", indem Sie angeben:
@@ -62,4 +62,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  Weitere Informationen zum Strukturieren von Daten, finden Sie unter [Datenstrukturierung](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Siehe auch
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

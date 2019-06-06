@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 251c35977421d63027fbc9d6042e193125da854d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308617"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695637"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter-Methode (ADO)
 Erstellt ein neues [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt mit den angegebenen Eigenschaften.  
@@ -42,16 +42,16 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Optional. Ein **Zeichenfolge** -Wert, der den Namen des enthält die **Parameter** Objekt.  
   
  *Typ*  
- Dies ist optional. Ein [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Wert, der angibt, den den Datentyp des der **Parameter** Objekt.  
+ Optional. Ein [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Wert, der angibt, den den Datentyp des der **Parameter** Objekt.  
   
  *Richtung*  
- Dies ist optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) Wert, der angibt, den Typ des **Parameter** Objekt.  
+ Optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) Wert, der angibt, den Typ des **Parameter** Objekt.  
   
  *Größe*  
  Optional. Ein **lange** Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
   
  *Wert*  
- Dies ist optional. Ein **Variant** , die angibt, dass des Werts für die **Parameter** Objekt.  
+ Optional. Ein **Variant** , die angibt, dass des Werts für die **Parameter** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **CreateParameter** Methode zum Erstellen eines neuen **Parameter** Objekt mit einem angegebenen Namen, Typ, Richtung, Größe und Wert. Alle Werte, die Sie in den Argumenten übergeben werden geschrieben, mit der entsprechenden **Parameter** Eigenschaften.  

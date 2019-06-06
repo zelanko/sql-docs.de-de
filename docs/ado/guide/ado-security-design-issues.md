@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a879e05e5c2df68058d9351b217382366ae80a0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1b098733eccd03db7bafff084fdc2416ddff5845
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719918"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701759"
 ---
 # <a name="ado-security-design-features"></a>ADO Security Design-Features
 Den folgenden Abschnitten wird das Design von Sicherheitsfeatures in ActiveX Data Objects (ADO) 2.8 und höher. Diese Änderungen wurden in ADO 2.8 vorgenommen, um die Sicherheit zu verbessern. ADO 6.0, die in Windows DAC 6.0 in Windows Vista enthalten ist, ist funktionell gleichwertig mit ADO 2.8, die in MDAC 2.8 in Windows XP und Windows Server 2003 enthalten war. Dieses Thema enthält Informationen dazu, wie Sie Ihre Anwendungen in ADO 2.8 oder höher am besten schützen.
@@ -103,7 +103,7 @@ This Website is using your identity to access a data source. If you trust this W
 
 2.  Abhängig von der Einstellung in der OLE DB-Anbieter, der die [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](https://msdn.microsoft.com/library/windows/desktop/ms714905.aspx) -Eigenschaft, die Kennwörter sind enthalten, zusammen mit anderen Verbindungsinformationen für die Zeichenfolge, die zurückgegeben wird.
 
- Z. B. wenn die dynamische Eigenschaft des ADO-Verbindung **Persist Security Info** nastaven NA hodnotu **"true"**, Kennwortinformationen befindet sich in der Verbindungszeichenfolge zurückgegeben. Andernfalls, wenn die Eigenschaft wurde auf der zugrunde liegenden Anbieter festgelegt **"false"** Kennwortinformationen fehlt (z. B. mit dem SQLOLEDB-Anbieter) in die zurückgegebene Zeichenfolge.
+ Z. B. wenn die dynamische Eigenschaft des ADO-Verbindung **Persist Security Info** nastaven NA hodnotu **"true"** , Kennwortinformationen befindet sich in der Verbindungszeichenfolge zurückgegeben. Andernfalls, wenn die Eigenschaft wurde auf der zugrunde liegenden Anbieter festgelegt **"false"** Kennwortinformationen fehlt (z. B. mit dem SQLOLEDB-Anbieter) in die zurückgegebene Zeichenfolge.
 
  Bei Verwendung von Drittanbieter-(, also nicht-Microsoft) OLE DB-Anbieter mit Ihrem Anwendungscode ADO, Sie können überprüfen, wie die **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** Eigenschaft wird implementiert, um zu bestimmen, ob Einbeziehung von Informationen zum Kennwort mit ADO-Verbindungszeichenfolgen ist zulässig.
 

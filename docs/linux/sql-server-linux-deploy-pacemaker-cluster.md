@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 49f5e3fd6250d3a9bb20ff68927bc66fa1e5d426
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: be1bae381cf9eb07180299130917cb6cbf3bfec3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211539"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705551"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Bereitstellen eines Pacemaker-Clusters für SQL Server unter Linux
 
@@ -82,8 +81,8 @@ Installieren Sie das Muster für hohe Verfügbarkeit in YaST zu oder es als Teil
 > Unter SLES ruft der HA-Add-On initialisiert, wenn der Cluster erstellt wird.
 
 ## <a name="prepare-the-nodes-for-pacemaker-rhel-and-ubuntu-only"></a>Vorbereiten der Knotens für Pacemaker (RHEL und nur für Ubuntu)
-Pacemaker verwendet die Erstellung der Verteilung, die mit dem Namen ein Benutzers *"hacluster"*. Der Benutzer wird erstellt, wenn die HA-Add-On für RHEL und Ubuntu installiert ist.
-1. Erstellen Sie auf jedem Server, die als einen Knoten des Pacemaker-Clusters verwendet wird das Kennwort für einen Benutzer, die vom Cluster verwendet werden. Der Name in den Beispielen verwendete *"hacluster"*, aber einen beliebigen Namen verwendet werden kann. Den Namen und das Kennwort müssen auf allen Knoten, die Teil des Pacemaker-Clusters identisch sein.
+Pacemaker verwendet die Erstellung der Verteilung, die mit dem Namen ein Benutzers *"hacluster"* . Der Benutzer wird erstellt, wenn die HA-Add-On für RHEL und Ubuntu installiert ist.
+1. Erstellen Sie auf jedem Server, die als einen Knoten des Pacemaker-Clusters verwendet wird das Kennwort für einen Benutzer, die vom Cluster verwendet werden. Der Name in den Beispielen verwendete *"hacluster"* , aber einen beliebigen Namen verwendet werden kann. Den Namen und das Kennwort müssen auf allen Knoten, die Teil des Pacemaker-Clusters identisch sein.
    
     ```bash
     sudo passwd hacluster
@@ -175,7 +174,7 @@ Der Prozess zum Erstellen eines Pacemaker-Clusters unterscheidet sich vollständ
    sudo passwd hacluster
    ```
    
-7. Wenn Sie eine IP-Adresse für die Verwaltung konfiguriert haben, können Sie es testen, in einem Browser, der getestet wird auch die Änderung des Kennworts für *"hacluster"*.
+7. Wenn Sie eine IP-Adresse für die Verwaltung konfiguriert haben, können Sie es testen, in einem Browser, der getestet wird auch die Änderung des Kennworts für *"hacluster"* .
    ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
 8. Führen Sie auf einen anderen SLES-Server, der einem Knoten des Clusters sein wird, 

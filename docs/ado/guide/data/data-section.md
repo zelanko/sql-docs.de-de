@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472547"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702134"
 ---
 # <a name="data-section"></a>Datenabschnitt
 Data-Abschnitt definiert die Daten des Rowsets zusammen mit allen ausstehenden Updates, einfügungen und löschungen. Data-Abschnitt kann NULL oder mehr Zeilen enthalten. Es kann nur Daten aus einem Rowset enthalten, in die Zeile durch das Schema definiert ist. Darüber hinaus können wie bereits erwähnt, Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder Unterelement im Data-Abschnitt verwendet wird, und dieses Konstrukt nicht im Schema-Abschnitt definiert wurde, wird es ignoriert.  
@@ -32,7 +32,7 @@ Data-Abschnitt definiert die Daten des Rowsets zusammen mit allen ausstehenden U
   
  Die folgenden Zeichen sind in XML reserviert und muss durch Zeichenentitäten ersetzt werden: {",", &,\<, >}.  
   
-## <a name="binary"></a>Binär (Binary)  
+## <a name="binary"></a>Binär  
  Binärdaten sind bin.hex codiert (d. h. ein Byte-Zuordnungen, die zwei Zeichen, ein Zeichen pro Halbbyte).  
   
 ## <a name="datetime"></a>datetime  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43e615d29c10553ef52f536320266abb3d28f542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0dab0712b05b1ef21f07e86d854f5ee63d388277
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308585"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698450"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType und EditMode Eigenschaften – Beispiel (VC++)
 Dieses Beispiel veranschaulicht das Festlegen der [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) und [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) Eigenschaften vor dem Öffnen einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Es zeigt auch den Wert des der [EditMode](../../../ado/reference/ado-api/editmode-property.md) Eigenschaft unter verschiedenen Bedingungen. Die EditModeOutput-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
@@ -156,11 +156,11 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **Nach der AddNew:**   
+  **Nach der AddNew:**    
  **EditMode = adEditAdd**  
-**Nach dem Update:**   
+**Nach dem Update:**    
  **EditMode AdEditNone =**  
-**Nach dem Bearbeiten:**   
+**Nach dem Bearbeiten:**    
  **EditMode AdEditInProgress =**   
 ## <a name="see-also"></a>Siehe auch  
  [CursorType-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   

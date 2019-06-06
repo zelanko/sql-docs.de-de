@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 445374eabceb3534f2b5791c1fb67ba6a22d4c33
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316799"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696542"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF-, EOF- und Bookmark Eigenschaften – Beispiel (VC++)
 Die erste Funktion in diesem Beispiel verwendet die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) Eigenschaften, die eine Meldung angezeigt, wenn ein Benutzer versucht, überspringen den ersten oder letzten Datensatz einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Er verwendet die [Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md) Eigenschaft ermöglichen den Benutzer einen Datensatz im flag einer **Recordset** und später auf ihn.  

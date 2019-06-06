@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d8b52f2cf665232c5e16677a257465d020c227c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719835"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702737"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft Cursor Service für OLE DB-Übersicht
 Der Microsoft Cursor Service für OLE DB ergänzt die Cursorfunktionen der Unterstützung von Datenanbietern. Daher nimmt der Benutzer die relativ einheitliche Funktionalität von allen Datenanbietern.
@@ -64,7 +64,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Zwischenspeichern von untergeordneten Zeilen (DBPROP_ADC_CACHECHILDROWS)|Für Recordsets mit den Data Shaping Service erstellt wurde gibt dieser Wert an, ob untergeordneten Recordsets in einem Cache für die spätere Verwendung gespeichert werden.|
 |Cursor-Engine-Version (DBPROP_ADC_CEVER)|Gibt die Version des Diensts Cursor verwendet wird.|
 |Änderungsstatus (DBPROP_ADC_MAINTAINCHANGESTATUS) verwalten|Gibt den Text des Befehls für erneutes Synchronisieren von einem ein oder mehrere Zeilen in einen Join mit mehreren Tabellen verwendet.|
-|[Optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob ein Index erstellt werden soll. Bei Festlegung auf **"true"**, wird das temporäre Erstellen von Indizes, um die Ausführung bestimmter Vorgänge zu verbessern.|
+|[Optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob ein Index erstellt werden soll. Bei Festlegung auf **"true"** , wird das temporäre Erstellen von Indizes, um die Ausführung bestimmter Vorgänge zu verbessern.|
 |[Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt den Namen des der **Recordset**. Kann auf die verwiesen wird in der aktuellen oder nachfolgenden Befehle für die datenstrukturierung sein.|
 |[Resync-Befehl](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Gibt eine Zeichenfolge von benutzerdefinierten Befehl, mit dem die [Resync](../../../ado/reference/ado-api/resync-method.md) Methode bei der [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) Eigenschaft gültig ist.|
 |[Eindeutige Katalogressource](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Gibt den Namen der Datenbank, die die Tabelle enthält die **eindeutige Tabelle** Eigenschaft.|

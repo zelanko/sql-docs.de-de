@@ -25,13 +25,13 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 905fc532057a827f30735efe067464f488f51dc0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 83e216f15da49150481af18ee98aac1f604b2394
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242905"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707479"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext und MovePrevious-Methode (ADO)
 Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt und macht, die zum aktuellen Datensatz.  
@@ -50,11 +50,11 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
   
  Ein Aufruf von **MoveFirst** oder **MoveLast** bei der **Recordset** ist leer (beide **BOF** und **EOF** Gibt "true") wird ein Fehler generiert.  
   
- Verwenden der **MoveNext** -Methode des aktuellen Datensatzes verschieben positionieren einen Datensatz nach vorne (am unteren Rand der **Recordset**). Wenn der letzte Eintrag der aktuelle Datensatz ist ein, und Sie rufen die **MoveNext** -Methode, ADO legt den aktuellen Datensatz auf die Position hinter dem letzten Datensatz in die **Recordset** ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ist **"True"**). Der Versuch, forward When Verschieben der **EOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
+ Verwenden der **MoveNext** -Methode des aktuellen Datensatzes verschieben positionieren einen Datensatz nach vorne (am unteren Rand der **Recordset**). Wenn der letzte Eintrag der aktuelle Datensatz ist ein, und Sie rufen die **MoveNext** -Methode, ADO legt den aktuellen Datensatz auf die Position hinter dem letzten Datensatz in die **Recordset** ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ist **"True"** ). Der Versuch, forward When Verschieben der **EOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
   
  In ADO 2.5 und höher, bei der **Recordset** gefiltert wurde oder sortiert, und die Daten des aktuellen Datensatzes geändert werden, Aufrufen der **MoveNext** Methode springt der Cursor zwei Datensätze aus dem aktuellen Datensatz weitergeleitet . Das liegt, wenn der aktuelle Datensatz geändert wird, der nächste Datensatz der neuen aktuellen Datensatz wird. Aufrufen von **MoveNext** nach die Änderung aus der neuen aktuellen Datensatz wird der Cursor um einen Datensatz nach vorn verschoben. Dies ist das sich vom Verhalten in ADO 2.1 und früher. Ändern Sie bei diesen älteren Versionen, die Daten von einem aktuellen Datensatz in der sortierten oder gefilterten **Recordset** ändert sich nicht auf die Position des aktuellen Datensatzes, und **MoveNext** verschiebt den Cursor auf den nächsten Datensatz unmittelbar nach den aktuellen Datensatz.  
   
- Verwenden der **MovePrevious** -Methode des aktuellen Datensatzes verschieben positionieren, einen Datensatz nach hinten (bis zum Anfang der **Recordset**). Die **Recordset** -Objekt Lesezeichen oder Bewegung des Cursors von Abwärtskompatibilität unterstützt; andernfalls wird der Methodenaufruf ein Fehler generiert. Wenn der erste Datensatz der aktuelle Datensatz ist ein, und Sie rufen die **MovePrevious** -Methode legt ADO des aktuellen Datensatzes auf die Position vor dem ersten Datensatz in die **Recordset** ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ist **"true"**). Der Versuch, verschieben Abwärtskompatibilität bei der **BOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert. Wenn die **Recordset** Objekt unterstützt keine Lesezeichen oder rückwärtsgerichtete Verschiebung des Cursors, entweder die **MovePrevious** Methode wird ein Fehler generiert.  
+ Verwenden der **MovePrevious** -Methode des aktuellen Datensatzes verschieben positionieren, einen Datensatz nach hinten (bis zum Anfang der **Recordset**). Die **Recordset** -Objekt Lesezeichen oder Bewegung des Cursors von Abwärtskompatibilität unterstützt; andernfalls wird der Methodenaufruf ein Fehler generiert. Wenn der erste Datensatz der aktuelle Datensatz ist ein, und Sie rufen die **MovePrevious** -Methode legt ADO des aktuellen Datensatzes auf die Position vor dem ersten Datensatz in die **Recordset** ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ist **"true"** ). Der Versuch, verschieben Abwärtskompatibilität bei der **BOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert. Wenn die **Recordset** Objekt unterstützt keine Lesezeichen oder rückwärtsgerichtete Verschiebung des Cursors, entweder die **MovePrevious** Methode wird ein Fehler generiert.  
   
  Wenn die **Recordset** ist nur vorwärts und unterstützt sowohl vorwärts und rückwärts zu scrollen, werden sollen können Sie die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) Eigenschaft, um einen Datensatzcache zu erstellen, die Bewegung des Cursors von Abwärtskompatibilität unterstützt durch die [verschieben](../../../ado/reference/ado-api/move-method-ado.md) Methode. Da der zwischengespeicherten Einträge in den Arbeitsspeicher geladen werden, sollten Sie Zwischenspeichern mehrere Datensätze als erforderlich erledigt wird. Rufen Sie die **MoveFirst** -Methode in der eine vorwärts gerichtete **Recordset** Objekt; Dies kann dazu führen, dass den Anbieter beim erneuten Ausführen des Befehls, die generiert die **Recordset** Objekt .  
   

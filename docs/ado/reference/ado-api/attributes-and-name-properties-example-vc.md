@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddceb73d278dd87849e65cb2904b73c9e535f711
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 32e51d3e459bc9c1698b731618cf139d602cd586
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248123"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696401"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attribute und Name Eigenschaften – Beispiel (VC++)
 Dieses Beispiel zeigt den Wert des der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) -Eigenschaft für [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Feld](../../../ado/reference/ado-api/field-object.md), und [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekte. Er verwendet den [Namen](../../../ado/reference/ado-api/name-property-ado.md) Eigenschaft, um die Namen der einzelnen anzuzeigen **Feld** und **Eigenschaft** Objekt.  

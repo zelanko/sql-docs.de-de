@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b5bbc04c94d491c096db047d574cc3b5fd8ee38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f4594e4b85ad66b1ab11a2966bc7a0d79815db09
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156631"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702975"
 ---
 # <a name="read-method"></a>Read-Methode
 Liest eine angegebene Anzahl von Bytes aus einer Binärdatei [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -36,7 +36,7 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Parameter  
  *NumBytes*  
- Dies ist optional. Ein **lange** Wert, der angibt, die Anzahl der Bytes, die aus der Datei gelesen oder [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) Wert **AdReadAll**, dies ist die Standardeinstellung.  
+ Optional. Ein **lange** Wert, der angibt, die Anzahl der Bytes, die aus der Datei gelesen oder [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) Wert **AdReadAll**, dies ist die Standardeinstellung.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die **lesen** Methode liest eine angegebene Anzahl von Bytes oder der gesamte Stream, aus einem **Stream** Objekt und gibt die resultierenden Daten als eine **Variant**.  

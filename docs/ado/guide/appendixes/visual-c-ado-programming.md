@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142969"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702621"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++-ADO-Programmierung
 Die ADO-API-Referenz beschreibt die Funktionalität von der ADO-Anwendungsprogrammierschnittstelle (API) mithilfe einer Syntax ähnlich wie auf Microsoft Visual Basic. Obwohl alle Benutzer, die Zielgruppe ist ADO Programmierern verschiedene Sprachen wie Visual Basic, Visual C++ (mit und ohne die **#import** Richtlinie), und Visual J++ (mit dem Paket für den ADO/WFC-Klasse).  
@@ -65,7 +65,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- Der Compiler generiert den entsprechenden **erhalten**_-_, **Put**-, oder **PutRef**_-Eigenschaft_ aufrufbasierte, auf welche alternative Syntax deklariert wird, und gibt an, ob die Eigenschaft wird gelesen bzw. geschrieben werden.  
+ Der Compiler generiert den entsprechenden **erhalten** _-_ , **Put**-, oder **PutRef** _-Eigenschaft_ aufrufbasierte, auf welche alternative Syntax deklariert wird, und gibt an, ob die Eigenschaft wird gelesen bzw. geschrieben werden.  
   
  Die **__declspec(property...)**  Compilerdirektive kann nur deklarieren **erhalten**, **put**, oder **erhalten** und **put** alternative Syntax für eine Funktion. Schreibgeschützte Vorgänge nur haben eine **erhalten** Deklaration; nur-schreiben-Vorgänge, die nur eine **put** Deklaration; Vorgänge, die sind sowohl Lese-als auch sowohl **erhalten** und **put** Deklarationen.  
   
@@ -85,7 +85,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- Z. B. ein Feld einen Wert zuweisen einer **Recordset** Objekt, mit dem Namen  **_Rs_**, abgeleitet von der **Autoren** Tabelle mit den **Pubs** Datenbank. Verwenden der **Item()** Eigenschaft auf die dritte **Feld** von der **Recordset** Objekt **Felder** (Sammlungen werden indiziert aus Auflistung 0 (null); Angenommen, das dritte Feld den Namen  **_au\_Fname_**). Rufen Sie dann die **Value()** Methode für die **Feld** Objekt, das einen Zeichenfolgenwert zuweisen.  
+ Z. B. ein Feld einen Wert zuweisen einer **Recordset** Objekt, mit dem Namen  **_Rs_** , abgeleitet von der **Autoren** Tabelle mit den **Pubs** Datenbank. Verwenden der **Item()** Eigenschaft auf die dritte **Feld** von der **Recordset** Objekt **Felder** (Sammlungen werden indiziert aus Auflistung 0 (null); Angenommen, das dritte Feld den Namen  **_au\_Fname_** ). Rufen Sie dann die **Value()** Methode für die **Feld** Objekt, das einen Zeichenfolgenwert zuweisen.  
   
  Dies kann ausgedrückt werden in Visual Basic in der folgenden vier Methoden (die letzten beiden Formen sind nur in Visual Basic; andere Sprachen müssen keine Entsprechungen):  
   
@@ -160,7 +160,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Es ist eine wichtige, jedoch nur selten tatsächlich bereits erwähnt, ADO eine IDispatch-Schnittstelle ist. Jedes Mal, wenn für die ein Zeiger auf ein ADO-Objekt übergeben werden muss, als eine **Variant**, diesen Zeiger als Zeiger auf eine IDispatch-Schnittstelle umgewandelt werden muss.  
   
- Im letzte Fall codes explizit das zweite boolesche Argument des Konstruktors mit den optional, Standardwert `true`. Dieses Argument bewirkt, dass die **Variant** Konstruktor aufrufen, die **"AddRef"**()-Methode, die ADO automatisch kompensiert die **_variant_t::Release()**()-Methode Wenn die ADO-Methode oder Eigenschaft aufrufen abgeschlossen ist.  
+ Im letzte Fall codes explizit das zweite boolesche Argument des Konstruktors mit den optional, Standardwert `true`. Dieses Argument bewirkt, dass die **Variant** Konstruktor aufrufen, die **"AddRef"** ()-Methode, die ADO automatisch kompensiert die **_variant_t::Release()** ()-Methode Wenn die ADO-Methode oder Eigenschaft aufrufen abgeschlossen ist.  
   
 ### <a name="safearray"></a>SafeArray  
  Ein **SafeArray** ist ein strukturierte Daten-Typ, der ein Array mit anderen Datentypen enthält. Ein **SafeArray** heißt *sicher* da Informationen über die Grenzen jeder Arraydimension enthält und den Zugriff auf Elemente innerhalb dieser Grenzen des Arrays schränkt.  
@@ -332,7 +332,7 @@ End Sub
   
 1.  Wieder ist die TESTHR() Inline-Funktion definiert, um die vorhandenen Fehlerbehandlungsmechanismus nutzen.  
   
-2.  Benötigen Sie nur ein eindimensionales Array, sodass Sie verwenden können **SafeArrayCreateVector**, statt den allgemeinen **SAFEARRAYBOUND** Deklaration und **"SafeArrayCreate"** -Funktion. Im folgenden finden Sie diesen Code mit aussehen würde **"SafeArrayCreate"**:  
+2.  Benötigen Sie nur ein eindimensionales Array, sodass Sie verwenden können **SafeArrayCreateVector**, statt den allgemeinen **SAFEARRAYBOUND** Deklaration und **"SafeArrayCreate"** -Funktion. Im folgenden finden Sie diesen Code mit aussehen würde **"SafeArrayCreate"** :  
   
     ```cpp
        SAFEARRAYBOUND   sabound[1];  
@@ -345,7 +345,7 @@ End Sub
   
      Die **Recordset** zurückgegeben wird, besteht aus mehreren Spalten, die eine Teilmenge davon besteht aus den Einschränkungsspalten. Die Werte der Einschränkungsspalten für jede zurückgegebene Zeile müssen die entsprechenden Einschränkungswerte identisch sein.  
   
-4.  Wer sich mit **SafeArrays** möglicherweise überrascht es, dass **"SafeArrayDestroy"**() wird nicht aufgerufen, bevor das Beenden. In der Tat Aufrufen **"SafeArrayDestroy"**() in diesem Fall führt dazu, dass eine Laufzeitausnahme. Der Grund ist, dass der Destruktor für `vtCriteria` ruft **VariantClear**() Wenn die **_variant_t** außerhalb des gültigen Bereichs, auf dem frei wird, wird die **SafeArray**. Aufrufen von **"SafeArrayDestroy"**, ohne manuellen Löschen der **_variant_t**, würde dazu führen, dass den Destruktor, um zu versuchen, eine ungültige löschen **SafeArray** Zeiger.  
+4.  Wer sich mit **SafeArrays** möglicherweise überrascht es, dass **"SafeArrayDestroy"** () wird nicht aufgerufen, bevor das Beenden. In der Tat Aufrufen **"SafeArrayDestroy"** () in diesem Fall führt dazu, dass eine Laufzeitausnahme. Der Grund ist, dass der Destruktor für `vtCriteria` ruft **VariantClear**() Wenn die **_variant_t** außerhalb des gültigen Bereichs, auf dem frei wird, wird die **SafeArray**. Aufrufen von **"SafeArrayDestroy"** , ohne manuellen Löschen der **_variant_t**, würde dazu führen, dass den Destruktor, um zu versuchen, eine ungültige löschen **SafeArray** Zeiger.  
   
      Wenn **"SafeArrayDestroy"** wurden aufgerufen wird, würde der Code wie folgt aussehen:  
   
@@ -558,7 +558,7 @@ void main() {
 #### <a name="notes"></a>Hinweise  
  Die folgenden Hinweise entsprechen kommentierten Abschnitten im Codebeispiel.  
   
-1.  Geben Sie eine offene **Verbindung** Objekt in einen codierten explizit **Variant**. Wandeln sie mit (IDispatch \*), damit der richtige Konstruktor aufgerufen wird. Außerdem explizit festlegen, die zweite **_variant_t** Parameter, um den Standardwert **"true"**, sodass der Verweiszähler des Objekts richtig, wenn sein wird die **Open** Vorgang beendet.  
+1.  Geben Sie eine offene **Verbindung** Objekt in einen codierten explizit **Variant**. Wandeln sie mit (IDispatch \*), damit der richtige Konstruktor aufgerufen wird. Außerdem explizit festlegen, die zweite **_variant_t** Parameter, um den Standardwert **"true"** , sodass der Verweiszähler des Objekts richtig, wenn sein wird die **Open** Vorgang beendet.  
   
 2.  Der Ausdruck `(_bstr_t)`, wird nicht umgewandelt, aber ein **_variant_t** Operator, der extrahiert eine **_bstr_t** die Zeichenfolge, aus der **Variant** zurückgegebenes **Wert** .  
   

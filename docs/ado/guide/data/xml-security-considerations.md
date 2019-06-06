@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e80a0bbb70a626ff01043592896ecfbe3c21f189
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e5ef2215725382650540d24f90e7cbd61102a71
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184814"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704422"
 ---
 # <a name="xml-security-considerations"></a>Überlegungen zur Sicherheit bei XML
 Die ADO zu speichern und Öffnen von Methoden für das Recordset-Objekt gelten nicht sichere Vorgänge in Internet Explorer ausgeführt. Also, wenn diese Methoden in einem Serverskript-Code verwendet werden, die ausgeführt wird, in einer Anwendung oder ein Steuerelement, das in einem Browser gehostet wird, wird die Sicherheitskonfiguration des Browsers auf deren Verhalten auswirken.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29addb89a5713b32b98df374a673fff4d549d771
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 794e71013b552cbd4e17b9cb37e4c8c261aeeae6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853450"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702694"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Übersicht über die Microsoft OLE DB Remoting-Anbieter
 Der Microsoft OLE DB-Anbieter für Remoting können einen lokalen Benutzer auf einem Clientcomputer, um Datenanbieter auf einem Remotecomputer aufzurufen. Geben Sie die Data-Anbieter-Parameter für den Remotecomputer, wie Sie tun würden, würden Sie einen lokalen Benutzer auf dem Remotecomputer. Geben Sie dann die Parameter, die den Remoting-Anbieter für den Remotecomputer zugreifen. Sie können dann den Remotecomputer zugreifen, als wären Sie ein lokaler Benutzer.
@@ -49,12 +49,12 @@ Der Microsoft OLE DB-Anbieter für Remoting können einen lokalen Benutzer auf e
 |---------------------------|-----------------|
 |**DFMode**|Gibt den Data Factory-Modus. Eine Zeichenfolge, die die gewünschte Version gibt an, die [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt auf dem Server. Legen Sie diese Eigenschaft vor dem Öffnen einer Verbindungs zum Anfordern einer bestimmten Version von der **DataFactory**. Wenn die benötigte Version nicht verfügbar ist, wird es versucht werden, verwenden Sie die vorherige Version. Wenn keine vorherige Version vorhanden ist, tritt ein Fehler auf. Wenn **DFMode** kleiner als die verfügbare Version ist, tritt ein Fehler auf. Diese Eigenschaft ist schreibgeschützt, nachdem eine Verbindung hergestellt wird.<br /><br /> Dabei kann es sich um eine der folgenden Zeichenfolgenwerte gültig sein:<br /><br /> -"25"-Version 2.5 (Standard)<br />-   "21"-Version 2.1<br />-   "20"-Version 2.0<br />-   "15"-Version 1.5|
 |**Befehlseigenschaften**|Gibt die Werte, die auf die Zeichenfolge der (Rowset)-Befehlseigenschaften, die an den Server gesendet werden, durch den MS Remote-Anbieter hinzugefügt werden. Der Standardwert für diese Zeichenfolge ist Vt_empty.|
-|**Aktuelle DFMode**|Gibt die tatsächliche Anzahl von der **DataFactory** auf dem Server. Überprüfen Sie diese Eigenschaft, um festzustellen, ob die Version im angeforderten der **DFMode** Eigenschaft berücksichtigt wurde.<br /><br /> Die folgenden gültigen Long Integer-Wert-Werte sind möglich:<br /><br /> -25-Version 2.5 (Standard)<br />-   21-Version 2.1<br />-   20-Version 2.0<br />-   15-Version 1.5<br /><br /> Hinzufügen von "DFMode = 20;" zur Verbindungszeichenfolge bei Verwendung der **MSRemote** Anbieter kann die Leistung Ihres Servers verbessern, beim Aktualisieren von Daten. Mit dieser Einstellung die **RDSServer.DataFactory** Objekt auf dem Server einen weniger ressourcenintensiv-Modus verwendet. Die folgenden Funktionen sind jedoch nicht in dieser Konfiguration verfügbar:<br /><br /> – Verwenden von parametrisierten Abfragen.<br />– Abrufen der Parameter oder eine Spalte Informationen vor dem Aufruf der **Execute** Methode.<br />– Festlegen **Transact Updates** zu **"true"**.<br />-Abrufen des Zeilenstatus.<br />– Aufrufen der **Resync** Methode.<br />-Aktualisieren (explizit oder automatisch) über die **Update Resync** Eigenschaft.<br />– Festlegen **Befehl** oder **Recordset** Eigenschaften.<br />-   Using **adCmdTableDirect**.|
+|**Aktuelle DFMode**|Gibt die tatsächliche Anzahl von der **DataFactory** auf dem Server. Überprüfen Sie diese Eigenschaft, um festzustellen, ob die Version im angeforderten der **DFMode** Eigenschaft berücksichtigt wurde.<br /><br /> Die folgenden gültigen Long Integer-Wert-Werte sind möglich:<br /><br /> -25-Version 2.5 (Standard)<br />-   21-Version 2.1<br />-   20-Version 2.0<br />-   15-Version 1.5<br /><br /> Hinzufügen von "DFMode = 20;" zur Verbindungszeichenfolge bei Verwendung der **MSRemote** Anbieter kann die Leistung Ihres Servers verbessern, beim Aktualisieren von Daten. Mit dieser Einstellung die **RDSServer.DataFactory** Objekt auf dem Server einen weniger ressourcenintensiv-Modus verwendet. Die folgenden Funktionen sind jedoch nicht in dieser Konfiguration verfügbar:<br /><br /> – Verwenden von parametrisierten Abfragen.<br />– Abrufen der Parameter oder eine Spalte Informationen vor dem Aufruf der **Execute** Methode.<br />– Festlegen **Transact Updates** zu **"true"** .<br />-Abrufen des Zeilenstatus.<br />– Aufrufen der **Resync** Methode.<br />-Aktualisieren (explizit oder automatisch) über die **Update Resync** Eigenschaft.<br />– Festlegen **Befehl** oder **Recordset** Eigenschaften.<br />-   Using **adCmdTableDirect**.|
 |**Handler**|Gibt den Namen des eine serverseitige Anpassung-Programm (oder Ereignishandler), die die Funktionalität von erweitert die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), und alle Parameter, die vom Handler verwendete *,* getrennt durch Kommas ( ","). Ein **String-Wert**.|
 |**Internet-Zeitüberschreitung.**|Gibt die maximale Anzahl von Millisekunden für eine Anforderung zum und vom Server zu übertragen. (Der Standardwert ist 5 Minuten.)|
 |**Remote-Anbieter**|Gibt den Namen des Datenanbieters auf dem Remoteserver verwendet werden.|
 |**Remoteserver**|Gibt an, das Serverprotokoll Name und die Kommunikation, die von dieser Verbindung verwendet werden. Diese Eigenschaft entspricht der [RDS. DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt [Server](../../../ado/reference/rds-api/server-property-rds.md) Eigenschaft.|
-|**Transact-Updates**|Bei Festlegung auf **"true"**, dieser Wert gibt an, die bei [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) erfolgt auf dem Server, wird er innerhalb einer Transaktion ausgeführt werden. Der Standardwert für diese boolesche Eigenschaft für die dynamische ist **"false"**.|
+|**Transact-Updates**|Bei Festlegung auf **"true"** , dieser Wert gibt an, die bei [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) erfolgt auf dem Server, wird er innerhalb einer Transaktion ausgeführt werden. Der Standardwert für diese boolesche Eigenschaft für die dynamische ist **"false"** .|
 
  Sie können auch beschreibbare dynamische Eigenschaften festlegen, durch deren Namen als Schlüsselwörter in der Verbindungszeichenfolge angeben. Legen Sie z. B. die **Internet-Zeitüberschreitung** dynamische Eigenschaft auf fünf Sekunden, indem Sie angeben:
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6436ca3b67587751757ae01b4248c1ce8b35722d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065186"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697285"
 ---
 # <a name="ado-api-reference"></a>ADO – API-Referenz
 In diesem Abschnitt der ADO-Dokumentation enthält Themen, die für jedes ADO-Objekt, Sammlung, Eigenschaft, dynamische Eigenschaft, Methode, Ereignis und -Enumeration. Darüber hinaus enthält es sich um eine Liste von ADO – Syntaxindizes mit Microsoft Visual C++ und Windows Foundation Classes (WFC) verwendet werden.  
@@ -46,8 +46,8 @@ In diesem Abschnitt der ADO-Dokumentation enthält Themen, die für jedes ADO-Ob
 -   [ADO-Codebeispiele](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Anhang C: Programmieren mit ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)   
+ [Anhang C: Programmieren mit ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)

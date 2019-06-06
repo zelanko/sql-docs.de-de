@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: ee1b1e45970be6501f8ab40dcc92c6675c0bc10b
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.openlocfilehash: 6ff0e1eb50f7e7af831ed58b4de05b520fd3f06a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626674"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712857"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer unter Linux
 
@@ -29,7 +28,7 @@ Dieses Dokument beschreibt, wie Sie die Problembehandlung für Microsoft SQL Ser
 ## <a id="connection"></a> Problembehandlung bei Verbindungsfehlern
 Wenn beim Herstellen einer Verbindung mit dem Linux-SQL-Server Probleme auftreten, sind einige Punkte zu überprüfen.
 
-- Wenn Sie nicht lokal über eine Verbindung herstellen können **"localhost"**, versuchen Sie es stattdessen mit die IP-Adresse 127.0.0.1. Es ist möglich, **"localhost"** ist nicht ordnungsgemäß an diese Adresse zugeordnet.
+- Wenn Sie nicht lokal über eine Verbindung herstellen können **"localhost"** , versuchen Sie es stattdessen mit die IP-Adresse 127.0.0.1. Es ist möglich, **"localhost"** ist nicht ordnungsgemäß an diese Adresse zugeordnet.
 
 - Stellen Sie sicher, dass der Servername oder IP-Adresse von Ihrem Clientcomputer erreichbar ist.
 

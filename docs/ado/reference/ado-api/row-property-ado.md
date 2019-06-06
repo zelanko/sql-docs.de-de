@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f67978362c7e55357c3cdbfea1c8590354277416
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63192822"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711466"
 ---
 # <a name="row-property-ado"></a>Row-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB **Zeile** Objekt aus, oder auf eine [ADORecordConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordconstruction-interface.md) Objekt. Bei Verwendung von **Put_Row** Festlegen einer **Zeile** Objekt, eine Zeile in eine ADO umgewandelt **Datensatz** Objekt.  

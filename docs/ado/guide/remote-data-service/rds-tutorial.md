@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3d1f328baf628e86c75abc9a452600e1f0e8cf88
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929890"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704255"
 ---
 # <a name="rds-tutorial"></a>RDS-Tutorial
 Dieses Tutorial veranschaulicht das Verwenden von RDS-Programmiermodell zum Abfragen und Aktualisieren einer Datenquelle. Zuerst beschreibt es die erforderlichen Schritte zum Ausführen dieser Aufgabe. Anschließend wird das Tutorial in Microsoft® Visual Basic Scripting Edition (mit ADO für die Windows Foundation Classes (ADO/WFC)) wiederholt.  
@@ -65,7 +65,7 @@ Dieses Tutorial veranschaulicht das Verwenden von RDS-Programmiermodell zum Abfr
   
 -   [Schritt 5: DataControl wird nutzbar gemacht (RDS-Tutorial)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Schritt 6: Änderungen werden an den Server (RDS-Tutorial) gesendet.](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Schritt 6: Änderungen werden an den Server (RDS-Tutorial) gesendet.](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
 -   [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   

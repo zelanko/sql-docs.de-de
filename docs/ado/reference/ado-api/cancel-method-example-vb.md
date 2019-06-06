@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 051e91d54a1f0311d5a8aeb69b4ea4672234a8f8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239805"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696137"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel-Methode – Beispiel (VB)
 Dieses Beispiel verwendet die [Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md) -Methode abbrechen, einen Befehl Ausführen auf einem [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, wenn die Verbindung ausgelastet ist.  

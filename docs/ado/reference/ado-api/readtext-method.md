@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b095e034df987fd580b5f5855993c9cf070a1236
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5e7f9a484ecb873a141f9b91a88c64f65ff25336
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278612"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712202"
 ---
 # <a name="readtext-method"></a>ReadText-Methode
 Liest eine angegebene Anzahl von Zeichen aus einem Textobjekt [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -36,7 +36,7 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Parameter  
  *NumChars*  
- Dies ist optional. Ein **lange** Wert, der die Anzahl der zu lesenden Zeichen aus der Datei angibt oder ein [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) Wert. Der Standardwert ist **AdReadAll**.  
+ Optional. Ein **lange** Wert, der die Anzahl der zu lesenden Zeichen aus der Datei angibt oder ein [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) Wert. Der Standardwert ist **AdReadAll**.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die **ReadText** Methode liest eine angegebene Anzahl von Zeichen, eine ganze Zeile oder der gesamte Stream, aus einem **Stream** Objekt und gibt die resultierende Zeichenfolge zurück.  

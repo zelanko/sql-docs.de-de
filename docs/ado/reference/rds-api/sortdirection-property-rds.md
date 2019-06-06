@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ef187cd2ae291413fccf10e2af51642c50e06e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dccaa1974b685c7d889f287cf4a1b0312aa87acd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62670876"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697516"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection-Eigenschaft (RDS)
 Gibt an, ob eine Sortierreihenfolge aufsteigend oder absteigend sortiert wird.  
@@ -39,7 +39,7 @@ DataControl.SortDirection = value
  Eine Objektvariable, steht ein [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt.  
   
  *Wert*  
- Ein **booleschen** Wert, der bei Festlegung auf **"true"**, gibt an, die Sortierreihenfolge ist Aufsteigend. **"False"** gibt eine absteigende Reihenfolge.  
+ Ein **booleschen** Wert, der bei Festlegung auf **"true"** , gibt an, die Sortierreihenfolge ist Aufsteigend. **"False"** gibt eine absteigende Reihenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
  Die [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), **Sortierreihenfolge**, [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), und [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)Eigenschaften bereitstellen, Sortier- und Filterfunktionen für den clientseitigen Cache. Die Funktion zum Sortieren sortiert die Datensätze mithilfe von Werten aus einer Spalte. Die Funktion zum Filtern wird eine Teilmenge der Datensätze auf Grundlage von Suchkriterien, während die vollständige [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wird im Cache beibehalten. Die [zurücksetzen](../../../ado/reference/rds-api/reset-method-rds.md) Methode führen Sie die Kriterien und Ersetzen Sie die aktuelle **Recordset** mit einen aktualisierbaren **Recordset**.  

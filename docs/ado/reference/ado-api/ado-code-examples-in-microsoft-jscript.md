@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 08dbea83f84a1b4606d48a79c80b8b6ef082d023
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065053"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697027"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>ADO-Codebeispiele in Microsoft JScript
 Verwenden Sie die folgenden Codebeispielen, Informationen zum Verwenden der ADO-Methoden, Eigenschaften und Ereignisse, die beim Schreiben in JScript.  
@@ -60,4 +60,4 @@ Verwenden Sie die folgenden Codebeispielen, Informationen zum Verwenden der ADO-
  [ADO-Codebeispiele in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO Codebeispiele (VBScript)](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [ADO-Codebeispiele in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

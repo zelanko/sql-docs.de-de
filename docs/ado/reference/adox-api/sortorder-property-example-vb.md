@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f3506070a55b852292067ec89ee24ee11417d6da
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281568"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705775"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, die [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) Eigenschaft eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) , wurde angefügt die [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung von eine [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code Fügt einen aufsteigenden Index der Spalte "Country" in der **Mitarbeiter** Tabelle, zeigt die Datensätze. Und klicken Sie dann der Code einen absteigenden Index der Spalte "Country" in fügt die **Mitarbeiter** Tabelle aus, und die Einträge erneut angezeigt. Der Unterschied zwischen aufsteigender und absteigender Indizes wird angezeigt.  

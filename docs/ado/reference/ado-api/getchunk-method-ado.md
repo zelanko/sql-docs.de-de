@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 538ccfd71375521bf0ba035ccfa55746c4d76af9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c5dc09043d780c2a743059773eed56e16a799bf5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028047"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694950"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk-Methode (ADO)
 Gibt alle oder einen Teil des den Inhalt der eine große Text- oder Binärdaten [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
@@ -48,7 +48,7 @@ variable = field.GetChunk(Size)
   
  Jeder nachfolgende **GetChunk** Aufruf ruft Daten ab, wo die vorherige **GetChunk** Aufruf beendet wurde. Aber wenn Sie Daten aus einem Feld aus, und klicken Sie dann festlegen oder lesen den Wert eines anderen Felds im aktuellen Datensatz abrufen, wird davon ausgegangen ADO, dass Sie das Abrufen von Daten aus dem ersten Feld abgeschlossen haben. Aufrufen der **GetChunk** Methode für das erste Feld in diesem Fall ADO interpretiert den Aufruf als eine neue **GetChunk** Vorgang und Lesen am Anfang der das beginnt. Beim Zugriff auf Felder in anderen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte, die nicht Klonen des ersten **Recordset** Objekt wird nicht unterbrochen. **GetChunk** Vorgänge.  
   
- Wenn die **AdFldLong** bit im der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) Eigenschaft eine **Feld** Objekt nastaven NA hodnotu **"true"**, können Sie die **GetChunk**  Methode für dieses Feld.  
+ Wenn die **AdFldLong** bit im der [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) Eigenschaft eine **Feld** Objekt nastaven NA hodnotu **"true"** , können Sie die **GetChunk**  Methode für dieses Feld.  
   
  Wenn es kein aktueller Datensatz, ist bei der Verwendung der **GetChunk** Methode für eine **Feld** Objekt Fehler 3021 (kein aktueller Datensatz).  
   

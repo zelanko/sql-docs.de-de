@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddcbba246f0bdcfb5c3a22766f5d335a2bd5893e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 34a4ab7327edfb6f6f4204fb457ade97be4f5975
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719975"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702925"
 ---
 # <a name="ado-java-class-wrappers"></a>ADO-Java-Klassen-Wrapper
 Dieser Code deklariert eine Instanz von der ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Klassenwrapper und initialisiert, auf die gleiche Zeile des Codes. Es darüber hinaus deklariert Variablen für jeden der Argumente in der [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode, dies gilt insbesondere für [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) und [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (da Java unterstützt keine aufgelistet Typen). Er öffnet und schließt die **Recordset** Objekt. Rs1 lediglich auf NULL festlegen, plant diese Variable freigegeben werden, wenn Java der systematischen und unterbrochene-Version von nicht verwendeten Objekten ausführt.  

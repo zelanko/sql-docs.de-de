@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01b7a1b7829ace46cac7be21d33d9837845db9a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f654bc1ccd913c5fc31f81cae67ffdb84e80f952
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955770"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704157"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Schritt 5: Nutzbarmachen von DataControl (RDS-Tutorial)
 Das zurückgegebene **Recordset** Objekt für die Verwendung verfügbar ist. Sie können überprüfen, navigieren Sie oder bearbeiten Sie sie, wie jede andere **Recordset**. Was Sie tun können, mit der **Recordset** hängt von Ihrer Umgebung. Visual Basic und Visual C++, haben Sie visuelle Steuerelemente, mit dem eine **Recordset** direkt oder indirekt mit Hilfe des Steuerelements ein aktivieren.  
@@ -45,5 +45,5 @@ Sub RDSTutorial5()
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schritt 6: Änderungen werden an den Server (RDS-Tutorial) gesendet.](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+ [Schritt 6: Änderungen werden an den Server (RDS-Tutorial) gesendet.](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS-Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

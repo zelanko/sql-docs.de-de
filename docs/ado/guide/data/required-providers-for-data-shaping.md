@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7edd3b3cacd097380b5d14ad55ed115ff93cf072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b95d6e42174cbce4357562ac3b866f49f0b58fef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280497"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701795"
 ---
 # <a name="required-providers-for-data-shaping"></a>Erforderliche Anbieter für die Datenstrukturierung
 Strukturieren von Daten erfordert in der Regel zwei Anbieter. Der Dienstanbieter [Data Shaping Service für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), der die Daten strukturieren, Funktionalität und einen Datenanbieter, wie z. B. der OLE DB-Anbieter für SQL Server bereitstellt, Zeilen mit Daten zum Auffüllen des geformten [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  Der Name des Dienstanbieters (MSDataShape) kann angegeben werden, als Wert für die [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) Eigenschaft oder das-Schlüsselwort der Verbindungszeichenfolge "Provider = MSDataShape;".  
   
- Der Name des Datenanbieters kann angegeben werden, als Wert für die **Datenanbieter** dynamische Eigenschaft, die hinzugefügt wird die **Verbindung** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlung der Data Shaping Service für OLE DB oder das-Schlüsselwort der Verbindungszeichenfolge "**Datenanbieter =**_Anbieter_".  
+ Der Name des Datenanbieters kann angegeben werden, als Wert für die **Datenanbieter** dynamische Eigenschaft, die hinzugefügt wird die **Verbindung** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlung der Data Shaping Service für OLE DB oder das-Schlüsselwort der Verbindungszeichenfolge "**Datenanbieter =** _Anbieter_".  
   
  Kein Datenanbieter ist erforderlich, wenn die **Recordset** nicht aufgefüllt wurde (z. B. wie eine erstellte **Recordset** , in Spalten mit dem neuen Schlüsselwort erstellt werden). Geben Sie in diesem Fall "**Datenanbieter =** none;".  
   

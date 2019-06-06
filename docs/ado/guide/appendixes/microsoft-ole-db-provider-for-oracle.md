@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6af8fcd665fdfe503eab5aec591419982d0d3958
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853410"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702715"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB-Anbieter für Oracle (Übersicht)
 > [!IMPORTANT]
@@ -59,7 +59,7 @@ MSDAORA
 >  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge.
 
 ## <a name="provider-specific-connection-parameters"></a>Anbieterspezifische-Verbindungsparameter
- Der Anbieter unterstützt mehrere Anbieter-spezifischen Verbindungsdaten Parameter zusätzlich zu den von ADO definiert. Wie mit den Eigenschaften der ADO-Verbindung diese Anbieter-spezifischen Eigenschaften können, über festgelegt werden die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) oder als Teil der **"ConnectionString"**.
+ Der Anbieter unterstützt mehrere Anbieter-spezifischen Verbindungsdaten Parameter zusätzlich zu den von ADO definiert. Wie mit den Eigenschaften der ADO-Verbindung diese Anbieter-spezifischen Eigenschaften können, über festgelegt werden die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) oder als Teil der **"ConnectionString"** .
 
  Diese Parameter sind ausführlich erläutert, in der [OLE DB-Programmierreferenz](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). Die [ADO dynamische Property-Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) bietet einen Querverweis zwischen diesen Parameternamen und den entsprechenden OLE DB-Eigenschaften.
 

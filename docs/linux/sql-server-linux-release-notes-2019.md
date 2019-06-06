@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d041e9554b976f46b121f2c39d8170183b85c6e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 8645fc41b518618194a62f24e3826b31a56596ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66110222"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705264"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Versionshinweise für SQL Server-2019-Vorschauversion unter Linux
 
@@ -215,7 +214,7 @@ Informationen zum Einstieg finden Sie in der folgenden Schnellstarts:
 
 - [Installieren Sie unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installieren unter Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen unter Docker aus](quickstart-install-connect-ubuntu.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Ausführen und Verbinden – Cloud](quickstart-install-connect-clouds.md)

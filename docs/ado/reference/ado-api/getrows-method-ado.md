@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65d346cb9394613a92f95f7466e429b10c54b1a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6babeebec1eac78949f0a80eb0701b5b5ba1dcc2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027950"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694838"
 ---
 # <a name="getrows-method-ado"></a>GetRows-Methode (ADO)
 Ruft mehrere Datensätze aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt in ein Array.  
@@ -39,13 +39,13 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Parameter  
  *Zeilen*  
- Dies ist optional. Ein [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) Wert, der die Anzahl der abzurufenden Datensätze angibt. Der Standardwert ist **AdGetRowsRest**.  
+ Optional. Ein [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) Wert, der die Anzahl der abzurufenden Datensätze angibt. Der Standardwert ist **AdGetRowsRest**.  
   
  *Start*  
- Dies ist optional. Ein **Zeichenfolge** Wert oder **Variant** , ausgewertet wird, zu dem Lesezeichen für den Datensatz aus der die **GetRows** Vorgang beginnen soll. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
+ Optional. Ein **Zeichenfolge** Wert oder **Variant** , ausgewertet wird, zu dem Lesezeichen für den Datensatz aus der die **GetRows** Vorgang beginnen soll. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
   
  *Fields*  
- Dies ist optional. Ein **Variant** , die einen einzelnen Feldnamen oder Ordnungsposition oder ein Array von Feldnamen oder Ordnungsposition Zahlen darstellt. ADO werden nur die Daten in diesen Feldern zurück.  
+ Optional. Ein **Variant** , die einen einzelnen Feldnamen oder Ordnungsposition oder ein Array von Feldnamen oder Ordnungsposition Zahlen darstellt. ADO werden nur die Daten in diesen Feldern zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **GetRows** Methode zum Kopieren der Datensätze aus einer **Recordset** in ein zweidimensionales Array. Der erste Index identifiziert das Feld und die zweite die Datensatznummer. Die *Array* Variable automatisch der richtige dimensioniert ist Größe, wenn die **GetRows** Methode gibt die Daten zurück.  

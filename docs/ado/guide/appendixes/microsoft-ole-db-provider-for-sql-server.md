@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17146ee01a2e4b99dbe50b1d81aedaf0ad7e0b94
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65095886"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701182"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB-Anbieter für SQL Server – Übersicht
 Microsoft OLE DB-Anbieter für SQL Server, SQLOLEDB, kann es sich um ADO auf Microsoft SQL Server zugreifen.
@@ -60,7 +60,7 @@ User ID=MyUserID;Password=MyPassword;"
 >  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge.
 
 ## <a name="provider-specific-connection-parameters"></a>Anbieterspezifische-Verbindungsparameter
- Der Anbieter unterstützt mehrere Anbieter-spezifischen Verbindungsdaten Parameter zusätzlich zu den von ADO definiert. Wie mit den Eigenschaften der ADO-Verbindung diese Anbieter-spezifischen Eigenschaften können, über festgelegt werden die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) oder als Teil der festgelegt werden kann die **"ConnectionString"**.
+ Der Anbieter unterstützt mehrere Anbieter-spezifischen Verbindungsdaten Parameter zusätzlich zu den von ADO definiert. Wie mit den Eigenschaften der ADO-Verbindung diese Anbieter-spezifischen Eigenschaften können, über festgelegt werden die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) oder als Teil der festgelegt werden kann die **"ConnectionString"** .
 
 |Parameter|Description|
 |---------------|-----------------|
@@ -69,7 +69,7 @@ User ID=MyUserID;Password=MyPassword;"
 |Netzwerkadresse|Gibt die Netzwerkadresse des SQL Servers gemäß der **Speicherort** Eigenschaft.|
 |Netzwerkbibliothek|Gibt den Namen der Netzwerkbibliothek (DLL) zur Kommunikation mit dem SQL Server verwendet. Der Name sollte weder den Pfad noch die DLL-Dateinamenerweiterung enthalten. Der Standardwert wird durch die SQL Server-Clientkonfiguration bereitgestellt.|
 |Verfahren für Vorbereitung verwenden|Bestimmt, ob SQL Server temporäre gespeicherte Prozeduren erstellt, bei der Vorbereitung der Befehle (durch die **Prepared** Eigenschaft).|
-|Automatisch übersetzen|Gibt an, ob der OEM-ANSI-Zeichen konvertiert werden. Diese Eigenschaft kann festgelegt werden, um **"true"** oder **"false"**. Der Standardwert lautet **True**. Wenn diese Eigenschaft, um festgelegt wird **"true"**, SQLOLEDB OEM-/ANSI-zeichenkonvertierung ausführt, wenn Multibyte-Zeichenfolgen aus abgerufen oder an, die SQL-Server gesendet werden. Wenn diese Eigenschaft, um festgelegt wird **"false"**, SQLOLEDB führt keine OEM-ANSI-zeichenkonvertierung Multibyte-Zeichensatz-Zeichenfolgendaten.|
+|Automatisch übersetzen|Gibt an, ob der OEM-ANSI-Zeichen konvertiert werden. Diese Eigenschaft kann festgelegt werden, um **"true"** oder **"false"** . Der Standardwert lautet **True**. Wenn diese Eigenschaft, um festgelegt wird **"true"** , SQLOLEDB OEM-/ANSI-zeichenkonvertierung ausführt, wenn Multibyte-Zeichenfolgen aus abgerufen oder an, die SQL-Server gesendet werden. Wenn diese Eigenschaft, um festgelegt wird **"false"** , SQLOLEDB führt keine OEM-ANSI-zeichenkonvertierung Multibyte-Zeichensatz-Zeichenfolgendaten.|
 |Packet Size|Gibt ein Netzwerk-Paketgröße in Bytes an. Der Paketgrößen-Eigenschaftswert muss zwischen 512 und 32767 liegen. Die standardmäßige Netzwerkpaketgröße SQLOLEDB ist 4096.|
 |ApplicationName|Gibt den Namen der Clientanwendung an.|
 |Workstation ID|Eine Zeichenfolge, die die Arbeitsstation identifiziert.|

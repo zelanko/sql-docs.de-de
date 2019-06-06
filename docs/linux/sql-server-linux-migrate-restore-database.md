@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: ef9ee77366b5087ea0beda81eb756d281f495b78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7d31490369b1562db91820d0e47f5935b5b42911
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398984"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713127"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrieren einer SQL Server-Datenbank von Windows bis Linux, die mit Sicherung und Wiederherstellung
 
@@ -50,7 +49,7 @@ Es gibt mehrere Möglichkeiten, eine Datenbank eine Sicherungsdatei in Windows z
 
 1. Starten Sie **SQL Server Management Studio** auf Ihrem Windows-Computer.
 
-1. Geben Sie im Verbindungsdialogfeld **"localhost"**.
+1. Geben Sie im Verbindungsdialogfeld **"localhost"** .
 
 1. Erweitern Sie im Objekt-Explorer **Datenbanken**.
 
@@ -106,7 +105,7 @@ Um die Datenbank wiederherzustellen, müssen Sie zuerst die Sicherungsdatei auf 
 
 An diesem Punkt wird die Sicherungsdatei auf dem Linux-Server im Basisverzeichnis des Benutzers ein. Sie müssen die Sicherung vor dem Wiederherstellen der Datenbank zu SQL Server platzieren, in einem Unterverzeichnis des **/var/opt/mssql**.
 
-1. In der gleichen Windows Bash-Sitzung Herstellen einer Remoteverbindung mit Ihrem Linux-Zielcomputer mit **ssh**. Im folgenden Beispiel wird eine Verbindung mit dem Linux-Computer her. **192.0.2.9** als Benutzer **"user1"**.
+1. In der gleichen Windows Bash-Sitzung Herstellen einer Remoteverbindung mit Ihrem Linux-Zielcomputer mit **ssh**. Im folgenden Beispiel wird eine Verbindung mit dem Linux-Computer her. **192.0.2.9** als Benutzer **"user1"** .
 
    ```bash
    ssh user1@192.0.2.9
@@ -126,7 +125,7 @@ An diesem Punkt wird die Sicherungsdatei auf dem Linux-Server im Basisverzeichni
    mkdir -p /var/opt/mssql/backup
    ```
 
-1. Verschieben Sie die Sicherungsdatei auf das Verzeichnis an. Im folgenden Beispiel wird die Sicherungsdatei im home-Verzeichnis befindet *"user1"*. Ändern Sie den Befehl mit dem Speicherort und Namen der backup-Datei übereinstimmen.
+1. Verschieben Sie die Sicherungsdatei auf das Verzeichnis an. Im folgenden Beispiel wird die Sicherungsdatei im home-Verzeichnis befindet *"user1"* . Ändern Sie den Befehl mit dem Speicherort und Namen der backup-Datei übereinstimmen.
 
    ```bash
    mv /home/user1/YourDB.bak /var/opt/mssql/backup/

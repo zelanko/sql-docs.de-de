@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 55ba7b2fc9e1b6ea0eaeb44989e1bfb64b44d9d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0953b76ff642387679c907e6f0b3364cbac898df
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315210"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711387"
 ---
 # <a name="save-method"></a>Save-Methode
 Speichert die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -36,10 +36,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parameter  
  *Ziel*  
- Dies ist optional. Ein **Variant** , die den vollständigen Pfadnamen der Datei darstellt, in denen die **Recordset** gespeichert werden soll, oder ein Verweis auf eine **Stream** Objekt.  
+ Optional. Ein **Variant** , die den vollständigen Pfadnamen der Datei darstellt, in denen die **Recordset** gespeichert werden soll, oder ein Verweis auf eine **Stream** Objekt.  
   
  *PersistFormat*  
- Dies ist optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der angibt, in dem das Format der **Recordset** (XML oder ADTG) gespeichert werden soll. Der Standardwert ist **AdPersistADTG**.  
+ Optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der angibt, in dem das Format der **Recordset** (XML oder ADTG) gespeichert werden soll. Der Standardwert ist **AdPersistADTG**.  
   
 ## <a name="remarks"></a>Hinweise  
  Die [Methode speichern](../../../ado/reference/ado-api/save-method.md) Methode kann nur aufgerufen werden, auf einem geöffneten **Recordset**. Verwenden der [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode, um spätere Wiederherstellung der **Recordset** aus *Ziel*.  

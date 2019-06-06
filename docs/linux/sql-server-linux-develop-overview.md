@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d3ef46dfbacb1c4cbfe67df555b79fb10ade86d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670880"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705814"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Vorgehensweise zum Einstieg in die Entwicklung von Anwendungen für SQL Server unter Linux
 
@@ -78,5 +77,5 @@ Installieren von SQL Server unter Linux mit einer der folgenden schnellstartanle
 
 - [Installieren Sie unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installieren unter Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen unter Docker aus](quickstart-install-connect-ubuntu.md)

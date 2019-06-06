@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50cf569f6e0af5e753cca7fba030b8fc2caa4a86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 98a0cc1df12f905cd0d22d05b162983742d0f355
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743126"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710786"
 ---
 # <a name="stayinsync-property"></a>StayInSync-Eigenschaft
 Gibt an, in einer hierarchischen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt, gibt an, ob den Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. die *Kapitel*) ändert sich, wenn die übergeordnete Zeile positionieren, Änderungen.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **booleschen** Wert. Der Standardwert lautet **True**. Wenn **"true"**, im Kapitel über das aktualisiert werden, wenn das übergeordnete Element **Recordset** objektänderungen Zeile Position aus, wenn **"false"**, weiterhin im Kapitel über das Verweisen auf Daten in dem vorhergehenden Kapitel Obwohl das übergeordnete Element **Recordset** -Objekt Zeilenposition geändert hat.  
+ Legt fest oder gibt einen **booleschen** Wert. Der Standardwert lautet **True**. Wenn **"true"** , im Kapitel über das aktualisiert werden, wenn das übergeordnete Element **Recordset** objektänderungen Zeile Position aus, wenn **"false"** , weiterhin im Kapitel über das Verweisen auf Daten in dem vorhergehenden Kapitel Obwohl das übergeordnete Element **Recordset** -Objekt Zeilenposition geändert hat.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Eigenschaft gilt für hierarchische Recordsets, z. B. diejenigen, die von unterstützt die [Microsoft Data Shaping Service für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), muss festgelegt werden, auf dem übergeordneten Element **Recordset** vor untergeordneten  **Recordset** abgerufen wird. Diese Eigenschaft wird das Navigieren in hierarchischen Recordsets vereinfacht.  

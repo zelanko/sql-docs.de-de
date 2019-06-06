@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855852"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701207"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB-Anbieter für Microsoft, die Indizierung Service – Übersicht
 Microsoft OLE DB-Anbieter für Microsoft Indexdienst ermöglicht programmgesteuerten schreibgeschützten Zugriff auf System- und Webdaten indiziert, die vom Microsoft Indexdienst-Datei. ADO-Anwendungen können SQL-Abfragen zum Abrufen von Inhalten und Informationen ausgeben.
@@ -61,7 +61,7 @@ MSIDXS
  Der Anbieter akzeptiert keine Aufrufe von gespeicherten Prozeduren oder einfache Tabellennamen (z. B. die [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) Eigenschaft werden immer **AdCmdText**).
 
 ## <a name="recordset-behavior"></a>Recordset-Verhalten
- Die folgenden Tabellen enthalten die Features von einem **Recordset** Objekt mit diesem Anbieter geöffnet. Nur der statische Cursor-Datentyp (**"adOpenStatic"**) verfügbar ist.
+ Die folgenden Tabellen enthalten die Features von einem **Recordset** Objekt mit diesem Anbieter geöffnet. Nur der statische Cursor-Datentyp ( **"adOpenStatic"** ) verfügbar ist.
 
  Ausführlichere Informationen zu **Recordset** Verhalten für die Anbieterkonfiguration, und führen Sie die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode eine Aufzählung der [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von der **Recordset** zu bestimmen, ob die anbieterspezifische dynamische Eigenschaften vorhanden sind.
 

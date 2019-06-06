@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb62318b9f8eb03fbd3c9732dc8ad0caa9127d17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 90904154f324a86088fac0d637301193464feb2c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294429"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701232"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Hinzufügen von mehreren Feldern und Werten
 In einigen Fällen ist es möglicherweise sehr viel effizienter, die in ein Array von Feldern und die entsprechenden Werte zu übergeben, um die **AddNew** Methode anstelle der Einstellung **Wert** mehrere Male für jedes neue Feld. Wenn *FieldList* ist ein Array, *Werte* muss auch ein Array mit der gleichen Anzahl von Elementen andernfalls, ein Fehler auftritt. Die Reihenfolge von Feldnamen muss es sich um die Reihenfolge der Werte des Felds in jedem Array entsprechen. Folgender Code übergibt ein Array von Feldern und ein Array von Werten, die **AddNew** Methode.

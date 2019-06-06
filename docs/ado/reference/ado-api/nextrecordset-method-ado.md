@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fba1826dcad9a183bab9b9b0106bb9b45eb29846
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 33cc979e0a3af9b684899cf7563573fd6ac8dadd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242425"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707278"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset-Methode (ADO)
 Löscht das aktuelle [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt und gibt die nächste **Recordset** durch eine Reihe von Befehlen gelangt sind.  
@@ -48,7 +48,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **NextRecordset** -Methode zur Rückgabe der Ergebnisse von den nächsten Befehl in einer zusammengesetzten Command-Anweisung oder einer gespeicherten Prozedur, die mehrere Ergebnisse zurückgibt. Beim Öffnen einer **Recordset** Objekt auf Grundlage einer zusammengesetzten-befehlsanweisung (z. B. "wählen \* von table1; SELECT \* von table2 ") mit der [ausführen](../../../ado/reference/ado-api/execute-method-ado-command.md) Methode für eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) oder [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode für eine **Recordset**, ADO führt nur den ersten Befehl und gibt die Ergebnisse an *Recordset*. Um die Ergebnisse der nachfolgenden Befehle in der Anweisung zuzugreifen, rufen die **NextRecordset** Methode.  
   
- Als zusätzliche Ergebnisse vorhanden sind und die **Recordset** nicht getrennt oder Prozessgrenzen, gemarshallt wird, enthält die verbundanweisungen der **NextRecordset** Methode weiterhin zurückgeben **Recordset** Objekte. Wenn ein Zeile zurückgeben-Befehl erfolgreich ausgeführt wird, aber keine Datensätze, die den zurückgegebenen gibt **Recordset** Objekt wird geöffnet, aber leer sein. Tests für diesen Fall, indem Sie überprüfen, ob die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) Eigenschaften sind beide **"true"**. Wenn ein Befehl nicht auf Zeilen zurückgebende erfolgreich zurückgegebenen ausgeführt wird **Recordset** -Objekt geschlossen, dies kann durch Tests überprüfen, die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft für die **Recordset**. Wenn es keine weiteren Ergebnisse sind, *Recordset* festgelegt *nichts*.  
+ Als zusätzliche Ergebnisse vorhanden sind und die **Recordset** nicht getrennt oder Prozessgrenzen, gemarshallt wird, enthält die verbundanweisungen der **NextRecordset** Methode weiterhin zurückgeben **Recordset** Objekte. Wenn ein Zeile zurückgeben-Befehl erfolgreich ausgeführt wird, aber keine Datensätze, die den zurückgegebenen gibt **Recordset** Objekt wird geöffnet, aber leer sein. Tests für diesen Fall, indem Sie überprüfen, ob die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) Eigenschaften sind beide **"true"** . Wenn ein Befehl nicht auf Zeilen zurückgebende erfolgreich zurückgegebenen ausgeführt wird **Recordset** -Objekt geschlossen, dies kann durch Tests überprüfen, die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft für die **Recordset**. Wenn es keine weiteren Ergebnisse sind, *Recordset* festgelegt *nichts*.  
   
  Die **NextRecordset** Methode ist nicht verfügbar, auf einem nicht verbundenen **Recordset** Objekt, in denen [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) festgelegt wurde **nichts**(in Microsoft Visual Basic) oder NULL (in anderen Sprachen).  
   

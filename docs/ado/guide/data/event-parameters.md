@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e44bc264b5fd3e21e35042243ee81f7834c60b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161634"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700766"
 ---
 # <a name="event-parameters"></a>Ereignisparameter
 Jeder Ereignishandler verfügt über eine Status-Parameter, der steuert, den Ereignishandler. Für Ereignisse zum Abschluss wird auch dieser Parameter verwendet, um anzugeben, den Erfolg oder Misserfolg des Vorgangs, der das Ereignis generiert hat. Umfassendste Ereignisse haben auch einen Fehlerparameter, um Aufschluss über alle Fehler, die aufgetreten sind, und einen oder mehrere Objektparameter, die auf die ADO-Objekte, die zum Ausführen des Vorgangs zu verweisen. Z. B. die [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) Ereignis enthält die Objektparameter, für die **Befehl**, **Recordset**, und **Verbindung** Objekte mit dem Ereignis verknüpft ist. Im folgenden Microsoft® Visual Basic® Beispiel sehen Sie die pCommand pRecordset und pConnection-Objekten, die darstellen der **Befehl**, **Recordset**, und **Verbindung** Objekte, mit denen, die **Execute** Methode.  

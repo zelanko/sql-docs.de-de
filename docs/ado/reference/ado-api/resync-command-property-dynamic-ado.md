@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5567bf3cc460aac6abfc2979a14e124bfd9d4cac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5acaaa20667ac13f89b41391c1cc1d567eccf580
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061936"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711665"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command – dynamische Eigenschaft (ADO)
 Gibt an, ein benutzerdefinierten Befehl-Zeichenfolge, die [Resync](../../../ado/reference/ado-api/resync-method.md) Probleme der Methode zum Aktualisieren der Daten in der Tabelle, die mit dem Namen in der [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) dynamische Eigenschaft.  
@@ -53,7 +53,7 @@ SELECT * FROM Customers JOIN Orders ON
 WHERE Orders.OrderID = ?"  
 ```  
   
- Die **eindeutige Tabelle** ist *Bestellungen* und der Primärschlüssel, *"OrderID"*, parametrisiert wird. Der untergeordneten Select bietet eine einfache Möglichkeit, programmgesteuert sicherstellen, dass die gleiche Anzahl und Reihenfolge der Spalten, wie Sie mit dem ursprünglichen Befehl zurückgegeben werden.  
+ Die **eindeutige Tabelle** ist *Bestellungen* und der Primärschlüssel, *"OrderID"* , parametrisiert wird. Der untergeordneten Select bietet eine einfache Möglichkeit, programmgesteuert sicherstellen, dass die gleiche Anzahl und Reihenfolge der Spalten, wie Sie mit dem ursprünglichen Befehl zurückgegeben werden.  
   
  2\) der **Recordset** wird durch eine gespeicherte Prozedur definiert:  
   
@@ -79,7 +79,7 @@ WHERE Orders.ordid  = @ordid
 "{call CustordersResync (?)}"  
 ```  
   
- Auch hier die **eindeutige Tabelle** ist *Bestellungen* und der Primärschlüssel, *"OrderID"*, parametrisiert wird.  
+ Auch hier die **eindeutige Tabelle** ist *Bestellungen* und der Primärschlüssel, *"OrderID"* , parametrisiert wird.  
   
  **Resync-Befehl** wird eine dynamische Eigenschaft angefügt der **Recordset** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf **AdUseClient**.  
   

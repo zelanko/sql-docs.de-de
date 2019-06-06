@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 911509c62c5ae93bc73ca94469ac776195d2a8b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: da8ef8208ae3edd1219eb81ec93e77ba5a275f87
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065264"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704229"
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für einen aktualisierbaren [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -39,10 +39,10 @@ recordset.AddNew FieldList, Values
  Ein **Recordset** Objekt.  
   
  *FieldList*  
- Dies ist optional. Ein einzelner Name oder ein Array von Namen oder die Ordnungspositionen der Felder im neuen Datensatz.  
+ Optional. Ein einzelner Name oder ein Array von Namen oder die Ordnungspositionen der Felder im neuen Datensatz.  
   
  *Werte*  
- Dies ist optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *Fieldlist* ist ein Array, *Werte* muss auch ein Array mit der gleichen Anzahl von Elementen andernfalls, ein Fehler auftritt. Die Reihenfolge von Feldnamen muss es sich um die Reihenfolge der Werte des Felds in jedem Array entsprechen.  
+ Optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *Fieldlist* ist ein Array, *Werte* muss auch ein Array mit der gleichen Anzahl von Elementen andernfalls, ein Fehler auftritt. Die Reihenfolge von Feldnamen muss es sich um die Reihenfolge der Werte des Felds in jedem Array entsprechen.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **AddNew** Methode zum Erstellen und initialisieren einen neuen Datensatz. Verwenden der [unterstützt](../../../ado/reference/ado-api/supports-method.md) -Methode mit **AdAddNew** (eine [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) Wert) zu überprüfen, ob Sie Datensätze, mit dem aktuellen hinzufügen können **Recordset**Objekt.  

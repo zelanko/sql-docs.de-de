@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9f7b31524a6c54846072fdce8cca76189c7034ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258966"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698082"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress-Ereignis (ADO)
 Die **FetchProgress**Ereignis wird aufgerufen, in regelmäßigen Abständen während einer langen asynchronen Operation zu melden, wie viele weitere Zeilen in das aktuell abgerufen wurden die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

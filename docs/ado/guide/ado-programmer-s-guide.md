@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc79564bfd71ae46ef25092294c624f67b51e42c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 98fd3af900c9a3ea6367ec517065746102af4493
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62670400"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701744"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>ADO Programmer's Guide für die Verwendung von ADO-Objekte
 Diese Dokumentation enthält eine Übersicht über ADO-Objekte zum Arbeiten mit Daten aus verschiedenen Datenquellen verwenden. Zunächst werden die Einführung zusammengefasst, die neuen Features und die Notwendigkeit der Installation mithilfe von, und Verteilen von der ADO-Komponente. In den nächsten Abschnitten erläutert die Verwendung der verschiedenen Typen von ADO-Objekte. Schließlich erläutern die Anhängen verschiedene Microsoft bereitgestellte Daten und Dienstanbieter, Fehlermeldungen und Tipps zur Verwendung von ADO in verschiedenen Programmiersprachen, zusätzlich zu Beispielen und ein Glossar.

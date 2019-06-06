@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855181"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702722"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst
 Die Active Directory Service Interfaces (ADSI)-Anbieter ermöglicht ADO zur Verbindung mit heterogenen Verzeichnisdiensten über ADSI. Dadurch erhält der ADO-Anwendungen nur-Lese Zugriff auf der Microsoft Windows NT 4.0 und Microsoft Windows 2000-Verzeichnisdienste, zusätzlich zu der alle LDAP-kompatiblen Verzeichnisdienst und Novell-Verzeichnisdienste. ADSI selbst basiert auf ein Anbietermodell, so dass bei ein neuen Anbieter haben Zugriff auf ein anderes Verzeichnis wird die ADO-Anwendung können sie problemlos darauf zugreifen kann. Der ADSI-Anbieter Freethread- und Unicode aktiviert ist.  
@@ -84,7 +84,7 @@ objectClass='user' AND objectCategory='Person'"
  Der Anbieter akzeptiert keine Aufrufe von gespeicherten Prozeduren oder einfache Tabellennamen (z. B. die [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) Eigenschaft werden immer **AdCmdText**). Finden Sie in den Active Directory Service Interfaces-Dokumentation für eine ausführlichere Beschreibung von Textelementen Befehl.  
   
 ## <a name="recordset-behavior"></a>Recordset-Verhalten  
- Die folgenden Tabellen enthalten die Features auf einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt mit diesem Anbieter geöffnet. Nur der statische Cursor-Datentyp (**"adOpenStatic"**) verfügbar ist.  
+ Die folgenden Tabellen enthalten die Features auf einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt mit diesem Anbieter geöffnet. Nur der statische Cursor-Datentyp ( **"adOpenStatic"** ) verfügbar ist.  
   
  Weitere Informationen zu **Recordset** Verhalten für die Anbieterkonfiguration, und führen Sie die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode eine Aufzählung der [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von der  **Recordset** zu bestimmen, ob die anbieterspezifische dynamische Eigenschaften vorhanden sind.  
   

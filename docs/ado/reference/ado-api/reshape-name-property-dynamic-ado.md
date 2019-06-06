@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a07ec878b1198fbf23bfb251460d83869313c83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f9b8898a3cc75cf47ae783a1dd2a120c8954ab8f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062128"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711657"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name – dynamische Eigenschaft (ADO)
 Gibt einen Namen für die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -32,7 +32,7 @@ Gibt einen Namen für die [Recordset](../../../ado/reference/ado-api/recordset-o
   
  Die **Reshape Name** Eigenschaft ist hauptsächlich für die Verwendung mit dem Feature neu strukturieren der [Microsoft Data Shaping Service für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) Dienstanbieter. Namen müssen zur Teilnahme an neu strukturieren eindeutig sein.  
   
- Diese Eigenschaft ist schreibgeschützt, aber können indirekt festgelegt werden, wenn eine **Recordset** erstellt wird. Z. B. wenn eine Klausel dieses Shape-Befehl erstellt eine **Recordset** und weist ihm einen Aliasnamen mithilfe der **AS** -Schlüsselwort, der Alias zugewiesen wird die **Reshape Name** Eigenschaft. Wenn kein Alias deklariert wird, die **Reshape Name** Eigenschaft erhält einen eindeutigen Namen, die von der Data shaping Dienst generiert. Der Name eines vorhandenen identisch ist der Aliasname **Recordset**, weder **Recordset** können umgeformt werden, bis eine von ihnen aufgehoben wird. Das Standardverhalten kann geändert werden, indem Sie einen eindeutigen Namen der [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md) Eigenschaft für die ADO-Verbindung mit **"true"**. Durch Festlegen dieser Eigenschaft können die Daten strukturieren der Dienst die Berechtigung zum Ändern Sie des zugewiesenen Benutzernamen ein, falls erforderlich, um die Eindeutigkeit sicherzustellen. Weitere Informationen zum Ändern der Form, finden Sie unter [Microsoft Data Shaping Service für OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md).  
+ Diese Eigenschaft ist schreibgeschützt, aber können indirekt festgelegt werden, wenn eine **Recordset** erstellt wird. Z. B. wenn eine Klausel dieses Shape-Befehl erstellt eine **Recordset** und weist ihm einen Aliasnamen mithilfe der **AS** -Schlüsselwort, der Alias zugewiesen wird die **Reshape Name** Eigenschaft. Wenn kein Alias deklariert wird, die **Reshape Name** Eigenschaft erhält einen eindeutigen Namen, die von der Data shaping Dienst generiert. Der Name eines vorhandenen identisch ist der Aliasname **Recordset**, weder **Recordset** können umgeformt werden, bis eine von ihnen aufgehoben wird. Das Standardverhalten kann geändert werden, indem Sie einen eindeutigen Namen der [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md) Eigenschaft für die ADO-Verbindung mit **"true"** . Durch Festlegen dieser Eigenschaft können die Daten strukturieren der Dienst die Berechtigung zum Ändern Sie des zugewiesenen Benutzernamen ein, falls erforderlich, um die Eindeutigkeit sicherzustellen. Weitere Informationen zum Ändern der Form, finden Sie unter [Microsoft Data Shaping Service für OLE DB (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md).  
   
  Verwenden der **Reshape Name** Eigenschaft, wenn Sie möchten eine **Recordset** in einem Shape-Befehl, oder wenn Sie den Namen nicht kennen, da er durch den Data Shaping Service generiert wurde. In diesem Fall konnte Sie einen SHAPE-Befehl generieren, indem Sie den Befehl aus, schließen Sie die zurückgegebene Zeichenfolge Verketten der **Reshape Name** Eigenschaft.  
   

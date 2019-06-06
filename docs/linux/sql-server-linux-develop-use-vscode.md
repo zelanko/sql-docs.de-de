@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: sql-linux
-ms.openlocfilehash: 3643e66e190ec1b45961f36af471498a56924cb0
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.openlocfilehash: b4d29739748b477adbef79bd1d6cf266aa16d2c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265378"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705538"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Verwenden von Visual Studio Code zum Erstellen und Ausführen von Transact-SQL-Skripts
 
@@ -104,7 +103,7 @@ Um ein Verbindungsprofil erstellen und eine Verbindung mit einer SQL Server, geh
 
    ![Verbindungsstatus](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)
 
-Als Alternative zu den vorherigen Schritten können Sie auch erstellen und Bearbeiten von remoteverbindungsprofilen in der Datei mit den Einstellungen der Benutzer können (*"Settings.JSON"*). Wählen Sie zum Öffnen der Einstellungsdatei **Datei** > **Voreinstellungen** > **Einstellungen**. Weitere Informationen finden Sie unter [Verwalten von remoteverbindungsprofilen](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
+Als Alternative zu den vorherigen Schritten können Sie auch erstellen und Bearbeiten von remoteverbindungsprofilen in der Datei mit den Einstellungen der Benutzer können ( *"Settings.JSON"* ). Wählen Sie zum Öffnen der Einstellungsdatei **Datei** > **Voreinstellungen** > **Einstellungen**. Weitere Informationen finden Sie unter [Verwalten von remoteverbindungsprofilen](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
 
 ## <a name="create-a-sql-database"></a>Erstellen Sie eine SQL­Datenbank
 
@@ -200,7 +199,7 @@ Als Alternative zu den vorherigen Schritten können Sie auch erstellen und Bearb
 
 ## <a name="view-and-save-the-result"></a>Anzeigen und Speichern des Ergebnisses
 
-1. Wählen Sie **Ansicht** > **-Editor-Layout** > **kippen Layout** auf einer vertikale oder horizontale Teilung Layout wechseln.
+1. Wählen Sie **Ansicht** >  **-Editor-Layout** > **kippen Layout** auf einer vertikale oder horizontale Teilung Layout wechseln.
 
 1. Wählen Sie die **Ergebnisse** und **Nachrichten** panel reduzieren und erweitern die Panels-Header.
 

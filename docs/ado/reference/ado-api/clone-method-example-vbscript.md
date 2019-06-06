@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b62cb5b050a9aedf25d9204921967c474c34fb6c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302363"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698781"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone-Methode – Beispiel (VBScript)
 Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode zum Erstellen von Kopien einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und dann kann der Benutzer, die unabhängig voneinander positionieren Sie den Datensatzzeiger der einzelnen Kopien.  

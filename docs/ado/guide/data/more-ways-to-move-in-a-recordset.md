@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e648bd9dcb3c6a073419cde42587f1be706fff4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8cb2edebfd0a23f7b626dfdc4cb55eab9684a2c0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161522"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700815"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Weitere Möglichkeiten zum Navigieren in einem Recordset
 Die folgenden vier Methoden werden zum Verschieben oder einen Bildlauf durchführen, ist in der **Recordset**: [MoveFirst, MoveLast, MoveNext und MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Einige dieser Methoden sind nicht verfügbar für Vorwärtscursor.)  
   
  **MoveFirst** ändert sich die Position des aktuelle Datensatzes in den ersten Datensatz in die **Recordset**. **MoveLast** Notieren Sie die Änderungen des aktuellen Datensatzes auf die letzte position in der **Recordset**. Verwendung von **MoveFirst** oder **MoveLast**, **Recordset** -Objekt Lesezeichen oder Bewegung des Cursors von Abwärtskompatibilität unterstützt; andernfalls wird der Methodenaufruf ein Fehler generiert.  
   
- **MoveNext** verschiebt den aktuellen Datensatz positionieren zentral weiterleiten. Notieren Sie auf der letzten beim Aufruf **MoveNext**, **EOF** festgelegt **"true"**. **MovePrevious** verschiebt den aktuellen Datensatz positionieren zentral rückwärts. Wenn Sie für den ersten Datensatz, beim Aufrufen sind **MovePrevious**, **BOF** festgelegt **"true"**. Es ist ratsam, überprüfen Sie die **EOF** und **BOF** Eigenschaften, die bei Verwendung dieser Methoden und den Cursor zurück zu einer gültigen Position des aktuellen Datensatzes verschieben, wenn Sie sich über das Ende des Verschieben der **Recordset**wie hier gezeigt:  
+ **MoveNext** verschiebt den aktuellen Datensatz positionieren zentral weiterleiten. Notieren Sie auf der letzten beim Aufruf **MoveNext**, **EOF** festgelegt **"true"** . **MovePrevious** verschiebt den aktuellen Datensatz positionieren zentral rückwärts. Wenn Sie für den ersten Datensatz, beim Aufrufen sind **MovePrevious**, **BOF** festgelegt **"true"** . Es ist ratsam, überprüfen Sie die **EOF** und **BOF** Eigenschaften, die bei Verwendung dieser Methoden und den Cursor zurück zu einer gültigen Position des aktuellen Datensatzes verschieben, wenn Sie sich über das Ende des Verschieben der **Recordset**wie hier gezeigt:  
   
 ```  
 . . .  
@@ -47,7 +47,7 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- In Fällen, in denen die **Recordset** gefiltert oder sortiert wurde, und die Daten des aktuellen Datensatzes geändert werden, werden möglicherweise auch die Position ändern. In solchen Fällen die **MoveNext** Methode funktioniert normal, aber beachten Sie, dass die Position verschoben ist vorwärts aus die neue Position, nicht die alte Position aufzeichnen. Die Daten in den aktuellen Datensatz, z. B. durch ändern, dass der Datensatz, an das Ende der sortierten verschoben wird **Recordset**, würde bedeuten, dass der Aufruf **MoveNext** führt zu ADO durch Festlegen des aktuellen Datensatzes auf die die Position hinter dem letzten Datensatz in die **Recordset** (**EOF** = **"true"**).  
+ In Fällen, in denen die **Recordset** gefiltert oder sortiert wurde, und die Daten des aktuellen Datensatzes geändert werden, werden möglicherweise auch die Position ändern. In solchen Fällen die **MoveNext** Methode funktioniert normal, aber beachten Sie, dass die Position verschoben ist vorwärts aus die neue Position, nicht die alte Position aufzeichnen. Die Daten in den aktuellen Datensatz, z. B. durch ändern, dass der Datensatz, an das Ende der sortierten verschoben wird **Recordset**, würde bedeuten, dass der Aufruf **MoveNext** führt zu ADO durch Festlegen des aktuellen Datensatzes auf die die Position hinter dem letzten Datensatz in die **Recordset** (**EOF** =  **"true"** ).  
   
  Das Verhalten der verschiedenen Methoden der Verschiebung der **Recordset** Objekt abhängig ist, zu einem gewissen Grad, der Daten in die **Recordset**. Neue Datensätze hinzugefügt werden, um die **Recordset** werden zunächst in einer bestimmten Reihenfolge, die von der Datenquelle definiert ist und möglicherweise implizit abhängige oder explizit auf die Daten im neuen Datensatz hinzugefügt. Z. B. wenn eine Sortierung oder ein Join erfolgt in der Abfrage, die Daten lädt, die **Recordset**, wird der neue Datensatz eingefügt werden, an der entsprechenden Stelle in der **Recordset**. Wenn die Sortierung nicht explizit angegeben wird beim Erstellen der **Recordset**, Änderungen in der Data-Source-Implementierung muss möglicherweise die Reihenfolge der zurückgegebenen Zeilen um versehentlich zu ändern. In Addition, sortieren, Filtern und Bearbeitungsfunktionen von der **Recordset** können beeinflussen die Reihenfolge und möglicherweise die Zeilen im Recordset angezeigt werden.  
   

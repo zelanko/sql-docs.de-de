@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c579c824d65d50dfd1b222615f247d97209db37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 092eb49216874a59e4bcba09431fcc01dc3679a4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314676"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711157"
 ---
 # <a name="sort-property"></a>Sort-Eigenschaft
 Gibt einen oder mehrere Feldnamen auf dem die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sortiert ist, und gibt an, ob jedes Feld in aufsteigender oder absteigender Reihenfolge sortiert wird.  
@@ -46,7 +46,7 @@ Gibt einen oder mehrere Feldnamen auf dem die [Recordset](../../../ado/reference
   
  Festlegen der **Sortierreihenfolge** Eigenschaft auf eine leere Zeichenfolge wird die Zeilen in der ursprünglichen Reihenfolge zurücksetzen und Löschen temporärer Indizes. Vorhandene Indizes werden nicht gelöscht werden.  
   
- Nehmen Sie an einer **Recordset** enthält drei Felder, die mit dem Namen *FirstName*, *MiddleInitial*, und *"LastName"*. Legen Sie die **sortieren** Eigenschaft, um die Zeichenfolge "`lastName DESC, firstName ASC`", welcher Reihenfolge werden die **Recordset** nach dem Nachnamen in absteigender Reihenfolge aus, und klicken Sie dann nach Vornamen in aufsteigender Reihenfolge. Der Wert von MiddleInitial wird ignoriert.  
+ Nehmen Sie an einer **Recordset** enthält drei Felder, die mit dem Namen *FirstName*, *MiddleInitial*, und *"LastName"* . Legen Sie die **sortieren** Eigenschaft, um die Zeichenfolge "`lastName DESC, firstName ASC`", welcher Reihenfolge werden die **Recordset** nach dem Nachnamen in absteigender Reihenfolge aus, und klicken Sie dann nach Vornamen in aufsteigender Reihenfolge. Der Wert von MiddleInitial wird ignoriert.  
   
  Kein Feld kann den Namen "ASC" oder "DESC", da diese Namen in mit den Schlüsselwörtern Konflikt **ASC** und **DESC**. Sie können einen Alias für ein Feld mit einem in Konflikt stehende Namen erstellen, mit der **AS** Schlüsselwort in der Abfrage, die gibt die **Recordset**.  
   

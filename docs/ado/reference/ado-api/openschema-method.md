@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 32f8c0086f1f81103156e5f592bcd63b0a43dd73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239995"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707103"
 ---
 # <a name="openschema-method"></a>OpenSchema-Methode
 Ruft Informationen über das Datenbankschema vom Anbieter ab.  
@@ -42,7 +42,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Alle [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) -Wert, der den Typ des, die die auszuführende Schemaabfrage darstellt.  
   
  *Kriterien*  
- Dies ist optional. Ein Array von Abfrage-Einschränkungen für die einzelnen *QueryType* option gemäß [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Optional. Ein Array von Abfrage-Einschränkungen für die einzelnen *QueryType* option gemäß [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  Die GUID für eine Anbieter-Schema-Abfrage, die nicht vom OLE DB-Spezifikation definiert. Dieser Parameter ist erforderlich, wenn *QueryType* nastaven NA hodnotu **AdSchemaProviderSpecific**ist, andernfalls wird er nicht verwendet.  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open Sie-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open Sie-Methode (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

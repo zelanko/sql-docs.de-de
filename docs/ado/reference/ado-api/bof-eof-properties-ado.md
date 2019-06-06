@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821441"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696289"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF- und EOF-Eigenschaften (ADO)
 -   **BOF** gibt an, der die Position des aktuelle Datensatzes vor dem ersten Datensatz in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -40,7 +40,7 @@ ms.locfileid: "62821441"
   
  Die **EOF** -Eigenschaft gibt **"true"** ist die Position des aktuelle Datensatzes nach dem letzten Datensatz und **"false"** die Position des aktuelle Datensatzes ist am oder vor den letzten Datensatz.  
   
- Wenn entweder die **BOF** oder **EOF** Eigenschaft **"true"**, es ist kein aktueller Datensatz.  
+ Wenn entweder die **BOF** oder **EOF** Eigenschaft **"true"** , es ist kein aktueller Datensatz.  
   
  Beim Öffnen einer **Recordset** -Objekt, enthält keine Datensätze, die **BOF** und **EOF** Eigenschaften festgelegt werden, um **"true"** (finden Sie unter der [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft für Weitere Informationen zu diesem Zustand, der eine **Recordset**). Beim Öffnen einer **Recordset** Objekt, das mindestens ein Datensatz, der erste Datensatz enthält, ist der aktuelle Datensatz und die **BOF** und **EOF** Eigenschaften sind **"false"** .  
   

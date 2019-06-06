@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c8f0268a91b66f6f26eec1d87502355a1c9795a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 572738c966651e35f2980ea75c3770ddc4bd029d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239781"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696180"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch-Methode (ADO)
 Bricht eine ausstehende Batchaktualisierung ab.  
@@ -36,7 +36,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Dies ist optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der angibt, wie viele Datensätze der **CancelBatch** Methode wirkt sich auf.  
+ Optional. Ein [AffectEnum](../../../ado/reference/ado-api/affectenum.md) Wert, der angibt, wie viele Datensätze der **CancelBatch** Methode wirkt sich auf.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **CancelBatch** Methode, um alle ausstehenden Updates in Abbrechen einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Modus "Batch-Update". Wenn die **Recordset** befindet sich im sofortupdatemodus Aufrufen **CancelBatch** ohne **AdAffectCurrent** wird ein Fehler generiert.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184826"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704439"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die Reihenfolge der Daten im Resultset, suchen Sie nach einem bestimmten Datensatz basierend auf Kriterien, die Sie angeben, und sogar die Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Features verwendet werden könne.n hängt davon ab, der Anbieter und in einigen Fällen – wie z. B. mit der die [Index](../../../ado/reference/ado-api/index-property.md) -Eigenschaft: die Struktur der Datenquelle selbst.  
@@ -34,7 +34,7 @@ Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die 
   
  Festlegen der **Sortierreihenfolge** Eigenschaft auf eine leere Zeichenfolge wird die Zeilen in der ursprünglichen Reihenfolge zurücksetzen und Löschen temporärer Indizes. Vorhandene Indizes werden nicht gelöscht werden.  
   
- Nehmen Sie an einer **Recordset** enthält drei Felder, die mit dem Namen *FirstName*, *MiddleInitial*, und *"LastName"*. Legen Sie die **sortieren** Eigenschaft, um die Zeichenfolge "`lastName DESC, firstName ASC`", welcher Reihenfolge werden die **Recordset** nach dem Nachnamen in absteigender Reihenfolge und klicken Sie dann nach Vornamen in aufsteigender Reihenfolge. Der Wert von MiddleInitial wird ignoriert.  
+ Nehmen Sie an einer **Recordset** enthält drei Felder, die mit dem Namen *FirstName*, *MiddleInitial*, und *"LastName"* . Legen Sie die **sortieren** Eigenschaft, um die Zeichenfolge "`lastName DESC, firstName ASC`", welcher Reihenfolge werden die **Recordset** nach dem Nachnamen in absteigender Reihenfolge und klicken Sie dann nach Vornamen in aufsteigender Reihenfolge. Der Wert von MiddleInitial wird ignoriert.  
   
  Kein Feld verwiesen wird, in der Sortierkriterien kann den Namen "ASC" oder "DESC", da diese Namen in mit den Schlüsselwörtern Konflikt **ASC** und **DESC**. Geben Sie ein Feld mit einem in Konflikt stehendem Namen einen Alias mithilfe die **AS** Schlüsselwort in der Abfrage, die zurückgibt der **Recordset**.  
   
@@ -54,7 +54,7 @@ Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die 
   
  Nur können eine einzelne Spalten für das Kriterium angegeben werden. Das heißt, unterstützt diese Methode nicht für mehrere Spalten sucht.  
   
- Der Vergleichsoperator für das Kriterium kann sein"**>**"(größer als),"**\<**" (kleiner als), "=" (gleich), "> =" (größer als oder gleich), "< =" (kleiner als oder gleich), " <> "(nicht gleich), oder"LIKE"(Mustervergleich).  
+ Der Vergleichsoperator für das Kriterium kann sein" **>** "(größer als)," **\<** " (kleiner als), "=" (gleich), "> =" (größer als oder gleich), "< =" (kleiner als oder gleich), " <> "(nicht gleich), oder"LIKE"(Mustervergleich).  
   
  Der kriteriumwert kann es sich um eine Zeichenfolge, eine Gleitkommazahl oder ein Datum sein. Zeichenfolgenwerte mit einfachen Anführungszeichen oder "#" (Nummernzeichen) markiert werden (z. B. "State ="WA"" oder "Status = #WA #"). Date-Werte als "#" (Nummernzeichen) ein Trennzeichen (z. B. "Start_date > #7/22/97 #").  
   
@@ -63,7 +63,7 @@ Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die 
  Sternchen können nur am Ende einer Zeichenfolge für die Kriterien oder zusammen am Anfang und Ende einer Kriterienzeichenfolge verwendet werden, wie oben beschrieben. Sie nicht das Sternchen als führender Platzhalter verwenden ("* str') oder eingebettete Platzhalter ('s\*R"). Dadurch wird einen Fehler.  
   
 ### <a name="seek-and-index"></a>Suchen und Indizieren  
- Verwenden der **Seek** -Methode zusammen mit den **Index** Eigenschaft, wenn der zugrunde liegenden Anbieter Indizes auf unterstützt die **Recordset** Objekt. Verwenden der [unterstützt](../../../ado/reference/ado-api/supports-method.md)**(AdSeek)** Methode, um zu bestimmen, ob der zugrunde liegenden Anbieter unterstützt **Seek**, und die **Supports(adIndex)** Methode, um zu bestimmen, ob der Anbieter Indizes unterstützt. (Z. B. die [OLE DB-Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) unterstützt **Seek** und **Index**.)  
+ Verwenden der **Seek** -Methode zusammen mit den **Index** Eigenschaft, wenn der zugrunde liegenden Anbieter Indizes auf unterstützt die **Recordset** Objekt. Verwenden der [unterstützt](../../../ado/reference/ado-api/supports-method.md) **(AdSeek)** Methode, um zu bestimmen, ob der zugrunde liegenden Anbieter unterstützt **Seek**, und die **Supports(adIndex)** Methode, um zu bestimmen, ob der Anbieter Indizes unterstützt. (Z. B. die [OLE DB-Anbieter für Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) unterstützt **Seek** und **Index**.)  
   
  Wenn **Seek** befindet sich nicht gefunden werden der gewünschten Zeile, kein Fehler auftritt, und für die Zeile am Ende der **Recordset**. Legen Sie die **Index** Eigenschaft, um den gewünschten Index vor dem Ausführen dieser Methode.  
   
@@ -88,12 +88,12 @@ Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die 
   
 -   *FieldName* muss ein gültiger Feldname aus der **Recordset**. Wenn der Name des Felds Leerzeichen enthält, müssen Sie den Namen in eckige Klammern einschließen.  
   
--   *Operator* muss eine der folgenden sein: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, oder **wie**.  
+-   *Operator* muss eine der folgenden sein: **\<** , **>** , **\< =** , **>=** , **<>** , **=** , oder **wie**.  
   
 -   *Wert* ist der Wert, mit denen Sie die Feldwerte vergleichen (z. B. `'Smith'`, `#8/24/95#`, `12.345`, oder `$50.00`). Verwenden Sie einfache Anführungszeichen ('), mit Zeichenfolgen und Nummernzeichen (`#`) mit Datumsangaben. Für Zahlen können Sie das Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise. Wenn *Operator* ist **wie**, *Wert* können Platzhalterzeichen verwenden. Nur das Sternchen (\*) und Prozentzeichen (%) Platzhalterzeichen sind zulässig, und sie müssen das letzte Zeichen in der Zeichenfolge sein. *Wert* darf nicht null sein.  
   
     > [!NOTE]
-    >  Einfache Anführungszeichen (') in den Filter eingeschlossen *Wert*, verwenden Sie zwei einfache Anführungszeichen, um einen darstellen. Beispielsweise einen Filter für *Malley*, die Zeichenfolge der Suchkriterien muss `"col1 = 'O''Malley'"`. Um einzelne Anführungszeichen am Anfang und Ende der Filterwert einzuschließen, schließen Sie die Zeichenfolge in Nummernzeichen (#). Beispielsweise einen Filter für *'1'*, die Zeichenfolge der Suchkriterien muss `"col1 = #'1'#"`.  
+    >  Einfache Anführungszeichen (') in den Filter eingeschlossen *Wert*, verwenden Sie zwei einfache Anführungszeichen, um einen darstellen. Beispielsweise einen Filter für *Malley*, die Zeichenfolge der Suchkriterien muss `"col1 = 'O''Malley'"`. Um einzelne Anführungszeichen am Anfang und Ende der Filterwert einzuschließen, schließen Sie die Zeichenfolge in Nummernzeichen (#). Beispielsweise einen Filter für *'1'* , die Zeichenfolge der Suchkriterien muss `"col1 = #'1'#"`.  
   
  Es gibt keine Rangfolge zwischen **und** und **oder**. Klauseln können innerhalb von Klammern gruppiert werden. Allerdings können nicht gruppiert werden Klauseln, die mithilfe einer **oder** und treten Sie der Gruppe klicken Sie dann mit einer anderen Klausel mit einer AND, aus wie folgt.  
   

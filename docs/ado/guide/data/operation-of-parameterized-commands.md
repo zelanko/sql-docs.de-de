@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302349"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701862"
 ---
 # <a name="operation-of-parameterized-commands"></a>Verarbeitung parametrisierter Befehle
 Bei Verwendung mit einem großen untergeordneten **Recordset**, insbesondere auf die Größe des übergeordneten Elements verglichene **Recordset**, müssen nur wenige untergeordnete Kapitel zugreifen, aber Sie finden es möglicherweise effizienter, verwenden eine parametrisierte Befehle.  
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  Wenn die Kapitelspalte von einer übergeordneten Zeile zugegriffen wird, die *untergeordneten Befehl* ausgeführt wird, mit dem Wert von der Customer. cust_id als der Wert des Parameters.  
   
-4.  Alle Zeilen im Rowset Daten-Anbieter in Schritt 3 erstellte werden verwendet, um das untergeordnete Element Auffüllen **Recordset**. In diesem Beispiel werden alle Zeilen in der Orders-Tabelle, in der die Cust_id der Wert von Customer. cust_id entspricht, darstellt. Standardmäßig wird das untergeordnete Element **Recordset**s wird auf dem Client zwischengespeichert werden, bis alle Verweise auf das übergeordnete Element **Recordset** freigegeben werden. Um dieses Verhalten zu ändern, legen die **Recordset** [dynamische Eigenschaft](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **Cache untergeordneten Zeilen** zu **"false"**.  
+4.  Alle Zeilen im Rowset Daten-Anbieter in Schritt 3 erstellte werden verwendet, um das untergeordnete Element Auffüllen **Recordset**. In diesem Beispiel werden alle Zeilen in der Orders-Tabelle, in der die Cust_id der Wert von Customer. cust_id entspricht, darstellt. Standardmäßig wird das untergeordnete Element **Recordset**s wird auf dem Client zwischengespeichert werden, bis alle Verweise auf das übergeordnete Element **Recordset** freigegeben werden. Um dieses Verhalten zu ändern, legen die **Recordset** [dynamische Eigenschaft](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **Cache untergeordneten Zeilen** zu **"false"** .  
   
 5.  Ein Verweis auf die abgerufenen untergeordneten Zeilen (d. h. das Kapitel des untergeordneten Elements **Recordset**) befindet sich in der Kapitelspalte "im" der aktuellen Zeile des übergeordneten Elements **Recordset**.  
   

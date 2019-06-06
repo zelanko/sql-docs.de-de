@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027969"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694792"
 ---
 # <a name="index-property"></a>Index-Eigenschaft
 Gibt den Namen des Indexes derzeit für eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -46,7 +46,7 @@ Gibt den Namen des Indexes derzeit für eine [Recordset](../../../ado/reference/
   
  Wenn der Index festgelegt werden kann und die [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) Eigenschaft **AdLockPessimistic** oder **AdLockOptimistic**, klicken Sie dann eine implizite [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Vorgang wird ausgeführt. Damit werden die aktuellen und dem betroffenen Gruppen. Alle vorhandener Filter wird freigegeben, und die aktuelle Zeilenposition wird geändert, auf die erste Zeile der neu angeordneten **Recordset**.  
   
- Die **Index** Eigenschaft wird verwendet, in Verbindung mit der [Seek](../../../ado/reference/ado-api/seek-method.md) Methode. Wenn der zugrunde liegenden Anbieter nicht unterstützt die **Index** -Eigenschaft, und somit die **Seek** -Methode in Betracht der [finden](../../../ado/reference/ado-api/find-method-ado.md) Methode stattdessen. Bestimmt, ob die **Recordset** Objekt unterstützt die Indizes mit der [unterstützt](../../../ado/reference/ado-api/supports-method.md)**(AdIndex)** Methode.  
+ Die **Index** Eigenschaft wird verwendet, in Verbindung mit der [Seek](../../../ado/reference/ado-api/seek-method.md) Methode. Wenn der zugrunde liegenden Anbieter nicht unterstützt die **Index** -Eigenschaft, und somit die **Seek** -Methode in Betracht der [finden](../../../ado/reference/ado-api/find-method-ado.md) Methode stattdessen. Bestimmt, ob die **Recordset** Objekt unterstützt die Indizes mit der [unterstützt](../../../ado/reference/ado-api/supports-method.md) **(AdIndex)** Methode.  
   
  Die integrierte **Index** Eigenschaft bezieht sich nicht an den dynamischen [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) -Eigenschaft, obwohl beide Indizes verarbeiten.  
   

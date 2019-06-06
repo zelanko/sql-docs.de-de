@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75c75540433e077cc5d96bb9b2f0c88c05a62bd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156432"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704034"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand-Eigenschaft – Beispiel (VB)
 Dieses Beispiel zeigt die [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) Eigenschaft.  
@@ -93,7 +93,7 @@ End Sub
   
  Die **ActiveCommandXprint** Routine erhält nur eine **Recordset** Objekt noch Drucken muss der Befehlstext und die Parameter, der erstellt das **Recordset**. Dies ist möglich, da die **Recordset** des Objekts **ActiveCommand** Eigenschaft gibt das zugeordnete [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt.  
   
- Die **Befehl** des Objekts [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft liefert den parametrisierten Befehl an, die erstellt die **Recordset**. Die **Befehl** des Objekts [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung ergibt sich der Wert, der die Befehls Parameterplatzhalter ersetzt wurde ("**?**").  
+ Die **Befehl** des Objekts [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) Eigenschaft liefert den parametrisierten Befehl an, die erstellt die **Recordset**. Die **Befehl** des Objekts [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung ergibt sich der Wert, der die Befehls Parameterplatzhalter ersetzt wurde (" **?** ").  
   
  Schließlich werden die Namen und der ID einer Fehlermeldung oder des Autors gedruckt.  
   

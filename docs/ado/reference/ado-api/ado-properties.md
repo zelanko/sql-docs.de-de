@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248872"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696625"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
 
@@ -102,7 +102,7 @@ ms.locfileid: "63248872"
  [ADO-Collections](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO – dynamische Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO – Enumerationskonstanten](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Anhang B: ADO-Fehler](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
  [ADO-Methoden](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)   

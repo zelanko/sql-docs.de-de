@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afc9955920784af966ef5d793d76ce251df1bc1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4ef1665bf96688fba5fc7d157b73d2df2fcd2c68
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242667"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705608"
 ---
 # <a name="number-property-ado"></a>Number-Eigenschaft (ADO)
 Gibt die Anzahl, die eindeutig eine [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt.  
@@ -34,7 +34,7 @@ Gibt die Anzahl, die eindeutig eine [Fehler](../../../ado/reference/ado-api/erro
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **Anzahl** Eigenschaft, um zu bestimmen, welcher Fehler aufgetreten ist. Der Wert der Eigenschaft ist eine eindeutige Zahl, die die fehlerbedingung entspricht.  
   
- Die [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung gibt ein HRESULT zurück, im hexadezimalen Format (z. B. 0 x 80004005) oder long-Wert (z. B. 2147467259). Diese HRESULTs können von zugrunde liegenden Komponenten, z. B. OLE DB oder sogar OLE selbst ausgelöst werden. Weitere Informationen zu diesen Zahlen finden Sie unter [Fehler (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) in die [OLE DB-Programmierreferenz](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
+ Die [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung gibt ein HRESULT zurück, im hexadezimalen Format (z. B. 0 x 80004005) oder long-Wert (z. B. 2147467259). Diese HRESULTs können von zugrunde liegenden Komponenten, z. B. OLE DB oder sogar OLE selbst ausgelöst werden. Weitere Informationen zu diesen Zahlen finden Sie unter [Fehler (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) in die [OLE DB-Programmierreferenz](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) *.*  
   
 ## <a name="applies-to"></a>Gilt für  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)  

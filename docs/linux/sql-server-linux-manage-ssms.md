@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723198"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713158"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von SQL Server Management Studio auf Windows zum Verwalten von SQL Server unter Linux
 
@@ -65,7 +64,7 @@ Verwenden Sie die folgenden grundlegenden Schritte, um eine Verbindung herzustel
    | **Anmeldename** | Geben Sie den Namen eines Benutzers mit Zugriff auf eine Datenbank auf dem Server (z. B. die Standardeinstellung **SA** Konto während des Setups erstellt wurde). |
    | **Kennwort** | Geben Sie das Kennwort für den angegebenen Benutzer (für die **SA** -Konto Sie dies während des Setups erstellt). |
 
-    ![SQL Server Management Studio: Verbinden Sie mit SQL-Datenbank-server](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio: Verbinden mit einem SQL-Datenbankserver](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. Klicken Sie auf **Verbinden**.
 
@@ -93,7 +92,7 @@ Nach der verbindungsherstellung mit Ihrem Server können Sie eine Verbindung mit
 
 1. Klicken Sie auf die **Execute** Schaltfläche, um die Abfrage auszuführen und die Ergebnisse angezeigt.
 
-   ![Erfolg. Verbinden mit einem SQL-Datenbankserver: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Erfolg. Verbinden Sie mit SQL-Datenbankserver: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Obwohl es möglich, fast jede Verwaltungsaufgabe mit Transact-SQL-Abfragen ist, ist SSMS ein grafisches Tool, das einfacher zu SQL Server zu verwalten. Die folgenden Abschnitte enthalten einige Beispiele für die Verwendung der grafischen Benutzeroberfläche.
 
@@ -146,5 +145,5 @@ Wenn ein Bereich erweitert wird, fragt der Aktivitätsmonitor die Instanz nach I
 - [Was ist SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Exportieren Sie und importieren Sie eine Datenbank mit SSMS](sql-server-linux-migrate-ssms.md)
 - [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-- [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Überwachen der Serverleistung und -aktivität](../relational-databases/performance/server-performance-and-activity-monitoring.md)

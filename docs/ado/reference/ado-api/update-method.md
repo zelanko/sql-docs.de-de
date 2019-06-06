@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae2645057670ba65a33bb8b5da238c7e01790ae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e48185f0524a920d52092540f5e3ed6d8546edfe
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63042236"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710510"
 ---
 # <a name="update-method"></a>Update-Methode
 Speichert alle Änderungen an der aktuellen Zeile eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt oder die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt.  
@@ -36,10 +36,10 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parameter  
  *Fields*  
- Dies ist optional. Ein **Variant** , die einen eindeutigen Namen, darstellt oder **Variant** Array, das darstellt, Namen oder die Positionen der Felder, die Sie ändern möchten.  
+ Optional. Ein **Variant** , die einen eindeutigen Namen, darstellt oder **Variant** Array, das darstellt, Namen oder die Positionen der Felder, die Sie ändern möchten.  
   
  *Werte*  
- Dies ist optional. Ein **Variant** , die einen einzelnen Wert darstellt oder **Variant** Array, das Werte für das Feld oder Felder in den neuen Eintrag darstellt.  
+ Optional. Ein **Variant** , die einen einzelnen Wert darstellt oder **Variant** Array, das Werte für das Feld oder Felder in den neuen Eintrag darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
   

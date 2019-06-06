@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 500beed65583eea1e1e01b34a3bb585198b219e1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062946"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700989"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO-Ereignisinstanziierung: Visual C++
 Dies ist eine schematische Darstellung Beschreibung der ADO-Ereignisse in Microsoft® Visual C++® zu instanziieren. Finden Sie unter [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) für eine vollständige Beschreibung.  
@@ -66,7 +66,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- Die Ereignisklassen, die von erben **IUnknown**, sodass Sie, auch implementieren müssen die **QueryInterface**, **"AddRef"**, und **Version** Methoden. Implementieren Sie außerdem-Klasse, Konstruktoren und Destruktoren. Wählen Sie die Visual C++-Tools, die mit denen Sie zur Vereinfachung der dieser Teil der Aufgabe am besten vertraut sind.  
+ Die Ereignisklassen, die von erben **IUnknown**, sodass Sie, auch implementieren müssen die **QueryInterface**, **"AddRef"** , und **Version** Methoden. Implementieren Sie außerdem-Klasse, Konstruktoren und Destruktoren. Wählen Sie die Visual C++-Tools, die mit denen Sie zur Vereinfachung der dieser Teil der Aufgabe am besten vertraut sind.  
   
  Stellen sie mit, dass Ihre Ereignishandler stehen hierzu **QueryInterface** auf die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) von Objekten für die  **IConnectionPointContainer** und **IConnectionPoint** Schnittstellen. Geben Sie dann **IConnectionPoint:: Advise** für jede Klasse.  
   

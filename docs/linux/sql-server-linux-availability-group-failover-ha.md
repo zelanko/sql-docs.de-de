@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: ee4550d9b86c5969bdf930391090e06c54988063
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 42401590745985baa207fa0db3ac9da774041ff4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657905"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713455"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover von AlwaysOn-Verfügbarkeitsgruppe unter Linux
 
@@ -103,7 +102,7 @@ Ein Beispiel für die Einschränkung, die aufgrund eines manuellen Failovers ers
 >[!NOTE]
 >Das automatische Failover fügt keine Speicherorteinschränkung hinzu, also ist keine Bereinigung notwendig. 
 
-Weitere Informationen:  
+Weitere Informationen:
 - [Red Hat - Managing Cluster Resources (Red Hat – Verwalten von Clusterressourcen)](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
 - [Pacemaker – Manuelles Verschieben von Ressourcen](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
  [SLES-Administratorhandbuch - Ressourcen](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
