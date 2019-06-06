@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9aee9b4f6054b5cbfca41db35f34a27000a7ac01
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241098"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719220"
 ---
 # <a name="open-method-ado-recordset"></a>Open-Methode (ADO-Recordset)
 Öffnet einen Cursor auf einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -42,12 +42,12 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Optional. Entweder ein **Variant** , ausgewertet wird, auf ein gültiges [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Namen der Objektvariablen, oder ein **Zeichenfolge** , enthält ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Parameter.  
   
  *CursorType*  
- Dies ist optional. Ein [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) Wert, der den Typ des Cursors bestimmt, die der Anbieter, beim Öffnen verwenden soll der **Recordset**. Der Standardwert ist **AdOpenForwardOnly**.  
+ Optional. Ein [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) Wert, der den Typ des Cursors bestimmt, die der Anbieter, beim Öffnen verwenden soll der **Recordset**. Der Standardwert ist **AdOpenForwardOnly**.  
   
  *LockType*  
- Dies ist optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) Wert, der bestimmt, welche Art von Sperren (nebenläufigkeit) des Anbieters verwenden soll, beim Öffnen der **Recordset**. Der Standardwert ist **AdLockReadOnly**.  
+ Optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) Wert, der bestimmt, welche Art von Sperren (nebenläufigkeit) des Anbieters verwenden soll, beim Öffnen der **Recordset**. Der Standardwert ist **AdLockReadOnly**.  
   
- *Optionen*  
+ *Options*  
  Optional. Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *Quelle* Argument, wenn es etwas anders als darstellt eine **Befehl** -Objekt, oder dass die **Recordset** wiederhergestellt werden sollen, aus einer Datei, in denen es bereits gespeichert wurde. Kann sein, eine oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte, die mit einem bitweisen OR-Operator kombiniert werden können.  
   
 > [!NOTE]
@@ -86,7 +86,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Der Standardwert für die *Optionen* Argument **AdCmdFile** , wenn keine Verbindung zugeordnet ist die **Recordset**. Dies wird in der Regel der Fall sein, für dauerhaft gespeicherte **Recordset** Objekte.  
   
- Wenn die Datenquelle keine Datensätze zurückgibt, legt der Anbieter die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) Eigenschaften **"true"**, und die Position des aktuelle Datensatzes ist nicht definiert. Sie können weiterhin neue Daten hinzufügen, um diesem leere **Recordset** Objekt, wenn der Cursor-Datentyp kann.  
+ Wenn die Datenquelle keine Datensätze zurückgibt, legt der Anbieter die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) Eigenschaften **"true"** , und die Position des aktuelle Datensatzes ist nicht definiert. Sie können weiterhin neue Daten hinzufügen, um diesem leere **Recordset** Objekt, wenn der Cursor-Datentyp kann.  
   
  Wenn Sie Ihre Vorgänge über ein offenes geschlossen haben **Recordset** -Objekts die [schließen](../../../ado/reference/ado-api/close-method-ado.md) Methode, um eine kostenlose zugeordnete Systemressourcen. Schließen ein Objekt entfernt es nicht aus dem Arbeitsspeicher. Sie können die Einstellungen zu ändern und die **öffnen** Methode, um sie später erneut öffnen. Um ein Objekt vom Arbeitsspeicher vollständig zu vermeiden, legen Sie die Objektvariable auf *nichts*.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3b8a4ac0da80303a63bd62f7b4d6f51faab1fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 30d1e1515ed3e84640fe1ca004cb7cbf4383ce97
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472567"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718716"
 ---
 # <a name="data-providers"></a>Datenanbieter
 Datenanbieter stellen unterschiedliche Datenquellen wie SQL-Datenbanken, indizierten sequenziellen Dateien, Tabellen, Dokumentspeicher und e-Mail-Dateien dar. Anbieter machen Daten gleichmäßig über eine allgemeine Abstraktion, die Namen des Rowsets verfügbar.  

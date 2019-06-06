@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494392"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719403"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
 
@@ -137,7 +136,7 @@ Die **telemetry.customerfeedback** Änderungen festlegen, ob SQL Server Feedback
 > [!IMPORTANT]
 > Sie können nicht die Feedback von Kunden für kostenlose Editionen von SQL Server "," Express "und" Developer deaktivieren.
 
-1. Führen Sie das Mssql-Conf-Skript als Root-Benutzer mit der **festgelegt** Befehl **telemetry.customerfeedback**. Das folgende Beispiel deaktiviert die Feedback von Kunden dazu **"false"**.
+1. Führen Sie das Mssql-Conf-Skript als Root-Benutzer mit der **festgelegt** Befehl **telemetry.customerfeedback**. Das folgende Beispiel deaktiviert die Feedback von Kunden dazu **"false"** .
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false

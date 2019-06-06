@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97a55923043d26c0eb672d7a698d5bf9224f1187
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472372"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718739"
 ---
 # <a name="dealing-with-failed-updates"></a>Umgang mit fehlerhaften Updates
 Wenn ein Update mit Fehlern abgeschlossen ist, hängt wie Sie die Fehler beheben von der Art und Schweregrad der Fehler und die Logik Ihrer Anwendung. Wenn die Datenbank für andere Benutzer freigegeben ist, ist ein typischer Fehler jedoch, dass eine andere Person auf das Feld ändert, vor dem Ausführen. Diese Art von Fehler ist einen Konflikt wird aufgerufen. ADO erkennt dies und meldet einen Fehler.  

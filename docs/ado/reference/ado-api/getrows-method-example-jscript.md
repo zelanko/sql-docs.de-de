@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d8103da63d91c5d59d1bfc4ac5b738ba8f333d1e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62630658"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719195"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows-Methode – Beispiel (JScript)
 Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen aller Zeilen der *Custiomers* Tabelle eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den sich ergebenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen weniger als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde, oder wenn **GetRows** beim Versuch, einen Datensatz abzurufen, die von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall auftritt. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **GetRowsJS.asp**.  

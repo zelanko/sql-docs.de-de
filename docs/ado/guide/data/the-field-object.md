@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a709b8c26c3cdee3a6087444e4acebbd212caf66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062667"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718662"
 ---
 # <a name="the-field-object"></a>Das Field-Objekt
 Jede **Feld** Objekt in der Regel entspricht einer Spalte in einer Datenbanktabelle. Allerdings eine **Feld** können auch einen Zeiger auf einen anderen darstellen **Recordset**, als Kapitel bezeichnet. Ausnahmen, z. B. die Kapitelspalten, werden weiter unten in diesem Handbuch behandelt.  
@@ -104,7 +104,7 @@ Jede **Feld** Objekt in der Regel entspricht einer Spalte in einer Datenbanktabe
 ### <a name="dealing-with-binary-data"></a>Arbeiten mit Binärdaten  
  Verwenden der [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) Methode für eine **Feld** Objekt, das mit dem lange Binär-oder Zeichendatentypen zu füllen. In Situationen, in dem Systemspeicher beschränkt ist, können Sie die **AppendChunk** Methode, um lange Werte in Teilen und nicht in ihrer Gesamtheit zu bearbeiten.  
   
- Wenn die **AdFldLong** bit im der **Attribute** Eigenschaft eine **Feld** Objekt nastaven NA hodnotu **"true"**, können Sie die  **AppendChunk** Methode für dieses Feld.  
+ Wenn die **AdFldLong** bit im der **Attribute** Eigenschaft eine **Feld** Objekt nastaven NA hodnotu **"true"** , können Sie die  **AppendChunk** Methode für dieses Feld.  
   
  Die erste **AppendChunk** rufen Sie für eine **Feld** Objekt schreibt Daten in das Feld, dass alle vorhandenen Daten. Nachfolgende **AppendChunk** Aufrufe an die vorhandenen Daten hinzufügen. Wenn von Daten auf ein Feld anfügen sind, und klicken Sie dann festlegen oder Lesen Sie den Wert eines anderen Felds im aktuellen Datensatz, wird das ADO davon ausgegangen, dass Sie die Daten an das erste Feld anfügen abgeschlossen haben. Aufrufen der **AppendChunk** Methode für das erste Feld in diesem Fall ADO interpretiert den Aufruf als eine neue **AppendChunk** Vorgang und die vorhandenen Daten überschrieben. Beim Zugriff auf Felder in anderen **Recordset** Objekte, die nicht Klonen des ersten **Recordset** Objekt wird nicht unterbrochen. **AppendChunk** Vorgänge.  
   
@@ -114,7 +114,7 @@ Jede **Feld** Objekt in der Regel entspricht einer Spalte in einer Datenbanktabe
   
  Jeder nachfolgende **GetChunk** Aufruf ruft Daten ab, wo die vorherige **GetChunk** Aufruf beendet wurde. Allerdings rufen Daten aus einem Feld und klicken Sie dann festlegen oder lesen den Wert eines anderen Felds im aktuellen Datensatz, wird davon ausgegangen ADO, dass Sie das Abrufen von Daten aus dem ersten Feld abgeschlossen haben. Aufrufen der **GetChunk** Methode für das erste Feld in diesem Fall ADO interpretiert den Aufruf als eine neue **GetChunk** Vorgang und Lesen am Anfang der das beginnt. Beim Zugriff auf Felder in anderen **Recordset** Objekte, die nicht Klonen des ersten **Recordset** Objekt wird nicht unterbrochen. **GetChunk** Vorgänge.  
   
- Wenn die **AdFldLong** bit im der **Attribute** Eigenschaft eine **Feld** Objekt nastaven NA hodnotu **"true"**, können Sie die **GetChunk**  Methode für dieses Feld.  
+ Wenn die **AdFldLong** bit im der **Attribute** Eigenschaft eine **Feld** Objekt nastaven NA hodnotu **"true"** , können Sie die **GetChunk**  Methode für dieses Feld.  
   
  Wenn es kein aktueller Datensatz, ist bei der Verwendung der **GetChunk** oder **AppendChunk** Methode für eine **Feld** Objekt Fehler 3021 (kein aktueller Datensatz).  
   

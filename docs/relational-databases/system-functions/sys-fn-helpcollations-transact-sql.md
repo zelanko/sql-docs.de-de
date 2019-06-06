@@ -1,5 +1,5 @@
 ---
-title: fn_helpcollations (Transact-SQL) | Microsoft-Dokumentation
+title: sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -20,29 +20,30 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83c9efd36bbcec788ef18b19552446877c5e36c8
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 157cb3b24d04337c4949e3d6cfe38337895b3bea
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629613"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719427"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   Gibt eine Liste aller unterstützten Sortierungen zurück.  
-  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```
 fn_helpcollations ()  
 ```  
   
-## <a name="tables-returned"></a>Zurückgegebene Tabellen  
+## <a name="tables-returned"></a>Zurückgegebene Tabellen
+
  **Fn_helpcollations** die folgenden Informationen zurückgegeben.  
   
 |Spaltenname|Datentyp|Description|  
@@ -50,10 +51,10 @@ fn_helpcollations ()
 |Name|**sysname**|Standardsortierungsname|  
 |Description|**nvarchar(1000)**|Beschreibung der Sortierung|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Windows-Sortierungen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt darüber hinaus eine begrenzte Anzahl (<80) von Sortierungen, die als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen bezeichnet werden und entwickelt wurden, bevor Windows-Sortierungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wurden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen werden weiterhin aus Gründen der Abwärtskompatibilität unterstützt, sollten für neue Entwicklungen jedoch nicht verwendet werden. Weitere Informationen zur Windows-Sortierung finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Weitere Informationen zur Sortierung finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Windows-Sortierungen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt auch eine begrenzte Anzahl (< 80) wird aufgerufen, Sortierungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sortierungen, die entwickelt wurden, bevor Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte Windows-Sortierungen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sortierungen werden für die Abwärtskompatibilität weiterhin unterstützt, aber für neue Entwicklungen nicht verwendet werden sollten. Weitere Informationen zur Windows-Sortierung finden Sie unter [Name der Windows-Sortierung &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Weitere Informationen zur Sortierung finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
   
+## <a name="examples"></a>Beispiele
 
-## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle Sortierungsnamen zurückgegeben, die mit dem Buchstaben `L` beginnen und die binäre Sortierungen darstellen.  
   
 ```sql  
@@ -63,7 +64,7 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
+ ```
  Name                   Description  
  -------------------    ------------------------------------  
  Lao_100_BIN            Lao-100, binary sort  
@@ -75,10 +76,10 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  Lithuanian_100_BIN     Lithuanian-100, binary sort  
   
  (7 row(s) affected)  
- ```    
+ ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
+
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Unterstützung der Datenbank-Sortierung für Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
-

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 59234b24d7a3e07c1d6500c41dd0ec2a16f95ee1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184864"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718378"
 ---
 # <a name="what-is-a-lock"></a>Was ist eine Sperre?
 Sperren ist der Prozess, der ein DBMS nach dem Zugriff auf eine Zeile in einer mehrbenutzerumgebung einschränkt. Wenn eine Zeile oder Spalte exklusiv gesperrt ist, sind andere Benutzer nicht zulässig, auf die gesperrten Daten zugreifen, bis die Sperre aufgehoben wird. Dadurch wird sichergestellt, dass zwei Benutzer gleichzeitig dieselbe Spalte in einer Zeile aktualisieren nicht möglich.  

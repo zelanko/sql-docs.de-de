@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43f325382cc556d75d7ab08c5b3dbdc94f68704f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: befb99993db3369995934be4f8d5874d4753d288
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281769"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718814"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner-Methode
 Gibt den Besitzer eines Objekts in eine [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -45,7 +45,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  Ein **Zeichenfolge** Wert, der angibt, die [Namen](../../../ado/reference/adox-api/name-property-adox.md) von der [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) oder [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) zum Besitzer des Objekts sein.  
   
  *ObjectTypeId*  
- Dies ist optional. Ein **Variant** Wert, der die GUID für einen Anbieter-Objekttyp angibt, die nicht vom OLE DB-Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
+ Optional. Ein **Variant** Wert, der die GUID für einen Anbieter-Objekttyp angibt, die nicht vom OLE DB-Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* nastaven NA hodnotu **AdPermObjProviderSpecific**ist, andernfalls wird er nicht verwendet.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Anbieter die Angabe von Objektbesitzern nicht unterstützt wird, tritt ein Fehler auf.  
