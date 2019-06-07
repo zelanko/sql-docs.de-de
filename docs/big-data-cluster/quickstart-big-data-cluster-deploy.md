@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462794"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744199"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
@@ -30,7 +30,7 @@ Die hier verwendete Standard big Data-Clusterbereitstellung besteht aus einer In
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Ein Azure-Abonnement.
 - [Big Data-Tools](deploy-big-data-tools.md):
@@ -73,7 +73,7 @@ Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungss
 
 1. Wenn Sie aufgefordert werden, geben Sie die folgenden Informationen an:
 
-   | Wert | Beschreibung |
+   | Wert | Description |
    |---|---|
    | **Azure-Abonnement-ID** | Die Azure-Abonnement-ID, der für AKS verwendet werden soll. Sie können alle Ihre Abonnements und die dazugehörigen IDs auflisten, indem Sie Ausführung `az account list` in einer anderen Befehlszeile. |
    | **Azure-Ressourcengruppe** | Der Gruppenname des Azure-Ressource für die AKS-Cluster zu erstellen. |
@@ -82,7 +82,7 @@ Verwenden Sie die folgenden Schritte aus, um das Ausführen des Bereitstellungss
    | **Azure-region** | Der Azure-Region für den neuen AKS-Cluster (standardmäßig **Westus**). |
    | **VM-Größe** | Die [VM-Größe](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) für Knoten im AKS-Cluster (standardmäßig **Standard_L8s**). |
    | **Workerknoten** | Die Anzahl der Worker-Knoten im AKS-Cluster (standardmäßig **1**). |
-   | **Clustername** | Der Name des AKS-Clusters und der big Data-Cluster. Der Name Ihres Clusters muss nur alphanumerische Kleinbuchstaben und ohne Leerzeichen sein. (standardmäßig **Sqlbigdata**). |
+   | **Clustername** | Der Name des AKS-Clusters und der big Data-Cluster. Der Name des Ihrer big Data-Cluster muss nur alphanumerische Kleinbuchstaben und ohne Leerzeichen sein. (standardmäßig **Sqlbigdata**). |
    | **Kennwort** | Das Kennwort für den Controller, HDFS/Spark-Gateway und Masterinstanz (standardmäßig **MySQLBigData2019**). |
    | **Benutzerkonten** | Benutzername für den Controllerbenutzer (Standard: **Admin**). |
 
@@ -118,7 +118,7 @@ Nach 10 bis 20 Minuten sollten Sie eine Benachrichtigung über der Pod Controlle
 
 ## <a name="inspect-the-cluster"></a>Überprüfen Sie den cluster
 
-Jederzeit während der Bereitstellung können Sie "kubectl" oder das Verwaltungsportal für den Cluster verwenden, um den Status und die Details der Ausführung von big Data-Cluster zu überprüfen.
+Sie können jederzeit während der Bereitstellung verwenden **"kubectl"** oder **Mssqlctl** , den Status und die Details der Ausführung von big Data-Cluster zu überprüfen.
 
 ### <a name="use-kubectl"></a>Verwenden von kubectl
 
@@ -127,42 +127,32 @@ Jederzeit während der Bereitstellung können Sie "kubectl" oder das Verwaltungs
 1. Führen Sie den folgenden Befehl aus, um eine Zusammenfassung des Status des gesamten Clusters abzurufen:
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Wenn Sie den Namen des big Data-Clusters nicht geändert haben, das Skript standardmäßig **Sqlbigdata**.
 
 1. Überprüfen Sie die Kubernetes-Dienste und deren interne und externe Endpunkte mit den folgenden **"kubectl"** Befehl:
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. Sie können auch den Status der Kubernetes-Pods mithilfe des folgenden Befehls überprüfen:
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. Finden Sie weitere Informationen zu einem bestimmten Pod mit dem folgenden Befehl ein:
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > Weitere Informationen zum Überwachen und Problembehandlung bei einer Bereitstellung finden Sie unter [Überwachung und Problembehandlung für SQL Server-big Data-Cluster](cluster-troubleshooting-commands.md).
-
-### <a name="use-the-cluster-administration-portal"></a>Verwenden Sie das Cluster-Verwaltungsportal
-
-Sobald der Controller-Pod ausgeführt wird, können Sie auch das Verwaltungsportal für den Cluster zum Überwachen der Bereitstellung verwenden. Sie können den Portalzugriff mithilfe der externen IP-Adresse und den Port für die `mgmtproxy-svc-external` (z. B.: **https://\<Ip-Adresse\>: 30777/Portal**). Die Anmeldeinformationen verwendet, um sich beim Portal anmelden, entsprechen die Werte für **Controllerbenutzer** und **Kennwort** , die Sie im Bereitstellungsskript angegeben.
-
-Sie können die IP-Adresse Abrufen der **Mgmtproxy-svc-External** Dienst mit dem folgenden Befehl in einem nachfolgenden bash- oder Cmd-Fenster:
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> In CTP 3.0 sehen eine sicherheitswarnung Sie beim Zugreifen auf die Webseite, da es sich bei big Data-Cluster derzeit automatisch generierte SSL-Zertifikate verwendet.
 
 ## <a name="connect-to-the-cluster"></a>Verbinden mit dem cluster
 

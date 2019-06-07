@@ -10,17 +10,46 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 05/08/2019
-ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.date: 06/06/2019
+ms.openlocfilehash: 6e2d4ff6e300290381f75ff4ab984743d7ea106e
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454727"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749149"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
 **[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
+
+## <a name="june-2019"></a>Juni 2019
+
+6 Juni 2019 &nbsp;  /  &nbsp; Version: 1.8.0 
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Version des zentralen Management Server (CMS)-Erweiterung | Zentrale Verwaltungsserver speichern eine Liste mit Instanzen von SQL Server, die eine oder mehrere Gruppen zentraler Verwaltungsserver unterteilt ist. Benutzer können eine Verbindung mit ihren eigenen vorhandenen CMS-Servern herstellen und verwalten ihre Server wie das Hinzufügen und Entfernen von Servern. Weitere Informationen finden Sie [hier](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| Version der Datenbank-Verwaltung-Tool-Erweiterungen für Windows | Diese Erweiterung wird gestartet, zwei der am häufigsten verwendeten Funktionen in SQL Server Management Studio aus Azure Data Studio. Benutzer können klicken Sie mit der rechten Maustaste auf viele verschiedene Objekte (z. B. Datenbanken, Tabellen, Spalten, Sichten usw.) und Eigenschaften auswählen, um das Dialogfeld Eigenschaften von SSMS für dieses Objekt anzeigen. Darüber hinaus können Benutzer klicken Sie mit der rechten Maustaste auf eine Datenbank und wählen Sie "Skripts generieren", um die bekannten SSMS Assistent zum Generieren Skripts zu starten. 
+| Schema vergleichen-Verbesserungen | &bull; &nbsp; Optionen für die hinzugefügte einschließen/ausschließen <br/>&bull; &nbsp; Skriptgenerierung Skript öffnet nach generiert werden <br/>&bull; &nbsp; Entfernt doppelte Bildlaufleisten  <br/>&bull; &nbsp; Verbesserungen bei der Formatierung und layout <br/>&bull; &nbsp; Finden Sie umfassende Änderungen [hier](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
+| Verschobene Messages-Abschnitt zur Registerkarte "Eigene" | Als Benutzer mit SQL-Abfragen ausgeführt haben, wurden Ergebnisse und Meldungen für gestapelte Bereiche. Jetzt sind sie auf separaten Registerkarten in einem Bereich z. B. in SSMS. |
+| SQL-Notebook-Verbesserungen | &bull; &nbsp; Benutzer können jetzt auch ihre eigenen Python 3 oder Anaconda-Installationen in Notizbüchern verwenden <br/>&bull; &nbsp; Mehrere Stabilität + anpassen/Ende Korrekturen &bull; &nbsp; zeigt die vollständige Liste der Verbesserungen [hier](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Visual Studio-Code kann Merge 1.34 freizugeben. | Neueste Verbesserungen finden Sie [hier](https://code.visualstudio.com/updates/v1_34) |
+| Behobene Fehler und Probleme. | Finden Sie unter [Fehlern und Problemen, die auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+- Datenbank-Verwaltung-Tools-Erweiterungen für Windows
+    - Eigenschaften von Knoten für nicht verbundene Server kann nicht gestartet werden.
+    - Eigenschaften für Azure-Server kann nicht gestartet werden.
+    - Nicht alle Objekte verfügen Dialogfelder für Ereigniseigenschaften
+    - Dialogfelder lange gestartet wird
+    - Fehler, die Server für einige Typen von Verbindungen (wie z.B. AAD) starten
+- Notebooks
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) ermöglichen Benutzern die Verwendung von System Python Notebooks
+- Schemavergleich
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Schemavergleich Tasks angezeigt werden standardmäßig "Abbrechen" im Kontextmenü nichts tut
 
 ## <a name="may-2019"></a>Mai 2019
 
@@ -32,8 +61,8 @@ ms.locfileid: "66454727"
 | :----- | :------ |
 | Veröffentlichung der Schemavergleich-Erweiterung | Schemavergleich ist ein bekanntes Feature in SQL Server Data Tools (SSDT) und der primäre Anwendungsfall ist, um zu vergleichen und Visualisieren die Unterschiede zwischen Datenbanken und DACPAC-Dateien und zum Ausführen von Aktionen auf, damit sie identisch sind. |
 | Aufgabenansicht in Fenster "Ausgabe" verschoben | Benutzer können nun den Status der lang ausgeführten Aufgaben z.B. Sicherung, Wiederherstellung und Schemavergleich in der Aufgabenansicht im Fenster "Ausgabe" anzeigen.
-| Hinzugefügte Seite "Willkommen" | &bull; &nbsp; Links zu häufig verwendete Aktionen wie die neue Abfrage, die neue Datei, neues Notebook <br/>&bull; &nbsp; Links zu Dokumentationen und Github |
-| SQL-Notebook-Verbesserungen | &bull; &nbsp; Markdown-Rendering-Verbesserungen, z. B. eine bessere Unterstützung für Anmerkungen zu dieser Version und Tabellen <br/>&bull; &nbsp; Verbesserungen der benutzerfreundlichkeit auf der Symbolleiste <br/>&bull; &nbsp; Markdownlinks nicht mehr vertrauenswürdigen Notebooks Cmd/STRG + klicken und direkt geklickt werden kann <br/>&bull; &nbsp; Verbesserungen an der Bereinigung der Jupyter-Prozesse nach dem Schließen von Notebooks, und verringert Fehler, wenn Sie mehrere Notizbücher gleichzeitig zu starten <br/>&bull; &nbsp; Verbesserungen bei der SQL-Notebook-Verbindungen, um sicherzustellen, dass Fehler treten nicht, wenn 2 Notebooks für dieselbe Datenbank ausgeführt wird. <br/>&bull; &nbsp; Verbesserungen bei der automatischen Bildlauf der aktuell ausgeführten Zelle beim Klicken auf die Schaltfläche Ausführen Zellen, über die Symbolleiste notebook <br/>&bull; &nbsp; Allgemeine Verbesserungen für Stabilität und Leistung |
+| Hinzugefügte Seite "Willkommen" | &bull; &nbsp; Links zu häufig verwendete Aktionen wie die neue Abfrage, die neue Datei, neues Notebook <br/>&bull; &nbsp; Links zu Dokumentationen und GitHub |
+| SQL-Notebook-Verbesserungen | &bull; &nbsp; Markdown-Rendering-Verbesserungen, z. B. eine bessere Unterstützung für Anmerkungen zu dieser Version und Tabellen <br/>&bull; &nbsp; Verbesserungen der benutzerfreundlichkeit auf der Symbolleiste <br/>&bull; &nbsp; Markdownlinks nicht mehr vertrauenswürdigen Notebooks Cmd/STRG + klicken und direkt geklickt werden kann <br/>&bull; &nbsp; Verbesserungen an der Bereinigung der Jupyter-Prozesse nach dem Schließen von Notebooks, und verringert Fehler, wenn Sie mehrere Notizbücher gleichzeitig zu starten <br/>&bull; &nbsp; Verbesserungen bei der SQL-Notebook-Verbindungen, um sicherzustellen, dass Fehler treten nicht, wenn 2 Notebooks für dieselbe Datenbank ausgeführt wird. <br/>&bull; &nbsp; Verbesserungen an Notebook den automatischen Bildlauf der aktuell ausgeführten Zelle, wenn Sie die Zellen ausführen-Schaltfläche auf der Symbolleiste klicken <br/>&bull; &nbsp; Allgemeine Verbesserungen für Stabilität und Leistung |
 | Behobene Fehler und Probleme. | Finden Sie unter [Fehlern und Problemen, die auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -203,7 +232,7 @@ Allgemein verfügbare Version von Azure Data Studio (früher SQL Operations Stud
 | :----- | :------ |
 | Fragen Sie Ergebnisraster Verbesserungen der Leistung und UX für große Anzahl von Resultsets. | &nbsp; |
 | Visual Studio Code-Quellcode Aktualisieren von "1,23", um 1.26.1 mit Rasterlayout und verbesserte-Einstellungs-Editor (Vorschau). | &nbsp; |
-| Verbesserungen der Barrierefreiheit für die Sprachausgabe und Tastaturnavigation mit hohem Kontrast. | &nbsp; |
+| Verbesserungen der Barrierefreiheit für die Sprachausgabe und Tastaturnavigation hohen Kontrast. | &nbsp; |
 | Hinzugefügt `Connection name` Option aus, um einen alternativen Anzeigenamen in der Ansicht-Let-Server angeben. | &nbsp; |
 | &nbsp; | &nbsp; |
 

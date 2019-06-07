@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014989"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744149"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
 
@@ -31,7 +31,7 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 ### <a name="whats-new"></a>Neues
 
-| Neues Feature oder aktualisieren | Details |
+| Neue Funktion oder Update | Details |
 |:---|:---|
 | **mssqlctl** updates | Mehrere **Mssqlctl** [Installationsbefehl und Parametersatz Updates](../big-data-cluster/reference-mssqlctl.md). Dies umfasst ein Update für die **Mssqlctl Anmeldung** -Befehl, der nun die Controller-Benutzernamen und ein Endpunkt ausgerichtet ist. |
 | Speichererweiterungen | Unterstützung für unterschiedliche Speicherkonfigurationen für Protokolle und Daten. Darüber hinaus wurde die Anzahl der Ansprüche von persistentes Volume für einen big Data-Cluster gesenkt. |
@@ -130,14 +130,14 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 ### <a name="whats-new"></a>Neues
 
-| Neues Feature oder aktualisieren | Details |
+| Neue Funktion oder Update | Details |
 |:---|:---|
-| Bereitstellungsprofile | Verwenden Sie die standardmäßige und angepasste [bereitstellungskonfigurationsdateien JSON](deployment-guidance.md#configfile) für big Data-Cluster-Bereitstellungen anstelle von Umgebungsvariablen. |
-| Aufforderung zur Eingabe von Bereitstellungen | `mssqlctl cluster create` Jetzt werden aufgefordert, alle erforderlichen Einstellungen für Standard-Bereitstellungen. |
-| -Endpunkt und die Pod-Namensänderungen | Die folgenden externen Endpunkte haben Namen geändert:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl** improvements | Verwendung **Mssqlctl** zu [Liste externer Endpunkte](deployment-guidance.md#endpoints) und prüfen die Version des **Mssqlctl** mit der `--version` Parameter. |
+| Bereitstellungsprofile | Verwenden Sie für die Bereitstellung von Big Data-Clustern standardmäßige und benutzerdefinierte [Konfigurationsdateien für die JSON-Bereitstellung](deployment-guidance.md#configfile) anstelle von Umgebungsvariablen. |
+| Bereitstellungen mit Aufforderung | `mssqlctl cluster create` ruft jetzt zu allen erforderlichen Einstellungen für Standardbereitstellungen auf. |
+| Änderungen bei Dienstendpunkten und Podnamen | Die folgenden externen Endpunkte haben Namen geändert:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| Verbesserungen bei **mssqlctl** | Verwenden Sie **mssqlctl** zum [Auflisten externer Endpunkte](deployment-guidance.md#endpoints) und zum Überprüfen der Version von **mssqlctl** mithilfe des Parameters `--version`. |
 | Offlineinstallation | Leitfaden für offline big Data-Cluster-Bereitstellungen. |
-| HDFS-tiering-Verbesserungen | S3-tiering, Zwischenspeichern bereitstellen und OAuth unterstützt für den ADLS-Gen2. |
+| Verbesserungen bei HDFS-Tiering | S3-tiering, Zwischenspeichern bereitstellen und OAuth unterstützt für den ADLS-Gen2. |
 | Neue `mssql` Spark-SQL Server-Connector | |
 
 ### <a name="known-issues"></a>Bekannte Probleme
@@ -218,13 +218,13 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 ### <a name="whats-new"></a>Neues
 
-| Neues Feature oder aktualisieren | Details |
+| Neue Funktion oder Update | Details |
 |:---|:---|
-| Anleitung für die GPU-Unterstützung zum Ausführen von Deep Learning mit TensorFlow in Spark | [Bereitstellen einen big Data-Cluster mit GPU-Unterstützung, und führen Sie TensorFlow](spark-gpu-tensorflow.md). |
-| **SqlDataPool** und **SqlStoragePool** Datenquellen werden nicht mehr standardmäßig erstellt. | Erstellen Sie diese manuell nach Bedarf. Finden Sie unter den [bekannte Probleme](#externaltablesctp24). |
-| Unterstützung von `INSERT INTO SELECT` für den Datenpool | Ein Beispiel finden Sie unter [Lernprogramm: Erfassen von Daten in einen Pool des SQL Server-Daten mit Transact-SQL](tutorial-data-pool-ingest-sql.md). |
-| `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION` Option. | Erzwingt, dass aktiviert oder deaktiviert die Verwendung des Pools für Compute in externen Tabellen Abfragen. Beispiel: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. |
-| Aktualisierte Empfehlungen für die AKS-Bereitstellung. | Bei der Auswertung von big Data-Cluster in AKS nun empfohlen wird mit einem einzelnen Knoten der Größe **Standard_L8s**. |
+| Anleitung für die GPU-Unterstützung zum Ausführen von Deep Learning mit TensorFlow in Spark | Weitere Informationen finden Sie unter [Deploy a big data cluster with GPU support and run TensorFlow (Bereitstellen eines Big Data-Clusters mit GPU-Unterstützung und Ausführen von TensorFlow)](spark-gpu-tensorflow.md). |
+| Die Datenquellen **SqlDataPool** und **SqlStoragePool** werden nicht mehr standardmäßig erstellt. | Erstellen Sie diese nach Bedarf manuell. Weitere Informationen finden Sie im Abschnitt [Bekannte Probleme](#externaltablesctp24). |
+| Unterstützung von `INSERT INTO SELECT` für den Datenpool | Ein Beispiel finden Sie unter [Tutorial: Ingest data into a SQL Server data pool with Transact-SQL (Tutorial: Erfassen von Daten in einem SQL Server-Datenpool mit Transact-SQL)](tutorial-data-pool-ingest-sql.md). |
+| Optionen `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION` | Erzwingt, dass aktiviert oder deaktiviert die Verwendung des Pools für Compute in externen Tabellen Abfragen. Beispiel: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. |
+| Aktualisierte Bereitstellungsempfehlungen für AKS | Für die Auswertung von Big Data-Clustern in AKS wird die Verwendung eines einzelnen Knotens der Größe **Standard_L8s** empfohlen. |
 | Upgrade der Spark-Runtime auf Spark 2.4 | |
 
 ### <a name="known-issues"></a>Bekannte Probleme
@@ -349,19 +349,19 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 ### <a name="whats-new"></a>Neues
 
-| Neues Feature oder aktualisieren | Details |
+| Neue Funktion oder Update | Details |
 | :---------- | :------ |
-| Übermitteln von Spark-Aufträgen im big Data-Cluster in IntelliJ. | [Übermitteln von Spark-Aufträgen in SQL Server-big Data-Clustern in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Allgemeine CLI für die Bereitstellung und -Cluster-Verwaltung von Anwendungen. | [Gewusst wie: Bereitstellen einer app auf SQL Server-2019 big Data-Cluster (Vorschau)](big-data-cluster-create-apps.md) |
-| VS Code-Erweiterung zum Bereitstellen von Anwendungen in einem big Data-Cluster. | [Gewusst wie: Verwenden Sie Visual Studio Code zum Bereitstellen von Anwendungen auf SQL Server-big Data-Cluster](app-deployment-extension.md) |
-| Änderungen an der **Mssqlctl** tool zur Verwendung des Befehls. | Weitere Informationen finden Sie die [bekannte Probleme bei Mssqlctl](#mssqlctlctp23). |
-| Verwenden Sie Sparklyr in big Data-cluster | [Verwenden Sie Sparklyr in SQL Server-2019 big Data-cluster](sparklyr-from-RStudio.md) |
-| Einbinden von externen HDFS-kompatiblen Speichern (Hadoop Distributed File System) in Big Data-Clustern mit dem **HDFS-Tiering** | Finden Sie unter [HDFS tiering](hdfs-tiering.md). |
-| Neue einheitliche Verbindungsschnittstelle für SQL Server-Instanz master und das HDFS/Spark-Gateway. | Finden Sie unter [master SQL Server-Instanz und das HDFS/Spark-Gateway](connect-to-big-data-cluster.md). |
-| Löschen eines Clusters mit **Mssqlctl Cluster löschen** jetzt löscht nur die Objekte im Namespace, die Teil der big Data-Cluster waren. | Der Namespace wird nicht gelöscht werden. In früheren Versionen mit diesem Befehl jedoch den gesamten Namespace löschen. |
-| _Sicherheit_ Endpunktnamen wurden geändert und zusammengefasst. | **Dienst-Security-lb** und **Service-Sicherheit-Nodeport** wurden zusammengeführt, in der **endpunktsicherheit** Endpunkt. |
-| _Proxy_ Endpunktnamen wurden geändert und zusammengefasst. | **Dienst-Proxy-lb** und **-Dienst-Proxy-Nodeport** wurden zusammengeführt, in der **Endpunkt-Dienst-Proxy** Endpunkt. |
-| _Controller_ Endpunktnamen wurden geändert und zusammengefasst. | **Dienst-Mssql-Controller-lb** und **-Dienst-Mssql-Controller-Nodeport** wurden zusammengeführt, in der **Endpunkt-Controller** Endpunkt. |
+| Übermitteln von Spark-Aufträgen an Big Data-Cluster in IntelliJ | [Submit Spark jobs on SQL Server big data clusters in IntelliJ (Übermitteln von Spark-Aufträgen an Big Data-Cluster von SQL Server in IntelliJ)](spark-submit-job-intellij-tool-plugin.md) |
+| Allgemeine CLI für die Anwendungsbereitstellung und Clusterverwaltung | [How to deploy an app on SQL Server 2019 big data cluster (preview) (Vorgehensweise: Bereitstellen einer App in Big Data-Clustern von SQL Server 2019 (Vorschau))](big-data-cluster-create-apps.md) |
+| VS Code-Erweiterung zum Bereitstellen von Anwendungen in einem Big Data-Cluster | [How to use VS Code to deploy applications to SQL Server big data clusters (Vorgehensweise: Verwenden von VS Code zum Bereitstellen von Anwendungen in Big Data-Clustern von SQL Server)](app-deployment-extension.md) |
+| Änderungen an der Befehlssyntax des Tools **mssqlctl** | Weitere Informationen finden Sie unter [Bekannte Probleme bei „mssqlctl“](#mssqlctlctp23). |
+| Verwenden Sie Sparklyr in big Data-cluster | [Use Sparklyr in SQL Server 2019 big data cluster (Verwenden von Sparklyr in Big Data-Clustern von SQL Server 2019)](sparklyr-from-RStudio.md) |
+| Einbinden von externen HDFS-kompatiblen Speichern (Hadoop Distributed File System) in Big Data-Clustern mit dem **HDFS-Tiering** | Weitere Informationen finden Sie unter [HDFS-Tiering](hdfs-tiering.md). |
+| Neue einheitliche Verbindungsoberfläche für die SQL Server-Masterinstanz und das HDFS-/Spark-Gateway | Weitere Informationen finden Sie unter [SQL Server master instance and the HDFS/Spark Gateway (Die SQL Server-Masterinstanz und das HDFS-/Spark-Gateway)](connect-to-big-data-cluster.md). |
+| Beim Löschen eines Clusters mit **mssqlctl cluster delete** werden jetzt nur noch die Objekte im Namespace gelöscht, die Teil des Big Data-Clusters waren. | Der Namespace wird nicht gelöscht. In früheren Releases wurde mit diesem Befehl jedoch nicht der gesamte Namespace gelöscht. |
+| Namen von _Sicherheitsendpunkten_ wurden geändert und zusammengefasst | **service-security-lb** und **service-security-nodeport** wurden im Endpunkt **endpoint-security** zusammengefasst. |
+| Namen von _Proxyendpunkten_ wurden geändert und zusammengefasst | **service-proxy-lb** und **service-proxy-nodeport** wurden im Endpunkt **endpoint-service-proxy** zusammengefasst. |
+| Namen von _Controllerendpunkten_ wurden geändert und zusammengefasst | **service-mssql-controller-lb** und **service-mssql-controller-nodeport** wurden im Endpunkt **endpoint-controller** zusammengefasst. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Bekannte Probleme
@@ -497,7 +497,7 @@ In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen 
 Das Verwaltungsportal für den Cluster wird den Endpunkt für die master-SQL Server-Instanz nicht angezeigt. Um die IP-Adresse und den Port für die master-Instanz ermitteln möchten, verwenden Sie die folgenden **"kubectl"** Befehl:
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>Externe Tabellen

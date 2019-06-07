@@ -10,12 +10,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2a00c248b75612525194ffd4074f1c176eefbee
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993970"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743894"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount ADLS Gen2 für HDFS-Staffelung in einem big Data-cluster
 
@@ -100,10 +100,10 @@ Sie können auch bereitstellen, mithilfe von Zugriffsschlüsseln, die Sie für I
 
 Nun, da Sie eine Datei mit Zugriffstasten oder mithilfe von OAuth vorbereitet haben, können Sie die Einbindung beginnen. Die folgenden Schritte stellen remote HDFS-Speicher in Azure Data Lake im lokalen HDFS-Speicher, der Ihre big Data-Cluster bereit.
 
-1. Verwendung **"kubectl"** finden Sie die IP-Adresse für den Endpunkt **Controller-svc-External** -Dienst in Ihre big Data-Cluster. Suchen Sie nach der **externe IP-**.
+1. Verwendung **"kubectl"** finden Sie die IP-Adresse für den Endpunkt **Controller-svc-External** -Dienst in Ihre big Data-Cluster. Suchen Sie nach der **externe IP-** .
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
 1. Melden Sie sich mit **Mssqlctl** verwenden die externe IP-Adresse des Endpunkts Controller mit Ihrem Benutzernamen und Kennwort:
