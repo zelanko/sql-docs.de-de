@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3d227d308ba05a4c9336e2f5dcb728e85c18d7ed
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089705"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797939"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwendung der Transact-SQL-Editor, um Datenbankobjekte zu erstellen: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -32,7 +32,7 @@ In diesem Tutorial erfahren Sie, wie Sie mit [!INCLUDE[name-sos-short](../includ
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"*. Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
+In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"* . Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
 
 - [Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Verbinden und Abfragen von Azure SQL-Datenbank [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -42,7 +42,7 @@ In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"*. 
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] bietet eine Such-Widget-Datenbankobjekte schnell zu finden. Die Ergebnisliste enthält ein Kontextmenü für allgemeine Aufgaben, die relevant für das ausgewählte Objekt wie z. B. *Daten bearbeiten* für eine Tabelle.
 
-1. Öffnen Sie die Server-Randleiste (**STRG + G**), erweitern Sie **Datenbanken**, und wählen Sie **"tutorialdb"**. 
+1. Öffnen Sie die Server-Randleiste (**STRG + G**), erweitern Sie **Datenbanken**, und wählen Sie **"tutorialdb"** . 
 
 1. Öffnen der *"tutorialdb" Dashboard* mit der rechten Maustaste **"tutorialdb"** und **verwalten** aus dem Kontextmenü:
 
@@ -55,7 +55,7 @@ In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"*. 
 
    ![Schnellsuche-widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Bearbeiten der **-e-Mail** -Spalte in der ersten Zeile Typ *orlando0@adventure-works.com*, und drücken Sie **EINGABETASTE** um die Änderung zu speichern.
+1. Bearbeiten der **-e-Mail** -Spalte in der ersten Zeile Typ *orlando0@adventure-works.com* , und drücken Sie **EINGABETASTE** um die Änderung zu speichern.
 
    ![Bearbeiten von Daten](./media/tutorial-sql-editor/edit-data.png)
 
@@ -133,7 +133,7 @@ Die gespeicherte Prozedur wird jetzt erstellt, und die **Ergebnisse** Bereich ze
    INSERT INTO dbo.Customers
    ```
 
-5. In der *einfügen* Zeile Sie gerade hinzugefügt, mit der rechten Maustaste **Dbo. Kunden** , und wählen Sie **"Definition einsehen"**.
+5. In der *einfügen* Zeile Sie gerade hinzugefügt, mit der rechten Maustaste **Dbo. Kunden** , und wählen Sie **"Definition einsehen"** .
 
    !["Definition einsehen"](./media/tutorial-sql-editor/peek-definition.png)
 

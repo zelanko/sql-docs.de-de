@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089688"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797930"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Hinzufügen der *fünf langsamsten Abfragen* Beispiel Widget aus, das die Datenbank-Dashboard
 
@@ -32,7 +32,7 @@ Dieses Tutorial veranschaulicht den Prozess des Hinzufügens eines [!INCLUDE[nam
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"*. Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
+In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"* . Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
 
 - [Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Verbinden und Abfragen von Azure SQL-Datenbank [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -129,7 +129,7 @@ Hinzufügen der *langsame Abfragen Widget* bearbeiten an Ihr Dashboard, die *das
 
 ## <a name="view-insight-details-for-more-information"></a>Insight-Details für Weitere Informationen anzeigen
 
-1. Um zusätzliche Informationen für ein Widget Einblicke anzuzeigen, klicken Sie auf die Auslassungspunkte (**...** ) in der oberen, rechten, und wählen **Details anzeigen**.
+1. Um zusätzliche Informationen für ein Widget Einblicke anzuzeigen, klicken Sie auf die Auslassungspunkte ( **...** ) in der oberen, rechten, und wählen **Details anzeigen**.
 2. Um weitere Details für ein Element anzuzeigen, wählen Sie ein Element im **Diagrammdaten** Liste.
 
    ![Insight-Detail-Dialogfeld](./media/tutorial-qds-sql-server/insight-details-dialog.png)

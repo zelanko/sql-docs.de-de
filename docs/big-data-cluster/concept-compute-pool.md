@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Dieser Artikel beschreibt den Compute-Pool in einer SQL Server-2019 big Data-Cluster (Vorschau).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7965ff1f29310f39fb5b8b5994b3967b928ecde
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ec1223e9255dd4dda40fb26fb9e8306bec57d926
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860242"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800731"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Was sind computepools in einem SQL Server-big Data-Cluster?
 
