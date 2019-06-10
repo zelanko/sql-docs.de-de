@@ -12,24 +12,19 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7f544983e1d34073cfe681a614d7d4808b45cd3c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 18e28d840373ae25f5045e8456fe6ecf479bfbe9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607110"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787843"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dieses Thema enthält Informationen, wie Sie Service Broker in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] zur Verwendung mit [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]konfigurieren.  
   
- **In diesem Thema:**  
-  
--   [Anforderungen, damit ein Dienst in einer Verfügbarkeitsgruppe Remotenachrichten empfangen kann](#ReceiveRemoteMessages)  
-  
--   [Anforderungen zum Senden von Nachrichten an einen Remotedienst in einer Verfügbarkeitsgruppe](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> Anforderungen, damit ein Dienst in einer Verfügbarkeitsgruppe Remotenachrichten empfangen kann  
   
@@ -118,7 +113,7 @@ ms.locfileid: "51607110"
   
 -   [Einrichten von Anmeldekonten für die Datenbankspiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  

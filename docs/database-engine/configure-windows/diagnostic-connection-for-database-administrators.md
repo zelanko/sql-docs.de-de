@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7cdcffb40c1c0e15a1be56a4484edade6b5f1463
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+manager: jroth
+ms.openlocfilehash: 7abd7c83f5f6259ad9415f1e790088f98567f06c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955981"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767451"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "56955981"
   
  Nur Mitglieder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Rolle sysadmin können dedizierte Administratorverbindungen (DAC) herstellen.  
   
- Die DAC steht über das **sqlcmd** -Hilfsprogramm für Eingabeaufforderungen mit einem speziellen Administratorschalter (**-A**) zur Verfügung und wird von diesem unterstützt. Weitere Informationen zum Verwenden von **sqlcmd** finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können die Verbindung auch herstellen, indem Sie dem Instanznamen **admin:** im folgenden Format voranstellen: **sqlcmd S admin:<*Instanzname*>**. Alternativ können Sie auch eine Datenschichtanwendung (DAC) in einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor initiieren, indem Sie eine Verbindung mit **admin:\<*Instanzname*>** herstellen.  
+ Die DAC steht über das **sqlcmd** -Hilfsprogramm für Eingabeaufforderungen mit einem speziellen Administratorschalter ( **-A**) zur Verfügung und wird von diesem unterstützt. Weitere Informationen zum Verwenden von **sqlcmd** finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können die Verbindung auch herstellen, indem Sie dem Instanznamen **admin:** im folgenden Format voranstellen: **sqlcmd S admin:<*Instanzname*>** . Alternativ können Sie auch eine Datenschichtanwendung (DAC) in einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor initiieren, indem Sie eine Verbindung mit **admin:\<*Instanzname*>** herstellen.  
   
 ## <a name="restrictions"></a>Restrictions  
  Da die DAC nur zum Diagnostizieren von Serverproblemen in seltenen Fällen gedacht ist, bestehen einige Einschränkungen für die Verbindung:  
@@ -76,7 +76,7 @@ ms.locfileid: "56955981"
   
 -   Grundlegende DBCC-Befehle wie [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) und [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). Führen Sie keine ressourcenintensiven Befehle wie [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) oder [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) aus.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>*-Befehl. Abhängig vom Status von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der KILL-Befehl nicht immer erfolgreich; dann ist ein Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unumgänglich. Es folgen einige allgemeine Richtlinien:  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* -Befehl. Abhängig vom Status von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der KILL-Befehl nicht immer erfolgreich; dann ist ein Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unumgänglich. Es folgen einige allgemeine Richtlinien:  
   
     -   Überprüfen Sie mit der Abfrage `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`, ob SPID tatsächlich beendet wurde. Wenn keine Zeilen zurückgegeben werden, wurde die Sitzung beendet.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "56955981"
   
  Der DAC-Port wird dynamisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Start zugewiesen. Beim Herstellen der Verbindung mit der Standardinstanz vermeidet die DAC die Verwendung einer SSRP-Anforderung ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) an den SQL Server-Browser-Dienst. Zunächst wird eine Verbindung über den TCP-Port 1434 hergestellt. Tritt dabei ein Fehler auf, wird ein SSRP-Aufruf ausgegeben, um den Port abzurufen. Falls der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser SSRP-Anforderungen nicht überwacht, gibt die Verbindungsanforderung einen Fehler zurück. Suchen Sie im Fehlerprotokoll nach der Portnummer, die von der DAC überwacht wird. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Annahme von Remoteverwaltungsverbindungen konfiguriert ist, muss die DAC wie folgt mit einer expliziten Portnummer initiiert werden:  
   
- **sqlcmd -S tcp:**_\<server>,\<port>_  
+ **sqlcmd -S tcp:** _\<server>,\<port>_  
   
  Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll ist die Portnummer für die DAC aufgelistet, standardmäßig 1434. Ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausschließlich für die Annahme lokaler DAC konfiguriert, müssen Sie die Verbindung mithilfe des Loopbackadapters herstellen. Verwenden Sie dazu folgenden Befehl:  
   

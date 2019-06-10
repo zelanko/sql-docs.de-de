@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6197649ed7548919a8659977c3b3550429840f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 35786f1c468e5f4c90e5615d64d527a1df673f00
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207529"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789402"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Verwenden von automatischem Seeding zum Initialisieren einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ Die folgenden Systemsichten zeigen den Status des automatischen Seedings in SQL 
 
 **sys.dm_hadr_automatic_seeding** 
 
-Fragen Sie auf dem primären Replikat `sys.dm_hadr_automatic_seeding` ab, um den Status des automatischen Seedingprozesses zu überprüfen. Die Sicht gibt eine Zeile für jeden Seedingprozess zurück. Zum Beispiel:
+Fragen Sie auf dem primären Replikat `sys.dm_hadr_automatic_seeding` ab, um den Status des automatischen Seedingprozesses zu überprüfen. Die Sicht gibt eine Zeile für jeden Seedingprozess zurück. Beispiel:
 
 ```sql
 SELECT start_time, 
@@ -217,7 +217,7 @@ GO
 
 Die folgende Tabelle enthält die erweiterten Ereignisse die sich auf automatisches Seeding beziehen: 
 
-| Name | Beschreibung|
+| Name | und Beschreibung|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Seedinganforderungsnachricht.
 |hadr_physical_seeding_backup_state_change |    Statusänderung auf der Sicherungsseite für das physische Seeding.
@@ -238,7 +238,7 @@ Die folgende Tabelle enthält die erweiterten Ereignisse die sich auf automatisc
 
 **Überwachen des automatischen Seedings**
 
-Fragen Sie `sys.dm_hadr_physical_seeding_stats` nach aktuell ausgeführten automatischen Seedingprozessen ab. Die Sicht gibt eine Zeile für jede Datenbank zurück. Zum Beispiel:
+Fragen Sie `sys.dm_hadr_physical_seeding_stats` nach aktuell ausgeführten automatischen Seedingprozessen ab. Die Sicht gibt eine Zeile für jede Datenbank zurück. Beispiel:
 
 ```sql
 SELECT local_database_name, 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f98a6e019790e7bc4e102a400c6f28f53c344e92
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+manager: jroth
+ms.openlocfilehash: 7775c1b66567cc72892b4f8ba5e4d0cf00f1ed52
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419616"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767483"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Standard-Netzwerkkonfiguration von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ In der folgenden Tabelle wird die Konfiguration nach der Installation beschriebe
 |Evaluation | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
 |SQL Server Express | Neue Installation | Aktiviert | Disabled | Deaktiviert für Netzwerkverbindungen|
 |Alle Editionen | Vorherige Installation ist vorhanden, wird aber nicht aktualisiert. | Wie für Neuinstallation | Wie für Neuinstallation | Wie für Neuinstallation|
-|Alle Editionen | UPGRADE | Aktiviert | Einstellungen aus früherer Installation werden beibehalten. | Einstellungen aus früherer Installation werden beibehalten.|
+|Alle Editionen | Aktualisieren | Aktiviert | Einstellungen aus früherer Installation werden beibehalten. | Einstellungen aus früherer Installation werden beibehalten.|
 
 
 >[!NOTE]
