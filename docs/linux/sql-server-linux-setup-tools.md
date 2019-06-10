@@ -5,18 +5,18 @@ description: Dieser Artikel beschreibt, wie Sie die SQL Server-Tools unter Linux
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 05/28/2019
+ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 86a452237628df8952beaa09277a79b1de507aa1
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.openlocfilehash: d6e10c384d799ee416facee150e5e2318b381ea6
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265400"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810277"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren von Sqlcmd und Bcp die SQL Server-Befehlszeilenprogramme unter Linux
 
@@ -261,7 +261,7 @@ Ein Beispiel zur Verwendung für **Sqlcmd** zum Verbinden mit SQL Server, und er
 
 - [Installieren Sie unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installieren unter Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen unter Docker aus](quickstart-install-connect-ubuntu.md)
 
 Ein Beispiel zur Verwendung für **Bcp** um per Massenvorgang zu importieren und Exportieren von Daten, finden Sie unter [Massenkopieren von Daten in SQL Server unter Linux](sql-server-linux-migrate-bcp.md).

@@ -1,18 +1,18 @@
 ---
 title: Übersicht über Claims to Windows Token Service (C2WTS) und Reporting Services | Microsoft-Dokumentation
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 8d53445544c360250ed35c322e2fc4078559bbbe
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397154"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454570"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) und Reporting Services
 
@@ -50,7 +50,7 @@ Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, da
 
     **C2WTS sollte mit einer eigenen Domänenidentität ausgeführt werden.**
 
-    * Erstellen Sie ein Active Directory-Konto, und registrieren Sie das Konto als verwaltetes Konto in SharePoint Server. Weitere Informationen zu verwalteten Konten finden Sie unter [Managed Accounts in SharePoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/) (Verwaltete Konten in SharePoint).
+    * Erstellen Sie ein Active Directory-Konto, und registrieren Sie das Konto als verwaltetes Konto in SharePoint Server. Weitere Informationen zu verwalteten Konten finden Sie unter [Managed Accounts in SharePoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/) (Verwaltete Konten in SharePoint).
    
     * Konfigurieren Sie den C2WTS-Dienst für die Verwendung des verwalteten Kontos über „SharePoint Zentraladministration > Sicherheit > Dienstkonten konfigurieren > Windows-Dienst – Claims to Windows Token Service“.
 
@@ -81,16 +81,16 @@ Wenn in der Umgebung die eingeschränkte Kerberos-Delegierung verwendet wird, da
 
     * Wählen Sie **Hinzufügen** zum Hinzufügen eines Dienstes, an den Sie delegieren können.
 
-    * Klicken Sie auf **Benutzer oder Computer...&#42;**, und geben Sie das Konto ein, das den Dienst hostet. Wenn ein SQL Server beispielsweise unter einem Konto namens *sqlservice* ausgeführt wird, geben Sie `sqlservice` ein. 
+    * Klicken Sie auf **Benutzer oder Computer...&#42;** , und geben Sie das Konto ein, das den Dienst hostet. Wenn ein SQL Server beispielsweise unter einem Konto namens *sqlservice* ausgeführt wird, geben Sie `sqlservice` ein. 
       Für das **Report Viewer-Webpart** ist dies das Dienstkonto für die Reporting Services-Instanz (einheitlicher Modus).
 
-    * Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen. Für das **Report Viewer-Webpart** finden Sie den konfigurierten HTTP-SPN unter [Konfiguration des Report Viewer-Webparts](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Wählen Sie die Darstellung des Diensts. Dadurch werden die SPNs angezeigt, die über dieses Konto verfügbar sind. Wenn der Dienst unter diesem Konto nicht angezeigt wird, fehlt er möglicherweise oder befindet auf einem anderen Konto. Sie können das SetSPN-Dienstprogramm verwenden, um die SPNs anzupassen. Für das **Report Viewer-Webpart** finden Sie den konfigurierten HTTP-SPN unter [Konfiguration des Report Viewer-Webparts](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Wählen Sie „OK“ aus, um die Dialogfelder zu verlassen.
 
 3. Konfigurieren Sie C2WTS-*AllowedCallers* (Zulässige Aufrufer).
 
-    C2WTS erfordert, dass die Identitäten der „Callers“ in der Konfigurationsdatei **c2WTShost.exe.config** explizit aufgeführt werden. C2WTS akzeptiert keine Anforderungen sämtlicher authentifizierter Benutzer im System, e sei denn, der Dienst wurde entsprechend konfiguriert. In diesem Fall entspricht der „Aufrufer“ der WSS_WPG-Windows-Gruppe. Die Datei „C2WTShost.exe.config“ wird im folgenden Ordner gespeichert:
+    C2WTS erfordert, dass die Identitäten der „Callers“ in der Konfigurationsdatei **c2WTShost.exe.config** explizit aufgeführt werden. C2WTS akzeptiert keine Anforderungen sämtlicher authentifizierter Benutzer im System, es sei denn, der Dienst wurde entsprechend konfiguriert. In diesem Fall entspricht der „Aufrufer“ der WSS_WPG-Windows-Gruppe. Die Datei „C2WTShost.exe.config“ wird im folgenden Ordner gespeichert:
 
     Durch die Änderung des Dienstkontos für den C2WTS-Dienst in der SharePoint-Zentraladministration wird das Konto der Gruppe „WSS_WPG“ hinzugefügt.
 
