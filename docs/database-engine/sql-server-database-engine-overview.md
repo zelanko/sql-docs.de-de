@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9ac9c8d88570fb6fd046c18157d8262a0a997e4a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5be414143dece0b0124d8ea4376d81481635f279
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605560"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794539"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server-Datenbank-Engine
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51605560"
  Verwenden Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] , um relationale Datenbanken für OLTP- (Online Transactional Processing, Onlinetransaktionsverarbeitung) oder OLAP-Daten (Online Analytical Processing, Analytische Onlineverarbeitung) zu erstellen. Dazu gehört das Erstellen von Tabellen zur Datenspeicherung und von Datenbankobjekten, wie z. B. Indizes, Sichten und gespeicherte Prozeduren, zum Anzeigen, Verwalten und Sichern von Daten. Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , um die Datenbankobjekte zu verwalten, und [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , um Serverereignisse aufzuzeichnen.  
 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Ressourcencenter](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

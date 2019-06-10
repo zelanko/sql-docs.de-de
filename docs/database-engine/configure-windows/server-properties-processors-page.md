@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cdb31d9a58af20fa66be960d96d78b8b87f7779a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 82e3792b2c92565921f189b4c843e2bacd6e4b49
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755668"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783137"
 ---
 # <a name="server-properties---processors-page"></a>Servereigenschaften (Seite „Prozessoren“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Auf dieser Seite können Sie die Prozessoroptionen anzeigen und ändern. Prozessoraffinitätsoptionen sind nur aktiviert, wenn mehr als ein Prozessor installiert ist.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Prozessoraffinität**  
  Weist Prozessoren bestimmte Threads zu, um ein Neuladen des Prozessors zu verhindern und die Threadmigration zwischen Prozessoren zu reduzieren. Weitere Informationen finden Sie unter [Affinitätsmaske (Serverkonfigurationsoption)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47755668"
  **Ausgeführte Werte**  
  Zeigt die gegenwärtig ausgeführten Werte für die Optionen in diesem Bereich an. Diese Werte sind schreibgeschützt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

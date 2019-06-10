@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9067825db57574385e925d28e1b7badf049831df
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: c4f56ac8334be617e800c388158074f801f4aa98
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480224"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777706"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Trennen und Anfügen von DQS-Datenbanken
 
@@ -46,7 +46,7 @@ ms.locfileid: "65480224"
 -   Sie müssen über die Rolle „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um ausgeführte Aktivitäten abzubrechen oder ausgeführte Prozesse in DQS anzuhalten.  
   
 ##  <a name="Detach"></a> Trennen von DQS-Datenbanken  
- Wenn Sie eine DQS-Datenbank unter Verwendung von SQL Server Management Studio trennen, verbleiben die getrennten Dateien auf dem Computer und können erneut an dieselbe SQL Server-Instanz angefügt oder auf einen anderen Server verschoben und dort angefügt werden. Die DQS-Datenbankdateien befinden sich auf dem Data Quality Services-Computer normalerweise im folgenden Ordner: C:\Programme\Microsoft SQL Server\MSSQL13.*<Instanzname>* \MSSQL\DATA.  
+ Wenn Sie eine DQS-Datenbank unter Verwendung von SQL Server Management Studio trennen, verbleiben die getrennten Dateien auf dem Computer und können erneut an dieselbe SQL Server-Instanz angefügt oder auf einen anderen Server verschoben und dort angefügt werden. Die DQS-Datenbankdateien befinden sich auf dem Data Quality Services-Computer normalerweise im folgenden Ordner: C:\Programme\Microsoft SQL Server\MSSQL13. *<Instanzname>* \MSSQL\DATA.  
   
 1.  Starten Sie Microsoft SQL Server Management Studio, und stellen Sie eine Verbindung mit der entsprechenden SQL Server-Instanz her.  
   

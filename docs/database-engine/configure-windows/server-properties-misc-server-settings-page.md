@@ -12,19 +12,19 @@ f1_keywords:
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e72286c63ef8721d68817a4a0347f4124630b2cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c127e58188b5b2f3487b243b89788bc304d915ad
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739318"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783221"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>Servereigenschaften (Seite „Sonstige Servereinstellungen“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Auf dieser Seite können Sie Ihre Servereinstellungen anzeigen und ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Standardsprache für Benutzer**  
  Gibt die Standardsprache für alle neu erstellten Benutzernamen an.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47739318"
  **Ausgeführte Werte**  
  Zeigt die gegenwärtig ausgeführten Werte für die Optionen in diesem Bereich an. Diese Werte sind schreibgeschützt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

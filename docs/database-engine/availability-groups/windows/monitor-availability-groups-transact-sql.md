@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209429"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779172"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,25 +32,6 @@ ms.locfileid: "53209429"
 > [!TIP]  
 >  Viele dieser Sichten können mithilfe ihre ID-Spalten verknüpft werden, um Informationen aus mehreren Sichten in einer einzelnen Abfrage zurückzugeben.  
   
- **In diesem Thema:**  
-  
--   [Berechtigungen](#Permissions)  
-  
--   **Verwenden von Transact-SQL zum Überwachen folgender Elemente:**  
-  
-     [Funktion AlwaysOn-Verfügbarkeitsgruppen auf einer Serverinstanz](#AoAgFeatureOnSI)  
-  
-     [Verfügbarkeitsgruppen auf dem WSFC-Cluster](#WSFC)  
-  
-     [Verfügbarkeitsgruppen](#AvGroups)  
-  
-     [Verfügbarkeitsreplikate](#AvReplicas)  
-  
-     [Verfügbarkeitsdatenbanken](#AvDbs)  
-  
-     [Verfügbarkeitsgruppenlistener](#AGlisteners)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
   
 ##  <a name="Permissions"></a> Berechtigungen  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Katalogsichten erfordern die VIEW ANY DEFINITION-Berechtigung für die Serverinstanz. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verwaltungssichten erfordern die VIEW SERVER STATE-Berechtigung für den Server.  
@@ -189,7 +170,7 @@ ms.locfileid: "53209429"
 >  Der primäre Replikatspeicherort ist die autoritative Quelle für eine Verfügbarkeitsgruppe.  
   
 > [!NOTE]  
->  Informationen zu den [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Leistungsindikatoren für Verfügbarkeitsdatenbanken (das **SQLServer:Datenbankreplikat** -Leistungsobjekt) finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Verwenden Sie zum Überwachen der Transaktionsprotokollaktivität in Verfügbarkeitsdatenbanken die folgenden Indikatoren des **SQLServer:Datenbanken**-Leistungsobjekts: **Schreibzeit für Protokollleerungen (ms)**, **Protokollleerungen/Sekunde**, **Protokollpool-Cachefehler/Sekunde**, **Protokollpool-Datenträgerlesevorgänge/Sekunde** und **Protokollpoolanforderungen/Sekunde**. Weitere Informationen finden Sie unter [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Informationen zu den [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Leistungsindikatoren für Verfügbarkeitsdatenbanken (das **SQLServer:Datenbankreplikat** -Leistungsobjekt) finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Verwenden Sie zum Überwachen der Transaktionsprotokollaktivität in Verfügbarkeitsdatenbanken die folgenden Indikatoren des **SQLServer:Datenbanken**-Leistungsobjekts: **Schreibzeit für Protokollleerungen (ms)** , **Protokollleerungen/Sekunde**, **Protokollpool-Cachefehler/Sekunde**, **Protokollpool-Datenträgerlesevorgänge/Sekunde** und **Protokollpoolanforderungen/Sekunde**. Weitere Informationen finden Sie unter [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Überwachen von Verfügbarkeitsgruppenlistenern  
  Zum Überwachen der Verfügbarkeitsgruppenlistener auf Subnetzen des WSFC-Clusters verwenden Sie die folgenden Sichten:  

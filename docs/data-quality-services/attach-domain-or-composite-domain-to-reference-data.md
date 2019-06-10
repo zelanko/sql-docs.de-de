@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5aa0a3672edcf788b2a5d485a0e23d87409c3534
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 551e66805dc53f7113aeb0260716967bb8a78486
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480407"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780461"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Anfügen einer Domäne oder Verbunddomäne an Verweisdaten
 
@@ -33,7 +33,7 @@ ms.locfileid: "65480407"
 > [!WARNING]  
 >  Die an einen Verweisdatendienst angefügte Verbunddomäne ist in der Domänen-Dropdownliste verfügbar, während Domänen den Spalten in Schema des Verweisdatendiensts zugeordnet werden. Ordnen Sie die Verbunddomäne keiner Spalte im Schema des Verweisdatendiensts zu; Sie dürfen den entsprechenden Spalten im Schema des Verweisdatendiensts nur einzelne Domänen innerhalb einer Verbunddomäne zuordnen. Andernfalls tritt ein Fehler auf.  
   
- Das Schema eines Verweisdatendiensts kann über eine erforderliche Spalte verfügen, die mit der entsprechenden Domäne zugeordnet werden muss, wenn Sie einen Verweisdatendienst verwenden möchten. Die erforderliche Spalte in einem Verweisdatenschema wird mit einem „(M)“ im Spaltennamen gekennzeichnet. So ist **AddressLine** beispielsweise die erforderliche Schemaspalte in **Melissa Data (Adressdaten)**, und **CompanyName** ist die erforderliche Schemaspalte in **Digital Trowel Inc. (US-Unternehmen und professionelle Daten für SQL-Benutzer)**.  
+ Das Schema eines Verweisdatendiensts kann über eine erforderliche Spalte verfügen, die mit der entsprechenden Domäne zugeordnet werden muss, wenn Sie einen Verweisdatendienst verwenden möchten. Die erforderliche Spalte in einem Verweisdatenschema wird mit einem „(M)“ im Spaltennamen gekennzeichnet. So ist **AddressLine** beispielsweise die erforderliche Schemaspalte in **Melissa Data (Adressdaten)** , und **CompanyName** ist die erforderliche Schemaspalte in **Digital Trowel Inc. (US-Unternehmen und professionelle Daten für SQL-Benutzer)** .  
   
  In diesem Artikel werden vier Domänen erstellt: **Adresszeile**, **Ort**, **Bundesland** und **PLZ**, unter einer Verbunddomäne, **Adressüberprüfung**, fügen die Verbunddomäne an den Reference Data Service **Melissa Data – Address Check** (Melissa Data (Adressüberprüfung)) an und ordnen die einzelnen Domänen innerhalb der Verbunddomäne anschließend den entsprechenden Spalten im Reference Data Service-Schema zu.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "65480407"
   
 8.  Im Dialogfeld **Onlinekatalog der Reference Data Service-Anbieter** :  
   
-    1.  Aktivieren Sie unter **DataMarket Data Quality Services** das Kontrollkästchen **Melissa Data (Adressüberprüfung)**.  
+    1.  Aktivieren Sie unter **DataMarket Data Quality Services** das Kontrollkästchen **Melissa Data (Adressüberprüfung)** .  
   
     2.  Ordnen Sie die Spalten des Verweisdatendiensts Melissa Data (Adressüberprüfung) den entsprechenden Domänen (Adresszeile, Ort, Bundesland und PLZ) zu. Sie ordnen die Spalten zu, indem Sie in der Spalte **RDS-Schema** eine Verweisdatendienst-Spalte auswählen und dann die entsprechende Domäne in der Spalte **Domäne** auswählen. Um mehr Zeilen in der Tabelle hinzuzufügen, klicken Sie auf das Symbol **Schemaeintrag hinzufügen** .  
   

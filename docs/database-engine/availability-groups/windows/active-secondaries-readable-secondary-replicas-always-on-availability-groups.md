@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e64c26d781bc7200540f6482185cc71e6214c64b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206269"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783707"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ ms.locfileid: "53206269"
 -   Das Suffix „_readonly_database_statistic“ ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Sie können dieses Suffix nicht verwenden, wenn Sie Statistiken in einer primären Datenbank erstellen. Weitere Informationen finden Sie unter [Statistics](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Zugreifen auf speicheroptimierte Tabellen auf einem sekundären Replikat  
- Mit speicheroptimierten Tabellen können für primäre und sekundäre Replikate dieselben Transaktionsisolationsstufen verwendet werden. Es wird empfohlen, die Isolationsstufe auf Sitzungsebene auf READ COMMITTED und die Datenbankebenenoption auf MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON festzulegen. Zum Beispiel:  
+ Mit speicheroptimierten Tabellen können für primäre und sekundäre Replikate dieselben Transaktionsisolationsstufen verwendet werden. Es wird empfohlen, die Isolationsstufe auf Sitzungsebene auf READ COMMITTED und die Datenbankebenenoption auf MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON festzulegen. Beispiel:  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  

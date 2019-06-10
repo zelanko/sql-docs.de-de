@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f37e036444bd0302e62339275d45942b62f9b375
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+manager: jroth
+ms.openlocfilehash: 7670b7f7ac2d80f596c3a192eb23fbf2b9e94a6d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756705"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775108"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Anzeigen oder Konfigurieren der Serverkonfigurationsoption Standardeinstellung für die Sicherungskomprimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "57756705"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie die Option backup compression default an und konfigurieren sie mit:**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "57756705"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-the-backup-compression-default-option"></a>So zeigen Sie die Option 'backup compression default' an und konfigurieren sie  
   

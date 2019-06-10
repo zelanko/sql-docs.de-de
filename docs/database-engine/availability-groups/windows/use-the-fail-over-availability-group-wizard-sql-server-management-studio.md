@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b11894150e184233b985dcfd21002175b1d9555
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 7ea5095fcec5681ea54a07bbcf8c41255d66db87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255925"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780271"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "54255925"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So verwenden Sie den Assistenten für das Failover von Verfügbarkeitsgruppen**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die ein sekundäres Replikat der Verfügbarkeitsgruppe hostet, für die ein Failover ausgeführt werden muss, und erweitern Sie die Serverstruktur.  
@@ -60,7 +60,7 @@ ms.locfileid: "54255925"
   
 4.  Welche Informationen auf der Seite **Einführung** angezeigt werden, hängt davon ab, ob ein sekundäres Replikat für ein geplantes Failover geeignet ist. Wenn diese Seite den Text "**Geplantes Failover für diese Verfügbarkeitsgruppe ausführen**" enthält, dann können Sie ein Failover für die Verfügbarkeitsgruppe ohne Datenverlust durchführen.  
   
-5.  Auf der Seite **Neues primäres Replikat auswählen** können Sie den Status des aktuellen primären Replikats und des WSFC-Quorums überprüfen, bevor Sie das sekundäre Replikat auswählen, das das neue primäre Replikat (das *Failoverziel*) wird. Für ein geplantes manuelles Failover müssen Sie ein sekundäres Replikat auswählen, das für **Failoverbereitschaft** den Wert "**Kein Datenverlust**" aufweist. Bei einem erzwungenen Failover lautet dieser Wert für alle möglichen Failoverziele „**Data loss, Warnings(**_#_**)**“ (Datenverlust, Warnungen (#)), wobei *#* die Anzahl der Warnungen angibt, die für ein angegebenes sekundäres Replikat vorhanden sind. Um die Warnungen für ein angegebenes Failoverziel anzuzeigen, klicken Sie auf dessen „Failoverbereitschaft“-Wert.  
+5.  Auf der Seite **Neues primäres Replikat auswählen** können Sie den Status des aktuellen primären Replikats und des WSFC-Quorums überprüfen, bevor Sie das sekundäre Replikat auswählen, das das neue primäre Replikat (das *Failoverziel*) wird. Für ein geplantes manuelles Failover müssen Sie ein sekundäres Replikat auswählen, das für **Failoverbereitschaft** den Wert "**Kein Datenverlust**" aufweist. Bei einem erzwungenen Failover lautet dieser Wert für alle möglichen Failoverziele „**Data loss, Warnings(** _#_ **)** “ (Datenverlust, Warnungen (#)), wobei *#* die Anzahl der Warnungen angibt, die für ein angegebenes sekundäres Replikat vorhanden sind. Um die Warnungen für ein angegebenes Failoverziel anzuzeigen, klicken Sie auf dessen „Failoverbereitschaft“-Wert.  
   
      Weitere Informationen finden Sie weiter unten in diesem Thema unter [Seite 'Neues primäres Replikat auswählen'](#SelectNewPrimaryReplica).  
   
@@ -106,7 +106,7 @@ ms.locfileid: "54255925"
  **Quorum-Status**  
  Zeigt den Quorum-Status des Verfügbarkeitsreplikats für den WSFC-Clustertyp an, der einen der folgenden Werte haben kann:  
   
-   |Wert|Beschreibung|  
+   |value|und Beschreibung|  
    |-----------|-----------------|  
    |**Normales Quorum**|Der Cluster hat mit einem normalem Quorum begonnen.|  
    |**Erzwungenes Quorum**|Der Cluster hat mit einem erzwungenem Quorum begonnen.|  
@@ -128,7 +128,7 @@ ms.locfileid: "54255925"
  **Verfügbarkeitsmodus**  
  Zeigt den Verfügbarkeitsmodus der Serverinstanz an und kann einen der folgenden Werte haben:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Synchroner Commit**|Im Modus für synchrone Commits wartet ein primäres Replikat mit synchronen Commits vor dem Commit für Transaktionen auf ein sekundäres Replikat mit synchronen Commits, um zu bestätigen, dass das Schreiben des Protokolls abgeschlossen wurde. Im Modus für synchrone Commits wird sichergestellt, dass Transaktionen, für die ein Commit ausgeführt wird, vollständig geschützt sind, sobald eine angegebene sekundäre Datenbank mit der primären Datenbank synchronisiert wird.|  
 |**Asynchroner Commit**|Im Modus für asynchrone Commits führt das primäre Replikat einen Commit für Transaktionen aus, ohne auf die Bestätigung zu warten, dass ein sekundäres Replikat mit asynchronem Commit das Protokoll geschrieben hat. Im Modus für asynchrone Commits wird die Transaktionswartezeit auf den sekundären Datenbanken minimiert. Dabei liegen sie jedoch möglicherweise hinter den primären Datenbanken zurück, was Datenverluste zur Folge haben kann.|  
@@ -138,7 +138,7 @@ ms.locfileid: "54255925"
  **Failovermodus**  
  Zeigt den Failovermodus der Serverinstanz an und kann einen der folgenden Werte haben:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Automatic**|Ein sekundäres Replikat, das für ein automatisches Failover konfiguriert wurde, unterstützt auch ein geplantes manuelles Failover, wenn das sekundäre Replikat mit dem primären Replikat synchronisiert wird.|  
 |**Manuell**|Man unterscheidet zwei manuelle Failovertypen: geplantes Failover (ohne Datenverlust) und erzwungenes Failover (mit möglichem Datenverlust). Die Unterstützung für ein erzwungenes Failover hängt vom Verfügbarkeitsmodus und für den Modus mit synchronem Commit vom Synchronisierungsstatus des sekundären Replikats wie folgt ab: Welche Form von manuellem Failover gegenwärtig von einem angegebenen sekundären Replikat unterstützt wird, können Sie der Spalte **Failoverbereitschaft** dieses Rasters entnehmen.|  
@@ -148,7 +148,7 @@ ms.locfileid: "54255925"
  **Failoverbereitschaft**  
  Zeigt die Failoverbereitschaft des sekundären Replikats an und kann einen der folgenden Werte enthalten:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Kein Datenverlust**|Dieses sekundäre Replikat unterstützt gegenwärtig geplante Failover. Dieser Wert tritt nur dann auf, wenn ein für den Verfügbarkeitsmodus mit synchronem Commit konfiguriertes sekundäres Replikat mit dem primären Replikat synchronisiert wird.|  
 |**Datenverlust, Warnungen (** _#_ **)**|Dieses sekundäre Replikat unterstützt nur erzwungene manuelle Failover (mit möglichem Datenverlust). Dieser Wert tritt immer dann auf, wenn das sekundäre Replikat nicht mit dem primären Replikat synchronisiert ist. Klicken Sie den Link für Datenverlust-Warnungen, um Informationen zum möglichen Datenverlust zu erhalten.|  
