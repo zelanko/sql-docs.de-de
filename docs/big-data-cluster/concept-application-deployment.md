@@ -4,18 +4,18 @@ titleSuffix: SQL Server 2019 big data clusters
 description: Dieser Artikel beschreibt die Bereitstellung einer Anwendung auf einem SQL Server-2019 big Data-Cluster (Vorschau).
 author: jterh
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 44e0be15c9b9cc3abb8af3e8f2e7fc8049d385df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a6ba9caed2b01abc50e16e34d1a13413af2d0ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63283727"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801855"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Was ist die Bereitstellung einer Anwendung auf einem SQL Server-2019 big Data-Cluster?
 
@@ -64,7 +64,7 @@ Es ist auch möglich, eine Anwendung mit einer RESTful-Webdienst ausgeführt wer
 
 Weitere Informationen zum Erstellen und Ausführen von Anwendungen auf SQL Server-big Data-Clustern finden Sie unter den folgenden:
 
-- [Bereitstellen von Anwendungen mithilfe von mssqlctl](big-data-cluster-create-apps.md)
+- [Deploy applications using mssqlctl (Bereitstellen von Anwendungen mit „mssqlctl“)](big-data-cluster-create-apps.md)
 - [Bereitstellen von Anwendungen, die mit der Bereitstellung von App-Erweiterung](app-deployment-extension.md)
 - [Nutzen Sie Anwendungen für big Data-Cluster](big-data-cluster-consume-apps.md)
 

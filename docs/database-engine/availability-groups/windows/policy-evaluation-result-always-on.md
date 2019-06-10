@@ -13,25 +13,19 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 23c32528e590b0484082cd74429cdf472907fba1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201929"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798202"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Seite „Ergebnis der Richtlinienauswertung“ (Always On-Dashboard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Verwenden Sie im AlwaysOn-Dashboard die Seite **Ergebnis der Richtlinienauswertung** , um die aktuellen Richtlinienprobleme anzuzeigen.  
-  
- **In diesem Thema:**  
-  
--   [Optionen im Dialogfeld](#Options)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
-  
+    
 ##  <a name="Options"></a> Optionen im Dialogfeld  
  **Erkanntes Problem**  
  Zeigt eine Zeile für jedes erkannte Problem an. Das einem Problem zugeordnete Symbol ist ein visueller Indikator, womit der Schweregrad des Problems wie folgt angegeben wird:  

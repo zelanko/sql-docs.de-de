@@ -13,36 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367238"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793616"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Konfigurieren der Replikation mit Always On-Verfügbarkeitsgruppen
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Die Konfiguration der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation und von Always On-Verfügbarkeitsgruppen umfasst sieben Schritte. Jeder dieser Schritte wird in den folgenden Abschnitten detailliert beschrieben.  
-  
-1.  [Konfigurieren Sie die Datenbankveröffentlichungen und die Abonnements.](#step1)  
-  
-2.  [Konfigurieren Sie die Always On-Verfügbarkeitsgruppe.](#step2)  
-  
-3.  [Stellen Sie sicher, dass alle sekundären Replikathosts für Replikation konfiguriert wurden.](#step3)  
-  
-4.  [Konfigurieren Sie die sekundären Replikathosts als Replikationsverleger.](#step4)  
-  
-5.  [Leiten Sie den ursprünglichen Verleger zum Namen des Verfügbarkeitsgruppenlisteners um.](#step5)  
-  
-6.  [Führen Sie die gespeicherte Prozedur zum Überprüfen aus, um die Konfiguration zu überprüfen.](#step6)  
-  
-7.  [So fügen Sie dem Replikationsmonitor den ursprünglichen Verleger hinzu.](#step7)  
-  
- Schritt 1 und 2 können in beliebiger Reihenfolge ausgeführt werden.  
   
 ##  <a name="step1"></a> 1. Konfigurieren der Datenbankveröffentlichungen und Abonnements  
  **Konfigurieren des Verteilers**  

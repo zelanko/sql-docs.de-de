@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 15635f99ee6ecc20fd0341f04f6cf5caaac74914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f8e46d571c5379255b138f0555f1e907f98aca73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676782"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772198"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Öffnen des ODBC-Datenquellen-Administrators
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +39,18 @@ ms.locfileid: "47676782"
   
 2.  Klicken Sie in der **Systemsteuerung**auf **Verwaltung**.  
   
-3.  Klicken Sie unter **Verwaltung**auf **Datenquellen (ODBC)**.  
+3.  Klicken Sie unter **Verwaltung**auf **Datenquellen (ODBC)** .  
 
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>So öffnen Sie den ODBC-Datenquellen-Administrator in Windows Server 2008  
   
-1.  Zeigen Sie im Menü **Start** auf **Verwaltung**, und klicken Sie dann auf **Datenquellen (ODBC)**.  
+1.  Zeigen Sie im Menü **Start** auf **Verwaltung**, und klicken Sie dann auf **Datenquellen (ODBC)** .  
 
 
 > [!NOTE]  
 >  Zum Herstellen von Verbindungen mit der Azure Active Directory-Authentifizierung für SQL-Datenbank installieren Sie die neuesten Treiber, z. B. [ODBC-Treiber 13.1 für SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überprüfen der Version des ODBC SQL Server-Treibers &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   

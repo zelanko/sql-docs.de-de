@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8a6b2b6313a0e4292d1860e8102218d2cc8b24e0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f929c973a400b600a220a920b944d7a9d46df6a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486454"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802134"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Konfigurieren von Schweregraden für DQS-Protokolldateien
 
@@ -58,7 +58,7 @@ ms.locfileid: "65486454"
   
 2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Konfiguration**.  
   
-3.  Klicken Sie dann auf die Registerkarte **Protokolleinstellungen** . Es werden die folgenden DQS-Aktivitäten aufgeführt, für die Sie einen Schweregrad auswählen können: **Domänenverwaltung**, **Wissensermittlung**, **Bereinigungsprojekt (z. B. RDS)**, **Abgleichsrichtlinie und -projekt** und **RDS**.  
+3.  Klicken Sie dann auf die Registerkarte **Protokolleinstellungen** . Es werden die folgenden DQS-Aktivitäten aufgeführt, für die Sie einen Schweregrad auswählen können: **Domänenverwaltung**, **Wissensermittlung**, **Bereinigungsprojekt (z. B. RDS)** , **Abgleichsrichtlinie und -projekt** und **RDS**.  
   
 4.  Wählen Sie für eine DQS-Aktivität den Schweregrad für die Protokollierung aus. Folgende Optionen stehen zur Wahl: **Schwerwiegend**, **Fehler**, **Warnen**, **Info** und **Debuggen**. Wenn z. B. nur schwerwiegende Meldungen in die DQS-Protokolldateien für die Wissensermittlungsaktivität geschrieben werden sollen, wählen Sie für die Aktivität **Wissensermittlung** in der Dropdownliste die Option **Schwerwiegend** aus.  
   

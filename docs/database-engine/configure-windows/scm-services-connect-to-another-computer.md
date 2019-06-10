@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 889067a9b4691e2b6d7ad03ab3ee3b7a503d425b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135770"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775769"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM-Dienste: Verbinden mit einem anderen Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54135770"
   
 1.  Klicken Sie im Menü **Start** mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie dann auf **Verwalten**.  
   
-2.  Klicken Sie in **Computerverwaltung**mit der rechten Maustaste auf **Computerverwaltung (lokal)**, und klicken Sie dann auf **Verbindung mit anderem Computer herstellen**.  
+2.  Klicken Sie in **Computerverwaltung**mit der rechten Maustaste auf **Computerverwaltung (lokal)** , und klicken Sie dann auf **Verbindung mit anderem Computer herstellen**.  
   
 3.  Geben Sie im Dialogfeld **Computer auswählen** in das Textfeld **Anderen Computer** den Namen des Computers ein, den Sie verwalten möchten, und klicken Sie dann auf **OK**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54135770"
   
 8.  Klicken Sie im Fenster **Snap-In hinzufügen/entfernen** auf **OK**.  
   
-9. Erweitern Sie **Computerverwaltung (**_\<Computername>_**)** und **Dienste und Anwendungen**.  
+9. Erweitern Sie **Computerverwaltung (** _\<Computername>_ **)** und **Dienste und Anwendungen**.  
   
 10. Klicken Sie mit der rechten Maustaste auf **SQL Server-Konfigurations-Manager**, und klicken Sie dann auf **Neues Fenster**.  
   

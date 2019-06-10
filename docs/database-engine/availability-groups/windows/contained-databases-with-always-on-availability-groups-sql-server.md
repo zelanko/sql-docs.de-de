@@ -13,24 +13,18 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 91df6ddd18ca1bdd194788da94e3cca761dcbca1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: b93c4c91051284a944e3b234da3f4523b3092623
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208889"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793551"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>Verwenden eigenständiger Datenbanken mit Always On-Verfügbarkeitsgruppen 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dieses Thema enthält Informationen zum Verwenden einer eigenständigen Datenbank in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
- **In diesem Thema:**  
-  
--   [Erforderliche Komponenten](#Prerequisites)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
   
 ##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
