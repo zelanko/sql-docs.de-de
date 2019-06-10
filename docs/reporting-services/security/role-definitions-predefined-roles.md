@@ -1,6 +1,6 @@
 ---
-title: Vordefinierte Rollen | Microsoft-Dokumentation
-ms.date: 10/22/2015
+title: 'Rollendefinitionen: vordefinierte Rollen | Microsoft-Dokumentation'
+ms.date: 05/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,50 +12,50 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e211010da8482a9a2707c2799812c813e2820832
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: edb599f3ae735ddc07755f73499a3e71d0c20746
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65570640"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270239"
 ---
 # <a name="role-definitions---predefined-roles"></a>Rollendefinitionen: vordefinierte Rollen
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit vordefinierten Rollen installiert, mit denen Sie den Zugriff auf Berichtsservervorgänge gewähren können. Jede vordefinierte Rolle beschreibt eine Auflistung verwandter Aufgaben. Sie können Gruppen und Benutzerkonten vordefinierten Rollen zuweisen, um den unmittelbaren Zugriff auf Berichtsservervorgänge bereitzustellen.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit vordefinierten Rollen installiert, mit denen Sie den Zugriff auf Berichtsservervorgänge gewähren können. Jede vordefinierte Rolle beschreibt eine Auflistung verwandter Aufgaben. Sie können Gruppen und Benutzerkonten vordefinierten Rollen zuweisen, um den unmittelbaren Zugriff auf Berichtsservervorgänge bereitzustellen.  
   
 ## <a name="how-to-use-predefined-roles"></a>Verwenden vordefinierter Rollen  
   
-1.  Überprüfen Sie die vordefinierten Rollen, um zu ermitteln, ob Sie sie unverändert verwenden können. Wenn Sie die Aufgaben anpassen oder zusätzliche Rollen definieren müssen, sollte dies erfolgen, bevor Sie den einzelnen Rollen Benutzer zuweisen.  
+1. Überprüfen Sie die vordefinierten Rollen, um zu ermitteln, ob Sie sie unverändert verwenden können. Wenn Sie die Aufgaben anpassen oder zusätzliche Rollen definieren müssen, sollte dies erfolgen, bevor Sie den einzelnen Rollen Benutzer zuweisen.  
   
-2.  Identifizieren Sie, für welche Benutzer und Gruppen der Zugriff auf den Berichtsserver erforderlich ist und auf welcher Ebene. Die meisten Benutzer sollten der **Browser** -Rolle oder der **Berichts-Generator** -Rolle zugewiesen werden. Eine kleinere Anzahl von Benutzern sollte der **Verleger** -Rolle zugewiesen werden. **Inhalts-Manager**sollten nur sehr wenige Benutzer zugewiesen werden.  
-  
-3.  Verwenden Sie den Berichts-Manager, wenn Sie bereit sind, Benutzer- und Gruppenkonten bestimmten Rollen zuzuweisen. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)sollten nur sehr wenige Benutzer zugewiesen werden.  
+2. Identifizieren Sie, für welche Benutzer und Gruppen der Zugriff auf den Berichtsserver erforderlich ist und auf welcher Ebene. Die meisten Benutzer sollten der **Browser** -Rolle oder der **Berichts-Generator** -Rolle zugewiesen werden. Eine kleinere Anzahl von Benutzern sollte der **Verleger** -Rolle zugewiesen werden. **Inhalts-Manager**sollten nur sehr wenige Benutzer zugewiesen werden.  
+
+3. Verwenden Sie das Webportal, wenn Sie bereit sind, Benutzer- und Gruppenkonten bestimmten Rollen zuzuweisen. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
 ##  <a name="bkmk_rolelist"></a> Vordefinierte Rollendefinitionen  
  Vordefinierte Rollen werden durch die von ihnen unterstützten Aufgaben definiert. Sie können diese Rollen ändern oder durch benutzerdefinierte Rollen ersetzen.  
   
  Der*Bereich* definiert die Grenzen, innerhalb derer Rollen verwendet werden. Rollen auf Elementebene bieten verschiedene Ebenen des Zugriffs auf Berichtsserverelemente und -vorgänge, die sich auf diese Elemente auswirken. Rollen auf Elementebene werden für den Stammknoten (Stamm) und alle Elemente in der Ordnerhierarchie des Berichtsservers definiert. Rollen auf Systemebene autorisieren den Zugriff auf Websiteebene. Rollen auf Element- und Systemebene schließen sich gegenseitig aus, werden aber zusammen verwendet, um umfassende Berechtigungen für Berichtsserverinhalt und -vorgänge bereitzustellen.  
   
- In der folgenden Tabelle werden die vordefinierten Rollen, ihr Bereich und ihre Verwendung beschrieben.  
+ In der folgenden Tabelle wird der vordefinierte Bereich der Rollen beschrieben:  
   
-|Vordefinierte Rolle|Bereich|Beschreibung|  
+|Vordefinierte Rolle|Bereich|und Beschreibung|  
 |---------------------|-----------|-----------------|  
-|[Inhalts-Manager-Rolle](#bkmk_content)|Element|Schließt alle Aufgaben auf Elementebene ein. Benutzer, die dieser Rolle zugewiesen sind, haben die Vollberechtigung zum Verwalten von Berichtsserverinhalt. In diesem Rahmen können Sie anderen Benutzern Berechtigungen gewähren und die Ordnerstruktur zum Speichern von Berichten und anderen Elementen definieren.|  
-|[Verleger-Rolle](#bkmk_publisher)|Element|Benutzer, die dieser Rolle zugewiesen sind, können einem Berichtsserver Elemente hinzufügen und die Ordner erstellen und verwalten, in denen diese Elemente enthalten sind.|  
-|[Browser-Rolle](#bkmk_browser)|Element|Benutzer, die dieser Rolle zugewiesen sind, können Berichte ausführen, Berichte abonnieren und in der Ordnerstruktur navigieren.|  
-|[Berichts-Generator-Rolle](#bkmk_reportbuilder)|Element|Benutzer, die dieser Rolle zugewiesen sind, können im Berichts-Generator Berichte erstellen und bearbeiten.|  
-|[Meine Berichte-Rolle](#bkmk_myreports)|Element|Benutzer, die dieser Rolle zugewiesen sind, können einen persönlichen Arbeitsbereich zum Speichern und Verwenden von Berichten und anderen Elementen verwalten.|  
-|[Systemadministrator-Rolle](#bkmk_systemadministrator)|System|Benutzer, die dieser Rolle zugewiesen sind, können Funktionen aktivieren und Standardwerte festlegen, sie können die siteweite Sicherheit festlegen, Rollendefinitionen in Management Studio erstellen und Aufträge verwalten.|  
-|[Systembenutzer-Rolle](#bkmk_systemuser)|System|Benutzer, die dieser Rolle zugewiesen sind, können grundlegende Informationen zum Berichtsserver anzeigen, z. B. die Zeitplaninformationen in einem freigegebenen Zeitplan.|  
+|[Inhalts-Manager-Rolle](#bkmk_content)|Element|Kann Inhalte im Berichtsserver verwalten. Dies schließt Ordner, Berichte und Ressourcen ein.|  
+|[Verleger-Rolle](#bkmk_publisher)|Element|Kann Berichte und verknüpfte Berichte auf dem Berichtsserver veröffentlichen.|  
+|[Browser-Rolle](#bkmk_browser)|Element|Kann Ordner und Berichte anzeigen und Berichte abonnieren.|  
+|[Berichts-Generator-Rolle](#bkmk_reportbuilder)|Element|Kann Berichtsdefinitionen anzeigen.|  
+|[Meine Berichte-Rolle](#bkmk_myreports)|Element|Kann Berichte und verknüpfte Berichte veröffentlichen, kann Ordner, Berichte und Ressourcen in einem Ordner „Meine Berichte“ eines Benutzers verwalten.|  
+|[Systemadministrator-Rolle](#bkmk_systemadministrator)|System|Anzeigen und Ändern von Systemrollenzuweisungen, Systemrollendefinitionen, Systemeigenschaften und freigegebenen Zeitplänen sowie Erstellen von Rollendefinitionen und Verwalten von Aufträgen in Management Studio.|  
+|[Systembenutzer-Rolle](#bkmk_systemuser)|System|Anzeigen von Systemeigenschaften, freigegebenen Zeitplänen und Ermöglichen der Verwendung des Berichts-Generators oder anderen Clients, die Berichtsdefinitionen ausführen.|  
   
 ##  <a name="bkmk_content"></a> Inhalts-Manager-Rolle  
- Die **Inhalts-Manager** -Rolle ist eine vordefinierte Rolle, die hilfreiche Aufgaben für einen Benutzer enthält, der Berichte und Webinhalt verwaltet, aber nicht notwendigerweise Berichte erstellt oder einen Webserver oder eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwaltet. Ein Inhalts-Manager stellt Berichte bereit, verwaltet Berichtsmodelle und Datenquellenverbindungen und fällt Entscheidungen zur Verwendungsweise von Berichten. Für alle Aufgaben auf Elementebene wird standardmäßig die **Inhalts-Manager** -Rollendefinition ausgewählt.  
+ Die **Inhalts-Manager**-Rolle ist eine vordefinierte Rolle, die hilfreiche Aufgaben für einen Benutzer enthält, der Berichte und Webinhalt verwaltet, aber nicht notwendigerweise Berichte erstellt oder einen Webserver oder eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verwaltet. Ein Inhalts-Manager stellt Berichte bereit, verwaltet Berichtsmodelle und Datenquellenverbindungen und fällt Entscheidungen zur Verwendungsweise von Berichten. Für alle Aufgaben auf Elementebene wird standardmäßig die **Inhalts-Manager** -Rollendefinition ausgewählt.  
   
- Die **Inhalts-Manager** -Rolle wird häufig mit der **Systemadministrator** -Rolle verwendet. Zusammen stellen die beiden Rollendefinitionen einen vollständigen Satz von Aufgaben für Benutzer bereit, die einen vollständigen Zugriff auf alle Elemente auf einem Berichtsserver benötigen. Obwohl die **Inhalts-Manager** -Rolle vollständigen Zugriff auf Berichte, Berichtsmodelle, Ordner und andere Elemente in der Ordnerhierarchie bietet, ermöglicht sie keinen Zugriff auf Elemente oder Vorgänge auf Websiteebene. Aufgaben wie das Erstellen und Verwalten freigegebener Zeitpläne, das Festlegen von Servereigenschaften und das Verwalten von Rollendefinitionen sind Aufgaben auf Systemebene, die in der **Systemadministrator** -Rolle enthalten sind. Aus diesem Grund wird empfohlen, eine zweite Rollenzuweisung auf Websiteebene zu erstellen, mit der Zugriff auf freigegebene Zeitpläne bereitgestellt wird.  
+ Die **Inhalts-Manager** -Rolle wird häufig mit der **Systemadministrator** -Rolle verwendet. Zusammen stellen die beiden Rollendefinitionen einen vollständigen Satz von Aufgaben für Benutzer bereit, die einen vollständigen Zugriff auf alle Elemente auf einem Berichtsserver benötigen. Obwohl die **Inhalts-Manager**-Rolle vollständigen Zugriff auf Berichte, Berichtsmodelle, Ordner und andere Elemente in der Ordnerhierarchie bietet, ermöglicht sie keinen Zugriff auf Elemente oder Vorgänge auf Websiteebene. Aufgaben wie das Erstellen und Verwalten freigegebener Zeitpläne, das Festlegen von Servereigenschaften und das Verwalten von Rollendefinitionen sind Aufgaben auf Systemebene, die in der **Systemadministrator** -Rolle enthalten sind. Aus diesem Grund wird empfohlen, eine zweite Rollenzuweisung auf Websiteebene zu erstellen, mit der Zugriff auf freigegebene Zeitpläne bereitgestellt wird.  
   
 ### <a name="content-manager-tasks"></a>Aufgaben des Inhalts-Managers  
- In der folgenden Tabelle sind die in der **Inhalts-Manager** -Rolle enthaltenen Aufgaben aufgeführt.  
+ In der folgenden Tabelle werden die in der **Inhalts-Manager**-Rolle enthaltenen Aufgaben aufgeführt:  
   
-|Task|Beschreibung|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf einem nicht verknüpften Bericht basieren.|  
@@ -64,7 +64,7 @@ ms.locfileid: "65570640"
 |Ordner verwalten|Ordner erstellen, anzeigen und löschen sowie Ordnereigenschaften anzeigen und ändern.|  
 |Modelle verwalten|Ermöglicht das Erstellen, Anzeigen und Löschen von Modellen sowie das Anzeigen und Ändern von Modelleigenschaften.|  
 |Einzelne Abonnements verwalten|Abonnements für Berichte und verknüpfte Berichte, die dem Benutzer gehören, erstellen, anzeigen, ändern und löschen.|  
-|Berichtsverlauf verwalten|Ermöglicht das Erstellen, Anzeigen und Löschen des Berichtsverlaufs, das Anzeigen von Berichtsverlaufeigenschaften sowie das Anzeigen und Ändern von Einstellungen, die Grenzwerte für den Momentaufnahmeverlauf und die Funktionsweise der Zwischenspeicherung bestimmen.|  
+|Berichtsverlauf verwalten|Erstellen, Anzeigen und Löschen des Berichtsverlaufs, Anzeigen von Berichtsverlaufeigenschaften sowie Anzeigen und Ändern von Einstellungen, die Grenzwerte für den Momentaufnahmeverlauf und die Funktionsweise der Zwischenspeicherung bestimmen.|  
 |Berichte verwalten|Berichte hinzufügen und löschen, Berichtsparameter ändern, Berichtseigenschaften anzeigen und ändern, Datenquellen, die Inhalt für den Bericht bereitstellen, anzeigen und ändern, Berichtsdefinitionen anzeigen und ändern sowie Sicherheitsrichtlinien auf Berichtsebene festlegen.|  
 |Ressourcen verwalten|Ressourcen erstellen, ändern und löschen sowie Ressourceneigenschaften anzeigen und ändern.|  
 |Die Sicherheit für einzelne Elemente festlegen|Sicherheitsrichtlinien für Berichte, verknüpfte Berichte, Ordner, Ressourcen und Datenquellen definieren. Weitere Informationen finden Sie unter [Projektelemente](../../reporting-services/security/securable-items.md).|  
@@ -83,16 +83,16 @@ ms.locfileid: "65570640"
  Die **Verleger** -Rolle ist eine integrierte Rollendefinition, die Aufgaben umfasst, mit denen Benutzer einem Berichtsserver Inhalt hinzufügen können. Diese Rolle ist vordefiniert. Sie wird erst verwendet, wenn Sie Rollenzuweisungen erstellen, in denen sie enthalten ist. Diese Rolle ist für Benutzer vorgesehen, die Berichte oder Modelle im Berichts-Designer oder Modell-Designer erstellen und diese Elemente dann auf einem Berichtsserver veröffentlichen.  
   
 > [!CAUTION]  
->  Die Berechtigung zum Veröffentlichen von Elementen auf einem Berichtsserver sollte nur vertrauenswürdigen Benutzern gewährt werden. Die Verleger-Rolle gewährt umfassende Berechtigungen, die es Benutzern ermöglichen, sämtliche Dateitypen auf einen Berichtsserver hochzuladen. Wenn ein hochgeladener Bericht oder eine hochgeladene HTML-Datei ein böswilliges Skript enthält, wird dieses von einem Benutzer, der auf den Bericht oder das HTML-Dokument klickt, unter dessen Anmeldedaten ausgeführt.  
+> Die Berechtigung zum Veröffentlichen von Elementen auf einem Berichtsserver sollte nur vertrauenswürdigen Benutzern gewährt werden. Die Verleger-Rolle gewährt umfassende Berechtigungen, die es Benutzern ermöglichen, sämtliche Dateitypen auf einen Berichtsserver hochzuladen. Wenn ein hochgeladener Bericht oder eine hochgeladene HTML-Datei ein böswilliges Skript enthält, wird dieses von einem Benutzer, der auf den Bericht oder das HTML-Dokument klickt, unter dessen Anmeldedaten ausgeführt.  
   
  Berichtsdefinitionen können Skripts und andere Elemente enthalten, die für HTML-Injection-Angriffe anfällig sind, wenn der Bericht zur Laufzeit in HTML gerendert wird. Wenn ein veröffentlichter Bericht ein böswilliges Skript enthält, bewirkt ein Benutzer, der diesen Bericht ausführt, beim Öffnen des Berichts versehentlich das Ausführen des Skripts. Wenn der Benutzer über erweiterte Berechtigungen verfügt, wird das Skript mit diesen Berechtigungen ausgeführt.  
   
  Wenn Sie das Risiko, dass Benutzer böswillige Skripts versehentlich ausführen, vermindern möchten, begrenzen Sie die Anzahl der Benutzer, die über Berechtigungen zum Veröffentlichen von Inhalt verfügen. Stellen Sie außerdem sicher, dass die Benutzer nur Dokumente und Berichte aus vertrauenswürdigen Quellen veröffentlichen. Wenn Sie nicht sicher sind, ob eine Berichtsdefinition bedenkenlos veröffentlicht werden kann, sollen Sie die RDL-Datei in einem Text-Editor öffnen und nach Skripttags suchen. Ein böswilliges Skript kann in Ausdrücken und URLs (z.B. einer URL in einer Navigationsaktion) verborgen sein.  
   
 ### <a name="publisher-tasks"></a>Verlegeraufgaben  
- In der folgenden Tabelle sind die in der **Verleger** -Rolle enthaltenen Aufgaben aufgeführt.  
+ In der folgenden Tabelle werden die in der **Verleger**-Rolle enthaltenen Aufgaben aufgeführt:  
   
-|Task|Beschreibung|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen und in einem Berichtsserverordner veröffentlichen.|  
 |Datenquellen verwalten|Freigegebene Datenquellenelemente erstellen und löschen, Datenquelleneigenschaften und Inhalt anzeigen und ändern.|  
@@ -112,9 +112,9 @@ ms.locfileid: "65570640"
  Die **Browser** -Rolle sollte mit der **Systembenutzer** -Rolle verwendet werden. Zusammen ermöglichen die beiden Rollendefinitionen einen vollständigen Satz von Aufgaben für Benutzer, die mit Elementen auf einem Berichtsserver interagieren. Obwohl die **Browser** -Rolle den Sichtzugriff auf Berichte, Berichtsmodelle, Ordner und andere Elemente in der Ordnerhierarchie bietet, ermöglicht sie keinen Zugriff auf Elemente auf Websiteebene, z.B. freigegebene Zeitpläne, die beim Erstellen von Abonnements hilfreich sind. Aus diesem Grund wird empfohlen, eine zweite Rollenzuweisung auf Websiteebene zu erstellen, mit der Zugriff auf freigegebene Zeitpläne bereitgestellt wird.  
   
 ### <a name="browser-tasks"></a>Browseraufgaben  
- In der folgenden Tabelle sind die in der **Browser** -Rolle enthaltenen Aufgaben beschrieben.  
+ In der folgenden Tabelle werden die in der **Browser**-Rolle enthaltenen Aufgaben beschrieben:  
   
-|Task|Beschreibung|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
 |Ressourcen anzeigen|Ressourcen und Ressourceneigenschaften anzeigen.|  
@@ -131,9 +131,9 @@ ms.locfileid: "65570640"
  Die **Berichts-Generator** -Rolle ist eine vordefinierte Rolle, die Aufgaben zum Laden von Berichten im Berichts-Generator sowie zum Anzeigen der Ordnerhierarchie und zum Navigieren in der Hierarchie einschließt. Zum Erstellen und Ändern von Berichten im Berichts-Generator müssen Sie zudem über eine Systemrollenzuweisung verfügen, die die Aufgabe "Berichtsdefinitionen ausführen" einschließt, die für die lokale Verarbeitung von Berichten im Berichts-Generator erforderlich ist.  
   
 ### <a name="report-builder-tasks"></a>Berichts-Generator-Aufgaben  
- In der folgenden Tabelle sind die Aufgaben beschrieben, die die **Berichts-Generator** -Rolle einschließt.  
+ In der folgenden Tabelle werden die Aufgaben beschrieben, die die **Berichts-Generator**-Rolle einschließt:  
   
-|Task|Beschreibung|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Berichte anzeigen|Berichte ausführen und Berichtseigenschaften anzeigen.|  
@@ -151,18 +151,18 @@ ms.locfileid: "65570640"
  Die **Meine Berichte** -Rolle ist eine vordefinierte Rolle, die eine Reihe von Aufgaben einschließt, die für Benutzer der Funktion "Meine Berichte" hilfreich sind. Zu dieser Rollendefinition gehören Aufgaben, die Benutzern Administratorrechte für die den eigenen Ordner Meine Berichte gewähren.  
   
  Sie können zwar eine andere Rolle für die Funktion Meine Berichte auswählen, aber es wird empfohlen, eine Rolle ausschließlich für die Sicherheit von Meine Berichte zu verwenden. Weitere Informationen finden Sie unter [Sichern von Meine Berichte](../../reporting-services/security/secure-my-reports.md).  
-  
+                          
 ### <a name="my-reports-tasks"></a>Aufgaben in Meine Berichte  
- In der folgenden Tabelle sind die in der **Meine Berichte** -Rolle enthaltenen Aufgaben aufgeführt.  
+ In der folgenden Tabelle werden die in der **Meine Berichte**-Rolle enthaltenen Aufgaben aufgeführt:  
   
-|Task|Beschreibung|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf Berichten basieren, die im Ordner Meine Berichte des Benutzers gespeichert sind.|  
 |Ordner verwalten|Ordner erstellen, anzeigen und löschen sowie Ordnereigenschaften anzeigen und ändern.|  
 |Datenquellen verwalten|Freigegebene Datenquellenelemente erstellen und löschen, Datenquelleneigenschaften und Inhalt anzeigen und ändern.|  
 |Einzelne Abonnements verwalten|Abonnements für Berichte und verknüpfte Berichte erstellen, anzeigen, ändern und löschen.|  
 |Berichte verwalten|Berichte hinzufügen und löschen, Berichtsparameter ändern, Berichtseigenschaften anzeigen und ändern, Datenquellen, die Inhalt für den Bericht bereitstellen, anzeigen und ändern, Berichtsdefinitionen anzeigen und ändern sowie Sicherheitsrichtlinien auf Berichtsebene festlegen.|  
-|Ressourcen verwalten|Ressourcen erstellen, ändern und löschen sowie Ressourceneigenschaften anzeigen und ändern.|  
+|Ressourcen verwalten|Erstellen, Ändern und Löschen von Ressourcen sowie Anzeigen. und Ändern von Ressourceneigenschaften.|  
 |Berichte anzeigen|Berichte ausführen, die im Ordner Meine Berichte des Benutzers gespeichert sind, und Berichtseigenschaften anzeigen.|  
 |Datenquellen anzeigen|Freigegebene Datenquellenelemente in der Ordnerhierarchie anzeigen.|  
 |Ressourcen anzeigen|Ressourcen und Ressourceneigenschaften anzeigen.|  
@@ -176,18 +176,18 @@ ms.locfileid: "65570640"
 ##  <a name="bkmk_systemadministrator"></a> Systemadministrator-Rolle  
  Die **Systemadministrator** -Rolle ist eine vordefinierte Rolle mit Aufgaben, die für einen Berichtsserveradministrator hilfreich sind, der die allgemeine Verantwortung für einen Berichtsserver trägt, jedoch nicht notwendigerweise für den Inhalt auf dem Berichtsserver.  
   
- Wenn Sie eine Rollenzuweisung erstellen möchten, die diese Regel umfasst, verwenden Sie die Seite Siteeinstellungen im Berichts-Manager, oder verwenden Sie die Befehle, die durch Klicken mit der rechten Maustaste für den Berichtsserverknoten in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt werden.  
+ Wenn Sie eine Rollenzuweisung erstellen möchten, die diese Rolle umfasst, verwenden Sie die Seite Siteeinstellungen im Webportal, oder verwenden Sie die Befehle, die durch Klicken mit der rechten Maustaste für den Berichtsserverknoten in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]angezeigt werden.  
   
  Die **Systemadministrator** -Rolle vermittelt nicht denselben vollen Umfang an Berechtigungen, die ein lokaler Administrator möglicherweise für einen Computer besitzt. Die **Systemadministrator** -Rolle umfasst vielmehr Vorgänge, die auf Websiteebene und nicht auf Elementebene ausgeführt werden. Erstellen Sie für Benutzer, für die der Zugriff auf siteweite Vorgänge und auf Elemente erforderlich ist, die auf dem Berichtsserver gespeichert sind, eine zweite Rollenzuweisung für den Ordner Home, die die **Inhalts-Manager** -Rolle umfasst. Zusammen stellen die beiden Rollendefinitionen einen vollständigen Satz von Aufgaben für Benutzer bereit, die einen vollständigen Zugriff auf alle Elemente auf einem Berichtsserver benötigen.  
   
 ### <a name="system-administrator-tasks"></a>Systemadministratoraufgaben  
- In der folgenden Tabelle sind die in der **Systemadministrator** -Rolle enthaltenen Aufgaben aufgeführt.  
+ In der folgenden Tabelle werden die in der **Systemadministrator**-Rolle enthaltenen Aufgaben aufgeführt:  
   
-|Task|Beschreibung|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Ausführung der Berichtsdefinition, ohne die Veröffentlichung auf einem Berichtsserver zu starten.|  
 |Aufträge verwalten|Aufträge, die ausgeführt werden, anzeigen und abbrechen. Weitere Informationen finden Sie unter [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md).|  
-|Berichtsservereigenschaften verwalten|Eigenschaften für den Berichtsserver und für vom Berichtsserver verwaltete Elemente anzeigen und ändern.<br /><br /> Mit dieser Aufgabe können Sie den Berichts-Manager umbenennen, Meine Berichte aktivieren und Standardwerte für den Berichtsverlauf festlegen.|  
+|Berichtsservereigenschaften verwalten|Eigenschaften für den Berichtsserver und für vom Berichtsserver verwaltete Elemente anzeigen und ändern.<br /><br /> Mit dieser Aufgabe können Sie das Webportal umbenennen, Meine Berichte aktivieren und Standardwerte für den Berichtsverlauf festlegen.|  
 |Rollen verwalten|Rollendefinitionen erstellen, anzeigen, ändern und löschen.<br /><br /> Mitglieder der **Systemadministrator** -Rolle können mithilfe der Seite Siteeinstellungen Rollen verwalten.|  
 |Freigegebene Zeitpläne verwalten|Freigegebene Zeitpläne, mit denen Berichte ausgeführt oder aktualisiert werden, erstellen, anzeigen, ändern und löschen.|  
 |Berichtsserversicherheit verwalten|Systemweite Rollenzuweisungen anzeigen und ändern.|  
@@ -195,23 +195,24 @@ ms.locfileid: "65570640"
  Die **Systemadministrator** -Rolle wird für die Standardsicherheit verwendet.  
   
 ##  <a name="bkmk_systemuser"></a> Systembenutzer-Rolle  
- Die **Systembenutzer** -Rolle ist eine vordefinierte Rolle mit Aufgaben, mit denen Benutzer grundlegende Informationen zum Berichtsserver anzeigen können. Sie unterstützt außerdem das Laden eines Berichts im Berichts-Generator. Beim Berichts-Generator handelt es sich um eine Clientanwendung, die einen Bericht unabhängig von einem Berichtsserver verarbeiten kann. Die Aufgabe "Berichtsdefinitionen ausführen" ist zum Verwenden mit dem Berichts-Generator gedacht. Wenn Sie den Berichts-Generator nicht verwenden, können Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen. In der folgenden Tabelle sind die in der **Systembenutzer** -Rollendefinition enthaltenen Aufgaben aufgeführt.  
+Die **Systembenutzer** -Rolle ist eine vordefinierte Rolle mit Aufgaben, mit denen Benutzer grundlegende Informationen zum Berichtsserver anzeigen können. Sie unterstützt außerdem das Laden eines Berichts im Berichts-Generator. Beim Berichts-Generator handelt es sich um eine Clientanwendung, die einen Bericht unabhängig von einem Berichtsserver verarbeiten kann. Die Aufgabe "Berichtsdefinitionen ausführen" ist zum Verwenden mit dem Berichts-Generator gedacht. Wenn Sie den Berichts-Generator nicht verwenden, können Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen.  
+
+In der folgenden Tabelle werden die in der **Systembenutzer**-Rollendefinition enthaltenen Aufgaben aufgeführt:  
   
 ### <a name="system-user-tasks"></a>Systembenutzeraufgaben  
   
-|Task|Beschreibung|  
+|Task|und Beschreibung|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Führen Sie einen Bericht aus, ohne ihn auf einem Berichtsserver zu veröffentlichen.|  
-|Berichtsservereigenschaften anzeigen|Eigenschaften für den Berichtsserver anzeigen, wie z. B. den Anwendungsnamen, Standardwerte für den Berichtsverlauf sowie ob Meine Berichte aktiviert ist.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, ist die Seite Siteeinstellungen nicht verfügbar. Außerdem wird der Titel der Anwendung nicht oben auf jeder Seite angezeigt. Standardmäßig lautet der Titel für den Berichtsmanager "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
+|Berichtsservereigenschaften anzeigen|Eigenschaften für den Berichtsserver anzeigen, wie z. B. den Anwendungsnamen, Standardwerte für den Berichtsverlauf sowie ob die Einstellung „Meine Berichte“ aktiviert ist.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, ist die Seite Siteeinstellungen nicht verfügbar. Außerdem wird der Titel der Anwendung nicht oben auf jeder Seite angezeigt. Standardmäßig lautet der Titel für das Webportal „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]“.|  
 |Freigegebene Zeitpläne anzeigen|Freigegebene Zeitpläne anzeigen, mit denen Berichte ausgeführt oder aktualisiert werden.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, können Benutzer keine freigegebenen Zeitpläne für Abonnements und sonstige geplante Vorgänge auswählen.|  
   
  Mithilfe der **Systembenutzer** -Rolle kann die Standardsicherheit ergänzt werden. Sie können die Rolle in neuen Rollenzuweisungen verwenden, die den Berichtsserverzugriff auf Berichtsbenutzer erweitern. Weitere Informationen finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md)  
-  
+## <a name="see-also"></a>Siehe auch  
+[Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)  
+[Grant User Access to a Report Server (Gewähren von Benutzerzugriff auf einen Berichtsserver)](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
+[Ändern oder Löschen einer Rollenzuweisung &#40;SSRS-Webportal&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+[Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+[Tasks and Permissions (Aufgaben und Berechtigungen)](../../reporting-services/security/tasks-and-permissions.md)
   
