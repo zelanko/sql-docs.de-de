@@ -10,15 +10,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 836884e69fcc841f30f02f871b54d791d27d566b
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+manager: jroth
+ms.openlocfilehash: 15c9b05c418d300b7c65266826df552864d0a5b3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748463"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798085"
 ---
-# <a name="schema-compare-extension-preview"></a>Schema vergleichen-Erweiterung (Vorschau)
+# <a name="schema-compare-extension-preview"></a>Schemavergleicherweiterung (Vorschauversion)
 Der Schemavergleich-Erweiterung bietet eine benutzerfreundliche Oberfläche zum Vergleichen von DACPAC-Dateien und Datenbanken und Anwenden der Änderungen aus der Quelle zum Ziel.
 
 Diese Benutzeroberfläche befindet sich derzeit in der ersten Vorschauversion. Probleme melden und Funktionsanfragen [hier.](https://github.com/microsoft/azuredatastudio/issues)

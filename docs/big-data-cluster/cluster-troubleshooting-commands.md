@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Dieser Artikel enthält Befehle für die Überwachung und Problembehandlung von eines SQL Server-2019 big Data-Clusters (Vorschau).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994083"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800737"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Überwachung und Problembehandlung für SQL Server-big Data-Cluster
 
@@ -121,7 +121,7 @@ Die folgenden Dienste unterstützen, externe Verbindungen mit der big Data-Clust
 | **appproxy-svc-external** | Bereitstellungsszenarien für die Anwendung zu unterstützen. |
 
 > [!TIP]
-> Dies ist eine Möglichkeit zum Anzeigen der Dienste mit **"kubectl"**, aber es ist auch möglich, verwenden Sie `mssqlctl cluster endpoint list` Befehl, um diese Endpunkte anzuzeigen. Weitere Informationen finden Sie unter [erhalten Sie big Data-clusterendpunkte](deployment-guidance.md#endpoints).
+> Dies ist eine Möglichkeit zum Anzeigen der Dienste mit **"kubectl"** , aber es ist auch möglich, verwenden Sie `mssqlctl cluster endpoint list` Befehl, um diese Endpunkte anzuzeigen. Weitere Informationen finden Sie unter [erhalten Sie big Data-clusterendpunkte](deployment-guidance.md#endpoints).
 
 ## <a name="get-service-details"></a>Abrufen von Dienstdetails
 
@@ -242,7 +242,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> Wenn Sie den folgenden Fehler erhalten: *Kann nicht für das Lauschen an Port 8001: Alle Listener Fehler beim Erstellen der folgende Fehler auf: So erstellen Sie Listener kann nicht: Fehler beim Lauschen tcp4 127.0.0.1:8001: > binden: Nur eine Verwendung der einzelnen Socket-Adressen (Protokoll/Netzwerk-Adresse/Port) ist normalerweise zulässig. So erstellen Sie Listener kann nicht: Fehler beim Lauschen tcp6: Adresse [[:: 1]]: 8001: Port in der fehlende > Behandeln von Fehlern: Kann nicht auf die angeforderten Ports überwacht werden: [{8001 9090}]*, stellen Sie sicher, dass Sie nicht gestartet haben das Dashboard bereits von einem anderen Fenster.
+> Wenn Sie den folgenden Fehler erhalten: *Kann nicht für das Lauschen an Port 8001: Alle Listener Fehler beim Erstellen der folgende Fehler auf: So erstellen Sie Listener kann nicht: Fehler beim Lauschen tcp4 127.0.0.1:8001: > binden: Nur eine Verwendung der einzelnen Socket-Adressen (Protokoll/Netzwerk-Adresse/Port) ist normalerweise zulässig. So erstellen Sie Listener kann nicht: Fehler beim Lauschen tcp6: Adresse [[:: 1]]: 8001: Port in der fehlende > Behandeln von Fehlern: Kann nicht auf die angeforderten Ports überwacht werden: [{8001 9090}]* , stellen Sie sicher, dass Sie nicht gestartet haben das Dashboard bereits von einem anderen Fenster.
 
 Wenn Sie das Dashboard in Ihrem Browser starten, erhalten Sie möglicherweise die Berechtigung Warnungen aufgrund von RBAC in AKS-Clustern standardmäßig aktiviert und das Dienstkonto, das Dashboard ein, die keine ausreichende Berechtigungen zum Zugriff auf alle Ressourcen (z. B.  *Pods ist nicht zulässig: Benutzer "System: Serviceaccount:kube-System: Kubernetes-Dashboard" Pods im Namespace "Default" kann nicht aufgelistet werden*). Führen Sie den folgenden Befehl aus, um die erforderlichen Berechtigungen zum erteilen `kubernetes-dashboard`, und klicken Sie dann das Dashboard neu zu starten:
 

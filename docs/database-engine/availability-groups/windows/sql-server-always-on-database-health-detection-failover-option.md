@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+manager: jroth
+ms.openlocfilehash: 979061055a0d48af7c2eec809e3499a1e672ec9d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419965"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777576"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ Wenn Sie SQL Server Management Studio verwenden, stellen Sie eine Verbindung mit
 
 Eine Erläuterung der Felder finden Sie im Folgenden:
 
-|Spaltendaten | Beschreibung|
+|Spaltendaten | und Beschreibung|
 |---------|---------|
 |availability_group_id |Die ID der Verfügbarkeitsgruppe.|
 |availability_group_name |Der Name der Verfügbarkeitsgruppe.|
@@ -167,7 +167,7 @@ Eine Erläuterung der Felder finden Sie im Folgenden:
 
 In dieser Beispielausgabe zeigt „fault_type“, dass ein kritisches Ereignis auf der Verfügbarkeitsgruppe „Contoso-ag“ stattgefunden hat, die sich auf dem Replikat „SQLSERVER-1“ befindet. Der Grund dafür ist die Datenbank namens „AutoHaSample2“ mit dem Fehlertyp 2 (Herunterfahren).
 
-|Feld  | Wert|
+|Feld  | value|
 |---------|---------|
 |availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
 |availability_group_name | Contoso-ag|

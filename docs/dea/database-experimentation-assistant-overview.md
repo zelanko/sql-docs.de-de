@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 7f323042c8f33207478eadc4c61a235871644130
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 25b5d051f6241919f34a60a42582e8a101052290
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015134"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794460"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Übersicht über die für Datenbankexperimente
 
@@ -100,9 +100,9 @@ Diese Schritte zeigen, wie Sie auswählen, welche Ereignisse gesammelt werden un
 
 1.  Wechseln Sie zu dem Speicherort, in denen DEA installiert ist (z. B. "c:"\\Programmdateien (x86)\\Microsoft Corporation\\Database experimentieren Assistant).
 2.  Öffnen Sie die beiden .config-Dateien: DEA.exe.config (für die Anwendung) und DEACmd.exe.config (für die Azure CLI).
-3.  Um einen Typ von Ereignis erfassen zu beenden, legen Sie den Wert der *Ereignis* (z. B. **TraceEvent**) zu **"false"**. Um erfassen das Ereignis erneut zu starten, legen Sie den Wert auf **"true"**.
-4.  Um lokale Kopien der Ereignisse zu beenden, legen Sie den Wert der **TraceLoggerEnabled** zu **"false"**. Um lokale Kopien Speichervorgang zu starten, legen Sie den Wert auf **"true"**.
-5.  Zum Senden von Ereignissen an Microsoft zu beenden, legen Sie den Wert der **AppInsightsLoggerEnabled** zu **"false"**. Um für das Senden von Ereignissen an Microsoft ist es noch Mal zu starten, legen Sie den Wert auf **"true"**.
+3.  Um einen Typ von Ereignis erfassen zu beenden, legen Sie den Wert der *Ereignis* (z. B. **TraceEvent**) zu **"false"** . Um erfassen das Ereignis erneut zu starten, legen Sie den Wert auf **"true"** .
+4.  Um lokale Kopien der Ereignisse zu beenden, legen Sie den Wert der **TraceLoggerEnabled** zu **"false"** . Um lokale Kopien Speichervorgang zu starten, legen Sie den Wert auf **"true"** .
+5.  Zum Senden von Ereignissen an Microsoft zu beenden, legen Sie den Wert der **AppInsightsLoggerEnabled** zu **"false"** . Um für das Senden von Ereignissen an Microsoft ist es noch Mal zu starten, legen Sie den Wert auf **"true"** .
 
 DEA unterliegt der [Microsoft Privacy Statement](https://aka.ms/dea-privacy).
 

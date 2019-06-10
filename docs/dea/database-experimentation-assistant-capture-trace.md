@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 822f8d02a9bcaa27a405acdc351646fd63560880
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015168"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794494"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Erfassen einer Ablaufverfolgung im Datenbank-experimentieren-Assistenten
 
@@ -39,8 +39,8 @@ Abfrage in SQL Server-Cache kann die auswertungsergebnisse auswirken. Es wird em
     - **SQL Server-Instanzname**: Geben Sie einen Namen für den Computer mit SQL Server auf dem Sie eine serverablaufverfolgung erfassen möchten.
     - **Name der Datenbank**: Geben Sie einen Namen für eine Datenbank, in eine Datenbank-Ablaufverfolgung zu starten. Wenn Sie eine Datenbank nicht angeben, wird die Ablaufverfolgung für alle Datenbanken auf dem Server erfasst.
     - **Name der Ablaufverfolgungsdatei**: Geben Sie einen Namen für die Ablaufverfolgungsdatei für die Erfassung aus.
-    - **Maximale Dateigröße (MB)**: Wählen Sie die Rollover-Größe für Dateien. Wie die Größe der Datei benötigt wird, die Sie auswählen, wird eine neue Datei erstellt. Die empfohlene Rollover-Größe beträgt 200 MB.
-    - **Dauer (in Minuten)**: Wählen Sie die Zeitdauer (in Minuten) an, die die Ablaufverfolgung Erfassung ausgeführt werden sollen.
+    - **Maximale Dateigröße (MB)** : Wählen Sie die Rollover-Größe für Dateien. Wie die Größe der Datei benötigt wird, die Sie auswählen, wird eine neue Datei erstellt. Die empfohlene Rollover-Größe beträgt 200 MB.
+    - **Dauer (in Minuten)** : Wählen Sie die Zeitdauer (in Minuten) an, die die Ablaufverfolgung Erfassung ausgeführt werden sollen.
     - **Pfad zum Speichern der Datei Ablaufverfolgungsausgabe**: Wählen Sie den Zielpfad für die Ablaufverfolgungsdatei an. 
 
     > [!NOTE]

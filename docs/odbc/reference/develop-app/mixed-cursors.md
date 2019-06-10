@@ -1,7 +1,7 @@
 ---
 title: Gemischte Cursor | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,14 +18,15 @@ ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1905bc30afff4af0ffc74363b93f95732f4760f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef8d5142397b4169513cf262ba4126ccba1fc1c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63254180"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785842"
 ---
 # <a name="mixed-cursors"></a>Gemischte Cursor
+
 Ein gemischte Cursor ist eine Kombination eines keysetgesteuerten Cursors und einen dynamischen Cursor. Es wird verwendet, wenn das Resultset zu groß, um den Schlüssel für das gesamte Resultset angemessen zu speichern ist. Gemischte Cursor werden implementiert, erstellen Sie eine Keyset, die kleiner als das gesamte Resultset jedoch größer als das Rowset ist.  
   
  Solange die Anwendung innerhalb des Keysets einen Bildlauf durchführt, ist das Verhalten keysetgesteuerte. Wenn die Anwendung außerhalb der Keyset einen Bildlauf durchführt, ist das Verhalten dynamischer: Der Cursor die angeforderten Zeilen und erstellt eine neue Keyset. Nachdem das neue Keyset erstellt wurde, wird das Verhalten innerhalb der, dass sich keysetgesteuerte keysetgesteuerte wiederhergestellt.  

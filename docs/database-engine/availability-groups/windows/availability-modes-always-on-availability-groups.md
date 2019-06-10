@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+manager: jroth
+ms.openlocfilehash: 6e25840a2dfe52bb6d6c9e1584e12aceaa862f0a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53206369"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781063"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Unterschiede zwischen den Verfügbarkeitsmodi von Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+manager: jroth
+ms.openlocfilehash: 510331bd244ced57494566c9508485d5dd4c90e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306167"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789435"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Verwenden von automatischem Seeding zum Initialisieren eines sekundären Replikats für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Bei SQL Server 2012 und 2014 ist die einzige Möglichkeit, ein sekundäres Replikat in einer SQL Server Always On-Verfügbarkeitsgruppe zu initialisieren, die Verwendung von Sicherung, Kopieren und Wiederherstellung. SQL Server 2016 führt eine neue Funktion zum Initialisieren eines sekundären Replikats ein – das *automatische Seeding*. Das automatische Seeding verwendet die Übermittlung durch Protokollstream, um die Sicherung mit VDI für jede Datenbank der Verfügbarkeitsgruppe mit konfigurierten Endpunkten an das sekundäre Replikat zu streamen. Diese neue Funktion kann verwendet werden, wenn eine Verfügbarkeitsgruppe erstellt wird oder wenn ihr eine Datenbank hinzugefügt wird. Das automatische Seeding ist in allen Versionen von SQL Server verfügbar, die Always On-Verfügbarkeitsgruppen unterstützen, und kann sowohl mit herkömmlichen als auch mit [verteilten Verfügbarkeitsgruppen](distributed-availability-groups.md) verwendet werden.
 
-## <a name="considerations"></a>Weitere Überlegungen
+## <a name="security"></a>Security
 
-Überlegungen zur Verwendung des automatischen Seedings beinhalten:
+Die Sicherheitsberechtigungen variieren je nach Art des Replikats, das initialisiert wird:
 
-* [Auswirkungen von Leistung und Transaktionsprotokoll auf das primäre Replikat](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Datenträgerlayout](#disklayout)
-* [Sicherheit](#security)
+* Bei einer herkömmlichen Verfügbarkeitsgruppe müssen der Verfügbarkeitsgruppe auf dem sekundären Replikat Berechtigungen gewährt werden, wenn dieses mit der Verfügbarkeitsgruppe verknüpft wird. Verwenden Sie in Transact-SQL den Befehl `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
+* Bei einer verteilten Verfügbarkeitsgruppe, bei der sich die erstellten Datenbanken des Replikats auf dem primären Replikat der sekundären Verfügbarkeitsgruppe befinden, sind keine zusätzlichen Berechtigungen erforderlich, da es sich bereits um ein primäres Replikat handelt.
+* Bei einem sekundären Replikat auf der sekundären Verfügbarkeitsgruppe einer verteilten Verfügbarkeitsgruppe müssen Sie den Befehl `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE` verwenden. Für dieses sekundäre Replikat wird ein Seeding vom primären Replikat der sekundären Verfügbarkeitsgruppe durchgeführt.
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Auswirkungen von Leistung und Transaktionsprotokoll auf das primäre Replikat
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Auswirkungen von Leistung und Transaktionsprotokoll auf das primäre Replikat
 
 Ob das automatische Seeding beim Initialisieren eines sekundären Replikats hilfreich ist, hängt von der Größe der Datenbank, der Netzwerkgeschwindigkeit und der Entfernung zwischen dem primären und dem sekundären Replikat ab. Zum Beispiel kann Folgendes gegeben sein:
 
@@ -49,7 +48,7 @@ Das automatische Seeding ist ein Singlethreadprozess, der bis zu fünf Datenbank
 
 Die Komprimierung kann für das automatische Seeding verwendet werden, ist aber in der Standardeinstellung deaktiviert. Das Aktivieren der Komprimierung reduziert die Netzwerkbandbreite und beschleunigt möglicherweise den Prozess, führt jedoch zu zusätzlichem Prozessoroverhead. Aktivieren Sie das Ablaufverfolgungsflag 9567, um die Komprimierung während des automatischen Seedings zu verwenden. Siehe dazu [Optimieren der Komprimierung für die Verfügbarkeitsgruppe](tune-compression-for-availability-group.md).
 
-### <a name = "disklayout"></a> Datenträgerlayout
+## <a name = "disklayout"></a> Datenträgerlayout
 
 Bis SQL Server 2016 muss der Ordner, in dem die Datenbank durch das automatische Seeding erstellt wird, bereits vorhanden und mit dem Pfad auf dem primären Replikat identisch sein. 
 
@@ -81,13 +80,6 @@ Beim Kombinieren von Standard- und Nicht-Standardpfaden auf den primären und se
 
 Aktivieren Sie das Ablaufverfolgungsflag 9571, um das Verhalten von SQL Server 2016 (und früher) wiederherzustellen. Weitere Informationen zum Aktivieren von Ablaufverfolgungsflags finden Sie unter [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
-### <a name="security"></a>Security
-
-Die Sicherheitsberechtigungen variieren je nach Art des Replikats, das initialisiert wird:
-
-* Bei einer herkömmlichen Verfügbarkeitsgruppe müssen der Verfügbarkeitsgruppe auf dem sekundären Replikat Berechtigungen gewährt werden, wenn dieses mit der Verfügbarkeitsgruppe verknüpft wird. Verwenden Sie in Transact-SQL den Befehl `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* Bei einer verteilten Verfügbarkeitsgruppe, bei der sich die erstellten Datenbanken des Replikats auf dem primären Replikat der sekundären Verfügbarkeitsgruppe befinden, sind keine zusätzlichen Berechtigungen erforderlich, da es sich bereits um ein primäres Replikat handelt.
-* Bei einem sekundären Replikat auf der sekundären Verfügbarkeitsgruppe einer verteilten Verfügbarkeitsgruppe müssen Sie den Befehl `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE` verwenden. Für dieses sekundäre Replikat wird ein Seeding vom primären Replikat der sekundären Verfügbarkeitsgruppe durchgeführt.
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>Erstellen einer Verfügbarkeitsgruppe mit automatischem Seeding
 
@@ -160,7 +152,7 @@ Wenn das sekundäre Replikat das automatische Seeding verwendet hat, als es zur 
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Ändern des Seedingmodus eines Replikats
 
-Der Seedingmodus eines Replikats kann geändert werden, nachdem die Verfügbarkeitsgruppe erstellt wurde, und das automatische Seeding kann so aktiviert oder deaktiviert werden. Das Aktivieren des automatischen Seedings nach dem Erstellen ermöglicht, dass eine Datenbank zur Verfügbarkeitsgruppe hinzugefügt werden kann, die automatisches Seeding verwendet, wenn Sie mit Sichern, Kopieren und Wiederherstellen erstellt wurde. Zum Beispiel:
+Der Seedingmodus eines Replikats kann geändert werden, nachdem die Verfügbarkeitsgruppe erstellt wurde, und das automatische Seeding kann so aktiviert oder deaktiviert werden. Das Aktivieren des automatischen Seedings nach dem Erstellen ermöglicht, dass eine Datenbank zur Verfügbarkeitsgruppe hinzugefügt werden kann, die automatisches Seeding verwendet, wenn Sie mit Sichern, Kopieren und Wiederherstellen erstellt wurde. Beispiel:
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -240,7 +232,7 @@ GO
 
 Die folgende Tabelle enthält erweiterte Ereignisse, die sich auf automatisches Seeding beziehen.
 
-|Name|Beschreibung|
+|Name|und Beschreibung|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|Seedinganforderungsnachricht.|
 |hadr_physical_seeding_backup_state_change|Statusänderung auf der Sicherungsseite für das physische Seeding.|

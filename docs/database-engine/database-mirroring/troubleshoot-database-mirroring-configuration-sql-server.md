@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 1655124738d88ecfd154d934bceef9c1b0236dcf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257185"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795114"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54257185"
 |[Netzwerkzugriff](#NetworkAccess)|Dokumentiert die Anforderung, dass jeder Serverinstanz der Zugriff auf die Ports der anderen Serverinstanz bzw. Serverinstanzen über TCP ermöglicht werden muss.|  
 |[Vorbereitung der Spiegeldatenbank](#MirrorDbPrep)|Gibt einen Überblick über die Anforderungen zum Vorbereiten der Spiegeldatenbank, sodass die Spiegelung beginnen kann.|  
 |[Fehler bei einem Dateierstellungsvorgang](#FailedCreateFileOp)|Beschreibt, wie auf Fehler bei einem Dateierstellungsvorgang zu reagieren ist.|  
-|[Starten der Spiegelung mit Transact-SQL](#StartDbm)|Beschreibt, welche Reihenfolge für ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** -Anweisungen eingehalten werden muss.|  
+|[Starten der Spiegelung mit Transact-SQL](#StartDbm)|Beschreibt, welche Reihenfolge für ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** -Anweisungen eingehalten werden muss.|  
 |[Datenbankübergreifende Transaktionen](#CrossDbTxns)|Ein automatisches Failover kann zu einer automatischen und möglicherweise falschen Auflösung von unsicheren Transaktionen führen. Aus diesem Grund werden datenbankübergreifende Transaktionen von der Datenbankspiegelung nicht unterstützt.|  
   
 ##  <a name="Accounts"></a> Konten  
@@ -144,7 +144,7 @@ ms.locfileid: "54257185"
  Weitere Informationen finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md), or [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Starten der Spiegelung mit Transact-SQL  
- Die Reihenfolge, in der ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** -Anweisungen ausgegeben werden, ist von großer Bedeutung.  
+ Die Reihenfolge, in der ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** -Anweisungen ausgegeben werden, ist von großer Bedeutung.  
   
 1.  Die erste Anweisung muss auf dem Spiegelserver ausgeführt werden. Wird diese Anweisung ausgegeben, versucht der Spiegelserver nicht, Kontakt zu anderen Serverinstanzen aufzunehmen. Stattdessen weist der Spiegelserver die Datenbank an, so lange zu warten, bis der Prinzipalserver Kontakt mit dem Spiegelserver aufgenommen hat.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f9ca00c2390ef0a03369ac21cfe02fcf7ed01392
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156076"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794377"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -115,7 +115,7 @@ Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden T
 |**serverName** | Die Namen der SQL Server-Instanz des Bestands Verwendung **SqlServer** in die **GetServerListFrom** Parameter. |
 |**databaseName** | Die Datenbank, die die Bestandstabelle hosten. |
 |**%Assessmentname** | Der Name des der DMA-Bewertung. |
-|**TargetPlatform** | Der Zieltyp für die Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **"azuresqldatabase"**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, **SQLServerWindows2017**, und **ManagedSqlServer**. |
+|**TargetPlatform** | Der Zieltyp für die Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **"azuresqldatabase"** , **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, **SQLServerWindows2017**, und **ManagedSqlServer**. |
 |**AuthenticationMethod** | Die Authentifizierungsmethode für die Verbindung mit der SQL Server-Ziele, die Sie bewerten möchten. Mögliche Werte sind **SQLAuth** und **WindowsAuth**. |
 |**OutputLocation** | Das Verzeichnis, in dem die JSON-Speicherung Bewertung der Ausgabedatei. Abhängig von der Anzahl der Datenbanken, die bewertet wird und die Anzahl der Objekte in Datenbanken können die Bewertungen außergewöhnlich lange dauern. Nachdem alle Bewertungen abgeschlossen haben, wird die Datei geschrieben werden. |
 
@@ -133,7 +133,7 @@ Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabel
 
 |Parameter  |Description |
 |---------|---------|
-|**processTo** | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"**. |
+|**processTo** | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"** . |
 |**serverName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (nicht enthalten. database.windows.net). Sie werden für zwei Anmeldungen aufgefordert werden, bei der Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
 |**CreateDMAReporting** | Die Stagingdatenbank, für die Verarbeitung der JSON-Datei zu erstellen.  Wenn die Datenbank bereits vorhanden ist, und legen Sie diesen Parameter auf einen, klicken Sie dann Objekte nicht erstellt.  Dieser Parameter ist hilfreich für Sie neu erstellen ein einzelnes Objekt, das gelöscht wurde. |
 |**CreateDataWarehouse** | Erstellt die Datawarehouse, das von Power BI-Bericht verwendet wird. |

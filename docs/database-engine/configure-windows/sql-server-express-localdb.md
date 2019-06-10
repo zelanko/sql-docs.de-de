@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 53b55ce0449dfd4eb415ee49ac29ac3cb493e111
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779512"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794110"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -34,7 +34,7 @@ Bei der Installation von LocalDB wird ein minimalen Satz von Dateien kopiert, de
 
 ## <a name="try-it-out"></a>Probieren Sie es aus. 
 
-- Um SQL Server Express LocalDB herunterzuladen und zu installieren, navigieren Sie zur Seite **[Downloads für SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie **Express Advanced** oder das LocalDB-Paket aus. Im **Visual Studio-Installer** können Sie SQL Server Express LocalDB als Teil der Workload **.NET-Desktopentwicklung** oder als einzelne Komponente installieren.
+- Um SQL Server Express LocalDB herunterzuladen und zu installieren, navigieren Sie zur Seite **[Downloads für SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie **Express Advanced** oder das LocalDB-Paket aus. Im **Visual Studio-Installer** können Sie SQL Server Express LocalDB als Teil der Workload **.NET-Desktopentwicklung** oder als einzelne Komponente installieren.
 
  >[!TIP]
  > Sie können LocalDB auch als Teil von Visual Studio installieren. Wählen Sie während der Installation von Visual Studio die Workload **.NET-Desktopentwicklung** aus, in der SQL Server Express LocalDB enthalten ist.
@@ -49,7 +49,7 @@ Wählen Sie während der Installation auf der Seite **Featureauswahl/Freigegeben
 
 Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB wird mit dem Hilfsprogramm `SqlLocalDB.exe` verwaltet. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB sollte anstelle des veralteten [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]-Benutzerinstanzfeatures verwendet werden.
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>und Beschreibung
 
 Das LocalDB-Setupprogramm installiert mithilfe von `SqlLocalDB.msi` die notwendigen Dateien auf dem Computer. Nach der Installation ist LocalDB eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert, der normalerweise verborgen ist. Beispiel: `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner `C:\Users\<user>\Documents\`.
 
