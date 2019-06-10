@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8029d83fd51d126a4ca6bdc8ae69e61536c2aa3d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582893"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802362"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,16 +59,16 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     In der folgenden Tabelle sind die Elemente des Arrays beschrieben.  
   
-    |Element|Beschreibung|  
+    |Element|und Beschreibung|  
     |-----------|---------------|  
     |*&$value*|Ein Literalwert oder ein Verweis auf eine PHP-Variable.|  
     |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\*** -Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[OPTIONAL]|Eine **SQLSRV_PHPTYPE_\***-Konstante, die den PHP-Datentyp des zurückgegebenen Werts angibt.|  
-    |*$sqlType*[OPTIONAL]|Eine **SQLSRV_SQLTYPE_\***-Konstante, die den SQL Server-Datentyp des Eingabewerts angibt.|  
+    |*$phpType*[OPTIONAL]|Eine **SQLSRV_PHPTYPE_\*** -Konstante, die den PHP-Datentyp des zurückgegebenen Werts angibt.|  
+    |*$sqlType*[OPTIONAL]|Eine **SQLSRV_SQLTYPE_\*** -Konstante, die den SQL Server-Datentyp des Eingabewerts angibt.|  
   
 *$options* [OPTIONAL]: Ein assoziatives Array, das <a name="properties">Abfrageeigenschaften</a> festlegt. In der folgenden Tabelle sind die unterstützten Schlüssel und die entsprechenden Werte aufgeführt:
 
-|Key|Unterstützte Werte|Beschreibung|  
+|Key|Unterstützte Werte|und Beschreibung|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Positive Ganzzahl|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10240 KB. Weitere Informationen finden Sie unter [Festlegen eines Cursortyps und Auswählen von Zeilen](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |Dezimalstellenanzeige|Eine ganze Zahl zwischen 0 und 4|Gibt die Dezimalstellen beim Formatieren abgerufener Geldwerte (Werte des Datentyps „money“) an.<br /><br />Negative ganze Zahlen oder Werte größer als 4 werden ignoriert.<br /><br />Diese Option funktioniert nur, wenn „FormatDecimals“ auf **true** festgelegt ist.|

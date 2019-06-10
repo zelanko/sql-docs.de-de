@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aefee98fefc5ae0b47ce3ea734580799c8abe57c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e4bf2ae4330a98d810d0d3291f0045834b8927d3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799324"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Vorgehensweise: Abrufen von Binärdaten als Stream mithilfe des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ Im folgenden Beispiel werden Binärdaten, z. B. ein Bild, aus der *Production.Pr
   
 Das Abrufen von Bilddaten als Stream erfolgt mithilfe von [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) und [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) mit einem binären Stream als Rückgabetyp. Der Rückgabetyp wird unter Verwendung der Konstanten **SQLSRV_PHPTYPE_STREAM** angegeben. Informationen zu **sqlsrv**-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über den Browser ausgeführt wird, werden alle Ausgaben im Browser geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über den Browser ausgeführt wird, werden alle Ausgaben im Browser geschrieben.  
   
 ```  
 <?php  
@@ -90,7 +90,7 @@ sqlsrv_close( $conn);
   
 Die Angabe des Rückgabetyps im Beispiel veranschaulicht, wie der PHP-Rückgabetyp als binärer Stream angegeben wird. Technisch gesehen ist dieser im Beispiel nicht erforderlich, weil das *LargePhoto*-Feld den SQL Server-Typ „varbinary(max)“ aufweist und dieser daher standardmäßig als binärer Stream zurückgegeben wird. Informationen zu PHP-Datentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Weitere Informationen zum Angeben von PHP-Rückgabetypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
 [Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

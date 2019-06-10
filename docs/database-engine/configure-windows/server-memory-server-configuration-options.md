@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e3d3a6524d0f7e791628ec664bc9b5df17a0e529
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: b3fd6813d68dd1562a001206d759ebd09f34ef12
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042189"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771923"
 ---
 # <a name="server-memory-server-configuration-options"></a>Serverkonfigurationsoptionen für den Serverarbeitsspeicher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Die Standardeinstellung für **Minimaler Serverarbeitsspeicher** ist 0; für **M
 Die minimal zulässige Arbeitsspeichermenge für **Max. Serverarbeitsspeicher** beträgt 128 MB.
   
 > [!IMPORTANT]  
-> Die Festlegung von **Max. Serverarbeitsspeicher** auf einen zu hohen Wert kann dazu führen, dass eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise in Konkurrenz mit anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen gerät, die auf dem gleichen Host aufgeführt werden. Die Festlegung auf einen zu niedrigen Wert kann jedoch zu erheblichem Arbeitsspeichermangel und entsprechenden Leistungsproblemen führen. Das Festlegen von **Max. Serverarbeitsspeicher** auf den Minimalwert kann sogar den Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindern. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht gestartet werden kann, müssen Sie den Start mithilfe der Startoption **_-f_** durchführen und die Option **Max. Serverarbeitsspeicher** auf ihren vorherigen Wert zurücksetzen. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Die Festlegung von **Max. Serverarbeitsspeicher** auf einen zu hohen Wert kann dazu führen, dass eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise in Konkurrenz mit anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen gerät, die auf dem gleichen Host aufgeführt werden. Die Festlegung auf einen zu niedrigen Wert kann jedoch zu erheblichem Arbeitsspeichermangel und entsprechenden Leistungsproblemen führen. Das Festlegen von **Max. Serverarbeitsspeicher** auf den Minimalwert kann sogar den Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindern. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht gestartet werden kann, müssen Sie den Start mithilfe der Startoption ** _-f_** durchführen und die Option **Max. Serverarbeitsspeicher** auf ihren vorherigen Wert zurücksetzen. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Arbeitsspeicher dynamisch verwenden. Sie können die Speicheroptionen jedoch auch manuell festlegen und den Umfang des für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifbaren Arbeitsspeichers einschränken. Bevor Sie den Umfang des Arbeitsspeichers für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festlegen, sollten Sie die geeignete Arbeitsspeichereinstellung ermitteln. Ziehen Sie dazu vom gesamten physischen Speicher den Arbeitsspeicher ab, der für das Betriebssystem, für nicht durch die Einstellung „max_server_memory“ gesteuerte Speicherbelegungen und für alle weiteren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erforderlich ist. (Falls der Computer nicht vollständig für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserviert ist, müssen Sie zusätzlich auch den für andere Verwendungen des Systems benötigten Arbeitsspeicher abziehen.) Die Differenz entspricht der maximalen Arbeitsspeichergröße, die Sie der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zuweisen können.  
  
@@ -56,7 +56,7 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
   
 <a name="max_server_memory"></a> Verwenden Sie **max_server_memory**, um sicherzustellen, dass beim Betriebssystem kein nachteiliger Arbeitsspeichermangel eintritt. Um den maximalen Serverarbeitsspeicher zu konfigurieren, überwachen Sie den Gesamtverbrauch des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses, um die Arbeitsspeicheranforderungen zu bestimmen. Hier folgen genauere Angaben für diese Berechnungen für eine Einzelinstanz:
  -  Reservieren Sie vom gesamten Arbeitsspeicher des Betriebssystems 1 GB–4 GB für das Betriebssystem selbst.
- -  Subtrahieren Sie anschließend das Äquivalent der potenziellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsspeicherbelegungen außerhalb des Steuerelements **Max. Serverarbeitsspeicher**, die sich aus **_Stapelgröße <sup>1</sup> × max. Anzahl der berechneten Arbeitsthreads <sup>2</sup> + Startparameter „-g“ <sup>3</sup>_** zusammensetzen (oder standardmäßig 256 MB, wenn *-g* nicht angegeben wird). Der Rest sollte die Einstellung „max_server_memory“ für die Einrichtung einer einzelnen Instanz bilden.
+ -  Subtrahieren Sie anschließend das Äquivalent der potenziellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsspeicherbelegungen außerhalb des Steuerelements **Max. Serverarbeitsspeicher**, die sich aus **_Stapelgröße <sup>1</sup> × max. Anzahl der berechneten Arbeitsthreads <sup>2</sup> + Startparameter „-g“ <sup>3</sup>_ ** zusammensetzen (oder standardmäßig 256 MB, wenn *-g* nicht angegeben wird). Der Rest sollte die Einstellung „max_server_memory“ für die Einrichtung einer einzelnen Instanz bilden.
  
 <sup>1</sup> Informationen zu den Threadstapelgrößen der einzelnen Architekturen finden Sie im [Handbuch zur Architektur der Speicherverwaltung](../../relational-databases/memory-management-architecture-guide.md#stacksizes).
 

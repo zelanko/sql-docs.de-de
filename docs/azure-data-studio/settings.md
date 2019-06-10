@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 883c0c98531311d77754fcbcdd86615283aecdc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312839"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798073"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Benutzer und Arbeitsbereichseinstellungen ändern
 
@@ -31,7 +31,7 @@ Es ist leicht zu konfigurierender [!INCLUDE[name-sos](../includes/name-sos-short
 
 Der Menübefehl **Datei** > **Voreinstellungen** > **Einstellungen** (**Code**  >  **Voreinstellungen** > **Einstellungen** auf Mac) stellt den Einstiegspunkt zum Konfigurieren von Einstellungen für Benutzer und -Arbeitsbereich bereit. Sie werden eine Liste mit den Standardeinstellungen bereitgestellt. Kopieren Sie jede Einstellung, die Sie in den entsprechenden ändern möchten `settings.json` Datei. Die Registerkarten auf der rechten Seite können Sie schnell zwischen den Einstellungen für Benutzer und -Arbeitsbereich zu wechseln.
 
-Sie können auch die Einstellungen für Benutzer und -Arbeitsbereich aus öffnen die **Befehlspalette** (**STRG + UMSCHALT + P**) mit **Einstellungen: Öffnen Sie die Benutzereinstellungen** und **Einstellungen: Öffnen Sie die Einstellungen für Systemarbeitsbereich** oder verwenden Sie die Tastenkombination (**STRG +,**).
+Sie können auch die Einstellungen für Benutzer und -Arbeitsbereich aus öffnen die **Befehlspalette** (**STRG + UMSCHALT + P**) mit **Einstellungen: Öffnen Sie die Benutzereinstellungen** und **Einstellungen: Öffnen Sie die Einstellungen für Systemarbeitsbereich** oder verwenden Sie die Tastenkombination (**STRG +,** ).
 
 Das folgende Beispiel deaktiviert die Zeilennummern im Editor und Codezeilen automatisch eingezogen werden konfiguriert.
 

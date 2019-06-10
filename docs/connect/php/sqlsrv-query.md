@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4c504228d94fb8642bb024128f4a8079d64a610
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: f04a41647f9d7bfb20551896fb1717dd8d200a98
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582823"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802378"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,12 +56,12 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
     Die Beschreibung für jedes Element des Arrays finden Sie in der folgenden Tabelle:  
   
-    |Element|Beschreibung|  
+    |Element|und Beschreibung|  
     |-----------|---------------|  
     |*$value*|Ein Literalwert, eine PHP-Variable oder eine PHP-Variable als Verweis.|  
     |*$direction*[OPTIONAL]|Eine der folgenden verwendeten **SQLSRV_PARAM_\*** -Konstanten, um die Parameterrichtung anzugeben: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Der Standardwert ist **SQLSRV_PARAM_IN**.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[OPTIONAL]|Eine **SQLSRV_PHPTYPE_\***-Konstante, die den PHP-Datentyp des zurückgegebenen Werts angibt.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$sqlType*[OPTIONAL]|Eine **SQLSRV_SQLTYPE_\***-Konstante, die den SQL Server-Datentyp des Eingabewerts angibt.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[OPTIONAL]|Eine **SQLSRV_PHPTYPE_\*** -Konstante, die den PHP-Datentyp des zurückgegebenen Werts angibt.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$sqlType*[OPTIONAL]|Eine **SQLSRV_SQLTYPE_\*** -Konstante, die den SQL Server-Datentyp des Eingabewerts angibt.<br /><br />Weitere Informationen zu PHP-Konstanten finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
 *$options* [OPTIONAL]: Ein assoziatives Array, das Abfrageeigenschaften festlegt. Es handelt sich um die gleiche Liste von Schlüsseln, die auch [Sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) unterstützt.
   
