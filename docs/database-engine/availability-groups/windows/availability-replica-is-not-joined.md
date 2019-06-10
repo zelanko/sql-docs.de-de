@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1be357ee98027d66f327e518a43947e3611fe119
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 93855743e4dd076d26c1b68a0137012c6fdf9f3a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203649"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782648"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>Verfügbarkeitsreplikat ist nicht mit einer Always On-Verfügbarkeitsgruppe verknüpft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53203649"
 |**Kategorie**|**Warnung**|  
 |**Facet**|Verfügbarkeitsreplikat|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>und Beschreibung  
  Diese Richtlinie überprüft den Verknüpfungsstatus des Verfügbarkeitsreplikats. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn der Verfügbarkeitsgruppe das Verfügbarkeitsreplikat hinzugefügt, aber nicht ordnungsgemäß damit verknüpft wird. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  
