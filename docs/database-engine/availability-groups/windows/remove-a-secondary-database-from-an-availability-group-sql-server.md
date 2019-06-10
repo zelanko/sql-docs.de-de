@@ -16,47 +16,28 @@ helpviewer_keywords:
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1c8c5fe88e1b3c95abd435558b0565960ba25ebf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213549"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801023"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie eine sekundäre Datenbank mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]aus einer Always On-Verfügbarkeitsgruppe entfernt wird.  
+   
   
--   **Vorbereitungen:**  
-  
-     [Erforderliche Komponenten](#Prerequisites)  
-  
-     [Sicherheit](#Security)  
-  
--   **So entfernen Sie eine sekundäre Datenbank mit**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Nachverfolgung:**  [Nach dem Entfernen einer sekundären Datenbank aus einer Verfügbarkeitsgruppe](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
+##  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
   
 -   Dieser Task wird nur für sekundäre Replikate unterstützt. Sie müssen mit der Serverinstanz verbunden sein, auf der das sekundäre Replikat gehostet wird, aus dem die Datenbank entfernt werden soll.  
   
-###  <a name="Security"></a> Sicherheit  
-  
-####  <a name="Permissions"></a> Berechtigungen  
+ 
+##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So entfernen Sie eine sekundäre Datenbank aus einer Verfügbarkeitsgruppe**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, auf der das sekundäre Replikat gehostet wird, aus dem Sie mindestens eine sekundäre Datenbanken entfernen möchten, und erweitern Sie die Serverstruktur.  

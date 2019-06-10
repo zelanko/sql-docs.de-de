@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5550a1151ed0fb71a769e7990d9cd47b3e9b0e47
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 93f38f8e703aabc765d3badc91393eb130081c99
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089698"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797971"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Sichern und Wiederherstellen von Datenbanken mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -30,7 +30,7 @@ In diesem Tutorial erfahren Sie, wie Sie mit [!INCLUDE[name-sos](../includes/nam
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-In diesem Tutorial ist die SQL Server *"tutorialdb"*. Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
+In diesem Tutorial ist die SQL Server *"tutorialdb"* . Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
 
 - [Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
@@ -38,7 +38,7 @@ Dieses Lernprogramm erfordert die Verbindung mit einer SQL Server-Datenbank. Azu
 
 ## <a name="backup-a-database"></a>Sichern einer Datenbank
 
-1. Öffnen Sie das Datenbank-Dashboard "tutorialdb" (Öffnen Sie die **Server** Randleiste (**STRG + G**), erweitern Sie **Datenbanken**, mit der rechten Maustaste **"tutorialdb"**, und wählen Sie **verwalten**).
+1. Öffnen Sie das Datenbank-Dashboard "tutorialdb" (Öffnen Sie die **Server** Randleiste (**STRG + G**), erweitern Sie **Datenbanken**, mit der rechten Maustaste **"tutorialdb"** , und wählen Sie **verwalten**).
 
 2. Öffnen der **datenbanksicherung** Dialogfeld (klicken Sie auf **Sicherung** auf die **Aufgaben** Widget).
 
@@ -68,7 +68,7 @@ Nach dem Klicken auf **Backup**, **datenbanksicherung** Dialogfeld nicht mehr an
 
 2. Wählen Sie **Sicherungsdatei** in die **wiederherstellen aus** Feld. 
 
-3. Klicken Sie auf die Auslassungspunkte (...) in der **Dateipfad der Zertifikatsicherung** ein, und wählen Sie die neuesten Sicherungsdatei für *"tutorialdb"*.
+3. Klicken Sie auf die Auslassungspunkte (...) in der **Dateipfad der Zertifikatsicherung** ein, und wählen Sie die neuesten Sicherungsdatei für *"tutorialdb"* .
 
 3. Typ **TutorialDB_Restored** in die **Zieldatenbank** -Feld in der **Ziel** Abschnitt aus, um die Sicherungsdatei in einer neuen Datenbank wiederherzustellen.
 
