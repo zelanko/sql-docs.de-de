@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS) | Microsoft-Dokumentation
-ms.date: 03/14/2017
+ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c0c170a76ee14b609ebc98fdc2232b611a11749e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580427"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403266"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)
   Für die Bereitstellung eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservers unter einem der folgenden Betriebssysteme sind weitere Konfigurationsschritte erforderlich, wenn die Berichtsserverinstanz lokal verwaltet werden soll. In diesem Thema wird beschrieben, wie der Berichtsserver für die lokale Verwaltung konfiguriert wird. Wenn Sie den Berichtsserver noch nicht installiert oder konfiguriert haben, lesen Sie [Installieren von SQL Server über den Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) und [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "65580427"
   
 -   [Übersicht der Konfigurationsänderungen](#bkmk_configuraiton_overview)  
   
--   [So konfigurieren Sie den Berichtsserver und den Berichts-Manager für die lokale Verwaltung](#bkmk_configure_local_server)  
+-   [So konfigurieren Sie den lokalen Berichtsserver und die Webportalverwaltung](#bkmk_configure_local_server)  
   
 -   [So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichtsservers](#bkmk_configure_ssms)  
   
@@ -64,18 +64,18 @@ ms.locfileid: "65580427"
   
 -   Erstellen Sie Rollenzuweisungen, die Ihnen als Berichtsserveradministrator die Berechtigung zur Verwaltung von Inhalt und Vorgängen verleihen, ohne die Funktion **Als Administrator ausführen** in Internet Explorer verwenden zu müssen. Durch das Erstellen von Rollenzuweisungen für Ihr Windows-Benutzerkonto erhalten Sie Zugriff auf einen Berichtsserver mit Inhalts-Manager- und Systemadministratorberechtigungen durch explizite Rollenzuweisungen, die die vordefinierten, integrierten Rollenzuweisungen ersetzen, die von Reporting Services erstellt werden.  
   
-##  <a name="bkmk_configure_local_server"></a> So konfigurieren Sie den Berichtsserver und den Berichts-Manager für die lokale Verwaltung  
+##  <a name="bkmk_configure_local_server"></a> So konfigurieren Sie den lokalen Berichtsserver und die Webportalverwaltung  
  Führen Sie die Konfigurationsschritte in diesem Abschnitt aus, wenn beim Navigieren zu einem lokalen Berichtsserver eine mit der folgenden vergleichbare Fehlermeldung angezeigt wird:  
   
 -   Der Benutzer `'Domain\[user name]`' verfügt nicht über die erforderlichen Berechtigungen. Stellen Sie sicher, dass ausreichende Berechtigungen erteilt und die Einschränkungen der Windows-Benutzerkontensteuerung (UAC) behandelt wurden.  
   
 ###  <a name="bkmk_site_settings"></a> Browsereinstellungen für vertrauenswürdige Sites  
   
-1.  Öffnen Sie ein Browserfenster mit "Als Administrator ausführen"-Berechtigungen. Klicken Sie im Menü **Start** auf **Alle Programme**, klicken Sie mit der rechten Maustaste auf **Internet Explorer**, und wählen Sie **Als Administrator ausführen**aus.  
+1.  Öffnen Sie ein Browserfenster mit "Als Administrator ausführen"-Berechtigungen. Klicken Sie im Menü **Start** mit der rechten Maustaste auf **Internet Explorer**, und wählen Sie dann **Als Administrator ausführen** aus.  
   
-2.  Klicken Sie auf **Zulassen** , um den Vorgang fortzusetzen.  
+2.  Wählen Sie **Ja** aus, wenn Sie dazu aufgefordert werden, um den Vorgang fortzusetzen.  
   
-3.  Geben Sie in der URL-Adresse die Berichts-Manager-URL ein. Anweisungen finden Sie unter [Berichts-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+3.  Geben Sie in der URL-Adresse die Webportal-URL ein. Anleitungen finden Sie unter [Webportal eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 4.  Klicken Sie auf **Extras**.  
   
@@ -93,51 +93,48 @@ ms.locfileid: "65580427"
   
 11. Klicken Sie auf **Hinzufügen**.  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. Wählen Sie **OK**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Ordnereinstellungen im Berichts-Manager  
+###  <a name="bkmk_configure_folder_settings"></a> Ordnereinstellungen des Webportals  
   
-1.  Klicken Sie im Berichts-Manager auf der Startseite auf **Ordnereinstellungen**.  
+1.  Klicken Sie im Webportal auf der Startseite auf **Ordner verwalten**.  
   
-2.  Klicken Sie auf der Seite Ordnereinstellungen auf **Sicherheit**.  
+2.  Klicken Sie auf Ordnerseite **Verwalten** auf **Sicherheit**, und wählen Sie dann **Gruppe oder Benutzer hinzufügen** aus.  
   
-3.  Klicken Sie auf **Neue Rollenzuweisung**.  
-  
-4.  Geben Sie im Feld **Gruppen- oder Benutzername** Ihr Windows-Benutzerkonto im folgenden Format ein: `<domain>\<user>`.  
+3.  Geben Sie auf der Seite **Neue Rollenzuweisung** im Feld **Gruppe oder Benutzer** Ihr Windows-Benutzerkonto im folgenden Format ein: `<domain>\<user>`.  
   
 5.  Wählen Sie **Inhalts-Manager**aus.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Wählen Sie **OK**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Siteeinstellungen im Berichts-Manager  
+###  <a name="bkmk_configure_site_settings"></a> Siteeinstellungen des Webportals  
   
-1.  Öffnen Sie den Browser mit Administratorprivilegien, und navigieren Sie zum Berichts-Manager unter `https://<server name>/reports`.  
+1.  Öffnen Sie den Browser mit Administratorprivilegien, und navigieren Sie zum Webportal (`https://<server name>/reports`).  
   
-2.  Klicken Sie in der oberen Ecke der Startseite auf **Siteeinstellungen** .  
+2.  Wählen Sie das Zahnradsymbol in der obersten Zeile der Startseite aus, und klicken Sie dann im Dropdownmenü auf **Siteeinstellungen**. 
   
-    > [!TIP]  
-    >  **Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorberechtigungen erneut, und navigieren Sie zum Berichts-Manager.  
+    ![Zahnradsymbol](../media/ssrsgearmenu.png)erforderlich.
+    >[!TIP]  
+    >**Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorberechtigungen erneut, und navigieren Sie zum Webportal.  
   
-3.  Klicken Sie auf **Sicherheit**.  
+3.  Wählen Sie auf der Seite „Siteeinstellungen“ die Option **Sicherheit** aus, und wählen Sie dann **Gruppe oder Benutzer hinzufügen** aus.  
   
-4.  Klicken Sie auf **Neue Rollenzuweisung**.  
+4.  Geben Sie im Feld **Gruppen- oder Benutzername** Ihr Windows-Benutzerkonto im folgenden Format ein: `<domain>\<user>`.  
+
+5.  Wählen Sie **Systemadministrator**aus.  
   
-5.  Geben Sie im Feld **Gruppen- oder Benutzername** Ihr Windows-Benutzerkonto im folgenden Format ein: `<domain>\<user>`.  
+6.  Wählen Sie **OK**.  
   
-6.  Wählen Sie **Systemadministrator**aus.  
+7.  Schließen Sie das Webportal.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-8.  Schließen Sie den Berichts-Manager.  
-  
-9. Öffnen Sie den Berichts-Manager in Internet Explorer erneut, ohne **Als Administrator ausführen**zu verwenden.  
+8. Öffnen Sie das Webportal in Internet Explorer erneut, ohne **Als Administrator ausführen**zu verwenden.  
   
 ##  <a name="bkmk_configure_ssms"></a> So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichtsservers  
  Standardmäßig ist es nur möglich, auf alle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbaren Berichtsservereigenschaften zuzugreifen, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit Administratorprivilegien starten.  
   
  **So konfigurieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , sodass [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht jedes Mal mit erweiterten Berechtigungen gestartet werden muss:  
   
--   Klicken Sie im Menü **Start** auf **Alle Programme**und anschließend auf **SQL Server 2014**. Klicken Sie mit der rechten Maustaste auf **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, und klicken Sie anschließend auf **Als Administrator ausführen**.  
+-   Klicken Sie im Menü **Start** mit der rechten Maustaste auf **Microsoft SQL Server[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** , und klicken Sie dann auf **Als Administrator ausführen**.  
   
 -   Stellen Sie eine Verbindung mit dem lokalen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Server her.  
   
@@ -151,7 +148,7 @@ ms.locfileid: "65580427"
   
 -   Schließen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
--   Informationen zum Hinzufügen eines Benutzers zur Systemrolle "Systemadministrator" finden Sie im Abschnitt [Siteeinstellungen im Berichts-Manager](#bkmk_configure_site_settings) weiter oben in diesem Thema.  
+-   Informationen zum Hinzufügen eines Benutzers zur Systemrolle „Systemadministrator“ finden Sie im Abschnitt [Siteeinstellungen des Webportals](#bkmk_configure_site_settings) weiter oben in diesem Artikel.  
   
  Wenn Sie jetzt [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] öffnen und nicht explizit **Als Administrator ausführen** auswählen, haben Sie Zugriff auf die Berichtsservereigenschaften.  
   
@@ -164,22 +161,20 @@ ms.locfileid: "65580427"
   
  **So verwenden Sie bei jedem Öffnen von SSDT erweiterte Berechtigungen**  
   
-1.  Geben Sie auf dem Startbildschirm **sql server** ein, und klicken Sie anschließend mit der rechten Maustaste auf **SQL Server Data Tools**. Klicken Sie auf **Als Administrator ausführen**.  
+1.  Wählen Sie im Startmenü **Microsoft SQL Server** aus, und klicken Sie anschließend mit der rechten Maustaste auf **SQL Server Data Tools**. Klicken Sie auf **Als Administrator ausführen**.  
   
-2.  Klicken Sie auf **Weiter**.  
+2.  Wählen Sie **Ja** aus, wenn Sie dazu aufgefordert werden, um den Vorgang fortzusetzen.  
   
-3.  Klicken Sie auf **Programm ausführen**.  
-  
- Sie können jetzt Berichte und andere Elemente auf einem lokalen Berichtsserver bereitstellen.  
+Sie können jetzt Berichte und andere Elemente auf einem lokalen Berichtsserver bereitstellen.  
   
  **So konfigurieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Rollenzuweisungen, damit SSDT nicht jedes Mal mit erweiterten Berechtigungen gestartet werden muss**  
   
--   Siehe die Abschnitte [Ordnereinstellungen im Berichts-Manager](#bkmk_configure_folder_settings) und [Siteeinstellungen im Berichts-Manager](#bkmk_configure_site_settings) weiter oben in diesem Thema.  
+-   Weitere Informationen finden Sie in den Abschnitten [Ordnereinstellungen des Webportals](#bkmk_configure_folder_settings) und [Siteeinstellungen des Webportals](#bkmk_configure_site_settings) weiter oben in diesem Thema.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Zusätzliche Informationen  
  Ein weiterer häufiger Konfigurationsschritt in Verbindung mit der Verwaltung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] besteht darin, Port 80 in der Windows-Firewall zu öffnen, um den Zugriff auf den Berichtsservercomputer zu ermöglichen. Anweisungen finden Sie unter [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
