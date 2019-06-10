@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: In diesem Tutorial wird gezeigt, wie Sie die einer Ausführung einer Beispiel-Spark-Notebook auf eine SQL Server-2019 big Data-Cluster (Vorschau) laden können.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 91daed271ca8e6a8eb04928a0806b287163143a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994146"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770865"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: Führen Sie ein Beispiel-Notebook auf eine SQL Server-big Data-cluster
 
@@ -71,7 +71,7 @@ Sie können die einzelnen Zellen des Notebooks ausführen, durch Drücken der Sc
 Führen Sie jede Zelle in der Beispiel-Notebooks nacheinander aus. Weitere Informationen zur Verwendung von Notebooks mit SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
 
 - [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md)
-- [Gewusst wie: Verwalten von Notebooks in Azure Data Studio](notebooks-how-to-manage.md)
+- [How to manage notebooks in Azure Data Studio (Vorgehensweise: Verwalten von Notebooks in Azure Data Studio)](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
