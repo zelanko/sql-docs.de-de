@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e75f732fc44ee339cb3d9d47518627f264cb8cc
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8f5f520be226d74c2c6530aacee7916aa381dc06
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671336"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778146"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Versionshinweise zum Microsoft JDBC-Treiber
 
@@ -68,7 +68,7 @@ In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Ser
 | Zusätzliche Details. | Informationen hierzu finden Sie unter [Behandlung von Fehlern](../../connect/jdbc/handling-errors.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>Die _Microsoft Azure Active Directory-Authentifizierungsbibliothek für Java (ADAL4J)_, Version 1.6.3, wurde aktualisiert.
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>Die _Microsoft Azure Active Directory-Authentifizierungsbibliothek für Java (ADAL4J)_ , Version 1.6.3, wurde aktualisiert.
 
 | ADAL4J-Änderung | Details |
 | :------------ | :------ |

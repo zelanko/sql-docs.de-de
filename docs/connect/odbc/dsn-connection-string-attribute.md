@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-manager: craigg
-ms.openlocfilehash: e371a896a617a09bb2bf5df4202d63f7047cd67d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 76e52c7183624a69284673b244b255fab24ae5e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860701"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789938"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen
 
@@ -119,7 +119,7 @@ In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute n
 
 Hier sind einige Schlüsselwörter für Verbindungszeichenfolgen und Verbindungsattribute aufgeführt, die nicht in den Artikeln [Using Connection String Keywords with SQL Server Native Client (Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLSetConnectAttr Function (SQLSetConnectAttr-Funktion)](../../odbc/reference/syntax/sqlsetconnectattr-function.md) dokumentiert sind.
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>und Beschreibung
 
 Wird zum Beschreiben der Datenquelle verwendet.
 
@@ -127,7 +127,7 @@ Wird zum Beschreiben der Datenquelle verwendet.
 
 Steuert die ANSI-in-OEM-Konvertierung. 
 
-| Attributwert | Beschreibung |
+| Attributwert | und Beschreibung |
 |-|-|
 | SQL_AO_OFF | (Standard) Keine Zeichenübersetzung wird durchgeführt. |
 | SQL_AO_ON | Zeichenübersetzung wird durchgeführt. |
@@ -136,7 +136,7 @@ Steuert die ANSI-in-OEM-Konvertierung.
 
 Steuert die Verwendung von SQL Server-Fallbackverbindungen. Wird nicht mehr unterstützt.
 
-| Attributwert | Beschreibung |
+| Attributwert | und Beschreibung |
 |-|-|
 | SQL_FB_OFF | (Standard) Fallbackverbindungen sind deaktiviert. |
 | SQL_FB_ON | Fallbackverbindungen sind aktiviert. |
@@ -149,7 +149,7 @@ Steuert die Verwendung von SQL Server-Fallbackverbindungen. Wird nicht mehr unte
 
 Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weitere Informationen finden Sie unter [Using Azure Active Directory (Verwenden von Azure Active Directory)](using-azure-active-directory.md).
 
-| Schlüsselwortwert | Attributwert | Beschreibung |
+| Schlüsselwortwert | Attributwert | und Beschreibung |
 |-|-|-|
 | |SQL_AU_NONE|(Standard) Nicht festgelegt. Die Kombination anderer Attribute bestimmt den Authentifizierungsmodus.|
 |SqlPassword|SQL_AU_PASSWORD|SQL Server-Standardauthentifizierung mit Benutzername und Kennwort.|
@@ -166,7 +166,7 @@ Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weiter
 
 Steuert transparente Spaltenverschlüsselung (Always Encrypted). Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver for SQL Server (Verwenden von Always Encrypted mit dem ODBC-Treiber für SQL Server)](using-always-encrypted-with-the-odbc-driver.md).
 
-| Schlüsselwortwert | Attributwert | Beschreibung |
+| Schlüsselwortwert | Attributwert | und Beschreibung |
 |-|-|-|
 |Aktiviert|SQL_CE_ENABLED|Aktiviert Always Encrypted.|
 |Disabled|SQL_CE_DISABLED|(Standard) Deaktiviert Always Encrypted.|
@@ -176,7 +176,7 @@ Steuert transparente Spaltenverschlüsselung (Always Encrypted). Weitere Informa
 
 Steuert das Feature zur transparenten Netzwerk-IP-Adressauflösung, das mit MultiSubnetFailover interagiert, um erneute Verbindungsversuche zu beschleunigen. Weitere Informationen finden Sie unter [Using Transparent Network IP Resolution (Verwenden der transparenten Netzwerk-IP-Adressauflösung)](using-transparent-network-ip-resolution.md).
 
-| Schlüsselwortwert | Attributwert| Beschreibung |
+| Schlüsselwortwert | Attributwert| und Beschreibung |
 |-|-|-|
 |Ja|SQL_IS_ON|(Standard) Aktiviert die transparente Netzwerk-IP-Adressauflösung.|
 |Nein|SQL_IS_OFF|Deaktiviert die transparente Netzwerk-IP-Adressauflösung.|
@@ -185,7 +185,7 @@ Steuert das Feature zur transparenten Netzwerk-IP-Adressauflösung, das mit Mult
 
 Steuert die Verwendung von „SET FMTONLY“ für Metadaten bei der Verbindung mit SQL Server 2012 und höheren Versionen.
 
-| Schlüsselwortwert | Beschreibung |
+| Schlüsselwortwert | und Beschreibung |
 |-|-|
 |Nein|(Standard) Verwenden von „sp_describe_first_result_set“ für Metadaten, wenn verfügbar. |
 |Ja| Verwenden von „SET FMTONLY“ für Metadaten. |
@@ -194,7 +194,7 @@ Steuert die Verwendung von „SET FMTONLY“ für Metadaten bei der Verbindung m
 
 Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur Authentifizierung. Weitere Informationen finden Sie unter [Using Azure Active Directory (Verwenden von Azure Active Directory)](using-azure-active-directory.md).
 
-| Attributwert | Beschreibung |
+| Attributwert | und Beschreibung |
 |-|-|
 | NULL | (Standard) Kein Zugriffstoken steht zur Verfügung. |
 | ACCESSTOKEN* | Zeiger zu einem Zugriffstoken. |
@@ -203,7 +203,7 @@ Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur 
 
 Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparente Spaltenverschlüsselung (Always Encrypted). Dieses Attribut hat keinen Standardwert. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Keystore-Anbieter)](custom-keystore-providers.md).
 
-| Attributwert | Beschreibung |
+| Attributwert | und Beschreibung |
 |-|-|
 | CEKEYSTOREDATA * | Kommunikationsdatenstruktur für die Keystore-Anbieterbibliothek |
 
@@ -211,7 +211,7 @@ Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparen
 
 Lädt eine Keystore-Anbieterbibliothek für Always Encrypted oder ruft die Namen der geladenen Keystore-Anbieterbibliotheken ab. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Keystore-Anbieter)](custom-keystore-providers.md). Dieses Attribut hat keinen Standardwert.
 
-| Attributwert | Beschreibung |
+| Attributwert | und Beschreibung |
 |-|-|
 | char * | Pfad zur Keystore-Anbieterbibliothek |
 
@@ -226,7 +226,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|Wert|Beschreibung|Plattformen|  
+|value|und Beschreibung|Plattformen|  
 |-----------|-----------------|-----------------|  
 |XACALLPARAM object*|Der Zeiger auf das `XACALLPARAM`-Objekt.|Windows, Linux und Mac|
 |TRUE|Ordnet die XA-Transaktion der ODBC-Verbindung zu. Alle entsprechenden Datenbankaktivitäten werden unter dem Schutz der XA-Transaktion durchgeführt.|Windows|  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce11cfca3416796f24299c722c65e755d64f4d4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d4727029dbb1ba4fbfdbdd10abf6b1cd0812790
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643848"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799655"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Vorgehensweise: Angeben von SQL Server-Datentypen, wenn der SQLSRV-Treiber verwendet wird.
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ Die folgenden Schritte fassen zusammen, wie der SQL Server-Datentyp angegeben wi
   
 3.  Erstellen Sie das *$params* -Array, das beim Vorbereiten oder Ausführen der Abfrage verwendet werden soll. Beachten Sie, dass jedes Element des *$params* -Arrays auch ein Array sein muss, wenn Sie den SQL Server-Datentyp angeben.  
   
-4.  Geben Sie den gewünschten SQL Server-Datentyp mit der entsprechenden **SQLSRV_SQLTYPE_&#42;**-Konstanten als vierten Parameter in jedem Unterarray des Arrays *$params* an. Eine vollständige Liste der **SQLSRV_SQLTYPE_&#42;**-Konstanten finden Sie im Abschnitt „SQLTYPES“ von [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Im folgenden Code werden z. B. *$changeDate*, *$rate*, und *$payFrequency* jeweils als die SQL Server-Datentypen **datetime**, **money**, und **tinyint** im *$params* -Array angegeben. Da kein SQL Server-Typ für *$employeeId* angegeben ist, und da er mit einem Integer initialisiert wird, wird der  SQL Server-Standardtyp **integer** verwendet.  
+4.  Geben Sie den gewünschten SQL Server-Datentyp mit der entsprechenden **SQLSRV_SQLTYPE_&#42;** -Konstanten als vierten Parameter in jedem Unterarray des Arrays *$params* an. Eine vollständige Liste der **SQLSRV_SQLTYPE_&#42;** -Konstanten finden Sie im Abschnitt „SQLTYPES“ von [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Im folgenden Code werden z. B. *$changeDate*, *$rate*, und *$payFrequency* jeweils als die SQL Server-Datentypen **datetime**, **money**, und **tinyint** im *$params* -Array angegeben. Da kein SQL Server-Typ für *$employeeId* angegeben ist, und da er mit einem Integer initialisiert wird, wird der  SQL Server-Standardtyp **integer** verwendet.  
   
     ```  
     $employeeId = 5;  
@@ -135,7 +135,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)

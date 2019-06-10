@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042369"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798750"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -75,7 +75,7 @@ Für ODBC-Treiber 13 und 13.1 müssen die SQLCHAR-Daten die UTF-8-Codierung aufw
 
 Für ODBC-Treiber 17 werden die folgenden Zeichensätze bzw. Codierungen für SQLCHAR-Daten unterstützt:
 
-|Name|Beschreibung|
+|Name|und Beschreibung|
 |-|-|
 |UTF-8|Unicode|
 |CP437|MS-DOS-Latin-US|

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f9b0a0bed30c936065cb262e34db4764345e846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573140"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500462"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -89,11 +89,11 @@ ms.locfileid: "65573140"
   
 -   Zugrunde liegende Datenanbieterversion (optional): Einige Datenquellentypen unterstützen mehr als einen Datenanbieter. Dabei kann es sich um unterschiedliche Versionen eines Datenanbieters oder um unterschiedliche Implementierungen von Drittanbietern für einen Typ von Datenanbieter handeln. Der Name des Anbieters wird nach dem Konfigurieren einer Datenquelle häufig in der Verbindungszeichenfolge angegeben. In dieser Spalte wird die folgende Frage beantwortet: "Welchen Datenanbieter wähle ich nach der Auswahl des Datenquellentyps im Dialogfeld **Verbindungseigenschaften** aus?"  
   
--   Datenquellen-*\<Plattform>*: Die von der Datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von einer Datenquelle auf diesem Typ von Plattform abgerufen werden?"  
+-   Datenquellen- *\<Plattform>* : Die von der Datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von einer Datenquelle auf diesem Typ von Plattform abgerufen werden?"  
   
 -   Version der Datenquelle: Die von der Datenverarbeitungserweiterung oder dem Datenanbieter unterstützte Version der Zieldatenquelle. In dieser Spalte wird die folgende Frage beantwortet: "Können mit dieser Datenverarbeitungserweiterung oder diesem Datenanbieter Daten von dieser Version der Datenquelle abgerufen werden?"  
   
--   RS-*\<Plattform>*: Die Plattformen für den Berichtsserver und den Berichterstellungsclient, auf denen Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder einen benutzerdefinierten Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. In dieser Spalte wird die folgende Frage beantwortet: "Kann diese Datenverarbeitungserweiterung oder dieser Datenanbieter auf diesem Typ von Plattform installiert werden?"  
+-   RS- *\<Plattform>* : Die Plattformen für den Berichtsserver und den Berichterstellungsclient, auf denen Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder einen benutzerdefinierten Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. In dieser Spalte wird die folgende Frage beantwortet: "Kann diese Datenverarbeitungserweiterung oder dieser Datenanbieter auf diesem Typ von Plattform installiert werden?"  
   
 ###  <a name="DataSourcesTable"></a> Typen von Datenquellen  
   
@@ -132,7 +132,7 @@ ms.locfileid: "65573140"
 > [!NOTE]
 >  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datenverarbeitungserweiterung wird derzeit nicht unterstützt.  
   
- Weitere Informationen zu Datenverarbeitungserweiterungen, die vom Berichts-Generator unterstützt wurden, finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) in der [Dokumentation zu Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=154494) auf „msdn.microsoft.com“.  
+ Weitere Informationen zu Datenverarbeitungserweiterungen, die vom Berichts-Generator unterstützt wurden, finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) in der [Dokumentation zu Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=154494) auf „msdn.microsoft.com“.  
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server-Datenverarbeitungserweiterung  
  Beim Datenquellentyp **Microsoft SQL Server** wird der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]umschlossen und erweitert. Diese Datenverarbeitungserweiterung wird für x86- und [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-basierte Plattformen nativ kompiliert und auf diesen Plattformen ausgeführt.  
@@ -150,7 +150,7 @@ ms.locfileid: "65573140"
   
  In [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] ist der grafische, dieser Datenerweiterung zugeordnete Abfrage-Designer der relationale Abfrage-Designer und nicht der Visual Database Tool-Designer, den Sie mit dem Datenquellentyp **Microsoft SQL Server** verwenden.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] unterscheidet automatisch zwischen **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]**- und **Microsoft SQL Server**-Datenquellentypen und öffnet den grafischen, dem Datenquellentyp zugeordneten Abfrage-Designer.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] unterscheidet automatisch zwischen **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** - und **Microsoft SQL Server**-Datenquellentypen und öffnet den grafischen, dem Datenquellentyp zugeordneten Abfrage-Designer.  
   
  Wenn Sie den Abfrage-Designer im grafischen Modus verwenden, wird die Abfrage analysiert und möglicherweise umgeschrieben. Ein textbasierter Abfrage-Designer ist ebenfalls für das Schreiben von Abfragen verfügbar. Wenn Sie die exakte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax für eine Abfrage steuern möchten, verwenden Sie den textbasierten Abfrage-Designer.   
   

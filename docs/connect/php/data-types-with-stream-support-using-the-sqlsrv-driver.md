@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a76d08ab4c07bc1324d09540a7c667f26c91020d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e2221833af115e31d7f7d74eff33b0b4f2557a74
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735068"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796202"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>Datentypen mit Stream-Unterstützung, die den SQLSRV-Treiber nutzen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Die folgenden SQL Server-Datentypen können als Streams mit dem SQLSRV-Treiber a
   
 -   XML  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 
 [PHP-Standarddatentypen](../../connect/php/default-php-data-types.md)

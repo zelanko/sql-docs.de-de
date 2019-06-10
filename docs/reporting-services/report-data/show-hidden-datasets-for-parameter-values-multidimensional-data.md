@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1e43951e4b6dcc4af97aaf8c96a783aae6830b5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 3b7298d9d761342afbfee33c62f4eda3aa7f3b59
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574938"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499906"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten
   Der Bericht kann automatisch generierte Datasets enthalten (die auch als ausgeblendete Datasets bezeichnet werden), die nicht standardmäßig im Berichtsdatenbereich angezeigt werden. Diese Datasets werden folgendermaßen erstellt:  
@@ -34,7 +34,7 @@ ms.locfileid: "65574938"
 -   Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf den Ordner „Datasets“, und klicken Sie dann auf **Ausgeblendete Datasets anzeigen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Abfrage-Designer &#40;Berichts-Generator&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [Abfrageentwurfstools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Abfrage-Designer in Reporting Services](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
