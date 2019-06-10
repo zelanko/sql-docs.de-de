@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6d10f1d16c31ad3af67e193a8bc684be0c66c1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b36c25969ac053bad4e626b110c314c28dff6b08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395479"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772161"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Benannte Instanz**  
   
--   **MSSQLSvc/\<FQDN>:[\<Port> | \<Instanzname>]**, wobei:  
+-   **MSSQLSvc/\<FQDN>:[\<Port> | \<Instanzname>]** , wobei:  
   
     -   **MSSQLSvc** der Dienst ist, der registriert wird.  
   
@@ -85,7 +85,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Standardinstanz**  
   
--   **MSSQLSvc/\<FQDN>:\<Port>** | **MSSQLSvc/\<FQDN>**, wobei:  
+-   **MSSQLSvc/\<FQDN>:\<Port>**  | **MSSQLSvc/\<FQDN>** , wobei:  
   
     -   **MSSQLSvc** der Dienst ist, der registriert wird.  
   
@@ -106,9 +106,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > Bei TCP/IP-Verbindungen, bei denen der TCP-Port im SPN enthalten ist, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das TCP-Protokoll für einen Benutzer aktivieren, um mithilfe der Kerberos-Authentifizierung eine Verbindung herzustellen. 
 
 ##  <a name="Auto"></a> Automatische SPN-Registrierung  
- Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den SPN für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zu registrieren. Wird die Instanz beendet, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Registrierung des SPN wieder aufzuheben. Bei TCP/IP-Verbindungen wird der SPN im folgenden Format registriert: *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Sowohl benannte Instanzen als auch die Standardinstanz werden als *MSSQLSvc* registriert, wobei der *\<tcpport>*-Wert zur Unterscheidung der Instanzen dient.  
+ Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den SPN für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zu registrieren. Wird die Instanz beendet, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Registrierung des SPN wieder aufzuheben. Bei TCP/IP-Verbindungen wird der SPN im folgenden Format registriert: *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Sowohl benannte Instanzen als auch die Standardinstanz werden als *MSSQLSvc* registriert, wobei der *\<tcpport>* -Wert zur Unterscheidung der Instanzen dient.  
   
- Bei anderen Verbindungen, die Kerberos unterstützen, wird der SPN im Format *MSSQLSvc/\<FQDN>*/*\<Instanzname>* für eine benannte Instanz registriert. Die Standardinstanz wird im folgenden Format registriert: *MSSQLSvc/\<FQDN>*.  
+ Bei anderen Verbindungen, die Kerberos unterstützen, wird der SPN im Format *MSSQLSvc/\<FQDN>* / *\<Instanzname>* für eine benannte Instanz registriert. Die Standardinstanz wird im folgenden Format registriert: *MSSQLSvc/\<FQDN>* .  
   
  Die Registrierung bzw. die Aufhebung der Registrierung eines SPN muss möglicherweise manuell durchgeführt werden, wenn der Dienst nicht über die Berechtigungen für diese Aktionen verfügt.  
   
@@ -177,7 +177,7 @@ WHERE session_id = @@SPID;
   
  Wenn die Aufhebung der SPN-Registrierung beim Herunterfahren fehlschlägt, wird dieser Fehler im Fehlerprotokoll von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgezeichnet, und das Herunterfahren wird fortgesetzt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterstützung von Dienstprinzipalnamen &#40;SPN&#41; in Clientverbindungen](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Dienstprinzipalnamen (SPN) in Clientverbindungen (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

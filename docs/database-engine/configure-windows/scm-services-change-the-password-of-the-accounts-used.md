@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7860afbb60d0911c61c479bb19e2b39c5b1e75e9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8f9b16bf035d2666eb3f6237a6a04aa49dd8a0fe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606570"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775830"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>SCM-Dienste: Ändern des Kennworts der verwendeten Konten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "51606570"
   
 2.  Klicken Sie im SQL Server-Konfigurations-Manager auf **SQL Server-Dienste**.  
   
-3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (**\<Instanzname>**)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (** \<Instanzname> **)** , und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Geben Sie im Dialogfeld **Eigenschaften von SQL Server (**\<Instanzname>**)** auf der Registerkarte „Anmelden“ für das im Feld **Kontoname** angegebene Konto das neue Kennwort in die Felder **Kennwort** und **Kennwort bestätigen** ein, und klicken Sie dann auf **OK**.  
+4.  Geben Sie im Dialogfeld **Eigenschaften von SQL Server (** \<Instanzname> **)** auf der Registerkarte „Anmelden“ für das im Feld **Kontoname** angegebene Konto das neue Kennwort in die Felder **Kennwort** und **Kennwort bestätigen** ein, und klicken Sie dann auf **OK**.  
   
      Das Kennwort wird sofort wirksam, ohne dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu gestartet werden muss.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "51606570"
   
 2.  Klicken Sie im SQL Server-Konfigurations-Manager auf **SQL Server-Dienste**.  
   
-3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server Agent (**\<Instanzname>**)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server Agent (** \<Instanzname> **)** , und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Geben Sie im Dialogfeld **Eigenschaften von SQL Server-Agent (**\<Instanzname>**)** auf der Registerkarte „Anmelden“ für das im Feld **Kontoname** angegebene Konto das neue Kennwort in die Felder **Kennwort** und **Kennwort bestätigen** ein, und klicken Sie dann auf **OK**.  
+4.  Geben Sie im Dialogfeld **Eigenschaften von SQL Server-Agent (** \<Instanzname> **)** auf der Registerkarte „Anmelden“ für das im Feld **Kontoname** angegebene Konto das neue Kennwort in die Felder **Kennwort** und **Kennwort bestätigen** ein, und klicken Sie dann auf **OK**.  
   
      Bei einer eigenständigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ist das Kennwort sofort wirksam, ohne dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu gestartet werden muss. Auf einer gruppierten Instanz kann die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offline geschaltet werden und einen Neustart erfordern.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Diensten: Themen zur Vorgehensweise &#40;SQL Server-Konfigurations-Manager&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
   
