@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 975423cab6fb7b00baf279a9a4186336120e08c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 62af44faa45892be9af08a4fbd282ddfa4c7c757
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537925"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772108"
 ---
 # <a name="remote-servers"></a>Remoteserver
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52537925"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
 ### <a name="remote-server-security-example"></a>Beispiel für die Sicherheit von Remoteservern  
- Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend**namens **Joe**wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive**_,_ namens **Joe**zugeordnet.  
+ Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend**namens **Joe**wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive** _,_ namens **Joe**zugeordnet.  
   
  Der folgende Transact-SQL-Beispielcode konfiguriert `serverSend` so, dass Remoteprozeduraufrufe auf `serverReceive`ausgeführt werden können.  
   
@@ -98,7 +98,7 @@ GO
  Sie können die erweiterte gespeicherte Prozedur **xp_msver** verwenden, um Serverattribute von lokalen oder Remoteservern zu überprüfen. Diese Attribute enthalten die Versionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Typ und Anzahl von Prozessoren des Computers, sowie die Version des Betriebssystems. Sie können vom lokalen Server Datenbanken, Dateien, Anmeldungen und Tools eines Remoteserver anzeigen. Weitere Informationen finden Sie unter [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verbindungsserver &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
+ [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

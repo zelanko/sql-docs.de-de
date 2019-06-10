@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fa577f1d2e995e870ab1ec3fabcd64266427dc7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 43fc46517ffbf639cfc9328510ad4550e048cbc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788158"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772069"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>Remoteadministratorverbindungen (Serverkonfigurationsoption)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47788158"
   
  In der folgenden Tabelle sind die möglichen Werte für die Option remote admin connections aufgeführt.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |0|Nur lokale Verbindungen sind mit der DAC zulässig.|  
 |1|Remoteverbindungen sind mit der DAC zulässig.|  
@@ -48,7 +48,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagnoseverbindung für Datenbankadministratoren](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   
   

@@ -18,51 +18,33 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bcda8c38e842f6799d799c97263c1443ad065ad8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 8e9fecbbe5894eb6a6804c48f4d37facf01359a1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209490"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772543"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>Verknüpfen einer sekundären Datenbank mit einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie eine sekundäre Datenbank mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]mit einer Always On-Verfügbarkeitsgruppe verknüpft wird. Nachdem Sie eine sekundäre Datenbank auf ein sekundäres Replikat vorbereitet haben, müssen Sie die Datenbank so schnell wie möglich mit der Verfügbarkeitsgruppe verknüpfen. So wird die Datenverschiebung aus der entsprechenden primären Datenbank in die sekundäre Datenbank gestartet.  
-  
--   **Vorbereitungen:**  
-  
-     [Erforderliche Komponenten](#Prerequisites)  
-  
-     [Sicherheit](#Security)  
-  
--   **So bereiten Sie eine sekundäre Datenbank vor mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
+   
 > [!NOTE]  
 >  Informationen dazu, was passiert, nachdem eine sekundäre Datenbank mit der Gruppe verknüpft wurde, finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+   
+##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, auf der das sekundäre Replikat gehostet wird.  
   
 -   Das sekundäre Replikat muss bereits mit der Verfügbarkeitsgruppe verknüpft sein. Weitere Informationen finden Sie unter [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
   
--   Die sekundäre Datenbank muss vor kurzem vorbereitet worden sein. Weitere Informationen finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)mit einer Always On-Verfügbarkeitsgruppe verknüpft wird.  
+-   Die sekundäre Datenbank muss vor kurzem vorbereitet worden sein. Weitere Informationen finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)erstellt und konfiguriert wird.  
   
-###  <a name="Security"></a> Sicherheit  
-  
-####  <a name="Permissions"></a> Berechtigungen  
+###  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So verknüpfen Sie eine sekundäre Datenbank mit einer Verfügbarkeitsgruppe**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das sekundäre Replikat hostet, und erweitern Sie die Serverstruktur.  
