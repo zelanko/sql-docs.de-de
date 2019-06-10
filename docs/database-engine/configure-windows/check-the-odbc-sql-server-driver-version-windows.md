@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: facadcb68e579797235c038b9669cea6f95dbce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb6646d96991785b7c94a48ad4601fdcc6e35b60
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736488"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799550"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>Überprüfen der Version des ODBC SQL Server-Treibers (Windows)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47736488"
 >  Zum Herstellen von Verbindungen mit der Azure Active Directory-Authentifizierung für SQL-Datenbank installieren Sie die neuesten Treiber, z. B. [ODBC-Treiber 13.1 für SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Öffnen des ODBC-Datenquellen-Administrators](../../database-engine/configure-windows/open-the-odbc-data-source-administrator.md)  
   
   

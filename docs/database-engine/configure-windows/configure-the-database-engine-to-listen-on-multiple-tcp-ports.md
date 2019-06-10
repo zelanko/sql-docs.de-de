@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2efa695bd6b6c36db1a813d7b33a866a30bd95f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 2fa73136dfc026f158cbe7a81a08d68cf9142114
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125960"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803341"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "54125960"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>So konfigurieren Sie die SQL Server-Datenbank-Engine zum Lauschen an einem zusätzlichen TCP-Port  
   
-1.  Erweitern Sie im SQL Server-Konfigurations-Manager den Eintrag **SQL Server-Netzwerkkonfiguration** und klicken Sie dann auf **Protokolle für**_<Instanzname>_.  
+1.  Erweitern Sie im SQL Server-Konfigurations-Manager den Eintrag **SQL Server-Netzwerkkonfiguration** und klicken Sie dann auf **Protokolle für** _<Instanzname>_ .  
   
-2.  Erweitern Sie **Protokolle für**_<Instanzname>_, und klicken Sie dann auf **TCP/IP**.  
+2.  Erweitern Sie **Protokolle für** _<Instanzname>_ , und klicken Sie dann auf **TCP/IP**.  
   
 3.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf jede deaktivierte IP-Adresse, die Sie aktivieren möchten, und klicken Sie dann auf **Aktivieren**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54125960"
   
 6.  Klicken Sie im linken Bereich auf **SQL Server-Dienste**.  
   
-7.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf **SQL Server**_<Instanzname>_, und klicken Sie dann auf **Neu starten**.  
+7.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf **SQL Server** _<Instanzname>_ , und klicken Sie dann auf **Neu starten**.  
   
      Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu gestartet wird, führt das Fehlerprotokoll die Ports auf, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht.  
   

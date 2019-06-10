@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0668e22c751d8cfe37987e0454e6f9ad1ecd476d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: e6bf8b95fc0d039054b407b12d70c737dce214ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480378"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802188"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Bereinigen von Daten in einer Verbunddomäne
 
@@ -58,7 +58,7 @@ ms.locfileid: "65480378"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Wenn Sie die definitive domänenübergreifende *Then* -Regel **Wert ist gleich**testen, enthält das Dialogfeld **Verbunddomänenregel testen** eine neue Spalte namens **Korrigieren in**, in der die korrigierten Daten angezeigt werden. In einem Data Quality-Bereinigungsprojekt ändert diese definitive domänenübergreifende Regel die Daten mit hundertprozentiger Vertraulichkeit, und die Spalte **Reason** (Grund) zeigt die folgende Meldung an: Korrigiert von Regel *\<Name der domänenübergreifenden Regel>*. Weitere Informationen zu domänenübergreifenden Regeln finden Sie unter [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ Wenn Sie die definitive domänenübergreifende *Then* -Regel **Wert ist gleich**testen, enthält das Dialogfeld **Verbunddomänenregel testen** eine neue Spalte namens **Korrigieren in**, in der die korrigierten Daten angezeigt werden. In einem Data Quality-Bereinigungsprojekt ändert diese definitive domänenübergreifende Regel die Daten mit hundertprozentiger Vertraulichkeit, und die Spalte **Reason** (Grund) zeigt die folgende Meldung an: Korrigiert von Regel *\<Name der domänenübergreifenden Regel>* . Weitere Informationen zu domänenübergreifenden Regeln finden Sie unter [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  Die definitive domänenübergreifende Regel funktioniert nicht für Verbunddomänen, die an einen Verweisdatendienst angefügt wurden.  

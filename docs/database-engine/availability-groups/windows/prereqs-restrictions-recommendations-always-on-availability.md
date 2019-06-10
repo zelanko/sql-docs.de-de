@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042439"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798153"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59042439"
 > [!IMPORTANT]  
 >  Stellen Sie zudem sicher, dass Ihre Umgebung ordnungsgemäß zum Herstellen einer Verbindung mit einer Verfügbarkeitsgruppe konfiguriert wird. Weitere Informationen finden Sie unter [Always On-Clientkonnektivität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="ComputerRecommendations"></a> Empfehlungen für Computer, die Verfügbarkeitsreplikate (Windows-System) hosten  
+##  <a name="ComputerRecommendations"></a> Empfehlungen für Computer, die Verfügbarkeitsreplikate (Windows-System) hosten  
   
 -   **Vergleichbare Systeme:**  Für eine bestimmte Verfügbarkeitsgruppe sollten alle Verfügbarkeitsreplikate auf vergleichbaren Systemen ausgeführt werden, die identische Arbeitslasten bewältigen können.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59042439"
   
 3.  Verwenden Sie das **Get-ClusterResource** -Cmdlet, um die Netzwerknamenressource anzuzeigen, und verwenden Sie das **Set-ClusterParameter** -Cmdlet, um den **HostRecordTTL** -Wert wie folgt festzulegen:  
   
-     Get-ClusterResource „*\<Netzwerkressourcenname>*“ | Set-ClusterParameter-HostRecordTTL *\<Zeit_in_Sekunden>*  
+     Get-ClusterResource „ *\<Netzwerkressourcenname>* “ | Set-ClusterParameter-HostRecordTTL *\<Zeit_in_Sekunden>*  
   
      Im folgenden PowerShell-Beispiel wird der HostRecordTTL für eine Netzwerknamenressource mit dem Namen `SQL Network Name (SQL35)` auf 300 Sekunden festgelegt.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "59042439"
 ###  <a name="RequirementsAG"></a> Voraussetzungen (Verfügbarkeitsgruppen)  
  Beim Erstellen oder Neukonfigurieren einer Verfügbarkeitsgruppenkonfiguration müssen Sie folgende Anforderungen einhalten.  
   
-||Voraussetzung|Beschreibung|  
+||Voraussetzung|und Beschreibung|  
 |-|------------------|-----------------|  
 |![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Wenn Sie planen, eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) zu verwenden, um ein Verfügbarkeitsreplikat zu hosten, muss gewährleistet sein, dass Sie die FCI-Einschränkungen verstehen und dass die FCI-Anforderungen erfüllt werden.|[Voraussetzungen und Einschränkungen für das Hosten eines Verfügbarkeitsreplikats mithilfe einer SQL Server-Failoverclusterinstanz (FCI)](#FciArLimitations) (weiter oben in diesem Artikel)|  
   

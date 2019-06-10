@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2bafd110b358e3dc1c2d639e4a1b5251c89bb9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 5bb5ffaab7bf391a50dbfb28be14852a05e83582
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517498"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795347"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Überwachen der Datenbankspiegelung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "52517498"
   
      In der folgenden Tabelle werden die gespeicherten Prozeduren vorgestellt, mit denen die Datenbankspiegelungsüberwachung unabhängig vom Datenbankspiegelungs-Monitor verwaltet und verwendet werden kann.  
   
-    |Verfahren|Beschreibung|  
+    |Verfahren|und Beschreibung|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Erstellt einen Auftrag, mit dem in regelmäßigen Abständen die Statusinformationen für jede gespiegelte Datenbank auf der Serverinstanz aktualisiert werden.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Ändert den Wert eines Parameters für die Datenbank-Spiegelungsüberwachung.|  
@@ -195,7 +195,7 @@ ms.locfileid: "52517498"
   
 -   Älteste, nicht gesendete Transaktion  
   
-     Alter der ältesten, nicht gesendeten Transaktion in der Sendewarteschlange. Das Alter dieser Transaktion gibt an, wie viele Minuten an Transaktionen noch nicht an die Spiegelserverinstanz gesendet wurden. Anhand dieses Werts lässt sich das Potenzial an Datenverlusten bezogen auf die Zeit ermitteln.  
+     Alter der ältesten, nicht gesendeten Transaktion in der Sendewarteschlange. Das Alter dieser Transaktion gibt an, wie viele Minuten an Transaktionen noch nicht an die Spiegelserverinstanz gesendet wurden. Dieser Wert hilft, das Datenverlustrisiko in Bezug auf die Zeit zu messen.  
   
 -   Zeit zum Senden des Protokolls (geschätzt)  
   
@@ -331,7 +331,7 @@ ms.locfileid: "52517498"
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Konzepte des WMI-Anbieters für Serverereignisse](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

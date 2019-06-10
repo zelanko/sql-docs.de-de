@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620378"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800759"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden mit SQL Server, und klicken Sie dann mithilfe von Transact-SQL (T-SQL)-Anweisungen zum Erstellen der *"tutorialdb"* verwendet [!INCLUDE[name-sos](../includes/name-sos-short.md)] Tutorials.
@@ -36,7 +36,7 @@ Wenn Sie keinen Zugriff auf einen SQL Server haben, wählen Sie Ihre Plattform a
 ## <a name="connect-to-a-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 
    
-1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 1. Der ersten Ausführung [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Willkommen** Seite sollte zu öffnen. Wenn Sie nicht sehen die **Willkommen** Seite **Hilfe** > **Willkommen**. Wählen Sie **neue Verbindung** zum Öffnen der **Verbindung** Bereich:
    
    ![Symbol "neue Verbindung"](media/quickstart-sql-server/new-connection-icon.png)
@@ -56,9 +56,9 @@ Wenn Sie keinen Zugriff auf einen SQL Server haben, wählen Sie Ihre Plattform a
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
 
-Die folgenden Schritte erstellen Sie eine Datenbank, die mit dem Namen **"tutorialdb"**:
+Die folgenden Schritte erstellen Sie eine Datenbank, die mit dem Namen **"tutorialdb"** :
 
-1. Klicken Sie mit der rechten Maustaste auf, auf dem Server **"localhost"**, und wählen Sie **neue Abfrage.**
+1. Klicken Sie mit der rechten Maustaste auf, auf dem Server **"localhost"** , und wählen Sie **neue Abfrage.**
 1. Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein: 
 
    ```sql
@@ -84,7 +84,7 @@ Nach Abschluss die Abfrage, die neue **"tutorialdb"** wird in der Liste der Date
 
 Abfrage-Editor immer noch verbunden ist die *master* -Datenbank, aber wir möchten eine Tabelle in der *"tutorialdb"* Datenbank. 
 
-1. Ändern den Verbindungskontext für **"tutorialdb"**:
+1. Ändern den Verbindungskontext für **"tutorialdb"** :
 
    ![Kontext ändern](media/quickstart-sql-server/change-context.png)
 

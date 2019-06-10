@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78517d525165c7186c1ecccb2c1fc3561a7f3f45
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: fb6134f8134d5f8a0ee10d0d5ac06d75d5dbe9e8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203739"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797700"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Always On-Verfügbarkeitsgruppe ist offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53203739"
 |**Kategorie**|**Kritisch**|  
 |**Facet**|Verfügbarkeitsgruppe|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>und Beschreibung  
  Diese Richtlinie überprüft den Online- oder Offlinestatus der Verfügbarkeitsgruppe. Die Richtlinie befindet sich in einem fehlerhaften Zustand, und eine Warnung wird ausgelöst, wenn die Clusterressource der Verfügbarkeitsgruppe offline ist oder wenn die Verfügbarkeitsgruppe nicht über ein primäres Replikat verfügt.  
   
  Der Zustand der Richtlinie ist fehlerfrei, wenn die Clusterressource der Verfügbarkeitsgruppe online ist und die Verfügbarkeitsgruppe über ein primäres Replikat verfügt.  

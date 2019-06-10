@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff7bb0be3ecc9ef02e38994bebda675c016ef8b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 281306cece913e4386a1ca6059b738c9fa20e058
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847708"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780142"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Seite „Überprüfung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-  
     
   In diesem Hilfethema werden die Optionen der Seite **Überprüfung** beschrieben. Dieses Thema gilt für [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]und [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie diese Seite, um zu überprüfen, ob die Umgebung alle auf vorherigen Seiten des Assistenten festgelegte Konfigurationsoptionen unterstützt.  
   
@@ -40,7 +38,7 @@ ms.locfileid: "47847708"
  **Ergebnis**  
  Zeigt einen der folgenden Linktexte an. Klicken Sie auf den Link, um weitere Informationen zum Ergebnis eines bestimmten Überprüfungsschritts anzuzeigen.  
   
-|Ergebnis|Beschreibung|  
+|Ergebnis|und Beschreibung|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
 |**Ausgelassen**|Gibt an, dass der Überprüfungsschritt ausgelassen wurde, da er für die Optionen nicht erforderlich ist. Klicken Sie auf den Link, um die Ursache für das Auslassen eines Schritts anzuzeigen.|  
@@ -59,7 +57,7 @@ ms.locfileid: "47847708"
 -   [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -17,46 +17,27 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5fb0b24d51c383466cf91e6e691717170c290f4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 0171d8e6c8b4148508f584743e36aa1a5a1c5a91
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201999"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801029"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Entfernen einer primären Datenbank aus einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird erläutert, wie sowohl die primäre Datenbank als auch die entsprechenden sekundären Datenbanken aus einer AlwaysOn-Verfügbarkeitsgruppe mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]entfernt werden.  
   
--   **Vorbereitungen:**  
-  
-     [Voraussetzungen und Einschränkungen](#Prerequisites)  
-  
-     [Sicherheit](#Security)  
-  
--   **Entfernen einer Verfügbarkeitsdatenbank mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Nachverfolgung:**  [Nach dem Entfernen einer Verfügbarkeitsdatenbank aus einer Verfügbarkeitsgruppe](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
+##  <a name="Prerequisites"></a> Voraussetzungen und Einschränkungen  
   
 -   Dieser Task wird nur für primäre Replikate unterstützt. Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
   
-###  <a name="Security"></a> Sicherheit  
-  
-####  <a name="Permissions"></a> Berechtigungen  
+ 
+##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So entfernen Sie eine Verfügbarkeitsdatenbank**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Replikat der zu entfernenden Datenbanken hostet, und erweitern Sie die Serverstruktur.  

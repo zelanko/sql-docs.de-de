@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Erfahren Sie, wie Sie SQL Server-2019 big Data-Cluster (Vorschau) auf eine neue Version zu aktualisieren.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45c489d7bb2dc6f0fea5815dce4b2f0ef11ae5ad
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 3af688d607e8ec2d9dad7efe0d2275840c48cba8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015188"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782239"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Das upgrade von SQL Server-big Data-Cluster
 

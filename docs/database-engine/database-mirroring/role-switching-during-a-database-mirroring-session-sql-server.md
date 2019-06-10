@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4fd4e32c928ed046f449392a078af0158efed283
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612888"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795261"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +69,9 @@ ms.locfileid: "47612888"
   
 ||Hohe Leistung|Modus für hohe Sicherheit ohne einen Zeugen|Modus für hohe Sicherheit mit einem Zeugen|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Automatisches Failover|nein|nein|Benutzerkontensteuerung|  
-|Manuelles Failover|nein|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|Erzwungener Dienst|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
+|Automatisches Failover|Nein|Nein|Ja|  
+|Manuelles Failover|Nein|Ja|Ja|  
+|Erzwungener Dienst|Ja|Ja|Nein|  
   
  Nach einem Rollenwechsel müssen bestimmte Metadaten auf beiden Partnern vorhanden sein, um sicherzustellen, dass alle Datenbankbenutzer auf die neue Prinzipaldatenbank zugreifen können. Darüber hinaus müssen Sicherungsaufträge auf dem neuen Prinzipalserver erstellt werden, damit die Datenbank weiterhin in regelmäßigen Abständen gesichert wird. Weitere Informationen finden Sie unter [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -312,9 +312,9 @@ ms.locfileid: "47612888"
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Mögliche Fehler während der Datenbankspiegelung](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

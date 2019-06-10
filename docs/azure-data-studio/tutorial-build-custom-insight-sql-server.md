@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 4a2aee7f7ca9c61306e0241ff77a87c1c7dae112
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 20b8bb332f2b8910d533407e79799dab162ac217
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089734"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797982"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Erstellen eines benutzerdefinierten Einblicks-Widgets
 
@@ -31,7 +31,7 @@ In diesem Tutorial erfahren Sie, wie Sie:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"*. Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
+In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"* . Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
 
 - [Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Verbinden und Abfragen von Azure SQL-Datenbank [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -42,7 +42,7 @@ Führen Sie in diesem Schritt ein Sql-Skript zum Abfragen der aktuellen aktiven 
 
 1. Um einen neuen Editor zu öffnen, drücken Sie die **STRG + N**. 
 
-2. Ändern den Verbindungskontext für **"tutorialdb"**.
+2. Ändern den Verbindungskontext für **"tutorialdb"** .
 
 3. Fügen Sie die folgende Abfrage in der Abfrage-Editor ein:
 
@@ -112,7 +112,7 @@ Führen Sie in diesem Schritt ein Sql-Skript zum Abfragen der aktuellen aktiven 
 
 1. Um einen neuen Editor zu öffnen, drücken Sie die **STRG + N**.
 
-2. Ändern den Verbindungskontext für **"tutorialdb"**.
+2. Ändern den Verbindungskontext für **"tutorialdb"** .
 
 3. Fügen Sie die folgende Abfrage in der Abfrage-Editor ein:
 

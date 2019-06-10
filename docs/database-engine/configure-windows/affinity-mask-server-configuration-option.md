@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 27af9f6cab45c6859a755578d5dfa93c2506016d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e8b31f79f4b5e6218d27d2f8562204223c2f21d6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789068"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786851"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Affinitätsmaske (Serverkonfigurationsoption)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ GO
 ### <a name="reconfigure"></a>Neukonfigurieren  
  Wenn eine angegebene Affinitätsmaske beim Ausführen des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehls RECONFIGURE gegen die Lizenzierungsrichtlinien verstößt, wird eine Fehlermeldung an die Clientsitzung und an das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll gesendet. Der Datenbankadministrator muss dann die Affinitätsmaske neu konfigurieren. In diesem Fall ist der Befehl RECONFIGURE WITH OVERRIDE nicht zulässig.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

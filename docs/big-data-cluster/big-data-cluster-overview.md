@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Informationen Sie zu SQL Server-2019 big Data-Clustern (Vorschau), die auf Kubernetes ausgeführt, und geben Sie Optionen für horizontales Skalieren für relationale und HDFS-Daten.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860252"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801892"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Was sind SQL Server-Big Data-Cluster?
 
@@ -61,7 +61,7 @@ Verwaltung und Überwachung werden durch eine Kombination von Befehlszeilentools
 
 Die [Cluster-Administratorportal](cluster-admin-portal.md) ist eine Weboberfläche, in dem Status und Integrität der Pods im Cluster angezeigt. Darüber hinaus Links zu anderen Dashboards für Log Analytics und Dashboards für die netzwerküberwachung.
 
-Azure Data Studio können eine Vielzahl von Aufgaben für die big Data-Cluster ausführen. Dies erfolgt durch die neue **2019-Erweiterung für SQL Server (Vorschau)**. Diese Erweiterung bietet:
+Azure Data Studio können eine Vielzahl von Aufgaben für die big Data-Cluster ausführen. Dies erfolgt durch die neue **2019-Erweiterung für SQL Server (Vorschau)** . Diese Erweiterung bietet:
 
 - Integrierten Codeausschnitte für allgemeine Verwaltungsaufgaben.
 - Möglichkeit zum Durchsuchen von HDFS, Hochladen von Dateien, Dateien und Verzeichnisse erstellen.

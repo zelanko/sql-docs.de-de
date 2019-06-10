@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: 9325820ea71c94bb1e43828998ebbf810fb11c10
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801994"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775267"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "56801994"
   
     -   [Zusätzliche Informationen](#MoreInformation)  
   
-    -   [Sicherheit](#Security)  
+    -   [Security](#Security)  
   
 -   **Anweisungen mit:**  
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 48fb7495e7dcd3818e784fd7c9dd7b4152871ebb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: beda4797b2beeeea2bfb24a35cf052b9ac22b5eb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848856"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794132"
 ---
 # <a name="server-properties---security-page"></a>Servereigenschaften (Seite „Sicherheit“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47848856"
 >  Das Ändern der Sicherheitskonfiguration erfordert einen Neustart des Diensts. Beim Ändern des SQL Server- und Windows-Authentifizierungsmodus wird das SA-Konto nicht automatisch aktiviert. Zum Verwenden des SA-Kontos führen Sie [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) mit der Option ENABLE aus.  
   
 ## <a name="login-auditing"></a>Anmeldungsüberwachung  
- **Keine**  
+ **None**  
  Schaltet die Anmeldungsüberwachung ab.  
   
  **Nur fehlgeschlagene Anmeldungen**  
@@ -66,14 +66,14 @@ ms.locfileid: "47848856"
  **Kennwort**  
  Geben Sie das Kennwort für das Proxykonto ein.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **C2-Überwachungs-Ablaufverfolgung aktivieren**  
  Überwacht alle Zugriffsversuche auf Anweisungen und Objekte und zeichnet diese in einer Datei im Verzeichnis \MSSQL\Data (bei Standardinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) bzw. \MSSQL$*Instanzname*\Data (bei benannten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) auf. Weitere Informationen finden Sie unter [C2-Überwachungsmodus (Serverkonfigurationsoption)](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md).  
   
  **Datenbankübergreifende Besitzverkettung**  
  Wählen Sie diese Option aus, um es der Datenbank zu ermöglichen, Quelle oder Ziel einer datenbankübergreifenden Besitzverkettung zu sein. Weitere Informationen finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
