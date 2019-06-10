@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 9ce8b817a704e6bae6d56a47b49f78fd1c17a2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: b5a07ce70b57f5d62d53bf8ae9b570edcc78d7e6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104756"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800238"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Tastenkombinationen in [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -29,7 +29,7 @@ Da [!INCLUDE[name-sos](../includes/name-sos-short.md)] erbt die tastenzuordnung-
 
 So zeigen Sie alle aktuell definierten Tastenkombinationen an:
 
-Öffnen der **Tastenkombinationen** Editor von der **Datei** Menü: **Datei** > **Voreinstellungen** > **Tastenkombinationen** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Voreinstellungen** > **Tastenkombinationen** auf Mac).
+Öffnen der **Tastenkombinationen** Editor von der **Datei** Menü: **Datei** > **Voreinstellungen** > **Tastenkombinationen** ( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **Voreinstellungen** > **Tastenkombinationen** auf Mac).
 
 Zusätzlich zur Anzeige der aktueller tastaturzuordnungen, die **Tastenkombinationen** Editor Listet die verfügbaren Befehle, die keine Tastenkombinationen in Visual Studio definiert haben. Die **Tastenkombinationen** -Editor können Sie ganz einfach ändern, entfernen, zurücksetzen und definieren neue tastenzuordnungen.  
 

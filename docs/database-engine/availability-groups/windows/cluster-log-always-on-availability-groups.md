@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bfb0b56bba45d5e4622076f1d38bec2f4aca97a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1d025a77cace9d8bbcdd746c2e6a193f23efd34d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211729"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772585"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Erstellen und Analysieren der Protokolldatei „CLUSTER.LOG“ für eine Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Bezeichner|Quelle|Beispiel aus CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Nachrichten mit dem Präfix `[RES]` und `[hadrag]`|hadrres.dll (Always On-Ressourcen-DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request. (00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>:`[hadrag]` Offlineanforderung.)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated (00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server-Verfügbarkeitsgruppe \<ag>:`[hadrag]` Leasethread beendet)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement (00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>: `[hadrag]`Freie SQL-Anweisung)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server (00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>: `[hadrag]` Verbindung mit SQL Server trennen)|  
+|Nachrichten mit dem Präfix `[RES]` und `[hadrag]`|hadrres.dll (Always On-Ressourcen-DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request. (00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] SQL Server-Verfügbarkeitsgruppe ag>:`[hadrag]` Offlineanforderung.)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated (00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server-Verfügbarkeitsgruppe ag>:`[hadrag]` Leasethread beendet)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement (00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server-Verfügbarkeitsgruppe ag>: `[hadrag]`Freie SQL-Anweisung)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server (00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server-Verfügbarkeitsgruppe ag>: `[hadrag]` Verbindung mit SQL Server trennen)|  
 |Nachrichten mit dem Präfix `[RHS]`|RHS.EXE (Ressourcenhosting-Subsystem, Hostprozess von „hadrres.dll“)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag has come offline. RHS is about to report resource status to RCM.|  
 |Nachrichten mit dem Präfix `[RCM]`|Ressourcensteuerungsmonitor (Clusterdienst)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first... (000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Zuerst wird die Gruppe 'ag' offline geschaltet.<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|Ein API-Aufruf, der hauptsächlich bedeutet, dass SQL Server die Aktion anfordert|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  

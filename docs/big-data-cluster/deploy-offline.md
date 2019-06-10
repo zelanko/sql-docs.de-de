@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Erfahren Sie, wie Sie eine offline-Bereitstellung von einer SQL Server-big Data-Cluster ausführen.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49c96300792adfefa32152ec73911ba32fac47ee
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fd6a1e1e6f2ad661c8a2316c434854095c7f6da5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994020"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797889"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Führen Sie eine offline-Bereitstellung von einer SQL Server-big Data-cluster
 
@@ -124,7 +124,7 @@ Sie können einen automatisierten Python-Skript verwenden, die automatisch alle 
 
 ## <a name="install-tools-offline"></a>Installieren von offline-tools
 
-Big Data-Cluster-Bereitstellungen müssen mehrere Tools, einschließlich **Python**, **Mssqlctl**, und **"kubectl"**. Verwenden Sie die folgenden Schritte aus, um diese Tools auf einem offline-Server zu installieren.
+Big Data-Cluster-Bereitstellungen müssen mehrere Tools, einschließlich **Python**, **Mssqlctl**, und **"kubectl"** . Verwenden Sie die folgenden Schritte aus, um diese Tools auf einem offline-Server zu installieren.
 
 ### <a id="python"></a> Installieren Sie Python offline
 

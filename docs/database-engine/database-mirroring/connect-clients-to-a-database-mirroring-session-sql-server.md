@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 510fa333b4dff71fc38bc60f91509d3daa67adb2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131850"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775015"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server-Attribut  
  Die Verbindungszeichenfolge muss ein **Server**-Attribut enthalten, das den Namen des ersten Partners bereitstellt, der die aktuelle Prinzipalserverinstanz identifizieren sollte.  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen (*<Servername>*[**\\**_<SQL_Server_Instanzname>_]) anzugeben. Beispiel:  
+ Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen ( *<Servername>* [ **\\** _<SQL_Server_Instanzname>_ ]) anzugeben. Beispiel:  
   
  `Server=Partner_A;`  
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Eine SQL Server-Browser-Abfrage ist erforderlich, wenn in der Verbindungszeichenfolge der benannte Instanzname und nicht der Port angegeben ist.  
   
- Zum Angeben der IP-Adresse und des Ports nimmt das **Server**-Attribut die Form `Server=`*<ip_address>*`,`*\<Port>* an, wie z.B. in:  
+ Zum Angeben der IP-Adresse und des Ports nimmt das **Server**-Attribut die Form `Server=` *<ip_address>* `,` *\<Port>* an, wie z.B. in:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +121,7 @@ Server=123.34.45.56,4724;
 >  Die Authentifizierungsinformationen fehlen in dieser Zeichenfolge.  
   
 > [!IMPORTANT]  
->  Die Bündelung des Protokollpräfix mit dem **Server**-Attribut (`Server=tcp:`*\<Servername>*) ist inkompatibel mit dem **Network**-Attribut; die Angabe des Protokolls an beiden Stellen führt wahrscheinlich zu einem Fehler. Deshalb wird empfohlen, dass eine Verbindungszeichenfolge das Protokoll mithilfe des **Network**-Attributs angibt und nur der Servername im **Server**-Attribut (`"Network=dbmssocn; Server=`*\<Servername>*`"`) angegeben wird.  
+>  Die Bündelung des Protokollpräfix mit dem **Server**-Attribut (`Server=tcp:` *\<Servername>* ) ist inkompatibel mit dem **Network**-Attribut; die Angabe des Protokolls an beiden Stellen führt wahrscheinlich zu einem Fehler. Deshalb wird empfohlen, dass eine Verbindungszeichenfolge das Protokoll mithilfe des **Network**-Attributs angibt und nur der Servername im **Server**-Attribut (`"Network=dbmssocn; Server=` *\<Servername>* `"`) angegeben wird.  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner-Attribut  
  Neben dem Namen des ersten Partners kann der Client auch den Namen des Failoverpartners angeben, der die aktuelle Spiegelserverinstanz identifizieren sollte. Der Failoverpartner wird durch eines der Schlüsselwörter des Failover Partner-Attributs angegeben. Das Schlüsselwort für dieses Attribut hängt von der verwendeten API ab. In der folgenden Tabelle werden diese Schlüsselwörter aufgeführt:  
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |ODBC-Treiber|**Failover_Partner**|  
 |ActiveX-Datenobjekte (ADO)|**Failoverpartner**|  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, ist über ihren Systemnamen, *<Servername>*[**\\**_<SQL_Server_Instanzname>_].  
+ Die einfachste Art, die Serverinstanz zu identifizieren, ist über ihren Systemnamen, *<Servername>* [ **\\** _<SQL_Server_Instanzname>_ ].  
   
  Alternativ können die IP-Adresse und die Portnummer im Attribut **Failover Partner** bereitgestellt werden. Wenn der Anfangsverbindungsversuch während der ersten Verbindung mit der Datenbank fehlschlägt, wird beim Versuch, eine Verbindung mit dem Failoverpartner herzustellen, auf das Zurückgreifen auf DNS und SQL Server-Browser verzichtet. Wenn eine Verbindung hergestellt wurde, wird der Failoverpartnername durch den Failoverpartnernamen überschrieben; bei einem Failover benötigen die umgeleiteten Verbindung somit DNS- und SQL Server-Browser.  
   
@@ -169,13 +169,13 @@ Server=123.34.45.56,4724;
   
  Die Wiederholungszeit wird mit der folgenden Formel berechnet:  
   
- _Wiederholungszeit_ **=** _Vorhergehende Wiederholungszeit_ **+(** 0,08 **&#42;**_Anmeldungstimeout_**)**  
+ _Wiederholungszeit_ **=** _Vorhergehende Wiederholungszeit_ **+(** 0,08 **&#42;** _Anmeldungstimeout_ **)**  
   
  Hierbei gilt für *Vorhergehende Wiederholungszeit* ein Anfangswert von 0.  
   
  Bei Verwendung des Standardwerts für den Anmeldungstimeout von 15 Sekunden gilt *Anmeldungstimeout* *= 15*. In diesem Fall berechnen sich die Wiederholungszeiten in den ersten drei Runden wie folgt:  
   
-|Round|Berechnung der*Wiederholungszeit* |Wiederholungszeit pro Versuch|  
+|Round|Berechnung der*Wiederholungszeit*|Wiederholungszeit pro Versuch|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 Sekunden|  
 |2|1.2 **+(** 0,08 **&#42;** 15 **)**|2,4 Sekunden|  
