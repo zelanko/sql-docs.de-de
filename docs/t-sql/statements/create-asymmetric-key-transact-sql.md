@@ -1,7 +1,7 @@
 ---
 title: CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 05/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa20850f0784b734173f46ceee4235694c15b9cd
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 1198567d07035413463a35accbd58c17127118bb
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361550"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270188"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ ms.locfileid: "54361550"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-CREATE ASYMMETRIC KEY Asym_Key_Name   
+CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
-   [ FROM <Asym_Key_Source> ]  
+   [ FROM <asym_key_source> ]  
    [ WITH <key_option> ] 
    [ ENCRYPTION BY <encrypting_mechanism> ] 
    [ ; ]
   
-<Asym_Key_Source>::=  
+<asym_key_source>::=  
      FILE = 'path_to_strong-name_file'  
    | EXECUTABLE FILE = 'path_to_executable_file'  
-   | ASSEMBLY Assembly_Name  
-   | PROVIDER Provider_Name  
+   | ASSEMBLY assembly_name  
+   | PROVIDER provider_name  
   
 <key_option> ::=  
    ALGORITHM = <algorithm>  
@@ -71,50 +71,54 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- FROM *Asym_Key_Source*  
- Gibt die Quelle an, aus der das asymmetrische Schlüsselpaar geladen werden soll.  
-  
+ *Asym_Key_Name*  
+ Der Name des asymmetrischen Schlüssels in der Datenbank. Namen von asymmetrischen Schlüsseln müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und innerhalb der Datenbank eindeutig sein.  
+
  AUTHORIZATION *database_principal_name*  
  Gibt den Besitzer des asymmetrischen Schlüssels an. Eine Rolle oder Gruppe kann nicht als Besitzer angegeben sein. Wird diese Option ausgelassen, wird der aktuelle Benutzer als Besitzer verwendet.  
   
+ FROM *Asym_Key_Source*  
+ Gibt die Quelle an, aus der das asymmetrische Schlüsselpaar geladen werden soll.  
+  
  FILE ='*path_to_strong-name_file*'  
- Gibt den Pfad zu einer Datei mit starkem Namen an, aus der das Schlüsselpaar geladen werden soll.  
+ Gibt den Pfad zu einer Datei mit starkem Namen an, aus der das Schlüsselpaar geladen werden soll. Beschränkt auf 260 Zeichen von MAX_PATH von der Windows-API.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
  EXECUTABLE FILE ='*path_to_executable_file*'  
- Gibt eine Assemblydatei an, aus der der öffentliche Schlüssel geladen werden soll. Beschränkt auf 260 Zeichen von MAX_PATH von der Windows-API.  
+ Gibt den Pfad einer Assemblydatei an, aus der der öffentliche Schlüssel geladen werden soll. Beschränkt auf 260 Zeichen von MAX_PATH von der Windows-API.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- ASSEMBLY *Assembly_Name*  
- Gibt den Namen einer Assembly an, aus der der öffentliche Schlüssel geladen werden soll.  
+ ASSEMBLY *assembly_name*  
+ Gibt den Namen einer signierten Assembly an, die bereits in die Datenbank geladen wurde. Aus ihr wird der öffentliche Schlüssel geladen.  
   
-ENCRYPTION BY *\<key_name_in_provider>* gibt an, wie der Schlüssel verschlüsselt wurde. Dabei kann es sich um ein Zertifikat, ein Kennwort oder einen asymmetrischen Schlüssel handeln.  
-  
- KEY_NAME ='*key_name_in_provider*'  
- Gibt den Schlüsselnamen des externen Anbieters an. Weitere Informationen zum Verwalten externer Schlüssel finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
-  
- CREATION_DISPOSITION = CREATE_NEW  
- Erstellt einen neuen Schlüssel auf dem Extensible Key Management-Gerät. PROV_KEY_NAME muss verwendet werden, um Schlüsselnamen auf dem Gerät anzugeben. Wenn bereits ein Schlüssel auf dem Gerät vorhanden ist, gibt die Anweisung eine Fehlermeldung zurück.  
-  
- CREATION_DISPOSITION = OPEN_EXISTING  
- Ordnet einen asymmetrischen Schlüssel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem vorhandenen EKM-Schlüssel zu. PROV_KEY_NAME muss verwendet werden, um Schlüsselnamen auf dem Gerät anzugeben. Wenn CREATION_DISPOSITION = OPEN_EXISTING nicht bereitgestellt wird, ist der Standardwert CREATE_NEW.  
+ PROVIDER *provider_name*  
+ Gibt den Namen eines Anbieters für erweiterte Schlüsselverwaltung (Extensible Key Management, EKM) an. Der Anbieter muss zuerst mit der CREATE PROVIDER-Anweisung definiert werden. Weitere Informationen zum Verwalten externer Schlüssel finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  ALGORITHM = \<algorithm>  
  Die folgenden fünf Algorithmen können zur Verfügung gestellt werden: RSA_4096, RSA_3072, RSA_2048, RSA_1024 und RSA_512.  
   
  RSA_1024 und RSA_512 sind veraltet. Um RSA_1024 oder RSA_512 zu verwenden (was nicht empfohlen wird), müssen Sie den Kompatibilitätsgrad zwischen Datenbanken auf höchstens 120 festlegen.  
   
- PASSWORD = '*password*'  
+ PROVIDER_KEY_NAME = '*key_name_in_provider*'  
+ Gibt den Schlüsselnamen des externen Anbieters an.  
+  
+ CREATION_DISPOSITION = CREATE_NEW  
+ Erstellt einen neuen Schlüssel auf dem Extensible Key Management-Gerät. PROVIDER_KEY_NAME muss verwendet werden, um Schlüsselnamen auf dem Gerät anzugeben. Wenn bereits ein Schlüssel auf dem Gerät vorhanden ist, gibt die Anweisung eine Fehlermeldung zurück.  
+  
+ CREATION_DISPOSITION = OPEN_EXISTING  
+ Ordnet einen asymmetrischen Schlüssel von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem vorhandenen EKM-Schlüssel zu. PROVIDER_KEY_NAME muss verwendet werden, um Schlüsselnamen auf dem Gerät anzugeben. Wenn CREATION_DISPOSITION = OPEN_EXISTING nicht bereitgestellt wird, ist der Standardwert CREATE_NEW.  
+  
+ ENCRYPTION BY PASSWORD = '*password*'  
  Gibt das Kennwort an, mit dem der private Schlüssel verschlüsselt werden soll. Wenn diese Klausel nicht vorhanden ist, wird der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt. *password* kann maximal 128 Zeichen umfassen. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
 ## <a name="remarks"></a>Remarks  
- Ein *asymmetrischer Schlüssel* ist eine sicherungsfähige Entität auf Datenbankebene. Standardmäßig enthält diese Entität sowohl einen öffentlichen als auch einen privaten Schlüssel. Bei einer Ausführung ohne die FROM-Klausel generiert CREATE ASYMMETRIC KEY ein neues Schlüsselpaar. Bei einer Ausführung mit FROM-Klausel importiert CREATE ASYMMETRIC KEY ein Schlüsselpaar aus einer Datei oder einen öffentlichen Schlüssel aus einer Assembly.  
+ Ein *asymmetrischer Schlüssel* ist eine sicherungsfähige Entität auf Datenbankebene. Standardmäßig enthält diese Entität sowohl einen öffentlichen als auch einen privaten Schlüssel. Bei einer Ausführung ohne die FROM-Klausel generiert CREATE ASYMMETRIC KEY ein neues Schlüsselpaar. Bei einer Ausführung mit FROM-Klausel importiert CREATE ASYMMETRIC KEY ein Schlüsselpaar aus einer Datei oder einen öffentlichen Schlüssel aus einer Assembly oder DLL-Datei.  
   
- Standardmäßig ist der private Schlüssel mit dem Datenbank-Hauptschlüssel geschützt. Falls kein Datenbank-Hauptschlüssel erstellt wurde, ist ein Kennwort zum Schützen des privaten Schlüssels erforderlich. Falls ein Datenbank-Hauptschlüssel vorhanden ist, ist das Kennwort optional.  
+ Standardmäßig ist der private Schlüssel mit dem Datenbank-Hauptschlüssel geschützt. Falls kein Datenbank-Hauptschlüssel erstellt wurde, ist ein Kennwort zum Schützen des privaten Schlüssels erforderlich.  
   
  Der private Schlüssel kann eine Länge von 512, 1024 oder 2048 Bits aufweisen.  
   
@@ -134,17 +138,17 @@ GO
 ```  
   
 ### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>B. Erstellen eines asymmetrischen Schlüssels aus einer Datei, wobei die Autorisierung an einen Benutzer erteilt wird  
- Im folgenden Beispiel wird der asymmetrische Schlüssel `PacificSales19` aus einem in einer Datei gespeicherten Schlüsselpaar erstellt, und der Benutzer `Christina` wird anschließend zum Verwenden des asymmetrischen Schlüssels autorisiert.  
+ Im folgenden Beispiel wird der asymmetrische Schlüssel `PacificSales19` aus einem in einer Datei gespeicherten Schlüsselpaar erstellt und der Besitz des asymmetrischen Schlüssels Benutzer `Christina` zugewiesen. Der private Schlüssel ist durch den Datenbankhauptschlüssel geschützt, der vor dem asymmetrischen Schlüssel erstellt werden muss.  
   
 ```  
-CREATE ASYMMETRIC KEY PacificSales19 AUTHORIZATION Christina   
-    FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp'    
-    ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';  
+CREATE ASYMMETRIC KEY PacificSales19  
+    AUTHORIZATION Christina  
+    FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
 GO  
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. Erstellen eines asymmetrischen Schlüssels von einem EKM-Anbieter  
- Im folgenden Beispiel wird der asymmetrische Schlüssel `EKM_askey1` aus einem in einer Datei gespeicherten Schlüsselpaar erstellt. Anschließend wird er unter Verwendung eines Extensible Key Management-Anbieters mit dem Namen `EKMProvider1` und einem Schlüssel mit dem Namen `key10_user1` bei dem Anbieter verschlüsselt.  
+ Das folgende Beispiel erstellt den asymmetrischen Schlüssel `EKM_askey1` aus einem Schlüsselpaar, das in einem EKM-Anbieter namens `EKM_Provider1` gespeichert ist, und einem Schlüssel für diesen Anbieter namens `key10_user1`.  
   
 ```  
 CREATE ASYMMETRIC KEY EKM_askey1   
@@ -157,10 +161,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
- [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
- [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
+ [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+ [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+ [ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
+ [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+ [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   

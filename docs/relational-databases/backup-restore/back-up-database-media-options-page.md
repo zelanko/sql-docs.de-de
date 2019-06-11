@@ -14,12 +14,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e29fe0deaaba673136ee1e1f135e61a8f2b402e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e89089c6f95547f30bc4d99cdecdc38c8fe88957
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212089"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402993"
 ---
 # <a name="back-up-database-media-options-page"></a>Datenbank sichern (Seite 'Medienoptionen')
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,55 +37,46 @@ ms.locfileid: "53212089"
 > [!NOTE]  
 >  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
   
 ### <a name="overwrite-media"></a>Medium überschreiben  
  Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Windows Azure-Speicher) als Sicherungsziel auswählen, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung **BACKUP TO URL. WITH FORMAT** überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+
+ Die Option **Medien überschreiben** ist deaktiviert, wenn Sie **URL** auf der Seite **Allgemein** als Sicherungsziel ausgewählt haben.
   
  Nur die Option **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen** wird mit Verschlüsselungsoptionen unterstützt. Wenn Sie die Optionen im Abschnitt **Auf vorhandenen Mediensatz sichern** auswählen, werden die Verschlüsselungsoptionen auf der Seite **Sicherungsoptionen** deaktiviert.  
   
 > [!NOTE]  
 >  Informationen über Mediensätze finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)ausgeführt wird.  
   
- **Auf vorhandenen Mediensatz sichern**  
- Sichert eine Datenbank auf einen vorhandenen Mediensatz. Durch Auswahl dieser Option werden drei weitere Optionen aktiviert.  
+**Auf vorhandenen Mediensatz sichern**: Sichert eine Datenbank auf einen vorhandenen Mediensatz. Durch Auswahl dieser Option werden drei weitere Optionen aktiviert.  
   
  Wählen Sie eine der folgenden Optionen aus:  
   
- **An vorhandenen Sicherungssatz anfügen**  
- Fügt den Sicherungssatz unter Beibehaltung vorheriger Sicherungen an den vorhandenen Mediensatz an.  
+ - **An vorhandenen Sicherungssatz anfügen**: Fügt den Sicherungssatz unter Beibehaltung vorheriger Sicherungen an den vorhandenen Mediensatz an.  
   
- **Alle vorhandenen Sicherungssätze überschreiben**  
- Ersetzt alle vorherigen Sicherungen auf dem vorhandenen Mediensatz durch die aktuelle Sicherung.  
+ - **Alle vorhandenen Sicherungssätze überschreiben**: Ersetzt alle vorherigen Sicherungen auf dem vorhandenen Mediensatz durch die aktuelle Sicherung.  
   
- **Mediensatznamen und Ablaufzeit des Sicherungssatzes überprüfen**  
- Legen Sie optional beim Sichern auf einen vorhandenen Mediensatz fest, dass während des Sicherungsvorgangs der Name und das Ablaufdatum der Sicherungssätze überprüft werden.  
+ - **Mediensatznamen und Ablaufzeit des Sicherungssatzes überprüfen**: Legen Sie optional beim Sichern auf einen vorhandenen Mediensatz fest, dass während des Sicherungsvorgangs der Name und das Ablaufdatum der Sicherungssätze überprüft werden.  
   
- **Mediensatzname**  
- Wenn **Mediensatznamen und Ablaufzeit des Sicherungssatzes überprüfen** ausgewählt ist, geben Sie optional den Namen des Mediensatzes an, der für diesen Sicherungsvorgang verwendet werden soll.  
+ - **Mediensatzname**:  Wenn **Mediensatznamen und Ablaufzeit des Sicherungssatzes überprüfen** ausgewählt ist, geben Sie optional den Namen des Mediensatzes an, der für diesen Sicherungsvorgang verwendet werden soll.  
   
- **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen**  
- Mit dieser Option erstellen Sie einen neuen Mediensatz, wobei die vorherigen Sicherungssätze gelöscht werden.  
+ - **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen**:  Mit dieser Option erstellen Sie einen neuen Mediensatz, wobei die vorherigen Sicherungssätze gelöscht werden.  
   
  Durch Auswählen dieser Option werden die folgenden Optionen aktiviert:  
   
- **Name für neuen Mediensatz**  
- Geben Sie optional einen neuen Namen für den Mediensatz ein.  
+ - **Name für neuen Mediensatz**: Geben Sie optional einen neuen Namen für den Mediensatz ein.  
   
- **Beschreibung für neuen Mediensatz**  
- Geben Sie optional eine aussagekräftige Beschreibung für den neuen Mediensatz ein. Die Beschreibung sollte genau genug sein, um den Inhalt akkurat zu vermitteln.  
+ - **Beschreibung für neuen Mediensatz**:  Geben Sie optional eine aussagekräftige Beschreibung für den neuen Mediensatz ein. Die Beschreibung sollte genau genug sein, um den Inhalt akkurat zu vermitteln.  
   
 ### <a name="reliability"></a>Zuverlässigkeit  
  Mit den Optionen des Bereichs **Transaktionsprotokoll** wird die Fehlerverwaltung durch den Sicherungsvorgang gesteuert.  
   
- **Sicherung nach dem Abschluss überprüfen**  
- Überprüft, ob der Sicherungssatz vollständig ist und alle Volumes lesbar sind.  
+ - **Sicherung nach dem Abschluss überprüfen**:  Überprüft, ob der Sicherungssatz vollständig ist und alle Volumes lesbar sind.  
   
- **Vor dem Schreiben auf die Medien Prüfsumme bilden**  
- Überprüft vor dem Schreiben auf die Sicherungsmedien die Prüfsummen. Das Auswählen dieser Option entspricht der Angabe der Option CHECKSUM in der BACKUP-Anweisung von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durch Auswahl dieser Option kann die Arbeitsauslastung erhöht und der Sicherungsdurchsatz des Sicherungsvorgangs verringert werden. Weitere Informationen zu Sicherungsprüfsummen finden Sie unter [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+ - **Vor dem Schreiben auf die Medien Prüfsumme bilden**: Überprüft vor dem Schreiben auf die Sicherungsmedien die Prüfsummen. Das Auswählen dieser Option entspricht der Angabe der Option CHECKSUM in der BACKUP-Anweisung von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durch Auswahl dieser Option kann die Arbeitsauslastung erhöht und der Sicherungsdurchsatz des Sicherungsvorgangs verringert werden. Weitere Informationen zu Sicherungsprüfsummen finden Sie unter [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- **Bei Fehler fortsetzen**  
- Der Sicherungsvorgang wird auch nach Auftreten eines oder mehrerer Fehler fortgesetzt.  
+ - **Bei Fehler fortsetzen**: Der Sicherungsvorgang wird auch nach Auftreten eines oder mehrerer Fehler fortgesetzt.  
   
 ### <a name="transaction-log"></a>Transaktionsprotokoll  
  Mit den Optionen des Bereichs **Transaktionsprotokoll** wird das Verhalten einer Transaktionsprotokollsicherung gesteuert. Diese Optionen sind nur beim vollständigen Wiederherstellungsmodell oder beim massenprotokollierten Wiederherstellungsmodell relevant. Sie sind nur aktiviert, wenn im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** im Feld [Sicherungstyp](../../relational-databases/backup-restore/back-up-database-general-page.md) die Option **Transaktionsprotokoll** ausgewählt ist.  
@@ -107,11 +98,9 @@ ms.locfileid: "53212089"
 > [!NOTE]  
 >  Weitere Informationen zum Verwenden von Bandmedien finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- **Band nach dem Sichern entladen**  
- Nach Abschluss der Sicherung wird das Band entladen.  
+ - **Band nach dem Sichern entladen**: Nach Abschluss der Sicherung wird das Band entladen.  
   
- **Band vor dem Entladen zurückspulen**  
- Das Band wird vor dem Entladen freigegeben und zurückgespult. Diese Option ist nur aktiviert, wenn **Band nach dem Sichern entladen** ausgewählt ist.  
+ - **Band vor dem Entladen zurückspulen**: Das Band wird vor dem Entladen freigegeben und zurückgespult. Diese Option ist nur aktiviert, wenn **Band nach dem Sichern entladen** ausgewählt ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

@@ -22,22 +22,69 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ebad80ec47c9d66e4079c76c1ca06e805ca259ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154655"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775411"
 ---
-# <a name="sql-server-service-broker"></a>SQL Server Service Broker
+# <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] bietet systemeigene Unterstützung für Messaging- und Warteschlangenanwendungen in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dies erleichtert Entwicklern das Erstellen anspruchsvoller Anwendungen, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Komponenten für die Kommunikation zwischen verschiedenartigen Datenbanken verwenden. Entwickler können [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwenden, um verteilte und zuverlässige Anwendungen auf einfache Weise zu erstellen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] bieten systemeigene Unterstützung für Messaging und Queuing in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und der [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Entwickler können problemlos anspruchsvolle Anwendungen erstellen, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Komponenten verwenden, um zwischen verschiedenen Datenbanken zu kommunizieren und verteilte und zuverlässige Anwendungen zu erstellen.  
   
- Anwendungsentwickler, die [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwenden, können Datenarbeitsauslastungen zwischen mehreren Datenbanken verteilen, ohne komplizierte Besonderheiten von Kommunikation und Messaging programmieren zu müssen. Dadurch werden die Entwicklungs- und die Testarbeit reduziert, da [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Kommunikationspfade im Kontext einer Konversation behandelt. Außerdem wird die Leistung verbessert. Front-End-Datenbanken, die Websites unterstützen, können z. B. Informationen aufzeichnen und prozessintensive Tasks an die Warteschlange von Back-End-Datenbanken senden. [!INCLUDE[ssSB](../../includes/sssb-md.md)] stellt sicher, dass alle Tasks im Kontext von Transaktionen verwaltet werden, um die Zuverlässigkeit und technische Konsistenz zu gewährleisten.  
+## <a name="when-to-use-service-broker"></a>Einsatz von Service Broker
+
+ Verwenden Sie Service Broker-Komponenten, um native, datenbankinterne asynchrone Nachrichtenverarbeitungsfunktionen zu implementieren. Anwendungsentwickler, die [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwenden, können Datenarbeitsauslastungen zwischen mehreren Datenbanken verteilen, ohne komplizierte Besonderheiten von Kommunikation und Messaging programmieren zu müssen. Service Broker reduziert die Entwicklungs- und die Testarbeit, da [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Kommunikationspfade im Kontext einer Konversation behandelt. Außerdem wird die Leistung verbessert. Front-End-Datenbanken, die Websites unterstützen, können z. B. Informationen aufzeichnen und prozessintensive Tasks an die Warteschlange von Back-End-Datenbanken senden. [!INCLUDE[ssSB](../../includes/sssb-md.md)] stellt sicher, dass alle Tasks im Kontext von Transaktionen verwaltet werden, um die Zuverlässigkeit und technische Konsistenz zu gewährleisten.  
   
+## <a name="overview"></a>Übersicht
+
+  Service Broker ist ein Nachrichtenübermittlungsframework, das das Erstellen nativer, datenbankinterner dienstorientierter Anwendungen ermöglicht. Im Gegensatz zu den klassischen Funktionen der Abfrageverarbeitung, die während des Abfragelebenszyklus ständig Daten aus den Tabellen lesen und verarbeiten, stehen Ihnen in der dienstorientierten Anwendung Datenbankdienste zur Verfügung, die Nachrichten austauschen. Jeder Dienst verfügt über eine Warteschlange, in der Nachrichten bis zu ihrer Verarbeitung platziert werden.
+  
+![Service Broker](media/service-broker.png)
+  
+  Die Nachrichten in den Warteschlangen können mit dem Transact-SQL-Befehl `RECEIVE` oder durch das Aktivierungsverfahren abgerufen werden, das aufgerufen wird, wenn die Nachricht in der Warteschlange eingeht.
+  
+### <a name="creating-services"></a>Erstellen von Diensten
+ 
+  Datenbankdienste werden mit der Transact-SQL-Anweisung [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) erstellt. Der Dienst kann mit der Anweisung [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) der erstellten Nachrichtenwarteschlange zugeordnet werden:
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### <a name="sending-messages"></a>Senden von Nachrichten
+  
+  Nachrichten werden für die Konversation zwischen den Diensten mit der Transact-SQL-Anweisung [SEND](../../t-sql/statements/send-transact-sql.md) gesendet. Eine Konversation ist ein Kommunikationskanal, der zwischen den Diensten mit der Transact-SQL-Anweisung `BEGIN DIALOG` eingerichtet wird. 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   Die Nachricht wird an `ExpenssesService` gesendet und in `dbo.ExpenseQueue` platziert. Da dieser Warteschlange kein Aktivierungsverfahren zugeordnet ist, verbleibt die Nachricht in der Warteschlange, bis sie gelesen wird.
+
+### <a name="processing-messages"></a>Verarbeiten von Nachrichten
+
+   Die Nachrichten, die in die Warteschlange gestellt werden, können mit einer Standardabfrage `SELECT` ausgewählt werden. Die `SELECT`-Anweisung ändert die Warteschlange nicht und entfernt die Nachrichten nicht. Um die Nachrichten aus der Warteschlange zu lesen und abzurufen, können Sie die Transact-SQL-Anweisung [RECEIVE](../../t-sql/statements/receive-transact-sql.md) verwenden.
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  Nachdem Sie alle Nachrichten aus der Warteschlange verarbeitet haben, sollten Sie die Konversation mit der Transact-SQL-Anweisung [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) schließen.
+
 ## <a name="where-is-the-documentation-for-service-broker"></a>Wo finde ich die Dokumentation für Service Broker?  
  Die Referenzdokumentation für [!INCLUDE[ssSB](../../includes/sssb-md.md)] ist in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Dokumentation enthalten. Diese Referenzdokumentation enthält die folgenden Abschnitte:  
   

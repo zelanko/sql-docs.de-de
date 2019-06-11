@@ -1,7 +1,7 @@
 ---
 title: Azure Feature Pack für Integration Services (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 003cfeefbea35d635264793555d771c5fddcead0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 29e30a8a7da41bcb7c75c61ef5ed78d0e3096536
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65729413"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403174"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
 
@@ -72,6 +72,8 @@ Die Downloadseiten enthalten auch Informationen zu erforderlichen Komponenten. S
 
     -   [Azure SQL DW-Uploadtask](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Flexibler Dateitask](../integration-services/control-flow/flexible-file-task.md)
+
 -   Datenflusskomponenten
 
     -   [Azure-Blob-Quelle](../integration-services/data-flow/azure-blob-source.md)
@@ -82,7 +84,11 @@ Die Downloadseiten enthalten auch Informationen zu erforderlichen Komponenten. S
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob und Azure Data Lake Store-Datei-Enumerator. Siehe [Foreach Loop Container](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296) (Foreach-Schleifencontainer).
+    -   [Flexible Dateiquelle](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [Flexibles Dateiziel](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Azure Blob, Azure Data Lake Store und Data Lake Storage Gen2-Datei-Enumerator. Siehe [Foreach Loop Container](../integration-services/control-flow/foreach-loop-container.md) (Foreach-Schleifencontainer).
 
 ## <a name="scenario-processing-big-data"></a>Szenario: Verarbeitung großer Datenmengen
  Verwenden Sie den Azure Connector zum Ausführen der folgenden Big Data-Verarbeitungsaufgaben:

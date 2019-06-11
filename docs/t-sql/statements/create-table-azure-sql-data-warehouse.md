@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574889"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413330"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -36,7 +36,7 @@ Informationen zu Tabellen und deren Verwendung finden Sie unter [Einführung in 
 
 ## <a name="syntax"></a>Syntax
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -166,12 +166,12 @@ Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizonta
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>Option für sortierten gruppierten Columnstore-Index (Vorschau)
 
-„Sortierter Columnstore-Index“ ist der Standard für das Erstellen von Tabellen in Azure SQL Data Warehouse.  Die Angabe „ORDER“ wird standardmäßig mit „COMPOUND“-Schlüsseln umgesetzt.  Die Sortierung erfolgt immer in aufsteigender Reihenfolge. Wenn keine ORDER-Klausel angegeben ist, wird der Columnstore nicht sortiert.
+„Sortierter Columnstore-Index“ ist der Standard für das Erstellen von Tabellen in Azure SQL Data Warehouse.  Die Angabe „ORDER“ wird standardmäßig mit „COMPOUND“-Schlüsseln umgesetzt.  Die Sortierung erfolgt immer in aufsteigender Reihenfolge. Wenn keine ORDER-Klausel angegeben ist, wird der Columnstore nicht sortiert. Aufgrund des Sortiervorgangs kann es bei einer Tabelle mit sortiertem geclustertem Columnstore-Index zu längeren Datenladezeiten kommen als bei nicht sortierten geclusterten Columnstore-Indizes. Wenn Sie beim Laden von Daten mehr tempdb-Speicherplatz benötigen, können Sie die Datenmenge pro Einfügung verringern.
 
 Während der Vorschauphase können Sie diese Abfrage ausführen, um die Spalten mit aktivierter ORDER zu überprüfen.  Später wird eine Katalogansicht bereitgestellt, um diese Informationen und die Spaltenordnungszahl anzugeben, wenn mehrere Spalten in ORDER angegeben sind.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   
@@ -344,7 +344,7 @@ CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION 
  
  Wenn *boundary_value* ein Literalwert ist, der implizit in den Datentyp in *partition_column_name* konvertiert werden muss, ergibt sich eine Abweichung. Zwar wird über die [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Systemsichten der Literalwert angezeigt, für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Vorgänge wird jedoch der konvertierte Wert verwendet. 
 
-### <a name="temporary-tables"></a>Temporäre Tabellen 
+### <a name="temporary-tables"></a>Temporäre Tabellen
 
  Globale temporäre Tabellen, die mit ## beginnen, werden nicht unterstützt.  
   

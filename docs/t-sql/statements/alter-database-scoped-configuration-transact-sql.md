@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 8932a3413923016783f50c3084658fa992e6c984
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64568339"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270172"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -71,8 +71,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
     | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -173,6 +173,8 @@ Ermöglicht Ihnen das Aktivieren bzw. Deaktivieren der verschachtelten Ausführu
 
 > [!NOTE]
 > Für Datenbank-Kompatibilitätsgrade von 130 oder weniger hat diese datenbankbezogene Konfiguration keine Auswirkungen.
+>
+> Nur in SQL Server 2017 (14.x) wurde für die Option INTERLEAVED_EXECUTION_TVF der ältere Name **DISABLE**_INTERLEAVED_EXECUTION_TVF verwendet.
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 
@@ -294,6 +296,8 @@ Gestattet das Festlegen der Funktion für automatisches Löschen von [globalen t
 
 - Für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singletons und Pools für elastische Datenbanken kann diese Option in den einzelnen Benutzerdatenbanken des SQL-Datenbankservers festgelegt werden.
 - In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der verwalteten [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz wird diese Option in der `TempDB` festgelegt, und die Einstellungen der einzelnen Benutzerdatenbanken haben keine Auswirkungen.
+
+<a name="lqp"></a>
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 

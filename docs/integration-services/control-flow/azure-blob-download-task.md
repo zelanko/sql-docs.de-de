@@ -1,7 +1,7 @@
 ---
 title: Azure-Blob-Downloadtask | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dfde0bdb50c5f8fbb81a5eb7d9b88067999f1de4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: ec05684572563228ec3bce88ebb5c5ca32a86bc2
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728039"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403196"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob-Download-Task
 
@@ -33,15 +33,13 @@ Um einen **Azure Blob-Download-Task**hinzuzufügen, legen Sie ihn mittels Drag &
  Der **Azure-Blob-Downloadtask** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
  Die folgende Tabelle enthält Beschreibungen für die Felder in diesem Dialogfeld.  
-  
-|||  
-|-|-|  
+
 |**Feld**|**Beschreibung**|  
+|---|---|
 |AzureStorageConnection|Geben Sie einen vorhandenen Azure Storage-Verbindungs-Manager an, oder erstellen Sie einen neuen, der sich auf ein Azure-Speicherkonto bezieht, das auf den Speicherort der Blob-Dateien verweist.|  
 |BlobContainer|Gibt den Namen des Blob-Containers an, der die herunterzuladenden Blob-Dateien enthält.|  
 |BlobDirectory|Gibt das Blob-Verzeichnis an, das die herunterzuladenden Blob-Dateien enthält. Das Blobverzeichnis ist eine virtuelle hierarchische Struktur.|  
+|SearchRecursively|Gibt an, ob in Unterverzeichnissen rekursiv gesucht werden soll.|  
 |LocalDirectory|Gibt das lokale Verzeichnis an, in dem die heruntergeladenen Blobdateien gespeichert werden sollen.|  
 |FileName|Legt einen Namensfilter an, um Dateien mit dem angegebenen Namensmuster auszuwählen. Beispielsweise enthält `MySheet*.xls\*` Dateien wie `MySheet001.xls` und `MySheetABC.xlsx`.|  
 |TimeRangeFrom/TimeRangeTo|Legt einen Filter für den Zeitbereich fest. Dateien, die nach **TimeRangeFrom** und vor **TimeRangeTo** geändert wurden, sind eingeschlossen.|  
-  
-  

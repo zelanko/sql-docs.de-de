@@ -1,7 +1,7 @@
 ---
 title: Azure Storage-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,34 +14,30 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 509e51243f7de4e6871bedf18c7ce7aa84d3e8c6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728333"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403071"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage-Verbindungs-Manager
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-  Der **Azure Storage-Verbindungs-Manager** ermöglicht es, eine Verbindung zwischen einem SSIS-Paket und einem Azure Storage-Konto mithilfe der Werte zu erstellen, die Sie für die folgenden Eigenschaften angeben: „Speicherkontoname“ und „Kontoschlüssel“.  
+  Der **Azure Storage-Verbindungs-Manager** ermöglicht einem SSIS-Paket, die Verbindung mit einem Azure Storage-Konto herzustellen.
    
  Der **Azure Storage-Verbindungs-Manager** ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
-1.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** die Option **AzureStorage**aus, und klicken Sie auf **Hinzufügen**.  
+Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** die Option **AzureStorage**aus, und klicken Sie auf **Hinzufügen**.  
   
-2.  Wählen Sie im Editor-Dialogfeld „Azure Storage-Verbindungs-Manager“ **Azure-Konto verwenden** aus, um eine Verbindung zu einem Azure Storage-Dienst über das Internet herzustellen, oder wählen Sie **Lokales Entwicklerkonto verwenden** aus, um eine Verbindung zum lokalen Dienst herzustellen, der vom Azure Storage-Emulator gehostet wird.  
-  
-3.  Gehen Sie bei Auswahl von **Azure-Konto verwenden** folgendermaßen vor:  
-  
-    1.  Geben Sie Werte in die Felder **Speicherkontoname** und **Kontoschlüssel** an. Diese Werte werden als vertrauliche Daten im SSIS-Paket gespeichert.  
-  
-    2.  Wählen Sie **HTTPS verwenden** aus, wenn Sie HTTPS anstelle von HTTP für die Verbindung mit dem Azure Storage-Dienst verwenden möchten.  
-  
-4.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
-  
-5.  Die Eigenschaften des Verbindungs-Managers, die Sie im Fenster **Eigenschaften** erstellt haben, werden angezeigt.  
-  
-  
+Die folgenden Eigenschaften sind verfügbar.
+
+- **Dienst:** Gibt den Speicherdienst an, mit dem eine Verbindung hergestellt werden soll.
+- **Kontoname:** Gibt den Speicherkontonamen an.
+- **Authentifizierung:** Gibt die zu verwendende Authentifizierungsmethode an. **AccessKey**- und **ServicePrincipal**-Authentifizierung werden unterstützt.
+    - **AccessKey:** Geben Sie für diese Authentifizierungsmethode den **Kontoschlüssel** an.
+    - **ServicePrincipal:** Geben Sie für diese Authentifizierungsmethode die **Anwendungs-ID**, den **Anwendungsschlüssel** und die **Mandanten-ID** des Dienstprinzipals an.
+      Dem Dienstprinzipal sollte die Rolle **Mitwirkender an Speicherblobdaten** zugewiesen werden.
+      Details dazu finden Sie auf [dieser](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) Seite.
+- **Umgebung:** Gibt die Cloudumgebung an, die das Speicherkonto hostet.
