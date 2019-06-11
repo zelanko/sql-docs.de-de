@@ -1,6 +1,6 @@
 ---
 title: Kompatibilitätsgrad für tabellarische Modelle in Analysis Services | Microsoft-Dokumentation
-ms.date: 05/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 19c69aa1a1ab27e7498d3c9d6a0d52c25b9f0020
+ms.sourcegitcommit: c2a5bed031b14f66562f792a3afaefab8c759fda
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175125"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826832"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Kompatibilitätsgrad für tabellarische Modelle von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-  Die *Kompatibilitätsgrad* bezieht sich auf releasespezifische Verhalten in der Analysis Services-Engine. Beispielsweise verfügen DirectQuery und tabellarische Objektmetadaten verschiedene Implementierungen abhängig von den Kompatibilitätsgrad. Im Allgemeinen sollten Sie die neuesten Kompatibilitätsgrad, die von Ihren Servern unterstützt auswählen.
+  Die *Kompatibilitätsgrad* bezieht sich auf Funktionen und Features, Verbesserungen in der Analysis Services-Engine und in den Metadaten für tabellarische Modelle. Im Allgemeinen sollten Sie die neuesten Kompatibilitätsgrad, die von Ihren Servern unterstützt auswählen. 
 
   **Die neueste unterstützte Kompatibilitätsgrad ist 1400** 
   
 Wichtige Features in den Kompatibilitätsgrad 1400 sind:
 
 *  Neue Infrastruktur für die Datenkonnektivität und den Import in tabellarische Modelle mit Unterstützung für TOM-APIs und TMSL-Skripts. Dies ermöglicht die Unterstützung für zusätzliche Datenquellen, z.B. Azure Blob Storage. Zusätzliche Daten, die Quellen werden werden in zukünftigen Updates enthalten.
-*  Datentransformations- und datenmashupfunktionen mithilfe von Get Data- und M-Ausdrücken in SSDT.
-*  Measures unterstützen jetzt eine detailzeileneigenschaft mit einem DAX-Ausdruck, BI-Tools wie Microsoft Excel Drilldown zu den detaillierten Daten aus einem aggregierten Bericht zu aktivieren. Wenn Endbenutzer den Gesamtumsatz für eine Region und Monat anzeigen, können sie z. B. die zugehörigen Auftragsdetails anzeigen. 
+*  Datentransformations- und datenmashupfunktionen mithilfe von Get Data- und M-Ausdrücken in SQL Server Data Tools (SSDT).
+*  Misst nun Unterstützung für eine detailzeileneigenschaft mit einem DAX-Ausdruck, aktivieren die BI-tools wie z. B. Microsoft Excel einen Drilldown nach unten zu Daten aus einem aggregierten Bericht beschrieben. Wenn Benutzer den Gesamtumsatz für eine Region und Monat anzeigen, können sie z. B. die zugehörigen Auftragsdetails anzeigen. 
 *  Sicherheit der auf Objektebene für Tabellen- und Spaltennamen, zusätzlich zu den darin enthaltenen Daten.
 *  Verbesserte Unterstützung für unregelmäßige Hierarchien.
 *  Überwachung von Leistung und Verbesserungen.
@@ -35,6 +35,8 @@ Wichtige Features in den Kompatibilitätsgrad 1400 sind:
   
 ## <a name="supported-compatibility-levels-by-version"></a>Unterstützte Kompatibilitätsgrade nach version
   
+Niedrigere Kompatibilitätsgraden werden Gründen der Abwärtskompatibilität unterstützt Kompatibilität. 
+
 |||  
 |-|-|- 
 |**Kompatibilitätsgrad**|**Serverversion**| 
@@ -44,7 +46,7 @@ Wichtige Features in den Kompatibilitätsgrad 1400 sind:
 |1103|SQLServer 2017 *, SqlServer 2016, SqlServer 2014, SQL Server 2012 SP1|  
 |1100|SQLServer 2017 *, SqlServer 2016, SqlServer 2014, SQL Server 2012 SP1, SqlServer 2012| 
 
-\* Kompatibilitätsgrad von 1100 und 1103 sind in SQL Server 2017 veraltet.
+\* Kompatibilitätsgrad von 1100 und 1103 sind in SQL Server 2017 und höher veraltet.
   
 ## <a name="set-compatibility-level"></a>Festlegen des Kompatibilitätsgrads 
  Beim Erstellen eines neuen tabellenmodellprojekts in SQL Server Data Tools (SSDT) können Sie den Kompatibilitätsgrad angeben, auf die **Designer für tabellarische Modelle** Dialogfeld. 
