@@ -9,24 +9,25 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-author: hirokib
-ms.author: elbutter
+author: julieMSFT
+ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b7bb600d4eda0f91be025baee7c6ecd35f99c9da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 399f08e0ebf09ea90c358ae5667b5031ef0cb099
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715867"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822512"
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Enthält eine Zeile für jede Spalte in einem columnstore-Index.  
+Enthält eine Zeile für jede Spalte in einem columnstore-Index.
 
 | Spaltenname                 | Datentyp  | Description                                                  |
-| --------------------------- | ---------- | ------------------------------------------------------------ |
+| :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | Gibt die Partitions-ID an. Ist innerhalb einer Datenbank eindeutig.     |
 | **hobt_id**                 | **bigint** | ID des Heaps oder B-Struktur-Indexes (hobt) für die Tabelle, die diesen columnstore-Index aufweist. |
 | **column_id**               | **int**    | ID der columnstore-Spalte.                                |
@@ -44,10 +45,11 @@ Enthält eine Zeile für jede Spalte in einem columnstore-Index.
 | **null_value**              | **bigint** | Ein Wert, der zum Darstellen von NULL-Werten verwendet wird.                               |
 | **on_disk_size**            | **bigint** | Die Größe des Segments in Byte.                                    |
 | **pdw_node_id**             | **int**    | Der eindeutige Bezeichner des eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten. |
+| &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
-Verknüpfen Sie sys.pdw_nodes_column_store_segments mit anderen Systemtabellen, um zu bestimmen, die Anzahl der columnstore-Segmente pro logischen Tabelle. 
+Verknüpfen Sie sys.pdw_nodes_column_store_segments mit anderen Systemtabellen, um zu bestimmen, die Anzahl der columnstore-Segmente pro logischen Tabelle.
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -75,17 +77,16 @@ GROUP BY    sm.name
 ,           nc.column_id  
 ORDER BY    table_nm
 ,           nc.column_id
-,           sm.name
+,           sm.name ;
 ```
 
-## <a name="permissions"></a>Berechtigungen  
- Erfordert die **VIEW SERVER STATE**-Berechtigung.  
+## <a name="permissions"></a>Berechtigungen
 
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+Erfordert die **VIEW SERVER STATE**-Berechtigung.
 
-  
+## <a name="see-also"></a>Siehe auch
 
+[SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
+author: MightyPen
 manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b743b1b02a911c9132eab4a90c1f35b781895df2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62629517"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822976"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Abrufen von numerischen Daten mit SQL\_numerischen\_Struktur
 
@@ -35,7 +35,7 @@ Der Artikel [C-Datentypen](c-data-types.md) enthält weitere Informationen über
 Die SQL-Anweisung\_numerischen\_Struktur ist in der Headerdatei sqltypes.h wie folgt definiert:
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +64,7 @@ In diesem Codebeispiel wird veranschaulicht:
 >
 > Microsoft bietet diese Codebeispiele "wie besehen" ohne Gewährleistung jeglicher Art, ausdrücklich oder konkludent, einschließlich, aber nicht beschränkt auf konkludente Garantien der Marktgängigkeit und/oder der Eignung für einen bestimmten Zweck.
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +217,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>Zwischenergebnisse:
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +240,7 @@ Jetzt ist die Herausforderung der skalierte Ganzzahl aus diesem Zeichenfolgenarr
 Code, der die Konvertierung von little-endian-Modus in die skalierte Ganzzahl implementiert. Es ist, muss der Anwendungsentwickler, um diese Funktionalität zu implementieren. Im folgenden Codebeispiel wird nur eine von den vielen Möglichkeiten.
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +283,7 @@ Das folgende Beispielprogramm veranschaulicht die Verwendung von SQL\_C\_numeris
 Der ODBC-Treiber, die, den Sie verwenden, um dieses Programm ausgeführt werden, muss ODBC 3.0-Funktionalität unterstützen.
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

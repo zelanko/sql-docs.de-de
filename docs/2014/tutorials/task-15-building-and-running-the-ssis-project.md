@@ -7,21 +7,24 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
-ms.openlocfilehash: 1dc31f9b3df500e862236d4125fb1de99bc93eda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: lle
+author: lrtoyou1223
+ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191856"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822991"
 ---
 # <a name="task-15-building-and-running-the-ssis-project"></a>Aufgabe 15: Erstellen und Ausführen des SSIS-Projekts
+
   In dieser Aufgabe erstellen Sie das SSIS-Projekt und führen es aus. Wenn Sie die 64-Bit-Version von Excel 2010 auf Ihrem Computer installiert haben, legen Sie den Wert der **Run64BitRuntime** zu **"false"** für die Excel-Quelle funktioniert.  
   
 1.  In der **Projektmappen-Explorer** Fenster, klicken Sie auf **Projekt** auf das Menü, und klicken Sie auf **Eigenschaften von CleanseAndCurateSuppliers**.  
   
 2.  In der **Eigenschaften** Dialogfeld erweitern Sie **Konfigurationseigenschaften** auf der linken Seite, und klicken Sie auf **Debuggen**.  
   
-3.  Legen Sie **Run64BitRuntime** zu **"false"**.  
+3.  Legen Sie **Run64BitRuntime** zu **"false"** .  
   
      ![CleanseAndCurateSuppliers Projekteigenschaften](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "CleanseAndCurateSuppliers-Projekteigenschaften")  
   

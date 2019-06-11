@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030791"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822371"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Ausführen einer bedarfsgesteuerten Auswertung mithilfe von registrierten Servern
+
   Sie können eine bedarfsgesteuerte Auswertung von Best Practices-Richtlinien gegen eine oder mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe registrierter Server ausführen. Dazu können Sie lokale Servergruppen oder einen zentralen Verwaltungsserver verwenden.  
   
 > [!NOTE]  
@@ -47,13 +48,13 @@ ms.locfileid: "56030791"
   
     -   Um die Richtlinien für einen bestimmten Server oder eine Servergruppe auszuwerten, erweitern Sie **lokale Servergruppen** oder Namen der rechten Maustaste auf den Server oder eine Servergruppe, die Sie verwenden möchten, Auswerten von Richtlinien für, und klicken Sie dann auf den zentralen Verwaltungsserver **Richtlinien auswerten**.  
   
-4.  In der **Richtlinien auswerten** Dialogfeld neben dem **Quelle** klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche.  
+4.  In der **Richtlinien auswerten** Dialogfeld neben dem **Quelle** klicken Sie auf die Auslassungspunkte ( **...** ) Schaltfläche.  
   
 5.  In der **Quelle auswählen** (Dialogfeld), Sie haben die Wahl zwischen **Dateien** oder **Server** als Quelle der auszuwertenden Richtliniendateien. Wenn Sie auf **Server**, können Sie eine bedarfsgesteuerte Auswertung von alle besten Practices-Richtlinien, die zuvor in die Richtlinie der richtlinienbasierten Verwaltung auf einem lokalen Server oder Remoteserver importiert wurden ausführen. In diesem Tutorial, klicken Sie auf **Dateien**, und wählen Sie dann auf die einzelnen Richtliniendateien aus, die Sie auswerten möchten. Führen Sie hierzu folgende Schritte aus:  
   
     1.  Klicken Sie auf **Dateien**.  
   
-    2.  Neben **Dateien**, klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche.  
+    2.  Neben **Dateien**, klicken Sie auf die Auslassungspunkte ( **...** ) Schaltfläche.  
   
     3.  Wählen Sie eine oder mehrere XML-Richtliniendateien ausgewertet, und klicken Sie auf **öffnen**.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "56030791"
 8.  Um ausführliche Ergebnisse für eine Richtlinie anzuzeigen, klicken Sie auf die Richtlinie in die **Ergebnisse** Tabelle. Die **Zieldetails** Tabelle zeigt die Details für jede Instanz.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Auswerten von Best Practices-Richtlinien auf Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lektion 2: Auswerten von Best Practices-Richtlinien auf Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überwachen und Erzwingen von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

@@ -3,7 +3,7 @@ title: Exportieren von Spark ML-Modellen mit MLeap
 titleSuffix: SQL Server big data clusters
 description: Erfahren Sie, wie Sie Spark-Machine learning-Modellen mit MLeap zu exportieren.
 author: lgongmsft
-ms.author: shivprashant
+ms.author: lgong
 ms.reviewer: jroth
 manager: jroth
 ms.date: 12/06/2018
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7d62cc32be569bec6e1560b4b712ff0ac9cba553
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e831345e82310b51e5802af70c91b0d397e66c90
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803054"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822455"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>Exportieren Sie Spark-Machine learning-Modellen mit MLeap
 

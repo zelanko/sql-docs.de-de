@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535582"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822629"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Listet Zuordnungen zwischen Sicherheitsprinzipalen und Proxys auf.  
@@ -34,7 +36,6 @@ ms.locfileid: "58535582"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -42,7 +43,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name des eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prinzipal, Anmeldung, Serverrolle oder **Msdb** -Datenbankrolle, für die Proxys aufgelistet werden sollen. Der Name ist **nvarchar(256)**, hat den Standardwert NULL.  
+`[ @name = ] 'name'` Der Name des eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prinzipal, Anmeldung, Serverrolle oder **Msdb** -Datenbankrolle, für die Proxys aufgelistet werden sollen. Der Name ist **nvarchar(256)** , hat den Standardwert NULL.  
   
 `[ @proxy_id = ] id` Die Proxy-ID des Proxys für den Informationen aufgelistet werden soll. Die *Proxy_id* ist **Int**, hat den Standardwert NULL. Entweder die *Id* oder *Proxy_name* kann angegeben werden.  
   
@@ -59,6 +60,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|Der Name des Proxys.|  
 |**name**|**sysname**|Name des Sicherheitsprinzipals für die Zuordnung|  
 |**flags**|**int**|Typ des Sicherheitsprinzipals.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung<br /><br /> **1** = feste Systemrolle<br /><br /> **2** = Datenbankrolle in **Msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Hinweise  
  Wenn keine Parameter angegeben werden, **Sp_enum_login_for_proxy** listet Informationen zu allen Anmeldenamen in der Instanz für alle Proxys.  
@@ -77,7 +79,7 @@ sp_enum_login_for_proxy
 ### <a name="a-listing-all-associations"></a>A. Auflisten aller Zuordnungen  
  Mit dem folgenden Beispiel werden alle Berechtigungen aufgelistet, die in der aktuellen Instanz zwischen Anmeldenamen und Proxys eingerichtet wurden.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -88,7 +90,7 @@ GO
 ### <a name="b-listing-proxies-for-a-specific-login"></a>B. Auflisten von Proxys für einen bestimmten Anmeldenamen  
  Mit dem folgenden Beispiel werden die Proxys aufgelistet, auf die der Anmeldename `terrid` zugreifen kann.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
