@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 72f4406c4da07a1ddec422f09512dfe7cb28a028
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524476"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778093"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Aktualisieren einer Anwendung auf den OLE DB-Treiber für SQL Server über MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52524476"
 
 -   Der OLE DB-Treiber für SQL Server unterstützt das Konfigurieren clientseitiger Netzwerkbibliotheken nur mithilfe von Verbindungszeichenfolgenattributen. Wenn Sie eine umfassendere Netzwerkbibliothekskonfiguration benötigen, müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager verwenden.  
 
--   MDAC-Verbindungszeichenfolgen können einen booleschen Wert (**"true"**) für die **Trusted_Connection** Schlüsselwort. Verwenden Sie einen OLE DB-Treiber für SQL Server-Verbindungszeichenfolge muss **Ja** oder **keine**.  
+-   MDAC-Verbindungszeichenfolgen können einen booleschen Wert ( **"true"** ) für die **Trusted_Connection** Schlüsselwort. Verwenden Sie einen OLE DB-Treiber für SQL Server-Verbindungszeichenfolge muss **Ja** oder **keine**.  
 
 -   An Warnungen und Fehlern wurden geringfügige Änderungen vorgenommen. Vom Server zurückgegebene Warnungen und Fehler behalten bei Übergabe an den OLE DB-Treiber für SQL Server den gleichen Schweregrad bei. Sie sollten sicherstellen, dass die Anwendung gründlich getestet wurde, wenn Sie auf das Abfangen bestimmter Warnungen und Fehler angewiesen sind.  
 
@@ -73,7 +73,7 @@ ms.locfileid: "52524476"
 
 -   Der OLE DB-Treiber für SQL Server gibt Synonyme in den Schemarowsets TABLES und TABLE_INFO zurück, wobei der Wert TABLE_TYPE auf SYNONYM gesetzt ist.  
 
--   Rückgabewerte vom Datentyp **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **udt** oder sonstige LOB-Typen (Large Object) können nicht an Clienttreiberversionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] zurückgegeben werden. Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie OLE DB-Treiber für SQL Server verwenden.  
+-   Rückgabewerte vom Datentyp **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **udt** oder sonstige LOB-Typen (Large Object) können nicht an Clienttreiberversionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] zurückgegeben werden. Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie OLE DB-Treiber für SQL Server verwenden.  
 
 -   MDAC lässt die Ausführung folgender Anweisungen beim Start manueller und impliziter Transaktionen zu, während der OLE DB-Treiber für SQL Server diese Möglichkeit nicht bietet. Die Anweisungen müssen im Autocommitmodus ausgeführt werden.  
 
@@ -110,5 +110,5 @@ ms.locfileid: "52524476"
 
  Beide OLE DB-Treiber für SQL Server auch MDAC unterstützen lesen committed-Transaktionsisolation mit zeilenversionsverwaltung, aber nur OLE DB-Treiber für SQL Server unterstützt die Momentaufnahmen-Transaktionsisolation. (Programmiertechnisch ausgedrückt bedeutet dies, dass die Read Committed-Transaktionsisolation mit Zeilenversionsverwaltung gleichbedeutend mit einer Read Committed-Transaktion ist.)  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

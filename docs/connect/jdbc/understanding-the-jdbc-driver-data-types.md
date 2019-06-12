@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3712370fef840e8bf265850d9ad4dbd946a52b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 4fcb982a613fe914aa0f0c3de556b8d19faa1bbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905011"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782507"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Grundlegendes zu den Datentypen in JDBC Driver
 
@@ -30,7 +30,7 @@ Die Themen in diesem Abschnitt beschreiben die Verwendung der grundlegenden und 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-| Thema                                                                                                                                            | Beschreibung                                                                                                                                                                                                                                                          |
+| Thema                                                                                                                                            | und Beschreibung                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Verwenden von Standarddatentypen](../../connect/jdbc/using-basic-data-types.md)                                                                           | Beschreibt die grundlegenden JDBC-Datentypen. Umfasst Beispiele zum Arbeiten mit den Datentypen mithilfe von Resultsets, parametrisierten Abfragen und gespeicherten Prozeduren.                                                                                                        |
 | [Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | Beschreibt die Generierung von Datumsangaben durch den JDBC-Treiber.                                                                                                                                                                                                                       |
@@ -41,6 +41,6 @@ Die Themen in diesem Abschnitt beschreiben die Verwendung der grundlegenden und 
 | [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Beschreibt die SQLXML-Schnittstelle. Beschreibt außerdem, wie Sie XML-Daten mit dem **SQLXML**-Java-Datentyp in bzw. aus einer relationalen Datenbank schreiben und lesen.                                                                                                             |
 | [Wrapper und Schnittstellen](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Behandelt die Schnittstellen, die über die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-spezifischen Methoden und Konstanten verfügen und es einem Anwendungsserver ermöglichen, einen Proxy der Klasse zu erstellen. Behandelt außerdem Unterstützungen für die `java.sql.Wrapper`-Schnittstelle. |
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

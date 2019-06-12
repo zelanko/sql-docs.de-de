@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b307dd027f45c54d6bd00dfc5614c12ad496544a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c00621a2fedce7d9fba4d65f248b412627ee6233
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834128"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776655"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString-Methode (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Aktualisiert die angegebene Spalte mit einem **Zeichenfolgenwert** unter Verwendung des angegebenen Spaltenindex.  
+  Aktualisiert die angegebene Spalte mit einem **Zeichenfolgenwert** unter Verwendung des angegebenen Spaltenindexes.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ public void updateNString(int columnIndex,
   
  Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
- *Nzeichenfolge*  
+ *nString*  
   
  Ein **Zeichenfolge** Objekt.  
   
@@ -46,9 +46,9 @@ public void updateNString(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  Diese UpdateNString-Methode wird von der UpdateNString-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode übergibt Java **Zeichenfolge** zu ausgewählten **Nchar**, **nvarchar(max)**, **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
+ Diese Methode übergibt Java **Zeichenfolge** zu ausgewählten **Nchar**, **nvarchar(max)** , **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [updateNString-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d875e82b4db5e1725f43307348d27a6701e2a88d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2881f3a9e0d3a4179334256aa7d2917917cf97f3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697788"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781327"
 ---
 # <a name="getcharacterstream-method-long-long"></a>getCharacterStream-Methode (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *POS*  
+ *pos*  
   
  Ein Wert vom Typ **long**, mit dem das Offset zum ersten Zeichen des abzurufenden Teilwerts angegeben wird.  
   
@@ -41,7 +41,7 @@ public java.io.Reader getCharacterStream(long pos,
  Ein Wert vom Typ **long**, mit dem die Länge (in Zeichen) des abzurufenden Teilwerts angegeben wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Readerobjekt, enthält die **Clob** Daten.  
+ Ein Readerobjekt, das die **NCLOB**-Daten enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +49,7 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="remarks"></a>Remarks  
  Diese GetCharacterStream-Methode wird von der GetCharacterStream-Methode in der java.sql.Clob-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getCharacterStream-Methode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   
  [SQLServerClob-Methoden](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be197521f64697973684728290422abd5e64fdca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 96746297f7ff083665c1ef79a0b672cb8c4bb124
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731688"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773051"
 ---
 # <a name="sqlserverblob-members"></a>SQLServerBlob-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47731688"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|Initialisiert eine neue Instanz der SQLServerBlob-Klasse.|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47731688"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Mit dieser Methode werden das BLOB sowie die von diesem verwendeten Ressourcen freigegeben.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|Gibt einen Eingabedatenstrom zum Lesen von Daten aus dem BLOB zurück.|  
@@ -54,7 +54,7 @@ ms.locfileid: "47731688"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   

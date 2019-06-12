@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2894c91caf18c9719912e2db2562e78be0fff1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f4d695c8c3d81786bdc931d576a701a7b54746a0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665028"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762538"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>getSavepointName-Methode (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.lang.String getSavepointName()
 ## <a name="remarks"></a>Remarks  
  Diese GetSavepointName-Methode wird von der GetSavepointName-Methode in der java.sql.Savepoint-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerSavepoint-Methoden](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   
  [SQLServerSavepoint-Elemente](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
  [SQLServerSavepoint-Klasse](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  

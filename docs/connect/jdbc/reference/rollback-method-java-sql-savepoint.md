@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 255f8ff45c4f904fc3fe0b0c864c188acd3adbf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f5d3aff96e90dd5de4e283697084ab0614d12f05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650044"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765514"
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>rollback-Methode (java.sql.Savepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public void rollback(java.sql.Savepoint s)
   
  Die Methode sollte nur bei deaktiviertem Modus für automatische Commits verwendet werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Rollback-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
