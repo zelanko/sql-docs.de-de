@@ -1,7 +1,7 @@
 ---
 title: Erstellen identischer symmetrischer Schlüssel auf zwei Servern | Microsoft Dokumentation
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 05/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 7158694719e11cca4ea355c5fe3b94359e00b952
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997562"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428822"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Erstellen identischer symmetrischer Schlüssel auf zwei Servern
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,9 +90,23 @@ ms.locfileid: "53997562"
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
-  
- Weitere Informationen finden Sie unter den folgenden Links:  
-  
+
+### <a name="encryption-changes-in-sql-server-2017-cu2"></a>Änderungen der Verschlüsselung in SQL Server 2017 CU2
+
+SQL Server 2016 verwendet den Hashalgorithmus SHA1 für die Verschlüsselung. Ab SQL Server 2017 wird stattdessen SHA2 verwendet. Das bedeutet, dass zusätzliche Schritte erforderlich sein können, damit Ihre SQL Server 2017-Installation Elemente entschlüsselt, die von SQL Server 2016 verschlüsselt wurden. Nachfolgend sind diese zusätzlichen Schritte aufgeführt:
+
+- Stellen Sie sicher, dass Ihre SQL Server 2017-Installation mindestens auf das kumulative Update 2 (CU2) aktualisiert ist.
+  - Wichtige Details finden Sie unter [Kumulatives Update 2 (CU2) für SQL Server 2017](https://support.microsoft.com/help/4052574).
+- Nach der Installation von CU2 aktivieren Sie das Ablaufverfolgungsflag 4631 in SQL Server 2017: `DBCC TRACEON(4631, -1);`
+  - Das Ablaufverfolgungsflag 4631 ist neu in SQL Server 2017. Das Ablaufverfolgungsflag 4631 muss global auf `ON` gesetzt sein, bevor Sie den Hauptschlüssel, das Zertifikat oder den symmetrischen Schlüssel in SQL Server 2017 erstellen. Dadurch können diese erstellten Elemente mit SQL Server 2016 und früheren Versionen zusammenarbeiten.
+
+Weitere Anleitungen finden Sie unter folgenden Themen:
+
+- [FIX: SQL Server 2017 kann Daten, die von früheren SQL Server-Versionen verschlüsselt wurden, nicht mit demselben symmetrischen Schlüssel entschlüsseln](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
+- [Für SQL Server 2017 und andere SQL Server-Versionen können keine identischen symmetrischen Schlüssel verwendet werden](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+
+## <a name="for-more-information"></a>Weitere Informationen finden Sie unter
+
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  

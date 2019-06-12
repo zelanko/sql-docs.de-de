@@ -28,19 +28,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7d761a88d570cfe65c3660656adde6f90e93c21
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c40f251759959f86d360bf495b8b405a831c5e6d
+ms.sourcegitcommit: f98a8a9a6def82ddd560150068824d4bbf8f067a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775379"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376136"
 ---
 # <a name="database-checkpoints-sql-server"></a>Datenbankprüfpunkte (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  Ein *Prüfpunkt* erstellt einen bekannten fehlerfreien Punkt, von dem aus [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Änderungen übernehmen kann, die im Protokoll während der Wiederherstellung nach einem unerwarteten Herunterfahren oder einem Absturz enthalten sind.
 
 ##  <a name="Overview"></a> Übersicht   
-Aus Leistungsgründen führt [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderungen an Datenbankseiten im Arbeitsspeicher aus (im Puffercache) und schreibt diese Seiten nicht nach jeder Änderung auf den Datenträger. Vielmehr gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] in regelmäßigen Abständen einen Prüfpunkt auf jeder Datenbank aus. Ein *Prüfpunkt* schreibt die aktuellen, speicherintern geänderten Seiten (auch bekannt als *modifizierte Seiten*) sowie Transaktionsprotokollinformationen vom Arbeitsspeicher auf den Datenträger und erfasst auch Informationen zum Transaktionsprotokoll.  
+Aus Leistungsgründen führt [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderungen an Datenbankseiten im Arbeitsspeicher aus (im Puffercache) und schreibt diese Seiten nicht nach jeder Änderung auf den Datenträger. Vielmehr gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] in regelmäßigen Abständen einen Prüfpunkt auf jeder Datenbank aus. Ein *Prüfpunkt* schreibt die aktuellen, speicherintern geänderten Seiten (auch bekannt als *modifizierte Seiten*) sowie Transaktionsprotokollinformationen vom Arbeitsspeicher auf den Datenträger und erfasst diese Informationen im Transaktionsprotokoll.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] unterstützt mehrere Typen von Prüfpunkten. Dazu gehören "automatisch", "indirekt", "manuell" und "intern". In der folgenden Tabelle werden die **Prüfpunkttypen**zusammengefasst:
   
@@ -65,7 +65,7 @@ Aus Leistungsgründen führt [!INCLUDE[ssDE](../../includes/ssde-md.md)] Änderu
 |Zielwiederherstellungszeit|'Wiederherstellungsintervall'|Verwendeter Prüfpunkttyp|  
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|Automatische Prüfpunkte, deren Zielwiederherstellungsintervall 1 Minute beträgt.|  
-|0|>0|Automatische Prüfpunkte, deren Zielwiederherstellungsintervall anhand der benutzerdefinierten Einstellung der Option **sp_configure recovery interval** angegeben wurde.|  
+|0|>0|Automatische Prüfpunkte, deren Zielwiederherstellungsintervall anhand der benutzerdefinierten Einstellung der Option **sp_configure 'recovery interval'** angegeben wurde.|  
 |>0|Nicht verfügbar.|Indirekte Prüfpunkte, deren Zielwiederherstellungszeit anhand der TARGET_RECOVERY_TIME-Einstellung definiert ist (in Sekunden ausgedrückt).|  
   
 ##  <a name="AutomaticChkpt"></a> Automatische Prüfpunkte  
@@ -80,7 +80,7 @@ Unter dem einfachen Wiederherstellungsmodell wird der ungenutzte Abschnitt des T
 Nach einem Systemabsturz richtet sich die Zeitdauer, die für die Wiederherstellung einer bestimmten Datenbank erforderlich ist, in hohem Maß nach der Menge zufälliger E/A-Vorgänge, die zur Wiederherstellung der zum Zeitpunkt des Absturzes modifizierten Seiten erforderlich sind. Dies bedeutet, dass die Einstellung **Wiederherstellungsintervall** nicht zuverlässig ist. Sie ermöglicht keine genaue Bestimmung der Wiederherstellungsdauer. Zudem erhöht sich die allgemeine E/A-Aktivität für Daten erheblich und eher unvorhersehbar, wenn ein automatischer Prüfpunkt ausgeführt wird.  
    
 ###  <a name="PerformanceImpact"></a> Auswirkungen des Wiederherstellungsintervalls auf die Wiederherstellungsleistung  
-Bei einem System zur Onlinetransaktionsverarbeitung (Online Transaction Processing, OLTP), das Transaktionen mit kurzer Ausführungszeit verwendet, ist das **Wiederherstellungsintervall** der wichtigste Faktor für die Bestimmung der Wiederherstellungszeit. Die Option **Wiederherstellungsintervall** wirkt sich jedoch nicht auf die Zeit aus, die für das Rückgängigmachen einer Transaktion mit langer Ausführungszeit erforderlich ist. Die Wiederherstellung einer Datenbank mit einer Transaktion mit langer Ausführungszeit kann deutlich länger dauern als mit der Option **Wiederherstellungsintervall** angegeben. 
+Bei einem System zur Onlinetransaktionsverarbeitung (Online Transaction Processing, OLTP), das Transaktionen mit kurzer Ausführungszeit verwendet, ist das **Wiederherstellungsintervall** der wichtigste Faktor für die Bestimmung der Wiederherstellungszeit. Die Option **Wiederherstellungsintervall** wirkt sich jedoch nicht auf die Zeit aus, die für das Rückgängigmachen einer Transaktion mit langer Ausführungszeit erforderlich ist. Die Wiederherstellung einer Datenbank mit einer Transaktion mit langer Ausführungszeit kann deutlich länger dauern als mit der Einstellung **Wiederherstellungsintervall** angegeben. 
  
 Wenn beispielsweise eine Transaktion mit langer Ausführungszeit zwei Stunden für Updates benötigt hat, bevor die Serverinstanz deaktiviert wurde, dauert die tatsächliche Wiederherstellung erheblich länger als im Wert für das **Wiederherstellungsintervall** zur Wiederherstellung der Transaktion mit langer Ausführungszeit angegeben. Weitere Informationen zu den Auswirkungen einer Transaktion mit langer Ausführungszeit auf die Wiederherstellungsdauer finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
@@ -90,7 +90,7 @@ In der Regel gewährleisten die Standardwerte eine optimale Wiederherstellungsle
   
 -   Sie stellen fest, dass häufige Prüfpunkte die Datenbankleistung beeinträchtigen.  
   
-Wenn Sie die Einstellung **recovery interval** erhöhen möchten, empfehlen wir eine schrittweise Erhöhung des entsprechenden Werts. Werten Sie zudem die Auswirkungen der jeweiligen stufenweisen Erhöhung auf die Wiederherstellungsleistung aus. Diese Vorgehensweise ist wichtig, da mit der Erhöhung des Werts für die Einstellung **Wiederherstellungsintervall** die Ausführung der Datenbankwiederherstellung entsprechend länger dauert. Ändern Sie beispielsweise den Wert für das **Wiederherstellungsintervall** in 10 Minuten, dauert die Wiederherstellung ungefähr 10-mal länger als bei einem **Wiederherstellungsintervall** -Wert von 1 Minute.  
+Wenn Sie die Einstellung **recovery interval** erhöhen möchten, empfehlen wir eine schrittweise Erhöhung des entsprechenden Werts. Werten Sie zudem die Auswirkungen der jeweiligen stufenweisen Erhöhung auf die Wiederherstellungsleistung aus. Diese Vorgehensweise ist wichtig, da mit der Erhöhung des Werts für die Einstellung **Wiederherstellungsintervall** die Ausführung der Datenbankwiederherstellung entsprechend länger dauert. Ändern Sie beispielsweise den Wert für das **Wiederherstellungsintervall** in 10 Minuten, dauert die Wiederherstellung ungefähr 10-mal länger als bei einem **Wiederherstellungsintervall**-Wert von 1 Minute.  
   
 ##  <a name="IndirectChkpt"></a> Indirekte Prüfpunkte
   
@@ -101,7 +101,7 @@ Im Fall eines Systemabsturzes ermöglichen indirekte Prüfpunkte eine potenziell
 
   Die Konfigurationsoption **Wiederherstellungsintervall** ermittelt die Wiederherstellungszeit über die Anzahl der Transaktionen. Im Gegensatz dazu greifen **indirekte Prüfpunkte** auf die Anzahl der modifizierten Seiten zurück. Wenn für eine Datenbank, die eine große Anzahl von DML-Vorgängen empfängt, indirekte Prüfpunkte aktiviert sind, können beim Schreiben im Hintergrund leere modifizierte Puffer aggressiv auf den Datenträger geleert werden. Dadurch wird sichergestellt, dass der Zeitaufwand für die Wiederherstellung innerhalb der Zielwiederherstellungszeit der Datenbank liegt. Dies kann auf bestimmten Systemen zusätzliche E/A-Aktivitäten verursachen, die zu einem Leistungsengpass beitragen können, wenn das Datenträgersubsystem über oder nahe dem E/A-Schwellenwert arbeitet.  
   
--   Indirekte Prüfpunkte ermöglichen Ihnen eine zuverlässige Kontrolle der Datenbankwiederherstellungszeit, indem die Kosten für das zufällige E/A-Volumen während des REDO-Vorgangs berücksichtigt werden. Dadurch überschreitet eine Serverinstanz nicht den Obergrenzwert der Wiederherstellungszeiten für eine bestimmte Datenbank, sofern eine Transaktion mit langer Laufzeit keine übermäßig langen UNDO-Vorgänge verursacht.  
+-   Indirekte Prüfpunkte ermöglichen Ihnen eine zuverlässige Kontrolle der Datenbankwiederherstellungszeit, indem die Kosten für das zufällige E/A-Volumen während des REDO-Vorgangs berücksichtigt werden. Dadurch überschreitet eine Serverinstanz nicht den oberen Grenzwert der Wiederherstellungszeiten für eine bestimmte Datenbank, sofern eine Transaktion mit langer Laufzeit keine übermäßig langen UNDO-Vorgänge verursacht.  
   
 -   Indirekte Prüfpunkte reduzieren prüfpunktbezogene E/A-Spitzen, indem modifizierte Seiten im Hintergrund kontinuierlich auf den Datenträger geschrieben werden.  
   
@@ -122,7 +122,7 @@ Interne Prüfpunkte werden von verschiedenen Serverkomponenten generiert, um so 
   
 -   Eine vollständige Datenbanksicherung wird ausgeführt.  
   
--   Eine Datenbank-Momentaufnahme wird erstellt, entweder explizit oder intern für DBCC CHECK.  
+-   Eine Datenbank-Momentaufnahme wird erstellt, entweder explizit oder intern für DBCC CHECKDB.  
   
 -   Eine Aktivität wird ausgeführt, für die das Herunterfahren einer Datenbank erforderlich ist. Beispielsweise besitzt AUTO_CLOSE den Status ON, und die letzte Benutzerverbindung mit der Datenbank wird geschlossen, oder eine Änderung einer Datenbankoption wird vorgenommen, für die ein Neustart der Datenbank erforderlich ist.  
   

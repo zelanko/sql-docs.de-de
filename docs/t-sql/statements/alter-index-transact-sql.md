@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502867"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413641"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>Argumente  
+```
+
+## <a name="arguments"></a>Argumente
+
  *index_name*  
  Der Name des Indexes. Indexnamen müssen für eine Tabelle oder Sicht eindeutig sein, können aber innerhalb einer Datenbank mehrfach vorkommen. Indexnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
@@ -653,23 +655,28 @@ Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Sie u. U. weiterhin
   
 Die Neuerstellung eines gruppierten columnstore-Indexes verläuft in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt:  
   
-1.  Abrufen einer exklusiven Sperre für die Tabelle oder Partition, während die Neuerstellung ausgeführt wird. Die Daten sind während der Neuerstellung „offline“ und nicht verfügbar.  
+1. Abrufen einer exklusiven Sperre für die Tabelle oder Partition, während die Neuerstellung ausgeführt wird. Die Daten sind während der Neuerstellung „offline“ und nicht verfügbar.  
   
-2.  Defragmentieren des Columnstore, indem physisch Zeilen gelöscht werden, die logisch aus der Tabelle gelöscht wurden. Die gelöschten Bytes werden auf dem physischen Medium freigegeben.  
+1. Defragmentieren des Columnstore, indem physisch Zeilen gelöscht werden, die logisch aus der Tabelle gelöscht wurden. Die gelöschten Bytes werden auf dem physischen Medium freigegeben.  
   
-3.  Liest alle Daten aus dem ursprünglichen Columnstore-Index, einschließlich des Deltastore. Die Daten werden in neuen Zeilengruppen zusammengefasst, und die Zeilengruppen werden in den Columnstore-Index komprimiert.  
+1. Liest alle Daten aus dem ursprünglichen Columnstore-Index, einschließlich des Deltastore. Die Daten werden in neuen Zeilengruppen zusammengefasst, und die Zeilengruppen werden in den Columnstore-Index komprimiert.  
   
-4.  Auf dem physischen Medium muss ausreichend freier Speicherplatz zur Verfügung stehen, um während der Neuerstellung zwei Kopien des Columnstore-Indexes speichern zu können. Nach Abschluss der Neuerstellung wird der ursprüngliche gruppierte Columnstore-Index von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht.  
+1. Auf dem physischen Medium muss ausreichend freier Speicherplatz zur Verfügung stehen, um während der Neuerstellung zwei Kopien des Columnstore-Indexes speichern zu können. Nach Abschluss der Neuerstellung wird der ursprüngliche gruppierte Columnstore-Index von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht.
+
+1. Bei einer Azure SQL Data Warehouse-Tabelle mit einem sortierten gruppierten Columnstore-Index werden mit ALTER INDEX REBUILD die Daten neu sortiert. Überwachen Sie tempdb während der Neuerstellungsvorgänge. Wenn Sie mehr tempdb-Speicherplatz benötigen, können Sie das Datawarehouse zentral hochskalieren. Skalieren Sie es nach Abschluss der Indexneuerstellung wieder herunter.
   
-## <a name="reorganizing-indexes"></a> Neuorganisieren von Indizes  
+## <a name="reorganizing-indexes"></a> Neuorganisieren von Indizes
 Das Neuorganisieren eines Indexes beansprucht minimale Systemressourcen. Dabei wird die Blattebene von gruppierten und nicht gruppierten Indizes in Tabellen und Sichten defragmentiert, indem die Blattebenenseiten physisch neu geordnet werden, damit sie mit der logischen Reihenfolge der Blattknoten von links nach rechts übereinstimmen. Durch das Neuorganisieren werden die Indexseiten auch komprimiert. Die Komprimierung basiert auf dem vorhandenen Füllfaktorwert. Verwenden Sie zum Anzeigen der Füllfaktoreinstellung [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 Wenn ALL angegeben ist,  werden relationale Indizes, sowohl gruppierte als auch nicht gruppierte, und XML-Indizes der Tabelle neu organisiert. Bei Angabe von ALL gelten einige Einschränkungen, die Sie in der Definition für ALL in diesem Artikel im Abschnitt „Argumente“ finden.  
   
 Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
- 
+
 > [!IMPORTANT]
 > Wann wird ein Index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu organisiert wird, werden Statistiken nicht aktualisiert.
+
+>[!IMPORTANT]
+> Bei einer Azure SQL Data Warehouse-Tabelle mit einem sortierten gruppierten Columnstore-Index werden mit `ALTER INDEX REORGANIZE` die Daten nicht neu sortiert. Verwenden Sie `ALTER INDEX REBUILD` zum Neusortieren der Daten.
   
 ## <a name="disabling-indexes"></a> Deaktivieren von Indizes  
 Durch das Deaktivieren eines Indexes wird der Benutzerzugriff auf den Index sowie auf die zugrunde liegenden Tabellendaten gruppierter Indizes verhindert. Die Indexdefinition bleibt im Systemkatalog erhalten. Beim Deaktivieren eines nicht gruppierten oder gruppierten Indexes in einer Sicht werden die Indexdaten physisch gelöscht. Durch das Deaktivieren eines gruppierten Indexes wird der Benutzerzugriff auf die Daten verhindert; die Daten bleiben jedoch in der B-Struktur unverwaltet, bis der Index gelöscht oder neu erstellt wird. Führen Sie eine Abfrage für die **is_disabled**-Spalte in der **sys.indexes**-Katalogsicht aus, um den Status eines aktivierten oder deaktivierten Index anzuzeigen.  
