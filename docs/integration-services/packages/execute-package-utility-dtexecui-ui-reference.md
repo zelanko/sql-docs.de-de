@@ -103,11 +103,11 @@ ms.locfileid: "65719903"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
   
 #### <a name="package-source--file-system"></a>Package Source = File System  
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung *.dtsx aufgelistet.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung .dtsx aufgelistet.  
   
 #### <a name="package-source--ssis-package-store"></a>Package Source = SSIS Package Store  
  **Server**  
@@ -123,7 +123,7 @@ ms.locfileid: "65719903"
  Diese Option ist nicht verfügbar, wenn Sie ein in **SSIS-Paketspeicher**gespeichertes Paket ausführen.  
   
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
   
 ## <a name="configurations-page"></a>Konfigurationsseite  
  Auf der Seite **Konfigurationen** des Dialogfelds **Paketausführungsprogramm** wählen Sie die Konfigurationsdateien aus, die zur Laufzeit geladen werden sollen, und geben Sie die Reihenfolge an, in der sie geladen werden sollen.  
@@ -211,7 +211,7 @@ ms.locfileid: "65719903"
  Führt die vom Paket verwendete Prüfpunktdatei auf, wenn die Paketprüfpunkte aktiviert sind.  
   
  **Durchsuchen**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um die Prüfpunktdatei mithilfe des Dialogfelds **Öffnen** zu suchen, wenn Paketprüfpunkte aktiviert sind. Wenn bereits eine Prüfpunktdatei angegeben ist, wird diese durch die ausgewählte Datei ersetzt.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um die Prüfpunktdatei mithilfe des Dialogfelds **Öffnen** zu suchen, wenn Paketprüfpunkte aktiviert sind. Wenn bereits eine Prüfpunktdatei angegeben ist, wird diese durch die ausgewählte Datei ersetzt.  
   
  **Neustartoptionen überschreiben**  
  Gibt an, ob die Neustartoptionen überschrieben werden, wenn Sie die Paketprüfpunkte aktivieren.  
