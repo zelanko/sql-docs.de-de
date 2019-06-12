@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 33c90213-92f7-416b-b2fa-67a1afe64e97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 269589e0ca54a5dd2c1325ee8c7b4e8672f61175
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 64f19e58bcc22160008e007a418c8e40021deb90
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810168"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766834"
 ---
 # <a name="start-method-sqlserverxaresource"></a>start-Methode (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void start(javax.transaction.xa.Xid xid,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *XID*  
+ *xid*  
   
  Ein Xid-Objekt.  
   
@@ -51,7 +51,7 @@ public void start(javax.transaction.xa.Xid xid,
 ## <a name="remarks"></a>Remarks  
  Diese start-Methode wird von der start-Methode in der javax.transaction.xa.XAResource-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXAResource-Methoden](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource-Elemente](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource-Klasse](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

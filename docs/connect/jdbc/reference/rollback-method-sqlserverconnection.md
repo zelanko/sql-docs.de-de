@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 911236962aac0c4bc6ad9640a7813367143df62a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 96b2f76ef208a92c014fe86c79914d659aff3d7d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795678"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765558"
 ---
 # <a name="rollback-method-sqlserverconnection"></a>rollback-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "47795678"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[rollback ()](../../../connect/jdbc/reference/rollback-method.md)|Macht alle im Rahmen der aktuellen Transaktion vorgenommenen Änderungen rückgängig und hebt sämtliche Datenbanksperren auf, die derzeit von diesem [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt aufrecht erhalten werden.|  
 |[rollback (java.sql.Savepoint)](../../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md)|Macht alle nach dem Festlegen des vorhandenen [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)-Objekts festgelegten Änderungen rückgängig.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

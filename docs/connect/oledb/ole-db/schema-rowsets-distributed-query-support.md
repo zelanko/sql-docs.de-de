@@ -17,13 +17,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b09e62a5057a948e2a12bb6272c9a0e431ba7507
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+manager: jroth
+ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864158"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795955"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Schemarowsets: Verteilte Abfrageunterstützung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47864158"
 
   Zur Unterstützung verteilter Abfragen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt die **IDBSchemaRowset**-Schnittstelle des OLE DB-Treibers für SQL Server Metadaten über Verbindungsserver zurück.  
   
- Wenn die DBPROPSET_SQLSERVERSESSION-Eigenschaft SSPROP_QUOTEDCATALOGNAMES auf VARIANT_TRUE festgelegt wurde, kann für den Katalognamen ein Bezeichner in Anführungszeichen angegeben werden (beispielsweise "my.catalog"). Wenn eine Katalogeinschränkung für die Ausgabe eines Schemarowsets angegeben wird, erkennt der OLE DB-Treiber für SQL Server zweiteilige Namen, die sich aus dem Namen des Verbindungsservers und dem Katalognamen zusammensetzen. Für die Schemarowsets in der Tabelle unten wird durch die Angabe eines zweiteiligen Katalognamens in Form von _linked\_server_**.**_catalog_ die Ausgabe auf den betreffenden Katalog des genannten Verbindungsservers beschränkt.  
+ Wenn die DBPROPSET_SQLSERVERSESSION-Eigenschaft SSPROP_QUOTEDCATALOGNAMES auf VARIANT_TRUE festgelegt wurde, kann für den Katalognamen ein Bezeichner in Anführungszeichen angegeben werden (beispielsweise "my.catalog"). Wenn eine Katalogeinschränkung für die Ausgabe eines Schemarowsets angegeben wird, erkennt der OLE DB-Treiber für SQL Server zweiteilige Namen, die sich aus dem Namen des Verbindungsservers und dem Katalognamen zusammensetzen. Für die Schemarowsets in der Tabelle unten wird durch die Angabe eines zweiteiligen Katalognamens in Form von _linked\_server_ **.** _catalog_ die Ausgabe auf den betreffenden Katalog des genannten Verbindungsservers beschränkt.  
   
 |Schemarowset|Katalogeinschränkung|  
 |-------------------|-------------------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "47864158"
  
  Der OLE DB-Treiber für SQL Server definiert das Schemarowset LINKEDSERVERS und gibt eine Liste der OLE DB-Datenquellen zurück, die als Verbindungsserver registriert sind.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS-Rowset &#40;OLE-DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   

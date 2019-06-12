@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 218ff486-3f31-49e4-ad81-a423246a8307
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 971bfea1d1b2d0d113bd4b49215a37be1320fdc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bde9ef88bf129de03f47751261f8641d63ced95b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643528"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764584"
 ---
 # <a name="setblob-method-sqlserverpreparedstatement"></a>setBlob-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public final void setBlob(int i,
 ## <a name="remarks"></a>Remarks  
  Diese setBlob-Methode wird von der setBlob-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

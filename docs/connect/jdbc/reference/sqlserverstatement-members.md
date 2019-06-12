@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e1f3b9c38aa5866561d146016d0a457cb506bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 07935ce3af347cf88666865068540a27bbec2c9b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643148"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796927"
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47643148"
   
 ## <a name="inherited-fields"></a>Geerbte Felder  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS, CLOSE_CURRENT_RESULT, EXECUTE_FAILED, KEEP_CURRENT_RESULT, NO_GENERATED_KEYS, RETURN_GENERATED_KEYS, SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|Fügt den angegebenen SQL-Befehl der aktuellen Liste mit Befehlen für dieses [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt hinzu.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Bricht die SQL-Anweisung ab, die derzeit von diesem [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt ausgeführt wird.|  
@@ -84,7 +84,7 @@ ms.locfileid: "47643148"
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

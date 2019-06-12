@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f17766ffc68cb42a7bf2db3a00dcdc0efc61224
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0d5a60f450978f94cb9d58f381da75be6ca0c3c9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804690"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766364"
 ---
 # <a name="supportscolumnaliasing-method-sqlserverdatabasemetadata"></a>supportsColumnAliasing-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsColumnAliasing()
 ## <a name="remarks"></a>Remarks  
  Diese SupportsColumnAliasing-Methode wird von der SupportsColumnAliasing-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

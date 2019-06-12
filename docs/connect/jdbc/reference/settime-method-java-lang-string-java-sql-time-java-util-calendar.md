@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3093ed27d45f58f9fb19f019de569236ff77f2ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c05d1558faaf8edce91a8383159abd04b6bf05d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814508"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773181"
 ---
 # <a name="settime-method-javalangstring-javasqltime-javautilcalendar"></a>setTime-Methode (java.lang.String, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +60,7 @@ public void setTime(java.lang.String sCol,
   
  Weitere Informationen finden Sie unter [Configuring How java.sql.Time Values are Sent to the Server (Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden)](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [setTime-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settime-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

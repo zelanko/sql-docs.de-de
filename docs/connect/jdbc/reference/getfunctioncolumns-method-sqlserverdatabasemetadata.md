@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 287a05727bf62de813afec4ad285ef47f3b65943
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801638"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774629"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,13 +57,13 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetFunctionColumns-Methode wird von der GetFunctionColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getColumns-Methode wird von der getColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Von dieser Methode werden nur die Funktionen und Parameter zurückgegeben, die dem angegebenen Schema, Funktions- und Parameternamen innerhalb des angegebenen Katalogs entsprechen.  
   
  Jede Zeile im Resultset enthält die folgenden Spalten für eine Parameterbeschreibung, eine Spaltenbeschreibung oder einen Rückgabetyp:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Der Name der Datenbank, in der die Funktion gespeichert ist.|  
 |FUNCTION_SCHEM|**String**|Das Schema für die Funktion.|  
@@ -72,8 +72,8 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |COLUMN_TYPE|**short**|**Der Spaltentyp. Weist einen der folgenden Werte auf:**<br /><br /> functionColumnUnknown (0): Unbekannter Typ<br /><br /> functionColumnIn (1): Eingabeparameter<br /><br /> functionColumnInOut (2): Eingabe-/Ausgabeparameter<br /><br /> functionColumnOut (3): Ausgabeparameter<br /><br /> functionReturn (4): Funktionsrückgabewert<br /><br /> functionColumnResult (5): Ein Parameter oder eine Spalte ist eine Spalte im Resultset.|  
 |DATA_TYPE|**smallint**|Der SQL-Datentypwert aus „Java.sql.Types“.|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|PRECISION|**int**|Die Gesamtanzahl von signifikanten Stellen.|  
-|LENGTH|**int**|Die Länge der Daten in Bytes.|  
+|PRECISION|**ssNoversion**|Die Gesamtanzahl von signifikanten Stellen.|  
+|LENGTH|**ssNoversion**|Die Länge der Daten in Bytes.|  
 |SCALE|**short**|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen.|  
 |RADIX|**short**|Die Basis für numerische Typen.|  
 |NULLABLE|**short**|Gibt an, ob der Parameter- oder Rückgabewert einen **NULL**-Wert enthalten kann.<br /><br /> **Weist einen der folgenden Werte auf:**<br /><br /> functionNoNulls (0): NULL-Wert ist nicht zulässig.<br /><br /> functionNullable (1): NULL-Wert ist zulässig.<br /><br /> functionNullableUnknown (2): Unbekannt|  
@@ -81,8 +81,8 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.<br /><br /> **Hinweis:** Diese Angabe ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und gilt nur für den JDBC-Treiber.|  
 |SQL_DATA_TYPE|**smallint**|Diese Spalte entspricht der **DATA_TYPE**-Spalte mit Ausnahme der **datetime**- und ISO-**interval**-Datentypen.<br /><br /> **Hinweis:** Diese Angabe ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und gilt nur für den JDBC-Treiber.|  
 |SQL_DATETIME_SUB|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Bei allen Datentypen außer **"DateTime"** und ISO **Intervall**, diese Spalte ist NULL.<br /><br /> **Hinweis:** Diese Angabe ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und gilt nur für den JDBC-Treiber.|  
-|CHAR_OCTET_LENGTH|**int**|Die maximale Länge von binären oder zeichenbasierten Parametern oder Spalten. Für andere Datentypen ist der Wert NULL.|  
-|ORDINAL_POSITION|**int**|Stellt für Eingabe- und Ausgabeparameter die Position (beginnend mit "1") dar.<br /><br /> Für Resultsetspalten handelt es sich hierbei um die Position der Spalte im Resultset. Beginn ist der Wert "1".<br /><br /> Für den Rückgabewert ist der Wert "0".|  
+|CHAR_OCTET_LENGTH|**ssNoversion**|Die maximale Länge von binären oder zeichenbasierten Parametern oder Spalten. Für andere Datentypen ist der Wert NULL.|  
+|ORDINAL_POSITION|**ssNoversion**|Stellt für Eingabe- und Ausgabeparameter die Position (beginnend mit "1") dar.<br /><br /> Für Resultsetspalten handelt es sich hierbei um die Position der Spalte im Resultset. Beginn ist der Wert "1".<br /><br /> Für den Rückgabewert ist der Wert "0".|  
 |IS_NULLABLE|**String**|Bestimmt die NULL-Zulässigkeit eines Parameters oder einer Spalte.<br /><br /> Mögliche Werte:<br /><br /> **Ja**: der Parameter oder eine Spalte kann NULL-Werte enthalten.<br /><br /> **KEINE**: der Parameter oder eine Spalte kann nicht NULL-Werte enthalten.<br /><br /> Leere Zeichenfolge (""): Unbekannt|  
 |SS_TYPE_CATALOG_NAME|**String**|Der Name des Katalogs, der den benutzerdefinierten Typ (UDT) enthält.|  
 |SS_TYPE_SCHEMA_NAME|**String**|Der Name des Schemas, der den benutzerdefinierten Typ (UDT) enthält.|  
@@ -94,7 +94,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|Der Name des Schemas, der den benutzerdefinierten Typ (UDT) enthält.|  
 |SS_DATA_TYPE|**tinyint**|Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird.<br /><br /> **Hinweis:** Weitere Informationen zu den Datentypen, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „Datentypen (Transact-SQL)“.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   

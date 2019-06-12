@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpreadfmt (OLE DB) | Microsoft-Dokumentation'
+title: IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs
 description: 'Mithilfe von ibcpsession:: Bcpreadfmt zum Lesen von Daten aus einer Formatdatei (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 451b2b52f44af44176ab5470992d30e24df70582
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 46139cddfb91c974f78547794bec55251abce25c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600270"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790826"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>'IBCPSession::BCPReadFmt' (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,8 +64,8 @@ HRESULT BCPReadFmt(
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)-Methode wurde beispielsweise erst nach dem Aufruf dieser Methode aufgerufen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [IBCPSession &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

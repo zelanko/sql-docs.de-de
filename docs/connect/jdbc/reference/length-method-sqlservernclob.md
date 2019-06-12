@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f6a4dc147bad46017d772aeb02787091e904e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5fa3d153f6e36fe4eb45cc54da2326aec8e32dd8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713198"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779679"
 ---
 # <a name="length-method-sqlservernclob"></a>length-Methode (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public long length()
 ## <a name="remarks"></a>Remarks  
  Diese Länge-Methode wird von der Length-Methode in der java.sql.NClob-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerNClob-Methoden](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob-Elemente](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob-Klasse](../../../connect/jdbc/reference/sqlservernclob-class.md)  

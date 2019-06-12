@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7790bc9eabb5127e36faddc02bb477c91ba72ac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ef02cfaf54499aa3ac6219b32ff154a258733614
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838978"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765649"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public int getPacketSize()
 ## <a name="remarks"></a>Remarks  
  Ist die packetSize-Eigenschaft nicht festgelegt, wird von der getPacketSize-Methode der Standardwert (8000) zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a3fffc08-7254-4af7-bbae-8ff591fbd5ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 425174215725a2f34899731fbe97ab1b99786fba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b0f95d11bf053e3bf41fe66c8e19acff6a5dd65b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666108"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766612"
 ---
 # <a name="supportsansi92entrylevelsql-method-sqlserverdatabasemetadata"></a>supportsANSI92EntryLevelSQL-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsANSI92EntryLevelSQL()
 ## <a name="remarks"></a>Remarks  
  Diese supportsANSI92EntryLevelSQL-Methode wird von der supportsANSI92EntryLevelSQL-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

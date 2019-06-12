@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37181dfc2a2fa7b3e166d00e83130c2758e28533
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 60d46f8f8792eacd7f1f67a67b2fc9fc56bf5a8e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638644"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764468"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ public void setHoldability(int nNewHold)
 ## <a name="remarks"></a>Remarks  
  Diese SetHoldability-Methode wird von der SetHoldability-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

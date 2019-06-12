@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines verknüpften Berichts | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19a78d5909d62054903a61d18c89d975cde1befe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571619"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506645"
 ---
 # <a name="create-a-linked-report"></a>Erstellen eines verknüpften Berichts
   Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.  
@@ -26,26 +26,26 @@ ms.locfileid: "65571619"
   
  Obwohl verknüpfte Berichte in der Regel auf parametrisierten Berichten basieren, ist kein parametrisierter Bericht erforderlich. Sie können immer dann verknüpfte Berichte erstellen, wenn Sie einen vorhandenen Bericht mit anderen Einstellungen bereitstellen möchten.  
   
-### <a name="to-create-a-linked-report"></a>So erstellen Sie einen verknüpften Bericht  
+## <a name="to-create-a-linked-report"></a>So erstellen Sie einen verknüpften Bericht  
   
-1.  Navigieren Sie im Berichts-Manager zum Ordner, der den Bericht enthält, zu dem Sie einen Link erstellen möchten, und öffnen Sie dann das Menü Optionen und klicken Sie auf **Verknüpften Bericht erstellen**.  
+1. Wechseln Sie in der Webportal zu den gewünschten Bericht, mit der rechten Maustaste darauf und wählen Sie **verwalten** aus der Dropdown-Menü.
+
+2. Auf der **verwalten <reportname>**  Seite **verknüpften Bericht erstellen**.  
   
-2.  Geben Sie einen Namen für den neuen verknüpften Bericht ein. Geben Sie optional eine Beschreibung ein.  
+3. Geben Sie einen Namen für den neuen verknüpften Bericht ein. Geben Sie optional eine Beschreibung ein.  
   
-3.  Um einen anderen Ordner für den Bericht auszuwählen, klicken Sie auf **Speicherort ändern**. Klicken Sie auf den Ordner, den Sie verwenden möchten, oder geben Sie den Ordnernamen im Feld **Speicherort** ein. [!INCLUDE[clickOK](../../includes/clickok-md.md)] Wenn Sie keinen anderen Ordner auswählen, wird der verknüpfte Bericht im aktuellen Ordner (in dem der Bericht, auf dem er basiert, gespeichert ist) erstellt.  
+4. Um einen anderen Ordner für den Bericht auszuwählen, wählen Sie die Schaltfläche mit den Auslassungspunkten (...) rechts neben ***Speicherort***.  Navigieren Sie zu den neuen Ordner für den Bericht, und wählen Sie **wählen**. Wenn Sie einen anderen Ordner nicht auswählen, wird der verknüpfte Bericht im aktuellen Ordner erstellt.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Der verknüpfte Bericht wird geöffnet.  
+5. Wählen Sie **Erstellen**aus. Der verknüpfte Bericht wird erstellt.  
+
+6. Klicken Sie unter **erweitert**, wählen Sie einen anderen **berichtstimeout** -Wert, wenn gewünscht, und wählen Sie **übernehmen** zum Speichern der Änderungen.
   
      Das Symbol für einen verknüpften Bericht unterscheidet sich von anderen Elementen, die von einem Berichtsserver verwaltet werden. Das folgende Symbol steht für einen verknüpften Bericht:  
   
      ![Symbol verknüpfte Berichte](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Öffnen und Schließen eines Berichts &#40;Berichts-Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Neuer verknüpfter Bericht (Seite) &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Speicherort für Elemente auswählen (Seite) (Berichts-Manager)](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)](https://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Konzepte von Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+## <a name="see-also"></a>Siehe auch  
+ [Öffnen und Schließen eines Berichts &#40;-Webportal&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [Konzepte von Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)  
+ [Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md)
   

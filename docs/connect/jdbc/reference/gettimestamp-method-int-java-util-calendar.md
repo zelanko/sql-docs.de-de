@@ -1,5 +1,5 @@
 ---
-title: GetTimestamp-Methode (Int, java.util.Calendar) | Microsoft-Dokumentation
+title: getTime-Methode (int, java.util.Calendar) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc078598377ec7a866b90d68677cfd9302b6263a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f48f135f42c0e738f13d4e59f0be49589f32057
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673148"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778617"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp-Methode (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Timestamp getTimestamp(int index,
   
  Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
- *CAL*  
+ *cal*  
   
  Ein Kalenderobjekt.  
   
@@ -56,7 +56,7 @@ public java.sql.Timestamp getTimestamp(int index,
   
  Von dieser Methode werden nur Werte aus **datetime**- und **smalldatetime**-Spalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getTimestamp-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

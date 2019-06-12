@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a160da53ddc8a634953fc7f7b75028075ce3d691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696709"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783266"
 ---
 # <a name="working-with-data-types-jdbc"></a>Arbeiten mit Datentypen (JDBC)
 
@@ -33,12 +33,12 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie in Java-Anwendungen unter Ve
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Standarddatentypen – Beispiel](../../connect/jdbc/basic-data-types-sample.md)|Beschreibt, wie Werte von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standarddatentypen mithilfe von Abrufmethoden für Resultsets abgerufen und wie diese Werte mithilfe von Updatemethoden für Resultsets aktualisiert werden.|  
 |[Beispiel für den SQLXML-Datentyp](../../connect/jdbc/sqlxml-data-type-sample.md)|Beschreibt das Speichern von XML-Daten in einer relationalen Datenbank, das Abrufen von XML-Daten aus einer Datenbank sowie das Analysieren von XML-Daten mit dem Java-Datentyp **SQLXML**.|  
 |[Beispiel für räumliche Datentypen](../../connect/jdbc/spatial-data-types-sample.md)|Beschreibt, wie zum Speichern und Abrufen von Daten mit räumlichen Datentypen 'Geometry' und 'Geography' der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank mit **Geometrie** und **Geography** Java-Typen, die vom Microsoft JDBC-Treiber definiert.|
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Beispiele für JDBC-Treiberanwendungen](../../connect/jdbc/sample-jdbc-driver-applications.md)  

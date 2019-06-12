@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f61427cdc3a71ebba5c6d511c3a5c8068b44c496
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 6e374dd44d25a40953662cada81f6cc3d949f97c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778748"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771096"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
   
  Ein **String-Objekt**, das den Katalognamen enthält. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Katalogname nicht verwendet werden muss.  
   
- *%sder*  
+ *sSchema*  
   
  Ein **String-Objekt**, das das Schemanamenmuster enthält. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Schemaname nicht verwendet werden muss.  
   
@@ -61,14 +61,14 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
   
  Das von der getProcedures-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|Der Name der Datenbank, in der sich die angegebene gespeicherte Prozedur befindet.|  
 |PROCEDURE_SCHEM|**String**|Das Schema für die gespeicherte Prozedur.|  
 |PROCEDURE_NAME|**String**|Name der gespeicherten Prozedur|  
-|NUM_INPUT_PARAMS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
-|NUM_OUTPUT_PARAMS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
-|NUM_RESULT_SETS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
+|NUM_INPUT_PARAMS|**ssNoversion**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
+|NUM_OUTPUT_PARAMS|**ssNoversion**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
+|NUM_RESULT_SETS|**ssNoversion**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
 |REMARKS|**String**|Die Beschreibung der Prozedurspalte.<br /><br /> <br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
 |PROCEDURE_TYPE|**smallint**|Der Typ der gespeicherten Prozedur. Mögliche Werte:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
@@ -101,7 +101,7 @@ public static void executeGetProcedures(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

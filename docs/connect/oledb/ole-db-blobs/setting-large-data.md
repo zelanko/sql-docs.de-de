@@ -16,13 +16,13 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: f4ae2a3aae9bca39ff0ad86d8ac57c1b39eef77c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d050a978efcfc1067f8adc5a346382f5b598ff7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816098"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788333"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47816098"
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   
-3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType*-Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject*-Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
+3.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine pro Spalte). Legen Sie das *wType* -Element in der DBBINDING-Struktur auf DBTYPE_IUNKNOWN fest, und legen Sie das *pObject* -Element so fest, dass es auf die von Ihnen erstellte DBOBJECT-Struktur zeigt.  
   
 4.  Erstellen Sie einen Accessor mithilfe der Bindungsinformationen im DBBINDINGS-Strukturarray.  
   
@@ -722,7 +722,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [BLOBs und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Verwenden von Datentypen mit umfangreichen Werten](../../oledb/features/using-large-value-types.md)  
   

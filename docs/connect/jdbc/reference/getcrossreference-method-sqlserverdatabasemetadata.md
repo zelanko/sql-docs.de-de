@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bae60cb90c0459b5a221f88f463cfda0a520f47e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 2fc70ed3e449840793dbd32e4d2014031256f3bd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600858"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763005"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>getCrossReference-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Katze1*  
+ *cat1*  
   
  Ein **String-Objekt**, das den Katalognamen der Tabelle enthält, die den Primärschlüssel enthält.  
   
@@ -53,7 +53,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  Ein **String-Objekt**, das den Tabellennamen der Tabelle enthält, die den Primärschlüssel enthält.  
   
- *"Cat2" verknüpfen*  
+ *cat2*  
   
  Ein **String-Objekt**, das den Katalognamen der Tabelle enthält, die den Fremdschlüssel enthält.  
   
@@ -61,7 +61,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  Ein **String-Objekt**, das den Schemanamen der Tabelle enthält, die den Fremdschlüssel enthält.  
   
- *Tab2*  
+ *tab2*  
   
  Ein **String-Objekt**, das den Tabellennamen der Tabelle enthält, die den Fremdschlüssel enthält.  
   
@@ -76,7 +76,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  Das von der getCrossReference-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Der Name des Katalogs, der die Primärschlüsseltabelle enthält.|  
 |PKTABLE_SCHEM|**String**|Der Name des Schemas der Primärschlüsseltabelle.|  
@@ -122,7 +122,7 @@ public static void executeGetCrossReference(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

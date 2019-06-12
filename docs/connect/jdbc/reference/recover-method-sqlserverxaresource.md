@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ec96cd3f56b1710268ae951e39e98866fe1bd54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1ca9d0fede758b99f442a9553e4266e79fa81134
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826818"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794030"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover-Methode (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
   
  Wenn der Parameter **Flag** ist kein XAResource.TMSTARTRSCAN oder XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, muss eine Überprüfung für die Wiederherstellung ausgeführt werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXAResource-Methoden](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource-Elemente](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource-Klasse](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 871887e2896f2594dddda18d2ab342d4c222612a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711198"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778046"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Verwenden von ADO mit dem OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47711198"
  Damit ADO die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden kann, wurde der OLE DB-Treiber für SQL Server, der die Kernfunktionen von OLE DB erweitert, um einige Erweiterungen ergänzt. Diese Erweiterungen erlauben es ADO-Anwendungen, neuere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Features zu verwenden und zwei Datentypen zu verarbeiten, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt wurden: **XML** und **UDT**. Diese Erweiterungen machen sich auch Erweiterungen der Datentypen **varchar**, **nvarchar** und **varbinary** zunutze. Der OLE DB-Treiber für SQL Server fügt für ADO-Anwendungen die Initialisierungseigenschaft SSPROP_INIT_DATATYPECOMPATIBILITY dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzu, damit die neuen Datentypen in einer mit ADO kompatiblen Weise verfügbar gemacht werden. Der OLE DB-Treiber für SQL Server definiert darüber hinaus auch ein neues Schlüsselwort für Verbindungszeichenfolgen mit dem Namen **DataTypeCompatibility** , die in der Verbindungszeichenfolge festgelegt ist.  
 
 > [!NOTE]  
->  Vorhandene ADO-Anwendungen können über den SQLOLEDB-Anbieter auf XML, UDT, umfangreiche Textwerte und Werte von Binärfeldern zugreifen und diese aktualisieren. Die neuen größeren Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** werden als die ADO-Typen **adLongVarChar**, **adLongVarWChar** bzw. **adLongVarBinary** zurückgegeben. XML-Spalten werden als **adLongVarChar** zurückgegeben, und UDT-Spalten werden als **adVarBinary** zurückgegeben. Aber wenn Sie den OLE DB-Treiber für SQL Server (MSOLEDBSQL) statt des SQLOLEDB verwenden, müssen Sie Sie sicher, dass die **DataTypeCompatibility** Schlüsselwort auf "80", damit die neuen Datentypen richtig den entsprechenden ADO-Datentypen zugeordnet werden.  
+>  Vorhandene ADO-Anwendungen können über den SQLOLEDB-Anbieter auf XML, UDT, umfangreiche Textwerte und Werte von Binärfeldern zugreifen und diese aktualisieren. Die neuen größeren Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** werden als die ADO-Typen **adLongVarChar**, **adLongVarWChar** bzw. **adLongVarBinary** zurückgegeben. XML-Spalten werden als **adLongVarChar** zurückgegeben, und UDT-Spalten werden als **adVarBinary** zurückgegeben. Aber wenn Sie den OLE DB-Treiber für SQL Server (MSOLEDBSQL) statt des SQLOLEDB verwenden, müssen Sie Sie sicher, dass die **DataTypeCompatibility** Schlüsselwort auf "80", damit die neuen Datentypen richtig den entsprechenden ADO-Datentypen zugeordnet werden.  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Aktivieren der OLE DB-Treiber für SQLServer über ADO  
  Um die Verwendung von OLE DB-Treiber für SQL Server zu ermöglichen, müssen ADO-Anwendungen die folgenden Schlüsselwörter in ihrer Verbindungszeichenfolge angeben:  
@@ -42,7 +42,7 @@ ms.locfileid: "47711198"
 
 -   `DataTypeCompatibility=80`  
 
- Weitere Informationen zu den ADO-Verbindungszeichenfolgen Schlüsselwörter unterstützt in OLE DB-Treiber für SQL Server finden Sie unter [Schlüsselwörtern für Verbindungszeichenfolgen mit OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Weitere Informationen zu Verbindungszeichenfolgen-Schlüsselwörtern im OLE DB-Treiber für SQL Server finden Sie unter [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Es folgt ein Beispiel, in dem eine ADO-Verbindungszeichenfolge eingerichtet wird, mit der die Verwendung von des OLE DB-Treibers für SQL Server in vollem Umfang ermöglicht und die MARS-Funktion aktiviert wird:  
 
@@ -167,5 +167,5 @@ Set con = Nothing
 
  In früheren Versionen des OLE DB-Anbieters hätte dieser Code bewirkt, dass für den zweiten Execute-Aufruf eine Standardverbindung erstellt wird, weil in diesen Versionen nur ein aktives Resultset pro Verbindung geöffnet werden konnte. Weil die Standardverbindung nicht in den OLE DB-Verbindungspool aufgenommen wurde, bedeutete dies zusätzlichen Aufwand. Wenn der OLE DB-Anbieter von OLE DB-Treiber für SQL Server verfügbar macht, sind mehrere aktive Resultsets in einer Verbindung zulässig.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

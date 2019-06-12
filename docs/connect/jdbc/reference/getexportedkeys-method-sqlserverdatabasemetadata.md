@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91c4b7bdcf360047cc02a53f4bc013b3e3d972e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: f0298e3c933db4887f1270ff60254103a965c7c2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839978"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767145"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>getExportedKeys-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,7 +61,7 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
   
  Das von der getExportedKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Der Name des Katalogs, der die Primärschlüsseltabelle enthält.|  
 |PKTABLE_SCHEM|**String**|Der Name des Schemas der Primärschlüsseltabelle.|  
@@ -107,7 +107,7 @@ public static void executeGetExportedKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

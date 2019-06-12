@@ -15,13 +15,13 @@ helpviewer_keywords:
 - SetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8298de4362b0c38b56d56d7cbd46822a53b4ddbb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 1dd2184a859f3bb6c0b961ac8596cdbea48d2d25
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030047"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783873"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>'ISSCommandWithParameters::SetParameterProperties' (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,13 +76,13 @@ HRESULT SetParameterProperties(
   
  Verbesserungen in der Datenbank-Engine ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] isscommandwithparameters:: SetParameterProperties, genauere Beschreibungen der erwarteten Ergebnisse abrufen können. Diese genaueren Ergebnisse unterscheiden sich möglicherweise aus den Werten von isscommandwithparameters:: SetParameterProperties zurückgegeben wird, in früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Metadatenermittlung](../../oledb/features/metadata-discovery.md).  
   
-|Member|Beschreibung|  
+|Member|und Beschreibung|  
 |------------|-----------------|  
 |*iOrdinal*|Die Ordnungszahl des übergebenen Parameters|  
 |*cPropertySets*|Die Anzahl von DBPROPSET-Strukturen in *rgPropertySets*|  
 |*rgPropertySets*|Ein Zeiger auf den Speicher, in den ein Array aus DBPROPSET-Strukturen zurückgegeben werden soll|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ISSCommandWithParameters &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

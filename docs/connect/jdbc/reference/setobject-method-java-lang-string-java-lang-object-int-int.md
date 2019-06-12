@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 16f5f09a-51b5-423a-b52d-8c2eaa04e9ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c40eeddf554cf26bf4de4e7bfb3348636d253fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aa535d31edb1d6f94bd06f41eaffda5f1970841a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666118"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788239"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int-int"></a>setObject-Methode (java.lang.String, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +65,7 @@ public void setObject(java.lang.String sCol,
   
  Weitere Informationen finden Sie unter [Configuring How java.sql.Time Values are Sent to the Server (Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden)](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [setObject-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

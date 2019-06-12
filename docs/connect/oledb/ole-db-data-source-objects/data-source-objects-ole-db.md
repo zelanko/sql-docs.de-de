@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726898"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768596"
 ---
 # <a name="data-source-objects-ole-db"></a>Datenquellenobjekte (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726898"
 
   Der OLE DB-Treiber für SQL Server verwendet den Begriff „Datenquelle“ für die Gruppe der OLE DB-Schnittstellen, die zum Herstellen einer Verknüpfung mit dem Datenspeicher verwendet werden, z.B. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Erstellen einer Instanz das Datenquellenobjekt des Anbieters ist die erste Aufgabe von einer OLE DB-Treiber für SQL Server-Consumer.  
   
- Jeder OLE DB-Anbieter deklariert einen Klassenbezeichner (CLSID) für sich. Die CLSID für den OLE DB-Treiber für SQL Server ist die C/C++-GUID-CLSID_MSOLEDBSQL (das Symbol MSOLEDBSQL_CLSID, auf den richtigen aufgelöst wird progid in der msoledbsql.h-Datei, die Sie referenzieren). Mit der CLSID verwendet der Consumer die OLE-Funktion **CoCreateInstance** zum Erstellen einer Instanz des Datenquellenobjekts.  
+ Jeder OLE DB-Anbieter deklariert einen Klassenbezeichner (CLSID) für sich. Die CLSID für den OLE DB-Treiber für SQL Server ist der C /C++ GUID CLSID_MSOLEDBSQL (das Symbol MSOLEDBSQL_CLSID, auf den richtigen aufgelöst wird progid in der msoledbsql.h-Datei, die Sie referenzieren). Mit der CLSID verwendet der Consumer die OLE-Funktion **CoCreateInstance** zum Erstellen einer Instanz des Datenquellenobjekts.  
   
  OLE DB-Treiber für SQL Server ist ein in-Process-Server. Instanzen von OLE DB-Treiber für SQL Server-Objekten werden mithilfe des Makros CLSCTX_INPROC_SERVER erstellt, um den ausführbaren Kontext anzugeben.  
   
@@ -92,7 +92,7 @@ else
   
 -   [Persistente Datenquellenobjekte](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

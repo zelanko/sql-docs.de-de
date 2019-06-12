@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29e1b67caaf566f04cf01c7c93a5e8d2445c31ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0f9643504dea0c40c90181a77fa8f035f18addfd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633948"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783322"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>setURL-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public void setURL(java.lang.String url)
 > [!NOTE]  
 >  Wird die setURL-Methode nicht vor dem Aufruf der [getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatasource.md)-Methode aufgerufen, wird von getURL der Standardwert „(jdbc:sqlserver://)“ zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

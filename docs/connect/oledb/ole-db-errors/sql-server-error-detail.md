@@ -17,13 +17,13 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: fc85a2818fcdc72c9450b813a84a4d6d139feae7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: aa151a9cf85d2ddf131a530d09d884c6fd7bbca4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606700"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791585"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server-Fehlerdetail
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  SSERRORINFO-Strukturmember werden vom Consumer interpretiert wie folgt.  
   
-|Member|Beschreibung|  
+|Member|und Beschreibung|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehlermeldung. Identisch mit der Zeichenfolge, die in **IErrorInfo::GetDescription** zurückgegeben wird.|  
 |*pwszServer*|Name der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für diese Sitzung.|  
@@ -59,7 +59,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*bClass*|Schweregrad einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehlermeldung.|  
 |*wLineNumber*|Falls zutreffend, die Zeilennummer einer gespeicherten Prozedur, in der der Fehler aufgetreten ist.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler](../../oledb/ole-db-errors/errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   

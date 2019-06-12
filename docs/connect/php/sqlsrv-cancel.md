@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad06888895e863760cfde3589475a230e33f9a06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6c5b4c9120eca9ed37dd1e7824c630c72ee91313
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615258"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797016"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_cancel( resource $stmt)
 Ein boolescher Wert: **true** , wenn der Vorgang erfolgreich war. Andernfalls lautet der Wert **false**.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel nimmt die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank als Ziel zur Ausführung einer Abfrage. Es werden dann Ergebnisse verarbeitet und gezählt, bis die Variable *$salesTotal* einen angegebenen Betrag erreicht. Die verbleibenden Abfrageergebnisse werden anschließend verworfen. Das Beispiel setzt voraus, dass SQL Server und die AdventureWorks-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel nimmt die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank als Ziel zur Ausführung einer Abfrage. Es werden dann Ergebnisse verarbeitet und gezählt, bis die Variable *$salesTotal* einen angegebenen Betrag erreicht. Die verbleibenden Abfrageergebnisse werden anschließend verworfen. Das Beispiel setzt voraus, dass SQL Server und die AdventureWorks-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -95,7 +95,7 @@ sqlsrv_cancel( $stmt);
 ## <a name="comments"></a>Kommentare  
 Eine Anweisung, die mit der Kombination von [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) und [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) vorbereitet und ausgeführt wird, kann nach dem Aufruf von **sqlsrv_cancel** erneut mit **sqlsrv_execute** ausgeführt werden. Eine Anweisung, die mit [sqlsrv_query](../../connect/php/sqlsrv-query.md) ausgeführt wird, kann nach dem Aufruf von **sqlsrv_cancel** nicht erneut ausgeführt werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)

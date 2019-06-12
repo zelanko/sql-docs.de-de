@@ -1,5 +1,5 @@
 ---
-title: SetString-Methode (long, java.lang.String) | Microsoft-Dokumentation
+title: setString-Methode (long, java.lang.String, int, int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a5fd1c9f0f876f024047fab5e28fb31ba29b687
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b23c0c5de87fc5df557d5d02958a72eaa336f8fb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839108"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771672"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString-Methode (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *POS*  
+ *pos*  
   
  Die Position, an der Daten in das CLOB geschrieben werden sollen.  
   
@@ -52,11 +52,11 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetString-Methode wird von der SetString-Methode in der java.sql.Clob-Schnittstelle angegeben.  
+ Diese setString-Methode wird von der setString-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
  Zeichendaten werden beginnend mit der angegebenen Position überschrieben, und sie können die ursprüngliche Länge des CLOB übersteigen. Durch Angeben eines Werts vom Typ "Position+1" wird die Zeichenfolge angefügt. Durch Angeben eines Werts vom Typ „Position+2“ oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SetString-Methode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob-Methoden](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)   

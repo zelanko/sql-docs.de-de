@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 21b727f60c0c60495c50e2e583b4cd776fd2e997
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: adf098f6a855a3db241f33b81b060c654ae47d6d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571288"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499602"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot-Verbindungstyp (SSRS)
   Sie können Daten mithilfe der SQL Server Analysis Services-Datenverarbeitungserweiterung aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe abrufen, die in einem SharePoint- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog veröffentlicht ist.  
@@ -32,7 +32,7 @@ ms.locfileid: "65571288"
  Die Verbindungszeichenfolge ist die URL der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappe, die auf SharePoint im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog oder einer anderen Bibliothek veröffentlicht wurde, z.B. `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Anmeldeinformationen  
- Geben Sie die Anmeldeinformationen an, die Sie benötigen, um auf die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe und die SharePoint-Website zuzugreifen, z.B. die Windows-Authentifizierung (Integrierte Sicherheit). Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Geben Sie die Anmeldeinformationen an, die Sie benötigen, um auf die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe und die SharePoint-Website zuzugreifen, z.B. die Windows-Authentifizierung (Integrierte Sicherheit). Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oder [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="queries"></a>Abfragen  
  Nachdem Sie eine Verbindung mit der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle hergestellt haben, verwenden Sie die grafische MDX-Abfrage, um durch Durchsuchen und Auswählen aus den zugrunde liegenden Datenstrukturen eine Abfrage zu erstellen. Nach dem Erstellen einer Abfrage können Sie die Abfrage so ausführen, dass die Beispieldaten im Ergebnisbereich angezeigt werden.  

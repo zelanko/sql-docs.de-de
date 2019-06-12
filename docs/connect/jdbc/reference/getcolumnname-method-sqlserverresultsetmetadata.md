@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0330ca1d-5e24-4ce3-9d2a-b931f20a0fcf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0991c55acdcb4654e34c7cbcf5272187f436a7bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b424fafe85baf584e3cadc96ee4fe478940b8649
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709538"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763477"
 ---
 # <a name="getcolumnname-method-sqlserverresultsetmetadata"></a>getColumnName-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public java.lang.String getColumnName(int column)
 ## <a name="remarks"></a>Remarks  
  Diese GetColumnName-Methode wird von der GetColumnName-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSetMetaData-Methoden](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData-Elemente](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData-Klasse](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

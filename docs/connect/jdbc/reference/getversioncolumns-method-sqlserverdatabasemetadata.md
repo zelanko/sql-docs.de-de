@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 938cf980a4035684b2e77435d5ab4df9522b4407
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8c098106fc3961e0248d638356df70527739203b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604008"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779998"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,18 +57,18 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetVersionColumns-Methode wird von der GetVersionColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getColumns-Methode wird von der getColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getVersionColumns-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|Wird vom JDBC-Treiber nicht unterstützt.|  
 |COLUMN_NAME|**String**|Der Spaltenname.|  
 |DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|COLUMN_SIZE|**int**|Die Genauigkeit der Spalte.|  
-|BUFFER_LENGTH|**int**|Die Länge der Spalten in Bytes.|  
+|COLUMN_SIZE|**ssNoversion**|Die Genauigkeit der Spalte.|  
+|BUFFER_LENGTH|**ssNoversion**|Die Länge der Spalten in Bytes.|  
 |DECIMAL_DIGITS|**short**|Die Dezimalstellen der Spalte.|  
 |PSEUDO_COLUMN|**short**|Gibt an, ob die Spalte eine Pseudospalte ist. Mögliche Werte:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
@@ -101,7 +101,7 @@ public static void executeGetVersionColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

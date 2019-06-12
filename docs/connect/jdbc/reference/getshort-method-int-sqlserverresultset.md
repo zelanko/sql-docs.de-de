@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06c132bf4300f6ee696c18604c973191d8d86a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd66bf9996ce01435c8243a13c86c65d11072fee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622568"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791876"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,11 +47,11 @@ public short getShort(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetShort-Methode wird von der GetShort-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getInt-Methode wird von der getInt-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Die Methode wird nur unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen unterstützt, die einen ganzzahligen Wert wie „smallint“, „tinyint“ und „bit“ sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getShort-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getshort-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

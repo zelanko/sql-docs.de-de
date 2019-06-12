@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 5a582a95223fd47863a6e42b8426ccfb13fcda59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748508"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796077"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>Rückgabewert  
 Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für jedes Feld im Resultset. Jedes Teilarray hat Schlüssel, wie in der unten stehenden Tabelle beschrieben. Falls beim Abrufen der Feldmetadaten ein Fehler auftritt, wird **false** zurückgegeben.  
   
-|Key|Beschreibung|  
+|Key|und Beschreibung|  
 |-------|---------------|  
 |Name|Name der Spalte, der das Feld entspricht|  
 |Typ|Numerischer Wert, der einem SQL-Typ entspricht|  
@@ -51,7 +51,7 @@ Ein **Array** von Arrays oder **false**. Das Array besteht aus einem Array für 
 |Dezimalstellen|Die Skalierung für die Typen mit variabler Skalierung (numeric, decimal, datetime2, datetimeoffset und time). **NULL** für andere SQL Server-Datentypen.|  
 |NULL zulassen|Ein Aufzählungswert, der anzeigt, ob die Spalte NULL-Werte zulässt (**SQLSRV_NULLABLE_YES**) oder nicht (**SQLSRV_NULLABLE_NO**), oder ob diese Eigenschaft nicht bekannt ist (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
-Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes Teilarray (weiter Informationen zu diesen Typen finden Sie in der Dokumentation zu SQL Server):   
+Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes Teilarray (weiter Informationen zu diesen Typen finden Sie in der Dokumentation zu SQL Server):  
   
 |SQL Server 2008-Datentyp|Typ|Min/Max Genauigkeit|Min/Max Skalierung|Größe|  
 |-----------------------------|--------|----------------------|------------------|--------|  
@@ -77,9 +77,9 @@ Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes T
 |SMALLINT|SQL_SMALLINT (5)|||2 Bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
-|Uhrzeit|SQL_SS_TIME2 (-154)|8/16|0/7||  
+|time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 Byte|  
-|tinyint|SQL_TINYINT (-6)|||1 Byte|  
+|TINYINT|SQL_TINYINT (-6)|||1 Byte|  
 |udt|SQL_SS_UDT (-151)|||variable|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
@@ -91,7 +91,7 @@ Die folgende Tabelle enthält mehr Informationen zu den Schlüsseln für jedes T
 Ein Schlüssel der NULL-Werte zulässt, kann entweder „Ja“ oder „Nein“ sein.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel erstellt eine Anweisungsressource, ruft  die Feldmetadaten ab und stellt sie dar. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel erstellt eine Anweisungsressource, ruft  die Feldmetadaten ab und stellt sie dar. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -129,7 +129,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

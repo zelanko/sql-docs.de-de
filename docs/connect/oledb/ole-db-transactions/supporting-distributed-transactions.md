@@ -1,6 +1,6 @@
 ---
 title: Unterstützen von verteilten Transaktionen | Microsoft-Dokumentation
-description: Verteilte Transaktionen in OLE DB-Treiber für SQL Server
+description: Transaktionen im OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - MS DTC, about distributed transaction support
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 058c7755468551ff94da7e7b8eb9d1993d92a07a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 97c7c4744d21697620740d2a865e5e6a66558a0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621958"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766120"
 ---
 # <a name="supporting-distributed-transactions"></a>Unterstützen von verteilten Transaktionen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47621958"
   
  Für verteilte Transaktionen implementiert der OLE DB-Treiber für SQL Server **ITransactionJoin::JoinTransaction**-Parameter wie folgt.  
   
-|Parameter|Beschreibung|  
+|Parameter|und Beschreibung|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Ein Zeiger auf ein MS DTC-Transaktionsobjekt|  
 |*IsoLevel*|Wird von der OLE DB-Treiber für SQLServer ignoriert. Die Isolationsstufe für MS DTC-koordinierte Transaktionen wird festgelegt, wenn der Consumer vom MS DTC ein Transaktionsobjekt abruft.|  
@@ -143,7 +143,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Transaktionen](../../oledb/ole-db-transactions/transactions.md)  
   
   

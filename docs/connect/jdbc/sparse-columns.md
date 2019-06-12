@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb2d80b8906a43ab2e2ea056d3d3d4e9d2813555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 131910bfaa6e119588f708305bb1008c7b36d6e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798357"
 ---
 # <a name="sparse-columns"></a>Spalten mit geringer Dichte
 
@@ -36,7 +36,7 @@ Spaltensätze sind berechnete Spalten, die alle Sparsespalten im nicht typisiert
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>und Beschreibung
 
 Dieses Beispiel zeigt, wie Spaltensätze erkannt werden. Des Weiteren zeigt es, wie die XML-Ausgabe eines Spaltensatzes analysiert wird, um die Daten aus den Sparsespalten zu erhalten.
 
@@ -159,6 +159,6 @@ public class SparseColumns {
 
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 549d23302474ae7838cc27da2e88e0cf9a16d16f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 03e79fb278433df33c3b1a9f6ce5d6753f4c2810
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698508"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782792"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_rows_affected( resource $stmt)
 Eine ganze Zahl, die die Anzahl der Zeilen angibt, die durch die zuletzt ausgeführte Anweisung geändert wurden. Wenn keine Zeilen geändert wurden, wird Null (0) zurückgegeben. Wenn keine Informationen über die Anzahl der geänderten Zeilen verfügbar sind, wird die negative Eins (-1) zurückgegeben. Wenn ein Fehler beim Abrufen der geänderten Zeilen aufgetreten ist, wird **false** zurückgegeben.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel zeigt die Anzahl der Zeilen, die durch eine UPDATE-Anweisung geändert wurden. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel zeigt die Anzahl der Zeilen, die durch eine UPDATE-Anweisung geändert wurden. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -91,7 +91,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  

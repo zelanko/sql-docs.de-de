@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe0ef2f88f2db6035bce1e7e72fd216882964e82
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697418"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788443"
 ---
 # <a name="understanding-ssl-support"></a>Grundlegendes zur SSL-Unterstützung
 
@@ -81,7 +81,7 @@ Während des SSL-Handshakes sendet der Server sein Zertifikat für öffentliche 
   
 - Ein DNS-Name kann Platzhalterzeichen enthalten. Aber die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützt keine Platzhalter. Das heißt, „abc.com“ entspricht nicht „\*.com“, während „\*.com“ „\*.com“ entspricht.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)
 

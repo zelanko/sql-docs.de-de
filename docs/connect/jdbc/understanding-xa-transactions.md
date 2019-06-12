@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736941"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788432"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
 
@@ -31,7 +31,7 @@ ms.locfileid: "55736941"
 
 Für die Implementierung verteilter Transaktionen stehen die folgenden Klassen zur Verfügung:  
   
-| Class                                              | Implementiert                      | Beschreibung                                       |
+| Class                                              | Implementiert                      | und Beschreibung                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | Das Klassenfactory für verteilte Verbindungen.    |
 | com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | Der Ressourcenadapter für den Transaktions-Manager. |
@@ -78,7 +78,7 @@ Unter Windows Vista und höher:
   
 1. Klicken Sie auf **Start**, geben Sie im Feld **Suche starten** den Namen **dcomcnfg** ein, und drücken Sie dann die EINGABETASTE, um **Komponentendienste** zu öffnen. Sie können auch im Feld **Suche starten** auch den Pfad %windir%\system32\comexp.msc eingeben, um **Komponentendienste** zu öffnen.  
   
-2. Erweitern Sie „Komponentendienste“, „Computer“, „Arbeitsplatz“ und dann „Distributed Transaction Coordinator“.  
+2. Erweitern Sie Komponentendienste, Computer, Arbeitsplatz und dann Distributed Transaction Coordinator.  
   
 3. Klicken Sie mit der rechten Maustaste auf **Lokaler DTC**, und wählen Sie anschließend **Eigenschaften** aus.  
   
@@ -99,7 +99,7 @@ Führen Sie die folgenden Schritte aus, um die Komponenten des JDBC-Treibers fü
     > [!NOTE]  
     > Wenn Sie XA-Transaktionen mit einem 32-Bit-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden, verwenden Sie die Datei „sqljdbc_xa.dll“ im Ordner „x86“, auch wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem x64-Prozessor installiert ist. Wenn Sie XA-Transaktionen mit einem 64-Bit-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem x64-Prozessor verwenden, verwenden Sie die Datei „sqljdbc_xa.dll“ im Ordner „x64“.  
   
-2. Führen Sie auf allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen, die an verteilten Transaktionen teilnehmen, das Datenbankskript „xa_install.sql“ aus. Mit diesem Skript werden die erweiterten gespeicherten Prozeduren installiert, die von „sqljdbc_xa.dll“ aufgerufen werden. Diese erweiterten gespeicherten Prozeduren implementieren die Unterstützung für verteilte Transaktionen und XA für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Sie müssen dieses Skript als Administrator der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ausführen.  
+2. Führen Sie auf allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen, die an verteilten Transaktionen teilnehmen, das Datenbankskript „xa_install.sql“ aus. Mit diesem Skript werden die erweiterten gespeicherten Prozeduren installiert, die von sqljdbc_xa.dll aufgerufen werden. Diese erweiterten gespeicherten Prozeduren implementieren die Unterstützung für verteilte Transaktionen und XA für [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Sie müssen dieses Skript als Administrator der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ausführen.  
   
 3. Um einem bestimmten Benutzer die Berechtigungen für die Teilnahme an verteilten Transaktionen mit dem JDBC-Treiber zu gewähren, fügen Sie den Benutzer der Rolle "SqlJDBCXAUser" hinzu.  
   
@@ -118,7 +118,7 @@ Sie können die derzeit auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 ### <a name="BKMK_ServerSide"></a>Konfigurieren von serverseitigen Timeouteinstellungen für den automatischen Rollback nicht vorbereiteter Transaktionen  
 
 > [!WARNING]  
-> Diese serverseitige Option wurde im Microsoft JDBC-Treiber 4.2 (und höher) für SQL Server neu eingeführt. Um das aktualisierte Verhalten nutzen zu können, stellen Sie sicher, dass ein Update von „sqljdbc_xa.dll“ auf dem Server ausgeführt wird. Weitere Informationen zum Festlegen von clientseitigen Timeouts finden Sie unter [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Diese serverseitige Option wurde im Microsoft JDBC-Treiber 4.2 (und höher) für SQL Server neu eingeführt. Um das aktualisierte Verhalten zu verwenden, stellen Sie sicher, dass sqljdbc_xa.dll auf dem Server aktualisiert wurde. Weitere Informationen zum Festlegen von clientseitigen Timeouts finden Sie unter [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Das Timeoutverhalten von verteilten Transaktionen wird mithilfe von zwei Registrierungseinstellungen (DWORD-Werten) gesteuert:  
   
@@ -155,16 +155,16 @@ Ein Timeoutwert wird für jede Transaktion bei deren Start festgelegt, und es er
   
 ### <a name="upgrading-sqljdbcxadll"></a>Aktualisieren von "sqljdbc_xa.dll"
 
-Wenn Sie eine neue Version des JDBC-Treibers installieren, sollten Sie auch „sqljdbc_xa.dll“ aus der neuen Version verwenden, um „sqljdbc_xa.dll“ auf dem Server zu aktualisieren.  
+Wenn Sie eine neue Version des JDBC-Treibers installieren, sollten Sie auch sqljdbc_xa.dll aus der neuen Version verwenden, um sqljdbc_xa.dll auf dem Server zu aktualisieren.  
   
 > [!IMPORTANT]  
 > Sie sollten das Upgrade der Datei „sqljdbc_xa.dll“ im Rahmen einer Wartung oder zu einem Zeitpunkt ausführen, zu dem keine MS DTC-Transaktionen in Bearbeitung sind.
   
-1. Entladen Sie "sqljdbc_xa.dll" mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] Befehl **DBCC Sqljdbc_xa (FREE)**.  
+1. Entladen Sie "sqljdbc_xa.dll" mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] Befehl **DBCC Sqljdbc_xa (FREE)** .  
   
 2. Kopieren Sie die neue Datei „sqljdbc_xa.dll“ aus dem Installationsverzeichnis des JDBC-Treibers auf allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Computern, die an verteilten Transaktionen teilnehmen, in das Verzeichnis „Binn“.  
   
-    Die neue DLL wird geladen, wenn eine erweiterte Prozedur in „sqljdbc_xa.dll“ aufgerufen wird. Sie müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht neu starten, um die neuen Definitionen zu laden.  
+    Die neue DLL wird geladen, wenn eine erweiterte Prozedur in sqljdbc_xa.dll aufgerufen wird. Sie müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht neu starten, um die neuen Definitionen zu laden.  
   
 ### <a name="configuring-the-user-defined-roles"></a>Konfigurieren der benutzerdefinierten Rollen
 

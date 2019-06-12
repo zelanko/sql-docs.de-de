@@ -13,13 +13,13 @@ helpviewer_keywords:
 - enumerating data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9fe4ab1b6fd245bdb7ac0bd08acb0564742e1188
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 7d2eedc7d8036bfa8507179b97c53e9977f0b5ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694945"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795936"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>Schemarowsets: LINKEDSERVERS-Rowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47694945"
   
  Das **LINKEDSERVERS** -Rowset enthält die folgenden Spalten.  
   
-|Spaltenname|Typindikator|Beschreibung|  
+|Spaltenname|Typindikator|und Beschreibung|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Name eines Verbindungsservers|  
 |SVR_PRODUCT|DBTYPE_WSTR|Hersteller oder ein anderer Name, der den Typ des Datenspeichers identifiziert, der durch den Namen des Verbindungsservers repräsentiert wird.|  
@@ -41,7 +41,7 @@ ms.locfileid: "47694945"
   
  Das Rowset wird nach SRV_NAME sortiert, und eine einzelne Einschränkung wird für SRV_NAME unterstützt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

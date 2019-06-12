@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf960ec912f51c5a39f8d07366174e1c0cd4f7b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600186"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800256"
 ---
 # <a name="logging-activity"></a>Protokollieren von Aktivitäten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ pdo_sqlsrv.log_severity = <number>
   
 Für**log_severity** sind die folgenden Werte möglich.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |---------|---------------|  
 |0|Die Protokollierung ist deaktiviert (Standardeinstellung, wenn nichts definiert ist).|  
 |-1|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
@@ -62,7 +62,7 @@ Sie können die Protokollierung mit der [sqlsrv_configure](../../connect/php/sql
   
 Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSubsystems** -Einstellung verwendet werden können:  
   
-|Wert (entsprechende ganze Zahl in Klammern)|Beschreibung|  
+|Wert (entsprechende ganze Zahl in Klammern)|und Beschreibung|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Aktiviert die Protokollierung aller Subsysteme.|  
 |SQLSRV_LOG_SYSTEM_OFF(0)|Deaktiviert die Protokollierung. Dies ist die Standardeinstellung.|  
@@ -93,7 +93,7 @@ Nachdem die Protokollierung aktiviert wurde, müssen Sie angeben, was protokolli
   
 Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSeverity** -Einstellung verwendet werden können:  
   
-|Wert (entsprechende ganze Zahl in Klammern)|Beschreibung|  
+|Wert (entsprechende ganze Zahl in Klammern)|und Beschreibung|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Gibt an, dass Fehler protokolliert werden. Dies ist die Standardeinstellung.|  
@@ -115,7 +115,7 @@ Durch die Addition von ganzzahligen Werten können Sie mehrere Optionen gleichze
   
 `sqlsrv.LogSeverity = 3`  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa85b61a67655fbf363c1927b48cd79f8ff841ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5725da0138ecec2e24f93e16af97a1d3c8a67681
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774418"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776025"
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public class SQLServerXADataSource
   
  SQLServerXAConnection-Objekte werden von einem SQLServerXADataSource-Objekt erstellt. SQLServerConnectionPoolDataSource und SQLServerXADataSource-Objekte sind ähnlich, da sie beide unterhalb einer Datenquellenebene implementiert sind, die in der JDBC-Anwendung sichtbar ist. Dank dieser Architektur kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verteilte Transaktionen auf eine Weise unterstützen, die für die Anwendung transparent ist. SQLServerXADataSource kann für die Integration mit [!INCLUDE[msCoName](../../../includes/msconame_md.md)]-DTC (Distributed Transaction Coordinator) konfiguriert werden, um echte verteilte Transaktionsverarbeitung zu ermöglichen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXADataSource-Elemente](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [API-Referenz für den JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

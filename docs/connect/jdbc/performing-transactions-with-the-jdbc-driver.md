@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d18f5c550bbf60446ac47961d16c1bbdb7cb2e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8471493fb68df8369084046075f88a1e7b4f2e3e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770344"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794101"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>Ausführen von Transaktionen mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47770344"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Grundlegendes zu Transaktionen](../../connect/jdbc/understanding-transactions.md)|Enthält eine Übersicht über die Verwendung von Transaktionen mit dem JDBC-Treiber.|  
 |[Grundlegendes zu XA-Transaktionen](../../connect/jdbc/understanding-xa-transactions.md)|Enthält eine Übersicht über die Verwendung von XA-Transaktionen mit dem JDBC-Treiber.|  
@@ -35,7 +35,7 @@ ms.locfileid: "47770344"
 |[Verwenden von Sicherungspunkten](../../connect/jdbc/using-savepoints.md)|Beschreibt die Verwendung des JDBC-Treibers für Sicherungspunkte für Transaktionen.|  
 |[Verwenden der Haltbarkeit](../../connect/jdbc/using-holdability.md)|Beschreibt die Verwendung des JDBC-Treibers für die Holdability für Resultsets.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

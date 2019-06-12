@@ -1,19 +1,19 @@
 ---
-title: 'Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 78f733d5f34c1c0bf6f89b40ef0346c85f1638b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294978"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499564"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie einen paginierten Bericht erstellen, der wie ein Newslettern funktioniert. Jede Seite zeigt statischen Text, zusammenfassende Visualisierungen und detaillierte Beispielumsatzdaten an.
@@ -48,13 +48,13 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Datenquelle**.  
   
-2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**.  
+2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**  
   
 3.  Klicken Sie auf **In Bericht eingebettete Verbindung verwenden**.  
   
-4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Data Source = \<servername>**  
+4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<Servername>** .  
   
-    Der **\<Servername>**, z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
+    Der **\<Servername>** , z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
   
 5.  Klicken Sie auf **Anmeldeinformationen**und geben Sie die zur Verbindung mit der Instanz der SQL Server-Datenbank-Engine benötigten Anmeldeinformationen ein.  
   
@@ -64,7 +64,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Dataset**.  
   
-2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataset**.  
+2.  Geben Sie im Feld **Name** **ListDataset**ein.  
   
 3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**und überprüfen Sie, ob **ListDataSource**die Datenquelle ist.  
   
@@ -215,7 +215,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
     *  **20 pt**
     *  **Tomate**  
   
-9. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 3 eingegeben haben, und geben Sie Folgendes ein: Das Wort **Hallo** gefolgt von einem Leerzeichen, um den Text und das Feld, das Sie im nächsten Schritt hinzufügen, voneinander zu trennen.  
+9. Platzieren Sie den Cursor unterhalb des Texts, den Sie in Schritt 3 eingegeben haben, und geben Sie **Hallo** mit einem anschließenden Leerzeichen ein, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen.  
  
 10. Ziehen Sie das `[FullName]` -Feld aus ListDataSet im Bereich „Berichtsdaten“ in das Textfeld, platzieren Sie es hinter „Hallo “, und geben Sie anschließend ein Komma (,) ein.  
    
@@ -244,7 +244,7 @@ Sie können Textfelder hinzufügen, um statischen Text anzuzeigen, der auf jeder
       *  **10 pt**
       *  **Schwarz**  
  
-20. Bewegen Sie den Cursor in das Textfeld unter den bedeutungslosen Text und geben Sie Folgendes ein: **Herzlichen Glückwunsch zu Ihrem Gesamtumsatz von** gefolgt von einem Leerzeichen, um den Text und das Feld, das Sie im nächsten Schritt hinzufügen, voneinander zu trennen. 
+20. Platzieren Sie den Cursor im Textfeld unter dem bedeutungslosen Text, und geben Sie **Glückwünsche zum Gesamtumsatz von**mit einem anschließenden Leerzeichen ein, um den Text von dem Feld zu trennen, das Sie im nächsten Schritt hinzufügen. 
   
 21. Ziehen Sie das Feld „Sales“ in das Textfeld, platzieren Sie es hinter dem im vorherigen Schritt eingegebenen Text, und geben Sie anschließend ein Ausrufezeichen (!) ein.  
 
@@ -405,7 +405,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck.  
    
-10. Wählen Sie den Diagrammtitel aus, und geben Sie Folgendes ein: **Verkaufte Produktmengen**.  
+10. Wählen Sie den Diagrammtitel und Typ **Verkaufte Produktmengen**aus.  
   
 12. Legen Sie für den Titel auf der Registerkarte **Start** im Bereich **Font** (Schriftart) Folgendes fest:
     * **Schriftart** **Segoe UI Semibold**.
@@ -444,7 +444,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck unter dem Kreisdiagramm.  
    
-10. Wählen Sie den Diagrammtitel aus, und geben Sie Folgendes ein: **Produktverkaufszahlen**.  
+10. Wählen Sie den Diagrammtitel aus und geben Sie **Produktumsatz**ein.  
   
 12. Legen Sie für den Titel auf der Registerkarte **Start** im Bereich **Font** (Schriftart) Folgendes fest:
     * **Schriftart** **Segoe UI Semibold**.
@@ -505,7 +505,7 @@ Weitere Informationen zu Listen finden Sie unter:
 * [Create Invoices and Forms with Lists (Erstellen von Rechnungen und Formularen mit Listen)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer (Berichts-Generator)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer (Berichts-Generator)](report-data/query-design-tools-ssrs.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md) 

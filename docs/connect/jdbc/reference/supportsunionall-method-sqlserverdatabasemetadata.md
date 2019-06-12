@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ed8344eb-4d1d-43d3-ade8-935ec677f73c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e537d7928e722f1f89974555d396fac3711468de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fad6422ea4c8b8b6cf9f9b3eeab7c2e483e537e6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624968"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797212"
 ---
 # <a name="supportsunionall-method-sqlserverdatabasemetadata"></a>supportsUnionAll-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsUnionAll()
 ## <a name="remarks"></a>Remarks  
  Diese SupportsUnionAll-Methode wird von der SupportsUnionAll-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

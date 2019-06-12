@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbb50cd617ba1ce85851c08764f3f80cd90cbe67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: edebe0f57ed09acbf9faa338355314e0bc6199d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611628"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774432"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,7 +61,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
   
  Das von der getImportedKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Der Name des Katalogs, der die Primärschlüsseltabelle enthält.|  
 |PKTABLE_SCHEM|**String**|Der Name des Schemas der Primärschlüsseltabelle.|  
@@ -107,7 +107,7 @@ public static void executeGetImportedKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

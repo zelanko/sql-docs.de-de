@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9eca16e0908bac5134d459414cbd43ee19a4665a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 19c732a38c5237811f4f2219292ab4589018f4e8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724958"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769410"
 ---
 # <a name="conversions-ole-db"></a>Konvertierungen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724958"
   
 -   Das Format der **"DateTime"** und **Datetimeoffset** -Zeichenfolgen ist:  
   
-     *Yyyy*-*mm*-*TT*[ *Hh*:*mm*:*ss*[. *9999999*] [± *Hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   Das Format für **Uhrzeiten** lautet wie folgt:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47724958"
  [Server/Client-Konvertierungen](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Beschreibt date/time-Konvertierungen, die zwischen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit dem OLE DB-Treiber für SQL Server geschrieben wurde.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

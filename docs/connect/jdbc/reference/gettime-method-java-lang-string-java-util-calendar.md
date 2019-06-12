@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 200267a37383d858d80419d49e0fbd5172294907
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6b9d74778d3ff1fc62b5549fbea7e0f97bf1e477
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793668"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778877"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime-Methode (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Time getTime(java.lang.String sCol,
   
  Ein **String-Objekt**, das den Parameternamen enthält.  
   
- *CAL*  
+ *cal*  
   
  Ein Kalenderobjekt.  
   

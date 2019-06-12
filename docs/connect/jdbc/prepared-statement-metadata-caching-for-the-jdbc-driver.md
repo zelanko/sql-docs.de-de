@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72ef56833f8f6a6ed4cc66a91dcb7a9e4576c7f5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 58ebcb2560e3b03703d7a419b28c6c04e41c19f1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395833"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794086"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Vorbereitetes Caching von Anweisungsmetadaten für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,23 +38,23 @@ Eine weitere Änderung, die von 6.1.6-preview eingeführt wird, vor diesem Treib
 
  **SQLServerConnection**
  
-|Methode „New“|Beschreibung|  
+|Methode „New“|und Beschreibung|  
 |-----------|-----------------|  
-|Int getDiscardedServerPreparedStatementCount()|Gibt die Anzahl der derzeit ausstehenden vorbereitete Anweisung unprepare Aktionen.|
-|"void" closeUnreferencedPreparedStatementHandles()|Erzwingt, dass die Unprepare-Anforderungen für alle ausstehenden verworfenen vorbereiteten Anweisungen ausgeführt werden.|
-|Boolesche getEnablePrepareOnFirstPreparedStatementCall()|Gibt das Verhalten für eine bestimmte Verbindung-Instanz zurück. False gibt an, die erste Ausführung Sp_executesql aufruft und keine Anweisung vorbereiten, nach die zweite Ausführung erfolgt, dass Sp_prepexec aufgerufen, und setup tatsächlich einem vorbereiteten Anweisungshandle ab. Die folgenden Ausführungen Aufrufe Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird. Der Standardwert für diese Option kann vom aufrufenden setDefaultEnablePrepareOnFirstPreparedStatementCall() geändert werden.|
+|int getDiscardedServerPreparedStatementCount()|Gibt die Anzahl der derzeit ausstehenden vorbereitete Anweisung unprepare Aktionen.|
+|void closeUnreferencedPreparedStatementHandles()|Erzwingt, dass die Unprepare-Anforderungen für alle ausstehenden verworfenen vorbereiteten Anweisungen ausgeführt werden.|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|Gibt das Verhalten für eine bestimmte Verbindung-Instanz zurück. False gibt an, die erste Ausführung Sp_executesql aufruft und keine Anweisung vorbereiten, nach die zweite Ausführung erfolgt, dass Sp_prepexec aufgerufen, und setup tatsächlich einem vorbereiteten Anweisungshandle ab. Die folgenden Ausführungen Aufrufe Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird. Der Standardwert für diese Option kann vom aufrufenden setDefaultEnablePrepareOnFirstPreparedStatementCall() geändert werden.|
 |"void" setEnablePrepareOnFirstPreparedStatementCall(boolean value)|Gibt das Verhalten für eine bestimmte Verbindung-Instanz. Falls der Wert "false", die erste Ausführung Sp_executesql aufruft und keine Anweisung vorbereiten, nach die zweite Ausführung erfolgt, dass Sp_prepexec aufgerufen, und setup tatsächlich einem vorbereiteten Anweisungshandle ab. Die folgenden Ausführungen Aufrufe Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird.|
-|Int getServerPreparedStatementDiscardThreshold()|Gibt das Verhalten für eine bestimmte Verbindung-Instanz zurück. Diese Einstellung steuert, wie viele ausstehende verwerfen der Anweisung vorbereitet, die Aktionen (Sp_unprepare) pro Verbindung ausstehenden sein können, bevor ein Aufruf zum Bereinigen der ausstehende Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1, unprepare Aktionen sofort auf Schließen die vorbereitete Anweisung ausgeführt werden. Wenn sie, um festgelegt ist {@literal >} 1, diese Aufrufe sind einem Batch zusammengefasst um Mehraufwand aufrufenden Sp_unprepare oft zu vermeiden. Der Standardwert für diese Option kann vom aufrufenden getDefaultServerPreparedStatementDiscardThreshold() geändert werden.|
-|"void" setServerPreparedStatementDiscardThreshold(int value)|Gibt das Verhalten für eine bestimmte Verbindung-Instanz. Diese Einstellung steuert, wie viele ausstehende verwerfen der Anweisung vorbereitet, die Aktionen (Sp_unprepare) pro Verbindung ausstehenden sein können, bevor ein Aufruf zum Bereinigen der ausstehende Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1 unprepare Aktionen sofort auf Schließen die vorbereitete Anweisung ausgeführt werden. Wenn sie auf > 1 festgelegt ist werden diese Aufrufe zusammengefasst um Mehraufwand Sp_unprepare oft aufrufen zu vermeiden.|
+|int getServerPreparedStatementDiscardThreshold()|Gibt das Verhalten für eine bestimmte Verbindung-Instanz zurück. Diese Einstellung steuert, wie viele ausstehende verwerfen der Anweisung vorbereitet, die Aktionen (Sp_unprepare) pro Verbindung ausstehenden sein können, bevor ein Aufruf zum Bereinigen der ausstehende Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1, unprepare Aktionen sofort auf Schließen die vorbereitete Anweisung ausgeführt werden. Wenn sie, um festgelegt ist {@literal >} 1, diese Aufrufe sind einem Batch zusammengefasst um Mehraufwand aufrufenden Sp_unprepare oft zu vermeiden. Der Standardwert für diese Option kann vom aufrufenden getDefaultServerPreparedStatementDiscardThreshold() geändert werden.|
+|void setServerPreparedStatementDiscardThreshold(int value)|Gibt das Verhalten für eine bestimmte Verbindung-Instanz. Diese Einstellung steuert, wie viele ausstehende verwerfen der Anweisung vorbereitet, die Aktionen (Sp_unprepare) pro Verbindung ausstehenden sein können, bevor ein Aufruf zum Bereinigen der ausstehende Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1 unprepare Aktionen sofort auf Schließen die vorbereitete Anweisung ausgeführt werden. Wenn sie auf > 1 festgelegt ist werden diese Aufrufe zusammengefasst um Mehraufwand Sp_unprepare oft aufrufen zu vermeiden.|
 
  **SQLServerDataSource**
  
-|Methode „New“|Beschreibung|  
+|Methode „New“|und Beschreibung|  
 |-----------|-----------------|  
 |"void" setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOnFirstPreparedStatementCall)|Wenn diese Konfiguration auf "false" festgelegt ist, die erste Ausführung einer vorbereiteten Anweisung Sp_executesql aufruft und keine Anweisung vorbereiten, nach die zweite Ausführung erfolgt, dass Sp_prepexec aufgerufen, und setup tatsächlich einem vorbereiteten Anweisungshandle ab. Die folgenden Ausführungen Aufrufe Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird.|
-|Boolesche getEnablePrepareOnFirstPreparedStatementCall()|Wenn diese Konfiguration gibt "false", die erste Ausführung einer vorbereiteten Anweisung Sp_executesql aufruft und eine Anweisung nicht vorbereitet werden, nachdem die zweite Ausführung erfolgt, wird der Sp_prepexec, und setup tatsächlich einem vorbereiteten Anweisungshandle. Die folgenden Ausführungen Aufrufe Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird.|
-|"void" setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Diese Einstellung steuert, wie viele ausstehende verwerfen der Anweisung vorbereitet, die Aktionen (Sp_unprepare) pro Verbindung ausstehenden sein können, bevor ein Aufruf zum Bereinigen der ausstehende Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1 unprepare Aktionen sofort auf Schließen die vorbereitete Anweisung ausgeführt werden. Wenn sie, um festgelegt ist {@literal >} 1, die diese Aufrufe einem zusammengefasst Batch sind um Mehraufwand Sp_unprepare oft aufrufen zu vermeiden|
-|Int getServerPreparedStatementDiscardThreshold()|Diese Einstellung steuert, wie viele ausstehende verwerfen der Anweisung vorbereitet, die Aktionen (Sp_unprepare) pro Verbindung ausstehenden sein können, bevor ein Aufruf zum Bereinigen der ausstehende Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1 unprepare Aktionen sofort auf Schließen die vorbereitete Anweisung ausgeführt werden. Wenn sie, um festgelegt ist {@literal >} 1, die diese Aufrufe einem zusammengefasst Batch sind um Mehraufwand Sp_unprepare oft aufrufen zu vermeiden.|
+|boolean getEnablePrepareOnFirstPreparedStatementCall()|Wenn diese Konfiguration gibt "false", die erste Ausführung einer vorbereiteten Anweisung Sp_executesql aufruft und eine Anweisung nicht vorbereitet werden, nachdem die zweite Ausführung erfolgt, wird der Sp_prepexec, und setup tatsächlich einem vorbereiteten Anweisungshandle. Die folgenden Ausführungen Aufrufe Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird.|
+|void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Diese Einstellung steuert, wie viele ausstehende verwerfen der Anweisung vorbereitet, die Aktionen (Sp_unprepare) pro Verbindung ausstehenden sein können, bevor ein Aufruf zum Bereinigen der ausstehende Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1 unprepare Aktionen sofort auf Schließen die vorbereitete Anweisung ausgeführt werden. Wenn sie, um festgelegt ist {@literal >} 1, die diese Aufrufe einem zusammengefasst Batch sind um Mehraufwand Sp_unprepare oft aufrufen zu vermeiden|
+|int getServerPreparedStatementDiscardThreshold()|Diese Einstellung steuert, wie viele ausstehende verwerfen der Anweisung vorbereitet, die Aktionen (Sp_unprepare) pro Verbindung ausstehenden sein können, bevor ein Aufruf zum Bereinigen der ausstehende Handles auf dem Server ausgeführt wird. Wenn die Einstellung < = 1 unprepare Aktionen sofort auf Schließen die vorbereitete Anweisung ausgeführt werden. Wenn sie, um festgelegt ist {@literal >} 1, die diese Aufrufe einem zusammengefasst Batch sind um Mehraufwand Sp_unprepare oft aufrufen zu vermeiden.|
 
 ## <a name="prepared-statement-metatada-caching"></a>Vorbereitete Anweisung Metadaten-Zwischenspeicherung
 Ab Version 6.3.0-preview unterstützt Microsoft JDBC-Treiber für SQL Server das Zwischenspeichern von vorbereiteten Anweisung. Vor v6.3.0-Preview Wenn eine Ausführung einer Abfrage, die bereits vorbereitet und im Cache gespeichert wurde führen die gleiche Abfrage erneut aufrufen nicht vorbereiten. Jetzt der Treiber sucht die Abfrage im Cache, und suchen Sie das Handle und führen Sie es mit Sp_execute haben.
@@ -70,25 +70,25 @@ Beispiel: `connection.setStatementPoolingCacheSize(10)`
 
  **SQLServerConnection**
  
-|Methode „New“|Beschreibung|  
+|Methode „New“|und Beschreibung|  
 |-----------|-----------------|  
 |"void" setDisableStatementPooling(boolean value)|Legt fest, anweisungspools "true" oder "false".|
-|Boolesche getDisableStatementPooling()|Gibt true zurück, wenn anweisungspools deaktiviert ist.|
+|boolean getDisableStatementPooling()|Gibt true zurück, wenn anweisungspools deaktiviert ist.|
 |"void" setStatementPoolingCacheSize(int value)|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung an. Ein Wert kleiner als 1 bedeutet, dass kein Cache.|
-|Int getStatementPoolingCacheSize()|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. Ein Wert kleiner als 1 bedeutet, dass kein Cache.|
-|Int getStatementHandleCacheEntryCount()|Gibt die aktuelle Anzahl der in einem Pool zusammengefasste vorbereiteter Anweisungshandles zurück.|
-|Boolesche isPreparedStatementCachingEnabled()|Ob anweisungspools aktiviert ist oder nicht für diese Verbindung.|
+|int getStatementPoolingCacheSize()|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. Ein Wert kleiner als 1 bedeutet, dass kein Cache.|
+|int getStatementHandleCacheEntryCount()|Gibt die aktuelle Anzahl der in einem Pool zusammengefasste vorbereiteter Anweisungshandles zurück.|
+|boolean isPreparedStatementCachingEnabled()|Ob anweisungspools aktiviert ist oder nicht für diese Verbindung.|
 
  **SQLServerDataSource**
  
-|Methode „New“|Beschreibung|  
+|Methode „New“|und Beschreibung|  
 |-----------|-----------------|  
 |"void" setDisableStatementPooling(boolean disableStatementPooling)|Der pooling-Anweisung festgelegt werden, auf "true" oder "false"|
-|Boolesche getDisableStatementPooling()|Gibt true zurück, wenn anweisungspools deaktiviert ist.|
-|"void" setStatementPoolingCacheSize(int statementPoolingCacheSize)|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung an. Ein Wert kleiner als 1 bedeutet, dass kein Cache.|
-|Int getStatementPoolingCacheSize()|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. Ein Wert kleiner als 1 bedeutet, dass kein Cache.|
+|boolean getDisableStatementPooling()|Gibt true zurück, wenn anweisungspools deaktiviert ist.|
+|void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung an. Ein Wert kleiner als 1 bedeutet, dass kein Cache.|
+|int getStatementPoolingCacheSize()|Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. Ein Wert kleiner als 1 bedeutet, dass kein Cache.|
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

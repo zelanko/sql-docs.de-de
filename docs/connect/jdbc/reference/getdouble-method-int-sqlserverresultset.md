@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77589b13639f678b0c647241054075ec26151e5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 648a36846cda855848713b9662f8a743a5d7ebd5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635218"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769037"
 ---
 # <a name="getdouble-method-int-sqlserverresultset"></a>getDouble-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,11 +47,11 @@ public double getDouble(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetDouble-Methode wird von der GetDouble-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getDate-Methode wird von der getDate-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Von dieser Methode werden alle zahlenbasierten Datentypen mit der Java-Genauigkeit vom Typ **double** zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getDouble-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

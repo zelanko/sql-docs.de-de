@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2bb0038320ccefe0e143ca7c18fbf7e117c4a75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d286046f40ea96863302b97d2c1d8289985dab2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719658"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788538"
 ---
 # <a name="understanding-row-locking"></a>Grundlegendes zu Zeilensperren
 
@@ -32,6 +32,6 @@ Sperren werden verwendet, um Transaktionsintegrität und Datenbankkonsistenz zu 
 > [!NOTE]  
 > Weitere Informationen zu Zeilensperren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter „Sperren in [!INCLUDE[ssDE](../../includes/ssde_md.md)]“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verwalten von Resultsets mit dem JDBC-Treiber](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)

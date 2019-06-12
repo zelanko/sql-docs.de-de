@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 51d9188328c8053188a52f6d96ab900916c11b94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 2a3f536c180106ed29ae5758433d2f59bb7a8b47
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733648"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763387"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -66,7 +66,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Das von der getColumns-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Der Katalogname.|  
 |TABLE_SCHEM|**String**|Der Tabellenschemaname.|  
@@ -74,7 +74,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |COLUMN_NAME|**String**|Der Spaltenname.|  
 |DATA_TYPE|**smallint**|Der SQL-Datentyp aus "java.sql.Types".|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|COLUMN_SIZE|**int**|Die Genauigkeit der Spalte.|  
+|COLUMN_SIZE|**ssNoversion**|Die Genauigkeit der Spalte.|  
 |BUFFER_LENGTH|**smallint**|Die Übertragungsgröße der Daten.|  
 |DECIMAL_DIGITS|**smallint**|Die Dezimalstellen der Spalte.|  
 |NUM_PREC_RADIX|**smallint**|Die Basis der Spalte.|  
@@ -83,8 +83,8 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte entspricht der DATA_TYPE-Spalte mit Ausnahme des datetime-Datentyps und des SQL-92-Datentyps interval. Diese Spalte gibt immer einen Wert zurück.|  
 |SQL_DATETIME_SUB|**smallint**|Untertypcode für den datetime-Datentyp und den SQL-92-Datentyp interval. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
-|CHAR_OCTET_LENGTH|**int**|Die maximale Anzahl von Bytes in der Spalte.|  
-|ORDINAL_POSITION|**int**|Der Index der Spalte innerhalb der Tabelle.|  
+|CHAR_OCTET_LENGTH|**ssNoversion**|Die maximale Anzahl von Bytes in der Spalte.|  
+|ORDINAL_POSITION|**ssNoversion**|Der Index der Spalte innerhalb der Tabelle.|  
 |IS_NULLABLE|**String**|Gibt an, ob in der Spalte NULL-Werte zulässig sind.|  
 |SS_IS_SPARSE|**smallint**|Besitzt den Wert 1, wenn die Spalte eine Sparsespalte ist, andernfalls 0.<sup>1</sup>|  
 |SS_IS_COLUMN_SET|**smallint**|Besitzt den Wert 1, wenn die Spalte die column_set-Sparsespalte ist, andernfalls 0. <sup>1</sup>|  
@@ -115,7 +115,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |varbinary(max)|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |nvarchar(max)|LONGVARCHAR (-1) oder LONGNVARCHAR (JDBC 4) (-16)|VARCHAR (12) oder NVARCHAR (JDBC 4) (-9)|  
 |varchar(max)|LONGVARCHAR (-1)|VARCHAR (12)|  
-|Uhrzeit|VARCHAR (12) oder NVARCHAR (JDBC 4) (-9)|TIME (-154)|  
+|time|VARCHAR (12) oder NVARCHAR (JDBC 4) (-9)|TIME (-154)|  
 |date|VARCHAR (12) oder NVARCHAR (JDBC 4) (-9)|DATE (91)|  
 |datetime2|VARCHAR (12) oder NVARCHAR (JDBC 4) (-9)|TIMESTAMP (93)|  
 |datetimeoffset|VARCHAR (12) oder NVARCHAR (JDBC 4) (-9)|microsoft.sql.Types.DATETIMEOFFSET (-155)|  
@@ -127,7 +127,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |nvarchar(max)|1073741823|2147483647 (Datenbankmetadaten)|  
 |xml|1073741823|2147483647 (Datenbankmetadaten)|  
 |benutzerdefinierter Typ mit weniger oder genau 8 KB|8 KB (Resultset- und Parametermetadaten)|Die tatsächliche von der gespeicherten Prozedur zurückgegebene Größe|  
-|Uhrzeit||Die Länge (in Zeichen) der Zeichenfolgendarstellung des Typs, wobei die maximal zulässige Genauigkeit der Komponente für Sekundenbruchteile vorausgesetzt wird.|  
+|time||Die Länge (in Zeichen) der Zeichenfolgendarstellung des Typs, wobei die maximal zulässige Genauigkeit der Komponente für Sekundenbruchteile vorausgesetzt wird.|  
 |date||entspricht "time"|  
 |datetime2||entspricht "time"|  
 |datetimeoffset||entspricht "time"|  
@@ -149,7 +149,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Typ|JDBC Driver 2.0|JDBC Driver 3.0|  
 |--------------------------------------------------------------|---------------------|---------------------|  
-|Uhrzeit|NULL|7 (oder – falls angegeben – kleiner)|  
+|time|NULL|7 (oder – falls angegeben – kleiner)|  
 |date|NULL|NULL|  
 |datetime2|NULL|7 (oder – falls angegeben – kleiner)|  
 |datetimeoffset|NULL|7 (oder – falls angegeben – kleiner)|  
@@ -166,7 +166,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |geography|–4|–151|  
 |Geometrie|–4|–151|  
 |hierarchyid|–4|–151|  
-|Uhrzeit|–9|92|  
+|time|–9|92|  
 |date|–9|91|  
 |datetime2|–9|93|  
 |datetimeoffset|–9|–155|  
@@ -205,7 +205,7 @@ public class c1 {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

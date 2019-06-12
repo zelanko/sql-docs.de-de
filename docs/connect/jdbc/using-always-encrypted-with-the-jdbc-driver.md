@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510721"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790281"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,11 +43,11 @@ Der Microsoft JDBC-Treiber für SQL Server kommuniziert mit einem Keystore ein H
 ### <a name="using-built-in-column-master-key-store-providers"></a>Verwenden integrierter Spaltenhauptschlüssel-Speicheranbieter
 Der Microsoft JDBC-Treiber für SQL Server enthält die folgenden integrierten Master Schlüsselspeicheranbieter. Einige dieser Anbieter registriert werden, vor den bestimmten Anbieternamen (verwendet, um den Anbieter zu suchen), und einige zusätzliche Anmeldeinformationen oder explizite Registrierung erforderlich.
 
-| Class                                                 | Beschreibung                                        | Anbietername (Suche)  | Ist bereits registriert? |
+| Class                                                 | und Beschreibung                                        | Anbietername (Suche)  | Ist bereits registriert? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Ein Anbieter für einen Schlüsselspeicher für Azure Key Vault. | AZURE_KEY_VAULT         | nein                 |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Ein Anbieter für den Windows-Zertifikatspeicher.      | MSSQL_CERTIFICATE_STORE | Benutzerkontensteuerung                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Ein Anbieter für den Java-keystore                   | MSSQL_JAVA_KEYSTORE     | Benutzerkontensteuerung                |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Ein Anbieter für einen Schlüsselspeicher für Azure Key Vault. | AZURE_KEY_VAULT         | Nein                 |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Ein Anbieter für den Windows-Zertifikatspeicher.      | MSSQL_CERTIFICATE_STORE | Ja                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Ein Anbieter für den Java-keystore                   | MSSQL_JAVA_KEYSTORE     | Ja                |
 
 Für den vorregistrierte Keystore-Anbieter müssen Sie alle Änderungen am Anwendungscode diese Anbieter verwenden, aber beachten Sie Folgendes vornehmen:
 
@@ -99,9 +99,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  Wenn Sie die Azure Key Vault-Keystore-Anbieter verwenden, hat die Azure Key Vault-Implementierung des JDBC-Treibers Abhängigkeiten von diesen Bibliotheken (aus GitHub), die in der Anwendung enthalten sein müssen:
 >
->  [Azure Sdk für java](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [Azure-Activedirectory-Library-for-Java-Bibliotheken](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Ein Beispiel dafür, wie diese Abhängigkeiten in ein Maven-Projekt eingeschlossen werden sollen, finden Sie unter [herunterladen ADAL4J und Azure-Schlüsseltresor-Abhängigkeiten mit Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -130,7 +130,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Während die anderen Keystore-Anbieter in diesem Artikel auf allen vom Treiber unterstützten Plattformen verfügbar sind, ist die SQLServerColumnEncryptionCertificateStoreProvider-Implementierung des JDBC-Treibers auf Windows-Betriebssystemen verfügbar. Es besteht eine Abhängigkeit auf "sqljdbc_auth.dll", die im Treiberpaket enthaltenen verfügbar ist. Wenn Sie diesen Anbieter verwenden möchten, müssen Sie die Datei „sqljdbc_auth.dll“ in ein Verzeichnis im Windows-Systempfad des Computers kopieren, auf dem der JDBC-Treiber installiert ist. Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von „sqljdbc_auth.dll“ angeben. Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x86“, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x64“. Wenn Sie beispielsweise die 32-Bit-JVM verwenden und der JDBC-Treiber im Standardverzeichnis installiert ist, können Sie den Speicherort der DLL beim Start der Java-Anwendung mit dem folgenden VM-Argument (Virtual Machine) angeben: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Während die anderen Keystore-Anbieter in diesem Artikel auf allen vom Treiber unterstützten Plattformen verfügbar sind, ist die SQLServerColumnEncryptionCertificateStoreProvider-Implementierung des JDBC-Treibers auf Windows-Betriebssystemen verfügbar. Es besteht eine Abhängigkeit auf "sqljdbc_auth.dll", die im Treiberpaket enthaltenen verfügbar ist. Wenn Sie diesen Anbieter verwenden möchten, müssen Sie die Datei „sqljdbc_auth.dll“ in ein Verzeichnis im Windows-Systempfad des Computers kopieren, auf dem der JDBC-Treiber installiert ist. Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von „sqljdbc_auth.dll“ angeben. Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei sqljdbc_auth.dll im Ordner x86, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x64“. Wenn Sie beispielsweise die 32-Bit-JVM verwenden und der JDBC-Treiber im Standardverzeichnis installiert ist, können Sie den Speicherort der DLL beim Start der Java-Anwendung mit dem folgenden VM-Argument (Virtual Machine) angeben: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Mithilfe von Java Key Store-Anbieter
 Der JDBC-Treiber ist mit einer integrierten Schlüsselspeicheranbieter-Implementierung für den Java Key Store ausgestattet. Wenn die **KeyStoreAuthentication** Verbindungszeichenfolgen-Eigenschaft ist in der Verbindungszeichenfolge vorhanden und "JavaKeyStorePassword" festgelegt ist, der Treiber automatisch instanziiert und den Anbieter für Java Key Store registriert. Der Name des Anbieters Java Key Store ist MSSQL_JAVA_KEYSTORE. Dieser Name kann auch mithilfe der SQLServerColumnEncryptionJavaKeyStoreProvider.getName()-API abgefragt werden. 
@@ -360,14 +360,14 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-Always Encrypted kann auch für einzelne Abfragen aktiviert werden. Weitere Informationen finden Sie unter [Steuern der leistungsauswirkungen von Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Die Aktivierung von Always Encrypted ist für eine erfolgreiche Verschlüsselung und Entschlüsselung nicht ausreichend. Sie müssen auch Folgendes sicherstellen:
+Always Encrypted kann auch für einzelne Abfragen aktiviert werden. Weitere Informationen finden Sie weiter unten im Abschnitt [Kontrollieren der Auswirkungen von Always Encrypted auf die Leistung](#controlling-the-performance-impact-of-always-encrypted). Die Aktivierung von Always Encrypted ist für eine erfolgreiche Verschlüsselung und Entschlüsselung nicht ausreichend. Sie müssen auch Folgendes sicherstellen:
 - Die Anwendung verfügt über die Datenbankberechtigungen *VIEW ANY COLUMN MASTER KEY DEFINITION* und *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , die für den Zugriff auf die Metadaten in der Datenbank über Always Encrypted-Schlüssel erforderlich sind. Weitere Informationen finden Sie unter [Berechtigungen in Always Encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - Die Anwendung kann auf den Hauptschlüssel der Spalte zugreifen, der die Spaltenverschlüsselungsschlüssel schützt, mit denen die abgefragten Datenbankspalten verschlüsselt werden. Um den Anbieter Java Key Store zu verwenden, müssen Sie zusätzliche Anmeldeinformationen in der Verbindungszeichenfolge angeben. Weitere Informationen finden Sie unter [Using Java Key Store Anbieter](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden
 Die **sendTimeAsDatetime**-Verbindungseigenschaft wird dazu verwendet, die Art und Weise zu konfigurieren, auf die der java.sql.Time-Wert an den Server gesendet wird. Bei Festlegung auf False, wird der Zeitwert als einen Zeittyp für SQL Server gesendet. Wenn auf, die Zeit true festgelegt, die als Datetime-Typ-Wert gesendet wird. Wenn eine Time-Spalte verschlüsselt wird, die **SendTimeAsDatetime** -Eigenschaft muss "false" sein, wie verschlüsselte Spalten nicht die Konvertierung von Zeit zu "DateTime" unterstützen. Beachten Sie außerdem, dass diese Eigenschaft von der Standardeinstellung "true", damit die Verwendung von verschlüsselten Spalten Sie sie auf "false" festgelegt müssen. Andernfalls wird der Treiber eine Ausnahme ausgelöst. Ab Version 6.0 des Treibers, die SQLServerConnection-Klasse verfügt über zwei Methoden, um den Wert dieser Eigenschaft programmgesteuert zu konfigurieren:
  
-* Öffentliche void SetSendTimeAsDatetime (boolescher SendTimeAsDateTimeValue)
+* public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 * öffentlicher boolescher Wert getSendTimeAsDatetime()
 
 Weitere Informationen zu dieser Eigenschaft finden Sie unter [Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
@@ -650,6 +650,6 @@ Mit „SQLServerBulkCopy“ können Sie Daten, die bereits verschlüsselt sind u
 > [!NOTE]
 > Gehen Sie bei der Angabe von „AllowEncryptedValueModifications“ mit Bedacht vor, da dies möglicherweise zu einer Beschädigung der Datenbank führen kann, da der Microsoft JDBC-Treiber für SQL Server nicht überprüft, ob die Daten tatsächlich verschlüsselt oder mit demselben Verschlüsselungstyp, Algorithmus und Schlüssel wie die Zielspalte ordnungsgemäß verschlüsselt wurden.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

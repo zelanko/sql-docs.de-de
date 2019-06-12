@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3336d4c1-d999-43cc-b36b-ff1532e899bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5b4f05af53856103d55209de2878dc92325a8f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f3729b510f4d25fb6e20496f987a9c7ccb2623d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610092"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771165"
 ---
 # <a name="getprocedureterm-method-sqlserverdatabasemetadata"></a>getProcedureTerm-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.lang.String getProcedureTerm()
 ## <a name="remarks"></a>Remarks  
  Diese GetProcedureTerm-Methode wird von der GetProcedureTerm-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

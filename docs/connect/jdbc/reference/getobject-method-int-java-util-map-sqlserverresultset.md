@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: df85a514-ab43-4bf6-98dd-f7f37fad1850
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5cbed2006e259b25d484e98b77b68b33f383de2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f1c909b174a0f5750bf55c8a80193865746bd737
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726908"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787735"
 ---
 # <a name="getobject-method-int-javautilmap-sqlserverresultset"></a>getObject-Methode (int, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ public java.lang.Object getObject(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetObject-Methode wird von der GetObject-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getObject-Methode wird von der getObject-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
  Von dieser Methode wird der Wert der angegebenen Spalte als Java-Objekt zurückgegeben. Beim Typ des Java-Objekts handelt es sich um den standardmäßigen Java-Objekttyp, der dem SQL-Typ der Spalte entspricht. Die Grundlage hierfür bildet die in der JDBC-Spezifikation angegebene Zuordnung für integrierte Typen. Bei einem SQL-NULL-Wert wird vom Treiber ein Java-NULL-Wert zurückgegeben.  
   
@@ -71,7 +71,7 @@ public java.lang.Object getObject(int i,
   
 -   Ein Datetimeoffset-Wert wird als microsoft.sql.DateTimeOffset-Objekt zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getObject-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

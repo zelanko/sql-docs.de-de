@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cecfab59bc318d2ce6a2061e2116f5523b9874d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3404d7e31cdc5ed82a4a2c57af1a05354104d4bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652230"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787446"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString-Methode (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public java.lang.String getSubString(long pos,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *POS*  
+ *pos*  
   
  Das erste Zeichen der zu extrahierenden Teilzeichenfolge. Das erste Zeichen befindet sich an Position 1.  
   
@@ -56,7 +56,7 @@ public java.lang.String getSubString(long pos,
   
  Beim Versuch, null Zeichen aus einem leeren CLOB oder aus einem CLOB mit der Länge Null abzurufen, wird eine leere Zeichenfolge zurückgegeben. Beim Versuch, aus einem CLOB mit der Länge Null eine beliebige Zeichenlänge an einer beliebigen Position (und nicht von Position 1) abzurufen, wird eine Positionsausnahme ausgelöst.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerClob-Methoden](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob-Klasse](../../../connect/jdbc/reference/sqlserverclob-class.md)  

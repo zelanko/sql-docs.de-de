@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 03ce063437879db5c93ca83e512dc5f807bba40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d178f847ae9de2ca8ec9af07433c88b950fddc2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769799"
 ---
 # <a name="updating-large-data-sample"></a>Beispiel zum Aktualisieren umfangreicher Daten
 
@@ -35,7 +35,7 @@ Die Codedatei für dieses Beispiel heißt „UpdateLargeData.java“ und befinde
 Zum Ausführen dieser Beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Außerdem müssen Sie die Datei „sqljdbc4.jar“ in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für "sqljdbc4.jar" vorhanden ist, löst die Beispielanwendung die allgemeine Ausnahme "Klasse nicht gefunden" aus. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] stellt die Klassenbibliotheksdatei „sqljdbc.jar“, „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ für die jeweilige Verwendung mit den bevorzugten JRE-Einstellungen (Java Runtime Environment) bereit. In diesem Beispiel werden die in der JDBC 4.0-API neu eingeführten Methoden [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) und [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) für den Zugriff auf die treiberspezifischen Antwortpuffermethoden verwendet. Zum Kompilieren und Ausführen dieses Beispiels benötigen Sie die "sqljdbc4.jar"-Klassenbibliothek, die die Unterstützung für JDBC 4.0 bereitstellt. Weitere Informationen zu der JAR-Datei auswählen, finden Sie unter [Systemanforderungen für JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] stellt die Klassenbibliotheksdatei „sqljdbc.jar“, „sqljdbc4.jar“, „sqljdbc41.jar“ oder „sqljdbc42.jar“ für die jeweilige Verwendung mit den bevorzugten JRE-Einstellungen (Java Runtime Environment) bereit. In diesem Beispiel werden die in der JDBC 4.0-API neu eingeführten Methoden [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) und [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) für den Zugriff auf die treiberspezifischen Antwortpuffermethoden verwendet. Zum Kompilieren und Ausführen dieses Beispiels benötigen Sie die "sqljdbc4.jar"-Klassenbibliothek, die die Unterstützung für JDBC 4.0 bereitstellt. Weitere Informationen zum Auswählen der richtigen JAR-Datei finden Sie unter [Systemanforderungen für den JDBC-Treiber](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -51,6 +51,6 @@ Das Verhalten des Treibers ist standardmäßig auf **Adaptiv** festgelegt. Für 
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Arbeiten mit umfangreichen Daten](../../../connect/jdbc/code-samples/working-with-large-data.md)

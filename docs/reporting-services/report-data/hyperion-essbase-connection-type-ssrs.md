@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd2395d063b8e4b5f9f237d49f5011e8630124d9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1906db6af5e73905b26d5e62394221ce790ec47b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65572318"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500421"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer externen [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der Datenerweiterung für [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], die es Ihnen ermöglicht, mehrdimensionale Daten aus einer externen [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle abzurufen.  
@@ -27,7 +27,7 @@ ms.locfileid: "65572318"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Weitere Informationen zu Beispielen für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Weitere Informationen zu Beispielen für Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Anmeldeinformationen  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) und [Angeben von Anmeldeinformationen im Berichts-Generator](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oder [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Abfragen  
@@ -73,7 +73,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Vordefinierte Feldeigenschaften  
- Vordefinierte Feldeigenschaften sind Eigenschaften, die in der Regel von mehreren Datenanbietern unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden. Beispielsweise ist die MDX-Dimensionseigenschaft MEMBER_UNIQUE_NAME der vordefinierten Berichtsdataset-Feldeigenschaft **UniqueName**zugeordnet. Verwenden Sie den Ausdruck `=Fields!`*\<Feldname>*`.UniqueName`, um den Wert des eindeutigen Namens in ein Textfeld einzuschließen.  
+ Vordefinierte Feldeigenschaften sind Eigenschaften, die in der Regel von mehreren Datenanbietern unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden. Beispielsweise ist die MDX-Dimensionseigenschaft MEMBER_UNIQUE_NAME der vordefinierten Berichtsdataset-Feldeigenschaft **UniqueName**zugeordnet. Verwenden Sie den Ausdruck `=Fields!` *\<Feldname>* `.UniqueName`, um den Wert des eindeutigen Namens in ein Textfeld einzuschließen.  
   
  Die folgende Tabelle enthält eine Liste vordefinierter Feldeigenschaften, die Sie für eine [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle verwenden können.  
   
@@ -90,7 +90,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Benutzerdefinierte Eigenschaften  
- Benutzerdefinierte Feldeigenschaften sind Eigenschaften, die von einem Datenanbieter unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden, jedoch nicht im Bereich "Datasets" des Berichts als Felder unter diesem Dataset aufgeführt werden. Beispielsweise ist **Long Names** eine für eine Dimensionsebene definierte Elementeigenschaft. Verwenden Sie den Ausdruck `=Fields!`*\<FieldName>*`("Long Names")`, um den Wert in ein Textfeld einzuschließen. Bei Feldnamen im Ausdruck wird zwischen Groß-/Kleinschreibung unterschieden.  
+ Benutzerdefinierte Feldeigenschaften sind Eigenschaften, die von einem Datenanbieter unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden, jedoch nicht im Bereich "Datasets" des Berichts als Felder unter diesem Dataset aufgeführt werden. Beispielsweise ist **Long Names** eine für eine Dimensionsebene definierte Elementeigenschaft. Verwenden Sie den Ausdruck `=Fields!` *\<FieldName>* `("Long Names")`, um den Wert in ein Textfeld einzuschließen. Bei Feldnamen im Ausdruck wird zwischen Groß-/Kleinschreibung unterschieden.  
   
  Verwenden Sie die folgende Syntax, um in einem Ausdruck auf benutzerdefinierte erweiterte Eigenschaften zu verweisen:  
   
@@ -125,7 +125,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Berichtsdatasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

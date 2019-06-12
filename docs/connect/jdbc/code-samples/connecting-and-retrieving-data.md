@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a711ab2e1f8f8f454e69b3b81b878d024d81eeba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: c87089b59855ef2c68a9e3b1051ed39850d7b17e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742008"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770071"
 ---
 # <a name="connecting-and-retrieving-data"></a>Verbinden und Abrufen von Daten
 
@@ -33,12 +33,12 @@ Die Themen in diesem Abschnitt beschreiben die verschiedenen Möglichkeiten zum 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Verbindungs-URL – Beispiel](../../../connect/jdbc/code-samples/connection-url-sample.md)|Beschreibt die Verwendung einer Verbindungs-URL, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen, und den anschließenden Abruf von Daten mit einer SQL-Anweisung.|  
 |[Beispiel für Datenquellen](../../../connect/jdbc/code-samples/data-source-sample.md)|Beschreibt die Verwendung einer Datenquelle, um eine Verbindung zu SQL Server herzustellen und Daten anschließend mit einer gespeicherten Prozedur abzurufen.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Beispiele für JDBC-Treiberanwendungen](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 75d03ced-3614-4997-9abd-24642b1d1aae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6e9fa2476ac61f5f5de026aa9d629518e9041e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d1ad967d9f3923b886e3713829830be39412620e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837768"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769677"
 ---
 # <a name="geturl-method-int"></a>getURL-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public java.net.URL getURL(int n)
 ## <a name="remarks"></a>Remarks  
  Diese getURL-Methode wird von der getURL-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getURL-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

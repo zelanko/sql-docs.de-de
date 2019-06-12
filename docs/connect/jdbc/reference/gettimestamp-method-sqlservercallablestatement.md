@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fca2d35f-266b-4dc7-9aa9-30a17ee2ecec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f754cf22b4418554b2eb2dafbb27123eb20b041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: a4f4403990d148536c6ce15f4e9e7c86c95f4f7f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654990"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786330"
 ---
 # <a name="gettimestamp-method-sqlservercallablestatement"></a>getTimestamp-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "47654990"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[getTimestamp (int)](../../../connect/jdbc/reference/gettimestamp-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als java.sql.Timestamp-Objekt in der Programmiersprache Java ab.|  
 |[getTimestamp (int, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-int-java-util-calendar.md)|Ruft den Wert des angegebenen Parameters als java.sql.Timestamp-Objekt in der Programmiersprache Java ab (unter Berücksichtigung des vorhandenen Parameterindexes), indem ein Calendar-Objekt verwendet wird.|  
 |[getTimestamp (java.lang.String)](../../../connect/jdbc/reference/gettimestamp-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als java.sql.Timestamp-Objekt in der Programmiersprache Java ab.|  
 |[getTimestamp (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-java-lang-string-java-util-calendar.md)|Ruft den Wert des angegebenen Parameters als java.sql.Timestamp-Objekt in der Programmiersprache Java ab (unter Berücksichtigung des vorhandenen Parameternamens), indem ein Calendar-Objekt verwendet wird.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

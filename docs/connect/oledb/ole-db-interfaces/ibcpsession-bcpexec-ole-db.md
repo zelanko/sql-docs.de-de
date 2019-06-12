@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPExec method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 905f22f3a4d33104db517d10c34292df653ada00
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 087987f64cf3da6e7f14b30c6014fdcd6e35e243
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602460"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790975"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,8 +71,8 @@ HRESULT BCPExec(
  DB_S_ERRORSOCCURRED  
  Während des Massenkopiervorgangs sind Fehler aufgetreten, und einige Zeilen sind möglicherweise nicht kopiert worden. Die Anzahl der Fehler ist immer noch weniger als die maximal zulässige Fehleranzahl.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [IBCPSession &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

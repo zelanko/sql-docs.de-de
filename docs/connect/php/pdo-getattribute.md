@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16a69d34bb8ae21b71831f57897811c6fc04ec93
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 7a7b634b10be90b164f67eb2837a053eef3db7e8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602590"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762141"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ Im Erfolgsfall wird der Wert einer Verbindungsoption, eines vordefinierten PDO-A
 ## <a name="remarks"></a>Remarks  
 Die nachfolgende Tabelle enthält die Liste mit den unterstützten Attributen:  
   
-|attribute|Verarbeitet von|Unterstützte Werte|Beschreibung|  
+|attribute|Verarbeitet von|Unterstützte Werte|und Beschreibung|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Dies gibt an, ob die Spaltennamen entweder groß oder klein geschrieben sein sollen. PDO::CASE_LOWER erzwingt die Schreibung der Spaltennamen in Kleinbuchstaben, PDO::CASE_NATURAL belässt die Spaltennamen so wie sie aus der Datenbank zurückgegeben wurden und PDO::CASE_UPPER erzwingt die Schreibung der Spaltennamen in Großbuchstaben.<br /><br />Die Standardeinstellung ist PDO::CASE_NATURAL.<br /><br />Dieses Attribut kann auch mit PDO::setAttribute eingerichtet werden.|  
 |PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Ein Array von Zeichenfolgen|Beschreibt die Version des Treibers und der verbundenen Bibliotheken Gibt ein Array mit den folgenden Elementen zurück: ODBC-Version (*Hauptversion*.*Nebenversion*), Name und Version der nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Client-DLL, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Version (*Hauptversion*.*Nebenversion*.*Buildnummer*.*Revision*)|  
@@ -53,7 +53,7 @@ Die nachfolgende Tabelle enthält die Liste mit den unterstützten Attributen:
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 bis zur Grenze des PHP-Speichers.|Konfiguriert die Größe des Puffers, der das Resultset für einen clientseitigen Cursor enthält.<br /><br />Die Standardeinstellung ist 10.240 KB (10 MB).<br /><br />Weitere Informationen zu clientseitigen Cursorn finden Sie unter [Cursortypen &#40;SQLSRV-Treiber&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Legt fest, ob eine direkte oder eine vorbereitete Anweisung ausgeführt wird. Weitere Informationen finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|Legt die Zeichensatzcodierung fest, die vom Treiber verwendet wird, um mit dem Server zu kommunizieren<br /><br />Der Standard ist PDO::SQLSRV_ENCODING_UTF8.|  
-|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true oder false|Verarbeitet die numerischen Abrufe aus Spalten mit numerischen SQL-Typen (Bit, Integer, Smallint, Tinyint, Float oder Real).<br /><br />Wenn Optionsflags für die Verbindung ATTR_STRINGIFY_FETCHES aktiviert ist, selbst wenn SQLSRV_ATTR_FETCHES_NUMERIC_TYPE befindet, ist der Rückgabewert eine Zeichenfolge.<br /><br />Wenn der zurückgegebene PDO-Typ in Bindung Spalte PDO_PARAM_INT ist, ist der Rückgabewert aus einer Spalte mit ganzen Zahlen eine ganze Zahl an, auch wenn SQLSRV_ATTR_FETCHES_NUMERIC_TYPE deaktiviert ist.|  
+|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true oder false|Verarbeitet numerische Abrufvorgänge aus Spalten mit numerischen SQL-Typen („bit“, „integer“, „smallint“, „tinyint“, „float“ oder „real“).<br /><br />Wenn das Flag für die Verbindungsoption ATTR_STRINGIFY_FETCHES auf „On“ festgelegt ist, ist der Rückgabewert selbst dann eine Zeichenfolge, wenn SQLSRV_ATTR_FETCHES_NUMERIC_TYPE auf „On“ festgelegt ist.<br /><br />Wenn der zurückgegebene PDO-Typ in einer bind-Spalte PDO_PARAM_INT lautet, ist der Rückgabewert aus einer integer-Spalte vom Typ „int“, selbst wenn SQLSRV_ATTR_FETCHES_NUMERIC_TYPE auf „Off“ festgelegt ist.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|Legt das Abfragetimeout in Sekunden fest.<br /><br />Der Standard ist 0, d. h. dass der Treiber unendlich lange auf Ergebnisse wartet.<br /><br />Negative Zahlen sind nicht zulässig.|  
 
   
@@ -88,7 +88,7 @@ print_r($conn->getAttribute( PDO::ATTR_CLIENT_VERSION ));
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [PDO-Klasse](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

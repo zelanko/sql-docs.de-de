@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6d0deaf2-6f12-4a6e-b537-a51fa3478059
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01babe87d330cabbfc6a882e1a22dd03ed99ff3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f587ff09c63f955cf238f8422b3bfcdd42439dde
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755238"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785580"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar"></a>getDate-Methode (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Date getDate(java.lang.String sCol,
   
  Ein **String-Objekt**, das den Parameternamen enthält.  
   
- *CAL*  
+ *cal*  
   
  Ein Kalenderobjekt.  
   
@@ -56,7 +56,7 @@ public java.sql.Date getDate(java.lang.String sCol,
   
  Von dieser Methode wird ein gültiger Datumsteil eines datetime- oder smalldatetime-Datentyps von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben. Der Zeitteil ist dabei auf die Java-Baseline (00:00, Mitternacht) festgelegt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getDate-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Fehler | Microsoft-Dokumentation
+title: Beheben von Fehlern | Microsoft-Dokumentation
 description: Fehler
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB error handling
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 96772a8de06454d038b3e018643cd32e5132ec2c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a9f937e130af664570b92b006a54d329b33b9e23
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606110"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798139"
 ---
 # <a name="errors"></a>Fehler
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51606110"
   
 -   [SQL Server-Meldungsergebnisse](../../oledb/ole-db-errors/sql-server-message-results.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

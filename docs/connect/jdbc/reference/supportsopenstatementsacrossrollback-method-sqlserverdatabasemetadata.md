@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69b226ee3e34864d5bd7984bc68e105f180467d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ee68785233d81b69548ffa07a5f6e9cb204d34e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634988"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763945"
 ---
 # <a name="supportsopenstatementsacrossrollback-method-sqlserverdatabasemetadata"></a>supportsOpenStatementsAcrossRollback-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsOpenStatementsAcrossRollback()
 ## <a name="remarks"></a>Remarks  
  Diese SupportsOpenStatementsAcrossRollback-Methode wird von der SupportsOpenStatementsAcrossRollback-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0d9ae2b4adf53e54b53acfe6dd334fe072a308d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf9c0696c2169ee9b0dd1af198fcb50333c5d9ca
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691740"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763772"
 ---
 # <a name="getclientinfoproperties-method-sqlserverdatabasemetadata"></a>getClientInfoProperties-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet getClientInfoProperties()
 > [!NOTE]  
 >  Von dieser Methode wird ein leeres Resultset zurückgegeben. Der Treiber unterstützt nur die **ApplicationName** und legt die **ApplicationName** nur zur Verbindungszeit erfolgt ist. Das Aktualisieren der Clientanwendungsinformationen nach der Verbindungsherstellung wird von SQL Server nicht unterstützt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   

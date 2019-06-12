@@ -12,13 +12,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: deab7936f6ba3eacb455cc19622d4232ed8617e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600080"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791562"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51600080"
   
 -   Wie auf eine Spalte zweimal zugegriffen wird. Das erste Mal wird die Spaltenbreite abgerufen, und später erfolgt der Zugriff auf die eigentlichen Daten.  
   
- Wenn in der DBCOLUMNACCESS-Struktur pData NULL ist und cbMaxLen 0 ist, wird beim Aufruf von IRow->GetColumns nur die Spaltenlänge zurückgegeben. In diesem Fall kann IRow->GetColumns wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
+ Wenn in der DBCOLUMNACCESS-Struktur pData NULL und cbMaxLen 0 ist, wird beim Aufruf von IRowGetColumns() nur die Spaltenlänge zurückgegeben. In diesem Fall kann IRow->GetColumns() wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
@@ -521,7 +521,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweisen für OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

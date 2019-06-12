@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a4b2cdefeecc56c331224cd7453e861defafb8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687965"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761627"
 ---
 # <a name="working-with-a-connection"></a>Arbeiten mit einer Verbindung
 
@@ -40,7 +40,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 Bei diesem Verfahren wird eine Datenbankverbindung mit dem ersten verfügbaren Treiber in der Liste der Treiber erstellt, der erfolgreich eine Verbindung mit der angegebenen URL herstellen kann.
 
 > [!NOTE]  
-> Bei Verwendung der sqljdbc4.jar-Klassenbibliothek müssen Anwendungen den Treiber nicht mit der Class.forName-Methode explizit registrieren oder laden. Wenn die GetConnection-Methode der DriverManager-Klasse aufgerufen wird, ist ein geeigneter Treiber aus der Gruppe der registrierten JDBC-Treiber. Weitere Informationen finden Sie unter "Verwenden des JDBC-Treibers".
+> Bei Verwendung der sqljdbc4.jar-Klassenbibliothek müssen Anwendungen den Treiber nicht mit der Class.forName-Methode explizit registrieren oder laden. Wenn die getConnection-Methode der DriverManager-Klasse aufgerufen wird, wird aus der Gruppe der registrierten JDBC-Treiber ein geeigneter Treiber ausgewählt. Weitere Informationen finden Sie unter "Verwenden des JDBC-Treibers".
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Erstellen einer Verbindung mit der SQLServerDriver-Klasse
 
@@ -125,6 +125,6 @@ Dadurch werden die vom SQLServerConnection-Objekt verwendeten Datenbankressource
 > [!NOTE]  
 > Durch den Aufruf der close-Methode wird auch ein Rollback aller anstehenden Transaktionen ausgeführt.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

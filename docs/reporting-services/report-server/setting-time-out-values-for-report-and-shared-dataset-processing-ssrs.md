@@ -1,6 +1,6 @@
 ---
 title: Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS) | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a0a28974b50d5230c962a19bc19630a55dbef48
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580959"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506437"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS)
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Timeoutwerte angeben, um Grenzwerte für die Verwendung der Systemressourcen festzulegen. Der Berichtsserver unterstützt die folgenden beiden Timeoutwerte:  
   
--   Ein Abfragetimeoutwert für ein eingebettetes Dataset gibt an, wie viele Sekunden der Berichtsserver auf eine Antwort von der Datenbank wartet. Dieser Wert wird in einem Bericht definiert.  
+- Ein Abfragetimeoutwert für ein eingebettetes Dataset gibt an, wie viele Sekunden der Berichtsserver auf eine Antwort von der Datenbank wartet. Dieser Wert wird in einem Bericht definiert.  
   
--   Ein Abfragetimeoutwert für ein freigegebenes Dataset gibt an, wie viele Sekunden der Berichtsserver auf eine Antwort von der Datenbank wartet. Dieser Wert ist Teil der Definition des freigegebenen Datasets und kann geändert werden, wenn Sie das freigegebene Dataset auf dem Berichtsserver verwalten.  
+- Ein Abfragetimeoutwert für ein freigegebenes Dataset gibt an, wie viele Sekunden der Berichtsserver auf eine Antwort von der Datenbank wartet. Dieser Wert ist Teil der Definition des freigegebenen Datasets und kann geändert werden, wenn Sie das freigegebene Dataset auf dem Berichtsserver verwalten.  
   
--   Ein Timeoutwert für die Berichtsausführung gibt an, wie viele Sekunden diese Berichtsverarbeitung maximal dauern darf, bevor sie beendet wird. Dieser Wert wird auf Systemebene definiert. Sie können diesen Wert für die jeweiligen Berichte anpassen.  
+- Ein Timeoutwert für die Berichtsausführung gibt an, wie viele Sekunden diese Berichtsverarbeitung maximal dauern darf, bevor sie beendet wird. Dieser Wert wird auf Systemebene definiert. Sie können diesen Wert für die jeweiligen Berichte anpassen.  
   
  Die meisten Timeoutfehler treten während der Abfrageverarbeitung auf. Verwenden Sie beim Auftreten von Timeoutfehlern einen höheren Abfragetimeoutwert. Passen Sie unbedingt den Timeoutwert für die Berichtsausführung so an, dass dieser Wert höher als der Abfragetimeoutwert ist. Dieser Zeitraum sollte so lang sein, dass sowohl die Abfrage- als auch die Berichtsverarbeitung abgeschlossen werden kann.  
   
@@ -50,12 +50,11 @@ ms.locfileid: "65580959"
  Beachten Sie Folgendes: Wenn ein Timeoutwert unter 60 Sekunden angegeben wird, kann der Bericht vollständig ausgeführt werden, falls die Verarbeitung während der Ruhezeit des Zyklus beginnt und endet, in der der Berichtsserver die ausgeführten Aufträge nicht auswertet. Wenn Sie z. B. einen Timeoutwert von 10 Sekunden für einen Bericht festlegen, dessen Ausführung 20 Sekunden dauert, wird der Bericht vollständig verarbeitet, falls die Berichtsausführung früh im 60 Sekunden-Zyklus beginnt.  
   
 > [!NOTE]  
->  Sie können die Einstellung **RunningRequestsDbCycle** in der Datei „RSReportServer.config“ festlegen, um die Häufigkeit zu ändern, mit der Aufträge, die ausgeführt werden, ausgewertet werden.  
+> Sie können die Einstellung **RunningRequestsDbCycle** in der Datei „RSReportServer.config“ festlegen, um die Häufigkeit zu ändern, mit der Aufträge, die ausgeführt werden, ausgewertet werden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Verwalten eines ausgeführten Prozesses](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Berichts-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+ [Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../../reporting-services/web-portal-ssrs-native-mode.md)  
   

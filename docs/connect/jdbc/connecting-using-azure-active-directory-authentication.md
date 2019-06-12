@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737031"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775969"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 
@@ -39,7 +39,7 @@ Eigenschaften von Verbindungen mit Azure Active Directory-Authentifizierung in d
     * **NotSpecified**
         * Verwendung `authentication=NotSpecified` , oder lassen Sie sie als Standard aus, wenn keine dieser Authentifizierungsmethoden benötigt werden.
 
-*   **accessToken**: Verwenden Sie diese Verbindungseigenschaft wird bei der Herstellung einer Verbindung mit einer SQL-Datenbank mithilfe eines Zugriffstokens. AccessToken kann nur festgelegt werden, verwenden den Eigenschaftenparameter der getConnection()-Methode in der DriverManager-Klasse. Es kann nicht in der Verbindungs-URL verwendet werden.  
+*   **AccessToken**: Diese Verbindungseigenschaft für die Verbindung mit einer SQL-Datenbank mithilfe eines Zugriffstokens verwenden. AccessToken kann nur festgelegt werden, verwenden den Eigenschaftenparameter der getConnection()-Methode in der DriverManager-Klasse. Es kann nicht in der Verbindungs-URL verwendet werden.  
 
 Weitere Informationen finden Sie unter der Authentifizierungseigenschaft auf die [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md) Seite.  
 
@@ -164,7 +164,7 @@ Sie müssen ein Kerberos-Ticket verknüpfen Ihres aktuellen Benutzers zu einem W
 #### <a name="windows"></a>Windows
 Im Lieferumfang von JDK `kinit`, die Sie verwenden können, um ein TGT vom Schlüsselverteilungscenter (KDC) in einer Domäne erhalten eingebundenen Computer an, die in Azure Active Directory verbunden ist.
 
-##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Schritt 1: Ticket-Granting Ticket abrufen
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Schritt 1: Ticket-Granting-Ticket abrufen
 - **Führen Sie auf**: Windows
 - **Aktion**:
   - Verwenden Sie den Befehl `kinit username@DOMAIN.COMPANY.COM` um ein TGT vom KDC erhalten, dann werden Sie aufgefordert für das Domänenkennwort ein.
@@ -178,7 +178,7 @@ Im Lieferumfang von JDK `kinit`, die Sie verwenden können, um ein TGT vom Schl�
 ##### <a name="requirements"></a>Anforderungen
 Zugriff auf ein Windows-Domäne eingebundenen Computer dem Kerberos-Domänencontroller abgefragt.
 
-##### <a name="step-1-find-kerberos-kdc"></a>Schritt 1: Suchen Sie die Kerberos-KDC
+##### <a name="step-1-find-kerberos-kdc"></a>Schritt 1: Suchen von Kerberos-KDC
 - **Führen Sie auf**: Windows-Befehlszeile
 - **Aktion**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (wobei "DOMAIN.COMPANY.COM" ordnet in Ihrer Domäne-Namen)
 - **Beispielausgabe**
@@ -190,9 +190,9 @@ Zugriff auf ein Windows-Domäne eingebundenen Computer dem Kerberos-Domänencont
   ```
 - **Informationen zum Extrahieren** der DC-Namen, in diesem Fall `co1-red-dc-33.domain.company.com`
 
-##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Schritt 2: Konfigurieren von KDC in krb5.conf
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Schritt 2: Konfigurieren der KDC in krb5.conf
 - **Führen Sie auf**: Linux/Mac
-- **Aktion**: Bearbeiten Sie die /etc/krb5.conf in einem Editor Ihrer Wahl. Konfigurieren Sie die folgenden Schlüssel
+- **Aktion**: Bearbeiten der /etc/krb5.conf in einem Editor Ihrer Wahl. Konfigurieren Sie die folgenden Schlüssel
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM
@@ -207,7 +207,7 @@ Zugriff auf ein Windows-Domäne eingebundenen Computer dem Kerberos-Domänencont
 > [!NOTE]
 >  Domäne muss in Großbuchstaben.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Schritt 3: Testen das Ticket-Granting-Ticket abrufen
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Schritt 3: Testen das Ticket-Granting-Ticket abrufen
 - **Führen Sie auf**: Linux/Mac
 - **Aktion**:
   - Verwenden Sie den Befehl `kinit username@DOMAIN.COMPANY.COM` um ein TGT vom KDC erhalten, dann werden Sie aufgefordert für das Domänenkennwort ein.

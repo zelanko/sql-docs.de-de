@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8587cedde63352f7027e573092c6e8ae02dc218d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580114"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499880"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
  In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten automatisieren der Karten-Assistent und der Kartenebenen-Assistent das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
@@ -114,12 +114,12 @@ ms.locfileid: "65580114"
  Der Kartenkatalog enthält Karten aus Berichten, die sich im Kartenkatalogordner für die Berichterstellungsumgebung befinden. Karten aus dem Katalog ermöglichen es, dem Bericht schnell eine Karte hinzuzufügen. Die vordefinierten Karten im Katalog werden von einem Kartenanbieter bereitgestellt.  
   
 > [!NOTE]  
->  Für diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Kartenfunktion werden Daten aus TIGER/Line-Shape-Dateien verwendet, die vom U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro (U.S. Census Bureau) verfügbar. Weitere Informationen zu den TIGER/Line-Shape-Dateien finden Sie unter [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  
+>  Für diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Kartenfunktion werden Daten aus TIGER/Line-Shape-Dateien verwendet, die vom U.S. Census Bureau ([https://www.census.gov/](https://www.census.gov/)). TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro (U.S. Census Bureau) verfügbar. Um weitere Informationen zu den TIGER/Line-Shape-Dateien zu erhalten, navigieren Sie zu [TIGER/Line-Shape-Dateien und der technischen Dokumentation zu TIGER/Line-Dateien](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  
   
  Um den Kartenkatalog zu erweitern, können Sie Berichte im Kartenkatalogverzeichnis hinzufügen oder entfernen sowie Ordner hinzufügen, um die Karten zu verwalten. Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Die Gruppe von Dateien enthält im Allgemeinen die Datei *\<Dateiname>*.shp, die die räumlichen Daten und eine Unterstützungsdatei enthält, in der Regel *\<Dateiname>*.dbf.  
+ Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Die Gruppe von Dateien enthält im Allgemeinen die Datei *\<Dateiname>* .shp, die die räumlichen Daten und eine Unterstützungsdatei enthält, in der Regel *\<Dateiname>* .dbf.  
   
  Wenn Sie eine Shape-Datei als räumliche Datenquelle angeben und sie sich auf dem lokalen Computer befindet, werden die räumlichen Daten automatisch in den Bericht eingebettet. Um räumliche Daten aus einer ESRI-Datei dynamisch zu verwenden, gehen Sie wie folgt vor:  
   
@@ -134,7 +134,7 @@ ms.locfileid: "65580114"
  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrage nach räumlichen Daten ist eine Datasetabfrage, in der Daten vom Datentyp "SQLGeometry" oder "SQLGeography" aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank angegeben werden.  
   
 > [!NOTE]  
->  Wenn Sie im Assistenten eine Datenquelle definieren, werden auf der Seite "Abfrage entwerfen" abhängig vom Datenquellentyp, mit dem Sie eine Verbindung herstellen, unterschiedliche Abfrage-Designer angezeigt. Weitere Informationen finden Sie unter [Abfrage-Designer (Berichts-Generator)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  Wenn Sie im Assistenten eine Datenquelle definieren, werden auf der Seite "Abfrage entwerfen" abhängig vom Datenquellentyp, mit dem Sie eine Verbindung herstellen, unterschiedliche Abfrage-Designer angezeigt. Weitere Informationen finden Sie unter [Abfrageentwurfstools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
  Wenn Sie die Abfrage im Abfrage-Designer ausführen, enthält das Resultset eine Spalte mit räumlichen Daten, die als Text angezeigt werden. Eine Zeile kann z. B. räumliche Daten enthalten, die einen einzelnen Punkt darstellen, und die nächste Zeile kann räumliche Daten enthalten, die einen Satz von Punkten definieren. Jede Zeile wird zu einem Kartenelement. Sie können die Anzeige jedes Kartenelements als unteilbare Einheit verändern.  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 67b2bb4b-9714-4ba5-8739-50c632830451
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a803748a8bdf5f9fcb8bb8fc2c765d4300437395
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4233b011af9df0b646f19965d636f7384887cd95
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597538"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781102"
 ---
 # <a name="getjdbcmajorversion-method-sqlserverdatabasemetadata"></a>getJDBCMajorVersion-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public int getJDBCMajorVersion()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Int** , der die Hauptversion des JDBC angibt.  
+ Ein Wert vom Typ **int**, durch den die Nebenversion des JDBC-Treibers angegeben wird.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +44,7 @@ public int getJDBCMajorVersion()
 ## <a name="remarks"></a>Remarks  
  Diese GetJDBCMajorVersion-Methode wird von der GetJDBCMajorVersion-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

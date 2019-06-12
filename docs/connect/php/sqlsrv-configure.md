@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98c3848ad344fcbb964d1b3a5e9ec1a6afe8703f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ae32c7693b724deec25c8d923e02cdf929e893ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618689"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796980"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +58,7 @@ Wenn **sqlsrv_configure** mit nicht unterstützten Einstellungen oder Werten auf
   
 (3) Weitere Informationen zum Konfigurieren der Fehler- und Warnungsbehandlung finden Sie unter [Gewusst wie: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md) 

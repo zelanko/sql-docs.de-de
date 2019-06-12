@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398333"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781661"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Internationale Funktionen des JDBC-Treibers
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet folgende Internationalisierungsfunktionen:  
+  Die Internationalisierungsfeatures von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] umfassen Folgendes:  
   
 -   Unterstützung einer vollständigen Lokalisierung in den gleichen Sprachen wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52398333"
 > [!NOTE]  
 >  Der Großteil der für Windows-Plattformen geschriebenen Konfliktlösersoftware basiert auf den Internet-DSN-Standards und verwendet aus diesem Grund mit hoher Wahrscheinlichkeit das Punycode-Format für IDN. Ein Windows-basierter DNS-Server in einem privaten Netzwerk kann hingegen so konfiguriert werden, dass die Verwendung von UTF-8-Zeichen auf Serverbasis möglich ist.  Weitere Informationen finden Sie unter [Unicode character support (Unterstützung von Unicode-Zeichen)](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

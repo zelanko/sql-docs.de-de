@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2f363fecebfe9a4ee4e586a5c5df703b47aa0e6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: aadbf8d0cc850d71626663883587195a8229ada8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602980"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785862"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Häufig gestellte Fragen (FAQ) zu ODBC (Linux und macOS)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,5 +46,5 @@ Ein Beispiel hierzu finden Sie unter [Vorhandene MSDN C++ ODBC-Beispiele für di
 
 Nein. die ODBC-Treiber unter Linux und MacOS sind nicht open Source-Produkt.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Installieren des Microsoft ODBC Driver for SQL Server unter Linux und macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

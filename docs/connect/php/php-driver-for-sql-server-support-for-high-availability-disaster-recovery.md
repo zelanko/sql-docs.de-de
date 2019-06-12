@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42990a22e3e4389940fe24d31bf028229e68aff4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 5e0ad826c8846330c7207b14ac2344687563bbfa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417901"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797107"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Unterstützung für hohe Verfügbarkeit bei Notfallwiederherstellung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -103,6 +103,6 @@ Der Treiber gibt einen Fehler zurück, wenn die Datenbankspiegelung in der prim�
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)  
   

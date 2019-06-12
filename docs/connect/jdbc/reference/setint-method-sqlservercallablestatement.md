@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7de05cf4-3a48-4c60-9a1b-6ad2ae43d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d8eb7134d07e48372dc133a92f0b44367348ad5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 89741f02e9a2afa7c1dc8de6f76f599c70a5a45a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779856"
 ---
 # <a name="setint-method-sqlservercallablestatement"></a>setInt-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void setInt(java.lang.String sCol,
 ## <a name="remarks"></a>Remarks  
  Diese setInt-Methode wird von der setInt-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

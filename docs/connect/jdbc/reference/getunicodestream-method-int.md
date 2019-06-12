@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22cbe0cd66c3f22249a8171115a3c11c59a30ee9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe3352ef2bffaed6151e163d5054b03a05c53418
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610238"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765916"
 ---
 # <a name="getunicodestream-method-int"></a>getUnicodeStream-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Diese GetUnicodeString-Methode wird von der GetUnicodeString-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getUnicodeStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b51437d4e5ea8b7177a69c2b8d848f0fbfad61a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3380b26cb0401e35c59b50b349c279566612c50f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598068"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771646"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,12 +47,12 @@ public boolean getBoolean(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetBoolean-Methode wird von der GetBoolean-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getBoolean-Methode wird von der getBoolean-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Diese Methode wird nur für Zahlen- und Zeichendatentypen unterstützt. Konvertiert Werte "1", 1, und "**" true "**" zum **"true"**, und die Werte "0", 0 (null) und "**" false "**" um **"false"**. Für alle anderen Werte bleibt das Verhalten nicht definiert.  
+ Diese Methode wird nur für Zahlen- und Zeichendatentypen unterstützt. Konvertiert Werte "1", 1, und " **" true "** " zum **"true"** , und die Werte "0", 0 (null) und " **" false "** " um **"false"** . Für alle anderen Werte bleibt das Verhalten nicht definiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [GetBoolean-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [updateBoolean-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

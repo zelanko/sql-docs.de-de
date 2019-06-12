@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62f222a450798c7c685ce55f8d82e876b6e24d5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 76b7aea17e3dcee07a7472a2a830ca4fb5212bf6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628078"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798335"
 ---
 # <a name="sqlxml-data-type-sample"></a>Beispiel für den SQLXML-Datentyp
 
@@ -61,6 +61,6 @@ Die showTransformer-Methode veranschaulicht das Abrufen von XML-Daten aus der ei
 
 [!code[JDBC#UsingSQLXML1](../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Working with Data Types &#40;JDBC&#41; (Arbeiten mit Datentypen &#40;JDBC&#41;)](../../connect/jdbc/working-with-data-types-jdbc.md)

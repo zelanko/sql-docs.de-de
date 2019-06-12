@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94a0a5fbf228f7fbf8249e9e75a7e2aebf861065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690052"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780796"
 ---
 # <a name="working-with-statements-and-result-sets"></a>Arbeiten mit Anweisungen und Resultsets
 
@@ -48,6 +48,6 @@ Bei schreibgeschützten Servercursorn muss ein Kompromiss zwischen den Roundtrip
 
 Verwenden Sie Datenströme oder BLOBs und CLOBs, die inkrementell gefüllt werden, um umfangreiche Spaltenwerte zu aktualisieren oder umfangreiche IN-Parameter zu senden. Der JDBC-Treiber sendet diese blockweise in mehreren Roundtrips an den Server, sodass Werte festgelegt und aktualisiert werden können, die größer sind als der verfügbare Speicher.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

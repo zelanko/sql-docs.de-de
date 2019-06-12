@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e164c8ac-a0ae-4638-affb-ed454e7c0708
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76f4d4eb468a50f370e86392c4534e0f4b878250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e734f838b62463b0edafc11db86dae9f035220e9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765355"
 ---
 # <a name="setapplicationintent-method-sqlserverdatasource"></a>setApplicationIntent-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void setApplicationIntent(java.lang.String applicationIntent);
 ## <a name="remarks"></a>Remarks  
  Weitere Informationen zu den **ApplicationIntent** Verbindungseigenschaft finden Sie unter [Festlegen der Verbindungseigenschaften](../../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource.getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)   
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Gespeicherte Prozeduren | Microsoft-Dokumentation
+title: Debuggen von gespeicherten Prozeduren | Microsoft-Dokumentation
 description: Gespeicherte Prozeduren
 ms.custom: ''
 ms.date: 06/12/2018
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - stored procedures [OLE DB], about OLE DB stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 7d9a26049a09f45ff7588324d8c0421c4287db2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 64654f5ba2f4356a4bb6efad5455ca4610689f3b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767197"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795893"
 ---
 # <a name="stored-procedures"></a>Gespeicherte Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47767197"
   
 -   [Aufrufen einer gespeicherter Prozedur &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Programmierung](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 - IBCPSession2 interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 387bd69dd9777ebfb5b511d45f923e6d4b380ecb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 48ad3391e18e1099f4926887d334f53414be24b5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677388"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790712"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47677388"
 
   IBCPSession2-Schnittstelle ist eine Erweiterung IBCPSession, die eine Memberfunktion bereitstellt, die eine Alternative zum Aufrufen von ibcpsession:: BCPColFmt für jede Spalte ist.  IBCPSession2 IBCPSession erbt und diese Fügt eine neue Methode hinzu: [ibcpsession2:: Bcpsetbulkmode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Schnittstellen &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
   
   

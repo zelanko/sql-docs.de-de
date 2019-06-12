@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 02c2443d-44e1-4f16-a0d5-08d197838214
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5520e84dc049a3aa395e62b4df94331d50fd8d63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 71467c99e486e04ea9ba707821ed011ecdd61f13
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711358"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765107"
 ---
 # <a name="setasciistream-method-int-javaioinputstream"></a>setAsciiStream-Methode (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public final void setAsciiStream(int parameterIndex,
 ## <a name="remarks"></a>Remarks  
  Diese SetAsciiStream-Methode wird von der SetAsciiStream-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [setAsciiStream-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setasciistream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ebe7ff0f-3cc0-408e-9503-4ca754c9c37f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96351497018dc1ea9468d51234e7eba7186f7c90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 17fc9ccf4b2483d00b2e6576d7e33441f6b90fb2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806038"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771413"
 ---
 # <a name="getparametertypename-method-sqlserverparametermetadata"></a>getParameterTypeName-Methode (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public java.lang.String getParameterTypeName(int param)
 ## <a name="remarks"></a>Remarks  
  Diese GetParameterTypeName-Methode wird von der GetParameterTypeName-Methode in der java.sql.ParameterMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerParameterMetaData-Methoden](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [SQLServerParameterMetaData-Elemente](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData-Klasse](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  

@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ae5f65538c0303a92fdb86f71d75a556ad3f458
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840888"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798246"
 ---
 # <a name="troubleshooting-connectivity"></a>Behandlung von Verbindungsproblemen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] setzt für die Kommunikation mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank voraus, dass TCP/IP installiert und aktiv ist. Sie können mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Configuration Manager überprüfen, welche Netzwerkbibliotheksprotokolle installiert sind.  
   
- Für Datenbankverbindungsfehler gibt es eine Vielzahl von Gründen, Sie können u. a. folgende Änderungen vornehmen:  
+ Für Datenbankverbindungsfehler gibt es eine Vielzahl von Gründen, wie z. B.:  
   
 -   TCP/IP ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht aktiviert, oder es wurde ein falscher Server oder eine falsche Portnummer angegeben. Überprüfen Sie, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an dem angegebenen Server und Port mit TCP/IP lauscht. In diesem Fall wird eine ähnliche Ausnahme wie die folgende gemeldet: "Fehler bei der Anmeldung. Es konnte keine TCP/IP-Verbindung zum Host hergestellt werden." die auf einen der folgenden Fehler hinweist:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47840888"
   
 -   Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, setzt der JDBC-Treiber voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung installiert ist. Dabei handelt es sich nicht um die Standardeinstellung. Vergewissern Sie sich beim Installieren oder Konfigurieren der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dass diese Option enthalten ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

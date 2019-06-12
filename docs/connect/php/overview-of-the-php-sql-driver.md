@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 45cb553dc1f83e42afee5d54951e598fc6df8d1a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645482"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768110"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Übersicht über die Microsoft-Treiber für PHP für SQL Server
 
@@ -28,7 +28,7 @@ Verwenden der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], müssen
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |---------|---------------|  
 | ![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[zum Herunterladen der Treiber für PHP für SQL Server](download-drivers-php-sql-server.md) | Links zum Herunterladen von Microsoft-Treibern für PHP für SQL Server. |
 |[Anmerkungen zu dieser Version für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Listet die Features auf, die für die Versionen 4.0, 3.2, 3.1, 3.0 und 2.0 hinzugefügt wurden.|  
@@ -44,7 +44,7 @@ Verwenden der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], müssen
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server (Erste Schritte mit dem Microsoft-Treiber für PHP für SQL Server)](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 

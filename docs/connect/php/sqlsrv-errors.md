@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47403e17df946ada2fe5a5ed913d9e16c8b62271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 9284b6148fecd96f881778ef82dec45b40acf178
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640728"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796885"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +58,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>Parameter  
 *$errorsAndOrWarnings* (optional): eine vordefinierte Konstante Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Fehler und Warnungen, die beim letzten **sqlsrv** -Funktionsaufruf generiert wurden, werden zurückgegeben.|  
 |SQLSRV_ERR_ERRORS|Fehler und Warnungen aus dem letzten **sqlsrv** -Funktionsaufruf werden zurückgegeben.|  
@@ -69,16 +69,16 @@ Wenn kein Parameterwert angegeben wird, werden Fehler und Warnungen zurückgegeb
 ## <a name="return-value"></a>Rückgabewert  
 Ein **Array** von Arrays oder **NULL**. Jedes **Array** im zurückgegebenen **Array** enthält drei Schlüssel-Wert-Paare. In der folgenden Tabelle wird jeder Schlüssel und dessen Beschreibung aufgelistet.  
   
-|Key|Beschreibung|  
+|Key|und Beschreibung|  
 |-------|---------------|  
-|SQLSTATE|Für Fehler, die aus dem ODBC-Treiber stammen, wird von ODBC der Wert SQLSTATE zurückgegeben Weitere Informationen zu SQLSTATE-Werten für ODBC finden Sie unter [ODBC-Fehlercodes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Für Fehler, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von IMSSP<br /><br />Für Warnungen, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von 01SSP|  
+|SQLSTATE|Für Fehler, die aus dem ODBC-Treiber stammen, wird von ODBC der Wert SQLSTATE zurückgegeben Weitere Informationen zu SQLSTATE-Werten für ODBC, finden Sie unter [ODBC-Fehlercodes](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Für Fehler, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von IMSSP<br /><br />Für Warnungen, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]stammen, ein SQLSTATE von 01SSP|  
 |Code|Für Fehler, die vom SQL Server stammen, den systemeigenen SQL Server-Fehlercode<br /><br />Für Fehler, die aus dem ODBC-Treiber stammen, wird von ODBC der Fehlercode zurückgegeben<br /><br />Für Fehler, die aus den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]oder dem [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] -Fehlercode stammen Weitere Informationen finden Sie unter [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|Eine Beschreibung des Fehlers|  
   
 Auf die Arraywerte kann auch mit den numerischen Schlüsseln 0, 1 und 2 zugegriffen werden. Wenn keine Fehler oder Warnungen auftreten, wird **NULL** zurückgegeben.  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel zeigt auftretende Fehler, die während einer fehlgeschlagene Anweisungsausführung entstehen. (Bei der Anweisung tritt ein Fehler auf, da **InvalidColumName** kein gültiger Spaltenname in der angegebenen Tabelle ist.) Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel zeigt auftretende Fehler, die während einer fehlgeschlagene Anweisungsausführung entstehen. (Bei der Anweisung tritt ein Fehler auf, da **InvalidColumName** kein gültiger Spaltenname in der angegebenen Tabelle ist.) Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -117,7 +117,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  

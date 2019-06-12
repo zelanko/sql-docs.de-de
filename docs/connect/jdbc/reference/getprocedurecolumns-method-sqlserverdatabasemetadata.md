@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c239a16728538acece726c1d0b4722d9c2977765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734698"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771197"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  Ein **String-Objekt**, das den Katalognamen enthält. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Katalogname nicht verwendet werden muss.  
   
- *%sder*  
+ *sSchema*  
   
  Ein **String-Objekt**, das das Schemanamenmuster enthält. Durch Festlegen dieses Parameters auf NULL wird angegeben, dass der Schemaname nicht verwendet werden muss.  
   
@@ -66,7 +66,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  Das von der getProcedureColumns-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|Der Name der Datenbank, in der sich die angegebene gespeicherte Prozedur befindet.|  
 |PROCEDURE_SCHEM|**String**|Das Schema für die gespeicherte Prozedur.|  
@@ -75,8 +75,8 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |COLUMN_TYPE|**short**|Der Typ der Spalte. Mögliche Werte:<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|Der SQL-Datentyp aus "java.sql.Types".|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|PRECISION|**int**|Die Gesamtanzahl von signifikanten Stellen.|  
-|LENGTH|**int**|Die Länge der Daten in Bytes.|  
+|PRECISION|**ssNoversion**|Die Gesamtanzahl von signifikanten Stellen.|  
+|LENGTH|**ssNoversion**|Die Länge der Daten in Bytes.|  
 |SCALE|**short**|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen.|  
 |RADIX|**short**|Die Basis für numerische Typen.|  
 |NULLABLE|**short**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Mögliche Werte:<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
@@ -84,8 +84,8 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Diese Spalte entspricht der **DATA_TYPE**-Spalte mit Ausnahme der **datetime**- und ISO-**interval**-Datentypen.|  
 |SQL_DATETIME_SUB|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Bei allen Datentypen außer **"DateTime"** und ISO **Intervall**, diese Spalte ist NULL.|  
-|CHAR_OCTET_LENGTH|**int**|Die maximale Anzahl von Bytes in der Spalte.|  
-|ORDINAL_POSITION|**int**|Der Index der Spalte innerhalb der Tabelle.|  
+|CHAR_OCTET_LENGTH|**ssNoversion**|Die maximale Anzahl von Bytes in der Spalte.|  
+|ORDINAL_POSITION|**ssNoversion**|Der Index der Spalte innerhalb der Tabelle.|  
 |IS_NULLABLE|**String**|Gibt an, ob in der Spalte NULL-Werte zulässig sind.|  
 |SS_TYPE_CATALOG_NAME|**String**|Der Name des Katalogs, der den benutzerdefinierten Typ (UDT) enthält.|  
 |SS_TYPE_SCHEMA_NAME|**String**|Der Name des Schemas, der den benutzerdefinierten Typ (UDT) enthält.|  
@@ -126,7 +126,7 @@ public static void executeGetProcedureColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   

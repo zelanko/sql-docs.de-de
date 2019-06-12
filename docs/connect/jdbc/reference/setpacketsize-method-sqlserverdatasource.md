@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0d2346b1d64db708a94c45ac1a643d2dfcaf5fed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d102885fc235a66f5d42b7ae5100bc8905d895d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694931"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788123"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public void setPacketSize(int packetSize)
   
  Weitere Informationen zur Verwendung von SSL finden Sie unter [Using SSL Encryption](../../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

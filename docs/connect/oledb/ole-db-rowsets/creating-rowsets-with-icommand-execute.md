@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Execute method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 86de5c5e985d038ec4e2640fcd9d4d87b56546d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 24ecb2e2089780ee9aed25853e0933bab1a4664c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773822"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781316"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>Erstellen von Rowsets mit 'ICommand::Execute'
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47773822"
   
  Bildlauffähige OLE DB-Treiber für SQL Server-Rowsets werden von unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cursor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erzwingt Einschränkungen für Cursor, die durch Änderungen anderer Benutzer der Datenbank beeinflusst werden können. Konkret kann die Reihenfolge der Zeilen in einigen Cursorn nicht verändert werden, und der Versuch, ein Rowset mithilfe eines Befehls zu erstellen, der eine SQL ORDER BY-Klausel enthält, kann fehlschlagen. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

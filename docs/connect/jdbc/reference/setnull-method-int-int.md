@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7e7f08e9-278a-495a-8ce3-ca173d055021
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48fd2baf752af1182f575f5daeab63c1a87bbefe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 977ca2ec68888bfc53ca1256da97f1bf427c33f6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646968"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800317"
 ---
 # <a name="setnull-method-int-int"></a>setNull-MethodE (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public final void setNull(int index,
 ## <a name="remarks"></a>Remarks  
  Diese setNull-Methode wird von der setNull-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [setNull-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea98438694963986c31f0dbb7dddecfb5caa9da6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4af5769f5187fd70387f89aebf07625117da9a49
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610828"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790343"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Verwenden von gespeicherten Prozeduren mit Ausgabeparametern
 
@@ -87,6 +87,6 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 
 Gespeicherte Prozeduren können Updatezählungen und mehrere Resultsets zurückgeben. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] folgt der JDBC 3.0-Spezifikation, die angibt, dass mehrere Resultsets und updatezählungen abgerufen werden soll, bevor die OUT-Parameter abgerufen werden. Die Anwendung sollte, also Abrufen aller Objekte ResultSet und updatezählungen, bevor die OUT-Parameter mit den Methoden CallableStatement.getter abrufen. Andernfalls gehen die noch nicht abgerufenen ResultSet-Objekte und Updatezählungen verloren, wenn die OUT-Parameter abgerufen werden. Weitere Informationen zu updatezählungen und mehrere Resultsets finden Sie [mithilfe einer gespeicherten Prozedur mit einer Anzahl aktualisieren](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) und [mehrere Resultsets mithilfe von](../../connect/jdbc/using-multiple-result-sets.md).
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md)

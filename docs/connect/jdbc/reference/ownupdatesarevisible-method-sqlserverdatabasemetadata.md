@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99d7412a9864fc4a720ba48630e4c469db353c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a31abfb17d613512651b8cfd7d7de92ee268beed
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842798"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768372"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>ownUpdatesAreVisible-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -67,7 +67,7 @@ public boolean othersUpdatesAreVisible(int type)
 ## <a name="remarks"></a>Remarks  
  Diese OwnUpdatesAreVisible-Methode wird von der OwnUpdatesAreVisible-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a29243c0b3b8922a2b6c743855080aa9e58abe87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3b9b4dd4ce34dcc39148a2346fd729a8dfb6b87f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771008"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773233"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>setWorkstationID-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public void setWorkstationID(java.lang.String workstationID)
 ## <a name="remarks"></a>Remarks  
  Die workstationID ist der Name des Clientcomputers oder der Workstation. Wenn die WorkstationID-Eigenschaft nicht festgelegt ist, wird der Standardwert erstellt InetAddress.getLocalHost().getHostName()-Methode aufrufen. Wenn GetHostName einen leeren Wert zurückgibt, wird die getHostAddress().toString()-Methode aufgerufen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

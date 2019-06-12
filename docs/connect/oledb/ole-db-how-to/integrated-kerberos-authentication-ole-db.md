@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5e2f63185ff0092e2df3814e634b5178ca79dcf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c85b34035d81657a7cbfff3808bb30e46d900618
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634118"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791392"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Integrierte Kerberos-Authentifizierung (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47634118"
  Weitere Informationen zu SPNs und Kerberos-Authentifizierung finden Sie unter [Service Principal Name &#40;SPN&#41; Support in Client Connections (Unterstützung von Dienstprinzipalnamen in Clientverbindungen)](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Beispiel  
- Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei „MyServer“ in den Namen eines Computers, auf dem sich eine Instanz von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) befindet.  
+ Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei "MyServer" in den Namen eines Computers, auf dem sich eine Instanz von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) befindet.  
   
  Sie müssen auch einen vom Kunden bereitgestellten SPN angeben. Ändern Sie in der CPP-Datei "CPSPN" in einen vom Kunden bereitgestellten SPN.  
   

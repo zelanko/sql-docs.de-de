@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1ffa599c-d0c8-43b6-8e9b-7c856a846630
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a997de47a565879009b5a21635bc61586f04e1d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f6110684c0b22f0ed7ac4bdcf8a2fc33d161d07c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838478"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766726"
 ---
 # <a name="storesmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseQuotedIdentifiers-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean storesMixedCaseQuotedIdentifiers()
 ## <a name="remarks"></a>Remarks  
  Diese StoresMixedCaseQuotedIdentifiers-Methode wird von der StoresMixedCaseQuotedIdentifiers-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

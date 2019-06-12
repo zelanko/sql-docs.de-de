@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0930b4af05fc693126602b7002a457cb7dc3e10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ac94bcab076912437e00f24e9f6acababcf01902
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597578"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788884"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>usesLocalFilePerTable-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean usesLocalFilePerTable()
 ## <a name="remarks"></a>Remarks  
  Diese UsesLocalFilePerTable-Methode wird von der UsesLocalFilePerTable-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

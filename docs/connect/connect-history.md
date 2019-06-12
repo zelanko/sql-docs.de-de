@@ -8,13 +8,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-manager: craigg
-ms.openlocfilehash: e6656b2df8eb635686dd5702d9b60a644a04e29b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: MTE75
+manager: jroth
+ms.openlocfilehash: 5c312421c7934690c947dbe0bf23b6404afaf56f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511617"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770513"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Treiberverlauf für Microsoft SQL Server
 
@@ -22,7 +22,7 @@ Auf dieser Seite werden die Technologien von Microsoft Daten zur Versionsgeschic
 
 ## <a name="odbc"></a>ODBC
 
-Es gibt drei verschiedene Generationen des Microsoft ODBC-Treiber für SQL Server. Der erste "SQL Server"-ODBC-Treiber wird weiterhin als Bestandteil von [Windows Data Access Components](#microsoft-or-windows-data-access-components). Es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Ab SQL Server 2005, die [SQL Server Native Client](#sql-server-native-client) enthält eine ODBC-Schnittstelle und der ODBC-Treiber, die mit den im Lieferumfang von SQL Server 2005 über SQL Server 2012. Es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Nach SQL Server 2012 die [Microsoft ODBC-Treiber für SQL Server](#microsoft-odbc-driver-for-sql-server) ist der Treiber, die mit den neuesten Serverfunktionen, die in Zukunft aktualisiert wird.
+Es gibt drei verschiedene Generationen von Microsoft OLE DB-Anbietern für SQL Server. Der erste "SQL Server"-ODBC-Treiber wird weiterhin als Bestandteil von [Windows Data Access Components](#microsoft-or-windows-data-access-components). Es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Ab SQL Server 2005, die [SQL Server Native Client](#sql-server-native-client) enthält eine ODBC-Schnittstelle und der ODBC-Treiber, die mit den im Lieferumfang von SQL Server 2005 über SQL Server 2012. Es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Nach SQL Server 2012 die [Microsoft ODBC-Treiber für SQL Server](#microsoft-odbc-driver-for-sql-server) ist der Treiber, die mit den neuesten Serverfunktionen, die in Zukunft aktualisiert wird.
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -36,7 +36,7 @@ Nach SQL Server 2012 wurde die primäre ODBC-Treiber für SQL Server entwickelt 
 
 ## <a name="ole-db"></a>OLE DB
 
-Es gibt drei verschiedene Generationen von Microsoft OLE DB-Anbieter für SQL Server. Der erste "Microsoft OLE DB-Anbieter für SQL Server" (SQLOLEDB) wird weiterhin als Bestandteil von [Windows Data Access Components](#microsoft-or-windows-data-access-components). Dieser Anbieter wird nicht mit den neuen Features aktualisiert werden, und es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Ab SQL Server 2005, die [SQL Server Native Client](#sql-server-native-client) enthält eine OLE DB-Provider-Schnittstelle (SQLNCLI), und der OLE DB-Anbieter, die mit SQL Server 2005 über SQL Server 2017 geliefert wird. Es war [als im Jahr 2011 veraltet bekanntgegeben](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) und es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. In 2017 OLE DB-datenzugriffstechnologie wurde anschließend [aufgehoben und ein neues geplantes Release wurde angekündigt](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) für 2018. Neue OLE DB-Anbieters ist wird aufgerufen, die "Microsoft OLE DB-Treiber für SQL Server" (MSOLEDBSQL) und derzeit verwaltet und unterstützt.
+Es gibt drei verschiedene Generationen von Microsoft OLE DB-Anbietern für SQL Server. Der [Microsoft OLE DB-Anbieter für SQL Server](#microsoft-or-windows-data-access-components) (SQLOLEDB) ist weiterhin als Teil von Windows Data Access Components erhältlich. Dieser Anbieter wird nicht mit den neuen Features aktualisiert werden, und es wird nicht empfohlen, diese Treiber für die neue Entwicklung zu verwenden. Ab SQL Server 2005, die [SQL Server Native Client](#sql-server-native-client) enthält eine OLE DB-Provider-Schnittstelle (SQLNCLI), und der OLE DB-Anbieter, die mit SQL Server 2005 über SQL Server 2017 geliefert wird. [Seit 2011 gilt dieser jedoch als veraltet](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/), und es wird nicht empfohlen, diesen Treiber für neue Bereitstellungen zu verwenden. In 2017 OLE DB-datenzugriffstechnologie wurde anschließend [aufgehoben und ein neues geplantes Release wurde angekündigt](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) für 2018. Neue OLE DB-Anbieters ist wird aufgerufen, die "Microsoft OLE DB-Treiber für SQL Server" (MSOLEDBSQL) und derzeit verwaltet und unterstützt.
 
 ## <a name="adonet"></a>ADO.NET
 
@@ -109,7 +109,7 @@ Diese Komponenten sind in der aktuellen Version von MDAC/WDAC weiterhin unterst�
 * **MSDADS:** mit Microsoft OLE DB-Anbieter für die Data Shaping (MSDADS), können Sie die hierarchische Beziehungen zwischen den Schlüssel, Felder oder Rowsets erstellen, in einer Anwendung. Ohne wesentliche funktionale Erweiterungen wurden seit MDAC 2.1 vorgenommen. Dieser Anbieter ist veraltet. Microsoft empfiehlt die Verwendung von XML anstelle von MSDADS.
 * **Oracle ODBC und Oracle OLE DB:** der Microsoft Oracle ODBC-Treiber (Oracle ODBC) und Microsoft OLE DB-Anbieter für Oracle (Oracle OLE DB) bieten Zugriff auf Oracle-Datenbank-Server. Sie werden mithilfe von Oracle aufrufen Schnittstelle (OCI) Version 7 erstellt und bieten vollständige Unterstützung für Oracle 7. Darüber hinaus verwendet Oracle 7-Emulation, um die eingeschränkten Unterstützung für Oracle 8-Datenbanken verfügbar. Oracle unterstützt nicht mehr Anwendungen, die Aufrufe der OCI-Version 7 verwenden. Diese Technologien sind veraltet. Wenn Sie Oracle-Datenquellen verwenden, sollten Sie Oracle bereitgestellte Treiber und Anbieter migrieren.
 * **RDS:** Remote Data Services (RDS) ist eine proprietäre Microsoft-Mechanismus für den Zugriff auf remote-ADO-Recordset-Objekte über das Internet oder Intranet. RDS ist veraltet. ohne wesentliche funktionale Erweiterungen RDS seit MDAC 2.1 wurden. Microsoft stellt .NET Framework bietet umfangreiche Funktionen für SOAP und RDS-Komponenten ersetzt. Alle RDS-Server-Komponenten werden vom Betriebssystem nach Windows 7 entfernt.
-* **JRO:** Jet Replikationsobjekte (JRO) ist veraltet. JRO wird innerhalb von ADO mit Jet verwendet (*.mdb) Datenbanken erstellen und Komprimieren der Jet-Datenbanken (.mdb) und Jet-Replikationsverwaltung auszuführen. MDAC 2.7 wird auf der letzten Version sein. JRO wird nicht auf dem 64-Bit-Windows-Betriebssystem verfügbar sein. JRO wird nicht unterstützt, in der Microsoft Access 2007-Dateiformat (*.accdb).
+* **JRO:** Jet Replikationsobjekte (JRO) ist veraltet. JRO wird innerhalb von ADO mit Jet verwendet ( *.mdb) Datenbanken erstellen und Komprimieren der Jet-Datenbanken (.mdb) und Jet-Replikationsverwaltung auszuführen. MDAC 2.7 wird auf der letzten Version sein. JRO wird nicht auf dem 64-Bit-Windows-Betriebssystem verfügbar sein. JRO wird nicht unterstützt, in der Microsoft Access 2007-Dateiformat (* .accdb).
 * **16-Bit-ODBC-Unterstützung:** , wenn Sie 16-Bit-Anwendungen verwenden, sollten Sie migrieren, auf eine 32-Bit-Anwendung. 16-Bit-Funktionalität ist veraltet und wird von 64-Bit-Betriebssystemen entfernt. Weitere Informationen finden Sie im [Knowledge Base-Artikel 896458](https://support.microsoft.com/kb/896458).
 * **Einfache OLE DB-Anbieter (MSDAOSP):** einfache OLE DB-Anbieter bietet ein Framework zum schnellen Erstellen von OLE DB-Anbieter für einfache Daten. MSDAOSP ist veraltet.
 * **ODBC-Cursorbibliothek:** ODBC Cursor Library (ODBCCR32.dll) bietet begrenzte clientseitigen Daten-Cursor. ODBC-Cursorbibliothek wurde als veraltet markiert; die Anwendung kann serverseitiger cursorimplementierungen als Ersatz verwenden.

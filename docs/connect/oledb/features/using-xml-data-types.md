@@ -30,13 +30,13 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391457"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796071"
 ---
 # <a name="using-xml-data-types"></a>Verwenden von XML-Datentypen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "52391457"
   
 |Datentyp|Zu Server<br /><br /> **XML**|Zu Server<br /><br /> **Nicht-XML**|Von Server<br /><br /> **XML**|Von Server<br /><br /> **Nicht-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|Pass-Through<sup>6,7</sup>|Fehler<sup>1</sup>|OK<sup>11, 6</sup>|Fehler<sup>8</sup>|  
+|DBTYPE_XML|Pass-Through<sup>6,7</sup>|Fehler<sup>1</sup>|OK<sup>11, 6</sup>|Error<sup>8</sup>|  
 |DBTYPE_BYTES|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>11, 6</sup>|Nicht zutreffend<sup>2</sup>|  
 |DBTYPE_WSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>4, 6, 12</sup>|Nicht zutreffend<sup>2</sup>|  
 |DBTYPE_BSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
@@ -230,7 +230,7 @@ ms.locfileid: "52391457"
  Die **IRowsetFind::FindNextRow**-Methode funktioniert nicht mit dem **XML**-Datentyp. Wenn **IRowsetFind::FindNextRow** aufgerufen wird und das *hAccessor*-Argument eine Spalte von DBTYPE_XML angibt, wird DB_E_BADBINDINFO zurückgegeben. Dies tritt unabhängig vom Typ der Spalte auf, die durchsucht wird. Für alle anderen Bindungstypen schlägt **FindNextRow** mit DB_E_BADCOMPAREOP fehl, wenn die zu durchsuchende Spalte vom Datentyp **XML** ist.  
  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [ISSCommandWithParameters &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

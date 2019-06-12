@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be2a66c779714902ae33ef25dcdf23b8797ee274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8f03bc0fdff52678a79bebb217dd0731515e47be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669438"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780423"
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47669438"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Vergleicht diese **DateTimeOffset** Objekt in ein anderes **DateTimeOffset** -Objekt basierend auf ihrer Uhrzeit nach GMT.|  
 |[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Vergleicht diese **DateTimeOffset** Objekt in ein anderes **Objekt**.|  
@@ -47,7 +47,7 @@ ms.locfileid: "47669438"
 |---------------------------|-------------|  
 |class java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait,|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
   

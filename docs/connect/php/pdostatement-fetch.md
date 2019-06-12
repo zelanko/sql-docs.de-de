@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 624f5efe97333fd76e934f94517588aede030f38
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: afd2f2fc098e23685dca1b913e010dced40cece9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605260"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799175"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ Ein gemischter Wert, der eine Zeile oder „false“ zurückgibt.
 ## <a name="remarks"></a>Remarks  
 Der Cursor wird automatisch vorgerückt, wenn FETCH aufgerufen wird. Die folgende Tabelle enthält die Liste der möglichen Werte für $*fetch_style*.  
   
-|$*fetch_style*|Beschreibung|  
+|$*fetch_style*|und Beschreibung|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Gibt ein Array an, das von einem Spaltennamen indiziert ist.|  
 |PDO::FETCH_BOTH|Gibt ein Array an, das von einem Spaltennamen und einer 0-basierten Reihenfolge indiziert ist. Dies ist die Standardeinstellung.|  
@@ -58,7 +58,7 @@ Wenn sich der Cursor am Ende des Resultsets befindet (die letzte Zeile wurde abg
   
 Wenn der Cursor bildlauffähig ist (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), wird FETCH den Cursor innerhalb der Begrenzung des Resultsets bewegen. Die folgende Tabelle enthält die Liste der möglichen Werte für $*cursor_orientation*.  
   
-|$*cursor_orientation*|Beschreibung|  
+|$*cursor_orientation*|und Beschreibung|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|Ruft die nächste Zeile ab. Dies ist die Standardeinstellung.|  
 |PDO::FETCH_ORI_PRIOR|Ruft die vorherige Zeile ab.|  
@@ -141,7 +141,7 @@ Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../in
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

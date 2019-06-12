@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31720bc3dfb2d39bb0dc83bfa7aa771aa1ef02fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fda0e082d8f0f35995e622f7f3a47b0a075f9eee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809808"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772835"
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>dataDefinitionIgnoredInTransactions-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean dataDefinitionIgnoredInTransactions()
 ## <a name="remarks"></a>Remarks  
  Diese DataDefinitionIgnoredInTransactions-Methode wird von der DataDefinitionIgnoredInTransactions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 5cf0c29f6d095361cb3fd8a1d1cb316beb646433
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710445"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797012"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,16 +44,16 @@ Ein assoziatives Array mit Schlüsseln, die in der folgenden Tabelle beschrieben
   
 **Für PHP für SQL Server-Versionen 3.2 und 3.1**:  
   
-|Key|Beschreibung|  
+|Key|und Beschreibung|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 für SQL Server)|  
 |DriverODBCVer|ODBC-Version (xx.yy)|  
-|DriverVer|ODBC Driver 11 for SQL Server DLL-Version:<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 3.2 oder 3.1)|  
+|DriverVer|ODBC Driver 11 for SQL Server DLL-Version:<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 3.2 oder 3.1)|  
 |ExtensionVer|php_sqlsrv.dll Version:<br /><br />3.2.xxxx.x (für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 3.2)<br /><br />3.1.xxxx.x (für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 3.1)|  
   
 **Für PHP für SQL Server-Versionen 3.0 und 2.0**:  
   
-|Key|Beschreibung|  
+|Key|und Beschreibung|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] Version 2.0)|  
 |DriverODBCVer|ODBC-Version (xx.yy)|  
@@ -93,7 +93,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)  

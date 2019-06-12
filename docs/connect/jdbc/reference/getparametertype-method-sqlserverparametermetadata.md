@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 638aca05-63e4-4d73-a9c8-e0442f775720
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77d2259007a50116b27fa1bf0bef0e381849d27d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 130489258d13d801a973e510042463440479f6b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708718"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771358"
 ---
 # <a name="getparametertype-method-sqlserverparametermetadata"></a>getParameterType-Methode (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public int getParameterType(int param)
 ## <a name="remarks"></a>Remarks  
  Diese GetParameterType-Methode wird von der GetParameterType-Methode in der java.sql.ParameterMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerParameterMetaData-Methoden](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [SQLServerParameterMetaData-Elemente](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData-Klasse](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  

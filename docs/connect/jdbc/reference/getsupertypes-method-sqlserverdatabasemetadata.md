@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f50bfa76bcac217bf89c7047f2803301f314ded3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45d1b81a18d953bcf3df8ff142535204e648edbb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830714"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787456"
 ---
 # <a name="getsupertypes-method-sqlserverdatabasemetadata"></a>getSuperTypes-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +62,7 @@ public java.sql.ResultSet getSuperTypes(java.lang.String catalog,
 ## <a name="remarks"></a>Remarks  
  Diese GetSuperTypes-Methode wird von der GetSuperTypes-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

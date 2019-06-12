@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b36100c0a2b87abad223c47fc4c81dd802c16cc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: abbb07c23685562d28297f096728589fdc3a343e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682608"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773499"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +53,7 @@ public void setString(java.lang.String sCol,
   
  Konvertierungen von Zeichenfolgen zu Binärwerten werden nur ausgeführt, wenn [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] bekannt ist, dass der Zieltyp binär ist. Ist der zugrunde liegende Typ nicht bekannt, wird vom JDBC-Treiber das **Zeichenfolge**-Literal übergeben. Kann die Konvertierung vom Server nicht ausgeführt werden, wird ein Serverfehler zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

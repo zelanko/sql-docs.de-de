@@ -12,13 +12,13 @@ helpviewer_keywords:
 - BCPSetBulkMode function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8df4a1e06e0bb1d7fbc4f4352c5c650be029f980
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 5987ca7b01022d30df0ee9bcded83ec4f65078ff
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532451"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790736"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ HRESULT BCPSetBulkMode (
   
  In der folgenden Tabelle sind die Konstanten für den *property* -Parameter aufgelistet.  
   
-|property|Beschreibung|  
+|property|und Beschreibung|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in BCP. EXE-Datei, und klicken Sie auf die ibcpsession:: BCPColFmt mit *eUserDataType* -Eigenschaftensatz auf **BCP_TYPE_SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der – w-Option in BCP. EXE-Datei und ibcpsession:: BCPColFmt mit *eUserDataType* -Eigenschaftensatz auf **BCP_TYPE_SQLNCHAR**.|  
@@ -363,7 +363,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [IBCPSession2 &#40;OLE-DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

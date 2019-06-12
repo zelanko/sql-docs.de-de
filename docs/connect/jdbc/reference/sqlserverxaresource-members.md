@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9d55da45733e15a9b2aa98f7c6d8fa386b1e4e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: c8b3e731fdc3480d646e141cbd53b777407015f8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682688"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768273"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47682688"
   
 ## <a name="fields"></a>Felder  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|Hierdurch werden eng verkoppelte XA-Transaktionen ermöglicht, die unterschiedliche XA-Verzweigungstransaktions-IDs (XIDs) aber dieselbe globale Transaktions-ID (GTRID) aufweisen.|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47682688"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|Führt einen Commit für die globale Transaktion aus, die durch das angegebene Xid-Objekt festgelegt wird.|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|Beendet die für einen Transaktionszweig durchgeführte Arbeit.|  
@@ -59,7 +59,7 @@ ms.locfileid: "47682688"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXAResource-Klasse](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 12e5a4cc-45a2-4779-bbfc-e4da66829588
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c239cdd495baf4f7f90ccc9a13d01b955ca0cce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cf86e81c3512ef29cc661388ec02ff204548fcac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621698"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793954"
 ---
 # <a name="setdate-method-int-javasqldate"></a>setDate-Methode (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public final void setDate(int n,
 ## <a name="remarks"></a>Remarks  
  Diese setDate-Methode wird von der setDate-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [setDate-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

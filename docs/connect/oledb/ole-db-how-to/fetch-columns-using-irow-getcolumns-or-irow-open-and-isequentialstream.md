@@ -14,13 +14,13 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 61a913586bbba7dc9fc1d7d997ba33a9eddc8e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213534"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785948"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53213534"
   
 2.  Führen Sie den Befehl aus (in diesem Beispiel wird **ICommandExecute::Execute()** mit IID_IRow aufgerufen).  
   
-3.  Abrufen der Spaltendaten mit **IRow::Open()** oder **IRow::GetColumns()**.  
+3.  Abrufen der Spaltendaten mit **IRow::Open()** oder **IRow::GetColumns()** .  
   
     -   **IRow::Open()** dienen zum Öffnen einer **ISequentialStream** in der Zeile. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit **IStream** oder **ISequentialStream** können die Daten anschließend aus der Spalte gelesen werden).  
   
