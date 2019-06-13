@@ -1,6 +1,6 @@
 ---
 title: Neuigkeiten zu SQL Server 2019 | Microsoft-Dokumentation
-ms.date: 04/23/2019
+ms.date: 05/28/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,34 +9,80 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09e1a4203ef519fb9939df2ba1892b85509f1324
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775479"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810286"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ist eine Erweiterung der SQL Server-Plattform basierend auf früheren Releases, die Ihnen eine große Auswahl an Entwicklungssprachen, Datentypen und Betriebssystemen sowie die Arbeit mit einer lokalen Umgebung oder der Cloud bietet. Dieser Artikel beschreibt die Neuigkeiten zu [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. 
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ist eine Erweiterung der SQL Server-Plattform basierend auf früheren Releases, die Ihnen eine große Auswahl an Entwicklungssprachen, Datentypen und Betriebssystemen sowie die Arbeit mit einer lokalen Umgebung oder der Cloud bietet. Dieser Artikel beschreibt die Neuigkeiten zu [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 Die Funktionen in den einzelnen Releases werden zusammengefasst, und es wird auf weitere Einzelheiten zu jeder Funktion verwiesen. Im Abschnitt [Details](#details) werden technische Einzelheiten der Funktionen beschrieben, die möglicherweise nicht Teil der Hauptdokumentation sind. In den anderen Abschnitten dieses Artikels werden Informationen zu allen bis dato veröffentlichten Features für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bereitgestellt.
 
 Weitere Informationen und bekannte Probleme finden Sie unter [Release Notes zu [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (Vorschauversion)](sql-server-ver15-release-notes.md).
 
-**Versuchen Sie Folgendes[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]:**
-
-- [![Download aus dem Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] für die Installation unter Windows herunterladen](https://go.microsoft.com/fwlink/?LinkID=862101).
-- Installieren Sie die Version unter Linux für [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) und [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Ausführen von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] auf Docker](../linux/quickstart-install-connect-docker.md)
-
 **Nutzen Sie die [neuesten Tools](#tools) für die optimale Verwendung von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## <a name="ctp-25-april-2019"></a>CTP 2.5 (April 2019)
+## <a name="ctp-30-may-2019"></a>CTP 3.0 (Mai 2019)
 
-Community Technology Preview (CTP) 2.5 ist das neueste öffentliche Release von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dieses Release beinhaltet Verbesserungen im Vergleich zu vorherigen CTP-Releases zum Beheben von Fehlern, zur Verbesserung der Sicherheit und zur Optimierung der Leistung. Außerdem wurden die folgenden Funktionen für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.5 hinzugefügt oder verbessert.
+Community Technology Preview (CTP) 3.0 ist das neueste öffentliche Release von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dieses Release beinhaltet Verbesserungen im Vergleich zu vorherigen CTP-Releases zum Beheben von Fehlern, zur Verbesserung der Sicherheit und zur Optimierung der Leistung.
+
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+
+Informationen zu bestimmten Funktionen, die vom Support ausgeschlossen sind, finden Sie in den [Release Notes](sql-server-ver15-release-notes.md).
+
+Außerdem wurden die folgenden Funktionen für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 hinzugefügt oder verbessert.
+
+### <a name="big-data-clusters"></a>Big Data-Cluster
+
+| Neue Funktion oder Update | Details |
+|:---|:---|
+| **mssqlctl**-Updates | Mehrere [Updates für den Befehl **mssqlctl** und seine Parameter](../big-data-cluster/reference-mssqlctl.md). Dies umfasst ein Update für den Befehl **mssqlctl login**, der nun den Controllerbenutzernamen und -endpunkt zum Ziel hat. |
+| Speichererweiterungen | Unterstützung für verschiedene Speicherkonfigurationen für Protokolle und Daten. Darüber hinaus wurde die Anzahl der Ansprüche von persistentem Volume für einen Big Data-Cluster gesenkt. |
+| Mehrere Computepoolinstanzen | Unterstützung für mehrere Computepoolinstanzen. |
+| Neues Poolverhalten und neue Poolfunktionen | Der Computepool wird jetzt standardmäßig für Speicherpool- und Datenpoolvorgänge ausschließlich in einer **ROUND_ROBIN**-Verteilung verwendet. Der Datenpool kann nun einen neuen Verteilungstyp **REPLICATED** verwenden, was bedeutet, dass dieselben Daten in allen Datenpoolinstanzen vorhanden sind. |
+| Verbesserungen externer Tabellen | Externe Tabellen des HADOOP-Datenquellentyps unterstützen nun das Lesen von Zeilen mit einer Größe von bis zu 1 MB. Externe Tabellen (ODBC, Speicherpool, Datenpool) unterstützen jetzt Zeilen mit der Breite einer SQL Server-Tabelle. |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>Datenbank-Engine
+
+| Neue Funktion oder Update | Details |
+|:---|:---|
+|SQL Server-Spracherweiterungen – [Java-Spracherweiterung](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|Das [Microsoft-SDK für Java-Erweiterung für Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) ist jetzt Open Source und [auf GitHub verfügbar](https://github.com/microsoft/sql-server-language-extensions).|
+|Registrieren externer Sprachen|In einer neuen DDL, `CREATE EXTERNAL LANGUAGE`, werden externe Sprachen (z.B. Java) in SQL Server registriert. Informationen finden Sie unter [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+|Mehr unterstützte Datentypen für Java|Informationen finden Sie unter [Java-Datentypen](../language-extensions/how-to/java-to-sql-data-types.md).|
+|Angepasste Erfassungsrichtlinie für den Abfragespeicher|Bei Aktivierung stehen zusätzliche Abfragespeicherkonfigurationen unter einer neuen Einstellung für die Erfassungsrichtlinie des Abfragespeichers zur Verfügung, um die Datensammlung auf einem bestimmten Server zu optimieren. Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|[In-Memory-Datenbank](../relational-databases/in-memory-database.md) fügt neue DDL-Syntax zum Steuern des hybriden Pufferpools hinzu. <sup>2</sup>|Mit dem [hybriden Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md) kann bei Bedarf direkt auf Datenbankseiten in Datenbankdateien zugegriffen werden, die sich auf einem Gerät mit beständigem Arbeitsspeicher (PMEM) befinden.|
+|Neue In-Memory-Datenbankfunktion, speicheroptimierte tempdb-Metadaten hinzugefügt.|Informationen finden Sie unter [Speicheroptimierte TempDB-Metadaten](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Verbindungsserver unterstützen UTF-8-Zeichencodierung. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Das SQL Server-Setup umfasst MaxDOP-Empfehlungen, die auf dokumentierten Richtlinien basieren. |[Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
+|`sys.dm_exec_query_plan_stats` gibt mehr Informationen zum Grad der Parallelität und Speicherzuweisungen für Abfragepläne zurück. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| &nbsp; | &nbsp; |
+
+><sup>1</sup> Dies ist eine optionale Funktion, für die das [Ablaufverfolgungsflag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 aktiviert sein muss.
+>
+><sup>2</sup> Es ist kein Ablaufverfolgungsflag mehr zum Aktivieren des hybriden Pufferpools erforderlich.
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| Neue Funktion oder Update | Details |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] unterstützt Datenbanken mit verwalteter Azure SQL-Datenbank-Instanz.| Hosten von [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] auf einer verwalteten Instanz. Informationen finden Sie unter [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]-Installation und -Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).
+| &nbsp; | &nbsp; |
+
+### <a name="analysis-services"></a>Analysis Services
+
+| Neue Funktion oder Update | Details |
+|:---|:---|
+|Unterstützung von MDX-Abfragen für tabellarische Modelle mit Berechnungsgruppen |In dieser Version wird die frühere Beschränkung in [Berechnungsgruppen](#calc-ctp24) aufgehoben. |
+|Dynamische Formatierung von Measures mithilfe von Berechnungsgruppen |Mit dieser Funktion können Sie Formatzeichenfolgen für Measures mit [Berechnungsgruppen](#calc-ctp24) bedingt ändern. Beispielsweise kann mit der Währungsumrechnung ein Measure in verschiedenen Fremdwährungsformaten angezeigt werden.|
+
+## <a name="ctp-25-april-2019"></a>CTP 2.5 (April 2019)
 
 ### <a name="big-data-clusters"></a>Big Data-Cluster
 
@@ -125,9 +171,9 @@ Community Technology Preview (CTP) 2.5 ist das neueste öffentliche Release von 
 |Durch den Abfragespeicherplan erzwungene Unterstützung für schnelle Vorwärts- und statische Cursor|[Erzwingen eines Plans für schnelle Vorwärts- und statische Cursor](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |Weniger Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche |[Weniger Neukompilierungen für Workloads](../relational-databases/tables/tables.md#ctp23) |
 |Verbesserte Skalierbarkeit indirekter Prüfpunkte |[Verbesserte Skalierbarkeit indirekter Prüfpunkte](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
-|Unterstützung für UTF-8: Unterstützung für die Verwendung von UTF-8-Zeichencodierung mit BIN2-Sortierung (`UTF8_BIN2`) wurde hinzugefügt |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Unterstützung für die Verwendung von UTF-8-Zeichencodierung mit BIN2-Sortierung (`UTF8_BIN2`) wurde hinzugefügt |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |Definieren von kaskadierenden Löschaktionen für eine Edgeeinschränkung in einer Graphdatenbank |[Edgeeinschränkungen](../relational-databases/tables/graph-edge-constraints.md) |
-|Aktivieren oder Deaktivieren von `LIGHTWEIGHT_QUERY_PROFILING` mit der neuen datenbankweiten Konfiguration |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+|Aktivieren oder Deaktivieren von `LIGHTWEIGHT_QUERY_PROFILING` mit der neuen datenbankweiten Konfiguration |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### <a name="tools"></a>Tools
@@ -389,7 +435,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Sie benötigen diese Syntax nicht, um das Feature in Azure SQL-Datenbank zu verwenden. Es wurde [auf Wunsch in der öffentlichen Vorschauversion aktiviert](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). Nach seiner Aktivierung ist das Feature standardmäßig aktiviert.
+> Sie benötigen diese Syntax nicht, um das Feature in Azure SQL-Datenbank zu verwenden. Es wurde [auf Wunsch in der öffentlichen Vorschauversion aktiviert](/azure/sql-database/sql-database-accelerated-database-recovery). Nach seiner Aktivierung ist das Feature standardmäßig aktiviert.
 
 Wenn Sie kritische Datenbanken besitzen, die für große Transaktionen anfällig sind, können Sie dieses Feature während der Vorschauphase testen. Senden Sie Feedback an das [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Team](<https://aka.ms/sqlfeedback>).
 

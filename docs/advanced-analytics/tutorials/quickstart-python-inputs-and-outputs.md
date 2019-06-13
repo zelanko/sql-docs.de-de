@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583223"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033391"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Schnellstart: Verarbeiten von Eingaben und Ausgaben, die mithilfe von Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 Sehen wir uns die standardmäßigen Eingabe- und Variablen von Sp_execute_external_script: `InputDataSet` und `OutputDataSet`.
 
-1. Sie können die Daten aus der Tabelle als Eingabe für das R-Skript abrufen. Führen Sie folgende Anweisung ein. Ruft die Daten aus der Tabelle ab, gibt die Werte mit den Namen der Spalte zurück und macht einen Roundtrip über die R-Laufzeit *NewColName*.
+1. Sie können die Daten aus der Tabelle als Eingabe für Ihre Python-Skript abrufen. Führen Sie folgende Anweisung ein. Ruft die Daten aus der Tabelle ab, gibt die Werte mit den Namen der Spalte zurück und macht einen Roundtrip über die Python-Laufzeit *NewColName*.
 
-    Die von der Abfrage zurückgegebenen Daten werden an die R-Laufzeit übergeben, die die Daten in SQL-Datenbank als dataframe zurückgibt. Die WITH RESULT SETS-Klausel definiert das Schema der zurückgegeben Datentabelle für SQL-Datenbank.
+    Die von der Abfrage zurückgegebenen Daten werden an die Python-Laufzeit übergeben, die die Daten in SQL-Datenbank als ein Pandas-DataFrame zurückgibt. Die WITH RESULT SETS-Klausel definiert das Schema der zurückgegeben Datentabelle für SQL-Datenbank.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ Sehen wir uns die standardmäßigen Eingabe- und Variablen von Sp_execute_extern
 
     ![Ausgabe von Python-Skript, das Daten aus einer Tabelle zurückgegeben.](./media/python-output-pythontestdata.png)
 
-2. Ändern wir den Namen der Eingabe- oder Variablen. Das obige Skript verwendet die Standardeingabe und eingabevariablennamen _"inputdataset"_ und _"outputdataset"_. Definieren Sie die Eingabedaten _InputDatSet_, Sie verwenden die *@input_data_1* Variable.
+2. Ändern wir den Namen der Eingabe- oder Variablen. Das obige Skript verwendet die Standardeingabe und eingabevariablennamen _"inputdataset"_ und _"outputdataset"_ . Definieren Sie die Eingabedaten _"inputdataset"_ , Sie verwenden die *@input_data_1* Variable.
 
     In diesem Skript wurde die Namen der Ausgabe- und der Eingabevariablen für die gespeicherte Prozedur zu geändert *SQL_out* und *SQL_in*:
 
