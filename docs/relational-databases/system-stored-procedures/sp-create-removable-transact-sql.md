@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724065"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
@@ -60,13 +60,13 @@ sp_create_removable
   
 `[ @syslogical = ] 'syslogical'` Ist der logische Name der Datei, die die Systemkatalogtabellen enthält. *Syslogical* ist **Sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Systemkatalogtabellen enthält. *Sysphysical* ist **nvarchar(260)**.  
+`[ @sysphysical = ] 'sysphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Systemkatalogtabellen enthält. *Sysphysical* ist **nvarchar(260)** .  
   
 `[ @syssize = ] syssize` Ist die Größe in Megabyte, der die Datei, die die Systemkatalogtabellen enthält. *Syssize* ist **Int**. Die minimale *Syssize* ist 1.  
   
 `[ @loglogical = ] 'loglogical'` Ist der logische Name der Datei, die das Transaktionsprotokoll enthält. *Loglogical* ist **Sysname**.  
   
-`[ @logphysical = ] 'logphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Transaktionsprotokolltabellen enthält. *Logphysical* ist **nvarchar(260)**.  
+`[ @logphysical = ] 'logphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Transaktionsprotokolltabellen enthält. *Logphysical* ist **nvarchar(260)** .  
   
 `[ @logsize = ] logsize` Ist die Größe in Megabyte, der Datei, die das Transaktionsprotokoll enthält. *Logsize* ist **Int**. Die minimale *Logsize* ist 1.  
   
@@ -74,7 +74,7 @@ sp_create_removable
   
  Die Anzahl von Datendateien muss zwischen 1 und 16 liegen. In der Regel wird mehr als eine Datendatei erstellt, wenn zu erwarten ist, dass die Datenbank umfangreich wird und auf mehrere Datenträger verteilt werden muss.  
   
-`[ @dataphysical1 = ] 'dataphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Datentabellen enthält. *Dataphysical* ist **nvarchar(260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Ist der physische Name. Enthält einen vollqualifizierten Pfad der Datei, die die Datentabellen enthält. *Dataphysical* ist **nvarchar(260)** .  
   
 `[ @datasize1 = ] 'datasize'` Ist die Größe in Megabyte, der eine Datei, die die Datentabellen enthält. *Datasize* ist **Int**. Die minimale *Datasize* ist 1.  
   

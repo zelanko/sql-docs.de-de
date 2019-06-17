@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63217743"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Erstellen von Vorhersagen für ein Sequenzclustermodell (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -65,7 +65,7 @@ ms.locfileid: "63217743"
   
 1.  Klicken Sie auf die **Entwurf** -Schaltfläche in der linken oberen Ecke des Generators für Vorhersageabfragen, wechseln zurück zum Raster Erstellen der Abfrage.  
   
-2.  In der **Singleton-Abfrageeingabe** im Dialogfeld klicken Sie auf die **Wert** für Feld `Region`, und wählen Sie **"Europa"**.  
+2.  In der **Singleton-Abfrageeingabe** im Dialogfeld klicken Sie auf die **Wert** für Feld `Region`, und wählen Sie **"Europa"** .  
   
 3.  Klicken Sie auf die **Ergebnis** Schaltfläche, um Vorhersagen für Kunden in Europa anzuzeigen.  
   

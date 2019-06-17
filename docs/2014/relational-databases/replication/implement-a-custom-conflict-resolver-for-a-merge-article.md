@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721226"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
@@ -61,13 +61,13 @@ ms.locfileid: "62721226"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem neuen Tabellenartikel  
   
-1.  Führen Sie [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) zur Definition eines Artikels unter Angabe eines Werts des **MicrosoftSQL**-**Konfliktlösers für gespeicherte Prozeduren** für den **@article_resolver**-Parameter und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für den Parameter **@resolver_info** aus. Weitere Informationen finden Sie unter [Define an Article](publish/define-an-article.md).  
+1.  Führen Sie [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) zur Definition eines Artikels unter Angabe eines Werts des **MicrosoftSQL**-**Konfliktlösers für gespeicherte Prozeduren** für den **@article_resolver** -Parameter und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für den Parameter **@resolver_info** aus. Weitere Informationen finden Sie unter [Define an Article](publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem vorhandenen Tabellenartikel  
   
-1.  Führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus, wobei Sie **@publication**,**@article**, den Wert **article_resolver** für **@property** und einen Wert des **MicrosoftSQL** **Konfliktlösers für gespeicherte Prozeduren** für **@value** angeben.  
+1.  Führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus, wobei Sie **@publication** , **@article** , den Wert **article_resolver** für **@property** und einen Wert des **MicrosoftSQL** **Konfliktlösers für gespeicherte Prozeduren** für **@value** angeben.  
   
-2.  Führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus, wobei Sie **@publication**, **@article**, den Wert **resolver_info** für **@property**und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für **@value**implementiert wird.  
+2.  Führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus, wobei Sie **@publication** , **@article** , den Wert **resolver_info** für **@property** und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für **@value** implementiert wird.  
   
 ##  <a name="COM"></a> Verwenden eines COM-basierten benutzerdefinierten Konfliktlösers  
  Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen und zur Lösung von Konflikten schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md). Sie können auch eine eigene, auf systemeigenem Code basierende benutzerdefinierte Geschäftslogik zur Lösung von Konflikten schreiben. Diese Logik wird mithilfe von Produkten wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ als COM-Komponente konzipiert und in DLLs (Dynamic-Link Libraries) kompiliert. Ein solcher COM-basierter benutzerdefinierter Konfliktlöser muss die **ICustomResolver**-Schnittstelle implementieren, die speziell für die Konfliktlösung entworfen wurde.  
@@ -97,7 +97,7 @@ ms.locfileid: "62721226"
   
 8.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) aus, um zu prüfen, ob die Bibliothek noch nicht als benutzerdefinierter Konfliktlöser registriert wurde.  
   
-9. Um die Bibliothek als benutzerdefinierten Konfliktlöser zu registrieren, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) aus. Geben Sie den Anzeigenamen des COM-Objekts für **@article_resolver**, die Bibliotheks ID (CLSID) für **@resolver_clsid**, und den Wert `false` für **@is_dotnet_assembly**.  
+9. Um die Bibliothek als benutzerdefinierten Konfliktlöser zu registrieren, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) aus. Geben Sie den Anzeigenamen des COM-Objekts für **@article_resolver** , die Bibliotheks ID (CLSID) für **@resolver_clsid** , und den Wert `false` für **@is_dotnet_assembly** .  
   
     > [!NOTE]  
     >  Wenn er nicht mehr benötigt wird, kann die Registrierung eines benutzerdefinierten Konfliktlösers mit [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) aufgehoben werden.  
@@ -108,13 +108,13 @@ ms.locfileid: "62721226"
   
 1.  Führen Sie auf dem Verleger [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) aus, und achten Sie auf den Anzeigenamen des gewünschten Konfliktlösers.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) zur Definition eines Artikels aus. Geben Sie den Anzeigenamen des Artikelkonfliktlösers aus Schritt&nbsp;1 für **@article_resolver**implementiert wird. Weitere Informationen finden Sie unter [Definieren eines Artikels](publish/define-an-article.md).  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) zur Definition eines Artikels aus. Geben Sie den Anzeigenamen des Artikelkonfliktlösers aus Schritt&nbsp;1 für **@article_resolver** implementiert wird. Weitere Informationen finden Sie unter [Definieren eines Artikels](publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem vorhandenen Tabellenartikel  
   
 1.  Führen Sie auf dem Verleger [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) aus, und achten Sie auf den Anzeigenamen des gewünschten Konfliktlösers.  
   
-2.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus. Geben Sie dabei **@publication** ,**@article**, den Wert **article_resolver** für **@property** und den Anzeigenamen des Artikelkonfliktlösers aus Schritt 1 für **@value** an.  
+2.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus. Geben Sie dabei **@publication** , **@article** , den Wert **article_resolver** für **@property** und den Anzeigenamen des Artikelkonfliktlösers aus Schritt 1 für **@value** an.  
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Anzeigen eines Beispiels für einen benutzerdefinierten Konfliktlöser  
   
@@ -125,7 +125,7 @@ ms.locfileid: "62721226"
 3.  Führen Sie **setup.exe**aus.  
   
     > [!NOTE]  
-    >  Bei der Auswahl der Installationsoptionen müssen Sie nur die Beispiele für die **Replikation** installieren. (Der Standardinstallationspfad lautet **C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\**)  
+    >  Bei der Auswahl der Installationsoptionen müssen Sie nur die Beispiele für die **Replikation** installieren. (Der Standardinstallationspfad lautet **C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\** )  
   
 4.  Wechseln Sie zum Installationsordner. (Der Standardordner ist **C:\Programme (x86)\Microsoft SQL Server 2000 Samples\1033\sqlrepl\unzip_sqlreplSP3.exe**)  
   

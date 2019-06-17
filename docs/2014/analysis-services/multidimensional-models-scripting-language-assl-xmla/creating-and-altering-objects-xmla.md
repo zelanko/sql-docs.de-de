@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702302"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Erstellen und Ändern von Objekten (XMLA)
@@ -79,7 +79,7 @@ ms.locfileid: "62702302"
  Wenn Sie das `AllowCreate`-Attribut des `Alter`-Befehls auf True setzen, können Sie das angegebene Hauptobjekt erstellen, wenn das Objekt nicht existiert. Andernfalls tritt ein Fehler auf, wenn ein angegebenes Hauptobjekt nicht bereits vorhanden ist.  
   
 ### <a name="using-the-objectexpansion-attribute"></a>Verwenden des ObjectExpansion-Attributs  
- Wenn Sie nur die Eigenschaften des Hauptobjekts ändern und sind nicht nebenobjekte, die im Hauptobjekt enthalten sind, legen Sie die `ObjectExpansion` Attribut des der `Alter` Befehl *' ObjectProperties '*. Die `ObjectDefinition`-Eigenschaft muss dann nur die Elemente für die Eigenschaften des Hauptobjekts enthalten, und der `Alter`-Befehl lässt die zum Hauptobjekt gehörenden Nebenobjekte unverändert.  
+ Wenn Sie nur die Eigenschaften des Hauptobjekts ändern und sind nicht nebenobjekte, die im Hauptobjekt enthalten sind, legen Sie die `ObjectExpansion` Attribut des der `Alter` Befehl *' ObjectProperties '* . Die `ObjectDefinition`-Eigenschaft muss dann nur die Elemente für die Eigenschaften des Hauptobjekts enthalten, und der `Alter`-Befehl lässt die zum Hauptobjekt gehörenden Nebenobjekte unverändert.  
   
  Um nebenobjekte für ein Hauptobjekt neu zu definieren, müssen Sie festlegen, die `ObjectExpansion` Attribut *ExpandFull* und die Objektdefinition muss alle nebenobjekte, die im Hauptobjekt enthalten sind enthalten. Wenn die `ObjectDefinition`-Eigenschaft des `Alter`-Befehls nicht explizit ein im Hauptobjekt enthaltenes Nebenobjekt einbindet, wird das nicht eingebundene Nebenobjekt gelöscht.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62702302"
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Das folgende Beispiel erstellt eine relationale Datenquelle, verweist der [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] Beispiel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  
   
 ### <a name="code"></a>Code  

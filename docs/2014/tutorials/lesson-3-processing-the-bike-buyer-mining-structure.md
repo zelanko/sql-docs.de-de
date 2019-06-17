@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655801"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lektion 3: Verarbeiten der Bike Buyer-Miningstruktur
@@ -25,7 +25,7 @@ ms.locfileid: "62655801"
  Sie müssen eine Miningstruktur nur dann erneut verarbeiten, wenn Sie eine Strukturspalte oder die Quelldaten ändern. Wenn Sie einer Miningstruktur, die bereits verarbeitet wurde, ein Miningmodell hinzufügen, können Sie das neue Miningmodell mithilfe der INSERT INTO MINING MODEL-Anweisung trainieren.  
   
 ## <a name="train-structure-template"></a>Trainieren der Strukturvorlage  
- Verwenden Sie zum Trainieren der Miningstruktur und ihre zugeordneten Mining-Modelle die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Verwenden Sie zum Trainieren der Miningstruktur und ihre zugeordneten Mining-Modelle die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
   
 -   Identifizieren der Miningstruktur  
   

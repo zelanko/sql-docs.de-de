@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754494"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server)
@@ -83,7 +83,7 @@ ms.locfileid: "62754494"
  Vom Datenbankadministrator kann das manuelle Failover zum Aktualisieren der Hardware oder Software ohne Einbußen bei der Verfügbarkeit verwendet werden. Um die Datenbankspiegelung für Softwareupgrades zu verwenden, müssen die Upgrades bereits auf dem Spiegelserver und/oder dem System vorhanden sein.  
   
 > [!NOTE]  
->  Die Datenbankspiegelung sollte in der Lage sein, ein paralleles Upgrade auszuführen. Dies wird jedoch nicht garantiert, da zukünftige Änderungen unbekannt sind. Weitere Informationen finden Sie unter [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+>  Die Datenbankspiegelung sollte in der Lage sein, ein paralleles Upgrade auszuführen. Dies wird jedoch nicht garantiert, da zukünftige Änderungen unbekannt sind. Weitere Informationen finden Sie unter [Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md).  
   
  Die folgende Abbildung veranschaulicht ein manuelles Failover, bei dem während des Upgrades einer Datenbankserverinstanz die Datenbank verfügbar bleibt. Nach dem Abschluss des Upgrades kann vom Administrator optional ein Failover zurück zur Originalserverinstanz durchgeführt werden. Dies ist nützlich, wenn der Administrator die Spiegelungssitzung beenden und den Spiegelserver anderweitig verwenden möchte. Auf diese Weise kann eine einzelne Serverinstanz wiederholt beim Aktualisieren einer Reihe von Datenbankserverinstanzen verwendet werden.  
   

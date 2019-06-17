@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9d2ee9e659e9cae8bb93a1ea50b0f2d8e355701
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719988"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Angeben eines Speicherortpfads (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "62719988"
      Ein relativer Speicherortpfad beginnt am Kontextknoten im Dokument. Ein Speicherortpfad besteht aus einer Folge von einem oder mehreren Positionsschritten, die durch einen Schrägstrich (/) getrennt sind. Jeder Schritt wählt relativ zum Kontextknoten einen Satz von Knoten aus. Die Anfangsschrittsequenz wählt relativ zu einem Kontextknoten einen Satz von Knoten aus. Jeder Knoten in diesem Satz wird als Kontextknoten für den folgenden Schritt verwendet. Die Knotensätze, die von diesem Schritt identifiziert werden, werden verknüpft. Z. B. **Child:: Order/Child:: OrderDetail** wählt die  **\<OrderDetail >** untergeordnete Elemente des der  **\<Reihenfolge >** Element die untergeordneten Elemente des Kontextknotens aus.  
   
     > [!NOTE]  
-    >  In der SQLXML 4.0-Implementierung von XPath beginnt jede XPath-Abfrage am Stammkontext, selbst wenn der XPath nicht ausdrücklich absolut ist. Zum Beispiel wird eine XPath-Abfrage, die mit "Customer" beginnt, als "/Customer" behandelt. XPath-Abfrage **Customer [Order]**, beginnt Customer am Stammkontext, Order jedoch am Customer-Kontext. Weitere Informationen finden Sie unter [Einführung in XPath-Abfragen mithilfe von &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  In der SQLXML 4.0-Implementierung von XPath beginnt jede XPath-Abfrage am Stammkontext, selbst wenn der XPath nicht ausdrücklich absolut ist. Zum Beispiel wird eine XPath-Abfrage, die mit "Customer" beginnt, als "/Customer" behandelt. XPath-Abfrage **Customer [Order]** , beginnt Customer am Stammkontext, Order jedoch am Customer-Kontext. Weitere Informationen finden Sie unter [Einführung in XPath-Abfragen mithilfe von &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="location-steps"></a>Positionsschritte  
  Ein Speicherortpfad (absolut oder relativ) besteht aus Positionsschritten, die drei Teile enthalten:  
@@ -52,7 +52,7 @@ ms.locfileid: "62719988"
   
 -   **Knotentest**  
   
-     Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (**untergeordneten**, **übergeordneten**, **Attribut**, und **selbst**) hat einen Hauptknotentyp. Für die **Attribut** Achse, der primäre Knotentyp ist  **\<Attribut >**. Für die **übergeordneten**, **untergeordneten**, und **selbst** Achsen, der primäre Knotentyp ist  **\<Element >**.  
+     Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (**untergeordneten**, **übergeordneten**, **Attribut**, und **selbst**) hat einen Hauptknotentyp. Für die **Attribut** Achse, der primäre Knotentyp ist  **\<Attribut >** . Für die **übergeordneten**, **untergeordneten**, und **selbst** Achsen, der primäre Knotentyp ist  **\<Element >** .  
   
      Wenn der Pfad zum Speicherort gibt an, z. B. **Child:: Customer**,  **\<Kunden >** untergeordneten-Elemente des Kontextknotens ausgewählt sind. Da die **untergeordneten** Achse  **\<Element >** als Hauptknotentyp, ist der Knotentest Customer, TRUE, wenn der Kunde ist ein  **\<Element >** Knoten.  
   

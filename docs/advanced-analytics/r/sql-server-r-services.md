@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642322"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services in SQL Server 2016
@@ -22,7 +22,7 @@ R Services ist ein Add-on in eine SQL Server 2016-Datenbank-Engine-Instanz, für
 
 R Services umfasst eine basisverteilung von R, zusammen mit Enterprise-R-Pakete von Microsoft, damit Sie laden und große Mengen von Daten auf mehreren Kernen verarbeiten und der Ergebnisse in eine einzelne, konsolidierte Ausgabe aggregieren können. Von Microsoft R-Funktionen und Algorithmen werden für sowohl Skalierung als auch Hilfsprogramm entwickelt: Bereitstellung von predictive Analytics, statistische Modellierung, datenvisualisierungen und fortschrittliche-Machine learning-Algorithmen in einer kommerziellen Serverprodukt konzipiert und von Microsoft unterstützt. 
 
-R-Bibliotheken enthalten [ **RevoScaleR**](ref-r-revoscaler.md), [ **MicrosoftML (R)**](ref-r-microsoftml.md), und andere. Da R Services in der Datenbank-Engine integriert ist, können Sie Analysen in der Nähe der Daten und beseitigen, die Kosten und Sicherheitsrisiken bei der datenverschiebung.
+R-Bibliotheken enthalten [ **RevoScaleR**](ref-r-revoscaler.md), [ **MicrosoftML (R)** ](ref-r-microsoftml.md), und andere. Da R Services in der Datenbank-Engine integriert ist, können Sie Analysen in der Nähe der Daten und beseitigen, die Kosten und Sicherheitsrisiken bei der datenverschiebung.
 
 > [!Note]
 > R Services wurde umbenannt in SQL Server 2017 an [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), das Hinzufügen von Python zu reflektieren.

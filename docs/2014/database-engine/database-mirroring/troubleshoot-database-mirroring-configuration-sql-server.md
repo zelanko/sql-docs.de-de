@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754208"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)
@@ -142,7 +142,7 @@ ms.locfileid: "62754208"
  Weitere Informationen finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md), [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md), [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md), [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md), or [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Starten der Spiegelung mit Transact-SQL  
- Die Reihenfolge, in der ALTER DATABASE *Datenbankname* SET PARTNER **='***Partnerserver***'**-Anweisungen ausgegeben werden, ist von großer Bedeutung.  
+ Die Reihenfolge, in der ALTER DATABASE *Datenbankname* SET PARTNER **='***Partnerserver***'** -Anweisungen ausgegeben werden, ist von großer Bedeutung.  
   
 1.  Die erste Anweisung muss auf dem Spiegelserver ausgeführt werden. Wird diese Anweisung ausgegeben, versucht der Spiegelserver nicht, Kontakt zu anderen Serverinstanzen aufzunehmen. Stattdessen weist der Spiegelserver die Datenbank an, so lange zu warten, bis der Prinzipalserver Kontakt mit dem Spiegelserver aufgenommen hat.  
   

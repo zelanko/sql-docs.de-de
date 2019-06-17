@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755237"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Verbinden mit SQL Server Analysis Services (Eigenschaftenseite Verbindung)
@@ -24,7 +24,7 @@ ms.locfileid: "62755237"
   
 ## <a name="options"></a>Optionen  
  **Verbindung mit Datenbank herstellen**  
- Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Bei Auswahl von  **\<standardmäßig >**, Sie werden auf die Standarddatenbank für den Server verbunden. Bei Auswahl von  **\<Suchserver >**, können Sie den Server für die Datenbank, um eine Verbindung herstellen möchten, durchsuchen.  
+ Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Bei Auswahl von  **\<standardmäßig >** , Sie werden auf die Standarddatenbank für den Server verbunden. Bei Auswahl von  **\<Suchserver >** , können Sie den Server für die Datenbank, um eine Verbindung herstellen möchten, durchsuchen.  
   
  **Verbindungstimeout**  
  Geben Sie an, wie lange (in Sekunden) versucht werden soll, eine Verbindung herzustellen, bevor ein Timeout eintritt. Der Standardwert beträgt 15 Sekunden.  

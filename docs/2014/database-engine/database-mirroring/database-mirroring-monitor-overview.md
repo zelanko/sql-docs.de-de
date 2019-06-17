@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755030"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Datenbankspiegelungs-Monitor (Übersicht)
@@ -53,7 +53,7 @@ ms.locfileid: "62755030"
  *\<Status>*  
  Im Folgenden sind die möglichen Statuswerte und die zugehörigen Symbole aufgeführt:  
   
-|Symbol|Status|Description|  
+|Symbol|Status|Beschreibung|  
 |----------|------------|-----------------|  
 |Warnungssymbol|**Unbekannt**|Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.|  
 |Warnungssymbol|**Wird synchronisiert**|Der Inhalt der Spiegeldatenbank hält mit dem Inhalt der Prinzipaldatenbank nicht Schritt. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen.<br /><br /> Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.|  
@@ -64,9 +64,9 @@ ms.locfileid: "62755030"
  *<PRINCIPAL_SERVER>*  
  Der Name des Partners, der derzeit die Prinzipalserverinstanz ist. Der Name weist folgendes Format auf:  
   
- *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
+ *<SYSTEM_NAME>* [ **\\** _<instance_name>_ ]  
   
- Dabei ist *<SYSTEM_NAME>* der Name des Systems, auf dem sich die Serverinstanz befindet. Für eine nicht standardmäßige Serverinstanz wird auch der Instanzname angezeigt: _<SYSTEM_NAME>_**\\**_<instance_name>_.  
+ Dabei ist *<SYSTEM_NAME>* der Name des Systems, auf dem sich die Serverinstanz befindet. Für eine nicht standardmäßige Serverinstanz wird auch der Instanzname angezeigt: _<SYSTEM_NAME>_ **\\** _<instance_name>_ .  
   
  *<MIRROR_SERVER>*  
  Der Name des Partners, der derzeit die Spiegelserverinstanz ist. Das Format ist identisch mit dem Format für den Prinzipalserver.  
@@ -81,7 +81,7 @@ ms.locfileid: "62755030"
   
  Ein Systemadministrator kann die aktuelle Konfiguration der Warnungen für die Datenbank anzeigen, indem er die Seite im Registerformat **Warnungen** auswählt. Von dort aus kann der Administrator das Dialogfeld **Schwellenwerte für Warnung festlegen** öffnen, um einen oder mehrere Schwellenwerte für Warnungen zu aktivieren und zu konfigurieren.  
   
- Im Banner über den Registerkarten zeigt der Detailbereich den Zeitpunkt an, zu dem die Statusinformationen zuletzt vom Monitor aktualisiert wurden: **Letzte Aktualisierung:**_\<date>_*\<time>*. Normalerweise ruft der Datenbankspiegelungs-Monitor Statusinformationen von der Prinzipal- und der Spiegelserverinstanz zu unterschiedlichen Zeiten ab. Die ältere dieser beiden Aktualisierungszeiten wird angezeigt.  
+ Im Banner über den Registerkarten zeigt der Detailbereich den Zeitpunkt an, zu dem die Statusinformationen zuletzt vom Monitor aktualisiert wurden: **Letzte Aktualisierung:** _\<date>_ *\<time>* . Normalerweise ruft der Datenbankspiegelungs-Monitor Statusinformationen von der Prinzipal- und der Spiegelserverinstanz zu unterschiedlichen Zeiten ab. Die ältere dieser beiden Aktualisierungszeiten wird angezeigt.  
   
 ## <a name="action-menu"></a>Menü Aktion  
  Das Menü **Aktion** enthält immer die folgenden Befehle:  

@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: craigg
-ms.openlocfilehash: 58248a2772377ccecba0c701d03276025785c964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698058"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797743"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Dialogfeld „SQL Server-Anmeldung“ (ODBC)
 
 Wenn Sie eine ODBC-Verbindung aufrufen, ohne ausreichende Informationen anzugeben, damit der Treiber eine Verbindung mit einem SQL-Server herstellen kann, zeigt der ODBC-Treiber das Dialogfeld **SQL Server-Anmeldung** an.
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>enthalten
 
 ### <a name="server"></a>Server
 
@@ -55,7 +55,7 @@ Gibt an, die SQL Server oder Azure Active Directory-Anmelde-ID für die Verbindu
 
 Gibt das Kennwort für die SQL Server oder Azure Active Directory Anmelde-ID, die für die Verbindung verwendet wird, wenn **Authentifizierungsmodus** nastaven NA hodnotu **SQL Server** oder **Active Directory-Kennwortauthentifizierung**. Andernfalls die **Kennwort** Feld ist deaktiviert.
 
-### <a name="options"></a>Tastatur
+### <a name="options"></a>enthalten
 
 Zeigt die Gruppe **Optionen** an oder blendet sie aus. Die Schaltfläche **Optionen** wird aktiviert, wenn **Server** über einen Wert verfügt.
 
@@ -103,6 +103,6 @@ Bei Auswahl dieser Option werden Daten, die über die Verbindung übergeben wird
 
 Diese Option ist nur anwendbar, wenn **starke Verschlüsselung für Daten verwenden** aktiviert ist. Bei Auswahl dieser Option wird das Zertifikat des Servers nicht überprüft werden, müssen den richtigen Hostnamen des Servers und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt werden.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

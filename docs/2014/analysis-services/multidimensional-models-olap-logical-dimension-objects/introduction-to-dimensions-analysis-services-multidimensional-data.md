@@ -17,13 +17,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d60d86a333c38b1fe122d72f55ccba25653256c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702532"
 ---
-# <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Einführung in Dimensionen (Analysis Services &amp;ndash; Mehrdimensionale Daten)
+# <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Einführung in Dimensionen (Analysis Services &ndash; Mehrdimensionale Daten)
   Alle Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Dimensionen sind Gruppen von Attributen basierend auf Spalten aus Tabellen oder Sichten in einer Datenquellensicht. Dimensionen sind unabhängig von einem Cube vorhanden, können sowohl in mehreren Cubes als auch mehrfach in einem einzelnen Cube verwendet und zwischen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanzen verknüpft werden. Eine unabhängig von einem Cube vorhandene Dimension wird als Datenbankdimension bezeichnet und eine innerhalb eines Cubes verwendete Instanz einer Datenbankdimension als Cubedimension.  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimension auf Basis eines Sternschemaentwurfs  
@@ -47,7 +47,7 @@ ms.locfileid: "62702532"
   
  Im vorherigen Diagramm der **FactResellerSales** Faktentabelle verfügt nicht über eine fremdschlüsselbeziehung mit der **DimGeography** Dimensionstabelle. Allerdings die **FactResellerSales** Faktentabelle verfügt über eine fremdschlüsselbeziehung mit der **DimReseller** Dimensionstabelle, die wiederum hat eine fremdschlüsselbeziehung mit der  **DimGeography** Dimensionstabelle. Zum Definieren einer Reseller-Dimensions, die geografische Informationen zu jedem Wiederverkäufer enthält müssten Sie zum Abrufen dieser Attribute auf die **DimGeography** und **DimReseller** Dimensionstabellen. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erzielen Sie dasselbe Ergebnis, wenn Sie zwei separate Dimensionen erstellen und diese innerhalb einer Measuregruppe verknüpfen, indem Sie eine auf dem Konzept der Bezugsdimension basierende Beziehung zwischen beiden Dimensionen definieren. Weitere Informationen zu bezugsdimensionsbeziehungen, finden Sie unter [Dimensionsbeziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
- Ein Vorteil der Verwendung von Bezugsdimensionsbeziehungen in diesem Szenario liegt darin, dass Sie eine einzelne Geography-Dimension und anschließend mehrere darauf basierende Cubedimensionen erstellen können, ohne zusätzlichen Speicherplatz zu benötigen. Sie können z. B. eine der Geography-Cubedimensionen mit einer Reseller-Dimension verknüpfen und eine andere mit einer Customer-Dimension. **Verwandte Themen:**[Dimensionsbeziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [Definieren einer referenzierten Beziehung und deren Eigenschaften auf die verwiesen wird](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ Ein Vorteil der Verwendung von Bezugsdimensionsbeziehungen in diesem Szenario liegt darin, dass Sie eine einzelne Geography-Dimension und anschließend mehrere darauf basierende Cubedimensionen erstellen können, ohne zusätzlichen Speicherplatz zu benötigen. Sie können z. B. eine der Geography-Cubedimensionen mit einer Reseller-Dimension verknüpfen und eine andere mit einer Customer-Dimension. **Verwandte Themen:** [Dimensionsbeziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [Definieren einer referenzierten Beziehung und deren Eigenschaften auf die verwiesen wird](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>Verarbeiten einer Dimension  
  Wenn Sie eine Dimension erstellt haben, müssen Sie diese verarbeiten, bevor Sie die Elemente der Attribute und Hierarchien in der Dimension anzeigen können. Wenn sich die Struktur einer Dimension geändert hat oder die Informationen in den zugrunde liegenden Tabellen aktualisiert wurden, müssen Sie die Dimension erneut verarbeiten, bevor Sie die Änderungen anzeigen können. Beim Verarbeiten einer Dimension nach einer strukturellen Änderung müssen sämtliche Cubes, die die Dimension enthalten, ebenfalls verarbeitet werden. Andernfalls kann der Cube nicht angezeigt werden.  

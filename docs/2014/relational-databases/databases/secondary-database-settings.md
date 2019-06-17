@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871211"
 ---
 # <a name="secondary-database-settings"></a>Einstellungen für die sekundäre Datenbank
@@ -74,7 +74,7 @@ ms.locfileid: "62871211"
  Zeigt den Namen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrags an, der verwendet wird, um Sicherungsdateien des Transaktionsprotokolls vom primären Server auf den sekundären Server zu kopieren. Wenn Sie den Auftrag erstmalig erstellen, können Sie den Namen durch Eingabe in das entsprechende Feld ändern.  
   
  **Zeitplan**  
- Zeigt den aktuellen Zeitplan für den Kopierauftrag des SQL Server-Agents an, mit dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden. Diesen Zeitplan können Sie ändern. Dazu klicken Sie auf **Zeitplan...**.  
+ Zeigt den aktuellen Zeitplan für den Kopierauftrag des SQL Server-Agents an, mit dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden. Diesen Zeitplan können Sie ändern. Dazu klicken Sie auf **Zeitplan...** .  
   
  **Zeitplan...**  
  Ändert die Parameter des SQL Server-Agentauftrags, von dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden.  
@@ -107,7 +107,7 @@ ms.locfileid: "62871211"
  Zeigt den Namen des SQL Server-Agentauftrags an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden sollen. Wenn Sie den Auftrag erstmalig erstellen, können Sie den Namen durch Eingabe in das entsprechende Feld ändern.  
   
  **Zeitplan**  
- Zeigt den aktuellen Zeitplan für den SQL Server-Agentauftrag an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden. Diese Option können Sie ändern. Dazu klicken Sie auf **Zeitplan...**.  
+ Zeigt den aktuellen Zeitplan für den SQL Server-Agentauftrag an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden. Diese Option können Sie ändern. Dazu klicken Sie auf **Zeitplan...** .  
   
  **Zeitplan...**  
  Ändert die Parameter, die dem SQL Server-Agentwiederherstellungsauftrag zugeordnet sind.  

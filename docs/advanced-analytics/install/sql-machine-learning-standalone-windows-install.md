@@ -10,16 +10,16 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62747072"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installieren von Machine Learning Server (eigenständig) oder R Server (eigenständig) mit SQL Server-Setup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server-Setup enthält einen **freigegebene Funktion** -Option zum Installieren einer nicht instanzabhängige, eigenständige Machine Learning-Server, die außerhalb von SQL Server ausgeführt wird. In SQL Server 2016 kann dieses Feature heißt **R Server (eigenständig)**. In SQL Server 2017 heißt es **Machine Learning Server (eigenständig)** enthält R und Python. 
+SQL Server-Setup enthält einen **freigegebene Funktion** -Option zum Installieren einer nicht instanzabhängige, eigenständige Machine Learning-Server, die außerhalb von SQL Server ausgeführt wird. In SQL Server 2016 kann dieses Feature heißt **R Server (eigenständig)** . In SQL Server 2017 heißt es **Machine Learning Server (eigenständig)** enthält R und Python. 
 
 Ein eigenständigen Server, wie vom SQL Server-Setup installiert ist funktionell gleichwertig mit der nicht-SQL-Versionen unter dem Markennamen [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), unterstützen die gleichen verwenden, Anwendungsfälle und Szenarien, einschließlich:
 
@@ -193,7 +193,7 @@ Auf getrennten Servern sind zusätzliche Schritte erforderlich. Sie müssen das 
 
    + Doppelklicken Sie auf die .exe aus, um Setup auszuführen. Wenn Sie ein kumulatives Update auf einem Server ohne Internetverbindung zu installieren, werden Sie aufgefordert, um den Speicherort der CAB-Dateien für R und Python auszuwählen.
 
-8. Bearbeiten Sie nach der Installation auf einem Server, Sie haben für die operationalisierung mit Web-Knoten und Compute-Knoten aktiviert **"appSettings.JSON"**, einen Eintrag "MMLResourcePath" direkt unter "MMLNativePath" hinzufügen:
+8. Bearbeiten Sie nach der Installation auf einem Server, Sie haben für die operationalisierung mit Web-Knoten und Compute-Knoten aktiviert **"appSettings.JSON"** , einen Eintrag "MMLResourcePath" direkt unter "MMLNativePath" hinzufügen:
 
     ```json
     "ScorerParameters": {

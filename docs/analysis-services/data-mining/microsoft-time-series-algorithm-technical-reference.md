@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd520413e425ad7ef43eb44511365c43c51022f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753542"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
@@ -112,7 +112,7 @@ ms.locfileid: "62753542"
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  Die folgende Tabelle beschreibt die Parameter, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwendet werden können.  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*AUTO_DETECT_PERIODICITY*|Gibt einen numerischen Wert zwischen [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] und 1 an, der Periodizität erkennt. Der Standardwert ist 0,6.<br /><br /> Wenn der Wert näher bei [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]liegt, wird Periodizität nur bei stark periodischen Daten erkannt.<br /><br /> Das Festlegen dieses Werts näher bei 1 begünstigt die Ermittlung vieler fast periodischer Muster und die automatische Generierung von Periodizitätshinweisen.<br /><br /> Hinweis: Umgang mit der Anzahl von Periodizitätshinweisen führt häufig zu erheblich längeren, jedoch auch zu genaueren Modellen Modelltrainingszeiten.|  
 |*COMPLEXITY_PENALTY*|Steuert das Anwachsen der Entscheidungsstruktur. Der Standardwert ist 0,1.<br /><br /> Das Verringern des Werts erhöht die Wahrscheinlichkeit einer Teilung. Das Erhöhen des Werts senkt die Wahrscheinlichkeit einer Teilung.<br /><br /> Hinweis: Dieser Parameter ist nur in einigen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar.|  

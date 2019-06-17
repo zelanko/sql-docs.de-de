@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789867"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -99,7 +99,7 @@ ms.locfileid: "62789867"
   
 3.  Verwenden Sie das `Get-ClusterResource`-Cmdlet, um die Netzwerknamenressource zu suchen. Verwenden Sie dann `Set-ClusterParameter`-Cmdlet, um den `HostRecordTTL`-Wert folgendermaßen festzulegen:  
   
-     Get-ClusterResource „*\<Netzwerkressourcenname>*“ | Set-ClusterParameter-HostRecordTTL *\<Zeit_in_Sekunden>*  
+     Get-ClusterResource „ *\<Netzwerkressourcenname>* “ | Set-ClusterParameter-HostRecordTTL *\<Zeit_in_Sekunden>*  
   
      Im folgenden PowerShell-Beispiel wird der HostRecordTTL für eine Netzwerknamenressource mit dem Namen "`SQL Network Name (SQL35)`" auf 300 Sekunden festgelegt.  
   
@@ -264,7 +264,7 @@ ms.locfileid: "62789867"
 ###  <a name="RequirementsAG"></a> Voraussetzungen (Verfügbarkeitsgruppen)  
  Beim Erstellen oder Neukonfigurieren einer Verfügbarkeitsgruppenkonfiguration müssen Sie folgende Anforderungen einhalten.  
   
-||Voraussetzung|Description|  
+||Voraussetzung|Beschreibung|  
 |-|------------------|-----------------|  
 |![Kontrollkästchen](../../media/checkboxemptycenterxtraspacetopandright.gif "Kontrollkästchen")|Wenn Sie planen, eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) zu verwenden, um ein Verfügbarkeitsreplikat zu hosten, muss gewährleistet sein, dass Sie die FCI-Einschränkungen verstehen und dass die FCI-Anforderungen erfüllt werden.|[Voraussetzungen und Einschränkungen zum Hosten eines Verfügbarkeitsreplikats mithilfe einer SQL Server-Failoverclusterinstanz (FCI)](#FciArLimitations) (früher in diesem Thema)|  
   

@@ -83,7 +83,7 @@
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md
     - name: Angeben eines Knotentests unter dem Speicherortpfad (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
-    - name: 'Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0) '
+    - name: Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md
 - name: XPath-Beispielabfragen (SQLXML 4.0)
   href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md

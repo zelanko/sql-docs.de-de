@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: bb07c2ca671fccbfdb737004ea0786359873a179
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138852"
 ---
 # <a name="global-settings-editor-oracletosql"></a>Globale Einstellungen (Editor) (OracleToSQL)
@@ -24,7 +24,7 @@ Die Editor-Einstellungen, für den Zugriff auf die **Tools** , wählen Sie im Me
   
 ## <a name="options"></a>Optionen  
 **Zeilennummern anzeigen**  
-Wählen Sie zum Anzeigen von Zeilennummern im Code-Editor-Fenster **"true"**.  
+Wählen Sie zum Anzeigen von Zeilennummern im Code-Editor-Fenster **"true"** .  
   
 Wenn ein Code-Editor-Fenster aktiviert ist, wenn Sie diese Einstellung ändern, müssen Sie möglicherweise erneut auswählen, das aktuelle Objekt, um die Anzeige zu aktualisieren.  
   

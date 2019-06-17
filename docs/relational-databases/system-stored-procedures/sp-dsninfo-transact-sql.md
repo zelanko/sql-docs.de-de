@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724018"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -42,24 +42,24 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dsn = ] 'dsn'` Ist der Name des ODBC-DSN oder OLE DB-Verbindungsservers. *DSN* ist **varchar(128)**, hat keinen Standardwert.  
+`[ @dsn = ] 'dsn'` Ist der Name des ODBC-DSN oder OLE DB-Verbindungsservers. *DSN* ist **varchar(128)** , hat keinen Standardwert.  
   
-`[ @infotype = ] 'info_type'` Ist der Typ der zurückzugebenden Informationen. Wenn *Infotyp* nicht angegeben ist oder wenn NULL angegeben wird, werden alle Informationstypen zurückgegeben. *Infotyp* ist **varchar(128)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @infotype = ] 'info_type'` Ist der Typ der zurückzugebenden Informationen. Wenn *Infotyp* nicht angegeben ist oder wenn NULL angegeben wird, werden alle Informationstypen zurückgegeben. *Infotyp* ist **varchar(128)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Gibt den Anbieter der Datenquelle an.|  
 |**DBMS_VERSION**|Gibt die Version der Datenquelle an.|  
 |**DATABASE_NAME**|Gibt den Datenbanknamen an.|  
 |**SQL_SUBSCRIBER**|Gibt an, dass die Datenquelle ein Abonnent sein kann.|  
   
-`[ @login = ] 'login'` Ist der Anmeldename für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Anmeldung*ist **varchar(128)**, hat den Standardwert NULL.  
+`[ @login = ] 'login'` Ist der Anmeldename für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Anmeldung*ist **varchar(128)** , hat den Standardwert NULL.  
   
-`[ @password = ] 'password'` Ist das Kennwort für die Anmeldung. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Kennwort*ist **varchar(128)**, hat den Standardwert NULL.  
+`[ @password = ] 'password'` Ist das Kennwort für die Anmeldung. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Kennwort*ist **varchar(128)** , hat den Standardwert NULL.  
   
 `[ @dso_type = ] dso_type` Ist der Datenquellentyp. *Dso_type* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1** (Standard)|ODBC-Datenquelle (ODBC data source)|  
 |**3**|OLE DB-Datenquelle|  
@@ -69,7 +69,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**Informationstyp**|**nvarchar(64)**|Informationstypen, wie z. B. DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Wert**|**nvarchar(512)**|Der Wert der verknüpften Informationstypen.|  

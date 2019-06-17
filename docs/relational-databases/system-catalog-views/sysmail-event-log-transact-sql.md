@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62759944"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "62759944"
 
   Enthält eine Zeile für jede Windows- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Meldung, die vom Datenbank-E-Mail-System zurückgegeben wird. (Die Nachricht in diesem Kontext bezieht sich auf eine Nachricht z. B. eine Fehlermeldung, die nicht in einer e-Mail-Nachricht.) Konfigurieren der **Protokolliergrad** Parameter mithilfe der **Systemparameter konfigurieren** im Dialogfeld des e-Mail-Datenbankkonfigurations-Assistenten, oder die [Sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)gespeicherte Prozedur, um zu bestimmen, welche Meldungen zurückgegeben werden.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|Der Bezeichner von Elementen im Protokoll.|  
 |**event_type**|**varchar(11)**|Die Art der Mitteilung, die in das Protokoll eingefügt wird. Mögliche Werte sind Fehler, Warnungen, Informationsmeldungen, Erfolgsmeldungen und zusätzliche interne Meldungen.|  

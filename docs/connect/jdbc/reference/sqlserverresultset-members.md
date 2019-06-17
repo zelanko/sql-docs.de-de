@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 464b88da8c20587298e308613e733db9b3e8cd87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 57e1859d4729860e7d8a5d11be4a4c3299bccced
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801499"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47623738"
   
 ## <a name="fields"></a>Felder  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Dient zum Angeben eines Typs der optimistischen Nebenläufigkeit (Lese-/Schreibzugriff) für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ohne Zeilensperre.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Dient zum Angeben eines Typs der optimistischen Nebenläufigkeit (Lese-/Schreibzugriff) für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ohne Zeilensperre.|  
@@ -41,13 +41,13 @@ ms.locfileid: "47623738"
   
 ## <a name="inherited-fields"></a>Geerbte Felder  
   
-|Klasse geerbt von:|Beschreibung|  
+|Klasse geerbt von:|und Beschreibung|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT, CONCUR_READ_ONLY, CONCUR_UPDATABLE, FETCH_FORWARD, FETCH_REVERSE, FETCH_UNKNOWN, HOLD_CURSORS_OVER_COMMIT, TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Versetzt den Cursor in die angegebene Zeile in diesem [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|Versetzt den Cursor an eine Position nach der letzten Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts.|  
@@ -152,7 +152,7 @@ ms.locfileid: "47623738"
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

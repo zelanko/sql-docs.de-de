@@ -41,7 +41,7 @@ Wenn der Methodenaufruf fehlschlägt, wird eine leere Zeichenfolge zurückgegebe
 ## <a name="remarks"></a>Remarks  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
 Zwischen der Version 2.0 und 4.3 der optionale Parameter ist ein Tabellenname, und der Rückgabewert ist die ID der Zeile, in der angegebenen Tabelle zuletzt hinzugefügt wurde.
-5.0 ab, der optionale Parameter wird als Name der Tasksequenz betrachtet, und der Rückgabewert ist die Sequenz, die zuletzt hinzugefügt wurde, für den Namen der bereitgestellten Tasksequenz.
+5\.0 ab, der optionale Parameter wird als Name der Tasksequenz betrachtet, und der Rückgabewert ist die Sequenz, die zuletzt hinzugefügt wurde, für den Namen der bereitgestellten Tasksequenz.
 Wenn ein Tabellenname für Versionen, nach 4.3 bereitgestellt wird, `lastInsertId` eine leere Zeichenfolge zurückgegeben.
 Sequenzen werden nur in SQL Server 2012 und höher unterstützt.
   

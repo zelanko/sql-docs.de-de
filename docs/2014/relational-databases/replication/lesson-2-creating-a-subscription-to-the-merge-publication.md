@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721028"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lektion 2: Erstellen eines Abonnements für die Mergeveröffentlichung
@@ -40,7 +40,7 @@ ms.locfileid: "62721028"
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **SalesOrdersReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie anschließend auf **Weiter**.  
   
-8.  Klicken Sie auf der Seite Sicherheit für den Merge-Agent auf die Auslassungspunkte (**...** ) Geben Sie eine Schaltfläche \< _Machine_Name >_**\repl_merge** in die **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein, klicken Sie auf **OK**, klicken Sie auf **Weiter**, und klicken Sie dann auf **Weiter** erneut aus.  
+8.  Klicken Sie auf der Seite Sicherheit für den Merge-Agent auf die Auslassungspunkte ( **...** ) Geben Sie eine Schaltfläche \< _Machine_Name >_ **\repl_merge** in die **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein, klicken Sie auf **OK**, klicken Sie auf **Weiter**, und klicken Sie dann auf **Weiter** erneut aus.  
   
 9. Wählen Sie auf der Seite Abonnements initialisieren aus der Liste **Initialisierungszeitpunkt** die Option **Bei der ersten Synchronisierung** aus, klicken Sie auf **Weiter**, und klicken Sie erneut auf **Weiter** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62721028"
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Abonnenten her, erweitern Sie **Datenbanken**, **SalesOrdersReplica**und **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Benutzer**, und wählen Sie anschließend **Neuer Benutzer**aus.  
   
-2.  Auf der **allgemeine** geben \< _Machine_Name >_**\repl_merge** in die **Benutzernamen** klicken Sie auf die Auslassungszeichen () **...** ), zeigen Sie auf **Durchsuchen**Option \< _Machine_Name >_**\repl_merge**, klicken Sie auf **OK**, klicken Sie auf **Namen überprüfen**, und klicken Sie dann auf **OK**.  
+2.  Auf der **allgemeine** geben \< _Machine_Name >_ **\repl_merge** in die **Benutzernamen** klicken Sie auf die Auslassungszeichen () **...** ), zeigen Sie auf **Durchsuchen**Option \< _Machine_Name >_ **\repl_merge**, klicken Sie auf **OK**, klicken Sie auf **Namen überprüfen**, und klicken Sie dann auf **OK**.  
   
 3.  Wählen Sie unter **Mitgliedschaft in Datenbankrollen**die **db_owner**-Rolle aus, und klicken Sie anschließend auf **OK** , um den Benutzer zu erstellen.  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1303ca724ef6790ae7bcf218ab8ed0e5da4ed38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62735086"
 ---
 # <a name="time-date-and-interval-functions"></a>Uhrzeit-, Datums- und Intervallfunktionen
@@ -43,7 +43,7 @@ Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skal
 |**CURRENT_TIMESTAMP**<br /> **[(** *Zeitstempel mit Genauigkeit* **)]** (ODBC-Version 3.0)|Gibt die aktuelle lokale Datum und Ortszeit als einen Timestamp-Wert zurück. Die *Zeitstempel mit Genauigkeit* Argument bestimmt die Genauigkeit des zurückgegebenen Zeitstempels.|  
 |**CURDATE ()** (ODBC 1.0)|Gibt das aktuelle Datum zurück.|  
 |**CURTIME ()** (ODBC 1.0)|Gibt die aktuelle lokale Zeit zurück.|  
-|**DAYNAME(** *date_exp* **)** (ODBC 2.0)|Gibt eine Zeichenfolge, die mit dem-spezifischen Namen des Tags (z. B. Sonntag bis Samstag oder so. bis Sa. für eine Datenquelle, die Englisch oder Sunday bis Saturday für eine Datenquelle verwendet, die Deutsch verwendet) für den Tagteil von *"date_exp"*.|  
+|**DAYNAME(** *date_exp* **)** (ODBC 2.0)|Gibt eine Zeichenfolge, die mit dem-spezifischen Namen des Tags (z. B. Sonntag bis Samstag oder so. bis Sa. für eine Datenquelle, die Englisch oder Sunday bis Saturday für eine Datenquelle verwendet, die Deutsch verwendet) für den Tagteil von *"date_exp"* .|  
 |**DAYOFMONTH(** *date_exp* **)** (ODBC 1.0)|Gibt den Tag des Monats basierend auf dem Monatsfeld in *"date_exp"* als ganze Zahl im Bereich von 1 bis 31.|  
 |**DAYOFWEEK(** *date_exp* **)** (ODBC 1.0)|Gibt den Tag der Woche, die basierend auf dem wochenfeld in *"date_exp"* als ganze Zahl im Bereich von 1 bis 7, wobei 1 steht für Sonntag.|  
 |**DAYOFYEAR(** *date_exp* **)** (ODBC 1.0)|Gibt den Tag des Jahres basierend auf das Jahresfeld in *"date_exp"* als ganze Zahl im Bereich von 1-366.|  
@@ -51,7 +51,7 @@ Die folgende Tabelle enthält Datum und Uhrzeit-Funktionen, die in der ODBC-Skal
 |**Stunde (** *"time_exp"* **)** (ODBC-1.0)|Gibt die Stunde basierend auf dem Stundenfeld in *"time_exp"* als ganze Zahl im Bereich von 0 bis 23.|  
 |**MINUTE(** *time_exp* **)** (ODBC 1.0)|Gibt die Minute basierend auf dem Minutenfeld in *"time_exp"* als ganze Zahl im Bereich von 0 bis 59.|  
 |**MONTH(** *date_exp* **)** (ODBC 1.0)|Gibt den Monat basierend auf dem Monatsfeld in *"date_exp"* als ganze Zahl im Bereich von 1 bis 12.|  
-|**MONTHNAME(** *date_exp* **)** (ODBC 2.0)|Gibt eine Zeichenfolge, die mit dem-spezifischen Namen des Monats (z. B. Januar bis Dezember oder Januar bis Dezember für eine Datenquelle, die Englisch verwendet, oder January bis December für eine Datenquelle, die Deutsch verwendet) für den Monatsteil von *"date_exp"*.|  
+|**MONTHNAME(** *date_exp* **)** (ODBC 2.0)|Gibt eine Zeichenfolge, die mit dem-spezifischen Namen des Monats (z. B. Januar bis Dezember oder Januar bis Dezember für eine Datenquelle, die Englisch verwendet, oder January bis December für eine Datenquelle, die Deutsch verwendet) für den Monatsteil von *"date_exp"* .|  
 |**(JETZT)** (ODBC 1.0)|Gibt das aktuelle Datum und Uhrzeit als einen Timestamp-Wert zurück.|  
 |**QUARTER(** *date_exp* **)** (ODBC 1.0)|Gibt das Quartal *"date_exp"* als ganze Zahl im Bereich von 1 bis 4, wobei 1 am 1. Januar bis 31. März darstellt.|  
 |**SECOND(** *time_exp* **)** (ODBC 1.0)|Gibt die Sekunde basierend auf dem Sekundenfeld in *"time_exp"* als ganze Zahl im Bereich von 0 bis 59.|

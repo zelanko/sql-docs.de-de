@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767312"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
@@ -110,11 +110,11 @@ Wenn Sie Daten aus Excel exportieren und diese Option aktivieren, enthält die e
 
 Es gibt drei Arten von Excel-Objekten, die Sie als Quelle oder Ziel für Ihre Daten verwenden können: ein Arbeitsblatt, einen benannten Bereich oder einen unbenannten Zellbereich, den Sie mit der Adresse angeben.
 
--   **Arbeitsblatt:** Fügen Sie das `$`-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]**, um ein Arbeitsblatt anzugeben. Oder suchen Sie in der Liste der vorhandenen Tabellen und Ansichten nach einem Namen, der mit dem `$`-Zeichen endet.
+-   **Arbeitsblatt:** Fügen Sie das `$`-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]** , um ein Arbeitsblatt anzugeben. Oder suchen Sie in der Liste der vorhandenen Tabellen und Ansichten nach einem Namen, der mit dem `$`-Zeichen endet.
 
 -   **Benannter Bereich:** Stellen Sie den Namen des Bereichs bereit, z.B. **MyDataRange**, um einen benannten Bereich anzugeben. Oder suchen Sie in der Liste der vorhandenen Tabellen und Ansichten nach einem Namen, der nicht mit dem `$`-Zeichen endet.
     
--   **Unbenannter Bereich:** Um einen Bereich von Zellen anzugeben, den Sie nicht benannt haben, fügen Sie das $-Zeichen an das Ende des Blattnamens an, fügen Sie die Bereichsspezifikation hinzu, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B: **[Sheet1$A1:B4]**.
+-   **Unbenannter Bereich:** Um einen Bereich von Zellen anzugeben, den Sie nicht benannt haben, fügen Sie das $-Zeichen an das Ende des Blattnamens an, fügen Sie die Bereichsspezifikation hinzu, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B: **[Sheet1$A1:B4]** .
 
 Führen Sie einen der folgenden Schritte aus, um den Typ des Excel-Objekts auszuwählen oder anzugeben, das Sie als Quelle oder Ziel für Ihre Daten verwenden möchten:
 

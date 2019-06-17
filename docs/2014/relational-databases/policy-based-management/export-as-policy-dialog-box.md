@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705198"
 ---
 # <a name="export-as-policy-dialog-box"></a>Dialogfeld 'Als Richtlinie exportieren'
@@ -33,7 +33,7 @@ ms.locfileid: "62705198"
  Wählen Sie diese Option aus, um die Richtlinie auf der lokalen Serverinstanz zu speichern.  
   
  **In Datei**  
- Um die Richtlinie als XML-Datei zu speichern, geben Sie den Pfad und den Namen der Datei ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen (**...**).  
+ Um die Richtlinie als XML-Datei zu speichern, geben Sie den Pfad und den Namen der Datei ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)  

@@ -38,10 +38,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62759706"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access Inventory Schemas (AccessToSQL)
@@ -134,7 +134,7 @@ Foreign Key-Metadaten exportiert wird, um die **SSMA_Access_InventoryForeignKeys
 ## <a name="queries"></a>Abfragen  
 Abfragen von Metadaten exportiert wird, um die **SSMA_Access_InventoryQueries** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die diese Abfrage enthält.|  
 |**QueryId**|**int**|Inkrementelle eine ganze Zahl, die die Abfrage identifiziert. Diese Spalte ist der primäre Schlüssel für die Tabelle.|  
@@ -156,7 +156,7 @@ In von Formularmetadaten exportiert die **SSMA_Access_InventoryForms** Tabelle. 
 ## <a name="macros"></a>Makros  
 Makro Metadaten exportiert wird, um die **SSMA_Access_InventoryMacros** Tabelle. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifiziert die Datenbank, die das Makro enthält.|  
 |**MacroId**|**int**|Inkrementelle eine ganze Zahl, die das Makro identifiziert. Diese Spalte ist der primäre Schlüssel für die Tabelle.|  

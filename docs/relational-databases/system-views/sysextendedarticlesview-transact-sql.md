@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40a494f4cf157b85f13327f8367b90e8db2fcce7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62693768"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "62693768"
 |**sync_objid**|**int**|Die ID der Tabelle oder Sicht, die die Artikeldefinition darstellt.|  
 |**type**|**tinyint**|Der Artikeltyp:<br /><br /> **1** = Protokollbasierter Artikel.<br /><br /> **3** = Protokollbasierter Artikel mit manuell erstelltem Filter.<br /><br /> **5** = Protokollbasierter Artikel mit manuell erstellter Sicht.<br /><br /> **7** = Protokollbasierter Artikel mit manuell erstelltem Filter und manuell erstellter Sicht.|  
 |**upd_cmd**|**nvarchar(255)**|Der bei einer UPDATE-Anweisung auszuführende Befehl, wird sonst aus dem Protokoll konstruiert|  
-|**schema_option**|**binary**|Gibt an, welche Eigenschaften des veröffentlichten Objekts in der Momentaufnahme ausgegeben wurden.  Eine Liste der unterstützten Schemaoptionen finden Sie [Sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
+|**schema_option**|**binary**|Gibt an, welche Eigenschaften des veröffentlichten Objekts in der Momentaufnahme ausgegeben wurden. Eine Liste der unterstützten Schemaoptionen finden Sie [Sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|Der Besitzer der Tabelle in der Zieldatenbank|  
 |**ins_scripting_proc**|**int**|Der Objektbezeichner der benutzerdefinierten gespeicherten Prozedur oder des Skripts, die bzw. das beim Replizieren einer INSERT-Anweisung ausgeführt wird|  
 |**del_scripting_proc**|**int**|Der Objektbezeichner der benutzerdefinierten gespeicherten Prozedur oder des Skripts, die bzw. das beim Replizieren einer DELETE-Anweisung ausgeführt wird|  

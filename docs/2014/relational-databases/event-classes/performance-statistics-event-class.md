@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827193"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics-Ereignisklasse
@@ -72,7 +72,7 @@ ms.locfileid: "62827193"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Ja|  
 |BinaryData|`image`|Binary XML des kompilierten Plans.|2|Ja|  
@@ -115,7 +115,7 @@ ms.locfileid: "62827193"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULL|52|Ja|  
 |BinaryData|`image`|NULL|2|Ja|  

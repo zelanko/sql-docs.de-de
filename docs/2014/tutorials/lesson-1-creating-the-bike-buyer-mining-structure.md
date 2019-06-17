@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678503"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lektion 1: Erstellen der Bike Buyer-Miningstruktur
@@ -23,7 +23,7 @@ ms.locfileid: "62678503"
  Die Bike Buyer-Miningstruktur, die Sie in dieser Lektion erstellen unterstützt das Hinzufügen von Miningmodellen, die basierend auf den [Microsoft Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft Decision Trees-Algorithmus](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). In späteren Lektionen untersuchen Sie mithilfe der Clustering-Miningmodelle verschiedene Möglichkeiten zum Gruppieren von Kunden und verwenden Entscheidungsstruktur-Miningmodelle, um vorherzusagen, ob ein potenzieller Kunde ein Fahrrad kaufen wird oder nicht.  
   
 ## <a name="create-mining-structure-statement"></a>CREATE MINING STRUCTURE-Anweisung  
- Um eine Miningstruktur zu erstellen, verwenden Sie die [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Um eine Miningstruktur zu erstellen, verwenden Sie die [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
   
 -   Benennen die Struktur.  
   
@@ -214,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  In der nächsten Lektion fügen Sie der soeben erstellten Struktur Miningmodelle hinzu.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

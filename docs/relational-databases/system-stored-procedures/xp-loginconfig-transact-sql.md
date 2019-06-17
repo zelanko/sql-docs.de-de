@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645102"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
@@ -46,13 +46,13 @@ xp_loginconfig ['config_name']
  **'** *config_name* **'**  
  Der anzuzeigende Konfigurationswert. Wenn *Config_name* ist nicht angegeben ist, werden alle Konfigurationswerte gemeldet. *Config_name* ist **Sysname**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Anmeldemodus**|Der Anmeldungssicherheitsmodus. Mögliche Werte sind **gemischt** und **Windows-Authentifizierung**.<br /><br /> Ersetzt durch:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**Anmeldung**|Der Name der standardmäßigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmelde-ID für autorisierte Benutzer vertrauenswürdiger Verbindungen (für Benutzer ohne entsprechenden Anmeldenamen). Der Standardanmeldename ist **Gast**. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**Standarddomäne**|Der Name der standardmäßigen Windows-Domäne für Netzwerkbenutzer vertrauenswürdiger Verbindungen. Die Standarddomäne ist die Domäne des Computers, auf dem Windows und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**Überwachungsebene**|Die Überwachungsebene. Mögliche Werte sind **keine**, **Erfolg**, **Fehler**, und **alle**. Überwachungen werden in das Fehlerprotokoll und in die Windows-Ereignisanzeige geschrieben.|  
-|**Set-hostname**|Gibt an, ob der Hostname aus dem Clientanmeldedatensatz durch den Windows-Netzwerk-Benutzernamen ersetzt wird. Mögliche Werte sind **"true"** oder **"false"**. Wenn dies festgelegt ist, der Netzwerknamen für den Benutzer angezeigt wird, in der Ausgabe von **Sp_who**.|  
+|**Set-hostname**|Gibt an, ob der Hostname aus dem Clientanmeldedatensatz durch den Windows-Netzwerk-Benutzernamen ersetzt wird. Mögliche Werte sind **"true"** oder **"false"** . Wenn dies festgelegt ist, der Netzwerknamen für den Benutzer angezeigt wird, in der Ausgabe von **Sp_who**.|  
 |**map _**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Unterstrich (_) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne** (Standard), **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**map $**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dollarzeichen ($) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Der Standardwert ist **Speicherplatz**. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**# zuordnen**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Nummernzeichen (#) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Der Standard ist der Bindestrich. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725384"
 ---
 # <a name="data-types-in-analysis-services"></a>Datentypen in Analysis Services
@@ -25,7 +25,7 @@ ms.locfileid: "62725384"
 |||  
 |-|-|  
 |BigInt|Ein 64-Bit-Integer mit Vorzeichen Die *BigInt* -Werttyp stellt Ganzzahlen dar, mit Werten zwischen-9.223.372.036.854.775.808 und + 9.223.372.036.854.775.807 liegen.|  
-|Binär (Binary)|Ein Stream binärer Daten der **Byte** Typ. **Byte** ist ein Werttyp, der Ganzzahlen ohne Vorzeichen darstellt, die zwischen 0 und 255 liegen.|  
+|Binär|Ein Stream binärer Daten der **Byte** Typ. **Byte** ist ein Werttyp, der Ganzzahlen ohne Vorzeichen darstellt, die zwischen 0 und 255 liegen.|  
 |Boolean|Instanzen dieses Typs weisen den Wert `true` oder `false` auf.|  
 |Währung|Ein *Währung* Wert im Bereich zwischen-922.337.203.685.477,5808 bis + 922.337.203.685.477,5807 mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit (vier Dezimalstellen).|  
 |date|Datum und Uhrzeitdaten, die als double-Wert gespeichert werden. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages oder die Tageszeit ist.|  

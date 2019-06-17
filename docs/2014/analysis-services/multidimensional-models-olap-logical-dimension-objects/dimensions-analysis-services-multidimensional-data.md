@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702422"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensionen (Analysis Services – Mehrdimensionale Daten)
@@ -26,7 +26,7 @@ ms.locfileid: "62702422"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Einführung in Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](dimensions-analysis-services-multidimensional-data.md)|Bietet eine Übersicht über die Konzepte von Dimensionen.|  
 |[Attribute und Attributhierarchien](attributes-and-attribute-hierarchies.md)|Beschreibt Attribute und Attributhierarchien.|  

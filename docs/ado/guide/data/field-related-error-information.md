@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702004"
 ---
 # <a name="field-related-error-information"></a>Fehlerinformationen im Zusammenhang mit Feldern
 Wenn der Fehler direkt auf ein Feld - bezieht Sie z. B., wenn die Daten nicht vorhanden ist oder wenn es sich um den falschen Typ für das Feld - ist können abrufen Weitere Informationen zur Ursache des Problems anhand der **Feld** des Objekts **Status**  Eigenschaft. Diese Eigenschaft wurde verbessert, um bestimmte Informationen über das Problem bereitzustellen. Dies der Fall ist, z. B. wenn ein Aufruf von **UpdateBatch** ein Fehler auftritt, die Ursache des Problems können ermittelt werden die **Status** Eigenschaft der **Felder** in jedem der betroffenen Datensätze. Die Eigenschaft enthält einen der Werte in der **FieldStatusEnum** Konstanten. Die folgende Tabelle enthält die Werte, die von besonderem Interesse sind, wenn ein Fehler auftritt.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Gibt an, dass das Feld kann nicht abgerufen oder ohne Verlust von Daten gespeichert werden.|  
 |**adFieldDataOverflow**|6|Gibt an, dass die vom Anbieter zurückgegebenen Daten den Datentyp des Felds ist ein Überlauf aufgetreten.|  

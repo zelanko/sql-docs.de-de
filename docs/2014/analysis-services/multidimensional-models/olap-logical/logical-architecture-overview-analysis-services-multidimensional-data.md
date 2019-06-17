@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62699213"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
@@ -81,15 +81,15 @@ ms.locfileid: "62699213"
 ||||Pakete|||Letzter|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|29.12.1999|22.12.1999|29.12.1999|  
-||Erste Hälfte||11173|2977|8196|28.06.1999|20.06.1999|28.06.1999|  
-|||Erstes Quartal|5108|1452|3656|30.03.1999|19.03.1999|30.03.1999|  
-|||Zweites Quartal|6065|1525|4540|28.06.1999|20.06.1999|28.06.1999|  
-||2nd half||13937|3570|10367|29.12.1999|22.12.1999|29.12.1999|  
-|||3rd quarter|6119|1444|4675|30.09.1999|18.09.1999|30.09.1999|  
-|||Viertes Quartal|7818|2126|5692|29.12.1999|22.12.1999|29.12.1999|  
+|All Time|||25110|6547|18563|29\.12.1999|22\.12.1999|29\.12.1999|  
+||Erste Hälfte||11173|2977|8196|28\.06.1999|20\.06.1999|28\.06.1999|  
+|||Erstes Quartal|5108|1452|3656|30\.03.1999|19\.03.1999|30\.03.1999|  
+|||Zweites Quartal|6065|1525|4540|28\.06.1999|20\.06.1999|28\.06.1999|  
+||2nd half||13937|3570|10367|29\.12.1999|22\.12.1999|29\.12.1999|  
+|||3rd quarter|6119|1444|4675|30\.09.1999|18\.09.1999|30\.09.1999|  
+|||Viertes Quartal|7818|2126|5692|29\.12.1999|22\.12.1999|29\.12.1999|  
   
- Wenn ein Cube definiert wurde, können Sie neue Aggregationen erstellen, oder Sie können vorhandene Aggregationen ändern, um Optionen festzulegen, die angeben, ob Aggregationen während der Verarbeitung im Voraus oder zum Zeitpunkt der Abfrage berechnet werden. **Verwandtes Thema:**[Aggregationen und Aggregationsentwürfe](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Wenn ein Cube definiert wurde, können Sie neue Aggregationen erstellen, oder Sie können vorhandene Aggregationen ändern, um Optionen festzulegen, die angeben, ob Aggregationen während der Verarbeitung im Voraus oder zum Zeitpunkt der Abfrage berechnet werden. **Verwandtes Thema:** [Aggregationen und Aggregationsentwürfe](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Zuordnen von Measures, Attributen und Hierarchien  
  Die Measures, Attribute und Hierarchien des Cubes in dem Beispiel werden aus den folgenden Spalten in den Fakten- und Dimensionstabellen des Cubes abgeleitet.  
@@ -110,18 +110,18 @@ ms.locfileid: "62699213"
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Pakete|Letzter|  
-|3516987|1|6|1|15|10.01.1999|  
-|3554790|1|6|1|40|19.01.1999|  
-|3572673|1|6|1|34|27.01.1999|  
-|3600974|1|6|1|45|02.02.1999|  
-|3645541|1|6|1|20|09.02.1999|  
-|3674906|1|6|1|36|17.02.1999|  
+|3516987|1|6|1|15|10\.01.1999|  
+|3554790|1|6|1|40|19\.01.1999|  
+|3572673|1|6|1|34|27\.01.1999|  
+|3600974|1|6|1|45|02\.02.1999|  
+|3645541|1|6|1|20|09\.02.1999|  
+|3674906|1|6|1|36|17\.02.1999|  
   
  In der obigen Tabelle weist jede Zeile die gleichen Werte für die **RouteKey**, **SourceKey**, und **TimeKey** Spalten, die angibt, dass diese Zeilen zur selben Cubezelle beitragen.  
   
- In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandtes Thema:**[Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandtes Thema:** [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandtes Thema:**[Dimensionsbeziehungen](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandtes Thema:** [Dimensionsbeziehungen](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
