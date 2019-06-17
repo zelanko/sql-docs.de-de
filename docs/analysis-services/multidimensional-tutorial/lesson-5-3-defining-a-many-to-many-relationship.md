@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d3bf9211fb62db1452f48306e682638fd17041b8
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404062"
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lektion 5-3: Definieren einer m: N Beziehung
@@ -58,7 +58,7 @@ In den Aufgaben in diesem Thema definieren Sie die Sales Reasons-Dimension und d
   
     Beachten Sie, dass die Datentypen für die anderen zwei Spalten in dieser Tabelle numerische Datentypen sind.  
   
-10. Klicken Sie im Bereich **Tabellen** mit der rechten Maustaste auf **InternetSalesReason (dbo.FactInternetSalesReason)**, und klicken Sie anschließend auf **Daten durchsuchen**.  
+10. Klicken Sie im Bereich **Tabellen** mit der rechten Maustaste auf **InternetSalesReason (dbo.FactInternetSalesReason)** , und klicken Sie anschließend auf **Daten durchsuchen**.  
   
     Beachten Sie, dass für jede Zeilennummer innerhalb jeder Bestellung von einem Schlüsselwert der Verkaufsgrund für den Kauf von diesem Zeilenelement identifiziert wird, wie in der folgenden Abbildung zu sehen.  
   
@@ -134,7 +134,7 @@ In den Aufgaben in diesem Thema definieren Sie die Sales Reasons-Dimension und d
   
     Beachten Sie, dass für die **Sales Reason** -Dimension eine reguläre Beziehung zur **Internet Sales Reason** -Measuregruppe definiert ist, nicht aber eine Beziehung zur **Internet Sales** -Measuregruppe oder zur **Reseller Sales** -Measuregruppe. Außerdem ist für die **Internet Sales Order Details** -Dimension eine reguläre Beziehung zur **Internet Sales Reason** -Dimension definiert, für die wiederum eine **Faktenbeziehung** zur **Internet Sales** -Measuregruppe besteht. Wäre diese Dimension nicht vorhanden (oder wäre eine andere Dimension, für die eine Beziehung sowohl zur **Internet Sales Reason** - als auch zur **Internet Sales** -Measuregruppe besteht, nicht vorhanden), könnten Sie die m:n-Beziehung nicht definieren.  
   
-2.  Klicken Sie auf die Zelle am Schnittpunkt der **Internet Sales** -Measuregruppe und der **Sales Reason** -Dimension und anschließend auf die Schaltfläche zum Durchsuchen (**…**).  
+2.  Klicken Sie auf die Zelle am Schnittpunkt der **Internet Sales** -Measuregruppe und der **Sales Reason** -Dimension und anschließend auf die Schaltfläche zum Durchsuchen ( **…** ).  
   
 3.  Wählen Sie im Dialogfeld **Beziehung definieren** **m:n** in der Liste **Beziehungstyp auswählen** aus.  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663645"
 ---
 # <a name="clr-event-category"></a>CLR-Ereigniskategorie
@@ -28,7 +28,7 @@ ms.locfileid: "62663645"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Assembly Load-Ereignisklasse](../../database-engine/assembly-load-event-class.md)|Zeigt an, dass eine Anforderung zum Laden einer Assembly ausgeführt wurde.|  
 |[Assembly Load-Ereignisklasse](../../database-engine/assembly-load-event-class.md)|Tritt auf, wenn eine Anforderung zum Laden einer Assembly ausgeführt wird.|  

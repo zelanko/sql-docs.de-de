@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 21dc355570d5a2778e553924a189ce985513a7cc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981039"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Datentypumwandlungen und die sql:datatype-Anmerkung (SQLXML 4.0)
@@ -89,9 +89,9 @@ ms.locfileid: "65981039"
 ## <a name="sqldatatype-annotation"></a>sql:datatype-Anmerkung  
  Die **SQL: DataType** Anmerkung dient zum Angeben der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp; diese Anmerkung muss angegeben werden, wenn:  
   
--   Sie sind Massenladen in eine **"DateTime"** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spalte aus einer XSD **"DateTime"**, **Datum**, oder **Zeit** Typ. In diesem Fall müssen Sie bestimmen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spaltendatentyp mithilfe **SQL: datatype = "DateTime"**. Diese Regel gilt auch für Updategrams.  
+-   Sie sind Massenladen in eine **"DateTime"** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spalte aus einer XSD **"DateTime"** , **Datum**, oder **Zeit** Typ. In diesem Fall müssen Sie bestimmen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spaltendatentyp mithilfe **SQL: datatype = "DateTime"** . Diese Regel gilt auch für Updategrams.  
   
--   Sie sind beim Massenladen in eine Spalte vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Uniqueidentifier** Typ und der XSD-Wert ist eine GUID mit Klammern ({und}). Beim Angeben von **SQL: datatype = "Uniqueidentifier"**, die geschweiften Klammern werden vom Wert entfernt, bevor sie in der Spalte eingefügt wird. Wenn **SQL: DataType** nicht angegeben ist, wird der Wert mit der INSERT- oder Update ein Fehler auftritt und die geschweiften Klammern gesendet.  
+-   Sie sind beim Massenladen in eine Spalte vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Uniqueidentifier** Typ und der XSD-Wert ist eine GUID mit Klammern ({und}). Beim Angeben von **SQL: datatype = "Uniqueidentifier"** , die geschweiften Klammern werden vom Wert entfernt, bevor sie in der Spalte eingefügt wird. Wenn **SQL: DataType** nicht angegeben ist, wird der Wert mit der INSERT- oder Update ein Fehler auftritt und die geschweiften Klammern gesendet.  
   
 -   Der XML-Datentyp **base64Binary** Zuordnungen zu verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen (**binäre**, **Image**, oder **Varbinary**). Zuordnen von XML-Datentyps **base64Binary** zu einem bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp, verwenden Sie die **SQL: DataType** Anmerkung. Diese Anmerkung gibt den expliziten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp der Spalte an, der das Attribut zugeordnet ist. Dies ist nützlich, wenn Daten in der Datenbank gespeichert werden. Durch Angabe der **SQL: DataType** -Anmerkung können Sie erkennen die explizite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp.  
   

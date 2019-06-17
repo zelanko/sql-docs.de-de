@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB error handling, SQL Server message results
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be796d00763c4004be121ae6ee25ef849d871cc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9098994ac5349fa9747c952e66eb902231956a5c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619068"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802853"
 ---
 # <a name="sql-server-message-results"></a>SQL Server-Meldungsergebnisse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47619068"
   
  Wenn der Consumer des OLE DB-Treibers für SQL Server die dynamische Angabe von Abfragetext zulässt, sollten die Fehlerschnittstellen nach jeder Ausführung einer Elementfunktion überprüft werden. Dabei spielen der Wert des Rückgabecodes, die Anwesenheit oder Abwesenheit eines zurückgegebenen **IRowset**- oder **IMultipleResults**-Schnittstellenverweises oder die Angabe betroffener Zeilen keine Rolle.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler](../../oledb/ole-db-errors/errors.md)  
   
   

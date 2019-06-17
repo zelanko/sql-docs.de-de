@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997122"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
@@ -46,11 +46,11 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` Die Eigenschaft, für die angegebene Veröffentlichung geändert werden soll. *Eigenschaft* ist **Sysname**, und kann einen der Werte im aufgeführt, die folgende Tabelle.  
   
-`[ @value = ] 'value'` Der neue Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)**, und kann einen der Werte im aufgeführt, die folgende Tabelle.  
+`[ @value = ] 'value'` Der neue Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)** , und kann einen der Werte im aufgeführt, die folgende Tabelle.  
   
  Diese Tabelle beschreibt die Eigenschaften der Veröffentlichung, die geändert werden kann, und werden Einschränkungen für die Werte für diese Eigenschaften beschrieben.  
   
-|Eigenschaft|Wert|Description|  
+|Eigenschaft|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Anonyme Abonnements sind zulässig.|  
 ||**false**|Anonyme Abonnements sind nicht zulässig.|  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62756879"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Anzeigen oder Ändern von Servereigenschaften (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62756879"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Anzeigen oder Ändern von Servereigenschaften mit:**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62756879"
   
  EXECUTE-Berechtigungen für `sp_configure` ohne Parameter oder nur mit dem ersten Parameter werden für alle Benutzer standardmäßig erteilt. Auszuführende `sp_configure` mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung, muss ein Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene gewährt. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>So zeigen Sie Servereigenschaften an oder ändern sie  
   
@@ -150,7 +150,7 @@ GO
   
 2.  Klicken Sie im **SQL Server-Konfigurations-Manager**auf **SQL Server-Dienste**.  
   
-3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (\<***Instanzname***>**), und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (\<***Instanzname***>** ), und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Ändern Sie im Dialogfeld **SQL Server (\<***Instanzname***>)-Eigenschaften** die Servereigenschaften auf der Registerkarte **Dienst** oder auf der Registerkarte **Erweitert**, und klicken Sie dann auf **OK**.  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060875"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Konfigurieren eines Foreach-Schleifencontainers
@@ -65,14 +65,14 @@ ms.locfileid: "66060875"
   
     -   Wenn Sie den Foreach-SMO-Enumerator verwenden möchten, wählen Sie eine vorhandene ADO.NET-Verbindung aus oder klicken in der Liste **Verbindung** auf **Neue Verbindung**. Dann geben Sie die zu verwendende Zeichenfolge ein oder klicken auf **Durchsuchen**. Entscheiden Sie sich für **Durchsuchen**, dann können Sie im Dialogfeld **SMO-Enumeration auswählen** den aufzuzählenden Objekttyp und den Enumerationstyp auswählen. Klicken Sie anschließend auf **OK**.  
   
-6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit der Ellipse **(…)**, um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](expressions/add-or-change-a-property-expression.md).  
+6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit der Ellipse **(…)** , um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Die in der Liste **Eigenschaft** aufgeführten Eigenschaften hängen vom Enumerator ab.  
   
 7.  Klicken Sie optional auf **Variablenzuordnungen** , um Objekteigenschaften dem Auflistungswert zuzuordnen, und führen Sie dann folgende Aktionen aus:  
   
-    1.  Wählen Sie in der Liste **Variablen** eine Variable aus, oder klicken Sie auf **\<Neue Variable>**, um eine neue Variable zu erstellen.  
+    1.  Wählen Sie in der Liste **Variablen** eine Variable aus, oder klicken Sie auf **\<Neue Variable>** , um eine neue Variable zu erstellen.  
   
     2.  Wenn Sie eine neue Variable hinzufügen, legen Sie die Variableneigenschaften im Dialogfeld **Variable hinzufügen** fest, und klicken Sie auf **OK**.  
   

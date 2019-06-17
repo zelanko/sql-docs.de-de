@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127005"
 ---
 # <a name="ssms-utility"></a>Ssms-Hilfsprogramm
@@ -51,28 +51,28 @@ ms.locfileid: "63127005"
  *solutionfile*  
  Gibt eine zu öffnende Lösung an. Der Parameter muss den vollständigen Pfad zur Lösungsdatei enthalten.  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
  Servername  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
  Datenbankname  
   
- [**-U** _username_]  
+ [ **-U** _username_]  
  Benutzername, wenn die Verbindung mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung hergestellt wird.  
   
- [**-P** _password_]  
+ [ **-P** _password_]  
  Kennwort, wenn die Verbindung mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung hergestellt wird.  
   
- [**-E**]  
+ [ **-E**]  
  Verbindung mithilfe der Windows-Authentifizierung herstellen  
   
- [**-nosplash**]  
+ [ **-nosplash**]  
  Verhindert, dass [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] beim Öffnen den Begrüßungsbildschirm anzeigt. Verwenden Sie diese Option, wenn Sie eine Verbindung zum Computer mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] herstellen und hierfür Terminaldienste über eine Verbindung mit begrenzter Bandbreite einsetzen. Bei diesem Argument wird die Groß- und Kleinschreibung nicht beachtet. Es kann vor oder nach anderen Argumenten angegeben werden.  
   
- [**-log**_[filename]?_]  
+ [ **-log** _[filename]?_ ]  
  Protokolliert die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Aktivität zur Problembehandlung in der angegebenen Datei.  
   
- [**-?**]  
+ [ **-?** ]  
  Zeigt die Hilfe zur Befehlszeile an.  
   
 ## <a name="remarks"></a>Hinweise  

@@ -3,17 +3,17 @@ title: Synchronisierung von R-Paket aus dem Dateisystem – SQL Server Machine L
 description: Aktualisieren Sie auf SQL Server R-Bibliotheken durch neuere Versionen, die im Dateisystem installiert.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 57677e8d7573411be2e77baa7ffd8564ec9cbeb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6782acd011242cfd9b8ed4fe24a11fba85e932c
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642737"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140517"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Synchronisierung von R-Paket für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ Außerdem müssen Sie aktivieren die [paketverwaltungsfunktion](r-package-how-to
 
 Dieses Feature ist in SQL Server 2017 CTP 2 oder höher verfügbar.
 
-Sie können dieses Feature mit einer Instanz von SQL Server 2016 hinzufügen, indem Sie ein Upgrade der Instanz um die neueste Version von Microsoft R. verwenden Weitere Informationen finden Sie unter [Verwenden von SqlBindR.exe zum Aktualisieren von SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Sie können dieses Feature mit einer Instanz von SQL Server 2016 hinzufügen, indem Sie ein Upgrade der Instanz um die neueste Version von Microsoft R. verwenden Weitere Informationen finden Sie unter [Verwenden von SqlBindR.exe zum Aktualisieren von SQL Server R Services](../install/upgrade-r-and-python.md).
 
 ### <a name="enable-the-package-management-feature"></a>Aktivieren Sie die paketverwaltungsfunktion
 
@@ -69,7 +69,7 @@ Wenn Sie ein neues Paket, das mithilfe der Paket-Management-Funktionen hinzufüg
 
 + Synchronisieren von Paketen, die als **private**, entweder der Besitzer des Pakets oder der Administrator muss die Funktion ausgeführt, und die Pakete müssen privat sein.
 
-+ Um Pakete im Namen anderer Benutzer zu synchronisieren, muss der Besitzer Bhe ein Mitglied der **Db_owner** -Datenbankrolle.
++ Um Pakete im Namen anderer Benutzer zu synchronisieren, muss der Besitzer Mitglied der **Db_owner** -Datenbankrolle.
 
 ## <a name="how-package-synchronization-works"></a>Funktionsweise der paketsynchronisierung
 
@@ -117,7 +117,7 @@ rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 
 ### <a name="example-3-restrict-synchronized-packages-by-owner"></a>Beispiel 3. Synchronisierte Pakete vom Besitzer zu beschränken
 
-Im folgenden Beispiel wird veranschaulicht, wie nur die Pakete, die für einen bestimmten Benutzer installiert wurden, synchronisiert wird. In diesem Beispiel wird der Benutzer durch den SQL-Anmeldenamen, identifiziert *"user1"*.
+Im folgenden Beispiel wird veranschaulicht, wie nur die Pakete, die für einen bestimmten Benutzer installiert wurden, synchronisiert wird. In diesem Beispiel wird der Benutzer durch den SQL-Anmeldenamen, identifiziert *"user1"* .
 
 ```R
 rxSyncPackages(computeContext=computeContext, scope="private", owner = "user1", verbose=TRUE))

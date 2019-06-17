@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f84f5331946a5887f833f7e579eb078a8854662
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581186"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037858"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tastenkombinationen (Berichts-Generator)
   Im Berichts-Generator stehen Ihnen für die Navigation alle von der Windows-Umgebung unterstützten Tastenkombinationen zur Verfügung, wenn Sie paginierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte erstellen und ändern. Sie können aus mehreren Standardtastenkombinationsschemas auswählen.  
@@ -30,7 +30,7 @@ ms.locfileid: "65581186"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Tastenkombinationen im Berichts-Generator  
   
-|Beschreibung|Tastenkombination|  
+|und Beschreibung|Tastenkombination|  
 |-----------------|---------------------|  
 |Öffnet das Menü Berichts-Generator.|ALT+F|  
 |Erstellt einen Bericht.|STRG+N|  
@@ -92,6 +92,5 @@ ms.locfileid: "65581186"
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Generator in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Glossar &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
-  
+
   

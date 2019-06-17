@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47423f36eece4ee42da880b555b5ce6acb1a6c40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 61a886e7c280a4181f332bb75a7227c2f6f7161a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727388"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789275"
 ---
 # <a name="equals-method-datetimeoffset"></a>equals-Methode (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public boolean equals(Object o)
 ## <a name="return-value"></a>Rückgabewert  
  Gibt "true" zurück, wenn diese **DateTimeOffset** -Objekt stellt die gleiche Punktmenge Zeitpunkt mit demselben Offset von GMT wie eine andere **DateTimeOffset**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset-Elemente](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

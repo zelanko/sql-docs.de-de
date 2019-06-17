@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63125476"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
@@ -35,15 +35,15 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  Eine Bedingung, die sich ergibt **"true"** (1) oder **"false"** (0). Es muss sich um einen gültigen logischen Multidimensional Expressions (MDX)-Ausdruck handeln.  
   
  *Expression1 Hinweis [Eager | Strenge | Verzögerte]]*  
- Verwendet, wenn der logische Ausdruck ergibt **"true"**. Expression1 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
+ Verwendet, wenn der logische Ausdruck ergibt **"true"** . Expression1 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
   
  *Expression2 Hinweis [Eager | Strenge | Verzögerte]]*  
- Verwendet, wenn der logische Ausdruck ergibt **"false"**. Expression2 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
+ Verwendet, wenn der logische Ausdruck ergibt **"false"** . Expression2 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
   
 ## <a name="remarks"></a>Hinweise  
- Die vom logischen Ausdruck angegebene Bedingung ergibt **"false"** Wenn der Wert dieses Ausdrucks 0 (null) ist. Jeder andere Wert ergibt **"true"**.  
+ Die vom logischen Ausdruck angegebene Bedingung ergibt **"false"** Wenn der Wert dieses Ausdrucks 0 (null) ist. Jeder andere Wert ergibt **"true"** .  
   
- Wenn die Bedingung ist **"true"**, **IIf** -Funktion den ersten Ausdruck zurück. Andernfalls gibt die Funktion den zweiten Ausdruck zurück.  
+ Wenn die Bedingung ist **"true"** , **IIf** -Funktion den ersten Ausdruck zurück. Andernfalls gibt die Funktion den zweiten Ausdruck zurück.  
   
  Die angegebene Ausdrücke können Werte oder MDX-Objekte zurückgeben. Ferner muss der Typ der angegebenen Ausdrücke nicht übereinstimmen.  
   

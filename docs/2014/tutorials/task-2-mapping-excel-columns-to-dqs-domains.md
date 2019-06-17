@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484705"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Aufgabe 2: Zuordnen von Excel-Spalten zu DQS-Domänen
@@ -49,6 +49,6 @@ ms.locfileid: "65484705"
 6.  Klicken Sie auf **Weiter** zum Wechseln der **Bereinigen** Seite.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 3: Bereinigung von Daten anhand der Wissensdatenbank ' Suppliers '](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [Aufgabe 3: Bereinigung von Daten anhand der Wissensdatenbank ' Suppliers '](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

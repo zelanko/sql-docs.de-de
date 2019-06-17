@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306128"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789329"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
 
@@ -43,12 +43,12 @@ Bei der Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] k
 
 - Durch das SQL Azure-Gateway ermittelte, inaktive Verbindungen. Dabei kann TCP **KeepAlive**-Meldungen ausgeben (wodurch sie aus TCP-Sicht nicht inaktiv sind), über die jedoch in den letzten 30 Minuten keine aktive Abfrage ausgeführt wurde. In diesem Szenario wird durch das Gateway ermittelt, ob die TDS-Verbindung 30 Minuten inaktiv war, und die Verbindung wird beendet.  
   
-Um zu vermeiden, dass Verbindungen im Leerlauf durch eine Netzwerkkomponente getrennt werden, sollten die folgenden Registrierungseinstellungen (bzw. deren Nicht-Windows-Äquivalente) für das Betriebssystem festgelegt werden, unter dem der Treiber geladen wurde:  
+Um zu vermeiden, dass Verbindungen im Leerlauf durch eineNetzwerkkomponente getrennt werden, sollten die folgenden Registrierungseinstellungen(bzw. deren Nicht-Windows-Äquivalente) für das Betriebssystem festgelegt werden, unter dem der Treiber geladen wurde:  
   
 |Registrierungseinstellung|Empfohlener Wert|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Dienste \ Tcpip \ Parameter \ "KeepAliveTime"|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Dienste \ Tcpip \ Parameter \ "KeepAliveInterval"|1000|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Starten Sie den Computer neu, damit die Registrierungseinstellungen wirksam werden.  
@@ -62,7 +62,7 @@ Um diese Aktion in Windows Azure auszuführen, erstellen Sie einen Starttask, du
 </Startup>  
 ```
 
-Fügen Sie dem Projekt anschließend die Datei „AddKeepAlive.cmd“ hinzu. Legen Sie die Einstellung „In Ausgabeverzeichnis kopieren“ auf „Immer kopieren“ fest. Das folgende Beispiel veranschaulicht eine Datei „AddKeepAlive.cmd“:  
+Fügen Sie dem Projekt anschließend die Datei „AddKeepAlive.cmd“ hinzu. Legen Sie die Einstellung In Ausgabeverzeichnis kopieren auf Immer kopieren fest. Das folgende Beispiel veranschaulicht eine Datei AddKeepAlive.cmd:  
 
 ```bat
 if exist keepalive.txt goto done  
@@ -81,9 +81,9 @@ Vor Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Einstellung "hostNameInCertificate" zur Verwendung der Verschlüsselung erforderlich
 
-Vor, Version 7.2 den [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], geben Sie **HostNameInCertificate** bei Angabe von **encrypt=true** (wenn der Servername in der Verbindung Zeichenfolge *ShortName*. *DomainName*legen die **HostNameInCertificate** Eigenschaft \*. *DomainName*.). Diese Eigenschaft ist optional ab Version 7.2 des Treibers.
+Vor, Version 7.2 den [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], geben Sie **HostNameInCertificate** bei Angabe von **verschlüsseln = True** (wenn der Servername in der Verbindung Zeichenfolge *ShortName*. *DomainName*legen die **HostNameInCertificate** Eigenschaft \*. *DomainName*.). Diese Eigenschaft ist optional ab Version 7.2 des Treibers.
 
-Zum Beispiel:
+Beispiel:
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;

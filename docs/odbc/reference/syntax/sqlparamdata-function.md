@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0d92abe17128bff382d4b291fa9d20fe5c4fa77
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536642"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData-Funktion
@@ -86,7 +86,7 @@ SQLRETURN SQLParamData(
   
  auf die Variablen definiert werden, wie in der folgenden Tabelle angegeben.  
   
-|Variable|Description|  
+|Variable|Beschreibung|  
 |--------------|-----------------|  
 |*Adresse gebunden*|Die Adresse angegeben wird, mit der *TargetValuePtr* -Argument in **SQLBindCol**.|  
 |*Binden von Offset*|Der Wert, der mit dem SQL_ATTR_ROW_BIND_OFFSET_PTR Anweisung-Attribut angegebenen Adresse gespeichert.|  

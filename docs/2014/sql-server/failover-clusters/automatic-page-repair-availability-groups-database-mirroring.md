@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137512"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Automatische Seitenreparatur (für Verfügbarkeitsgruppen und Datenbankspiegelung)
@@ -88,7 +88,7 @@ ms.locfileid: "63137512"
   
 
   
-##  <a name="ViewAPRattempts"></a> So wird es gemacht: Die automatischen Seitenreparatur-Versuche anzeigen  
+##  <a name="ViewAPRattempts"></a> Vorgehensweise: Die automatischen Seitenreparatur-Versuche anzeigen  
  Die folgenden dynamischen Verwaltungssichten geben Zeilen für die letzten automatischen Seitenreparatur-Versuche auf einer angegebenen Verfügbarkeitsdatenbank oder gespiegelten Datenbank mit einem Maximum von 100 Zeilen pro Datenbank zurück.  
   
 -   **AlwaysOn-Verfügbarkeitsgruppen:**  

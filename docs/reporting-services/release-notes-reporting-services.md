@@ -1,20 +1,20 @@
 ---
 title: Anmerkungen zu dieser Version (SSRS) 2017 und höher | Microsoft-Dokumentation
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283293"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037853"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Versionshinweise für SQL Server Reporting Services (SSRS) 2017 und höher
 
@@ -86,7 +86,7 @@ Das folgende Problem wurde behoben:
 | Die Textgröße wurde nicht skaliert, wenn „pageHeight“ unter 0,5 Zoll lag. | &nbsp; |
 | Deadlock tritt in der SSRS-Katalogdatenbank auf, wenn er mit CRM verwendet wird. | &nbsp; |
 | Vertikal ausgerichtete Spaltenüberschriften wurden beim Herunterscrollen im Bericht falsch angezeigt. | &nbsp; |
-| Für Benutzer, die der SCOM-Berichterstellungsrolle hinzugefügt wurden, war der Zugriff auf das SSRS-Webportal blockiert. | &nbsp; |
+| Benutzer, die System Center Operations Manager-Berichterstattung der Rolle hinzugefügt haben, Zugriff blockiert, SSRS-Webportal. | &nbsp; |
 | Thai-Zeichen ist nicht ordnungsgemäß in die PDF-Datei exportiert. | &nbsp; |
 | Behavior Change bei der Browserrolle. | &nbsp; |
 | „rc:Toolbar=false“ hat in der Express Edition nicht funktioniert. | &nbsp; |

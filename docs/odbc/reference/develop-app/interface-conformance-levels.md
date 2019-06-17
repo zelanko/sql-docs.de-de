@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62446687"
 ---
 # <a name="interface-conformance-levels"></a>Ebenen der Schnittstellenübereinstimmung
@@ -37,7 +37,7 @@ Der Zweck der Lastenausgleich ist auf die Anwendung zu informieren, welche Featu
  Es gibt drei Konformitätsgrad des ODBC-Schnittstelle: Core, Ebene 1 und Ebene 2.  
   
 > [!NOTE]
->  Diese Ebenen der schnittstellenübereinstimmung haben unterschiedliche Anforderungen an als der ODBC-API-Ebenen der schnittstellenübereinstimmung mit dem gleichen Namen in ODBC 2.*.x*. Insbesondere alle Funktionen, die durch ODBC 2. impliziert *.x* -API-Übereinstimmung mit Standards Level 1 sind jetzt Bestandteil der Konformitätsgrad des Core-Schnittstelle. Daher können viele ODBC-Treiber-Kernebenen-schnittstellenübereinstimmung melden.  
+>  Diese Ebenen der schnittstellenübereinstimmung haben unterschiedliche Anforderungen an als der ODBC-API-Ebenen der schnittstellenübereinstimmung mit dem gleichen Namen in ODBC 2. *.x*. Insbesondere alle Funktionen, die durch ODBC 2. impliziert *.x* -API-Übereinstimmung mit Standards Level 1 sind jetzt Bestandteil der Konformitätsgrad des Core-Schnittstelle. Daher können viele ODBC-Treiber-Kernebenen-schnittstellenübereinstimmung melden.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

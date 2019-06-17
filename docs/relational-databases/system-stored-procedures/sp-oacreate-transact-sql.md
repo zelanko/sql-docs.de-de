@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450017"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -41,14 +41,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>Argumente  
  *progid*  
- Der programmtechnische Bezeichner (ProgID, Programmatic Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das Format: **"**_OLEComponent_**.** _Objekt_**"**  
+ Der programmtechnische Bezeichner (ProgID, Programmatic Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das Format: **"** _OLEComponent_ **.** _Objekt_ **"**  
   
  *OLEComponent* ist der Komponentenname des OLE-Automatisierungsservers, und *Objekt* ist der Name des OLE-Objekts. Das angegebene OLE-Objekt muss gültig sein und muss unterstützen die **IDispatch** Schnittstelle.  
   
  Beispielsweise ist SQLDMO. SQL Server ist die ProgID des SQL-DMO **SQLServer** Objekt. SQL-DMO besitzt den Komponentennamen SQLDMO, das **SQLServer** Objekt gültig ist, und (z. B. alle SQL-DMO-Objekte) die **SQLServer** -Objekt unterstützt **IDispatch**.  
   
  *clsid*  
- Die Klassen-ID (CLSID, Class Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das Format: **"{**_Nnnnnnnn-Nnnn-Nnnn-Nnnn-Nnnnnnnnnnnn_**}'**. Das angegebene OLE-Objekt muss gültig sein und muss unterstützen die **IDispatch** Schnittstelle.  
+ Die Klassen-ID (CLSID, Class Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das Format: **"{** _Nnnnnnnn-Nnnn-Nnnn-Nnnn-Nnnnnnnnnnnn_ **}'** . Das angegebene OLE-Objekt muss gültig sein und muss unterstützen die **IDispatch** Schnittstelle.  
   
  Beispielsweise ist {00026BA1-0000-0000-C000-000000000046} der CLSID des SQL-DMO **SQLServer** Objekt.  
   

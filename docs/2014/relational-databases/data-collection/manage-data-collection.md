@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918580"
 ---
 # <a name="manage-data-collection"></a>Verwalten von Datensammlungen
@@ -79,7 +79,7 @@ ms.locfileid: "62918580"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Sammlungssätzen verwenden können.  
   
-|Name der Prozedur|Description|  
+|Name der Prozedur|Beschreibung|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql)|Führt bei Bedarf einen Sammlungssatz aus.|  
 |[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql)|Startet einen Sammlungssatz.|  

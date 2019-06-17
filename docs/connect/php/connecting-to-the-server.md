@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58357c0316f5b439d3dbac00a79547bd799e27bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 47a894b93a0228782e48116dc3bcc2272e4264c2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601958"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795821"
 ---
 # <a name="connecting-to-the-server"></a>Verbinden mit dem Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ Mittels der Windows-Authentifizierung oder der SQL Server-Authentifizierung kön
 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |---------|---------------|  
 |[Vorgehensweise: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung](../../connect/php/how-to-connect-using-windows-authentication.md)|Beschreibt, wie eine Verbindung mittels der Windows-Authentifizierung hergestellt wird|  
 |[Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Beschreibt wie eine Verbindung mittels der SQL Server-Authentifizierung hergestellt wird|  
@@ -41,7 +41,7 @@ Mittels der Windows-Authentifizierung oder der SQL Server-Authentifizierung kön
 |[Herstellen einer Verbindung mit einer Microsoft Azure SQL-Datenbank](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|In diesem Artikel wird das Herstellen einer Verbindung mit einer Azure SQL-Datenbank erläutert.|  
 |[Verbindungsstabilität](../../connect/php/connection-resiliency.md)|Erläutert das verbindungsstabilitätsfeature, das unterbrochene Verbindungen erneut herstellt.|  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Beispielanwendung &#40;SQLSRV-Treiber&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

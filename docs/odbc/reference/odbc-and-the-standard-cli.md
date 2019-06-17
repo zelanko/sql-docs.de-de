@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273301"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC und die Standard-CLI
@@ -35,7 +35,7 @@ ODBC richtet mit den folgenden Spezifikationen und Standards, die mit der Call-L
   
 -   Eine Anwendung geschrieben, um die Open Group und ein ISO-CLI-Spezifikationen funktioniert mit einer ODBC-3. *x* Treibers oder einer standardkonformen beim Kompilieren mit der ODBC-3. *X* Header-Dateien, und klicken Sie mit ODBC 3. verknüpft. *X* Bibliotheken, und wenn sie den Zugriff auf die vom Treiber über die ODBC 3. erzielt. *X* -Treiber-Manager.  
   
--   Ein Treiber geschrieben, um die Open Group und ISO-CLI-Spezifikationen funktioniert mit einer ODBC 3.*.x* Anwendung oder eine Standards kompatible Anwendung, die beim Kompilieren mit der ODBC 3.*.x* Header-Dateien und verknüpft mit ODBC 3.*.x* Bibliotheken, und wenn die Anwendung erhält Zugriff auf die vom Treiber über die ODBC 3.*.x* -Treiber-Manager. (Weitere Informationen finden Sie unter [den Standards entsprechende Anwendungen und Treiber](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Ein Treiber geschrieben, um die Open Group und ISO-CLI-Spezifikationen funktioniert mit einer ODBC 3. *.x* Anwendung oder eine Standards kompatible Anwendung, die beim Kompilieren mit der ODBC 3. *.x* Header-Dateien und verknüpft mit ODBC 3. *.x* Bibliotheken, und wenn die Anwendung erhält Zugriff auf die vom Treiber über die ODBC 3. *.x* -Treiber-Manager. (Weitere Informationen finden Sie unter [den Standards entsprechende Anwendungen und Treiber](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
  Der Konformitätsgrad des Core-Schnittstelle umfasst alle Features in der ISO-CLI und alle nonoptional Funktionen in der Open Group-CLI. Optionale Features der CLI öffnen Gruppe werden in höheren Ebenen der schnittstellenübereinstimmung Schnittstelle angezeigt. Da alle ODBC-3. *x* Treiber sind erforderlich, um die Funktionen in der Konformitätsgrad des Core-Schnittstelle unterstützen, die folgende Bedingungen erfüllt sind:  
   

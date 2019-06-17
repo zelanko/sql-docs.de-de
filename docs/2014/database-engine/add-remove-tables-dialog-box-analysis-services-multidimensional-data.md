@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065243"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Hinzufügen und Entfernen von Tabellen (Dialogfeld) (Analysis Services – mehrdimensionale Daten)
@@ -35,7 +35,7 @@ ms.locfileid: "66065243"
  **Verfügbare Objekte**  
  Zeigt die Objekte und die dazugehörigen Objekttypen der ausgewählten Datenquelle an, die noch nicht in der Datenquellensicht enthalten sind.  
   
- Klicken Sie auf **>>**, um die unter **Verfügbare Objekte** aufgeführten Objekte nach **Eingeschlossene Objekte** zu übertragen. Wahlweise können Sie auch eines oder mehrere Objekte auswählen und auf **>** klicken, um die ausgewählten Objekte nach **Eingeschlossene Objekte** zu übertragen.  
+ Klicken Sie auf **>>** , um die unter **Verfügbare Objekte** aufgeführten Objekte nach **Eingeschlossene Objekte** zu übertragen. Wahlweise können Sie auch eines oder mehrere Objekte auswählen und auf **>** klicken, um die ausgewählten Objekte nach **Eingeschlossene Objekte** zu übertragen.  
   
  **Filter**  
  Geben Sie den Filter ein, mit dem die in **Verfügbare Objekte** aufgelisteten Objekte eingeschränkt werden sollen, und klicken Sie dann auf die Schaltfläche, um die aufgelisteten Objekte zu filtern.  
@@ -46,7 +46,7 @@ ms.locfileid: "66065243"
  **Eingeschlossene Objekte**  
  Zeigt die Objekte und die dazugehörigen Typen an, die der Datenquellensicht bereits hinzugefügt wurden.  
   
- Klicken Sie auf **<<**, um alle in **Eingeschlossene Objekte** aufgeführten Objekte in **Verfügbare Objekte** zu übertragen, oder wählen Sie ein oder mehrere Objekte aus, und klicken Sie auf **<**, um die ausgewählten Objekte in **Verfügbare Objekte** zu übertragen.  
+ Klicken Sie auf **<<** , um alle in **Eingeschlossene Objekte** aufgeführten Objekte in **Verfügbare Objekte** zu übertragen, oder wählen Sie ein oder mehrere Objekte aus, und klicken Sie auf **<** , um die ausgewählten Objekte in **Verfügbare Objekte** zu übertragen.  
   
  **Fügen verknüpfter Tabellen hinzu**  
  Klicken Sie hier, um alle Tabellen hinzuzufügen, die mit den in **Verfügbare Objekte** ausgewählten Tabellen verknüpft sind.  
