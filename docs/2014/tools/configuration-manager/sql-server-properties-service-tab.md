@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63237990"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL-Server-Eigenschaften (Registerkarte Dienst)
@@ -52,6 +52,6 @@ ms.locfileid: "63237990"
 -   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
   
  **Zustand**  
- Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „**…**“ gibt einen ausstehenden Statuswechsel an.  
+ Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „ **…** “ gibt einen ausstehenden Statuswechsel an.  
   
   

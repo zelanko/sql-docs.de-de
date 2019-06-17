@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76b495fc9d583ea93b32d6625a836fcd84faca47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7050a26a8fe98d5069cd52a58afe501bee738499
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731188"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802317"
 ---
 # <a name="execute-method-"></a>execute-Methode ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean execute()
 ## <a name="remarks"></a>Remarks  
  Diese execute-Methode wird von der execute-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [execute-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

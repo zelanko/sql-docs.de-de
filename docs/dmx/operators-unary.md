@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d44e4a7269c8fb11533b7fb287684c9a6b7b5d83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62501874"
 ---
 # <a name="operators---unary"></a>Operatoren – unär
@@ -23,7 +23,7 @@ ms.locfileid: "62501874"
   
  In der folgenden Tabelle sind die unären Operatoren aufgeführt, die DMX unterstützt.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[- &#40;Negative&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|Gibt den negativen Wert eines numerischen Ausdrucks zurück.|  
 |[+ &#40;Positive&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|Gibt den positiven Wert eines numerischen Ausdrucks zurück.|  

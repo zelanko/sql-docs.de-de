@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62503768"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Gewusst wie: Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modelle in SQL Server
@@ -84,7 +84,7 @@ Um ein Modell mit der schnellen Bewertung Optionen zu verwenden, speichern Sie d
 
 **Mithilfe von SQL**
 
-Von SQL-Code können Sie trainieren das Modell, indem [Sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), und fügen Sie direkt die trainierten Modelle in einer Tabelle in einer Spalte vom Typ **'varbinary(max)'**. Ein einfaches Beispiel finden Sie unter [preditive Modell in R erstellen](../tutorials/rtsql-create-a-predictive-model-r.md)
+Von SQL-Code können Sie trainieren das Modell, indem [Sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), und fügen Sie direkt die trainierten Modelle in einer Tabelle in einer Spalte vom Typ **'varbinary(max)'** . Ein einfaches Beispiel finden Sie unter [preditive Modell in R erstellen](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **Mithilfe von R**
 

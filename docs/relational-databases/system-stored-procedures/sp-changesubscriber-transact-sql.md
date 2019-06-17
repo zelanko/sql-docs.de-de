@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997805"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -63,7 +63,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @login = ] 'login'` Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung-Anmelde-ID. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
-`[ @password = ] 'password'` Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungskennwort. *Kennwort* ist **Sysname**, hat den Standardwert **%**. **%** Gibt an, dass keine Änderung an der Password-Eigenschaft vorhanden ist.  
+`[ @password = ] 'password'` Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungskennwort. *Kennwort* ist **Sysname**, hat den Standardwert **%** . **%** Gibt an, dass keine Änderung an der Password-Eigenschaft vorhanden ist.  
   
 `[ @commit_batch_size = ] commit_batch_size` Nur für Abwärtskompatibilität unterstützt.  
   
@@ -117,7 +117,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date` Ist das Datum, ab der Verteilungstask nicht mehr, geplant ist JJJJMMTT. *Active_end_date*ist **Int**, hat den Standardwert NULL.  
   
-`[ @description = ] 'description'` Ist eine optionale textbeschreibung. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Ist eine optionale textbeschreibung. *Beschreibung* ist **nvarchar(255)** , hat den Standardwert NULL.  
   
 `[ @security_mode = ] security_mode` Ist der implementierte Sicherheitsmodus. *Security_mode* ist **Int**, und kann einen der folgenden Werte sein.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107211"
 ---
 # <a name="manage-shared-datasets"></a>Verwalten von freigegebenen Datasets
@@ -52,7 +52,7 @@ ms.locfileid: "66107211"
   
  Die folgenden zusätzlichen Eigenschaften für freigegebene Datasets werden automatisch konfiguriert:  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|Gibt an, ob die zugeordnete freigegebene Datenquelle über gespeicherte Anmeldeinformationen auf dem Berichtsserver verfügt.|  
 |HasUserProfileDependencies|Gibt an, ob der Bericht in der Abfrage oder in Filterausdrücken über einen Verweis auf die globale User-Auflistung verfügt.|  

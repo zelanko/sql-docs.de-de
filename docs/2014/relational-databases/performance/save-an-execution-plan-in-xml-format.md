@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150864"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Speichern eines Ausführungsplans im XML-Format
@@ -65,7 +65,7 @@ ms.locfileid: "63150864"
   
 4.  Klicken Sie im Bereich **Ergebnisse** mit der rechten Maustaste auf den **Microsoft SQL Server XML Showplan** , der den Abfrageplan enthält, und klicken Sie dann auf **Ergebnisse speichern unter**.  
   
-5.  Klicken Sie im Dialogfeld \<Rasterergebnisse****speichern** bzw.** Ergebnisse **speichern im Feld Dateityp** auf **Alle Dateien (\*.\*)**.  
+5.  Klicken Sie im Dialogfeld \<Rasterergebnisse ****speichern** bzw.** Ergebnisse **speichern im Feld Dateityp** auf **Alle Dateien (\*.\*)** .  
   
 6.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<Name **>.sqlplan** ein, und klicken Sie auf **Speichern**.  
   

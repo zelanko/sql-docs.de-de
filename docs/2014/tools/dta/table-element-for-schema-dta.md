@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138782"
 ---
 # <a name="table-element-for-schema-dta"></a>Table-Element für Schema (DTA)
@@ -35,9 +35,9 @@ ms.locfileid: "63138782"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|Attribut|Description|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`NumberOfRows`|Dies ist optional. Eine ganze Zahl, mit der Sie Tabellen unterschiedlicher Größe simulieren können.|  
+|`NumberOfRows`|Optional. Eine ganze Zahl, mit der Sie Tabellen unterschiedlicher Größe simulieren können.|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   

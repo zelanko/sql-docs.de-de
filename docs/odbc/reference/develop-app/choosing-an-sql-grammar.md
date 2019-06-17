@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026577"
 ---
 # <a name="choosing-an-sql-grammar"></a>Auswählen einer SQL-Grammatik
 Die erste Entscheidung bei der Erstellung der SQL-Anweisungen ist die Grammatik zu verwenden. Zusätzlich zu der Grammatiken für verschiedene Standardorganisationen, z. B. Open Group, ANSI und ISO-Images definiert praktisch jeden DBMS-Hersteller eine eigene Grammatik, von denen jede geringfügig von der Standard variiert.  
   
- [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), beschreibt die minimale SQL-Grammatik, die alle ODBC-Treiber unterstützen muss. Diese Grammatik ist eine Teilmenge der Ebene der SQL-92-Eintrag. Treiber unterstützen möglicherweise weitere Grammatik entspricht, den Zwischenspeicher voll oder FIPS 127-2-Transitional Ebenen definiert von SQL-92. Weitere Informationen finden Sie unter [mindestens SQL-Grammatik](../../../odbc/reference/appendixes/sql-minimum-grammar.md) in Anhang C: SQL-Grammatik und SQL-92.  
+ [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), beschreibt die minimale SQL-Grammatik, die alle ODBC-Treiber unterstützen muss. Diese Grammatik ist eine Teilmenge der Ebene der SQL-92-Eintrag. Treiber unterstützen möglicherweise weitere Grammatik entspricht, den Zwischenspeicher voll oder FIPS 127-2-Transitional Ebenen definiert von SQL-92. Weitere Informationen finden Sie unter [mindestens SQL-Grammatik](../../../odbc/reference/appendixes/sql-minimum-grammar.md) in Anhang C: SQL-Grammatik und SQL-92.  
   
  Anhang C definiert auch *escape-Zeichensequenzen* mit standard-Grammatik für gängiger Sprachfeatures, z. B. outer Join, unterliegen nicht der SQL-92-Grammatik. Weitere Informationen finden Sie unter [ODBC-Escapesequenzen](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Anhang C: SQL-Grammatik und [Escapesequenzen](../../../odbc/reference/develop-app/escape-sequences.md)weiter unten in diesem Abschnitt.  
   

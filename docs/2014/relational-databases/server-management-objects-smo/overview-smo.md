@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63131806"
 ---
 # <a name="overview-smo"></a>Übersicht (SMO)
@@ -73,7 +73,7 @@ ms.locfileid: "63131806"
   
  **Instanzklassen**  
   
- Die Instanzklassen stellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte dar, z.&amp;nbsp;B. Server, Datenbanken, Tabellen, Trigger und gespeicherte Prozeduren. Um eine Verbindung zur Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> herzustellen und den Aufzeichnungsmodus für an die Instanz gesendete Befehle zu steuern, wird die Klasse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
+ Die Instanzklassen stellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte dar, z.&nbsp;B. Server, Datenbanken, Tabellen, Trigger und gespeicherte Prozeduren. Um eine Verbindung zur Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> herzustellen und den Aufzeichnungsmodus für an die Instanz gesendete Befehle zu steuern, wird die Klasse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.  
   
  Die SMO-Instanzobjekte bilden eine Hierarchie, die die Hierarchie eines Datenbankservers darstellt. Ganz oben sind die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gefolgt von den Datenbanken, gefolgt von den Tabellen, Spalten, Triggern usw. Ist eine 1:n-Beziehung zwischen den über- und untergeordneten Elementen logisch, etwa im Fall einer Tabelle mit mehreren Spalten, wird das untergeordnete Element durch eine Objektauflistung dargestellt. Andernfalls wird das untergeordnete Element nur durch ein Objekt dargestellt.  
   

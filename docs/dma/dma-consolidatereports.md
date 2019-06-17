@@ -16,10 +16,10 @@ author: HJToland3
 ms.author: rajpo
 manager: jroth
 ms.openlocfilehash: f9ca00c2390ef0a03369ac21cfe02fcf7ed01392
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794377"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
@@ -108,7 +108,7 @@ Nach dem Laden die PowerShell-Module in das Modulverzeichnis, und erstellen eine
 
 Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Description |
+|Parameter  |Beschreibung |
 |---------|---------|
 |**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellung eines Inventars aus SQL Server-Instanzen](#create-inventory). |
 |**csvPath** | Der Pfad in Ihrem Inventar CSV-Datei.  Verwendet nur, wenn **GetServerListFrom** nastaven NA hodnotu **CSV**. |
@@ -131,7 +131,7 @@ Nach Abschluss der Bewertung können Sie sich nun um die Daten in SQL Server fü
 
 Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Description |
+|Parameter  |Beschreibung |
 |---------|---------|
 |**processTo** | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"** . |
 |**serverName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (nicht enthalten. database.windows.net). Sie werden für zwei Anmeldungen aufgefordert werden, bei der Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |

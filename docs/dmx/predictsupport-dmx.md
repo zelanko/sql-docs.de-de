@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658843"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
@@ -32,7 +32,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Ein skalare Spalte.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Ein Skalarwert des Typs, der angegebenen *\<* skalarspaltenverweis*>*.  
+ Ein Skalarwert des Typs, der angegebenen *\<* skalarspaltenverweis *>* .  
   
 ## <a name="remarks"></a>Hinweise  
  Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Um Bucket der fehlenden Status einzuschließen, setzen die \<vorhergesagten Status > auf **INCLUDE_NULL**.  

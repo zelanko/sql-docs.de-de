@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094796"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Gewusst wie: Anzeigen eines Berichts des Upgrade Advisors
@@ -31,7 +31,7 @@ ms.locfileid: "66094796"
   
 ### <a name="to-view-a-report"></a>So zeigen Sie einen Bericht an  
   
-1.  Klicken Sie auf **starten**, klicken Sie auf **Programme**, klicken Sie auf **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, und klicken Sie dann auf  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+1.  Klicken Sie auf **starten**, klicken Sie auf **Programme**, klicken Sie auf **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , und klicken Sie dann auf  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
 2.  Klicken Sie auf der Startseite des Upgrade Advisors auf **Viewer des Upgrade Advisors Bericht starten**.  
   

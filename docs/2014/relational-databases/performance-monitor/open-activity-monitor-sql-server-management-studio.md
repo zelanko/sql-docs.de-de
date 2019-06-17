@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032004"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Öffnen des Aktivitätsmonitors (SQL Server Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "63032004"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So öffnen Sie den Aktivitätsmonitor mit:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63032004"
   
  Zum Ausführen von KILL für einen Prozess muss ein Benutzer Mitglied der festen Serverrolle sysadmin oder processadmin sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>So öffnen Sie den Aktivitätsmonitor in SQL Server Management Studio  
   

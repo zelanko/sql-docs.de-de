@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070463"
 ---
 # <a name="relational-query-designer-ssas"></a>Relationaler Abfrage-Designer (SSAS)
@@ -82,7 +82,7 @@ ms.locfileid: "66070463"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet [!INCLUDE[tsql](../includes/tsql-md.md)] - und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] verwendet [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Beide Dialekte der SQL-Sprache unterstützen die Klausel, das Schlüsselwort und die Aggregate, die der Abfrage-Designer bereitstellt.  
   
- Weitere Informationen zu [!INCLUDE[tsql](../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/language-reference) in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
+ Weitere Informationen zu [!INCLUDE[tsql](../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference) in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
   
  In der folgenden Tabelle sind die Aggregate einschließlich einer kurzen Beschreibung aufgelistet.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "66070463"
 ### <a name="graphical-query-designer-toolbar"></a>Symbolleiste für den grafischen Abfrage-Designer  
  Die Symbolleiste des grafischen Abfrage-Designers stellt die folgenden Schaltflächen bereit, mit denen Sie eine Abfrage angeben oder die Ergebnisse der Abfrage anzeigen können.  
   
-|Schaltfläche|Description|  
+|Schaltfläche|Beschreibung|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechselt zum textbasierten Abfrage-Designer, um die automatisch generierte Abfrage anzuzeigen oder die Abfrage zu ändern.|  
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Die Dateitypen SQL und RDL werden unterstützt.|  
@@ -247,7 +247,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Klicken Sie auf die Schaltfläche **Ausführen** (**!**). Die folgende Tabelle enthält ein Beispiel für `uspGetWhereUsedProductID` Parameter, die für die Sie Werte in der **Abfrageparameter definieren** Dialogfeld.  
+ Klicken Sie auf die Schaltfläche **Ausführen** ( **!** ). Die folgende Tabelle enthält ein Beispiel für `uspGetWhereUsedProductID` Parameter, die für die Sie Werte in der **Abfrageparameter definieren** Dialogfeld.  
   
 |||  
 |-|-|  

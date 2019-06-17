@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157316"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Hardwareinstallation für Analytics Platform System appliance
@@ -42,7 +42,7 @@ Verwenden Sie die folgende Checkliste, um jedes Rack Gerät aus der Palette an d
 >   
 > Nie wurde versucht, heben oder eine Appliance-Knoten oder eine andere hohe Komponente ohne Unterstützung zu erhalten oder geeignete Ausrüstung zu verschieben. Wenden Sie sich an Ihrem unabhängigen Hardwarehersteller Informationen auf der Gewichtung der einzelnen Komponenten, damit Sie im Voraus bestimmen können, welche Unterstützung zu erhalten, Geräte und Tools, die Sie jede Komponente zu behandeln, sicher und ohne dort Schaden anrichten können müssen.  
   
-|Aufgabe|Description|  
+|Aufgabe|Beschreibung|  
 |--------|---------------|  
 |Stellen Sie sicher, dass die Palette Ebene ist.|Bevor Sie beginnen, verschieben oder zu packen, achten Sie darauf, dass es auf der Ebene von Grund auf neu ist.|  
 |Unbolt einen Knoten aus der Palette|Beginnen Sie am oberen Rand der Palette, unbolt den obersten Knoten aus der Palette.|  

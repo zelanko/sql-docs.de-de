@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035064"
 ---
 # <a name="sqllogship-application"></a>Anwendung sqllogship
@@ -64,10 +64,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |4|Ausgabe aller Debug- und Ablaufverfolgungsmeldungen|  
   
  **-logintimeout** _timeout_value_  
- Gibt die für das Anmelden an der Serverinstanz vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standardwert ist 15 Sekunden. *timeout_value* hat den Typ **int**_._  
+ Gibt die für das Anmelden an der Serverinstanz vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standardwert ist 15 Sekunden. *timeout_value* hat den Typ **int** _._  
   
  **-querytimeout** _timeout_value_  
- Gibt die für das Starten des angegebenen Vorgangs vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standard ist kein Timeout. *timeout_value* hat den Typ **int**_._  
+ Gibt die für das Starten des angegebenen Vorgangs vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standard ist kein Timeout. *timeout_value* hat den Typ **int** _._  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie zum Sichern, Kopieren und Wiederherstellen nach Möglichkeit die Sicherungs-, Kopier- und Wiederherstellungsaufträge. Rufen Sie die gespeicherte Prozedur [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) auf, um diese Aufträge aus einem Batchvorgang oder einer anderen Anwendung zu starten.  

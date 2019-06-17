@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695958"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString-Eigenschaft (ADO)
@@ -34,7 +34,7 @@ Gibt an, die Informationen, die zum Herstellen einer Verbindung mit einer Datenq
   
  ADO unterstützt fünf Argumente für die **"ConnectionString"** Eigenschaft; alle anderen Argumente übergeben direkt an den Anbieter ohne jede Verarbeitung von ADO. Die Argumente ADO unterstützt lauten wie folgt aus.  
   
-|Argument|Description|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*Provider=*|Gibt den Namen eines Anbieters für die Verbindung verwendet.|  
 |*Dateiname =*|Gibt den Namen einer anbieterspezifischen-Datei (z. B. eine persistente Daten Quellobjekt), die vordefinierten Verbindungsinformationen enthält.|  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62797815"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -43,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @class = ] 'class'` Die Klasse, die Informationen angefordert wird. *Klasse* ist **varchar(8)**, hat den Standardwert des **Auftrag**. *Klasse* kann einen der folgenden Werte sein.  
+`[ @class = ] 'class'` Die Klasse, die Informationen angefordert wird. *Klasse* ist **varchar(8)** , hat den Standardwert des **Auftrag**. *Klasse* kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERT**|Stellt Informationen zu einer Warnungskategorie bereit.|  
 |**OPERATOR**|Stellt Informationen zu einer Operatorkategorie bereit.|  
   
-`[ @type = ] 'type'` Der Typ der Kategorie für die Informationen angefordert werden. *Typ* ist **varchar(12)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @type = ] 'type'` Der Typ der Kategorie für die Informationen angefordert werden. *Typ* ist **varchar(12)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  

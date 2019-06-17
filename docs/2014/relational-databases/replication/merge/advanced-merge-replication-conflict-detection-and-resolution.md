@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000344"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
@@ -109,7 +109,7 @@ ms.locfileid: "63000344"
   
  Im Konflikt-Viewer werden Informationen aus drei Systemtabellen angezeigt:  
   
--   Die Replikation erstellt eine Konflikttabelle für jede Tabelle in einem Mergeartikel, deren Name das folgende Format aufweist: **MSmerge_conflict_\<PublicationName>_\<ArticleName>**.  
+-   Die Replikation erstellt eine Konflikttabelle für jede Tabelle in einem Mergeartikel, deren Name das folgende Format aufweist: **MSmerge_conflict_\<PublicationName>_\<ArticleName>** .  
   
      Konflikttabellen weisen dieselbe Struktur auf wie die Tabellen, auf denen sie basieren. Eine Zeile in einer dieser Tabellen besteht aus der verlierenden Version einer Konfliktzeile (die gewinnende Version der Zeile befindet sich in der eigentlichen Benutzertabelle).  
   

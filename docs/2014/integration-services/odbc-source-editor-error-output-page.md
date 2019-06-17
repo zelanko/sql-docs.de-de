@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057131"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Quellen-Editor für ODBC (Seite Fehlerausgabe)
@@ -47,7 +47,7 @@ ms.locfileid: "66057131"
 ### <a name="truncation"></a>Abschneiden  
  Wählen Sie aus, wie die ODBC-Quelle Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Wird nicht verwendet.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Diesen Wert für ausgewählte Zellen festlegen  

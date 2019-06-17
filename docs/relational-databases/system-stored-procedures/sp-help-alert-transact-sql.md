@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796568"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @alert_name = ] 'alert_name'` Name der Warnung. *Warnungsname* ist **vom Datentyp nvarchar(128)**. Wenn *Warnungsname* ist nicht angegeben wird, Informationen zu allen Warnungen zurückgegeben.  
+`[ @alert_name = ] 'alert_name'` Name der Warnung. *Warnungsname* ist **vom Datentyp nvarchar(128)** . Wenn *Warnungsname* ist nicht angegeben wird, Informationen zu allen Warnungen zurückgegeben.  
   
 `[ @order_by = ] 'order_by'` Die Sortierreihenfolge, die zum Erzeugen der Ergebnisse verwendet werden soll. *Order_by*ist **Sysname**, hat den Standardwert N '*Namen*".  
   
@@ -121,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|Ungleich 0, wenn einer oder mehrere Operatoren für diese Warnung benachrichtigt werden. Einer oder mehrere der folgenden Werte sind möglich (mit OR verknüpft):<br /><br /> **1**= e-Mail-Benachrichtigung<br /><br /> **2**= Pagerbenachrichtigung<br /><br /> **4**= hat **net Send** Benachrichtigung.|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]. installiert haben.|  
 |**performance_condition**|**nvarchar(512)**|Wenn **Typ** ist **2**, diese Spalte die Definition des Leistungsstatus angezeigt. Wenn **Typ** ist **3**, in dieser Spalte wird die Abfrage für das WMI-Ereignis. Andernfalls weist die Spalte den Wert NULL auf.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Immer "**[nicht kategorisiert]**" für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Immer " **[nicht kategorisiert]** " für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**type**|**int**|Warnungstyp:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ereigniswarnung<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] leistungswarnung<br /><br /> **3** = WMI-ereigniswarnung|  
   
 ## <a name="remarks"></a>Hinweise  

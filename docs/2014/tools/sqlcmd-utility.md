@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035384"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -135,10 +135,10 @@ ms.locfileid: "63035384"
   
  Werden nach der Option **-P** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
- **-S** [*Protokoll*:]*Servername*[**\\**_Instanzname_][**,**_Port_]  
+ **-S** [*Protokoll*:]*Servername*[ **\\** _Instanzname_][ **,** _Port_]  
  Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an, mit der eine Verbindung hergestellt wird. Durch die Option wird die `sqlcmd`-Skriptvariable SQLCMDSERVER festgelegt.  
   
- Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Geben Sie *Servername* [**\\**_Instanzname_] an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Wenn kein Servercomputer angegeben wird, stellt `sqlcmd` eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, beim Ausführen von `sqlcmd` von einem Remotecomputer im Netzwerk.  
+ Geben Sie *Servername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Geben Sie *Servername* [ **\\** _Instanzname_] an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Servercomputer herzustellen. Wenn kein Servercomputer angegeben wird, stellt `sqlcmd` eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, beim Ausführen von `sqlcmd` von einem Remotecomputer im Netzwerk.  
   
  *Protokoll* kann `tcp` (TCP/IP), `lpc` (shared Memory) oder `np` (named Pipes).  
   
@@ -168,7 +168,7 @@ ms.locfileid: "63035384"
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Eingabe-/Ausgabeoptionen**  
-  **-f** _Codepage_ | **i:**_Codepage_[**,o:**_Codepage_] | **o:**_Codepage_[**,i:**_Codepage_]  
+  **-f** _Codepage_ | **i:** _Codepage_[ **,o:** _Codepage_] | **o:** _Codepage_[ **,i:** _Codepage_]  
  Gibt die Eingabe- und Ausgabecodepages an. Die Codepagenummer ist ein numerischer Wert, der eine installierte Windows-Codepage angibt.  
   
  Regeln zum Konvertieren von Codepages:  
@@ -183,7 +183,7 @@ ms.locfileid: "63035384"
   
  Geben Sie an der Eingabeaufforderung `chcp` ein, um die Codepage von Cmd.exe zu überprüfen.  
   
- **-i** _Eingabedatei_[**,**_Eingabedatei2_...]  
+ **-i** _Eingabedatei_[ **,** _Eingabedatei2_...]  
  Identifiziert die Datei, die einen Batch mit SQL-Anweisungen oder gespeicherten Prozeduren enthält. Sie können mehrere Dateien angeben, die der Reihe nach gelesen und verarbeitet werden. Verwenden Sie keine Leerzeichen zwischen Dateinamen. `sqlcmd` prüft zunächst, ob alle angegebenen Dateien vorhanden sind. Wenn eine oder mehrere Dateien nicht vorhanden sind, wird `sqlcmd` beendet. Die Optionen -i und -Q/-q schließen sich gegenseitig aus.  
   
  Beispiele für Pfade:  
@@ -266,7 +266,7 @@ ms.locfileid: "63035384"
 >  Der tatsächliche Timeoutwert kann einige Sekunden von dem für *Timeout* angegebenen Wert abweichen.  
   
  **-Vvar =** _Wert_[ **Var =** _Wert_...]  
- Erstellt eine `sqlcmd`Skriptvariable, die verwendet werden können eine `sqlcmd` Skript. Setzen Sie den Wert in Anführungszeichen, falls er Leerzeichen enthält. Sie können angeben, dass mehrere  **_Var_**=**"*`values`*"** Werte. Wenn einer der angegebenen Werte fehlerhaft ist, generiert `sqlcmd` eine Fehlermeldung und wird beendet.  
+ Erstellt eine `sqlcmd`Skriptvariable, die verwendet werden können eine `sqlcmd` Skript. Setzen Sie den Wert in Anführungszeichen, falls er Leerzeichen enthält. Sie können angeben, dass mehrere  **_Var_** = **" *`values`* "** Werte. Wenn einer der angegebenen Werte fehlerhaft ist, generiert `sqlcmd` eine Fehlermeldung und wird beendet.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -427,7 +427,7 @@ ms.locfileid: "63035384"
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd-Skriptvariablen  
   
-|Variable|Damit verbundene Schalter|R/W|Standard|  
+|Variable|Damit verbundene Schalter|R/W|Default|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -460,11 +460,11 @@ ms.locfileid: "63035384"
 |||  
 |-|-|  
 |**GO** [*Anzahl*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
+|[ **:** ] **RESET**|**:Error**|  
+|[ **:** ] **ED**|**:Out**|  
+|[ **:** ] **!!**|**:Perftrace**|  
+|[ **:** ] **QUIT**|**:Connect**|  
+|[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
 |**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
 |**:Setvar**|**:Listvar**|  
@@ -474,7 +474,7 @@ ms.locfileid: "63035384"
 -   Mit Ausnahme von GO muss vor allen `sqlcmd`-Befehlen ein Doppelpunkt (:) angegeben werden.  
   
     > [!IMPORTANT]  
-    >  Aus Gründen der Abwärtskompatibilität mit bestehenden **osql** -Skripts werden einige der Befehle auch ohne Angabe des Doppelpunkts erkannt. Dies wird durch [**:**] gekennzeichnet.  
+    >  Aus Gründen der Abwärtskompatibilität mit bestehenden **osql** -Skripts werden einige der Befehle auch ohne Angabe des Doppelpunkts erkannt. Dies wird durch [ **:** ] gekennzeichnet.  
   
 -   `sqlcmd`-Befehle werden nur erkannt, wenn sie am Anfang einer Zeile stehen.  
   
@@ -485,21 +485,21 @@ ms.locfileid: "63035384"
 -   Die Befehle werden sofort ausgeführt. Sie werden nicht wie [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen in den Ausführungspuffer gestellt.  
   
  **Bearbeitungsbefehle**  
-  [**:**] **ED**  
+  [ **:** ] **ED**  
  Startet den Text-Editor. Mit diesem Editor kann der aktuelle [!INCLUDE[tsql](../includes/tsql-md.md)]-Batch oder der zuletzt ausgeführte Batch bearbeitet werden. Um den zuletzt ausgeführten Batch zu bearbeiten, muss der **ED**-Befehl unmittelbar nach Abschluss der Ausführung des letzten Batches eingegeben werden.  
   
  Der Text-Editor wird durch die SQLCMDEDITOR-Umgebungsvariable definiert. Der Standardeditor ist 'Edit'. Sie können den Editor ändern, indem Sie die SQLCMDEDITOR-Umgebungsvariable festlegen. Wenn Sie beispielsweise den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Editor als Editor festlegen möchten, müssen Sie Folgendes eingeben:  
   
  `SET SQLCMDEDITOR=notepad`  
   
- [**:**] **RESET**  
+ [ **:** ] **RESET**  
  Löscht den Anweisungscache.  
   
  **:List**  
  Gibt den Inhalt des Anweisungscaches aus.  
   
  **Variablen**  
-  **:Setvar** \<**var**> [ **"*`value`*"** ]  
+  **:Setvar** \<**var**> [ **" *`value`* "** ]  
  Definiert `sqlcmd`-Skriptvariablen. Skriptvariablen haben das folgende Format: `$(VARNAME)`.  
   
  Bei Variablennamen wird die Groß- und Kleinschreibung nicht beachtet.  
@@ -531,7 +531,7 @@ ms.locfileid: "63035384"
   
  **Ausgabebefehle**  
   **:Error**   
- **_\<_** _FileName_  **_>|_ STDERR | "STDOUT"**  
+ ** _\<_ ** _FileName_  ** _>|_ STDERR | "STDOUT"**  
  Leitet die gesamte Fehlerausgabe in die mit *Dateiname*angegebene Datei, in **stderr** oder in **stdout**um. Der Befehl **Error** kann mehrmals in einem Skript verwendet werden. Die Fehlerausgabe wird standardmäßig an **stderr**gesendet.  
   
  *file name*  
@@ -543,10 +543,10 @@ ms.locfileid: "63035384"
  **STDOUT**  
  Leitet die Fehlerausgabe in den **stdout** -Datenstrom. Wenn dieser Datenstrom umgeleitet wurde, wird die Fehlerausgabe von dem Ziel empfangen, zu dem der Datenstrom umgeleitet wurde.  
   
- **:Out \<** _Dateiname_ **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _Dateiname_ **>** | **STDERR**| **STDOUT**  
  Erstellt und leitet alle Abfrageergebnisse in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder an **stdout**um. Standardmäßig wird die Ausgabe an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Out** kann mehrmals in einem Skript verwendet werden.  
   
- **:Perftrace \<** _Dateiname_ **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _Dateiname_ **>** | **STDERR**| **STDOUT**  
  Erstellt und leitet alle Informationen zur Leistungsnachverfolgung in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder **stdout**um. Standardmäßig wird die Ausgabe zur Leistungsnachverfolgung an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Perftrace** kann mehrmals in einem Skript verwendet werden.  
   
  **Befehle zur Ausführungssteuerung**  
@@ -557,10 +557,10 @@ ms.locfileid: "63035384"
   
  Wenn die Option `ignore` verwendet wird, ignoriert `sqlcmd` den Fehler und setzt die Batch- oder Skriptausführung fort. Standardmäßig wird eine Fehlermeldung ausgegeben.  
   
- [**:**] **QUIT**  
+ [ **:** ] **QUIT**  
  Bewirkt, dass `sqlcmd` beendet wird.  
   
- [**:**] **EXIT**[ **(*`statement`*)** ]  
+ [ **:** ] **EXIT**[ **( *`statement`* )** ]  
  Gibt Ihnen die Möglichkeit, das Ergebnis einer SELECT-Anweisung als Rückgabewert von `sqlcmd` zu verwenden. Wenn numerisch, wird die erste Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS übergibt das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows 200x übergibt die gesamte 4 Bytes lange ganze Zahl. Die Syntax lautet:  
   
  `:EXIT(query)`  
@@ -625,7 +625,7 @@ ms.locfileid: "63035384"
  **:Serverlist**  
  Listet die lokal konfigurierten Server sowie die Namen der Server auf, die Nachrichten über das Netzwerk senden.  
   
- **: Connect** _Server_name_[**\\**_Instance_name_] [-l *Timeout*] [-U *User_ Namen* [-P *Kennwort*]]  
+ **: Connect** _Server_name_[ **\\** _Instance_name_] [-l *Timeout*] [-U *User_ Namen* [-P *Kennwort*]]  
  Stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] her. Schließt außerdem die aktuelle Verbindung.  
   
  Timeoutoptionen:  
@@ -651,8 +651,8 @@ ms.locfileid: "63035384"
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**  \< *Befehl*>  
- Führt Betriebssystembefehle aus. Um einen Betriebssystembefehl auszuführen, geben Sie zwei Ausrufezeichen (**!!**) gefolgt von dem Betriebssystembefehl in eine neue Zeile ein. Zum Beispiel:  
+ [ **:** ] **!!**  \< *Befehl*>  
+ Führt Betriebssystembefehle aus. Um einen Betriebssystembefehl auszuführen, geben Sie zwei Ausrufezeichen ( **!!** ) gefolgt von dem Betriebssystembefehl in eine neue Zeile ein. Zum Beispiel:  
   
  `:!! Dir`  
   
@@ -668,11 +668,11 @@ ms.locfileid: "63035384"
 ### <a name="sqlcmd-file-names"></a>sqlcmd-Dateinamen  
  `sqlcmd` Eingabedateien können angegeben werden, mit der **-i** Option oder die **: R** Befehl. Ausgabedateien können mit der Option **-o** oder den Befehlen **:Error**, **:Out** und **:Perftrace** angegeben werden. Es folgen einige Richtlinien für das Verwenden dieser Dateien:  
   
--   **: Error**, **: Out** und **: Perftrace** sollten separate verwenden **< *`filename`* >**. Wenn die gleiche **< *`filename`* >** wird verwendet, Eingaben der Dateien womöglich vermischt.  
+-   **: Error**, **: Out** und **: Perftrace** sollten separate verwenden **< *`filename`* >** . Wenn die gleiche **< *`filename`* >** wird verwendet, Eingaben der Dateien womöglich vermischt.  
   
 -   Wenn eine Eingabedatei auf einem Remoteserver einen Laufwerksdateipfad wie z. B. :out c:\OutputFile.txt enthält und von `sqlcmd` auf einem lokalen Computer aufgerufen wird, wird die Ausgabedatei auf dem lokalen Computer und nicht auf dem Remoteserver erstellt.  
   
--   Gültige Dateipfade sind: "C:"\\**<*`filename`*>**, \\ \\< Server\>\\< Freigabe$ >\\ **< *`filename`* >** und "C:\Some Ordner\\  **< *`file name`*>**". Verwenden Sie Anführungszeichen, wenn der Pfad ein Leerzeichen enthält.  
+-   Gültige Dateipfade sind: "C:"\\ **< *`filename`* >** , \\ \\< Server\>\\< Freigabe$ >\\ **< *`filename`* >** und "C:\Some Ordner\\  **< *`file name`* >** ". Verwenden Sie Anführungszeichen, wenn der Pfad ein Leerzeichen enthält.  
   
 -   Mit jeder neuen `sqlcmd`-Sitzung werden eventuell schon vorhandene gleichnamige Dateien überschrieben.  
   

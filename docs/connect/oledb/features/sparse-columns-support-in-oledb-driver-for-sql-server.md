@@ -13,13 +13,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: cde5de04f06c7954ad9eb5ae721ae1c4ba04e4ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 598d640362ea164673d198b0dc57b3743350673e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606260"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802918"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "51606260"
   
  Bei **queryout**-Vorgängen gibt es keine Änderungen in der Behandlung von Spalten, auf die explizit verwiesen wird. **column_set**-Spalten weisen das gleiche Verhalten auf wie XML-Spalten, und die Sparseeigenschaft hat keine Auswirkungen auf die Behandlung von benannten Sparsespalten.  
   
- Wenn jedoch **queryout** für das Exportieren verwendet wird, und Sie über den Namen auf Sparsespalten verweisen, die Elemente des Sparsespaltensatzes sind, können Sie keinen direkten Import in eine Spalte mit gleicher Struktur durchführen. Dies liegt daran, dass BCP Metadaten verwendet, die konsistent mit einem **select \***-Vorgang für den Import sind, und **column_set**-Elementspalten diesen Metadaten nicht zuordnen kann. Damit **column_set**-Elementspalten einzeln importiert werden können, müssen Sie eine Ansicht für die Tabelle definieren, die auf die gewünschten **column_set**-Spalten verweist. Darüber hinaus müssen Sie den Importvorgang über die Ansicht ausführen.  
+ Wenn jedoch **queryout** für das Exportieren verwendet wird, und Sie über den Namen auf Sparsespalten verweisen, die Elemente des Sparsespaltensatzes sind, können Sie keinen direkten Import in eine Spalte mit gleicher Struktur durchführen. Dies liegt daran, dass BCP Metadaten verwendet, die konsistent mit einem **select \*** -Vorgang für den Import sind, und **column_set**-Elementspalten diesen Metadaten nicht zuordnen kann. Damit **column_set**-Elementspalten einzeln importiert werden können, müssen Sie eine Ansicht für die Tabelle definieren, die auf die gewünschten **column_set**-Spalten verweist. Darüber hinaus müssen Sie den Importvorgang über die Ansicht ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL-Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

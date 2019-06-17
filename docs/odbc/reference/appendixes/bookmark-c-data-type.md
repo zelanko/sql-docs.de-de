@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026951"
 ---
 # <a name="bookmark-c-data-type"></a>Textmarke, C-Datentyp
@@ -30,7 +30,7 @@ Das Lesezeichen C-Datentyp kann es sich um eine Anwendung ein Lesezeichen abrufe
  Die folgende Tabelle enthält den Wert der *CType* für den Lesezeichen C-Datentyp, geben Sie der ODBC-C-Datentyp, der die Lesezeichen C-Datentyp und die Definition dieser Daten implementiert von SQL. H.  
   
 > [!NOTE]
->  Der Datentyp SQL_C_BOOKMARK wurde als veraltet markiert. ODBC 3.*.x* Anwendungen sollten keine SQL_C_BOOKMARK verwenden. ODBC 3.*.x* Treiber müssen SQL_C_BOOKMARK unterstützen nur, wenn sie mit ODBC 2. arbeiten möchten. *X* Anwendungen, die sie verwenden. Der Treiber-Manager ordnet SQL_C_VARBOOKMARK SQL_C_BOOKMARK, wenn es sich bei eine Anwendung mit einer ODBC 2. funktioniert. *x* Treiber.  
+>  Der Datentyp SQL_C_BOOKMARK wurde als veraltet markiert. ODBC 3. *.x* Anwendungen sollten keine SQL_C_BOOKMARK verwenden. ODBC 3. *.x* Treiber müssen SQL_C_BOOKMARK unterstützen nur, wenn sie mit ODBC 2. arbeiten möchten. *X* Anwendungen, die sie verwenden. Der Treiber-Manager ordnet SQL_C_VARBOOKMARK SQL_C_BOOKMARK, wenn es sich bei eine Anwendung mit einer ODBC 2. funktioniert. *x* Treiber.  
   
 |C-Typ-ID|ODBC-C-Typdefinition|C-Typ|  
 |-----------------------|--------------------|------------|  

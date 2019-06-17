@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811284"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz
@@ -85,7 +85,7 @@ ms.locfileid: "62811284"
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server** , und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Erweitern Sie **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** *\<* Instanzname*>*, und klicken Sie dann auf **Eigenschaften**.  
+2.  Erweitern Sie **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** *\<* Instanzname *>* , und klicken Sie dann auf **Eigenschaften**.  
   
 3.  Legen Sie sowohl für die Kanalbindung als auch für die Dienstbindung auf der Registerkarte **Erweitert** die geeignete Einstellung für die Funktion **Erweiterter Schutz** fest.  
   

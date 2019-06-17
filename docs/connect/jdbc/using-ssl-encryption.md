@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1453daf6bf9e806a4b3ac79ae8c9a322e5bd0bac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771524"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798583"
 ---
 # <a name="using-ssl-encryption"></a>Verwenden der SSL-Verschlüsselung
 
@@ -37,12 +37,12 @@ In den Themen in diesem Abschnitt werden die Unterstützung der SSL-Verschlüsse
 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
-| Thema                                                                                                        | Beschreibung                                                                                                                                           |
+| Thema                                                                                                        | und Beschreibung                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Grundlegendes zur SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md)                                 | Beschreibt die Unterstützung der SSL-Verschlüsselung in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].                                              |
 | [Herstellen von Verbindungen mit SSL-Verschlüsselung](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Beschreibt das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe der neuen SSL-spezifischen Verbindungseigenschaften. |
 | [Konfigurieren des Clients für SSL-Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Beschreibt das Konfigurieren des Standardvertrauensspeichers auf Clientseite und das Importieren eines privaten Zertifikats im Vertrauensspeicher des Clientcomputers.   |
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  

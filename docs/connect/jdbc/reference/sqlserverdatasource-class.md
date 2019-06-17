@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4dcbeb69fee36b3b38ec07de338e2624d3695c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 916a3c318cf96fa5114b7e0e6bc1a3caae815d4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840778"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800550"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public class SQLServerDataSource
 ## <a name="remarks"></a>Remarks  
  Diese Klasse unterstützt das Entpacken in die SQLServerDataSource-Klasse, die ISQLServerDataSource-Schnittstelle und die DataSource-Schnittstelle. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [API-Referenz für den JDBC-Treiber](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

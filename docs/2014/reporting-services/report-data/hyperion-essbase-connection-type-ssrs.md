@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a0c38487f58a6db6e80d48c2b39b09e3ed93106
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107270"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase-Verbindungstyp (SSRS)
@@ -76,7 +76,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Vordefinierte Feldeigenschaften  
- Vordefinierte Feldeigenschaften sind Eigenschaften, die in der Regel von mehreren Datenanbietern unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden. Beispielsweise ist die MDX-Dimensionseigenschaft MEMBER_UNIQUE_NAME der vordefinierten Berichtsdataset-Feldeigenschaft `UniqueName` zugeordnet. Verwenden Sie den Ausdruck `=Fields!`*\<Feldname>*`.UniqueName`, um den Wert des eindeutigen Namens in ein Textfeld einzuschließen.  
+ Vordefinierte Feldeigenschaften sind Eigenschaften, die in der Regel von mehreren Datenanbietern unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden. Beispielsweise ist die MDX-Dimensionseigenschaft MEMBER_UNIQUE_NAME der vordefinierten Berichtsdataset-Feldeigenschaft `UniqueName` zugeordnet. Verwenden Sie den Ausdruck `=Fields!` *\<Feldname>* `.UniqueName`, um den Wert des eindeutigen Namens in ein Textfeld einzuschließen.  
   
  Die folgende Tabelle enthält eine Liste vordefinierter Feldeigenschaften, die Sie für eine [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle verwenden können.  
   
@@ -93,7 +93,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Benutzerdefinierte Eigenschaften  
- Benutzerdefinierte Feldeigenschaften sind Eigenschaften, die von einem Datenanbieter unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden, jedoch nicht im Bereich "Datasets" des Berichts als Felder unter diesem Dataset aufgeführt werden. Beispielsweise ist **Long Names** eine für eine Dimensionsebene definierte Elementeigenschaft. Verwenden Sie den Ausdruck `=Fields!`*\<FieldName>*`("Long Names")`, um den Wert in ein Textfeld einzuschließen. Bei Feldnamen im Ausdruck wird zwischen Groß-/Kleinschreibung unterschieden.  
+ Benutzerdefinierte Feldeigenschaften sind Eigenschaften, die von einem Datenanbieter unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden, jedoch nicht im Bereich "Datasets" des Berichts als Felder unter diesem Dataset aufgeführt werden. Beispielsweise ist **Long Names** eine für eine Dimensionsebene definierte Elementeigenschaft. Verwenden Sie den Ausdruck `=Fields!` *\<FieldName>* `("Long Names")`, um den Wert in ein Textfeld einzuschließen. Bei Feldnamen im Ausdruck wird zwischen Groß-/Kleinschreibung unterschieden.  
   
  Verwenden Sie die folgende Syntax, um in einem Ausdruck auf benutzerdefinierte erweiterte Eigenschaften zu verweisen:  
   

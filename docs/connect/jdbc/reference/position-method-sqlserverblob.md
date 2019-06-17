@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b520f192-6a14-4453-babd-8e7861ab25d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fd40b98f66122cafa13ddf060f8800c9e2a65b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: fca7b4dd1f8167fa5103d461b22804c43b5c9b86
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657758"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802394"
 ---
 # <a name="position-method-sqlserverblob"></a>position-Methode (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "47657758"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[position (java.sql.Blob, long)](../../../connect/jdbc/reference/position-method-java-sql-blob-long.md)|Gibt die Position eines angegebenen Musters im BLOB auf der Grundlage des angegebenen Musters und des Startindexes zurück.|  
 |[Position (Byte&#91;&#93;, long)](../../../connect/jdbc/reference/position-method-byte-long.md)|Gibt die Position eines angegebenen Musters im BLOB auf der Grundlage des angegebenen **Bytearray**-Musters und des Startindexes zurück.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerBlob-Methoden](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob-Elemente](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  

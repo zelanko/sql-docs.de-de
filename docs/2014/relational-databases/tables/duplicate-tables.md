@@ -1,9 +1,8 @@
 ---
 title: Duplizieren von Tabellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
@@ -16,17 +15,14 @@ ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760755"
 ---
 # <a name="duplicate-tables"></a>Duplizieren von Tabellen
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
-
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine vorhandene Tabelle in [!INCLUDE[tsql](../../includes/tsql-md.md)] duplizieren, indem Sie eine neue Tabelle erstellen und dann Spalteninformationen aus einer vorhandenen Tabelle kopieren.  
   
 > [!IMPORTANT]  
@@ -36,7 +32,7 @@ ms.locfileid: "62760755"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So duplizieren Sie eine Tabelle mit:**  
   
@@ -51,7 +47,7 @@ ms.locfileid: "62760755"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE TABLE-Berechtigung in der Zieldatenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-duplicate-a-table"></a>So duplizieren Sie eine Tabelle  
   

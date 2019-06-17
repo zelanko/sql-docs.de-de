@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776069"
 ---
 # <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten
@@ -107,7 +107,7 @@ Die berechnete Spalte "productsubcategoryname" wird verwendet, um eine Hierarchi
     =RELATED('DimProductCategory'[EnglishProductCategoryName]) 
     ```
     
-3.  Benennen Sie die Spalte in **"productcategoryname"**.  
+3.  Benennen Sie die Spalte in **"productcategoryname"** .  
   
 Die berechnete Spalte "productcategoryname" wird verwendet, um eine Hierarchie in der DimProduct-Tabelle zu erstellen, die Daten aus der EnglishProductCategoryName-Spalte in der Tabelle "DimProductCategory" enthält. Hierarchien können maximal eine Tabelle umfassen.  
   

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 589519e7c4a075d5fb06b5f2640d48e5d4ed898d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695264"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Gibt an, wie ein Anbieter einen Befehl ausführen soll.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Gibt an, dass der Befehl asynchron ausgeführt werden soll.<br /><br /> Dieser Wert kann nicht kombiniert werden, mit der [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) Wert **AdCmdTableDirect**.|  
 |**adAsyncFetch**|0x20|Gibt an, dass die verbleibenden Zeilen nach der ersten Menge in angegeben die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) Eigenschaft asynchron abgerufen werden soll.|  

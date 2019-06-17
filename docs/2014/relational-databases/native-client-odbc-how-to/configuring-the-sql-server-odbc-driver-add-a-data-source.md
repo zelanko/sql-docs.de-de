@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126074"
 ---
 # <a name="add-a-data-source-odbc"></a>Hinzufügen einer Datenquelle (ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126074"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>So fügen Sie eine Datenquelle mit dem ODBC-Administrator hinzu  
   
-1.  Von der **Systemsteuerung**, Zugriff **Verwaltung** und dann **Datenquellen (ODBC)**. Alternativ können Sie odbcad32.exe aufrufen.  
+1.  Von der **Systemsteuerung**, Zugriff **Verwaltung** und dann **Datenquellen (ODBC)** . Alternativ können Sie odbcad32.exe aufrufen.  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** , und klicken Sie dann auf **Hinzufügen**.  
   

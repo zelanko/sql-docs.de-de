@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62899997"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
@@ -137,7 +137,7 @@ ms.locfileid: "62899997"
   
 3.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** im Foreach-Schleifencontainer einen Task „Mail senden“ hinzu.  
   
-4.  Öffnen Sie den **Editor für den Task „Mail senden“**, und konfigurieren Sie auf der Seite **E-Mail** den Task mit den folgenden Einstellungen:  
+4.  Öffnen Sie den **Editor für den Task „Mail senden“** , und konfigurieren Sie auf der Seite **E-Mail** den Task mit den folgenden Einstellungen:  
   
     1.  Wählen Sie für **SmtpConnection**den SMTP-Verbindungs-Manager aus, der zuvor konfiguriert wurde.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62899997"
   
     5.  Wählen Sie für **MessageSourceType**die Option **Direkteingabe**aus.  
   
-5.  Klicken Sie auf der Seite **Ausdrücke** des **Editors für den Task „Mail senden“** auf die Schaltfläche mit den drei Punkten (**...**), um den **Eigenschaftsausdrucks-Editor**zu öffnen.  
+5.  Klicken Sie auf der Seite **Ausdrücke** des **Editors für den Task „Mail senden“** auf die Schaltfläche mit den drei Punkten ( **...** ), um den **Eigenschaftsausdrucks-Editor**zu öffnen.  
   
 6.  Geben Sie im **Eigenschaftsausdrucks-Editor**die folgenden Informationen ein:  
   

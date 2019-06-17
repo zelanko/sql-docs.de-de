@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: d3967da74969556cd96483d4a9c3afa3135fa342
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779218"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
@@ -33,11 +33,11 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 | Neue Funktion oder Update | Details |
 |:---|:---|
-| **mssqlctl** updates | Mehrere **Mssqlctl** [Installationsbefehl und Parametersatz Updates](../big-data-cluster/reference-mssqlctl.md). Dies umfasst ein Update für die **Mssqlctl Anmeldung** -Befehl, der nun die Controller-Benutzernamen und ein Endpunkt ausgerichtet ist. |
-| Speichererweiterungen | Unterstützung für unterschiedliche Speicherkonfigurationen für Protokolle und Daten. Darüber hinaus wurde die Anzahl der Ansprüche von persistentes Volume für einen big Data-Cluster gesenkt. |
-| Mehrere Instanzen der Compute-pool | Unterstützung für mehrere Instanzen der Compute-Pool. |
-| Neuer Pool Verhalten und die Funktionen | Der Compute-Pool ist jetzt für Storage Pool und Pool-Datenvorgänge in standardmäßig verwendet eine **ROUND_ROBIN** nur Verteilung. Der Datenpool können Sie jetzt ein neues new **REPLIZIERTE** Verteilungstyp, was bedeutet, dass die gleichen Daten für alle Instanzen der Daten-Pool vorhanden ist. |
-| Verbesserungen der externen Tabelle | Externe Tabellen der HADOOP-Datenquelle geben nun unterstützt das Lesen von bis zu 1 MB groß Zeilen. Externe Tabellen (ODBC, Speicher-Pool, Datenpool) jetzt Unterstützung Zeilen so breit ist wie eine SQL Server-Tabelle. |
+| **mssqlctl**-Updates | Mehrere [Updates für den Befehl **mssqlctl** und seine Parameter](../big-data-cluster/reference-mssqlctl.md). Dies umfasst ein Update für den Befehl **mssqlctl login**, der nun den Controllerbenutzernamen und -endpunkt zum Ziel hat. |
+| Speichererweiterungen | Unterstützung für verschiedene Speicherkonfigurationen für Protokolle und Daten. Darüber hinaus wurde die Anzahl der Ansprüche von persistentem Volume für einen Big Data-Cluster gesenkt. |
+| Mehrere Computepoolinstanzen | Unterstützung für mehrere Computepoolinstanzen. |
+| Neues Poolverhalten und neue Poolfunktionen | Der Computepool wird jetzt standardmäßig für Speicherpool- und Datenpoolvorgänge ausschließlich in einer **ROUND_ROBIN**-Verteilung verwendet. Der Datenpool kann nun einen neuen Verteilungstyp **REPLICATED** verwenden, was bedeutet, dass dieselben Daten in allen Datenpoolinstanzen vorhanden sind. |
+| Verbesserungen externer Tabellen | Externe Tabellen des HADOOP-Datenquellentyps unterstützen nun das Lesen von Zeilen mit einer Größe von bis zu 1 MB. Externe Tabellen (ODBC, Speicherpool, Datenpool) unterstützen jetzt Zeilen mit der Breite einer SQL Server-Tabelle. |
 
 ### <a name="known-issues"></a>Bekannte Probleme
 

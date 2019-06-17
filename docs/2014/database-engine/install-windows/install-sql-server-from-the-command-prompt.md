@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13f6cb50604047e7c5f2aaaa60c3e3b77cae5913
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780980"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Installieren von SQL Server 2014 von der Eingabeaufforderung
@@ -269,7 +269,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>Parameter für die Imagevorbereitung  
  Verwenden Sie die Parameter in der folgenden Tabelle, um Befehlszeilenskripts zur Vorbereitung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu entwickeln, ohne sie zu konfigurieren.  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente|Parameter|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente|Parameter|Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den installationsworkflow anzugeben. Unterstützte Werte:<br /><br /> PrepareImage|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
@@ -411,7 +411,7 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> Parameter für die Neuerstellung einer Systemdatenbank  
  Verwenden Sie die in der folgenden Tabelle aufgeführten Parameter, um Befehlszeilenskripts zur Neuerstellung der Systemdatenbanken master, model, msdb und tempdb zu entwickeln. Weitere Informationen finden Sie unter [Neuerstellen von Systemdatenbanken](../../relational-databases/databases/system-databases.md).  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente|Parameter|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente|Parameter|Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Workflow für das erneute Erstellen der Datenbank anzugeben. Unterstützte Werte:<br /><br /> Rebuilddatabase|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/INSTANCENAME<br /><br /> **Erforderlich**|Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen an.<br /><br /> Weitere Informationen finden Sie unter [Instance Configuration](../../sql-server/install/instance-configuration.md).|  
@@ -661,7 +661,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>Parameter für das Aktualisieren von Failoverclustern  
  Entwickeln Sie mit den in der folgenden Tabelle aufgelisteten Parametern Befehlszeilenskripts für die Failoverclusterupgrades. Weitere Informationen finden Sie unter [Aktualisieren einer SQL Server-Failoverclusterinstanz &#40;Setup&#41; ](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) und [AlwaysOn-Failoverclusterinstanzen (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente|Parameter|Description|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponente|Parameter|Beschreibung|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/ACTION<br /><br /> **Erforderlich**|Erforderlich, um den Installationsworkflow anzugeben. Unterstützte Werte:<br /><br /> Aktualisieren|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setupsteuerelement|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Nur erforderlich, wenn der /Q-Parameter oder der /QS-Parameter für die unbeaufsichtigte Installation angegeben wird.**|Erforderlich, um das Einverständnis mit den Lizenzbedingungen zu erklären.|  
@@ -798,7 +798,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>Beispiele für Funktionsparameter:  
   
-|Parameter und Werte|Description|  
+|Parameter und Werte|Beschreibung|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Installiert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] ohne Replikation und Volltext.|  
 |/FEATURES=SQLEngine, FullText|Installiert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] und Volltext.|  

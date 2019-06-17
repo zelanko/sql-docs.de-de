@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9a6804b68680600f9db9690929236d9f6128bc9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: eba70e8a4ee641b4bccb54f67f37015a0edbd434
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614478"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802898"
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47614478"
  Weitere Informationen zu OLE DB-Treiber für SQL Server-Unterstützung für die datenbankspiegelung finden Sie unter [Initialisierungs- und Autorisierungseigenschaften](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

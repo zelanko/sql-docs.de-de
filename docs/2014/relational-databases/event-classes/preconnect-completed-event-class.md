@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827081"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed (Ereignisklasse)
@@ -26,7 +26,7 @@ ms.locfileid: "62827081"
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Datenspalten der PreConnect:Completed-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|`int`|216|27|Nein|  
 |SPID|`int`|Die ID des Serverprozesses, von dem das Ereignis ausgelöst wird.|12|Ja|  
