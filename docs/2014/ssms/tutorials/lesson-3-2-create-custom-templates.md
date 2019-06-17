@@ -67,7 +67,7 @@ ms.locfileid: "62805579"
   
 10. Geben Sie im Abfrage-Editor **EXECUTE dbo.WorkOrdersForBlade**ein, und drücken Sie anschließend F5, um die Abfrage auszuführen. Überprüfen Sie, ob im Bereich **Ergebnisse** eine Liste mit Bestellungen für Klingen zurückgegeben wird.  
   
-11. Bearbeiten Sie das Vorlagenskript (das Skript in Schritt 7), und Ersetzen Sie dabei den Produktnamen "Blade" mit dem Parameter  <strong> *<* Product_name</strong>, `nvarchar(50)`, <strong>Namen *>* </strong> , an vier Stellen.  
+11. Bearbeiten Sie das Vorlagenskript (das Skript in Schritt 7), und Ersetzen Sie dabei den Produktnamen "Blade" mit dem Parameter <strong> *<* Product_name</strong>, `nvarchar(50)`, <strong>Namen *>* </strong>, an vier Stellen.  
   
     > [!NOTE]  
     >  Für Parameter sind drei Elemente erforderlich: der Name des zu ersetzenden Parameters, der Datentyp des Parameters und ein Standardwert für den Parameter.  

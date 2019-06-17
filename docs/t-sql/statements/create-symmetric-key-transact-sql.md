@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326501"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836348"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>Argumente  
  *Key_name*  
- Gibt den eindeutigen Namen an, unter dem der symmetrische Schlüssel in der Datenbank bekannt ist. Die Namen von temporären Schlüsseln müssen mit einem Nummernzeichen (#) beginnen. Ein Beispiel: **#temporaryKey900007**. Das Erstellen eines symmetrischen Schlüssels, dessen Name mit mehreren Nummernzeichen (#) beginnt, ist nicht möglich. Sie können keinen temporären symmetrischen Schlüssel mit einem EKM-Anbieter erstellen.  
+ Gibt den eindeutigen Namen an, unter dem der symmetrische Schlüssel in der Datenbank bekannt ist. Temporäre Schlüssel werden festgelegt, wenn der _key_name_ mit einem Nummernzeichen (#) beginnt. Ein Beispiel: **#temporaryKey900007**. Das Erstellen eines symmetrischen Schlüssels, dessen Name mit mehreren Nummernzeichen (#) beginnt, ist nicht möglich. Sie können keinen temporären symmetrischen Schlüssel mit einem EKM-Anbieter erstellen.  
   
  AUTHORIZATION *owner_name*  
  Gibt den Namen des Datenbankbenutzers oder der Anwendungsrolle an, der bzw. die diesen Schlüssel besitzen wird.  
