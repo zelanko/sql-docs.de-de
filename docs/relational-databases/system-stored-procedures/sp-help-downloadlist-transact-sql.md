@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796183"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
-`[ @operation = ] 'operation'` Der gültige Vorgang für den angegebenen Auftrag. *Vorgang* ist **varchar(64)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @operation = ] 'operation'` Der gültige Vorgang für den angegebenen Auftrag. *Vorgang* ist **varchar(64)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -68,17 +68,17 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
 |**UPDATE**|Auftragsvorgang, der aktualisiert nur die **Sysjobs** Informationen für einen Auftrag, nicht die Schritte eines Auftrags oder Zeitpläne. Aufruf erfolgt automatisch durch **Sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'` Der Typ des Objekts für den angegebenen Auftrag. *Object_type* ist **varchar(64)**, hat den Standardwert NULL. *Object_type* kann JOB oder SERVER sein. Weitere Informationen zu gültigen *Object_type*Werte finden Sie unter [Sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Der Typ des Objekts für den angegebenen Auftrag. *Object_type* ist **varchar(64)** , hat den Standardwert NULL. *Object_type* kann JOB oder SERVER sein. Weitere Informationen zu gültigen *Object_type*Werte finden Sie unter [Sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
 `[ @object_name = ] 'object_name'` Der Name des Objekts. *Object_name* ist **Sysname**, hat den Standardwert NULL. Wenn *Object_type* Wert JOB aufweist, *Object_name*ist der Name des Auftrags. Wenn *Object_type*Server und *Object_name*ist der Servername.  
   
-`[ @target_server = ] 'target_server'` Der Name des Zielservers. *Target_server* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
+`[ @target_server = ] 'target_server'` Der Name des Zielservers. *Target_server* ist **vom Datentyp nvarchar(128)** , hat den Standardwert NULL.  
   
 `[ @has_error = ] has_error` Ist, gibt an, ob der Auftrag Fehler bestätigen soll. *Has_error* ist **Tinyint**, hat den Standardwert NULL, womit keine Fehler bestätigt werden sollen. **1** gibt an, dass alle Fehler bestätigt werden sollen.  
   
 `[ @status = ] status` Der Status des Auftrags. *Status* ist **Tinyint**, hat den Standardwert NULL.  
   
-`[ @date_posted = ] date_posted` Legen Sie Datum und Uhrzeit, zu dem alle Einträge, die am oder nach dem angegebenen Datum und Uhrzeit im Resultset enthalten sein soll. *Date_posted* ist **"DateTime"**, hat den Standardwert NULL.  
+`[ @date_posted = ] date_posted` Legen Sie Datum und Uhrzeit, zu dem alle Einträge, die am oder nach dem angegebenen Datum und Uhrzeit im Resultset enthalten sein soll. *Date_posted* ist **"DateTime"** , hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

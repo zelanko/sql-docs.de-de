@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098878"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
@@ -148,7 +148,7 @@ ms.locfileid: "66098878"
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
   
-1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ auf die Schaltfläche **(...)**.  
+1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ auf die Schaltfläche **(...)** .  
   
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66098878"
   
 5.  Ziehen Sie das Measure „Sales Amount“ in den Datenbereich, und legen Sie es rechts neben „Product Subcategory Name“ ab.  
   
-6.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen (!)**.  
+6.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen (!)** .  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "66098878"
   
      Die Tabelle wird der Entwurfsoberfläche hinzugefügt.  
   
-3.  Klicken Sie auf **Ausführen (!)**, um den Bericht in der Vorschau anzuzeigen.  
+3.  Klicken Sie auf **Ausführen (!)** , um den Bericht in der Vorschau anzuzeigen.  
   
 ##  <a name="DFormat"></a> 2. Formatieren von Daten als Währung  
  Übernehmen Sie die Währungsformatierung für die Sales Amount-Felder im Drillthroughbericht.  
@@ -442,7 +442,7 @@ ms.locfileid: "66098878"
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
   
-1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ im Cubeabschnitt auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
+1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ im Cubeabschnitt auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
   
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
@@ -529,7 +529,7 @@ ms.locfileid: "66098878"
   
 4.  Ziehen Sie aus Berechnete Elemente das Element „Net Sales“ in den Datenbereich, und legen Sie es rechts neben `Net QTY`ab.  
   
-5.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen (!)**.  
+5.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen (!)** .  
   
      Überprüfen Sie das Abfrageresultset.  
   
@@ -644,7 +644,7 @@ ms.locfileid: "66098878"
   
 4.  Klicken Sie auf den Typ **3 Zeichen** und anschließend auf **OK**.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)**. Wählen Sie `Net_QTY`aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)** . Wählen Sie `Net_QTY`aus.  
   
 6.  Wiederholen Sie die Schritte 2 bis 5 für die Zelle `[Sum(Net QTY)]` in der Zeilengruppe `[Product_Category_Name]` innerhalb von **Gesamt**.  
   
@@ -656,7 +656,7 @@ ms.locfileid: "66098878"
   
 3.  Klicken Sie auf den Typ **3 Zeichen** und anschließend auf **OK**.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)**. Wählen Sie `Net_Sales`aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)** . Wählen Sie `Net_Sales`aus.  
   
 5.  Wiederholen Sie die Schritte 1 bis 4 für die Zelle `[Sum(Net_Sales)]` in der Zeilengruppe `[Product_Category_Name]` innerhalb von **Gesamt**.  
   
@@ -684,7 +684,7 @@ ms.locfileid: "66098878"
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Umsatz in 2009 in Produktkategorie: Online und Wiederverkäufer:**.  
+2.  Geben Sie **Umsatz in 2009 in Produktkategorie: Online und Wiederverkäufer:** .  
   
 3.  Wählen Sie den eingegebenen Text aus.  
   

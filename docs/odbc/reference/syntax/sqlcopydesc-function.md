@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537726"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc-Funktion
@@ -60,7 +60,7 @@ SQLRETURN SQLCopyDesc(
   
  Da **SQLCopyDesc** kann implementiert werden, durch den Aufruf **SQLGetDescField** und **SQLSetDescField**, **SQLCopyDesc** möglicherweise zurück Zurückgegebenes SQLSTATEs **SQLGetDescField** oder **SQLSetDescField**.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  

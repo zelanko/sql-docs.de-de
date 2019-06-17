@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982870"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Die vollqualifizierte Adresse des Azure-Servers.  
   
--   Wenn Sie einen Wert für **@database_name**, aber die angegebene Datenbank ist nicht für die Stretch-fähigen, dann müssen Sie einen Wert für **@server_address**.  
+-   Wenn Sie einen Wert für **@database_name** , aber die angegebene Datenbank ist nicht für die Stretch-fähigen, dann müssen Sie einen Wert für **@server_address** .  
   
--   Wenn Sie einen Wert für **@database_name**, die angegebene Datenbank ist Stretch-fähigen, und Sie müssen einen Wert für **@server_address**. Wenn Sie einen Wert für **@server_address**, die gespeicherte Prozedur ignoriert, und verwendet die Azure-Server bereits vorhandene, die mit der Stretch-aktivierten Datenbank verknüpft ist.  
+-   Wenn Sie einen Wert für **@database_name** , die angegebene Datenbank ist Stretch-fähigen, und Sie müssen einen Wert für **@server_address** . Wenn Sie einen Wert für **@server_address** , die gespeicherte Prozedur ignoriert, und verwendet die Azure-Server bereits vorhandene, die mit der Stretch-aktivierten Datenbank verknüpft ist.  
   
  @azure_username = N'*azure_username*  
  Der Benutzername für den Azure-Remoteserver.  
@@ -69,7 +69,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |link_state|ssNoversion|Eine der folgenden Werte, die die Werte für entsprechen **Link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
 |link_state_desc|varchar(32)|Eine der folgenden Werte, die im vorhergehenden Abschnitt entsprechen die Werte für **Link_state**.<br /><br /> -FEHLERFREI<br />     Die zwischen SQL Server und das Azure-remote-Server fehlerfrei ist.<br />-   ERROR_AZURE_FIREWALL<br />     Die Azure-Firewall verhindert, dass die Verbindung zwischen SQL Server und der Azure-Remoteserver.<br />-   ERROR_NO_CONNECTION<br />     SQL Server kann nicht es sich um eine Verbindung mit der Azure-Remoteserver herzustellen.<br />-   ERROR_AUTH_FAILURE<br />     Einem Authentifizierungsfehler führen kann, wird durch die Verknüpfung zwischen SQL Server und der Azure-Remoteserver verhindert.<br />-FEHLER<br />     Ein Fehler, der ein Authentifizierungsproblem, ein Verbindungsproblem oder ein Problem mit der Firewall ist nicht verhindert, dass die Verbindung zwischen SQL Server und der Azure-Remoteserver.|  

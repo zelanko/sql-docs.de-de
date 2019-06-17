@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62823300"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Hinzufügen einer Datenquellensicht für Callcenterdaten (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -58,7 +58,7 @@ ms.locfileid: "62823300"
     |-|-|  
     |**Spaltenname**|DayOfWeek (TagderWoche)|  
     |**Beschreibung**|Abrufen des Wochentags aus der DimDate-Tabelle|  
-    |**Ausdruck**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
+    |**expression**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
      Um sicherzustellen, dass der Ausdruck die Daten erstellt. Sie benötigen, mit der rechten Maustaste in der Tabelle **FactCallCenter**, und wählen Sie dann **Stichprobenoptionen**.  
   

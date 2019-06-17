@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856332"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer neuronalen Netzwerkstruktur und eines neuronalen Netzwerkmodells (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -52,7 +52,7 @@ ms.locfileid: "62856332"
   
 4.  Auf der **Erstellen von Data Mining-Struktur** Seite, überprüfen Sie, ob die Option **Miningstruktur mit Miningmodell erstellen** ausgewählt ist.  
   
-5.  Klicken Sie auf die Dropdownliste für die Option **welche Datamining-Technik möchten Sie verwenden?**, und wählen Sie dann **Microsoft Neural Networks**.  
+5.  Klicken Sie auf die Dropdownliste für die Option **welche Datamining-Technik möchten Sie verwenden?** , und wählen Sie dann **Microsoft Neural Networks**.  
   
      Da die logistischen Regressionsmodelle auf den neuronalen Netzwerken basieren, können Sie die gleiche Struktur wiederverwenden und ein neues Miningmodell hinzufügen.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "62856332"
     |**Modellierungsflags**||  
     |**Name**|Service Grade|  
     |**SourceColumn-ID**|Service Grade 1|  
-    |**Usage**|Vorhersagen|  
+    |**Verwendung**|Vorhersagen|  
   
 5.  Klicken Sie auf eine beliebige Stelle der **Miningmodell** Registerkarte.  
   

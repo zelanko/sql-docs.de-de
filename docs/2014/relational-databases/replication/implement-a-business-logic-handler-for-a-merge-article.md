@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721205"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
@@ -99,10 +99,10 @@ ms.locfileid: "62721205"
   
 1.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) aus, um zu prüfen, ob die Assembly noch nicht als Geschäftslogikhandler registriert wurde.  
   
-2.  Führen Sie auf dem Verteiler [Sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), dabei einen Anzeigenamen für den Geschäftslogikhandler für **@article_resolver**, einen Wert von `true`für **@is_dotnet_assembly**, den Namen der Assembly für **@dotnet_assembly_name**, und die den vollqualifizierten Namen der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> für  **@dotnet_class_name**.  
+2.  Führen Sie auf dem Verteiler [Sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), dabei einen Anzeigenamen für den Geschäftslogikhandler für **@article_resolver** , einen Wert von `true`für **@is_dotnet_assembly** , den Namen der Assembly für **@dotnet_assembly_name** , und die den vollqualifizierten Namen der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> für  **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name**. Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
+    >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name** . Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62721205"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
-1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus. Geben Sie dabei **@publication**, **@article**, den Wert **article_resolver** für **@property** und den Anzeigenamen des Geschäftslogikhandlers für **@value** an.  
+1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus. Geben Sie dabei **@publication** , **@article** , den Wert **article_resolver** für **@property** und den Anzeigenamen des Geschäftslogikhandlers für **@value** an.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Replikationsprogrammierung)  
  In diesem Beispiel wird ein Geschäftslogikhandler gezeigt, der ein Überwachungsprotokoll erstellt.  
@@ -182,7 +182,7 @@ ms.locfileid: "62721205"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> &ndash; ein Anzeigename, den Sie beim Zugriff auf den Geschäftslogikhandler verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &amp;ndash; der Wert `true`.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &ndash; der Wert `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>So stellen Sie einen Geschäftslogikhandler bereit  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688369"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
@@ -44,10 +44,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argumente  
  [ @table_name=] '*Table_name*"  
- Die Tabelle zum Zurückgeben von Kataloginformationen. *TABLE_NAME* ist **Nvarchar (** 384 **)**, hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+ Die Tabelle zum Zurückgeben von Kataloginformationen. *TABLE_NAME* ist **Nvarchar (** 384 **)** , hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
  [ @table_owner=] '*Table_owner*"  
- Der Tabellenbesitzer für die Tabelle zum Zurückgeben von Kataloginformationen. *Table_owner*ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn der Besitzer nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
+ Der Tabellenbesitzer für die Tabelle zum Zurückgeben von Kataloginformationen. *Table_owner*ist **Nvarchar (** 384 **)** , hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn der Besitzer nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
   
  Wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt, werden die Spalten einer Tabelle zurückgegeben. Wenn *Besitzer* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Namen*, sieht Sie dieses Verfahren für eine Tabelle mit dem angegebenen *Table_name* im Besitz der Besitzer der Datenbank. Wenn eine vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   

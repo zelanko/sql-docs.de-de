@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62889213"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
@@ -49,7 +49,7 @@ ms.locfileid: "62889213"
   
 -   [Sonstiges](#Misc)  
   
--   [Security](#Security)  
+-   [Sicherheit](#Security)  
   
 -   [Transaktionen](#Transactions)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62889213"
 ###  <a name="Execution"></a> Ausführung  
  Mit den Eigenschaften in dieser Kategorie wird das Laufzeitverhalten des Paketobjekts konfiguriert.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`DelayValidation`|Zeigt an, ob die Paketüberprüfung bis zur Ausführung des Pakets verschoben wird. Der Standardwert dieser Eigenschaft ist `False`.|  
 |**Deaktivieren**|Zeigt an, ob das Paket deaktiviert ist. Der Standardwert dieser Eigenschaft ist `False`.|  
@@ -93,7 +93,7 @@ ms.locfileid: "62889213"
 ###  <a name="ForcedExecutionValue"></a> Erzwungener Ausführungswert  
  Mit den Eigenschaften in dieser Kategorie wird ein optionaler Ausführungswert für das Paket konfiguriert.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`ForcedExecutionValue`|Falls ForceExecutionValue, um festgelegt ist `True`, ein Wert, den optionalen Ausführungswert angibt, die vom Paket zurückgegebenen. Der Standardwert dieser Eigenschaft ist **0**.|  
 |`ForcedExecutionValueType`|Der Datentyp von ForcedExecutionValue. Der Standardwert dieser Eigenschaft ist `Int32`.|  
@@ -102,7 +102,7 @@ ms.locfileid: "62889213"
 ###  <a name="Identification"></a> Identifikation  
  Mit den Eigenschaften in dieser Kategorie werden Informationen bereitgestellt, wie z. B. der eindeutige Bezeichner und der Name des Pakets.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`CreationDate`|Das Datum, an dem das Paket erstellt wurde.|  
 |`CreatorComputerName`|Der Name des Computers, auf dem das Paket erstellt wurde.|  
@@ -115,10 +115,10 @@ ms.locfileid: "62889213"
 ###  <a name="Misc"></a> Sonstiges  
  Mit den Eigenschaften in dieser Kategorie wird auf Konfigurationen und Ausdrücke zugegriffen, die von einem Paket verwendet werden. Außerdem werden Informationen zum Gebietsschema und zum Protokollierungsmodus des Pakets bereitgestellt. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|`Configurations`|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
-|`Expressions`|Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Hinweis: Sie können Eigenschaftsausdrücke für alle Paketeigenschaften erstellen, die Objekt-Modell enthält, nicht nur im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie `Expressions`, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(...)**, um einen Ausdruck zu ändern und auszuwerten.|  
+|`Configurations`|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
+|`Expressions`|Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Hinweis: Sie können Eigenschaftsausdrücke für alle Paketeigenschaften erstellen, die Objekt-Modell enthält, nicht nur im Eigenschaftenfenster aufgeführten Eigenschaften.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie `Expressions`, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(...)** , um einen Ausdruck zu ändern und auszuwerten.|  
 |`ForceExecutionResult`|Das Ausführungsergebnis des Pakets. Mögliche Werte sind `None`, `Success`, `Failure` und `Completion`. Der Standardwert dieser Eigenschaft ist `None`. Weitere Informationen finden Sie unter T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |`LocaleId`|Ein Microsoft Win32-Gebietsschema. Der Standardwert dieser Eigenschaft ist das Gebietsschema des Betriebssystems auf dem lokalen Computer.|  
 |`LoggingMode`|Ein Wert, der das Protokollierungsverhalten des Pakets angibt. Mögliche Werte sind `Disabled`, `Enabled` und `UseParentSetting`. Der Standardwert dieser Eigenschaft ist `UseParentSetting`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
@@ -129,7 +129,7 @@ ms.locfileid: "62889213"
 ###  <a name="Security"></a> Sicherheit  
  Mit den Eigenschaften in dieser Kategorie wird die Schutzebene des Pakets konfiguriert. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`PackagePassword`|Das Kennwort für paketschutzebenen (`EncryptSensitiveWithPassword` und `EncryptAllWithPassword`), die Kennwörter erfordern.|  
 |`ProtectionLevel`|Die Schutzebene des Pakets. Die Werte sind `DontSaveSensitive`, `EncryptSensitiveWithUserKey`, `EncryptSensitiveWithPassword`, `EncryptAllWithPassword`, und **ServerStorage**. Der Standardwert dieser Eigenschaft ist `EncryptSensitiveWithUserKey`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  

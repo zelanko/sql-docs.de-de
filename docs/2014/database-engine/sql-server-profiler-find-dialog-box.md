@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088858"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler - Suchen (Dialogfeld)
@@ -31,7 +31,7 @@ ms.locfileid: "66088858"
  Geben Sie den Text ein, nach dem gesucht werden soll. Die Suche entspricht jeder Zeichenfolge, die die angegebene Zeichenfolge enthält. Die Suche nach "Completed" entspricht beispielsweise "SQL:BatchCompleted". Platzhalterzeichen (*, ? usw.) werden nicht unterstützt.  
   
  **Suchen in Spalte**  
- Klicken Sie auf eine zu durchsuchende Datenspalte oder auf **\<Alle Spalten>**, um alle Datenspalten in der Ablaufverfolgung zu durchsuchen.  
+ Klicken Sie auf eine zu durchsuchende Datenspalte oder auf **\<Alle Spalten>** , um alle Datenspalten in der Ablaufverfolgung zu durchsuchen.  
   
  **Groß-/Kleinschreibung beachten**  
  Sucht nach Text, der die gleiche Groß-/Kleinschreibung besitzt wie der Text im Feld **Suchen nach** . Deaktivieren Sie dieses Kontrollkästchen, um in der Ablaufverfolgung nach Beispielen zu suchen, die groß oder klein geschrieben werden.  

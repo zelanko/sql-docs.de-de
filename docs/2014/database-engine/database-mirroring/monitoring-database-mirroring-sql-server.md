@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755369"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Überwachen der Datenbankspiegelung (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "62755369"
   
      In der folgenden Tabelle werden die gespeicherten Prozeduren vorgestellt, mit denen die Datenbankspiegelungsüberwachung unabhängig vom Datenbankspiegelungs-Monitor verwaltet und verwendet werden kann.  
   
-    |Prozedur|Description|  
+    |Prozedur|Beschreibung|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)|Erstellt einen Auftrag, mit dem in regelmäßigen Abständen die Statusinformationen für jede gespiegelte Datenbank auf der Serverinstanz aktualisiert werden.|  
     |[sp_dbmmonitorchangemonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)|Ändert den Wert eines Parameters für die Datenbank-Spiegelungsüberwachung.|  

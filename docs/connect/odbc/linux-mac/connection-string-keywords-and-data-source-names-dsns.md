@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 1f3e311b0f7d27b6a0ca2d12ae510960859ae80d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125840"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797507"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-Sie können optional das Protokoll und den Port für die Verbindung mit dem Server angeben. Z. B. **Server = Tcp:**_Servername_**, 12345**. Beachten Sie, dass das einzige Protokoll unterstützt, indem Sie die Treiber für Linux und MacOS `tcp`.
+Sie können optional das Protokoll und den Port für die Verbindung mit dem Server angeben. Z. B. **Server = Tcp:** _Servername_ **, 12345**. Beachten Sie, dass das einzige Protokoll unterstützt, indem Sie die Treiber für Linux und MacOS `tcp`.
 
 Um eine Verbindung mit einer benannten Instanz auf einem statischen Port herzustellen, verwenden Sie <b>Server=</b>*servername*,**port_number**. Das Verbinden mit einem dynamischen Port wird nicht unterstützt.  
 

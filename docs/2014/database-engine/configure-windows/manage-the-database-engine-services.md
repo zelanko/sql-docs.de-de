@@ -25,17 +25,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e747a85c816c8e57757be9acb61b14204266ff35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782051"
 ---
 # <a name="manage-the-database-engine-services"></a>Verwalten der Datenbank-Engine-Dienste
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird unter den Betriebssystemen als Dienst ausgeführt. Ein Dienst ist ein Anwendungstyp, der im Hintergrund ausgeführt wird. Dienste stellen gewöhnlich wichtige Betriebssystemfunktionen bereit, wie z. B. Webbereitstellung, Ereignisprotokollierung oder Dateibereitstellung. Dienste können ausgeführt werden, ohne dass auf dem Computerdesktop eine Benutzeroberfläche angezeigt wird. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent und mehrere andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten werden als Dienste ausgeführt. Diese Dienste werden in der Regel zusammen mit dem Betriebssystem gestartet. Dies hängt von der Konfiguration während der Installation ab. Manche Dienste werden standardmäßig nicht gestartet. In diesem Abschnitt wird die Verwaltung verschiedener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben. Vor dem Anmelden an einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sollten Sie wissen, wie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gestartet, beendet, angehalten, fortgesetzt und neu gestartet wird. Nach dem Anmelden können Sie verschiedene Aufgaben ausführen, wie z. B. das Verwalten des Servers oder das Abfragen einer Datenbank.  
   
 ## <a name="using-the-sql-server-service"></a>Verwenden des SQL Server-Diensts  
- Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst. Nach dem Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts können Benutzer neue Verbindungen mit dem Server herstellen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst kann als Dienst lokal oder remote gestartet und beendet werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst wird als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) bezeichnet, wenn es sich um die Standardinstanz handelt, oder als MSSQL$*\<Instanzname>* bei einer benannten Instanz.  
+ Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst. Nach dem Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensts können Benutzer neue Verbindungen mit dem Server herstellen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst kann als Dienst lokal oder remote gestartet und beendet werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst wird als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) bezeichnet, wenn es sich um die Standardinstanz handelt, oder als MSSQL$ *\<Instanzname>* bei einer benannten Instanz.  
   
 ## <a name="using-sql-server-configuration-manager"></a>Verwenden des SQL Server-Konfigurations-Managers  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager können Sie verschiedene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste beschrieben.  
@@ -60,7 +60,7 @@ ms.locfileid: "62782051"
 |[Sicherheitsanforderungen für das Verwalten von Diensten](security-requirements-for-managing-services.md)|[Verhindern des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](scm-services-prevent-automatic-startup-of-an-instance.md)|  
 |[Konfigurieren von Windows-Dienstkonten und -Berechtigungen](configure-windows-service-accounts-and-permissions.md)|[Ändern des Dienststartkontos für SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](scm-services-change-the-service-startup-account.md)|  
 |[Ausführen von SQL Server mit oder ohne Netzwerk](run-sql-server-with-or-without-a-network.md)|[Konfigurieren von Serverstartoptionen &#40;SQL Server-Konfigurations-Manager&#41;](scm-services-configure-server-startup-options.md)|  
-|[SQL Server-Browserdienst &amp;amp;#40;Datenbank-Engine und SSAS&amp;amp;#41;](sql-server-browser-service-database-engine-and-ssas.md)|[Ändern des Kennworts der von SQL Server verwendeten Konten &#40;SQL Server-Konfigurations-Manager&#41;](scm-services-change-the-password-of-the-accounts-used.md)|  
+|[SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](sql-server-browser-service-database-engine-and-ssas.md)|[Ändern des Kennworts der von SQL Server verwendeten Konten &#40;SQL Server-Konfigurations-Manager&#41;](scm-services-change-the-password-of-the-accounts-used.md)|  
 |[Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)|[Konfigurieren von SQL Server-Fehlerprotokollen](scm-services-configure-sql-server-error-logs.md)|  
 |[Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](start-stop-pause-resume-restart-sql-server-services.md)|[Ändern des Serverauthentifizierungsmodus](change-server-authentication-mode.md)|  
 |[Starten von SQL Server im Einzelbenutzermodus](start-sql-server-in-single-user-mode.md)|[SQL Writer-Dienst](sql-writer-service.md)|  

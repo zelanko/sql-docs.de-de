@@ -42,10 +42,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770728"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
@@ -87,7 +87,7 @@ ms.locfileid: "62770728"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Ausgabe der Transformation für das Aggregieren beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Description|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |Schlüssel|Integer|Ein Wert, der die genaue Anzahl der GROUP BY-Schlüssel angibt, die durch die Aggregation geschrieben werden können. Wenn ein KeyScale-Wert angegeben wird, hat der Wert in „Keys“ Vorrang.|  
 |KeyScale|Ganze Zahl (Enumeration)|Ein Wert, der beschreibt, wie viele GROUP BY-Schlüsselwerte ungefähr von der Aggregation geschrieben werden können. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Niedrig** (1):Gibt bis zu 500.000 Schlüsselwerte an.<br /><br /> **Mittel** (2): Gibt bis zu 5 Millionen Schlüsselwerte an.<br /><br /> **Hoch** (3): Gibt mehr als 25 Millionen Schlüsselwerte an.<br /><br /> **Keine Angabe** (0): Gibt an, dass kein KeyScale-Wert verwendet wird.|  
@@ -112,7 +112,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Überwachungstransformation. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |LineageItemSelected|Ganze Zahl (Enumeration)|Das für die Ausgabe ausgewählte Überwachungsobjekt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **GUID der Ausführungsinstanz** (0)<br /><br /> **Startzeit der Ausführung** (4)<br /><br /> **Computername** (5)<br /><br /> **Paket-ID** (1)<br /><br /> **Paketname** (2)<br /><br /> **Task-ID** (8)<br /><br /> **Taskname** (7)<br /><br /> **Benutzername** (6)<br /><br /> **Versions-ID** (3)|  
   
@@ -141,7 +141,7 @@ ms.locfileid: "62770728"
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Ein Wert, der die `LineageID` der Eingabespalte angibt, die die Quelle der Ausgabespalte ist.|  
-|MapFlags|Ganze Zahl (Enumeration)|Ein Wert, der die Zeichenfolgenvorgänge angibt, die die Transformation zum Zuordnen der Zeichen für die Spalte ausführt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Byteumkehrung** (2)<br /><br /> **Normale Breite** (6)<br /><br /> **Halbe Breite** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Linguistische Schreibweise** (7)<br /><br /> **Kleinbuchstaben** (0)<br /><br /> **Chinesisch (vereinfacht)** (8)<br /><br /> **Chinesisch (traditionell)**(9)<br /><br /> **Großbuchstaben** (1)|  
+|MapFlags|Ganze Zahl (Enumeration)|Ein Wert, der die Zeichenfolgenvorgänge angibt, die die Transformation zum Zuordnen der Zeichen für die Spalte ausführt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Byteumkehrung** (2)<br /><br /> **Normale Breite** (6)<br /><br /> **Halbe Breite** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Linguistische Schreibweise** (7)<br /><br /> **Kleinbuchstaben** (0)<br /><br /> **Chinesisch (vereinfacht)** (8)<br /><br /> **Chinesisch (traditionell)** (9)<br /><br /> **Großbuchstaben** (1)|  
   
  Die Eingabe, die Eingabespalten und die Ausgabe der Transformation zum Zuordnen der Zeichen verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für das Kopieren von Spalten. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |copyColumnId|Integer|Die `LineageID` der Eingabespalte, aus der die Ausgabespalte kopiert wird.|  
   
@@ -181,7 +181,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Datenkonvertierung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Description|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |FastParse|Boolean|Ein Wert, der angibt, ob die Spalte die schnelleren gebietsschemaneutralen Analyseroutinen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] oder die gebietsschemabezogenen Standardanalyseroutinen verwendet. Der Standardwert dieser Eigenschaft ist `False`. Weitere Informationen finden Sie unter [Fast Parse](../../fast-parse.md) und [Standard Parse](../../standard-parse.md). .<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Datenkonvertierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |SourceInputColumnLineageId|Integer|Die `LineageID` der Eingabespalte, die die Quelle der Ausgabespalte ist.|  
@@ -214,7 +214,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten und Ausgabespalten der Transformation für abgeleitete Spalten. Wenn Sie die abgeleitete Spalte als neue Spalte hinzufügen, gelten diese benutzerdefinierten Eigenschaften für die neue Ausgabespalte. Wenn Sie den Inhalt einer vorhandenen Eingabespalte durch die abgeleiteten Ergebnisse ersetzen, gelten diese benutzerdefinierten Eigenschaften für die vorhandene Eingabespalte. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Description|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |expression|Zeichenfolge|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch die `LineageID`-Eigenschaft für die Spalte dargestellt.|  
 |FriendlyExpression|Zeichenfolge|Ein Ausdruck, der die Bedingung darstellt, die die Transformation für bedingtes Teilen auswertet. Spalten werden durch ihre Namen dargestellt.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
@@ -350,14 +350,14 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Suche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Description|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |CopyFromReferenceColumn|Zeichenfolge|Der Name der Spalte in der Verweistabelle, aus der eine Spalte kopiert wird.|  
 |JoinToReferenceColumns|Zeichenfolge|Der Name der Spalte in der Verweistabelle, mit der eine Quellspalte verknüpft wird.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Suche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |CopyFromReferenceColumn|Zeichenfolge|Der Name der Spalte in der Verweistabelle, aus der eine Spalte kopiert wird.|  
   
@@ -455,7 +455,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Zeilenanzahl. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |VariableName|Zeichenfolge|Der Name der Variablen, die die Zeilenanzahl enthält.|  
   
@@ -475,7 +475,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgaben der Transformation für Zeilenstichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |Ausgewählt|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. Klicken Sie auf der ausgewählten Ausgabe wird festgelegt `True`, und in der nicht ausgewählten Ausgabe ausgewählte auf `False`.|  
   
@@ -494,7 +494,7 @@ ms.locfileid: "62770728"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Skriptkomponente beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |ReadOnlyVariables|Zeichenfolge|Eine durch Trennzeichen getrennte Liste von Variablen für den schreibgeschützten Zugriff durch die Skriptkomponente.|  
 |ReadWriteVariables|Zeichenfolge|Eine durch Trennzeichen getrennte Liste von Variablen für den Lese-/Schreibzugriff durch die Skriptkomponente.|  
@@ -521,7 +521,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für langsam veränderliche Dimensionen. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Description|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |ColumnType|Ganze Zahl (Enumeration)|Der Updatetyp der Spalte. Folgende Werte sind möglich: **Veränderliches Attribut** (2), **Festes Attribut** (4), **Verlaufsattribut** (3) **Schlüssel** (1) und **Andere** (0).|  
   
@@ -589,7 +589,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Ausdruckssuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Description|  
+|Eigenschaft|Datentyp|Beschreibung|  
 |--------------|---------------|-----------------|  
 |InputColumnType|Integer|Ein Wert, der die Verwendung der Spalte angibt. Gültige Werte sind 0 für eine Pass-Through-Spalte, 1 für eine Suchspalte und 2 für eine Spalte, die sowohl eine Pass-Through-Spalte als auch eine Suchspalte ist.|  
   

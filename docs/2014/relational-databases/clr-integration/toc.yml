@@ -51,7 +51,7 @@
           href: ../clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md
         - name: Zuordnen von CLR-Parameterdaten
           href: ../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
-- name: 'Übersicht über benutzerdefinierte Attribute der CLR-Integration '
+- name: Übersicht über benutzerdefinierte Attribute der CLR-Integration
   href: ../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md
   items:
     - name: Benutzerdefinierte Attribute für CLR-Routinen

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489710"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lektion 4: Speichern von Lieferantendaten in MDS
@@ -49,6 +49,6 @@ ms.locfileid: "65489710"
 8.  Erstellen und verwenden eine abgeleitete Hierarchie mithilfe der domänenbasierten attributbeziehung zwischen der **Lieferanten** Entität und die **Zustand** Entität (dem Statusattribut von der Entität "Supplier" ist vom Typ State-Entität ) mithilfe von **Master Data Manager**.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 1: Erstellen des Modells ' Suppliers ', die mit Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [Aufgabe 1: Erstellen des Modells ' Suppliers ', die mit Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

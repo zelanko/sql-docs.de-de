@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83ead8522e506fcf4ab81d2e904c354424cdb6fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66080158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046669"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Verbindungszeichenfolgen-Eigenschaften (Analysis Services)
   In diesem Thema sind Eigenschaften für Verbindungszeichenfolgen dokumentiert, die Sie u. U. in einem der Designer- oder Verwaltungstools festlegen bzw. die in Verbindungszeichenfolgen von Clientanwendungen verwendet werden, die eine Verbindung mit Analysis Services-Daten herstellen und diese abfragen. In diesem Dokument wird daher nur auf einen Teilbereich der verfügbaren Eigenschaften eingegangen. Die vollständige Liste umfasst zahlreiche Server- und Datenbankeigenschaften, mit denen eine Verbindung unabhängig davon, wie die Instanz oder Datenbank auf dem Server konfiguriert ist, an spezifische Anwendungen angepasst werden kann.  
@@ -60,7 +60,7 @@ ms.locfileid: "66080158"
   
  Die Eigenschaften sind in alphabetischer Reihenfolge aufgeführt.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`EffectiveUserName`|Wird verwendet, wenn auf dem Server die Identität eines Endbenutzers angenommen werden muss. Geben Sie das Konto im Format "Domäne\Benutzer" an. Zur Verwendung dieser Eigenschaft muss der Aufrufer über Administratorberechtigungen in Analysis Services verfügen. Weitere Informationen zur Verwendung dieser Eigenschaft in einer Excel-Arbeitsmappe in SharePoint finden Sie unter [Verwenden von "EffectiveUserName" der Analysis Services in SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkId=311905). Die Verwendung dieser Eigenschaft mit Reporting Services wird unter [Verwenden von "EffectiveUserName" für den Identitätswechsel in SSAS](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas)veranschaulicht.<br /><br /> `EffectiveUserName` wird in einer PowerPivot für SharePoint-Installation verwendet, um Informationen zur Verwendung zu erfassen. Die Benutzeridentität wird für den Server bereitgestellt, damit Ereignisse oder Fehler in Zusammenhang mit der Benutzeridentität in den Protokolldateien aufgezeichnet werden können. Bei PowerPivot wird sie nicht zu Autorisierungszwecken verwendet.|  
 |**Encrypt Password**|Gibt an, ob ein lokales Kennwort zur Verschlüsselung lokaler Cubes verwendet werden soll. Gültige Werte sind True oder False. Der Standardwert ist False.|  
@@ -80,9 +80,9 @@ ms.locfileid: "66080158"
   
  Die Eigenschaften sind in alphabetischer Reihenfolge aufgeführt.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|`Application Name`|Legt den Namen der Anwendung fest, die der Verbindung zugeordnet ist. Dieser Wert kann bei der Überwachung von Ablaufverfolgungsereignissen hilfreich sein, insbesondere wenn mehrere Anwendungen auf dieselben Datenbanken zugreifen. Hinzufügen von z. B. Anwendungsname = 'test', um eine Verbindung wird 'Test' in einer SQL Server Profiler-Ablaufverfolgung angezeigt werden, wie im folgenden Screenshot gezeigt:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Zu den Aliasen dieser Eigenschaft gehören `sspropinitAppName` und `AppName`. Weitere Informationen finden Sie unter [Verwenden des Application Name-Parameters beim Herstellen einer Verbindung mit SQL Server](https://go.microsoft.com/fwlink/?LinkId=301699).|  
+|`Application Name`|Legt den Namen der Anwendung fest, die der Verbindung zugeordnet ist. Dieser Wert kann bei der Überwachung von Ablaufverfolgungsereignissen hilfreich sein, insbesondere wenn mehrere Anwendungen auf dieselben Datenbanken zugreifen. Hinzufügen von z. B. Anwendungsname = 'test', um eine Verbindung wird 'Test' in einer SQL Server Profiler-Ablaufverfolgung angezeigt werden, wie im folgenden Screenshot gezeigt:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Zu den Aliasen dieser Eigenschaft gehören `sspropinitAppName` und `AppName`. Weitere Informationen finden Sie unter [Verwenden des Application Name-Parameters beim Herstellen einer Verbindung mit SQL Server](https://www.connectionstrings.com/use-application-name-sql-server/).|  
 |`AutoSyncPeriod`|Legt fest, wie häufig der Client- und Servercache synchronisiert werden (in Millisekunden). ADOMD.NET unterstützt das Clientcaching für häufig verwendete Objekte, die sich minimal auf die Arbeitsspeicherauslastung auswirken. Auf diese Weise wird die Anzahl von Roundtrips zum Server reduziert. Der Standardwert beträgt 10000 Millisekunden (oder zehn Sekunden). Beim Wert NULL oder 0 ist die automatische Synchronisierung deaktiviert.|  
 |`Character Encoding`|Definiert, wie Zeichen in der Anforderung codiert werden. Gültige Werte sind Default oder UTF-8 (diese sind gleichwertig) sowie UTF-16.|  
 |`CompareCaseSensitiveStringFlags`|Passt Zeichenfolgenvergleiche für ein angegebenes Gebietsschema an, bei denen die Groß-/Kleinschreibung beachtet wird. Weitere Informationen zum Festlegen dieser Eigenschaft finden Sie unter [CompareCaseSensitiveStringFlags-Eigenschaft](https://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx).|  

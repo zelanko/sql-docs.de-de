@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754093"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Details zu bereitgestellten Datenebenenanwendungen (SQL Server-Hilfsprogramm)
@@ -40,7 +40,7 @@ ms.locfileid: "62754093"
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
- Um auf Filteroptionen für die Listenansicht des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste auf den Knoten **Bereitgestellte Datenebenenanwendungen** im Navigationsbereich des Hilfsprogramm-Explorers, und wählen Sie **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Bereitgestellte Datenebenenanwendungen** im Hilfsprogramm-Explorer die Beschriftung **Bereitgestellte Datenebenenanwendungen (gefiltert)**. Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Um auf Filteroptionen für die Listenansicht des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste auf den Knoten **Bereitgestellte Datenebenenanwendungen** im Navigationsbereich des Hilfsprogramm-Explorers, und wählen Sie **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Bereitgestellte Datenebenenanwendungen** im Hilfsprogramm-Explorer die Beschriftung **Bereitgestellte Datenebenenanwendungen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  In den folgenden Spalten werden standardmäßig Zustandsinformationen zu den einzelnen Datenebenenanwendungen angezeigt.  
   

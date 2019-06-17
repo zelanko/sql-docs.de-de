@@ -30,10 +30,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678064"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath-Datentypen (SQLXML 4.0)
@@ -96,7 +96,7 @@ ms.locfileid: "62678064"
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|String|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|– (es gibt keinen Datentyp in XPath, der dem fixed14.4 XDR-Datentyp entspricht)|CONVERT(money, EmployeeID)|  
 |date|String|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|Uhrzeit<br /><br /> time.tz|String|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|time<br /><br /> time.tz|String|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Die Datums- / zeitkonvertierungen funktionieren, ob der Wert, in der Datenbank mithilfe gespeichert wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **"DateTime"** -Datentyp oder ein **Zeichenfolge**. Beachten Sie, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **"DateTime"** -Datentyp verwendet keine **Zeitzone** und verfügt über eine geringere Genauigkeit als den XML-Code **Zeit** -Datentyp. Sollen die **Zeitzone** -Datentyp oder höhere Genauigkeit zu gewährleisten, speichern Sie die Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einer **Zeichenfolge** Typ.  
   
