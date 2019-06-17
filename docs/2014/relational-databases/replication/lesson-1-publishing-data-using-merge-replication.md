@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721177"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lektion 1: Veröffentlichen von Daten mithilfe der Mergereplikation
@@ -51,7 +51,7 @@ ms.locfileid: "62721177"
   
 9. Klicken Sie auf **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**und anschließend auf **OK**.  
   
-10. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)**, klicken Sie auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
+10. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)** , klicken Sie auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
   
 11. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** die Tabelle **Sales.SalesOrderHeader**aus, klicken Sie auf **Joinanweisung manuell schreiben**und vervollständigen Sie die Joinanweisung wie folgt:  
   
@@ -77,13 +77,13 @@ ms.locfileid: "62721177"
   
 18. Wählen Sie unter **Geben Sie Joinoptionen an**die Option **Eindeutiger Schlüssel**aus und klicken Sie anschließend auf **OK**.  
   
-19. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **SalesOrderHeader (Sales)**, klicken Sie auf **Hinzufügen**und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
+19. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **SalesOrderHeader (Sales)** , klicken Sie auf **Hinzufügen**und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
   
 20. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** die Tabelle **Sales.SalesOrderDetail**aus, klicken Sie auf **OK**und klicken Sie anschließend auf **Weiter**.  
   
 21. Wählen Sie **Momentaufnahme sofort erstellen**aus, deaktivieren Sie **Ausführung des Momentaufnahme-Agents zu folgenden Zeitpunkten planen**und klicken Sie auf **Weiter**.  
   
-22. Klicken Sie auf der Seite „Agentsicherheit“ auf **Sicherheitseinstellungen**, geben Sie im Feld **Prozesskonto** das Konto \<_Machine_Name>_**\repl_snapshot** und das Kennwort für das Konto ein und klicken Sie anschließend auf **OK**. Klicken Sie auf **Fertig stellen**.  
+22. Klicken Sie auf der Seite „Agentsicherheit“ auf **Sicherheitseinstellungen**, geben Sie im Feld **Prozesskonto** das Konto \<_Machine_Name>_ **\repl_snapshot** und das Kennwort für das Konto ein und klicken Sie anschließend auf **OK**. Klicken Sie auf **Fertig stellen**.  
   
 23. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Veröffentlichungsname** den Namen **AdvWorksSalesOrdersMerge** ein und klicken Sie auf **Fertig stellen**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62721177"
   
 3.  Wählen Sie die Seite **Veröffentlichungszugriffsliste** aus und klicken Sie auf **Hinzufügen**.  
   
-4.  Wählen Sie im Dialogfeld „Veröffentlichungszugriff hinzufügen“ Folgendes aus: _<Computername>_**\repl_merge**. Klicken Sie anschließend auf **OK**. Klicken Sie auf **OK**.  
+4.  Wählen Sie im Dialogfeld „Veröffentlichungszugriff hinzufügen“ Folgendes aus: _<Computername>_ **\repl_merge**. Klicken Sie anschließend auf **OK**. Klicken Sie auf **OK**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben die Mergeveröffentlichung erfolgreich erstellt. Als Nächstes abonnieren Sie diese Veröffentlichung. Siehe [Lektion 2: Erstellen eines Abonnements für die Mergeveröffentlichung](lesson-2-creating-a-subscription-to-the-merge-publication.md).  

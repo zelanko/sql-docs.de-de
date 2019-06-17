@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922196"
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
@@ -86,7 +86,7 @@ ms.locfileid: "62922196"
   
  BACKUP DATABASE *Name der Datenbank*  
   
- TO DISK **=** { **'**_Name des physischen Sicherungsmediums_**'** | **@**_physical_backup_device_name_var_ }  
+ TO DISK **=** { **'** _Name des physischen Sicherungsmediums_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Zum Beispiel:  
   
@@ -100,7 +100,7 @@ GO
   
  RESTORE { DATABASE | LOG } *Name der Datenbank*  
   
- FROM DISK **=** { **'**_Name des physischen Sicherungsmediums_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM DISK **=** { **'** _Name des physischen Sicherungsmediums_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Beispiel:  
   
@@ -136,7 +136,7 @@ GO
     >  Da es bei Vorliegen von Netzwerkfehlern beim Sichern von Daten über ein Netzwerk zu Störungen kommen kann, sollten Sie bei Verwendung eines Remotedatenträgers den Sicherungsvorgang am Ende überprüfen. Weitere Informationen finden Sie unter [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Angeben eines UNC-Namen (Universal Naming Convention)  
- Zum Angeben einer Netzwerkfreigabe in einem Sicherungs- oder Wiederherstellungsbefehl sollten Sie den vollqualifizierten UNC-Namen der Datei für das Sicherungsmedium verwenden. Ein UNC-Name weist das Format **\\\\**_Systemname_**\\**_ShareName_**\\**_Path_**\\**_FileName_.  
+ Zum Angeben einer Netzwerkfreigabe in einem Sicherungs- oder Wiederherstellungsbefehl sollten Sie den vollqualifizierten UNC-Namen der Datei für das Sicherungsmedium verwenden. Ein UNC-Name weist das Format **\\\\** _Systemname_ **\\** _ShareName_ **\\** _Path_ **\\** _FileName_.  
   
  Zum Beispiel:  
   
@@ -174,7 +174,7 @@ GO
   
  BACKUP { DATABASE | LOG } *Name der Datenbank*  
   
- TO TAPE **=** { **'**_Name des physischen Sicherungsmediums_**'** | **@**_physical_backup_device_name_var_ }  
+ TO TAPE **=** { **'** _Name des physischen Sicherungsmediums_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Zum Beispiel:  
   
@@ -188,7 +188,7 @@ GO
   
  RESTORE { DATABASE | LOG } *Name der Datenbank*  
   
- FROM TAPE **=** { **'**_Name des physischen Sicherungsmediums_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'** _Name des physischen Sicherungsmediums_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> Bandspezifische Backup- und RESTORE-Optionen (Transact-SQL)  
  Zur Vereinfachung der Bandverwaltung bietet die BACKUP-Anweisung die folgenden bandspezifischen Optionen:  

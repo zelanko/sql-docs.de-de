@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 858f3c02-4531-4775-97e9-a03b316bdaba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 249e10054a537ed26006551a6f8b09b05f741ac3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cb2bc65e0662e4daedc4b8a34a8223c478e0b032
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721008"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794170"
 ---
 # <a name="supportsexpressionsinorderby-method-sqlserverdatabasemetadata"></a>supportsExpressionsInOrderBy-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsExpressionsInOrderBy()
 ## <a name="remarks"></a>Remarks  
  Diese SupportsExpressionsInOrderBy-Methode wird von der SupportsExpressionsInOrderBy-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

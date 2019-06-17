@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753452"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
@@ -42,7 +42,7 @@ ms.locfileid: "62753452"
  [Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
  In dieser Lektion erfahren Sie, wie Sie die Komponenten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verwenden, wie das Umgebungslayout neu konfiguriert wird und wie Sie das Standardlayout wiederherstellen.  
   
- [Lektion 2: Schreiben von Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [Lektion 2: Schreiben von Transact-SQL](lesson-2-writing-transact-sql.md)  
  In dieser Lektion erfahren Sie, wie der Abfrage-Editor geöffnet wird, wie Code verwaltet wird und wie weitere, neue Funktionen des Abfrage-Editors verwendet werden.  
   
  [Lektion 3: Arbeiten mit Vorlagen, Lösungen und Skriptprojekte](lesson-3-working-with-templates-solutions-and-script-projects.md)  

@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151455"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
@@ -150,7 +150,7 @@ ms.locfileid: "63151455"
   
 3.  Öffnen Sie die in Schritt 2 erstellte XML-Datei in dem von Ihnen bevorzugten XML-Editor, Text-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Führen Sie einen Bildlauf zum `Configuration`-Element durch. Kopieren Sie den `Configuration`-Elementabschnitt und fügen Sie ihn in eine XML-Eingabedateivorlage hinter dem `TuningOptions`-Element ein. Speichern Sie diese XML-Eingabedatei.  
   
-4.  Geben Sie in der neuen XML-Eingabedatei, die Sie in Schritt 3 erstellt haben, Optimierungsoptionen für das `TuningOptions`-Element an. Bearbeiten Sie den `Configuration`-Elementabschnitt (fügen Sie die physischen Entwurfsstrukturen hinzu oder löschen Sie sie, je nachdem, wie Sie Ihre Analyse ausführen möchten). Speichern Sie die Datei, und überprüfen Sie sie mithilfe des XML-Schemas des Datenbankoptimierungsratgebers. Informationen zum Bearbeiten dieser XML-Datei finden Sie unter [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+4.  Geben Sie in der neuen XML-Eingabedatei, die Sie in Schritt 3 erstellt haben, Optimierungsoptionen für das `TuningOptions`-Element an. Bearbeiten Sie den `Configuration`-Elementabschnitt (fügen Sie die physischen Entwurfsstrukturen hinzu oder löschen Sie sie, je nachdem, wie Sie Ihre Analyse ausführen möchten). Speichern Sie die Datei, und überprüfen Sie sie mithilfe des XML-Schemas des Datenbankoptimierungsratgebers. Informationen zum Bearbeiten dieser XML-Datei finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 5.  Verwenden Sie die in Schritt 4 erstellte XML-Datei als Eingabewert für das Befehlszeilen-Hilfsprogramm **dta** . Informationen zur Verwendung von XML-Eingabedateien mit diesem Tool finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
@@ -272,7 +272,7 @@ ms.locfileid: "63151455"
  **Database Name**  
  Datenbank mit den Objekten, für die Änderungen empfohlen wurden.  
   
- **Objektnamen**  
+ **Objektname**  
  Mit der Empfehlung verbundene Tabelle.  
   
  **Empfehlung**  

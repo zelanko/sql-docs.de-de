@@ -3,17 +3,17 @@ title: Verwenden von R-Paket-Manager - SQL Server Machine Learning Services
 description: Verwenden Sie R-Standardbefehle wie install.packages, um neue R-Pakete auf SQL Server 2016 R Services oder SQL Server 2017-Machine Learning Services (Datenbankintern) hinzuzufügen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642269"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140778"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Verwenden von R-Paket-Manager zum Installieren von R-Pakete auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ Diese Prozedur verwendet RGui, jedoch können RTerm oder ein anderes R Befehlsze
 
 ## <a name="install-a-package-using-rgui"></a>Installieren eines Pakets mit RGui
 
-1. [Bestimmen Sie den Speicherort der Instanz-Bibliothek](installing-and-managing-r-packages.md). Navigieren Sie zu dem Ordner, in dem die R-Tools installiert sind. Beispielsweise lautet der standardmäßige Pfad für eine Standardinstanz von SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Bestimmen Sie den Speicherort der Instanz-Bibliothek](../package-management/default-packages.md). Navigieren Sie zu dem Ordner, in dem die R-Tools installiert sind. Beispielsweise lautet der standardmäßige Pfad für eine Standardinstanz von SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Mit der rechten Maustaste RGui.exe, und wählen **als Administrator ausführen**. Wenn Sie nicht über die erforderlichen Berechtigungen verfügen, wenden Sie sich an den Datenbankadministrator, und geben Sie eine Liste der Pakete, die Sie benötigen.
 

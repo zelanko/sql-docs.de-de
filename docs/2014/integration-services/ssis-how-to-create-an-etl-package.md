@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62878282"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets
@@ -58,7 +58,7 @@ ms.locfileid: "62878282"
  [Lektion 1: Erstellen des Projekts und Basispakets](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  In dieser Lektion erstellen Sie ein einfaches ETL-Paket, das Daten aus einer einzelnen Flatfile extrahiert, die Daten mithilfe von Transformationen zum Suchen transformiert und die Ergebnisse schließlich in ein Faktentabellenziel lädt.  
   
- [Lektion 2: Hinzufügen von Schleifen](lesson-2-adding-looping-with-ssis.md)  
+ [Lektion 2: Hinzufügen von Schleifen](lesson-2-adding-looping-with-ssis.md)  
  In dieser Lektion erweitern Sie das Paket, das Sie in Lektion 1 erstellt haben, um die Vorteile der neuen Schleifenfunktionen zum Extrahieren von mehreren Flatfiles in einen einzigen Datenflussprozess zu nutzen.  
   
  [Lektion 3: Hinzufügen der Protokollierung](lesson-3-add-logging-with-ssis.md)  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922131"
 ---
 # <a name="copy-only-backups-sql-server"></a>Kopiesicherungen [SQL Server]
@@ -43,7 +43,7 @@ ms.locfileid: "62922131"
 ## <a name="to-create-a-copy-only-backup"></a>So erstellen Sie eine Kopiesicherung  
  Kopiesicherungen können mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder PowerShell erstellt werden.  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 1.  Wählen Sie im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** die Option **Kopiesicherung** aus.  
   
@@ -52,14 +52,14 @@ ms.locfileid: "62922131"
   
 -   Für eine vollständige Kopiesicherung:  
   
-     BACKUP DATABASE *Database_name* für \<Backup_device*>* ... MIT COPY_ONLY...  
+     BACKUP DATABASE *Database_name* für \<Backup_device *>* ... MIT COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY ist wirkungslos, wenn gleichzeitig die Option DIFFERENTIAL angegeben wird.  
   
 -   Für eine Protokollkopiesicherung:  
   
-     BACKUP LOG *Database_name* für *\<* Backup_device*>* ... MIT COPY_ONLY...  
+     BACKUP LOG *Database_name* für *\<* Backup_device *>* ... MIT COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell  
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046714"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -78,11 +78,11 @@ sp_execute_external_script
  **@language** = N'*Sprache*"  
  Gibt die Skriptsprache an. *Sprache* ist **Sysname**.  Abhängig von Ihrer Version von SQL Server sind die gültigen Werte R (SQLServer 2016 und höher), Python (SQLServer 2017 und höher) und Java (SQL Server-2019 Vorschau). 
   
- **@script** = N'*Skript*' externe Sprachskript, die als Eingabe Zeichenfolgenliteral oder eine Variable angegeben. *Skript* ist **nvarchar(max)**.  
+ **@script** = N'*Skript*' externe Sprachskript, die als Eingabe Zeichenfolgenliteral oder eine Variable angegeben. *Skript* ist **nvarchar(max)** .  
 
-`[ @input_data_1 =  N'input_data_1' ]` Gibt an, die Eingabedaten, die von externen Skripts in Form von verwendet eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage. Der Datentyp des *input_data_1* ist **nvarchar(max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Gibt an, die Eingabedaten, die von externen Skripts in Form von verwendet eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage. Der Datentyp des *input_data_1* ist **nvarchar(max)** .
 
-`[ @input_data_1_name = N'input_data_1_name' ]` Gibt den Namen der Variablen verwendet, um die Abfrage von definiert darzustellen @input_data_1. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Im Fall von R ist die Eingabevariable einen Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. *input_data_1_name* ist **Sysname**.  Standardwert ist *"inputdataset"*.  
+`[ @input_data_1_name = N'input_data_1_name' ]` Gibt den Namen der Variablen verwendet, um die Abfrage von definiert darzustellen @input_data_1. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Im Fall von R ist die Eingabevariable einen Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. *input_data_1_name* ist **Sysname**.  Standardwert ist *"inputdataset"* .  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 `[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` Gilt nur für SQL Server-2019 und wird verwendet, um pro Partition Modelle zu erstellen. Gibt den Namen der Spalte verwendet, um das Resultset zu sortieren, z. B. nach Produktname. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Im Fall von R ist die Eingabevariable einen Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein.
@@ -90,7 +90,7 @@ sp_execute_external_script
 `[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` Gilt nur für SQL Server-2019 und wird verwendet, um pro Partition Modelle zu erstellen. Gibt den Namen der Spalte verwendet Daten zu segmentieren, wie z. B. Region oder Datum. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Im Fall von R ist die Eingabevariable einen Datenrahmen. Im Fall von Python muss die Eingabe tabellarische sein. 
 ::: moniker-end
 
-`[ @output_data_1_name =  N'output_data_1_name' ]` Gibt den Namen der Variablen in externen Skripts mit den Daten zu zurückzugebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Abschluss des Aufrufs der gespeicherten Prozedur. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Für R muss die Ausgabe einen Datenrahmen. Für Python muss die Ausgabe ein Pandas-dataframe. *output_data_1_name* ist **Sysname**.  Standardwert ist *"outputdataset"*.  
+`[ @output_data_1_name =  N'output_data_1_name' ]` Gibt den Namen der Variablen in externen Skripts mit den Daten zu zurückzugebenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Abschluss des Aufrufs der gespeicherten Prozedur. Der Datentyp der Variablen im externen Skripts, hängt von der Sprache ab. Für R muss die Ausgabe einen Datenrahmen. Für Python muss die Ausgabe ein Pandas-dataframe. *output_data_1_name* ist **Sysname**.  Standardwert ist *"outputdataset"* .  
 
 `[ @parallel = 0 | 1 ]` Aktivieren der parallelen Ausführung von R-Skripts durch Festlegen der `@parallel` Parameter auf 1. Der Standardwert für diesen Parameter ist 0 (keine Parallelität). Wenn `@parallel = 1` und die Ausgabe wird direkt auf dem Clientcomputer gestreamt wird und dann die `WITH RESULT SETS` -Klausel ist erforderlich, und einem Ausgabeschema muss angegeben werden.  
 
@@ -124,7 +124,7 @@ Monitor-skriptausführung mit [Sys. dm_external_script_requests](../../relationa
 
  In SQL Server-2019 können derzeit in der öffentlichen Vorschauversion können Sie zwei zusätzliche Parameter festlegen, mit denen die Modellierung für partitionierte Daten, in denen Partitionen basieren auf einem oder mehr Spalten, die Sie bereitstellen, die einen Satz von Daten auf natürliche Weise in logische Partitionen unterteilen erstellt und verwendet nur während der Ausführung des Skripts. Spalten, die sich wiederholenden Werte für Alter, Geschlecht, Region, Datum oder Zeit sind einige Beispiele, die für die partitionierten Datasets geeignet sind.
  
- Die beiden Parameter sind **input_data_1_partition_by_columns** und **input_data_1_order_by_columns**, wobei der zweite Parameter verwendet wird, um das Resultset zu sortieren. Die Parameter werden als Eingaben für übergeben `sp_execute_external_script` mit dem externen Skript ausführen einmal für jede Partition. Weitere Informationen und Beispiele finden Sie unter [Lernprogramm: Erstellen von Modellen partitionsbasierter](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+ Die beiden Parameter sind **input_data_1_partition_by_columns** und **input_data_1_order_by_columns**, wobei der zweite Parameter verwendet wird, um das Resultset zu sortieren. Die Parameter werden als Eingaben für übergeben `sp_execute_external_script` mit dem externen Skript ausführen einmal für jede Partition. Weitere Informationen und Beispiele finden Sie unter [Lernprogramm: Erstellen von Modellen partitionsbasierter](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
 
  Sie können Skript parallel ausführen, durch Angabe `@parallel=1`. Wenn die Eingabeabfrage parallelisiert werden kann, legen Sie `@parallel=1` als Teil Ihrer Argumente auf `sp_execute_external_script`. Standardmäßig wird die Abfrageoptimierer unter `@parallel=1` für Tabellen, die über mehr als 256 Zeilen, aber wenn Sie dies explizit behandelt möchten dieses Skript enthält den Parameter als eine Demonstration.
 

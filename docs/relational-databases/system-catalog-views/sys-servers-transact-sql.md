@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 59849d1e4a462433ac7f0b1b4e3e620bcdb82256
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856069"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62856069"
 
   Enthält eine Zeile für jeden registrierten Verbindungs- oder Remoteserver sowie eine Zeile für den lokalen Server, bei dem **server_id** = 0 ist.  
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Lokale ID des Verbindungsservers.|  
 |**name**|**sysname**|Wenn **Server_id** = 0, der zurückgegebene Wert ist, den Namen des Servers.<br /><br /> Wenn **Server_id** > 0 ist, der zurückgegebene Wert wird der lokale Name des Verbindungsservers.|  

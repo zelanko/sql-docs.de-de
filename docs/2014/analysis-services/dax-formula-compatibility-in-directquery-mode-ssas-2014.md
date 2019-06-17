@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62732472"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014)
@@ -55,7 +55,7 @@ Die Formel vergleicht eine Textzeichenfolge mit einer Zahl. Der Ausdruck ist sow
   
 Bei einem speicherinternen Modell lautet das Ergebnis **true** , da Zahlen als Zeichenfolgen implizit in einen numerischen Datentyp für Vergleiche mit anderen Zahlen umgewandelt werden. SQL wandelt auch Textzahlen implizit in Zahlen für den Vergleich mit numerischen Datentypen um.  
   
-Beachten Sie, dass dies eine Änderung im Verhalten von der ersten Version von stellt [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], die zurückgeben würde **"false"**, da der Text "2" immer größer als eine beliebige Anzahl berücksichtigt werden sollen.  
+Beachten Sie, dass dies eine Änderung im Verhalten von der ersten Version von stellt [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], die zurückgeben würde **"false"** , da der Text "2" immer größer als eine beliebige Anzahl berücksichtigt werden sollen.  
   
 **Vergleich von Text mit booleschen Werten**  
 BEISPIEL: `"VERDADERO" = TRUE`  
@@ -78,7 +78,7 @@ Es gibt in der DAX-Programmiersprache keine Umwandlungsfunktion als solche, aber
 -   Boolesche Werte werden stets als logische Werte in Vergleichen sowie bei Verwendung mit EXACT, AND, OR, &amp;&amp;oder || betrachtet.  
   
 **Umwandeln einer Zeichenfolge in einen booleschen Wert**  
-Im speicherinternen und DirectQuery-Modelle, Umwandlungen in boolesche Werte nur bei folgenden Zeichenfolgen zulässig sind: **""** (leere Zeichenfolge), **"true"**, **"false"**; Wenn eine leere Zeichenfolge Umwandlungen in Wert "false".  
+Im speicherinternen und DirectQuery-Modelle, Umwandlungen in boolesche Werte nur bei folgenden Zeichenfolgen zulässig sind: **""** (leere Zeichenfolge), **"true"** , **"false"** ; Wenn eine leere Zeichenfolge Umwandlungen in Wert "false".  
   
 Umwandlungen anderer Zeichenfolgen in den booleschen Datentyp führen zu einem Fehler.  
   

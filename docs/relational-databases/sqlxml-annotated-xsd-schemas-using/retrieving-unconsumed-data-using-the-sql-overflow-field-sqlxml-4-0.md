@@ -20,15 +20,15 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf5a92c2deaf8fc6867c183e17db8992a39bfd1b
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980766"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Abrufen von nicht verbrauchten Daten mithilfe von 'sql:overflow-field' (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Wenn Datensätze mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML-Funktion aus einem XML-Dokument in eine Datenbank eingefügt werden, können alle nicht verbrauchten Daten aus dem XML-Quelldokument in einer Spalte gespeichert werden. Wenn Sie Daten mit kommentierte Schemas aus einer Datenbank abrufen, können Sie die **SQL: Overflow-Feld** Attribut zu Spalte in der Tabelle, in der die Überlaufdaten gespeichert. Die **SQL: Overflow-Feld** Attribut kann angegeben werden, auf  **\<Element >**.  
+  Wenn Datensätze mithilfe der [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML-Funktion aus einem XML-Dokument in eine Datenbank eingefügt werden, können alle nicht verbrauchten Daten aus dem XML-Quelldokument in einer Spalte gespeichert werden. Wenn Sie Daten mit kommentierte Schemas aus einer Datenbank abrufen, können Sie die **SQL: Overflow-Feld** Attribut zu Spalte in der Tabelle, in der die Überlaufdaten gespeichert. Die **SQL: Overflow-Feld** Attribut kann angegeben werden, auf  **\<Element >** .  
   
  Anschließend gibt es folgende Möglichkeiten, diese Daten abzurufen:  
   

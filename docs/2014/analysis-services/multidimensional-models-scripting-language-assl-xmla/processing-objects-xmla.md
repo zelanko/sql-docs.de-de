@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727596"
 ---
 # <a name="processing-objects-xmla"></a>Verarbeiten von Objekten (XMLA)
@@ -127,7 +127,7 @@ ms.locfileid: "62727596"
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Im folgenden Beispiel wird inkrementell verarbeitet die **Internet_Sales_2004** partition im der **Internetverkäufe** -Measuregruppe des der **Adventure Works DW** Cube in der [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] Beispiel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank. Die `Process` -Befehl fügt Aggregationen für Bestelldaten Datumsangaben nach dem 31. Dezember 2006 zur Partition mit einer Out-of-Line-abfragebindung in der `Bindings` Eigenschaft der `Process` Befehl aus, um die Zeilen der Faktentabelle aus der Erstellung abrufen die Aggregationen der Partition hinzugefügt.  
   
 ### <a name="code"></a>Code  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62938582"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Replikationskonflikt-Viewer von Microsoft (Mergereplikation)
@@ -70,7 +70,7 @@ ms.locfileid: "62938582"
  **Die ersten fünf Spalten und Spalten mit Konfliktdaten anzeigen**  
  Zeigt die ersten fünf Spalten und alle Spalten mit Konflikten an. Diese Option ist hilfreich, wenn die Tabelle über eine große Anzahl von Spalten verfügt, Sie aber nur diejenigen anzeigen möchten, die für die Konfliktlösung am wichtigsten sind. Die ersten fünf Spalten sind in diese Sicht immer einbezogen, da Felder zum Kennzeichnen einer Zeile, z. B. der Primärschlüssel oder Namensfelder, sich oft in den ersten Spalten einer Tabelle befinden.  
   
- **Spalteninformationen anzeigen** (**…**)  
+ **Spalteninformationen anzeigen** ( **…** )  
  Klicken Sie, um Spalteninformationen anzuzeigen: **Tabellenname**, **Spaltenname**, **Datentyp** und **Spaltenwert**. **Spaltenwert** kann bearbeitet werden, sofern der Wert nicht als schreibgeschützt angezeigt wird.  
   
  **Gewinner absenden**  
@@ -80,7 +80,7 @@ ms.locfileid: "62938582"
  Klicken Sie auf diese Option, um die Zeile zu akzeptieren, die vom Konfliktlöser als Verlierer bestimmt wurde. Der Wert jeder nicht als schreibgeschützt angezeigten Spalte kann vor dem Klicken auf diese Schaltfläche geändert werden.  
   
  **Details dieses Konflikts protokollieren**  
- Aktivieren Sie dieses Kontrollkästchen, um die Details eines Konflikts in eine Datei zu speichern. Zeigen Sie auf das Menü **Ansicht** , und klicken Sie auf **Optionen**, um einen Speicherort für die Datei anzugeben. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), und navigieren Sie zur entsprechenden Datei. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
+ Aktivieren Sie dieses Kontrollkästchen, um die Details eines Konflikts in eine Datei zu speichern. Zeigen Sie auf das Menü **Ansicht** , und klicken Sie auf **Optionen**, um einen Speicherort für die Datei anzugeben. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), und navigieren Sie zur entsprechenden Datei. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   

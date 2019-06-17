@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032417"
 ---
 # <a name="object-dependencies"></a>Objektabhängigkeiten
@@ -27,10 +27,10 @@ ms.locfileid: "63032417"
  Mithilfe dieses Dialogfelds können Sie sich einen Überblick über die Abhängigkeiten verschaffen, bevor Sie das ausgewählte Objekt ändern oder löschen.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Objekte, abhängig**_\<ausgewähltes Objekt >_  
+ **Objekte, abhängig** _\<ausgewähltes Objekt >_  
  Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und die vom ausgewählten Objekt abhängig sind.  
   
- **Objekte, von denen**_\<ausgewähltes Objekt >_**abhängt**  
+ **Objekte, von denen** _\<ausgewähltes Objekt >_ **abhängt**  
  Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und von denen das ausgewählte Objekt abhängig ist.  
   
  **Abhängigkeiten**  

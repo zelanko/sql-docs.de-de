@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abb599adfe93935bd329d174b685ce71c2f64864
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 21da83dd2ca7c5c85c2d98fe8d69061f0b3abc11
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615128"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792304"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.sql.DatabaseMetaData getMetaData()
 ## <a name="remarks"></a>Remarks  
  Diese GetMetaData-Methode wird von der GetMetaData-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

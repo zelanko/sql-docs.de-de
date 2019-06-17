@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62898898"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
@@ -50,7 +50,7 @@ ms.locfileid: "62898898"
   
 |Anzeigename in DTSPackageType|Numerischer Wert|  
 |-------------------------------------|-------------------|  
-|Standard|0|  
+|Default|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -69,7 +69,7 @@ ms.locfileid: "62898898"
   
 |Anzeigename in DTSPriorityClass|Numerischer Wert|  
 |---------------------------------------|-------------------|  
-|Standard|0|  
+|Default|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
@@ -596,7 +596,7 @@ ms.locfileid: "62898898"
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
 |Supported|1|  
-|Erforderlich|2|  
+|Required|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](add-or-change-a-property-expression.md)  

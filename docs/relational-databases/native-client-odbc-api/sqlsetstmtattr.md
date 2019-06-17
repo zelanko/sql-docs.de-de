@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014104"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
@@ -76,7 +76,7 @@ ms.locfileid: "63014104"
   
  Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
   
-|*ValuePtr* Wert|Description|  
+|*ValuePtr* Wert|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|Standard. Der Treiber konvertiert Datums-, Uhrzeit- und Währungsdaten nicht gemäß der Gebietsschemaeinstellung des Clients in Zeichenfolgendaten.|  
 |SQL_RE_ON|Der Treiber konvertiert Datums-, Uhrzeit- und Währungsdaten gemäß der Gebietsschemaeinstellung des Clients in Zeichenfolgendaten.|  
@@ -99,7 +99,7 @@ ms.locfileid: "63014104"
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  Das SQL_SOPT_SS_HIDDEN_COLUMNS-Attribut macht Spalten im Resultset verfügbar, die in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SELECT FOR BROWSE-Anweisung verborgen sind. Der Treiber macht diese Spalten standardmäßig nicht verfügbar. Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
   
-|*ValuePtr* Wert|Description|  
+|*ValuePtr* Wert|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|Standard. FOR BROWSE-Spalten werden aus dem Resultset ausgeblendet.|  
 |SQL_HC_ON|Macht FOR BROWSE-Spalten verfügbar.|  

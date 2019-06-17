@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721319"
 ---
 # <a name="errors-and-events-reference-replication"></a>Fehler- und Ereignisreferenz (Replikation)
@@ -28,7 +28,7 @@ ms.locfileid: "62721319"
   
 |Fehler|MessageBox|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „%.*ls“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
+|[MSSQL_ENG002601](mssql-eng002601.md)|Eine Zeile mit doppeltem Schlüssel kann in das „*ls“-Objekt mit dem eindeutigen „%.\*ls“-Index nicht eingefügt werden.|  
 |[MSSQL_ENG002627](mssql-eng002627.md)|Verletzung der %ls-Einschränkung ' %. * ls'. Ein doppelter Schlüssel kann in das „%.\*ls“-Objekt nicht eingefügt werden.|  
 |[MSSQL_ENG003165](mssql-eng003165.md)|Die %1!s!-Datenbank wurde wiederhergestellt; beim Wiederherstellen/Entfernen der Replikation wurde jedoch ein Fehler erkannt. Die Datenbank ist offline. Weitere Informationen finden Sie im Thema 'MSSQL_ENG003165' in der SQL Server-Onlinedokumentation.|  
 |[MSSQL_ENG003724](mssql-eng003724.md)|Kann nicht %s_msg %s_msg ' %. * ls, da sie für die Replikation verwendet wird.|  

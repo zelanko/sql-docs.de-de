@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155370"
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
@@ -34,7 +34,7 @@ ms.locfileid: "63155370"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Erstellen eines gruppierten Indexes für eine Tabelle mit:**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63155370"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>So erstellen Sie einen gruppierten Index mit dem Objekt-Explorer  
   
@@ -84,7 +84,7 @@ ms.locfileid: "63155370"
   
 3.  Geben Sie in das Dialogfeld **Neuer Index** auf der Seite **Allgemein** den Namen des neuen Indexes in das Feld **Indexname** ein.  
   
-4.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…**.  
+4.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…** .  
   
 5.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das Kontrollkästchen der Tabellenspalte, die dem gruppierten Index hinzugefügt werden soll.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63155370"
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank, für die Sie eine Tabelle mit einem gruppierten Index erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Tabellen**, und klicken Sie auf **Neue Tabelle...**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Tabellen**, und klicken Sie auf **Neue Tabelle...** .  
   
 3.  Erstellen Sie eine neue Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../tables/create-tables-database-engine.md).  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e1c05eb3-8465-46fd-99bc-5e8effcafee5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f5b995640688cc58d807444d158610a497fa713
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b0f9a8a30e694671a0e4d87163e50816c18859ad
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690330"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792558"
 ---
 # <a name="getmaxprocedurenamelength-method-sqlserverdatabasemetadata"></a>getMaxProcedureNameLength-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public int getMaxProcedureNameLength()
 ## <a name="remarks"></a>Remarks  
  Diese GetMaxProcedureNameLength-Methode wird von der GetMaxProcedureNameLength-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

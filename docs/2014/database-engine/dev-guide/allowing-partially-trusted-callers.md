@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754198"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Zulassen von teilweise vertrauenswürdigen Aufrufern
@@ -45,7 +45,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Angenommen, es gibt eine Hilfsprogrammklasse, die für viele serverseitige CLR-Integrationsanwendungen nützlich wäre. Zum Beispiel könnte es eine Klasse sein, die die Ergebnisse einer Abfrage darstellt. Um die gemeinsame Nutzung dieser Komponente zu ermöglichen, wird diese Hilfsprogrammmklasse in eine separate Assembly eingefügt. Dann wird von verschiedenen anderen Assemblys, die CLR-Integrationsobjekte enthalten, auf diese Assembly verwiesen. Da diese Hilfsprogrammmklasse in vielen verschiedenen Serveranwendungen verwendet wird, wird sie sorgfältig überprüft. Alle eventuell vorhandenen Sicherheitsrisiken werden beseitigt. Dann wird das `AllowPartiallyTrustedCallers`-Attribut der Assembly, die die Hilfsprogrammklasse enthält, zugeordnet, sodass die in den mit den Berechtigungssätzen `SAFE` oder `EXTERNAL_ACCESS` markierten Assemblys enthaltenen CLR-Integrationsobjekte die Hilfsprogrammklasse und deren Methoden nutzen können, obwohl sie sich in einer getrennten Assembly befinden.  
   
  Manchmal kann es nützlich sein, Befehle beim Durchsehen der Ergebnisse einer Abfrage ausführen zu können, ohne eine neue Verbindung öffnen und ohne alle Ergebnisse in den Speicher laden zu müssen. Dies kann mit der Technologie der MARS-Funktion (Multiple Active Result Set) in ADO.NET 2.0 verwirklicht werden. Derzeit ist MARS nicht für den Anbieter im Prozess, der für die serverseitige Programmierung verwendet wird, implementiert. Diese Einschränkung können Sie mithilfe eines serverseitigen Cursors umgehen. Dieses Beispiel zeigt, wie Sie serverseitige Cursor verwenden, um die fehlende MARS-Unterstützung für die serverseitige Progammierung zu umgehen.  

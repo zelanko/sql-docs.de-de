@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1ae81034-5de3-4f4a-b3f2-7d9d198a73af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3247a49ecd4649988b95cc82358918a211b362a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e45dea3bd714e84b786af8e05a5a9460592e9cbb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775838"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789264"
 ---
 # <a name="getusername-method-sqlserverdatabasemetadata"></a>getUserName-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.lang.String getUserName()
 ## <a name="remarks"></a>Remarks  
  Diese getUserName-Methode wird von der getUserName-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

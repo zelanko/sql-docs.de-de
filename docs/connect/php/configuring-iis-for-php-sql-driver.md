@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7b550fb7300ffdb2d37ae4407aaeeb43a49c89f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3c4fb297ed31c801c8326307ab5b7dfd4e694e2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654778"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795788"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Konfigurieren der IIS für Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,8 +45,8 @@ Die folgenden Foren bieten Communityunterstützung für FastCGI unter IIS:
 -   [FastCGI-Handler](https://forums.iis.net/1103.aspx)  
 -   [IIS 7 – FastCGI-Modul](https://forums.iis.net/1104.aspx)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
-[Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
+## <a name="see-also"></a>Weitere Informationen  
+[Getting Started with the Microsoft Drivers for PHP for SQL Server (Erste Schritte mit dem Microsoft-Treiber für PHP für SQL Server)](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
