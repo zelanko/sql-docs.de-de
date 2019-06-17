@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 001e62869146a7090fe4598650c763a690809cfb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103637"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Leistungsindikatoren für die Leistungsobjekte 'ReportServer:Service' und 'ReportServerSharePoint:Service'
@@ -54,7 +54,7 @@ ms.locfileid: "66103637"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |`Active connections`|Die Anzahl der Verbindungen, die aktuell auf dem Server aktiv sind.|  
 |`Bytes Received Total`|Die Anzahl der vom Server empfangenen Bytes. Dieser Leistungsindikator zählt die Rohbytes, die insgesamt vom Berichts-Manager und Berichtsserver empfangen wurden.|  

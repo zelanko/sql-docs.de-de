@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187011"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (Hilfsprogramm)
@@ -79,8 +79,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Gibt an, dass das Syntaxdiagramm für **sqlmaint** zurückgegeben werden soll. Dieser Parameter darf nur alleine verwendet werden.  
   
- **-S** _Servername_[ **\\**_Instanzname_]  
- Gibt die Zielinstanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *ervername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf diesem Server herzustellen. Geben Sie *Servername**_\\_** Instanzname* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn kein Server angegeben wird, stellt **sqlmaint** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer her.  
+ **-S** _Servername_[ **\\** _Instanzname_]  
+ Gibt die Zielinstanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]an. Geben Sie *ervername* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf diesem Server herzustellen. Geben Sie *Servername ** _\\_ **Instanzname* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf diesem Server herzustellen. Wenn kein Server angegeben wird, stellt **sqlmaint** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer her.  
   
  **-U** _Anmelde-ID_  
  Gibt die Anmelde-ID an, der beim Verbinden zum Server verwendet werden soll. Wenn dieses Argument nicht angegeben wird, versucht **sqlmaint** , die [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierung zu verwenden. Wenn die *Anmelde-ID* Sonderzeichen enthält, muss das Argument in doppelte Anführungszeichen (") eingeschlossen werden. Andernfalls sind die doppelten Anführungszeichen optional.  
@@ -134,12 +134,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-RmUnusedSpace** _Schwellenwert_Prozent_ungenutzt_Prozent_  
  Gibt an, dass nicht verwendeter Speicherplatz aus der mit **-D**angegebenen Datenbank entfernt wird. Diese Option ist nur für Datenbanken nützlich, die für das automatische Wachstum definiert wurden. *Schwellenwert_Prozent* gibt die Größe in Megabytes an, die die Datenbank erreichen muss, bevor **sqlmaint** versucht, nicht verwendeten Datenspeicherplatz zu entfernen. Wenn die Datenbank kleiner als *Schwellenwert_Prozent*ist, wird keine Aktion ausgeführt. *Prozent_frei* gibt an, wie viel nicht verwendeter Speicherplatz in der Datenbank verbleiben muss. Die Angabe erfolgt als Prozentsatz der endgültigen Größe der Datenbank. Wenn eine 200 MB große Datenbank z.B. 100 MB an Daten enthält, bewirkt die Angabe des Werts 10 für *Prozent_frei* , dass die endgültige Größe der Datenbank 110 MB beträgt. Beachten Sie, dass eine Datenbank nicht erweitert wird, wenn sie kleiner als der Wert ist, der sich aus *Prozent_frei* zuzüglich der Menge der Daten in der Datenbank ergibt. Wenn eine 108 MB große Datenbank z.B. 100 MB an Daten enthält, bewirkt die Angabe des Werts 10 für *Prozent_frei* nicht, dass die Datenbank auf 110 MB erweitert wird; die Datenbank bleibt 108 MB groß.  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  Gibt an, dass eine DBCC CHECKDB-Anweisung oder eine DBCC CHECKDB-Anweisung mit der Option NOINDEX in der Datenbank ausgeführt werden soll, die mit **-D**angegeben wurde. Weitere Informationen finden Sie unter DBCC CHECKDB.  
   
  Wenn die Datenbank zum Zeitpunkt der Ausführung von *sqlmaint* verwendet wird, wird eine Warnung in die Datei geschrieben, die mit **Textdatei** angegeben wurde.  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  Gibt an, dass eine DBCC CHECKALLOC-Anweisung mit der Option NOINDEX in der Datenbank ausgeführt werden soll, die mit **-D** angegeben wurde. Weitere Informationen finden Sie unter [DBCC CHECKALLOC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql).  
   
  **-CkCat**  
@@ -211,7 +211,7 @@ dbname_log_yyyymmddhhmm.BAK
  Gibt an, dass das Sicherungsmedium ein Band ist.  
   
  **-BkUpOnlyIfClean**  
- Gibt an, dass eine Sicherung nur dann erfolgt, wenn bei den mit **-Ck** angegebenen Überprüfungen keine Probleme bei den Daten gefunden wurden. Wartungsaktionen werden in derselben Reihenfolge ausgeführt, in der sie an der Eingabeaufforderung angezeigt werden. Geben Sie die Parameter **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**oder **-CkCat** vor den Parametern **-BkUpDB**/**-BkUpLog** an, wenn Sie auch **-BkUpOnlyIfClean**angeben möchten. Andernfalls erfolgt die Sicherung unabhängig davon, ob bei der Überprüfung Probleme gemeldet werden oder nicht.  
+ Gibt an, dass eine Sicherung nur dann erfolgt, wenn bei den mit **-Ck** angegebenen Überprüfungen keine Probleme bei den Daten gefunden wurden. Wartungsaktionen werden in derselben Reihenfolge ausgeführt, in der sie an der Eingabeaufforderung angezeigt werden. Geben Sie die Parameter **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**oder **-CkCat** vor den Parametern **-BkUpDB**/ **-BkUpLog** an, wenn Sie auch **-BkUpOnlyIfClean**angeben möchten. Andernfalls erfolgt die Sicherung unabhängig davon, ob bei der Überprüfung Probleme gemeldet werden oder nicht.  
   
  **-VrfyBackup**  
  Gibt an, dass für die Sicherung RESTORE VERIFYONLY ausgeführt wird, sobald die Sicherung abgeschlossen ist.  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021905"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
@@ -68,7 +68,7 @@ ms.locfileid: "63021905"
   
 -   „Die Oracle-Serverinstanz '\<*OracleVerlegerName*>' wurde zum Verwenden von '\<*SQLServerDistributorName*>' als Verteiler konfiguriert. Um mit dem Verwenden von '\<*NewSQLServerDistributorName*>' als Verteiler zu beginnen, müssen Sie die aktuelle Replikationskonfiguration auf der Oracle-Serverinstanz entfernen. Hierbei werden alle Veröffentlichungen auf dieser Serverinstanz gelöscht.“  
   
--   „Der Oracle-Server '\<*OracleServerName*>' ist bereits als Verleger '\<*OracleVerlegerName*>' auf dem Verteiler '\<*SQLServerDistributorName*>.*\<VerteilungsdatenbankName>*' definiert. Löschen Sie die Zuordnung des Verlegers, oder löschen Sie das öffentliche Synonym '*\<SynonymName>*' zur erneuten Erstellung.“  
+-   „Der Oracle-Server '\<*OracleServerName*>' ist bereits als Verleger '\<*OracleVerlegerName*>' auf dem Verteiler '\<*SQLServerDistributorName*>. *\<VerteilungsdatenbankName>* ' definiert. Löschen Sie die Zuordnung des Verlegers, oder löschen Sie das öffentliche Synonym ' *\<SynonymName>* ' zur erneuten Erstellung.“  
   
  Wenn die Zuordnung eines Oracle-Verlegers gelöscht wird, werden die Replikationsobjekte in der Oracle-Datenbank automatisch bereinigt. In einigen Fällen ist jedoch auch eine manuelle Bereinigung der Oracle-Replikationsobjekte erforderlich. So bereinigen Sie die durch die Replikation erstellten Oracle-Replikationsobjekte manuell:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021905"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>SQL Server-Fehler 21642 (Verbindungsserver bereits vorhanden) wurde ausgelöst  
  Wenn ein Oracle-Verleger zum ersten Mal konfiguriert wird, wird für die Verbindung zwischen dem Verleger und dem Verteiler ein Verbindungsservereintrag erstellt. Der Verbindungsserver hat denselben Namen wie der Oracle-TNS-Dienst. Wenn Sie versuchen, einen Verbindungsserver mit demselben Namen zu erstellen, wird die folgende Fehlermeldung angezeigt:  
   
- "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen '*\<LinkedServerName>*' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
+ "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen ' *\<LinkedServerName>* ' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
   
  Dieser Fehler kann auftreten, wenn Sie versuchen, den Verbindungsserver direkt zu erstellen, oder die Beziehung zwischen dem Oracle-Verleger und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler zuvor gelöscht haben und jetzt versuchen, diese Beziehung neu zu konfigurieren. Wenn Sie beim Neukonfigurieren des Verlegers diese Fehlermeldung erhalten, löschen Sie den Verbindungsserver mit [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -155,7 +155,7 @@ ms.locfileid: "63021905"
   
 2.  Geben Sie **regedit** im Dialogfeld **Ausführen**ein, und klicken Sie dann auf **OK**.  
   
-3.  Navigieren Sie zu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers.  
+3.  Navigieren Sie zu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers.  
   
      Unter Providers sollte sich ein Ordner mit dem Namen OraOLEDB.Oracle befinden. In diesem Ordner sollte sich der DWORD-Wert mit dem Namen **AllowInProcess**und dem Wert **1**befinden.  
   
