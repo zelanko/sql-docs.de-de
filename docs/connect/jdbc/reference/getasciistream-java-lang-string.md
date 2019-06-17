@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 630b659f-eb36-4277-b04e-9a2e6134f795
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4169a8e4ec46993dd58c705b04b8f3e46b57892a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: da221e6e718515603462cddd03bede63567ae426
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687528"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800026"
 ---
 # <a name="getasciistream-javalangstring"></a>getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public final java.io.InputStream getAsciiStream(java.lang.String paramName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getAsciiStream-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

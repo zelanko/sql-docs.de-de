@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 40178471-4f35-4df9-b3fb-80cdf43de274
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f40d9fc6fee6ade26f2279662175c5d91458d279
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55fa26cc1cdd89a67eb918b90aca9b0c922e0adb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829748"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801996"
 ---
 # <a name="getfloat-method-int"></a>getFloat-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public float getFloat(int index)
   
  Von dieser Methode werden alle zahlenbasierten Typen mit der Java-Genauigkeit vom Typ **float** zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getFloat-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3d126126827674eb3164a800891c8f6afc502b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 169f6bdbe17e1df27e62983def52ec26a11635f4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796918"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801634"
 ---
 # <a name="setdisablestatementpooling-method-sqlserverconnection"></a>setDisableStatementPooling-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public void setDisableStatementPooling(boolean disableStatementPooling)
 ## <a name="remarks"></a>Remarks  
  Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

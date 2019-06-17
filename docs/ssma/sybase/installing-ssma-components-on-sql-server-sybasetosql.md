@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63294570"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Installieren von SSMA-Komponenten auf SQL Server (SybaseToSQL)
@@ -88,7 +88,7 @@ Nach der Installation der Erweiterung Pack werden Sie eine finden Sie unter eine
   
 -   **stop_agent_process**  
   
-Jedes Mal, die Sie zum Migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA erstellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag. Diese Aufträge werden mit dem Namen **Ssma_syb Migration Datenpaket {GUID}**, und in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Knoten der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Ordner "Aufträge".  
+Jedes Mal, die Sie zum Migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA erstellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag. Diese Aufträge werden mit dem Namen **Ssma_syb Migration Datenpaket {GUID}** , und in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Knoten der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Ordner "Aufträge".  
   
 ## <a name="sybase-providers"></a>Sybase-Anbieter  
 Wenn Sie Daten aus der App Service-Umgebung migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure, die Daten migriert werden, direkt zwischen ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure. Es wird nicht über SSMA übertragen werden, da dies die Datenmigration verlangsamen würde.  

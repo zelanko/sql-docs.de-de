@@ -7,17 +7,18 @@ ms.prod_service: connectivity
 ms.reviewer: craigg
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
+author: MightyPen
+ms.author: genemi
 manager: kenvh
-ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
-ms.translationtype: HT
+ms.openlocfilehash: d710bb6e83d6f9761f7926afac3280a2c33d2bec
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618277"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822236"
 ---
 # <a name="fips-mode"></a>FIPS-Modus
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Der Microsoft JDBC-Treiber für SQL Server unterstützt die Ausführung in JVMs konfiguriert *FIPS 140-konformen*.
@@ -84,13 +85,13 @@ Führen Sie den JDBC-Treiber im FIPS-kompatiblen Modus konfigurieren Sie Verbind
 
 #### <a name="properties"></a>Eigenschaften 
 
-|Eigenschaft|Typ|Default|Beschreibung|Hinweise|
+|Eigenschaft|Typ|Default|und Beschreibung|Hinweise|
 |---|---|---|---|---|
 |encrypt|Boolesche Werte ["TRUE / FALSE"]|„FALSE“|Für FIPS aktivierte JVM Verschlüsseln von Eigenschaft sollte **"true"**||
 |TrustServerCertificate|Boolesche Werte ["TRUE / FALSE"]|„FALSE“|Für FIPS, muss der Benutzer-Zertifikatskette zu überprüfen, damit der Benutzer verwenden sollten **"false"** Wert für diese Eigenschaft. ||
 |trustStore|Zeichenfolge|NULL|Ihre Java-Keystore-Dateipfad, in dem Sie das Zertifikat importiert haben. Wenn Sie das Zertifikat auf Ihrem System und dann nicht erforderlich, übergeben Sie etwas installieren. Treiber verwendet die Cacerts oder Jssecacerts-Dateien.||
 |trustStorePassword|Zeichenfolge|NULL|Das Kennwort, das zum Überprüfen der Integrität der trustStore-Daten verwendet wird.||
 |fips|Boolesche Werte ["TRUE / FALSE"]|„FALSE“|Diese Eigenschaft sollte sein, für die FIPS JVM aktiviert **"true"**|In 6.1.4 hinzugefügt (Stable release 6.2.2)||
-|fipsProvider|Zeichenfolge|NULL|FIPS-Anbieter in JVM konfiguriert. Z. B. BCFIPS oder SunPKCS11-NSS |6.1.2 hinzugefügt (Stable release 6.2.2), ausführliche Informationen finden Sie in 6.4.0: als veraltet markiert [hier](https://github.com/Microsoft/mssql-jdbc/pull/460).|
-|trustStoreType|Zeichenfolge|JKS|FIPS-Modus Trust Store Mengentyp entweder PKCS12 Typ definiert, oder von FIPS-Anbieter |6.1.2 hinzugefügt (Stable release 6.2.2)||
+|fipsProvider|Zeichenfolge|NULL|FIPS-Anbieter in JVM konfiguriert. Z. B. BCFIPS oder SunPKCS11-NSS |6\.1.2 hinzugefügt (Stable release 6.2.2), ausführliche Informationen finden Sie in 6.4.0: als veraltet markiert [hier](https://github.com/Microsoft/mssql-jdbc/pull/460).|
+|trustStoreType|Zeichenfolge|JKS|FIPS-Modus Trust Store Mengentyp entweder PKCS12 Typ definiert, oder von FIPS-Anbieter |6\.1.2 hinzugefügt (Stable release 6.2.2)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

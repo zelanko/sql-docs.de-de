@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a79b52295ede211dcf7ceb6e3f23ab9e742b31d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63267920"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX-Skriptanweisungen (MDX)
@@ -23,7 +23,7 @@ ms.locfileid: "63267920"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[CALCULATE-Anweisung &#40;MDX&#41;](../mdx/mdx-scripting-calculate.md)|Berechnet einen Teilcube, wobei optional die Lösungsreihenfolge der im Teilcube enthaltenen Dimensionen bestimmt wird.|  
 |[CASE-Anweisung &#40;MDX&#41;](../mdx/case-statement-mdx.md)|Ermöglicht die bedingte Rückgabe bestimmter Werte aus mehreren Vergleichen.|  

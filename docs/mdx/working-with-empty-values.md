@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251430"
 ---
 # <a name="working-with-empty-values"></a>Arbeiten mit leeren Werten
@@ -46,7 +46,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Die folgenden Informationen gelten für leere Werte:  
   
--   Die ["isEmpty"](../mdx/isempty-mdx.md) -Funktion zurückgegeben **"true"** Wenn und nur wenn die Zelle, die durch das in der Funktion angegebenen Tupel identifiziert leer ist. Die Funktion hingegen gibt **"false"**.  
+-   Die ["isEmpty"](../mdx/isempty-mdx.md) -Funktion zurückgegeben **"true"** Wenn und nur wenn die Zelle, die durch das in der Funktion angegebenen Tupel identifiziert leer ist. Die Funktion hingegen gibt **"false"** .  
   
     > [!NOTE]  
     >  Die **"isEmpty"** Funktion kann nicht bestimmt werden, ob ein Elementausdruck einen null-Wert zurückgibt. Um zu bestimmen, ob ein null-Element aus einem Ausdruck zurückgegeben wird, verwenden die [IS](../mdx/is-mdx.md)Operator.  

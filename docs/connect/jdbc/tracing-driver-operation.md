@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605780"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798258"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51605780"
   
  Die verfügbaren Protokolliergrade für öffentliche Protokollierungskategorien werden in der folgenden Tabelle beschrieben:  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |SEVERE|Der höchste Protokolliergrad, der schwerwiegende Fehler kennzeichnet. Im JDBC-Treiber wird dieser Grad für Fehler und Ausnahmen verwendet.|  
 |WARNING|Kennzeichnet ein mögliches Problem.|  
@@ -54,7 +54,7 @@ ms.locfileid: "51605780"
   
  Die verfügbaren Protokolliergrade für interne Protokollierungskategorien werden in der folgenden Tabelle beschrieben:  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |SEVERE|Der höchste Protokolliergrad, der schwerwiegende Fehler kennzeichnet. Im JDBC-Treiber wird dieser Grad für Fehler und Ausnahmen verwendet.|  
 |WARNING|Kennzeichnet ein mögliches Problem.|  
@@ -68,7 +68,7 @@ ms.locfileid: "51605780"
 ## <a name="logging-categories"></a>Protokollierungskategorien  
  Wenn Sie ein Logger-Objekt erstellen, müssen Sie an das Objekt die benannte Entität oder Kategorie übergeben, zu der Protokollinformationen ermittelt werden sollen. Der JDBC-Treiber unterstützt die folgenden öffentlichen Protokollierungskategorien, die alle im com.microsoft.sqlserver.jdbc-Treiberpaket definiert sind.  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |Verbindung|Protokolliert Meldungen in der Klasse [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Die Anwendungen können den Protokolliergrad auf FINER festlegen.|  
 |-Anweisung.|Protokolliert Meldungen in der Klasse [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Die Anwendungen können den Protokolliergrad auf FINER festlegen.|  
@@ -78,7 +78,7 @@ ms.locfileid: "51605780"
   
  Ab Version 2.0 des Microsoft JDBC-Treibers stellt der Treiber auch das com.microsoft.sqlserver.jdbc.internals-Paket bereit, das die Protokollierungsunterstützung für die folgenden internen Protokollierungskategorien enthält.  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |AuthenticationJNI|Protokolliert Meldungen in Bezug auf die Windows-integriert Authentifizierungsprobleme (wenn die **AuthenticationScheme** -Verbindungseigenschaft implizit oder explizit festgelegt ist **NativeAuthentication**).<br /><br /> Die Anwendungen können den Protokolliergrad auf FINER und FINE festlegen.|  
 |SQLServerConnection|Protokolliert Meldungen in der Klasse [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Die Anwendungen können den Protokolliergrad auf FINE und FINER festlegen.|  
@@ -159,7 +159,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  Mit dem Objekt „LogManager“, das Bestandteil von „java.util.logging“ ist, können Sie die Eigenschaften in der Datei `logging.properties` festlegen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

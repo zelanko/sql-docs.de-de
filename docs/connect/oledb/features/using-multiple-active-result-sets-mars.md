@@ -17,13 +17,13 @@ helpviewer_keywords:
 - MARS [SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 37a2a695e93d8783e6fd0c88319fed9eda55d8cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545477"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802869"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Verwenden von Multiple Active Result Sets (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52545477"
   
  Ein Beispiel der Verwendung von MARS aus ADO finden Sie unter [mithilfe von ADO mit OLE DB-Treiber für SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
-## <a name="in-memory-oltp"></a>In-Memory OLTP  
+## <a name="in-memory-oltp"></a>In-Memory-OLTP  
  In-Memory-OLTP unterstützt MARS mithilfe von Abfragen und systemintern kompilierte gespeicherte Prozeduren. MARS ermöglicht die anfordernde Daten aus mehreren Abfragen ohne die einzelnen Resultsets, die vor dem Senden einer Anforderung zum Abrufen von Zeilen aus einem neuen Resultset vollständig abrufen. Um mehrere geöffneten Resultsets erfolgreich gelesen werden, müssen Sie eine aktivierter MARS-Verbindung verwenden.  
   
  MARS ist standardmäßig deaktiviert, sodass Sie es explizit durch das Hinzufügen aktivieren müssen `MultipleActiveResultSets=True` auf eine Verbindungszeichenfolge. Im folgende Beispiel wird veranschaulicht, wie eine Verbindung mit einer Instanz von SQL Server, und geben an, dass MARS aktiviert ist:  
@@ -207,7 +207,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
 
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  
   

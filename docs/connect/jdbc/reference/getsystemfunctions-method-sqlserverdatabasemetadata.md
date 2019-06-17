@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fec081e0bd9a9e90e6b1640a1552ba62f24c77c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0176be5707f0e0af9fa2444445881eed3039d532
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845228"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802614"
 ---
 # <a name="getsystemfunctions-method-sqlserverdatabasemetadata"></a>getSystemFunctions-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.lang.String getSystemFunctions()
 ## <a name="remarks"></a>Remarks  
  Diese GetSystemFunctions-Methode wird von der GetSystemFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

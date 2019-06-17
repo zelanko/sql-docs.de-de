@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 4ad868122fd8986c642bace1b2c9cf419bb89182
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288401"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Herstellen einer Verbindung mit Oracle Database (OracleToSQL)
@@ -57,11 +57,11 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenban
   
 2.  In der **Anbieter** Kontrollkästchen **Oracle-Client-Anbieter** oder **OLE DB-Anbieter**, je nachdem, welcher Anbieter installiert ist. Der Standardwert ist Oracle-Client.  
   
-3.  In der **Modus** wählen **Modus "Standard"**, **TNSNAME Modus**, oder **verbindungszeichenfolgenmodus**.  
+3.  In der **Modus** wählen **Modus "Standard"** , **TNSNAME Modus**, oder **verbindungszeichenfolgenmodus**.  
   
     Verwenden Sie Modus "standard", um den Servernamen und Port anzugeben. Verwenden Sie Namen Dienstmodus, um die Oracle-Dienstname manuell anzugeben. Verwenden Sie verbindungszeichenfolgenmodus, um eine vollständige Verbindungszeichenfolge bereitstellen.  
   
-4.  Bei Auswahl von **Modus "Standard"**, geben Sie die folgenden Werte:  
+4.  Bei Auswahl von **Modus "Standard"** , geben Sie die folgenden Werte:  
   
     1.  In der **Servernamen** Feld eingeben oder auswählen, den Namen oder IP-Adresse des Datenbankservers.  
   

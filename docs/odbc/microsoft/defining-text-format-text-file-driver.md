@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240380"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definieren des Textformats (Textdateitreiber)
@@ -33,7 +33,7 @@ Wenn der Text-Treiber verwendet wird, können Sie die **-Text-Format definieren*
 |------------|-----------------|  
 |**Hinzufügen**|Fügt eine Spalte mit den Werten in **Datentyp**, **Namen**, und **Breite** aus dem Dialogfeld, und falls zutreffend, Datumstrennzeichen Schema.ini Wert.|  
 |**Zeichen**|**ANSI** oder **OEM**. OEM-Abhängige gibt einen nicht-ANSI-Zeichensatz an. Wenn das Format des Elements in ausgewählt. für OEM standardmäßig die **Tabellen** Liste wurde durch dieses Dialogfeld können Sie nicht zuvor definiert.|  
-|**Kopfzeile der Spalte Name**|Gibt an, ob die Spalten der ausgewählten Tabelle die erste Zeile als Spaltennamen verwendet werden soll. Entweder **"true"** oder **"false"**. Standardmäßig auf "false" fest, wenn das Format des ausgewählten Elements in der **Tabellen** Liste wurde durch dieses Dialogfeld können Sie nicht zuvor definiert.|  
+|**Kopfzeile der Spalte Name**|Gibt an, ob die Spalten der ausgewählten Tabelle die erste Zeile als Spaltennamen verwendet werden soll. Entweder **"true"** oder **"false"** . Standardmäßig auf "false" fest, wenn das Format des ausgewählten Elements in der **Tabellen** Liste wurde durch dieses Dialogfeld können Sie nicht zuvor definiert.|  
 |**Spalten**|Listet die Spaltennamen für jede Spalte in der ausgewählten Tabelle. Die Reihenfolge der Spalten gibt die Reihenfolge der Spalten in der Tabelle wieder. Diese Liste ist aktiviert, wenn eine Datei ausgewählt wurde die **Tabellen** Liste.|  
 |**Datentyp**|BIT, BYTE, CHAR, Währung, Datum, "float", ganze Zahl, LONGCHAR, SHORT oder einzelne möglich. Date-Datentypen können in den folgenden Formaten werden: "tt-mmm-Yy", "mm-Dd-Yy", "mmm-JJ", "Yyyy-mm-Dd" oder "Yyyy-mmm-Dd". "mm" gibt die Zahlen für Monate; "mmm" gibt die Buchstaben für Monate an.|  
 |**Delimiter**|Gibt an, das benutzerdefinierte Trennzeichen zum Trennen der Spalten verwendet werden. Aktiviert, wenn die **benutzerdefinierte Trennzeichen** Format ausgewählt ist. Das Trennzeichen kann nur ein Zeichen lang sein, und doppelte Anführungszeichen (") kann nicht als Trennzeichen verwendet werden. (Das Trennzeichen kann nicht im Hexadezimal-oder Dezimalformat angegeben werden.)|  

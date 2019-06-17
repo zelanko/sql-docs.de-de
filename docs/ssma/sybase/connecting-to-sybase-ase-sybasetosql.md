@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d9c76a33a650284fde21b28af3a61b197829ef98
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298543"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Herstellen einer Verbindung mit der Sybase-ASE (SybaseToSQL)
@@ -65,7 +65,7 @@ Wenn Sie mit der eine Adaptive Server verbinden, SSMA liest die Metadaten der Da
   
     Verwenden Sie Modus "standard", um den Servernamen, Port, Benutzername und Kennwort anzugeben. Verwenden Sie im erweiterten Modus, um eine Verbindungszeichenfolge bereitstellen. Dieser Modus ist in der Regel nur für die Problembehandlung von oder Arbeiten mit dem technischen Support verwendet.  
   
-4.  Bei Auswahl von **Modus "Standard"**, geben Sie die folgenden Werte:  
+4.  Bei Auswahl von **Modus "Standard"** , geben Sie die folgenden Werte:  
   
     1.  In der **Servernamen** Feld eingeben oder auswählen, den Namen oder IP-Adresse des Datenbankservers.  
   

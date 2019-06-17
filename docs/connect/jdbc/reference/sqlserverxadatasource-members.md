@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e9e25a45940304b977623b0f009ed134b56caed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8a624c51aed73ccf586d58e35881bde6f883cbb8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672328"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804113"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47672328"
   
 ## <a name="constructors"></a>Konstruktoren  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|Initialisiert eine neue Instanz der [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)-Klasse.|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47672328"
   
 ## <a name="methods"></a>Methoden  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt den Wert der **applicationIntent**-Verbindungseigenschaft zurück.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|(Geerbt von [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Gibt den Anwendungsnamen zurück.|  
@@ -97,7 +97,7 @@ ms.locfileid: "47672328"
 |javax.sql.XADataSource|getLoginTimeout, getLogWriter, setLoginTimeout, setLogWriter|  
 |javax.sql.ConnectionPoolDataSource|getLoginTimeout, getLogWriter, setLoginTimeout, setLogWriter|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXADataSource-Klasse](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
   
   

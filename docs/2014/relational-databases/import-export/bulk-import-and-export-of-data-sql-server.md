@@ -25,10 +25,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e90afe2092623fa1dd356e51af5fff7a19e9a2ca
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012121"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Massenimport und -export von Daten (SQL Server)
@@ -66,7 +66,7 @@ ms.locfileid: "66012121"
   
  Formatdateien bieten eine flexible Möglichkeit zum Interpretieren von Daten, wie diese in der Datendatei während des Imports vorhanden sind, und zum Formatieren von Daten in der Datendatei während des Exports. Durch diese Flexibilität besteht nicht mehr die Notwendigkeit, einen speziellen Code für das Interpretieren der Daten zu schreiben oder die Daten für die speziellen Anforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder der externen Anwendung umzuformatieren. Wenn Sie beispielsweise einen Massenexport von Daten ausführen, die in eine Anwendung geladen werden sollen, für die durch Trennzeichen getrennte Werte erforderlich sind, können Sie eine Formatdatei verwenden, um Kommas als Feldabschlusszeichen in den exportierten Daten einzufügen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Arten von Formatdateien: XML-Formatdateien und nicht-XML-Formatdateien.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Arten von Formatdateien: XML-Formatdateien und Nicht-XML-Formatdateien.  
   
  Formatdateien können nur mithilfe des Hilfsprogramms **bcp** generiert werden. Weitere Informationen finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md). Weitere Informationen zu Formatdateien finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
   

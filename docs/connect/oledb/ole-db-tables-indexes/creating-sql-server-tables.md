@@ -16,13 +16,13 @@ helpviewer_keywords:
 - CreateTable function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9ffa0d562346770aa31b5394576453f3b7860b87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 4f0368ba6f5fe72cc5fa52e65d2c0ebb0757ee9d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655438"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801293"
 ---
 # <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47655438"
   
  Spalteneigenschaften in DBCOLUMNDESC werden wie folgt interpretiert.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|und Beschreibung|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE-Beschreibung: Legt die IDENTITY-Eigenschaft der Spalte, die erstellt wird, fest. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist die IDENTITY-Eigenschaft für eine einzelne Spalte innerhalb einer Tabelle gültig. Wenn Sie die Eigenschaft für mehrere Spalten auf VARIANT_TRUE festlegen, wird ein Fehler gemeldet, wenn der OLE DB-Treiber für SQL Server versucht, die Tabelle auf dem Server zu erstellen.<br /><br /> Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Identitätseigenschaft ist nur für **integer**-, **numeric**- und **decimal**-Typen gültig wenn der Dezimalstellenwert 0 (null) ist. Wenn Sie die Eigenschaft für eine Spalte eines anderen Datentyps auf VARIANT_TRUE festlegen, wird ein Fehler gemeldet, wenn der OLE DB-Treiber für SQL Server versucht, die Tabelle auf dem Server zu erstellen.<br /><br /> Der OLE DB-Treiber für SQL Server gibt DB_S_ERRORSOCCURRED zurück, wenn sowohl DBPROP_COL_AUTOINCREMENT als auch DBPROP_COL_NULLABLE den Wert VARIANT_TRUE haben und *dwOption* von DBPROP_COL_NULLABLE nicht DBPROPOPTIONS_REQUIRED ist. DB_E_ERRORSOCCURRED wird zurückgegeben, wenn sowohl DBPROP_COL_AUTOINCREMENT als auch DBPROP_COL_NULLABLE den Wert VARIANT_TRUE haben und *dwOption* von DBPROP_COL_NULLABLE gleich DBPROPOPTIONS_REQUIRED ist. Die Spalte wird mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Identitätseigenschaft definiert, und das DBPROP_COL_NULLABLE *dwStatus*-Element wird auf DBPROPSTATUS_CONFLICTING festgelegt.|  
 |DBPROP_COL_DEFAULT|R/W: Lesen/Schreiben<br /><br /> Standardwert: Keiner<br /><br /> Beschreibung: Erstellt eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DEFAULT-Einschränkung für die Spalte.<br /><br /> Das *vValue* DBPROP-Element kann verschiedenen Typen entsprechen. Das *vValue.vt*-Element sollte einen Typ angeben, der mit dem Datentyp der Spalte kompatibel ist. Beispielsweise ist BSTR N/A als Standardwert für eine Spalte geeignet, die als DBTYPE_WSTR definiert ist. Wenn Sie denselben Standard für eine Spalte festlegen, die als DBTYPE_R8 definiert ist, wird ein Fehler gemeldet, wenn der OLE DB-Treiber für SQL Server versucht, die Tabelle auf dem Server zu erstellen.|  
@@ -67,7 +67,7 @@ ms.locfileid: "47655438"
   
  Wenn der Consumer **ITableDefinition::CreateTable** aufruft, interpretiert der OLE DB Treiber für SQL Server Tabelleneigenschaften wie folgt.  
   
-|Eigenschafts-ID|Beschreibung|  
+|Eigenschafts-ID|und Beschreibung|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE Beschreibung: Standardmäßig erstellt der OLE DB-Treiber für SQL Server die Tabellen, die vom Consumer benannt. Wenn VARIANT_TRUE, die OLE DB-Treiber für SQL Server einen temporären Tabellennamen für den Consumer generiert. Der Consumer legt den *pTableID*-Parameter von **CreateTable** auf NULL fest. Der *ppTableID*-Parameter muss einen gültigen Zeiger enthalten.|  
   
@@ -220,7 +220,7 @@ SAFE_EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabellen und Indizes](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064399"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attribute (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -58,7 +58,7 @@ ms.locfileid: "66064399"
 |Wert|Description|  
 |-----------|-----------------|  
 |Regular|Identifiziert ein reguläres Attribut.|  
-|Key|Identifiziert das Schlüsselattribut für die Dimension. Dies entspricht den Blattelementen der Dimension. Pro Dimension kann es nur ein Schlüsselattribut geben. Klicken Sie zum Ändern des Attributs auf die Schaltfläche mit den Auslassungspunkten (**...**) neben der Eigenschaft **KeyColumns** im Bereich **Eigenschaften** .|  
+|Key|Identifiziert das Schlüsselattribut für die Dimension. Dies entspricht den Blattelementen der Dimension. Pro Dimension kann es nur ein Schlüsselattribut geben. Klicken Sie zum Ändern des Attributs auf die Schaltfläche mit den Auslassungspunkten ( **...** ) neben der Eigenschaft **KeyColumns** im Bereich **Eigenschaften** .|  
 |Parent|Bezeichnet das übergeordnete Attribut einer Über-/Unterordnungsbeziehung. In dieser Beziehung muss das untergeordnete Attribut immer ein Schlüsselattribut sein.|  
 |AccountType|Bezeichnet ein Kontotypattribut. Wird vom Server oder von der Engine verwendet, wenn die Aggregatfunktion für ein Measure auf Aggregieren nach Konto ("ByAccount") festgelegt wird.|  
   

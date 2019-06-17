@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 295c16b7-1532-40e1-93ef-64462a2c0ab6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e70ab409badc3dd41c94070db559d0a5682fb53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f186239dded7e7152437c347e9b218d7dcf46693
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839088"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801607"
 ---
 # <a name="setdouble-method-sqlserverpreparedstatement"></a>setDouble-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public final void setDouble(int n,
 ## <a name="remarks"></a>Remarks  
  Diese setDouble-Methode wird von der setDouble-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736991"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798595"
 ---
-# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Verwenden der integrierten Kerberos-Authentifizierung für Verbindungen mit SQL Server
+# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -38,13 +38,13 @@ Bei Verwendung der integrierten Authentifizierung mit dem Java-**Krb5LoginModule
 
 ## <a name="remarks"></a>Remarks
 
-Vor dem [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], Anwendungen können die integrierte Authentifizierung (mithilfe von Kerberos oder NTLM, je nach Verfügbarkeit) angeben mithilfe der **IntegratedSecurity** -Verbindungseigenschaft und durch Verweisen auf  **"sqljdbc_auth.dll"**, wie in beschrieben [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
+Vor dem [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], Anwendungen können die integrierte Authentifizierung (mithilfe von Kerberos oder NTLM, je nach Verfügbarkeit) angeben mithilfe der **IntegratedSecurity** -Verbindungseigenschaft und durch Verweisen auf  **"sqljdbc_auth.dll"** , wie in beschrieben [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
 
 Ab [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] können Anwendungen mit der Verbindungseigenschaft **authenticationScheme** angeben, dass eine Verbindung mit einer Datenbank mithilfe der integrierten Kerberos-Authentifizierung hergestellt werden soll, unter Verwendung der reinen Java-Kerberos-Implementierung:
 
 - Wenn Sie die integrierte Authentifizierung verwenden möchten **Krb5LoginModule**, Sie müssen noch angeben, die **IntegratedSecurity = True** Connection-Eigenschaft. Sie würden dann auch angeben, die **AuthenticationScheme Java Kerberos =** Connection-Eigenschaft.
 
-- Um den Vorgang fortzusetzen, integrierte Authentifizierung mit **"sqljdbc_auth.dll"**, geben Sie einfach **IntegratedSecurity = True** Connection-Eigenschaft (und optional **AuthenticationScheme = NativeAuthentication**).
+- Um den Vorgang fortzusetzen, integrierte Authentifizierung mit **"sqljdbc_auth.dll"** , geben Sie einfach **IntegratedSecurity = True** Connection-Eigenschaft (und optional **AuthenticationScheme = NativeAuthentication**).
 
 - Bei Angabe von **AuthenticationScheme Java Kerberos =** jedoch nicht gleichzeitig angeben **IntegratedSecurity = True**, ignoriert der Treiber die **AuthenticationScheme** Connection-Eigenschaft, und sie erwarten, dass Benutzername und Kennwort-Anmeldeinformationen in der Verbindungszeichenfolge enthalten.
 
@@ -77,7 +77,7 @@ Weitere Informationen zu Dienstprinzipalnamen (SPNs) finden Sie in folgendem The
 - [Verwenden von Kerberos mit SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
-> Vor 6.2 Version des JDBC-Treiber für die ordnungsgemäße Verwendung von Cross-Realm Kerberos verwendet, müssen Sie explizit festlegen der **"serverspn"**.
+> Vor 6.2 Version des JDBC-Treiber für die ordnungsgemäße Verwendung von Cross-Realm Kerberos verwendet, müssen Sie explizit festlegen der **"serverspn"** .
 >
 > Ab der Version 6.2 der Treiber werden zum Erstellen der **"serverspn"** standardmäßig, selbst wenn Cross-Realm Kerberos verwendet. Obwohl eine verwenden können **"serverspn"** explizit zu.
 
@@ -195,7 +195,7 @@ Die Username-Eigenschaft ist kein Bereich erforderlich, wenn Benutzer die Defaul
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Verwenden von Kerberos-Authentifizierung von Unix-Computern in der gleichen Domäne
 
-Dieses Handbuch setzt voraus, eine funktionierende Kerberos-Einrichtung ist bereits vorhanden. Führen Sie den folgenden Code auf einem Windows-Computer mit Kerberos-Authentifizierung, um sicherzustellen, dass die oben genannte "true" ist. Der Code gibt "Authentifizierungsschema: KERBEROS"in der Konsole aus, wenn erfolgreich. Keine zusätzliche Flags der Laufzeit, Abhängigkeiten oder Netzwerktreiber sind außerhalb von den angebotenen erforderlich. Im gleiche Codeblock kann unter Linux, um zu überprüfen, ob erfolgreiche Verbindungen ausgeführt werden.
+Dieses Handbuch setzt voraus, eine funktionierende Kerberos-Einrichtung ist bereits vorhanden. Führen Sie den folgenden Code auf einem Windows-Computer mit Kerberos-Authentifizierung, um sicherzustellen, dass die oben genannte "true" ist. Der Code wird "Authentifizierung Schema: KERBEROS" in der Konsole aus, wenn erfolgreich ausgegeben. Keine zusätzliche Flags der Laufzeit, Abhängigkeiten oder Netzwerktreiber sind außerhalb von den angebotenen erforderlich. Im gleiche Codeblock kann unter Linux, um zu überprüfen, ob erfolgreiche Verbindungen ausgeführt werden.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

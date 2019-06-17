@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1fffca14e9c30c5fd01cff88b7bb90608eb9d30d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185083"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
@@ -54,7 +54,7 @@ ms.locfileid: "63185083"
   
  **Verwenden anderer Identitäten**  
   
--   [Anmeldeinformationen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](authentication-access/credentials-database-engine.md)  
+-   [Anmeldeinformationen &#40;Datenbank-Engine&#41;](authentication-access/credentials-database-engine.md)  
   
 -   [Ausführen unter anderem Anmeldenamen](/sql/t-sql/statements/execute-as-transact-sql)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63185083"
  ![Kleines Dateiordnersymbol](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Autorisierung: Was können Sie tun?**  
  **Gewährung, Widerrufen und Verweigern von Berechtigungen**  
   
--   [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](permissions-hierarchy-database-engine.md)  
+-   [Berechtigungshierarchie &#40;Datenbank-Engine&#41;](permissions-hierarchy-database-engine.md)  
   
 -   [Berechtigungen](permissions-database-engine.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63185083"
  ![Kleines Dateiordnersymbol](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Überwachung: Aufzeichnen des Zugriffs**  
  **Automatisierte Überwachung**  
   
--   [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit &#40;Datenbank-Engine&#41;](auditing/sql-server-audit-database-engine.md)  
   
 -   [SQL-Datenbanküberwachung](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "63185083"
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von SQL Server](securing-sql-server.md)   
- [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](authentication-access/principals-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](authentication-access/principals-database-engine.md)   
  [SQL Server-Zertifikate und asymmetrische Schlüssel](sql-server-certificates-and-asymmetric-keys.md)   
  [SQL Server-Verschlüsselung](encryption/sql-server-encryption.md)   
  [Oberflächenkonfiguration](surface-area-configuration.md)   

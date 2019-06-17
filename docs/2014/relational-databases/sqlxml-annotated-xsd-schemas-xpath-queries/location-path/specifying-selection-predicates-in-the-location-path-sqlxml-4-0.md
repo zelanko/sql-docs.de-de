@@ -18,13 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012581"
 ---
-# <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0) 
+# <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0)
   Ein Prädikat filtert eine Knotengruppe in Bezug auf eine Achse (ähnlich einer WHERE-Klausel in einer SELECT-Anweisung). Das Prädikat wird zwischen Klammern angegeben. Für jeden Knoten in der zu filternden Knotengruppe wird der Prädikatausdruck mit dem entsprechenden Knoten als Kontextknoten ausgewertet. Die Anzahl der Knoten in der Knotengruppe dient dabei als Kontextgröße. Ergibt die Auswertung des Prädikatausdrucks für den betreffenden Knoten TRUE, wird dieser Knoten in die resultierende Knotengruppe aufgenommen.  
   
  XPath ermöglicht auch die positionsbasierte Filterung. Ein Prädikatausdruck, der eine Zahl ergibt, wählt diesen Ordinalzahlenknoten aus. Beispielsweise gibt der Speicherortpfad `Customer[3]` den dritten Kunden zurück. Solche numerische Prädikate werden nicht unterstützt. Nur Prädikatausdrücke, die ein boolesches Ergebnis zurückgeben, werden unterstützt.  
@@ -39,7 +39,7 @@ ms.locfileid: "66012581"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- In dieser XPath-Abfrage sind `child` und `attribute` die Achsennamen. `Customer` ist der Knotentest (TRUE, wenn `Customer` ist ein  **\<Elementknoten >**, da  **\<Element >** ist der Hauptknotentyp für die `child` Achse). `attribute::CustomerID="ALFKI"` ist das Prädikat. Im Prädikat ist `attribute` ist die Achse und `CustomerID` ist der Knotentest (TRUE, wenn **"CustomerID"** ist ein Attribut des Kontextknotens aus, da  **\<Attribut >** ist der Prinzipal Knotentyp `attribute` Achse).  
+ In dieser XPath-Abfrage sind `child` und `attribute` die Achsennamen. `Customer` ist der Knotentest (TRUE, wenn `Customer` ist ein  **\<Elementknoten >** , da  **\<Element >** ist der Hauptknotentyp für die `child` Achse). `attribute::CustomerID="ALFKI"` ist das Prädikat. Im Prädikat ist `attribute` ist die Achse und `CustomerID` ist der Knotentest (TRUE, wenn **"CustomerID"** ist ein Attribut des Kontextknotens aus, da  **\<Attribut >** ist der Prinzipal Knotentyp `attribute` Achse).  
   
  In abgekürzter Syntax kann die XPath-Abfrage auch wie folgt angegeben werden:  
   

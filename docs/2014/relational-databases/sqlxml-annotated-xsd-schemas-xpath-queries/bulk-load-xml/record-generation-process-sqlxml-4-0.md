@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013336"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Datensatzgenerierungsprozess (SQLXML 4.0)
@@ -146,7 +146,7 @@ ms.locfileid: "66013336"
   
  Die XML-Beispieldaten und die Schritte zum Erstellen eines funktionierenden Beispiels sind unten aufgeführt.  
   
--   Wenn eine  **\<Kunden >** Elementknoten in das XML-Datendatei in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die Cust-Tabelle. XML-Massenladen kopiert dann die erforderlichen Spaltenwerte (CustomerID, CompanyName und City) aus der  **\<"CustomerID" >**,  **\<CompanyName >**, und die  **\<City >** untergeordneten Elemente wie diese Elemente in den Bereich gelangen.  
+-   Wenn eine  **\<Kunden >** Elementknoten in das XML-Datendatei in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die Cust-Tabelle. XML-Massenladen kopiert dann die erforderlichen Spaltenwerte (CustomerID, CompanyName und City) aus der  **\<"CustomerID" >** ,  **\<CompanyName >** , und die  **\<City >** untergeordneten Elemente wie diese Elemente in den Bereich gelangen.  
   
 -   Wenn ein  **\<Reihenfolge >** Elementknoten in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die CustOrder-Tabelle. XML-Massenladen kopiert den Wert der **"OrderID"** -Attributs in diesen Datensatz. Der erforderliche Wert für die Spalte "CustomerID" aus erfolgt die  **\<"CustomerID" >** untergeordnetes Element von der  **\<Kunden >** Element. XML-Massenladen verwendet die Informationen, die im angegebenen `<sql:relationship>` die CustomerID Fremdschlüsselwerts für diesen Datensatz abrufen, es sei denn, die **"CustomerID"** Attribut wurde angegeben, der  **\<Reihenfolge >** Element. Generell gilt, dass beim XML-Massenladen der explizit im untergeordneten Element als Fremdschlüsselattribut angegebene Wert verwendet wird (sofern vorhanden) und er nicht über `<sql:relationship>` aus dem übergeordneten Element abgerufen wird. Wie diese  **\<Reihenfolge >** Elementknoten den Gültigkeitsbereich verlässt, XML-Massenladen der Datensatz an gesendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und verarbeitet anschließend alle nachfolgenden  **\<Reihenfolge >** Elementknoten auf die gleiche Weise.  
   

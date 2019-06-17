@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba024f3ddafa4f4b0231774e244b145004d3bff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 78e6c28cf69b118b31d457569019710ed665c94e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662018"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799952"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean getAutoCommit()
 ## <a name="remarks"></a>Remarks  
  Diese GetAutoCommit-Methode wird von der GetAutoCommit-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

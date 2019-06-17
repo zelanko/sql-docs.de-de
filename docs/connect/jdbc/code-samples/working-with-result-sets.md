@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3144eb103a1197d36ddc165d15bf16f828ebd9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 351351dd287da5b7efeb59bd9d1df97e52b30f57
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610150"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798510"
 ---
 # <a name="working-with-result-sets"></a>Arbeiten mit Resultsets
 
@@ -33,13 +33,13 @@ Die Themen in diesem Abschnitt beschreiben verschiedene Möglichkeiten, wie Sie 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-| Thema                                                                                           | Beschreibung                                                                                                                                                                                             |
+| Thema                                                                                           | und Beschreibung                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Abrufen von Resultsetdaten – Beispiel](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Beschreibt die Verwendung eines Resultsets, um Daten aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank abzurufen und anzuzeigen.                                                         |
 | [Ändern von Resultsetdaten – Beispiel](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Beschreibt die Verwendung eines Resultsets, um Daten in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank einzufügen, daraus abzurufen bzw. darin zu ändern.                                                      |
 | [Zwischenspeichern von Resultsetdaten – Beispiel](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Beschreibt die Verwendung eines Resultsets, um umfangreiche Daten aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank abzurufen, sowie die Steuerung der Zwischenspeicherung dieser Daten im Client. |
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 
 [Beispiele für JDBC-Treiberanwendungen](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

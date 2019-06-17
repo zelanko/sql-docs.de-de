@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e004e6fd41ee74643fc05ec9020e6ac1933e09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63186256"
 ---
 # <a name="affected-odbc-components"></a>Betroffene ODBC-Komponenten
@@ -36,4 +36,4 @@ Abwärtskompatibilität wird beschrieben, wie Anwendungen, Treiber-Manager und T
  [1] die Abwärtskompatibilität der Treiber wird in erster Linie in Anhang G: erläutert. Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
 > [!NOTE]
->  Eine Standards kompatible Anwendung – z. B. eine Anwendung, die gemäß den Standards Open Group oder ISO-CLI - geschrieben wurde ist garantiert zum Arbeiten mit einer ODBC-3 *.x* Treiber über die ODBC 3.*.x*-Treiber-Manager. Es wird vorausgesetzt, dass die Funktionalität, die die Anwendung im Treiber verfügbar ist. Außerdem wird vorausgesetzt, dass die ODBC 3. die Standards kompatible Anwendung kompiliert wurde *.x* Headerdateien.
+>  Eine Standards kompatible Anwendung – z. B. eine Anwendung, die gemäß den Standards Open Group oder ISO-CLI - geschrieben wurde ist garantiert zum Arbeiten mit einer ODBC-3 *.x* Treiber über die ODBC 3. *.x*-Treiber-Manager. Es wird vorausgesetzt, dass die Funktionalität, die die Anwendung im Treiber verfügbar ist. Außerdem wird vorausgesetzt, dass die ODBC 3. die Standards kompatible Anwendung kompiliert wurde *.x* Headerdateien.

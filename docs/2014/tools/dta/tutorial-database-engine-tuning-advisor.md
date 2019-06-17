@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63268373"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Datenbankoptimierungsratgeber
@@ -31,7 +31,7 @@ ms.locfileid: "63268373"
  [Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  In dieser Lektion machen Sie sich mit der grafischen Benutzeroberfläche des neuen Datenbankoptimierungsratgebers vertraut und lernen, wie Sie die Anzeigeoptionen und das Layout festlegen.  
   
- [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](lesson-2-using-database-engine-tuning-advisor.md)  
  In dieser Lektion erfahren Sie, wie Sie einfache Optimierungsaufgaben mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers ausführen.  
   
  [Lektion 3: Verwenden des Dta Command Prompt Utility](lesson-3-using-the-dta-command-prompt-utility.md)  

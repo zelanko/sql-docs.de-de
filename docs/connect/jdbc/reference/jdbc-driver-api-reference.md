@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f311458a8fb6b58f22a1ca4c23fa8d1f36dddc51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: b635cfc7ecbe3e658a364a214d5c7cf744095492
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773790"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803217"
 ---
 # <a name="jdbc-driver-api-reference"></a>API-Referenz für den JDBC-Treiber
 
@@ -72,7 +72,7 @@ Dokumentation zu JDBC, Version 6.0 und einige höheren Versionen ist auch hier. 
 
 ## <a name="interfaces"></a>Schnittstellen  
   
-|Schnittstellenname|Beschreibung|  
+|Schnittstellenname|und Beschreibung|  
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement-Schnittstelle](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Mit dieser Klasse kann der gespeicherte Prozedurname angegeben werden, der mit Eingabe- und Ausgabeparametern aufgerufen wird.|  
 |[ISQLServerConnection-Schnittstelle](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Stellt eine JDBC-Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank dar.|  
@@ -86,7 +86,7 @@ Dokumentation zu JDBC, Version 6.0 und einige höheren Versionen ist auch hier. 
   
 ## <a name="classes"></a>Klassen  
   
-|Klassenname|Beschreibung|  
+|Klassenname|und Beschreibung|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Stellt ein Objekt vom Typ "microsoft.sql.DateTimeOffset" dar.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Stellt ein BLOB (Binary Large Object) dar.|  
@@ -115,6 +115,6 @@ Dokumentation zu JDBC, Version 6.0 und einige höheren Versionen ist auch hier. 
 
 
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
 

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184241"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Manuelles Erstellen von Selbstjoins (Visual Database Tools)
@@ -116,7 +116,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Klicken Sie mit der rechten Maustaste auf die Joinlinie, und wählen Sie im Kontextmenü die Option **Eigenschaften** aus.  
   
-4.  Klicken Sie im Eigenschaftenfenster auf **Joinkondition und -typ** und anschließend auf die **Auslassungspunkte (...)**, die rechts neben der Eigenschaft angezeigt werden.  
+4.  Klicken Sie im Eigenschaftenfenster auf **Joinkondition und -typ** und anschließend auf die **Auslassungspunkte (...)** , die rechts neben der Eigenschaft angezeigt werden.  
   
 5.  Ändern Sie nach Bedarf im [Dialogfeld „Join“](join-dialog-box-visual-database-tools.md) den Vergleichsoperator zwischen den Primärschlüsseln. Sie können z. B. den Operator in "kleiner als" (<) ändern.  
   

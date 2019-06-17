@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070300"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Berichtsaktionsformular-Editor (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -76,7 +76,7 @@ ms.locfileid: "66070300"
 |Spalte|Description|  
 |------------|-----------------|  
 |**Parametername**|Geben Sie den Namen des Berichtsparameters ein, der an den Bericht übergeben werden soll.|  
-|**Parameterwert**|Geben Sie den Wert des Berichtsparameters ein, der an den Bericht übergeben werden soll.<br /><br /> Klicken Sie auf die Schaltfläche mit den drei Punkten (**...**), um das Dialogfeld **MDX-Generator** anzuzeigen und einen MDX-Ausdruck zu erstellen, der den Wert des Berichtsparameters angibt. Weitere Informationen zum Dialogfeld **MDX-Generator** finden Sie unter [MDX-Generator &#40;Analysis Services – Mehrdimensionale Daten&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Wenn der Parameter auf einen MDX-Ausdruck festgelegt ist, wird der Ausdruck beim Ausführen der Aktion ausgewertet. Andernfalls wird der Ausdruck unverändert an den Bericht übergeben.|  
+|**Parameterwert**|Geben Sie den Wert des Berichtsparameters ein, der an den Bericht übergeben werden soll.<br /><br /> Klicken Sie auf die Schaltfläche mit den drei Punkten ( **...** ), um das Dialogfeld **MDX-Generator** anzuzeigen und einen MDX-Ausdruck zu erstellen, der den Wert des Berichtsparameters angibt. Weitere Informationen zum Dialogfeld **MDX-Generator** finden Sie unter [MDX-Generator &#40;Analysis Services – Mehrdimensionale Daten&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Wenn der Parameter auf einen MDX-Ausdruck festgelegt ist, wird der Ausdruck beim Ausführen der Aktion ausgewertet. Andernfalls wird der Ausdruck unverändert an den Bericht übergeben.|  
   
  **Weitere Eigenschaften**  
  Erweitern Sie die Option, um die Optionen **Aufruf**, **Anwendung**, **Beschreibung**, **Beschriftung**und **Beschriftung ist MDX** anzuzeigen.  

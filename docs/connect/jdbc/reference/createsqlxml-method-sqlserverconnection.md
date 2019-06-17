@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abf87cc57f7279b9b625ba908dd21386b02e86cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f44520d6d6a060bb323436d23fa7335e25551883
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732604"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800657"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>createSQLXML-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public java.sql.SQLXML createSQLXML()
 ## <a name="remarks"></a>Remarks  
  Diese CreateSQLXML-Methode wird von der CreateSQLXML-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

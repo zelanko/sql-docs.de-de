@@ -21,13 +21,13 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: e779d51f535d3b3489c1fbe043c7ff9212b0e875
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744380"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800878"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installieren des OLE DB-Treibers für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ Sie können den OLE DB-Treiber für SQL Server über msoledbsql.msi verteilen. S
   
 Die X64 msoledbsql.msi wird auch die 32-Bit-Version des OLE DB-Treiber für SQL Server installiert. Wenn Ihre Anwendung eine andere Zielplattform als die vorgesehen, die es entwickelt wurde ist, können Sie Versionen von msoledbsql.msi X64 und X86 herunterladen.
 
-Wenn Sie „msoledbsql.msi“ aufrufen, werden nur die Clientkomponenten standardmäßig installiert. Bei den Clientkomponenten handelt es sich um Dateien, die das Ausführen einer mithilfe des OLE DB-Treibers für SQL Server entwickelten Anwendung unterstützen. Um auch die SDK-Komponenten zu installieren, geben Sie `ADDLOCAL=All` in der Befehlszeile an. Zum Beispiel:  
+Wenn Sie „msoledbsql.msi“ aufrufen, werden nur die Clientkomponenten standardmäßig installiert. Bei den Clientkomponenten handelt es sich um Dateien, die das Ausführen einer mithilfe des OLE DB-Treibers für SQL Server entwickelten Anwendung unterstützen. Um auch die SDK-Komponenten zu installieren, geben Sie `ADDLOCAL=All` in der Befehlszeile an. Beispiel:  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 

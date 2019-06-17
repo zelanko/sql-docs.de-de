@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63254142"
 ---
 # <a name="return-codes-odbc"></a>ODBC-Rückgabecodes
@@ -45,7 +45,7 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  Der folgenden Tabelle werden die Rückgabecodes.  
   
-|Rückgabecode|Description|  
+|Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |SQL_SUCCESS|Die Funktion wurde erfolgreich abgeschlossen. Ruft die Anwendung **SQLGetDiagField** um zusätzliche Informationen aus dem Headerdatensatz abzurufen.|  
 |SQL_SUCCESS_WITH_INFO|Die Funktion wurde erfolgreich abgeschlossen, möglicherweise mit einem nicht schwerwiegenden Fehler (Warnung). Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen abzurufen.|  

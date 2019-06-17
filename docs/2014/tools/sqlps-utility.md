@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187044"
 ---
 # <a name="sqlps-utility"></a>sqlps (Hilfsprogramm)
@@ -69,9 +69,9 @@ ms.locfileid: "63187044"
  Gibt einen Block von PowerShell-Befehlen an, die ausgeführt werden sollen. Der Block muss in geschweifte Klammern ({}) eingeschlossen werden. *Script_block* kann nur angegeben werden, wenn die `sqlps` Hilfsprogramm heißt entweder **PowerShell** oder einem anderen `sqlps` Sitzung des Hilfsprogramms. *Argument_array* ist ein Array von PowerShell-Variablen, das die Argumente für die PowerShell-Befehle in *script_block*enthält.  
   
  *string* [ *command_parameters* ]  
- Gibt eine Zeichenfolge an, die die auszuführenden PowerShell-Befehle enthält. Verwenden Sie das Format **"& {*`command`*}"**. Die Anführungszeichen geben eine Zeichenfolge, und der Aufrufoperator (&) bewirkt, dass die `sqlps` Hilfsprogramm zum Ausführen des Befehls.  
+ Gibt eine Zeichenfolge an, die die auszuführenden PowerShell-Befehle enthält. Verwenden Sie das Format **"& { *`command`* }"** . Die Anführungszeichen geben eine Zeichenfolge, und der Aufrufoperator (&) bewirkt, dass die `sqlps` Hilfsprogramm zum Ausführen des Befehls.  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  Zeigt eine Syntaxzusammenfassung der Optionen des Hilfsprogramms `sqlps` an.  
   
 ## <a name="remarks"></a>Hinweise  

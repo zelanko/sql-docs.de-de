@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241428"
 ---
 # <a name="c-to-sql-timestamp"></a>C in SQL: Timestamp
@@ -41,6 +41,6 @@ Der Bezeichner für den Timestamp ODBC C-Datentyp ist:
   
  Weitere Informationen dazu, welche Werte in einer Struktur SQL_C_TIMESTAMP gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
   
- Wenn C-Zeitstempel-Daten in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten die "*JJJJ*-*mm*-*TT* *Hh*:*mm*:*ss*[.*f...*] "Format.  
+ Wenn C-Zeitstempel-Daten in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten die "*JJJJ*-*mm*-*TT* *Hh*:*mm*:*ss*[.*f...* ] "Format.  
   
  Der Treiber ignoriert den Längenindikator /-Wert, bei der Konvertierung von Daten von der C-Timestamp-Datentyp, und es wird davon ausgegangen, dass die Größe des Datenpuffers die Größe der C-Timestamp-Datentyp ist. Der Längenindikator /-Wert übergeben wird die *StrLen_or_Ind* -Argument in **SQLPutData** und in den Puffer, der mit angegebenen die *StrLen_or_IndPtr* -Argument in **SQLBindParameter**. Der Datenpuffer wird angegeben, mit der *DataPtr* -Argument in **SQLPutData** und die *ParameterValuePtr* -Argument in **SQLBindParameter**.

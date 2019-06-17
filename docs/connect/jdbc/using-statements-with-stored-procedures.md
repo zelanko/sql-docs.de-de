@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d12b5d0940ea161e3650dc5126a10783c1afc3e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812848"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798546"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Verwenden von Anweisungen mit gespeicherten Prozeduren
 
@@ -26,7 +26,7 @@ Bei einer gespeicherten Prozedur handelt es sich um eine Datenbankprozedur, ähn
   
 - Annehmen von Eingabeparametern und Zurückgeben mehrerer Werte in Form von Ausgabeparametern an die aufrufende Prozedur oder den aufrufenden Batch.  
   
-- Aufnehmen von Programmierungsanweisungen, die Operationen in der Datenbank ausführen, einschließlich des Aufrufens anderer Prozeduren.  
+- Aufnehmen von Programmierungsanweisungen, die Vorgänge in der Datenbank ausführen, einschließlich des Aufrufens anderer Prozeduren.  
   
 - Zurückgeben eines Statuswertes an eine aufrufende Prozedur oder einen aufrufenden Batch, der Erfolg oder Fehlschlagen (sowie die Ursache für das Fehlschlagen) anzeigt.  
   
@@ -49,7 +49,7 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie gespeicherte [!INCLUDE[ssNoV
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Verwenden von gespeicherten Prozeduren ohne Parameter](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die keine Eingabe- oder Ausgabeparameter enthalten.|  
 |[Verwenden von gespeicherten Prozeduren mit Eingabeparametern](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Eingabeparameter enthalten.|  
@@ -57,6 +57,6 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie gespeicherte [!INCLUDE[ssNoV
 |[Verwenden von gespeicherten Prozeduren mit einem Rückgabestatus](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Rückgabestatuswerte enthalten.|  
 |[Verwenden von gespeicherten Prozeduren mit einer Updatezählung](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Updatezählungen enthalten.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

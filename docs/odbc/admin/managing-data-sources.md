@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198757"
 ---
 # <a name="managing-data-sources"></a>Verwalten von Datenquellen
@@ -30,7 +30,7 @@ Nachdem Sie einen ODBC-Treiber vom Setupprogramm vom Treiber installiert haben, 
 > [!NOTE]  
 >  Verwenden Sie zum Verwalten von einer Datenquelle, die mit einer 32-Bit-Treiber unter 64-Bit-Plattform verbindet c:\windows\sysWOW64\odbcad32.exe. Verwenden Sie zum Verwalten von einer Datenquelle, die Verbindung mit einer 64-Bit-Treiber c:\windows\system32\odbcad32.exe. In **Verwaltung** auf einem 64-Bit-Windows 8-Betriebssystem befinden sich die Symbole für die 32-Bit- und 64-Bit- **ODBC-Datenquellenadministrator** Dialogfeld.  
   
- Wenn Sie der 64-Bit-odbcad32.exe mithilfe konfigurieren oder entfernen einen DSN ein, die Verbindung mit einer 32-Bit-Treiber, z. B. **Treiber werden von Microsoft Access (\*.mdb)**, Sie erhalten die folgende Fehlermeldung angezeigt:  
+ Wenn Sie der 64-Bit-odbcad32.exe mithilfe konfigurieren oder entfernen einen DSN ein, die Verbindung mit einer 32-Bit-Treiber, z. B. **Treiber werden von Microsoft Access (\*.mdb)** , Sie erhalten die folgende Fehlermeldung angezeigt:  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

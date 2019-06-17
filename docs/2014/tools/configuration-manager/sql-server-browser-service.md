@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4e06fe371602956b6b43714038f41d8486cf2ae0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253643"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
@@ -117,7 +117,7 @@ ms.locfileid: "63253643"
   
 -   Beliebige **lokale** Domänenkonten  
   
--   Das Konto **Lokaler Dienst**   
+-   Das Konto **Lokaler Dienst**  
   
 -   Das Konto **Lokales System** (wird nicht empfohlen, da es über unnötige Berechtigungen verfügt)  
   

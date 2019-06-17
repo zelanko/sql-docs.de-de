@@ -16,20 +16,20 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6f65e9b99b01f413c85ed61bbacc7a7aebfdb72a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700348"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800699"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht die **ISequentialStream**-Schnittstelle verfügbar, um den Consumerzugriff auf die Datentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und XML als Binary Large Objects (BLOBs) zu unterstützen. Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
+  Der OLE DB-Treiber für SQL Server macht die **ISequentialStream**-Schnittstelle verfügbar, um den Consumerzugriff auf die Datentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und XML als Binary Large Objects (BLOBs) zu unterstützen. Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
   
  Ein Beispiel für diese Funktion ist, finden Sie unter [festlegen großer Datenmengen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47700348"
   
  Für Datentypen mit umfangreichen Werten prüft der OLE DB-Treiber für SQL Server, ob in **IRowset** und DDL-Schnittstellen Annahmen über die Typgröße vorhanden sind. Spalten mit den Datentypen **varchar**, **nvarchar** und **varbinary**, bei denen die maximale Größe auf „Unlimited“ festgelegt ist, werden von den Schemarowsets und Schnittstellen, die Spaltendatentypen wiedergeben, als ISLONG dargestellt.  
   
- Der OLE DB-Treiber für SQL Server macht die Datentypen **varchar(max)**, **varbinary(max)** und **nvarchar(max)** als DBTYPE_STR, DBTYPE_BYTES bzw. DBTYPE_WSTR verfügbar.  
+ Der OLE DB-Treiber für SQL Server macht die Datentypen **varchar(max)** , **varbinary(max)** und **nvarchar(max)** als DBTYPE_STR, DBTYPE_BYTES bzw. DBTYPE_WSTR verfügbar.  
   
  Um mit diesen Typen zu arbeiten, stehen der Anwendung die folgenden Optionen zur Verfügung:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47700348"
   
 -   [Streamingunterstützung für BLOB-Ausgabeparameter](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB Driver for SQL Server Programming (OLE DB-Treiber für SQL Server-Programmierung)](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [Verwenden von Datentypen mit umfangreichen Werten](../../oledb/features/using-large-value-types.md)  
   

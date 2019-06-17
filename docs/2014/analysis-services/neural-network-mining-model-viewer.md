@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072320"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Neuronales Netzwerk (Miningmodell-Viewer)
@@ -37,15 +37,15 @@ ms.locfileid: "66072320"
  **Eingabe**  
  Wählen Sie in diesem Bereich Eingabeattribute und Werte aus, damit Sie später untersuchen können, wie sich diese auf das Ergebnis auswirken.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Attribut**|Wählen Sie ein Eingabeattribut aus der Liste aus. Wenn Sie die Standardauswahl, lassen  **\<alle >**, das Diagramm zeigt eine Liste aller Eingabeattribute angezeigt, sortiert nach ihren Auswirkungen auf das vorhersagbare Attribut.|  
+|**Attribut**|Wählen Sie ein Eingabeattribut aus der Liste aus. Wenn Sie die Standardauswahl, lassen  **\<alle >** , das Diagramm zeigt eine Liste aller Eingabeattribute angezeigt, sortiert nach ihren Auswirkungen auf das vorhersagbare Attribut.|  
 |**Wert**|Wählen Sie einen Wert für das Eingabeattribut aus.|  
   
  **Ausgabe**  
  Wählen Sie mit diesen Steuerelementen ein vorhersagbares Attribut und einen Wert für die Analyse und den Vergleich im Balkendiagramm aus. Wenn Sie die Auswahl nicht ändern, werden im Balkendiagramm die obersten zwei Ergebnisstatuswerte verglichen.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Output-Attributs**|Wählen Sie ein vorhersagbares Attribut aus. Wenn Sie die Spalte beim Erstellen des Modells nicht als vorhersagbar definiert haben, ist das Hinzufügen hier nicht möglich.|  
 |**Der Wert 1**|Wählen Sie einen Status des vorhersagbaren Attributs aus, der mit dem in **Wert 2**enthaltenen Wert verglichen wird.<br /><br /> Sie können zwei beliebige diskrete oder diskretisierte Werte vergleichen. Sie können jedoch keinen Wert mit seinem Komplement vergleichen wie in anderen Viewern.|  

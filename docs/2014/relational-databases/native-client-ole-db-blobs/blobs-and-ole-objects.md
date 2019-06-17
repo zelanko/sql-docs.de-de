@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63195217"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **ISequentialStream** -Schnittstelle zur Unterstützung der Consumerzugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**, **Text**, **Image**, **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, und die Xml-Datentypen als binary large Objects (BLOBs ). Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **ISequentialStream** -Schnittstelle zur Unterstützung der Consumerzugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ntext**, **Text**, **Image**, **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , und die Xml-Datentypen als binary large Objects (BLOBs ). Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
   
  Ein Beispiel für diese Funktion ist, finden Sie unter [festlegen großer Datenmengen &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63195217"
   
  Bei Datentypen mit umfangreichen Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft Annahmen über die typgroße in **IRowset** und DDL-Schnittstellen. Spalten mit **Varchar**, **Nvarchar**, und **Varbinary** Datentypen mit max. Größe auf unlimited festgelegt werden, als ISLONG dargestellt werden, über die Schemarowsets und Schnittstellen Zurückgeben von Spaltendatentypen.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **varchar(max)**, **'varbinary(max)'** und **nvarchar(max)** Typen als DBTYPE_STR, DBTYPE_BYTES bzw. DBTYPE_ WSTR bzw.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **varchar(max)** , **'varbinary(max)'** und **nvarchar(max)** Typen als DBTYPE_STR, DBTYPE_BYTES bzw. DBTYPE_ WSTR bzw.  
   
  Um mit diesen Typen zu arbeiten, hat eine Anwendung die folgenden Optionen:  
   
