@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917467"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Kopieren von Datenbanken durch Sichern und Wiederherstellen
@@ -78,7 +78,7 @@ ms.locfileid: "62917467"
  Der explizit beim Wiederherstellen einer Datenbank bereitgestellte Name wird automatisch als neuer Datenbankname verwendet. Da der Datenbankname noch nicht vorhanden ist, wird ein neuer Name mithilfe der Dateien in der Sicherung erstellt.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Beim Aktualisieren einer Datenbank mit Wiederherstellen  
- Beim Wiederherstellen von Sicherungen einer früheren Version ist es hilfreich, vorher zu wissen, ob der Pfad (Laufwerk und Verzeichnis) jedes Volltextkatalogs in einer Sicherung auf dem Zielcomputer vorhanden ist. Zum Auflisten der logischen und physischen Namen (Pfad und Dateiname) jeder Datei in einer Sicherung, einschließlich der Katalogdateien, verwenden Sie eine RESTORE FILELISTONLY FROM *<Sicherungsmedium>*-Anweisung. Weitere Informationen finden Sie unter [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
+ Beim Wiederherstellen von Sicherungen einer früheren Version ist es hilfreich, vorher zu wissen, ob der Pfad (Laufwerk und Verzeichnis) jedes Volltextkatalogs in einer Sicherung auf dem Zielcomputer vorhanden ist. Zum Auflisten der logischen und physischen Namen (Pfad und Dateiname) jeder Datei in einer Sicherung, einschließlich der Katalogdateien, verwenden Sie eine RESTORE FILELISTONLY FROM *<Sicherungsmedium>* -Anweisung. Weitere Informationen finden Sie unter [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
  Falls auf dem Zielcomputer nicht der gleiche Pfad vorhanden ist, haben Sie zwei Möglichkeiten:  
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916579"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>SQL Server-Datendateien in Windows Azure
@@ -99,7 +99,7 @@ ON
   
 -   In der aktuellen Version dieser Funktion wird das Speichern von `FileStream`-Daten im Windows Azure-Speicher nicht unterstützt. Sie können `Filestream`-Daten in einer lokalen, in den Windows Azure-Speicher integrierten Datenbank speichern, es ist jedoch nicht möglich, Filestream-Daten unter Verwendung des Windows Azure-Speichers zwischen Computern zu verschieben. Bei `FileStream`-Daten wird empfohlen, die herkömmlichen Verfahren zu verwenden, die bisher zum Verschieben von Dateien (MDF, LDF) in Verbindung mit Filestream-Daten zwischen verschiedenen Computern eingesetzt werden.  
   
--   Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Windows Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode **5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“**.  
+-   Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Windows Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode **5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“** .  
   
 -   von SQL Server-Datendateien in Microsoft Azure können ausschließlich MDF-, LDF- und NDF-Dateien in Microsoft Azure Storage gespeichert werden.  
   
@@ -142,13 +142,13 @@ ON
   
  **Authentifizierungsfehler**  
   
--   *Die %.\*ls-Anmeldeinformationen können nicht gelöscht werden, weil sie von einer aktiven Datenbankdatei verwendet werden.*   
+-   *Die %.\*ls-Anmeldeinformationen können nicht gelöscht werden, weil sie von einer aktiven Datenbankdatei verwendet werden.*    
     Lösung: Dieser Fehler kann angezeigt werden, wenn Sie versuchen, löschen Sie einen Satz von Anmeldeinformationen, der noch verwendet wird, indem Sie einer aktiven Datenbankdatei im Windows Azure-Speicher. Um die Anmeldeinformationen zu löschen, müssen Sie zuerst das zugeordnete BLOB löschen, das diese Datenbankdatei enthält. Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
   
--   *Für den Container wurde nicht ordnungsgemäß eine SAS (Shared Access Signature) erstellt.*   
+-   *Für den Container wurde nicht ordnungsgemäß eine SAS (Shared Access Signature) erstellt.*    
      Lösung: Stellen Sie sicher, dass Sie eine SAS ordnungsgemäß für den Container erstellt haben. Lesen Sie die Hinweise in Lektion 2 im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
--   *SQL Server-Anmeldeinformationen wurden nicht ordnungsgemäß erstellt.*   
+-   *SQL Server-Anmeldeinformationen wurden nicht ordnungsgemäß erstellt.*    
     Lösung: Vergewissern Sie sich, dass Sie für das Feld **Identität** die Option „Shared Access Signature“ verwendet und ordnungsgemäß einen geheimen Schlüssel erstellt haben. Lesen Sie die Hinweise in Lektion 3 im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Fehler bei BLOB-Leasedauer:**  
@@ -163,8 +163,8 @@ ON
 2.  *Fehler beim Ausführen der ALTER-Anweisung*   
     Lösung: Stellen Sie sicher, dass die Alter Database-Anweisung ausgeführt werden soll, wenn die Datenbank online ist. Wenn Sie die Datendateien in den Windows Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Hinweise in Lektion 7 im [Tutorial: SQL Server-Datendateien im Windows Azure-Speicherdienst](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Fehlercode 5120: Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*   
-    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Windows Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode *5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*.  
+3.  *Fehlercode 5120: Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*    
+    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Windows Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode *5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“* .  
   
      Um dieses Problem zu beheben, stellen Sie zuerst fest, ob ServerA auf die Datenbankdatei im Windows Azure-Speicher zugreifen muss oder nicht. Wenn nicht, entfernen Sie einfach jegliche Verbindungen zwischen ServerA und den Datenbankdateien im Windows Azure-Speicher. Führen Sie hierzu folgende Schritte aus:  
   

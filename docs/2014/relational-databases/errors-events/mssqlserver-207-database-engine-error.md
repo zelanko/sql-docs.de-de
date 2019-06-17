@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62915050"
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
@@ -75,7 +75,7 @@ ms.locfileid: "62915050"
   
      Da vor dem Verarbeiten der SELECT-Klausel kein Spaltenalias definiert wird, ist der Aliasname beim Verarbeiten der GROUP BY-Klausel unbekannt.  
   
--   Die MERGE-Anweisung löst diesen Fehler aus, wenn die *<merge_matched>*-Klausel auf Spalten in der Quelltabelle verweist, jedoch von der Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel keine Zeilen zurückgegeben werden. Dieser Fehler tritt auf, da auf die Spalten in der Quelltabelle nicht zugegriffen werden kann, wenn in der Abfrage keine Zeilen zurückgegeben werden. Die Klausel `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` kann beispielsweise dazu führen, dass die Anweisung fehlschlägt, wenn der Zugriff auf `Col1` in der Quelltabelle nicht möglich ist.  
+-   Die MERGE-Anweisung löst diesen Fehler aus, wenn die *<merge_matched>* -Klausel auf Spalten in der Quelltabelle verweist, jedoch von der Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel keine Zeilen zurückgegeben werden. Dieser Fehler tritt auf, da auf die Spalten in der Quelltabelle nicht zugegriffen werden kann, wenn in der Abfrage keine Zeilen zurückgegeben werden. Die Klausel `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` kann beispielsweise dazu führen, dass die Anweisung fehlschlägt, wenn der Zugriff auf `Col1` in der Quelltabelle nicht möglich ist.  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Überprüfen Sie die folgenden Informationen, und korrigieren Sie die Anweisung entsprechend.  
