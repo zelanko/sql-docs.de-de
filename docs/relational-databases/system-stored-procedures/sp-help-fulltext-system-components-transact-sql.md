@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8090ea1080fa7528d3a8297e14760190e8aadfe
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980257"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -66,7 +66,7 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Resultsets  
  Folgendes Resultset wird für die Systemkomponenten zurückgegeben.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden Typen:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
 |**componentname**|**sysname**|Name der Komponente.|  
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Bestimmen, ob eine bestimmte Wörtertrennung registriert ist  
- Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel gibt an, den Parameternamen, **@component_type** und **@param**.  
+ Im folgenden Beispiel wird die Wörtertrennung für die türkische Sprache (LCID = 1055) aufgeführt, wenn diese auf dem System installiert und auf der Dienstinstanz registriert wurde. In diesem Beispiel gibt an, den Parameternamen, **@component_type** und **@param** .  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  

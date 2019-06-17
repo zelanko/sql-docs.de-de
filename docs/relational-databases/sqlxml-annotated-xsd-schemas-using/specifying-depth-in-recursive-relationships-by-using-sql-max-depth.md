@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980753"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Angeben der Tiefe von rekursiven Beziehungen mit 'sql:max-depth'
@@ -62,7 +62,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  In diesem Fragment berichtet Mitarbeiter 5 an Mitarbeiter 4, Mitarbeiter 4 berichtet an Mitarbeiter 3, und die Mitarbeiter 3 und 2 berichten an Mitarbeiter 1.  
   
- Sie können das folgende XSD-Schema verwenden und eine XPath-Abfrage damit ausführen, um dieses Ergebnis zu erhalten. Das Schema beschreibt ein  **\<Emp >** Element des Typs EmployeeType, bestehend aus einem  **\<Emp >** untergeordnetes Element des gleichen Typs EmployeeType. Dies ist eine rekursive Beziehung (das Element und sein Vorgänger sind vom gleichen Typ). Darüber hinaus das Schema verwendet eine  **\<SQL: Relationship >** um die über-/ unterordnungsbeziehung zwischen dem aufseher und dem beaufsichtigten zu beschreiben. Beachten Sie, dass in diesem  **\<SQL: Relationship >**, Emp ist das übergeordnete Element und der untergeordneten Tabelle.  
+ Sie können das folgende XSD-Schema verwenden und eine XPath-Abfrage damit ausführen, um dieses Ergebnis zu erhalten. Das Schema beschreibt ein  **\<Emp >** Element des Typs EmployeeType, bestehend aus einem  **\<Emp >** untergeordnetes Element des gleichen Typs EmployeeType. Dies ist eine rekursive Beziehung (das Element und sein Vorgänger sind vom gleichen Typ). Darüber hinaus das Schema verwendet eine  **\<SQL: Relationship >** um die über-/ unterordnungsbeziehung zwischen dem aufseher und dem beaufsichtigten zu beschreiben. Beachten Sie, dass in diesem  **\<SQL: Relationship >** , Emp ist das übergeordnete Element und der untergeordneten Tabelle.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -172,7 +172,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Um verschiedene Tiefen Hierarchien im Ergebnis zu erzeugen, ändern Sie den Wert von der **Sql:max-Tiefe** -Anmerkung im Schema, und führen Sie die Vorlage nach jeder Änderung erneut aus.  
   
- Im vorherigen Schema alle die  **\<Emp >** Elemente haben genau den gleichen Satz von Attributen (**EmployeeID**, **FirstName**, und  **"LastName"**). Das folgende Schema wurde leicht abgeändert, um ein zusätzliches **ReportsTo** -Attribut für alle der  **\<Emp >** Elemente, die einem Manager unterstellt.  
+ Im vorherigen Schema alle die  **\<Emp >** Elemente haben genau den gleichen Satz von Attributen (**EmployeeID**, **FirstName**, und  **"LastName"** ). Das folgende Schema wurde leicht abgeändert, um ein zusätzliches **ReportsTo** -Attribut für alle der  **\<Emp >** Elemente, die einem Manager unterstellt.  
   
  Zum Beispiel zeigt dieses XML-Fragment die Untergebenen von Mitarbeiter 1 an:  
   
@@ -286,7 +286,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>Nicht rekursive Elemente  
  Wenn die **Sql:max-Tiefe** -Anmerkung wird auf ein Element in das Schema, das keine Rekursion bewirkt wird angegeben, wird es ignoriert. Im folgenden Schema wird eine  **\<Emp >** Element besteht aus einer  **\<Konstanten >** untergeordneten-Element, das wiederum hat eine  **\<Emp >** untergeordnetes Element.  
   
- In diesem Schema die **Sql:max-Tiefe** -Anmerkung für die  **\<Konstanten >** Element wird ignoriert, da es keine Rekursion zwischen dem  **\<Emp >** übergeordnete und die  **\<Konstanten >** untergeordnetes Element. Es gibt jedoch Rekursion zwischen dem  **\<Emp >** Vorgänger und  **\<Emp >** untergeordneten. Gibt an, das Schema der **Sql:max-Tiefe** -Anmerkung für beide. Aus diesem Grund die **Sql:max-Tiefe** Anmerkung, die auf den Vorgänger angegeben ist (**\<Emp >** in der aufseherrolle) Vorrang.  
+ In diesem Schema die **Sql:max-Tiefe** -Anmerkung für die  **\<Konstanten >** Element wird ignoriert, da es keine Rekursion zwischen dem  **\<Emp >** übergeordnete und die  **\<Konstanten >** untergeordnetes Element. Es gibt jedoch Rekursion zwischen dem  **\<Emp >** Vorgänger und  **\<Emp >** untergeordneten. Gibt an, das Schema der **Sql:max-Tiefe** -Anmerkung für beide. Aus diesem Grund die **Sql:max-Tiefe** Anmerkung, die auf den Vorgänger angegeben ist ( **\<Emp >** in der aufseherrolle) Vorrang.  
   
 #### <a name="example-c"></a>Beispiel C  
   
@@ -330,9 +330,9 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Um dieses Schema zu testen, führen Sie die für Beispiel A weiter oben in diesem Thema beschriebenen Schritte aus.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Durch Einschränkungen abgeleitete komplexe Typen  
- Wenn Sie eine komplexen typableitung mit haben  **\<Einschränkung >**, Elemente des zugehörigen komplexen Basistyps können nicht angegeben. die **Sql:max-Tiefe** Anmerkung. In diesen Fällen die **Sql:max-Tiefe** Anmerkung auf das Element des abgeleiteten Typs hinzugefügt werden kann.  
+ Wenn Sie eine komplexen typableitung mit haben  **\<Einschränkung >** , Elemente des zugehörigen komplexen Basistyps können nicht angegeben. die **Sql:max-Tiefe** Anmerkung. In diesen Fällen die **Sql:max-Tiefe** Anmerkung auf das Element des abgeleiteten Typs hinzugefügt werden kann.  
   
- Andererseits, wenn man von einer komplexen typableitung mit  **\<Erweiterung >**, die Elemente des zugehörigen komplexen Basistyps können angeben, die **Sql:max-Tiefe** Anmerkung.  
+ Andererseits, wenn man von einer komplexen typableitung mit  **\<Erweiterung >** , die Elemente des zugehörigen komplexen Basistyps können angeben, die **Sql:max-Tiefe** Anmerkung.  
   
  Das folgende XSD-Schema generiert z. B. einen Fehler, da die **Sql:max-Tiefe** -Anmerkung wird auf den Basistyp angegeben. Diese Anmerkung wird nicht unterstützt, auf eine vom abgeleiteten Typ  **\<Einschränkung >** von einem anderen Typ. Um dieses Problem zu beheben, müssen Sie das Schema ändern und Angeben der **Sql:max-Tiefe** Anmerkung zum Element im abgeleiteten Typ.  
   

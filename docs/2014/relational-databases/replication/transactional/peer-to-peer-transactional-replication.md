@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63274350"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-zu-Peer-Transaktionsreplikation
@@ -137,7 +137,7 @@ ms.locfileid: "63274350"
   
 -   Der Verteilungs-Agent-Parameter **-SubscriptionStreams** und der Protokolllese-Agent-Parameter **-MaxCmdsInTran**.  
   
--   Die Artikeleigenschaften **@destination_owner** und **@destination_table**bezeichnet werden.  
+-   Die Artikeleigenschaften **@destination_owner** und **@destination_table** bezeichnet werden.  
 
 -   Die Peer-zu-Peer-Transaktionsreplikation unterstützt keine Erstellung von unidirektionalen Transaktionsabonnements an eine Peer-zu-Peer-Veröffentlichung.
   
@@ -147,7 +147,7 @@ ms.locfileid: "63274350"
   
 -   Die Artikeleigenschaft **@replicate_ddl** erfordert einen Wert von `true`; **@identityrangemanagementoption** erfordert einen Wert von `manual`; und **@status** muss **24** festgelegt ist.  
   
--   Der Wert für die Artikeleigenschaften **@ins_cmd**, **@del_cmd**, und **@upd_cmd** kann nicht festgelegt werden, um `SQL`.  
+-   Der Wert für die Artikeleigenschaften **@ins_cmd** , **@del_cmd** , und **@upd_cmd** kann nicht festgelegt werden, um `SQL`.  
   
 -   Die Abonnementeigenschaft **@sync_type** erfordert einen Wert von `none` oder `automatic`.  
   

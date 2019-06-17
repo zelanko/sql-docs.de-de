@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724045"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
@@ -62,7 +62,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Dies ist das Format des von sp_cursor_list zurückgegebenen Cursors. Das Format des Cursors ist mit dem von sp_describe_cursor zurückgegebenen Format identisch.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Der Name, der zum Verweisen auf den Cursor verwendet wird. Wenn der Verweis auf den Cursor über den Namen, die in einer DECLARE CURSOR-Anweisung angegeben wurde, ist der Verweisname Cursornamen identisch. Wenn der Verweis auf den Cursor über eine Variable erfolgte, ist der Verweisname der Name der Cursorvariablen.|  
 |cursor_name|**sysname**|Der Name des Cursors aus einer DECLARE CURSOR-Anweisung. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn der Cursor erstellt wurde, indem eine Cursorvariable auf einen Cursor, **Cursor_name** gibt den Namen der Cursorvariablen zurück.  In früheren Versionen gibt diese Ausgabespalte einen systemgenerierten Namen zurück.|  

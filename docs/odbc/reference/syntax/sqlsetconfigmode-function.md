@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b40da961e3e659bf4cd3e3692b4674399bce47a6
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537224"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode-Funktion
@@ -58,7 +58,7 @@ BOOL SQLSetConfigMode(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetConfigMode** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|Ungültiger Parameter-Sequenz|Die *wConfigMode* Argument enthielt keine ODBC_USER_DSN ODBC_SYSTEM_DSN oder ODBC_BOTH_DSN.|  
   

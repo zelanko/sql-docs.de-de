@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: 7f0532ad3d9822e3418a3642dd2109761187a2bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66776050"
 ---
 # <a name="monitor-dqs-activities"></a>Überwachen der DQS-Aktivitäten
@@ -137,7 +137,7 @@ ms.locfileid: "66776050"
   
 3.  Sie werden aufgefordert, einen Namen und einen Speicherort für die zu speichernde Excel-Datei anzugeben. Die exportierte Excel-Datei enthält folgende Arbeitsblätter:  
   
-    |Blattname|Description|  
+    |Blattname|Beschreibung|  
     |----------------|-----------------|  
     |Aktivität|Enthält Informationen (Spalten) zur Aktivität wie das Aktivitätsraster.|  
     |Prozesse|Enthält Informationen (Spalten) zu den Prozessen in der Aktivität wie die Registerkarte **Aktivitätsschritte** .|  

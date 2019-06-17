@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035399"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB-Hilfsprogramm
@@ -43,7 +43,7 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
  Erstellt eine neue Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB` die Version des [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Binärdateien, die anhand des  *\<instanzversion >* Argument. Die Versionsnummer wird im numerischen Format mit mindestens einer Dezimalzahl angegeben. Die Nebenversionsnummern (Service Packs) sind optional. Beispielsweise sind die folgenden zwei Versionsnummern akzeptabel: 11.0 oder 11.0.1186. Die angegebene Version muss auf dem Computer installiert sein. Wenn nicht angegeben, wird die Versionsnummer der Version des standardmäßig die `SqlLocalDB` Hilfsprogramm. Durch Hinzufügen von **-s** wird die neue Instanz von **LocalDB**gestartet.  
   
  [ **share** | **h** ]  
@@ -55,10 +55,10 @@ SqlLocalDB.exe
  [ **delete** | **d** ] *\<instance-name>*  
  Löscht die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **start** | **s** ] "*\<instance-name>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  Startet die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Bei Erfolg gibt die Anweisung die Named Pipe-Adresse von **LocalDB**zurück.  
   
- [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
  Beendet die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Hinzufügen von **-i** fordert das Herunterfahren der Instanz mit der `NOWAIT` Option. Durch Hinzufügen von **-k** wird der Instanzprozess ohne Kontaktieren abgebrochen.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  
@@ -82,7 +82,7 @@ SqlLocalDB.exe
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-an-instance-of-localdb"></a>A. Erstellen einer Instanz von LocalDB  
- Im folgenden Beispiel wird mithilfe der [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**-Binärdateien eine Instanz von** LocalDB `DEPARTMENT` namens [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] erstellt und die Instanz gestartet.  
+ Im folgenden Beispiel wird mithilfe der [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **-Binärdateien eine Instanz von** LocalDB `DEPARTMENT` namens [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] erstellt und die Instanz gestartet.  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  

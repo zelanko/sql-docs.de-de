@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 247dd2950365a1b75a3b911fe6dfda1a4dd044df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107366"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
@@ -95,11 +95,11 @@ ms.locfileid: "66107366"
   
 -   Zugrunde liegende datenanbieterversion (Optional): Einige Datenquellentypen unterstützen mehrere Datenanbieter. Dabei kann es sich um unterschiedliche Versionen eines Datenanbieters oder um unterschiedliche Implementierungen von Drittanbietern für einen Typ von Datenanbieter handeln. Der Name des Anbieters wird nach dem Konfigurieren einer Datenquelle häufig in der Verbindungszeichenfolge angegeben. Diese Spalte wird die folgende Frage beantwortet: „Welchen Datenanbieter wähle ich nach der Auswahl des Datenquellentyps im Dialogfeld **Verbindungseigenschaften** aus?“  
   
--   Datenquelle *\<plattform>*: Von der datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform der Daten. Diese Spalte wird die folgende Frage beantwortet: "Kann diese datenverarbeitungserweiterung oder diesem Datenanbieter Daten aus einer Datenquelle auf diesem Plattformtyp werden abgerufen?"  
+-   Datenquelle *\<plattform>* : Von der datenverarbeitungserweiterung oder dem Datenanbieter für die Zieldatenquelle unterstützte Plattform der Daten. Diese Spalte wird die folgende Frage beantwortet: "Kann diese datenverarbeitungserweiterung oder diesem Datenanbieter Daten aus einer Datenquelle auf diesem Plattformtyp werden abgerufen?"  
   
 -   Die Version der Datenquelle: Die Version der Zieldatenquelle, die von der Datenverarbeitungserweiterung oder dem Datenanbieter unterstützt werden. Diese Spalte wird die folgende Frage beantwortet: "Kann diese datenverarbeitungserweiterung oder diesem Datenanbieter Daten von dieser Version der Datenquelle werden abgerufen?"  
   
--   RS *\<plattform>*: Die Plattformen für den Berichtsserver und den berichterstellungsclient, auf dem Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder dem Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. Diese Spalte wird die folgende Frage beantwortet: "Kann diese datenverarbeitungserweiterung oder diesem Datenanbieter auf diesem Plattformtyp werden installiert?"  
+-   RS *\<plattform>* : Die Plattformen für den Berichtsserver und den berichterstellungsclient, auf dem Sie eine benutzerdefinierte Datenverarbeitungserweiterung oder dem Datenanbieter installieren können. Die integrierten Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden bei jeder Installation von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]bereitgestellt. Eine benutzerdefinierte Datenverarbeitungserweiterung oder ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter müssen systemintern für eine bestimmte Plattform kompiliert werden. Diese Spalte wird die folgende Frage beantwortet: "Kann diese datenverarbeitungserweiterung oder diesem Datenanbieter auf diesem Plattformtyp werden installiert?"  
   
 ###  <a name="DataSourcesTable"></a> Typen von Datenquellen  
   

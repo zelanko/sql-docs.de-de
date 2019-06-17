@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 098ff2a0a3e4827a9d80c3955cc6f2689c3fa53e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62446431"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62446431"
 
   Diese Katalogsicht enthält eine Zeile pro Route. Service Broker verwendet Routen zur Suche der Netzwerkadresse für einen Dienst.   
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Route, der innerhalb der Datenbank eindeutig ist. Lässt keine NULL-Werte zu.|  
 |**route_id**|**int**|Der Bezeichner für die Route. Lässt keine NULL-Werte zu.|  

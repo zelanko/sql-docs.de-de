@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62467781"
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData-Schnittstelle
@@ -125,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Beschreibung  
  Legt die URL für die Datei fest, die den eingebetteten Datenstrom enthält.  
   
 #### <a name="parameters"></a>Parameter  
@@ -185,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Beschreibung  
  Legt den Pfad zu den von der Einbettungsanwendung verwendeten temporären Dateien fest.  
   
 #### <a name="parameters"></a>Parameter  
@@ -288,7 +288,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Beschreibung  
  Lädt die eingebettete Datenbank in die lokale oder prozessinterne Engine. Geerbt von **IPersistStream**.  
   
 #### <a name="parameters"></a>Parameter  

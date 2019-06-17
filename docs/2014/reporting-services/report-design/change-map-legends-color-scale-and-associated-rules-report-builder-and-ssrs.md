@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35ea86d2e03c903736a5900da3da5c10986a3f9f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106355"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln (Berichts-Generator und SSRS)
@@ -114,7 +114,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Farbregel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Legende**.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Farbregel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Vorlagenstil anwenden**.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Farbregel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe der Farbpalette anzeigen**.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Farbregel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe von Farbbereichen anzeigen**.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Farbregel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Farbregel**.  
   
 3.  Klicken Sie auf **Daten mithilfe benutzerdefinierter Farben anzeigen**.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Farbregel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Farbregel**.  
   
 3.  Wählen Sie die **Visualisieren von Daten mithilfe von** \<Regeltyp\> Option. Um Verteilungsoptionen zu verwenden, müssen Sie Bereiche auf der Seite **Verteilung** auf Grundlage analytischer Daten erstellen, die der Ebene zugeordnet sind.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Regel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Regel**.  
   
 3.  Überprüfen Sie, ob „**Daten mithilfe von** \<*Regeltyp*> anzeigen“ aktiviert ist.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Farbregel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Farbregel**.  
   
 3.  Aktivieren Sie die zu verwendende Farbregeloption. Um Elemente in einer Kartenlegende oder Farbskala anzuzeigen, müssen Sie eine der Optionen „**Daten mithilfe von** \<Regeltyp> anzeigen“ aktivieren.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Regel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Regel**.  
   
 3.  Klicken Sie auf **Legende**.  
   
@@ -305,7 +305,7 @@ ms.locfileid: "66106355"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_**Regel**.  
+2.  Mit der rechten Maustaste in der Schicht mit den Daten, die Sie möchten, und klicken Sie dann auf  _\<kartenelementtyp\>_ **Regel**.  
   
 3.  Klicken Sie auf **Legende**.  
   

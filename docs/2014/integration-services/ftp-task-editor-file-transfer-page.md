@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058436"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Editor für den FTP-Task (Seite Dateiübertragung)
@@ -67,13 +67,13 @@ ms.locfileid: "66058436"
   
 ### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Wählen Sie eine vorhandene benutzerdefinierte Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine benutzerdefinierte Variable zu erstellen.  
+ Wählen Sie eine vorhandene benutzerdefinierte Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine benutzerdefinierte Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), Hinzufügen von Variablen  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Wählen Sie einen vorhandenen FTP-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen FTP-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…** >, um einen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [FTP-Verbindungs-Manager](connection-manager/ftp-connection-manager.md), [FTP-Verbindungs-Manager-Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -81,13 +81,13 @@ ms.locfileid: "66058436"
   
 ### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Wählen Sie eine vorhandene benutzerdefinierte Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine Variable zu erstellen.  
+ Wählen Sie eine vorhandene benutzerdefinierte Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), Hinzufügen von Variablen  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…** >, um einen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Verbindungs-Manager für Flatfiles](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   

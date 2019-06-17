@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 07c1c226d33a213dd9bd071c59d9771a0e0ca736
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183030"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Erste Schritte mit der SSMA-Konsole für MySQL (MySqlToSql)
@@ -56,7 +56,7 @@ Beim Ausführen der SSMA-Skript-Befehle und Optionen an, das Konsolenprogramm ze
   
 Color-Interpretation der Konsolenausgabe in der folgenden Tabelle:  
   
-|Farbe|Description|  
+|Farbe|Beschreibung|  
 |---------|---------------|  
 |Red|Schwerwiegender Fehler während der Ausführung|  
 |Grau|Datums- und Zeitstempel, an den Benutzer|  

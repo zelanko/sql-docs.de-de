@@ -31,16 +31,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151175"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
   In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Objekte und Leistungsindikatoren bereitgestellt, die vom Systemmonitor zum Überwachen der Aktivität von Computern, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausführen, verwendet werden können. Ein Objekt ist eine beliebige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource, z.B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sperre oder ein Windows-Prozess. Jedes Objekt enthält einen oder mehrere Leistungsindikatoren, die verschiedene Aspekte der zu überwachenden Objekte ermitteln. So enthält z.B. das Objekt **SQL Server-Sperren** Leistungsindikatoren für die **Anzahl der Deadlocks/Sekunde** und die **Sperrtimeouts/Sekunde**.  
   
- Einige Objekte verfügen über mehrere Instanzen, wenn mehrere Ressourcen eines bestimmten Typs auf dem Computer vorhanden sind. So weist z.B. der Objekttyp **Prozessor** mehrere Instanzen auf, wenn ein System über mehrere Prozessoren verfügt. Der Objekttyp **Datenbanken** verfügt über eine Instanz für jede Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Einige Objekttypen (z.B. für den **Speicher-Manager** ) verfügen nur über eine Instanz. Wenn ein Objekttyp über mehrere Instanzen verfügt, können Sie Leistungsindikatoren hinzufügen, um die Statistiken für jede Instanz (oder in vielen Fällen für alle Instanzen gleichzeitig) nachzuverfolgen. Leistungsindikatoren für die Standardinstanz werden im Format **SQLServer:**_\<<Objektname>_ angezeigt. Leistungsindikatoren für benannte Instanzen werden im Format **MSSQL$**_\<<Instanzname>_**:**_\<Indikatorname>_ oder **SQLAgent$**_\<Instanzname>_**:**_\<Indikatorname>_ angezeigt.  
+ Einige Objekte verfügen über mehrere Instanzen, wenn mehrere Ressourcen eines bestimmten Typs auf dem Computer vorhanden sind. So weist z.B. der Objekttyp **Prozessor** mehrere Instanzen auf, wenn ein System über mehrere Prozessoren verfügt. Der Objekttyp **Datenbanken** verfügt über eine Instanz für jede Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Einige Objekttypen (z.B. für den **Speicher-Manager** ) verfügen nur über eine Instanz. Wenn ein Objekttyp über mehrere Instanzen verfügt, können Sie Leistungsindikatoren hinzufügen, um die Statistiken für jede Instanz (oder in vielen Fällen für alle Instanzen gleichzeitig) nachzuverfolgen. Leistungsindikatoren für die Standardinstanz werden im Format **SQLServer:** _\<<Objektname>_ angezeigt. Leistungsindikatoren für benannte Instanzen werden im Format **MSSQL$** _\<<Instanzname>_ **:** _\<Indikatorname>_ oder **SQLAgent$** _\<Instanzname>_ **:** _\<Indikatorname>_ angezeigt.  
   
  Durch Hinzufügen oder Entfernen von Leistungsindikatoren zum bzw. aus dem Diagramm und Speichern der Diagrammeinstellungen können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte und -Leistungsindikatoren angeben, die beim Starten des Systemmonitors überwacht werden.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63151175"
 ##  <a name="SQLServerAgentPOs"></a> Leistungsobjekte für den SQL Server-Agent  
  In der folgenden Tabelle sind die Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent aufgeführt:  
   
-|Leistungsobjekt|Description|  
+|Leistungsobjekt|Beschreibung|  
 |------------------------|-----------------|  
 |[SQLAgent:Warnungen](sql-server-agent-alerts-object.md)|Stellt Informationen zu Warnungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
 |[SQLAgent:Aufträge](sql-server-agent-jobs-object.md)|Stellt Informationen zu Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
@@ -76,7 +76,7 @@ ms.locfileid: "63151175"
 ##  <a name="ServiceBrokerPOs"></a> Service Broker-Leistungsobjekte  
  In der folgenden Tabelle sind die Leistungsobjekte für [!INCLUDE[ssSB](../../includes/sssb-md.md)]aufgeführt.  
   
-|Leistungsobjekt|Description|  
+|Leistungsobjekt|Beschreibung|  
 |------------------------|-----------------|  
 |[SQLServer:Broker-Aktivierung](sql-server-broker-activation-object.md)|Stellt Informationen zu aktivierten [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Tasks bereit.|  
 |[SQLServer:Broker-Statistik](sql-server-broker-statistics-object.md)|Stellt allgemeine Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] bereit.|  

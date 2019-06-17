@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cd25f6abf4c7cade7edbd35780cc191bce9c003d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702794"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>Internetinformation Services-Fehlercodes für Remote Data Service
 Die folgende Tabelle enthält die Microsoft® Internet Information Services (IIS)-Fehlercodes, die im Zusammenhang mit der Verwendung von Remote Data Service. Die positive decimal Übersetzung der niedrigen zwei Bytes, die negative dezimale Übersetzung von der vollständigen Fehlercode und die Hexadezimalwerte werden angezeigt.
 
-|Internet Information Services-Fehler|Number|Description|
+|Internet Information Services-Fehler|Number|Beschreibung|
 |------------------------------------------|------------|-----------------|
 |**IDS_IIS_AccessDenied**|8208 -2146820080 0x800A2010|Internetserverfehler: Zugriff verweigert.|
 |**IDS_IIS_ObjectNotFound**|8209 -2146820079 0x800A2011|Internetserverfehler: Objekt/Modul wurde nicht gefunden.|

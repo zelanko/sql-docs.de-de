@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08eb9db7645448157a76b3bcfdd302f6654f68f5
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537256"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute-Funktion
@@ -52,7 +52,7 @@ SQLRETURN SQLExecute(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLExecute** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, zurück ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLExecute** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01001|Konflikt beim Cursorvorgang|Die vorbereitete Anweisung zugeordneten der *StatementHandle* enthaltenen ein positioniertes update oder delete-Anweisung, und keine Zeilen oder mehr als eine Zeile aktualisiert oder gelöscht wurden. (Weitere Informationen zu Updates für mehr als eine Zeile, finden Sie unter der Beschreibung der SQL_ATTR_SIMULATE_CURSOR *Attribut* in **SQLSetStmtAttr**.)<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  

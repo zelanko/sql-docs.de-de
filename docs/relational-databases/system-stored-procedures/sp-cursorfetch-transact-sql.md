@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724569"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
@@ -143,7 +143,7 @@ sp_cursorfetch cursor
   
  Die Zeilen werden als typisches Resultset zurückgegeben: Spaltenformat (0x2a), Zeilen (0xd1) gefolgt vom fertigen Resultset (0xfd). Metadatentoken werden im gleichen Format wie für Sp_cursoropen angegeben, gesendet: 0 x 81, 0xa5 und 0xa4 für SQL Server 7.0-Benutzer und So weiter. Die Zeilenstatusindikatoren werden ähnlich dem BROWSE-Modus als ausgeblendete Spalten am Ende jeder Zeile mit dem Spaltennamen "rowstat" und dem Datentyp INT4 gesendet. Diese rowstat-Spalte verfügt über einen der Werte aus der folgenden Tabelle.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

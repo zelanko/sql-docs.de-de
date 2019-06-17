@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028413"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Volltextindex (Dialogfeld) (Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "63028413"
  Wenn die Kategorie erweitert ist, werden **Spalten** und **Volltextkatalogname**angezeigt.  
   
  **Spalten**  
- Zeigt eine durch Trennzeichen getrennte Liste mit den Namen volltextdurchsuchbarer Spalten an. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) links neben dem Eigenschaftenfeld, um die Liste vollständig anzuzeigen.  
+ Zeigt eine durch Trennzeichen getrennte Liste mit den Namen volltextdurchsuchbarer Spalten an. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) links neben dem Eigenschaftenfeld, um die Liste vollständig anzuzeigen.  
   
  **Full-Text Catalog Name**  
  Zeigt den Namen des Volltextkatalogs an, für den dieser Volltextindex gespeichert wird. Um den Index für einen anderen Katalog zu speichern, klicken Sie auf den Katalognamen, und wählen Sie aus der Dropdownliste den gewünschten Katalog aus.  

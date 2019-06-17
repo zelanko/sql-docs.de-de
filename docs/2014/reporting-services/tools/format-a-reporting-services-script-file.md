@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df4585dfa4b1e45b2de9d396a59dcbf132b1a505
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100251"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Formatieren einer Reporting Services-Skriptdatei
@@ -48,7 +48,7 @@ End Sub
 > [!IMPORTANT]  
 >  Benutzeranmeldeinformationen werden von der Skriptumgebung verwaltet und durch Argumente für die Eingabeaufforderung mithilfe von RS.exe übergeben. Sie können zwar die *rs* -Variable verwenden, um die Authentifizierung des Webdiensts festzulegen, allerdings wird die Verwendung der Skriptumgebung empfohlen. Die Authentifizierung des Webdiensts in der Skriptdatei selbst ist nicht erforderlich. Weitere Informationen zum Authentifizieren der Skriptumgebung finden Sie unter [Hilfsprogramm RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
- Es werden keine Namespaces innerhalb der Skriptdatei deklariert. Die skriptumgebung stellt verschiedene nützliche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Namespaces, die Ihnen zur Verfügung: **System.Web.Services**, **System.Web.Services.Protocols**, **"System.xml"**, und **System.IO**.  
+ Es werden keine Namespaces innerhalb der Skriptdatei deklariert. Die skriptumgebung stellt verschiedene nützliche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Namespaces, die Ihnen zur Verfügung: **System.Web.Services**, **System.Web.Services.Protocols**, **"System.xml"** , und **System.IO**.  
   
  Skriptbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   

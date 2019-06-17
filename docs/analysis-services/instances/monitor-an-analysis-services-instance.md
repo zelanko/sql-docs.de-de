@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 39cc5a22165d07aafce29e4216548c4e8d226892
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62709467"
 ---
 # <a name="monitoring-overview"></a>Übersicht über die Überwachung
@@ -25,7 +25,7 @@ Weitere Informationen zur Überwachung von SQL Server Analysis Services finden S
   
 ## <a name="monitoring-tools"></a>Überwachungstools  
 
-|Tool  |Description  |
+|Tool  |Beschreibung  |
 |---------|---------|
 |[SQL Server Profiler](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)      |   Verfolgt Engine-Prozessereignisse an. Es erfasst auch Daten zu diesen Ereignissen, können Sie Server- und Datenbankaktivität überwachen.      |
 | [Erweiterte Ereignisse](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)     |   Ein kompaktes Ablaufverfolgungs- und die Leistung, System, das nur sehr wenige Systemressourcen verwendet, dadurch stellen sie ein ideales Tool zum Diagnostizieren von Problemen auf den Test und Produktion.       |

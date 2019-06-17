@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273737"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
@@ -44,7 +44,7 @@ ms.locfileid: "63273737"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Knoten Datenbankdiagramme, und wählen Sie **Neues Datenbankdiagramm** aus.  
   
-     Wenn die Datenbank nicht zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird die folgende Meldung angezeigt: **Diese Datenbank keinen oder Unterstützung Objekte erforderlich, um Datenbankdiagramme verwenden. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
+     Wenn die Datenbank nicht über die erforderlichen Objekte zum Erstellen von Diagrammen verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
   
      Das Dialogfeld **Tabelle hinzufügen** wird angezeigt.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273737"
   
 1.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle. Zeigen Sie im Kontextmenü auf **Tabellensicht**, und klicken Sie dann auf **Standard**.  
   
-     Im Tabellenraster werden drei Spalten: **Name der Spalte**, **Datentyp**, und **NULL-Werte zulassen**.  
+     Im Tabellenraster werden drei Spalten angezeigt: **Spaltenname**, **Datentyp** und **Null-Werte zulassen**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die `Address` -Tabelle, klicken Sie auf **Tabellensicht** , und wählen Sie **Schlüssel**aus.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63273737"
   
 2.  In der **Namen auswählen** Dialogfeld klicken Sie auf **OK** um die Standardnamen `Table1`.  
   
-     Es wird ein neues Tabellenraster mit drei Spalten angezeigt: **Name der Spalte**, **Datentyp**, und **NULL-Werte zulassen**.  
+     Es wird ein neues Tabellenraster mit drei Spalten angezeigt: **Spaltenname**, **Datentyp** und **Null-Werte zulassen**.  
   
 3.  Fügen Sie die folgende Informationen zur `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63273737"
   
 2.  Ziehen Sie `T2col1` in `T1col1`.  
   
-     Es werden zwei Dialogfelder angezeigt: **Foreign Key-Beziehung** im Hintergrund und **Tabellen und Spalten** im Vordergrund.  
+     Es werden zwei Dialogfelder angezeigt: **Fremdschlüsselbeziehung** im Hintergrund und **Tabellen und Spalten** im Vordergrund.  
   
 3.  Klicken Sie auf **OK** , um die neue Beziehung zu speichern.  
   

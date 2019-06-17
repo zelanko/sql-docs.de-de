@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997063"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
@@ -50,7 +50,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumente  
 `[ @dbname = ] 'dbnam_ '` Ist der Name der Datenbank, die an den Server angefügt werden. Der Name muss eindeutig sein. *Dbname* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @filename1 = ] 'filename_n'` Ist der physische Name, einschließlich des Pfads einer Datenbankdatei an. *Filename_n* ist **nvarchar(260)**, hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen mit **@filename1** und werden bis **@filename16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
+`[ @filename1 = ] 'filename_n'` Ist der physische Name, einschließlich des Pfads einer Datenbankdatei an. *Filename_n* ist **nvarchar(260)** , hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen mit **@filename1** und werden bis **@filename16** . Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
   
 > [!NOTE]  
 >  Dieses Argument entspricht dem FILENAME-Parameter der CREATE DATABASE-Anweisung. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 619d35c084884aa72de63ff221d5a6f61ea86196
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108484"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle
-  In dieser Lektion verwenden Sie den Berichts-Manager für die Auswahl eines Berichts, der an Empfänger übermittelt werden soll. Das datengesteuerte Abonnement, das Sie definieren, verteilt den im Tutorial **Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial &#41;** erstellten Bericht [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial &#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). In den folgenden Schritten wird erläutert, wie Sie die Datenquellen-Verbindungsinformationen ändern, die vom Bericht zum Abrufen von Daten verwendet werden. Nur Berichte, die **gespeicherte Anmeldeinformationen** für das Zugreifen auf eine Berichtsdatenquelle verwenden, können über ein datengesteuertes Abonnement verteilt werden. Für die unbeaufsichtigte Berichtsverarbeitung sind gespeicherte Anmeldeinformationen erforderlich.  
+  In dieser Lektion verwenden Sie den Berichts-Manager für die Auswahl eines Berichts, der an Empfänger übermittelt werden soll. Das datengesteuerte Abonnement, das Sie definieren, verteilt den im Tutorial **Erstellen eines einfachen Tabellenberichts &amp;#40;SSRS-Tutorial&amp;#41;** erstellten Bericht [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). In den folgenden Schritten wird erläutert, wie Sie die Datenquellen-Verbindungsinformationen ändern, die vom Bericht zum Abrufen von Daten verwendet werden. Nur Berichte, die **gespeicherte Anmeldeinformationen** für das Zugreifen auf eine Berichtsdatenquelle verwenden, können über ein datengesteuertes Abonnement verteilt werden. Für die unbeaufsichtigte Berichtsverarbeitung sind gespeicherte Anmeldeinformationen erforderlich.  
   
  Sie ändern auch das Dataset und den Bericht, um einen Parameter zu verwenden, mit dem der Bericht nach `[Order]` gefiltert wird, damit das Abonnement verschiedene Instanzen des Berichts für bestimmte Aufträge und Renderingformate ausgeben kann.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108484"
   
 ##  <a name="bkmk_add_reportparameter"></a> Fügen Sie einen Berichtsparameter hinzu und veröffentlichen den Bericht erneut  
   
-1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Parameter...**.  
+1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Parameter...** .  
   
 2.  Geben Sie in **Name**den Namen `OrderNumber`ein.  
   

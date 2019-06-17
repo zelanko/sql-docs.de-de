@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8ec0edfa1a5ae1b6b94ed07f63c930bc896f5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297409"
 ---
 # <a name="statement-transitions"></a>Anweisungsübergänge
@@ -324,7 +324,7 @@ ODBC-Anweisungen werden die folgenden Status haben.
   
  [1] für diese Zeile zeigt die Übergänge beim *Option* SQL_CLOSE wurde.  
   
- [2] für diese Zeile zeigt die Übergänge beim *Option* SQL_UNBIND oder SQL_RESET_PARAMS war. Wenn die *Option* Argument war SQL_DROP und der zugrunde liegenden Treiber ist ein ODBC 3.*.x* Treiber, der Treiber-Manager ordnet dies für einen Aufruf von **SQLFreeHandle** mit  *HandleType* auf SQL_HANDLE_STMT festgelegt. Weitere Informationen finden Sie in der Tabelle der Zustandsübergänge für [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ [2] für diese Zeile zeigt die Übergänge beim *Option* SQL_UNBIND oder SQL_RESET_PARAMS war. Wenn die *Option* Argument war SQL_DROP und der zugrunde liegenden Treiber ist ein ODBC 3. *.x* Treiber, der Treiber-Manager ordnet dies für einen Aufruf von **SQLFreeHandle** mit  *HandleType* auf SQL_HANDLE_STMT festgelegt. Weitere Informationen finden Sie in der Tabelle der Zustandsübergänge für [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

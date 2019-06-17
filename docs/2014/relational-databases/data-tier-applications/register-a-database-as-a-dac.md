@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918131"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrieren einer Datenbank als eine DAC
@@ -101,7 +101,7 @@ ms.locfileid: "62918131"
  **Abbrechen** – Beendet den Assistenten, ohne die DAC zu registrieren.  
   
 ### <a name="validating-objects"></a>Überprüfen von Objekten  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** – Zeigt eine Statusanzeige an, während der Assistent die Abhängigkeiten der abgerufenen Objekten überprüft und sicherstellt, dass sie alle für eine DAC gültig sind. _SchemaName_**.**_ObjectName_ gibt das derzeit überprüfte Objekt an.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** – Zeigt eine Statusanzeige an, während der Assistent die Abhängigkeiten der abgerufenen Objekten überprüft und sicherstellt, dass sie alle für eine DAC gültig sind. _SchemaName_ **.** _ObjectName_ gibt das derzeit überprüfte Objekt an.  
   
  **\< Vorherige** -wird wieder die **Eigenschaften** Seite, um Ihre Einträge ändern.  
   

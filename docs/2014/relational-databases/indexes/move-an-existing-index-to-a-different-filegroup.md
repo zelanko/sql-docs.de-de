@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036218"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
@@ -32,7 +32,7 @@ ms.locfileid: "63036218"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Verschieben eines vorhandenen Indexes in eine andere Dateigruppe mit:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63036218"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>So verschieben Sie einen vorhandenen Index mit dem Tabellen-Designer in eine andere Dateigruppe  
   

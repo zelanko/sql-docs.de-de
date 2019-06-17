@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015649"
 ---
 # <a name="view-statistics-properties"></a>Anzeigen von Statistikeigenschaften
@@ -29,7 +29,7 @@ ms.locfileid: "63015649"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So zeigen Sie Statistikeigenschaften an mit:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63015649"
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Anzeigen des Statistikobjekts muss der Benutzer Besitzer der Tabelle oder Mitglied der festen Serverrolle `sysadmin` bzw. der festen Datenbankrollen `db_owner` oder `db_ddladmin` sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>So zeigen Sie Statistikeigenschaften an  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63015649"
      Durchschnittliche Anzahl von Bytes pro Wert für alle Schlüsselspalten im Statistikobjekt.  
   
      **String Index**  
-     "Ja" gibt an, dass das Statistikobjekt Statistiken über Zusammenfassungen von Zeichenfolgen enthält, um die Kardinalitätsschätzungen für Abfrageprädikate, die den LIKE-Operator verwenden, zu verbessern, z. B. `WHERE ProductName LIKE '%Bike'`. Zusammenfassungen von Zeichenfolgen werden getrennt vom Histogramm gespeichert und in der ersten Schlüsselspalte des Statistikobjekts erstellt, wenn es vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext**ist.  
+     "Ja" gibt an, dass das Statistikobjekt Statistiken über Zusammenfassungen von Zeichenfolgen enthält, um die Kardinalitätsschätzungen für Abfrageprädikate, die den LIKE-Operator verwenden, zu verbessern, z. B. `WHERE ProductName LIKE '%Bike'`. Zusammenfassungen von Zeichenfolgen werden getrennt vom Histogramm gespeichert und in der ersten Schlüsselspalte des Statistikobjekts erstellt, wenn es vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**, or **ntext**ist.  
   
      **Filterausdruck**  
      Prädikat für die Teilmenge von Tabellenzeilen, die im Statistikobjekt enthalten sind. NULL = Nicht gefilterte Statistik.  

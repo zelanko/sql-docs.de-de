@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678482"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Lektion 1: Erstellen der mittleres Datamining-Lösung (mittleres Datamining-Lernprogramm)
@@ -30,12 +30,12 @@ ms.locfileid: "62678482"
 -   [Erstellen einer Projektmappe und die Datenquelle &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Alle Lektionen  
- Lektion 1: Erstellen der mittleres Datamining-Lösung  
+ Lektion 1: Erstellen der Data Mining-Lösung für Fortgeschrittene  
   
- [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
  [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   

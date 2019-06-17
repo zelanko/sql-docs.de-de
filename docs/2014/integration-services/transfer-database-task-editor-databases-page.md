@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055111"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor für den Task Datenbanken übertragen (Seite Datenbanken)
@@ -26,10 +26,10 @@ ms.locfileid: "66055111"
   
 ## <a name="options"></a>Optionen  
  **SourceConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>**, um eine neue Verbindung mit dem Quellserver herzustellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>** , um eine neue Verbindung mit dem Quellserver herzustellen.  
   
  **DestinationConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>**, um eine neue Verbindung mit dem Zielserver herzustellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>** , um eine neue Verbindung mit dem Zielserver herzustellen.  
   
  **DestinationDatabaseName**  
  Geben Sie den Namen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank auf dem Zielserver an.  

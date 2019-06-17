@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453581"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Arbeiten mit der Beispiel-Konsole Skript FilesExecuting der SSMA-Konsole (AccessToSQL)
@@ -57,7 +57,7 @@ Referenz für den Benutzer haben die folgenden Konsole beispielskriptdateien fü
   
 -   **ConversionAndDataMigrationSample.xml:** In diesem Beispiel kann der Benutzer eine End-to-End-Migration von der Konvertierung in die Datenmigration ausführen. Die Liste der erforderlichen Attributwerte, die sie ändern müssen, ist im folgenden aufgeführt:  
   
-    |Befehlsname|Description|Attribut|  
+    |Befehlsname|Beschreibung|Attribut|  
     |----------------|---------------|-------------|  
     |`map-schema`|Schemazuordnung der Quelldatenbank mit dem Zielschema.|`source-schema:` Gibt an, die Quelldatenbank, die erforderlich sind, konvertiert werden soll.<br /><br />`sql-server-schema`: Gibt die Zieldatenbank, die für die Migration|  
     |`convert-schema`|Führt die schemakonvertierung aus der Quelle in das Zielschema.<br /><br />Wenn der Benutzer verfügt über mehrere Objekte bewerten / er Datenbanken können angeben, mehrere `metabase-object` Knoten wie in der `convert-schema` des Befehls Beispiel 4 von der Konsole-Beispielskriptdatei.|`object-name`: Geben Sie die Quelldatenbank / Objektnamen Sie, die erforderlich sind, konvertiert werden soll. Sicherstellen, dass die entsprechenden `object-type` basierend auf dem Typ des Objekts, das im angegebenen geändert wird die `object-name`|  

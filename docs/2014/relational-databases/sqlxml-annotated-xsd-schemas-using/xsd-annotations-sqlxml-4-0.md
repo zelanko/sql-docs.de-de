@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b9e50cc418ef1fa2076b3207d7d3429694f160a
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013547"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD-Anmerkungen (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "66013547"
 |`sql:guid`|Damit können Sie angeben, ob ein von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierter GUID-Wert oder der im Updategram für diese Spalte angegebene Wert verwendet werden soll.|[Verwenden der Anmerkungen 'sql:identity' und 'sql:guid'](using-the-sql-identity-and-sql-guid-annotations.md)|Nicht unterstützt|  
 |`sql:hide`|Blendet das im Schema angegebene Element oder Attribut im resultierenden XML-Dokument aus.|[Ausblenden von Elementen und Attributen mit sql:hide](hiding-elements-and-attributes-by-using-sql-hide.md)|Nicht unterstützt|  
 |`sql:identity`|Kann in jedem Knoten angegeben werden, der einer Datenbankspalte vom Typ IDENTITY zugeordnet ist. Der für diese Anmerkung angegebene Wert definiert, wie die entsprechende Spalte vom Typ IDENTITY in der Datenbank aktualisiert wird.|[Verwenden der Anmerkungen 'sql:identity' und 'sql:guid'](using-the-sql-identity-and-sql-guid-annotations.md)|Nicht unterstützt|  
-|`sql:inverse`|Weist die updategramlogik an die Interpretation der über-/ unterordnungsbeziehung, die angegeben wurde  **\<SQL: Relationship >**.|[Angeben des SQL: Inverse-Attributs für SQL: Relationship &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|Nicht unterstützt|  
+|`sql:inverse`|Weist die updategramlogik an die Interpretation der über-/ unterordnungsbeziehung, die angegeben wurde  **\<SQL: Relationship >** .|[Angeben des SQL: Inverse-Attributs für SQL: Relationship &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|Nicht unterstützt|  
 |`sql:is-constant`|Erstellt ein XML-Element, das keiner Tabelle zugeordnet wird. Das Element wird in der Abfrageausgabe angezeigt.|[Erstellen von Konstanten Elementen unter Verwendung von Sql: ist Konstante &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|Gleich|  
 |`sql:key-fields`|Damit können Sie Spalten angeben, mit denen die Zeilen in einer Tabelle eindeutig identifiziert werden.|[Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Felder &#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|Gleich|  
 |`sql:limit-field`<br /><br /> `sql:limit-value`|Damit können Sie die Werte beschränken, die auf Grundlage eines beschränkenden Werts zurückgegeben werden.|[Filtern von Werten mithilfe von ' SQL: Limit-Field und ' SQL: Limit-Wert &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)|Gleich|  

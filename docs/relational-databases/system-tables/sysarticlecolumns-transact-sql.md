@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714187"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
@@ -30,13 +30,13 @@ ms.locfileid: "62714187"
 
   Die **Sysarticlecolumns** -Tabelle enthält eine Zeile für jede Tabellenspalte, die in einer Momentaufnahme- oder transaktionsveröffentlichung veröffentlicht wird, und ordnet jede Spalte einen Artikel. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Identifiziert einen Artikel.|  
 |**colid**|**smallint**|Identifiziert eine Spalte in einem Artikel.|  
 |**is_udt**|**bit**|Zeigt an, ob die Spalte dem benutzerdefinierten Datentyp (UDT) zugehört. Der Wert **1** eine UDT-Spalte angibt.|  
 |**is_xml**|**bit**|Gibt an, ob die Spalte ist eine **Xml** Spalte. Der Wert **1** gibt eine XML-Spalte.|  
-|**is_max**|**bit**|Gibt an, ob die Spalte einen hohen Wert-Datentypspalte **varchar(max)**, **nvarchar(max)**, und **'varbinary(max)'**. Der Wert **1** gibt eine Spalte mit umfangreichen Werten.|  
+|**is_max**|**bit**|Gibt an, ob die Spalte einen hohen Wert-Datentypspalte **varchar(max)** , **nvarchar(max)** , und **'varbinary(max)'** . Der Wert **1** gibt eine Spalte mit umfangreichen Werten.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

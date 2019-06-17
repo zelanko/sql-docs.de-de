@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7f9562f8594e29c33832c595b9296eaf4f2019b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162436"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Verhaltensänderungen des ODBC-Treibers bei der Behandlung von Zeichenkonvertierungen
@@ -52,7 +52,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiberversion|Längen- oder Indikatorergebnis|Description|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiberversion|Längen- oder Indikatorergebnis|Beschreibung|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client oder früher|6|Der Treiber geht fälschlicherweise davon aus, dass die Konvertierung von CHAR in WCHAR als "Länge * 2" durchgeführt wird.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (Version 11.0.2100.60) oder höher|-4 (SQL_NO_TOTAL)|Der Treiber nicht mehr davon aus, dass die Konvertierung von CHAR in WCHAR bzw. WCHAR in CHAR eine (Multiplikation) \*2 oder (Division) / 2 Aktion.<br /><br /> Aufrufen von **SQLGetData** nicht mehr die Länge der erwarteten Konvertierung zurückgegeben. Der Treiber erkennt die Konvertierung in bzw. aus CHAR und WCHAR und gibt anstelle von "*2" oder "/2" das Ergebnis (-4) SQL_NO_TOTAL zurück; dieses Verhalten kann falsch sein.|  

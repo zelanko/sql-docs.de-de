@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 57dde428be8a70b1476de390dbbd22549434c2ee
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453514"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant für Access (AccessToSQL)
@@ -24,7 +24,7 @@ Diese Dokumentation führt Sie in SSMA für Access und enthält detaillierte Anw
   
 ## <a name="contents"></a>Inhalt  
   
-|Abschnitt|Description|  
+|Abschnitt|Beschreibung|  
 |-----------|---------------|  
 |[What's New in SSMA for Access (Neuerungen in SSMA für Access)](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|Werden die Änderungen an der SSMA-Versionen aufgeführt.|  
 |[Installieren von SQL Server Migration Assistant für Access](installing-sql-server-migration-assistant-for-access-accesstosql.md)|Listet die Voraussetzungen zum Installieren von SSMA das Verfahren zum Installieren und lizenzieren SSMA und einen Link auf die neueste Version.|  

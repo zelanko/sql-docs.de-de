@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a71ee85fc4dce4abd7d8ef91a8f22529ce8d5a0f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483014"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Benutzerdefinierte Workflow-XML-Beschreibung (Master Data Services)
@@ -62,7 +62,7 @@ ms.locfileid: "65483014"
   
  In der folgenden Tabelle werden einige der Tags beschrieben, die in dieser XML enthalten sind:  
   
-|Tag|Description|  
+|Tag|Beschreibung|  
 |---------|-----------------|  
 |\<Type>|Der von Ihnen im Textfeld **Workflowtyp** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eingegebene Text, der zum Identifizieren der zu ladenden benutzerdefinierten Workflowassembly dient.|  
 |\<SendData>|Ein boolescher Wert, der mithilfe des Kontrollkästchens **Elementdaten in die Meldung einschließen** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gesteuert wird. Der Wert 1 bedeutet, dass der Abschnitt \<MemberData> gesendet wird. Andernfalls wird der Abschnitt \<MemberData> nicht gesendet.|  

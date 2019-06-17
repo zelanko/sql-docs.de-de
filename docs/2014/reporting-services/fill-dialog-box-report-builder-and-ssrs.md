@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109161"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Ausfüllen (Dialogfeld) (Berichts-Generator und SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66109161"
   
  Wenn Sie das Bild einbetten, wählen Sie das Bild, das Sie zum Bericht hinzufügen möchten, in der Dropdownliste aus. Klicken Sie auf **Importieren** , um das Bild der Dropdownliste hinzuzufügen. Wenn Sie ein Bild im Bereich **Daten** hinzugefügt haben, können Sie dieses Bild auswählen, indem Sie auf die Option **Eingebettet** klicken und das Bild in der Dropdownliste auswählen.  
   
- Wenn Sie die Option **Extern** aktivieren, geben Sie die URL des Bilds ein. Verwenden Sie für einen Bericht in einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wird, einen vollständigen oder relativen Pfad (z. B. http://*\<Servername >*/images/image1.jpg). Verwenden Sie für einen Bericht, der auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL (z. B. http://*\<SharePointservername > /\<Site >*  /Dokumente/Images / Image1.jpg).  
+ Wenn Sie die Option **Extern** aktivieren, geben Sie die URL des Bilds ein. Verwenden Sie für einen Bericht in einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wird, einen vollständigen oder relativen Pfad (z. B. http:// *\<Servername >* /images/image1.jpg). Verwenden Sie für einen Bericht, der auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL (z. B. http:// *\<SharePointservername > /\<Site >*  /Dokumente/Images / Image1.jpg).  
   
  **Importieren**  
  Diese Option ist verfügbar, wenn Sie **Eingebettet**auswählen. Klicken Sie auf diese Schaltfläche, um der Dropdownliste **Dieses Bild verwenden** ein Bild hinzuzufügen.  

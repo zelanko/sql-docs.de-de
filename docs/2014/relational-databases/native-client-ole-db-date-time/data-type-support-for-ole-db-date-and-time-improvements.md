@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72bc879e1c04199f5e8e8cbdc1d630cf43113520
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62718107"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
@@ -31,7 +31,7 @@ ms.locfileid: "62718107"
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|Uhrzeit|DBTYPE_DBTIME2|145 (sqlncli.h)|  
+|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62718107"
 |DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu drei Sekundenbruchteilziffern für Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> Dieser Datentyp verfügt über eine Genauigkeit von einer Minute. Die zweite Komponente ist 0 (null) auf Ausgabe und wird auf Eingabe vom Server gerundet.|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
-|Uhrzeit|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
+|time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.fffffff] +/-hh:mm'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
   

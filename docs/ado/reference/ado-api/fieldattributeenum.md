@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e0f6984c464c08518c7b3143986a041b195cce69
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695071"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Gibt einen oder mehrere Attribute einer [Feld](../../../ado/reference/ado-api/field-object.md) Objekt.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Gibt an, dass der Anbieter die Feldwerte zwischenspeichert und nachfolgende Lesevorgänge aus dem Cache erfolgen.|  
 |**adFldFixed**|0x10|Gibt an, dass das Feld-Daten fester Länge enthält.|  

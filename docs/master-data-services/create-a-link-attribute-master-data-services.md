@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
-ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66354363"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Erstellen eines Linkattributs (Master Data Services)
@@ -42,7 +42,7 @@ ms.locfileid: "66354363"
 ## <a name="attribute-information"></a>Attributinformationen  
  Für jedes erstellte Attribut wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.  
   
-|Spalte|Description|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |Status|Der Attributstatus.<br /><br /> Wenn Sie auf „Speichern“ klicken, wird das Bild ![Symbol für den Aktualisierungsstatus](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Attributs Fehler auftreten, wird das Bild ![Fehlerstatussymbol](../master-data-services/media/mds-statusicon-error.png "Icon for error status") angezeigt.<br /><br /> Andernfalls ist der Status „OK“, und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") wird angezeigt.|  
 |Name|Der Attributname.|  

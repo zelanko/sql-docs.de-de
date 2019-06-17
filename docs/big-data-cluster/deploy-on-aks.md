@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 51c7dbf8e50f6c3537a2a4171720c160c444471d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797873"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für SQL Server-big Data-Cluster-Bereitstellungen
@@ -38,7 +38,7 @@ Dieser Artikel beschreibt die Schritte zum Bereitstellen von Kubernetes in AKS m
    - **SQL Server-2019-Erweiterung**
    - **Azure-Befehlszeilenschnittstelle**
 
-- 1.10 Mindestversion für Kubernetes-Server. Für AKS, müssen Sie `--kubernetes-version` Parameter, um eine andere als die standardmäßige Version anzugeben.
+- 1\.10 Mindestversion für Kubernetes-Server. Für AKS, müssen Sie `--kubernetes-version` Parameter, um eine andere als die standardmäßige Version anzugeben.
 
 - Für eine optimale Leistung bei der Überprüfung des grundlegenden Szenarien in AKS zu verwenden:
    - 8 vCPUs in allen Knoten

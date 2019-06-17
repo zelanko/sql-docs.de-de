@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997952"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -48,9 +48,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'` Ist der Name des Artikels, dessen Eigenschaft geändert werden. *Artikel* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @property = ] 'property'` Ist eine, die zu ändernden Artikeleigenschaft. *Eigenschaft* ist **nvarchar(100)**.  
+`[ @property = ] 'property'` Ist eine, die zu ändernden Artikeleigenschaft. *Eigenschaft* ist **nvarchar(100)** .  
   
-`[ @value = ] 'value'` Ist der neue Wert der Artikeleigenschaft. *Wert* ist **nvarchar(255)**.  
+`[ @value = ] 'value'` Ist der neue Wert der Artikeleigenschaft. *Wert* ist **nvarchar(255)** .  
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**delete**|Löscht die Zieltabelle.|  
 ||**truncate**|Schneidet die Zieltabelle ab.|  
 |**pub_identity_range**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
-|**schema_option**||Gibt die Bitmap der Schemagenerierungsoption für den angegebenen Artikel an. *Schema_option* ist **binary(8)**. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.|  
+|**schema_option**||Gibt die Bitmap der Schemagenerierungsoption für den angegebenen Artikel an. *Schema_option* ist **binary(8)** . Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.|  
 ||**0x00**|Beschreibt die Skripterstellung durch den Momentaufnahme-Agent.|  
 ||**0x01**|Generiert die Objekterstellung (CREATE TABLE, CREATE PROCEDURE usw.).|  
 ||**0x02**|Generiert die gespeicherten Prozeduren, die Änderungen für den Artikel weitergeben (falls definiert).|  
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Repliziert Indizes für **Xml** Spalten.|  
 ||**0x8000000**|Legt Schemas an, die auf dem Abonnent noch nicht vorhanden sind.|  
 ||**0x10000000**|Konvertiert **Xml** Spalten **Ntext** auf dem Abonnenten.|  
-||**0x20000000**|Konvertiert, die große Objekttypen Daten (**nvarchar(max)**, **varchar(max)**, und **'varbinary(max)'**), die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Datentypen, die unterstützt werden auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0x20000000**|Konvertiert, die große Objekttypen Daten (**nvarchar(max)** , **varchar(max)** , und **'varbinary(max)'** ), die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Datentypen, die unterstützt werden auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0x40000000**|Berechtigungen für die Replikation.|  
 ||**0x80000000**|Der Versuch, Abhängigkeiten für Objekte zu löschen, die nicht Teil der Veröffentlichung sind.|  
 ||**0x100000000**|Mit dieser Option können Sie das FILESTREAM-Attribut replizieren, wenn es für angegeben wird **'varbinary(max)'** Spalten. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Abonnenten wird unabhängig von der Festlegung dieser Schemaoption nicht unterstützt.<br /><br /> Siehe die verwandte Option **0 x 800000000**.|  

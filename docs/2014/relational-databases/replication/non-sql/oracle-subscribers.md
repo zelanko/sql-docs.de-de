@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022227"
 ---
 # <a name="oracle-subscribers"></a>Oracle-Abonnenten
@@ -31,7 +31,7 @@ ms.locfileid: "63022227"
   
 1.  Installieren und konfigurieren Sie die Oracle-Clientnetzwerksoftware sowie den Oracle OLE DB-Anbieter auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler, damit dieser die Verbindung mit dem Oracle-Abonnenten herstellen kann. Sie sollten dazu die aktuellste verfügbare Version der Oracle-Clientnetzwerksoftware verwenden. Oracle empfiehlt Benutzern, die aktuellste Version der Clientsoftware zu installieren. Dabei ist die Clientsoftware häufig aktueller als die Datenbanksoftware. Am einfachsten lässt sich die Software mithilfe des Oracle Universal Installer von der Oracle-Client-CD installieren. Im Oracle Universal Installer müssen Sie folgende Informationen angeben:  
   
-    |Information|Description|  
+    |Information|Beschreibung|  
     |-----------------|-----------------|  
     |Oracle-Homeverzeichnis|Der Pfad zum Installationsverzeichnis für die Oracle-Software. Übernehmen Sie die Standardeinstellung (C:\oracle\ora90 oder Ähnliches), oder geben Sie einen anderen Pfad ein. Weitere Informationen zum Oracle-Homeverzeichnis finden Sie im Abschnitt zu Überlegungen zum Oracle-Homeverzeichnis weiter unten in diesem Thema.|  
     |Oracle-Homeverzeichnisname|Alias für den Pfad zum Oracle-Homeverzeichnis.|  
@@ -85,7 +85,7 @@ ms.locfileid: "63022227"
   
     -   Stellen Sie sicher, dass keine leeren Zeichenfolgen als Spaltenwerte in die veröffentlichte Tabelle eingefügt werden.  
   
-    -   Verwenden Sie für den Verteilungs-Agent den Parameter **-SkipErrors**, wenn eine Fehlerbenachrichtigung im Verlaufsprotokoll des Verteilungs-Agents genügt und die Verarbeitung ansonsten fortgesetzt werden kann. Geben Sie den Oracle-Fehlercode 1400 (**-SkipErrors1400**) an.  
+    -   Verwenden Sie für den Verteilungs-Agent den Parameter **-SkipErrors**, wenn eine Fehlerbenachrichtigung im Verlaufsprotokoll des Verteilungs-Agents genügt und die Verarbeitung ansonsten fortgesetzt werden kann. Geben Sie den Oracle-Fehlercode 1400 ( **-SkipErrors1400**) an.  
   
     -   Entfernen Sie das NOT NULL-Attribut aus allen Zeichenspalten, denen eventuell leere Zeichenfolgen zugeordnet werden können, aus dem generierten CREATE TABLE-Skript, und geben Sie das geänderte Skript mithilfe des @creation_script -Parameters von [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)als benutzerdefiniertes Skript für den Artikel an.  
   

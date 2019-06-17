@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63276963"
 ---
 # <a name="add-objects"></a>Objekte hinzufügen
@@ -29,7 +29,7 @@ ms.locfileid: "63276963"
  **Alle Objekte des Typs**  
  Öffnet das Dialogfeld **Objekttypen auswählen** , sodass Sie angeben können, welche Objekttypen in die zugrunde liegende Liste eingeschlossen werden sollen.  
   
- **Der Server**_\<Servername >_  
+ **Der Server** _\<Servername >_  
  Fügt auf dem angegebenen Server alle entsprechenden Objekte hinzu. Wird nur angezeigt, wenn die Option über ein Dialogfeld mit Serverbereich, z. B. **Anmeldung – Neu** , geöffnet wird.  
   
  **Alle Objekte, die dem Schema angehören**  

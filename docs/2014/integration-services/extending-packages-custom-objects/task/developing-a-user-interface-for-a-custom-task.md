@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768911"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Task
@@ -45,7 +45,7 @@ ms.locfileid: "62768911"
  Ein Task und seine Benutzeroberfläche sind separate Entitäten. Sie sollten in separaten Assemblys implementiert werden, um den Aufwand bei der Lokalisierung, der Bereitstellung und den Wartungsarbeiten zu reduzieren. Mit Ausnahme der Informationen, die in den im Task codierten<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attributwerten enthalten sind, werden von der DLL keine Informationen zur Benutzeroerfläche geladen oder aufgerufen bzw. sind solche Informationen in der Regel nicht in ihr enthalten. Dies ist die einzige Möglichkeit der Zuordnung eines Task zu seiner Benutzeroberfläche.  
   
 ## <a name="the-dtstask-attribute"></a>Das DtsTask-Attribut  
- Das <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attribut ist im Code der Taskklasse enthalten, um den Task seiner Benutzeroberfläche zuzuordnen. Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer nutzt die Eigenschaften des Attributs, um zu ermitteln, wie der Task im Designer angezeigt werden soll.  Diese Eigenschaften schließen den anzuzeigenden Namen und ggf. das Symbol ein.  
+ Das <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attribut ist im Code der Taskklasse enthalten, um den Task seiner Benutzeroberfläche zuzuordnen. Der [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designer nutzt die Eigenschaften des Attributs, um zu ermitteln, wie der Task im Designer angezeigt werden soll. Diese Eigenschaften schließen den anzuzeigenden Namen und ggf. das Symbol ein.  
   
  In der folgenden Tabelle werden die Eigenschaften des <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attributs beschrieben.  
   

@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63136663"
 ---
 # <a name="using-xml-data-types"></a>Verwenden von XML-Datentypen
@@ -135,7 +135,7 @@ ms.locfileid: "63136663"
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Die COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets  
  Den COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets wurden unter anderem die folgenden Spalten hinzugefügt.  
   
-|Spaltenname|Typ|Description|  
+|Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines Schemas, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  

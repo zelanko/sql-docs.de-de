@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e6dadcc53120ce112ad3e9044e38bf14a525fded
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404082"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lektion 5-4: Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
@@ -127,7 +127,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
     Beachten Sie, dass die **Employee** - und **Date** -Cubedimensionen mit den **Sales Quotas- und Sales Quotas 1** -Measuregruppen durch reguläre Beziehungen verknüpft sind. Beachten Sie außerdem, dass die **Sales Territory** -Cubedimension mit keiner dieser Measuregruppen verknüpft ist.  
   
-4.  Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
+4.  Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
 5.  Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -141,7 +141,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
 10. Klicken Sie auf **OK**.  
   
-11. Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas 1** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
+11. Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas 1** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
 12. Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -163,7 +163,7 @@ In den Aufgaben in diesem Thema fügen Sie eine Sales Quota-Measuregruppe hinzu 
   
     Durch das Umbenennen der **Order Date** -Cubedimension in **Date** wird ihre Rolle als primäre Datendimension in diesem Cube für Benutzer leichter verständlich.  
   
-20. Klicken Sie auf die Schaltfläche zum Durchsuchen (**...** ) in der Zelle am Schnittpunkt der **Sales Quotas** Measuregruppe und der **Datum** Dimension.  
+20. Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) in der Zelle am Schnittpunkt der **Sales Quotas** Measuregruppe und der **Datum** Dimension.  
   
 21. Wählen Sie im Dialogfeld **Beziehung definieren** in der Liste **Beziehungstyp auswählen** den Eintrag **Regulär** aus.  
   

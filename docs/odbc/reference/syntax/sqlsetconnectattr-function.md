@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53ab6ddfb8253b1df877c6e20df43f8327f0f2e5
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537386"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr-Funktion
@@ -35,7 +35,7 @@ ms.locfileid: "65537386"
  **SQLSetConnectAttr** legt diese fest, die Aspekte der Verbindungen steuern.  
   
 > [!NOTE]
->  Weitere Informationen dazu, was der Treiber-Manager diese Funktion auf, wenn eine ODBC 3. zuordnet *.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, finden Sie unter [Zuordnen von Ersatzfunktionen für rückwärts Kompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Weitere Informationen dazu, was der Treiber-Manager diese Funktion auf, wenn eine ODBC 3. zuordnet *.x* Anwendung arbeitet mit einer ODBC 2. *.x* -Treiber verwenden, finden Sie unter [Zuordnen von Ersatzfunktionen für rückwärts Kompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -120,9 +120,9 @@ SQLRETURN SQLSetConnectAttr(
  Die aktuell definierten Attribute und die Version von ODBC in der sie eingeführt wurden, werden in der Tabelle weiter unten in diesem Abschnitt angezeigt. Es wird erwartet, dass weitere Attribute definiert werden, um verschiedene Datenquellen nutzen. ODBC ist eine Reihe von Attributen reserviert. Treiberentwickler müssen Werte für die eigene Verwendung treiberspezifische aus Open Group reservieren.  
   
 > [!NOTE]
->  Die Fähigkeit zum Festlegen von Anweisungsattribute auf der Verbindungsebene durch Aufrufen von **SQLSetConnectAttr** veraltet in ODBC 3.*.x*. ODBC 3.*.x* Anwendungen sollten auf der Verbindungsebene Anweisungsattribute festlegen. ODBC 3.*.x* Anweisungsattribute können nicht auf Verbindungsebene, mit Ausnahme von den SQL_ATTR_METADATA_ID und SQL_ATTR_ASYNC_ENABLE-Attributen, die sowohl-Verbindungsattributen und Anweisungsattribute und kann nicht festgelegt werden Legen Sie auf der Verbindungsebene oder Anweisungsebene.  
+>  Die Fähigkeit zum Festlegen von Anweisungsattribute auf der Verbindungsebene durch Aufrufen von **SQLSetConnectAttr** veraltet in ODBC 3. *.x*. ODBC 3. *.x* Anwendungen sollten auf der Verbindungsebene Anweisungsattribute festlegen. ODBC 3. *.x* Anweisungsattribute können nicht auf Verbindungsebene, mit Ausnahme von den SQL_ATTR_METADATA_ID und SQL_ATTR_ASYNC_ENABLE-Attributen, die sowohl-Verbindungsattributen und Anweisungsattribute und kann nicht festgelegt werden Legen Sie auf der Verbindungsebene oder Anweisungsebene.  
 > 
->  ODBC 3.*.x* Treiber müssen nur diese Funktion unterstützen, wenn sie mit ODBC 2. funktionieren sollte *.x* Anwendungen, die ODBC 2. festgelegt *.x* Anweisungsoptionen auf Verbindungsebene. Weitere Informationen finden Sie unter [SQLSetConnectOption-Zuordnung](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
+>  ODBC 3. *.x* Treiber müssen nur diese Funktion unterstützen, wenn sie mit ODBC 2. funktionieren sollte *.x* Anwendungen, die ODBC 2. festgelegt *.x* Anweisungsoptionen auf Verbindungsebene. Weitere Informationen finden Sie unter [SQLSetConnectOption-Zuordnung](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
  Kann eine Anwendung aufrufen **SQLSetConnectAttr** zu einem beliebigen Zeitpunkt zwischen dem Zeitpunkt die Verbindung zugeordnet und freigegeben wird. Alle Verbindungs- und Attribute, die von der Anwendung für die Verbindung wurde erfolgreich festgelegt bleiben, bis **SQLFreeHandle** für die Verbindung aufgerufen wird. Wenn eine Anwendung ruft z. B. **SQLSetConnectAttr** vor dem Herstellen einer Verbindung mit einer Datenquelle, die das Attribut beibehalten selbst wenn **SQLSetConnectAttr** im Treiber ein Fehler auftritt, wenn die Anwendung eine Verbindung herstellt der Datenquelle Wenn eine Anwendung eine treiberspezifische Attribut festlegt, beibehalten das Attribut, auch wenn die Anwendung eine Verbindung zu einem anderen Treiber für die Verbindung herstellt.  
   
