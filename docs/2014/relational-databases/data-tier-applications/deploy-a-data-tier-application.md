@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918187"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
@@ -89,7 +89,7 @@ ms.locfileid: "62918187"
   
  **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Seite in Zukunft nicht mehr angezeigt wird.  
   
- **Weiter >**:Geht zur Seite **DAC-Paket auswählen** über.  
+ **Weiter >** :Geht zur Seite **DAC-Paket auswählen** über.  
   
  **Abbrechen**: Beendet den Assistenten, ohne eine DAC bereitzustellen.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62918187"
   
  **\< Zurück** – Kehrt zur Seite **Einführung** über.  
   
- **Weiter >**: Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
+ **Weiter >** : Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62918187"
   
  **\< Vorherige** -zurückgibt, die in den ursprünglichen Zustand des der **Paket auswählen** Seite.  
   
- **Weiter >**: Geht zur abschließenden Version der Seite **Paket auswählen** über.  
+ **Weiter >** : Geht zur abschließenden Version der Seite **Paket auswählen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62918187"
   
  **\< Vorherige** -zurückgibt die **Paket auswählen** Seite.  
   
- **Weiter >**: Geht zur Seite **Konfiguration aktualisieren** über.  
+ **Weiter >** : Geht zur Seite **Konfiguration aktualisieren** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "62918187"
   
  **\< Vorherige** -zurückgibt die **DAC-Paket auswählen** Seite.  
   
- **Weiter >**: Geht zur Seite **Zusammenfassung** über.  
+ **Weiter >** : Geht zur Seite **Zusammenfassung** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62918187"
   
  **\< Vorherige** -wird wieder die **Updatekonfiguration** Seite, um Ihre Auswahl zu ändern.  
   
- **Weiter >**: Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC bereitstellen** an.  
+ **Weiter >** : Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC bereitstellen** an.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   

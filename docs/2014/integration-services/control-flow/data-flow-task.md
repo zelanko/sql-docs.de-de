@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832453"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
@@ -88,7 +88,7 @@ ms.locfileid: "62832453"
   
  Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : OLE DB Source Output : 1180 : Sort : 1181 : Sort Input : 76", in Spalten analysiert. Die Meldung wurde vom `OnPipelineRowsSent`-Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
-|Spalte|Description|Wert|  
+|Spalte|Beschreibung|Wert|  
 |------------|-----------------|-----------|  
 |**PathID**|Der Wert der `ID`-Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
 |**PathName**|Der Wert der `Name`-Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  

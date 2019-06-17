@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f173a21db91f5566caea01114865a228d0f34ec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62854797"
 ---
 # <a name="sysstatscolumns-transact-sql"></a>sys.stats_columns (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62854797"
 
   Enthält eine Zeile für jede Spalte, die Teil einer **sys.stats** -Statistik ist.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, von dem diese Spalte ein Bestandteil ist|  
 |**stats_id**|**int**|ID der Statistik, von der diese Spalte ein Bestandteil ist<br /><br />Wenn Statistiken einem Index entsprechen den *Stats_id* Wert ist identisch mit der *Index_id* Wert in der [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht angezeigt.|  

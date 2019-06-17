@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892658"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
@@ -46,7 +46,7 @@ ms.locfileid: "62892658"
 ##  <a name="msgError"></a> Fehlermeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit `DTS_E_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Die gespeicherte Prozedur "%1" wird am Ziel überschrieben.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|Der Datentyp "%1"in Spalte %2 wird für %3 nicht unterstützt. Diese Spalte wird in DT_NTEXT umgewandelt.|  
@@ -2304,7 +2304,7 @@ ms.locfileid: "62892658"
 ##  <a name="msgSuccess"></a> Erfolgsmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Erfolgsmeldungen beginnen mit `DTS_S_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Description|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|Der Wert ist NULL.|  
 |0x40005|262149|DTS_S_TRUNCATED|Der Zeichenfolgenwert war abgeschnitten. Der Puffer hat eine Zeichenfolge empfangen, die für die Spalte zu lang war. Die Zeichenfolge wurde deshalb vom Puffer abgeschnitten.|  

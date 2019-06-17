@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774159"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Neue Serverregistrierung und Serverregistrierung bearbeiten (Registerkarte Allgemein) (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62774159"
   
 ## <a name="options"></a>Optionen  
  **Servertyp**  
- Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, bevor Sie mit dem Registrieren eines neuen Servers beginnen, klicken Sie auf der Symbolleiste **Registrierte Server**, **Datenbank-Engine**, **Analysis-Server**, **Analysis-Server****SQL Server Compact****Registrierte Server** auf **Integration Services**.  
+ Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, bevor Sie mit dem Registrieren eines neuen Servers beginnen, klicken Sie auf der Symbolleiste **Registrierte Server**, **Datenbank-Engine**, **Analysis-Server**, **Analysis-Server** **SQL Server Compact** **Registrierte Server** auf **Integration Services**.  
   
  **Servername**  
  Wählen Sie den Server aus, mit dem eine Verbindung hergestellt werden soll. Standardmäßig wird der Server angezeigt, mit dem zuletzt eine Verbindung hergestellt wurde.  

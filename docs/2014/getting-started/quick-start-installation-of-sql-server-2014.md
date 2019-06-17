@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b06f5248152f8a11bf3e46d222df457f5442b6b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62837783"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Schnellstart-Installation von SQL Server 2014
@@ -105,7 +105,7 @@ ms.locfileid: "62837783"
 ###  <a name="BKMK_Upgrading"></a> Ein Upgrade auf [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Sie können vorhandene Instanzen von [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] auf [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] aktualisieren. Weitere Informationen finden Sie unter [aktualisieren auf SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md). Lesen Sie vor der Ausführung des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Setups zur Aktualisierung auf [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] die folgenden Themen über den Upgradevorgang:  
   
-|Description|Thema|  
+|Beschreibung|Thema|  
 |-----------------|-----------|  
 |Dokumentiert unterstützte Upgradepfade zu [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Unterstützte Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
 |Beschreibt den Upgrade Advisor, ein Tool, das Instanzen von [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] und [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] analysiert, um bekannte Probleme beim Upgrade zu identifizieren.|[Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
@@ -118,7 +118,7 @@ ms.locfileid: "62837783"
 ###  <a name="BKMK_Install"></a> Installieren von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  Informationen zu verschiedenen Installationsszenarien für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] finden Sie in den folgenden Themen.  
   
-|Description|Thema|  
+|Beschreibung|Thema|  
 |-----------------|-----------|  
 |Stellt Links zu Themen über die Installation verschiedener Komponenten von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] und zu Themen mit Anleitungen für die Installation von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] bereit.|[Installieren von SQL Server 2014](../database-engine/install-windows/install-sql-server.md)|  
 |Lesen Sie dieses Thema, wenn Sie [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] unter Windows Server Core installieren möchten.|[Installieren von SQL Server 2014 unter Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
@@ -144,7 +144,7 @@ ms.locfileid: "62837783"
 ###  <a name="BKMK_Uninstalling"></a> Deinstallieren von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  In den folgenden Themen wird beschrieben, wie Sie eine eigenständige Instanz und eine Failoverclusterinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] manuell deinstallieren:  
   
-|Description|Thema|  
+|Beschreibung|Thema|  
 |-----------------|-----------|  
 |In diesem Thema wird beschrieben, wie Sie eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]manuell deinstallieren.|[Deinstallieren von SQL Server 2014](../sql-server/install/uninstall-sql-server.md)|  
 |In diesem Thema wird beschrieben, wie Sie eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Failoverclusterinstanz deinstallieren.|[Entfernen einer SQL Server-Failoverclusterinstanz &#40;Setup&#41;](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  

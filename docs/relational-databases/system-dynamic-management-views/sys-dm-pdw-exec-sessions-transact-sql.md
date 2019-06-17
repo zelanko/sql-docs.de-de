@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 331bb44faa2938241de98a6bff08f1e660583c4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689836"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "62689836"
 
   Enthält Informationen zu allen Sitzungen auf dem Gerät zurzeit oder zuletzt geöffnet. Sie enthält eine Zeile für jede Sitzung.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|Die Id des die aktuelle Abfrage oder der letzten Abfrage ausführen (wenn die Sitzung beendet wird, und zum Zeitpunkt der Beendigung die Abfrage ausgeführt wurde). Der Schlüssel für diese Sicht.|Für alle Sitzungen im System eindeutig.|  
 |status|**nvarchar(10)**|Für die aktuellen Sitzungen identifiziert, ob die Sitzung derzeit aktiv oder im Leerlauf befindet. Für die vergangenen Sitzungen die Sitzung, die Status angezeigt werden kann geschlossen oder abgebrochen wird (wenn die Sitzung zwangsweise geschlossen wurde).|'AKTIV","GESCHLOSSEN","IM LEERLAUF', BEENDET' '|  

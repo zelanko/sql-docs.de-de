@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891170"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 4
+# <a name="step-1-copying-the-lesson-4-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 4
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 4 erstellten Pakets namens „Lesson 4.dtsx“. Alternativ können Sie dem Projekt auch das im Tutorial enthaltene, abgeschlossene Paket aus Lektion 4 hinzufügen und anschließend eine Kopie dieses Pakets erstellen. Sie werden diese neue Kopie in der gesamten Lektion 5 verwenden.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>So kopieren Sie das Paket aus Lektion 4  
@@ -38,7 +38,7 @@ ms.locfileid: "62891170"
   
 7.  Aktualisieren Sie im Fenster Eigenschaften die `Name` Eigenschaft `Lesson 5`.  
   
-8.  Klicken Sie auf das Kontrollkästchen für die **ID** -Eigenschaft, klicken Sie dann auf den Dropdownpfeil, und klicken Sie dann auf  **\<neue ID generieren >**.  
+8.  Klicken Sie auf das Kontrollkästchen für die **ID** -Eigenschaft, klicken Sie dann auf den Dropdownpfeil, und klicken Sie dann auf  **\<neue ID generieren >** .  
   
 ### <a name="to-add-the-completed-lesson-4-package"></a>So fügen Sie das abgeschlossene Paket aus Lektion 4 hinzu  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62891170"
   
 3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, navigieren Sie zu **Lesson 4.dtsx** auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , navigieren Sie zu **Lesson 4.dtsx** auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
   
      Um alle Lektionspakete für dieses Lernprogramm herunterzuladen, gehen Sie wie folgt vor.  
   

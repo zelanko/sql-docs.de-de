@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781995"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Benannte Instanz**  
   
--   *MSSQLSvc/FQDN*:[_port_**|**_instancename_], wobei:  
+-   *MSSQLSvc/FQDN*:[_port_ **|** _instancename_], wobei:  
   
     -   *MSSQLSvc* der Dienst ist, der registriert wird.  
   
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Standardinstanz**  
   
--   *MSSQLSvc/FQDN*:_port_**|**_MSSQLSvc/FQDN_, wobei:  
+-   *MSSQLSvc/FQDN*:_port_ **|** _MSSQLSvc/FQDN_, wobei:  
   
     -   *MSSQLSvc* der Dienst ist, der registriert wird.  
   
@@ -103,9 +103,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |MSSQLSvc/*fqdn:InstanceName*|Der vom Anbieter erstellte Standard-SPN für eine benannte Instanz, wenn ein anderes Protokoll als TCP verwendet wird. *InstanceName* ist der Name einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Automatische SPN-Registrierung  
- Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den SPN für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zu registrieren. Wird die Instanz beendet, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Registrierung des SPN wieder aufzuheben. Bei TCP/IP-Verbindungen wird der SPN im folgenden Format registriert: *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Sowohl benannte Instanzen als auch die Standardinstanz werden als *MSSQLSvc* registriert, wobei der *\<tcpport>*-Wert zur Unterscheidung der Instanzen dient.  
+ Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den SPN für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zu registrieren. Wird die Instanz beendet, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Registrierung des SPN wieder aufzuheben. Bei TCP/IP-Verbindungen wird der SPN im folgenden Format registriert: *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Sowohl benannte Instanzen als auch die Standardinstanz werden als *MSSQLSvc* registriert, wobei der *\<tcpport>* -Wert zur Unterscheidung der Instanzen dient.  
   
- Bei anderen Verbindungen, die Kerberos unterstützen wird der SPN im folgenden Format registriert *MSSQLSvc /\<FQDN >*:*\<Instancename >* für eine benannte Instanz. Die Standardinstanz wird im folgenden Format registriert: *MSSQLSvc/\<FQDN>*.  
+ Bei anderen Verbindungen, die Kerberos unterstützen wird der SPN im folgenden Format registriert *MSSQLSvc /\<FQDN >* : *\<Instancename >* für eine benannte Instanz. Die Standardinstanz wird im folgenden Format registriert: *MSSQLSvc/\<FQDN>* .  
   
  Die Registrierung bzw. die Aufhebung der Registrierung eines SPN muss möglicherweise manuell durchgeführt werden, wenn der Dienst nicht über die Berechtigungen für diese Aktionen verfügt.  
   

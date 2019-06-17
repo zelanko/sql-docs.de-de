@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842577"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Problembehandlung für SQL Server Managed Backup für Windows Azure
@@ -105,8 +105,8 @@ ms.locfileid: "62842577"
   
      Wenn SQL Server nicht mehr reagiert, werden Ereignisse im Adminkanal protokolliert.  Ein Beispiel für das Ereignisprotokoll:  
   
-     *SQL-Fehler (engine reagiert nicht oder get SqlException: SqlException:*   
-     *Fehlercode, Nachrichten und stapelüberwachung werden in einem Xevent, zusammen mit zusätzlichen Informationen, wie z. B. angezeigt:*   
+     *SQL-Fehler (engine reagiert nicht oder get SqlException: SqlException:*    
+     *Fehlercode, Nachrichten und stapelüberwachung werden in einem Xevent, zusammen mit zusätzlichen Informationen, wie z. B. angezeigt:*    
     *"Wahrscheinlich Verbindungsprobleme mit SQL Server. Datenbank wird in der aktuellen Iteration übersprungen"*  
   
 -   **SQL-Agent reagiert nicht mehr oder funktioniert nicht bei [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ausgeführt wird:**  

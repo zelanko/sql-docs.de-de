@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875713"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion
@@ -61,11 +61,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Transact-SQL-Syntax für das Wiederherstellen bis zu einer Markierung  
  Wenn Sie das Ziel einer markierten Transaktion mithilfe einer[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)-Anweisung festlegen, können Sie eine der folgenden Klauseln verwenden, um ein Anhalten bei oder unmittelbar vor der Markierung zu bewirken:  
   
--   Verwenden Sie die WITH STOPATMARK = **"*`<mark_name>`*"** Klausel, um anzugeben, dass die markierte Transaktion den Wiederherstellungspunkt darstellt.  
+-   Verwenden Sie die WITH STOPATMARK = **" *`<mark_name>`* "** Klausel, um anzugeben, dass die markierte Transaktion den Wiederherstellungspunkt darstellt.  
   
      STOPATMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion in das Rollforward ein.  
   
--   Verwenden Sie die WITH STOPBEFOREMARK = **"*`<mark_name>`*"** Klausel, um anzugeben, dass der Protokolldatensatz wird unmittelbar vor die Markierung den Wiederherstellungspunkt darstellt.  
+-   Verwenden Sie die WITH STOPBEFOREMARK = **" *`<mark_name>`* "** Klausel, um anzugeben, dass der Protokolldatensatz wird unmittelbar vor die Markierung den Wiederherstellungspunkt darstellt.  
   
      STOPBEFOREMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion aus dem Rollforward aus.  
   

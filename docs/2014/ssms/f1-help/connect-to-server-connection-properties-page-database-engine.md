@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245495"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung)
@@ -24,7 +24,7 @@ ms.locfileid: "63245495"
   
 ## <a name="options"></a>Optionen  
  **Verbindung mit Datenbank herstellen**  
- Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Bei Auswahl von  **\<standardmäßig >**, Sie werden auf die Standarddatenbank für den Server verbunden. Bei Auswahl von  **\<Suchserver >**, können Sie den Server für die Datenbank für die Verbindung durchsuchen.  
+ Wählen Sie eine Datenbank aus der Liste aus, zu der eine Verbindung hergestellt werden soll. Bei Auswahl von  **\<standardmäßig >** , Sie werden auf die Standarddatenbank für den Server verbunden. Bei Auswahl von  **\<Suchserver >** , können Sie den Server für die Datenbank für die Verbindung durchsuchen.  
   
  Wenn Sie über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung mit einer Instanz der [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Datenbank-Engine herstellen, müssen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden und im Dialogfeld **Verbindung mit Server herstellen** auf der Registerkarte **Verbindungseigenschaften** eine Datenbank angeben. Das Kontrollkästchen **Verbindung verschlüsseln** muss aktiviert sein.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63245495"
  **Verbinden**  
  Versucht, mithilfe der aufgelisteten Werte eine Verbindung herzustellen.  
   
- **Optionen**  
+ **Options**  
  Klicken Sie hier, um die Anzeige des Dialogfelds zu ändern und die zusätzlichen Serververbindungsoptionen, z. B. Speichern des Kennworts, auszublenden.  
   
  **Testen**  

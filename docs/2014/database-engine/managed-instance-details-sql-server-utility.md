@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774342"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
@@ -34,7 +34,7 @@ ms.locfileid: "62774342"
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
- Um auf Filteroptionen für die Listenansicht des Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste im Navigationsbereich des Hilfsprogramm-Explorers auf den Knoten **Verwaltete Instanzen** und wählen **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Verwaltete Instanzen** im Hilfsprogramm-Explorer die Beschriftung **Verwaltete Instanzen (gefiltert)**. Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Um auf Filteroptionen für die Listenansicht des Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste im Navigationsbereich des Hilfsprogramm-Explorers auf den Knoten **Verwaltete Instanzen** und wählen **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Verwaltete Instanzen** im Hilfsprogramm-Explorer die Beschriftung **Verwaltete Instanzen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Die folgenden Spalten enthalten standardmäßig Zustandsinformationen zu den einzelnen verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

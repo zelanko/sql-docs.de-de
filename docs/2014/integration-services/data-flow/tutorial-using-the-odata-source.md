@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770216"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Tutorial: Verwenden der OData-Quelle [SSIS]
@@ -42,7 +42,7 @@ ms.locfileid: "62770216"
   
 4.  Doppelklicken Sie auf die Komponente **OData-Quelle** , um das Dialogfeld **Quellen-Editor für OData** zu öffnen.  
   
-5.  Klicken Sie auf **Neu…**, um einen neuen OData-Verbindungs-Manager hinzuzufügen.  
+5.  Klicken Sie auf **Neu…** , um einen neuen OData-Verbindungs-Manager hinzuzufügen.  
   
 6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Hierbei kann es sich um die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität handeln. Geben Sie für die Zwecke dieses Lernprogramms [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   

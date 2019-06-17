@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781400"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Öffnen des ODBC-Datenquellen-Administrators
@@ -27,7 +27,7 @@ ms.locfileid: "62781400"
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>So öffnen Sie den ODBC-Datenquellen-Administrator in Windows Server 2008  
   
-1.  Zeigen Sie im Menü **Start** auf **Verwaltung**, und klicken Sie dann auf **Datenquellen (ODBC)**.  
+1.  Zeigen Sie im Menü **Start** auf **Verwaltung**, und klicken Sie dann auf **Datenquellen (ODBC)** .  
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>So öffnen Sie den ODBC-Datenquellen-Administrator in Windows 7  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62781400"
   
 2.  Klicken Sie in der **Systemsteuerung**auf **Verwaltung**.  
   
-3.  Klicken Sie unter **Verwaltung**auf **Datenquellen (ODBC)**.  
+3.  Klicken Sie unter **Verwaltung**auf **Datenquellen (ODBC)** .  
   
 ## <a name="see-also"></a>Siehe auch  
  [Überprüfen der Version des ODBC SQL Server-Treibers &#40;Windows&#41;](check-the-odbc-sql-server-driver-version-windows.md)  

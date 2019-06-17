@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144616"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
@@ -76,7 +76,7 @@ ms.locfileid: "63144616"
   
  Die Protokollkürzung kann durch verschiedene Faktoren verzögert werden. Sie können ermitteln, wodurch die Protokollkürzung verhindert wird, indem Sie die Spalten **log_reuse_wait** und **log_reuse_wait_desc** der Katalogsicht [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) abfragen. In der folgenden Tabelle werden die Werte dieser Spalten beschrieben.  
   
-|log_reuse_wait value|log_reuse_wait_desc value|Description|  
+|log_reuse_wait value|log_reuse_wait_desc value|Beschreibung|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Derzeit ist mindestens eine wiederverwendbare virtuelle Protokolldatei vorhanden.|  
 |1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine virtuelle Protokolldatei hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789819"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
@@ -169,7 +169,7 @@ ms.locfileid: "62789819"
 >  Der primäre Replikatspeicherort ist die autoritative Quelle für eine Verfügbarkeitsgruppe.  
   
 > [!NOTE]  
->  Informationen zu den [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Leistungsindikatoren für Verfügbarkeitsdatenbanken (das **SQLServer:Datenbankreplikat** -Leistungsobjekt) finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Verwenden Sie zum Überwachen der Transaktionsprotokollaktivität in Verfügbarkeitsdatenbanken die folgenden Indikatoren des **SQLServer:Datenbanken**-Leistungsobjekts: **Schreibzeit für Protokollleerungen (ms)**, **Protokollleerungen/Sekunde**, **Protokollpool-Cachefehler/Sekunde**, **Protokollpool-Datenträgerlesevorgänge/Sekunde** und **Protokollpoolanforderungen/Sekunde**. Weitere Informationen finden Sie unter [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Informationen zu den [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Leistungsindikatoren für Verfügbarkeitsdatenbanken (das **SQLServer:Datenbankreplikat** -Leistungsobjekt) finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Verwenden Sie zum Überwachen der Transaktionsprotokollaktivität in Verfügbarkeitsdatenbanken die folgenden Indikatoren des **SQLServer:Datenbanken**-Leistungsobjekts: **Schreibzeit für Protokollleerungen (ms)** , **Protokollleerungen/Sekunde**, **Protokollpool-Cachefehler/Sekunde**, **Protokollpool-Datenträgerlesevorgänge/Sekunde** und **Protokollpoolanforderungen/Sekunde**. Weitere Informationen finden Sie unter [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Überwachen von Verfügbarkeitsgruppenlistenern  
  Zum Überwachen der Verfügbarkeitsgruppenlistener auf Subnetzen des WSFC-Clusters verwenden Sie die folgenden Sichten:  

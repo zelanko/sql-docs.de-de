@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900292"
 ---
 # <a name="integration-services-transformations"></a>SQL Server Integration Services-Transformationen
@@ -73,7 +73,7 @@ ms.locfileid: "62900292"
 ## <a name="split-and-join-transformations"></a>Transformationen für Teilen und Verknüpfen  
  Mit den folgenden Transformationen werden Zeilen an verschiedene Ausgaben verteilt, Kopien der Transformationseingaben erstellt, mehrere Eingaben zu einer einzigen Ausgabe verknüpft sowie Suchvorgänge ausgeführt.  
   
-|Transformation|Description|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für bedingtes Teilen](conditional-split-transformation.md)|Diese Transformation routet Datenzeilen an andere Ausgaben.|  
 |[Transformation für Multicast](multicast-transformation.md)|Diese Transformation verteilt Datasets an mehrere Ausgaben.|  
@@ -87,7 +87,7 @@ ms.locfileid: "62900292"
 ## <a name="auditing-transformations"></a>Überwachen von Transformationen  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält die folgenden Transformationen, um Überwachungsinformationen hinzuzufügen und Zeilen zu zählen.  
   
-|Transformation|Description|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Überwachungstransformation](audit-transformation.md)|Diese Transformation stellt dem Datenfluss in einem Paket Informationen zur Umgebung zur Verfügung.|  
 |[Transformation für Zeilenanzahl](row-count-transformation.md)|Diese Transformation zählt die Zeilen in einem Datenfluss und speichert die endgültige Anzahl in einer Variablen.|  

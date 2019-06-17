@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960084"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
@@ -54,7 +54,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ## <a name="result-sets"></a>Resultsets  
  Die **Sp_lock** Resultset enthält eine Zeile für jede Sperre frei, die Sitzungen, die im angegebenen die **@spid1** und **@spid2** Parameter. Wenn weder **@spid1** noch **@spid2** angegeben ist, meldet das Resultset der Sperren für alle Sitzungen, die derzeit aktiven in der Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**spid**|**smallint**|Die Sitzungs-ID von [!INCLUDE[ssDE](../../includes/ssde-md.md)] für den Prozess, der die Sperre anfordert.|  
 |**dbid**|**smallint**|Die ID der Datenbank, in der die Sperre aufrechterhalten wird. Sie können die DB_NAME()-Funktion zum Identifizieren der Datenbank verwenden.|  

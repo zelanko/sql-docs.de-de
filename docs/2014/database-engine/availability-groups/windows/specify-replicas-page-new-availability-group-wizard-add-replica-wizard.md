@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788353"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
@@ -146,7 +146,7 @@ ms.locfileid: "62788353"
  Geben Sie folgendermaßen die Listenereinstellungen für diese Verfügbarkeitsgruppe an:  
   
  **DNS-Name des Listeners**  
- Geben Sie den Netzwerknamen des Listeners an. Dieser Name muss in der Domäne eindeutig sein und kann nur alphanumerische Zeichen, Bindestriche (**-**) und Unterstriche (**_**) in beliebiger Reihenfolge enthalten. Wird der DNS-Name mit der Registerkarte **Listener** angegeben, kann er bis zu 15 Zeichen lang sein.  
+ Geben Sie den Netzwerknamen des Listeners an. Dieser Name muss in der Domäne eindeutig sein und kann nur alphanumerische Zeichen, Bindestriche ( **-** ) und Unterstriche ( **_** ) in beliebiger Reihenfolge enthalten. Wird der DNS-Name mit der Registerkarte **Listener** angegeben, kann er bis zu 15 Zeichen lang sein.  
   
 > [!IMPORTANT]  
 >  Wenn Sie einen ungültigen DNS-Listenernamen (oder eine ungültige Portnummer) auf der Registerkarte **Listener** eingeben, wird die Schaltfläche **Weiter** auf der Seite **Replikate angeben** deaktiviert.  
@@ -165,10 +165,10 @@ ms.locfileid: "62788353"
   
  Wenn **Statische IP** als Netzwerkmodus ausgewählt wird (Standardauswahl), werden in einem Raster die Spalten **Subnetz** und **IP-Adresse** sowie die zugehörigen Schaltflächen **Hinzufügen** und **Entfernen** angezeigt. Beachten Sie, dass das Raster leer ist, bis Sie das erste Subnetz hinzufügen.  
   
- Spalte**Subnetz**   
+ Spalte**Subnetz**  
  Zeigt die Subnetzadresse an, die Sie für alle Subnetze ausgewählt haben, die Sie für den Listener hinzugefügt haben.  
   
- Spalte**IP-Adresse**   
+ Spalte**IP-Adresse**  
  Zeigt die IPv4- oder IPv6-Adresse an, die Sie für ein bestimmtes Subnetz angegeben haben.  
   
  **Hinzufügen**  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808729"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Verbinden mit SQL Server Integration Services (Seite Anmeldung)
@@ -31,7 +31,7 @@ ms.locfileid: "62808729"
  Wählen Sie den Server für die Verbindungsherstellung aus. Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
 > [!NOTE]  
->  Verwenden Sie keine  *\<Servername >*\\*\<Instancename >*, da [!INCLUDE[ssIS](../includes/ssis-md.md)] unterstützt nicht mehrere Instanzen auf einem Computer.  
+>  Verwenden Sie keine  *\<Servername >* \\ *\<Instancename >* , da [!INCLUDE[ssIS](../includes/ssis-md.md)] unterstützt nicht mehrere Instanzen auf einem Computer.  
   
  **Authentifizierung**  
  Für [!INCLUDE[msCoName](../includes/msconame-md.md)] steht nur die [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows-Authentifizierung zur Verfügung. Der Windows Authentifizierungsmodus ermöglicht Benutzern die Verbindung über ein Windows-Benutzerkonto.  
@@ -48,7 +48,7 @@ ms.locfileid: "62808729"
  **Verbinden**  
  Stellt eine Verbindung zu dem oben ausgewählten Server her.  
   
- **Optionen**  
+ **Options**  
  Klicken Sie hier, um die Anzeige des Dialogfelds zu ändern und die zusätzlichen Serververbindungsoptionen, z. B. Speichern des Kennworts, auszublenden.  
   
   

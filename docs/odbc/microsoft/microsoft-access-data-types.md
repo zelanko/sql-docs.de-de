@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026885"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access-Datentypen
@@ -61,7 +61,7 @@ Die folgende Tabelle zeigt die Microsoft Access-Datentypen, Datentypen, die zum 
   
  Die folgende Tabelle zeigt die Einschränkungen für Microsoft Access-Datentypen.  
   
-|Datentyp|Description|  
+|Datentyp|Beschreibung|  
 |---------------|-----------------|  
 |BINARY, VARBINARY und VARCHAR|Erstellen einer BINARY, VARBINARY und VARCHAR-Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 510-Byte-Spalte zurück.|  
 |BYTE|Auch, wenn ein Feld für die Microsoft Access Zahl mit einem BYTE gleich Feldgröße nicht signiert ist, kann eine negative Zahl in das Feld eingefügt werden, wenn der Microsoft Access-Treiber verwendet.|  

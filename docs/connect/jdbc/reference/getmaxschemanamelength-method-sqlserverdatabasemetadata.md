@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fece19e9-3bf8-4299-9188-ac3df5ce9c19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05e2f3dfe637c2e8be89778c1d415c105499b0fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd1ba9d798f7d65a72097ce3f60a6df629d08b02
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805418"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792473"
 ---
 # <a name="getmaxschemanamelength-method-sqlserverdatabasemetadata"></a>getMaxSchemaNameLength-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public int getMaxSchemaNameLength()
 ## <a name="remarks"></a>Remarks  
  Diese GetMaxSchemaNameLength-Methode wird von der GetMaxSchemaNameLength-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

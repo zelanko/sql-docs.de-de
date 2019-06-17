@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791879"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
@@ -28,7 +28,7 @@ ms.locfileid: "62791879"
   
  Verwenden Sie einen Datenanbieter, der das TDS (Tabular Data Stream)-Protokoll, Version 7.4 oder höher, unterstützt, z. B. SQL Server Native Client 11.0 oder den Datenanbieter für SQL Server in .NET Framework 4.02.  
   
- **(Für schreibgeschützte Arbeitsauslastungen)**. Die sekundäre Replikatrolle muss für schreibgeschützte Verbindungen konfiguriert sein, die Verfügbarkeitsgruppe muss über eine Routingliste verfügen, und die Verbindung in der Analysis Services-Datenquelle muss den Verfügbarkeitsgruppenlistener angeben. In diesem Thema finden Sie Anweisungen.  
+ **(Für schreibgeschützte Arbeitsauslastungen)** . Die sekundäre Replikatrolle muss für schreibgeschützte Verbindungen konfiguriert sein, die Verfügbarkeitsgruppe muss über eine Routingliste verfügen, und die Verbindung in der Analysis Services-Datenquelle muss den Verfügbarkeitsgruppenlistener angeben. In diesem Thema finden Sie Anweisungen.  
   
 ##  <a name="bkmk_UseSecondary"></a> Prüfliste: Verwenden eines sekundären Replikats für schreibgeschützte Vorgänge  
  Wenn die Analysis Services-Lösung kein Rückschreiben umfasst, können Sie eine Datenquellenverbindung zum Verwenden eines lesbaren sekundären Replikats konfigurieren. Wenn Sie über eine schnelle Netzwerkverbindung verfügen, weist das sekundäre Replikat eine sehr geringe Datenlatenz auf und stellt nahezu die gleichen Daten wie das primäre Replikat bereit. Mit dem sekundären Replikat für Analysis Services-Vorgänge können Sie Lese-/Schreibkonflikte auf dem primären Replikat reduzieren und eine bessere Auslastung sekundärer Replikate in der Verfügbarkeitsgruppe erzielen.  

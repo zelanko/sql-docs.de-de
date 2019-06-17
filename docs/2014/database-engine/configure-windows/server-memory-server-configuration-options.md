@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810062"
 ---
 # <a name="server-memory-server-configuration-options"></a>Serverkonfigurationsoptionen für den Serverarbeitsspeicher
@@ -134,7 +134,7 @@ ms.locfileid: "62810062"
 |-|-------------|-------------|  
 |Konventioneller Arbeitsspeicher|Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 GB<br /><br /> 3 GB mit **/3 gb** starten Parameter *<br /><br /> 4 GB unter WOW64\*\*|Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 TB in einer x64-Architektur|  
   
- ***/3gb** ist ein Startparameter des Betriebssystems. Weitere Informationen finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * **/3gb** ist ein Startparameter des Betriebssystems. Weitere Informationen finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
  ** WOW64 (Windows on Windows 64) ist ein Modus, in der 32-Bit- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem 64-Bit-Betriebssystem ausgeführt wird. Weitere Informationen finden Sie in der [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   

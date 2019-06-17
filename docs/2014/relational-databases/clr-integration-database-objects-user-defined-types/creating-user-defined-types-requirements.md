@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62919661"
 ---
 # <a name="user-defined-type-requirements"></a>Anforderungen für den benutzerdefinierten Typ
@@ -69,7 +69,7 @@ ms.locfileid: "62919661"
 ## <a name="native-serialization"></a>Systemeigene Serialisierung  
  Die Auswahl der richtigen Serialisierungsattribute für den UDT hängt vom Typ des UDTs ab, den Sie erstellen möchten. Für das `Native`-Serialisierungsformat wird eine sehr einfache Struktur verwendet, die es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, eine effiziente systemeigene Darstellung des UDTs auf dem Datenträger zu speichern. Das `Native`-Format wird empfohlen, wenn der UDT einfach ist und nur Felder der folgenden Typen enthält:  
   
- **"bool"**, **Byte**, **Sbyte**, **kurze**, **Ushort**, **Int**,  **Uint**, **lange**, **Ulong**, **"float"**, **doppelte**, **Value**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **"bool"** , **Byte**, **Sbyte**, **kurze**, **Ushort**, **Int**,  **Uint**, **lange**, **Ulong**, **"float"** , **doppelte**, **Value**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Werttypen, die zusammengesetzt sind Felder, die oben genannten Typen eignen sich gut für `Native` format, z. B. `structs` in Visual c# (oder `Structures` , wie sie in Visual Basic genannt werden). Ein UDT, der mit dem `Native`-Serialisierungsformat angegeben wurde, kann z. B. ein Feld eines anderen UDTs enthalten, das auch mit dem `Native`-Format angegeben wurde. Wenn die UDT-Definition komplexer ist und Datentypen enthält, die nicht aus der Liste oben stammen, müssen Sie stattdessen das `UserDefined`-Serialisierungsformat angeben.  
   

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994249"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
@@ -53,9 +53,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>Argumente  
 `[ @database = ] 'database'` Ist der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @backup_directory = ] 'backup_directory'` Ist der Pfad zum Sicherungsordner auf dem primären Server. *Backup_directory* ist **nvarchar(500)**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_directory = ] 'backup_directory'` Ist der Pfad zum Sicherungsordner auf dem primären Server. *Backup_directory* ist **nvarchar(500)** , hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @backup_share = ] 'backup_share'` Ist Sie der Netzwerkpfad zum Sicherungsverzeichnis auf dem primären Server. *Backup_share* ist **nvarchar(500)**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_share = ] 'backup_share'` Ist Sie der Netzwerkpfad zum Sicherungsverzeichnis auf dem primären Server. *Backup_share* ist **nvarchar(500)** , hat keinen Standardwert und darf nicht NULL sein.  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` Ist die Zeitdauer in Minuten, die Protokollsicherungsdatei im Sicherungsverzeichnis auf dem primären Server beibehalten werden sollen. *Backup_retention_period* ist **Int**, hat keinen Standardwert und darf nicht NULL sein.  
   

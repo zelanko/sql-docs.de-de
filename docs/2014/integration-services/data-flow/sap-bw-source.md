@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901068"
 ---
 # <a name="sap-bw-source"></a>SAP BW-Quelle
@@ -48,7 +48,7 @@ ms.locfileid: "62901068"
   
     2.  Wählen Sie für **Activation Type**(Aktivierungstyp) die Option **Registered Server Program**(Registriertes Serverprogramm) aus.  
   
-    3.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)**(Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
+    3.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)** (Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
   
     4.  Weisen Sie eine entsprechende Programm-ID zu.  
   

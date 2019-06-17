@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871137"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
@@ -59,7 +59,7 @@ ms.locfileid: "62871137"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Verwenden des Assistenten zum Kopieren einer Datenbank an:**  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62871137"
 2.  Geben Sie auf der Seite **Quellserver auswählen** den Server an, auf dem sich die zu verschiebende oder zu kopierende Datenbank befindet, und geben Sie die Anmeldeinformationen ein. Nach der Auswahl der Authentifizierungsmethode und der Eingabe der Anmeldeinformationen, klicken Sie auf **Weiter** , um die Verbindung zum Quellserver herzustellen. Diese Verbindung bleibt während der ganzen Sitzung bestehen.  
   
      **Quellserver**  
-     Wählen Sie den Namen des Servers bzw. der Serverinstanz aus, auf dem bzw. der sich die zu verschiebenden oder zu kopierenden Datenbanken befinden. Sie können auch auf die Schaltfläche zum Durchsuchen klicken (**...**), um nach dem gewünschten Server zu suchen. Der Server muss mindestens [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sein.  
+     Wählen Sie den Namen des Servers bzw. der Serverinstanz aus, auf dem bzw. der sich die zu verschiebenden oder zu kopierenden Datenbanken befinden. Sie können auch auf die Schaltfläche zum Durchsuchen klicken ( **...** ), um nach dem gewünschten Server zu suchen. Der Server muss mindestens [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sein.  
   
      **Windows-Authentifizierung verwenden**  
      Ermöglicht den Benutzern eine Verbindung über ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto.  
@@ -132,7 +132,7 @@ ms.locfileid: "62871137"
 3.  Geben Sie auf der Seite **Zielserver auswählen** den Server an, auf den die Datenbank verschoben oder kopiert werden soll. Wenn Quell- und Zielserver auf derselben Serverinstanz eingerichtet sind, wird eine Kopie der Datenbank erstellt. In diesem Fall müssen Sie die Datenbank zu einem späteren Zeitpunkt im Assistenten umbenennen. Der Name der Quelldatenbank kann nur für die kopierte oder verschobene Datenbank verwendet werden, wenn keine Namenskonflikte auf dem Zielserver bestehen. Wenn Namenskonflikte bestehen, müssen Sie diese manuell auf dem Zielserver lösen, bevor Sie den Namen der Quelldatenbank verwenden können.  
   
      **Zielserver**  
-     Wählen Sie den Namen des Servers aus, auf den die Datenbank(en) kopiert oder verschoben wird/werden. Sie können auch auf die Schaltfläche zum Durchsuchen (**...**) klicken, um einen Zielserver zu suchen.  
+     Wählen Sie den Namen des Servers aus, auf den die Datenbank(en) kopiert oder verschoben wird/werden. Sie können auch auf die Schaltfläche zum Durchsuchen ( **...** ) klicken, um einen Zielserver zu suchen.  
   
     > [!NOTE]  
     >  Sie können einen gruppierten Server als Ziel verwenden. Mit dem Assistenten zum Kopieren von Datenbanken wird sichergestellt, dass Sie nur freigegebene Laufwerke auf einem gruppierten Zielserver auswählen.  

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774654"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
@@ -127,7 +127,7 @@ ms.locfileid: "62774654"
   
     4.  Auf der **Installationstyp** wählen Sie im Assistenten auf der Seite die **Hinzufügen von Funktionen zu einer vorhandenen Instanz** aus, und wählen Sie die Instanz, auf dem MDS-Datenbank installiert ist.  
   
-    5.  Auf der **Funktionsauswahl** Seite **gemeinsam genutzte Funktionen**Option **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
+    5.  Auf der **Funktionsauswahl** Seite **gemeinsam genutzte Funktionen**Option **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
   
     6.  Schließen Sie den Assistenten ab.  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63075253"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
@@ -52,7 +52,7 @@ ms.locfileid: "63075253"
 ####  <a name="Permissions"></a> Berechtigungen  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProc2"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProc2"></a> Verwendung von SQL Server Management Studio  
  **So ändern Sie den Besitz eines Auftrags**  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  

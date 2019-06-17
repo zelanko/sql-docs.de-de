@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780723"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Verwendungsszenarien und Beispiele für Common Language Runtime (CLR)-Integration
@@ -29,7 +29,7 @@ ms.locfileid: "62780723"
   
  Vollständige Visual Studio-Projekten implementieren diese Beispiele und weitere Materialien finden Sie unter [Microsoft SQL Server Community Projects & Beispiele auf CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[Zugreifen auf nativen Code von einer CLR-UDF](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Zeigt, wie eine Funktion in systemeigenem (nicht verwaltetem) C++-Code in der Datenbank von einer benutzerdefinierten Funktion in einer Assembly aufgerufen wird.|  
 |[Beispiel für einen Arrayparameter](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Zeigt, wie Sie eine Gruppe von Zeilen in einer Datenbank durch Übergeben eines Arrays mit Informationen von einem Client an eine CLR-gespeicherte Prozedur auf dem Server erstellen, aktualisieren oder löschen können. Zu diesem Zweck wird ein UDT verwendet.|  

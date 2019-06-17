@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62902440"
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
@@ -32,7 +32,7 @@ ms.locfileid: "62902440"
   
  In der folgenden Tabelle sind die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen aufgeführt. Bei einigen der Datentypen in der Tabelle werden auch die für sie geltende Genauigkeit und die Anzahl der Dezimalstellen genannt. Weitere Informationen zu Genauigkeit und Dezimalstellen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql).  
   
-|Datentyp|Description|  
+|Datentyp|Beschreibung|  
 |---------------|-----------------|  
 |DT_BOOL|Ein boolescher Wert.|  
 |DT_BYTES|Ein binärer Datenwert. Die Länge ist variabel, und die maximale Länge beträgt 8000 Bytes.|  
@@ -225,7 +225,7 @@ ms.locfileid: "62902440"
 |DT_CY|smallmoney, money|smallmoney, money|Währung||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
-|DT_DBTIME||||timestamp|Uhrzeit|Uhrzeit|  
+|DT_DBTIME||||timestamp|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  

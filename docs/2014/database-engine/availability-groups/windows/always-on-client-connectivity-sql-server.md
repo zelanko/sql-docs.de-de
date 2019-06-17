@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790659"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On-Clientkonnektivität (SQL Server)
@@ -37,13 +37,13 @@ ms.locfileid: "62790659"
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Ja|Ja|Ja|Ja|Ja|  
 |SQL Native Client 11.0 OLEDB|Nein|Ja|Ja|Nein|Nein|  
-|ADO.NET mit .NET Framework 4.0 mit konnektivitätspatch**<sup>*</sup>**|Ja|Ja|Ja|Ja|Ja|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit konnektivitätspatch **<sup>**</sup>**|Ja|Ja|Ja|Ja|Ja|  
+|ADO.NET mit .NET Framework 4.0 mit konnektivitätspatch **<sup>*</sup>**|Ja|Ja|Ja|Ja|Ja|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit konnektivitätspatch **<sup>** </sup>**|Ja|Ja|Ja|Ja|Ja|  
 |Microsoft JDBC-Treiber 4.0 für SQL Server|Ja|Ja|Ja|Ja|Ja|  
   
  **<sup>*</sup>**  Download des konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  
   
- **<sup>**</sup>**  Laden Sie das konnektivitätspatch für ADO.NET mit .NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
+ **<sup>** </sup>**  Laden Sie das konnektivitätspatch für ADO.NET mit .NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
   
 > [!IMPORTANT]  
 >  Ein Client muss eine TCP-Verbindungszeichenfolge verwenden, um eine Verbindung mit einem Verfügbarkeitsgruppenlistener herzustellen.  

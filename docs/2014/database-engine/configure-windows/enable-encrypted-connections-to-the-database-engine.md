@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782314"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine (SQL Server-Konfigurations-Manager)
@@ -37,7 +37,7 @@ ms.locfileid: "62782314"
  Der Client muss in der Lage sein, den Besitzer des vom Server verwendeten Zertifikats zu überprüfen. Wenn der Client über das Zertifikat für öffentliche Schlüssel der Zertifizierungsstelle verfügt, die das Serverzertifikat signiert hat, sind keine weiteren Konfigurationsschritte erforderlich. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows enthält die Zertifikate für öffentliche Schlüssel von vielen Zertifizierungsstellen. Wenn das Serverzertifikat von einer öffentlichen oder privaten Zertifizierungsstelle signiert wurde, für die der Client kein öffentliches Schlüsselzertifikat besitzt, müssen Sie das Zertifikat für öffentliche Schlüssel der Zertifizierungsstelle installieren, die das Serverzertifikat signiert hat.  
   
 > [!NOTE]  
->  Wenn Sie die Verschlüsselung bei einem Failovercluster verwenden möchten, müssen Sie das Serverzertifikat mit dem vollqualifizierten DNS-Namen des virtuellen Servers auf allen Knoten im Failovercluster installieren. Wenn Sie z.B. über einen Cluster mit zwei Knoten verfügen, wobei die Knotennamen test1.*\<Ihr_Unternehmen>*.com und test2.*\<Ihr_Unternehmen>*.com lauten, und ein virtueller Server den Namen „virtsql“ trägt, müssen Sie ein Zertifikat für virtsql.*\<Ihr_Unternehmen>*.com auf beiden Knoten installieren. Sie können den Wert der Option **ForceEncryption**auf **Yes**.  
+>  Wenn Sie die Verschlüsselung bei einem Failovercluster verwenden möchten, müssen Sie das Serverzertifikat mit dem vollqualifizierten DNS-Namen des virtuellen Servers auf allen Knoten im Failovercluster installieren. Wenn Sie z.B. über einen Cluster mit zwei Knoten verfügen, wobei die Knotennamen test1. *\<Ihr_Unternehmen>* .com und test2. *\<Ihr_Unternehmen>* .com lauten, und ein virtueller Server den Namen „virtsql“ trägt, müssen Sie ein Zertifikat für virtsql. *\<Ihr_Unternehmen>* .com auf beiden Knoten installieren. Sie können den Wert der Option **ForceEncryption**auf **Yes**.  
   
  **In diesem Thema**  
   
@@ -83,9 +83,9 @@ ms.locfileid: "62782314"
   
 ###  <a name="ConfigureServerConnections"></a> So konfigurieren Sie den Server zum Annehmen verschlüsselter Verbindungen  
   
-1.  Erweitern Sie im **SQL Server Configuration Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_, und wählen Sie dann **Eigenschaften**.  
+1.  Erweitern Sie im **SQL Server Configuration Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_ , und wählen Sie dann **Eigenschaften**.  
   
-2.  In der **Protokolle für**_\<Instanzname >_ **Eigenschaften** Dialogfeld auf die **Zertifikat** Registerkarte die gewünschte Zertifikat aus der Dropdownliste unten für die **Zertifikat** ein, und klicken Sie dann auf **OK**.  
+2.  In der **Protokolle für** _\<Instanzname >_ **Eigenschaften** Dialogfeld auf die **Zertifikat** Registerkarte die gewünschte Zertifikat aus der Dropdownliste unten für die **Zertifikat** ein, und klicken Sie dann auf **OK**.  
   
 3.  Aktivieren Sie auf der Registerkarte **Flags** im Feld **ForceEncryption** die Option **Ja**, und klicken Sie dann auf **OK** , um das Dialogfeld zu schließen.  
   

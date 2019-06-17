@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014612"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -42,7 +42,7 @@ ms.locfileid: "63014612"
 |Spaltenname|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Gibt SQL_VARCHAR, SQL_VARBINARY oder SQL_WVARCHAR für den **varchar(max)** -Datentypen.|  
-|TYPE_NAME|Gibt "Varchar", "Varbinary" oder "Nvarchar" für die **varchar(max)**, **'varbinary(max)'**, und **nvarchar(max)** -Datentypen.|  
+|TYPE_NAME|Gibt "Varchar", "Varbinary" oder "Nvarchar" für die **varchar(max)** , **'varbinary(max)'** , und **nvarchar(max)** -Datentypen.|  
 |COLUMN_SIZE|Gibt SQL_SS_LENGTH_UNLIMITED für **varchar(max)** -Datentyp zurück, die Größe der Spalte unbegrenzt ist.|  
 |BUFFER_LENGTH|Gibt SQL_SS_LENGTH_UNLIMITED für **varchar(max)** -Datentyp zurück, die Größe des Puffers unbegrenzt ist.|  
 |SQL_DATA_TYPE|Gibt SQL_VARCHAR, SQL_VARBINARY oder SQL_WVARCHAR für den **varchar(max)** -Datentypen.|  
@@ -81,7 +81,7 @@ ms.locfileid: "63014612"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns-Unterstützung für Spalten mit geringer Dichte  
  Zwei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmte Spalten das Resultset für SQLColumns hinzugefügt wurden:  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Wenn die Spalte ist der **Column_set** Spalte, ist dies SQL_TRUE, andernfalls SQL_FALSE.|  

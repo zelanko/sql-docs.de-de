@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019295"
 ---
 # <a name="define-partitions-in-directquery-models"></a>Definieren von Partitionen im DirectQuery-Modellen
@@ -69,7 +69,7 @@ ms.locfileid: "63019295"
   
  Zwei Verarbeitungsoptionen stehen für die DirectQuery-Partition zur Verfügung. Um diese Eigenschaft festzulegen, verwenden Sie den **Partitions-Manager** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und wählen Sie die Eigenschaft **Verarbeitungsoption** aus. In der folgenden Tabelle sind die Werte dieser Eigenschaft aufgeführt. Außerdem sind die Effekte jedes einzelnen Werts für den Fall beschrieben, dass ein Wert mit der DirectQueryUsage-Eigenschaft zur Verbindungszeichenfolge kombiniert wird:  
   
-|Eigenschaft**Verbindungszeichenfolge** |Eigenschaft**Verarbeitungsoption** |Hinweise|  
+|Eigenschaft**Verbindungszeichenfolge**|Eigenschaft**Verarbeitungsoption**|Hinweise|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|Kein Verarbeiten dieser Partition|Wenn das Modell ausschließlich DirectQuery verwendet, ist eine Verarbeitung niemals notwendig.<br /><br /> In Hybridmodellen können Sie die DirectQuery-Partition so konfigurieren, dass sie niemals verarbeitet wird. Beispiel: Wenn Sie ein sehr großes Dataset verwenden und dem Cache nicht die vollständigen Ergebnisse hinzufügen möchten, können Sie angeben, dass die DirectQuery-Partition die Vereinigung der Ergebnisse für alle anderen Partitionen in der Tabelle enthalten und dass niemals eine Verarbeitung stattfinden soll. Abfragen, die an die relationale Quelle gerichtet werden, sind nicht betroffen, und in Abfragen für zwischengespeicherte Daten werden Daten aus den anderen Partitionen kombiniert.|  
 |DataView=Sample<br /><br /> Gilt für tabellarische Modelle mit beispieldatenansichten|Verarbeitung von Partitionen zulassen|Wenn das Modell Beispieldaten verwendet, können Sie die Tabelle verarbeiten, um ein gefiltertes Dataset zurückzugeben, das während des Modellentwurfs optische Hilfen bereitstellt.|  

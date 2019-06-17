@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873408"
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
@@ -51,12 +51,12 @@ ms.locfileid: "62873408"
 -   Der Trend und die Informationen zur durchschnittlichen Vergrößerung werden grafisch und numerisch für Daten- und Protokolldateien dargestellt.  
   
 #### <a name="disk-usage-collection-set---database-databasename-subreport"></a>Unterbericht "Sammlungssatz für Datenträgerverwendung – Datenbank: <Datenbankname>"  
- Der Unterbericht „Sammlungssatz für Datenträgerverwendung – Datenbank: *<Datenbankname>*“ wird angezeigt, wenn Sie auf eine Trendlinie für eine bestimmte Datenbank oder Protokolldatei in der Zusammenfassungstabelle des Berichts über den Sammlungssatz für Datenträgerverwendung klicken. Dieser Bericht liefert eine grafische Darstellung der Vergrößerungstrends bei der Speicherplatzverwendung während des Berichtzeitraums. Die Datenträgerverwendung ist nach verwendetem Speicher, Datenspeicherplatz, nicht zugeordnetem Speicher sowie dem Indexspeicher für Datendateien und dem verwendeten und nicht verwendeten Speicherplatz für Protokolldateien gegliedert.  
+ Der Unterbericht „Sammlungssatz für Datenträgerverwendung – Datenbank: *<Datenbankname>* “ wird angezeigt, wenn Sie auf eine Trendlinie für eine bestimmte Datenbank oder Protokolldatei in der Zusammenfassungstabelle des Berichts über den Sammlungssatz für Datenträgerverwendung klicken. Dieser Bericht liefert eine grafische Darstellung der Vergrößerungstrends bei der Speicherplatzverwendung während des Berichtzeitraums. Die Datenträgerverwendung ist nach verwendetem Speicher, Datenspeicherplatz, nicht zugeordnetem Speicher sowie dem Indexspeicher für Datendateien und dem verwendeten und nicht verwendeten Speicherplatz für Protokolldateien gegliedert.  
   
  In der Tabelle unter dem Diagramm sind Datensammlungszeiten und zugehörige Nutzungsdaten aufgeführt.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Unterbericht "Datenträgerverwendung für Datenbank: <Datenbankname>"  
- Der Unterbericht **Datenträgerverwendung für Datenbank:**_<Datenbankname>_ wird angezeigt, wenn Sie auf einen Datenbanknamen in der Zusammenfassungstabelle des Berichts über den Sammlungssatz für Datenträgerverwendung klicken. Dieser Bericht liefert eine numerische und grafische Aufschlüsselung der Speicherplatzverwendung durch die Daten- und Transaktionsprotokolldateien der Datenbank. Die Speicherplatzverwendung für Datendateien wird als Prozentsatz angegeben, kategorisiert nach dem prozentualen Anteil, der den Indexseiten, dem nicht zugeordneten Speicherplatz, den Datenseiten und dem nicht verwendeten Speicherplatz zugeordnet ist. Diese Kategorien sind folgendermaßen definiert:  
+ Der Unterbericht **Datenträgerverwendung für Datenbank:** _<Datenbankname>_ wird angezeigt, wenn Sie auf einen Datenbanknamen in der Zusammenfassungstabelle des Berichts über den Sammlungssatz für Datenträgerverwendung klicken. Dieser Bericht liefert eine numerische und grafische Aufschlüsselung der Speicherplatzverwendung durch die Daten- und Transaktionsprotokolldateien der Datenbank. Die Speicherplatzverwendung für Datendateien wird als Prozentsatz angegeben, kategorisiert nach dem prozentualen Anteil, der den Indexseiten, dem nicht zugeordneten Speicherplatz, den Datenseiten und dem nicht verwendeten Speicherplatz zugeordnet ist. Diese Kategorien sind folgendermaßen definiert:  
   
 |Kategorie|Definition|  
 |--------------|----------------|  

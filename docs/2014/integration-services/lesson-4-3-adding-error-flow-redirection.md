@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891402"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Schritt 3: Hinzufügen von Fehlerflussumleitungen
+# <a name="step-3-adding-error-flow-redirection"></a>Schritt 3: Hinzufügen der Fehlerflussumleitung
   Wie in der vorhergehenden Aufgabe gezeigt, kann von der Lookup Currency Key-Transformation keine Übereinstimmung generiert werden, wenn die Transformation versucht, die beschädigte Beispielflatfile, die einen Fehler produziert hat, zu verarbeiten. Da die Transformation die Standardeinstellungen für die Fehlerausgabe verwendet, führt jeder Fehler dazu, dass die Transformation fehlschlägt. Wenn die Transformation fehlschlägt, schlägt auch der Rest des Pakets fehl.  
   
  Anstatt ein Fehlschlagen der Transformation zuzulassen, können Sie die Komponente so konfigurieren, dass die fehlerverursachende Zeile mithilfe der Fehlerausgabe in einen anderen Verarbeitungspfad umgeleitet wird. Die Verwendung eines separaten Fehlerverarbeitungspfades gibt Ihnen die Möglichkeit, mehrere Vorgänge auszuführen. Sie können beispielsweise die Daten säubern und dann die fehlerhafte Zeile erneut verarbeiten. Oder Sie speichern die fehlerhafte Zeile zusammen mit zusätzlichen Fehlerinformationen zum späteren Überprüfen und erneutem Verarbeiten.  
@@ -48,7 +48,7 @@ ms.locfileid: "62891402"
   
 8.  Erweitern Sie auf der Seite **Eingaben und Ausgaben** das Element **Ausgabe 0**, klicken Sie auf **Ausgabespalten**und anschließend auf **Spalte hinzufügen**.  
   
-9. In der `Name` Eigenschaft **ErrorDescription** und legen Sie die `DataType` Eigenschaft **Unicode-Zeichenfolge [DT_WSTR]**.  
+9. In der `Name` Eigenschaft **ErrorDescription** und legen Sie die `DataType` Eigenschaft **Unicode-Zeichenfolge [DT_WSTR]** .  
   
 10. Auf der **Skript** Seite, überprüfen Sie, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten.**  
   

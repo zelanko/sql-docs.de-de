@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62843734"
 ---
 # <a name="set-source-control-options"></a>Festlegen von Quellcodeverwaltungsoptionen
@@ -62,7 +62,7 @@ ms.locfileid: "62843734"
      **Login ID**  
      Gibt den Benutzernamen an, der für die Anmeldung beim Quellcode-Verwaltungsanbieter verwendet wird. Wenn von der Quellcodeverwaltungsanbieter unterstützt, dieser Name wird ausgefüllt, automatisch in die **Anmeldung** Dialogfeld Ihren Quellcode-Verwaltungsserver erreichen. Deaktivieren Sie automatische Benutzeranmeldungen, um diese Option zu aktivieren, indem Sie das Administratorprogramm Ihres Quellcode-Verwaltungsanbieters verwenden. Starten Sie anschließend [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] neu.  
   
-     **Erweitert:**  
+     **Erweitert**  
      Zeigt zusätzliche Optionen für das Hinzufügen von Elementen zur Quellcodeverwaltung an. Welche Optionen dies sind, hängt von Ihrem Quellcode-Verwaltungsanbieter ab. Hilfe zu diesen Optionen wird vom Quellcode-Verwaltungsprogramm bereitgestellt.  
   
 4.  Wählen Sie die **Umgebung** Seite.  

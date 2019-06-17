@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787758"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Fehlerhafte Änderungen der Volltextsuche
@@ -38,7 +38,7 @@ ms.locfileid: "62787758"
   
 |Funktion|Szenario|SQL Server 2005|Nur in SQL Server 2008 und höheren Versionen.|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) mit benutzerdefinierten Typen (UDTs)|Der Volltextschlüssel ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] benutzerdefinierter Typ, z. B. `MyType = char(1)`.|Der zurückgegebene Schlüssel entspricht dem Typ, der dem benutzerdefinierten Typ zugewiesen wurde.<br /><br /> In diesem Beispiel wäre dies **char(1)**.|Der zurückgegebene Schlüssel entspricht dem benutzerdefinierten Typ. In diesem Beispiel wäre dies **MyType**.|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) mit benutzerdefinierten Typen (UDTs)|Der Volltextschlüssel ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] benutzerdefinierter Typ, z. B. `MyType = char(1)`.|Der zurückgegebene Schlüssel entspricht dem Typ, der dem benutzerdefinierten Typ zugewiesen wurde.<br /><br /> In diesem Beispiel wäre dies **char(1)** .|Der zurückgegebene Schlüssel entspricht dem benutzerdefinierten Typ. In diesem Beispiel wäre dies **MyType**.|  
 |*Top_n_by_rank* Parameter (der die CONTAINSTABLE-Anweisung und [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen)|*Top_n_by_rank* Abfragen, die mit "0" als Parameter.|Erzeugt einen Fehler, da – wie in der Fehlermeldung angegeben – ein Wert größer als 0 (null) verwendet werden muss.|Wird erfolgreich ausgeführt und gibt 0 (null) Zeilen zurück.|  
 |CONTAINSTABLE und **ItemCount**|Löschen Sie Zeilen aus der Basistabelle, bevor Änderungen an MSSearch übermittelt werden.|CONTAINSTABLE gibt einen inaktiven Datensatz zurück. **ItemCount** wird nicht geändert.|CONTAINSTABLE gibt keine inaktiven Datensätze zurück.|  
 |**ItemCount**|Tabelle enthält keine Dokumente oder Typspalten.|Neben indizierten Dokumenten werden Dokumente, die null sind oder der Typ null aufweisen, gezählt, der **ItemCount** Wert.|Erfasst nur indizierte Dokumente der **ItemCount** Wert.|  

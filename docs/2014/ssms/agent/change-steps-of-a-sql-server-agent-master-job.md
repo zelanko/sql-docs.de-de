@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017587"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -26,7 +26,7 @@ ms.locfileid: "63017587"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Ändern der Schritte in einem Masterauftrag für den SQL Server-Agent mit:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63017587"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie sind ein Mitglied der festen Serverrolle **sysadmin** . Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>So ändern Sie die Schritte in einem Masterauftrag für den SQL Server-Agent  
   
@@ -58,11 +58,11 @@ ms.locfileid: "63017587"
   
 5.  Klicken Sie im Dialogfeld **Auftragseigenschaften** > _Auftragsname_ unter **Seite auswählen** auf die Option **Schritte**.  
   
-6.  Klicken Sie auf **bearbeiten** zum Öffnen der **Auftragsschritt-Eigenschaften –**_Auftragsschrittname_ Dialogfeld. Weitere Informationen zu den verfügbaren Optionen in diesem Dialogfeld finden Sie unter [Auftragsschritt-Eigenschaften: Neuer Auftragsschritt &#40;Seite "Allgemein"&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) und [Auftragsschritt-Eigenschaften: Neuer Auftragsschritt &#40;Seite "Erweitert"&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Klicken Sie auf **bearbeiten** zum Öffnen der **Auftragsschritt-Eigenschaften –** _Auftragsschrittname_ Dialogfeld. Weitere Informationen zu den verfügbaren Optionen in diesem Dialogfeld finden Sie unter [Auftragsschritt-Eigenschaften: Neuer Auftragsschritt &#40;Seite "Allgemein"&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) und [Auftragsschritt-Eigenschaften: Neuer Auftragsschritt &#40;Seite "Erweitert"&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-8.  In der **Auftragseigenschaften -**_Job_name_ Dialogfeld klicken Sie auf **OK**.  
+8.  In der **Auftragseigenschaften -** _Job_name_ Dialogfeld klicken Sie auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

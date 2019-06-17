@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775042"
 ---
 # <a name="manage-full-text-indexes"></a>Verwalten von Volltextindizes
@@ -46,7 +46,7 @@ ms.locfileid: "62775042"
   
  Die folgende Tabelle enthält die Volltexteigenschaften, die sich auf indizierte Tabellen und Spalten beziehen, sowie die zugehörigen [!INCLUDE[tsql](../includes/tsql-md.md)]-Funktionen.  
   
-|Eigenschaft|Description|Funktion|  
+|Eigenschaft|Beschreibung|Funktion|  
 |--------------|-----------------|--------------|  
 |`FullTextTypeColumn`|TYPE COLUMN in der Tabelle, die die Dokumenttypinformationen der Spalte enthält.|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|Gibt an, ob eine Spalte für die Volltextindizierung aktiviert wurde.|COLUMNPROPERTY|  

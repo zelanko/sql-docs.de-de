@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77f98e86a5ac4b03d4a21b0242a2324c61b2081a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768816"
 ---
 # <a name="operator-precedence-and-associativity"></a>Operatorenrangfolge und -assoziativität
@@ -28,8 +28,8 @@ ms.locfileid: "62768816"
 |Operatorsymbol|Vorgangstyp|Assoziativität|  
 |---------------------|-----------------------|-------------------|  
 |( )|expression|Von links nach rechts|  
-|-, !, ~|Unäroperatoren|Von rechts nach links|  
-|Umwandlungen|Unäroperatoren|Von rechts nach links|  
+|-, !, ~|Unär|Von rechts nach links|  
+|Umwandlungen|Unär|Von rechts nach links|  
 |*, / ,%|Multiplikativ|Von links nach rechts|  
 |+, -|Additiv|Von links nach rechts|  
 |\<, >, \<=, >=|Relational|Von links nach rechts|  

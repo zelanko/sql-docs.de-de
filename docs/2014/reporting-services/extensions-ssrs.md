@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63165185"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Erweiterungen für SQL Server Reporting Services (SSRS)
@@ -66,7 +66,7 @@ Einige Erweiterungen können auch die folgenden Tasks ausführen:
   
 - **XML-Renderingerweiterung** Die XML-Renderingerweiterung rendert Berichte in XML-Dateien. Diese XML-Dateien können dann von anderen Programmen gespeichert oder gelesen werden. Sie können auch eine XSLT-Transformation verwenden, um den Bericht in ein anderes XML-Schema zu verwandeln, das von einer anderen Anwendung verwendet wird. Der von der XML-Renderingerweiterung generierte XML-Code ist UTF-8-codiert. Weitere Informationen finden Sie unter [Exportieren nach XML &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-xml-report-builder-and-ssrs.md)mit den Daten arbeiten.  
   
--   **Bild-Renderingerweiterung** Die Bild-Renderingerweiterung rendert Berichte in Bitmaps oder Metadateien. Die Erweiterung kann Berichte in den folgenden Formaten Rendern: BMP, EMF, GIF, JPEG, PNG, TIFF und WMF. Standardmäßig wird das Bild in TIFF gerendert, das mit dem standardmäßigen Image Viewer des Betriebssystems (z. B. Windows Bild- und Faxanzeige) angezeigt werden kann. Sie können das Bild vom Viewer aus an einen Drucker senden. Durch Verwenden der Bildrenderingerweiterung zum Rendern des Berichts wird sichergestellt, dass der Bericht auf jedem Client gleich dargestellt wird. (Wenn ein Benutzer einen Bericht in HTML anzeigt, kann die Darstellung des Berichts variieren je nach Version der Browser des Benutzers, Browsereinstellungen des Benutzers und die Schriftarten, die verfügbar sind.) Die Bildrenderingerweiterung rendert den Bericht auf dem Server, sodass allen Benutzern dasselbe Bild angezeigt wird. Da der Bericht auf dem Server gerendert wird, müssen alle im Bericht verwendeten Schriftarten auf dem Server installiert sein. Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)mit den Daten arbeiten.  
+-   **Bild-Renderingerweiterung** Die Bild-Renderingerweiterung rendert Berichte in Bitmaps oder Metadateien. Die Erweiterung kann Berichte in den folgenden Formaten Rendern: BMP, EMF, GIF, JPEG, PNG, TIFF und WMF. Standardmäßig wird das Bild in TIFF gerendert, das mit dem standardmäßigen Image Viewer des Betriebssystems (z. B. Windows Bild- und Faxanzeige) angezeigt werden kann. Sie können das Bild vom Viewer aus an einen Drucker senden. Durch Verwenden der Bildrenderingerweiterung zum Rendern des Berichts wird sichergestellt, dass der Bericht auf jedem Client gleich dargestellt wird. (Wenn ein Benutzer einen Bericht in HTML anzeigt, kann die Darstellung des Berichts in Abhängigkeit von der vom Benutzer verwendeten Browserversion, den Browsereinstellungen des Benutzers und den verfügbaren Schriftarten variieren.) Die Bildrenderingerweiterung rendert den Bericht auf dem Server, sodass allen Benutzern dasselbe Bild angezeigt wird. Da der Bericht auf dem Server gerendert wird, müssen alle im Bericht verwendeten Schriftarten auf dem Server installiert sein. Weitere Informationen finden Sie unter [Exportieren in eine Bilddatei &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)mit den Daten arbeiten.  
   
 - **PDF-Renderingerweiterung** Die PDF-Renderingerweiterung rendert Berichte in PDF-Dateien, die mit Adobe Acrobat 6.0 oder höher geöffnet und angezeigt werden können. Weitere Informationen finden Sie unter [Exportieren als PDF-Datei &#40;Berichts-Generator und SSRS&#41;](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)mit den Daten arbeiten.  
   

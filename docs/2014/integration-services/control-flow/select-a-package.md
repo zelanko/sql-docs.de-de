@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 026c588f2fc35a6cb256a63046ad91e5d1b5641a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830247"
 ---
 # <a name="select-a-package"></a>Paket auswählen
@@ -56,7 +56,7 @@ ms.locfileid: "62830247"
   
 ### <a name="location--dtsx-file"></a>Speicherort = DTSX-Datei  
  **Dateiname**  
- Geben Sie den Pfad eines Pakets an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um das Paket zu suchen.  
+ Geben Sie den Pfad eines Pakets an, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um das Paket zu suchen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Nachrichtenwarteschlange (Task)](message-queue-task.md)  

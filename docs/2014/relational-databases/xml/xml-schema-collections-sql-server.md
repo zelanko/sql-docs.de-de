@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193037"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
@@ -167,7 +167,7 @@ ms.locfileid: "63193037"
   
 -   Schreiben Sie Transact-SQL-Abfragen zur jeweiligen Katalogsicht für XML-Schemaauflistungen.  
   
--   Verwenden Sie die integrierte Funktion **XML_SCHEMA_NAMESPACE()**. Sie können anwenden `xml` -Datentypmethoden in der Ausgabe dieser Funktion. Allerdings können Sie dabei die zugrunde liegenden XML-Schemas nicht ändern.  
+-   Verwenden Sie die integrierte Funktion **XML_SCHEMA_NAMESPACE()** . Sie können anwenden `xml` -Datentypmethoden in der Ausgabe dieser Funktion. Allerdings können Sie dabei die zugrunde liegenden XML-Schemas nicht ändern.  
   
  Diese Möglichkeiten werden in den folgenden Beispielen veranschaulicht.  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Einzelne XML-Schemas in der Auflistung abgerufen werden können, als `xml` -datentypinstanzen durch Angabe des Zielnamespaces als drittes Argument für **XML_SCHEMA_NAMESPACE()**. Dies wird im folgenden Beispiel gezeigt.  
+ Einzelne XML-Schemas in der Auflistung abgerufen werden können, als `xml` -datentypinstanzen durch Angabe des Zielnamespaces als drittes Argument für **XML_SCHEMA_NAMESPACE()** . Dies wird im folgenden Beispiel gezeigt.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Beispiel: Ausgeben eines angegebenen Schemas für eine XML-Schemaauflistung  
  Mit der folgenden Anweisung wird das XML-Schema mit dem Zielnamespace <https://www.microsoft.com/books> aus der XML-Schemaauflistung „myCollection“ innerhalb des relationalen Schemas „dbo“ ausgegeben.  

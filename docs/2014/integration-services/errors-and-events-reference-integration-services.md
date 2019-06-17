@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62899448"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Fehler- und Ereignisreferenz (Integration Services)
@@ -65,7 +65,7 @@ ms.locfileid: "62899448"
 ## <a name="events-sqlisservice"></a>Ereignisse (SQLISService)  
  Weitere Informationen finden Sie unter [Vom Integration Services-Dienst protokollierte Ereignisse](service/events-logged-by-the-integration-services-service.md).  
   
-|Ereignis|Description|  
+|Ereignis|Beschreibung|  
 |-----------|-----------------|  
 |SQLISService_256|Gibt an, dass der Dienst umgehend gestartet wird.|  
 |SQLISService_257|Gibt an, dass der Dienst gestartet wurde.|  

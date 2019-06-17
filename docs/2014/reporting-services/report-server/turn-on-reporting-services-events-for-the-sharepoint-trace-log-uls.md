@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b292805f0cf24a220223adc3a1996b3e5effe54c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103161"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
@@ -39,7 +39,7 @@ ms.locfileid: "66103161"
 ##  <a name="bkmk_general"></a> Allgemeine ULS-Protokollempfehlungen  
  In der folgenden Tabelle werden Ereigniskategorien und -ebenen aufgelistet, die für die Überwachung einer [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Umgebung empfohlen werden. Wenn ein Ereignis protokolliert wird, enthält jeder Eintrag den Zeitpunkt der Protokollierung, den Prozessnamen und die Thread-ID.  
   
-|Kategorie|Ebene|Description|  
+|Kategorie|Ebene|Beschreibung|  
 |--------------|-----------|-----------------|  
 |Datenbank|Ausführlich|Protokolliert Ereignisse, die Datenbankzugriff einschließen.|  
 |Allgemein|Ausführlich|Protokolliert Ereignisse, die Zugriff auf die folgenden Elemente einschließen:<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Webseiten<br /><br /> Berichts-Viewer-HTTP-Handler<br /><br /> Zugriff auf Bericht (RDL-Dateien)<br /><br /> Datenquellen (RSDS-Dateien)<br /><br /> URLs auf der SharePoint-Website (SMDL-Dateien)|  

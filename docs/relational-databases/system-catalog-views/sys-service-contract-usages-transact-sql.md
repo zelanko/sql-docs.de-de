@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a34d69fe4d8d8de6668e804bc574c18196f0aa8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856175"
 ---
 # <a name="sysservicecontractusages-transact-sql"></a>sys.service_contract_usages (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "62856175"
 
   Diese Katalogsicht enthält eine Zeile pro (Dienst-, Vertrags-) Paar.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**service_id**|**int**|Bezeichner des Diensts, der den Vertrag verwendet. Lässt keine NULL-Werte zu.|  
 |**service_contract_id**|**int**|Bezeichner des vom Dienst verwendeten Vertrags. Lässt keine NULL-Werte zu.|  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: e2b9178b057d7f8a2a4c9c663101c99df1d468df
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606740"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795851"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Informationen zu den Codebeispielen in der Dokumentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,6 +51,6 @@ Es gibt einige Punkte zu beachten, wenn Sie die Codebeispiele in der [!INCLUDE[s
   
     Weitere Informationen zum Behandeln von Fehlern und Warnungen finden Sie unter [Handhabung von Fehlern und Warnungen](../../connect/php/handling-errors-and-warnings.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
   

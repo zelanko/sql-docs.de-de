@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_8642 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 8642 (Database Engine error)
 ms.assetid: fc498059-202f-4d0b-8599-4e784b47c186
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff30f298d961eeb07b16261e400cb9fd8cb2a257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62913070"
 ---
 # <a name="mssqlserver8642"></a>MSSQLSERVER_8642
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Details  
   
 |||  
@@ -34,8 +33,9 @@ ms.locfileid: "62913070"
 |Meldungstext|Der Abfrageprozessor konnte die erforderlichen Threadressourcen für die parallele Abfrageausführung nicht starten.|  
   
 ## <a name="explanation"></a>Erklärung  
-Auf dem Server gibt es nicht genügend Threadressourcen.  
+ Auf dem Server gibt es nicht genügend Threadressourcen.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-Verringern Sie die Last auf dem Server, und führen Sie die Abfrage erneut aus.  
+ Verringern Sie die Last auf dem Server, und führen Sie die Abfrage erneut aus.  
+  
   
