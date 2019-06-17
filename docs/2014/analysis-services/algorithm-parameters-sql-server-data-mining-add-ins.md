@@ -48,10 +48,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062601"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Algorithmusparameter (SQL Server Data Mining-Add-Ins)
@@ -105,7 +105,7 @@ ms.locfileid: "66062601"
 |MINIMUM_SUPPORT|Microsoft Time Series-Algorithmus|Gibt die Mindestanzahl von Zeitscheiben an, die erforderlich sind, um eine Teilung in jeder Zeitreihenstruktur zu generieren.<br /><br /> Der Standardwert ist 10.|  
 |MISSING_VALUE_SUBSTITUTION|Microsoft Time Series-Algorithmus|Gibt die Methode an, die zum Füllen der Lücken in Vergangenheitsdaten verwendet wird. Standardmäßig sind unregelmäßige Lücken oder Ränder in Daten nicht zulässig. Mit folgenden Methoden können unregelmäßige Lücken oder Ränder ausgefüllt werden: mit dem vorherigen Wert, dem Mittelwert oder einer spezifischen numerischen Konstante.|  
 |MODELLING_CARDINALITY|Microsoft Clustering-Algorithmus|Gibt die Anzahl von Stichprobenmodellen an, die während des Clusterprozesses erstellt werden.<br /><br /> Der Standardwert ist 10.|  
-|PERIODICITY_HINT|Microsoft Time Series-Algorithmus|Stellt für den Algorithmus einen Periodizitätshinweis der Daten bereit. Beispiel: Wenn die Verkaufszahlen jahresabhängig variieren und als Maßeinheit für die Reihe Monate gewählt wurden, ist die Periodizität 12. Dieser Parameter weist das Format {n [, n]} auf, wobei n eine beliebige positive Zahl ist. Das n innerhalb der eckigen Klammern [] ist optional und kann so oft wie nötig wiederholt werden.<br /><br /> Der Standardwert ist {1}.|  
+|PERIODICITY_HINT|Microsoft Time Series-Algorithmus|Stellt für den Algorithmus einen Periodizitätshinweis der Daten bereit. Beispiel: Wenn die Verkaufszahlen jahresabhängig variieren und als Maßeinheit für die Reihe Monate gewählt wurden, ist die Periodizität 12. Dieser Parameter weist das Format {n [, n]} auf, wobei n eine beliebige positive Zahl ist. Das n innerhalb der eckigen Klammern [] ist optional und kann so oft wie nötig wiederholt werden.<br /><br /> Die Standardeinstellung ist {1}.|  
 |PREDICTION_SMOOTHING|Microsoft Time Series-Algorithmus|Steuert die Mischung aus ARTXP- und ARIMA-Zeitreihenalgorithmen. Der angegebene Wert ist nur gültig, wenn der FORECAST_METHOD-Parameter auf MIXED festgelegt ist. Werte müssen zwischen 0 und 1 liegen. Wenn der Wert 0 ist, verwendet das Modell nur ARTXP. Wenn der Wert 1 ist, verwendet das Modell nur ARIMA. Bei einem Wert, der nahe an 0 liegt, wird ARTXP stärker gewichtet. Bei einem Wert, der nahe an 1 liegt, wird ARIMA stärker gewichtet.|  
 |SAMPLE_SIZE|Microsoft Clustering-Algorithmus|Gibt die Anzahl von Fällen an, die bei jedem Durchlauf des Algorithmus verwendet werden, wenn der CLUSTERING_METHOD-Parameter auf eine der skalierbaren Clustermethoden festgelegt ist. Das Festlegen des SAMPLE_SIZE-Parameters auf 0 bewirkt eine Clustererstellung für das gesamte Dataset in einem einzelnen Durchlauf. Dies kann zu Arbeitsspeicher- und Leistungsproblemen führen.<br /><br /> Der Standardwert ist 50.000.|  
 |SAMPLE_SIZE|Microsoft Logistic Regression-Algorithmus<br /><br /> Microsoft Neural Network Algorithm|Gibt die Anzahl von Fällen an, die zum Trainieren des Modells verwendet werden. Der Algorithmusanbieter verwendet entweder diese Anzahl oder den Prozentsatz aller Fälle, die laut HOLDOUT_PERCENTAGE-Parameter nicht im Prozentsatz für zurückgehaltene Daten enthalten sind, je nachdem, welcher Wert kleiner ist.<br /><br /> Wenn also HOLDOUT_PERCENTAGE auf 30 festgelegt ist, verwendet der Algorithmus entweder den Wert dieses Parameters oder einen Wert, der 70 % der Gesamtanzahl der Fälle entspricht, je nachdem, welcher Wert kleiner ist.<br /><br /> Der Standardwert ist 10.000.|  

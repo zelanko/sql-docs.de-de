@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996085"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
@@ -56,7 +56,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>Argumente  
 `[ @dbname = ] 'dbname'` Ist die Zeichenfolge, die die Ziel-Abonnementdatenbank namentlich angibt. *Dbname* ist **Sysname**, hat keinen Standardwert.  
   
-`[ @filename = ] 'filename'` Der Name und physische Speicherort der primären MDF-Datei (**master** Datendatei). *FileName* ist **nvarchar(260)**, hat keinen Standardwert.  
+`[ @filename = ] 'filename'` Der Name und physische Speicherort der primären MDF-Datei (**master** Datendatei). *FileName* ist **nvarchar(260)** , hat keinen Standardwert.  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` Ist der Sicherheitsmodus des Abonnenten beim Herstellen einer Verbindung an einen Abonnenten, bei der Synchronisierung verwendet. *Subscriber_security_mode* ist **Int**, hat den Standardwert NULL.  
   
@@ -91,14 +91,14 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
-`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet.  
+`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)** , hat keinen Standardwert. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet.  
   
 `[ @job_password = ] 'job_password'` Ist das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert. Der Wert des *Job_password* muss weniger als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` Ist das Kennwort von einer benutzerdefinierten Datenbank-Hauptschlüssel. *Db_master_key_password* ist **nvarchar(524)**, hat den Standardwert NULL. Wenn *Db_master_key_password* nicht angegeben ist, wird eine vorhandene Datenbank-Hauptschlüssel gelöscht und neu erstellt werden.  
+`[ @db_master_key_password = ] 'db_master_key_password'` Ist das Kennwort von einer benutzerdefinierten Datenbank-Hauptschlüssel. *Db_master_key_password* ist **nvarchar(524)** , hat den Standardwert NULL. Wenn *Db_master_key_password* nicht angegeben ist, wird eine vorhandene Datenbank-Hauptschlüssel gelöscht und neu erstellt werden.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  

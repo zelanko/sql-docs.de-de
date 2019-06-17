@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092181"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Dienstkonto (einheitlicher SSRS-Modus)
@@ -36,7 +36,7 @@ ms.locfileid: "66092181"
  Wählen Sie **Netzwerkdienst**, **Lokales System**oder **Lokaler Dienst** aus der Liste aus. Es wird empfohlen, die Einstellung **Netzwerkdienst** zu verwenden; Sie können das Konto jedoch für jedes verfügbare Konto konfigurieren.  
   
  **Ein anderes Konto verwenden**  
- Wählen Sie diese Option aus, um ein Windows-Benutzerkonto anzugeben. Sie können ein lokales Windows-Benutzerkonto oder ein Domänen-Benutzerkonto eingeben. Geben Sie ein Domänenkonto im folgenden Format:  *\<Domäne >\\< Benutzer\>*. Geben Sie ein lokales Windows-Benutzerkonto im folgenden Format:  *\<Computername >\\< Benutzer\>*. Sie können nur ein vorhandenes Konto auswählen. Während der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration kann kein neues Konto erstellt werden.  
+ Wählen Sie diese Option aus, um ein Windows-Benutzerkonto anzugeben. Sie können ein lokales Windows-Benutzerkonto oder ein Domänen-Benutzerkonto eingeben. Geben Sie ein Domänenkonto im folgenden Format:  *\<Domäne >\\< Benutzer\>* . Geben Sie ein lokales Windows-Benutzerkonto im folgenden Format:  *\<Computername >\\< Benutzer\>* . Sie können nur ein vorhandenes Konto auswählen. Während der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration kann kein neues Konto erstellt werden.  
   
  Die maximale Zeichenlänge für das Konto beträgt 20 Zeichen.  
   

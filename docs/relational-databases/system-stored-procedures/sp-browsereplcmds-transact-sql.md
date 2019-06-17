@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996367"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -45,9 +45,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` Gibt die niedrigste genaue Sequenznummer zurückgegeben. *Xact_seqno_start* ist **nchar(22)**, hat den Standardwert 0 x 00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Gibt die niedrigste genaue Sequenznummer zurückgegeben. *Xact_seqno_start* ist **nchar(22)** , hat den Standardwert 0 x 00000000000000000000.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` Gibt die höchste genaue Sequenznummer zurückgegeben. *Xact_seqno_end* ist **nchar(22)**, hat den Standardwert 0xffffffffffffffffffff.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Gibt die höchste genaue Sequenznummer zurückgegeben. *Xact_seqno_end* ist **nchar(22)** , hat den Standardwert 0xffffffffffffffffffff.  
   
 `[ @originator_id = ] 'originator_id'` Gibt an, ob Befehle mit dem angegebenen *Originator_id* zurückgegeben werden. *Originator_id* ist **Int**, hat den Standardwert NULL.  
   
@@ -66,7 +66,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**varbinary(16)**|Sequenznummer des Befehls.|  
 |**originator_srvname**|**sysname**|Server, von dem die Transaktion stammt|  

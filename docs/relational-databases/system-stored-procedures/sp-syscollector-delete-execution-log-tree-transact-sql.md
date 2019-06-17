@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be3f468db321f1e8ba7af3d7b5b80c97803a0b4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63002610"
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
@@ -44,7 +44,7 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ## <a name="arguments"></a>Argumente  
 `[ @log_id = ] log_id` Ist der eindeutige Bezeichner für die Sammlung auf Log festgelegt. *log_id* ist **int**  
   
-`[ @from_collection_set = ] from_collection_set` Ist der Bezeichner für den Sammlungssatz. *From_collection_set* ist **Bit 1 =**.  
+`[ @from_collection_set = ] from_collection_set` Ist der Bezeichner für den Sammlungssatz. *From_collection_set* ist **Bit 1 =** .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

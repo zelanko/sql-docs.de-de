@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086996"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Benutzerdefinierte Elementformel erstellen (Business Intelligence-Assistent)
@@ -27,7 +27,7 @@ ms.locfileid: "66086996"
  Wählen Sie das Attribut aus, das einer benutzerdefinierten Elementformel zugeordnet werden soll.  
   
  **Quellspalte**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **wählen Sie eine Spalte** Dialogfeld und wählen Sie die benutzerdefinierte Formel Spalte mit dem Attribut zugeordnet werden soll.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) die Schaltfläche, um die **wählen Sie eine Spalte** Dialogfeld und wählen Sie die benutzerdefinierte Formel Spalte mit dem Attribut zugeordnet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   

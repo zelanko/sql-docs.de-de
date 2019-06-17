@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998310"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -89,7 +89,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Der Name der Zieldatenbank, in der die replizierten Daten gespeichert werden sollen. *Destination_db* ist **Sysname**, hat den Standardwert NULL. Wenn der Wert NULL, *Destination_db* auf den Namen der Veröffentlichungsdatenbank festgelegt ist. Für Oracle-Verleger *Destination_db* muss angegeben werden. Geben Sie den Wert (Standardziel) für einen nicht - SQL Server-Abonnenten für *Destination_db*.  
   
  [ @sync_type=] '*sync_type*'  
- Der Synchronisierungstyp des Abonnements. *Sync_type* ist **nvarchar(255)**, und kann einen der folgenden Werte:  
+ Der Synchronisierungstyp des Abonnements. *Sync_type* ist **nvarchar(255)** , und kann einen der folgenden Werte:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|Das Abonnement muss initialisiert werden. Diese Option wird festgelegt, wenn der Wert des *Sync_type* erfolgt automatisch.|  
   
  [ @subscription_type=] '*subscription_type*'  
- Ist der Typ des Abonnements. *Subscription_type* ist **nvarchar(4)**, hat den Standardwert Push. Mögliche Werte sind push und pull. Der Verteilungs-Agents von Pushabonnements befinden, auf dem Verteiler und die Verteilungs-Agents von Pullabonnements befinden, auf dem Abonnenten. *Subscription_type* können Pull sein, um ein benanntes Pullabonnement zu erstellen, mit dem Verleger bekannt ist. Weitere Informationen finden Sie unter [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md).  
+ Ist der Typ des Abonnements. *Subscription_type* ist **nvarchar(4)** , hat den Standardwert Push. Mögliche Werte sind push und pull. Der Verteilungs-Agents von Pushabonnements befinden, auf dem Verteiler und die Verteilungs-Agents von Pullabonnements befinden, auf dem Abonnenten. *Subscription_type* können Pull sein, um ein benanntes Pullabonnement zu erstellen, mit dem Verleger bekannt ist. Weitere Informationen finden Sie unter [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Für anonyme Abonnements ist diese gespeicherte Prozedur nicht erforderlich.  
   
  [ @update_mode=] '*update_mode*'  
- Ist der Typ des Updates. *Update_mode* ist **nvarchar(30)**, und kann einen der folgenden Werte sein.  
+ Ist der Typ des Updates. *Update_mode* ist **nvarchar(30)** , und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -130,9 +130,9 @@ sp_addsubscription [ @publication = ] 'publication'
  Beachten Sie, dass die Werte Synctran und queued Tran nicht zulässig sind, wenn die abonnierte Veröffentlichung DTS zulässt.  
   
  [ @loopback_detection=] '*loopback_detection*'  
- Gibt an, ob der Verteilungs-Agent Transaktionen, die vom Abonnenten stammen, zurück an den Abonnenten sendet. *Loopback_detection* ist **nvarchar(5)**, und kann einen der folgenden Werte sein.  
+ Gibt an, ob der Verteilungs-Agent Transaktionen, die vom Abonnenten stammen, zurück an den Abonnenten sendet. *Loopback_detection* ist **nvarchar(5)** , und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |true|Der Verteilungs-Agent sendet Transaktionen des Abonnenten nicht an den Abonnenten zurück. Wird bei der bidirektionalen Transaktionsreplikation verwendet. Weitere Informationen finden Sie unter [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|Der Verteilungs-Agent sendet Transaktionen des Abonnenten an den Abonnenten zurück.|  
@@ -158,7 +158,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  Das Datum des Verteilungs-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* auf 32 (monatlich, relativ) festgelegt wird. *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |1|Erster|  
 |2|Zweimal|  
@@ -197,13 +197,13 @@ sp_addsubscription [ @publication = ] 'publication'
  Das Datum, ab dem der Verteilungs-Agent nicht mehr geplant ist. Dabei wird das Format JJJJMMTT verwendet. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
  [ @optional_command_line=] '*optional_command_line*'  
- Die optional auszuführende Befehlszeile. *Der Standardwert* ist **nvarchar(4000)**, hat den Standardwert NULL.  
+ Die optional auszuführende Befehlszeile. *Der Standardwert* ist **nvarchar(4000)** , hat den Standardwert NULL.  
   
  [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- Gibt an, ob das Abonnement über synchronisiert werden kann [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungsverwaltung von Windows. *Enabled_for_syncmgr* ist **nvarchar(5)**, hat den Standardwert "false". Mit FALSE wird das Abonnement nicht bei der Windows-Synchronisierungsverwaltung registriert. Mit TRUE wird das Abonnement bei der Windows-Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zu starten. Diese Option wird für Oracle-Verleger nicht unterstützt.  
+ Gibt an, ob das Abonnement über synchronisiert werden kann [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungsverwaltung von Windows. *Enabled_for_syncmgr* ist **nvarchar(5)** , hat den Standardwert "false". Mit FALSE wird das Abonnement nicht bei der Windows-Synchronisierungsverwaltung registriert. Mit TRUE wird das Abonnement bei der Windows-Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zu starten. Diese Option wird für Oracle-Verleger nicht unterstützt.  
   
  [ @offloadagent=] '*Remote_agent_activation*"  
  Gibt an, dass eine Remoteaktivierung der Momentaufnahme möglich ist. *Remote_agent_activation* ist **Bit** hat den Standardwert 0.  
@@ -224,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  Sie müssen ein Kennwort angeben, wenn *Dts_package_name* angegeben ist.  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- Gibt den Paketspeicherort an. *Dts_package_location* ist eine **nvarchar(12)**, hat den Standardwert des VERTEILERS. Der Speicherort des Pakets kann distributor oder subscriber sein.  
+ Gibt den Paketspeicherort an. *Dts_package_location* ist eine **nvarchar(12)** , hat den Standardwert des VERTEILERS. Der Speicherort des Pakets kann distributor oder subscriber sein.  
   
  [ @distribution_job_name=] '*distribution_job _name*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *Publisher* sollte nicht angegeben werden, für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
  [ @backupdevicetype=] '*Backupdevicetype*"  
- Gibt den Sicherungsmedientyp an, der beim Initialisieren eines Abonnenten von einer Sicherung verwendet wird. *Backupdevicetype* ist **nvarchar(20)**, und kann einen der folgenden Werte:  
+ Gibt den Sicherungsmedientyp an, der beim Initialisieren eines Abonnenten von einer Sicherung verwendet wird. *Backupdevicetype* ist **nvarchar(20)** , und kann einen der folgenden Werte:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *Backupdevicetype* wird nur verwendet, wenn *Sync_method*auf Initialize_with_backup festgelegt ist.  
   
  [ @backupdevicename= ] '*backupdevicename*'  
- Gibt den Namen des Sicherungsmediums an, das beim Initialisieren eines Abonnenten von einer Sicherung verwendet wird. *Backupdevicename* ist **nvarchar(1000)**, hat den Standardwert NULL.  
+ Gibt den Namen des Sicherungsmediums an, das beim Initialisieren eines Abonnenten von einer Sicherung verwendet wird. *Backupdevicename* ist **nvarchar(1000)** , hat den Standardwert NULL.  
   
  [ @mediapassword= ] '*mediapassword*'  
  Gibt ein Kennwort für den Mediensatz an, falls beim Formatieren des Mediums ein Kennwort festgelegt wurde. *MEDIAPASSWORD* ist **Sysname**, hat den Standardwert NULL.  

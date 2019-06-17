@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057670"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Empfangen)
@@ -31,7 +31,7 @@ ms.locfileid: "66057670"
  Geben Sie an, ob die Nachricht aus der Warteschlange entfernt werden soll, nachdem sie empfangen wurde. Standardmäßig ist dieser Wert auf `False` festgelegt.  
   
  **ErrorIfMessageTimeOut**  
- Geben Sie an, ob der Task fehlschlägt und eine Fehlermeldung angezeigt wird, wenn die Zeit für die Nachricht überschritten wird. Der Standardwert ist `False`.  
+ Geben Sie an, ob der Task fehlschlägt und eine Fehlermeldung angezeigt wird, wenn die Zeit für die Nachricht überschritten wird. Die Standardeinstellung ist `False`.  
   
  **TimeoutAfter**  
  Wenn eine Fehlermeldung beim Fehlschlagen des Tasks angezeigt werden soll, geben Sie hier die Wartezeit vor dem Anzeigen der Timeoutmeldung in Sekunden an.  
@@ -50,10 +50,10 @@ ms.locfileid: "66057670"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Data file message  
  **SaveFileAs**  
- Geben Sie den Pfad der zu verwendenden Datei an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um nach der Datei zu suchen.  
+ Geben Sie den Pfad der zu verwendenden Datei an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um nach der Datei zu suchen.  
   
  **Overwrite**  
- Geben Sie an, dass die Daten in einer vorhandenen Datei überschrieben werden sollen, wenn der Inhalt einer Datendateinachricht gespeichert wird. Der Standardwert ist `False`.  
+ Geben Sie an, dass die Daten in einer vorhandenen Datei überschrieben werden sollen, wenn der Inhalt einer Datendateinachricht gespeichert wird. Die Standardeinstellung ist `False`.  
   
  **Filter**  
  Geben Sie an, ob auf die Nachricht ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
@@ -71,7 +71,7 @@ ms.locfileid: "66057670"
   
 #### <a name="filter--from-package"></a>Filter = From package  
  **Bezeichner**  
- Wenn Sie einen Filter anwenden möchten, geben Sie den eindeutigen Bezeichner des Pakets ein, aus dem die Nachrichten empfangen werden können, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, und geben Sie das Paket an.  
+ Wenn Sie einen Filter anwenden möchten, geben Sie den eindeutigen Bezeichner des Pakets ein, aus dem die Nachrichten empfangen werden können, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , und geben Sie das Paket an.  
   
  **Verwandte Themen:** [Paket auswählen](control-flow/select-a-package.md)  
   
@@ -79,13 +79,13 @@ ms.locfileid: "66057670"
  **Filter**  
  Geben Sie an, ob auf Nachrichten ein Filter angewendet werden soll. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Kein Filter**|Der Task filtert keine Nachrichten. Wenn Sie diesen Wert auswählen, wird die dynamische Option **IdentifierReadOnly**angezeigt.|  
 |**Vom Paket**|Der Task empfängt nur Nachrichten von dem angegebenen Paket. Wenn Sie diesen Wert auswählen, wird die dynamische Option **Identifier**angezeigt.|  
   
  **Variable**  
- Geben Sie den Variablennamen an, oder klicken Sie auf \<**Neue Variable…**>, und konfigurieren Sie anschließend eine neue Variable.  
+ Geben Sie den Variablennamen an, oder klicken Sie auf \<**Neue Variable…** >, und konfigurieren Sie anschließend eine neue Variable.  
   
  **Verwandte Themen:** [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66057670"
   
 #### <a name="filter--from-package"></a>Filter = From package  
  **Bezeichner**  
- Wenn Sie einen Filter anwenden möchten, geben Sie den eindeutigen Bezeichner des Pakets ein, aus dem die Nachrichten empfangen werden können, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, und geben Sie das Paket an.  
+ Wenn Sie einen Filter anwenden möchten, geben Sie den eindeutigen Bezeichner des Pakets ein, aus dem die Nachrichten empfangen werden können, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , und geben Sie das Paket an.  
   
  **Verwandte Themen:** [Paket auswählen](control-flow/select-a-package.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66057670"
  Geben Sie hier die Zeichenfolge an, mit der die Nachricht verglichen wird, wenn die Option **Vergleichen** nicht auf **Keine**festgelegt ist.  
   
  **Variable**  
- Geben Sie den Namen der Variablen zum Speichern der Nachricht ein, oder klicken Sie auf \<**Neue Variable…**>, und konfigurieren Sie anschließend eine neue Variable.  
+ Geben Sie den Namen der Variablen zum Speichern der Nachricht ein, oder klicken Sie auf \<**Neue Variable…** >, und konfigurieren Sie anschließend eine neue Variable.  
   
  **Verwandte Themen:** [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
   

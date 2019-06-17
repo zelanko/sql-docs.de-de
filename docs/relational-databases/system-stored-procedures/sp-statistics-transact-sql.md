@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004207"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -53,13 +53,13 @@ sp_statistics [ @table_name = ] 'table_name'
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Indizes einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn *Besitzer* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Namen*, sieht Sie dieses Verfahren für eine Tabelle mit dem angegebenen *Namen* im Besitz der Besitzer der Datenbank. Sofern eine solche Tabelle vorhanden ist, werden die Indizes dieser Tabelle zurückgegeben.  
   
-`[ @table_qualifier = ] 'qualifier'` Ist der Name des Qualifizierers der Tabelle. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+`[ @table_qualifier = ] 'qualifier'` Ist der Name des Qualifizierers der Tabelle. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_ **.** _Besitzer_ **.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
 `[ @index_name = ] 'index_name'` Ist der Name des Indexes an. *Index_name* ist **Sysname**, hat den Standardwert %. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
-`[ @is_unique = ] 'is_unique'` Ist, ob nur eindeutige Indizes (Wenn **Y**) zurückgegeben werden sollen. *Is_unique* ist **char(1)**, hat den Standardwert **N**.  
+`[ @is_unique = ] 'is_unique'` Ist, ob nur eindeutige Indizes (Wenn **Y**) zurückgegeben werden sollen. *Is_unique* ist **char(1)** , hat den Standardwert **N**.  
   
-`[ @accuracy = ] 'accuracy'` Ist die Ebene der Kardinalität und seitengenauigkeit für Statistiken. *Genauigkeit* ist **char(1)**, hat den Standardwert **Q**. Geben Sie **E** um sicherzustellen, dass die Statistiken aktualisiert werden, sodass Kardinalität und Seiten stimmen.  
+`[ @accuracy = ] 'accuracy'` Ist die Ebene der Kardinalität und seitengenauigkeit für Statistiken. *Genauigkeit* ist **char(1)** , hat den Standardwert **Q**. Geben Sie **E** um sicherzustellen, dass die Statistiken aktualisiert werden, sodass Kardinalität und Seiten stimmen.  
   
  Der Wert **E** (SQL_ENSURE) weist den Treiber zum unbedingten Abrufen der Statistiken.  
   

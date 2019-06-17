@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063628"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Statusleiste (Abfrage-Editor der Datenbank-Engine)
@@ -36,7 +36,7 @@ ms.locfileid: "66063628"
   
 1.  Wählen Sie im **Objekt-Explorer** die Schaltfläche **Verbinden** und dann **Datenbank-Engine...** aus.  
   
-2.  Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Option **Optionen >>**.  
+2.  Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Option **Optionen >>** .  
   
 3.  Aktivieren Sie das Kontrollkästchen **Benutzerdefinierte Farbe verwenden** .  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66063628"
   
 -   Öffnen Sie das Menü **Datei**, wählen Sie **Neu** aus, und wählen Sie dann **Datenbank-Engine-Abfrage** aus.  
   
--   Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Option **Optionen >>**.  
+-   Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Option **Optionen >>** .  
   
 -   Aktivieren Sie das Kontrollkästchen **Benutzerdefinierte Farbe verwenden** .  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c9f297459b498276f84fa4fdfed5adf9941112d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064876"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
@@ -44,7 +44,7 @@ ms.locfileid: "66064876"
   
 -   **sqlcmd** -Variablen und -Befehle. Informationen zu diesen Variablen und Befehlen finden Sie unter [sqlcmd (Hilfsprogramm)](../tools/sqlcmd-utility.md)im Abschnitt „Hinweise“.  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen verwendet werden. Weitere Informationen über die [!INCLUDE[tsql](../includes/tsql-md.md)]-Sprache finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/language-reference).  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] Anweisungen verwendet werden. Weitere Informationen über die [!INCLUDE[tsql](../includes/tsql-md.md)]-Sprache finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference).  
   
 -   XQuery-Anweisungen. Weitere Informationen zu der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützten XQuery-Sprache finden Sie unter [XQuery-Sprachreferenz &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   

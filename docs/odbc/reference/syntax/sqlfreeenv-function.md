@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 979e34f89128a27a416f0af9305b1f97c6d0d385
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62982274"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv-Funktion
@@ -32,10 +32,10 @@ ms.locfileid: "62982274"
  Eingeführt in Version: ODBC-1.0-Standards-Compliance: Als veraltet markiert  
   
  **Zusammenfassung**  
- In ODBC 3.*.x*, die ODBC 2.0-Funktion **SQLFreeEnv** wurde ersetzt durch **SQLFreeHandle**. Weitere Informationen finden Sie unter [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ In ODBC 3. *.x*, die ODBC 2.0-Funktion **SQLFreeEnv** wurde ersetzt durch **SQLFreeHandle**. Weitere Informationen finden Sie unter [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]
->  Weitere Informationen dazu, was der Treiber-Manager diese Funktion auf, wenn einer ODBC 2. zuordnet *.x* Anwendung arbeitet mit einer ODBC 3.*.x* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
+>  Weitere Informationen dazu, was der Treiber-Manager diese Funktion auf, wenn einer ODBC 2. zuordnet *.x* Anwendung arbeitet mit einer ODBC 3. *.x* -Treiber verwenden, finden Sie unter [veraltet Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

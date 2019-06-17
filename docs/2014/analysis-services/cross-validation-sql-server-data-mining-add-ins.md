@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086649"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Kreuzvalidierung (SQL Server Data Mining-Add-Ins)
@@ -75,7 +75,7 @@ ms.locfileid: "66086649"
  Wenn Sie eine Struktur auswählen, die sowohl Clustermodelle als auch andere Arten von Modellen unterstützt, werden die Clustermodelle nicht getestet.  
   
 ## <a name="understanding-cross-validation-results"></a>Grundlegendes zu Kreuzvalidierungsergebnissen  
- Die Ergebnisse der kreuzvalidierung werden angezeigt, in einem neuen Arbeitsblatt, mit dem Titel **Kreuzvalidierungsbericht für \<Attributname >**. Das neue Arbeitsblatt besteht aus mehreren Abschnitten: der erste Abschnitt enthält eine Zusammenfassung mit wichtigen Metadaten zum getesteten Modell, sodass Sie sehen, aus welchem Modell oder aus welcher Struktur die Ergebnisse stammen.  
+ Die Ergebnisse der kreuzvalidierung werden angezeigt, in einem neuen Arbeitsblatt, mit dem Titel **Kreuzvalidierungsbericht für \<Attributname >** . Das neue Arbeitsblatt besteht aus mehreren Abschnitten: der erste Abschnitt enthält eine Zusammenfassung mit wichtigen Metadaten zum getesteten Modell, sodass Sie sehen, aus welchem Modell oder aus welcher Struktur die Ergebnisse stammen.  
   
  Der zweite Abschnitt enthält eine statistische Zusammenfassung, die angibt, wie gut das ursprüngliche Modell ist. In dieser Zusammenfassung werden die Unterschiede zwischen den Modellen, die für jeden Fold erstellt drei Hauptmeasures analysiert werden: *Wurzel des mittleren quadratischen Fehler*, *mittlerer absoluter Fehler*, und *protokollergebnis*. Dies sind statistische Standardmeasures, die nicht nur beim Data Mining verwendet werden, sondern auch in den meisten statistischen Analysen.  
   
