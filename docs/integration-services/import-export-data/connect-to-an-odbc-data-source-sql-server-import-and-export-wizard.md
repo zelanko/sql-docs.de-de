@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22fd8a3e1518c535e61321255fda9c2a3f279ab1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723944"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer ODBC-Datenquelle (SQL Server-Import/Export-Assistent)
@@ -29,7 +29,7 @@ Möglicherweise müssen Sie den ODBC-Treiber bei Microsoft oder einem Drittanbie
 Außerdem müssen Sie gegebenenfalls nachsehen, welche Verbindungsinformationen erforderlich sind. Auf der Website [The Connection Strings Reference (Verweis auf Verbindungszeichenfolgen)](https://www.connectionstrings.com/) eines Drittanbieters sind Beispielverbindungszeichenfolgen aufgelistet, und es werden Informationen zu Datenanbietern und den erforderlichen Verbindungsinformationen gegeben.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>Sicherstellen, dass der gewünschte Treiber installiert ist
-1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)**. Wenn Sie nur über einen 32-Bit-Treiber verfügen, oder Sie wissen, dass Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)**.
+1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen, oder Sie wissen, dass Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
 2.  Starten Sie das Applet. Das Fenster **ODBC-Datenquellen-Administrator** wird geöffnet.
 3.  Auf der Registerkarte **Treiber** finden Sie eine Liste aller auf Ihrem Computer installierten ODBC-Treiber. (Die Namen einiger Treiber werden möglicherweise in mehreren Sprachen aufgeführt.)
 
@@ -67,7 +67,7 @@ Wenn Sie eine Verbindungszeichenfolge eingegeben haben, werden auf den Seiten **
 
 ## <a name="odbc_dsn"></a> Option 1: Bereitstellen eines DSN
 Wenn Sie die Verbindungsinformationen über einen Datenquellennamen bereitstellen möchten, verwenden Sie das Applet **ODBC-Datenquellen-Administrator**, um den Namen des bestehenden DSN zu finden oder einen neuen zu erstellen.
-1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)**. Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)**.
+1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
 2.  Starten Sie das Applet. Das Fenster **ODBC-Datenquellen-Administrator** wird geöffnet. Das Applet sieht wie folgt aus.
 
     ![Applet „ODBC-Administratoreinstellungen“](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -112,7 +112,7 @@ Auf der Website [The Connection Strings Reference (Verweis auf Verbindungszeiche
 ## <a name="get-the-connection-string-with-an-app"></a>Abrufen der Verbindungszeichenfolge über eine App
 Sie können das Applet **ODBC-Datenquellen-Administrator** in den Einstellungen verwenden, um eine Verbindungszeichenfolge für Ihren ODBC-Treiber auf Ihrem Computer zu erstellen und zu testen. Erstellen Sie einen Datei-DSN für Ihre Verbindung, und kopieren Sie die Einstellungen des Datei-DSN anschließend, um die Verbindungszeichenfolge zu assemblieren. Dafür müssen Sie zwar mehrere Schritte ausführen, aber dieser Vorgang hilft Ihnen dabei, eine gültige Verbindungszeichenfolge zu erstellen.
 
-1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)**. Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)**.
+1.  Suchen Sie in den Einstellungen nach, oder navigieren Sie zu dem Applet **ODBC-Datenquellen (64-Bit)** . Wenn Sie nur über einen 32-Bit-Treiber verfügen oder Sie einen 32-Bit-Treiber verwenden müssen, suchen Sie stattdessen nach, oder navigieren Sie zu **ODBC-Datenquellen (32-Bit)** .
 2.  Starten Sie das Applet. Das Fenster **ODBC-Datenquellen-Administrator** wird geöffnet.
 3.  Gehen Sie jetzt zur Registerkarte **Datei-DSN** des Applets. Klicken Sie auf **Hinzufügen**.
 

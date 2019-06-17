@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2c3fe113514ba44a63bce8b07d14efda865626cf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088741"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
@@ -27,7 +27,7 @@ Argumente sind Variablen, für die die SQL Server Management Studio-Umgebung Wer
   
 In der folgenden Tabelle sind die Argumente für externe Tools aufgeführt.  
   
-|Name|Argument|Beschreibung|  
+|Name|Argument|und Beschreibung|  
 |--------|------------|---------------|  
 |**Elementpfad**|$(ItemPath)|Der vollständige Dateiname der aktuellen Quelle (definiert als Laufwerk + Pfad + Dateiname); leer, wenn ein Fenster aktiv ist, das nicht zur Quelle gehört.|  
 |**Elementverzeichnis**|$(ItemDir)|Das Verzeichnis der aktuellen Quelle (definiert als Laufwerk + Pfad); leer, wenn ein Fenster aktiv ist, das nicht zur Quelle gehört.|  
@@ -45,7 +45,7 @@ In der folgenden Tabelle sind die Argumente für externe Tools aufgeführt.
 |**Projektmappenverzeichnis**|$(SolutionDir)|Das Verzeichnis der aktuellen Projektmappe (definiert als Laufwerk + Pfad).|  
 |**Projektmappen-Dateiname**|$(SolutionFileName)|Der Dateiname der aktuellen Projektmappe (definiert als Laufwerk + Pfad + Dateiname).|  
   
-* Die aktuelle Zeile oder Spalte bzw. der aktuelle Text hängt von der Position des Cursors im Text-Editor ab, wie in der Statusleiste dargestellt.  
+\* Die aktuelle Zeile oder Spalte bzw. der aktuelle Text hängt von der Position des Cursors im Text-Editor ab, wie in der Statusleiste dargestellt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Externe Tools (Dialogfeld)](../ssms/external-tools-dialog-box.md)  

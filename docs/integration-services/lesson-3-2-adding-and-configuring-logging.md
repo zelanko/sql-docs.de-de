@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80d2eb1ec30b4729deb4891c451fc5967bec9d54
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722068"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lektion 3.2: Hinzufügen und Konfigurieren der Protokollierung
@@ -40,7 +40,7 @@ In dieser Aufgabe aktivieren Sie die Protokollierung für den Datenfluss im Pake
   
 5.  Ändern Sie optional **Beschreibung**.  
   
-6.  Klicken Sie in der Spalte **Konfiguration** auf **\<Neue Verbindung>**, um anzugeben, wohin [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Protokollinformationen schreibt.  
+6.  Klicken Sie in der Spalte **Konfiguration** auf **\<Neue Verbindung>** , um anzugeben, wohin [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Protokollinformationen schreibt.  
   
     Wählen Sie im Dialogfeld **Dateiverbindungs-Manager-Editor** für **Verwendungstyp** die Option **Datei erstellen** aus, und klicken Sie anschließend auf **Durchsuchen**. Standardmäßig wird vom Dialogfeld **Datei auswählen** der Projektordner geöffnet, aber Sie können Protokollinformationen an beliebigen Speicherorten speichern.  
   

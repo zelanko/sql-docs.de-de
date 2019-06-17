@@ -22,18 +22,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664693"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Ändert eine zuvor erstellte Sicht. Darunter fallen auch indizierte Sichten. ALTER VIEW wirkt sich nicht auf abhängige gespeicherte Prozeduren oder Trigger aus und ändert keine Berechtigungen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -73,7 +73,7 @@ AS select_statement
  Verschlüsselt die [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)-Einträge, die den Text der ALTER VIEW-Anweisung enthalten. Mithilfe von WITH ENCRYPTION kann verhindert werden, dass die Sicht als Teil der SQL Server-Replikation veröffentlicht wird.  
   
  SCHEMABINDING  
- Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wird SCHEMABINDING angegeben, ist es nicht möglich, Änderungen der Basistabellen auszuführen, die sich auf die Sichtdefinition auswirken würden. Die Sichtdefinition muss zuerst geändert oder gelöscht werden, um Abhängigkeiten von der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss _select\_statement_ die zweiteiligen Namen (_schema_**.**_object_) der Tabellen, Sichten oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
+ Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wird SCHEMABINDING angegeben, ist es nicht möglich, Änderungen der Basistabellen auszuführen, die sich auf die Sichtdefinition auswirken würden. Die Sichtdefinition muss zuerst geändert oder gelöscht werden, um Abhängigkeiten von der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss _select\_statement_ die zweiteiligen Namen (_schema_ **.** _object_) der Tabellen, Sichten oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
   
  Sichten oder Tabellen, die Bestandteil einer mit der SCHEMABINDING-Klausel erstellten Sicht sind, können erst dann gelöscht werden, wenn die entsprechende Sicht gelöscht oder geändert wird, sodass die Schemabindung nicht mehr vorhanden ist. Andernfalls löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Darüber hinaus schlägt die Ausführung von ALTER TABLE-Anweisungen für Tabellen fehl, die Bestandteil von Sichten mit Schemabindung sind, falls diese Anweisungen die Sichtdefinition betreffen.  
   
@@ -134,7 +134,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1879aef282f9e3d8e61767ba2808bf3dd2908b8d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715678"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB-Datenbank)
@@ -41,13 +41,13 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumente  
  [ @folder_name = ] *folder_name*  
- Der Name eines Ordners, der das Projekt enthält. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name eines Ordners, der das Projekt enthält. Der *folder_name* ist **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Der Name des Projekts. Der *project_name* ist **nvarchar(128)**.  
+ Der Name des Projekts. Der *project_name* ist **nvarchar(128)** .  
   
  [ @validate_type = ] *validate_type*  
- Gibt den Typ der auszuführenden Überprüfung an. Führen Sie mithilfe des Zeichens `F` eine vollständige Überprüfung aus. Dieser Parameter ist optional. Das Zeichen `F` wird standardmäßig verwendet. Das Argument *value_type* ist vom Typ **char(1)**.  
+ Gibt den Typ der auszuführenden Überprüfung an. Führen Sie mithilfe des Zeichens `F` eine vollständige Überprüfung aus. Dieser Parameter ist optional. Das Zeichen `F` wird standardmäßig verwendet. Das Argument *value_type* ist vom Typ **char(1)** .  
   
  [ @validation_id = ] *validation_id*  
  Gibt den eindeutigen Bezeichner (ID) der Überprüfung zurück. Das Argument *validation_id* ist vom Typ **bigint**.  
@@ -56,7 +56,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Gibt an, ob die 32-Bit-Laufzeit verwendet werden soll, um das Paket unter einem 64-Bit-Betriebssystem auszuführen. Verwenden Sie den Wert `1`, um das Paket mit der 32-Bit-Runtime auszuführen, wenn die Ausführung unter einem 64-Bit-Betriebssystem erfolgt. Verwenden Sie den Wert `0`, um das Paket mit der 64-Bit-Laufzeit auszuführen, wenn die Ausführung unter einem 64-Bit-Betriebssystem erfolgt. Dieser Parameter ist optional. Das Argument*use32bitruntime* ist vom Typ **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Gibt die Umgebungsverweise an, die bei der Überprüfung beachtet werden. Wenn der Wert `A` ist, werden alle dem Projekt zugeordneten Umgebungsverweise in die Überprüfung eingeschlossen. Wenn der Wert `S` ist, wird nur ein einzelner Umgebungsverweis eingeschlossen. Wenn der Wert `D` ist, werden keine Umgebungsverweise eingeschlossen, und jeder Parameter muss für eine erfolgreiche Überprüfung über einen Standardliteralwert verfügen. Dieser Parameter ist optional. Das Zeichen `D` wird standardmäßig verwendet. Das Argument *environment_scope* ist vom Typ **Char(1)**.  
+ Gibt die Umgebungsverweise an, die bei der Überprüfung beachtet werden. Wenn der Wert `A` ist, werden alle dem Projekt zugeordneten Umgebungsverweise in die Überprüfung eingeschlossen. Wenn der Wert `S` ist, wird nur ein einzelner Umgebungsverweis eingeschlossen. Wenn der Wert `D` ist, werden keine Umgebungsverweise eingeschlossen, und jeder Parameter muss für eine erfolgreiche Überprüfung über einen Standardliteralwert verfügen. Dieser Parameter ist optional. Das Zeichen `D` wird standardmäßig verwendet. Das Argument *environment_scope* ist vom Typ **Char(1)** .  
   
  [ @reference_id = ] *reference_id*  
  Die eindeutige ID des Umgebungsverweises. Dieser Parameter ist nur erforderlich, wenn *environment_scope* den Wert `S` aufweist und daher nur ein einzelner Umgebungsverweis in die Überprüfung eingeschlossen wird. Der *reference_id* ist **bigint**.  

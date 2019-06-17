@@ -29,10 +29,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102060"
 ---
 # <a name="transact-sql-editor-options"></a>Optionen des Transact-SQL-Editors
@@ -44,7 +44,7 @@ Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Edi
   
 ## <a name="QueryExecution"></a>Abfrageausführung  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|und Beschreibung|  
 |------------|---------------|  
 |**SET ROWCOUNT**|Der Standardwert 0 zeigt an, dass SQL Server so lange auf die Ergebnisse wartet, bis alle Ergebnisse übermittelt sind. Geben Sie einen Wert größer 0 an, wenn die Abfrage von SQL Server nach Übermittlung einer bestimmten Anzahl von Zeilen abgebrochen werden soll. Geben Sie SET ROWCOUNT 0 an, um diese Option zu deaktivieren (sodass alle Zeilen zurückgegeben werden).|  
 |**SET TEXTSIZE**|Der Standardwert von 2.147.483.647 Bytes zeigt an, dass SQL Server ein vollständiges Datenfeld bereitstellt, das maximal der Größe von text-, ntext-, nvarchar(max)- und varchar(max)-Datenfeldern entspricht. Dies hat keine Auswirkungen auf den XML-Datentyp. Geben Sie eine kleinere Zahl an, um Ergebnisse mit großen Werten zu beschränken. Spalten, deren Größe die angegebene Zahl übersteigt, werden abgeschnitten.|  
@@ -68,11 +68,11 @@ Dieses Thema enthält Informationen zu einigen der Optionen des Transact-SQL-Edi
 |**SET CURSOR_CLOSE_ON_COMMIT**|Steuert, ob ein Cursor beim Commit für eine Transaktion geschlossen wird oder nicht. Weitere Informationen finden Sie unter [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754).|  
 |**SET ANSI_PADDING**|Steuert das Speichern von Werten in der Spalte, wenn die Werte kürzer als die definierte Spaltengröße sind, sowie das Speichern von Werten mit nachfolgenden Leerzeichen in Daten vom Typ **char**, **varchar**, **binary**und **varbinary** . Weitere Informationen finden Sie unter [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755).|  
 |**SET ANSI_WARNINGS**|Gibt das SQL-92-Standardverhalten für verschiedene Fehlerbedingungen an. Weitere Informationen finden Sie unter [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
-|**SET ANSI_NULLS**|Gibt das SQL-92-kompatible Verhalten für den Gleichheits- (**=**) und den Ungleichheits-Vergleichsoperator (**<>**) bei Verwendung von NULL-Werten an. Weitere Informationen finden Sie unter [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
+|**SET ANSI_NULLS**|Gibt das SQL-92-kompatible Verhalten für den Gleichheits- ( **=** ) und den Ungleichheits-Vergleichsoperator ( **<>** ) bei Verwendung von NULL-Werten an. Weitere Informationen finden Sie unter [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
 ## <a name="QueryResults"></a>Abfrageergebnisse  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|und Beschreibung|  
 |------------|---------------|  
 |**Abfrage in das Resultset einschließen**|Gibt den Text der Abfrage als Teil des Resultsets zurück.|  
 |**Spaltenheader beim Kopieren oder Speichern der Ergebnisse einschließen**|Schließt Spaltenheader (Titel) ein, wenn Ergebnisse in die Zwischenablage kopiert oder in einer Datei gespeichert werden. Deaktivieren Sie dieses Kontrollkästchen, wenn Sie nur die Ergebnisdaten und nicht die Spaltenheader speichern oder kopieren möchten.|  

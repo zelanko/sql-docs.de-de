@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 39e43b52575b8f500b68c61eda2cb12c68406db9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106257"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -63,13 +63,13 @@ Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie si
   
 4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, dessen Schritte Sie ändern möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften -**_job\_name_ unter **Seite auswählen** auf die Option **Schritte**.  
+5.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** _job\_name_ unter **Seite auswählen** auf die Option **Schritte**.  
   
-6.  Klicken Sie auf **Bearbeiten**, um das Dialogfeld **Auftragsschritteigenschaften -**_job\_step\_name_ zu öffnen. Weitere Informationen zu den verfügbaren Optionen in diesem Dialogfeld finden Sie unter [Auftragsschritt-Eigenschaften – Neuer Auftragsschritt &#40;Seite „Allgemein“&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) und [Auftragsschritt-Eigenschaften – Neuer Auftragsschritt &#40;Seite „Erweitert“&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Klicken Sie auf **Bearbeiten**, um das Dialogfeld **Auftragsschritteigenschaften -** _job\_step\_name_ zu öffnen. Weitere Informationen zu den verfügbaren Optionen in diesem Dialogfeld finden Sie unter [Auftragsschritt-Eigenschaften – Neuer Auftragsschritt &#40;Seite „Allgemein“&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) und [Auftragsschritt-Eigenschaften – Neuer Auftragsschritt &#40;Seite „Erweitert“&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-8.  Klicken Sie im Dialogfeld **Auftragseigenschaften -**_job\_name_ auf **OK**.  
+8.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** _job\_name_ auf **OK**.  
   
 ## <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 592af27fb460f748dcf11b1463583a5d221402d9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715807"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB-Datenbank)
@@ -44,22 +44,22 @@ catalog.set_object_parameter_value [@object_type =] object_type
  Der Typ des Parameters. Verwenden Sie den Wert `20` , um einen Projektparameter anzugeben, oder den Wert `30` , um einen Paketparameter anzugeben. Der *object_type* ist **smallInt**.  
   
  [@folder_name =] *folder_name*  
- Der Name des Ordners, der den Parameter enthält. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners, der den Parameter enthält. Der *folder_name* ist **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Der Name des Projekts, das den Parameter enthält. Der *project_name* ist **nvarchar(128)**.  
+ Der Name des Projekts, das den Parameter enthält. Der *project_name* ist **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- Der Name des Parameters. Der *parameter_name* ist **nvarchar(128)**.  
+ Der Name des Parameters. Der *parameter_name* ist **nvarchar(128)** .  
   
  [@parameter_value =] *parameter_value*  
  Der Wert des Parameters. Der *parameter_value* ist **sql_variant**.  
   
  [@object_name =] *object_name*  
- Der Name des Pakets. Dieses Argument ist erforderlich, wenn der Parameter ein Paketparameter ist. Der *object_name* ist **nvarchar(260)**.  
+ Der Name des Pakets. Dieses Argument ist erforderlich, wenn der Parameter ein Paketparameter ist. Der *object_name* ist **nvarchar(260)** .  
   
  [@value_type =] *value_type*  
- Der Typ des Parameterwerts. Verwenden Sie das Zeichen `V`, um anzugeben, dass *parameter_value* ein Literalwert ist, der standardmäßig verwendet wird, wenn vor der Ausführung keine anderen Werte zugewiesen werden. Verwenden Sie das Zeichen `R` , um anzugeben, dass *parameter_value* ein Wert ist, auf den verwiesen wird und der auf den Namen einer Umgebungsvariablen festgelegt wurde. Dieses Argument ist optional. Das Zeichen `V` wird standardmäßig verwendet. Der *value_type* ist **char(1)**.  
+ Der Typ des Parameterwerts. Verwenden Sie das Zeichen `V`, um anzugeben, dass *parameter_value* ein Literalwert ist, der standardmäßig verwendet wird, wenn vor der Ausführung keine anderen Werte zugewiesen werden. Verwenden Sie das Zeichen `R` , um anzugeben, dass *parameter_value* ein Wert ist, auf den verwiesen wird und der auf den Namen einer Umgebungsvariablen festgelegt wurde. Dieses Argument ist optional. Das Zeichen `V` wird standardmäßig verwendet. Der *value_type* ist **char(1)** .  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  

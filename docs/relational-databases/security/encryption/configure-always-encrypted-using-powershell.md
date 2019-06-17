@@ -12,11 +12,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 529aaf3e6de3d748ee998b4b345bf90e84a885f1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521684"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Konfigurieren von Always Encrypted mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ $database | Get-SqlColumnMasterKey
 
 Die folgenden PowerShell-Cmdlets sind für Always Encrypted verfügbar:
 
-|CMDLET |Beschreibung
+|CMDLET |und Beschreibung
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Führt die Azure-Authentifizierung aus und ruft ein Authentifizierungstoken ab.
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |Fügt einen neuen verschlüsselten Wert für ein vorhandenes Spaltenverschlüsselungsschlüssel-Objekt in der Datenbank hinzu.

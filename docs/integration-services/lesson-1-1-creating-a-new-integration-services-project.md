@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723320"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Lektion 1-1: Erstellen eines neuen SQL Server Integration Services-Projekts
@@ -35,7 +35,7 @@ Die Pakete, die Sie in den Lektionen 2 bis 6 verwenden, werden aus dem Paket kop
 
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts  
   
-1.  Suchen Sie im Windows-**Startmenü** nach **Visual Studio (SSDT)**, und wählen Sie es aus.  
+1.  Suchen Sie im Windows-**Startmenü** nach **Visual Studio (SSDT)** , und wählen Sie es aus.  
   
 2.  Wählen Sie in Visual Studio den Befehl **Datei** > **Neu** > **Projekt** aus, um ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt zu erstellen.  
   

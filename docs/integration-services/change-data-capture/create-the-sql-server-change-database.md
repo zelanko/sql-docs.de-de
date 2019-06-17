@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b9ea9d63d2303a66e56ab38774845cee73c125a4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728934"
 ---
 # <a name="create-the-sql-server-change-database"></a>Erstellen der SQL Server-Änderungsdatenbank
@@ -36,7 +36,7 @@ ms.locfileid: "65728934"
   
  Informationen zum Eingeben der Daten im Dialogfeld Verbindung mit SQL Server herstellen finden Sie unter [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Oracle CDC-Instanz**  
  Geben Sie die folgenden Informationen zur CDC-Instanz an, die Sie erstellen.  
   

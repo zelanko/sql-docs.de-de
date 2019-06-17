@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665502"
 ---
 # <a name="add-or-edit-join"></a>Join hinzufügen und Join bearbeiten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47794578"
 > [!IMPORTANT]  
 >  Joinfilter können zwar eine unbegrenzte Anzahl von Tabellen umfassen, Filter mit sehr vielen Tabellen können sich jedoch nachteilig auf die Leistung während der Mergeverarbeitung auswirken. Wenn Sie Joinsfilter für fünf oder mehr Tabellen erstellen, sollten Sie andere Lösungen in Betracht ziehen: Kleinere Tabellen, Tabellen, die nicht geändert werden, oder Tabellen, bei denen es sich primär um Nachschlagetabellen handelt, sollten in diesem Fall nicht gefiltert werden. Verwenden Sie Joinfilter nur zwischen Tabellen, die für die Abonnenten partitioniert werden müssen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  Dieses Dialogfeld enthält einen dreistufigen Vorgang zur Erstellung eines Joinfilters zwischen zwei Tabellen. Wenn mehrere Joinfilter erstellt werden sollen, muss der Vorgang mithilfe des Dialogfelds mehrfach ausgeführt werden.  
   
 1.  **Überprüfen Sie die gefilterte Tabelle, und wählen Sie die verknüpfte Tabelle aus**  
@@ -47,7 +47,7 @@ ms.locfileid: "47794578"
   
     -   Wenn Sie einen neuen Join hinzufügen, wählen Sie **Anweisung mit dem Generator erstellen** oder **Joinanweisung manuell schreiben**aus. Wenn Sie bereits begonnen haben, den Join manuell zu schreiben, können Sie den Generator nicht mehr verwenden.  
   
-         Wenn Sie auswählen, dass der Generator verwendet werden soll, verwenden Sie die Spalten im Raster (**Konjunktion**, **Gefilterte Tabellenspalte**, **Operator**und **Verknüpfte Tabellenspalte**), um eine Joinanweisung zu erstellen. Jede der Spalten im Raster enthält ein Dropdownlistenfeld, mit dessen Hilfe Sie zwei Spalten und einen Operator (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **wie**) auswählen können. Die Ergebnisse werden im Textbereich **Vorschau** angezeigt. Wenn mehr als ein Spaltenpaar an dem Join beteiligt ist, wählen Sie in der**Conjunction** -Spalte eine Konjunktion ( **AND**oder **OR** ) aus, und geben Sie zwei weitere Spalten und einen weiteren Operator ein.  
+         Wenn Sie auswählen, dass der Generator verwendet werden soll, verwenden Sie die Spalten im Raster (**Konjunktion**, **Gefilterte Tabellenspalte**, **Operator**und **Verknüpfte Tabellenspalte**), um eine Joinanweisung zu erstellen. Jede der Spalten im Raster enthält ein Dropdownlistenfeld, mit dessen Hilfe Sie zwei Spalten und einen Operator ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **wie**) auswählen können. Die Ergebnisse werden im Textbereich **Vorschau** angezeigt. Wenn mehr als ein Spaltenpaar an dem Join beteiligt ist, wählen Sie in der**Conjunction** -Spalte eine Konjunktion ( **AND**oder **OR** ) aus, und geben Sie zwei weitere Spalten und einen weiteren Operator ein.  
   
          Wenn Sie ausgewählt haben, dass die Anweisung manuell geschrieben wird, schreiben Sie die Joinanweisung im Textbereich **Joinanweisung** . Um Spalten mit Drag und Drop in den Textbereich **Joinanweisung** zu verschieben, verwenden Sie die Listenfelder **Gefilterte Tabellenspalten** und **Verknüpfte Tabellenspalten** .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47794578"
   
  Nachdem Sie einen Filter hinzugefügt oder bearbeitet haben, klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld zu schließen. Der von Ihnen angegebene Filter wird analysiert und für die Tabelle in der SELECT-Klausel ausgeführt. Wenn die Filteranweisung Syntaxfehler oder andere Probleme enthält, werden Sie benachrichtigt und können die Filteranweisung bearbeiten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)   

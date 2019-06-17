@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b18b2bdd034cf5d6864ddb4e652eda0266758a3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714429"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB-Datenbank)
@@ -27,7 +27,7 @@ ms.locfileid: "65714429"
 
   Zeigt die Details für alle Projekte an, die im **SSISDB** -Katalog angezeigt werden.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |project_id|**bigint**|Der eindeutige Bezeichner (ID) des Projekts.|  
 |folder_id|**bigint**|Die eindeutige ID des Ordners, in dem sich das Projekt befindet.|  

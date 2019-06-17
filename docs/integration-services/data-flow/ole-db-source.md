@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f666a224c2e41fb50a1a62748e7d8f1666d0beb9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726636"
 ---
 # <a name="ole-db-source"></a>OLE DB-Quelle
@@ -147,7 +147,7 @@ ms.locfileid: "65726636"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Beschreibung|  
+|Option|und Beschreibung|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Rufen Sie Daten aus einer Tabelle oder Sicht in der OLE DB-Datenquelle ab.|  
 |Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -193,7 +193,7 @@ ms.locfileid: "65726636"
 ## <a name="ole-db-source-editor-columns-page"></a>Quellen-Editor für OLE DB (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Quellen-Editor für OLE DB** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "65726636"
 ## <a name="ole-db-source-editor-error-output-page"></a>Quellen-Editor für OLE DB (Seite Fehlerausgabe)
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für OLE DB** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   

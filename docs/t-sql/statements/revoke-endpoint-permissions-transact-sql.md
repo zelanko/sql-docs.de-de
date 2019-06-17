@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a6b7b9e2fdb8673571803e9b98de80dd1d26040f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327561"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62659993"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE (Endpunktberechtigungen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Gibt eine Berechtigung an, die für einen Endpunkt erteilt werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- ON ENDPOINT **::**_endpoint_name_  
- Gibt den Endpunkt an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
+ ON ENDPOINT **::** _endpoint_name_  
+ Gibt den Endpunkt an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
  { FROM | TO } \<server_principal> Gibt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an, dessen Berechtigung aufgehoben wird.  
   
@@ -129,8 +129,8 @@ GO
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [Endpoints Catalog Views &#40;Transact-SQL&#41; (Katalogsichten für Endpunkte &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
 

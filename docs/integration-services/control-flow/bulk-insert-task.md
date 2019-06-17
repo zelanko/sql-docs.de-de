@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728008"
 ---
 # <a name="bulk-insert-task"></a>Masseneinfügungstask
@@ -72,7 +72,7 @@ ms.locfileid: "65728008"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den Masseneinfügungstask  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Masseneinfügungstask aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|und Beschreibung|  
 |---------------|-----------------|  
 |**BulkInsertTaskBegin**|Zeigt den Beginn der Masseneinfügung an.|  
 |**BulkInsertTaskEnd**|Zeigt die Fertigstellung der Masseneinfügung an.|  
@@ -124,9 +124,9 @@ ms.locfileid: "65728008"
   
  Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](../../integration-services/control-flow/bulk-insert-task.md) und [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verbindung**  
- Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
+ Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, um eine neue Verbindung zu erstellen.  
   
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -136,13 +136,13 @@ ms.locfileid: "65728008"
  **Format**  
  Wählen Sie die Quelle des Formats für die Masseneinfügung aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Use File**|Wählen Sie eine Datei mit Formatspezifikationen aus. Nach Auswahl dieser Option wird die dynamische Option **FormatFile**angezeigt.|  
 |**Specify**|Geben Sie das Format an. Nach Auswahl dieser Option werden die dynamischen Optionen **RowDelimiter** und **ColumnDelimiter**angezeigt.|  
   
  **File**  
- Wählen Sie einen Datei- oder Flatfileverbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
+ Wählen Sie einen Datei- oder Flatfileverbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, um eine neue Verbindung zu erstellen.  
   
  Der Speicherort ist relativ zur SQL Server-Datenbank-Engine, die im Verbindungs-Manager für diesen Task angegeben wurde. Die SQL Server-Datenbank-Engine muss auf die Textdatei zugreifen können, und zwar entweder auf einer lokalen Festplatte des Servers oder über eine Freigabe oder einem SQL Server zugeordneten Laufwerk. Auf die Datei wird nicht von der SSIS-Laufzeit zugegriffen.  
   
@@ -157,11 +157,11 @@ ms.locfileid: "65728008"
   
 #### <a name="format--use-file"></a>Format = Use File  
  **FormatFile**  
- Geben Sie den Pfad der Formatdatei ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), um nach der Formatdatei zu suchen.  
+ Geben Sie den Pfad der Formatdatei ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ), um nach der Formatdatei zu suchen.  
   
 #### <a name="format--specify"></a>Format = Specify  
  **RowDelimiter**  
- Geben Sie das Zeilentrennzeichen in der Quelldatei an. Der Standardwert ist **{CR}{LF}**.  
+ Geben Sie das Zeilentrennzeichen in der Quelldatei an. Der Standardwert ist **{CR}{LF}** .  
   
  **ColumnDelimiter**  
  Geben Sie das Spaltentrennzeichen in der Quelldatei an. Der Standardwert ist **Tabstopp**.  
@@ -169,7 +169,7 @@ ms.locfileid: "65728008"
 ## <a name="bulk-insert-task-editor-general-page"></a>Masseneinfügungstask-Editor (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Masseneinfügungstask-Editor** können Sie einen Namen und eine Beschreibung für den Masseneinfügungstask angeben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Masseneinfügungstask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "65728008"
   
  Weitere Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](../../integration-services/control-flow/bulk-insert-task.md) und [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **CodePage**  
  Geben Sie die Codepage für die in der Datendatei enthaltenen Daten an.  
   

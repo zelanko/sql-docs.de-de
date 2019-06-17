@@ -15,19 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5a43918612c24a6c2d7a0b39c89dacc3edc4ed6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704270"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Platzhalterkomponenten und Inhaltsüberprüfung
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Platzhalterkomponenten werden verwendet, um die Flexibilität der zulässigen Inhalte in einem Inhaltsmodell zu erhöhen. Diese Komponenten werden in der XSD-Sprache auf folgende Weise unterstützt:  
   
--   Elementplatzhalterkomponenten. Diese werden durch das **\<xsd:any>**-Element dargestellt.  
+-   Elementplatzhalterkomponenten. Diese werden durch das **\<xsd:any>** -Element dargestellt.  
   
--   Attributplatzhalterkomponenten. Diese werden durch das **\<xsd:anyAttribute>**-Element dargestellt.  
+-   Attributplatzhalterkomponenten. Diese werden durch das **\<xsd:anyAttribute>** -Element dargestellt.  
   
  Beide Platzhalterzeichenelemente **\<xsd:any>** und **\<xsd: anyAttribute >** unterstützen die Verwendung eines **processContents** Attributs. Auf diese Weise können Sie einen Wert angeben, der angibt, wie XML-Anwendungen die Überprüfung des Dokumentinhalts durchführen, der diesen Platzhalterzeichenelementen zugeordnet ist. Die folgenden Werte und Auswirkungen werden bereitgestellt:  
   

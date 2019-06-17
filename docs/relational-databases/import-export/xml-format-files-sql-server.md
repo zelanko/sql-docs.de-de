@@ -17,10 +17,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b65b89ea70d48991af89190c7577cd7dee2043a
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946354"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-Formatdateien (SQL Server)
@@ -182,19 +182,19 @@ ms.locfileid: "64946354"
   
  <FIELD  
   
- ID **="**_fieldID_**"**  
+ ID **="** _fieldID_ **"**  
   
- xsi **:** type **="**_fieldType_**"**  
+ xsi **:** type **="** _fieldType_ **"**  
   
- [ LENGTH **="**_n_**"** ]  
+ [ LENGTH **="** _n_ **"** ]  
   
- [ PREFIX_LENGTH **="**_p_**"** ]  
+ [ PREFIX_LENGTH **="** _p_ **"** ]  
   
- [ MAX_LENGTH **="**_m_**"** ]  
+ [ MAX_LENGTH **="** _m_ **"** ]  
   
- [ COLLATION **="**_collationName_**"** ]  
+ [ COLLATION **="** _collationName_ **"** ]  
   
- [ TERMINATOR **="**_terminator_**"** ]  
+ [ TERMINATOR **="** _terminator_ **"** ]  
   
  />  
   
@@ -202,13 +202,13 @@ ms.locfileid: "64946354"
   
 |FIELD-Attribut|Beschreibung|Optional /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="**_fieldID_**"**|Gibt den logischen Namen des Felds in der Datendatei an. Die ID eines Felds ist der Schlüssel, mit dem auf das Feld verwiesen wird.<br /><br /> \<FIELD ID **="**_fieldID_**"**/> wird \<COLUMN SOURCE **="**_fieldID_**"**/> zugeordnet.|Required|  
-|xsi:type **="**_fieldType_**"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Typ der Instanz des Elements identifiziert. Der Wert von *fieldType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.|Erforderlich (abhängig vom Datentyp)|  
-|LENGTH **="**_n_**"**|Dieses Attribut definiert die Länge für eine Instanz mit einem Datentyp fester Länge.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
-|PREFIX_LENGTH **="**_p_**"**|Dieses Attribut definiert die Präfixlänge für eine binäre Datendarstellung. Bei dem PREFIX_LENGTH-Wert, *p*, muss es sich um eine der folgenden Zahlen handeln: 1, 2, 4 oder 8.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
-|MAX_LENGTH **="**_m_**"**|Dieses Attribut gibt die maximale Anzahl an Byte an, die in einem bestimmten Feld gespeichert werden kann. Ohne eine Zieltabelle ist die maximale Spaltenlänge nicht bekannt. Das MAX_LENGTH-Attribut beschränkt die maximale Länge einer Ausgabezeichenspalte sowie den Speicherplatz, der dem Spaltenwert zugewiesen ist. Dies ist vor allem bei Verwendung der BULK-Option der OPENROWSET-Funktion in einer SELECT FROM-Klausel nützlich.<br /><br /> Der Wert von *m* muss eine positive ganze Zahl sein. Standardmäßig beträgt die maximale Länge 8000 Zeichen für eine **char** -Spalte und 4000 Zeichen für eine **nchar** -Spalte.|Optional|  
-|COLLATION **="**_collationName_**"**|COLLATION ist nur für Zeichenfelder zulässig. Eine Liste der SQL-Sortierungsnamen finden Sie unter [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
-|TERMINATOR **= "**_terminator_**"**|Dieses Attribut gibt das Abschlusszeichen eines Datenfelds an. Als Abschlusszeichen kann jedes beliebige Zeichen verwendet werden. Es muss sich jedoch um ein eindeutiges Zeichen handeln, das nicht Teil der Daten ist.<br /><br /> Standardmäßig wird das Tabstoppzeichen (dargestellt als \t) als Abschlusszeichen verwendet. Um eine Absatzmarke darzustellen, verwenden Sie \r\n.|Wird nur mit einem xsi:type von Zeichendaten verwendet, die dieses Attribut erfordern.|  
+|ID **="** _fieldID_ **"**|Gibt den logischen Namen des Felds in der Datendatei an. Die ID eines Felds ist der Schlüssel, mit dem auf das Feld verwiesen wird.<br /><br /> \<FIELD ID **="** _fieldID_ **"** /> wird \<COLUMN SOURCE **="** _fieldID_ **"** /> zugeordnet.|Required|  
+|xsi:type **="** _fieldType_ **"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Typ der Instanz des Elements identifiziert. Der Wert von *fieldType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.|Erforderlich (abhängig vom Datentyp)|  
+|LENGTH **="** _n_ **"**|Dieses Attribut definiert die Länge für eine Instanz mit einem Datentyp fester Länge.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
+|PREFIX_LENGTH **="** _p_ **"**|Dieses Attribut definiert die Präfixlänge für eine binäre Datendarstellung. Bei dem PREFIX_LENGTH-Wert, *p*, muss es sich um eine der folgenden Zahlen handeln: 1, 2, 4 oder 8.|Optional, sofern nicht für den xsi:type-Wert erforderlich|  
+|MAX_LENGTH **="** _m_ **"**|Dieses Attribut gibt die maximale Anzahl an Byte an, die in einem bestimmten Feld gespeichert werden kann. Ohne eine Zieltabelle ist die maximale Spaltenlänge nicht bekannt. Das MAX_LENGTH-Attribut beschränkt die maximale Länge einer Ausgabezeichenspalte sowie den Speicherplatz, der dem Spaltenwert zugewiesen ist. Dies ist vor allem bei Verwendung der BULK-Option der OPENROWSET-Funktion in einer SELECT FROM-Klausel nützlich.<br /><br /> Der Wert von *m* muss eine positive ganze Zahl sein. Standardmäßig beträgt die maximale Länge 8000 Zeichen für eine **char** -Spalte und 4000 Zeichen für eine **nchar** -Spalte.|Optional|  
+|COLLATION **="** _collationName_ **"**|COLLATION ist nur für Zeichenfelder zulässig. Eine Liste der SQL-Sortierungsnamen finden Sie unter [SQL Server-Sortierungsname &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
+|TERMINATOR **= "** _terminator_ **"**|Dieses Attribut gibt das Abschlusszeichen eines Datenfelds an. Als Abschlusszeichen kann jedes beliebige Zeichen verwendet werden. Es muss sich jedoch um ein eindeutiges Zeichen handeln, das nicht Teil der Daten ist.<br /><br /> Standardmäßig wird das Tabstoppzeichen (dargestellt als \t) als Abschlusszeichen verwendet. Um eine Absatzmarke darzustellen, verwenden Sie \r\n.|Wird nur mit einem xsi:type von Zeichendaten verwendet, die dieses Attribut erfordern.|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Xsi:type-Werte des \<FIELD>-Elements  
  Der xsi:type-Wert ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp für eine Instanz eines Elements identifiziert. Weitere Informationen finden Sie unter "Einfügen des xsi:type-Werts in ein Dataset" weiter unten in diesem Abschnitt.  
@@ -253,14 +253,14 @@ ms.locfileid: "64946354"
   
  Ein Feld wird mithilfe der folgenden Attribute einer Spalte in der Zieltabelle zugeordnet:  
   
-|COLUMN-Attribut|Beschreibung|Optional /<br /><br /> Required|  
+|COLUMN-Attribut|und Beschreibung|Optional /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="**_fieldID_**"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> \<COLUMN SOURCE **="**_fieldID_**"**/> wird \<FIELD ID **="**_fieldID_**"**/> zugeordnet.|Required|  
+|SOURCE **="** _fieldID_ **"**|Gibt die ID des Felds an, das der Spalte zugeordnet wird.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** /> wird \<FIELD ID **="** _fieldID_ **"** /> zugeordnet.|Required|  
 |NAME = "*columnName*"|Gibt den Namen der Spalte im Rowset an, die durch die Formatdatei dargestellt wird. Dieser Spaltenname wird verwendet, um die Spalte im Resultset zu identifizieren; er muss nicht dem in der Zieltabelle verwendeten Spaltennamen entsprechen.|Required|  
-|xsi **:** type **="**_ColumnType_**"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: Mögliche Werte für *ColumnType* und die zugehörigen Attribute werden in der \<COLUMN>-Elementtabelle im Abschnitt [Xsi:type-Werte des &lt;COLUMN&gt;-Elements](#XsiTypeValuesOfCOLUMN) aufgelistet.|Optional|  
-|LENGTH **="**_n_**"**|Definiert die Länge für eine Instanz mit einem Datentyp fester Länge. LENGTH wird nur verwendet, wenn es sich bei xsi:type um einen Zeichenfolgen-Datentyp handelt.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Zeichenfolgen-Datentyp ist)|  
-|PRECISION **="**_n_**"**|Gibt die Anzahl der Stellen einer Zahl an. Beispielsweise hat die Zahl 123,45 eine Genauigkeit von 5.<br /><br /> Der Wert muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
-|SCALE **="**_int_**"**|Gibt die Anzahl der Stellen rechts vom Dezimaltrennzeichen einer Zahl an. Beispielsweise verfügt die Zahl 123,45 über 2 Dezimalstellen.<br /><br /> Der Wert muss eine ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
+|xsi **:** type **="** _ColumnType_ **"**|Dies ist ein (als Attribut verwendetes) XML-Konstrukt, das den Datentyp der Instanz des Elements identifiziert. Der Wert von *ColumnType* bestimmt, welche der optionalen Attribute (unten) in einer bestimmten Instanz erforderlich sind.<br /><br /> Hinweis: Mögliche Werte für *ColumnType* und die zugehörigen Attribute werden in der \<COLUMN>-Elementtabelle im Abschnitt [Xsi:type-Werte des &lt;COLUMN&gt;-Elements](#XsiTypeValuesOfCOLUMN) aufgelistet.|Optional|  
+|LENGTH **="** _n_ **"**|Definiert die Länge für eine Instanz mit einem Datentyp fester Länge. LENGTH wird nur verwendet, wenn es sich bei xsi:type um einen Zeichenfolgen-Datentyp handelt.<br /><br /> Der Wert von *n* muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Zeichenfolgen-Datentyp ist)|  
+|PRECISION **="** _n_ **"**|Gibt die Anzahl der Stellen einer Zahl an. Beispielsweise hat die Zahl 123,45 eine Genauigkeit von 5.<br /><br /> Der Wert muss eine positive ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
+|SCALE **="** _int_ **"**|Gibt die Anzahl der Stellen rechts vom Dezimaltrennzeichen einer Zahl an. Beispielsweise verfügt die Zahl 123,45 über 2 Dezimalstellen.<br /><br /> Der Wert muss eine ganze Zahl sein.|Optional (nur verfügbar, wenn xsi:type ein Datentyp mit variablen Zahlen ist)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Gibt an, ob eine Spalte NULL-Werte verarbeiten kann. Dieses Attribut ist unabhängig von FIELDS. Falls die Spalte jedoch nicht NULLABLE ist und für ein Feld NULL (d. h. kein Wert) angegeben wurde, tritt ein Laufzeitfehler auf.<br /><br /> Das NULLABLE-Attribut wird nur verwendet, wenn Sie eine einfache SELECT FROM OPENROWSET (BULK...)-Anweisung ausführen.|Optional (verfügbar für jeden beliebigen Datentyp)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> Xsi:type-Werte des \<COLUMN>-Elements  
@@ -285,7 +285,7 @@ ms.locfileid: "64946354"
 ###  <a name="HowUsesROW"></a> Verwenden des \<ROW>-Elements beim Massenimportieren  
  Das \<ROW>-Element wird in bestimmten Kontexten ignoriert. Ob sich das \<ROW>-Element auf einen Massenimportvorgang auswirkt, hängt davon ab, wie der Vorgang durchgeführt wird:  
   
--   Befehl **bcp**   
+-   Befehl **bcp**  
   
      Wenn Daten in eine Zieltabelle geladen werden, ignoriert **bcp** die \<ROW>-Komponente. Stattdessen lädt **bcp** die Daten auf der Grundlage der Spaltentypen der Zieltabelle.  
   

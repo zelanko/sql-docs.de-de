@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01e5fa146c49d1fd43b2fac8fda419dec412fee6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728072"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services-Verarbeitungstask
@@ -87,7 +87,7 @@ ms.locfileid: "65728072"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den Analysis Services-Verarbeitungstask** können Sie den Analysis Services-Verarbeitungstask benennen und beschreiben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Analysis Services-Verarbeitungstask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "65728072"
   
 4.  Batcheinstellungen werden für tabellarische Modelle ignoriert.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Analysis Services-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Analysis Services-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "65728072"
  **Verwandte Themen:** [Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Objektliste**  
- |Eigenschaft|Beschreibung|  
+ |Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**Objektname**|Listet die angegebenen Objektnamen auf.|  
 |**Typ**|Listet die Typen der angegebenen Objekte auf.|  
@@ -139,7 +139,7 @@ ms.locfileid: "65728072"
  **Verwandte Themen:** [Dialogfeld „Auswirkungsanalyse“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Zusammenfassung der Batcheinstellungen**  
- |Eigenschaft|Beschreibung|  
+ |Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**Verarbeitungsreihenfolge**|Gibt an, ob die Objekte nacheinander oder als Batch verarbeitet werden; bei Verwendung der parallelen Verarbeitung wird die Anzahl der gleichzeitig verarbeiteten Objekte angegeben.|  
 |**Transaktionsmodus**|Gibt den Transaktionsmodus für die sequenzielle Verarbeitung an.|  

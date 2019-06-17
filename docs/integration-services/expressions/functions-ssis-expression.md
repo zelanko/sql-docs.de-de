@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba74954d0cf587161b02d1a37a09f222722f9f61
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725394"
 ---
 # <a name="functions-ssis-expression"></a>Funktionen (SSIS-Ausdruck)
@@ -43,7 +43,7 @@ ms.locfileid: "65725394"
   
  Die Ausdruckssprache stellt die folgenden mathematischen Funktionen bereit.  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |[ABS &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/abs-ssis-expression.md)|Gibt den absoluten, positiven Wert eines numerischen Ausdrucks zurück.|  
 |[EXP &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/exp-ssis-expression.md)|Gibt den Exponenten für die Basis e des angegebenen Ausdrucks zurück.|  
@@ -59,7 +59,7 @@ ms.locfileid: "65725394"
   
  Die Ausdrucksauswertung stellt die folgenden Zeichenfolgenfunktionen bereit.  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |[CODEPOINT &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/codepoint-ssis-expression.md)|Gibt den Unicode-Codewert des äußeren linken Zeichens eines Zeichenausdrucks zurück.|  
 |[FINDSTRING &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/findstring-ssis-expression.md)|Gibt den einsbasierten Index für das angegebene Auftreten einer Zeichenfolge innerhalb eines Ausdrucks zurück.|  
@@ -79,7 +79,7 @@ ms.locfileid: "65725394"
   
  Die Ausdrucksauswertung stellt die folgenden Datums- und Zeitfunktionen bereit.  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|Gibt einen neuen DT_DBTIMESTAMP-Wert zurück, indem ein Datums- oder Zeitintervall einem angegebenen Datum hinzugefügt wird.|  
 |[DATEDIFF &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|Gibt die Anzahl von Datums- und Zeiteinheiten zurück, die zwischen zwei angegebenen Daten überschritten wurden.|  
@@ -92,7 +92,7 @@ ms.locfileid: "65725394"
   
  Die Ausdrucksauswertung stellt die folgenden NULL-Funktionen bereit.  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/isnull-ssis-expression.md)|Gibt abhängig davon, ob ein Ausdruck NULL ist, ein boolesches Ergebnis zurück.|  
 |[NULL &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/null-ssis-expression.md)|Gibt einen NULL-Wert eines angeforderten Datentyps zurück.|  
