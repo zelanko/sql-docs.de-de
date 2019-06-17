@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653752"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des Xsd-Tool
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des XSD-Tools
   Nachdem Sie das [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Projekt erstellt haben, rufen Sie eine lokale Kopie des Berichtsdefinitionsschemas ab, und führen Sie das XML-Schemadefinitionstool (Xsd.exe) aus.  
   
 ### <a name="to-generate-the-rdl-classes"></a>So generieren Sie RDL-Klassen  
@@ -32,7 +32,7 @@ ms.locfileid: "62653752"
   
 3.  Navigieren Sie zu dem Speicherort, an dem Sie das [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Projekt erstellt haben, und speichern Sie das Schema unter dem Dateinamen ReportDefinition.xsd.  
   
-4.  Nachdem die Datei gespeichert wurde, öffnen Sie eine Instanz der [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] -Eingabeaufforderung. Um eine Instanz der Eingabeaufforderung zu öffnen, klicken Sie im Startmenü, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft Visual Studio 2010**, zeigen Sie auf **Visual Studio-Tools** , und klicken Sie auf **Visual Studio-Eingabeaufforderung (2010)**.  
+4.  Nachdem die Datei gespeichert wurde, öffnen Sie eine Instanz der [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] -Eingabeaufforderung. Um eine Instanz der Eingabeaufforderung zu öffnen, klicken Sie im Startmenü, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft Visual Studio 2010**, zeigen Sie auf **Visual Studio-Tools** , und klicken Sie auf **Visual Studio-Eingabeaufforderung (2010)** .  
   
 5.  Ändern Sie den aktuellen Pfad in den Speicherort, an dem Sie die Datei ReportDefinition.xsd gespeichert haben:  
   

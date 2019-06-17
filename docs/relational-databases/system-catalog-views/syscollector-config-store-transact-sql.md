@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f535bf0ce2bf455fea72db4ebcdf9879749441cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761346"
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "62761346"
 
   Gibt Eigenschaften zurück, die im Gegensatz zu einer Sammlungssatzinstanz für den gesamten Datensammler gelten. Jede Zeile in dieser Sicht beschreibt eine bestimmte Datensammlereigenschaft, wie den Namen des Verwaltungs-Data Warehouse und den Namen der Instanz, in der sich das Verwaltungs-Data Warehouse befindet.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|Der Name der Eigenschaft. Lässt keine NULL-Werte zu.|  
 |parameter_value|**sql_variant**|Der tatsächliche Wert der Eigenschaft. Lässt NULL-Werte zu.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62761346"
 ## <a name="remarks"></a>Hinweise  
  Die Liste der verfügbaren Eigenschaften ist festgelegt, und deren Werte können nur mithilfe der geeigneten gespeicherten Prozedur geändert werden. In der folgenden Tabelle werden die Eigenschaften beschrieben, die durch diese Sicht verfügbar gemacht werden.  
   
-|Eigenschaftenname|Description|  
+|Eigenschaftenname|Beschreibung|  
 |-------------------|-----------------|  
 |CacheDirectory|Der Name des Verzeichnisses im Dateisystem, in dem die Sammlertyppakete temporäre Informationen speichern.<br /><br /> NULL = das standardmäßige temporäre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verzeichnis wird verwendet.|  
 |CacheWindow|Gibt die Datenbeibehaltungsrichtlinie des Cacheverzeichnisses für fehlgeschlagene Datenuploads an.<br /><br /> -1 = Daten aus allen fehlgeschlagenen Uploads beibehalten.<br /><br /> 0 - Keine Daten aus fehlgeschlagenen Uploads beibehalten.<br /><br /> *n* = beibehalten von Daten aus *n* vorherigen fehlgeschlagenen uploadversuchen, wobei *n* > = 1.<br /><br /> Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_cache_window, um diesen Wert zu ändern.|  

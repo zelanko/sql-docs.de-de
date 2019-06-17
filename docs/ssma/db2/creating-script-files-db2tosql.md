@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453415"
 ---
 # <a name="creating-script-files-db2tosql"></a>Erstellen von Skriptdateien (DB2ToSQL)
@@ -320,9 +320,9 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     Hier entstehen zwei Fälle:  
   
-    1.  Wenn Option zur Außerkraftsetzung ist **"false"**, die Reihenfolge der Suche werden auf geschützten Speicher -&gt;Skript-Datei -&gt;Server Connection-Datei –&gt; Benutzer auffordern.  
+    1.  Wenn Option zur Außerkraftsetzung ist **"false"** , die Reihenfolge der Suche werden auf geschützten Speicher -&gt;Skript-Datei -&gt;Server Connection-Datei –&gt; Benutzer auffordern.  
   
-    2.  Wenn Option zur Außerkraftsetzung ist **"true"**, die Reihenfolge der Suche werden Skript-Datei -&gt;Server Connection-Datei –&gt;Benutzer auffordern.  
+    2.  Wenn Option zur Außerkraftsetzung ist **"true"** , die Reihenfolge der Suche werden Skript-Datei -&gt;Server Connection-Datei –&gt;Benutzer auffordern.  
   
     **Beispiel:**  
   

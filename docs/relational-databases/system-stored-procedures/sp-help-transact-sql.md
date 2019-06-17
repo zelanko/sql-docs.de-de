@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017752"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'name'` Ist der Name eines beliebigen Objekts im **Sysobjects** , oder geben Sie eine benutzerdefinierte Daten die **Systypes** Tabelle. *Namen* ist **Nvarchar (** 776 **)**, hat den Standardwert NULL. Datenbanknamen sind nicht zulässig.  Zwei bis drei Teilnamen müssen eingeschränkt werden, z.B. „Person.AddressType“ oder [Person.AddressType].   
+`[ @objname = ] 'name'` Ist der Name eines beliebigen Objekts im **Sysobjects** , oder geben Sie eine benutzerdefinierte Daten die **Systypes** Tabelle. *Namen* ist **Nvarchar (** 776 **)** , hat den Standardwert NULL. Datenbanknamen sind nicht zulässig.  Zwei bis drei Teilnamen müssen eingeschränkt werden, z.B. „Person.AddressType“ oder [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -88,12 +88,12 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Spaltenobjekte zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Spaltenname**|**nvarchar(** 128 **)**|Name der Spalte.|  
         |**Typ**|**nvarchar(** 128 **)**|Datentyp der Spalte.|  
         |**Computed**|**varchar(** 35 **)**|Gibt an, ob die Werte in der Spalte berechnet werden: Ja oder nein.|  
-        |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Datentyp der Spalte einen Typ mit umfangreichen Werten ist (**varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**), wird der Wert als-1 angezeigt.|  
+        |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Datentyp der Spalte einen Typ mit umfangreichen Werten ist (**varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , oder **Xml**), wird der Wert als-1 angezeigt.|  
         |**prec**|**char(** 5 **)**|Spaltengenauigkeit|  
         |**Dezimalstellen**|**char(** 5 **)**|Dezimalstellen einer Spalte|  
         |**NULL zulassen**|**varchar(** 35 **)**|Gibt an, ob NULL-Werte in der Spalte zulässig sind: Ja oder nein.|  
@@ -112,7 +112,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Spalten zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|Name der GUID-Spalte|  
   

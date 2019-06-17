@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205106"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
@@ -474,11 +474,11 @@ EXEC sp_xml_removedocument @docHandle
   
  In *SchemaDeclaration* (in der WITH-Klausel) wird *ColPattern* auch mit den Parametern *ColName* und *ColType* angegeben. Der optionale *ColPattern* -Parameter entspricht dem angegebenen XPath-Muster und zeigt Folgendes an:  
   
--   Das als *ColPattern* für die **ProdID**-Spalte im Rowset angegebene XPath-Muster (**.**) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
+-   Das als *ColPattern* für die **ProdID**-Spalte im Rowset angegebene XPath-Muster ( **.** ) identifiziert den Kontextknoten (aktueller Knoten). Laut Angabe in *rowpattern* ist das das **ProductID**-Attribut des <`OrderDetail`>-Elements.  
   
 -   Das für die **Qty**-Spalte im Rowset angegebene *ColPattern* **(../\@Quantity**) identifiziert das **Quantity**-Attribut des übergeordneten Knotens (<`OrderDetail`>) des Kontextknotens (\<ProductID>).  
   
--   In gleicher Weise identifiziert das für die **OID**-Spalte im Rowset angegebene *ColPattern* (**../../\@OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
+-   In gleicher Weise identifiziert das für die **OID**-Spalte im Rowset angegebene *ColPattern* ( **../../\@OrderID**) das **OrderID**-Attribut des übergeordneten Knotens (<`Order`>) des Kontextknotens. Der übergeordnete Knoten ist <`OrderDetail`>, und der Kontextknoten <`ProductID`>.  
   
  Schließlich ruft die SELECT-Anweisung alle Spalten in dem von OPENXML bereitgestellten Rowset ab.  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Angeben eines XML-Dokuments mit mehreren Textknoten  
- Sind mehrere Textknoten in einem XML-Dokument vorhanden, gibt eine SELECT-Anweisung mit *ColPattern*( **text()**) nur den ersten anstelle aller Textknoten zurück. Zum Beispiel:  
+ Sind mehrere Textknoten in einem XML-Dokument vorhanden, gibt eine SELECT-Anweisung mit *ColPattern*( **text()** ) nur den ersten anstelle aller Textknoten zurück. Zum Beispiel:  
   
 ```  
 DECLARE @h int  
@@ -576,7 +576,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Konkret wird eine **xml** -Typvariable (\@x) an die **sp_xml_preparedocument()**-Funktion übergeben.  
+ Konkret wird eine **xml** -Typvariable (\@x) an die **sp_xml_preparedocument()** -Funktion übergeben.  
   
  Dies ist das Ergebnis:  
   
@@ -595,7 +595,7 @@ id  lname   xmlname                   OverFlow
   
  Beachten Sie Folgendes im Ergebnis:  
   
--   Für die **lname**-Spalte des **varchar(30)**-Typs wird der Wert aus dem entsprechenden <`lname`>-Element abgerufen.  
+-   Für die **lname**-Spalte des **varchar(30)** -Typs wird der Wert aus dem entsprechenden <`lname`>-Element abgerufen.  
   
 -   Für die **xmlname** -Spalte des **xml** -Typs wird dasselbe Namenselement als Wert zurückgegeben.  
   

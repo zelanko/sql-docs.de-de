@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922171"
 ---
 # <a name="backup-encryption"></a>Verschlüsseln der Sicherung
@@ -132,7 +132,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
-|Thema/Aufgabe|Description|  
+|Thema/Aufgabe|Beschreibung|  
 |-----------------|-----------------|  
 |[Erstellen einer verschlüsselten Sicherung](create-an-encrypted-backup.md)|Beschreibt die grundlegenden Schritte, die erforderlich sind, um eine verschlüsselte Sicherung zu erstellen.|  
 |[SQL Server Managed Backup für Microsoft Azure: Beibehaltungs- und Speichereinstellungen](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Beschreibt die grundlegenden Schritte, die erforderlich sind, um [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mit den angegebenen Verschlüsselungsoptionen zu konfigurieren.|  

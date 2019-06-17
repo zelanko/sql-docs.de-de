@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e983d3c9a0989a5aae79c074ba7b77b09528af6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: cb76c3498be69a9a29525bbe96a26b94ba954af2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662688"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802283"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* (optional): eine vordefinierte Konstante Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|Die nächste Datenzeile wird als numerisches Array zurückgegeben.|  
 |SQLSRV_FETCH_ASSOC|Die nächste Datenzeile wird als assoziatives Array zurückgegeben. Die Array-Schlüssel sind die Spaltennamen im Resultset.|  
@@ -126,7 +126,7 @@ Das folgende Beispiel ruft jede Zeile eines Resultsets als numerisch indiziertes
   
 Im Beispiel wird die Produktinformation aus der *Purchasing.PurchaseOrderDetail*-Tabelle der AdventureWorks-Datenbank für Produkte mit einem angegebenen Datum und einer gelagerten Menge (*StockQty*), die kleiner als ein angegebener Wert ist, abgerufen.  
   
-Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -181,7 +181,7 @@ Die **sqlsrv_fetch_array** Funktion gibt immer die Daten gemäß der [Default PH
   
 Wenn ein Feld ohne Namen abgerufen wird, ist der assoziative Schlüssel für das Arrayelement eine leere Zeichenfolge (""). Weitere Informationen finden Sie unter [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
