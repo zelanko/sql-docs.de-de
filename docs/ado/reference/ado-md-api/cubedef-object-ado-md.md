@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 3831c78380d8ae34e1dab74e92514c7d84136988
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66709388"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef-Objekt (ADO MD)
@@ -47,7 +47,7 @@ Stellt einen Cube aus einem mehrdimensionalen Schema, das mit einem Satz von ver
 |CubeName|Der Name des Cubes.|  
 |CubeType|Der Typ des Cubes.|  
 |DataUpdatedBy|Benutzer-ID der Person, die der letzten datenaktualisierung durchführen.|  
-|Description|Eine aussagekräftige Beschreibung des Cubes.|  
+|Beschreibung|Eine aussagekräftige Beschreibung des Cubes.|  
 |LastSchemaUpdate|Datum und Uhrzeit der letzten Aktualisierung des Schemas.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
 |SchemaUpdatedBy|Benutzer-ID der Person, die Aktualisierung des letzten Schemas ausführen.|  

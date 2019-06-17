@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a89d17414328ea58a65a6df96af267335c8465d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 610100e8a9634fd25232b515533d993bb459b2bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830678"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788621"
 ---
 # <a name="supportsgroupbybeyondselect-method-sqlserverdatabasemetadata"></a>supportsGroupByBeyondSelect-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsGroupByBeyondSelect()
 ## <a name="remarks"></a>Remarks  
  Diese SupportsGroupByBeyondSelect-Methode wird von der SupportsGroupByBeyondSelect-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

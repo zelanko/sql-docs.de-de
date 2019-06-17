@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960869"
 ---
 # <a name="delete-an-article"></a>Löschen eines Artikels
@@ -35,13 +35,13 @@ ms.locfileid: "62960869"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>So löschen Sie einen Artikel aus einer Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) aus, um einen durch **@article** angegebenen Artikel von der durch **@publication** angegebenen Veröffentlichung zu löschen. Geben Sie den Wert **1** für **@force_invalidate_snapshot**.  
+1.  Führen Sie [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) aus, um einen durch **@article** angegebenen Artikel von der durch **@publication** angegebenen Veröffentlichung zu löschen. Geben Sie den Wert **1** für **@force_invalidate_snapshot** .  
   
 2.  (Optional) Um das veröffentlichte Objekt vollständig aus der Veröffentlichungsdatenbank zu löschen, führen Sie den Befehl `DROP <objectname>` auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>So löschen Sie einen Artikel aus einer Mergeveröffentlichung  
   
-1.  Führen Sie [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) aus, um einen durch **@article** angegebenen Artikel von der durch **@publication** angegebenen Veröffentlichung zu löschen. Geben Sie dafür, falls notwendig, den Wert **1** für **@force_invalidate_snapshot** und den Wert **1** für **@force_reinit_subscription**.  
+1.  Führen Sie [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) aus, um einen durch **@article** angegebenen Artikel von der durch **@publication** angegebenen Veröffentlichung zu löschen. Geben Sie dafür, falls notwendig, den Wert **1** für **@force_invalidate_snapshot** und den Wert **1** für **@force_reinit_subscription** .  
   
 2.  (Optional) Um das veröffentlichte Objekt vollständig aus der Veröffentlichungsdatenbank zu löschen, führen Sie den Befehl `DROP <objectname>` auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   

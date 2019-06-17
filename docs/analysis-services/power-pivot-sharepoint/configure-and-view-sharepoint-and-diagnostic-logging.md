@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988640"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Konfigurieren und Anzeigen von SharePoint und Diagnoseprotokollierung

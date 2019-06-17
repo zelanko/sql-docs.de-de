@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079191"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>Lektion 13: In Excel analysieren
@@ -38,7 +38,7 @@ ms.locfileid: "66079191"
   
      Excel wird mit einer neuen Arbeitsmappe geöffnet. Es wird eine Datenquellenverbindung mit dem aktuellen Benutzerkonto erstellt, und zum Definieren von Anzeigefeldern wird die Standardperspektive verwendet. Dem Arbeitsblatt wird automatisch eine PivotTable hinzugefügt.  
   
-3.  In Excel in der **Feldliste "PivotTable"**, beachten Sie, dass die **Datum** und **Internetverkäufe** Measures angezeigt werden, als auch die **Kunden**,  **Datum**, **Geography**, **Produkt**, **Produktkategorie**, **Produktunterkategorie**, und **Internetverkäufe** Tabellen mit der entsprechenden Spalten angezeigt werden.  
+3.  In Excel in der **Feldliste "PivotTable"** , beachten Sie, dass die **Datum** und **Internetverkäufe** Measures angezeigt werden, als auch die **Kunden**,  **Datum**, **Geography**, **Produkt**, **Produktkategorie**, **Produktunterkategorie**, und **Internetverkäufe** Tabellen mit der entsprechenden Spalten angezeigt werden.  
   
 4.  Schließen Sie Excel, ohne die Arbeitsmappe zu speichern.  
   

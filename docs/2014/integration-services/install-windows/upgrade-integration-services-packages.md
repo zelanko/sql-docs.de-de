@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768996"
 ---
 # <a name="upgrade-integration-services-packages"></a>Aktualisieren von Integration Services-Paketen
@@ -81,14 +81,14 @@ ms.locfileid: "62768996"
   
 -   DTExecUI.exe.config  
   
- Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zum Entwerfen von Paketen, die enthalten [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] benutzerdefinierte Komponenten müssen Sie die Datei "devenv.exe.config" ändern, die unter  *\<Laufwerk >*: \programme\ Microsoft Visual Studio 10.0\Common7\IDE.  
+ Verwendung von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] zum Entwerfen von Paketen, die enthalten [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] benutzerdefinierte Komponenten müssen Sie die Datei "devenv.exe.config" ändern, die unter  *\<Laufwerk >* : \programme\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
  Zur Verwendung dieser Pakete mit Kundenanwendungen, die mit der Laufzeit für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellt werden, schließen Sie die Umleitungsregeln in den Konfigurationsabschnitt der Datei *.exe.config für die ausführbare Datei ein. Die Laufzeitassemblys werden durch die Regeln an Version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) umgeleitet. Weitere Informationen zur Umleitung von Assemblyversionen finden Sie unter [\<assemblyBinding>-Element für \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Suchen der Assemblys  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wurden die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Assemblys auf .NET 4.0 aktualisiert. Es ist ein separater globaler Assemblycache für .NET 4 verfügbar, der sich im Verzeichnis „*\<Laufwerk>*:\Windows\Microsoft.NET\assembly“ befindet. Normalerweise befinden sich alle [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Assemblys unter diesem Pfad im Ordner GAC_MSIL.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wurden die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Assemblys auf .NET 4.0 aktualisiert. Es ist ein separater globaler Assemblycache für .NET 4 verfügbar, der sich im Verzeichnis „ *\<Laufwerk>* :\Windows\Microsoft.NET\assembly“ befindet. Normalerweise befinden sich alle [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Assemblys unter diesem Pfad im Ordner GAC_MSIL.  
   
- Wie bei früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden sich die zentralen DLL-Dateien für die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Erweiterbarkeit auch im Verzeichnis „*\<Laufwerk>*:\Programme\Microsoft SQL Server\100\SDK\Assemblies“.  
+ Wie bei früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden sich die zentralen DLL-Dateien für die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Erweiterbarkeit auch im Verzeichnis „ *\<Laufwerk>* :\Programme\Microsoft SQL Server\100\SDK\Assemblies“.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>Grundlegendes zu den Ergebnissen des SQL Server-Paketupgrades  
  Während des Paketupgrades werden die meisten Komponenten und Funktionen in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]- und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Paketen nahtlos in ihre Äquivalente der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version konvertiert. Allerdings gibt es einige Komponenten und Funktionen, die entweder nicht aktualisiert werden oder zu Upgradeergebnissen führen, über die Sie sich im Klaren sein müssen. In der folgenden Tabelle werden diese Komponenten und Funktionen aufgeführt.  

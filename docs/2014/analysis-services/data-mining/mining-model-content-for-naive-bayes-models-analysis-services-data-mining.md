@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083649"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Miningmodellinhalt von Naive Bayes-Modellen (Analysis Services - Data Mining)
@@ -72,7 +72,7 @@ ms.locfileid: "66083649"
  NODE_TYPE  
  Ein Naive Bayes-Modell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|Enthält Statistiken, die den ganzen Satz von Trainingsfällen für das Modell beschreiben.|  
 |9 (vorhersagbares Attribut)|Enthält den Namen des vorhersagbaren Attributs.|  

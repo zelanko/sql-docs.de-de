@@ -16,10 +16,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026823"
 ---
 # <a name="sql-graph-architecture"></a>SQL-Graph-Architektur  
@@ -83,7 +83,7 @@ Die `sys.columns` -Ansicht enthält zusätzliche Spalten `graph_type` und `graph
  
 Die folgende Tabelle enthält die gültigen Werte für `graph_type` Spalte
 
-|Spaltenwert  |Description  |
+|Spaltenwert  |Beschreibung  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -120,7 +120,7 @@ Impliziten Spalten in eine edgetabelle
 ### <a name="system-functions"></a>Systemfunktionen
 Die folgenden integrierten Funktionen werden hinzugefügt. Dies hilft Benutzern, die Informationen aus die generierten Spalten zu extrahieren. Beachten Sie, dass diese Methoden nicht die Eingabe des Benutzers überprüft werden. Wenn der Benutzer ein ungültiges angibt `sys.node_id` die-Methode den entsprechenden Teil zu extrahieren und zurückzugeben. Z. B. OBJECT_ID_FROM_NODE_ID dauert eine `$node_id` als Eingabe und gibt die Object_id der Tabelle dieser Knoten gehört. 
  
-|Built-in   |Description  |
+|Built-in   |Beschreibung  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Extrahieren Sie die Object_id von einem `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |Extrahieren Sie die Graph_id aus einem `node_id`  |

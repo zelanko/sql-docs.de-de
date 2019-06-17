@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013355"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Einführung in die Verwendung von XPath-Abfragen (SQLXML 4.0)
@@ -50,7 +50,7 @@ ms.locfileid: "63013355"
   
  In diesem Dokument  **\<Kunden >** ist ein Elementknoten **Cid** ist ein Attributknoten und **"Wichtig"** ein Textknoten.  
   
- XPath ist eine Diagrammnavigationssprache, die verwendet wird, um eine Gruppe von Knoten aus einem XML-Dokument auszuwählen. Jeder XPath-Operator wählt eine Knotengruppe aus, die auf einer von einem vorherigen XPath-Operator ausgewählten Knotengruppe basiert. Angenommen, eine Reihe von  **\<Kunden >** XPath-Knoten können auswählen, alle  **\<Reihenfolge >** Knoten mit der **Datum** -Attributwert **"7/14/1999"**. Die resultierende Knotengruppe enthält alle Bestellungen mit dem Bestelldatum 14.7.1999.  
+ XPath ist eine Diagrammnavigationssprache, die verwendet wird, um eine Gruppe von Knoten aus einem XML-Dokument auszuwählen. Jeder XPath-Operator wählt eine Knotengruppe aus, die auf einer von einem vorherigen XPath-Operator ausgewählten Knotengruppe basiert. Angenommen, eine Reihe von  **\<Kunden >** XPath-Knoten können auswählen, alle  **\<Reihenfolge >** Knoten mit der **Datum** -Attributwert **"7/14/1999"** . Die resultierende Knotengruppe enthält alle Bestellungen mit dem Bestelldatum 14.7.1999.  
   
  Die XPath-Sprache wurde vom World Wide Web Consortium (W3C) als Standardnavigationssprache definiert. SQLXML 4.0 implementiert eine Teilmenge der W3C-XPath-Spezifikation, das sich in http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63013355"
 |Prädikate mit booleschen Werten einschließlich aufeinander folgender und geschachtelter Prädikate||[Angeben von arithmetischen Operatoren in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Alle relationalen Operatoren|=, !=, <, \<=, >, >=|[Angeben von relationalen Operatoren in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Arithmetische Operatoren|+, -, *, div|[Angeben von arithmetischen Operatoren in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Explizite Konvertierungsfunktionen|**number()**, **string()**, **Boolean()**|[Angeben von expliziten Konvertierungsfunktionen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Explizite Konvertierungsfunktionen|**number()** , **string()** , **Boolean()**|[Angeben von expliziten Konvertierungsfunktionen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |Boolesche Operatoren|AND, OR|[Angeben von booleschen Operatoren in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Boolesche Funktionen|**true()**, **false()**, **not()**|[Angeben von booleschen Funktionen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Boolesche Funktionen|**true()** , **false()** , **not()**|[Angeben von booleschen Funktionen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath-Variablen||[Angeben von XPath-Variablen in XPath-Abfragen &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Nicht unterstützte Funktionalität  
@@ -108,13 +108,13 @@ ms.locfileid: "63013355"
   
 |Funktion|Element|  
 |-------------|----------|  
-|Achsen|**Vorgänger**, **Ancestor-or-Self**, **untergeordneten**, **Descendant-or-Self (/ /)**, **folgenden**,  **Nachfolgend-nebengeordnete Elemente**, **Namespace**, **vorherigen**, **vorausgehend-nebengeordnete**|  
+|Achsen|**Vorgänger**, **Ancestor-or-Self**, **untergeordneten**, **Descendant-or-Self (/ /)** , **folgenden**,  **Nachfolgend-nebengeordnete Elemente**, **Namespace**, **vorherigen**, **vorausgehend-nebengeordnete**|  
 |Prädikate mit numerischen Werten||  
 |Arithmetische Operatoren|mod|  
-|Knotenfunktionen|**Vorgänger**, **Ancestor-or-Self**, **untergeordneten**, **Descendant-or-Self (/ /)**, **folgenden**,  **Nachfolgend-nebengeordnete Elemente**, **Namespace**, **vorherigen**, **vorausgehend-nebengeordnete**|  
-|Zeichenfolgenfunktionen|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**,  **substring-After()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
+|Knotenfunktionen|**Vorgänger**, **Ancestor-or-Self**, **untergeordneten**, **Descendant-or-Self (/ /)** , **folgenden**,  **Nachfolgend-nebengeordnete Elemente**, **Namespace**, **vorherigen**, **vorausgehend-nebengeordnete**|  
+|Zeichenfolgenfunktionen|**String()** , **concat()** , **starts-with()** , **contains()** , **substring-before()** ,  **substring-After()** , **substring()** , **string-length()** , **normalize()** , **translate()**|  
 |Boolesche Funktionen|**lang()**|  
-|Numerische Funktionen|**sum()**, **floor()**, **ceiling()**, **round()**|  
+|Numerische Funktionen|**sum()** , **floor()** , **ceiling()** , **round()**|  
 |Union-operator|&#124;|  
   
  Bei der Angabe von XPath-Abfragen in einer Vorlage ist Folgendes zu beachten:  

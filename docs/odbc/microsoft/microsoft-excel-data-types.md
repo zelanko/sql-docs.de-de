@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10695dd9bf044e270bb1ce1d26de78e53a1dd85a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026780"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel-Datentypen
@@ -41,7 +41,7 @@ Die folgende Tabelle zeigt, wie Microsoft Excel-Treiber-Datentypen in ODBC-SQL-D
   
  Die folgende Tabelle zeigt die Einschränkungen für Microsoft Excel-Datentypen.  
   
-|Datentyp|Description|  
+|Datentyp|Beschreibung|  
 |---------------|-----------------|  
 |Verschlüsselte Daten|Der Microsoft Excel-Treiber kann nicht auf verschlüsselte Daten gelesen.|  
 |Fehlerzeichenfolgen|Der Microsoft Excel-Treiber kann keine Zeichenfolge für die Microsoft Excel-Fehlerwerte zurück (#n!, #VALUE!, #REF!, #DIV/0!, #NUM!, #NAME?, und #NULL!), sondern stattdessen eine NULL zurück.|  

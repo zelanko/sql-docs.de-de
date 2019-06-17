@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1246119b72890bc80125034c8ee23bcd0c221b5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067593"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften (SSAS – tabellarisch)
@@ -33,7 +33,7 @@ ms.locfileid: "66067593"
   
 3.  Konfigurieren Sie die folgenden Eigenschafteneinstellungen:  
   
-    |Eigenschaft|Standardeinstellung|Description|  
+    |Eigenschaft|Standardeinstellung|Beschreibung|  
     |--------------|---------------------|-----------------|  
     |**Standardkompatibilitätsgrad für neue Projekte**|SQL Server 2012 (1100)|Mit dieser Einstellung wird der beim Erstellen eines neuen Projekts für tabellarische Modelle zu verwendende Standardkompatibilitätsgrad angegeben. Sie können SQL Server 2012 RTM (1100) auswählen, wenn Sie in einer Analysis Services-Instanz ohne SP1 bereitstellen, oder SQL Server 2012 SP1, wenn in der Bereitstellungsinstanz SP1 angewendet wird, oder SQL Server 2014. Weitere Informationen finden Sie unter [Kompatibilitätsgrad &#40;SSAS – tabellarisch, SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  
     |**Kompatibilitätsgradoptionen**|Alles überprüft|Gibt Kompatibilitätsgradoptionen für neue Projekte für tabellarische Modelle und für das Bereitstellen in eine andere Analysis Services-Instanz an.|  
@@ -46,7 +46,7 @@ ms.locfileid: "66067593"
   
 3.  Konfigurieren Sie die folgenden Eigenschafteneinstellungen:  
   
-    |Eigenschaft|Standardeinstellung|Description|  
+    |Eigenschaft|Standardeinstellung|Beschreibung|  
     |--------------|---------------------|-----------------|  
     |**Standard-Deployment Server**|localhost|Diese Einstellung gibt den Standardserver an, der beim Bereitstellen eines Modells verwendet werden soll. Sie können auf den Pfeil nach unten klicken, um nach verfügbaren lokalen Analysis Services-Netzwerkservern zu suchen, oder den Namen eines Remoteservers eingeben.|  
   

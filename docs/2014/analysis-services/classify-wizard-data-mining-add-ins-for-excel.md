@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087929"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistent zum Klassifizieren (Data Mining-Add-Ins für Excel)
@@ -49,7 +49,7 @@ ms.locfileid: "66087929"
   
 6.  Auf der **Fertig stellen** Seite Geben Sie einen beschreibenden Namen für das DataSet und das Modell, und legen Sie die folgenden Optionen, die steuern, wie Sie mit dem fertigen Modell arbeiten:  
   
-    -   **Modell durchsuchen,**. Wenn diese Option ausgewählt ist, sobald der Assistent nach Abschluss der Verarbeitung des Modells, öffnen ein **Durchsuchen** Fenster können Sie die Ergebnisse zu untersuchen. Der Inhalt des Viewers hängt vom Typ des erstellten Modells ab. Weitere Informationen finden Sie unter [Durchsuchen eines Entscheidungsstrukturmodells](browsing-a-decision-trees-model.md) und [Durchsuchen eines neuronalen Netzwerkmodells](browsing-a-neural-network-model.md).  
+    -   **Modell durchsuchen,** . Wenn diese Option ausgewählt ist, sobald der Assistent nach Abschluss der Verarbeitung des Modells, öffnen ein **Durchsuchen** Fenster können Sie die Ergebnisse zu untersuchen. Der Inhalt des Viewers hängt vom Typ des erstellten Modells ab. Weitere Informationen finden Sie unter [Durchsuchen eines Entscheidungsstrukturmodells](browsing-a-decision-trees-model.md) und [Durchsuchen eines neuronalen Netzwerkmodells](browsing-a-neural-network-model.md).  
   
     -   **Aktivieren von Drillthrough**. Wählen Sie diese Option aus, um die zugrunde liegenden Daten des fertigen Modells anzuzeigen. Diese Option ist nur verfügbar, wenn Sie ein Decision Tree-Modell erstellen.  
   

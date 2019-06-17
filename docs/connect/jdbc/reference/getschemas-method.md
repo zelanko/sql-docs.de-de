@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72ff77a7284368f901667febfd8853fb2bb7f873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 0209c50b19e46e90db3738fc94f5927f8aa619ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611998"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792125"
 ---
 # <a name="getschemas-method-"></a>getSchemas-Methode ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.sql.ResultSet getSchemas()
   
  Durch die GetSchemas-Methode zurückgegebene Resultset enthält die folgenden Informationen an:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Der Name des Schemas.|  
 |TABLE_CATALOG|**String**|Der Katalogname für das Schema.|  
@@ -82,7 +82,7 @@ public static void executeGetSchemas(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

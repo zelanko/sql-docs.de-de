@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721306"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Aktivieren eines Remoteverlegers auf einem Verteiler (SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "62721306"
   
 4.  Geben Sie auf der Seite **Verteilerkennwort** in den Textfeldern **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort für das **distributor_admin** -Konto an, das die Replikation zum Herstellen der Verbindung zwischen dem Verleger und dem Verteiler verwendet, um administrative Aufgaben auszuführen.  
   
-5.  Klicken Sie auf die Schaltfläche mit den drei Punkten (**…**), um die Einstellungen eines Verlegers anzuzeigen und zu ändern.  
+5.  Klicken Sie auf die Schaltfläche mit den drei Punkten ( **…** ), um die Einstellungen eines Verlegers anzuzeigen und zu ändern.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62721306"
   
 4.  Geben Sie auf der Seite **Verleger** in den Textfeldern **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort für das **distributor_admin** -Konto an, das die Replikation zum Herstellen der Verbindung zwischen dem Verleger und dem Verteiler verwendet, um administrative Aufgaben auszuführen.  
   
-5.  Klicken Sie auf die Schaltfläche mit den drei Punkten (**…**), um die Einstellungen eines Verlegers anzuzeigen und zu ändern.  
+5.  Klicken Sie auf die Schaltfläche mit den drei Punkten ( **…** ), um die Einstellungen eines Verlegers anzuzeigen und zu ändern.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

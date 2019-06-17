@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771197"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
@@ -103,11 +103,11 @@ ms.locfileid: "62771197"
 |Kennwort|Das Kennwort für den Oracle Datenbankbenutzer mit Log Mining-Berechtigung. Diese Angabe ist nur obligatorisch, wenn Folgendes gilt: **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Der Zeitraum in Sekunden, während dessen eine nicht mit Commit bestätigte Oracle-Transaktion im Arbeitsspeicher verbleibt, bevor sie in die Tabelle **cdc.xdbcdc_staged_transactions** geschrieben wird. Der Standardwert ist 120 Sekunden.|  
 |memory_limit|Der Arbeitsspeicher-Höchstwert in MB, der zum Zwischenspeichern von Daten im Arbeitsspeicher verwendet werden kann. Ein niedrigere Einstellung führt dazu, dass mehr Transaktionen in die Tabelle **cdc.xdbcdc_staged_transactions** geschrieben werden. Die Standardeinstellung ist 50 MB.|  
-|Optionen|Eine Liste der Optionen der Form name[=value][; ]. Wird zum Angeben von sekundären Optionen verwendet (z. B. Ablaufverfolgung, Optimierung). Eine Beschreibung der verfügbaren Optionen finden Sie unten in der Tabelle.|  
+|options|Eine Liste der Optionen der Form name[=value][; ]. Wird zum Angeben von sekundären Optionen verwendet (z. B. Ablaufverfolgung, Optimierung). Eine Beschreibung der verfügbaren Optionen finden Sie unten in der Tabelle.|  
   
  In der folgenden Tabelle werden die verfügbaren Optionen beschrieben.  
   
-|Name|Standard|Min|Max|STATIC-Cursor|Description|  
+|Name|Default|Min|Max|STATIC-Cursor|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |Ablaufverfolgung|False|-|-|False|Die verfügbaren Werte:<br /><br /> **Wahr**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|Die Größe von Arbeitsspeichersegmenten (in KB), die für eine Transaktion zugeordnet werden (eine Transaktion kann mehr als ein Segment zuordnen). Siehe Spalte „memory_limit“ in der [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) -Tabelle.|  

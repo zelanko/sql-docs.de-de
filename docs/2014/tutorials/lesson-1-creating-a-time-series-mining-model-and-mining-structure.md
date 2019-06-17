@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678451"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lektion 1: Erstellen ein Zeitreihenmodell Miningmodell und einer Miningstruktur
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lektion 1: Erstellen eines Miningmodells und einer Miningstruktur für eine Zeitreihe
   In dieser Lektion erstellen Sie ein Miningmodell, mit dem Sie auf Basis von Vergangenheitsdaten Werte für einen Zeitraum vorhersagen können. Beim Erstellen des Modells wird die zugrunde liegende Struktur automatisch generiert und kann als Basis für weitere Miningmodelle verwendet werden.  
   
  In dieser Lektion wird davon ausgegangen, dass Sie mit Forecasting-Modellen sowie mit den Anforderungen des Microsoft Time Series-Algorithmus vertraut sind. Weitere Informationen finden Sie unter [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
   
 ## <a name="create-mining-model-statement"></a>Erstellen von MINING MODEL-Anweisung  
- Um ein Miningmodell direkt erstellen, und die zugrunde liegende Miningstruktur automatisch generieren, verwenden Sie die [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Um ein Miningmodell direkt erstellen, und die zugrunde liegende Miningstruktur automatisch generieren, verwenden Sie die [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
   
 -   Benennen des Modells  
   
@@ -195,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  In der nächsten Lektion fügen Sie ein anzuzeigendes Miningmodell die **Forecasting_MIXED** Miningstruktur, die Sie gerade erstellt haben.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mingingmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Datamining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

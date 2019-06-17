@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989675"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
@@ -36,7 +36,7 @@ ms.locfileid: "62989675"
 ## <a name="policy-files-in-reporting-services"></a>Richtliniendateien in Reporting Services  
  In der nachstehenden Tabelle werden die Richtlinienkonfigurationsdateien in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ihre Speicherorte (bei einer Standardinstallation) und die entsprechenden Funktionen aufgelistet.  
   
-|Dateiname|Speicherort (Standardinstallation)|Description|  
+|Dateiname|Speicherort (Standardinstallation)|Beschreibung|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Die Berichtsserverrichtlinien-Konfigurationsdatei. Diese Sicherheitsrichtlinien wirken sich vorwiegend auf Berichtsausdrücke und benutzerdefinierte Assemblys aus, nachdem ein Bericht für einen Berichtsserver bereitgestellt wurde. Diese Richtliniendatei beeinflusst auch benutzerdefinierte Daten, Übermittlung, Rendering und Sicherheitserweiterungen, die für den Berichtsserver bereitgestellt wurden.|  
 |rsmgrpolicy.config|C:\Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Richtlinienkonfigurationsdatei des Berichts-Managers. Diese Sicherheitsrichtlinien wirken sich auf alle Assemblys aus, die eine Erweiterung für den Berichts-Manager darstellen, wie zum Beispiel Abonnementbenutzeroberflächen-Erweiterungen für benutzerdefinierte Übermittlung.|  

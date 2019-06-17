@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: f8d11e97fd31745752449c5649e1096d0bb667a8
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66709028"
 ---
 # <a name="member-object-ado-md"></a>Member-Objekt (ADO MD)
@@ -74,7 +74,7 @@ Stellt ein Element einer Ebene in einem Cube, die untergeordneten Elemente ein E
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |ChildrenCardinality|Die Anzahl der untergeordneten Elemente des Elements.|  
 |CubeName|Der Name des Cubes.|  
-|Description|Eine aussagekräftige Beschreibung des Elements.|  
+|Beschreibung|Eine aussagekräftige Beschreibung des Elements.|  
 |DimensionUniqueName|Der eindeutige Name des der [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|Der eindeutige Name der Hierarchie.|  
 |LevelNumber|Der Abstand zwischen der Ebene und der Stamm der Hierarchie.|  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4ad50e54-8246-4012-bd88-4aaaaf7f0f77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c12d4538d593988a01ae24e0e3b9ce769694930e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: f3a643b34f7e9d83e0dd48cc3a204828e976c502
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773042"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777474"
 ---
 # <a name="getboolean-method-sqlservercallablestatement"></a>getBoolean-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "47773042"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameterindexes als Wert vom Typ **boolean** ab.|  
 |[getBoolean (java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string.md)|Ruft den Wert des angegebenen Parameters unter Berücksichtigung des Parameternamens als Wert vom Typ **boolean** ab.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

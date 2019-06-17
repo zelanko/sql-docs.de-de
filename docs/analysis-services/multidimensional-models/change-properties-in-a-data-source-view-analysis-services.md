@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec8840a9d4f66247c41466a6d32c7dd6eee7de6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988093"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Ändern von Eigenschaften in einer Datenquellensicht (Analysis Services)
@@ -39,7 +39,7 @@ ms.locfileid: "62988093"
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |Datenquelle|Gibt die Datenquelle innerhalb der Datenquellensicht an, deren Eigenschaften Sie anzeigen.|  
-|Description|Gibt eine Beschreibung der Datenquellensicht an.|  
+|Beschreibung|Gibt eine Beschreibung der Datenquellensicht an.|  
 |Name|Gibt den Namen der Datenquellensicht an, der im Projektmappen-Explorer oder in der Analysis Services-Datenbank angezeigt wird. Sie können den Namen der Datenquellensicht hier oder im Projektmappen-Explorer ändern.|  
 |NameMatchingCriteria|Die Namensübereinstimmungskriterien für die Datenquelle. Die Standardeinstellung ist (Keine), wenn Primärschlüssel/Fremdschlüssel-Beziehungen vom Datenquellensicht-Assistenten ermittelt wurden. Unabhängig davon, ob diese Eigenschaft vom Datenquellensicht-Assistenten festgelegt wurde, können Sie hier einen Wert angeben. Wenn Datenbankbeziehungen vorhanden sind und Sie Namensübereinstimmungskriterien angeben, werden beide Einstellungen verwendet, um auf Beziehungen zwischen vorhandenen Tabellen und neu hinzugefügten Tabellen zu schließen.|  
 |RetrieveRelationships|Gibt an, ob Beziehungen aus der Datenbank abgerufen werden. Der Standardwert lautet "True".|  
@@ -48,7 +48,7 @@ ms.locfileid: "62988093"
 ## <a name="viewing-or-changing-datatable-properties"></a>Anzeigen oder Ändern von DataTable-Eigenschaften  
  **DataTable** -Eigenschaften sind die Eigenschaften von Tabellen, Sichten und benannten Abfragen in einer Datenquellensicht. Die Eigenschaften werden festgelegt, wenn der Datenquellensicht eines dieser Objekte hinzugefügt wird. In der folgenden Tabelle sind die Eigenschaften von **DataTable** -Objekten in einer Datenquellensicht aufgeführt und beschrieben.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |AllowChangesDuringGeneration|Gibt an, ob der Schemagenerierungs-Assistent berechtigt ist, eine Datenquellensicht-Tabelle während der erneuten Generierung zu überschreiben. Diese Eigenschaft ist nur für Tabellen vorhanden, die ursprünglich vom Schemagenerierungs-Assistenten generiert wurden. Weitere Informationen finden Sie unter [Grundlegendes zur inkrementellen Generierung](../../analysis-services/multidimensional-models/understanding-incremental-generation.md).|  
 |DataSource|Gibt die Datenquelle für das Objekt an. Sie können diese Eigenschaft nicht bearbeiten.|  
