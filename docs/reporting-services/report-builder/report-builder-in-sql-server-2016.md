@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620600"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037835"
 ---
 # <a name="report-builder-in-sql-server"></a>Berichts-Generator in SQL Server
 
@@ -81,7 +81,7 @@ Sie können einen paginierten Bericht auch im Power BI-Dienst veröffentlichen. 
  [Planen eines Berichts &#40;Berichts-Generator&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Enthält Informationen zu den Punkten, die Sie vor dem Erstellen des Berichts beachten sollten.  
   
- [Berichtserstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services Concepts (SSRS) (Konzepte von Reporting Services (SSRS))](../reporting-services-concepts-ssrs.md)  
  Definiert Schlüsselkonzepte, die in der gesamten [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] -Dokumentation verwendet werden.  
   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  

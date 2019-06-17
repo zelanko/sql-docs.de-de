@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831745"
 ---
 # <a name="file-system-task"></a>Task Dateisystem
@@ -53,7 +53,7 @@ ms.locfileid: "62831745"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den Task 'Dateisystem'  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task "Dateisystem" beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`FileSystemOperation`|Berichtet den vom Task durchgeführten Vorgang. Der Protokolleintrag wird geschrieben, wenn der Dateisystemvorgang begonnen wird, und schließt Informationen über die Quelle und das Ziel ein.|  
   

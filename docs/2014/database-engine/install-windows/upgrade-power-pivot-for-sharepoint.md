@@ -11,10 +11,10 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775650"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Aktualisieren von PowerPivot für SharePoint
@@ -66,7 +66,7 @@ ms.locfileid: "62775650"
   
     1.  Klicken Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup-Assistenten auf **Installation**.  
   
-    2.  Klicken Sie auf **Aktualisieren von SQL Server...**.  
+    2.  Klicken Sie auf **Aktualisieren von SQL Server...** .  
   
     3.  Wählen Sie auf der Seite **Instanz auswählen** den Instanznamen **POWERPIVOT** aus, und klicken Sie auf **Weiter**.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62775650"
         > [!IMPORTANT]  
         >  Die erste Aktion, **Farmlösung aktualisieren**, muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
   
-    7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Möchten Sie den Vorgang fortsetzen?**“.  
+    7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Möchten Sie den Vorgang fortsetzen?** “.  
   
     8.  Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   

@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873817"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
@@ -37,7 +37,7 @@ ms.locfileid: "62873817"
   
 -   Die Assembly ist eine der unterstützten Assemblys. Weitere Informationen finden Sie unter [unterstützt .NET Framework-Bibliotheken](supported-net-framework-libraries.md).  
   
--   Verwenden Sie `CREATE ASSEMBLY FROM`  *\<Speicherort >,* und alle referenzierten Assemblys und deren Abhängigkeiten stehen im  *\<Speicherort >*.  
+-   Verwenden Sie `CREATE ASSEMBLY FROM`  *\<Speicherort >,* und alle referenzierten Assemblys und deren Abhängigkeiten stehen im  *\<Speicherort >* .  
   
 -   Verwenden Sie `CREATE ASSEMBLY FROM`  *\<Bytes... >,* und alle Verweise, durch Leerzeichen angegeben werden getrennte Bytes.  
   

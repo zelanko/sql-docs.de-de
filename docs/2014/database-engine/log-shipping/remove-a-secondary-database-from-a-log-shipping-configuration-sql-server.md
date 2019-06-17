@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0849d4e10df746dd98e271bb3eb35696cb20337b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774824"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Entfernen einer sekundären Datenbank aus einer Protokollversandkonfiguration (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62774824"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So entfernen Sie eine sekundäre Datenbank für den Protokollversand mit:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62774824"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die gespeicherten Prozeduren für den Protokollversand erfordern die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-remove-a-log-shipping-secondary-database"></a>So entfernen Sie eine sekundäre Datenbank für den Protokollversand  
   

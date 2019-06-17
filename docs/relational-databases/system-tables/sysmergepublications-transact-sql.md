@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62817026"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
@@ -65,7 +65,7 @@ ms.locfileid: "62817026"
 |**allow_subscription_copy**|**bit**|Gibt an, ob die Möglichkeit zum Kopieren der Abonnementdatenbank aktiviert wurde. **0** bedeutet, dass kopieren nicht zulässig.|  
 |**allow_synctoalternate**|**bit**|Gibt an, ob ein alternativer Synchronisierungspartner für die Synchronisierung mit diesem Verleger zulässig ist. **0** bedeutet, dass ein alternativer Synchronisierungspartner nicht zulässig ist.|  
 |**validate_subscriber_info**|**nvarchar(500)**|Listet die Funktionen auf, die zum Abrufen der Abonnenteninformationen sowie zum Überprüfen der parametrisierten Zeilenfilterkriterien für den Abonnenten verwendet werden.|  
-|**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Ein gültiger GUID gibt an, dass die Veröffentlichung in Active Directory veröffentlicht wird, und die GUID das entsprechende Active Directory-Veröffentlichungsobjekt ist **"objectGUID"**. Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in Active Directory veröffentlicht.|  
+|**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Ein gültiger GUID gibt an, dass die Veröffentlichung in Active Directory veröffentlicht wird, und die GUID das entsprechende Active Directory-Veröffentlichungsobjekt ist **"objectGUID"** . Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in Active Directory veröffentlicht.|  
 |**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad. Kann einer der folgenden Werte sein:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|Die maximal zulässige Anzahl gleichzeitiger Mergeprozesse. Der Wert **0** für diese Eigenschaft bedeutet, dass es keine Beschränkung der Anzahl gleichzeitiger Mergeprozesse, die einem bestimmten Zeitpunkt ausgeführt. Diese Eigenschaft legt eine Grenze für die Anzahl gleichzeitiger Mergeprozesse fest, die zu einem Zeitpunkt für eine Mergeveröffentlichung ausgeführt werden können. Wenn zum gleichen Zeitpunkt mehr Momentaufnahmeprozesse geplant sind, als der Wert für eine Ausführung zulässt, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Momentaufnahmeprozess beendet wird.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Die maximal zulässige Anzahl gleichzeitiger Datenfilterungs-Momentaufnahmesitzungen, die für die Mergeveröffentlichung ausgeführt werden können. Wenn **0**, es gibt keine Beschränkung auf die maximale Anzahl gleichzeitiger datenfilterungs-momentaufnahmesitzungen, die für die Veröffentlichung in einem bestimmten Zeitpunkt ausgeführt werden können. Diese Eigenschaft legt eine Grenze für die Anzahl gleichzeitiger Momentaufnahmeprozesse fest, die zu einem Zeitpunkt für eine Mergeveröffentlichung ausgeführt werden können. Wenn zum gleichen Zeitpunkt mehr Momentaufnahmeprozesse geplant sind, als der Wert für eine Ausführung zulässt, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Momentaufnahmeprozess beendet wird.|  

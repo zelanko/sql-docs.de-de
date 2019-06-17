@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62829358"
 ---
 # <a name="xml-task"></a>XML-Task
@@ -53,7 +53,7 @@ ms.locfileid: "62829358"
 ## <a name="predefined-xml-operations"></a>Vordefinierte XML-Vorgänge  
  Der XML-Task schließt vordefinierte Vorgänge zum Verwenden von XML-Dokumenten ein. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|Description|  
+|Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |Diff|Vergleicht zwei XML-Dokumente miteinander. Diff verwendet das XML-Quelldokument als Basisdokument und vergleicht es mit einem zweiten XML-Dokument, stellt die Unterschiede fest und schreibt diese in ein XML-Diffgram-Dokument. Dieser Vorgang schließt Eigenschaften zum Anpassen des Vergleichs ein.|  
 |Merge|Führt zwei XML-Dokumente zusammen. Der Merge-Vorgang verwendet das XML-Quelldokument als Basisdokument und fügt diesem den Inhalt eines zweiten Dokuments hinzu. Bei diesem Vorgang kann ein Mergespeicherort innerhalb des Basisdokuments angegeben werden.|  
@@ -67,7 +67,7 @@ ms.locfileid: "62829358"
   
  Der Diff-Vorgang enthält Optionen, mit denen der XML-Vergleich angepasst wird. In der folgenden Tabelle werden diese Optionen beschrieben.  
   
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**IgnoreComments**|Dieser Wert gibt an, ob Kommentarknoten verglichen werden.|  
 |**IgnoreNamespaces**|Dieser Wert gibt an, ob der Namespace-URI (Uniform Resource Identifier) eines Elements und dessen Attributnamen verglichen werden. Falls diese Option auf `true` festgelegt ist, werden zwei Elemente mit dem gleichen lokalen Namen, aber einem unterschiedlichen Namespace, als identisch betrachtet.|  

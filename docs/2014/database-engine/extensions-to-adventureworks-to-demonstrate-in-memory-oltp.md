@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779953"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP
@@ -227,7 +227,7 @@ ms.locfileid: "62779953"
   
 -   *Rowguid* : Die rowguid-Spalte wird nicht verwendet. Ausführliche Informationen finden Sie in der Beschreibung zur Tabelle SalesOrderHeader.  
   
--   *UNIQUE-*, *CHECK-* und *FOREIGN KEY-Einschränkungen* werden auf zwei Weisen berücksichtigt: Die gespeicherten Prozeduren Product.usp_InsertProduct_inmem und Product.usp_DeleteProduct_inmem können zum Einfügen und Löschen von Produkten verwendet werden. Mithilfe dieser Prozeduren werden Domänenintegrität und referenzielle Integrität überprüft. Bei einer Integritätsverletzung verursachen sie einen Fehler. Darüber hinaus können Domänenintegrität und referenzielle Integrität mithilfe des folgenden Skripts direkt überprüft werden:  
+-   *UNIQUE-* , *CHECK-* und *FOREIGN KEY-Einschränkungen* werden auf zwei Weisen berücksichtigt: Die gespeicherten Prozeduren Product.usp_InsertProduct_inmem und Product.usp_DeleteProduct_inmem können zum Einfügen und Löschen von Produkten verwendet werden. Mithilfe dieser Prozeduren werden Domänenintegrität und referenzielle Integrität überprüft. Bei einer Integritätsverletzung verursachen sie einen Fehler. Darüber hinaus können Domänenintegrität und referenzielle Integrität mithilfe des folgenden Skripts direkt überprüft werden:  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  
@@ -569,10 +569,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Standard|94|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Standard|0|  
-|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Die standardmäßigen Arbeitsspeicherclerks basieren auf systemweiten Strukturen und sind relativ klein. Der Arbeitsspeicherclerk für die Benutzerdatenbank, d. h. die Datenbank mit der ID 5, umfasst etwa 900 MB.  
   
@@ -618,10 +618,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Standard|146|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Standard|0|  
-|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Sie sehen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] etwas weniger als 8 GB für die speicheroptimierten Tabellen und Indizes in der Beispieldatenbank belegt.  
   
@@ -664,10 +664,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Standard|2261|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Standard|0|  
-|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  Erwartetes Verhalten: Der Arbeitsspeicher wird beim Ausführen der Transaktionsarbeitsauslastung freigegeben.  
   
@@ -683,10 +683,10 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
 ||||  
 |-|-|-|  
 |**type**|**name**|**pages_MB**|  
-|MEMORYCLERK_XTP|Standard|1863|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Standard|0|  
-|MEMORYCLERK_XTP|Standard|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Datenträgernutzung für speicheroptimierte Tabellen  
  Mithilfe der folgenden Abfrage können Sie ermitteln, wie viel Gesamtspeicherplatz die Prüfpunktdateien einer Datenbank zu einem bestimmten Zeitpunkt auf dem Datenträger belegen:  

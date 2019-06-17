@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743504"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
@@ -46,7 +46,7 @@ ms.locfileid: "62743504"
   
  Ein *OLE DB-Anbieter* ist eine DLL (Dynamic Link Library), die mit einer bestimmten Datenquelle interagiert und sie verwaltet. Eine *OLE DB-Datenquelle* identifiziert die spezielle Datenbank, auf die über OLE DB zugegriffen werden kann. Obwohl es sich bei Datenquellen, die über Verbindungsserverdefinitionen abgefragt werden, normalerweise um Datenbanken handelt, sind OLE DB-Anbieter für eine Vielzahl von Dateien und Dateiformaten verfügbar. Dazu gehören Textdateien, Kalkulationstabellendaten und die Ergebnisse aus Volltextsuchläufen.  
   
- Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind jedoch so entworfen, dass sie mit jedem OLE DB-Anbieter zusammenarbeiten, der die erforderlichen OLE DB-Schnittstellen implementiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde jedoch nur für den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und bestimmte andere Anbieter getestet.  
@@ -78,13 +78,13 @@ ms.locfileid: "62743504"
   
  Sie können Verbindungsserver auch mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]definieren. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Serverobjekte**, klicken Sie auf **Neu**, und klicken Sie dann auf **Verbindungsserver**. Sie können eine Verbindungsserverdefinition löschen, indem Sie mit der rechten Maustaste auf den Namen des Verbindungsservers und dann auf **Löschen**klicken.  
   
- Wenn Sie eine verteilte Abfrage auf einem Verbindungsserver ausführen, sollten Sie einen vollqualifizierten vierteiligen Tabellennamen für jede Datenquelle einschließen, die abgefragt werden soll. Dieser vierteilige Name muss in der Form _linked_server_name.catalog_**. _`schema`_.** _Object_name_.  
+ Wenn Sie eine verteilte Abfrage auf einem Verbindungsserver ausführen, sollten Sie einen vollqualifizierten vierteiligen Tabellennamen für jede Datenquelle einschließen, die abgefragt werden soll. Dieser vierteilige Name muss in der Form _linked_server_name.catalog_ **. _`schema`_ .** _Object_name_.  
   
 > [!NOTE]  
 >  Verbindungsserver können so definiert werden, dass sie zurück auf den Server zeigen, auf dem sie definiert sind (zurücklaufen = loop back). Loopbackserver sind sehr nützlich, um eine Anwendung, von der verteilte Abfragen verwendet werden, in einem Netzwerk mit einem einzelnen Server zu testen. Loopbackverbindungsserver sind für Tests bestimmt und werden für viele Vorgänge, z. B. verteilte Transaktionen, nicht unterstützt.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Erstellen von Verbindungsservern &amp;amp;#40;SQL Server-Datenbank-Engine&amp;amp;#41;](create-linked-servers-sql-server-database-engine.md)  
+ [Erstellen von Verbindungsservern &#40;SQL Server-Datenbank-Engine&#41;](create-linked-servers-sql-server-database-engine.md)  
   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)  
   

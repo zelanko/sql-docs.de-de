@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792080"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62792080"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So bereiten Sie eine sekundäre Datenbank vor mit:**  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62792080"
   
  Wenn die Datenbank, die wiederhergestellt wird, auf der Serverinstanz nicht vorhanden ist, erfordert die RESTORE-Anweisung CREATE DATABASE-Berechtigungen. Weitere Informationen finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 > [!NOTE]  
 >  Wenn die Sicherungs- und Wiederherstellungsdateipfade sowohl auf der Serverinstanz, auf der das primäre Replikat gehostet wird, als auch auf jeder Instanz identisch sind, auf der ein sekundäres Replikat gehostet wird, können Sie sekundäre Datenbanken mithilfe des [Assistenten für neue Verfügbarkeitsgruppen](use-the-availability-group-wizard-sql-server-management-studio.md), des [Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)oder des [Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen](availability-group-add-database-to-group-wizard.md)erstellen.  
@@ -94,7 +94,7 @@ ms.locfileid: "62792080"
   
 3.  Stellen Sie auf der Serverinstanz, die das sekundäre Replikat hostet, die vollständige Datenbanksicherung der primären (und optional eine differenzielle Sicherung) und anschließend nachfolgende Protokollsicherungen wieder her.  
   
-     Aktivieren Sie auf der Seite **RESTORE DATABASE-Optionen** die Option **Datenbank nicht betriebsbereit belassen und kein Rollback für Transaktionen ohne Commit ausführen. Zusätzliche Transaktionsprotokolle können wiederhergestellt werden. (RESTORE WITH NORECOVERY)**.  
+     Aktivieren Sie auf der Seite **RESTORE DATABASE-Optionen** die Option **Datenbank nicht betriebsbereit belassen und kein Rollback für Transaktionen ohne Commit ausführen. Zusätzliche Transaktionsprotokolle können wiederhergestellt werden. (RESTORE WITH NORECOVERY)** .  
   
      Wenn sich die Dateipfade der primären Datenbank und der sekundären Datenbank unterscheiden, z. B. wenn sich die primäre Datenbank auf Laufwerk F: befindet, bei der Serverinstanz, die das sekundäre Replikat hostet, jedoch das Laufwerk F: fehlt, schließen Sie die MOVE-Option in die WITH-Klausel ein.  
   

@@ -20,13 +20,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720034"
 ---
-# <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0) 
+# <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Angeben von Auswahlprädikaten im Speicherortpfad (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ein Prädikat filtert eine Knotengruppe in Bezug auf eine Achse (ähnlich einer WHERE-Klausel in einer SELECT-Anweisung). Das Prädikat wird zwischen Klammern angegeben. Für jeden Knoten in der zu filternden Knotengruppe wird der Prädikatausdruck mit dem entsprechenden Knoten als Kontextknoten ausgewertet. Die Anzahl der Knoten in der Knotengruppe dient dabei als Kontextgröße. Ergibt die Auswertung des Prädikatausdrucks für den betreffenden Knoten TRUE, wird dieser Knoten in die resultierende Knotengruppe aufgenommen.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62720034"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- In dieser XPath-Abfrage sind `child` und `attribute` die Achsennamen. `Customer` ist der Knotentest (TRUE, wenn `Customer` ist ein  **\<Elementknoten >**, da  **\<Element >** ist der Hauptknotentyp für die `child` Achse). `attribute::CustomerID="ALFKI"` ist das Prädikat. Im Prädikat ist `attribute` ist die Achse und `CustomerID` ist der Knotentest (TRUE, wenn **"CustomerID"** ist ein Attribut des Kontextknotens aus, da  **\<Attribut >** ist der Prinzipal Knotentyp **Attribut** Achse).  
+ In dieser XPath-Abfrage sind `child` und `attribute` die Achsennamen. `Customer` ist der Knotentest (TRUE, wenn `Customer` ist ein  **\<Elementknoten >** , da  **\<Element >** ist der Hauptknotentyp für die `child` Achse). `attribute::CustomerID="ALFKI"` ist das Prädikat. Im Prädikat ist `attribute` ist die Achse und `CustomerID` ist der Knotentest (TRUE, wenn **"CustomerID"** ist ein Attribut des Kontextknotens aus, da  **\<Attribut >** ist der Prinzipal Knotentyp **Attribut** Achse).  
   
  In abgekürzter Syntax kann die XPath-Abfrage auch wie folgt angegeben werden:  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62893595"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Datenquelle auswählen (SQL Server-Import/Export-Assistent)
@@ -111,7 +111,7 @@ ms.locfileid: "62893595"
  **Kennwort**  
  Geben Sie das Kennwort des Benutzers für die Datenbankverbindung an, wenn der Datenbank eine Informationsdatei für die Arbeitsgruppe zugeordnet ist. Jedoch, wenn die Datenbank mit einem einzigen Kennwort für alle Benutzer geschützt ist, müssen Sie angeben dieses Werts in der **Datenlinkeigenschaften** Dialogfeld durch Klicken auf erfolgt **erweitert**.  
   
- **Erweitert:**  
+ **Erweitert**  
  Erweiterte Optionen an, z.B. das Datenbankkennwort oder eine nicht standardmäßige Informationsdatei mithilfe angeben möchten die **Datenlinkeigenschaften** Dialogfeld. Weitere Informationen zu OLE DB-Anbieter-Eigenschaften, suchen Sie im Abschnitt "Datenzugriff" des der [MSDN-Bibliothek](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### <a name="data-source--flat-file-source"></a>Datenquelle = Flatfilequelle  

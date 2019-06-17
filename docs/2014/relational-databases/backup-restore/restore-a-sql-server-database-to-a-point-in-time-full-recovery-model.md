@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921054"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt (vollständiges Wiederherstellungsmodell)
@@ -31,7 +31,7 @@ ms.locfileid: "62921054"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Wiederherstellen einer SQL Server-Datenbank zu einem bestimmten Zeitpunkt mit:**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62921054"
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  **So stellen Sie eine Datenbank bis zu einem Zeitpunkt wieder her**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie die Serverstruktur.  
@@ -74,7 +74,7 @@ ms.locfileid: "62921054"
   
     -   **Sicherungsmedium**  
   
-         Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921054"
   
  **Grundlegende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax**  
   
- RESTORE LOG *Database_name* FROM < Sicherungsmedium > WITH STOPAT  **= *`time`*,** Wiederherstellung...  
+ RESTORE LOG *Database_name* FROM < Sicherungsmedium > WITH STOPAT  **= *`time`* ,** Wiederherstellung...  
   
  Der Wiederherstellungszeitpunkt ist der Transaktionscommit, die am oder vor dem aufgetreten sind die `datetime` -Wert, der angegebenen *Zeit*.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62921054"
   
 3.  Stellen Sie die letzte differenzielle Datenbanksicherung wieder her und – sofern vorhanden –  ohne dabei die Datenbank wiederherzustellen (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Wenden Sie jede einzelne transaktionsprotokollsicherung in derselben Reihenfolge an, in dem sie, und erstellt wurde, Sie dabei den Zeitpunkt, an die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *Database_name* FROM < Sicherungsgerät > WITH STOPAT **= *`time`*,** RECOVERY).  
+4.  Wenden Sie jede einzelne transaktionsprotokollsicherung in derselben Reihenfolge an, in dem sie, und erstellt wurde, Sie dabei den Zeitpunkt, an die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *Database_name* FROM < Sicherungsgerät > WITH STOPAT **= *`time`* ,** RECOVERY).  
   
     > [!NOTE]  
     >  Die Optionen RECOVERY und STOPAT. Wenn die Transaktionsprotokollsicherung den geforderten Zeitpunkt nicht enthält (z. B. wenn der angegebene Zeitpunkt hinter dem Zeitpunkt liegt, bis zu dem das Transaktionsprotokoll reicht), wird eine Warnung erzeugt, und die Datenbank wird nicht wiederhergestellt.  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872321"
 ---
 # <a name="create-a-database"></a>Erstellen einer Datenbank
@@ -34,7 +34,7 @@ ms.locfileid: "62872321"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Datenbank mit:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62872321"
   
  Zur Steuerung der Datenträgernutzung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Berechtigung zum Erstellen von Datenbanken in der Regel auf einige wenige Anmeldekonten beschränkt.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>So erstellen Sie eine Datenbank  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62872321"
   
 4.  Zum Erstellen der Datenbank unter Übernahme aller Standardwerte klicken Sie auf **OK**; ansonsten fahren Sie mit den folgenden optionalen Schritten fort.  
   
-5.  Zum Ändern des Besitzernamens klicken Sie auf (**…**), um einen anderen Besitzer auszuwählen.  
+5.  Zum Ändern des Besitzernamens klicken Sie auf ( **…** ), um einen anderen Besitzer auszuwählen.  
   
     > [!NOTE]  
     >  Die Option **Volltextindizierung verwenden** ist immer aktiviert und wird ausgegraut angezeigt, da ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]alle Benutzerdatenbanken volltextfähig sind.  

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831768"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
@@ -156,7 +156,7 @@ ms.locfileid: "62831768"
   
 -   [Resultsets im Task „SQL ausführen“](../result-sets-in-the-execute-sql-task.md)  
   
--   [Transact-SQL-Referenz &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](/sql/t-sql/language-reference)  
+-   [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference)  
   
 -   Blogeintrag [Neue Datums- und Uhrzeitfunktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=239783)auf mssqltips.com.  
   

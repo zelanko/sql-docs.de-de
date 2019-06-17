@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62844098"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Neuer Volltextkatalog (Seite 'Allgemein')
@@ -38,7 +38,7 @@ ms.locfileid: "62844098"
  Wählen Sie diese Option, um diesen Katalog als Standardkatalog für neue Volltextkataloge festzulegen.  
   
  **Unterscheidung nach Akzent**  
- Gibt an, ob bei dem Katalog eine Unterscheidung anhand von diakritischen Zeichen wie Tilde (**~**), Akut-Akzentzeichen (**´**) oder Umlaut (**¨**) erfolgt. Wenn Sie **Keine Unterscheidung**auswählen, werden diakritische Zeichen in Volltextindizes ignoriert, die mit diesem Volltextkatalog verknüpft sind. Weitere Informationen zu diakritischen Zeichen, finden Sie unter [diakritisches](https://www.merriam-webster.com/dictionary/diacritic) der Nitsche-Webster-Website.  
+ Gibt an, ob bei dem Katalog eine Unterscheidung anhand von diakritischen Zeichen wie Tilde ( **~** ), Akut-Akzentzeichen (**´**) oder Umlaut (**¨**) erfolgt. Wenn Sie **Keine Unterscheidung**auswählen, werden diakritische Zeichen in Volltextindizes ignoriert, die mit diesem Volltextkatalog verknüpft sind. Weitere Informationen zu diakritischen Zeichen, finden Sie unter [diakritisches](https://www.merriam-webster.com/dictionary/diacritic) der Nitsche-Webster-Website.  
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

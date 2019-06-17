@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789457"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "62789457"
   
 ##  <a name="AGlisteners"></a> Erstellen und Verwalten von Verfügbarkeitsgruppenlistenern  
   
-|Cmdlet|Description|Unterstützt auf|  
+|Cmdlet|Beschreibung|Unterstützt auf|  
 |------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroupListener`|Erstellt einen neuen Verfügbarkeitsgruppenlistener und fügt ihn einer vorhandenen Verfügbarkeitsgruppe hinzu.|Serverinstanz, die das primäre Replikat hostet|  
 |`Set-SqlAvailabilityGroupListener`|Ändert die Porteinstellung eines vorhandenen Verfügbarkeitsgruppenlisteners.|Serverinstanz, die das primäre Replikat hostet|  
@@ -92,7 +92,7 @@ ms.locfileid: "62789457"
   
 ##  <a name="DeployManageDbs"></a> Hinzufügen und Verwalten von Verfügbarkeitsdatenbanken  
   
-|Cmdlets|Description|Unterstützt auf|  
+|Cmdlets|Beschreibung|Unterstützt auf|  
 |-------------|-----------------|------------------|  
 |**Add-SqlAvailabilityDatabase**|Fügt auf dem primären Replikat einer Verfügbarkeitsgruppe eine Datenbank hinzu.<br /><br /> Verknüpft auf einem sekundären Replikat eine sekundäre Datenbank mit einer Verfügbarkeitsgruppe.|Eine beliebige Serverinstanz, die ein Verfügbarkeitsreplikat hostet (Verhalten unterscheidet sich für primäre und sekundäre Replikate)|  
 |**Remove-SqlAvailabilityDatabase**|Entfernt auf dem primären Replikat die Datenbank aus der Verfügbarkeitsgruppe.<br /><br /> Entfernt auf einem sekundären Replikat die lokale sekundäre Datenbank aus dem lokalen sekundären Replikat.|Eine beliebige Serverinstanz, die ein Verfügbarkeitsreplikat hostet (Verhalten unterscheidet sich für primäre und sekundäre Replikate)|  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044221"
 ---
 # <a name="server-event-category"></a>Server-Ereigniskategorie
@@ -28,7 +28,7 @@ ms.locfileid: "63044221"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Mount Tape (Ereignisklasse)](mount-tape-event-class.md)|Gibt an, dass eine Anforderung zum Bandeinlegen empfangen wurde.|  
 |[Server Memory Change-Ereignisklasse](server-memory-change-event-class.md)|Gibt an, dass sich die Speicherverwendung durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert hat.|  

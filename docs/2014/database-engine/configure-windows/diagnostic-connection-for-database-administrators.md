@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810421"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
@@ -43,7 +43,7 @@ ms.locfileid: "62810421"
   
  Nur Mitglieder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Rolle sysadmin können dedizierte Administratorverbindungen (DAC) herstellen.  
   
- Die DAC steht über das **sqlcmd** -Hilfsprogramm für Eingabeaufforderungen mit einem speziellen Administratorschalter (**-A**) zur Verfügung und wird von diesem unterstützt. Weitere Informationen zum Verwenden von **sqlcmd** finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können auch verbinden, als Präfix voranstellen `admin:`dem Instanznamen im Format **Sqlcmd - Sadmin:**_< Instance_name >._ Sie können auch initiieren, eine dedizierte Administratorverbindung in einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Abfrage-Editor durch Herstellen einer Verbindung mit `admin:` \< *Instance_name*>.  
+ Die DAC steht über das **sqlcmd** -Hilfsprogramm für Eingabeaufforderungen mit einem speziellen Administratorschalter ( **-A**) zur Verfügung und wird von diesem unterstützt. Weitere Informationen zum Verwenden von **sqlcmd** finden Sie unter [Verwenden von sqlcmd mit Skriptvariablen](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Sie können auch verbinden, als Präfix voranstellen `admin:`dem Instanznamen im Format **Sqlcmd - Sadmin:** _< Instance_name >._ Sie können auch initiieren, eine dedizierte Administratorverbindung in einem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Abfrage-Editor durch Herstellen einer Verbindung mit `admin:` \< *Instance_name*>.  
   
 ## <a name="restrictions"></a>Restrictions  
  Da die DAC nur zum Diagnostizieren von Serverproblemen in seltenen Fällen gedacht ist, bestehen einige Einschränkungen für die Verbindung:  
@@ -76,7 +76,7 @@ ms.locfileid: "62810421"
   
 -   Einfache DBCC-Befehle, wie z. B. DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` und DBCC SQLPERF. Führen Sie keine ressourcenintensiven Befehle wie **DBCC** CHECKDB, DBCC DBREINDEX oder DBCC SHRINKDATABASE aus.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>*-Befehl. Abhängig vom Status von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der KILL-Befehl nicht immer erfolgreich; dann ist ein Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unumgänglich. Es folgen einige allgemeine Richtlinien:  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* -Befehl. Abhängig vom Status von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist der KILL-Befehl nicht immer erfolgreich; dann ist ein Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unumgänglich. Es folgen einige allgemeine Richtlinien:  
   
     -   Überprüfen Sie mit der Abfrage `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`, ob SPID tatsächlich beendet wurde. Wenn keine Zeilen zurückgegeben werden, wurde die Sitzung beendet.  
   

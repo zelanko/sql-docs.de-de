@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060086"
 ---
 # <a name="custom-messages-for-logging"></a>Benutzerdefinierte Meldungen für die Protokollierung
@@ -78,7 +78,7 @@ ms.locfileid: "66060086"
 ###  <a name="Package"></a> Paket  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für Pakete aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`PackageStart`|Zeigt den Beginn der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |`PackageEnd`|Zeigt den Abschluss der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
@@ -112,7 +112,7 @@ ms.locfileid: "66060086"
 ###  <a name="ExecuteDTS200"></a> DTS 2000 ausführen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task DTS 2000 ausführen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Zeigt an, dass die Ausführung eines DTS 2000-Pakets über den Task gestartet wurde.|  
 |`ExecuteDTS80PackageTaskEnd`|Zeigt an, dass die Ausführung über den Task beendet wurde.<br /><br /> Hinweis: Das DTS 2000-Paket kann nach Beendigung des Tasks mit der Ausführung fortfahren.|  
@@ -144,7 +144,7 @@ ms.locfileid: "66060086"
 ###  <a name="FTP"></a> FTP-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den FTP-Task aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|Zeigt an, dass mit dem Task eine Verbindung zum FTP-Server initiiert wurde.|  
 |`FTPOperation`|Berichtet den Beginn und Typ des vom Task ausgeführten FTP-Vorgangs.|  
@@ -190,7 +190,7 @@ ms.locfileid: "66060086"
 ###  <a name="TransferErrorMessages"></a> Fehlermeldungen übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Fehlermeldungen übertragen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von Fehlermeldungen beendet wurde.|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von Fehlermeldungen gestartet wurde.|  
@@ -198,7 +198,7 @@ ms.locfileid: "66060086"
 ###  <a name="TransferJobs"></a> Aufträge übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Aufträge übertragen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`TransferJobsTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Aufträgen beendet wurde.|  
 |`TransferJobsTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Aufträgen gestartet wurde.|  
@@ -222,7 +222,7 @@ ms.locfileid: "66060086"
 ###  <a name="TransferSQLServerObjects"></a> SQL Server-Objekte kopieren (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte kopieren aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`TransferSqlServerObjectsTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbankobjekten beendet wurde.|  
 |`TransferSqlServerObjectsTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbankobjekten gestartet wurde.|  
@@ -256,7 +256,7 @@ ms.locfileid: "66060086"
 ###  <a name="XML"></a> XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`XMLOperation`|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
   

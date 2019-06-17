@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806826"
 ---
 # <a name="toolbox-component-f1-help"></a>Toolboxkomponente (F1-Hilfe)
@@ -26,7 +26,7 @@ In der**Toolbox** wird eine Vielzahl von Elementen angezeigt, die in [!INCLUDE[m
 **Toolbox** Symbole gezogen und abgelegt oder kopiert und eingefügt werden können in Code-Editoren oder auf Flächen der Entwurfssicht in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>Verwenden der Toolbox  
- Die Toolbox ist eine verschiebbare Strukturansicht, die in ihrem Verhalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer ähnelt, aber nicht über ein Raster oder Verbindungslinien verfügt. Mehrere Segmente der **Toolbox** (als „Registerkarten“ bezeichnet) können gleichzeitig erweitert werden, und die gesamte Struktur kann innerhalb des Fensters **Toolbox** per Bildlauf verschoben werden. Um eine der Registerkarten der **Toolbox**zu erweitern, klicken Sie auf das Pluszeichen (**+**) neben ihrem Namen. Um eine erweiterte Registerkarte zu reduzieren, klicken Sie auf das Minuszeichen (**-**) neben ihrem Namen.  
+ Die Toolbox ist eine verschiebbare Strukturansicht, die in ihrem Verhalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer ähnelt, aber nicht über ein Raster oder Verbindungslinien verfügt. Mehrere Segmente der **Toolbox** (als „Registerkarten“ bezeichnet) können gleichzeitig erweitert werden, und die gesamte Struktur kann innerhalb des Fensters **Toolbox** per Bildlauf verschoben werden. Um eine der Registerkarten der **Toolbox**zu erweitern, klicken Sie auf das Pluszeichen ( **+** ) neben ihrem Namen. Um eine erweiterte Registerkarte zu reduzieren, klicken Sie auf das Minuszeichen ( **-** ) neben ihrem Namen.  
   
  Jedes Mal, wenn Sie in einen Editor oder Designer zurückkehren, führt die **Toolbox** automatisch einen Bildlauf zur zuletzt verwendeten Registerkarte und zum zuletzt ausgewählten Element durch. Wenn Sie den Fokus auf einen anderen Editor oder Designer verlagern, wandert die aktuelle Auswahl in der **Toolbox** mit Ihnen mit.  
   

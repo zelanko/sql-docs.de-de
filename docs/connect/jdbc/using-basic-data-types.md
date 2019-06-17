@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8aa3b6b211095f3c27693928dab6518a6a2e895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759408"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790087"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
 
@@ -38,11 +38,11 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
 | DATETIME           | timestamp                                          | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
-| Decimal            | DECIMAL                                            | java.math.BigDecimal         |
+| Decimal            | DEZIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
 | ssNoversion                | INTEGER                                            | ssNoversion                          |
-| money              | DECIMAL                                            | java.math.BigDecimal         |
+| money              | DEZIMAL                                            | java.math.BigDecimal         |
 | NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | Zeichenfolge                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | Zeichenfolge                       |
 | NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
@@ -51,9 +51,9 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
 | REAL               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
-| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
+| SMALLMONEY         | DEZIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | Zeichenfolge                       |
-| Uhrzeit               | TIME (1)                                           | java.sql.Time (1)            |
+| time               | TIME (1)                                           | java.sql.Time (1)            |
 | timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
@@ -127,6 +127,6 @@ Wenn Sie Parameter wieder aus einer gespeicherten Prozedur abrufen müssen, müs
   
 Weitere Informationen zur Verwendung des JDBC-Treibers mit gespeicherten Prozeduren und Ausgabeparametern finden Sie unter [mithilfe einer gespeicherten Prozedur mit Output-Parameter](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

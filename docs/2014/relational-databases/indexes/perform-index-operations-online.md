@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036204"
 ---
 # <a name="perform-index-operations-online"></a>Ausführen von Onlineindexvorgängen
@@ -33,7 +33,7 @@ ms.locfileid: "63036204"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Onlineneuerstellung eines Indexes mit:**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63036204"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-rebuild-an-index-online"></a>Sie erstellen Sie einen Index online neu  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63036204"
   
 #### <a name="to-create-rebuild-or-drop-an-index-online"></a>So können Sie einen Index online erstellen, neu erstellen oder löschen  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

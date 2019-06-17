@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62927225"
 ---
 # <a name="system-variables"></a>Systemvariablen
@@ -77,7 +77,7 @@ ms.locfileid: "62927225"
 ## <a name="system-variables-for-event-handlers"></a>Systemvariablen für Ereignishandler  
  In der folgenden Tabelle werden die Systemvariablen beschrieben, die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] für Ereignishandler bereitstellt. Nicht alle Variablen sind für alle Ereignishandler verfügbar.  
   
-|Systemvariable|Datentyp|Description|Ereignishandler|  
+|Systemvariable|Datentyp|Beschreibung|Ereignishandler|  
 |---------------------|---------------|-----------------|-------------------|  
 |**Abbrechen**|Boolean|Gibt an, ob das Ausführen des Ereignishandlers bei einem Fehler, einer Warnung oder beim Abbruch einer Abfrage beendet wird.|OnError-Ereignishandler<br /><br /> OnWarning-Ereignishandler<br /><br /> OnQueryCancel-Ereignishandler|  
 |**ErrorCode**|Int32|Der Fehlerbezeichner.|OnError-Ereignishandler<br /><br /> OnInformation-Ereignishandler<br /><br /> OnWarning-Ereignishandler|  

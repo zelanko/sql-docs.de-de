@@ -3,17 +3,17 @@ title: 'MicrosoftML R - Funktionsbibliothek: SQL Server Machine Learning Service
 description: Einführung in MicrosoftML Funktionsbibliothek in SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services mit R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641824"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140489"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (R-Bibliothek in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -96,7 +96,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>4-Loss-Funktionen für Klassifizierung und regression
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Spezifikationen für verlustfunktion exponentiellen Klassifizierung. | 
 |[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Spezifikationen für die Log-Verlust Klassifizierungsfunktion.  |
@@ -107,14 +107,14 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ## <a name="5-feature-selection-functions"></a>5-Feature-Selection-Funktionen
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | Spezifikation für die Funktionsauswahl in seitenanzahlmodus, den. |
 |[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | Spezifikation für die Funktionsauswahl im Modus für gegenseitige Information. |
 
 ## <a name="6-ensemble-modeling-functions"></a>6-Ensemble-Modellierungsfunktionen
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | Erstellt eine Liste mit den Funktionsnamen und Argumenten zum Trainieren eines Modells schnell Struktur mit [RxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
 |[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Erstellt eine Liste mit den Funktionsnamen und Argumenten zum Trainieren eines Modells schneller Forest mit [RxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
@@ -140,7 +140,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 Funktionen in **MicrosoftML** in R-Code gekapselt, die in gespeicherten Prozeduren können aufgerufen werden. Die meisten Entwickler erstellen **MicrosoftML** Lösungen lokal, und migrieren Sie dann die fertig gestellten R-Code zu gespeicherten Prozeduren als eine Übung für die Bereitstellung.
 
-Die **MicrosoftML** -Paket für R installierten "Out-of-the-Box" in SQL Server 2017 ist. Es ist auch für die Verwendung mit SQL Server 2016 verfügbar, wenn Sie die R-Komponenten für die Instanz aktualisieren: [Aktualisieren einer Instanz von SQL Server mithilfe der Bindung](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+Die **MicrosoftML** -Paket für R installierten "Out-of-the-Box" in SQL Server 2017 ist. Es ist auch für die Verwendung mit SQL Server 2016 verfügbar, wenn Sie die R-Komponenten für die Instanz aktualisieren: [Aktualisieren einer Instanz von SQL Server mithilfe der Bindung](../install/upgrade-r-and-python.md)
 
 Das Paket ist nicht standardmäßig geladen. Als erstes laden die **MicrosoftML** -Paket, und Laden Sie **RevoScaleR** remotecomputekontexte oder verbundene Konnektivitäts- oder Data-Source-Objekte verwenden werden sollen. Klicken Sie dann, verweisen auf den einzelnen Funktionen, die Sie benötigen.
 

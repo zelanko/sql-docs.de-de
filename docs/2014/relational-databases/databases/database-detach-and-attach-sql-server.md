@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762419"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anfügen und Trennen von Datenbanken (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "62762419"
 > [!NOTE]  
 >  Wenn die angefügte primäre Datendatei schreibgeschützt ist, geht [!INCLUDE[ssDE](../../includes/ssde-md.md)] davon aus, dass auch die Datenbank schreibgeschützt ist.  
   
- Wenn eine verschlüsselte Datenbank angefügt wird mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], der Besitzer der Datenbank muss der Hauptschlüssel der Datenbank öffnen, indem Sie die folgende Anweisung ausführen: OPEN MASTER KEY-ENTSCHLÜSSELUNG DURCH KENNWORT = **"*`password`*"**. Es wird empfohlen, dass Sie die automatische Entschlüsselung des Hauptschlüssels aktivieren, indem Sie die folgende Anweisung ausführen: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Wenn eine verschlüsselte Datenbank angefügt wird mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], der Besitzer der Datenbank muss der Hauptschlüssel der Datenbank öffnen, indem Sie die folgende Anweisung ausführen: OPEN MASTER KEY-ENTSCHLÜSSELUNG DURCH KENNWORT = **" *`password`* "** . Es wird empfohlen, dass Sie die automatische Entschlüsselung des Hauptschlüssels aktivieren, indem Sie die folgende Anweisung ausführen: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Die Anforderungen für das Anfügen von Protokolldateien hängen wie im Folgenden beschrieben teilweise davon ab, ob die Datenbank Lese-/Schreibzugriff aufweist oder schreibgeschützt ist:  
   

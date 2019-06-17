@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62870958"
 ---
 # <a name="database-engine-error-severities"></a>Schweregrade von Datenbank-Engine-Fehlern
@@ -29,7 +29,7 @@ ms.locfileid: "62870958"
 ## <a name="levels-of-severity"></a>Schweregrade  
  In der folgenden Tabelle sind die Schweregrade der Fehler aufgeführt und beschrieben, die von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ausgelöst werden.  
   
-|Schweregrad|Description|  
+|Schweregrad|Beschreibung|  
 |--------------------|-----------------|  
 |0-9|Informationsmeldungen, die Statusinformationen zurückgeben oder Fehler melden, die nicht schwerwiegend sind. [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst keine Systemfehler mit Schweregraden zwischen 0 und 9 aus.|  
 |10|Informationsmeldungen, die Statusinformationen zurückgeben oder Fehler melden, die nicht schwerwiegend sind. Aus Kompatibilitätsgründen konvertiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Schweregrad 10 in Schweregrad 0, bevor die Fehlerinformationen an die aufrufende Anwendung zurückgegeben werden.|  

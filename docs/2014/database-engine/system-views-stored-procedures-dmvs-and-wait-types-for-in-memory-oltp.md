@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842399"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Systemsichten, gespeicherte Prozeduren, DMVs und Wartetypen für In-Memory-OLTP
@@ -35,7 +35,7 @@ ms.locfileid: "62842399"
   
 ### <a name="metadata-functions"></a>Metadatenfunktionen  
   
-|Metadatenfunktion|Description|In-Memory OLTP-Feature|  
+|Metadatenfunktion|Beschreibung|In-Memory OLTP-Feature|  
 |-----------------------|-----------------|-----------------------------|  
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|Überprüfen, ob eine Datenbankobjekte speicheroptimiert sind.|**ExecIsWithNativeCompilation** und **TableIsMemoryOptimized** Eigenschaften.<br /><br /> Die **IsSchemaBound** -Eigenschaft unterstützt den prozedurobjekttyp (gibt 0 für Prozeduren anstelle von NULL).|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|Überprüfen, ob ein Server In-Memory OLTP unterstützt.|**IsXTPSupported** Eigenschaft.|  

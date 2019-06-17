@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724368"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797765"
 ---
 # <a name="data-source-wizard-screen-4"></a>Datenquellen-Assistent (Bildschirm 4)
 
 Geben Sie die Sprache an, die für SQL Server-Meldungen verwendet werden soll, die Übersetzung des Zeichensatzes, und ob der ODBC Driver for SQL Server Einstellungen für Land/Region verwenden soll. Sie können auch die Protokollierung von Abfragen mit langer Ausführungszeit und die Einstellungen der Treiberstatistik steuern.
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>enthalten
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>Ändern der Sprache von SQL Server-Systemmeldungen in
 

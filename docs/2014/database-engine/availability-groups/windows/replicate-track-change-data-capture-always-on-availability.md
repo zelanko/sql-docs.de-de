@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814056"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replikation, Änderungsnachverfolgung, Change Data Capture und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -109,7 +109,7 @@ ms.locfileid: "62814056"
     ```  
   
     > [!NOTE]  
-    >  Sie sollten die Aufträge im Vorfeld für alle möglichen Failoverziele erstellen und sie als deaktiviert kennzeichnen, bis das Verfügbarkeitsreplikat auf einem Host zum neuen primären Replikat wird. Die CDC-Aufträge, die auf der alten primären Datenbank ausgeführt werden, sollten auch deaktiviert werden, wenn die lokale Datenbank zur sekundären Datenbank wird. Verwenden Sie zum Deaktivieren und Aktivieren von Aufträgen die *@enabled*-Option von [sp_update_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Weitere Informationen zum Erstellen von CDC-Aufträgen finden Sie unter [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)unterstützt.  
+    >  Sie sollten die Aufträge im Vorfeld für alle möglichen Failoverziele erstellen und sie als deaktiviert kennzeichnen, bis das Verfügbarkeitsreplikat auf einem Host zum neuen primären Replikat wird. Die CDC-Aufträge, die auf der alten primären Datenbank ausgeführt werden, sollten auch deaktiviert werden, wenn die lokale Datenbank zur sekundären Datenbank wird. Verwenden Sie zum Deaktivieren und Aktivieren von Aufträgen die *@enabled* -Option von [sp_update_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Weitere Informationen zum Erstellen von CDC-Aufträgen finden Sie unter [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)unterstützt.  
   
 -   **Hinzufügen von CDC-Rollen zu einer primären AlwaysOn-Datenbankreplikat**  
   

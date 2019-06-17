@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61a5e8c1e3dad99318f14a49f1386757a4ebabe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873467"
 ---
 # <a name="enable-or-disable-data-collection"></a>Aktivieren oder Deaktivieren der Datensammlung
@@ -27,7 +27,7 @@ ms.locfileid: "62873467"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So aktivieren oder deaktivieren Sie die Datensammlung mit**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62873467"
 ####  <a name="Permissions"></a> Berechtigungen  
  Damit diese Prozedur ausgeführt werden kann, ist die Mitgliedschaft in der festen Datenbankrolle **dc_admin** oder **dc_operator** (mit EXECUTE-Berechtigung) erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-enable-the-data-collector"></a>So aktivieren Sie den Datensammler  
   

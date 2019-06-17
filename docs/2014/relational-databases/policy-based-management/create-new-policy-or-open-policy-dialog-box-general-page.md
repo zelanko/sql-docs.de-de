@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705385"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Allgemein'
@@ -43,7 +43,7 @@ ms.locfileid: "62705385"
  Richtlinien, die unter Verwendung des Auswertungsmodus **Bedarfsgesteuert** ausgeführt werden, verwenden dieses Kontrollkästchen nicht.  
   
  **Bedingung überprüfen**  
- Wählen Sie die richtlinienbasierte Verwaltungsbedingung aus, die diese Richtlinie verwendet. Alle Bedingungen auf dem Server für das zugeordnete Facet der richtlinienbasierten Verwaltung werden aufgelistet. Klicken Sie auf **Neue Bedingung** , um eine neue Bedingung zu erstellen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**), um die Bedingung zu ändern.  
+ Wählen Sie die richtlinienbasierte Verwaltungsbedingung aus, die diese Richtlinie verwendet. Alle Bedingungen auf dem Server für das zugeordnete Facet der richtlinienbasierten Verwaltung werden aufgelistet. Klicken Sie auf **Neue Bedingung** , um eine neue Bedingung zu erstellen. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ), um die Bedingung zu ändern.  
   
  **Für Ziele**  
  Wählen Sie die Zieltypen aus, die für dieses Facet verfügbar sind, um einen Filterausdruck abzuschließen.  

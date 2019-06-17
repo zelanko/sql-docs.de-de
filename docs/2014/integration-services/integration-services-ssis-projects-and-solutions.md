@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26ab429a5f2abeda9a811e85dc5113121380e999
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892490"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services-Projekte (SSIS)
@@ -46,7 +46,7 @@ ms.locfileid: "62892490"
   
  In der folgende Tabelle werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt beschrieben.  
   
-|Ordner|Description|  
+|Ordner|Beschreibung|  
 |------------|-----------------|  
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Pakete|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|  
 |Sonstiges|Enthält Dateien, die sich von Paketdateien unterscheiden.|  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806751"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten (Transact-SQL)
@@ -257,7 +257,7 @@ ms.locfileid: "62806751"
     ```  
   
     > [!NOTE]  
-    >  Wenn Sie im Modus für hohe Sicherheit mit automatischem Failover ausführen möchten, behalten Sie Transaktion Safety auf FULL (Standardeinstellung) und der Zeuge so schnell wie möglich nach Ausführung der zweiten SET PARTNER hinzufügen **"*`partner_server`*"** Anweisung. Beachten Sie, dass der Zeuge zuerst für aus- und eingehende Verbindungen konfiguriert werden muss.  
+    >  Wenn Sie im Modus für hohe Sicherheit mit automatischem Failover ausführen möchten, behalten Sie Transaktion Safety auf FULL (Standardeinstellung) und der Zeuge so schnell wie möglich nach Ausführung der zweiten SET PARTNER hinzufügen **" *`partner_server`* "** Anweisung. Beachten Sie, dass der Zeuge zuerst für aus- und eingehende Verbindungen konfiguriert werden muss.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
