@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106438"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Integrierte globale Werte und Benutzerverweise (Berichts-Generator und SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66106438"
 ### <a name="renderformat"></a>RenderFormat  
  In der folgenden Tabelle werden die Elemente von `RenderFormat` beschrieben.  
   
-|Member|Typ|Description|  
+|Member|Typ|Beschreibung|  
 |------------|----------|-----------------|  
 |Name|`String`|Der Name des Renderers laut Registrierung in der RSReportServer-Konfigurationsdatei.<br /><br /> Verfügbar während bestimmter Teile des Berichtsverarbeitungs-/Renderingzyklus.|  
 |IsInteractive|`Boolean`|Gibt an, ob die aktuelle Renderinganforderung ein interaktives Renderingformat verwendet.|  

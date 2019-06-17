@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872656"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
@@ -106,7 +106,7 @@ ms.locfileid: "62872656"
   
  **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Seite in Zukunft nicht mehr angezeigt wird.  
   
- **Weiter >**: Geht zur Seite **Paket auswählen** über.  
+ **Weiter >** : Geht zur Seite **Paket auswählen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62872656"
   
  **\< Zurück** – Kehrt zur Seite **Einführung** über.  
   
- **Weiter >**: Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
+ **Weiter >** : Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62872656"
   
  **\< Vorherige** -zurückgibt, die in den ursprünglichen Zustand des der **Paket auswählen** Seite.  
   
- **Weiter >**: Geht zur abschließenden Version der Seite **Paket auswählen** über.  
+ **Weiter >** : Geht zur abschließenden Version der Seite **Paket auswählen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62872656"
   
  **\< Vorherige** -zurückgibt die **Paket auswählen** Seite.  
   
- **Weiter >**: Geht zur Seite **Änderung erkennen** über.  
+ **Weiter >** : Geht zur Seite **Änderung erkennen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62872656"
   
  **\< Vorherige** -zurückgibt die **DAC-Paket auswählen** Seite.  
   
- **Weiter >**: Geht zur Seite **Optionen** über.  
+ **Weiter >** : Geht zur Seite **Optionen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "62872656"
   
  **\< Vorherige** -zurückgibt die **Änderung erkennen** Seite.  
   
- **Weiter >**: Geht zur Seite **Upgradeplan überprüfen** über.  
+ **Weiter >** : Geht zur Seite **Upgradeplan überprüfen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "62872656"
   
  **\< Vorherige** -zurückgibt die **Änderung erkennen** Seite.  
   
- **Weiter >**: Geht zur Seite **Zusammenfassung** über.  
+ **Weiter >** : Geht zur Seite **Zusammenfassung** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -216,7 +216,7 @@ ms.locfileid: "62872656"
   
  **\< Vorherige** -wird wieder die **Upgradeplan** Seite.  
   
- **Weiter >**: Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC aktualisieren** an.  
+ **Weiter >** : Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC aktualisieren** an.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   

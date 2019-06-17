@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5520554b509b0c25d62e4a191e16ad3524a02652
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63297459"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions-Zuordnung
-Wenn eine Anwendung ruft **SQLSetScrollOptions** über einen ODBC 3.*.x* Treiber und der Treiber unterstützt keine **SQLSetScrollOptions**, den Aufruf von  
+Wenn eine Anwendung ruft **SQLSetScrollOptions** über einen ODBC 3. *.x* Treiber und der Treiber unterstützt keine **SQLSetScrollOptions**, den Aufruf von  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -100,4 +100,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      mit  *\*ValuePtr* legen Sie auf die *RowsetSize* -Argument in **SQLSetScrollOptions**.  
   
     > [!NOTE]  
-    >  Wenn der Treiber-Manager zugeordnet **SQLSetScrollOptions** für eine Anwendung, die Arbeit mit einer ODBC 3.*.x* Treiber, der nicht unterstützt. **SQLSetScrollOptions**, den Treiber Legt Manager die SQL_ROWSET_SIZE setzen Option-Anweisung, nicht das SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut, zu der *RowsetSize* -Argument in **SQLSetScrollOption**. Daher **SQLSetScrollOptions** kann nicht von einer Anwendung verwendet werden, wenn mehrere Zeilen durch einen Aufruf zum Abrufen von **SQLFetch** oder **SQLFetchScroll**. Kann verwendet werden, nur dann, wenn das Abrufen von mehreren durch einen Aufruf von Zeilen **SQLExtendedFetch**.
+    >  Wenn der Treiber-Manager zugeordnet **SQLSetScrollOptions** für eine Anwendung, die Arbeit mit einer ODBC 3. *.x* Treiber, der nicht unterstützt. **SQLSetScrollOptions**, den Treiber Legt Manager die SQL_ROWSET_SIZE setzen Option-Anweisung, nicht das SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut, zu der *RowsetSize* -Argument in **SQLSetScrollOption**. Daher **SQLSetScrollOptions** kann nicht von einer Anwendung verwendet werden, wenn mehrere Zeilen durch einen Aufruf zum Abrufen von **SQLFetch** oder **SQLFetchScroll**. Kann verwendet werden, nur dann, wenn das Abrufen von mehreren durch einen Aufruf von Zeilen **SQLExtendedFetch**.

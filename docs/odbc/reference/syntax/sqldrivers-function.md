@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d3aea0b2c756abc0dc603348cc9cfd728ac4f
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538154"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers-Funktion
@@ -84,7 +84,7 @@ SQLRETURN SQLDrivers(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDrivers** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, zurück ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_ENV und *behandeln* von *EnvironmentHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLDrivers** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|(DM)-Treiber-Manager-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|(DM) des Puffers \* *DriverDescription* nicht groß genug war, um die vollständige treiberbeschreibung zurückzugeben. Aus diesem Grund wurde die Beschreibung abgeschnitten. Die Länge der treiberbeschreibung vollständige wird zurückgegeben, \* *DescriptionLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (DM) des Puffers \* *DriverAttributes* war nicht groß genug, um die vollständige Liste der Attribut-Wert-Paaren zurück. Aus diesem Grund wurde die Liste abgeschnitten. Die Länge der Liste den ungekürzten von Attribut-Wert-Paaren zurückgegeben **AttributesLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  

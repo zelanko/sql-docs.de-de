@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450111"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
   
  Zum Abrufen des Rückgabewert eines Ausgabeparameters *Parameter* muss eine lokale Variable vom entsprechenden Datentyp zurück, und **Ausgabe** muss angegeben werden. Wenn Sie ein konstanter Parameter angegeben wird oder wenn **Ausgabe** nicht angegeben ist, Rückgabewert Wert aus einer Output-Parameter wird ignoriert.  
   
- Wenn angegeben, *Parametername* muss der Namen der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannte Parameter. Beachten Sie, dass **@**_parametername_is keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable. Das at-Zeichen (**@**) wird entfernt, und *Parametername*an OLE-Objekts als der Name des Parameters übergeben wird. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
+ Wenn angegeben, *Parametername* muss der Namen der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannte Parameter. Beachten Sie, dass **@** _parametername_is keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable. Das at-Zeichen ( **@** ) wird entfernt, und *Parametername*an OLE-Objekts als der Name des Parameters übergeben wird. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
   
  *n*  
  Ein Platzhalter, der anzeigt, dass mehrere Parameter angegeben werden können.  

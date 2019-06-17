@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144596"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
@@ -50,7 +50,7 @@ ms.locfileid: "63144596"
   
 -   Lesezugriff auf den **Root\Microsoft\SqlServer\ComputerManagement12** -WMI-Namespace. Standardmäßig verfügt jeder Benutzer durch die Berechtigung Konto aktivieren über Lesezugriff. Weitere Informationen finden Sie im Verfahren "So überprüfen Sie WMI-Berechtigungen" weiter unten in diesem Abschnitt.  
   
--   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei <\<*Laufwerk>* das Laufwerk darstellt, auf dem Sie installiert haben[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und\<*<Instanzname* den Namen der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
+-   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei <\<*Laufwerk>* das Laufwerk darstellt, auf dem Sie installiert haben[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und\< *<Instanzname* den Namen der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
   
      **\<Laufwerk >: \Programme\Microsoft SQL Server\MSSQL12. \<Instanzname > \MSSQL\Log**  
   
@@ -68,13 +68,13 @@ ms.locfileid: "63144596"
   
      Wenn Sie eine Verbindung mit einem Remotecomputer herstellen möchten, führen Sie folgende Schritte aus:  
   
-    1.  Klicken Sie mit der rechten Maustaste auf **WMI-Kontrolle (Lokal)**, und klicken Sie dann auf **Verbindung mit anderem Computer herstellen**.  
+    1.  Klicken Sie mit der rechten Maustaste auf **WMI-Kontrolle (Lokal)** , und klicken Sie dann auf **Verbindung mit anderem Computer herstellen**.  
   
     2.  Klicken Sie im Dialogfeld **Verwalteten Computer ändern** auf **Anderem Computer**.  
   
     3.  Geben Sie den Namen des Remotecomputers ein, und klicken Sie dann auf **OK**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** oder **WMI-Steuerung (***Remotecomputername***)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** oder **WMI-Steuerung (***Remotecomputername***)** , und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Klicken Sie im Dialogfeld **Eigenschaften von WMI-Kontrolle** auf die Registerkarte **Sicherheit** .  
   

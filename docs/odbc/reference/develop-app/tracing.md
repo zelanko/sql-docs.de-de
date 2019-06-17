@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96d86952b2d8be152aefad584e85104accb7cee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63148982"
 ---
 # <a name="tracing"></a>Ablaufverfolgung
-Der ODBC-Treiber-Manager verfügt über eine Ablaufverfolgung-Funktion, die die Sequenz von Funktionsaufrufen, die von einer ODBC-Anwendung erfasst und in einer Protokolldatei transkribiert werden kann. Ablaufverfolgung erfolgt durch eine Ablaufverfolgung DLL, die Aufrufe zwischen der Anwendung und der Treiber-Manager sowie zwischen der Treiber-Manager und der Treiber erfasst. Diese Methode der Ablaufverfolgung ersetzt die Ablaufverfolgung ausgeführt wird, indem Sie die ODBC 2.*.x* -Treiber-Manager und die Ablaufverfolgung durchgeführt werden, in ODBC 2.*.x* von ODBC-Spy.  
+Der ODBC-Treiber-Manager verfügt über eine Ablaufverfolgung-Funktion, die die Sequenz von Funktionsaufrufen, die von einer ODBC-Anwendung erfasst und in einer Protokolldatei transkribiert werden kann. Ablaufverfolgung erfolgt durch eine Ablaufverfolgung DLL, die Aufrufe zwischen der Anwendung und der Treiber-Manager sowie zwischen der Treiber-Manager und der Treiber erfasst. Diese Methode der Ablaufverfolgung ersetzt die Ablaufverfolgung ausgeführt wird, indem Sie die ODBC 2. *.x* -Treiber-Manager und die Ablaufverfolgung durchgeführt werden, in ODBC 2. *.x* von ODBC-Spy.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

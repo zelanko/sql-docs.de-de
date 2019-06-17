@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: faf680e657cc533f9874b0d041aac0d3fe29f34b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63244997"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>SetNumValue-Methode (ClientNetworkProtocolProperty-Klasse)
@@ -42,7 +42,7 @@ object
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*value*|Ein u`uint32`-Wert, der den numerischen Wert der Eigenschaft angibt, auf die verwiesen wird.|  
   

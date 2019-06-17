@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489252"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>Aufgabe 3 (optional): Überprüfung der Abonnementsichten
@@ -22,7 +22,7 @@ ms.locfileid: "65489252"
   
 1.  Starten Sie **SQL Server Management Studio**. Klicken Sie auf die **starten** , zeigen Sie auf **Programme**, klicken Sie auf **Microsoft SQL Server 2012**, und klicken Sie dann auf **SQL Server Management Studio**.  
   
-2.  In der **Herstellen einer Verbindung mit Server** legen **Servertyp** zu **Datenbank-Engine**, Typ der **Servernamen** (oder wählen Sie **( Local)**, und wählen Sie einen geeigneten **Authentifizierung**, und klicken Sie auf **Connect**.  
+2.  In der **Herstellen einer Verbindung mit Server** legen **Servertyp** zu **Datenbank-Engine**, Typ der **Servernamen** (oder wählen Sie **( Local)** , und wählen Sie einen geeigneten **Authentifizierung**, und klicken Sie auf **Connect**.  
   
 3.  In der **Objekt-Explorer** Bereich, erweitern Sie **Datenbanken**, erweitern Sie **MDS**, und erweitern Sie dann **Ansichten**.  
   
@@ -31,4 +31,4 @@ ms.locfileid: "65489252"
      ![SQL Server Management Studio – Verwaltung mobiler Geräte. Anzeigen von Lieferanten](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio – Verwaltung mobiler Geräte. Lieferanten-Ansicht")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
+ [Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

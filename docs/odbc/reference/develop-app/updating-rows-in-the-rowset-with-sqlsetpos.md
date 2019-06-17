@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313101"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Aktualisieren von Zeilen im Rowset mit SQLSetPos
@@ -37,7 +37,7 @@ Der Updatevorgang des **SQLSetPos** macht die Datenquelle, die eine oder mehrere
   
  Nach dem **SQLSetPos** zurückgegeben wird, um die aktualisierte Zeile die aktuelle Zeile festgelegt ist.  
   
- Wenn alle Zeilen im Rowset zu aktualisieren (*' RowNumber '* gleich 0 ist), eine Anwendung kann das Update von bestimmten Zeilen deaktivieren, indem Sie die entsprechenden Elemente von der Zeile Operation-Array (verweist die SQL_ATTR_ROW_OPERATION_PTR Anweisungsattribut) zu SQL_ROW_IGNORE. Die Zeile Operation-Array entspricht in Größe und Anzahl von Elementen, die die zeilenstatusarray (das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verweist). Um nur die Zeilen im Resultset zu aktualisieren, die erfolgreich abgerufen wurden und nicht aus dem Rowset gelöscht wurden, die Anwendung verwendet die zeilenstatusarray von der Funktion, die das Rowset als das Zeile Operation-Array, das abgerufen **SQLSetPos**.  
+ Wenn alle Zeilen im Rowset zu aktualisieren ( *' RowNumber '* gleich 0 ist), eine Anwendung kann das Update von bestimmten Zeilen deaktivieren, indem Sie die entsprechenden Elemente von der Zeile Operation-Array (verweist die SQL_ATTR_ROW_OPERATION_PTR Anweisungsattribut) zu SQL_ROW_IGNORE. Die Zeile Operation-Array entspricht in Größe und Anzahl von Elementen, die die zeilenstatusarray (das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verweist). Um nur die Zeilen im Resultset zu aktualisieren, die erfolgreich abgerufen wurden und nicht aus dem Rowset gelöscht wurden, die Anwendung verwendet die zeilenstatusarray von der Funktion, die das Rowset als das Zeile Operation-Array, das abgerufen **SQLSetPos**.  
   
  Für jede Zeile, die mit der Datenquelle als Update gesendet wird, sollte die Anwendungspuffer gültigen Zeilendaten haben. Wenn die Anwendungspuffer durch Abrufen gefüllt wurden und ein zeilenstatusarray gewahrt wurde, sollte die Werte an jeder Zeilenposition nicht SQL_ROW_DELETED, SQL_ROW_ERROR oder SQL_ROW_NOROW sein.  
   

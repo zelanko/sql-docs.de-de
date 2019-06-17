@@ -12,22 +12,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181289"
 ---
 # <a name="odbc-appendixes"></a>ODBC-Anhänge
 Technische Details im Zusammenhang mit Microsoft ODBC-Schnittstelle befinden sich in den folgenden Anhängen:  
   
--   [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [Anhang B: ODBC-Übergang Statustabellen](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
 -   [Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   

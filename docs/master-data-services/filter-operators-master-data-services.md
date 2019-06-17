@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca778a91b154de3a4dbcde1d663af5173af5ebe8
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483824"
 ---
 # <a name="filter-operators-master-data-services"></a>Filteroperatoren (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "65483824"
   
 ## <a name="filter-operators"></a>Filteroperatoren  
   
-|Steuerelementname|Description|  
+|Steuerelementname|Beschreibung|  
 |------------------|-----------------|  
 |**Ist gleich**|Gibt Attributwerte zurück, die den angegebenen Kriterien genau entsprechen. Um nach **Mountain-100**zu filtern, müssen Sie z.B. **Mountain-100**eingeben.|  
 |**Ist nicht gleich**|Gibt Attributwerte zurück, die keine genaue Übereinstimmung mit den angegebenen Kriterien aufweisen. Die Filterkriterien müssen dem Attributwert, den Sie aus den Ergebnissen ausschließen möchten, genau entsprechen. Um Ergebnisse auszuschließen, die mit **Mountain-100**übereinstimmen, müssen Sie z.B. **Mountain-100**eingeben.<br /><br /> <br /><br /> Hinweis: Wenn eine Filteranwendung mit einer "Ist nicht gleich"-Klausel auf ein Attribut angewendet wird, übergibt ein Element, dessen Attribut nicht NULL ist, die Filterbedingung und wird zurückgegeben, wenn in Ihren Datenbankeinstellungen SET ANSI_NULLS auf ON festgelegt ist. Um dieses Verhalten zu beenden, legen Sie SET ANSI_NULLS in den Datenbankeinstellungen auf OFF fest. Wenn SET ANSI_NULLS auf OFF festgelegt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Dies hat zur Folge, dass das Element die „Ist ungleich“-Klausel nicht besteht. Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  

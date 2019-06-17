@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 18ffebe5cbf781212b6b8962f9f48d61281c7d30
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66703990"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
@@ -28,7 +28,7 @@ Für eine RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md
   
  Verwenden Sie diese Konstanten mit dem **Recordset** "**Hintergrundpriorität Thread**" dynamische Eigenschaft, die im Index ADO, OLE DB dynamische Eigenschaft verwiesen wird und Sie finden Sie unter der [ Microsoft Cursor Service für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) Dokumentation.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|Legt die Priorität zwischen normalen und die höchste fest.|  
 |**adPriorityBelowNormal**|2|Legt die Priorität zwischen dem niedrigsten und den normalen fest.|  

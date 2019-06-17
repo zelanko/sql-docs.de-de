@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105501"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatoren in Ausdrücken (Berichts-Generator und SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66105501"
 ### <a name="arithmetic"></a>Arithmetik  
  Arithmetische Operatoren führen mathematische Vorgänge für zwei numerische Begriffe in einem Ausdruck aus.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |^|Erhebt eine Zahl zur Potenz einer anderen Zahl.|  
 |*|Multipliziert zwei Zahlen.|  
@@ -39,7 +39,7 @@ ms.locfileid: "66105501"
 ### <a name="comparison"></a>Vergleich  
  Vergleichsoperatoren testen, ob zwei Ausdrücke gleichwertig sind.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |<|Kleiner als.|  
 |\<=|Kleiner oder gleich.|  
@@ -47,13 +47,13 @@ ms.locfileid: "66105501"
 |>=|Größer oder gleich.|  
 |=|Gleich.|  
 |<>|Ungleich.|  
-|Wie|Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator.<br /><br /> Die folgenden Listen-Zeichen, die als Platzhalter verwendet werden können:<br /><br /> **%**: Eine Zeichenfolge aus null oder mehr Zeichen<br /><br /> **_**: Ein einzelnes Zeichen.<br /><br /> **[ ]**: Ein einzelnes Zeichen innerhalb des angegebenen Bereichs (z. B. [a-f]) oder der festgelegten Menge (z. B. [Aeiou]).<br /><br /> **[^]**: Ein einzelnes Zeichen, die nicht innerhalb des angegebenen Bereichs (z. B. [^ a-f]) oder festlegen (z. B. [^ Aeiou]).|  
+|Wie|Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator.<br /><br /> Die folgenden Listen-Zeichen, die als Platzhalter verwendet werden können:<br /><br /> **%** : Eine Zeichenfolge aus null oder mehr Zeichen<br /><br /> **_** : Ein einzelnes Zeichen.<br /><br /> **[ ]** : Ein einzelnes Zeichen innerhalb des angegebenen Bereichs (z. B. [a-f]) oder der festgelegten Menge (z. B. [Aeiou]).<br /><br /> **[^]** : Ein einzelnes Zeichen, die nicht innerhalb des angegebenen Bereichs (z. B. [^ a-f]) oder festlegen (z. B. [^ Aeiou]).|  
 |Is|Vergleicht zwei Objektverweise.|  
   
 ### <a name="string-concatenation"></a>Verketten von Zeichenfolgen  
  Mit der Zeichenfolgenverkettung wird die zweite Zeichenfolge in einem Ausdruck an die erste Zeichenfolge angefügt. Verwenden Sie für andere Zeichenfolgenoperationen integrierte Funktionen.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |&|Verkettet zwei Zeichenfolgen.|  
 |+|Verkettet zwei Zeichenfolgen.|  
@@ -61,7 +61,7 @@ ms.locfileid: "66105501"
 ### <a name="logical-and-bitwise"></a>Logisch und bitweise  
  Logische und bitweise Operatoren führen logische Manipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |And|Führt eine logische Konjunktion zweier boolescher Ausdrücke oder eine bitweise Konjunktion zweier numerischer Ausdrücke aus.|  
 |Not|Führt eine logische Negation eines booleschen Ausdrucks oder eine bitweise Negation eines numerischen Ausdrucks aus.|  
@@ -73,7 +73,7 @@ ms.locfileid: "66105501"
 ### <a name="bit-shift"></a>Bitverschiebung  
  Bitweise Operatoren führen Bitmanipulationen zwischen zwei ganzzahligen Begriffen in einem Ausdruck aus.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |<\<|Führt eine arithmetische Verschiebung nach links für ein Bitmuster aus.|  
 |>>|Führt eine arithmetische Verschiebung nach rechts für ein Bitmuster aus.|  

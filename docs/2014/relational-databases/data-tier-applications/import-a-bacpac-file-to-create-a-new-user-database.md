@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918183"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
@@ -99,7 +99,7 @@ ms.locfileid: "62918183"
 ###  <a name="Import_settings"></a> Importeinstellungen (Seite)  
  Verwenden Sie diese Seite, um den Speicherort der zu importierenden BACPAC-Datei anzugeben.  
   
--   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
+-   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
   
 -   **Aus Windows Azure importieren** -importiert eine bacpac-Datei aus einem Windows Azure-Container. Sie müssen eine Verbindung mit einem Windows Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "62918183"
   
 -   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **Datendateipfad**: Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
+-   **Datendateipfad**: Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
--   **Protokolldateipfad**: Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
+-   **Protokolldateipfad**: Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   

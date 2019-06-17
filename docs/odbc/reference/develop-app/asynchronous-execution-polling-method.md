@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63306299"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Asynchrone Ausführung (Abrufmethode)
@@ -212,7 +212,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Das folgende Beispiel zeigt, wie Sie mit **SQLSetConnectAttr** zum Aktivieren asynchroner Ausführung für die Verbindung in Zusammenhang stehende Funktionen.  
   
 ### <a name="code"></a>Code  
@@ -266,7 +266,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt die asynchroner Commit-Vorgängen. Rollback-Operationen können auch auf diese Weise erfolgen.  
   
 ### <a name="code"></a>Code  

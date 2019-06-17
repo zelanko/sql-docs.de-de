@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 618c4b127c42aae6a5b8d7570f1962f8c8e38e9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642361"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>Microsoftml (Python-Modul in SQL Server)
@@ -75,7 +75,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ### <a name="schema-manipulation"></a>Schema bearbeiten
 
-| Funktion | Description |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Verkettet mehrere Zeichenfolgenspalten in einen einzelnen Vektor. |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | Löscht aus einem Dataset. |
@@ -109,7 +109,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ### <a name="featurization-functions"></a>Featurebereitstellung-Funktionen
 
-| Funktion | Description |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | Datentransformation für Datenquellen |
 

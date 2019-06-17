@@ -1,32 +1,20 @@
 ---
 title: Berichts-Manager (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- reports [Reporting Services], managing
-- Report Manager [Reporting Services], about Report Manager
-- customizing Report Manager
-- Report Manager [Reporting Services], customizing
-- report servers [Reporting Services], administering
-- browsing reports [Reporting Services]
-- administering reports
-- Report Manager [Reporting Services]
-- components [Reporting Services], Report Manager
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 55581ae96660732ee01bf12fa37e1c5e8ac9634e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568383"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Berichts-Manager (einheitlicher SSRS-Modus)
   Der Berichts-Manager ist ein webbasiertes Zugriffs- und Verwaltungstool für Berichte. Dieses Tool kann verwendet werden, um eine einzelne Berichtsserverinstanz von einem Remotestandort aus über eine HTTP-Verbindung zu verwalten. Sie können ebenso die Berichts-Viewer- und Navigationsfunktionen des Berichts-Managers verwenden. In diesem Thema:  
@@ -69,7 +57,7 @@ ms.locfileid: "59940666"
   
  Einige Berichts-Manager-Funktionen sind nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- In einer neuen Installation verfügen nur lokale Administratoren über ausreichende Berechtigungen zum Verwenden des Inhalts und der Einstellungen. Wenn Sie anderen Benutzern Berechtigungen erteilen möchten, muss ein lokaler Administrator Rollenzuweisungen erstellen, die den Zugriff auf den Berichtsserver ermöglichen. Die Anwendungsseiten und Aufgaben, auf die ein Benutzer anschließend Zugriff erhält, sind von den Rollenzuweisungen für den Benutzer abhängig. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](security/grant-user-access-to-a-report-server.md).  
+ In einer neuen Installation verfügen nur lokale Administratoren über ausreichende Berechtigungen zum Verwenden des Inhalts und der Einstellungen. Wenn Sie anderen Benutzern Berechtigungen erteilen möchten, muss ein lokaler Administrator Rollenzuweisungen erstellen, die den Zugriff auf den Berichtsserver ermöglichen. Die Anwendungsseiten und Aufgaben, auf die ein Benutzer anschließend Zugriff erhält, sind von den Rollenzuweisungen für den Benutzer abhängig. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](security/grant-user-access-to-a-report-server.md)sollten nur sehr wenige Benutzer zugewiesen werden.  
   
  Wenn Sie [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] oder Windows Server 2008 verwenden, müssen Sie den Berichts-Manager für die lokale Verwaltung konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
@@ -101,7 +89,7 @@ ms.locfileid: "59940666"
 ##  <a name="bkmk_icon_descriptions"></a> Symbolbeschreibungen  
  In der folgenden Tabelle werden die Symbole beschrieben, die im Berichts-Manager verwendet werden. Weitere Informationen zu den Symbolen, die in der Symbolleiste des Berichts angezeigt werden, finden Sie unter [HTML-Viewer und die Berichtssymbolleiste](html-viewer-and-the-report-toolbar.md).  
   
-|Symbol|Description|Aktion|  
+|Symbol|Beschreibung|Aktion|  
 |----------|-----------------|------------|  
 |![Berichtsymbol](media/hlp-16doc.gif "Report icon")|Bericht|Klicken Sie auf das Berichtssymbol oder den Berichtsnamen, um den Bericht zu öffnen. Der Bericht wird in einem eigenen Fenster geöffnet.|  
 |![Modellsymbol](media/model-icon.gif "Model icon")|Berichtsmodell|Klicken Sie auf das Berichtsmodellsymbol, um Eigenschaftenseiten für Modelle zu öffnen.|  
@@ -113,13 +101,11 @@ ms.locfileid: "59940666"
 |![Symbol freigegebene Datenquelle](media/hlp-16datasource.png "Shared data source icon")|Freigegebenes Datenquellenelement|Klicken Sie auf ein Symbol für eine freigegebene Datenquelle, um die Eigenschaftenseiten, die Berichtsliste und die Abonnementliste der Datenquelle zu öffnen.|  
 |![Symbol für Eigenschaftenseite](media/hlp-16prop.gif "Symbol für Eigenschaftenseite")|Eigenschaftenseite|Klicken Sie auf das Eigenschaftensymbol, um zusätzliche Seiten zu öffnen sowie Eigenschaften und die Sicherheit festzulegen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Berichts-Generator &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Reporting Services-Tools](tools/reporting-services-tools.md)   
- [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Anzeigen und Durchsuchen von Berichten im einheitlichen Modus, die mit SharePoint-Webparts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## <a name="see-also"></a>Siehe auch
+
+- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Berichts-Generator &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Reporting Services-Tools](tools/reporting-services-tools.md)
+- [Berichtsserver Content Management (einheitlicher SSRS-Modus)](report-server/report-server-content-management-ssrs-native-mode.md)  
+[Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)

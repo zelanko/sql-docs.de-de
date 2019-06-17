@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855346"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Erstellen einer Projektmappe und einer Datenquelle (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -69,13 +69,13 @@ ms.locfileid: "62855346"
   
 |Szenario|In der Datenquellensicht enthaltene Daten|  
 |--------------|-------------------------------------------|  
-|[Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Monatliche Verkaufsberichte für Fahrradmodelle in unterschiedlichen Regionen (als einzelne Sicht gesammelt).|  
+|[Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Monatliche Verkaufsberichte für Fahrradmodelle in unterschiedlichen Regionen (als einzelne Sicht gesammelt).|  
 |[Lektion 3: Erstellen eines Warenkorbszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Eine Tabelle, die eine Liste mit Kundenaufträgen und eine geschachtelte Tabelle, in der die einzelnen Käufe für jeden Kunden angezeigt werden, enthält.|  
 |[Lektion 4: Erstellen eines Sequenzclusterszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Die gleichen Daten, die für die Warenkorbanalyse verwendet werden, sowie ein Bezeichner, der die Reihenfolge anzeigt, in der Elemente gekauft wurden.|  
 |[Lesson 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Eine einzelne Tabelle, die vorläufige Nachverfolgungsdaten für die Leistung in einem Callcenter enthält.|  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datamining-Projekte](../../2014/analysis-services/data-mining/data-mining-projects.md)   

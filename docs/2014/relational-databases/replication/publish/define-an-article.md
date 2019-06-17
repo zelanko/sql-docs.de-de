@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128722"
 ---
 # <a name="define-an-article"></a>Definieren eines Artikels
@@ -103,7 +103,7 @@ ms.locfileid: "63128722"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>So definieren Sie einen Artikel für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**und alle weiteren optionalen Parameter an. Verwenden Sie **@source_owner** , um den Schemabesitz am Objekt anzugeben, wenn dies nicht **dbo**. Wenn der Artikel kein protokollbasierter Tabellenartikel ist, geben Sie für **@type** den Artikeltyp an. Weitere Informationen finden Sie unter [Angeben von Artikeltypen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](specify-article-types-replication-transact-sql-programming.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , das Datenbankobjekt, das veröffentlicht wird, für **@source_object** und alle weiteren optionalen Parameter an. Verwenden Sie **@source_owner** , um den Schemabesitz am Objekt anzugeben, wenn dies nicht **dbo**. Wenn der Artikel kein protokollbasierter Tabellenartikel ist, geben Sie für **@type** den Artikeltyp an. Weitere Informationen finden Sie unter [Angeben von Artikeltypen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
 2.  Um Zeilen eines Tabellen- oder Sichtartikels horizontal zu filtern, verwenden Sie [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) zur Definition der Filterklausel. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md).  
   
@@ -120,7 +120,7 @@ ms.locfileid: "63128722"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>So definieren Sie einen Artikel für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus. Geben Sie für **@publication**den Namen der Veröffentlichung, für **@article**den Namen des Artikels und für **@source_object**. Um Tabellenzeilen horizontal zu filtern, geben Sie einen Wert für **@subset_filterclause**. Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) und [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md). Wenn der Artikel kein Tabellenartikel ist, geben Sie für **@type**. Weitere Informationen finden Sie unter [Angeben von Artikeltypen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](specify-article-types-replication-transact-sql-programming.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus. Geben Sie für **@publication** den Namen der Veröffentlichung, für **@article** den Namen des Artikels und für **@source_object** . Um Tabellenzeilen horizontal zu filtern, geben Sie einen Wert für **@subset_filterclause** . Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) und [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md). Wenn der Artikel kein Tabellenartikel ist, geben Sie für **@type** . Weitere Informationen finden Sie unter [Angeben von Artikeltypen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](specify-article-types-replication-transact-sql-programming.md).  
   
 2.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) aus, um einen Joinfilter zwischen zwei Artikeln zu definieren. Weitere Informationen finden Sie unter [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](define-and-modify-a-join-filter-between-merge-articles.md).  
   

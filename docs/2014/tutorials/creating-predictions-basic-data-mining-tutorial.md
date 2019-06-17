@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63285687"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Erstellen von Vorhersagen (Lernprogramm zu Data Mining-Grundlagen)
@@ -65,7 +65,7 @@ ms.locfileid: "63285687"
   
 6.  In der **benannte Berechnung erstellen** im Dialogfeld für **Spaltenname**, Typ `calcAge`.  
   
-7.  Für **Beschreibung**, Typ **Berechnen des Alters basierend auf "BirthDate"**.  
+7.  Für **Beschreibung**, Typ **Berechnen des Alters basierend auf "BirthDate"** .  
   
 8.  In der **Ausdruck** geben `DATEDIFF(YYYY,[BirthDate],getdate())` , und klicken Sie dann auf **OK**.  
   

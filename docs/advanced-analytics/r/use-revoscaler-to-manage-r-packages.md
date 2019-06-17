@@ -2,24 +2,24 @@
 title: 'Gewusst wie: Verwenden der RevoScaleR-Funktionen zum Suchen oder installieren R-Pakete: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d5ba43e913f91ab93f80249cae3d0c8cf8e1740
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642336"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140408"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Gewusst wie: Verwenden von RevoScaleR-Funktionen zum Suchen oder installieren R-Pakete auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 RevoScaleR 9.0.1 und höher schließt Funktionen für R-paketverwaltung für einen SQL Server-computekontext. Diese Funktionen können von remote nicht-Administratoren verwendet werden, um Pakete auf SQL Server ohne direkten Zugriff auf den Server zu installieren.
 
-SQL Server 2017-Machine Learning Services enthält bereits eine neuere Version von RevoScaleR. SQL Server 2016 R Services-Kunden müssen eine [Upgrade von Integrationskomponenten](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) um RevoScaleR-Paket-Management-Funktionen zu erhalten. Anweisungen zum Abrufen von Version und Inhalt Verpacken, finden Sie unter [Abrufen von Paketinformationen](determine-which-packages-are-installed-on-sql-server.md).
+SQL Server 2017-Machine Learning Services enthält bereits eine neuere Version von RevoScaleR. SQL Server 2016 R Services-Kunden müssen eine [Upgrade von Integrationskomponenten](../install/upgrade-r-and-python.md) um RevoScaleR-Paket-Management-Funktionen zu erhalten. Anweisungen zum Abrufen von Version und Inhalt Verpacken, finden Sie unter [Abrufen von Paketinformationen](../package-management/installed-package-information.md).
 
 ## <a name="revoscaler-functions-for-package-management"></a>RevoScaleR-Funktionen für die paketverwaltung
 
@@ -38,7 +38,7 @@ Die folgende Tabelle beschreibt die Funktionen zur Installation von R-Paket und 
 
 + [Aktivieren von remote R-paketverwaltung für SQL Server](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR-Versionen müssen auf Client und Server-Umgebungen identisch sein. Weitere Informationen finden Sie unter [Abrufen von Paketinformationen](determine-which-packages-are-installed-on-sql-server.md).
++ RevoScaleR-Versionen müssen auf Client und Server-Umgebungen identisch sein. Weitere Informationen finden Sie unter [Abrufen von Paketinformationen](../package-management/installed-package-information.md).
 
 + Berechtigung zur Verbindung mit dem Server und einer Datenbank, und klicken Sie zum Ausführen von R-Befehlen. Sie müssen ein Mitglied einer Datenbankrolle sein, die Sie zum Installieren der Pakete für die angegebene Instanz und die Datenbank ermöglicht.
 
@@ -212,4 +212,4 @@ exec sp_execute_external_script
 + [Remoteverwaltung für R-Pakete aktivieren](r-package-how-to-enable-or-disable.md)
 + [Synchronisieren von R-Paketen](package-install-uninstall-and-sync.md)
 + [Tipps für die Installation von R-Pakete](packages-installed-in-user-libraries.md)
-+ [Standardpakete](installing-and-managing-r-packages.md)
++ [Standardpakete](../package-management/default-packages.md)

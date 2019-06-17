@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63161901"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
@@ -180,7 +180,7 @@ ms.locfileid: "63161901"
 ### <a name="bounding-box"></a>Umgebendes Feld  
  Das *umgebende Feld* ist der Umkreis des Rasters der höchsten Ebene einer geometrischen Ebene. Die Parameter für das umgebende Feld sind nur im Geometrierastermosaik vorhanden. Diese Parameter sind nicht verfügbar, wenn das **Mosaikschema** auf **Geografieraster**festgelegt ist.  
   
- Zeigt der Bereich der **(*`X-min`*,*`Y-min`*)** und **(*`X-max`*,*`Y-max`*)** Koordinaten des umgebenden Felds. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ `geometry` erstellen.  
+ Zeigt der Bereich der **( *`X-min`* , *`Y-min`* )** und **( *`X-max`* , *`Y-max`* )** Koordinaten des umgebenden Felds. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ `geometry` erstellen.  
   
  `X-min`  
  Die X-Koordinate der unteren linken Ecke des umgebenden Felds.  

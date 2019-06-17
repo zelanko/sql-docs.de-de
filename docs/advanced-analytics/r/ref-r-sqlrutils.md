@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 7ccc3ad494658fc7a8f9c67472aecb1c4cddb7da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641754"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>Sqlrutils (R-Bibliothek in SQL Server)
@@ -41,7 +41,7 @@ Die **Sqlrutils** Bibliothek wird in mehreren Microsoft-Produkte verteilt, aber 
 
 Der folgende Abschnitt enthält eine Übersicht über die Funktionen, die Sie aufrufen können, aus der **Sqlrutils** Paket entwickeln Sie eine gespeicherte Prozedur mit eingebetteten R-Code. Details zu den Parametern für jede Methode oder Funktion finden Sie in der R-Hilfe für das Paket: `help(package="sqlrutils")`
 
-|Funktion | Description |
+|Funktion | Beschreibung |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Ausführen einer gespeicherten SQL-Prozedur.|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Ruft eine Liste der Eingabeparameter für die gespeicherte Prozedur.| 

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a69ffbde7ec4ff1d7eebbb73f0b60a619755c37
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536795"
 ---
 # <a name="sqltables-function"></a>SQLTables-Funktion
@@ -123,7 +123,7 @@ SQLRETURN SQLTables(
   
  Andernfalls muss die Anwendung kann mit der jeweiligen Situation, in denen der Benutzer eine Tabelle, für die wählt **wählen** Berechtigungen nicht erteilt wurden.  
   
- Die *SchemaName* und *TableName* Argumente akzeptieren Suchmuster. Die *CatalogName* Argument akzeptiert Suchmuster ist umgebungsattributs SQL_ODBC_VERSION SQL_OV_ODBC3 fest; Suchmuster werden nicht akzeptiert, wenn SQL_OV_ODBC2 festgelegt ist. Wenn SQL_OV_ODBC3 festgelegt ist, wird eine ODBC 3.*.x* Treiber benötigen, Platzhalterzeichen den *CatalogName* -Argument werden mit Escapezeichen versehen, um als Literalzeichen behandelt werden. Weitere Informationen zu gültigen Suchmuster, finden Sie unter [Musterwerts](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
+ Die *SchemaName* und *TableName* Argumente akzeptieren Suchmuster. Die *CatalogName* Argument akzeptiert Suchmuster ist umgebungsattributs SQL_ODBC_VERSION SQL_OV_ODBC3 fest; Suchmuster werden nicht akzeptiert, wenn SQL_OV_ODBC2 festgelegt ist. Wenn SQL_OV_ODBC3 festgelegt ist, wird eine ODBC 3. *.x* Treiber benötigen, Platzhalterzeichen den *CatalogName* -Argument werden mit Escapezeichen versehen, um als Literalzeichen behandelt werden. Weitere Informationen zu gültigen Suchmuster, finden Sie unter [Musterwerts](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
 > [!NOTE]  
 >  Weitere Informationen über die allgemeine Verwendung, Argumenten und zurückgegebenen Daten des ODBC-Katalogfunktionen, finden Sie unter [Katalogfunktionen](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -142,9 +142,9 @@ SQLRETURN SQLTables(
   
  Um die tatsächliche Länge der Spalten TABLE_CAT, nach "TABLE_SCHEM" und TABLE_NAME zu bestimmen, kann eine Anwendung aufrufen **SQLGetInfo** mit den Informationen SQL_MAX_CATALOG_NAME_LEN SQL_MAX_SCHEMA_NAME_LEN und SQL_MAX_TABLE_NAME_LEN Typen.  
   
- Die folgenden Spalten wurden umbenannt ODBC 3.*.x*. Die Änderungen an wirken Abwärtskompatibilität sich nicht, da Anwendungen durch die Nummer der Spalte binden.  
+ Die folgenden Spalten wurden umbenannt ODBC 3. *.x*. Die Änderungen an wirken Abwärtskompatibilität sich nicht, da Anwendungen durch die Nummer der Spalte binden.  
   
-|ODBC 2.0-Spalte|ODBC 3.*.x* Spalte|  
+|ODBC 2.0-Spalte|ODBC 3. *.x* Spalte|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

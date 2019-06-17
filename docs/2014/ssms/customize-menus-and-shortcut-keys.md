@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245793"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Anpassen von Menüs und Tastenkombinationen
-  Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+*\<einzelner Buchstabe>* drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
+  Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+ *\<einzelner Buchstabe>* drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
   
  Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die Seite **Tastatur** des Dialogfelds **Extras**/**Optionen** erstellt werden.  
   

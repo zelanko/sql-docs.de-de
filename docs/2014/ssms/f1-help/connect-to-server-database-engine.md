@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245743"
 ---
 # <a name="connect-to-server-database-engine"></a>Verbindung mit Server herstellen (Datenbank-Engine)
@@ -63,7 +63,7 @@ ms.locfileid: "63245743"
  **Verbinden**  
  Klicken Sie hier, um eine Verbindung mit dem oben ausgewählten Server herzustellen.  
   
- **Optionen**  
+ **Options**  
  Klicken Sie auf diese Schaltfläche, um zusätzliche Optionen für die Serververbindung anzuzeigen, z. B. zum Registrieren eines Servers oder zum Speichern des Kennworts.  
   
   

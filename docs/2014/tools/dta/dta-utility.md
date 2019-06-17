@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670692"
 ---
 # <a name="dta-utility"></a>dta
@@ -176,7 +176,7 @@ dta -d AdventureWorks2012 ...
  **-fk** _keep_existing_option_  
  Gibt an, welche vorhandenen physischen Entwurfsstrukturen **dta** beim Generieren der Empfehlung beibehalten muss. In der folgenden Tabelle sind die Werte, die für dieses Argument angegeben werden können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine|Keine vorhandenen Strukturen|  
 |ALL|Alle vorhandenen Strukturen|  
@@ -193,7 +193,7 @@ dta -d AdventureWorks2012 ...
 |FULL|Vollständige Partitionierung (zur Verbesserung der Leistung)|  
 |ALIGNED|Nur ausgerichtete Partitionierung (zur Verbesserung der Verwaltbarkeit)|  
   
- ALIGNED bedeutet, dass jeder vorgeschlagene Index in der von **dta** generierten Empfehlung ganz genau so wie die zugrunde liegende Tabelle partitioniert wird, für die der Index definiert wurde. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet. Für dieses Argument kann nur ein Wert angegeben werden. Der Standardwert ist **' - fp '**`NONE`.  
+ ALIGNED bedeutet, dass jeder vorgeschlagene Index in der von **dta** generierten Empfehlung ganz genau so wie die zugrunde liegende Tabelle partitioniert wird, für die der Index definiert wurde. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet. Für dieses Argument kann nur ein Wert angegeben werden. Der Standardwert ist **' - fp '** `NONE`.  
   
  **-fx** _drop_only_mode_  
  Gibt an, dass **dta** nur das Löschen vorhandener physischer Entwurfsstrukturen in Erwägung zieht. Das Erstellen neuer physischer Entwurfsstrukturen wird nicht in Erwägung gezogen. Wenn diese Option angegeben wird, bewertet **dta** die Zweckmäßigkeit vorhandener physischer Entwurfsstrukturen und empfiehlt das Löschen selten verwendeter Strukturen. Für dieses Argument werden keinen Werte angegeben. Es kann nicht mit den Argumenten **-fa**, **-fp**oder **-fk ALL** verwendet werden.  
@@ -211,7 +211,7 @@ dta -d AdventureWorks2012 ...
  Gibt den Pfad und den Namen der Arbeitsauslastungsdatei an, die als Eingabe für die Optimierung verwendet werden soll. Die Datei muss eines der folgenden Formate aufweisen: TRC (SQL Server Profiler-Ablaufverfolgungsdatei), SQL (SQL-Datei) oder LOG ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ablaufverfolgungsdatei). Es muss entweder eine Arbeitsauslastungsdatei oder eine Arbeitsauslastungstabelle angegeben werden.  
   
  **-it** _workload_trace_table_name_  
- Gibt den Namen einer Tabelle an, die die Arbeitsauslastungs-Ablaufverfolgung für das Optimieren enthält. Der Name wird im folgenden Format angegeben: [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Gibt den Namen einer Tabelle an, die die Arbeitsauslastungs-Ablaufverfolgung für das Optimieren enthält. Der Name wird im folgenden Format angegeben: [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  In der folgenden Tabelle ist für jeden Parameter der zugehörige Standardwert aufgeführt:  
   
@@ -233,7 +233,7 @@ dta -d AdventureWorks2012 ...
  **-N** _online_option_  
  Gibt an, ob physische Entwurfsstrukturen online erstellt werden. In der folgenden Tabelle sind die Werte, die Sie für dieses Argument angeben können, sowie die zugehörigen Beschreibungen aufgeführt:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |OFF|Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.|  
 |ON|Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.|  
@@ -316,14 +316,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Die Verwendung dieses Arguments ist eine Alternative zur Eingabe einer Tabellenliste an der Eingabeaufforderung (**-Tl**). Verwenden Sie keine Tabellenlistendatei (**-Tf**), wenn Sie **-Tl**verwenden. Wenn beide Argumente verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
+ Die Verwendung dieses Arguments ist eine Alternative zur Eingabe einer Tabellenliste an der Eingabeaufforderung ( **-Tl**). Verwenden Sie keine Tabellenlistendatei ( **-Tf**), wenn Sie **-Tl**verwenden. Wenn beide Argumente verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
   
  Wenn die Argumente **-Tf** und **-Tl** nicht angegeben werden, werden alle Benutzertabellen in den angegebenen Datenbanken bei der Optimierung berücksichtigt.  
   
  **-Tl** _table_list_  
  Gibt eine Liste mit zu optimierenden Tabellen an der Eingabeaufforderung an. Geben Sie zwischen Tabellennamen ein Komma als Trennzeichen ein. Wenn nur eine Datenbank mit dem Argument **-D** angegeben wird, müssen die Tabellennamen nicht mit einem Datenbanknamen qualifiziert werden. Andernfalls ist für jede Tabelle ihr vollqualifizierter Name im Format *database_name.schema_name.table_name* erforderlich.  
   
- Die Verwendung dieses Arguments ist eine Alternative zum Verwenden einer Tabellenlistendatei (**-Tf**). Wenn sowohl **-Tl** als auch **-Tf** verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
+ Die Verwendung dieses Arguments ist eine Alternative zum Verwenden einer Tabellenlistendatei ( **-Tf**). Wenn sowohl **-Tl** als auch **-Tf** verwendet werden, schlägt die Ausführung von **dta** fehl und es wird ein Fehler zurückgegeben.  
   
  **-U** _login_id_  
  Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird.  
@@ -389,7 +389,7 @@ dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](../command-prompt-utility-reference-database-engine.md)   
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../command-prompt-utility-reference-database-engine.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2585452ee31c911ea6e288effc3e5e91fff88a64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721270"
 ---
 # <a name="generate-sql-script-replication-objects"></a>SQL-Skript generieren (Replikationsobjekte)
@@ -26,7 +26,7 @@ ms.locfileid: "62721270"
   
 -   **SQL-Skript generieren**: Dieses Dialogfeld kann über das Kontextmenü des Ordners **Replikation** sowie aller untergeordneten Ordner in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aufgerufen werden. Mithilfe dieses Dialogfelds können Sie Skripts für alle Replikationsobjekte einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellen.  
   
--   **SQL-Skript generieren \<ObjectName>**: Auf dieses Dialogfeld können Sie über das Kontextmenü für Veröffentlichungen und Abonnements zugreifen. Mithilfe dieses Dialogfelds können Sie Skripts für einzelne Objekte erstellen.  
+-   **SQL-Skript generieren \<ObjectName>** : Auf dieses Dialogfeld können Sie über das Kontextmenü für Veröffentlichungen und Abonnements zugreifen. Mithilfe dieses Dialogfelds können Sie Skripts für einzelne Objekte erstellen.  
   
  In diesen Dialogfeldern werden Skripts für Objekte einer einzelnen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt; es werden keine Verbindungen mit anderen Instanzen hergestellt, um Skripts für verknüpfte Objekte zu erstellen.  
   

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185639"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Market Basket DMX-Lernprogramm
@@ -89,7 +89,7 @@ ms.locfileid: "63185639"
  [Lektion 1: Erstellen der Market Basket-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie mithilfe der `CREATE`-Anweisung Miningstrukturen erstellt werden.  
   
- [Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie einer Miningstruktur mithilfe der `ALTER`-Anweisung Miningmodelle hinzugefügt werden.  
   
  [Lektion 3: Verarbeiten der Market Basket-Miningstruktur](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  

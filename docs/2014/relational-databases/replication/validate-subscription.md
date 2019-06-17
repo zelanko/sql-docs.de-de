@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63255441"
 ---
 # <a name="validate-subscription"></a>Abonnement überprüfen
@@ -36,7 +36,7 @@ ms.locfileid: "63255441"
  **Dieses Abonnement überprüfen**  
  Wählen Sie diese Option aus, um das Abonnement zu überprüfen.  
   
- **Optionen**  
+ **Options**  
  Klicken Sie auf diese Option, um auf das Dialogfeld **Optionen für die Abonnementüberprüfung** zuzugreifen, in dem Sie angeben können, ob die Zeilenanzahlüberprüfung oder die binäre Prüfsummenüberprüfung verwendet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  

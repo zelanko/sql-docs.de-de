@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312149"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lektion 4: Untersuchen der Targeted Mailing-Modelle (Lernprogramm zu Datamining-Grundlagen)

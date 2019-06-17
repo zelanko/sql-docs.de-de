@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62912105"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login-Ereignisklasse
@@ -53,7 +53,7 @@ ms.locfileid: "62912105"
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgelistet.  
   
-|ID|Unterklasse|Description|  
+|ID|Unterklasse|Beschreibung|  
 |--------|--------------|-----------------|  
 |1|Login Success|Ein Login Success-Ereignis gibt an, dass der Anmeldeprozess des Brokers erfolgreich abgeschlossen wurde.|  
 |2|Login Protocol Error|Ein Login Protocol Error-Ereignis gibt an, dass der Broker eine wohlgeformte, aber für den aktuellen Status des Anmeldeprozesses ungültige Nachricht empfängt. Die Meldung ging eventuell verloren oder wurde außer der Reihe versendet.|  
