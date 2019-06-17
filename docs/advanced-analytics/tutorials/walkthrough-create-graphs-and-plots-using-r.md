@@ -3,17 +3,17 @@ title: Erstellen von Graphen und Diagrammen mit SQL und R-Funktionen – SQL Ser
 description: 'Tutorial: Erstellen von Graphen und Diagrammen mit R-Sprache-Funktionen in SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513167"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140386"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Erstellen von Graphen und Diagrammen mit SQL und R (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ In der Regel blockieren Datenbankserver den Zugriff auf das Internet. Dies kann 
     + Wenn die Zeile ab `plot` ausgeführt wird, der gerenderten Daten zurück an die lokale R-Umgebung serialisiert wird, sodass Sie sie in Ihrem R-Client sehen können.
 
     > [!NOTE]
-    > Wenn Sie SQL Server in virtuellen Azure-Computer verwenden, Sie erhalten möglicherweise einen Fehler an diesem Punkt. Ein Fehler tritt auf, wenn die Firewall-Standardregel in Azure Netzwerkzugriff durch R-Code blockiert wird. Weitere Informationen darüber, wie Sie diesen Fehler zu beheben, finden Sie unter [Installieren von Machine Learning (R)-Dienste auf einer Azure-VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > Wenn Sie SQL Server in virtuellen Azure-Computer verwenden, Sie erhalten möglicherweise einen Fehler an diesem Punkt. Ein Fehler tritt auf, wenn die Firewall-Standardregel in Azure Netzwerkzugriff durch R-Code blockiert wird. Weitere Informationen darüber, wie Sie diesen Fehler zu beheben, finden Sie unter [Installieren von Machine Learning (R)-Dienste auf einer Azure-VM](../install/sql-machine-learning-azure-virtual-machine.md).
 
 4. In der folgenden Abbildung ist das ausgegebene Diagramm dargestellt. Die Taxi-Abholorte wurden zur Karte als rote Punkte hinzugefügt. Ihr Image sieht möglicherweise anders, je nach Anzahl der Standorte in der Datenquelle, die Sie verwendet zu werden.
 

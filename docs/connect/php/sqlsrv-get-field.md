@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a5f94566cf965cfe135a17eed216cf8ee4b42b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7854d52116b9092a069043f8e3c1ca9a23fbbce5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618678"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802230"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: Der Index des abzurufenden Felds. Indizes beginnen mit 0.  
   
-*$getAsType* [OPTIONAL]: Eine **SQLSRV**-Konstante (**SQLSRV_PHPTYPE_&#x2a;**), die den PHP-Datentyp für die zurückgegebenen Daten bestimmt. Informationen zu den unterstützten Datentypen finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Wenn kein Rückgabetyp spezifiziert ist, wird ein PHP-Typ zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [OPTIONAL]: Eine **SQLSRV**-Konstante (**SQLSRV_PHPTYPE_&#x2a;** ), die den PHP-Datentyp für die zurückgegebenen Daten bestimmt. Informationen zu den unterstützten Datentypen finden Sie unter [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Wenn kein Rückgabetyp spezifiziert ist, wird ein PHP-Typ zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
 Die Felddaten. Sie können den PHP-Datentyp der zurückgegebenen Daten festlegen, indem Sie den *$getAsType* -Parameter verwenden. Falls kein Rückgabedatentyp festgelegt ist, wird der PHP-Standarddatentyp zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
@@ -52,7 +52,7 @@ Die Kombination von **sqlsrv_fetch** und **sqlsrv_get_field** bewirkt, dass auf 
 Die Kombination **sqlsrv_fetch**/**sqlsrv_get_field** lädt nur ein Feld einer Zeile eines Resultsets in den Skriptspeicher und erlaubt die Festlegung von PHP-Rückgabetypen. Informationen zur Angabe des PHP-Rückgabetyps finden Sie unter [Vorgehensweise: PHP-Datentypen festlegen](../../connect/php/how-to-specify-php-data-types.md). Diese Kombination von Funktionen macht es möglich Daten als Stream abzurufen. Informationen zum Abrufen von Daten als Stream finden Sie unter [Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  
-Das folgende Beispiel ruft eine Datenzeile ab, die eine Produktprüfung enthält, sowie den Namen des Prüfers. Zum Abrufen von Daten aus dem Resultset wird **sqlsrv_get_field** verwendet. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) -Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel ruft eine Datenzeile ab, die eine Produktprüfung enthält, sowie den Namen des Prüfers. Zum Abrufen von Daten aus dem Resultset wird **sqlsrv_get_field** verwendet. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks-Datenbank](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  
@@ -110,7 +110,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  

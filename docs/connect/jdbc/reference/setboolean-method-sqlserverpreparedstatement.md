@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5be9d4dfdb6760cba13556a1de38db12258c5cfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4197b96740685ff9aca98634b2dfd1acfdc92fb8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798858"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797673"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>setBoolean-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setBoolean(int n,
   
  *x*  
   
- Ein **booleschen** Wert entweder **"true"** oder **"false"**.  
+ Ein **booleschen** Wert entweder **"true"** oder **"false"** .  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -51,7 +51,7 @@ public final void setBoolean(int n,
 ## <a name="remarks"></a>Remarks  
  Diese setboolean-Methode wird von der setboolean-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

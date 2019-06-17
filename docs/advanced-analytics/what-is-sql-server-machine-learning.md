@@ -3,22 +3,22 @@ title: Sprache R und Python-Funktionsintegration – SQL Server Machine Learning
 description: Sprache R und Python-Features in SQL Server, die Integration mit relationalen Daten für Data Science und statistische Modellierung, Machine Learning-Modellen, predictive Analytics, Visualisierung von Daten und mehr.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf7d8a7cddcfbe0d47d4808f82abc0a47efade2c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 921ffc0188623335ac7e7206a02095cc11469327
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512452"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140329"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning-Dienste (R, Python), in SQLServer 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017-Machine Learning Services ist ein Add-on für eine Datenbank-Engine-Instanz, die zur Ausführung von R und Python-Code in SQL Server verwendet. Die Funktion enthält [Microsoft R und Python-Paketen](#components) für leistungsstarke predictive Analytics und Machine Learning. Code wird in einem Erweiterbarkeitsframework,, ausgeführt, von der Kern-Engine-Prozesse isoliert, jedoch vollständig auf relationale Daten als gespeicherte Prozeduren, wie T-SQL-Skript, R oder Python-Anweisungen enthält, oder wie R oder Python-Code mit T-SQL verfügbar. 
+Machine Learning-Dienste ist ein Feature von SQL Server, die zum Ausführen von R und Python-Skripts in der Datenbank verwendet. Die Funktion enthält [Microsoft R und Python-Paketen](#components) für leistungsstarke predictive Analytics und Machine Learning. Die relationalen Daten in R und Python-Skripts mithilfe von gespeicherten Prozeduren, T-SQL-Skript, die mit R und Python-Anweisungen verwendet werden können, oder R und Python-code mit T-SQL.
 
 Wenn Sie zuvor [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services in SQL Server 2017 ist die nächste Generation von Unterstützung für R, mit aktualisierten Versionen von Basis-R "," RevoScaleR-MicrosoftML lautet und anderen Bibliotheken, die in 2016 eingeführt wurde. 
 
@@ -140,7 +140,7 @@ SQL Server 2017-Machine Learning Services ist die nächste Generation von SQL Se
 | SQL Server 2016 R Services (Datenbankintern) | R Server 9.1  | Juli 2017  |
 | SQL Server 2016 R Server (eigenständig)  |  R Server 9.1 | Juli 2017 |
 
-Versionen des Pakets von Version, finden Sie unter der Version in Zuordnung [ein Upgrade von R und Python-Komponenten](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map).
+Versionen des Pakets von Version, finden Sie unter der Version in Zuordnung [ein Upgrade von R und Python-Komponenten](install/upgrade-r-and-python.md#version-map).
 
 ## <a name="portability-and-related-products"></a>Portabilität und verwandte Produkte
 

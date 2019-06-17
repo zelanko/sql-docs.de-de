@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107673"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Berichtsabschnitte (Dialogfeld) (Berichts-Generator)
-  Wenn Sie einen Bericht öffnen, überprüft der Berichts-Generator, ob der Bericht nur ein **<Section\<**-Element der Berichtsdefinitionssprache (Report Definition Language, RDL) enthält. Das Öffnen eines Berichts mit mehreren **\<Section>**-Elementen wird nicht unterstützt.  
+  Wenn Sie einen Bericht öffnen, überprüft der Berichts-Generator, ob der Bericht nur ein **<Section\<** -Element der Berichtsdefinitionssprache (Report Definition Language, RDL) enthält. Das Öffnen eines Berichts mit mehreren **\<Section>** -Elementen wird nicht unterstützt.  
   
  Obwohl eine Berichtsdefinition mit mehreren Abschnitten programmgesteuert generiert werden kann, wird die Bearbeitung eines solchen Berichtes in einer Berichterstellungsumgebung nicht unterstützt.  
   

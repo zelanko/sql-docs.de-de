@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: c3db6be0-9e2b-4408-ab22-b6ecfc42961e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 263b557590a1e5d5f0df2c201be73568101902f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 06c1a1d21b240841e40a235bebd085fb9114f0eb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809508"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800651"
 ---
 # <a name="sqlserverconnection-methods"></a>SQLServerConnection-Methoden
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Weitere Informationen zu den Elementen von ISQLServerConnection finden Sie unter [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

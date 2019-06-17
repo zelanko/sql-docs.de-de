@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63156962"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>Tempdb-Datenbank in Parallel Data Warehouse
@@ -33,7 +33,7 @@ Globale temporäre Tabelle
 pdwtempdb  
 **Pdwtempdb** ist die Datenbank, in der lokale temporäre Tabellen gespeichert.  
   
-PDW temporäre Tabellen nicht über den SQL Server implementiert**Tempdb** Datenbank. Stattdessen speichert PDW sie in eine Datenbank namens Pdwtempdb. Diese Datenbank auf jedem Computeknoten vorhanden ist und für den Benutzer über die PDW-Schnittstellen nicht sichtbar ist. In der Verwaltungskonsole auf der Seite "Speicher" sehen Sie diese ausgewiesenen für in einer PDW-Systemdatenbank, die Namen **Tempdb-Sql-**.  
+PDW temporäre Tabellen nicht über den SQL Server implementiert**Tempdb** Datenbank. Stattdessen speichert PDW sie in eine Datenbank namens Pdwtempdb. Diese Datenbank auf jedem Computeknoten vorhanden ist und für den Benutzer über die PDW-Schnittstellen nicht sichtbar ist. In der Verwaltungskonsole auf der Seite "Speicher" sehen Sie diese ausgewiesenen für in einer PDW-Systemdatenbank, die Namen **Tempdb-Sql-** .  
   
 tempdb  
 **Tempdb** ist die SQL Server-Tempdb-Datenbank. Die minimale Protokollierung verwendet. SQL Server verwendet Tempdb auf den Computeknoten zum Speichern von temporärer Tabellen, die beim Ausführen von SQL Server-Vorgängen werden muss.  

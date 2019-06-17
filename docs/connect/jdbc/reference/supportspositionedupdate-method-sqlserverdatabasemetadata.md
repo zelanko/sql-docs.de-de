@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f963fb70-377d-43f5-8d56-326591f6d3e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c44dc72058a3bd8b78dd78676eb5478450b2f53f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: da21e58e0decbf7e5cde83cf34d59182212232ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804268"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797426"
 ---
 # <a name="supportspositionedupdate-method-sqlserverdatabasemetadata"></a>supportsPositionedUpdate-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsPositionedUpdate()
 ## <a name="remarks"></a>Remarks  
  Diese SupportsPositionedUpdate-Methode wird von der SupportsPositionedUpdate-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
