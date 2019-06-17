@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63294450"
 ---
 # <a name="about-drivers-and-data-sources"></a>Informationen zu Treibern und Datenquellen
@@ -25,7 +25,7 @@ ms.locfileid: "63294450"
   
  *Datenquellen* sind die Datenbanken oder Dateien, die von einem Treiber zugegriffen und durch einen Datenquellennamen (DSN) identifiziert. Verwenden Sie den ODBC-Datenquellen-Administrator hinzufügen, konfigurieren und Löschen von Datenquellen aus dem System. Die Typen von Datenquellen, die verwendet werden können, werden in der folgenden Tabelle beschrieben.  
   
-|Datenquelle|Description|  
+|Datenquelle|Beschreibung|  
 |-----------------|-----------------|  
 |Benutzer|Benutzer-DSNs werden lokal auf einem Computer und können nur durch den aktuellen Benutzer verwendet werden. Sie werden in der Teilstruktur der HKEY_CURRENT_USER-Registrierung registriert.|  
 |System|System-DSNs werden lokal auf einem Computer statt für einen Benutzer bestimmt. Das System oder alle Benutzer mit Berechtigungen können eine Datenquelle mit einer System-DSN einrichten. System-DSNs werden in der HKEY_LOCAL_MACHINE-Registrierungsunterstruktur registriert.|  

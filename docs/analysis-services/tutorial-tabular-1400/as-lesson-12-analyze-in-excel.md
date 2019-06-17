@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: c807825bfd4ef90491fb38e09e81eb79134fdbc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62467801"
 ---
 # <a name="analyze-in-excel"></a>In Excel analysieren
@@ -43,7 +43,7 @@ Klicken Sie in diesen ersten Aufgaben durchsuchen Sie Ihr Modell mithilfe der St
   
     Excel wird mit einer neuen Arbeitsmappe geöffnet. Es wird eine Datenquellenverbindung mit dem aktuellen Benutzerkonto erstellt, und zum Definieren von Anzeigefeldern wird die Standardperspektive verwendet. Das Arbeitsblatt wird automatisch eine PivotTable hinzugefügt.  
   
-3.  In Excel in der **Feldliste "PivotTable"**, beachten Sie, dass die **DimDate** und **"factinternetsales"** Measuregruppen angezeigt. Die **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, und **"factinternetsales"** Tabellen mit den entsprechenden Spalten auch angezeigt werden.  
+3.  In Excel in der **Feldliste "PivotTable"** , beachten Sie, dass die **DimDate** und **"factinternetsales"** Measuregruppen angezeigt. Die **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, und **"factinternetsales"** Tabellen mit den entsprechenden Spalten auch angezeigt werden.  
   
 4.  Schließen Sie Excel, ohne die Arbeitsmappe zu speichern.  
   

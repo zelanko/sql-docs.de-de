@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078014"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX-Generator (Analysis Services – Mehrdimensionale Daten)
-  Im Dialogfeld **MDX-Generator** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie einen MDX-Ausdruck (Multidimensional Expressions) erstellen. Anzeigen der **MDX-Generator** Dialogfeld durch Klicken auf die **MDX bearbeiten** Schaltfläche mit den Auslassungspunkten (**...** ) für die **Lesen des Cubeinhalts zulassen** -Option der **Lesen des Zelleninhalts abhängig von der zellensicherheit zulassen** Option oder die **lesen zulassen und Schreiben des Cubeinhalts** option die **Zellendaten** auf der Seite **Rollen-Designers**.  
+  Im Dialogfeld **MDX-Generator** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie einen MDX-Ausdruck (Multidimensional Expressions) erstellen. Anzeigen der **MDX-Generator** Dialogfeld durch Klicken auf die **MDX bearbeiten** Schaltfläche mit den Auslassungspunkten ( **...** ) für die **Lesen des Cubeinhalts zulassen** -Option der **Lesen des Zelleninhalts abhängig von der zellensicherheit zulassen** Option oder die **lesen zulassen und Schreiben des Cubeinhalts** option die **Zellendaten** auf der Seite **Rollen-Designers**.  
   
 ## <a name="options"></a>Optionen  
   

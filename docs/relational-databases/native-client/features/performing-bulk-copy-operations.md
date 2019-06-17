@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08b6accde41f7f1f557d5f6c6f80157ae79fb7a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62744390"
 ---
 # <a name="performing-bulk-copy-operations"></a>Durchführen von Massenkopiervorgängen
@@ -101,7 +101,7 @@ ms.locfileid: "62744390"
   
  Die anbieterspezifischen Eigenschaften SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS und SSPROP_FASTLOADKEEPIDENTITY steuern die Verhalten des Massenkopierrowsets eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieters. Die Eigenschaften angegeben werden, der *RgProperties* Mitglied einer _RgPropertySets_**IOpenRowset**Parameter-Element.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|Spalte: Nein<br /><br /> R/W: Lese-/Schreibzugriff<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Verwaltet vom Consumer angegebene Identitätswerte.<br /><br /> VARIANT_FALSE: Werte für eine Identitätsspalte in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle werden generiert, indem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Jeder Wert gebunden werden, für die Spalte, durch ignoriert wird die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.<br /><br /> VARIANT_TRUE: Der Consumer bindet einen Accessor, der ein Wert für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Identity-Spalte. Die IDENTITY-Eigenschaft ist nicht für Spalten verfügbar, die NULL-Werte akzeptieren, daher stellt der Consumer für jeden **IRowsetFastLoad::Insert**-Aufruf einen eindeutigen Wert bereit.|  
 |SSPROP_FASTLOADKEEPNULLS|Spalte: Nein<br /><br /> R/W: Lese-/Schreibzugriff<br /><br /> Typ: VT_BOOL<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Behält NULL-Werte für Spalten mit DEFAULT-Einschränkung. Betrifft nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalten, die NULL-Werte akzeptieren und eine DEFAULT-Einschränkung aufweisen.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt den Standardwert für die Spalte ein, wenn der Consumer des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieters eine Zeile einfügt, die einen NULL-Wert für die Spalte enthält.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt einen NULL-Wert in die Spalte ein, wenn der Consumer des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieters eine Zeile einfügt, die einen NULL-Wert für die Spalte enthält.|  

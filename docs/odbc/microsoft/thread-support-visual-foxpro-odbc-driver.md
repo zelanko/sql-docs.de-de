@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77187802bb57a832263ec2070564754e87f21345
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632923"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Threadunterstützung (Visual FoxPro-ODBC-Treiber)
-Der Visual FoxPro-ODBC-Treiber ist threadsicher. Zugriff auf Umgebungshandles (*"hen"*), Verbindungshandles (*Hdbc*), und Anweisungshandles (*Befehls beschäftigt*) wird in der entsprechenden Semaphoren, um zu verhindern, dass andere Prozesse eingebunden Zugreifen aus, und potenziell ändern internen Datenstrukturen des Treibers.  
+Der Visual FoxPro-ODBC-Treiber ist threadsicher. Zugriff auf Umgebungshandles ( *"hen"* ), Verbindungshandles (*Hdbc*), und Anweisungshandles (*Befehls beschäftigt*) wird in der entsprechenden Semaphoren, um zu verhindern, dass andere Prozesse eingebunden Zugreifen aus, und potenziell ändern internen Datenstrukturen des Treibers.  
   
  In einer Multithreadanwendung, können Sie Abbrechen, eine Funktion, die synchron mit ausgeführt wird, wird ein *Befehls beschäftigt* durch Aufrufen von [SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md) in einem separaten Thread.  
   

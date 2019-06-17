@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468797"
 ---
 # <a name="scalar-function-calls"></a>Aufrufe von Skalarfunktionen
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  Für eine optimale Interoperabilität sollten Anwendungen verwenden die **konvertieren** skalare Funktion, um sicherzustellen, dass die Ausgabe eine skalare Funktion mit den erforderlichen Typ ist. Die **konvertieren** Funktion konvertiert die Daten von einem SQL-Datentyp, in der angegebenen SQL-Datentyp. Die Syntax der **konvertieren** -Funktion ist  
   
- **KONVERTIEREN (** _Value_exp_ **,** _Data_type_**)**  
+ **KONVERTIEREN (** _Value_exp_ **,** _Data_type_ **)**  
   
  in denen *Value_exp* ist, einen Spaltennamen an, das Ergebnis von einem anderen skalaren Funktion oder ein Literalwert, und *Data_type* ist ein Schlüsselwort, das entspricht der **#define** Name, mit dem ein SQL-Datentyp Bezeichner gemäß [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md). Beispielsweise die folgende SQL-Anweisung verwendet die **konvertieren** Funktion, um sicherzustellen, dass die Ausgabe der **CURDATE** -Funktion ist ein Datum ist, anstatt ein Zeitstempel oder Zeichen-Daten:  
   

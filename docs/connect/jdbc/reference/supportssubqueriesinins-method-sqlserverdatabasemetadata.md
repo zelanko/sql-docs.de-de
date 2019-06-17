@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 77a0b5c0-0d8e-4e08-975f-4eeabb108ab1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64f397218cf0a45a06ebd477bd8c01efd0e3c3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: acff21de5747132001f3c6353758aed2f1d9d330
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632788"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797278"
 ---
 # <a name="supportssubqueriesinins-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInIns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsSubqueriesInIns()
 ## <a name="remarks"></a>Remarks  
  Diese SupportsSubqueriesInIns-Methode wird von der SupportsSubqueriesInIns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

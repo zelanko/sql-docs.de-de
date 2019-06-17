@@ -16,15 +16,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6079766625633391e281b99751ba42bb772531e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760473"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>Behandlung von LOB-Parametern (Large Object) in der CLR-Routine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Verwendung **SqlBytes** und **SqlChars** großer Objekte (LOB)-binary-Typs zu übergeben (**'varbinary(max)'**) und LOB-Zeichenparameter (**nvarchar(max)**) Parameter bzw. Mithilfe dieser Parameter können die LOB-Werte von der Datenbank an die CLR-Routine (Common Language Runtime) in einem Strom übergeben werden, sodass nicht der gesamte Wert in einen verwalteten Bereich kopiert werden muss. **SqlBinary** und **SqlString** sollte nur für kleine Binärdatei- und Zeichenfolgenwerte verwendet werden.  
+  Verwendung **SqlBytes** und **SqlChars** großer Objekte (LOB)-binary-Typs zu übergeben ( **'varbinary(max)'** ) und LOB-Zeichenparameter (**nvarchar(max)** ) Parameter bzw. Mithilfe dieser Parameter können die LOB-Werte von der Datenbank an die CLR-Routine (Common Language Runtime) in einem Strom übergeben werden, sodass nicht der gesamte Wert in einen verwalteten Bereich kopiert werden muss. **SqlBinary** und **SqlString** sollte nur für kleine Binärdatei- und Zeichenfolgenwerte verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server-Datentypen in .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  

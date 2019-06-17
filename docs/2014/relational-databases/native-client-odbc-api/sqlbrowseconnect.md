@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067663"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -43,7 +43,7 @@ ms.locfileid: "63067663"
   
 ## <a name="level-3"></a>Ebene 3  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|Description|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|Beschreibung|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Ja|Ja|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |LANGUAGE|Ja|Ja|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  

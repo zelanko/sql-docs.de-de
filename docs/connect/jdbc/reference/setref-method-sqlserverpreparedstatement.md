@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1a09bbf9-6f8f-4a21-85d2-2182111b5ce7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31c5f9fa24baf0c7bc451dada8be744888d331bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fbddeef54d5deef75cc7ae87bbb03fd010d2d19c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677924"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796768"
 ---
 # <a name="setref-method-sqlserverpreparedstatement"></a>setRef-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public final void setRef(int i,
 ## <a name="remarks"></a>Remarks  
  Diese setRef-Methode wird von der setRef-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement-Klasse](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

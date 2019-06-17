@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667378"
 ---
 # <a name="using-catalog-functions"></a>Verwenden von Katalogfunktionen
@@ -43,7 +43,7 @@ ms.locfileid: "62667378"
   
      Gibt eine Liste der in einem Verbindungsserver enthaltenen Kataloge zurück.  
   
- Sobald Sie einen Verbindungsservernamen und einen Katalognamen verfügen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt das Abrufen von Informationen aus dem Katalog mithilfe eines zweiteiligen Namens des _Linked_server_name_**.** _Katalog_ für *CatalogName* auf die folgenden ODBC-Katalogfunktionen:  
+ Sobald Sie einen Verbindungsservernamen und einen Katalognamen verfügen die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt das Abrufen von Informationen aus dem Katalog mithilfe eines zweiteiligen Namens des _Linked_server_name_ **.** _Katalog_ für *CatalogName* auf die folgenden ODBC-Katalogfunktionen:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62667378"
   
 -   **SQLTables**  
   
- Der zweiteilige _Linked_server_name_**.** _Katalog_ wird ebenfalls unterstützt *FKCatalogName* und *PKCatalogName* auf [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ Der zweiteilige _Linked_server_name_ **.** _Katalog_ wird ebenfalls unterstützt *FKCatalogName* und *PKCatalogName* auf [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  Zur Verwendung von SQLLinkedServers und SQLLinkedCatalogs sind die folgenden Dateien erforderlich:  
   

@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798042"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Verwendung von Notebooks in Azure Data Studio
@@ -83,7 +83,7 @@ Wenn die Installation erfolgreich war, finden Sie eine Benachrichtigung in der G
 
 ![Image22](media/sql-notebooks/jupyter-backend.png)
 
-|Kernel|Description
+|Kernel|Beschreibung
 |:-----|:-----
 | SQL Kernel | Schreiben Sie SQL-Code an Ihre relationale Datenbank gerichtet sind.
 |PySpark3 und PySpark-Kernel| Schreiben Sie Python-Code, die mit Spark Compute aus dem Cluster.

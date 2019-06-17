@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012467"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Angeben von arithmetischen Operatoren in XPath-Abfragen (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66012467"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- In der Abfrage `child` ist die Achse und `OrderDetail` ist der Knotentest (TRUE, wenn **OrderDetail** ist ein  **\<Elementknoten >**, da die  **\< Element >** Knoten ist der primäre Knoten für die `child` Achse). Für alle der  **\<OrderDetail >** Elementknoten, der Test im Prädikat angewendet wird, und nur die Knoten, die die Bedingung erfüllen, werden zurückgegeben.  
+ In der Abfrage `child` ist die Achse und `OrderDetail` ist der Knotentest (TRUE, wenn **OrderDetail** ist ein  **\<Elementknoten >** , da die  **\< Element >** Knoten ist der primäre Knoten für die `child` Achse). Für alle der  **\<OrderDetail >** Elementknoten, der Test im Prädikat angewendet wird, und nur die Knoten, die die Bedingung erfüllen, werden zurückgegeben.  
   
 > [!NOTE]  
 >  Die in XPath verwendeten Zahlen sind Gleitkommazahlen mit doppelter Genauigkeit, durch Vergleich der Gleitkommazahlen wie im Beispiel werden die Werte gerundet.  

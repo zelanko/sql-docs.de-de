@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ed0721ada78b3aa70741510818c5e312b3bd4d55
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047204"
 ---
 # <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "63047204"
   
 |||||  
 |-|-|-|-|  
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |run_id|**int**|Eindeutiger Bezeichner des ein Ladeprogramm ausführen.||  
 |Stufe|**nvarchar(30)**|Die aktuelle Phase für die Ausführung.|'CREATE_STAGING', 'DMS_LOAD', 'LOAD_INSERT', 'LOAD_CLEANUP'|  
 |request_id|**nvarchar(32)**|Die ID der Anforderung dieser Phase ausgeführt.||  

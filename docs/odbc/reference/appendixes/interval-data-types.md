@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188903"
 ---
 # <a name="interval-data-types"></a>Intervalldatentypen
@@ -42,7 +42,7 @@ Ein Intervall wird als die Differenz zwischen zwei Datumsangaben und Uhrzeiten d
   
  Es gibt 13 Interval SQL-Datentypen und 13 Interval C-Datentypen. Jede der Intervalldatentypen C verwendet die gleiche Struktur SQL_INTERVAL_STRUCT, die Intervalldaten enthalten. (Weitere Informationen finden Sie im nächsten Abschnitt [C-Intervall-Struktur](../../../odbc/reference/appendixes/c-interval-structure.md).) Weitere Informationen zu den SQL-Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md); Weitere Informationen zu den C-Datentypen finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Typ-ID|Class|Description|  
+|Typ-ID|Class|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |MONTH|Jahr-Monat|Anzahl der Monate zwischen zwei Datumsangaben.|  
 |YEAR|Jahr-Monat|Anzahl der Jahre zwischen zwei Datumsangaben.|  

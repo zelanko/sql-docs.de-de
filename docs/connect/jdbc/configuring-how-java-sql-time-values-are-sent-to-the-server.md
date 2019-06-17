@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0f359c66250d11fa01c74567e1faeab3ff064ac
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 49925570b878bc442e10ab89e3eb9ef6694232d5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602250"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797519"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Konfigurieren der Art und Weise, wie java.sql.Time-Werte an den Server gesendet werden
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51602250"
   
  Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] unterstützen nicht die **Zeit** -Datentyp, damit Anwendungen, die in der Regel mithilfe von java.sql.Time java.sql.Time speichern Werte entweder als **"DateTime"** oder **Smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.  
   
- Wenn Sie verwenden möchten die **"DateTime"** und **Smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen beim Arbeiten mit java.sql.Time-Werte, die Sie festlegen sollten die **SendTimeAsDatetime** Connection-Eigenschaft, um **"true"**. Wenn Sie verwenden möchten die **Zeit** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp beim Arbeiten mit java.sql.Time-Werte, legen Sie die **SendTimeAsDatetime** -Verbindungseigenschaft auf **"false"**.  
+ Wenn Sie verwenden möchten die **"DateTime"** und **Smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen beim Arbeiten mit java.sql.Time-Werte, die Sie festlegen sollten die **SendTimeAsDatetime** Connection-Eigenschaft, um **"true"** . Wenn Sie verwenden möchten die **Zeit** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp beim Arbeiten mit java.sql.Time-Werte, legen Sie die **SendTimeAsDatetime** -Verbindungseigenschaft auf **"false"** .  
   
  Wenn Sie ausschließlich java.sql.Time-Werte in einen Parameter senden, deren Datentyp ebenfalls das Datum speichern kann, unterscheiden sich die Standarddaten je nachdem, ob der java.sql.Time-Wert als **datetime**- (01.01.1970) oder **time**-Wert (01.01.1900) gesendet wird. Weitere Informationen zu Datenkonvertierungen beim Senden von Daten an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=145211).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "51602250"
   
 -   Verwenden Sie java.sql.Time, wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **time** verwenden.  
   
--   Verwenden Sie java.sql.Timestamp, bei der Arbeit mit der **"DateTime"**, **Smalldatetime**, und **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.  
+-   Verwenden Sie java.sql.Timestamp, bei der Arbeit mit der **"DateTime"** , **Smalldatetime**, und **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.  
   
 SendTimeAsDatetime muss "false" für verschlüsselte Spalten sein, wie verschlüsselte Spalten nicht die Konvertierung von Zeit zu "DateTime" unterstützen. Microsoft JDBC-Treiber 6.0 für SQL Server ab, die SQLServerConnection-Klasse verfügt über die folgenden beiden Methoden zum Festlegen/Abrufen von den Wert der Eigenschaft SendTimeAsDatetime.
 
@@ -62,7 +62,7 @@ SendTimeAsDatetime muss "false" für verschlüsselte Spalten sein, wie verschlü
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

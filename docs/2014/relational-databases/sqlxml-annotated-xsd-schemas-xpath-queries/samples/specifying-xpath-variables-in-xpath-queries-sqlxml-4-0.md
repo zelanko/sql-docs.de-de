@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25e6c96ccbe51ccc0d2d88c4b119c08538d37fcf
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010685"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Angeben von XPath-Variablen in XPath-Abfragen (SQLXML 4.0)
@@ -26,7 +26,7 @@ ms.locfileid: "66010685"
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Verwenden der XPath-Variablen  
- Eine Beispielvorlage besteht aus zwei XPath-Abfragen. Jede der XPath-Abfragen verwendet einen Parameter. Die Vorlage gibt außerdem Standardwerte für diese Parameter an. Die Standardwerte werden verwendet, wenn keine Parameterwerte angegeben werden. Zwei Parameter mit Standardwerten werden in angegeben  **\<SQL: Header >**.  
+ Eine Beispielvorlage besteht aus zwei XPath-Abfragen. Jede der XPath-Abfragen verwendet einen Parameter. Die Vorlage gibt außerdem Standardwerte für diese Parameter an. Die Standardwerte werden verwendet, wenn keine Parameterwerte angegeben werden. Zwei Parameter mit Standardwerten werden in angegeben  **\<SQL: Header >** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

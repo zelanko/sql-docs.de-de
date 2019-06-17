@@ -10,13 +10,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470101"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Fallstudie: Erstellen mit Microsoft Dynamics ERP und SQL Server 2014-Replikation und leistungsfähigen Ökosystems in einem Unternehmen
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Fallstudie: Aufbau eines skalierbaren und leistungsfähigen Ökosystems in einem Unternehmen mithilfe von Microsoft Dynamics ERP und SQL Server 2014-Replikation
 
   **Zusammenfassung:** In diesem Artikel werden die folgenden Szenarien behandelt:  
 Gewusst wie Transaktionsreplikation in SQL Server 2014 zu verwenden, um die Transaktionen von Dynamics AX-Clients über mehrere Knoten hinweg zu verteilen. Da die Daten über die Knoten hinweg in Echtzeit verwaltet werden, sorgt die Transaktionsreplikation für Datenredundanz. Dies steigert die Verfügbarkeit unter anderem bei Daten, die für eine effizientere Leistungsanalyse verwendet werden.  

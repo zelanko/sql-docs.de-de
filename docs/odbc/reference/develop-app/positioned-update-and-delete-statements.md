@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312489"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Positionierte Aktualisierung und DELETE-Anweisungen
@@ -32,9 +32,9 @@ Anwendungen können aktualisieren oder löschen Sie die aktuelle Zeile in einem 
   
  **VON** *Tabellenliste-Referenz*  
   
- [**, In denen** *Suchbedingung*]  
+ [ **, In denen** *Suchbedingung*]  
   
- **FÜR UPDATE OF** [*Spaltenname* [**,** *Spaltenname*]...]  
+ **FÜR UPDATE OF** [*Spaltenname* [ **,** *Spaltenname*]...]  
   
  Klicken Sie dann die Anwendung setzt den Cursor in die Zeile aktualisiert oder gelöscht werden. Sie erreichen dies durch den Aufruf **SQLFetchScroll** zum Abrufen eines Rowsets, die die erforderliche Zeile enthält und das Aufrufen **SQLSetPos** den Rowset-Cursor in dieser Zeile zu positionieren. Die Anwendung führt dann die positioniertes Update oder Delete-Anweisung auf einer anderen Anweisung als die Anweisung, die vom Resultset verwendet wird. Die Syntax dieser Anweisungen lautet:  
   
@@ -42,7 +42,7 @@ Anwendungen können aktualisieren oder löschen Sie die aktuelle Zeile in einem 
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *Spaltenbezeichner* **=** {*Ausdruck* &#124; **NULL**}]...  
+ [ **,** *Spaltenbezeichner* **=** {*Ausdruck* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *Cursorname*  
   

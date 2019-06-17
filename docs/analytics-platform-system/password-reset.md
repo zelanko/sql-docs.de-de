@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639960"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Zurücksetzen des Kennworts - Analytics Platform System
@@ -40,7 +40,7 @@ Die **sa** SQL Server-Anmeldung. **SA** ist ein Mitglied der **Sysadmin** festen
 Sowohl der System-Administratoranmeldeinformationen als auch die Anmeldeinformationen des Domänenadministrators an die und die Richtlinien zur kennwortsicherheit, für jeden Typ von Anmeldeinformationen. Wenn Sie die Anmeldeinformationen des Domänenadministrators zu ändern, wird das neue Kennwort in die Domäne aktualisiert bei Bedarf in der gesamten SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW unterstützt nicht das Dollarzeichen (**$**) in der Administrator der Domäne oder lokaler Administratorkennwörter. Die Zeichen **^ % &** dürfen in Kennwörtern, jedoch PowerShell als Sonderzeichen betrachtet. Wenn eines dieser Zeichen in Kennwörtern, für die vom Systemadministrator oder den SQL Server verwendet werden**sa** Konten (die **AdminPassword** und **PdwSAPassword** Parametern während der Setup) klicken Sie dann setup, einschließlich Installation, UPGRADE, "replaceNode" auf und PATCHEN, schlägt fehl. Um ein erfolgreiches Upgrade sicherzustellen, wenn der aktuelle Kennwörter nicht unterstützte Zeichen enthalten, ändern Sie diese Kennwörter, sodass sie vor dem Ausführen der Aktualisierung keine solche Zeichen enthalten. Nach Abschluss des Upgrades können Sie diese Kennwörter wieder auf ihre ursprünglichen Werte festlegen. Weitere Informationen zu kennwortanforderungen finden Sie unter [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW unterstützt nicht das Dollarzeichen ( **$** ) in der Administrator der Domäne oder lokaler Administratorkennwörter. Die Zeichen **^ % &** dürfen in Kennwörtern, jedoch PowerShell als Sonderzeichen betrachtet. Wenn eines dieser Zeichen in Kennwörtern, für die vom Systemadministrator oder den SQL Server verwendet werden**sa** Konten (die **AdminPassword** und **PdwSAPassword** Parametern während der Setup) klicken Sie dann setup, einschließlich Installation, UPGRADE, "replaceNode" auf und PATCHEN, schlägt fehl. Um ein erfolgreiches Upgrade sicherzustellen, wenn der aktuelle Kennwörter nicht unterstützte Zeichen enthalten, ändern Sie diese Kennwörter, sodass sie vor dem Ausführen der Aktualisierung keine solche Zeichen enthalten. Nach Abschluss des Upgrades können Sie diese Kennwörter wieder auf ihre ursprünglichen Werte festlegen. Weitere Informationen zu kennwortanforderungen finden Sie unter [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Zurücksetzen eines Kennworts  
   

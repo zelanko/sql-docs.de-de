@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62513274"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server
@@ -55,7 +55,7 @@ ms.locfileid: "62513274"
   
  SQL-Programmierer sind dafür verantwortlich, Transaktionen an Punkten zu starten und zu beenden, die die logische Konsistenz der Daten erzwingen. Der Programmierer muss die Sequenz der Datenänderungen so definieren, dass die Daten hinsichtlich der Geschäftsregeln der Organisation in konsistentem Status bleiben. Daraufhin schließt der Programmierer diese Änderungsanweisungen in eine einzelne Transaktion ein, sodass [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die physische Integrität der Transaktion erzwingen kann.  
   
- Es ist die Aufgabe eines Unternehmensdatenbank-Systems, wie z. B. einer Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)], Mechanismen bereitzustellen, durch die die physische Integrität aller Transaktionen sichergestellt wird. [!INCLUDE[ssDE](../includes/ssde-md.md)] stellt Folgendes bereit:    
+ Es ist die Aufgabe eines Unternehmensdatenbank-Systems, wie z. B. einer Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)], Mechanismen bereitzustellen, durch die die physische Integrität aller Transaktionen sichergestellt wird. [!INCLUDE[ssDE](../includes/ssde-md.md)] stellt Folgendes bereit:  
   
 -   Sperrvorrichtungen, durch die die Isolation jeder Transaktion erhalten bleibt.  
   
@@ -208,7 +208,7 @@ GO
   
 #### <a name="concurrency-effects"></a>Parallelitätseffekte  
 
- Benutzer, die Daten ändern, können einen Konflikt mit anderen Benutzern verursachen, die die gleichen Daten zur gleichen Zeit lesen oder ändern. Durch diese Benutzer erfolgt ein gleichzeitiger Zugriff auf die Daten. Wenn ein Datenspeichersystem keine Steuerung für die Parallelität besitzt, können Benutzer die folgenden Auswirkungen feststellen:    
+ Benutzer, die Daten ändern, können einen Konflikt mit anderen Benutzern verursachen, die die gleichen Daten zur gleichen Zeit lesen oder ändern. Durch diese Benutzer erfolgt ein gleichzeitiger Zugriff auf die Daten. Wenn ein Datenspeichersystem keine Steuerung für die Parallelität besitzt, können Benutzer die folgenden Auswirkungen feststellen:  
   
 -   Verlorene Updates  
   
@@ -372,7 +372,7 @@ GO
   
  Die folgende Tabelle zeigt die Ressourcen, die [!INCLUDE[ssDE](../includes/ssde-md.md)] sperren kann.  
   
-|Ressource|Description|  
+|Ressource|Beschreibung|  
 |--------------|-----------------|  
 |RID|Ein Zeilenbezeichner, der verwendet wird, um eine einzelne Zeile in einem Heap zu sperren.|  
 |KEY|Eine Zeilensperre in einem Index, die verwendet wird, um Schlüsselbereiche in serialisierbaren Transaktionen zu schützen.|  
@@ -425,7 +425,7 @@ GO
 
  Das [!INCLUDE[ssDE](../includes/ssde-md.md)] verwendet beabsichtigte Sperren, um das Platzieren einer freigegebenen (S) oder exklusiven Sperre (X) auf eine Ressource zu schützen, die sich weiter unten in der Sperrhierarchie befinden. Die Bezeichnung 'beabsichtige Sperre' bedeutet, dass beabsichtigte Sperren vor Sperren auf untergeordneten Ebenen eingerichtet werden, und damit die Absicht ausdrücken, Sperren auf untergeordneten Ebenen zu platzieren.  
   
- Beabsichtigte Sperren werden aus zwei Gründen verwendet:   
+ Beabsichtigte Sperren werden aus zwei Gründen verwendet:  
   
 -   Um zu verhindern, dass andere Transaktionen Ressourcen übergeordneter Ebenen ändern und damit die Sperren untergeordneter Ebenen ungültig werden.  
   
@@ -496,7 +496,7 @@ GO
   
  Durch Schlüsselbereichssperren werden Phantomlesezugriffe verhindert. Indem die Schlüsselbereiche zwischen Zeilen geschützt werden, wird außerdem verhindert, dass es zu Phantomeinfügungsvorgängen in Datensätzen kommt, auf die eine Transaktion zugreift.  
   
- Eine Schlüsselbereichssperre wird für einen Index platziert; auf diese Weise wird ein Start- und Endschlüsselwert angegeben. Durch diese Sperre wird jeglicher Versuch blockiert, eine Zeile mit einem Schlüsselwert einzufügen, zu aktualisieren oder zu löschen, der dem Bereich zugehörig ist, da von diesen Vorgängen zunächst eine Sperre für den Index eingerichtet werden müsste. Eine serialisierbare Transaktion könnte beispielsweise eine SELECT-Anweisung ausgeben, die sämtliche Zeilen liest, deren Schlüsselwerte zwischen **'** AAA **'** und **'** CZZ **'** liegen. Eine Schlüsselbereichssperre für die Schlüsselwerte im Bereich von **'** AAA **'** bis **'** CZZ **'** verhindert, dass andere Transaktionen Zeilen mit Schlüsselwerten in diesem Bereich einfügen, beispielsweise **'** ADG **'**, **'** BBD **'** oder **'** CAL **'**.  
+ Eine Schlüsselbereichssperre wird für einen Index platziert; auf diese Weise wird ein Start- und Endschlüsselwert angegeben. Durch diese Sperre wird jeglicher Versuch blockiert, eine Zeile mit einem Schlüsselwert einzufügen, zu aktualisieren oder zu löschen, der dem Bereich zugehörig ist, da von diesen Vorgängen zunächst eine Sperre für den Index eingerichtet werden müsste. Eine serialisierbare Transaktion könnte beispielsweise eine SELECT-Anweisung ausgeben, die sämtliche Zeilen liest, deren Schlüsselwerte zwischen **'** AAA **'** und **'** CZZ **'** liegen. Eine Schlüsselbereichssperre für die Schlüsselwerte im Bereich von **'** AAA **'** bis **'** CZZ **'** verhindert, dass andere Transaktionen Zeilen mit Schlüsselwerten in diesem Bereich einfügen, beispielsweise **'** ADG **'** , **'** BBD **'** oder **'** CAL **'** .  
   
 #### <a name="key-range-lock-modes"></a>Schlüsselbereichssperrmodi  
 
@@ -561,7 +561,7 @@ GO
   
 -   Die Isolationsstufe der Transaktion muss auf SERIALIZABLE festgelegt sein.  
   
--   Der Abfrageprozessor muss zum Implementieren des Bereichsfilterprädikäts verwendet werden. Die WHERE-Klausel einer SELECT-Anweisung könnte beispielsweise eine bereichsbedingung mit diesem Prädikat eingerichtet: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Eine Schlüsselbereichssperre kann nur eingerichtet werden, wenn **ColumnX** durch einen Indexschlüssel abgedeckt ist.  
+-   Der Abfrageprozessor muss zum Implementieren des Bereichsfilterprädikäts verwendet werden. Die WHERE-Klausel einer SELECT-Anweisung könnte beispielsweise eine bereichsbedingung mit diesem Prädikat eingerichtet: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . Eine Schlüsselbereichssperre kann nur eingerichtet werden, wenn **ColumnX** durch einen Indexschlüssel abgedeckt ist.  
   
 #### <a name="examples"></a>Beispiele  
 
@@ -1267,7 +1267,7 @@ BEGIN TRANSACTION
 
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Leistungsindikatoren stellen Informationen zur Auswirkung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozessen auf die Systemleistung zur Verfügung. Die folgenden Leistungsindikatoren überwachen tempdb und den Versionsspeicher sowie Transaktionen mithilfe der Zeilenversionsverwaltung. Die Leistungsindikatoren sind im SQLServer:Transaktionen-Leistungsobjekt enthalten.  
   
- **Freier Speicherplatz in tempdb (KB)**: Überwacht die Menge des freien Speicherplatzes in Kilobyte (KB), der in der tempdb-Datenbank zur Verfügung steht. Es muss genügend freier Speicherplatz in tempdb zur Verfügung stehen, um den Versionsspeicher zu bearbeiten, der die Momentaufnahmeisolation unterstützt.  
+ **Freier Speicherplatz in tempdb (KB)** : Überwacht die Menge des freien Speicherplatzes in Kilobyte (KB), der in der tempdb-Datenbank zur Verfügung steht. Es muss genügend freier Speicherplatz in tempdb zur Verfügung stehen, um den Versionsspeicher zu bearbeiten, der die Momentaufnahmeisolation unterstützt.  
   
  Die folgende Formel ermöglicht eine grobe Schätzung der Größe des Versionsspeichers. Bei lange andauernden Transaktionen kann es sich als sinnvoll erweisen, die Generierungs- und Cleanuprate zu überwachen, um die maximale Größe des Versionsspeichers einzuschätzen.  
   
@@ -1275,7 +1275,7 @@ BEGIN TRANSACTION
   
  Die längste Ausführungszeit von Transaktionen sollte Onlineindexerstellungs-Vorgänge nicht einschließen. Da diese Vorgänge bei sehr großen Tabellen viel Zeit in Anspruch nehmen können, verwenden Onlineindexerstellungs-Vorgänge einen separaten Versionsspeicher. Die ungefähre Größe des Onlineindexerstellungs-Versionsspeichers entspricht der Menge der in der Tabelle geänderten Daten, einschließlich aller Indizes, während die Onlineindexerstellung aktiviert ist.  
   
- **Versionsspeichergröße (KB)**: Überwacht die Größe in KB aller Versionsspeicher. Mithilfe dieser Informationen können Sie die Menge des Speicherplatzes bestimmen, die in der tempdb-Datenbank für den Versionsspeicher benötigt wird. Das Überwachen dieser Indikatoren über einen gewissen Zeitraum ermöglicht eine hilfreiche Schätzung des zusätzlich für tempdb benötigten Speicherplatzes.  
+ **Versionsspeichergröße (KB)** : Überwacht die Größe in KB aller Versionsspeicher. Mithilfe dieser Informationen können Sie die Menge des Speicherplatzes bestimmen, die in der tempdb-Datenbank für den Versionsspeicher benötigt wird. Das Überwachen dieser Indikatoren über einen gewissen Zeitraum ermöglicht eine hilfreiche Schätzung des zusätzlich für tempdb benötigten Speicherplatzes.  
   
  `Version Generation rate (KB/s)`. installiert haben. Überwacht die Versionsgenerierungsrate, in KB pro Sekunde, in allen Versionsspeichern.  
   
@@ -1535,7 +1535,7 @@ ALTER DATABASE AdventureWorks2012
   
  In der folgenden Tabelle werden die Statusmöglichkeiten der ALLOW_SNAPSHOT_ISOLATION-Option aufgeführt und beschrieben. Der Zugriff von Benutzern auf Daten in der Datenbank wird durch das Verwenden von ALTER DATABASE mit der ALLOW_SNAPSHOT_ISOLATION-Option nicht blockiert.  
   
-|Status der Momentaufnahmeisolationsumgebung der aktuellen Datenbank|Description|  
+|Status der Momentaufnahmeisolationsumgebung der aktuellen Datenbank|Beschreibung|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|Die Unterstützung von Momentaufnahmeisolationstransaktionen ist nicht aktiviert. Momentaufnahmeisolationtransaktionen sind nicht zulässig.|  
 |PENDING_ON|Die Unterstützung von Momentaufnahmeisolationstransaktionen befindet sich in einem Übergangsstatus (von OFF nach ON). Offene Transaktionen müssen abgeschlossen werden.<br /><br /> Momentaufnahmeisolationtransaktionen sind nicht zulässig.|  

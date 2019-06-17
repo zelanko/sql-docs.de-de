@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721093"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lektion 1: Veröffentlichen von Daten mithilfe der Transaktionsreplikation
@@ -50,7 +50,7 @@ ms.locfileid: "62721093"
   
 10. Deaktivieren Sie auf der Seite „Agentsicherheit“ das Kontrollkästchen **Sicherheitseinstellungen des Momentaufnahme-Agents verwenden** .  
   
-11. Klicken Sie für den Momentaufnahme-Agent auf **Sicherheitseinstellungen**, geben Sie \<_Machine_Name>_**\repl_snapshot** im Feld **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein und klicken Sie anschließend auf **OK**.  
+11. Klicken Sie für den Momentaufnahme-Agent auf **Sicherheitseinstellungen**, geben Sie \<_Machine_Name>_ **\repl_snapshot** im Feld **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein und klicken Sie anschließend auf **OK**.  
   
 12. Wiederholen Sie den vorherigen Schritt, um repl_logreader als Prozesskonto für den Protokolllese-Agenten festzulegen, und klicken Sie anschließend auf **Fertig stellen**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62721093"
   
 3.  Wählen Sie die Seite **Veröffentlichungszugriffsliste** aus und klicken Sie auf **Hinzufügen**.  
   
-4.  Wählen Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** die Anmeldung _<Computername>_**\repl_distribution** aus und klicken Sie auf **OK**. Klicken Sie auf **OK**.  
+4.  Wählen Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** die Anmeldung _<Computername>_ **\repl_distribution** aus und klicken Sie auf **OK**. Klicken Sie auf **OK**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben die Transaktionsveröffentlichung erfolgreich erstellt. Als Nächstes abonnieren Sie diese Veröffentlichung. Siehe [Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  

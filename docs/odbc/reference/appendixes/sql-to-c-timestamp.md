@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259257"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL in C: Timestamp
@@ -51,4 +51,4 @@ Die folgende Tabelle zeigt die ODBC-C-Datentypen, die in denen Timestamp-SQL-Dat
   
  [f] Dies ist die Größe des entsprechenden C-Datentyp.  
 
-Wenn SQL-Zeitstempeldaten in C-Zeichendaten konvertiert werden, wird die resultierende Zeichenfolge der "*JJJJ*-*mm*-*TT* *Hh* :*mm*:*ss*[.*f...*] "-Format, in denen bis zu neun Ziffern für Sekundenbruchteile verwendet werden kann. Dieses Format wird von der Einstellung für Land Windows® nicht beeinflusst. (Mit Ausnahme des Dezimalzeichens und Bruchteilen von Sekunden, muss die gesamte Format, unabhängig von der Genauigkeit von der SQL-Datentyp Timestamp verwendet werden.)
+Wenn SQL-Zeitstempeldaten in C-Zeichendaten konvertiert werden, wird die resultierende Zeichenfolge der "*JJJJ*-*mm*-*TT* *Hh* :*mm*:*ss*[.*f...* ] "-Format, in denen bis zu neun Ziffern für Sekundenbruchteile verwendet werden kann. Dieses Format wird von der Einstellung für Land Windows® nicht beeinflusst. (Mit Ausnahme des Dezimalzeichens und Bruchteilen von Sekunden, muss die gesamte Format, unabhängig von der Genauigkeit von der SQL-Datentyp Timestamp verwendet werden.)

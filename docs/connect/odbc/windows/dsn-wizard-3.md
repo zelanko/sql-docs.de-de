@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5261e3bd3c114961533b60431b6d0e1b9a313fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615248"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797783"
 ---
 # <a name="data-source-wizard-screen-3"></a>Datenquellen-Assistent (Bildschirm 3)
 
 Geben Sie die Standarddatenbank, verschiedene ANSI-Optionen, die vom Treiber verwendet werden sollen, und den Namen eines Spiegelservers an.
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>enthalten
 
 ### <a name="change-the-default-database-to"></a>Standarddatenbank ändern in
 
@@ -72,7 +72,7 @@ Wenn Ihre Anwendung an eine hohe Verfügbarkeit und Disaster Recovery (AlwaysOn-
 
 ### <a name="transparent-network-ip-resolution"></a>Transparente Netzwerk-IP-Adressauflösung
 
-Ändert das Sitzungsverhalten, sodass **-multisubnetz-Failovercluster** um schnellere wiederverbindung während des Failovers zu ermöglichen. Finden Sie unter [mithilfe transparente Netzwerk-IP-Adressauflösung](../../../connect/odbc/using-transparent-network-ip-resolution.md) für Weitere Informationen.
+Ändert das Sitzungsverhalten, sodass **-multisubnetz-Failovercluster** um schnellere wiederverbindung während des Failovers zu ermöglichen. Weitere Informationen finden Sie unter [Using Transparent Network IP Resolution (Verwenden der transparenten Netzwerk-IP-Adressauflösung)](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Spaltenverschlüsselung
 

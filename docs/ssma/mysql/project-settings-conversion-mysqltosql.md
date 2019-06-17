@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162027"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySqlToSql)
@@ -88,7 +88,7 @@ Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und
 |-|-|  
 |**Begriff**|**Definition**|  
 |**Umgebendes Feld standardmäßig {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN} für räumliche Indizes**|Definiert die Standard-Wert für {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN}-Parameter des umgebenden Felds in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Vollständige**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Vollständigen-Modus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
-|**Standardmäßig die Dichte des Rasters für räumliche Indizes**|Definiert Standardwert für LEVEL_1, LEVEL_2, LEVEL_3 und LEVEL_4, der die Dichte des Rasters in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Vollständige**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard<br /><br />**Vollständigen-Modus**<br /><br />LEVEL_1: Standard<br /><br />LEVEL_2: Standard<br /><br />LEVEL_3: Standard<br /><br />LEVEL_4: Standard|  
+|**Standardmäßig die Dichte des Rasters für räumliche Indizes**|Definiert Standardwert für LEVEL_1, LEVEL_2, LEVEL_3 und LEVEL_4, der die Dichte des Rasters in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Vollständige**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Vollständigen-Modus**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default|  
   
 ### <a name="transactions"></a>Transaktionen  
   
@@ -96,7 +96,7 @@ Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und
 |-|-|  
 |**Begriff**|**Definition**|  
 |**Nicht-transaktionale Tabellen**|Gibt an, und zwar unabhängig davon, ob alle Verweise auf die Tabelle, die keine Transaktionen unterstützen, die mit Warnmeldungen für die Konvertierung gekennzeichnet werden soll.<br /><br />**Im Modus Standard**: Nein<br /><br />**Vollständige**: Nein<br /><br />**Vollständiger Modus**: Ja|  
-|**Transaktionsisolationsstufe**|Gibt an, welche Isolationsstufe für Transaktionen für neue Transaktionen verwendet werden soll.<br /><br />**Im Modus Standard**:   Standard<br /><br />**Vollständige**:  Standard<br /><br />**Vollständiger Modus**:   Repeatable Read|  
+|**Transaktionsisolationsstufe**|Gibt an, welche Isolationsstufe für Transaktionen für neue Transaktionen verwendet werden soll.<br /><br />**Im Modus Standard**:   Default<br /><br />**Vollständige**:  Default<br /><br />**Vollständiger Modus**:   Repeatable Read|  
   
 ### <a name="value-control"></a>Steuerelement für Werte  
   

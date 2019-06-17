@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700766"
 ---
 # <a name="event-parameters"></a>Ereignisparameter
@@ -54,7 +54,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Wenn Sie nicht mehr ein Ereignis verarbeiten möchten, legen Sie *Status* zu **AdStatusUnwantedEvent** und empfängt die Anwendung nicht mehr benachrichtigt, wenn das Ereignis. Beachten Sie jedoch, dass einige Ereignisse für mehr als einer der Gründe ausgelöst werden können. In diesem Fall müssen Sie angeben **AdStatusUnwantedEvent** für jeden möglichen Grund. Beispielsweise zum Beenden des Empfangs der Benachrichtigung über ausstehende **RecordChange** Ereignisse, müssen Sie festlegen, die *Status* Parameter **AdStatusUnwantedEvent** für  **AdRsnAddNew**, **AdRsnDelete**, **AdRsnUpdate**, **AdRsnUndoUpdate**, **AdRsnUndoAddNew**, **AdRsnUndoDelete**, und **AdRsnFirstChange** eintreten.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Fordern Sie an, dass dieser Ereignishandler keine weiteren Benachrichtigungen erhalten.|  
 |**adStatusCancel**|Fordern Sie Abbruch des Vorgangs, der ausgeführt wird.|  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083285"
 ---
 # <a name="neural-network-model-query-examples"></a>Neuronale Beispiele für Netzwerkmodellabfragen
@@ -181,7 +181,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Erstellen einer Singleton-Vorhersage  
  Die einfachste Methode, eine Vorhersageabfrage in einem neuronalen Netzwerkmodell zu erstellen, stellt der Generator für Vorhersageabfragen dar. Dieser ist auf der Registerkarte **Miningvorhersage** des Data Mining Designer sowohl in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] als auch in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]verfügbar. Sie können das Modell im [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für neuronale Netzwerke durchsuchen, um Attribute von Interesse zu filtern und Trends anzuzeigen. Anschließend können Sie auf die Registerkarte **Miningvorhersage** wechseln, um eine Abfrage zu erstellen und neue Werte für diese Trends vorherzusagen.  
   
- Sie können beispielsweise das Callcentermodell durchsuchen, um Korrelationen zwischen der Anzahl der Bestellungen und anderen Attributen anzuzeigen. Zu diesem Zweck öffnen Sie das Modell im Viewer, und für **Eingabe**Option  **\<alle >**.  Wählen Sie anschließend für **Ausgabe**die Option **Anzahl der Bestellungen**aus. Wählen Sie für **Wert 1**den Bereich aus, der die meisten Bestellungen repräsentiert, und für **Wert 2**den Bereich, der die wenigsten Bestellungen darstellt. Sie können dann auf einen Blick alle Attribute sehen, die das Modell mit der Anzahl der Bestellungen korreliert.  
+ Sie können beispielsweise das Callcentermodell durchsuchen, um Korrelationen zwischen der Anzahl der Bestellungen und anderen Attributen anzuzeigen. Zu diesem Zweck öffnen Sie das Modell im Viewer, und für **Eingabe**Option  **\<alle >** .  Wählen Sie anschließend für **Ausgabe**die Option **Anzahl der Bestellungen**aus. Wählen Sie für **Wert 1**den Bereich aus, der die meisten Bestellungen repräsentiert, und für **Wert 2**den Bereich, der die wenigsten Bestellungen darstellt. Sie können dann auf einen Blick alle Attribute sehen, die das Modell mit der Anzahl der Bestellungen korreliert.  
   
  Durch Durchsuchen der Ergebnisse im Viewer können Sie feststellen, dass einige Tage der Woche niedrige Bestellzahlen aufweisen und dass ein Anstieg der Anzahl der Operatoren anscheinend mit höheren Umsätzen korreliert. Anschließend können Sie mit einer Vorhersageabfrage für das Modell eine "Was-wäre-wenn"-Hpyothese testen und untersuchen, ob eine Erhöhung der Anzahl von Operatoren auf Ebene 2 an einem Tag mit niedriger Bestellmenge zu einem Anstieg der Bestellungen führen würde. Erstellen Sie dazu beispielsweise folgende Abfrage:  
   
