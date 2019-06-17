@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b583be423e6f70fa23ae105082fe0b39f221072f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843598"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665102"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Sichern und Wiederherstellen von replizierten Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47843598"
   
  Fester Bestandteil jeder Wiederherstellungsstrategie sollte sein, immer ein aktuelles Skript der Replikationseinstellungen an einem sicheren Ort aufzubewahren. Wenn ein Server ausfällt oder eine Testumgebung eingerichtet werden muss, können Sie das Skript durch Ändern der Verweise auf Servernamen modifizieren. Im Anschluss kann es zur Wiederherstellung der Replikationseinstellungen verwendet werden. Zusätzlich zum Erstellen eines Skripts für die aktuellen Replikationseinstellungen sollten Sie für das Aktivieren oder Deaktivieren der Replikation ein Skript erstellen. Informationen zur Skripterstellung für Replikationsobjekte finden Sie unter [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   

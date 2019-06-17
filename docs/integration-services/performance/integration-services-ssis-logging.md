@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719589"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
@@ -231,7 +231,7 @@ ms.locfileid: "65719589"
   
 3.  Wählen Sie einen Protokollanbieter in der Liste **Anbietertyp** aus, und klicken Sie dann auf **Hinzufügen**.  
   
-4.  Wählen Sie in der Spalte **Konfiguration** einen Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung>**, um einen neuen Verbindungs-Manager des entsprechenden Typs für den Protokollanbieter zu erstellen. Verwenden Sie je nach ausgewähltem Anbieter einen der folgenden Verbindungs-Manager.  
+4.  Wählen Sie in der Spalte **Konfiguration** einen Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung>** , um einen neuen Verbindungs-Manager des entsprechenden Typs für den Protokollanbieter zu erstellen. Verwenden Sie je nach ausgewähltem Anbieter einen der folgenden Verbindungs-Manager.  
   
     -   Verwenden Sie für Textdateien einen Dateiverbindungs-Manager. Weitere Informationen finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
@@ -313,11 +313,11 @@ ms.locfileid: "65719589"
  Das Feld Beschreibung kann bearbeitet werden. Klicken Sie in das Feld und ändern Sie die Standardbeschreibung des Protokolls.  
   
  **Configuration**  
- Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
+ Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen. Abhängig vom Typ des Protokollanbieters können Sie einen OLE DB-Verbindungs-Manager oder einen Dateiverbindungs-Manager konfigurieren. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokollanbieter erfordert keine Verbindung.  
   
  Verwandte Themen: [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md), [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie einen Protokollanbieter aus, und klicken Sie auf **Löschen**.  
   
 ###  <a name="detail"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Details".  

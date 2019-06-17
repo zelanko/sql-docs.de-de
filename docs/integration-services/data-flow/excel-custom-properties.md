@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 45df4518b935057e23e46b62583989bf98d0b0ab
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726905"
 ---
 # <a name="excel-custom-properties"></a>Benutzerdefinierte Eigenschaften von Excel
@@ -29,7 +29,7 @@ ms.locfileid: "65726905"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Excel-Quelle beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|Der zum Zugreifen auf die Datenbank verwendete Modus. Die möglichen Werte sind **Geöffnetes Rowset**, **Geöffnetes Rowset aus Variable**, **SQL-Befehl**und **SQL-Befehl aus Variable**. Der Standardwert ist **Geöffnetes Rowset**.|  
 |CommandTimeout|Integer|Die Anzahl der Sekunden, nach denen ein Befehl wegen eines Timeouts abgebrochen wird.  Der Wert 0 steht für ein unbegrenztes Timeout.<br /><br /> **Hinweis** Diese Eigenschaft ist nicht im **Quellen-Editor für Excel**verfügbar, kann jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden.|  
@@ -49,7 +49,7 @@ ms.locfileid: "65726905"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Excel-Ziels. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Ganze Zahl (Enumeration)|Ein Wert, der angibt, wie das Ziel auf seine Zieldatenbank zugreift.<br /><br /> Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **OpenRowset** (0): Sie geben den Namen einer Tabelle oder Ansicht an.<br /><br /> **OpenRowset from Variable** (1): Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Ansicht enthält.<br /><br /> **OpenRowset Using Fastload** (3): Sie geben den Namen einer Tabelle oder Ansicht an.<br /><br /> **OpenRowset Using Fastload from Variable** (4): Sie geben den Namen einer Variablen an, die den Namen einer Tabelle oder Ansicht enthält.<br /><br /> **SQL Command** (2): Sie geben eine SQL-Anweisung an.|  
 |CommandTimeout|Integer|Die maximale Ausführungsdauer in Sekunden, bevor ein Timeout für den SQL-Befehl eintritt. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **0**.<br /><br /> Hinweis: Diese Eigenschaft ist nicht im **Ziel-Editor für Excel** verfügbar, kann jedoch mit dem **Erweiterten Editor** festgelegt werden.|  

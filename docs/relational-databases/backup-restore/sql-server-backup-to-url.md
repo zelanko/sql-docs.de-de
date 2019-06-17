@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
-ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "67046689"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
@@ -115,7 +115,7 @@ Beim Sichern mit Blockblobs, können Sie eine maximale Blockgröße von 4 MB ang
   
 -   Die Angabe von Sicherungssatzoptionen mit **RETAINDAYS** und **EXPIREDATE** wird nicht unterstützt.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf 259 Zeichen begrenzt. Da BACKUP TO URL 36 Zeichen für die erforderlichen Elemente zur Angabe der URL (https://.blob.core.windows.net//.bak) beansprucht, verbleiben insgesamt noch 223 Zeichen für Konto-, Container- und Blobnamen.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf 259 Zeichen begrenzt. Da BACKUP TO URL 36 Zeichen für die erforderlichen Elemente zur Angabe der URL (https://.blob.core.windows.net//.bak ) beansprucht, verbleiben insgesamt noch 223 Zeichen für Konto-, Container- und Blobnamen.  
   
 ###  <a name="Support"></a> Unterstützung für BACKUP-/RESTORE-Anweisungen  
   
@@ -216,7 +216,7 @@ Sie können eine Datenbank über URL mit dem Sicherungstask in SQL Server Manage
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
-2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Back Up...**(Sichern).
+2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Back Up...** (Sichern).
   
 3.  Die Option **URL** ist in der Dropdownliste **Back up to:** (Sichern auf:) auf der Seite **Allgemein** im Abschnitt **Ziel** verfügbar.  Die Option **URL** wird verwendet, um eine Sicherung im Windows Azure-Speicher zu erstellen. Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Sicherungsziel auswählen** wird geöffnet:
    
@@ -250,7 +250,7 @@ Sie können eine Datenbank über URL mit dem Sicherungstask in SQL Server Manage
 ##  <a name="RestoreSSMS"></a> Wiederherstellen aus dem Microsoft Azure-Speicher mithilfe von SQL Server Management Studio  
 Die Aufgabe „Datenbank wiederherstellen“ enthält als Medium eine **URL** , von der aus wiederhergestellt wird.  Die folgenden Schritte beschreiben die Verwendung des Wiederherstellungstasks für die Wiederherstellung aus dem Microsoft Azure BLOB-Speicherdienst: 
   
-1.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Restore Database...**(Datenbank... wiederherstellen) aus. 
+1.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Restore Database...** (Datenbank... wiederherstellen) aus. 
   
 2.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
   

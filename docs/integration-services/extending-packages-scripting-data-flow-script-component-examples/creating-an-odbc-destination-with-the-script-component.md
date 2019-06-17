@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 812915337b03927af5b23a66a0452d0d6a875112
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724479"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Erstellen eines ODBC-Ziels mit der Skriptkomponente
@@ -42,7 +42,7 @@ ms.locfileid: "65724479"
   
 -   **OdbcCommand** erwartet Positionsparameter. Die Position von Parametern wird durch die Fragezeichen (?) im Text des Befehls angegeben. (Im Gegensatz dazu erwartet **SqlCommand** benannte Parameter.)  
   
- In diesem Beispiel wird die Tabelle **Person.Address** in der **AdventureWorks**-Beispieldatenbank verwendet. Im Beispiel werden die erste und die vierte Spalte dieser Tabelle, nämlich die Spalten **int _AddressID_** und **nvarchar(30) _City_**, durch den Datenfluss übergeben. Die gleichen Daten werden in den Beispielen für die Quelle, die Transformation und das Ziel im Thema [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) (Entwickeln bestimmter Typen von Skriptkomponenten) verwendet.  
+ In diesem Beispiel wird die Tabelle **Person.Address** in der **AdventureWorks**-Beispieldatenbank verwendet. Im Beispiel werden die erste und die vierte Spalte dieser Tabelle, nämlich die Spalten **int _AddressID_** und **nvarchar(30) _City_** , durch den Datenfluss übergeben. Die gleichen Daten werden in den Beispielen für die Quelle, die Transformation und das Ziel im Thema [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md) (Entwickeln bestimmter Typen von Skriptkomponenten) verwendet.  
   
 #### <a name="to-configure-this-script-component-example"></a>So konfigurieren Sie dieses Skriptkomponentenbeispiel  
   

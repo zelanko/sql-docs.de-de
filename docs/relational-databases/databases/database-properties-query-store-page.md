@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 72b79e02cfdc8bab664df1a47c1e8bfb91743493
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62861191"
 ---
 # <a name="database-properties-query-store-page"></a>Datenbankeigenschaften (Seite des Abfragespeichers)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "53596661"
 |-|  
 |**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]).|  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  Betriebsmodus  
  Gültige Werte sind OFF, READ_ONLY und READ_WRITE. OFF deaktiviert den Abfragespeicher. Im Modus READ_WRITE sammelt und speichert der Abfragespeicher Angaben zum Abfrageplan und statistische Informationen zur Laufzeitausführung. Im Modus READ_ONLY können Informationen aus dem Abfragespeicher gelesen werden, es werden jedoch keine neuen Informationen hinzugefügt. Wenn die maximale Speicherplatzbelegung des Abfragespeichers ausgelastet ist, wird der Betriebsmodus in READ_ONLY geändert.  
   
