@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316330"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analysieren von Deadlocks mit SQL Server Profiler
@@ -31,7 +31,7 @@ ms.locfileid: "63316330"
   
  Um eine Ablaufverfolgung für Deadlockereignisse auszuführen, fügen Sie die **Deadlock graph** -Ereignisklasse zu einer Ablaufverfolgung hinzu. Diese Ereignisklasse füllt die **TextData** -Datenspalte in der Ablaufverfolgung mit XML-Daten zum Prozess sowie zu vom Deadlock betroffenen Objekten auf. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] kann das XML-Dokument in eine Deadlock-XML-Datei (.xdl) extrahieren, die Sie später in SQL Server Management Studio anzeigen können. Sie können [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] so konfigurieren, dass **Deadlock graph** -Ereignisse entweder in eine einzelne Datei mit allen **Deadlock graph** -Ereignissen oder in separate Dateien extrahiert werden. Das Extrahieren kann auf eine der folgenden Arten ausgeführt werden:  
   
--   Beim Konfigurieren der Ablaufverfolgung über die Registerkarte **Ereignisextraktionseinstellungen** . Beachten Sie, dass diese Registerkarte erst angezeigt wird, wenn Sie das Deadlock graph -Ereignis auf der Registerkarte **Ereignisauswahl** ausgewählt haben.  
+-   Beim Konfigurieren der Ablaufverfolgung über die Registerkarte **Ereignisextraktionseinstellungen** . Beachten Sie, dass diese Registerkarte erst angezeigt wird, wenn Sie das **Deadlock graph** -Ereignis auf der Registerkarte **Ereignisauswahl** ausgewählt haben.  
   
 -   Mithilfe der Option **SQL Server-Ereignisse extrahieren** im Menü **Datei**  
   

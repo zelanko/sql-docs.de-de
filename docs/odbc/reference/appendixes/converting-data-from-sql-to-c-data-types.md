@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224480"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Konvertieren von Daten von SQL- zu C-Datentypen
@@ -33,7 +33,7 @@ Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, 
   
  Die folgende Tabelle zeigt die unterstützten Konvertierungen von ODBC-SQL-Datentypen in ODBC-C-Datentypen. Ein ausgefüllten Kreis gibt an, die standardkonvertierung für einen SQL-Datentyp (der C-Datentyp, der die Daten werden, wenn konvertiert werden, der Wert des *TargetType* SQL_C_DEFAULT ist). Ein leerer Kreis gibt an, eine Konvertierung unterstützt wird.  
   
- Eine ODBC 3.*.x* Anwendung mit einer ODBC 2. *X* Treiber, die Konvertierung vom Treiber-spezifische Typen möglicherweise nicht unterstützt.  
+ Eine ODBC 3 *.x* Anwendung mit einer ODBC 2. *X* Treiber, die Konvertierung vom Treiber-spezifische Typen möglicherweise nicht unterstützt.  
   
  Das Format der konvertierten Daten ist von der Windows® Land-Einstellung nicht betroffen.  
   

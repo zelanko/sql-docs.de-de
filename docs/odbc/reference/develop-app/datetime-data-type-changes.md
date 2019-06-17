@@ -32,7 +32,7 @@ In ODBC 3. *x*, die Bezeichner für date, Time und Timestamp SQL-Datentypen von 
   
  Diese Änderungen wirken sich auf **SQLDescribeCol**, **SQLDescribeParam**, und **SQLColAttribute**; **SQLBindCol**, **SQLBindParameter**, und **SQLGetData**; und **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, und **SQLSpecialColumns**.  
   
- Die folgende Tabelle zeigt, wie die ODBC 3. *.x* -Treiber-Manager führt die Zuordnung der Date, Time und Timestamp C-Datentypen in eingegebenen der *TargetType* Argumente **SQLBindCol**und **SQLGetData** oder in der *ValueType* Argument **SQLBindParameter**.  
+ Die folgende Tabelle zeigt, wie die ODBC 3 *.x* -Treiber-Manager führt die Zuordnung der Date, Time und Timestamp C-Datentypen in eingegebenen der *TargetType* Argumente **SQLBindCol**und **SQLGetData** oder in der *ValueType* Argument **SQLBindParameter**.  
   
 |Datentyp<br /><br /> Code wurde eingegeben|2.*x* -app<br /><br /> 2.*x* Treiber|2.*x* -app<br /><br /> 3.*x* Treiber|3.*x* -app<br /><br /> 2.*x* Treiber|3.*x* -app<br /><br /> 3.*x* Treiber|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  
@@ -47,7 +47,7 @@ In ODBC 3. *x*, die Bezeichner für date, Time und Timestamp SQL-Datentypen von 
   
  [2] als Ergebnis des dies, eine ODBC-3. *x* Anwendung mit einer ODBC 3. *X* Treiber können auf das Datum, Uhrzeit oder Zeitstempel-Codes, die zurückgegeben werden, in den Resultsets, die durch die Katalogfunktionen zurückgegeben werden.  
   
- Die folgende Tabelle zeigt, wie die ODBC 3. *.x* -Treiber-Manager führt die Zuordnung der Date, Time und Timestamp SQL-Datentypen in eingegebenen der *ParameterType* Argument **SQLBindParameter**  oder in der *DataType* Argument **SQLGetTypeInfo**.  
+ Die folgende Tabelle zeigt, wie die ODBC 3 *.x* -Treiber-Manager führt die Zuordnung der Date, Time und Timestamp SQL-Datentypen in eingegebenen der *ParameterType* Argument **SQLBindParameter**  oder in der *DataType* Argument **SQLGetTypeInfo**.  
   
 |Datentyp<br /><br /> Code wurde eingegeben|2.*x* -app<br /><br /> 2.*x* Treiber|2.*x* -app<br /><br /> 3.*x* Treiber|3.*x* -app<br /><br /> 2.*x* Treiber|3.*x* -app<br /><br /> 3.*x* Treiber|  
 |--------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|-----------------------------------|  

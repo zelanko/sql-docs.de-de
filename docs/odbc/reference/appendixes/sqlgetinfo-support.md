@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eb6bedb20e1f61c48776d03df59aa6865cfb2a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62751210"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo-Unterstützung
-Wenn eine ODBC-2. *x* Anwendungsaufrufe **SQLGetInfo** auf eine ODBC 3.*.x* -Treiber die *Informationsart* Argumente in der folgenden Tabelle unterstützt werden müssen.  
+Wenn eine ODBC-2. *x* Anwendungsaufrufe **SQLGetInfo** auf eine ODBC 3 *.x* -Treiber die *Informationsart* Argumente in der folgenden Tabelle unterstützt werden müssen.  
   
 |*InfoType*|Rückgabewert|  
 |----------------|-------------|  
@@ -37,6 +37,6 @@ Wenn eine ODBC-2. *x* Anwendungsaufrufe **SQLGetInfo** auf eine ODBC 3.*.x* -Tre
 |SQL_SCROLL_CONCURRENCY (ODBC 1.0)|Eine SQLINTEGER-Bitmaske, die die Steuerelement-Parallelitätsoptionen für den Cursor unterstützt auflisten.<br /><br /> Die folgenden Bitmasken werden verwendet, um zu bestimmen, welche Optionen unterstützt werden:<br /><br /> SQL_SCCO_READ_ONLY = Cursor ist schreibgeschützt. Es sind keine Updates zulässig.<br /><br /> SQL_SCCO_LOCK = Cursor verwendet die niedrigste Ebene von Sperren ausreichen, um sicherzustellen, dass die Zeile aktualisiert werden kann.<br /><br /> SQL_SCCO_OPT_ROWVER = Cursor verwendet Steuerung durch vollständige Parallelität, Vergleichen von Zeilenversionen, z. B. SQLBase ROWID oder Sybase-TIMESTAMP.<br /><br /> SQL_SCCO_OPT_VALUES = Cursor verwendet Steuerung durch vollständige Parallelität, Vergleichen von Werten.|  
 |SQL_STATIC_SENSITIVITY (ODBC 2.0)|Eine SQLINTEGER Bitmaske Auflisten von, ob eine Anwendung in eine statische oder keysetgesteuerte Cursor über Änderungen **SQLSetPos** oder positionierte Update- oder Delete-Anweisungen von dieser Anwendung erkannt werden können.<br /><br /> SQL_SS_ADDITIONS = hinzugefügte Zeilen sind sichtbar, bis zum Cursor; der Cursor kann auf diese Spalten scrollen. In denen diese Zeilen hinzugefügt werden, bis des Cursors ist treiberabhängig.<br /><br /> SQL_SS_DELETIONS = der gelöschte Zeilen sind nicht mehr verfügbar, bis zum Cursor und lassen sich nicht auf eine "Lücke" im Resultset; Nachdem Sie der Cursor aus einer gelöschten Zeile einen Bildlauf durchführt, können keine Zeile zurückgegeben werden.<br /><br /> SQL_SS_UPDATES = Updates von Zeilen sind sichtbar, bis zum Cursor; Wenn der Cursor führt einen Bildlauf aus, und es auf eine aktualisierte Zeile zurückgibt, ist die vom Cursor zurückgegebenen Daten die aktualisierten Daten, nicht die ursprünglichen Daten. Diese Option gilt nur statische Cursor oder Updates auf keysetgesteuerte Cursor, die den Schlüssel nicht aktualisieren. Diese Option gilt nicht für einen dynamischen Cursor oder in der Fall, in dem ein Schlüssel in einem gemischten Cursor geändert wird.<br /><br /> Ob eine Anwendung Änderungen an das Resultset nach anderen Benutzern, einschließlich anderer Cursor in der gleichen Anwendung erkennen kann, hängt von der Cursortyp ab.|  
   
- Eine ODBC 3.*.x* Anwendung mit einer ODBC 3.*.x* Treiber sollte nicht aufrufen **SQLGetInfo** mit der *Informationsart* Argumente beschriebene die obige Tabelle sollten jedoch verwenden, die ODBC 3.*.x* *Informationsart* Argumente, die im folgenden Abschnitt aufgeführt. Es ist nicht zwischen *Informationsart* in ODBC 2. verwendeten Argumente. *X* auch solche, die in ODBC 3. verwendet *.x*. Eine ODBC 3.*.x* Anwendung mit einer ODBC 2. *X* , auf der anderen Seite sollte Treiber verwenden, die *Informationsart* Argumente zuvor beschrieben.  
+ Eine ODBC 3 *.x* Anwendung mit einer ODBC 3 *.x* Treiber sollte nicht aufrufen **SQLGetInfo** mit der *Informationsart* Argumente beschriebene die obige Tabelle sollten jedoch verwenden, die ODBC 3 *.x* *Informationsart* Argumente, die im folgenden Abschnitt aufgeführt. Es ist nicht zwischen *Informationsart* in ODBC 2. verwendeten Argumente. *X* auch solche, die in ODBC 3. verwendet *.x*. Eine ODBC 3 *.x* Anwendung mit einer ODBC 2.*X* , auf der anderen Seite sollte Treiber verwenden, die *Informationsart* Argumente zuvor beschrieben.  
   
  Einige der Informationstypen in der vorherigen Tabelle werden durch die Cursortypen für Attribute Informationen ersetzt. Diese als Informationen, die Typen SQL_FETCH_DIRECTION, SQL_LOCK_TYPES, SQL_POS_OPERATIONS, SQL_POSITIONED_STATEMENTS, SQL_SCROLL_CONCURRENCY und SQL_STATIC_SENSITIVITY sind veraltet. Die neuen Attribute-Cursortypen sind SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2, wobei XXX DYNAMIC, FORWARD_ONLY, KEYSET_DRIVEN oder statischen gleich ist. Jedes neue Typen gibt die Treiber-Funktionen für eine einmalige Cursor-Datentyp an. Weitere Informationen zu diesen Optionen finden Sie unter den [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung.
