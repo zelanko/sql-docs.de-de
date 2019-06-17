@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62897464"
 ---
 # <a name="literals-ssis"></a>Literale (SSIS)
@@ -52,7 +52,7 @@ ms.locfileid: "62897464"
   
  In der folgenden Tabelle sind gültige numerische Literale mithilfe der regulären Ausdruckssprache beschrieben.  
   
-|Regulärer Ausdruck|Description|  
+|Regulärer Ausdruck|Beschreibung|  
 |------------------------|-----------------|  
 |{D}+{IS}|Ein integrales numerisches Literal mit mindestens einer Ziffer (D) und optional dem Suffix long und/oder unsigned (IS).  Beispiele: 457, 785u, 986L und 7945ul.|  
 |{D}+{E}{FS}|Ein integrales numerisches Literal mit mindestens einer Ziffer (D) in wissenschaftlicher Schreibweise und dem Suffix long oder float.  Beispiele: 4E8l, 13e-2f und 5E+L.|  

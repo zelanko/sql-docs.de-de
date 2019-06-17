@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989991"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
@@ -69,7 +69,7 @@ HRESULT BCPSetBulkMode (
   
  In der folgenden Tabelle sind die Konstanten für den *property* -Parameter aufgelistet.  
   
-|property|Description|  
+|property|Beschreibung|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in BCP. EXE-Datei, und klicken Sie auf die ibcpsession:: BCPColFmt mit *eUserDataType* -Eigenschaftensatz auf `BCP_TYPE_SQLCHARACTER`.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der – w-Option in BCP. EXE-Datei und ibcpsession:: BCPColFmt mit *eUserDataType* -Eigenschaftensatz auf `BCP_TYPE_SQLNCHAR`.|  

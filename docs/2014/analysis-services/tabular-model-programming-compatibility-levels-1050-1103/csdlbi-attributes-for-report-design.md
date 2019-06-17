@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757938"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>CSDLBI-Attribute für Berichtsentwurf
@@ -23,7 +23,7 @@ ms.locfileid: "62757938"
 ## <a name="model-attributes"></a>Modellattribute  
  Diese Attribute werden für ein Unterelement eines [EntityContainer](https://msdn.microsoft.com/library/bb399169.aspx) -Elements der CSDL definiert.  
   
-|Attributname|Datentyp|Description|  
+|Attributname|Datentyp|Beschreibung|  
 |--------------------|---------------|-----------------|  
 |Culture|Textmodus|Gibt die für Währungsformate verwendete Kultur an. Wenn keine Angabe erfolgt, wird EN-US verwendet.|  
 |IsRightToLeft|Boolean|Gibt an, ob die Werte von Textfeldern standardmäßig von rechts nach links gelesen werden sollen.|  

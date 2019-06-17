@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081086"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Allgemein (Datenbank-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -48,7 +48,7 @@ ms.locfileid: "66081086"
  **Sprache**  
  Wählen Sie die Sprache für die angegebene Übersetzung aus.  
   
- Um dem Raster eine neue Übersetzung hinzuzufügen, klicken Sie auf  **\<neue Übersetzung hinzufügen >**.  
+ Um dem Raster eine neue Übersetzung hinzuzufügen, klicken Sie auf  **\<neue Übersetzung hinzufügen >** .  
   
  **Übersetzte Beschriftung**  
  Geben Sie die Beschriftung der Datenbank in der entsprechenden Sprache für die Übersetzung ein. Wenn der Eintrag leer bleibt, wird die Standardbeschriftung für die Datenbank verwendet.  
@@ -67,7 +67,7 @@ ms.locfileid: "66081086"
  **Name**  
  Geben Sie den Namen des Kontotyps ein.  
   
- Um einen neuen Kontotyp hinzuzufügen, klicken Sie auf  **\<neuen Kontotyp hinzufügen >**.  
+ Um einen neuen Kontotyp hinzuzufügen, klicken Sie auf  **\<neuen Kontotyp hinzufügen >** .  
   
  **Alias**  
  Legt den Standardnamen des Kontotyps fest, der vom Business Intelligence-Assistenten verwendet wird. Wenn diese Spalte leer bleibt, wird der Standardwert aus der **Name** -Spalte verwendet.  
