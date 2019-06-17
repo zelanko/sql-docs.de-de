@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672362"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
 
@@ -171,6 +171,6 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Invoke-PolicyEvaluation-Cmdlet](invoke-policyevaluation-cmdlet.md)   
- [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40;Datenbank-Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

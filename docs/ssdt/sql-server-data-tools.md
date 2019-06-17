@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9ea53ad33b58d7c838017dd2761e74a780214bb0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101870"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
@@ -29,7 +29,7 @@ Der SQL Server-Objekt-Explorer in Visual Studio bietet eine Ansicht Ihrer Datenb
   
 In den folgenden Themen und Abschnitten wird erläutert, wie SSDT zur Datenbankentwicklung beiträgt. Anhand exemplarischer Vorgehensweisen werden Sie durch die Schritte zur Fertigstellung des Datenbankprojekts geführt. Diese im Stil eines Lernprogramms beschriebenen und nacheinander ausgeführten Aufgaben sind im Kontext von Northwind Traders angesiedelt, einer fiktiven, weltweit tätigen Import- und Exportfirma für Lebensmittel und Feinkost.  
   
-|Themen/Abschnitt|Beschreibung|  
+|Themen/Abschnitt|und Beschreibung|  
 |-------------------|---------------|  
 |[Projektorientierte Offlinedatenbankentwicklung](../ssdt/project-oriented-offline-database-development.md)|In den Themen dieses Abschnitts werden die SQL Server Data Tools-Funktionen zum Erstellen, Debuggen und Veröffentlichen von Datenbankprojekten beschrieben.|  
 |[Projektorientierte Datenbankentwicklung mit Befehlszeilentools](../ssdt/project-oriented-database-development-using-command-line-tools.md)|In den Themen dieses Abschnitts werden die Befehlszeilentools beschrieben, die eine Reihe von Szenarien für die projektorientierte Datenbankentwicklung ermöglichen.|  

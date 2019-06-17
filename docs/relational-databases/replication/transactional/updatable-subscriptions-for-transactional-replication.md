@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669665"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Aktualisierbare Abonnements – Für die Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54132990"
   
 -   Abonnenten können keine **text**-, **ntext** - oder **image** -Werte aktualisieren oder einfügen, da das Lesen eingefügter oder gelöschter Tabellen innerhalb der Änderungsprotokollierungstrigger der Replikation nicht möglich ist. Ebenso können Abonnenten keine **text** - oder **image** -Werte mithilfe von **WRITETEXT** oder **UPDATETEXT** aktualisieren oder einfügen, da die Daten vom Verleger überschrieben werden. Stattdessen können Sie die **text** - und **image** -Spalten in eine separate Tabelle partitionieren und die beiden Tabellen in einer Transaktion ändern.  
   
-     Verwenden Sie zum Aktualisieren großer Objekte für einen Abonnenten die Datentypen **varchar(max)**, **nvarchar(max)**, **varbinary(max)** anstelle der Datentypen **text**, **ntext**, und **image** .  
+     Verwenden Sie zum Aktualisieren großer Objekte für einen Abonnenten die Datentypen **varchar(max)** , **nvarchar(max)** , **varbinary(max)** anstelle der Datentypen **text**, **ntext**, und **image** .  
   
 -   Updates an eindeutigen Schlüsseln (einschließlich Primärschlüssel), die Duplikate generieren (z. B. ein Update der Form `UPDATE <column> SET <column> =<column>+1` ), sind nicht zulässig und werden aufgrund eines Verstoßes gegen die Eindeutigkeit abgelehnt. Dies ist darin begründet, dass Updates von Zeilengruppen auf dem Abonnenten durch die Replikation als einzelne **UPDATE** -Anweisungen für jede betroffene Zeile weitergegeben werden.  
   

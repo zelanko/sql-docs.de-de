@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1a41df41528d3b9e76fd55404ae8ab544646a5d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715886"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB-Datenbank)
@@ -66,7 +66,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* ist vom Typ **smallInt**.  
   
  [ @parameter_name = ] *parameter_name*  
- Der Name des Parameters. Der *parameter_name* ist **nvarchar(128)**.  
+ Der Name des Parameters. Der *parameter_name* ist **nvarchar(128)** .  
   
  [ @parameter_value = ] *parameter_value*  
  Der Wert des Parameters. Der *parameter_value* ist **sql_variant**.  
@@ -78,7 +78,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Legen Sie den *object_type*-Parameter auf „50“ fest.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |0|None<br /><br /> Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
 |1|Standard<br /><br /> Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
@@ -89,7 +89,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Wenn Sie festlegen möchten, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung ein Fehler auftritt, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
   
-|Parameter|Wert|  
+|Parameter|value|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
@@ -98,7 +98,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Wenn Sie festlegen möchten, dass der Integration Services-Server Dumpdateien generiert, wenn während einer Paketausführung Ereignisse auftreten, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde.  
   
-|Parameter|Wert|  
+|Parameter|value|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  
@@ -107,7 +107,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Wenn Sie die während einer Paketausführung auftretenden Ereignisse festlegen möchten, die Integration Services-Server zum Generieren von Dumpdateien veranlassen, legen Sie die folgenden Parameterwerte für eine Ausführungsinstanz fest, die nicht ausgeführt wurde. Trennen Sie mehrere Ereigniscodes mithilfe eines Semikolons.  
   
-|Parameter|Wert|  
+|Parameter|value|  
 |---------------|-----------|  
 |*execution_id*|Der eindeutige Bezeichner für die Instanz der Ausführung|  
 |*object_type*|50|  

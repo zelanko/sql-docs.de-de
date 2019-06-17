@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d066a88955d3d47bb8e9e552dde689bee3ae47
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948128"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
@@ -44,7 +44,7 @@ Die Eigenschaft der Verbindung. *property* kann einen der folgenden Werte aufwei
   
 |value|Datentyp|und Beschreibung|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Gibt das physische Transportprotokoll zurück, das von dieser Verbindung verwendet wird. Dieser Wert lässt keine NULL-Werte zu. Mögliche Rückgabewerte:<br /><br /> **HTTP**<br /> **Named Pipe**<br /> **Session**<br /> **Shared Memory**<br /> **SSL**<br /> **TCP**<br /><br /> - und<br /><br /> **VIA**<br /><br /> Hinweis: Es wird stets **Session** zurückgegeben, wenn für eine Verbindung sowohl „mehrere aktive Resultsets“ (MARS) als auch Verbindungs-Pooling aktiviert ist.|  
+|net_transport|**nvarchar(40)**|Gibt das physische Transportprotokoll zurück, das von dieser Verbindung verwendet wird. Dieser Wert lässt keine NULL-Werte zu. Mögliche Rückgabewerte:<br /><br /> **HTTP**<br /> **Named Pipe**<br /> **Session**<br /> **Shared Memory**<br /> **SSL**<br /> **TCP**<br /><br /> \- und<br /><br /> **VIA**<br /><br /> Hinweis: Es wird stets **Session** zurückgegeben, wenn für eine Verbindung sowohl „mehrere aktive Resultsets“ (MARS) als auch Verbindungs-Pooling aktiviert ist.|  
 |protocol_type|**nvarchar(40)**|Gibt den Nutzlast-Protokolltyp zurück. Zurzeit wird zwischen TDS (TSQL) und SOAP unterschieden. Lässt NULL-Werte zu.|  
 |auth_scheme|**nvarchar(40)**|Gibt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierungsschema einer Verbindung zurück. Das Authentifizierungsschema ist entweder Windows-Authentifizierung (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung. Lässt keine NULL-Werte zu.|  
 |local_net_address|**varchar(48)**|Gibt die IP-Adresse auf dem Server zurück, die die Zieladresse dieser spezifischen Verbindung ist. Ist nur für Verbindungen verfügbar, die den TCP-Transportanbieter verwenden. Lässt NULL-Werte zu.|  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cc8fb9f921c80d77094f19c561d9d428520199a
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049056"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "54046440"
   
  In der folgenden Tabelle finden Sie Links und Beschreibungen zu diesen Ressourcen.  
   
-|Ressource|Beschreibung|  
+|Ressource|und Beschreibung|  
 |--------------|-----------------|  
 |[SQL Server-Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
 |[SQL Server Developer Center-Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  

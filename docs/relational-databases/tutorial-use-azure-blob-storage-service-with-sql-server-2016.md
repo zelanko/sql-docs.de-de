@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38e4aa10089bcd96f0285d2e18cf763f31f45d7b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478762"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Lernprogramm: Verwenden des Microsoft Azure Blob Storage-Diensts mit SQL Server 2016
 
@@ -490,7 +490,7 @@ Um die Ressourcengruppe zu löschen, führen Sie den folgenden PowerShell-Code a
 [Erstellen von Containern](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Abrufen der Container-ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)
-[Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
+[Anmeldeinformationen &#40;Datenbank-Engine&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
 [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-credential-transact-sql.md)  
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  

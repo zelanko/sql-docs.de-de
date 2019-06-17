@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b57a3ca1893d44cc2ed3fd60e20a39c4e43f473
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715929"
 ---
 # <a name="catalogsetenvironmentvariableproperty-ssisdb-database"></a>catalog.set_environment_variable_property (SSISDB-Datenbank)
@@ -39,19 +39,19 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumente  
  [ @folder_name = ] *folder_name*  
- Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
+ Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)**.  
+ Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Der Name der Umgebungsvariableneigenschaft. Der *property_name* ist **nvarchar(128)**.  
+ Der Name der Umgebungsvariableneigenschaft. Der *property_name* ist **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
- Der Wert der Umgebungsvariableneigenschaft. Der *property_value* ist **nvarchar(4000)**.  
+ Der Wert der Umgebungsvariableneigenschaft. Der *property_value* ist **nvarchar(4000)** .  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  

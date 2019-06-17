@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebe4438e48f14c1adba3b56d30cc772549f9ee7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034847"
 ---
 # <a name="temporal-table-security"></a>Sicherheit bei temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "52526445"
 ## <a name="security-principles"></a>Sicherheitsprinzipien  
  Die folgende Tabelle beschreibt die Sicherheitsprinzipien, die für temporäre Tabellen gelten:  
   
-|Prinzip|Beschreibung|  
+|Prinzip|und Beschreibung|  
 |---------------|-----------------|  
 |Das Aktivieren bzw. Deaktivieren der Systemversionsverwaltung erfordert die höchsten Berechtigungen für betroffene Objekte|Das Aktivieren und Deaktivieren von SYSTEM_VERSIONING erfordert die CONTROL-Berechtigung sowohl für die aktuelle Tabelle als auch für die Verlaufstabelle|  
 |Verlaufsdaten können nicht direkt geändert werden|Wenn SYSTEM_VERSIONING ON ist, können die Benutzer Verlaufsdaten nicht ändern, unabhängig davon, über welche tatsächlichen Berechtigungen sie für die aktuelle Tabelle oder die Verlaufstabelle verfügen. Das umfasst sowohl Daten- als auch Schemaänderungen|  
@@ -71,7 +71,7 @@ ms.locfileid: "52526445"
 ## <a name="security-of-select-statement"></a>Sicherheit der SELECT-Anweisung  
  **SELECT** -Berechtigung ist unverändert für **SELECT** -Anweisungen, die sich nicht auf die Verlaufstabelle auswirken. Für **SELECT** -Anweisungen, die auf die Verlaufstabelle wirken, ist die **SELECT** -Berechtigung sowohl für die aktuelle als auch für die Verlaufstabelle erforderlich.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 091c4034071394d03c1548290c5d6eea08d50b8e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653281"
 ---
 # <a name="data-collection"></a>Datensammlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51662339"
   
 ## <a name="things-you-can-do"></a>Was Sie tun können  
   
-|Beschreibung|Thema|  
+|und Beschreibung|Thema|  
 |----------------------|-----------|  
 |Verwalten von unterschiedlichen Aspekten der Datensammlung, wie z.B. das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer Sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Data Warehouse.|[Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Verwenden von Berichten, um Informationen zum Überwachen der Systemkapazität und zur Behandlung von Problemen mit der Systemleistung abzurufen.|[Berichte der Systemdaten-Sammlungssätze](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  

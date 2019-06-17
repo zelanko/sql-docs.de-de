@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: dad897e09518fa181916676e4a2b4c8a3c14face
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093758"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Spaltenauswahl (Dialogfeld) (Visual Database Tools)
@@ -27,7 +27,7 @@ Mit diesem Dialogfeld können Sie die benutzerdefinierte Sicht für Tabellen im 
   
 Dieses Dialogfeld wird angezeigt, wenn Sie mit der rechten Maustaste auf eine Tabelle klicken und anschließend im Kontextmenü die Option **Benutzerdefinierte Sicht ändern** auswählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Verfügbare Spalten**  
 Führt alle in der ausgewählten Datenbanktabelle vorhandenen Spalten auf. Die hier aufgeführten Spalten sind von den Eigenschaften der Datenbanktabelle und dem Datenbanktyp abhängig. Markieren Sie die gewünschte Spalte, und verschieben Sie diese mithilfe der Pfeilschaltflächen in das Feld **Ausgewählte Spalten** .  
   

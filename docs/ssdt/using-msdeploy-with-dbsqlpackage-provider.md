@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101967"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
@@ -45,23 +45,23 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="ms-deploy-verbs"></a>MS-Deploy-Verben  
 Sie verwenden den Switch **-verb** in der MS Deploy-Befehlszeile, um MS Deploy-Verben anzugeben. Der **dbSqlPackage**-Anbieter unterstützt die folgenden **MSDeploy**-Verben:  
   
-|Verb|Beschreibung|  
+|Verb|und Beschreibung|  
 |--------|---------------|  
-|dump|Stellt Informationen über eine in einer DACPAC-Datei enthaltene Quelldatenbank bereit, z. B. Namen, Versionsnummer und Beschreibung. Geben Sie die Quelldatenbank im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_DACPAC-Dateipfad_**"**|  
-|sync|Gibt die dbSqlPackage-Aktionen im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="Eingabe" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="Eingabe" *[,DbSqlPackage-destination-parameters]*<br /><br />Weitere Informationen finden Sie in den folgenden Abschnitten zu den gültigen Quell- und Zielparametern für das sync-Verb.|  
+|dump|Stellt Informationen über eine in einer DACPAC-Datei enthaltene Quelldatenbank bereit, z. B. Namen, Versionsnummer und Beschreibung. Geben Sie die Quelldatenbank im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _DACPAC-Dateipfad_ **"**|  
+|sync|Gibt die dbSqlPackage-Aktionen im folgenden Format in der Befehlszeile an:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="Eingabe" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="Eingabe" *[,DbSqlPackage-destination-parameters]*<br /><br />Weitere Informationen finden Sie in den folgenden Abschnitten zu den gültigen Quell- und Zielparametern für das sync-Verb.|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage-Quelle  
 Der **dbSqlPackage**-Anbieter akzeptiert eine Eingabe, die entweder einer gültigen SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. einem Pfad zu einer DACPAC-Datei auf dem Datenträger entspricht.  Die Syntax zum Angeben der Eingabequelle für den Anbieter lautet wie folgt:  
   
-|Eingabe|Default|Beschreibung|  
+|Eingabe|Default|und Beschreibung|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/V**|*input* ist eine gültige SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. ein Pfad zu einer DACPAC-Datei auf dem Datenträger.<br /><br />**HINWEIS:** Die einzigen Verbindungszeichenfolgen-Eigenschaften, die bei der Verwendung einer Verbindungszeichenfolge als Eingabequelle unterstützt werden, sind *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* und *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=** {*input*}|**N/V**|*input* ist eine gültige SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. ein Pfad zu einer DACPAC-Datei auf dem Datenträger.<br /><br />**HINWEIS:** Die einzigen Verbindungszeichenfolgen-Eigenschaften, die bei der Verwendung einer Verbindungszeichenfolge als Eingabequelle unterstützt werden, sind *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* und *ConnectionTimeout*.|  
   
 Wenn die Eingabequelle eine Verbindungszeichenfolge zu einer SQL Server- oder Azure SQL-Livedatenbank ist, extrahiert **dbSqlPackage** eine Datenbankmomentaufnahme in Form einer DACPAC-Datei aus einer SQL Server- oder SQL Azure-Livedatenbank.  
   
 Die **Source**-Parameter sind Folgende:  
   
-|Parameter|Default|Beschreibung|  
+|Parameter|Default|und Beschreibung|  
 |-------------|-----------|---------------|  
 |**Profil**:{ *string*}|–|Gibt den Dateipfad zu einem DAC-Veröffentlichungsprofil an. Im Profil ist eine Auflistung von Eigenschaften und Variablen definiert, die beim Generieren der resultierenden DACPAC-Datei verwendet werden. Das Veröffentlichungsprofil wird an das Ziel übergeben und beim Ausführen von einer der Aktionen **Publish**, **Script** oder **DeployReport** verwendet.|  
 |**DacApplicationName**={ *string* }|Datenbankname|Definiert den in den DACPAC-Metadaten zu speichernden Anwendungsnamen. Die Standardzeichenfolge entspricht dem Datenbanknamen.|  
@@ -78,13 +78,13 @@ Die **Source**-Parameter sind Folgende:
 ## <a name="dbsqlpackage-destination"></a>DbSqlPackage-Ziel  
 Der **dbSqlPackage**-Anbieter akzeptiert eine gültige SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. einen Pfad zu einer DACPAC-Datei auf dem Datenträger als Zieleingabe.  Die Syntax zum Angeben des Ziels für den Anbieter lautet wie folgt:  
   
-|Eingabe|Default|Beschreibung|  
+|Eingabe|Default|und Beschreibung|  
 |---------|-----------|---------------|  
 |-**dest:dbSqlPackage**={*input*}|–|*input* ist eine gültige SQL Server- oder SQL Azure-Verbindungszeichenfolge bzw. ein vollständiger oder teilweiser Pfad zu einer DACPAC-Datei auf dem Datenträger. Wenn *input* einem Dateipfad entspricht, können keine weiteren Parameter angegeben werden.|  
   
 Die folgenden **Destination**-Parameter sind für alle **dbSqlPackage**-Vorgänge verfügbar:  
   
-|Eigenschaft|Default|Beschreibung|  
+|Eigenschaft|Default|und Beschreibung|  
 |------------|-----------|---------------|  
 |**Action={Publish&#124;DeployReport&#124;Script}**|–|Ein optionaler Parameter, der die für **Destination** auszuführende Aktion angibt.|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|Gibt an, ob blockierende Assemblys durch die **SqlClr**-Veröffentlichung im Rahmen des Bereitstellungsplans gelöscht werden. Wenn die verweisende Assembly gelöscht werden muss, werden Assemblyupdates durch blockierende oder verweisende Assemblys standardmäßig blockiert.|  
@@ -123,7 +123,7 @@ Die folgenden **Destination**-Parameter sind für alle **dbSqlPackage**-Vorgäng
 |**IgnoreFileSize= {True &#124; False}**|**Wahr**|Gibt an, ob Unterschiede in der Dateigröße beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden.|  
 |**IgnoreFillFactor= {True &#124; False}**|**Wahr**|Gibt an, ob Unterschiede in den Füllfaktoren beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden.|  
   
-|Eigenschaft|Default|Beschreibung|  
+|Eigenschaft|Default|und Beschreibung|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**Wahr**|Gibt an, ob Unterschiede im Pfad zu Volltext-Indexdateien beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden.|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|Gibt an, ob Unterschiede im Ausgangswert für eine Identitätsspalte beim Veröffentlichen in einer Datenbank ignoriert oder aktualisiert werden.|  
@@ -172,7 +172,7 @@ Die folgenden **Destination**-Parameter sind für alle **dbSqlPackage**-Vorgäng
   
 Die folgenden **Destination**-Parameter sind nur für die Vorgänge **DeployReport** und **Script** verfügbar:  
   
-|Parameter|Default|Beschreibung|  
+|Parameter|Default|und Beschreibung|  
 |-------------|-----------|---------------|  
 |**OutputPath**={ *string* }|–|Ein optionaler Parameter, der **dbSqlPackage** anweist, die XML-Ausgabedatei von DeployReport oder die SQL-Ausgabedatei von Script an einem Ort auf dem Datenträger zu erstellen, der durch *string* vorgegeben wird. Durch diese Aktion werden Skripts überschrieben, die sich derzeit an einem von string angegebenen Ort befinden.|  
   

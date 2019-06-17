@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664584"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +188,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
  Die CREATE XML SCHEMA COLLECTION-Anweisung speichert nur die Schemakomponenten, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretieren kann. Nicht alles im XML-Schema wird in der Datenbank gespeichert. Wenn Sie den ursprünglichen Zustand der XML-Schemaauflistung wiederherstellen möchten, sollten Sie daher Ihre XML-Schemas in einer Datenbankspalte oder in einem anderen Ordner auf dem Computer speichern.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Angeben mehrerer Schemanamespaces in einer Schemaauflistung  
- Sie können mehrere XML-Schemas angeben, wenn Sie eine XML-Schemaauflistung erstellen. Zum Beispiel:  
+ Sie können mehrere XML-Schemas angeben, wenn Sie eine XML-Schemaauflistung erstellen. Beispiel:  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  

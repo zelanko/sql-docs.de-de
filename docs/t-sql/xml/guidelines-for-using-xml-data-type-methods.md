@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928975"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Richtlinien zum Verwenden von Methoden des xml-Datentyps
 
@@ -38,7 +38,7 @@ SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
 
-Eine mögliche Lösung besteht darin, zuerst das Ergebnis der **value()**-Methode einer Variablen vom **xml**-Typ zuzuweisen und dann diese Variable in der Abfrage anzugeben.
+Eine mögliche Lösung besteht darin, zuerst das Ergebnis der **value()** -Methode einer Variablen vom **xml**-Typ zuzuweisen und dann diese Variable in der Abfrage anzugeben.
 
 ```sql
 DECLARE @x xml
@@ -61,7 +61,7 @@ Msg errorNumber, Level levelNumber, State stateNumber:
 XQuery [database.table.method]: description_of_error
 ```
 
-Zum Beispiel:
+Beispiel:
 
 ```
 Msg 2396, Level 16, State 1:
@@ -70,11 +70,11 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>Singleton-Überprüfungen
 
-Positionsschritte, Funktionsparameter und Operatoren, die Singleton-Elemente benötigen, geben einen Fehler zurück, wenn der Compiler nicht ermitteln kann, ob zur Laufzeit ein Singleton-Element sichergestellt ist. Dieses Problem tritt häufig bei nicht typisierten Daten auf. So erfordert z. B. die Suche eines Attributs ein übergeordnetes Singleton-Element. Dabei ist eine Ordinalzahl ausreichend, die einen einzelnen übergeordneten Knoten auswählt. Die Auswertung einer **node()**-**-value()**-Kombination zum Extrahieren von Attributwerten erfordert möglicherweise keine Angabe der Ordinalzahl. Dies ist im nächsten Beispiel dargestellt.
+Positionsschritte, Funktionsparameter und Operatoren, die Singleton-Elemente benötigen, geben einen Fehler zurück, wenn der Compiler nicht ermitteln kann, ob zur Laufzeit ein Singleton-Element sichergestellt ist. Dieses Problem tritt häufig bei nicht typisierten Daten auf. So erfordert z. B. die Suche eines Attributs ein übergeordnetes Singleton-Element. Dabei ist eine Ordinalzahl ausreichend, die einen einzelnen übergeordneten Knoten auswählt. Die Auswertung einer **node()** - **-value()** -Kombination zum Extrahieren von Attributwerten erfordert möglicherweise keine Angabe der Ordinalzahl. Dies ist im nächsten Beispiel dargestellt.
 
 ### <a name="example-known-singleton"></a>Beispiel: Bekanntes Singleton
 
-In diesem Beispiel generiert die **nodes()**-Methode eine separate Zeile für jedes `<book>`-Element. Die **value()**-Methode, die in einem `<book>`-Knoten ausgewertet wird, extrahiert den Wert von `@genre` und stellt, da es sich um ein Attribut handelt, ein Singleton-Element dar.
+In diesem Beispiel generiert die **nodes()** -Methode eine separate Zeile für jedes `<book>`-Element. Die **value()** -Methode, die in einem `<book>`-Knoten ausgewertet wird, extrahiert den Wert von `@genre` und stellt, da es sich um ein Attribut handelt, ein Singleton-Element dar.
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName

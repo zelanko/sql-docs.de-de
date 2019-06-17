@@ -44,11 +44,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201698"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL)
 
@@ -64,12 +64,12 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+# <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Syntax
 
@@ -144,13 +144,13 @@ REMOVE FILE *logical_file_name* Entfernt die logische Dateibeschreibung aus eine
 
 MODIFY FILE Gibt die Datei an, die geändert werden soll. Es kann jeweils nur eine \<filespec>-Eigenschaft geändert werden. NAME muss zur Identifikation der Datei, die geändert werden soll, stets in \<filespec> angegeben sein. Wenn SIZE angegeben ist, muss die neue Größe die aktuelle Dateigröße übersteigen.
 
-Geben Sie in der `NAME`-Klausel den logischen Namen der Datei an, die umbenannt werden soll, und geben Sie in der `NEWNAME`-Klausel den neuen logischen Namen für die Datei an, um den logischen Namen einer Daten- oder Protokolldatei zu ändern. Zum Beispiel:
+Geben Sie in der `NAME`-Klausel den logischen Namen der Datei an, die umbenannt werden soll, und geben Sie in der `NEWNAME`-Klausel den neuen logischen Namen für die Datei an, um den logischen Namen einer Daten- oder Protokolldatei zu ändern. Beispiel:
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-Geben Sie den aktuellen logischen Dateinamen in der `NAME`-Klausel an, und geben Sie den neuen Pfad und den Betriebssystem-Dateinamen in der `FILENAME`-Klausel an, um eine Datendatei oder Protokolldatei an einen neuen Speicherort zu verschieben. Zum Beispiel:
+Geben Sie den aktuellen logischen Dateinamen in der `NAME`-Klausel an, und geben Sie den neuen Pfad und den Betriebssystem-Dateinamen in der `FILENAME`-Klausel an, um eine Datendatei oder Protokolldatei an einen neuen Speicherort zu verschieben. Beispiel:
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -179,7 +179,7 @@ NEWNAME *new_logical_file_name* Gibt einen neuen logischen Namen für die Datei 
 
 *new_logical_file_name* Der Name, der den vorhandenen logischen Dateinamen ersetzen soll. Der Name muss in der Datenbank eindeutig sein und den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Der Name kann eine Zeichen- oder Unicodekonstante, ein regulärer Bezeichner oder ein Begrenzungsbezeichner sein.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**} Gibt einen Betriebssystem-Dateinamen (physischer Dateiname) an.
+FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** } Gibt einen Betriebssystem-Dateinamen (physischer Dateiname) an.
 
 ' *os_file_name* ' Bei einer Standarddateigruppe (ROWS) ist dies der Pfad und der Dateiname, die vom Betriebssystem beim Erstellen der Datei verwendet werden. Die Datei muss sich auf dem Server befinden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Der angegebene Pfad muss vorhanden sein, bevor die ALTER DATABASE-Anweisung ausgeführt wird.
 
@@ -279,7 +279,7 @@ REMOVE FILEGROUP *filegroup_name* Entfernt eine Dateigruppe aus der Datenbank. D
 > [!NOTE]
 > Wenn vom FILESTREAM-Garbage Collector nicht alle Dateien aus einem FILESTREAM-Container entfernt wurden, wird beim Ausführen von `ALTER DATABASE REMOVE FILE` zum Entfernen eines FILESTREAM-Containers ein Fehler zurückgegeben. Weitere Informationen finden Sie unter [Entfernen eines FILESTREAM-Containers](#removing-a-filestream-container) weiter unten in diesem Thema.
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Ändert die Dateigruppe durch Festlegen des Status auf READ_ONLY oder READ_WRITE, Festlegen der Dateigruppe als Standarddateigruppe für die Datenbank oder Ändern des Dateigruppennamens.
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Ändert die Dateigruppe durch Festlegen des Status auf READ_ONLY oder READ_WRITE, Festlegen der Dateigruppe als Standarddateigruppe für die Datenbank oder Ändern des Dateigruppennamens.
 
 \<filegroup_updatability_option> Legt die read-only- oder read/write-Eigenschaft für die Dateigruppe fest.
 
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL-Datenbank<br />verwaltete Instanz \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\* SQL-Datenbank<br />verwaltete Instanz \*_ **<br />&nbsp;|
 
 &nbsp;
 
@@ -812,7 +812,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 
 REMOVE FILEGROUP *filegroup_name* Entfernt eine Dateigruppe aus der Datenbank. Die Dateigruppe kann nur entfernt werden, wenn sie leer ist. Entfernen Sie zuerst alle Dateien aus der Dateigruppe. Weitere Informationen finden Sie im Abschnitt „REMOVE FILE *logical_file_name*“ in diesem Artikel.
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Ändert die Dateigruppe durch Festlegen des Status auf READ_ONLY oder READ_WRITE, Festlegen der Dateigruppe als Standarddateigruppe für die Datenbank oder Ändern des Dateigruppennamens.
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Ändert die Dateigruppe durch Festlegen des Status auf READ_ONLY oder READ_WRITE, Festlegen der Dateigruppe als Standarddateigruppe für die Datenbank oder Ändern des Dateigruppennamens.
 
 \<filegroup_updatability_option> Legt die read-only- oder read/write-Eigenschaft für die Dateigruppe fest.
 

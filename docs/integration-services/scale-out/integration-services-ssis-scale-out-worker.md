@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: bb649888638ec4e194d64679b73fc69806664fc3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718458"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Worker für horizontales Hochskalieren von Integration Services (SSIS)
@@ -29,10 +29,10 @@ Der Scale Out-Worker führt den Scale Out-Workerdienst aus, um Ausführungsaufga
 ## <a name="configure-the-scale-out-worker-service"></a>Konfigurieren des Scale Out-Workerdiensts
 Sie können den Scale Out-Workerdienst mithilfe der `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`-Datei konfigurieren. Der Dienst muss nach dem Aktualisieren der Konfigurationsdatei neu gestartet werden.
 
-|Konfiguration  |Beschreibung  |Standardwert|
+|Konfiguration  |und Beschreibung  |Standardwert|
 |---------|---------|---------|
 |DisplayName|Der Anzeigename des Workers für horizontales Hochskalieren. **Wird NICHT in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 verwendet.**|Computername|
-|Beschreibung|Die Beschreibung des Workers für horizontales Hochskalieren. **Wird NICHT in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 verwendet.**|Empty|
+|und Beschreibung|Die Beschreibung des Workers für horizontales Hochskalieren. **Wird NICHT in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 verwendet.**|Empty|
 |MasterEndpoint|Der Endpunkt zum Herstellen einer Verbindung mit Master für horizontales Hochskalieren|Der Endpunkt, der während der Installation des Workers für horizontales Hochskalieren festgelegt wurde|
 |MasterHttpsCertThumbprint|Der Fingerabdruck des Client-SSL-Zertifikats, mit dem Master für horizontales Hochskalieren authentifiziert wird|Der Fingerabdruck des Clientzertifikats, das bei der Installation von Worker für horizontales Hochskalieren angegeben wurde|
 |WorkerHttpsCertThumbprint|Der Fingerabdruck des Zertifikats, das für den Master für horizontales Hochskalieren verwendet wird, um den Worker für horizontales Hochskalieren zu authentifizieren|Der Fingerabdruck eines Zertifikats, das bei der Installation von Worker für horizontales Hochskalieren automatisch erstellt und installiert wurde|

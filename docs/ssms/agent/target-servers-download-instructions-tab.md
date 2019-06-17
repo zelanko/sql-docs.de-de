@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 15341e02e6e34f82470d3cf687884023f36adacd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089404"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Zielserver (Registerkarte Anweisungen zum Herunterladen)
@@ -29,7 +29,7 @@ ms.locfileid: "65089404"
 
 Mithilfe dieser Seite können Sie die Downloadanweisungen für einen oder mehrere Zielserver anzeigen und aktualisieren.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Zielserver**  
 Wählt den Server aus, für den Anweisungen angezeigt oder geändert werden sollen.  
   

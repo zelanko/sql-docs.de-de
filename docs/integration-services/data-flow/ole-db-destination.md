@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc2b3a1f77c7d0f2f00c1a08f27c27887cc4b73f
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65802346"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
@@ -96,7 +96,7 @@ ms.locfileid: "65802346"
   
 |Option für schnelles Laden|und Beschreibung|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die Option hat die folgende Form: **KILOBYTES_PER_BATCH** = \<positive ganze Zahl**>**.|  
+|KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die Option hat die folgende Form: **KILOBYTES_PER_BATCH** = \<positive ganze Zahl **>** .|  
 |FIRE_TRIGGERS|Gibt an, ob in der Einfügetabelle Trigger ausgelöst werden. Die Option hat die Form **FIRE_TRIGGERS**. Das Vorhandensein der Option gibt an, dass Trigger ausgelöst werden.|  
 |ORDER|Gibt die Sortierung der Eingabedaten an. Die Option hat die folgende Form: ORDER \<Spaltenname> ASC&#124;DESC. Es kann eine beliebige Anzahl an Spalten aufgelistet werden. Optional kann die Sortierreihenfolge eingeschlossen werden. Wird die Sortierreihenfolge ausgelassen, geht der Einfügevorgang davon aus, dass die Daten nicht sortiert sind.<br /><br /> Hinweis: Die Leistung wird verbessert, wenn die Eingabedaten entsprechend dem gruppierten Index der Tabelle mit der ORDER-Option sortiert werden.|  
   
@@ -281,7 +281,7 @@ ms.locfileid: "65802346"
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
- **Column**  
+ **Spalte**  
  Wird nicht verwendet.  
   
  **Fehler**  

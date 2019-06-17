@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a7f1437346baa2c54801af591a5f23a208d42c2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723447"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lektion 1-1: Erstellen von Arbeitsordnern und Umgebungsvariablen
@@ -37,7 +37,7 @@ Wenn Sie planen, die Pakete auf einem anderen Computer bereitzustellen, müssen 
   
 1.  Klicken Sie mit der rechten Maustaste auf das Menü Start, und klicken Sie dann auf Suchen.  
   
-2.  Klicken Sie auf **Lokaler Datenträger (C:)**.  
+2.  Klicken Sie auf **Lokaler Datenträger (C:)** .  
   
 3.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie anschließend auf **Ordner**.  
   

@@ -10,11 +10,11 @@ ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
 ms.openlocfilehash: 35243a3f983f711968f8012eaa23eefdacb11a31
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63003409"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server: Verwaltungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +22,7 @@ Es gibt eine große Auswahl an branchenführenden Tools zur Verwaltung Ihrer SQL
 
 ## <a name="our-management-partners"></a>Unsere Verwaltungspartner
 
-| Partner | Beschreibung | Links |
+| Partner | und Beschreibung | Links |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL Compliance Manager ist eine umfassende Überwachungslösung, die anzeigt, wer, wann, was und wie an SQL Servern gearbeitet hat, und somit die Einhaltung von rechtlichen Anforderungen und Anforderungen, die die Datensicherheit betreffen, sicherstellt.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 

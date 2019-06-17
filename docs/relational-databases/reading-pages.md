@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 0384f081f3c660bb54d75b72992b991e822ec630
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678703"
 ---
 # <a name="reading-pages"></a>Lesen von Seiten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,6 @@ Nehmen Sie z. B. an, Sie verfügen über eine Tabelle mit 500.000 Seiten. UserA 
 
 Ohne die erweiterten Scanfunktionen müssten sich die einzelnen Benutzer den Pufferspeicher teilen, was Konflikte in der Speicherverteilung verursachen würde. Dieselben Seiten würden dann einmal für jeden Benutzer gelesen werden, anstatt einmal gelesen und dann für mehrere Benutzer freigegeben zu werden. Dies würde die Leistung beeinträchtigen und Ressourcen unnötig beanspruchen.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Handbuch zur Architektur von Seiten und Blöcken](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Schreiben von Seiten](../relational-databases/writing-pages.md)

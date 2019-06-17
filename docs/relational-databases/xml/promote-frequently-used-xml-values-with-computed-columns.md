@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939044"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Erstellen Sie Trigger für die XML-Spalte, um die Eigenschaftentabellen zu verwalten. Führen Sie innerhalb der Trigger einen der folgenden Schritte aus:  
   
-    -   Verwenden Sie **xml** -Datentypmethoden, z.B. **nodes()** und **value()**, um Zeilen der Eigenschaftentabellen einzufügen oder zu löschen.  
+    -   Verwenden Sie **xml** -Datentypmethoden, z.B. **nodes()** und **value()** , um Zeilen der Eigenschaftentabellen einzufügen oder zu löschen.  
   
     -   Erstellen Sie Streaming-Tabellenwertfunktionen in CLR (Common Language Runtime), um Zeilen der Eigenschaftentabellen einzufügen oder zu löschen.  
   

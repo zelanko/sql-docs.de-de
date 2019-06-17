@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a915eeb07757476929310ada65f99b3408ba373
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715960"
 ---
 # <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value 
@@ -39,12 +39,12 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  Der Name für einen vorhandenen benutzerdefinierten Protokolliergrad.  
   
- Das Argument *level_name* ist vom Typ **nvarchar(128)**.  
+ Das Argument *level_name* ist vom Typ **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
  Der Name der zu ändernden Eigenschaft. Gültige Werte sind **PROFILE** und **EVENTS**.  
   
- Der *property_name* ist **nvarchar(128)**.  
+ Der *property_name* ist **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
  Der neue Wert für die angegebene Eigenschaft des angegebenen benutzerdefinierten Protokolliergrads.  

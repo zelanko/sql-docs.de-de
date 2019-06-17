@@ -14,17 +14,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5b90219751a912dc336924ed2c704e97b2b8c223
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104332"
 ---
 # <a name="select-objects-object-explorer"></a>Objekte auswählen (Objekt-Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Verwenden Sie das Dialogfeld **Objekte auswählen** , um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Wählen Sie Objekttypen aus**  
 Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu diesen Typen gehören auch Prinzipale und sicherungsfähige Typen auf der [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ebene und der Datenbankebene. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
   

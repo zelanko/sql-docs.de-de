@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ded5a5e97d34b09a655d37557b75d5a90a7717
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726463"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Ziel-Editor für SAP BW (Seite Verbindungs-Manager)
@@ -40,7 +40,7 @@ ms.locfileid: "65726463"
   
 3.  Klicken Sie im **Ziel-Editor für SAP BW**auf **Verbindungs-Manager** , um die Seite **Verbindungs-Manager** des Editors zu öffnen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Ziels erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -66,7 +66,7 @@ ms.locfileid: "65726463"
  **Typ**  
  Geben Sie das Einzelzeichen ein, durch das der InfoSource-Typ identifiziert wird. In der folgenden Tabelle sind die zulässigen Einzelzeichenwerte aufgeführt.  
   
-|Wert|Beschreibung|  
+|Wert|und Beschreibung|  
 |-----------|-----------------|  
 |**D**|Transaktionsdaten|  
 |**M**|Masterdaten|  

@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eaf2546a9829a1a9154b9e4bb866a4360a5d08a4
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821127"
 ---
 # <a name="color-coding-in-query-editors"></a>Farbcodierung im Abfrage-Editor
@@ -41,7 +41,7 @@ ms.locfileid: "65821127"
 |Dunkelgrau|Operatoren|  
   
 ## <a name="status-bar"></a>Statusleiste  
- Sie können registrierte Server oder [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Server im Objekt-Explorer konfigurieren, damit sie in der Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors andere Farben aufweisen. Damit können Sie identifizieren, zu welchem Server die einzelnen Editor-Fenster gehören, wenn viele Fenster gleichzeitig geöffnet sind. Weitere Informationen zum Festlegen der Statusleistenfarben finden Sie unter [Statusleiste &amp;#40;Abfrage-Editor der Datenbank-Engine&amp;#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md).  
+ Sie können registrierte Server oder [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Server im Objekt-Explorer konfigurieren, damit sie in der Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors andere Farben aufweisen. Damit können Sie identifizieren, zu welchem Server die einzelnen Editor-Fenster gehören, wenn viele Fenster gleichzeitig geöffnet sind. Weitere Informationen zum Festlegen der Statusleistenfarben finden Sie unter [Statusleiste &#40;Abfrage-Editor der Datenbank-Engine&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md).  
   
  In manchen Editor-Typen wird die Statusleiste nicht angezeigt, oder es werden keine verschiedenen Farben unterstützt.  
   

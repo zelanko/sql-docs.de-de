@@ -18,10 +18,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713320"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -54,7 +54,7 @@ Ein Datenbankobjekt, das definiert, wie die Zeilen einer Tabelle oder eines Inde
 Ein Datenbankobjekt, das die Partitionen einer Partitionsfunktion Dateigruppen zuordnet. Der wichtigste Grund dafür, dass Partitionen in separaten Dateigruppen platziert werden, besteht darin, sicherzustellen, dass Sie Sicherungsvorgänge unabhängig für Partitionen ausführen können. Dies liegt daran, dass Sie Sicherungen für einzelne Dateigruppen ausführen können.  
   
 ### <a name="partitioning-column"></a>Partitionierungsspalte  
-Die Spalte einer Tabelle oder eines Indexes, die von einer Partitionsfunktion zum Partitionieren der Tabelle oder des Indexes verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein. Alle Datentypen, die zum Verwenden als Indexspalten zulässig sind, können als Partitionsspalte verwenden werden, mit Ausnahme des Datentyps **timestamp**. Die Datentypen **ntext**-, **text**-, **image**-, **xml**-, **varchar(max)**-, **nvarchar(max)** oder **varbinary(max)** können nicht angegeben werden. Zudem können der benutzerdefinierte CLR-Typ (Common Language Runtime) von Microsoft .NET Framework und die Spalten mit dem Aliasdatentyp nicht angegeben werden.  
+Die Spalte einer Tabelle oder eines Indexes, die von einer Partitionsfunktion zum Partitionieren der Tabelle oder des Indexes verwendet wird. Berechnete Spalten, die in eine Partitionsfunktion einbezogen werden, müssen explizit als PERSISTED gekennzeichnet sein. Alle Datentypen, die zum Verwenden als Indexspalten zulässig sind, können als Partitionsspalte verwenden werden, mit Ausnahme des Datentyps **timestamp**. Die Datentypen **ntext**-, **text**-, **image**-, **xml**-, **varchar(max)** -, **nvarchar(max)** oder **varbinary(max)** können nicht angegeben werden. Zudem können der benutzerdefinierte CLR-Typ (Common Language Runtime) von Microsoft .NET Framework und die Spalten mit dem Aliasdatentyp nicht angegeben werden.  
   
 ### <a name="aligned-index"></a>Ausgerichteter Index  
 Ein Index, der auf dem gleichen Partitionsschema wie die zugehörige Tabelle aufbaut. Wenn eine Tabelle und ihre Indizes aneinander ausgerichtet sind, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schnell zwischen Partitionen wechseln und gleichzeitig die Partitionsstruktur sowohl der Tabelle als auch ihrer Indizes beibehalten. Ein Index muss nicht an derselben benannten Partitionsfunktion beteiligt sein, um an ihrer Basistabelle ausgerichtet zu sein. Allerdings müssen die Partitionsfunktionen des Indexes und der Basistabelle im Wesentlichen identisch sein, d.h.:
@@ -109,7 +109,7 @@ Nehmen Sie beispielsweise an, eine Tabelle hat 100 Millionen Zeilen und Spalten 
 
 Abfragen, die Operatoren wie TOP oder MAX/MIN für andere Spalten als die Partitionierungsspalte verwenden, erzielen aufgrund der Partitionierung möglicherweise eine geringere Leistung, da alle Partitionen ausgewertet werden müssen.  
 
-Wenn Sie häufig Abfragen ausführen, die Gleichheitsjoins zwischen mindestens zwei partitionierten Tabellen voraussetzen, sollten deren Partitionsspalten dieselben sein wie die Spalten, an denen die Tabellen verknüpft sind. Außerdem sollten die Tabellen oder deren Indizes angeordnet sein. Dies bedeutet, dass sie entweder dieselbe benannte Partitionsfunktion verwenden oder aber verschiedene Partitionsfunktionen, die sich in folgenden wesentlichen Punkten entsprechen:  
+Wenn Sie häufig Abfragen ausführen, die Gleichheitsjoins zwischen mindestens zwei partitionierten Tabellen voraussetzen, sollten deren Partitionsspalten dieselben sein wie die Spalten, an denen die Tabellen verknüpft sind. Außerdem sollten die Tabellen oder deren Indizes angeordnet sein. Dies bedeutet, dass sie entweder dieselbe benannte Partitionsfunktion verwenden oder aber verschiedene Partitionsfunktionen, die sich in folgenden wesentlichen Punkten entsprechen:
 -  Sie besitzen dieselbe Anzahl an Parametern für die Partitionierung, und die entsprechenden Parameter sind vom selben Datentyp.
 -  Sie definieren dieselbe Anzahl an Partitionen.
 -  Sie definieren dieselben Begrenzungswerte für Partitionen.

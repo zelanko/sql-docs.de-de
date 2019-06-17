@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27c6b863ac563b0814ac1d5e483f6b62e667b3e5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723854"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Verbinden mit Azure Blob Storage (SQL Server-Import/Export-Assistent)
@@ -54,7 +54,7 @@ Geben Sie den Schlüssel für das Azure-Speicherkonto ein.
  **Lokales Entwicklerkonto verwenden**  
  Geben Sie an, ob der Speicheremulator auf dem lokalen Computer verwendet werden soll.  
   
- **Blobcontainername**  
+ **Blob-Containername**  
  Treffen Sie eine Auswahl aus der Liste der im angegebenen Speicherkonto verfügbaren Speichercontainer.  
   
  **Blob-Dateiformat**  

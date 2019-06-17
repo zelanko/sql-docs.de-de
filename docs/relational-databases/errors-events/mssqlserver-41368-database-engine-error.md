@@ -14,11 +14,11 @@ ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
 ms.openlocfilehash: 861e35fcb9c201057e7595316dc90b5f7cc33903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62632537"
 ---
 # <a name="mssqlserver41368"></a>MSSQLSERVER_41368
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,6 @@ Wenn Sie unter Verwendung einer expliziten Transaktion, die mit BEGIN TRANSACTIO
 ## <a name="user-action"></a>Benutzeraktion  
 Verwenden Sie für den Tabellenzugriff die SNAPSHOT-Isolationsstufe, wenn Sie von einer expliziten oder impliziten READ COMMITTED-Transaktion auf eine speicheroptimierte Tabelle zugreifen. Dazu können Sie den Tabellenhinweis WITH (SNAPSHOT) verwenden (weitere Informationen finden Sie unter [Transaktionen mit In-Memory-Tabellen und Prozeduren](~/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)) oder die Datenbankoption MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON festlegen (weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

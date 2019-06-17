@@ -13,10 +13,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776013"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
@@ -40,7 +40,7 @@ Diese bietet allgemeine Informationen, um sich mit dem Kerberos-Protokoll vertra
 1. gesicherte Ressourcen (HDFS, MR2, YARN, Auftragsverlauf, usw.)
 1. das Schlüsselverteilungscenter (in Active Directory als Domänencontroller bezeichnet)
 
-Jede von Hadoop gesicherte Ressource wird im **Schlüsselverteilungscenter (Key Distribution Center, KDC)** mit einem eindeutigen **Dienstprinzipalnamen (Service Principal Name, SPN)** registriert, wenn Kerberos für den Hadoop-Cluster konfiguriert wird. Ziel ist es, dass der Client ein temporäres Benutzerticket, ein sogenanntes **Ticket Granting Ticket (TGT)**, erhält, um ein weiteres temporäres Ticket, ein sogenanntes **Dienstticket (Service Ticket, ST)** vom KDC mit dem gegebenen SPN anfordern zu können.  
+Jede von Hadoop gesicherte Ressource wird im **Schlüsselverteilungscenter (Key Distribution Center, KDC)** mit einem eindeutigen **Dienstprinzipalnamen (Service Principal Name, SPN)** registriert, wenn Kerberos für den Hadoop-Cluster konfiguriert wird. Ziel ist es, dass der Client ein temporäres Benutzerticket, ein sogenanntes **Ticket Granting Ticket (TGT)** , erhält, um ein weiteres temporäres Ticket, ein sogenanntes **Dienstticket (Service Ticket, ST)** vom KDC mit dem gegebenen SPN anfordern zu können.  
 
 Wenn in PolyBase die Authentifizierung mit einer durch Kerberos gesicherten Ressource angefordert wird, kommt es zu folgendem Handshake aus vier Zyklen:
 
@@ -98,7 +98,7 @@ Das Tool wird unabhängig von SQL Server ausgeführt. Dies bedeutet, dass es wed
 
 ## <a name="arguments"></a>Argumente
 
-| Argument | Beschreibung|
+| Argument | und Beschreibung|
 | --- | --- |
 | *Namenknotenadresse* | Die IP oder der FQDN des Namenknotens. Verweist auf das „LOCATION“-Argument Ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“.|
 | *Namenknotenport* | Der Port des Namensknotens. Verweist auf das „LOCATION“-Argument Ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“. Zum Beispiel „8020“. |

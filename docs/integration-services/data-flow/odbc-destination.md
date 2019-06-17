@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2914cdec402cee3be7ba92d74e0c8ff7db8fd41e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726634"
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
@@ -100,7 +100,7 @@ ms.locfileid: "65726634"
   
 -   Klicken Sie im **Ziel-Editor für ODBC**auf **Verbindungs-Manager**.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
   
 #### <a name="connection-manager"></a>Ziel-Editor für Dimensionsverarbeitung  
  Wählen Sie in der Liste einen vorhandenen ODBC-Verbindungs-Manager aus, oder klicken Sie auf Neu, um eine neue Verbindung zu erstellen. Sie können eine Verbindung mit jeder von ODBC unterstützten Datenbank erstellen.  
@@ -111,7 +111,7 @@ ms.locfileid: "65726634"
 #### <a name="data-access-mode"></a>Datenzugriffsmodus  
  Wählen Sie die Methode zum Laden von Daten in das Ziel aus. Die Optionen sind in der folgenden Tabelle aufgeführt:  
   
-|Option|Beschreibung|  
+|Option|und Beschreibung|  
 |------------|-----------------|  
 |Tabellenname - Batch|Wählen Sie diese Option aus, um das ODBC-Ziel im Batchmodus zu konfigurieren. Bei Auswahl dieser Option sind die folgenden Optionen verfügbar:|  
 ||**Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht aus.<br /><br /> Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (\*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.<br /><br /> **Batchgröße**: Geben Sie die Größe des Batches für das Massenladen ein. Dies ist die Anzahl von Zeilen, die als Batch geladen werden.|  
@@ -124,7 +124,7 @@ ms.locfileid: "65726634"
 ## <a name="odbc-destination-editor-mappings-page"></a>Ziel-Editor für ODBC (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für ODBC** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
   
 #### <a name="available-input-columns"></a>Verfügbare Eingabespalten  
  Die Liste der verfügbaren Eingabespalten. Ordnen Sie die Eingabespalten per Drag & Drop den verfügbaren Zielspalten zu.  
@@ -151,7 +151,7 @@ ms.locfileid: "65726634"
   
 -   Klicken Sie im **Ziel-Editor für ODBC**auf **Fehlerausgabe**.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
   
 #### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
@@ -165,7 +165,7 @@ ms.locfileid: "65726634"
 #### <a name="truncation"></a>Abschneiden  
  Wählen Sie aus, wie das ODBC-Ziel Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
-#### <a name="description"></a>Beschreibung  
+#### <a name="description"></a>und Beschreibung  
  Zeigt eine Beschreibung des Fehlers an.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Diesen Wert für ausgewählte Zellen festlegen  

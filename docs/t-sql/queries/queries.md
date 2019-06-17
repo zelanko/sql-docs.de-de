@@ -11,17 +11,18 @@ dev_langs:
 - TSQL
 ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
-ms.author: vanto"
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d5017005cba460f04bd82dcbfd721d26e5f0b7d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 97c7a7f45408fa4e6ea314bd04a0d35d127af660
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822460"
 ---
 # <a name="queries"></a>Abfragen
+
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Die Datenbearbeitungssprache (DML) ist ein Vokabular zum Abrufen und Bearbeiten von Daten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und SQL-Datenbank. Die meisten DML-Anweisungen können auch in SQL Data Warehouse und PDW verwendet werden. Weitere Informationen hierzu finden Sie in der Dokumentation zu den jeweiligen Anweisungen. Mit diesen können Sie einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank Daten hinzufügen oder diese ändern, abfragen oder entfernen.  
@@ -35,8 +36,9 @@ ms.locfileid: "57334587"
 |[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|  
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)|[UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)|  
 |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|[WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)|  
-|[READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)||  
-  
+|[READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)| &nbsp; |  
+| &nbsp; | &nbsp; |
+
  In der folgenden Tabelle sind die Klauseln aufgeführt, die in mehreren DML-Anweisungen oder -Klauseln verwendet werden.  
   
 |Klausel|Kann in folgenden Anweisungen verwendet werden|  
@@ -50,5 +52,4 @@ ms.locfileid: "57334587"
 |[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
 |[WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)|DELETE, SELECT, UPDATE, MATCH|  
 |[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
-  
-  
+| &nbsp; | &nbsp; |

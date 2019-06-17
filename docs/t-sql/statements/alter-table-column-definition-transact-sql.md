@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025209"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name* kann zwischen 1 und 128 Zeichen aufweisen. Bei neuen Spalten, die mit einem timestamp-Datentyp erstellt wurden, ist *column_name* nicht erforderlich. Wenn *column_name* nicht für eine Spalte vom Datentyp **timestamp** angegeben ist, wird der Name **timestamp** verwendet.  
   
- [ _type_schema_name_**.** ] *type_name*  
+ [ _type_schema_name_ **.** ] *type_name*  
  Der Datentyp für die hinzugefügte Spalte und das Schema, zu dem er gehört.  
   
  *type_name* kann Folgendes sein:  
@@ -163,7 +163,7 @@ Wenn dieser verwendet wird, hat dies keine Auswirkung wenn die verknüpfte Spalt
 IDENTITY  
  Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird ein eindeutiger, inkrementeller Wert für die Spalte bereitgestellt. Wenn Sie vorhandenen Tabellen Bezeichnerspalten hinzufügen, werden die ID-Nummern mit den Ausgangswerten und den inkrementellen Werten den vorhandenen Zeilen der Tabelle hinzugefügt. Die Reihenfolge, in der die Zeilen aktualisiert werden, ist nicht sichergestellt. Auch für alle neu hinzugefügten Zeilen werden ID-Nummern generiert.  
   
- Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** oder **numeric(p,0)**. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Das DEFAULT-Schlüsselwort und gebundene Standardwerte können bei einer Identitätsspalte nicht verwendet werden. Entweder müssen sowohl Ausgangswert als auch Inkrement oder keines von beiden angegeben werden. Wenn keine Angabe gemacht wird, ist der Standardwert (1,1).  
+ Identitätsspalten werden in der Regel in Verbindung mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** oder **numeric(p,0)** . Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Das DEFAULT-Schlüsselwort und gebundene Standardwerte können bei einer Identitätsspalte nicht verwendet werden. Entweder müssen sowohl Ausgangswert als auch Inkrement oder keines von beiden angegeben werden. Wenn keine Angabe gemacht wird, ist der Standardwert (1,1).  
   
 > [!NOTE]  
 >  Es ist nicht möglich, einer vorhandenen Tabellenspalte die IDENTITY-Eigenschaft hinzuzufügen.  

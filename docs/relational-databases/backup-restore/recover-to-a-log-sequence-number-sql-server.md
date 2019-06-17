@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540295"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025311"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Wiederherstellen zu einer Protokollfolgenummer (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52540295"
   
  Jeder Datensatz im Transaktionsprotokoll wird eindeutig durch eine Protokollfolgenummer (Log Sequence Number, LSN) identifiziert. LSNs halten sich an eine bestimmte Reihenfolge. Wenn LSN2 größer als LSN1 ist, erfolgte die durch den Protokolldatensatz von LSN2 beschriebene Änderung nach der durch den Protokolldatensatz von LSN1 beschriebenen Änderung.  
   
- Die LSN eines Protokolldatensatzes, bei dem ein wichtiges Ereignis aufgetreten ist, kann zum Erstellen richtiger Wiederherstellungssequenzen hilfreich sein. Da LSNs eine bestimmte Reihenfolge aufweisen, kann verglichen werden, ob sie gleich oder ungleich sind (d.h. **\<**, **>**, **=**, **\<=**, **>=**). Solche Vergleiche sind beim Erstellen von Wiederherstellungssequenzen hilfreich.  
+ Die LSN eines Protokolldatensatzes, bei dem ein wichtiges Ereignis aufgetreten ist, kann zum Erstellen richtiger Wiederherstellungssequenzen hilfreich sein. Da LSNs eine bestimmte Reihenfolge aufweisen, kann verglichen werden, ob sie gleich oder ungleich sind (d.h. **\<** , **>** , **=** , **\<=** , **>=** ). Solche Vergleiche sind beim Erstellen von Wiederherstellungssequenzen hilfreich.  
   
 > [!NOTE]  
 >  LSNs sind Werte vom Datentyp **numeric**(25,0). Arithmetische Operationen (z. B. Addition oder Subtraktion) sind ohne Bedeutung und dürfen für LSNs nicht verwendet.  
@@ -65,11 +65,11 @@ ms.locfileid: "52540295"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Transact-SQL-Syntax für die Wiederherstellung bis zu einer LSN  
  Mithilfe einer [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisung können Sie an oder direkt vor der LSN stoppen, wie im Folgenden gezeigt:  
   
--   Verwenden Sie die WITH STOPATMARK **='** lsn:_<LSN-Nummer>_**'**-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPATMARK **='** lsn: _<LSN-Nummer>_ **'** -Klausel, wobei lsn: *\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
   
      Von STOPATMARK wird ein Rollforward zur LSN ausgeführt und dieser Protokolldatensatz im Rollforward eingeschlossen.  
   
--   Verwenden Sie die WITH STOPBEFOREMARK **= '** lsn:_<LSN-Nummer>_**'**-Klausel, wobei lsn:*\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz direkt vor dem Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
+-   Verwenden Sie die WITH STOPBEFOREMARK **= '** lsn: _<LSN-Nummer>_ **'** -Klausel, wobei lsn: *\<LSN-Nummer>* eine Zeichenfolge darstellt, die angibt, dass der Protokolldatensatz direkt vor dem Protokolldatensatz mit der angegebenen LSN der Wiederherstellungspunkt ist.  
   
      Von STOPBEFOREMARK wird ein Rollforward bis zur LSN ausgeführt und dieser Protokolldatensatz aus dem Rollforward ausgeschlossen.  
   
@@ -98,7 +98,7 @@ GO
   
 -   [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

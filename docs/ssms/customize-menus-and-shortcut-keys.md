@@ -22,15 +22,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 931ecdb787e5dc3aeb62dd81d19357048987e82e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102910"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Anpassen von Menüs und Tastenkombinationen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+*\<einzelner Buchstabe>* drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
+Mit einer Zugriffstaste können Sie einen Menübefehl oder eine Schaltfläche auswählen, indem Sie ALT+ *\<einzelner Buchstabe>* drücken. Drücken Sie z. B. zum Öffnen des Menüs **Bearbeiten** die Tasten ALT+B. Mit dem Dialogfeld **Anpassen** können Sie Symbolleistenschaltflächen, Menüs und Menübefehle neu anordnen und ändern. Sie erhalten Anweisungen zum Ändern der Einstellungen mithilfe der Maus oder ausschließlich mithilfe der Tastatur.  
   
 Zugriffstasten für gespeicherte Prozeduren mit der STRG-TASTE können über die Seite **Tastatur** des Dialogfelds **Extras**/**Optionen** erstellt werden.  
   

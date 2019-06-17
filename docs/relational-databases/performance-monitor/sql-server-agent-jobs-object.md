@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: e3bb24d2a8f18077f69358ad26d2363c2ad743d4
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380961"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671639"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server-Agent, Aufträge-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53380961"
   
  Die nachfolgende Tabelle enthält die **SQLAgent:Jobs** -Leistungsindikatoren.  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |**Aktive Aufträge**|Dieser Leistungsindikator erfasst die Anzahl der gerade ausgeführten Aufträge.|  
 |**Fehlerhafte Aufträge**|Dieser Leistungsindikator erfasst die Anzahl der Aufträge, die mit einem Fehler beendet wurden.|  
@@ -38,7 +38,7 @@ ms.locfileid: "53380961"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Instanz|Beschreibung|  
+|Instanz|und Beschreibung|  
 |--------------|-----------------|  
 |**_Total**|Informationen zu allen Aufträgen.|  
 |**Warnungen**|Informationen zu durch Warnungen gestarteten Aufträgen.|  
