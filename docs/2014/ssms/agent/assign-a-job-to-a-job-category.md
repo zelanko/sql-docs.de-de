@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473201"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Zuweisen eines Auftrags zu einer Auftragskategorie
@@ -37,7 +37,7 @@ ms.locfileid: "62473201"
   
   
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>So weisen Sie einen Auftrag einer Auftragskategorie zu  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62473201"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, den Sie bearbeiten möchten, und wählen Sie anschließend **Eigenschaften**aus.  
   
-5.  Wählen Sie im Dialogfeld **Auftragseigenschaften –**_Auftragsname_ in der Liste **Kategorie** die Auftragskategorie aus, die Sie dem Auftrag zuweisen möchten.  
+5.  Wählen Sie im Dialogfeld **Auftragseigenschaften –** _Auftragsname_ in der Liste **Kategorie** die Auftragskategorie aus, die Sie dem Auftrag zuweisen möchten.  
   
 6.  Klicken Sie auf **OK**.  
   

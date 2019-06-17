@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088629"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informationen zu den SQL Server-Lizenzbedingungen
@@ -35,7 +35,7 @@ ms.locfileid: "66088629"
   
 -   ENT – Enterprise Edition: Server und Client Zugriff auf Clientzugriffslizenz (CAL)-Lizenzierung  
   
--   ENTCORE – Enterprise Edition: Core-basierte Lizenzierung  
+-   ENTCORE – Enterprise Edition: Kernbasierte Lizenzierung  
   
 -   BI – Business Intelligence  
   

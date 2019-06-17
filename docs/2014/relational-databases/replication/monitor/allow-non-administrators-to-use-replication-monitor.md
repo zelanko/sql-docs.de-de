@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e8f03d12d3ac1695d4f6d000c8eab89a42004fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667388"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden
@@ -34,7 +34,7 @@ ms.locfileid: "62667388"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ermöglichen Sie Nichtadministratoren die Verwendung des Replikationsmonitors mit:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62667388"
 ####  <a name="Permissions"></a> Berechtigungen  
  Nicht-Administratoren mit Replikationsmonitor, ein Mitglied der **Sysadmin** festen Serverrolle muss den Benutzer an die Verteilungsdatenbank hinzufügen und weisen Sie diesem Benutzer die `replmonitor` Rolle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-allow-non-administrators-to-use-replication-monitor"></a>So lassen Sie zu, dass Nichtadministratoren den Replikationsmonitor verwenden  
   
@@ -75,12 +75,12 @@ ms.locfileid: "62667388"
   
 2.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank [Sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql), geben Sie einen Wert `replmonitor` für die **@rolename** Parameter. Wenn der Benutzer im aufgeführt ist `MemberName` im Resultset, gehört der Benutzer bereits zu dieser Rolle.  
   
-3.  Wenn der Benutzer gehört nicht zu den `replmonitor` Rolle ausführen [Sp_addrolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) auf dem Verteiler für die Verteilungsdatenbank. Geben Sie den Wert `replmonitor` für **@rolename** und den Namen des Datenbankbenutzers oder der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] hinzugefügt wird, für die Windows-Anmeldung **@membername**.  
+3.  Wenn der Benutzer gehört nicht zu den `replmonitor` Rolle ausführen [Sp_addrolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) auf dem Verteiler für die Verteilungsdatenbank. Geben Sie den Wert `replmonitor` für **@rolename** und den Namen des Datenbankbenutzers oder der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] hinzugefügt wird, für die Windows-Anmeldung **@membername** .  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>So entfernen Sie einen Benutzer aus der festen Datenbankrolle "replmonitor"  
   
-1.  Um sicherzustellen, dass der Benutzer gehört der `replmonitor` Rolle ausführen [Sp_helprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) auf dem Verteiler für die Verteilungsdatenbank, und geben Sie den Wert `replmonitor` für **@rolename**. Wenn der Benutzer unter `MemberName` im Resultset nicht aufgeführt wird, gehört der Benutzer aktuell nicht zu der Rolle.  
+1.  Um sicherzustellen, dass der Benutzer gehört der `replmonitor` Rolle ausführen [Sp_helprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) auf dem Verteiler für die Verteilungsdatenbank, und geben Sie den Wert `replmonitor` für **@rolename** . Wenn der Benutzer unter `MemberName` im Resultset nicht aufgeführt wird, gehört der Benutzer aktuell nicht zu der Rolle.  
   
-2.  Wenn der Benutzer angehört der `replmonitor` Rolle ausführen [Sp_droprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) auf dem Verteiler für die Verteilungsdatenbank. Geben Sie den Wert `replmonitor` für **@rolename** und den Namen des Datenbankbenutzers oder der Windows-Anmeldung, die entfernt wird, für die **@membername**.  
+2.  Wenn der Benutzer angehört der `replmonitor` Rolle ausführen [Sp_droprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) auf dem Verteiler für die Verteilungsdatenbank. Geben Sie den Wert `replmonitor` für **@rolename** und den Namen des Datenbankbenutzers oder der Windows-Anmeldung, die entfernt wird, für die **@membername** .  
   
   

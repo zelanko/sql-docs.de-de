@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660801"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @publication**=** ] **'**_publication_**'**  
- Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat den Standardwert **%**, womit Informationen zu allen mergeveröffentlichungen in der aktuellen Datenbank zurückgegeben.  
+ [ @publication **=** ] **'** _publication_ **'**  
+ Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat den Standardwert **%** , womit Informationen zu allen mergeveröffentlichungen in der aktuellen Datenbank zurückgegeben.  
   
  [ @found **=** ] **"***gefunden***"** Ausgabe  
  Ein Flag zur Angabe zurückgegebener Zeilen. *finden Sie*ist **Int** und ein OUTPUT-Parameter hat den Standardwert NULL. **1** gibt an, die Veröffentlichung gefunden wurde. **0** gibt an, die Veröffentlichung wurde nicht gefunden.  
   
- [ @publication_id **=**] **"***Publication_id***"** Ausgabe  
+ [ @publication_id **=** ] **"***Publication_id***"** Ausgabe  
  Die Veröffentlichung-ID. *Publication_id* ist **Uniqueidentifier** und ein OUTPUT-Parameter hat den Standardwert NULL.  
   
- [ @reserved **=**] **"***reservierte***"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservierte* ist **nvarchar(20)**, hat den Standardwert NULL.  
+ [ @reserved **=** ] **"***reservierte***"**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservierte* ist **nvarchar(20)** , hat den Standardwert NULL.  
   
- [ @publisher**=** ] **'***publisher***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  Der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL.  
   
 ## <a name="result-sets"></a>Resultsets  

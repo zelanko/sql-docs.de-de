@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067062"
 ---
 # <a name="impersonation-ssas-tabular"></a>Identitätswechsel (SSAS – tabellarisch)
@@ -65,9 +65,9 @@ ms.locfileid: "66067062"
 ##  <a name="bkmk_imp_info_options"></a> enthalten  
  Wenn Sie den Identitätswechsel konfigurieren oder Eigenschaften für eine vorhandene Datenquellenverbindung in Analysis Services bearbeiten, können Sie eine der folgenden Optionen angeben:  
   
-|Option|ImpersonationMode<sup>1</sup>|Description|  
+|Option|ImpersonationMode<sup>1</sup>|Beschreibung|  
 |------------|-----------------------------------|-----------------|  
-|**Bestimmten Windows-Benutzernamen und Kennwort** <sup>2</sup>|ImpersonateWindowsUserAccount|Diese Option gibt an, dass das Modell ein Windows-Benutzerkonto verwendet, um Daten aus der Datenquelle zu importieren oder zu verarbeiten. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format:**\<Domänenname >\\< Benutzerkontoname\>**. Beim Erstellen eines neuen Modells mit dem Tabellenimport-Assistenten ist dies die Standardoption.|  
+|**Bestimmten Windows-Benutzernamen und Kennwort** <sup>2</sup>|ImpersonateWindowsUserAccount|Diese Option gibt an, dass das Modell ein Windows-Benutzerkonto verwendet, um Daten aus der Datenquelle zu importieren oder zu verarbeiten. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format: **\<Domänenname >\\< Benutzerkontoname\>** . Beim Erstellen eines neuen Modells mit dem Tabellenimport-Assistenten ist dies die Standardoption.|  
 |**Dienstkonto**|ImpersonateServiceAccount|Diese Option gibt an, dass das Modell die Sicherheitsanmeldeinformationen verwendet, die der Analysis Services-Dienstinstanz zugeordnet sind, die das Modell verwaltet.|  
   
  <sup>1</sup>ImpersonationMode gibt den Wert für die [DataSourceImpersonationInfo-Element &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) Eigenschaft für die Datenquelle.  

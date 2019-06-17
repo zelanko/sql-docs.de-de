@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627913"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62627913"
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_tasks**.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Speicheradresse des Objekts.|  
 |**task_state**|**nvarchar(60)**|Der Status des Tasks. Die folgenden Werte sind möglich:<br /><br /> AUSSTEHEND: Warten auf einen Arbeitsthread.<br /><br /> RUNNABLE: Ausführbar, doch eines Quantums gewartet.<br /><br /> AUSGEFÜHRTE: Wird derzeit auf dem Zeitplanungsmodul ausgeführt.<br /><br /> ANGEHALTEN: Verfügt über einen Arbeitsthread, aber für ein Ereignis wartet.<br /><br /> FERTIG: Abgeschlossen.<br /><br /> SPINLOOP: Hängen in einem SpinLock festgehalten.|  

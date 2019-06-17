@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054516"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor für den Task 'Webdienst' (Seite Eingabe)
@@ -34,7 +34,7 @@ ms.locfileid: "66054516"
  Wählen Sie für den auszuführenden Task eine Webmethode aus der Liste aus.  
   
  **WebMethodDocumentation**  
- Geben Sie eine Beschreibung der Webmethode ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, und geben Sie anschließend in das Dialogfeld **Dokumentation der Webmethode** die Beschreibung ein.  
+ Geben Sie eine Beschreibung der Webmethode ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , und geben Sie anschließend in das Dialogfeld **Dokumentation der Webmethode** die Beschreibung ein.  
   
  **Name**  
  Führt die Namen der Eingaben in die Webmethode in einer Liste auf.  

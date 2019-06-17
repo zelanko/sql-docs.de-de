@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012666"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Angeben eines Knotentests unter dem Speicherortpfad (SQLXML 4.0)
-  Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (`child`, `parent`, `attribute`, oder `self`) hat einen Hauptknotentyp. Für die `attribute` Achse, der primäre Knotentyp ist  **\<Attribut >**. Für die `parent`, `child`, und `self` Achsen, der primäre Knotentyp ist  **\<Element >**.  
+  Ein Knotentest gibt den vom Positionsschritt ausgewählten Knotentyp an. Jede Achse (`child`, `parent`, `attribute`, oder `self`) hat einen Hauptknotentyp. Für die `attribute` Achse, der primäre Knotentyp ist  **\<Attribut >** . Für die `parent`, `child`, und `self` Achsen, der primäre Knotentyp ist  **\<Element >** .  
   
 > [!NOTE]  
 >  Der Platzhalterknotentest * (z. B. `child::*`) wird nicht unterstützt.  
@@ -31,12 +31,12 @@ ms.locfileid: "66012666"
 ## <a name="node-test-example-1"></a>Knotentest: Beispiel 1  
  Der Pfad zum Speicherort `child::Customer` wählt  **\<Kunden >** untergeordneten-Elemente des Kontextknotens aus.  
   
- In diesem Beispiel ist `child` die Achse, und `Customer` ist der Knotentest. Der primäre Knotentyp für die `child` Achse ist  **\<Element >**. Aus diesem Grund ist der Knotentest TRUE, wenn die  **\<Kunden >** Knoten ist ein  **\<Element >** Knoten. Wenn der Kontextknoten keine  **\<Kunden >** untergeordneten Elemente ein leerer Satz Knoten zurückgegeben.  
+ In diesem Beispiel ist `child` die Achse, und `Customer` ist der Knotentest. Der primäre Knotentyp für die `child` Achse ist  **\<Element >** . Aus diesem Grund ist der Knotentest TRUE, wenn die  **\<Kunden >** Knoten ist ein  **\<Element >** Knoten. Wenn der Kontextknoten keine  **\<Kunden >** untergeordneten Elemente ein leerer Satz Knoten zurückgegeben.  
   
 ## <a name="node-test-example-2"></a>Knotentest: Beispiel 2  
  Der Pfad zum Speicherort `attribute::CustomerID` wählt die **"CustomerID"** Attribut des Kontextknotens aus.  
   
- Im Beispiel ist `attribute` die Achse, und `CustomerID` ist der Knotentest. Der primäre Knotentyp, der die `attribute` Achse ist  **\<Attribut >**. Aus diesem Grund ist der Knotentest TRUE, wenn **"CustomerID"** ist ein  **\<Attribut >** Knoten. Wenn der Kontextknoten keine **"CustomerID"**, wird ein leerer Satz Knoten zurückgegeben.  
+ Im Beispiel ist `attribute` die Achse, und `CustomerID` ist der Knotentest. Der primäre Knotentyp, der die `attribute` Achse ist  **\<Attribut >** . Aus diesem Grund ist der Knotentest TRUE, wenn **"CustomerID"** ist ein  **\<Attribut >** Knoten. Wenn der Kontextknoten keine **"CustomerID"** , wird ein leerer Satz Knoten zurückgegeben.  
   
 > [!NOTE]  
 >  In dieser Implementierung von XPath, wenn ein speicherortschritt ein  **\<Element >** oder  **\<Attribut >** Typ, der nicht im Schema deklariert ist, wird ein Fehler generiert. Dies unterscheidet sich von der Implementierung von XPath in MSXML, bei der ein leerer Knotensatz zurückgegeben wird.  

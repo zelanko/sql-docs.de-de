@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62638741"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
@@ -215,7 +215,7 @@ where name = 'lock_mode'
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
-   [Engine für erweiterte Ereignisse von SQL Server](sql-server-extended-events-engine.md)   
+  [Engine für erweiterte Ereignisse von SQL Server](sql-server-extended-events-engine.md)   
  [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
   
   

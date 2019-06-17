@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4b6aabb1f44c2a25704b7079074a5600c4d52d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833128"
 ---
 # <a name="back-up-database-task"></a>Datenbank sichern (Task)
@@ -35,9 +35,9 @@ ms.locfileid: "62833128"
   
 |Wiederherstellungsmodell|Datenbank|Datenbank - differenziell|Transaktionsprotokoll|Datei oder differenzielle Datei|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Einfach|Erforderlich|Optional|Nicht unterstützt|Nicht unterstützt|  
-|Vollständig|Erforderlich|Optional|Erforderlich|Optional|  
-|Massenprotokolliert|Erforderlich|Optional|Erforderlich|Optional|  
+|Einfach|Required|Optional|Nicht unterstützt|Nicht unterstützt|  
+|Vollständig|Required|Optional|Required|Optional|  
+|Massenprotokolliert|Required|Optional|Required|Optional|  
   
  Der Task Datenbank sichern kapselt eine BACKUP-Anweisung von Transact-SQL. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   

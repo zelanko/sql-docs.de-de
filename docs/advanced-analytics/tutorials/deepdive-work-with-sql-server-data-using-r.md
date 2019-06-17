@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 2ed5d6e7ef3b0d6e8ac5ebaa3533c6bebce5e856
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641098"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Erstellen Sie eine Datenbank und Berechtigungen (SQL Server und die RevoScaleR-Lernprogramm)
@@ -102,11 +102,11 @@ Dieser Abschnitt enthält einige häufig auftretende Probleme, denen Sie möglic
   
 - **Mein Tabellenname wurde mit dem Präfix DataReader versehen – warum?**
   
-    Wenn Sie angeben, das Standardschema für diesen Benutzer als **"db_datareader"**, alle Tabellen und andere neue Objekte, die von diesem Benutzer erstellte haben das Präfix der *Schema* Name. Ein Schema ist wie ein Ordner, den Sie einer Datenbank hinzufügen können, um Objekte zu organisieren. Das Schema definiert außerdem die Berechtigungen eines Benutzers in der Datenbank.
+    Wenn Sie angeben, das Standardschema für diesen Benutzer als **"db_datareader"** , alle Tabellen und andere neue Objekte, die von diesem Benutzer erstellte haben das Präfix der *Schema* Name. Ein Schema ist wie ein Ordner, den Sie einer Datenbank hinzufügen können, um Objekte zu organisieren. Das Schema definiert außerdem die Berechtigungen eines Benutzers in der Datenbank.
   
     Wenn das Schema mit einem bestimmten Benutzernamen verknüpft ist, wird der Benutzer die _schemabesitzer_. Wenn Sie ein Objekt erstellen, müssen Sie immer es immer in Ihrem eigenen Schema erstellen, außer Sie geben ausdrücklich an, dass es in einem anderen Schema erstellt werden soll.
   
-    Beispielsweise wird bei der Erstellung einer Tabelle mit dem Namen **TestData**, und Ihr Standardschema **"db_datareader"**, die Tabelle wird erstellt, mit dem Namen `<database_name>.db_datareader.TestData`.
+    Beispielsweise wird bei der Erstellung einer Tabelle mit dem Namen **TestData**, und Ihr Standardschema **"db_datareader"** , die Tabelle wird erstellt, mit dem Namen `<database_name>.db_datareader.TestData`.
   
     Aus diesem Grund kann eine Datenbank mehrere Tabellen mit dem gleichen Namen enthalten, solange die Tabellen zu unterschiedlichen Schemas gehören.
    

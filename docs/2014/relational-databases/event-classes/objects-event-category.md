@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62661951"
 ---
 # <a name="objects-event-category"></a>Objekte (Ereigniskategorie)
@@ -28,7 +28,7 @@ ms.locfileid: "62661951"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Auto Stats-Ereignisklasse](auto-stats-event-class.md)|Gibt an, dass eine automatische Aktualisierung der Index- und Spaltenstatistiken aufgetreten ist.|  
 |[Object:Altered-Ereignisklasse](object-altered-event-class.md)|Gibt an, dass ein Objekt geändert wurde, z. B. durch die ALTER DATABASE-Anweisung oder die ALTER TABLE-Anweisung.|  

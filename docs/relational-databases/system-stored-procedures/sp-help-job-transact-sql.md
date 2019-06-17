@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660784"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -60,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  Entweder an einen bestimmten Auftrag können *Job_id* oder *Job_name* muss angegeben werden.  Lassen Sie beide *Job_id* und *Job_name* zum Zurückgeben von Informationen zu allen Aufträgen.
   
-`[ @job_aspect = ] 'job_aspect'` Das Auftragsattribut, angezeigt werden soll. *Job_aspect* ist **varchar(9)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @job_aspect = ] 'job_aspect'` Das Auftragsattribut, angezeigt werden soll. *Job_aspect* ist **varchar(9)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -70,11 +70,11 @@ sp_help_job { [ @job_id = ] job_id
 |**SCHRITTE**|Auftragsschrittinformationen|  
 |**ZIELE**|Zielinformationen|  
   
-`[ @job_type = ] 'job_type'` Der Typ der Aufträge in den Bericht eingeschlossen werden sollen. *Der Standardwert ist* ist **varchar(12)**, hat den Standardwert NULL. *Der Standardwert ist* kann **lokalen** oder **mit mehreren Servern**.  
+`[ @job_type = ] 'job_type'` Der Typ der Aufträge in den Bericht eingeschlossen werden sollen. *Der Standardwert ist* ist **varchar(12)** , hat den Standardwert NULL. *Der Standardwert ist* kann **lokalen** oder **mit mehreren Servern**.  
   
 `[ @owner_login_name = ] 'login_name'` Der Anmeldename des Besitzers des Auftrags. *Login_name* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @subsystem = ] 'subsystem'` Der Name des Subsystems. *Subsystem* ist **nvarchar(40)**, hat den Standardwert NULL.  
+`[ @subsystem = ] 'subsystem'` Der Name des Subsystems. *Subsystem* ist **nvarchar(40)** , hat den Standardwert NULL.  
   
 `[ @category_name = ] 'category'` Der Name der Kategorie. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
   
@@ -92,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Unterbrochen|  
 |**7**|Abschlussaktionen werden ausgeführt|  
   
-`[ @date_comparator = ] 'date_comparison'` Der Vergleichsoperator, um Vergleiche von *Date_created* und *Date_modified*. *Date_comparison* ist **char(1)**, und kann =, \<, oder >.  
+`[ @date_comparator = ] 'date_comparison'` Der Vergleichsoperator, um Vergleiche von *Date_created* und *Date_modified*. *Date_comparison* ist **char(1)** , und kann =, \<, oder >.  
   
-`[ @date_created = ] date_created` Das Datum, an der Auftrag erstellt wurde. *Date_created*ist **"DateTime"**, hat den Standardwert NULL.  
+`[ @date_created = ] date_created` Das Datum, an der Auftrag erstellt wurde. *Date_created*ist **"DateTime"** , hat den Standardwert NULL.  
   
-`[ @date_last_modified = ] date_modified` Das Datum, an der letzten des Auftrags Änderung. *DATE_MODIFIED* ist **"DateTime"**, hat den Standardwert NULL.  
+`[ @date_last_modified = ] date_modified` Das Datum, an der letzten des Auftrags Änderung. *DATE_MODIFIED* ist **"DateTime"** , hat den Standardwert NULL.  
   
-`[ @description = ] 'description_pattern'` Die Beschreibung des Auftrags. *ist NULL* ist **nvarchar(512)**, hat den Standardwert NULL. *ist NULL* kann die SQL Server-Platzhalterzeichen für den Mustervergleich enthalten.  
+`[ @description = ] 'description_pattern'` Die Beschreibung des Auftrags. *ist NULL* ist **nvarchar(512)** , hat den Standardwert NULL. *ist NULL* kann die SQL Server-Platzhalterzeichen für den Mustervergleich enthalten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -145,7 +145,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Im Folgenden wird das Resultset für Auftragsschritte aufgeführt.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Eindeutiger Bezeichner (für diesen Auftrag) für den Schritt|  
 |**step_name**|**sysname**|Name des Schritts|  

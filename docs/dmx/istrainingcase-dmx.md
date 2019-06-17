@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c42ecb976884573e313c06adc4241e202e123df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62503573"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
@@ -29,7 +29,7 @@ IsTrainingCase()
 ```  
   
 ## <a name="result-type"></a>Ergebnistyp  
- Gibt **"true"** ist der Fall ein Teil des trainingsdatasets; andernfalls **"false"**.  
+ Gibt **"true"** ist der Fall ein Teil des trainingsdatasets; andernfalls **"false"** .  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie eine Miningstruktur und ein damit verknüpftes Miningmodell mit dem Data Mining-Assistenten erstellen, werden standardmäßig 30 Prozent der Fälle zur Verwendung als Testdataset zurückgehalten. Die verbleibenden Fälle in der angegebenen Datenquelle werden zum Trainieren des Modells verwendet. Wenn Sie das Miningmodell jedoch mithilfe von DMX-Anweisungen (Data Mining-Erweiterungen) erstellen, werden standardmäßig alle Daten zum Trainieren des Modells verwendet, und es wird kein Testsatz erstellt. Damit ein Testdataset erstellt werden kann, müssen Sie die Parameter der WITH HOLDOUT-Klausel festlegen.  

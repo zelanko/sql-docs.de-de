@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: c9195a6c2b9a2192e9d8fd04ce3e5d2592b1b23e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642257"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Verwenden von R-Code-Profilerstellungsfunktionen zur Verbesserung der Leistung
@@ -25,7 +25,7 @@ Neben SQL Server-Ressourcen und Tools zum Überwachen von R-Skriptausführung k�
 
 ## <a name="using-rprof"></a>Verwenden von RPROF
 
-[*Rprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) ist eine Funktion, die im Basispaket enthalten [ **"utils"**](https://www.rdocumentation.org/packages/utils/versions/3.5.1), das standardmäßig geladen wird. 
+[*Rprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) ist eine Funktion, die im Basispaket enthalten [ **"utils"** ](https://www.rdocumentation.org/packages/utils/versions/3.5.1), das standardmäßig geladen wird. 
 
 Im Allgemeinen schreibt die *rprof*-Funktion die Aufrufliste in bestimmten Intervallen in eine Datei. Anschließend können Sie die [ *SummaryRprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) Funktion, um die Ausgabedatei zu verarbeiten. Ein Vorteil von *rprof* ist, dass die Funktion Sampling durchführt und dadurch die Leistungsauslastung der Überwachung verringert wird.
 

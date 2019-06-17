@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471079"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62471079"
 |__$pre_version|**Varbinary (32)**|Version der Datenbank, aus der die konfliktverursachende Änderung stammt.|  
 |__$reason_code|**int**|Auflösungscode für den Konflikt. Kann einer der folgenden Werte sein:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Weitere Informationen finden Sie unter **__ $Reason_text**.|  
 |__$reason_text|**nvarchar (720)**|Auflösung für den Konflikt. Kann einer der folgenden Werte sein:<br /><br /> Aufgelöst (1)<br /><br /> Nicht aufgelöst (2)<br /><br /> Unbekannt (0)|  
-|__$update_bitmap|**varbinary(** *n* **)**. Größe variiert je nach Inhalt.|Bitmap, die angibt, welche Spalten im Fall eines UPDATE/UPDATE-Konflikts aktualisiert wurden.|  
+|__$update_bitmap|**varbinary(** *n* **)** . Größe variiert je nach Inhalt.|Bitmap, die angibt, welche Spalten im Fall eines UPDATE/UPDATE-Konflikts aktualisiert wurden.|  
 |__$inserted_date|**datetime**|Datum und Uhrzeit, zu der die Konfliktzeile in diese Tabelle eingefügt wurde.|  
 |__$row_id|**timestamp**|Zeilenversion, die mit der Zeile verknüpft ist, die den Konflikt verursacht hat.|  
 |__$change_id|**Binärdatei (8)**|Für eine lokale Zeile entspricht dieser Wert der __$row_id der eingehenden Zeile, die in Konflikt mit der lokalen Zeile steht. Dieser Wert ist NULL für eine eingehende Zeile.|  

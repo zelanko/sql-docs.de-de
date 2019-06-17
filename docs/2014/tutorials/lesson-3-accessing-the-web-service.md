@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653783"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Lektion 3: Zugreifen auf den Webdienst
+# <a name="lesson-3-accessing-the-web-service"></a>Lektion 3: Zugriff auf den Webdienst
   Nachdem Sie dem Projekt einen Verweis auf den Berichtsserver-Webdienst hinzugefügt haben, besteht der nächste Schritt darin, eine Instanz der Proxyklasse des Webdiensts zu erstellen. Auf die Methoden des Webdiensts kann durch Aufrufen der Methoden in der Proxyklasse zugegriffen werden. Wenn diese Methoden von Ihrer Anwendung aufgerufen werden, behandelt der von [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generierte Proxyklassencode die Kommunikation zwischen Ihrer Anwendung und dem Webdienst.  
   
  Zuerst erstellen Sie <xref:ReportService2010.ReportingService2010> - eine Instanz der Proxyklasse des Webdiensts. Dann rufen Sie die <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode des Webdiensts mithilfe der Proxyklasse auf. Sie verwenden diesen Aufruf zum Abrufen des Namens und der Beschreibung eines der Beispielsberichte, Company Sales.  

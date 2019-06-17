@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650764"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (AccessToSQL)
@@ -25,7 +25,7 @@ Hierin beschriebenen sind die Konsole die Befehlsoptionen an.
   
 In diesem Abschnitt wird der Begriff "Option" auch als "Switch" bezeichnet.  
   
-Optionen sind nicht in der Groß-/Kleinschreibung beachtet und integritätsdienststatus mit der "**-**'oder'**/**" Zeichen.  
+Optionen sind nicht in der Groß-/Kleinschreibung beachtet und integritätsdienststatus mit der " **-** 'oder' **/** " Zeichen.  
   
 Wenn Optionen angegeben werden, ist es zwingend erforderlich, dass Sie die entsprechende Optionsparameter angeben.  
   

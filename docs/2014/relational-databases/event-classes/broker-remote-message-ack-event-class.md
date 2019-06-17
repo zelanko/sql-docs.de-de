@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663911"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack (Ereignisklasse)
@@ -50,7 +50,7 @@ ms.locfileid: "62663911"
 |**ServerName**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung erfolgt.|26|Nein|  
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Ja|  
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
-|**StarvationElevation**|**int**|Die Nachricht wurde mit einer höheren Priorität als die Priorität, die konfiguriert wurde für die Konversation gesendet: 0 = False, 1 = "true".|33|Ja|  
+|**StarvationElevation**|**int**|Die Nachricht wurde mit einer höheren Priorität gesendet als die Priorität, die für die Konversation konfiguriert wurde: 0 = FALSE, 1 = TRUE.|33|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
   
   

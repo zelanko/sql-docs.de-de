@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524331"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Erste Schritte mit der Datenbank-Engine
@@ -34,7 +34,7 @@ ms.locfileid: "62524331"
  [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](lesson-1-connecting-to-the-database-engine.md)  
  In dieser Lektion erfahren Sie, wie Sie eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herstellen und anderen Personen das Herstellen einer Verbindung ermöglichen.  
   
- [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
+ [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
  In dieser Lektion erfahren Sie, wie Sie von einem zweiten Computer eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herstellen, einschließlich Aktivieren von Protokollen sowie Konfigurieren von Ports und Firewalleinstellungen.  
   
 ## <a name="requirements"></a>Anforderungen  

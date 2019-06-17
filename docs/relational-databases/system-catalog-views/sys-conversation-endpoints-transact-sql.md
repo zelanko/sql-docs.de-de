@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 493fd7d0ce579073228c467226cef7ea86b2dc26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62656583"
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "62656583"
 
   Jede Seite einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversation wird durch einen Konversationsendpunkt dargestellt. Diese Katalogsicht enthält eine Zeile pro Konversationsendpunkt in der Datenbank.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |conversation_handle|**uniqueidentifier**|Bezeichner für diesen Konversationsendpunkt. Lässt keine NULL-Werte zu.|  
 |conversation_id|**uniqueidentifier**|Bezeichner für die Konversation. Dieser Bezeichner wird von beiden Teilnehmern an der Konversation gemeinsam genutzt. In Kombination mit der is_initiator-Spalte ist dieser Bezeichner in der Datenbank eindeutig. Lässt keine NULL-Werte zu.|  

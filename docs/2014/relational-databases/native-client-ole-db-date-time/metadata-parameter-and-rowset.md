@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655626"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Metadaten für Parameter und Rowsets
@@ -38,7 +38,7 @@ ms.locfileid: "62655626"
 |Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Löschen|  
-|Uhrzeit|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Legen Sie|  
@@ -56,7 +56,7 @@ ms.locfileid: "62655626"
 ||DBTYPE_DATE|6|Wird ignoriert.|  
 |date|DBTYPE_DBDATE|6|Wird ignoriert.|  
 ||DBTYPE_DBTIME|10|Wird ignoriert.|  
-|Uhrzeit|DBTYPE_DBTIME2|10|0..7|  
+|time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Wird ignoriert.|  
 |DATETIME||16|Wird ignoriert.|  
 |datetime2 oder DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
@@ -83,7 +83,7 @@ ms.locfileid: "62655626"
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Löschen|  
-|Uhrzeit|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Legen Sie|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Löschen|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Löschen|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Legen Sie|  

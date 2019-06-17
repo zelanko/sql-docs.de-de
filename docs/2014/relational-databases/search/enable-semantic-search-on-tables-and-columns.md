@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011382"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
@@ -50,7 +50,7 @@ ms.locfileid: "66011382"
   
 -   Wenn Sie eine Sprache für eine Spalte angeben, für die das Sprachmodell nicht verfügbar ist, schlägt die Erstellung des Indexes fehl, und es wird eine Fehlermeldung zurückgegeben.  
   
-###  <a name="HowToEnableCreate"></a> So wird es gemacht: Erstellen eines semantischen Indexes, wenn kein Volltextindex vorhanden ist  
+###  <a name="HowToEnableCreate"></a> Vorgehensweise: Erstellen eines semantischen Indexes, wenn kein Volltextindex vorhanden ist  
  Wenn Sie einen neuen Volltextindex mit der **CREATE FULLTEXT INDEX** -Anweisung erstellen, können Sie die semantische Indizierung auf Spaltenebene aktivieren, indem Sie das Schlüsselwort **STATISTICAL_SEMANTICS** als Teil der Spaltendefinition angeben. Sie können die semantische Indizierung auch aktivieren, wenn Sie einen neuen Volltextindex mithilfe des Volltextindizierungs-Assistenten erstellen.  
   
  **Erstellen eines neuen semantischen Indexes mit Transact-SQL**  
@@ -115,7 +115,7 @@ GO
  **Erstellen eines neuen semantischen Indexes mithilfe von SQL Server Management Studio**  
  Führen Sie den Volltextindizierungs-Assistenten aus, und aktivieren Sie für jede Spalte, in der Sie einen semantischen Index erstellen möchten, die Option **Statistische Semantik** auf der Seite **Tabellenspalten** auswählen. Weitere Informationen, einschließlich Informationen zum Starten des Volltextindizierungs-Assistenten, finden Sie unter [Verwenden des Volltextindizierungs-Assistenten](use-the-full-text-indexing-wizard.md).  
   
-###  <a name="HowToEnableAlter"></a> So wird es gemacht: Erstellen eines semantischen Indexes, wenn ein vorhandener Volltextindex vorhanden ist  
+###  <a name="HowToEnableAlter"></a> Vorgehensweise: Erstellen eines semantischen Indexes, wenn ein vorhandener Volltextindex vorhanden ist  
  Sie können die semantische Indizierung hinzufügen, wenn Sie einen vorhandenen Volltextindex mit der **ALTER FULLTEXT INDEX** -Anweisung ändern. Sie können die semantische Indizierung auch mithilfe verschiedener Dialogfelder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]hinzufügen.  
   
  **Hinzufügen eines semantischen Indexes mit Transact-SQL**  
@@ -152,7 +152,7 @@ GO
   
 ##  <a name="dropping"></a> Löschen eines semantischen Indexes  
   
-###  <a name="drophow"></a> So wird es gemacht: Löschen eines semantischen Indexes  
+###  <a name="drophow"></a> Vorgehensweise: Löschen eines semantischen Indexes  
  Sie können die semantische Indizierung löschen, wenn Sie einen vorhandenen Volltextindex mit der **ALTER FULLTEXT INDEX** -Anweisung ändern. Sie können die semantische Indizierung auch mithilfe verschiedener Dialogfelder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]löschen.  
   
  **Löschen eines semantischen Indexes mit Transact-SQL**  
@@ -191,7 +191,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>Überprüfen, ob die semantische Suche für Datenbankobjekte aktiviert ist  
   
-###  <a name="HowToCheckEnabled"></a> So wird es gemacht: Überprüfen Sie, ob die semantische Suche für Datenbankobjekte aktiviert ist  
+###  <a name="HowToCheckEnabled"></a> Vorgehensweise: Überprüfen Sie, ob die semantische Suche für Datenbankobjekte aktiviert ist  
  **Werden semantische Suche ist für eine Datenbank aktiviert?**  
  Fragen Sie die Eigenschaft **IsFullTextEnabled** der Metadatenfunktion [DATABASEPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) ab.  
   
@@ -239,7 +239,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>Ermitteln der indizierbaren Objekte für die semantische Suche  
   
-###  <a name="HowToCheckLanguages"></a> So wird es gemacht: Überprüfen der für die semantische Suche unterstützten Sprachen  
+###  <a name="HowToCheckLanguages"></a> Vorgehensweise: Überprüfen der für die semantische Suche unterstützten Sprachen  
   
 > [!IMPORTANT]  
 >  Für die semantische Indizierung werden weniger Sprachen als für die Volltextindizierung unterstützt. Es gibt daher möglicherweise Spalten, die für die Volltextsuche, aber nicht für die semantische Suche indiziert werden können.  
@@ -266,7 +266,7 @@ GO
 |Portugiesisch (Portugal)|2070|  
 |Spanisch|3082|  
   
-###  <a name="doctypes"></a> So wird es gemacht: Ermitteln Sie, welche Dokumenttypen indiziert werden können  
+###  <a name="doctypes"></a> Vorgehensweise: Ermitteln Sie, welche Dokumenttypen indiziert werden können  
  Fragen Sie die Katalogsicht [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) ab.  
   
  Wenn der zu indizierende Dokumenttyp nicht in der Liste der unterstützten Typen aufgeführt wird, müssen Sie möglicherweise zusätzliche Filter suchen, herunterladen und installieren. Weitere Informationen finden Sie unter [Anzeigen oder Ändern von registrierten Filtern und Wörtertrennungen](view-or-change-registered-filters-and-word-breakers.md).  

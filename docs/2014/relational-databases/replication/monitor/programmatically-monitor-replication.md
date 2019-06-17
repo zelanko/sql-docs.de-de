@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667246"
 ---
 # <a name="programmatically-monitor-replication"></a>Programmgesteuertes Überwachen der Replikation
@@ -58,47 +58,47 @@ ms.locfileid: "62667246"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>So überwachen Sie Verleger, Veröffentlichungen und Abonnements auf dem Verteiler  
   
-1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Verlegern zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf nur einen Verleger zu beschränken, geben Sie **@publisher**aus.  
+1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Verlegern zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf nur einen Verleger zu beschränken, geben Sie **@publisher** aus.  
   
-2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Veröffentlichungen zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf nur einen Verleger, eine Veröffentlichung oder eine veröffentlichte Datenbank zu beschränken, geben Sie **@publisher**, **@publication**bzw. **@publisher_db**an.  
+2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Veröffentlichungen zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf nur einen Verleger, eine Veröffentlichung oder eine veröffentlichte Datenbank zu beschränken, geben Sie **@publisher** , **@publication** bzw. **@publisher_db** an.  
   
-3.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Abonnements zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf Abonnements zu beschränken, die nur zu einem Verleger, einer Veröffentlichung oder einer veröffentlichten Datenbank gehören, geben Sie **@publisher**, **@publication**bzw. **@publisher_db**an.  
+3.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Abonnements zurückgegeben, die diesen Verteiler verwenden. Um das Resultset auf Abonnements zu beschränken, die nur zu einem Verleger, einer Veröffentlichung oder einer veröffentlichten Datenbank gehören, geben Sie **@publisher** , **@publication** bzw. **@publisher_db** an.  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>So überwachen Sie Transaktionsbefehle, die darauf warten, auf dem Abonnenten angewendet zu werden  
   
-1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Befehlen zurückgegeben, die für alle Abonnements ausstehen, die diesen Verteiler verwenden. Um das Resultset auf Befehle zu beschränken, die für Abonnements ausstehen, die nur zu einem Verleger, einem Abonnenten, einer Veröffentlichung oder einer veröffentlichten Datenbank gehören, geben Sie **@publisher**, **@subscriber**, **@publication**bzw. **@publisher_db**an.  
+1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)aus. Dadurch werden Überwachungsinformationen zu allen Befehlen zurückgegeben, die für alle Abonnements ausstehen, die diesen Verteiler verwenden. Um das Resultset auf Befehle zu beschränken, die für Abonnements ausstehen, die nur zu einem Verleger, einem Abonnenten, einer Veröffentlichung oder einer veröffentlichten Datenbank gehören, geben Sie **@publisher** , **@subscriber** , **@publication** bzw. **@publisher_db** an.  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>So überwachen Sie Mergeänderungen, die darauf warten, hoch- oder heruntergeladen zu werden  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)aus. Dadurch wird ein Resultset mit Informationen zu Änderungen zurückgegeben, die darauf warten, auf Abonnenten repliziert zu werden. Um das Resultset auf Änderungen zu beschränken, die nur zu einer Veröffentlichung oder einem Artikel gehören, geben Sie **@publication** bzw. **@article**an.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)aus. Dadurch wird ein Resultset mit Informationen zu Änderungen zurückgegeben, die darauf warten, auf Abonnenten repliziert zu werden. Um das Resultset auf Änderungen zu beschränken, die nur zu einer Veröffentlichung oder einem Artikel gehören, geben Sie **@publication** bzw. **@article** an.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)aus. Dadurch wird ein Resultset mit Informationen zu Änderungen zurückgegeben, die darauf warten, auf dem Verleger repliziert zu werden. Um das Resultset auf Änderungen zu beschränken, die nur zu einer Veröffentlichung oder einem Artikel gehören, geben Sie **@publication** bzw. **@article**an.  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql)aus. Dadurch wird ein Resultset mit Informationen zu Änderungen zurückgegeben, die darauf warten, auf dem Verleger repliziert zu werden. Um das Resultset auf Änderungen zu beschränken, die nur zu einer Veröffentlichung oder einem Artikel gehören, geben Sie **@publication** bzw. **@article** an.  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>So überwachen Sie Merge-Agentsitzungen  
   
 1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)aus. Dadurch werden zu allen Merge-Agentsitzungen für alle Abonnements, die diesen Verteiler verwenden, Überwachungsinformationen, beispielsweise **Session_id**, zurückgegeben. Sie können **Session_id** auch ermitteln, indem Sie eine Abfrage der [MSmerge_sessions](/sql/relational-databases/system-tables/msmerge-sessions-transact-sql) -Systemtabelle ausführen.  
   
-2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)aus. Geben Sie einen Wert **Session_id** aus Schritt 1 für **@session_id**aus. Dadurch werden ausführliche Überwachungsinformationen zu der Sitzung angezeigt.  
+2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)aus. Geben Sie einen Wert **Session_id** aus Schritt 1 für **@session_id** aus. Dadurch werden ausführliche Überwachungsinformationen zu der Sitzung angezeigt.  
   
 3.  Wiederholen Sie Schritt 2 für jede Sitzung, die von Interesse ist.  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>So überwachen Sie Merge-Agentsitzungen für Pullabonnements auf dem Abonnenten  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)aus. Geben Sie für ein bestimmtes Abonnement **@publisher**, **@publication**und den Namen der Veröffentlichungsdatenbank für **@publisher_db**aus. Dadurch werden Überwachungsinformationen zu den letzten fünf Merge-Agentsitzungen für dieses Abonnement zurückgegeben. Beachten Sie im Resultset den Wert **Session_id** für Sitzungen, die von Interesse sind.  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql)aus. Geben Sie für ein bestimmtes Abonnement **@publisher** , **@publication** und den Namen der Veröffentlichungsdatenbank für **@publisher_db** aus. Dadurch werden Überwachungsinformationen zu den letzten fünf Merge-Agentsitzungen für dieses Abonnement zurückgegeben. Beachten Sie im Resultset den Wert **Session_id** für Sitzungen, die von Interesse sind.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)aus. Geben Sie einen Wert **Session_id** aus Schritt 1 für **@session_id**aus. Dadurch werden ausführliche Überwachungsinformationen zu der Sitzung angezeigt.  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql)aus. Geben Sie einen Wert **Session_id** aus Schritt 1 für **@session_id** aus. Dadurch werden ausführliche Überwachungsinformationen zu der Sitzung angezeigt.  
   
 3.  Wiederholen Sie Schritt 2 für jede Sitzung, die von Interesse ist.  
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>So können Sie die Schwellenwertmetriken für die Überwachung für eine Veröffentlichung anzeigen und ändern  
   
-1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)aus. Dadurch werden Überwachungsschwellenwerte zurückgegeben, die für alle Veröffentlichungen festgelegt wurden, die diesen Verteiler verwenden. Um das Resultset auf Überwachungsschwellenwerte für Veröffentlichungen festzulegen, die nur zu einem Verleger, einer veröffentlichten Datenbank oder einer Veröffentlichung gehören, geben Sie **@publisher**, **@publisher_db**bzw. **@publication**an. Beachten Sie den Wert **Metric_id** für alle Schwellenwerte, die geändert werden müssen. Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql)aus. Dadurch werden Überwachungsschwellenwerte zurückgegeben, die für alle Veröffentlichungen festgelegt wurden, die diesen Verteiler verwenden. Um das Resultset auf Überwachungsschwellenwerte für Veröffentlichungen festzulegen, die nur zu einem Verleger, einer veröffentlichten Datenbank oder einer Veröffentlichung gehören, geben Sie **@publisher** , **@publisher_db** bzw. **@publication** an. Beachten Sie den Wert **Metric_id** für alle Schwellenwerte, die geändert werden müssen. Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql)aus. Geben Sie bei Bedarf Folgendes an:  
   
-    -   Den in Schritt 1 ermittelten **Metric_id** -Wert für **@metric_id**aus.  
+    -   Den in Schritt 1 ermittelten **Metric_id** -Wert für **@metric_id** aus.  
   
-    -   Einen neuen Wert für die Schwellenwertmetrik für die Überwachung für **@value**aus.  
+    -   Einen neuen Wert für die Schwellenwertmetrik für die Überwachung für **@value** aus.  
   
     -   Einen Wert **1** für **@shouldalert** für eine Warnung, die protokolliert wird, wenn dieser Schwellenwert erreicht wird, oder einen Wert **0** , wenn keine Warnung erforderlich ist.  
   

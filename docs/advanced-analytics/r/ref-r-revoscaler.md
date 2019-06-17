@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 3745c6cd8c340ce4ad89cac84c5b6286126e3f89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641930"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (R-Bibliothek in SQL Server)
@@ -53,7 +53,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 Verwenden unterschiedliche Datentypen in einigen Fällen, SQL Server und R. Eine Liste der Zuordnungen zwischen SQL und R-Datentypen, finden Sie unter [R-an-SQL-Datentypen](r-libraries-and-data-types.md).
 
-| Funktion| Description|
+| Funktion| Beschreibung|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Erstellen Sie eine SQL Server Compute Context-Objekt, Push-Berechnungen auf einer remote-Instanz. Mehrere **RevoScaleR** Funktionen nehmen computekontext als Argument. |
 |[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Abrufen oder den aktiven computekontext festlegen. |
@@ -68,7 +68,7 @@ Verwenden unterschiedliche Datentypen in einigen Fällen, SQL Server und R. Eine
 
 Sie können DDL-Anweisungen von R ausführen, wenn Sie die erforderlichen Berechtigungen für die Instanz und Datenbank haben. Die folgenden Funktionen verwenden die ODBC-Aufrufe zum Ausführen von DDL-Anweisungen oder das Schema der Datenbank abzurufen.
 
-| Funktion| Description|
+| Funktion| Beschreibung|
 | ------- | ---------- |
 | [RxSqlServerTableExists und rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | Löschen einer [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Tabelle ab, oder Überprüfen Sie das Vorhandensein einer Datenbanktabelle oder -Objekt. |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | Führen Sie einen Befehl (Data Definition Language, Datendefinitionssprache) definiert, oder Datenbankobjekte bearbeitet. Diese Funktion kann keine Daten zurückgeben, und wird nur zum Abrufen oder Ändern der Objektschemas oder von Metadaten verwendet.|
@@ -87,7 +87,7 @@ Nachdem Sie ein Datenquellenobjekt erstellt haben, können Sie das Objekt, das L
 
 ## <a name="3-graphing-functions"></a>3-diagrammerstellung Funktionen
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |Erstellt ein Histogramm aus Daten. | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |Erstellt ein Liniendiagramm aus Daten. | 

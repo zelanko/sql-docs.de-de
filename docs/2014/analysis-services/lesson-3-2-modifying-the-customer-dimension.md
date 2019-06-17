@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078932"
 ---
 # <a name="modifying-the-customer-dimension"></a>Ändern der Customer-Dimension
@@ -105,7 +105,7 @@ ms.locfileid: "66078932"
   
 4.  In der **Namen** Eigenschaftenfeld `Full Name`.  
   
-5.  Klicken Sie in der **NameColumn** Eigenschaftenfeld am unteren Rand, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
+5.  Klicken Sie in der **NameColumn** Eigenschaftenfeld am unteren Rand, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 6.  Wählen Sie `FullName` am unteren Rand der **Quellspalte** aus, und klicken Sie dann auf **OK**.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "66078932"
   
 2.  Klicken Sie im Bereich **Attribute** auf das **City** -Attribut.  
   
-3.  Klicken Sie im Fenster **Eigenschaften** weiter unten auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+3.  Klicken Sie im Fenster **Eigenschaften** weiter unten auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 4.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **StateProvinceName** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66078932"
   
 5.  Klicken Sie auf **OK**.  
   
-6.  Um die **NameColumn** -Eigenschaft des **City** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Fensters „Eigenschaften“ und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+6.  Um die **NameColumn** -Eigenschaft des **City** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Fensters „Eigenschaften“ und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 7.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quellspalte** die Option **City**aus, und klicken Sie anschließend auf **OK**.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66078932"
   
 2.  In der **Attribute** Bereich, klicken Sie auf die `State-Province` Attribut.  
   
-3.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+3.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 4.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **EnglishCountryRegionName** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
   
@@ -205,7 +205,7 @@ ms.locfileid: "66078932"
   
 5.  Klicken Sie auf **OK**.  
   
-6.  Festlegen der **NameColumn** Eigenschaft der `State-Province` Attribut, klicken Sie auf die **NameColumn** Feld im Fenster Eigenschaften, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) Schaltfläche.  
+6.  Festlegen der **NameColumn** Eigenschaft der `State-Province` Attribut, klicken Sie auf die **NameColumn** Feld im Fenster Eigenschaften, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ) Schaltfläche.  
   
 7.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quellspalte** die Option **StateProvinceName**aus, und klicken Sie anschließend auf **OK**.  
   

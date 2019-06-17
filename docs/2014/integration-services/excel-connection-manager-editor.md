@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059270"
 ---
 # <a name="excel-connection-manager-editor"></a>Verbindungs-Manager-Editor für Excel
@@ -42,7 +42,7 @@ ms.locfileid: "66059270"
  **Excel-Version**  
  Geben Sie die Version von Microsoft Excel an, die zum Erstellen der Datei verwendet wurde.  
   
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Excel 97-2003|Die Datei wurde mithilfe von Excel 97 oder höher erstellt.|  
 |Excel 3.0|Datei wurde mithilfe von Excel 3.0 erstellt.|  

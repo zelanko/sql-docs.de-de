@@ -136,10 +136,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e4e45de57f4ea1ea88b72df7190e5ec8c3a1f768
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627328"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referenz zu logischen und physischen Showplanoperatoren
@@ -161,9 +161,9 @@ ms.locfileid: "62627328"
   
 -   **Close():** Mit der Methode **Close()** wird der physische Operator dazu angewiesen, einige Cleanupvorgänge auszuführen und sich selbst zu beenden. Ein physischer Operator empfängt nur einen **Close()** -Aufruf.  
   
- Die **GetNext()**-Methode gibt eine Datenzeile zurück, und die Anzahl der Aufrufe wird als **ActualRows** in der durch SET STATISTICS PROFILE ON oder SET STATISTICS XML ON erstellten Showplanausgabe angezeigt. Weitere Informationen zu diesen SET-Optionen finden Sie unter [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-profile-transact-sql) und [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql).  
+ Die **GetNext()** -Methode gibt eine Datenzeile zurück, und die Anzahl der Aufrufe wird als **ActualRows** in der durch SET STATISTICS PROFILE ON oder SET STATISTICS XML ON erstellten Showplanausgabe angezeigt. Weitere Informationen zu diesen SET-Optionen finden Sie unter [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-profile-transact-sql) und [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql).  
   
- Die **ActualRebinds**- und **ActualRewinds**-Zähler, die in der Showplanausgabe angezeigt werden, beziehen sich auf die Anzahl der Aufrufe der **Init()**-Methode. **ActualRebinds** entspricht 1 und **ActualRewinds** entspricht 0, es sei denn, ein Operator befindet sich innerhalb eines Schleifenjoins. Wenn sich ein Operator innerhalb eines Schleifenjoins befindet, muss die Summe der erneuten Bindungen und Zurückspulvorgänge der Anzahl der verarbeiteten Vorgänge außerhalb des Joins entsprechen. Unter 'erneuter Bindung' wird verstanden, dass sich mindestens ein korrelierter Parameter des Joins geändert hat und daher das Innere des Joins neu ausgewertet werden muss. Unter 'Zurückspulvorgang' wird verstanden, dass sich keiner der korrelierten Parameter geändert hat und das vorherige innere Resultset daher wiederverwendet werden kann.  
+ Die **ActualRebinds**- und **ActualRewinds**-Zähler, die in der Showplanausgabe angezeigt werden, beziehen sich auf die Anzahl der Aufrufe der **Init()** -Methode. **ActualRebinds** entspricht 1 und **ActualRewinds** entspricht 0, es sei denn, ein Operator befindet sich innerhalb eines Schleifenjoins. Wenn sich ein Operator innerhalb eines Schleifenjoins befindet, muss die Summe der erneuten Bindungen und Zurückspulvorgänge der Anzahl der verarbeiteten Vorgänge außerhalb des Joins entsprechen. Unter 'erneuter Bindung' wird verstanden, dass sich mindestens ein korrelierter Parameter des Joins geändert hat und daher das Innere des Joins neu ausgewertet werden muss. Unter 'Zurückspulvorgang' wird verstanden, dass sich keiner der korrelierten Parameter geändert hat und das vorherige innere Resultset daher wiederverwendet werden kann.  
   
  **ActualRebinds** und **ActualRewinds** sind in der mithilfe von SET STATISTICS XML ON erstellten XML-Showplanausgabe vorhanden. Sie werden nur aufgefüllt, für die **Nonclustered Index Spool**, `Remote Query`, **Row Count Spool**, `Sort`, **Table Spool**, und  **Funktion mit Tabellenrückgabe** Operatoren. **ActualRebinds** und **ActualRewinds** auch eingetragen werden für die `Assert` und **Filter** Operatoren bei der **StartupExpression** Attribut wird auf "true" festgelegt.  
   

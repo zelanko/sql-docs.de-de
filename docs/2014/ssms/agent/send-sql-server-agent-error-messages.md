@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666787"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
@@ -31,7 +31,7 @@ ms.locfileid: "62666787"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   [So senden Sie SQL Server-Agent-Fehlermeldungen mithilfe von SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62666787"
   
  Weitere Informationen zu den Windows-Berechtigungen, die für die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](select-an-account-for-the-sql-server-agent-service.md) und [Konfigurieren von Windows-Dienstkonten und Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-send-sql-server-agent-error-messages"></a>So senden Sie SQL Server-Agent-Fehlermeldungen  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62666787"
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
   
-3.  In der **SQL Server-Agent-Eigenschaften –**_Server_name_ Dialogfeld **Fehlerprotokoll** auf die **allgemeine** Seite, geben Sie den Benutzernamen oder Computername, die Sie senden möchten, Nachrichten in der **Net send-Empfänger** Feld.  
+3.  In der **SQL Server-Agent-Eigenschaften –** _Server_name_ Dialogfeld **Fehlerprotokoll** auf die **allgemeine** Seite, geben Sie den Benutzernamen oder Computername, die Sie senden möchten, Nachrichten in der **Net send-Empfänger** Feld.  
   
 4.  Klicken Sie auf **OK**.  
   

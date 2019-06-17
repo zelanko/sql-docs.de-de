@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62626205"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Auswählen und Konfigurieren von zu testenden Objekten (OracleToSQL)
@@ -35,19 +35,19 @@ Einrichten der Vergleichsregeln für Output-Parameter und Rückgabewerte in der 
 ### <a name="use-during-test-comparisons"></a>Verwendung während der Testvergleiche  
 Aktivieren Sie die von den ausgewählten Parameter in Vergleichsberichte für Ergebnisse.  
   
--   Auf Wunsch **"true"**, SSMA wird den Ausgabewert dieses Parameters vergleichen, nach dem Ausführen der Prozedur für Oracle mit dem entsprechenden Wert in SQL Server.
+-   Auf Wunsch **"true"** , SSMA wird den Ausgabewert dieses Parameters vergleichen, nach dem Ausführen der Prozedur für Oracle mit dem entsprechenden Wert in SQL Server.
   
--   Auf Wunsch **"false"**, der Parameter aus Ergebnisse Überprüfung ausgeschlossen werden.  
+-   Auf Wunsch **"false"** , der Parameter aus Ergebnisse Überprüfung ausgeschlossen werden.  
   
 ### <a name="use-custom-scale"></a>Verwenden Sie benutzerdefinierte Skalierung  
 Für die Parameter des numerischen Datentyp aufweisen können Sie festlegen, dass eine benutzerdefinierte Skalierung für den Vergleich.  
   
--   Auf Wunsch **"true"**, numerische Werte entsprechend aufgerundet der **vergleichen Skalierung** Wert, bevor sie verglichen werden.  
+-   Auf Wunsch **"true"** , numerische Werte entsprechend aufgerundet der **vergleichen Skalierung** Wert, bevor sie verglichen werden.  
   
--   Auf Wunsch **"false"**, exakten numerischen Vergleichs werden.  
+-   Auf Wunsch **"false"** , exakten numerischen Vergleichs werden.  
   
 ### <a name="comparing-scale"></a>Vergleichen von Skala  
-Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"**. Dies ist die Genauigkeit für einen numerischen Vergleich.  
+Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"** . Dies ist die Genauigkeit für einen numerischen Vergleich.  
   
 ### <a name="date-time-comparing"></a>Datum Uhrzeit vergleichen  
 Definiert, wie die Datum/Uhrzeit-Werte verglichen.  
@@ -65,16 +65,16 @@ Definiert, wie die Datum/Uhrzeit-Werte verglichen.
 ### <a name="ignore-strings-case"></a>Zeichenfolgen Groß-/Kleinschreibung ignorieren  
 Steuert den Vergleich die Groß-/Kleinschreibung beachtet.  
   
--   Auf Wunsch **"true"**, der Vergleich wird Groß-/Kleinschreibung sein.  
+-   Auf Wunsch **"true"** , der Vergleich wird Groß-/Kleinschreibung sein.  
   
--   Auf Wunsch **"false"**, der Vergleich wird Groß-/Kleinschreibung beachtet werden.  
+-   Auf Wunsch **"false"** , der Vergleich wird Groß-/Kleinschreibung beachtet werden.  
   
 ### <a name="ignore-trailing-spaces"></a>Nachfolgende Leerzeichen ignorieren  
 Steuert, wie nachfolgende Leerzeichen werden während des Vergleichs behandelt.  
   
--   Auf Wunsch **"true"**, die verglichenen Zeichenfolgen werden vor dem Vergleich werden rechts abgeschnitten.  
+-   Auf Wunsch **"true"** , die verglichenen Zeichenfolgen werden vor dem Vergleich werden rechts abgeschnitten.  
   
--   Auf Wunsch **"false"**, behält die verglichenen Zeichenfolgen nachstehende Leerzeichen.  
+-   Auf Wunsch **"false"** , behält die verglichenen Zeichenfolgen nachstehende Leerzeichen.  
   
 ## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Geben Sie die Eingabewerte für die Prozeduren und Funktionen (rufen Sie Werte)  
 Sie können die Werte der Eingabeparameter angeben, auf die **rufen Werte** Seite. Die **Aufruf hinzufügen** Schaltfläche wird einen neuen Aufruf mit leeren Werten hinzugefügt. Die **entfernen Aufrufe** Schaltfläche entfernt den aktuellen Aufruf.  

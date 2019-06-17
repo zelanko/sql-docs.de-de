@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471139"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tabellen von Datenschichtanwendung: sysdac_history_internal
@@ -30,7 +30,7 @@ ms.locfileid: "62471139"
 
   Enthält Informationen zu den Maßnahmen, die zur Verwaltung von Datenebenenanwendungen (DAC) ausgeführt werden. Diese Tabelle befindet sich in der **Dbo** Schema der **Msdb** Datenbank.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Bezeichner der Aktion|  
 |**sequence_id**|**int**|Identifiziert einen Schritt innerhalb einer Aktion.|  

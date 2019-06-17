@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814501"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Failover und Failovermodi (AlwaysOn-Verfügbarkeitsgruppen)
@@ -66,7 +66,7 @@ ms.locfileid: "62814501"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatisches Failover|Nein|Nein|Ja|  
 |Geplantes manuelles Failover|Nein|Ja|Ja|  
-|erzwungenes Failover|Ja|Ja|"Ja"**<sup>*</sup>**|  
+|erzwungenes Failover|Ja|Ja|"Ja" **<sup>*</sup>**|  
   
  **<sup>*</sup>**  Wenn Sie den Befehl für ein erzwungenes Failover für ein synchronisiertes sekundäres Replikat ausgeben, verhält sich das sekundäre Replikat genauso wie bei einem manuellen Failover.  
   

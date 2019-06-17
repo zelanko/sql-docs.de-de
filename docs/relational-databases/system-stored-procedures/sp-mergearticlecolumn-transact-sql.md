@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627809"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` Gibt die Spalten für die die vertikale Partition erstellt. *Spalte* ist **Sysname**, hat den Standardwert NULL. Bei den Werten NULL und `@operation = N'add'` werden dem Artikel standardmäßig alle Spalten in der Quelltabelle hinzugefügt. *Spalte* darf nicht NULL sein, wenn *Vorgang* nastaven NA hodnotu **löschen**. Führen Sie zum Ausschließen von Spalten aus einem Artikel **Sp_mergearticlecolumn** , und geben Sie *Spalte* und `@operation = N'drop'` für jede Spalte, die entfernt werden aus dem angegebenen *Artikel*.  
   
-`[ @operation = ] 'operation'` Ist der Replikationsstatus. *Vorgang* ist **nvarchar(4)**, hat den Standardwert ADD. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** wird die Spalte gelöscht.  
+`[ @operation = ] 'operation'` Ist der Replikationsstatus. *Vorgang* ist **nvarchar(4)** , hat den Standardwert ADD. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** wird die Spalte gelöscht.  
   
-`[ @schema_replication = ] 'schema_replication'` Gibt an, dass eine schemaänderung weitergegeben wird, wenn der Merge-Agent ausgeführt wird. *Schema_replication* ist **nvarchar(5)**, hat den Standardwert "false".  
+`[ @schema_replication = ] 'schema_replication'` Gibt an, dass eine schemaänderung weitergegeben wird, wenn der Merge-Agent ausgeführt wird. *Schema_replication* ist **nvarchar(5)** , hat den Standardwert "false".  
   
 > [!NOTE]  
 >  Nur **"false"** wird für unterstützt *Schema_replication*.  

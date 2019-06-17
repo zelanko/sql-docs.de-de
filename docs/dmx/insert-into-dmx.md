@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62505166"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
@@ -47,7 +47,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie keinen angeben **MININGMODELL** oder **MININGSTRUKTUR**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sucht nach den Objekttyp, der anhand des Namens, und verarbeitet das richtige Objekt. Wenn der Server eine Miningstruktur und ein Miningmodell enthält, die denselben Namen haben, wird ein Fehler zurückgegeben.  
   
- Durch die zweite Syntaxform, INSERT INTO*\<Objekt >*. COLUMN_VALUES können Sie Daten direkt in die modellspalten einfügen, ohne zu trainieren des Modells. Bei dieser Methode werden dem Modell Spaltendaten in einer übersichtlichen, geordneten Weise bereitgestellt, die sich anbietet, wenn Sie mit Datasets arbeiten, die Hierarchien oder geordnete Spalten enthalten.  
+ Durch die zweite Syntaxform, INSERT INTO *\<Objekt >* . COLUMN_VALUES können Sie Daten direkt in die modellspalten einfügen, ohne zu trainieren des Modells. Bei dieser Methode werden dem Modell Spaltendaten in einer übersichtlichen, geordneten Weise bereitgestellt, die sich anbietet, wenn Sie mit Datasets arbeiten, die Hierarchien oder geordnete Spalten enthalten.  
   
  Bei Verwendung von **INSERT INTO** mit einem Miningmodell oder eine Miningstruktur und nicht mehr die \<zugeordneten modellspalten > und \<quelldatenabfrage > Argumente, die Anweisung verhält sich wie  **ProcessDefault**, mit Bindungen, die bereits vorhanden. Wenn keine Bindungen vorhanden sind, gibt die Anweisung einen Fehler zurück. Weitere Informationen zu **ProcessDefault**, finden Sie unter [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). Das folgende Beispiel zeigt die Syntax:  
   
@@ -61,11 +61,11 @@ INSERT INTO [MINING MODEL] <model>
   
 |-Anweisung.|Status der Objekte|Ergebnis|  
 |---------------|----------------------|------------|  
-|INSERT INTO MINING MODEL*\<Modell >*|Miningstruktur wird verarbeitet.|Miningmodell wird verarbeitet.|  
+|INSERT INTO MINING MODEL *\<Modell >*|Miningstruktur wird verarbeitet.|Miningmodell wird verarbeitet.|  
 ||Miningstruktur wird nicht verarbeitet.|Miningmodell und Miningstruktur werden verarbeitet.|  
 ||Miningstruktur enthält weitere Miningmodelle.|Fehler bei der Verarbeitung. Sie müssen die Struktur und die zugeordneten Miningmodelle erneut verarbeiten.|  
-|INSERT INTO MINING STRUCTURE*\<Struktur >*|Miningstruktur wird verarbeitet oder nicht verarbeitet.|Miningstruktur und zugeordnete Miningmodelle werden verarbeitet.|  
-|INSERT INTO MINING MODEL*\<Modell >* , das eine Quellabfrage enthält<br /><br /> oder<br /><br /> INSERT INTO MINING STRUCTURE*\<Struktur >* , das eine Quellabfrage enthält|Entweder die Struktur oder das Modell enthält bereits Inhalt.|Fehler bei der Verarbeitung. Müssen Sie die Objekte löschen, bevor Sie mit diesen Vorgang ausführen [löschen &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING STRUCTURE *\<Struktur >*|Miningstruktur wird verarbeitet oder nicht verarbeitet.|Miningstruktur und zugeordnete Miningmodelle werden verarbeitet.|  
+|INSERT INTO MINING MODEL *\<Modell >* , das eine Quellabfrage enthält<br /><br /> oder<br /><br /> INSERT INTO MINING STRUCTURE *\<Struktur >* , das eine Quellabfrage enthält|Entweder die Struktur oder das Modell enthält bereits Inhalt.|Fehler bei der Verarbeitung. Müssen Sie die Objekte löschen, bevor Sie mit diesen Vorgang ausführen [löschen &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Zugeordnete Modellspalten (Mapped Model Columns)  
  Mithilfe der \<zugeordnet modellspalten >-Element können Sie die Spalten aus der Datenquelle den Spalten in Ihrem Miningmodell zuordnen. Die \<zugeordneten modellspalten >-Element weist folgende Form:  

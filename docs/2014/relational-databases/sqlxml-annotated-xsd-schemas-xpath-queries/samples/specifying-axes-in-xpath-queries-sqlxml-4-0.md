@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010714"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Angeben von Achsen in XPath-Abfragen (SQLXML 4.0)
@@ -90,7 +90,7 @@ ms.locfileid: "66010714"
 /child::Customer/child::Order  
 ```  
   
- In der Abfrage `child` ist die Achse und `Customer` und `Order` sind die Knotentests (diese Knotentests sind TRUE, wenn Customer und Order sind  **\<Element >** Knoten, da die  **\<Element >** Knoten ist der primäre Knoten für die `child` Achse). Für jeden Knoten übereinstimmende  **\<Kunden >**, die übereinstimmenden Knoten  **\<Bestellungen >** zum Ergebnis hinzugefügt werden. Nur  **\<Reihenfolge >** wird im Resultset zurückgegeben.  
+ In der Abfrage `child` ist die Achse und `Customer` und `Order` sind die Knotentests (diese Knotentests sind TRUE, wenn Customer und Order sind  **\<Element >** Knoten, da die  **\<Element >** Knoten ist der primäre Knoten für die `child` Achse). Für jeden Knoten übereinstimmende  **\<Kunden >** , die übereinstimmenden Knoten  **\<Bestellungen >** zum Ergebnis hinzugefügt werden. Nur  **\<Reihenfolge >** wird im Resultset zurückgegeben.  
   
  Die `child`-Achse ist die Standardachse. Daher kann die Abfrage wie folgt angegeben werden:  
   
@@ -159,7 +159,7 @@ ms.locfileid: "66010714"
 </ROOT>  
 ```  
   
- Wenn die XPath-Abfrage als angegeben wird `Customer/Order/OrderDetail`, von einem einzelnen Knoten Abgleich  **\<Kunden >** Abfrage navigiert zu der  **\<Reihenfolge >** Elemente. Und für den Abgleich von einzelnen Knoten  **\<Reihenfolge >**, die Abfrage fügt die Knoten  **\<OrderDetail >** auf das Ergebnis. Nur  **\<OrderDetail >** wird im Resultset zurückgegeben.  
+ Wenn die XPath-Abfrage als angegeben wird `Customer/Order/OrderDetail`, von einem einzelnen Knoten Abgleich  **\<Kunden >** Abfrage navigiert zu der  **\<Reihenfolge >** Elemente. Und für den Abgleich von einzelnen Knoten  **\<Reihenfolge >** , die Abfrage fügt die Knoten  **\<OrderDetail >** auf das Ergebnis. Nur  **\<OrderDetail >** wird im Resultset zurückgegeben.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Verwenden... Angeben der übergeordneten Achse  
  Die folgende Abfrage ruft alle der  **\<Reihenfolge >** -Elemente mit einem übergeordneten  **\<Kunden >** -Element mit einem **"CustomerID"** Attribut der Wert 1. Die Abfrage verwendet die `child` -Achse im Prädikat, um das übergeordnete Element des finden die  **\<Reihenfolge >** Element.  
@@ -181,7 +181,7 @@ ms.locfileid: "66010714"
 ```  
   
 > [!NOTE]  
->  Die XPath-Abfrage `/Order[../@CustomerID="1"]` wird ein Fehler zurückgegeben, da es kein übergeordnetes Element des ist  **\<Reihenfolge >**. Es kann jedoch auch Elementen im Zuordnungsschema mit  **\<Reihenfolge >**, XPath beginnt bei keinem dieser Elemente; daher  **\<Reihenfolge >** gilt die Typ der Element der obersten Ebene im Dokument.  
+>  Die XPath-Abfrage `/Order[../@CustomerID="1"]` wird ein Fehler zurückgegeben, da es kein übergeordnetes Element des ist  **\<Reihenfolge >** . Es kann jedoch auch Elementen im Zuordnungsschema mit  **\<Reihenfolge >** , XPath beginnt bei keinem dieser Elemente; daher  **\<Reihenfolge >** gilt die Typ der Element der obersten Ebene im Dokument.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>So testen Sie die XPath-Abfrage mit dem Zuordnungsschema  
   

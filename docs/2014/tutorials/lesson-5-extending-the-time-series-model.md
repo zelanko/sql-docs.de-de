@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822066"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lektion 5: Erweitern die Zeitreihe zu modellieren.
+# <a name="lesson-5-extending-the-time-series-model"></a>Lektion 5: Erweitern des Zeitreihenmodells
   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise können Sie einem Zeitreihenmodell neue Daten hinzufügen und die neuen Daten automatisch in das Modell einbeziehen. Es gibt zwei Möglichkeiten, einem Zeitreihen-Miningmodell neue Daten hinzuzufügen:  
   
--   Verknüpfen von Daten in einer externen Quelle mit den Trainingsdaten durch eine PREDICTION JOIN-Anweisung   
+-   Verknüpfen von Daten in einer externen Quelle mit den Trainingsdaten durch eine PREDICTION JOIN-Anweisung  
   
 -   Bereitstellen von Daten in einzelnen Slices mit einer SINGLETON-Vorhersageabfrage  
   

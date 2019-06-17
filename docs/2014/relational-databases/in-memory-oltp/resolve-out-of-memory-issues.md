@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468351"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
@@ -24,12 +24,12 @@ ms.locfileid: "62468351"
   
 |Thema|Übersicht|  
 |-----------|--------------|  
-| [Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#resolve-database-restore-failures-due-to-oom) |Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank „*\<Datenbankname>*“ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „*\<Ressourcenpoolname>*“ vorgehen.|  
+| [Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#resolve-database-restore-failures-due-to-oom) |Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank „ *\<Datenbankname>* “ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „ *\<Ressourcenpoolname>* “ vorgehen.|  
 | [Beheben von Beeinträchtigungen der Arbeitsauslastung durch wenig oder unzureichenden Arbeitsspeicher](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|Erläutert, wie Sie vorgehen, wenn die Leistung durch unzureichenden Arbeitsspeicher beeinträchtigt wird.|  
-| [Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „*\<Datenbankname>*“ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „*\<Ressourcenpoolname>*“ nicht zulässig“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|  
+| [Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „ *\<Datenbankname>* “ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „ *\<Ressourcenpoolname>* “ nicht zulässig“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung  
- Beim Wiederherstellen einer Datenbank erhalten Sie möglicherweise die Fehlermeldung angezeigt: "Fehler beim Wiederherstellungsvorgang für Datenbank '*\<DatabaseName >*'aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool'*\<Ressourcenpoolname >*". " Bevor Sie die Datenbank erfolgreich wiederherstellen können, müssen Sie das Problem von unzureichendem Arbeitsspeicher beheben, indem Sie zusätzlichen Arbeitsspeicher freigeben.  
+ Beim Wiederherstellen einer Datenbank erhalten Sie möglicherweise die Fehlermeldung angezeigt: "Fehler beim Wiederherstellungsvorgang für Datenbank ' *\<DatabaseName >* 'aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool' *\<Ressourcenpoolname >* ". " Bevor Sie die Datenbank erfolgreich wiederherstellen können, müssen Sie das Problem von unzureichendem Arbeitsspeicher beheben, indem Sie zusätzlichen Arbeitsspeicher freigeben.  
   
  Um Wiederherstellungsfehler aufgrund von OOM-Bedingungen zu beheben, erhöhen Sie den verfügbaren Arbeitsspeicher durch einige oder alle diese Maßnahmen zum vorübergehenden Erhöhen des für den Wiederherstellungsvorgang verfügbaren Arbeitsspeichers.  
   
@@ -135,7 +135,7 @@ GO
 > Finden Sie im Thema [Best Practices: Verwenden von In-Memory-OLTP in einer Umgebung mit virtuellen Computern](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) für Weitere Informationen.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist  
- Wenn Sie die Fehlermeldung "Seitenbelegungen für die Datenbank"*\<DatabaseName >*'aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool'*\<Ressourcenpoolname >*'. Finden Sie unter "<https://go.microsoft.com/fwlink/?LinkId=330673>" Weitere Informationen. " im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
+ Wenn Sie die Fehlermeldung "Seitenbelegungen für die Datenbank" *\<DatabaseName >* 'aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool' *\<Ressourcenpoolname >* '. Finden Sie unter "<https://go.microsoft.com/fwlink/?LinkId=330673>" Weitere Informationen. " im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
   
  Um dieses Problem zu beheben, müssen Sie die Ressourcenkontrolle aktivieren.  
   

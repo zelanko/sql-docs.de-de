@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8aacd6825a81ff172d8fdf79373f5b251d6e18b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653470"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
@@ -36,7 +36,7 @@ IsAncestor(Member_Expression1, Member_Expression2)
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **IsAncestor** -Funktion zurückgegeben **"true"** das erste angegebene Element ein Vorgänger des zweiten Elements angegeben ist. Die Funktion hingegen gibt **"false"**.  
+ Die **IsAncestor** -Funktion zurückgegeben **"true"** das erste angegebene Element ein Vorgänger des zweiten Elements angegeben ist. Die Funktion hingegen gibt **"false"** .  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel zurückgegeben **"true"** Wenn [Date]. [ Fiscal]. CurrentMember ist ein Vorgänger von Januar 2003:  

@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641023"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Datums-, Zeit- und Zeitstempelliterale
 Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet  
   
- **{**_-Typ_ **"** _Wert_ **'}**  
+ **{** _-Typ_ **"** _Wert_ **'}**  
   
  wo *Literal-Typ* ist einer der Werte in der folgenden Tabelle aufgeführt.  
   
@@ -31,7 +31,7 @@ Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet
 |---------------------|-------------|-----------------------|  
 |**d**|date|*yyyy*-*mm*-*dd*|  
 |**t**|Uhrzeit *|*hh*:*mm*:*ss*[1]|  
-|**ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*][1]|  
+|**ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
   
  [1] die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in einem Zeichenfolgenliteral mit einer Komponente für Sekunden Uhrzeit oder Zeitstempel Intervall ist abhängig von der Genauigkeit, wie in das Deskriptorfeld SQL_DESC_PRECISION enthalten. (Weitere Informationen finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6a7cb7e8f93489bb52c1457fbf25bf7206026914
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642755"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Geben Sie datentypzuordnungen zwischen Python und SQL Server
@@ -22,7 +22,7 @@ Python-Lösungen, die auf die Funktion für die Python-Integration in SQL Server
 
 ## <a name="python-version"></a>Python Version
 
-4.2 für SQL Server 2017 Anaconda-Distribution und Python 3.6.
+4\.2 für SQL Server 2017 Anaconda-Distribution und Python 3.6.
 
 Ein Teil der RevoScaleR-Funktionen (RxLinMod, RxLogit, RxPredict, RxDTrees, RxBTrees, vielleicht einige andere) wird unter Verwendung von Python-APIs, mit der ein neues Python-Paket bereitgestellt **Revoscalepy**. Sie können dieses Paket verwenden, arbeiten mit Daten, die mithilfe von Pandas-Datenrahmen, XDF-Dateien oder SQL Data-Abfragen.
 

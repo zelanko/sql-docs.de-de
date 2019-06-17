@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ae8636ce7f7dc25a99fde8ade52ca58c7786395
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509854"
 ---
 # <a name="feature-properties"></a>Featureeigenschaften
@@ -27,7 +27,7 @@ ms.locfileid: "62509854"
   
 ## <a name="properties"></a>Eigenschaften  
   
-|Eigenschaft|Standard|Description|  
+|Eigenschaft|Default|Description|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|Eine boolesche Eigenschaft, die anzeigt, ob CLR-gespeicherte Prozeduren aktiviert sind.|  
 |**LinkInsideInstanceEnabled**|1|Eine boolesche Eigenschaft, die anzeigt, ob innerhalb derselben Serverinstanz ein verknüpftes Objekt erstellt werden kann.|  

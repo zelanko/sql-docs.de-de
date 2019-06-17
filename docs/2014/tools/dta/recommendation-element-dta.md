@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659578"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation-Element (DTA)
@@ -39,11 +39,11 @@ ms.locfileid: "62659578"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Dies ist optional. Einmalige Verwendung pro `Table`-Element möglich.|  
+|**Vorkommen**|Optional. Einmalige Verwendung pro `Table`-Element möglich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

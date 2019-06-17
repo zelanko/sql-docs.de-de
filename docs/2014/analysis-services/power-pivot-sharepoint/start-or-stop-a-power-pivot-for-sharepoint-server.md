@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071050"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Starten oder Beenden eines PowerPivot für SharePoint-Servers
@@ -53,7 +53,7 @@ ms.locfileid: "66071050"
 ##  <a name="effects"></a> Auswirkungen beim Beenden eines PowerPivot-Servers  
  In der folgenden Tabelle werden die Auswirkungen beschrieben, die das Beenden des PowerPivot-Systemdiensts und Analysis Services-Diensts auf einem SharePoint-Server hat.  
   
-|Auswirkungen auf|Description|  
+|Auswirkungen auf|Beschreibung|  
 |---------------|-----------------|  
 |Vorhandene Abfragen|Auf einem Analysis Services-Server ausgeführte Abfragen werden sofort beendet. Der Benutzer erhält eine Fehlermeldung, dass keine Daten oder keine Datenquellenverbindung gefunden wurde.|  
 |Vorhandene Datenaktualisierungsaufträge, die gerade verarbeitet werden|Auf dem aktuellen Analysis Services-Server ausgeführte Aufträge werden sofort beendet. Die Datenaktualisierung schlägt fehl, und im Datenaktualisierungsverlauf wird ein Fehler protokolliert.<br /><br /> Sie können den Status der aktuellen Aufträge anzeigen, bevor Sie den Dienst mithilfe der Seite Auftragsstatus überprüfen in der SharePoint-Zentraladministration beenden.<br /><br /> Obwohl die derzeit verarbeiteten Aufträge ermittelt werden können, gibt es keine Möglichkeit, die Warteschlange selbst anzuzeigen, um festzustellen, ob andere Aufträge gerade gestartet werden.|  

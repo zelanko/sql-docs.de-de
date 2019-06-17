@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650887"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
@@ -29,7 +29,7 @@ ms.locfileid: "62650887"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So legen Sie Größenbeschränkungen für den Auftragsverlauf fest mit**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62650887"
 ###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Basisgröße  
   
@@ -62,6 +62,6 @@ ms.locfileid: "62650887"
   
 3.  Wählen Sie die Seite **Verlauf** aus, und klicken Sie dann auf **Agentverlauf automatisch entfernen**.  
   
-4.  Wählen Sie die entsprechende Anzahl für **Tag(e)**, **Woche(n)** oder **Monat(e)** aus.  
+4.  Wählen Sie die entsprechende Anzahl für **Tag(e)** , **Woche(n)** oder **Monat(e)** aus.  
   
   

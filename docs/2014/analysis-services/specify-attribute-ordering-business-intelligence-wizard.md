@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068541"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Attributreihenfolge angeben (Business Intelligence-Assistent)
@@ -29,7 +29,7 @@ ms.locfileid: "66068541"
  **Reihenfolgenattribut**  
  Wählen Sie das Attribut aus, nach dem die Elemente für das entsprechende **Attribut**sortiert werden sollen. Sie können dasselbe Attribut angeben.  
   
- Um ein neues Reihenfolgenattribut erstellen möchten, wählen  **\<neues Attribut >**, und klicken Sie in der **wählen Sie eine Spalte** Dialogfeld wählen die Spalte aus auf dem das neue Attribut basieren soll.  
+ Um ein neues Reihenfolgenattribut erstellen möchten, wählen  **\<neues Attribut >** , und klicken Sie in der **wählen Sie eine Spalte** Dialogfeld wählen die Spalte aus auf dem das neue Attribut basieren soll.  
   
  **Kriterien**  
  Geben Sie unter **Reihenfolgenattribut** die Kriterien an, die zum Anordnen der Elemente im entsprechenden **Attribut**verwendet werden sollen. Die folgende Tabelle enthält die verfügbaren Kriterien.  

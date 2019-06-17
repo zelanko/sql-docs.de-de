@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a685158e83569cd7d53e4b7da9edf3fa38436109
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078213"
 ---
 # <a name="defining-and-browsing-translations"></a>Definieren und Durchsuchen von Übersetzungen
@@ -44,9 +44,9 @@ ms.locfileid: "66078213"
   
 6.  In der Zeile für die **Beschriftung** -Objekt für die **Month Name** Attribut, und geben `Mes del Año` in die **Spanisch (Spanien)** übersetzungsspalte und `Mois d'Année` in der **Französisch (Frankreich)** übersetzungsspalte.  
   
-     Beachten Sie, dass beim Eingeben dieser Übersetzungen Auslassungspunkte (**...** ) angezeigt wird. Durch Klicken auf dieses Auslassungszeichen können Sie eine Spalte in der zugrunde liegenden Tabelle angeben, die Übersetzungen für jedes Mitglied der Attributhierarchie bereitstellt.  
+     Beachten Sie, dass beim Eingeben dieser Übersetzungen Auslassungspunkte ( **...** ) angezeigt wird. Durch Klicken auf dieses Auslassungszeichen können Sie eine Spalte in der zugrunde liegenden Tabelle angeben, die Übersetzungen für jedes Mitglied der Attributhierarchie bereitstellt.  
   
-7.  Klicken Sie auf die Auslassungspunkte (**...** ) für die **Spanisch (Spanien)** Übersetzung für die **Monatsnamen** Attribut.  
+7.  Klicken Sie auf die Auslassungspunkte ( **...** ) für die **Spanisch (Spanien)** Übersetzung für die **Monatsnamen** Attribut.  
   
      Das Dialogfeld **Attributdatenübersetzung** wird angezeigt.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66078213"
   
      ![Attribut Attributdatenübersetzung (Dialogfeld)](../../2014/tutorials/media/l9-translations-4.gif "Attributdatenübersetzung (Dialogfeld)")  
   
-9. Klicken Sie auf **OK**, und klicken Sie dann auf die Auslassungspunkte (**...** ) für die **Französisch (Frankreich)** Übersetzung für die **Monatsnamen** Attribut.  
+9. Klicken Sie auf **OK**, und klicken Sie dann auf die Auslassungspunkte ( **...** ) für die **Französisch (Frankreich)** Übersetzung für die **Monatsnamen** Attribut.  
   
 10. Wählen Sie in der Liste **Übersetzungsspalten** die Option **FrenchMonthName**aus, und klicken Sie anschließend auf **OK**.  
   
