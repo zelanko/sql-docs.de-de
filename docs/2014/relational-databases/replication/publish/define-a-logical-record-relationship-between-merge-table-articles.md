@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62691662"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
@@ -49,7 +49,7 @@ ms.locfileid: "62691662"
   
 -   Wenn Sie einen logischen Datensatz hinzufügen, ändern oder löschen, nachdem Abonnements für die Veröffentlichung initialisiert wurden, müssen Sie eine neue Momentaufnahme generieren und alle Abonnements nach vorgenommener Änderung erneut initialisieren. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Zum Definieren logischer Datensätze steht Ihnen das Dialogfeld **Join hinzufügen** zur Verfügung, das über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** verfügbar ist. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
   
  Logische Datensätze können nur dann im Dialogfeld **Join hinzufügen** definiert werden, wenn sie auf einen Joinfilter in einer Mergeveröffentlichung angewendet werden und die Veröffentlichung die Anforderungen für die Verwendung vorausberechneter Partitionen erfüllt. Wenn Sie logische Datensätze definieren möchten, die nicht auf Joinfilter angewendet werden, und die Konflikterkennung und -lösung auf der Ebene des logischen Datensatzes festlegen möchten, müssen Sie gespeicherte Prozeduren verwenden.  
@@ -91,7 +91,7 @@ ms.locfileid: "62691662"
   
     -   Wenn der Wert **1**ist, dann werden bereits vorausberechnete Partitionen verwendet.  
   
-    -   Ist der in Schritt 1 ermittelte Wert **0**, führen Sie [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **use_partition_groups** für **@property** und den Wert **true** für **@value**.  
+    -   Ist der in Schritt 1 ermittelte Wert **0**, führen Sie [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **use_partition_groups** für **@property** und den Wert **true** für **@value** .  
   
         > [!NOTE]  
         >  Wenn die Veröffentlichung keine vorausberechneten Partitionen unterstützt, dann können keine logischen Datensätze verwendet werden. Weitere Informationen finden Sie unter „Anforderungen für die Verwendung vorausberechneter Partitionen“ im Thema [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -100,13 +100,13 @@ ms.locfileid: "62691662"
   
 2.  Wenn die Artikel, die den logischen Datensatz umfassen, nicht vorhanden sind, führen Sie [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie eine der folgenden Konflikterkennungs- und -lösungsoptionen für den logischen Datensatz an:  
   
-    -   Damit Konflikte, die innerhalb verknüpfter Zeilen im logischen Datensatz auftreten, erkannt und gelöst werden, geben Sie den Wert **true** für **@logical_record_level_conflict_detection** und **@logical_record_level_conflict_resolution**.  
+    -   Damit Konflikte, die innerhalb verknüpfter Zeilen im logischen Datensatz auftreten, erkannt und gelöst werden, geben Sie den Wert **true** für **@logical_record_level_conflict_detection** und **@logical_record_level_conflict_resolution** .  
   
-    -   Um die standardmäßigen Zeilen- oder Spaltenebene-konflikterkennung und-Lösung zu verwenden, geben Sie den Wert `false` für **@logical_record_level_conflict_detection** und **@logical_record_level_conflict_resolution**, dies ist die Standardeinstellung.  
+    -   Um die standardmäßigen Zeilen- oder Spaltenebene-konflikterkennung und-Lösung zu verwenden, geben Sie den Wert `false` für **@logical_record_level_conflict_detection** und **@logical_record_level_conflict_resolution** , dies ist die Standardeinstellung.  
   
 3.  Wiederholen Sie Schritt 2 für jeden Artikel, der den logischen Datensatz umfasst. Sie müssen für jeden Artikel im logischen Datensatz die gleiche Konflikterkennung und Konfliktlösungsoption verwenden. Weitere Informationen finden Sie unter [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
-4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)aus. Geben Sie **@publication**an sowie den Namen des ersten an der Beziehung beteiligten Artikels für **@article**, den Namen des zweiten an der Beziehung beteiligten Artikels für **@join_articlename**, einen Namen für die Beziehung für **@filtername**, eine Klausel zur Definition der Beziehung zwischen den beiden Artikeln für **@join_filterclause**, den Jointyp für **@join_unique_key** und einen der folgenden Werte für **@filter_type**:  
+4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)aus. Geben Sie **@publication** an sowie den Namen des ersten an der Beziehung beteiligten Artikels für **@article** , den Namen des zweiten an der Beziehung beteiligten Artikels für **@join_articlename** , einen Namen für die Beziehung für **@filtername** , eine Klausel zur Definition der Beziehung zwischen den beiden Artikeln für **@join_filterclause** , den Jointyp für **@join_unique_key** und einen der folgenden Werte für **@filter_type** :  
   
     -   **2** &ndash; Definiert eine logische Datensatzbeziehung.  
   
@@ -121,15 +121,15 @@ ms.locfileid: "62691662"
   
 1.  So erkennen und lösen Sie Konflikte, die innerhalb verknüpfter Zeilen im logischen Datensatz auftreten:  
   
-    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **logical_record_level_conflict_detection** für **@property** und den Wert **true** für **@value**. Geben Sie den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription**.  
+    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **logical_record_level_conflict_detection** für **@property** und den Wert **true** für **@value** . Geben Sie den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription** .  
   
-    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **logical_record_level_conflict_resolution** für **@property** und den Wert **true** für **@value**. Geben Sie den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription**.  
+    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **logical_record_level_conflict_resolution** für **@property** und den Wert **true** für **@value** . Geben Sie den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription** .  
   
 2.  So verwenden Sie die Standard-Konflikterkennung und -lösung auf Zeilen- oder Spaltenebene:  
   
-    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **Logical_record_level_conflict_detection** für **@property** und den Wert `false` für **@value**. Geben Sie den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription**.  
+    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **Logical_record_level_conflict_detection** für **@property** und den Wert `false` für **@value** . Geben Sie den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription** .  
   
-    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **Logical_record_level_conflict_resolution** für **@property** und den Wert `false` für **@value**. Geben Sie den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription**.  
+    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **Logical_record_level_conflict_resolution** für **@property** und den Wert `false` für **@value** . Geben Sie den Wert **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription** .  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>So entfernen Sie eine logische Datensatzbeziehung  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62691662"
     > [!NOTE]  
     >  Diese Abfrage gibt die gleichen Informationen zurück wie [sp_helpmergefilter](/sql/relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql). Diese gespeicherte Systemprozedur ermittelt jedoch nur Informationen über logische Datensatzbeziehungen, die auch Joinfilter sind.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)aus. Geben Sie **@publication**an sowie den Namen eines der an der Beziehung beteiligten Artikel für **@article**und den Namen der Beziehung aus Schritt 1 für **@filtername**.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)aus. Geben Sie **@publication** an sowie den Namen eines der an der Beziehung beteiligten Artikel für **@article** und den Namen der Beziehung aus Schritt 1 für **@filtername** .  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel werden vorausberechnete Partitionen für eine vorhandene Veröffentlichung aktiviert und ein logischer Datensatz erstellt, der die zwei neuen Artikel für die Tabellen `SalesOrderHeader` und `SalesOrderDetail` umfasst.  

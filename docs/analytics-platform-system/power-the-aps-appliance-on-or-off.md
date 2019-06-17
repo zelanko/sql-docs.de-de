@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678628"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Schalten Sie das Gerät aktiviert oder deaktiviert für Analytics Platform System
@@ -39,7 +39,7 @@ Vor dem Ausschalten auf der Appliances, sollten Sie alle Aktivitäten auf dem Ge
 > [!WARNING]  
 > Alle Schritte müssen ausgeführt werden, in der exakten Reihenfolge aufgeführt, und jeder Schritt muss abschließen, bevor der nächste Schritt ausgeführt wird, sofern nicht anders angegeben. Ausführen der Schritte außerhalb der Reihenfolge oder ohne zu warten, für die einzelnen Schritte zum Abschließen kann zu Fehlern führen, wenn das Gerät zu einem späteren Zeitpunkt eingeschaltet ist.  
   
-1.  Verbinden mit dem Steuerungsknoten mit PDW (**_PDW_region_-CTL01** ), und melden Sie sich mit dem Analytics Platform System Appliance-Domänenadministratorkonto.  
+1.  Verbinden mit dem Steuerungsknoten mit PDW ( **_PDW_region_-CTL01** ), und melden Sie sich mit dem Analytics Platform System Appliance-Domänenadministratorkonto.  
   
 2.  Führen Sie `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` zum Öffnen der **Configuration Manager**.  
   

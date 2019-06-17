@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642676"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Leistung von R Services: Ergebnisse und Ressourcen
@@ -39,7 +39,7 @@ Diese Fallstudie vom SQL Server R Services-Entwicklungsteam getestet, die Auswir
 3. Verschiedene Änderungen wurden die Kopien der Tabelle, zum Testen von SQL Server-Funktionen wie z. B. Page-Komprimierung, Row-Komprimierung, Indizierung, spaltenbasierte Datenspeicher usw. angewendet.
 4. Vor und nach jeder Optimierung angewendet wurde, wurde die Leistung gemessen.
 
-| Tabellenname| Description|
+| Tabellenname| Beschreibung|
 |------|------|
 | *airline* | Aus der ursprünglichen XDF-Datei mithilfe von `rxDataStep` konvertierte Daten.|                          |
 | *airlineWithIntCol*   | *DayOfWeek* konvertiert in eine Ganzzahl anstatt in eine Zeichenfolge. Fügt auch eine *rowNum*-Spalte hinzu.|
@@ -92,10 +92,10 @@ Der erste Test verglichen, die Verwendung von Komprimierung und einer spaltenbas
 
 | Tabellenname            | Zeilen     | Reserviert.   | Daten       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
-| *airlineWithIndex*    | 10000000 | 2.978.816 KB | 2.972.160 KB | 6.128 KB    | 528 KB  | 0                   |
-| *airlineWithPageComp* | 10000000 | 625.784 KB  | 623.744 KB  | 1.352 KB    | 688 KB  | 79%                 |
-| *airlineWithRowComp*  | 10000000 | 1.262.520 KB | 1.258.880 KB | 2.552 KB    | 1.088 KB | 58%                 |
-| *airlineColumnar*     | 9999999  | 201.992 KB  | 201.624 KB  | –        | 368 KB  | 93%                 |
+| *airlineWithIndex*    | 10000000 | 2\.978.816 KB | 2\.972.160 KB | 6\.128 KB    | 528 KB  | 0                   |
+| *airlineWithPageComp* | 10000000 | 625\.784 KB  | 623\.744 KB  | 1\.352 KB    | 688 KB  | 79%                 |
+| *airlineWithRowComp*  | 10000000 | 1\.262.520 KB | 1\.258.880 KB | 2\.552 KB    | 1\.088 KB | 58%                 |
+| *airlineColumnar*     | 9999999  | 201\.992 KB  | 201\.624 KB  | –        | 368 KB  | 93%                 |
 
 **Schlussfolgerungen**
 

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683981"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` Wenn der Verteilungs-Agent ausgeführt wird, **Sp_table_validation**, gibt an, ob der Verteilungs-Agent sofort nach dem Abschluss der Überprüfung heruntergefahren werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, Replikations-Agent nicht heruntergefahren. Wenn **1**Fehler 20578 wird ausgelöst, und der Replikations-Agent das Signal zum Herunterfahren. Dieser Parameter wird ignoriert, wenn **Sp_table_validation** direkt von einem Benutzer ausgeführt wird.  
   
-`[ @table_name = ] table_name` Ist der Tabellenname der für ausgabemeldungen verwendeten Sicht. *TABLE_NAME* ist **Sysname**, hat den Standardwert **@table**.  
+`[ @table_name = ] table_name` Ist der Tabellenname der für ausgabemeldungen verwendeten Sicht. *TABLE_NAME* ist **Sysname**, hat den Standardwert **@table** .  
   
-`[ @column_list = ] 'column_list'` Ist die Liste der Spalten, die in der Prüfsummenfunktion verwendet werden soll. *Column_list* ist **nvarchar(4000)**, hat den Standardwert NULL. Aktiviert die Überprüfung von Mergeartikeln, um eine Spaltenliste anzugeben, die berechnete Spalten und Timestampspalten ausschließt.  
+`[ @column_list = ] 'column_list'` Ist die Liste der Spalten, die in der Prüfsummenfunktion verwendet werden soll. *Column_list* ist **nvarchar(4000)** , hat den Standardwert NULL. Aktiviert die Überprüfung von Mergeartikeln, um eine Spaltenliste anzugeben, die berechnete Spalten und Timestampspalten ausschließt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Wenn die Prüfsumme in der Tabelle ausführen, eine Prüfsumme überprüfen und die erwartete Prüfsumme gleich ist. **Sp_table_validation** gibt eine Meldung, dass die Tabelle die Überprüfung bestanden. Andernfalls wird eine Meldung zurückgegeben, die besagt, dass die Tabelle möglicherweise nicht mehr synchronisiert ist, und der Unterschied zwischen der erwarteten und der tatsächlichen Zeilenanzahl wird angezeigt.  
