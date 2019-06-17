@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635867"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'object_statement'` Ist der Name des Objekts in der aktuellen Datenbank oder einer Anweisung mit den Berechtigungen zum Bericht. *Object_statement* ist **nvarchar(776)**, hat den Standardwert NULL, womit alle Objekt- und Anweisungsberechtigungen Berechtigungen. Handelt es sich um ein Objekt (Tabelle, Sicht, gespeicherte Prozedur oder erweiterte gespeicherte Prozedur), muss dieses ein gültiges Objekt in der aktuellen Datenbank sein. Der Objektname kann einen besitzerqualifizierer im Format _Besitzer_**.** _Objekt_.  
+`[ @name = ] 'object_statement'` Ist der Name des Objekts in der aktuellen Datenbank oder einer Anweisung mit den Berechtigungen zum Bericht. *Object_statement* ist **nvarchar(776)** , hat den Standardwert NULL, womit alle Objekt- und Anweisungsberechtigungen Berechtigungen. Handelt es sich um ein Objekt (Tabelle, Sicht, gespeicherte Prozedur oder erweiterte gespeicherte Prozedur), muss dieses ein gültiges Objekt in der aktuellen Datenbank sein. Der Objektname kann einen besitzerqualifizierer im Format _Besitzer_ **.** _Objekt_.  
   
  Wenn *Object_statement* ist eine Anweisung, es kann eine CREATE-Anweisung sein.  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` Ist der Name des Prinzipals, dem Berechtigungen gewährt. *GRANTOR* ist **Sysname**, hat den Standardwert NULL, womit alle Informationen zu Berechtigungen, die von einem Prinzipal in der Datenbank erteilt.  
   
-`[ @permissionarea = ] 'type'` Eine Zeichenfolge, der angibt, ob Berechtigungen für Systemobjekte angezeigt (Zeichenfolge **o**), Anweisungsberechtigungen (Zeichenfolge **s**), oder beides (**os**). *Typ* ist **varchar(10)**, hat den Standardwert **os**. *Typ* kann eine beliebige Kombination von sein **o** und **s**mit oder ohne Kommas bzw. Leerzeichen zwischen **o** und **s**.  
+`[ @permissionarea = ] 'type'` Eine Zeichenfolge, der angibt, ob Berechtigungen für Systemobjekte angezeigt (Zeichenfolge **o**), Anweisungsberechtigungen (Zeichenfolge **s**), oder beides (**os**). *Typ* ist **varchar(10)** , hat den Standardwert **os**. *Typ* kann eine beliebige Kombination von sein **o** und **s**mit oder ohne Kommas bzw. Leerzeichen zwischen **o** und **s**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

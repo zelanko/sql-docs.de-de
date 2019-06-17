@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62630380"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Abonnementablauf und -deaktivierung
@@ -33,7 +33,7 @@ ms.locfileid: "62630380"
  Weitere Informationen zum Festlegen von Beibehaltungsdauern finden Sie unter [Festlegen des Ablaufdatums für Abonnements](publish/set-the-expiration-period-for-subscriptions.md), [Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](set-distribution-retention-period-for-transactional-publications.md), und [Verleger- und Verteilereigenschaften](configure-publishing-and-distribution.md).  
   
 ## <a name="transactional-replication"></a>Transaktionsreplikation  
- Die Transaktionsreplikation verwendet die maximale Beibehaltungsdauer für die Verteilung (die **@max_distretention**-Parameter von [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)) und die Beibehaltungsdauer für die Veröffentlichung (die **@retention**-Parameter von [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)):  
+ Die Transaktionsreplikation verwendet die maximale Beibehaltungsdauer für die Verteilung (die **@max_distretention** -Parameter von [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)) und die Beibehaltungsdauer für die Veröffentlichung (die **@retention** -Parameter von [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)):  
   
 -   Falls ein Abonnement nicht innerhalb der maximalen Beibehaltungsdauer für die Verteilung (standardmäßig 72 Stunden) synchronisiert wird und Änderungen in der Verteilungsdatenbank vorliegen, die noch nicht an den Abonnenten übermittelt wurden, wird das Abonnement vom Auftrag **Verteilungscleanup** , der auf dem Verteiler ausgeführt wird, als deaktiviert gekennzeichnet. Das Abonnement muss erneut initialisiert werden.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62630380"
      Wenn ein Pushabonnement abläuft, wird es vollständig entfernt. Bei Pullabonnements ist dies nicht der Fall. Sie müssen einen Cleanup der Pullabonnements auf dem Abonnenten ausführen. Weitere Informationen finden Sie unter [Delete a Pull Subscription](delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Mergereplikation  
- Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (die **@retention** und **@retention_period_unit**-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Zum Beispiel:  
+ Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (die **@retention** und **@retention_period_unit** -Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Zum Beispiel:  
   
 -   Wenn eine Veröffentlichung eine Beibehaltungsdauer von 14 Tagen aufweist, kann ein Abonnement ablaufen, wenn es nicht innerhalb von 14 Tagen synchronisiert wurde.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62630380"
   
     -   Die Replikation kann der Cleanup von Metadaten aus den Veröffentlichungs- und Abonnementdatenbanken erst ausführen, wenn das Ablaufdatum erreicht ist. Geben Sie keinen zu hohen Wert für die Beibehaltungsdauer an, da dies zu einer Beeinträchtigung der Replikationsleistung führen kann. Es wird empfohlen, eine niedrigere Einstellung zu verwenden, wenn Sie zuverlässig einschätzen können, dass alle Abonnenten innerhalb dieser Zeitspanne regelmäßig synchronisiert werden.  
   
-    -   Es ist möglich anzugeben, dass die Abonnements nie ablaufen (Wert 0 für **@retention**), aber es wird dringend empfohlen, diesen Wert nicht zu verwenden, da kein Cleanup der Metadaten durchgeführt werden darf.  
+    -   Es ist möglich anzugeben, dass die Abonnements nie ablaufen (Wert 0 für **@retention** ), aber es wird dringend empfohlen, diesen Wert nicht zu verwenden, da kein Cleanup der Metadaten durchgeführt werden darf.  
   
 -   Die Beibehaltungsdauer für alle Wiederveröffentlichungen muss auf einen Wert festgelegt werden, der gleich oder niedriger ist als die auf dem ursprünglichen Verleger festgelegte Beibehaltungsdauer. Verwenden Sie zudem dieselben Beibehaltungsdauerwerte für Veröffentlichungen für alle Verleger und ihre alternativen Synchronisierungspartner. Das Verwenden unterschiedlicher Werte kann zu mangelnder Konvergenz der Daten führen. Wenn Sie die Beibehaltungsdauer der Veröffentlichung ändern müssen, sollten Sie den Abonnenten erneut initialisieren, um sicherzustellen, dass die Daten konvergieren.  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507315"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
@@ -77,9 +77,9 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Damit eine Planhinweisliste entsprechend einen Batch zugeordnet, die aus einer Anwendung übermittelt *Batch_tex*t muss angegeben werden, im gleichen Format, Zeichen für Zeichen, wie beim Übermitteln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
- [*Schema_name*.] *Object_name* gibt den Namen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder [!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger, enthält *Statement_text*. Wenn *Schema_name* nicht angegeben ist, *Schema_name* wird das Schema des aktuellen Benutzers verwendet. Wenn NULL angegeben wird und \@Type = 'SQL', den Wert der \@Module_or_batch festgelegt ist, auf den Wert der \@Stmt. Wenn \@Type = "Vorlage **"**, \@Module_or_batch muss NULL sein.  
+ [*Schema_name*.] *Object_name* gibt den Namen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur, Skalarfunktion, aus mehreren Anweisungen bestehenden Funktion mit Tabellenrückgabe oder [!INCLUDE[tsql](../../includes/tsql-md.md)] DML-Trigger, enthält *Statement_text*. Wenn *Schema_name* nicht angegeben ist, *Schema_name* wird das Schema des aktuellen Benutzers verwendet. Wenn NULL angegeben wird und \@Type = 'SQL', den Wert der \@Module_or_batch festgelegt ist, auf den Wert der \@Stmt. Wenn \@Type = "Vorlage **"** , \@Module_or_batch muss NULL sein.  
   
- [ \@Params =] {N "*\@Parameter_name, Data_type* [,*... n* ]' | NULL}  
+ [ \@Params =] {N " *\@Parameter_name, Data_type* [, *... n* ]' | NULL}  
  Gibt an, die Definitionen aller Parameter, die in eingebetteten *Statement_text*. \@Params gilt nur wenn eine der folgenden Aussagen zutrifft:  
   
 -   \@Type = 'SQL' oder 'TEMPLATE'. Wenn 'TEMPLATE' \@Params darf nicht NULL sein.  
@@ -88,8 +88,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@Parameter_name, Data_type* muss im exakt gleichen Format angegeben werden, wie beim Übermitteln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entweder mithilfe von Sp_executesql oder durch internes übermitteln nach der Parametrisierung. Weitere Informationen finden Sie im Abschnitt mit Hinweisen. Wenn der Batch keine Parameter enthält, muss NULL angegeben werden. Die Größe des \@Params wird nur durch den verfügbaren Arbeitsspeicher des Servers beschränkt.  
   
- [\@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
- N ' Option (*Query_hint* [,*... n* ])  
+ [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
+ N ' Option (*Query_hint* [, *... n* ])  
  Gibt an, eine Verbindung mit einer Abfrage, die entspricht OPTION-Klausel \@Stmt. \@Hinweise muss syntaktisch identisch mit einer OPTION-Klausel in einer SELECT-Anweisung, und kann eine beliebige gültige Sequenz von Abfragehinweisen enthalten.  
   
  N'*XML_showplan*'  
@@ -113,15 +113,15 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  Planhinweislisten können nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Planhinweislisten sind in jeder Edition sichtbar. Sie können auch in allen Versionen eine Datenbank anfügen, die Planhinweislisten enthält. Planhinweislisten bleiben beim Wiederherstellen oder Anfügen einer Datenbank in einer aktualisierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erhalten. Nach dem Serverupgrade sollten Sie in jeder Datenbank prüfen, ob die Planhinweislisten wirklich erwünscht sind.  
   
 ## <a name="plan-guide-matching-requirements"></a>Voraussetzungen für den Planhinweislistenabgleich  
- Für Planhinweislisten, die angeben, \@Type = 'SQL' oder \@Type = 'TEMPLATE' entsprechend, dass erfolgreich eine Abfrage, die Werte für *Batch_text* und  *\@Parameter_name, Data_type* [,*... n* ] müssen in genau das gleiche Format wie die von der Anwendung übermittelten Gegenstücke bereitgestellt werden. Das bedeutet, dass Sie den Batchtext genau so bereitstellen müssen, wie er vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Compiler empfangen wird. Mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie den eigentlichen Batch- und Parametertext erfassen. Weitere Informationen finden Sie unter [verwenden SQL Server Profiler zum Erstellen und Test-Planhinweislisten](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+ Für Planhinweislisten, die angeben, \@Type = 'SQL' oder \@Type = 'TEMPLATE' entsprechend, dass erfolgreich eine Abfrage, die Werte für *Batch_text* und  *\@Parameter_name, Data_type* [, *... n* ] müssen in genau das gleiche Format wie die von der Anwendung übermittelten Gegenstücke bereitgestellt werden. Das bedeutet, dass Sie den Batchtext genau so bereitstellen müssen, wie er vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Compiler empfangen wird. Mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] können Sie den eigentlichen Batch- und Parametertext erfassen. Weitere Informationen finden Sie unter [verwenden SQL Server Profiler zum Erstellen und Test-Planhinweislisten](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
  Wenn \@Typ = 'SQL' und \@Module_or_batch ist auf NULL gesetzt, den Wert der \@Module_or_batch festgelegt ist, auf den Wert der \@Stmt. Dies bedeutet, dass den Wert für *Statement_text* muss angegeben werden, in dem genau gleichen Format, Zeichen für Zeichen, wie beim Übermitteln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
   
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dem Wert *Statement_text* zu *Batch_text* und  *\@Parameter_name, Data_type* [,*... n* ], oder wenn \@Typ = **"** Objekt", um den Text der entsprechenden Abfrage in *Object_name*, die folgenden Zeichenfolgenelemente nicht berücksichtigt:  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dem Wert *Statement_text* zu *Batch_text* und  *\@Parameter_name, Data_type* [, *... n* ], oder wenn \@Typ = **"** Objekt", um den Text der entsprechenden Abfrage in *Object_name*, die folgenden Zeichenfolgenelemente nicht berücksichtigt:  
   
 -   Leerzeichen (Tabstopps, Leerzeichen, Wagenrücklauf oder Zeilenvorschub) innerhalb der Zeichenfolge.  
   
--   Kommentare (**--** oder **/ \* \* /**).  
+-   Kommentare ( **--** oder **/ \* \* /** ).  
   
 -   Nachfolgende Semikolons  
   

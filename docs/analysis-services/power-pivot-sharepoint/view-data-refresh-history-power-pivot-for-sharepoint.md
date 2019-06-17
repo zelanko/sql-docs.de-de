@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509940"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Anzeigen des Verlaufs der Datenaktualisierungen (PowerPivot für SharePoint)
@@ -55,7 +55,7 @@ ms.locfileid: "62509940"
 ##  <a name="pageelements"></a> Verwenden von Verlaufsinformationen  
  Die Seite Verlauf der Datenaktualisierung enthält ausführliche Informationen zu jedem Aktualisierungsvorgang. Mithilfe der Informationen auf dieser Seite können Sie feststellen, ob eine Aktualisierung ausgeführt wurde bzw. warum ein Fehler aufgetreten ist.  
   
-|Element|Description|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |Name|Gibt den Dateinamen der Excel-Arbeitsmappe an, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthält.|  
 |Aktueller Status|Die Werte lauten **Geplant**, **Wird aktualisiert**, **Erfolgreich beendet**oder **Fehler**.<br /><br /> **Geplant** wird beim erstmaligen Erstellen des Zeitplans angezeigt. Nachdem die Datenaktualisierung zum ersten Mal ausgeführt wurde, wird diese Statusmeldung nicht mehr angezeigt.<br /><br /> **Wird aktualisiert** gibt an, dass die Datenaktualisierung ausgeführt wird. Eine Anforderung befindet sich entweder in der Verarbeitungswarteschlange oder wird aktiv auf dem Server ausgeführt.<br /><br /> **Erfolgreich beendet** gibt an, dass der letzte Datenaktualisierungsvorgang abgeschlossen und die aktualisierte Arbeitsmappe wieder in die SharePoint-Bibliothek eingecheckt wurde.<br /><br /> **Fehler** gibt an, dass der letzte Datenaktualisierungsvorgang nicht erfolgreich war. Die aktualisierten Daten wurden nicht gespeichert. Die Arbeitsmappe enthält die gleichen Daten wie vor der Datenaktualisierung.|  

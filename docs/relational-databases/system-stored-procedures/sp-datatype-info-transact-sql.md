@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62506979"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
@@ -55,8 +55,8 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Der DBMS-abhängige Datentyp.|  
 |DATA_TYPE|**smallint**|Der Code für den ODBC-Datentyp, dem alle Spalten dieses Datentyps zugeordnet sind.|  
 |PRECISION|**int**|Die maximale Genauigkeit des Datentyps bezüglich der Datenquelle. NULL wird für Datentypen zurückgegeben, auf die die Genauigkeit nicht anwendbar ist. Der Rückgabewert für die PRECISION-Spalte hat die Basis 10.|  
-|LITERAL_PREFIX|**Varchar (** 32 **)**|Das oder die Zeichen, die einer Konstante vorangestellt werden. Beispielsweise eine einfaches Anführungszeichen (**"**) bei Zeichentypen und 0 X bei Binärtypen.|  
-|LITERAL_SUFFIX|**Varchar (** 32 **)**|Das oder die Zeichen, die eine Konstante beenden. Beispielsweise eine einfaches Anführungszeichen (**"**) bei Zeichentypen und keine Anführungszeichen bei Binärtypen.|  
+|LITERAL_PREFIX|**Varchar (** 32 **)**|Das oder die Zeichen, die einer Konstante vorangestellt werden. Beispielsweise eine einfaches Anführungszeichen ( **"** ) bei Zeichentypen und 0 X bei Binärtypen.|  
+|LITERAL_SUFFIX|**Varchar (** 32 **)**|Das oder die Zeichen, die eine Konstante beenden. Beispielsweise eine einfaches Anführungszeichen ( **"** ) bei Zeichentypen und keine Anführungszeichen bei Binärtypen.|  
 |CREATE_PARAMS|**Varchar (** 32 **)**|Die Beschreibung der Erstellungsparameter für diesen Datentyp. Z. B. **decimal** ist "Precision, Scale", **"float"** NULL ist, und **Varchar** "max_length".|  
 |NULLABLE|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = Lässt NULL-Werte zu.<br /><br /> 0 = NULL ist nicht zulässig.|  
 |CASE_SENSITIVE|**smallint**|Gibt die Unterscheidung nach Groß-/Kleinschreibung an.<br /><br /> 1 = Bei allen Spalten dieses Typs wird nach Groß-/Kleinschreibung unterschieden (für Sortierungen).<br /><br /> 0 = Bei allen Spalten dieses Typs wird nicht nach Groß-/Kleinschreibung unterschieden.|  

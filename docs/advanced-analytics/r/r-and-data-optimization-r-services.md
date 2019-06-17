@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 4fdc699437ef44d32e944d810e9e38571d20472c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642281"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Leistung von R Services - Data-Optimierung
@@ -33,7 +33,7 @@ Bei der Arbeit mit großen Datenmengen sollten Sie immer den SQL Compute Context
 
 Die R-Sprache wurde das Konzept der *Faktoren*, die spezielle Variable für kategorische Daten sind. Datenanalysten häufig faktorvariablen in der Formel verwenden, da kategorische Variablen als Faktoren Behandlung die Daten wird sichergestellt, dass ordnungsgemäß vom Machine Learning-Funktionen verarbeitet wird. Weitere Informationen finden Sie unter [R für Anfänger: Faktorvariablen](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
-Standardmäßig können faktorvariablen in ganze Zahlen "und" zurück, für das Speichern oder Verarbeiten von Zeichenfolgen konvertiert werden. Die R `data.frame` Funktion als faktorvariablen, alle Zeichenfolgen behandelt, es sei denn, das Argument *StringsAsFactors* nastaven NA hodnotu **"false"**. Das bedeutet, dass Zeichenfolgen, automatisch sind in eine ganze Zahl für die Verarbeitung konvertiert, und dann wieder die ursprüngliche Zeichenfolge zugeordnet.
+Standardmäßig können faktorvariablen in ganze Zahlen "und" zurück, für das Speichern oder Verarbeiten von Zeichenfolgen konvertiert werden. Die R `data.frame` Funktion als faktorvariablen, alle Zeichenfolgen behandelt, es sei denn, das Argument *StringsAsFactors* nastaven NA hodnotu **"false"** . Das bedeutet, dass Zeichenfolgen, automatisch sind in eine ganze Zahl für die Verarbeitung konvertiert, und dann wieder die ursprüngliche Zeichenfolge zugeordnet.
 
 Wenn die Quelldaten für Faktoren vor, als ganze Zahl gespeichert ist, kann Leistung beeinträchtigt, da es sich bei R die Faktor ganzen Zahlen in Zeichenfolgen konvertiert, zur Laufzeit, und führt dann eine eigene interne Konvertierung der Zeichenfolge zur ganzen Zahl.
 

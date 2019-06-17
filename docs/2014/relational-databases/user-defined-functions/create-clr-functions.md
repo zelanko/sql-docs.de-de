@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524060"
 ---
 # <a name="create-clr-functions"></a>Erstellen von CLR-Funktionen
@@ -27,7 +27,7 @@ ms.locfileid: "62524060"
   
 -   Definieren der Funktion als statische Methode einer Klasse in einer Sprache, die von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]unterstützt wird. Weitere Informationen zum Programmieren von Funktionen in der Common Language Runtime finden Sie unter [Benutzerdefinierte CLR-Funktionen](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md). Kompilieren Sie die Klasse mithilfe des entsprechenden Sprachcompilers, um eine Assembly in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] zu erstellen.  
   
--   Registrieren der Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der CREATE ASSEMBLY-Anweisung. Weitere Informationen zum Arbeiten mit Assemblys in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Assemblys &amp;#40;Datenbank-Engine&amp;#41;](../clr-integration/assemblies-database-engine.md).  
+-   Registrieren der Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der CREATE ASSEMBLY-Anweisung. Weitere Informationen zum Arbeiten mit Assemblys in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Assemblys &#40;Datenbank-Engine&#41;](../clr-integration/assemblies-database-engine.md).  
   
 -   Erstellen der Funktion, die auf die registrierte Assembly verweist, mithilfe der [CREATE FUNCTION](/sql/t-sql/statements/create-function-transact-sql) -Anweisung.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62524060"
  CLR-Funktionen können für den Zugriff auf nativen (nicht verwalteten) Code verwendet werden, z.B. in C oder C++ geschriebenen Code. Dazu wird PInvoke vom verwalteten Code aus ausgeführt (Einzelheiten finden Sie unter [Aufrufen nativer Funktionen aus verwaltetem Code](https://go.microsoft.com/fwlink/?LinkID=181929) ). Dies kann die Wiederverwendung von Legacycode als CLR-UDFs oder das Programmieren leistungskritischer UDFs in systemeigenem Code ermöglichen. Die Verwendung einer UNSAFE-Assembly wird in diesem Fall vorausgesetzt. Warnhinweise zur Verwendung von UNSAFE-Assemblys finden Sie unter [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) .  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen benutzerdefinierter Funktionen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](create-user-defined-functions-database-engine.md)   
+ [Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](create-user-defined-functions-database-engine.md)   
  [Erstellen benutzerdefinierter Aggregate](create-user-defined-aggregates.md)   
  [Ausführen von benutzerdefinierten Funktionen](execute-user-defined-functions.md)   
  [Anzeigen benutzerdefinierter Funktionen](view-user-defined-functions.md)   

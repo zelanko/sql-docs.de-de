@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472845"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Vorhersagen von Zuordnungen (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -163,7 +163,7 @@ ms.locfileid: "62472845"
   
 2.  Es wird eine Warnmeldung angezeigt, die Sie darüber informiert, dass die SINGLETON-Abfrage verloren geht. Klicken Sie auf **Ja**.  
   
-     Der Name des eingabedialogfelds ändert sich in **Eingabetabelle(n)**.  
+     Der Name des eingabedialogfelds ändert sich in **Eingabetabelle(n)** .  
   
  Da Sie eine Vorhersageabfrage erstellen möchten, die die Customer ID sowie eine Liste der Produkte als Eingabe bereitstellt, fügen Sie die Kundentabelle als Falltabelle hinzu und die Tabelle mit den von Kunden getätigten Käufen als geschachtelte Tabelle. Anschließend fügen Sie Vorhersagefunktionen hinzu, um Empfehlungen zu erstellen.  
   
@@ -193,9 +193,9 @@ ms.locfileid: "62472845"
   
      Die Falltabelle und die geschachtelte Tabelle werden im Entwurfsbereich aktualisiert, um die Joins zwischen den externen Datenspalten und den Spalten im Modell anzuzeigen. Wenn fehlerhafte Beziehungen erstellt werden, können Sie mit der rechten Maustaste der Joinlinie und auswählen **Verbindungen ändern** zum Bearbeiten der Spalte zuordnen oder Sie können mit der rechten Maustaste der Joinlinie, und wählen **löschen** So entfernen Sie die Beziehung vollständig.  
   
-9. Fügen Sie dem Raster eine neue Zeile hinzu. Für **Quelle**Option **Tabelle "vAssocSeqOrders"**. Für **Feld**, wählen Sie CustomerKey.  
+9. Fügen Sie dem Raster eine neue Zeile hinzu. Für **Quelle**Option **Tabelle "vAssocSeqOrders"** . Für **Feld**, wählen Sie CustomerKey.  
   
-10. Fügen Sie dem Raster eine neue Zeile hinzu. Für **Quelle**Option **Tabelle "vAssocSeqOrders"**. Für **Feld**, Region auswählen.  
+10. Fügen Sie dem Raster eine neue Zeile hinzu. Für **Quelle**Option **Tabelle "vAssocSeqOrders"** . Für **Feld**, Region auswählen.  
   
 11. Fügen Sie dem Raster eine neue Zeile hinzu. Für **Quelle**Option **Vorhersagefunktion**, und für **Feld**Option `PredictAssociation`.  
   
