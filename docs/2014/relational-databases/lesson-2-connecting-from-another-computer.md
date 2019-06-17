@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144810"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
@@ -44,7 +44,7 @@ ms.locfileid: "63144810"
     > [!NOTE]  
     >  Möglicherweise steht sowohl die 32-Bit- als auch die 64-Bit-Option zur Verfügung.  
   
-2.  In **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für**  _\<Instanzname >_.  
+2.  In **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für**  _\<Instanzname >_ .  
   
      Die Standardinstanz (eine unbenannte Instanz) wird als **MSSQLSERVER**aufgelistet. Wenn Sie eine benannte Instanz installiert haben, wird der von Ihnen angegebene Name aufgeführt. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] wird als **SQLEXPRESS**installiert, es sei denn, der Name wurde während des Setups geändert.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63144810"
   
 2.  Bestätigen Sie im Dialogfeld **Verbindung mit Server herstellen** in der Liste **Servertyp** die Option **Datenbank-Engine** .  
   
-3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher **tcp:**_<Computername>_ ein. Geben Sie in unserem Beispiel für eine benannte Instanz **tcp:**_<Computername>_**,49172** ein.  
+3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher **tcp:** _<Computername>_ ein. Geben Sie in unserem Beispiel für eine benannte Instanz **tcp:** _<Computername>_ **,49172** ein.  
   
     > [!NOTE]  
     >  Wenn Sie **tcp:** nicht im Feld **Servername** eingeben, testet der Client alle aktivierten Protokolle in der Reihenfolge, die in der Clientkonfiguration festgelegt ist.  

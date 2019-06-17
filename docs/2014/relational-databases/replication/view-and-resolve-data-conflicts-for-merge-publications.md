@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63255429"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "63255429"
   
 -   Geben Sie einen Beibehaltungswert für den Parameter **@conflict_retention** von [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
--   Geben Sie den Wert **conflict_retention** für den **@property**-Parameter und einen Beibehaltungswert für den **@value**-Parameter von [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) an.  
+-   Geben Sie den Wert **conflict_retention** für den **@property** -Parameter und einen Beibehaltungswert für den **@value** -Parameter von [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) an.  
   
  Standardmäßig werden Konfliktinformationen an den folgenden Orten gespeichert:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63255429"
   
     -   Wählen Sie eine oder mehrere Zeilen im oberen Raster aus, und klicken Sie auf **Entfernen**, was dem Klicken auf die Schaltfläche **Gewinner absenden** entspricht (ohne Änderungen an den Daten vorzunehmen).  
   
-    -   Klicken Sie auf die Eigenschaftenschaltfläche (**…**), um weitere Informationen zu einer am Konflikt beteiligten Zeile anzuzeigen.  
+    -   Klicken Sie auf die Eigenschaftenschaltfläche ( **…** ), um weitere Informationen zu einer am Konflikt beteiligten Zeile anzuzeigen.  
   
     -   Bearbeiten Sie Daten in den Spalten **Konfliktgewinner** oder **Konfliktverlierer** , bevor Sie die Daten absenden (bei einer grauen Spalte sind die Daten schreibgeschützt).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63255429"
   
     -   Klicken Sie auf **Verlierer absenden** , um die Konfliktlösung zu überschreiben und den als Verlierer des Konflikts ausgewiesenen Wert an alle Knoten der Topologie zu senden.  
   
-    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten (**...**), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
+    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten ( **...** ), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
   
 6.  Schließen Sie den Replikationskonflikt-Viewer.  
   

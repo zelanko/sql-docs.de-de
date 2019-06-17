@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce34e46a49e88167606543a341aaef55591493ba
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538098"
 ---
 # <a name="configdriver-function"></a>ConfigDriver-Funktion
@@ -84,7 +84,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **ConfigDriver** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert an den Installer Fehler Puffer gesendet wird, durch einen Aufruf von **SQLPostInstallerError** und erhalten Sie durch Aufrufen von **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Ungültiges Fenster-handle|Die *HwndParent* Argument war ungültig.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Typ der Anforderung|Die *häufigsten* Argument war keiner der folgenden:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> Der Treiber-spezifische Option war kleiner als oder gleich ODBC_CONFIG_DRIVER_MAX.|  

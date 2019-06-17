@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068345"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Benennungskonventionen angeben (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
@@ -26,7 +26,7 @@ ms.locfileid: "66068345"
  **Option**  
  Geben Sie die Benennungskonventionen für den zu verwendenden Assistenten an. In der folgenden Tabelle werden die Optionen beschrieben, die Sie angeben können.  
   
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Separator**|Gibt das Zeichen an, das zwischen den Wörtern in einem Objektnamen steht. Wählen Sie in der **Value** -Spalte **Unterstrich**, **Leerzeichen**oder **Kein**aus. Der Standardwert ist **Unterstrich**.|  
 |**Präfix der Primärschlüsselspalte**|Gibt die Zeichenfolge an, die dem Namen einer Primärschlüsselspalte als Präfix vorangestellt wird. Der Standardwert lautet **PS**.|  

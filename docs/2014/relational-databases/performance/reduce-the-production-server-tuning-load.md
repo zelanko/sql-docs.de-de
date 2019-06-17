@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150728"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzieren der Optimierungsauslastung des Produktionsservers
@@ -94,6 +94,6 @@ ms.locfileid: "63150728"
   
 ## <a name="see-also"></a>Siehe auch  
  [Gesichtspunkte bei der Verwendung von Testservern](considerations-for-using-test-servers.md)   
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](database-engine-tuning-advisor.md)  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](database-engine-tuning-advisor.md)  
   
   

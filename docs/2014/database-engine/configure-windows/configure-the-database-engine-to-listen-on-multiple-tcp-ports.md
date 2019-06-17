@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811544"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Konfigurieren der Datenbank-Engine zum Überwachen mehrerer TCP-Ports
@@ -74,9 +74,9 @@ ms.locfileid: "62811544"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>So konfigurieren Sie die SQL Server-Datenbank-Engine zum Lauschen an einem zusätzlichen TCP-Port  
   
-1.  Erweitern Sie im SQL Server-Konfigurations-Manager den Eintrag **SQL Server-Netzwerkkonfiguration** und klicken Sie dann auf **Protokolle für**_<Instanzname>_.  
+1.  Erweitern Sie im SQL Server-Konfigurations-Manager den Eintrag **SQL Server-Netzwerkkonfiguration** und klicken Sie dann auf **Protokolle für** _<Instanzname>_ .  
   
-2.  Erweitern Sie **Protokolle für**_<Instanzname>_, und klicken Sie dann auf **TCP/IP**.  
+2.  Erweitern Sie **Protokolle für** _<Instanzname>_ , und klicken Sie dann auf **TCP/IP**.  
   
 3.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf jede deaktivierte IP-Adresse, die Sie aktivieren möchten, und klicken Sie dann auf **Aktivieren**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62811544"
   
 6.  Klicken Sie im linken Bereich auf **SQL Server-Dienste**.  
   
-7.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf **SQL Server**_<Instanzname>_, und klicken Sie dann auf **Neu starten**.  
+7.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf **SQL Server** _<Instanzname>_ , und klicken Sie dann auf **Neu starten**.  
   
      Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu gestartet wird, führt das Fehlerprotokoll die Ports auf, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht.  
   

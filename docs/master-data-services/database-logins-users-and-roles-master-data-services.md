@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487733"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Datenbankanmeldenamen, -benutzer und -rollen (Master Data Services)
@@ -33,23 +33,23 @@ ms.locfileid: "65487733"
   
 ## <a name="logins"></a>Anmeldungen  
   
-|Anmeldename|Description|  
+|Anmeldename|Beschreibung|  
 |-----------|-----------------|  
-|**mds_dlp_login**|Ermöglicht die Erstellung von UNSAFE-Assemblys. Weitere Informationen finden Sie unter [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> –Deaktivierter Anmeldename mit willkürlich generiertem Kennwort.<br /><br /> - Wird für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank dbo zugeordnet.<br /><br /> - Für msdb wird mds_clr_user diesem Anmeldenamen zugeordnet.|  
+|**mds_dlp_login**|Ermöglicht die Erstellung von UNSAFE-Assemblys. Weitere Informationen finden Sie unter [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> –Deaktivierter Anmeldename mit willkürlich generiertem Kennwort.<br /><br /> \- Wird für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank dbo zugeordnet.<br /><br /> \- Für msdb wird mds_clr_user diesem Anmeldenamen zugeordnet.|  
 |**mds_email_login**|Aktiviert den für Benachrichtigungen verwendeten Anmeldenamen.<br /><br /> Für msdb und die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank wird mds_email_user diesem Anmeldenamen zugeordnet.|  
   
 ## <a name="msdb-users"></a>msdb-Benutzer  
   
-|Benutzer|Description|  
+|Benutzer|Beschreibung|  
 |----------|-----------------|  
 |**mds_clr_user**|Wird nicht verwendet. Wird mds_dlp_login zugeordnet.|  
-|**mds_email_user**|Wird für Benachrichtigungen verwendet.<br /><br /> - Wird mds_email_login zugeordnet.<br /><br /> –Ist ein Element folgender Rolle: DatabaseMailUserRole.|  
+|**mds_email_user**|Wird für Benachrichtigungen verwendet.<br /><br /> \- Wird mds_email_login zugeordnet.<br /><br /> –Ist ein Element folgender Rolle: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services-Datenbankbenutzer  
   
 |Benutzer|Description|  
 |----------|-----------------|  
-|**mds_email_user**|Wird für Benachrichtigungen verwendet.<br /><br /> - Verfügt über die SELECT-Berechtigung für das mdm-Schema.<br /><br /> - Verfügt über die EXECUTE-Berechtigung für den benutzerdefinierten Tabellentyp mdm.MemberGetCriteria.<br /><br /> - Verfügt über die EXECUTE-Berechtigung für die gespeicherte Prozedur mdm.udpNotificationQueueActivate.|  
+|**mds_email_user**|Wird für Benachrichtigungen verwendet.<br /><br /> \- Verfügt über die SELECT-Berechtigung für das mdm-Schema.<br /><br /> \- Verfügt über die EXECUTE-Berechtigung für den benutzerdefinierten Tabellentyp mdm.MemberGetCriteria.<br /><br /> \- Verfügt über die EXECUTE-Berechtigung für die gespeicherte Prozedur mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Besitzt die mdm- und mdq-Schemas. Das Standardschema ist mdm.<br /><br /> Ist keinem Anmeldenamen zugeordnet.|  
 |**mds_ssb_user**|Wird zum Ausführen von Service Broker-Tasks verwendet.<br /><br /> –Verfügt über die Berechtigungen DELETE, INSERT, REFERENCES, SELECT und UPDATE für alle Schemas.<br /><br /> –Ist keinem Anmeldenamen zugeordnet.|  
   

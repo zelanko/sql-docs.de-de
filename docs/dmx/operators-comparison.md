@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8049f2bad6e78ff301b460b1375a0a73807ccd8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62501953"
 ---
 # <a name="operators---comparison"></a>Operatoren – vergleichend
@@ -23,7 +23,7 @@ ms.locfileid: "62501953"
   
  In der folgenden Tabelle sind die Vergleichsoperatoren aufgeführt, die DMX unterstützt.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[&#60;&#40;Kleiner als&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|Gibt für Argumente, die ausgewertet ungleich NULL sind, TRUE zurück, wenn der Wert des Arguments auf der linken Seite kleiner ist als der Wert des Arguments auf der rechten Seite; gibt anderenfalls FALSE zurück. Wenn eines der Argumente oder beide Argumente ausgewertet gleich NULL sind, gibt der Operator einen NULL-Wert zurück.|  
 |[&#62; &#40;Greater Than&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|Für Argumente, die einen Wert ungleich Null ergeben, gibt "true", wenn der Wert des Arguments auf der linken Seite größer als der Wert des Arguments auf der rechten Seite ist; Andernfalls wird "false" zurückgegeben. Wenn eines der Argumente oder beide Argumente ausgewertet gleich NULL sind, gibt der Operator einen NULL-Wert zurück.|  

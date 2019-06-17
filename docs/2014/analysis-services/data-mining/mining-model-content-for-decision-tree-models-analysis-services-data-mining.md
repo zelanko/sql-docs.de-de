@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083673"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
@@ -75,10 +75,10 @@ ms.locfileid: "66083673"
 |Knotentyp|Description|  
 |---------------|-----------------|  
 |1 (Model)|Stammknoten des Modells|  
-|2 (Struktur)|Übergeordneter Knoten für Klassifizierungsstrukturen im Modell. Gekennzeichnet mit **"Alle"**.|  
+|2 (Struktur)|Übergeordneter Knoten für Klassifizierungsstrukturen im Modell. Gekennzeichnet mit **"Alle"** .|  
 |3 (Innen)|Head des inneren Zweigs innerhalb einer Klassifizierungs- oder Regressionsstruktur.|  
 |4 (Verteilung)|Blattknoten innerhalb einer Klassifzierungs- oder Regressionsstruktur.|  
-|25 (Regressionsstruktur)|Übergeordneter Knoten für Regressionsstruktur innerhalb des Modells. Gekennzeichnet mit **"Alle"**.|  
+|25 (Regressionsstruktur)|Übergeordneter Knoten für Regressionsstruktur innerhalb des Modells. Gekennzeichnet mit **"Alle"** .|  
   
  NODE_CAPTION  
  Ein beschreibender Name, der angezeigt wird.  

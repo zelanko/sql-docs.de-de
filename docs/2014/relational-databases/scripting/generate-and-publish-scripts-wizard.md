@@ -43,10 +43,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063992"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
@@ -127,7 +127,7 @@ ms.locfileid: "66063992"
   
 -   **Erweitert** – Zeigt das Dialogfeld **Erweiterte Skripterstellungsoptionen** an, in dem Sie erweiterte Optionen für die Skripterstellung auswählen können.  
   
--   **In Datei speichern** – Speichert das Skript in einer oder mehreren SQL-Dateien. Klicken Sie auf die Schaltfläche zum Durchsuchen (**…**), um Namen und Speicherort für die Datei anzugeben. Aktivieren Sie das Kontrollkästchen **Vorhandene Datei überschreiben** , um die Datei zu ersetzen, wenn bereits eine Datei mit dem gleichen Namen vorhanden ist. Klicken Sie auf **Einzelne Datei** oder **Einzelne Datei pro Objekt** , um anzugeben, wie die Skripts generiert werden sollen. Klicken Sie auf **Unicode-Text** oder **ANSI-Text** , um die Art von Text anzugeben, die im Skript verwendet werden soll.  
+-   **In Datei speichern** – Speichert das Skript in einer oder mehreren SQL-Dateien. Klicken Sie auf die Schaltfläche zum Durchsuchen ( **…** ), um Namen und Speicherort für die Datei anzugeben. Aktivieren Sie das Kontrollkästchen **Vorhandene Datei überschreiben** , um die Datei zu ersetzen, wenn bereits eine Datei mit dem gleichen Namen vorhanden ist. Klicken Sie auf **Einzelne Datei** oder **Einzelne Datei pro Objekt** , um anzugeben, wie die Skripts generiert werden sollen. Klicken Sie auf **Unicode-Text** oder **ANSI-Text** , um die Art von Text anzugeben, die im Skript verwendet werden soll.  
   
 -   **In Zwischenablage speichern** – Speichert das Transact-SQL-Skript in die Zwischenablage.  
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076737"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Ändern von Eigenschaften in einer Datenquellensicht (Analysis Services)
@@ -46,7 +46,7 @@ ms.locfileid: "66076737"
 |Eigenschaft|Description|  
 |--------------|-----------------|  
 |Datenquelle|Gibt die Datenquelle innerhalb der Datenquellensicht an, deren Eigenschaften Sie anzeigen.|  
-|Description|Gibt eine Beschreibung der Datenquellensicht an.|  
+|Beschreibung|Gibt eine Beschreibung der Datenquellensicht an.|  
 |Name|Gibt den Namen der Datenquellensicht an, der im Projektmappen-Explorer oder in der Analysis Services-Datenbank angezeigt wird. Sie können den Namen der Datenquellensicht hier oder im Projektmappen-Explorer ändern.|  
 |NameMatchingCriteria|Die Namensübereinstimmungskriterien für die Datenquelle. Die Standardeinstellung ist (Keine), wenn Primärschlüssel/Fremdschlüssel-Beziehungen vom Datenquellensicht-Assistenten ermittelt wurden. Unabhängig davon, ob diese Eigenschaft vom Datenquellensicht-Assistenten festgelegt wurde, können Sie hier einen Wert angeben. Wenn Datenbankbeziehungen vorhanden sind und Sie Namensübereinstimmungskriterien angeben, werden beide Einstellungen verwendet, um auf Beziehungen zwischen vorhandenen Tabellen und neu hinzugefügten Tabellen zu schließen.|  
 |RetrieveRelationships|Gibt an, ob Beziehungen aus der Datenbank abgerufen werden. Der Standardwert lautet "True".|  
@@ -74,7 +74,7 @@ ms.locfileid: "66076737"
 |AllowNull|Gibt die Eigenschaft, die die NULL-Zulässigkeit der Spalte definiert, basierend auf der Spalte in der zugrunde liegenden Tabelle, Sicht oder benannten Abfrage an. Diese Eigenschaft kann nicht bearbeitet werden.|  
 |DataType|Gibt den Datentyp der Spalte basierend auf der Spalte in der zugrunde liegenden Tabelle, Sicht oder benannten Abfrage an. Diese Eigenschaft kann nicht direkt bearbeitet werden. Wenn Sie jedoch den Datentyp einer Spalte aus einer Tabelle oder Sicht ändern müssen, können Sie die Tabelle durch eine benannte Abfrage ersetzen, die die Spalte in den gewünschten Datentyp konvertiert.|  
 |DateTimeMode|Gibt das Datumsserialisierungsformat für **DateTime** -Spalten an. Der Standardwert ist **UnspecifiedLocal**. Diese Eigenschaft kann bearbeitet werden.|  
-|Description|Gibt die Beschreibung für die Spalte an. Wenn für die zugrunde liegende Datenbankspalte eine Beschreibung als erweiterte Eigenschaft gespeichert wurde, wird dieser Wert angezeigt. Sie können diese Eigenschaft bearbeiten.|  
+|Beschreibung|Gibt die Beschreibung für die Spalte an. Wenn für die zugrunde liegende Datenbankspalte eine Beschreibung als erweiterte Eigenschaft gespeichert wurde, wird dieser Wert angezeigt. Sie können diese Eigenschaft bearbeiten.|  
 |FriendlyName|Gibt den Namen für eine Spalte aus einer Tabelle oder Sicht an, der für Benutzer leichter verständlich oder aussagekräftiger im Hinblick auf den Themenbereich ist. Standardmäßig ist die **FriendlyName** -Eigenschaft einer Spalte aus einer Tabelle oder Sicht mit der **Name** -Eigenschaft der Spalte identisch. Die **FriendlyName** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf Spalten aus Tabellen oder Sichten definiert werden. Sie können diese Eigenschaft bearbeiten.|  
 |Länge|Gibt die maximale Länge der Spalte basierend auf den Daten in der Spalte in der zugrunde liegenden Tabelle oder Sicht an.|  
 |Name|Gibt den Namen der zugrunde liegenden Spalte oder den Namen der benannten Berechnung an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf benannten Berechnungen definiert werden. Diese Eigenschaft kann nur bei benannten Berechnungen bearbeitet werden.|  

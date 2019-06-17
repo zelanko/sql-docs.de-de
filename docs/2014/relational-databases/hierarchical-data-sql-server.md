@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065703"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
@@ -497,7 +497,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Verschieben von Teilstrukturen  
- Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Die Prozedur unten macht die Teilstruktur **@oldMgr** (einschließlich **@oldMgr**) zu einer Teilstruktur von **@newMgr**bedeutend schneller.  
+ Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Die Prozedur unten macht die Teilstruktur **@oldMgr** (einschließlich **@oldMgr** ) zu einer Teilstruktur von **@newMgr** bedeutend schneller.  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

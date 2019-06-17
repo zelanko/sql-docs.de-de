@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce7b42b1c97964108797c58948216aaed0ad5431
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105741"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105741"
 ## <a name="examples-of-group-expressions"></a>Beispiele für Gruppenausdrücke  
  In der folgenden Tabelle sind Beispiele für Gruppenausdrücke aufgeführt, die Sie zum Definieren einer Gruppe verwenden können.  
   
-|Description|expression|  
+|Beschreibung|expression|  
 |-----------------|----------------|  
 |Gruppieren nach dem `Region` -Feld.|`=Fields!Region.Value`|  
 |Gruppieren Sie nach Nachnamen und Vornamen.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

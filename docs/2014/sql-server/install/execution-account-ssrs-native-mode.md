@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 17bbc891c54d28f5eedbebc1d51edf11d0ae405b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095342"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Ausführungskonto (einheitlicher SSRS-Modus)
@@ -44,7 +44,7 @@ ms.locfileid: "66095342"
  Wählen Sie diese Option aus, um ein Konto anzugeben.  
   
  **Konto**  
- Geben Sie ein Windows-Domänenbenutzerkonto an. Verwenden Sie dieses Format: *\<Domäne>\\<Benutzerkonto\>*.  
+ Geben Sie ein Windows-Domänenbenutzerkonto an. Verwenden Sie dieses Format: *\<Domäne>\\<Benutzerkonto\>* .  
   
  **Kennwort**  
  Geben Sie das Kennwort ein.  

@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcf2003873de6f6ca15fed4d0818337ce4920906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205857"
 ---
 # <a name="working-with-snapshot-isolation"></a>Arbeiten mit Momentaufnahmeisolation
@@ -41,7 +41,7 @@ ms.locfileid: "63205857"
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  Die DBPROPSET_DATASOURCEINFO-Eigenschaftsgruppe wurde geändert, um anzugeben, dass die Momentaufnahmenisolationsstufe vom hinzugefügten DBPROPVAL_TI_SNAPSHOT-Wert unterstützt wird, der in der DBPROP_SUPPORTEDTXNISOLEVELS-Eigenschaft verwendet wird. Dieser neue Wert gibt an, dass die Momentaufnahmenisolationsstufe unabhängig davon unterstützt wird, ob die Versionsverwaltung für die Datenbank aktiviert ist. Im Folgenden sind die DBPROP_SUPPORTEDTXNISOLEVELS-Werte aufgeführt:  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |DBPROP_SUPPORTEDTXNISOLEVELS|Typ: VT_I4<br /><br /> R/W: Schreibgeschützt<br /><br /> Beschreibung: Eine Bitmaske, die die unterstützten Transaktionsisolationsstufen angibt. Eine Kombination von null oder mehreren der folgenden Werte:<br /><br /> -   DBPROPVAL_TI_CHAOS<br />-   DBPROPVAL_TI_READUNCOMMITTED<br />-   DBPROPVAL_TI_BROWSE<br />-   DBPROPVAL_TI_CURSORSTABILITY<br />-   DBPROPVAL_TI_READCOMMITTED<br />-   DBPROPVAL_TI_REPEATABLEREAD<br />-   DBPROPVAL_TI_SERIALIZABLE<br />-   DBPROPVAL_TI_ISOLATED<br />-   DBPROPVAL_TI_SNAPSHOT|  
   

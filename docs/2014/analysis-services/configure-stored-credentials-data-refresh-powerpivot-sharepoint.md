@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087456"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)
@@ -58,7 +58,7 @@ ms.locfileid: "66087456"
   
 1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
   
-2.  Klicken Sie auf **Secure Store Service-**.  
+2.  Klicken Sie auf **Secure Store Service-** .  
   
 3.  Klicken Sie unter Zielanwendungen verwalten auf **neu**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66087456"
  Weitere Informationen zur Problembehandlung finden Sie unter [Problembehandlung bei der PowerPivot-Datenaktualisierung](https://go.microsoft.com/fwlink/p/?LinkID=223279) im TechNet Wiki.  
   
 ##  <a name="config3rd"></a> Konfigurieren eines vordefinierten Kontos für den Zugriff auf externe Datenquellen oder Drittanbieter-Datenquellen  
- Datenbankserver werden oft mit eigenen Authentifizierungsmethoden ausgeliefert. Wenn Sie über eine PowerPivot-Arbeitsmappe verfügen, die für den Zugriff auf eine externe Datenquelle während der Datenaktualisierung Datenbank-Anmeldeinformationen erfordert, können Sie eine Zielanwendungs-ID für die Anmeldeinformationen erstellen und dieser Zielanwendung dann Datenbank-Anmeldeinformationen zuordnen.   
+ Datenbankserver werden oft mit eigenen Authentifizierungsmethoden ausgeliefert. Wenn Sie über eine PowerPivot-Arbeitsmappe verfügen, die für den Zugriff auf eine externe Datenquelle während der Datenaktualisierung Datenbank-Anmeldeinformationen erfordert, können Sie eine Zielanwendungs-ID für die Anmeldeinformationen erstellen und dieser Zielanwendung dann Datenbank-Anmeldeinformationen zuordnen.  
   
  Dieser Schritt ist nur notwendig, wenn Sie Benutzer mit einer Option zur Überschreibung der Datenbank-Anmeldeinformationen, die bereits in die Arbeitsmappe PowerPivot eingebettet sind, versehen möchten.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66087456"
   
 1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Dienstanwendungen verwalten**.  
   
-2.  Klicken Sie auf **Secure Store Service-**.  
+2.  Klicken Sie auf **Secure Store Service-** .  
   
 3.  Klicken Sie unter Zielanwendungen verwalten auf **neu**.  
   

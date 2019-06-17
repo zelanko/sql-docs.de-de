@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e0a99559312704459c41514d53711cfbea4353e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057240"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lektion 1: Erstellen und Anwenden der Richtlinie „Standardmäßig deaktiviert“
@@ -30,6 +30,6 @@ ms.locfileid: "63057240"
  [Erstellen der Richtlinie 'Standardmäßig aus'](lesson-1-1-create-the-off-by-default-policy.md)  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

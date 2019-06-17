@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072106"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitionen (Dialogfeld Datenbank wiederherstellen) (Analysis Services – Mehrdimensionale Daten)
@@ -66,7 +66,7 @@ ms.locfileid: "66072106"
 |**Partition**|Zeigt den Namen der lokalen Partition an.|  
 |**Größe (MB)**|Zeigt die Größe der lokalen Partition in Megabytes an.|  
 |**Ursprünglicher Ordner**|Zeigt den Namen des Ordners an, in dem die lokale Partition ursprünglich gespeichert war.|  
-|**Wiederherstellungsordner**|Geben Sie den Namen des Wiederherstellungsordners für die lokale Partition ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...**), um das Dialogfeld **Nach Remoteordner suchen** anzuzeigen, und wählen Sie den Pfad des Ordners aus, der verwendet werden soll. Weitere Informationen zum Dialogfeld **Nach Remoteordner suchen** finden Sie unter [Dialogfeld „Nach Remoteordner suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Wiederherstellungsordner**|Geben Sie den Namen des Wiederherstellungsordners für die lokale Partition ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ), um das Dialogfeld **Nach Remoteordner suchen** anzuzeigen, und wählen Sie den Pfad des Ordners aus, der verwendet werden soll. Weitere Informationen zum Dialogfeld **Nach Remoteordner suchen** finden Sie unter [Dialogfeld „Nach Remoteordner suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
  **Remotepartitionen wiederherstellen**  
  Wählen Sie diese Option aus, um in Remotesicherungsdateien gespeicherte Remotepartitionen wiederherzustellen.  
@@ -80,7 +80,7 @@ ms.locfileid: "66072106"
 |------------|-----------------|  
 |**Server**|Zeigt den Namen der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] an, die die Remotepartition verwaltet.|  
 |**Data Source**|Zeigt den Namen der Datenquelle in der Sicherungsdatei an, die die Datenbank mit der Remotepartition darstellt.|  
-|**Sicherungsdatei**|Geben Sie den vollständigen Pfad und den Dateinamen der Remotesicherungsdatei an, die verwendet werden soll. Wahlweise können Sie auch auf die Schaltfläche mit den drei Punkten(**...**) klicken, um das Dialogfeld **Datenbankdateien suchen** anzuzeigen und dort den Pfad und Dateinamen der betreffenden Remotesicherungsdatei auszuwählen. Weitere Informationen zum Dialogfeld **Datenbankdateien suchen** finden Sie unter [Dialogfeld „Datenbankdateien suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Sicherungsdatei**|Geben Sie den vollständigen Pfad und den Dateinamen der Remotesicherungsdatei an, die verwendet werden soll. Wahlweise können Sie auch auf die Schaltfläche mit den drei Punkten( **...** ) klicken, um das Dialogfeld **Datenbankdateien suchen** anzuzeigen und dort den Pfad und Dateinamen der betreffenden Remotesicherungsdatei auszuwählen. Weitere Informationen zum Dialogfeld **Datenbankdateien suchen** finden Sie unter [Dialogfeld „Datenbankdateien suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
 |**...**|Klicken Sie auf diese Schaltfläche, um das Dialogfeld **Remotepartitionen – Erweiterte Einstellungen** anzuzeigen und erweiterte Optionen wie die Verbindungszeichenfolge für die Datenquelle zum Wiederherstellen der Remotepartition zu ändern. Weitere Informationen zum Dialogfeld **Remotepartitionen – Erweiterte Einstellungen** finden Sie unter [Dialogfeld „Remote-Partitionen – Erweiterte Einstellungen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d7f51b24c487175d13153b9e5627e101175740b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075150"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Bearbeiten oder Löschen von Partitionen (Analyisis Services – Mehrdimensional)
@@ -33,11 +33,11 @@ ms.locfileid: "66075150"
 >  Alternativ können Sie XMLA-Skripts verwenden, um die Erstellung, das Zusammenführen und das Löschen von Partitionen zu automatisieren. XMLA-Skripts können in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]oder in benutzerdefinierten SSIS-Paketen, die als geplanter Task ablaufen, erstellt und ausgeführt werden. Weitere Informationen finden Sie unter [Automate Analysis Services Administrative Tasks with SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## <a name="partition-source"></a>Partitionsquelle  
- Gibt die Quelltabelle oder benannte Abfrage für die Partition an. Klicken Sie auf die Zelle, und klicken Sie anschließend auf die Schaltfläche zum Durchsuchen (**...**), um die Quelltabelle zu ändern.  
+ Gibt die Quelltabelle oder benannte Abfrage für die Partition an. Klicken Sie auf die Zelle, und klicken Sie anschließend auf die Schaltfläche zum Durchsuchen ( **...** ), um die Quelltabelle zu ändern.  
   
  ![Quellspalte im Bereich "Partition"](../media/ssas-partitionsource.png "Quellspalte im Bereich \"Partition\"")  
   
- Wenn die Partition auf einer Abfrage basiert, klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um die Abfrage zu bearbeiten. Dadurch wird die **Source** -Eigenschaft der Partition bearbeitet. Weitere Informationen finden Sie unter [Ändern einer Partitionsquelle für die Verwendung einer anderen Faktentabelle](change-a-partition-source-to-use-a-different-fact-table.md).  
+ Wenn die Partition auf einer Abfrage basiert, klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um die Abfrage zu bearbeiten. Dadurch wird die **Source** -Eigenschaft der Partition bearbeitet. Weitere Informationen finden Sie unter [Ändern einer Partitionsquelle für die Verwendung einer anderen Faktentabelle](change-a-partition-source-to-use-a-different-fact-table.md).  
   
  Sie können eine Tabelle in der Datenquellensicht angeben, die die gleiche Struktur wie die ursprüngliche Quelltabelle (in der externen Datenquelle, aus der die Daten abgerufen werden) aufweist. Bei der Quelle kann es sich um eine beliebige Datenquelle oder Datenquellensicht der Cubedatenbank handeln.  
   

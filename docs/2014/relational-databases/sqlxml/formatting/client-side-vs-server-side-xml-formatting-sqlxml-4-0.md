@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012351"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Clientseitig vs. Serverseitige XML-Formatierung (SQLXML 4.0)
@@ -179,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Wenn die XML-Formatierung auf dem Server ausgeführt wird (**Client-Side-Xml = "0"**), können Sie den Alias für die Spalten, die Dbobject-Abfragen in der tatsächlichen Tabelle und Spalte Namen zurückgegeben werden (selbst wenn Sie Aliasse angegeben haben) zurückgeben. Z. B. die folgende Vorlage führt eine Abfrage, und die XML-Formatierung auf dem Server erfolgt (der **Client-Side-XML-** Option nicht angegeben und die **ausführen auf Client** ausgewählt ist nicht für die Virtueller Stamm). Die Abfrage gibt auch den AUTO-Modus an (nicht den clientseitigen NESTED-Modus).  
+ Wenn die XML-Formatierung auf dem Server ausgeführt wird (**Client-Side-Xml = "0"** ), können Sie den Alias für die Spalten, die Dbobject-Abfragen in der tatsächlichen Tabelle und Spalte Namen zurückgegeben werden (selbst wenn Sie Aliasse angegeben haben) zurückgeben. Z. B. die folgende Vorlage führt eine Abfrage, und die XML-Formatierung auf dem Server erfolgt (der **Client-Side-XML-** Option nicht angegeben und die **ausführen auf Client** ausgewählt ist nicht für die Virtueller Stamm). Die Abfrage gibt auch den AUTO-Modus an (nicht den clientseitigen NESTED-Modus).  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

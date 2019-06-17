@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200357"
 ---
 # <a name="log-long-running-queries-odbc"></a>Protokollieren von Abfragen mit langer Ausführungszeit (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200357"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>So protokollieren Sie Abfragen mit langer Ausführungszeit mithilfe des ODBC-Administrators  
   
-1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)**. (Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen.)  
+1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)** . (Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen.)  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** .  
   

@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63260752"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Einstellungen der Reporting Services-Übermittlungserweiterungen
@@ -41,13 +41,13 @@ ms.locfileid: "63260752"
 |Einstellung|Wert|  
 |-------------|-----------|  
 |**TO**|Die E-Mail-Adresse, die in der `To`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Erforderlich.|  
-|**CC**|Die E-Mail-Adresse, die in der `Cc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Dies ist optional.|  
-|**BCC**|Die E-Mail-Adresse, die in der `Bcc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Dies ist optional.|  
+|**CC**|Die E-Mail-Adresse, die in der `Cc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Optional.|  
+|**BCC**|Die E-Mail-Adresse, die in der `Bcc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Optional.|  
 |**ReplyTo**|Die E-Mail-Adresse, die im `Reply-To`-Header der E-Mail-Nachricht angezeigt wird. Dieser Wert darf nur eine E-Mail-Adresse enthalten. Optional.|  
 |`IncludeReport`|Ein Wert, der angibt, ob der Bericht in der E-Mail-Übermittlung enthalten sein soll. Der Wert `true` gibt an, dass der Bericht im Textkörper der E-Mail-Nachricht übermittelt wird.|  
 |**Renderformat**|Der Name der Renderingerweiterung, die zum Generieren des gerenderten Berichts verwendet werden soll. Der Name muss einer der sichtbaren Renderingerweiterungen entsprechen, die auf dem Berichtsserver installiert sind. Dieser Wert ist erforderlich, wenn die Einstellung `IncludeReport` auf den Wert `true` festgelegt ist.|  
 |**Priority**|Die Priorität, mit der die E-Mail gesendet wird. Gültige Werte sind `LOW`, `NORMAL` und `HIGH`. Der Standardwert ist `NORMAL`.|  
-|**Subject**|Der Text in der Betreffzeile der E-Mail-Nachricht.|  
+|**Betreff**|Der Text in der Betreffzeile der E-Mail-Nachricht.|  
 |**Anmerkung**|Der im Textkörper der E-Mail-Nachricht enthaltene Text.|  
 |**IncludeLink**|Ein Wert, der angibt, ob ein Link zum Bericht im Textkörper der E-Mail enthalten sein soll.|  
   

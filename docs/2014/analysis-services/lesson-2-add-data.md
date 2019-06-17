@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078965"
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
@@ -52,7 +52,7 @@ ms.locfileid: "66078965"
   
 7.  Überprüfen Sie auf der Seite **Auswählen, wie die Daten importiert werden sollen**, ob die Option **Aus einer Liste von Tabellen und Sichten auswählen, um die zu importierenden Daten zu bestimmen** ausgewählt ist. Sie möchten in einer Liste von Tabellen und Sichten eine Auswahl treffen. Klicken Sie daher auf **Weiter** , um eine Liste aller Quelltabellen in der Quelldatenbank anzuzeigen.  
   
-8.  In der **Tabellen und Sichten auswählen** Seite, wählen Sie das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, und **"factinternetsales"**.  
+8.  In der **Tabellen und Sichten auswählen** Seite, wählen Sie das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, und **"factinternetsales"** .  
   
 9. Die Tabellen im Modell sollten leicht verständliche Namen enthalten. Klicken Sie auf die Zelle in der Spalte **Anzeigename** für **DimCustomer**. Benennen Sie die Tabelle durch Entfernen von "Dim" aus der DimCustomer.  
   

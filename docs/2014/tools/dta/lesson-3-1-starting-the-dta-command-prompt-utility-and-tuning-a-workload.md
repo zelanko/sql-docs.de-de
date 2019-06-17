@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110157"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Starten des Befehlzeilenprogramms dta und Optimieren einer Arbeitsauslastung
@@ -53,7 +53,7 @@ ms.locfileid: "66110157"
 3.  Wenn der Datenbankoptimierungsratgeber mit dem Optimieren der Arbeitsauslastung fertig ist, zeigt er eine Meldung an, die besagt, dass die Optimierungssitzung erfolgreich abgeschlossen wurde. Sie können die Optimierungsergebnisse anzeigen. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Öffnen der Dateien MySession2OutputScript.sql und MySession2Output.xml. Alternativ dazu können Sie auch die Optimierungssitzung MySession2 in der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers öffnen und die Empfehlungen und Berichte so anzeigen, wie in den Abschnitten [Anzeigen von Empfehlungen für die Optimierung](lesson-1-2-viewing-tuning-recommendations.md) und [Anzeigen von Optimierungsberichten](lesson-1-3-viewing-tuning-reports.md)erläutert.  
   
 ## <a name="summary"></a>Zusammenfassung  
- Sie haben damit eine einfache Arbeitsauslastung von der Eingabeaufforderung aus mithilfe des Hilfsprogramms **dta** optimiert. Dieses Tool umfasst noch viele weitere Optimierungsoptionen. Weitere Informationen dazu finden Sie in der Hilfe des Tools (**dta -?**) und im Referenzthema [dta (Hilfsprogramm)](dta-utility.md) .  
+ Sie haben damit eine einfache Arbeitsauslastung von der Eingabeaufforderung aus mithilfe des Hilfsprogramms **dta** optimiert. Dieses Tool umfasst noch viele weitere Optimierungsoptionen. Weitere Informationen dazu finden Sie in der Hilfe des Tools (**dta -?** ) und im Referenzthema [dta (Hilfsprogramm)](dta-utility.md) .  
   
 ## <a name="after-you-finish-this-tutorial"></a>Weiterführende Informationen nach Abschluss dieses Lernprogramms  
  Wenn Sie die Lektionen in diesem Lernprogramm durchgearbeitet haben, finden Sie unter folgenden Themen weitere Informationen zum Datenbankoptimierungsratgeber:  

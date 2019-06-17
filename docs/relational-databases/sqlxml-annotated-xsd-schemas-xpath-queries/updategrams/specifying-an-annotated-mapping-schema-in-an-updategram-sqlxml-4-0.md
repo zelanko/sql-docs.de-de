@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025537"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Angeben eines Zuordnungsschemas mit Anmerkungen in einem Updategram (SQLXML 4.0)
@@ -39,9 +39,9 @@ ms.locfileid: "63025537"
 >  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Für ältere Anwendungen, die XDR verwenden, finden Sie unter [XDR-Schemas mit Anmerkungen versehen &#40;in SQLXML 4.0 veraltet&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Umgehen mit Datentypen  
- Wenn das Schema gibt die **Image**, **binäre**, oder **Varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp (mit **SQL: DataType**) und nicht Geben Sie einen XML-Datentyp, das Updategram wird davon ausgegangen, dass der XML-Datentyp ist **binary Base64**. Wenn Ihre Daten sind **bin.base** geben, müssen Sie den Typ explizit angeben (**dt:type=bin.base** oder **Type = "xsd: hexBinary"**).  
+ Wenn das Schema gibt die **Image**, **binäre**, oder **Varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp (mit **SQL: DataType**) und nicht Geben Sie einen XML-Datentyp, das Updategram wird davon ausgegangen, dass der XML-Datentyp ist **binary Base64**. Wenn Ihre Daten sind **bin.base** geben, müssen Sie den Typ explizit angeben (**dt:type=bin.base** oder **Type = "xsd: hexBinary"** ).  
   
- Wenn das Schema gibt die **"DateTime"**, **Datum**, oder **Zeit** XSD-Datentyp, müssen Sie auch angeben der entsprechenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentyp mithilfe  **SQL: datatype = "DateTime"**.  
+ Wenn das Schema gibt die **"DateTime"** , **Datum**, oder **Zeit** XSD-Datentyp, müssen Sie auch angeben der entsprechenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentyp mithilfe  **SQL: datatype = "DateTime"** .  
   
  Beim Verarbeiten von Parametern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Geld** geben, müssen Sie explizit angeben **SQL: datatype = "Money"** auf dem entsprechenden Knoten im Zuordnungsschema.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63025537"
 </xsd:schema>  
 ```  
   
- Das folgende Updategram fügt einen Datensatz in die Sales.Customer-Tabelle ein und ordnet diese Daten anhand des vorherigen Zuordnungsschemas der Tabelle ordnungsgemäß zu. Beachten Sie, dass das Updategram den gleichen Elementnamen verwendet  **\<Kunden >**, wie im Schema definiert. Dies ist obligatorisch, da das Updategram ein bestimmtes Schema angibt.  
+ Das folgende Updategram fügt einen Datensatz in die Sales.Customer-Tabelle ein und ordnet diese Daten anhand des vorherigen Zuordnungsschemas der Tabelle ordnungsgemäß zu. Beachten Sie, dass das Updategram den gleichen Elementnamen verwendet  **\<Kunden >** , wie im Schema definiert. Dies ist obligatorisch, da das Updategram ein bestimmtes Schema angibt.  
   
 ##### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63025537"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Einfügen eines Datensatzes durch Verwenden der im Zuordnungsschema angegebenen Über-/Unterordnungsbeziehung  
  Schemaelemente können in Beziehung gesetzt werden. Die  **\<SQL: Relationship >** Element gibt die über-/ unterordnungsbeziehung zwischen den Schemaelementen an. Mit diesen Informationen werden die entsprechenden Tabellen aktualisiert, die Primärschlüssel-Fremdschlüssel-Beziehungen aufweisen.  
   
- Das folgende Zuordnungsschema (SampleSchema.xml) besteht aus zwei Elementen,  **\<Reihenfolge >** und  **\<OD >**:  
+ Das folgende Zuordnungsschema (SampleSchema.xml) besteht aus zwei Elementen,  **\<Reihenfolge >** und  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

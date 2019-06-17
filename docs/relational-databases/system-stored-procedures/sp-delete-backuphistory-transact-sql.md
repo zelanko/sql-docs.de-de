@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 44db86eef5231fde337a9521cb76ca5e03f28db9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62715827"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
@@ -43,7 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @oldest_date = ] 'oldest\_date'` Die am weitesten zurückliegende Datum wird in den sicherungs- und Verlaufstabellen beibehalten werden. *Oldest_date* ist **"DateTime"**, hat keinen Standardwert.  
+`[ @oldest_date = ] 'oldest\_date'` Die am weitesten zurückliegende Datum wird in den sicherungs- und Verlaufstabellen beibehalten werden. *Oldest_date* ist **"DateTime"** , hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

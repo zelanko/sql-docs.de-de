@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 794e71013b552cbd4e17b9cb37e4c8c261aeeae6
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702694"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Übersicht über die Microsoft OLE DB Remoting-Anbieter
@@ -38,14 +38,14 @@ Der Microsoft OLE DB-Anbieter für Remoting können einen lokalen Benutzer auf e
 ## <a name="additional-keywords"></a>Zusätzliche Schlüsselwörter
  Wenn dieser Dienstanbieter aufgerufen wird, sind die folgenden zusätzlichen Schlüsselwörter relevant.
 
-|Schlüsselwort|Description|
+|Schlüsselwort|Beschreibung|
 |-------------|-----------------|
 |**Data Source**|Gibt den Namen der remote-Datenquelle. Es wird an den OLE DB-Anbieter für Remoting für die Verarbeitung übergeben.<br /><br /> Dieses Schlüsselwort entspricht der [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) des Objekts [Connect](../../../ado/reference/rds-api/connect-property-rds.md) Eigenschaft.|
 
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
  Wenn diesem Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften hinzugefügt, auf die [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)des Objekts [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.
 
-|Name der dynamischen Eigenschaft|Description|
+|Name der dynamischen Eigenschaft|Beschreibung|
 |---------------------------|-----------------|
 |**DFMode**|Gibt den Data Factory-Modus. Eine Zeichenfolge, die die gewünschte Version gibt an, die [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt auf dem Server. Legen Sie diese Eigenschaft vor dem Öffnen einer Verbindungs zum Anfordern einer bestimmten Version von der **DataFactory**. Wenn die benötigte Version nicht verfügbar ist, wird es versucht werden, verwenden Sie die vorherige Version. Wenn keine vorherige Version vorhanden ist, tritt ein Fehler auf. Wenn **DFMode** kleiner als die verfügbare Version ist, tritt ein Fehler auf. Diese Eigenschaft ist schreibgeschützt, nachdem eine Verbindung hergestellt wird.<br /><br /> Dabei kann es sich um eine der folgenden Zeichenfolgenwerte gültig sein:<br /><br /> -"25"-Version 2.5 (Standard)<br />-   "21"-Version 2.1<br />-   "20"-Version 2.0<br />-   "15"-Version 1.5|
 |**Befehlseigenschaften**|Gibt die Werte, die auf die Zeichenfolge der (Rowset)-Befehlseigenschaften, die an den Server gesendet werden, durch den MS Remote-Anbieter hinzugefügt werden. Der Standardwert für diese Zeichenfolge ist Vt_empty.|

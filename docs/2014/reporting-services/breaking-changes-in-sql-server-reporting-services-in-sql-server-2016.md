@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109929"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2014
@@ -47,7 +47,7 @@ ms.locfileid: "66109929"
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>Änderungen an der SharePoint-Modus-Befehlszeileninstallation  
- Die Eingabeeinstellung **/RSINSTALLMODE** kann nur noch mit Installationen im einheitlichen Modus, jedoch nicht mit Installationen im SharePoint-Modus verwendet werden. Beispielsweise wird Folgendes nicht unterstützt [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/rsinstallmode = "DefaultSharePointMode"**. Verwenden Sie statt dieser Eingabeeinstellung **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
+ Die Eingabeeinstellung **/RSINSTALLMODE** kann nur noch mit Installationen im einheitlichen Modus, jedoch nicht mit Installationen im SharePoint-Modus verwendet werden. Beispielsweise wird Folgendes nicht unterstützt [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/rsinstallmode = "DefaultSharePointMode"** . Verwenden Sie statt dieser Eingabeeinstellung **/RSSHPINSTALLMODE="DefaultSharePointMode"** .  
   
  Die folgende Anweisung ist ein Beispiel einer vollständigen Installation Installationsbefehl und Parametersatz: **setup/Action = Install/Features = SQL, RS/InstanceName = Denali_INST1 … / rsshpinstallmode = "DefaultSharePointMode"**  
   

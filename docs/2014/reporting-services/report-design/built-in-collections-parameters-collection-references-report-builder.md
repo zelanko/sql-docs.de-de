@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c3c9452a9be55c71431a0ed3012769b1f5f6d8eb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106413"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Verweise auf Parameters-Auflistungen (Berichts-Generator und SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106413"
 ##  <a name="Single"></a> Verwenden von einwertigen Parametern in Ausdrücken  
  Die folgende Tabelle enthält Beispiele für die zu verwendende Syntax zum Verweisen auf einwertige Parameter beliebigen Datentyps in einem Ausdruck.  
   
-|Beispiel|Description|  
+|Beispiel|Beschreibung|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Parametername>* `.IsMultiValue`|Gibt `False` zurück.<br /><br /> Überprüft, ob ein Parameter mehrwertig ist. Wenn `True`, wird der Parameter mehrwertig ist, und es ist eine Auflistung von Objekten. Wenn `False`, der Parameter einwertig und stellt ein einzelnes Objekt.|  
 |`=Parameters!` *\<Parametername>* `.Count`|Gibt den Ganzzahlwert 1 zurück. Für einwertige Parameter ist der Wert stets 1.|  

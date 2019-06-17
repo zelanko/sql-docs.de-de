@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfb62ec0bbd16a2b77e2f05f64d36ef31498a100
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095901"
 ---
 # <a name="database-engine-configuration---data-directories"></a>Konfiguration der Datenbank-Engine – Datenverzeichnisse
@@ -27,7 +27,7 @@ ms.locfileid: "66095901"
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
   
-|Description|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
+|Beschreibung|Unterstützter Speichertyp|Standardverzeichnis|Empfehlungen|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Datenstammverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher <sup>1</sup>|C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup konfiguriert Zugriffssteuerungslisten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verzeichnisse und unterbricht die Vererbung im Rahmen der Konfiguration.|  
 |Benutzerdatenbankverzeichnis|Lokaler Datenträger, SMB-Dateiserver, freigegebener Speicher <sup>1</sup>|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< InstanceID > \MSSQL\Data|Welche Vorgehensweise für Benutzerdatenverzeichnisse empfohlen wird, hängt von der Arbeitsauslastung und den Leistungsanforderungen ab.|  

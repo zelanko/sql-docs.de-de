@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980045"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
@@ -72,7 +72,7 @@ OUTPUT
  [ *Xpath_namespaces* ]  
  Gibt die Namespacedeklarationen an, die in XPATH-Ausdrücken für Zeilen und Spalten in OPENXML verwendet werden. *Xpath_namespaces* ist ein Textparameter: **Char**, **Nchar**, **Varchar**, **Nvarchar**, **Text**, **Ntext** oder **Xml**.  
   
- Der Standardwert ist  **\<root Xmlns:mp = "Urn: Schemas-Microsoft-com: xml-Metaprop" >**. *Xpath_namespaces* enthält die Namespace-URIs für die Präfixe der XPath-Ausdrücken in OPENXML ein wohlgeformtes XML-Dokument verwendet. *Xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace zu verweisen **Urn: Schemas-Microsoft-com: xml-Metaprop**; Dies stellt Metadaten für die analysierte XML-Elemente. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix **mp** ist noch gültig für **Urn: Schemas-Microsoft-com: xml-Metaprop** selbst wenn *Xpath_namespaces* keine derartige Deklaration enthält.  
+ Der Standardwert ist  **\<root Xmlns:mp = "Urn: Schemas-Microsoft-com: xml-Metaprop" >** . *Xpath_namespaces* enthält die Namespace-URIs für die Präfixe der XPath-Ausdrücken in OPENXML ein wohlgeformtes XML-Dokument verwendet. *Xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace zu verweisen **Urn: Schemas-Microsoft-com: xml-Metaprop**; Dies stellt Metadaten für die analysierte XML-Elemente. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix **mp** ist noch gültig für **Urn: Schemas-Microsoft-com: xml-Metaprop** selbst wenn *Xpath_namespaces* keine derartige Deklaration enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder > 0 (Fehler)  

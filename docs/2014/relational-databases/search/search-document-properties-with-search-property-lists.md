@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011079"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
@@ -211,7 +211,7 @@ GO
   
     1.  Klicken Sie zum Entfernen einer Dokumenteigenschaft auf den Zeilenkopf links von der Eigenschaft, und drücken Sie ENTF.  
   
-    2.  Klicken Sie zum Hinzufügen einer Dokumenteigenschaft auf die leere Zeile am unteren Rand der Liste (rechts vom **\***), und geben Sie die Werte für die neue Eigenschaft ein.  
+    2.  Klicken Sie zum Hinzufügen einer Dokumenteigenschaft auf die leere Zeile am unteren Rand der Liste (rechts vom **\*** ), und geben Sie die Werte für die neue Eigenschaft ein.  
   
          Weitere Informationen zu diesen Werten finden Sie unter [Sucheigenschaftenlisten-Editor](../../database-engine/search-property-list-editor.md). Wie Sie diese Werte für die von Microsoft definierte Eigenschaften erhalten, erfahren Sie unter [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Weitere Informationen zu Eigenschaften, die von einem unabhängigen Softwareanbieter (ISV) definiert wurden, finden Sie in der Dokumentation des betreffenden Anbieters.  
   

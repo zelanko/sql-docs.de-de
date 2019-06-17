@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011261"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
@@ -128,10 +128,10 @@ ms.locfileid: "66011261"
   
 |Platform|Schätzen der arbeitsspeicheranforderungen von fdhost.exe in MB -*F*<sup>1</sup>|Formel zum Berechnen von max Server Memory -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _Anzahl der durchforstungsbereiche_ **&#42;** 50|_M_ **= Minimum (** _T_ **,** 2000 **)-*`F`* -**  500|  
+|x86|_F_ **=** _Anzahl der durchforstungsbereiche_ **&#42;** 50|_M_ **= Minimum (** _T_ **,** 2000 **)- *`F`* -**  500|  
 |x64|_F_ **=** _Anzahl der durchforstungsbereiche_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die arbeitsspeicheranforderungen von fdhost.exe aller separat, *F1*, *F2*und so weiter. Berechnen Sie anschließend *M* als _T_**-** sigma **(**_F_i **)**.  
+ <sup>1</sup> Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die arbeitsspeicheranforderungen von fdhost.exe aller separat, *F1*, *F2*und so weiter. Berechnen Sie anschließend *M* als _T_ **-** sigma **(** _F_i **)** .  
   
  <sup>2</sup> 500 MB ist eine Schätzung des Arbeitsspeichers durch andere Prozesse im System erforderlich. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
   

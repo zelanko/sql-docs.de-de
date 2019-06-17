@@ -10,12 +10,12 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767537"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046765"
 ---
 # <a name="lesson-3-adding-logging"></a>Lektion 3: Hinzufügen der Protokollierung
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst Protokollierungsfunktionen für die Problembehandlung und das Überwachen der Paketausführung mithilfe einer Reihe von Task- und Containerereignissen. Die Protokollierungsfunktionen sind flexibel und können auf der Ebene des Pakets oder für einzelne Tasks und Container innerhalb des Pakets aktiviert werden. Sie können dann auswählen, welche Ereignisse protokolliert werden sollen, und mehrere Protokolle für ein einzelnes Paket erstellen.  
@@ -35,7 +35,7 @@ ms.locfileid: "62767537"
  In dieser Lektion erstellen Sie eine Kopie des Pakets, das Sie in erstellt [Lektion 2: Hinzufügen von Schleifen](lesson-2-adding-looping-with-ssis.md). Beim Arbeiten mit diesem neuen Paket fügen Sie dann die Protokollierung hinzu und konfigurieren sie, um bestimmte Ereignisse während der Paketausführung zu überwachen. Wenn Sie keine der vorherigen Lektionen abgeschlossen haben, können Sie auch das abgeschlossene Paket aus Lektion 2, das im Lernprogramm enthalten ist, kopieren.  
   
 > [!IMPORTANT]  
->  Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zur Installation und Bereitstellung **AdventureWorksDW2012**, [Reporting Services-Produktbeispiele auf CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Dieses Lernprogramm erfordert die **AdventureWorksDW2012** -Beispieldatenbank. Weitere Informationen zur Installation und Bereitstellung **AdventureWorksDW2012**, [Reporting Services Product Samples auf GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Diese Lektion enthält die folgenden Aufgaben:  

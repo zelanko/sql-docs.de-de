@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd92344552371e2e052a958485340b70522cc121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313570"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Programmgesteuertes Festlegen von Optionen für die Paradox-Treiber
 
-|Option|Description|Methode|  
+|Option|Beschreibung|Methode|  
 |------------|-----------------|------------|  
 |Verzeichnis|Legt die entsprechenden Verzeichnis fest.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Sortierreihenfolge|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz kann ASCII (Standard) sein, internationale, Finnish-Swedish oder Danish-Norwegian.|Um diese Option dynamisch festzulegen, verwenden die **COLLATINGSEQUENCE** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  

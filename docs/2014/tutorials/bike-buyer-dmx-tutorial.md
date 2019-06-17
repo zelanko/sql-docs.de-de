@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140556"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer-Lernprogramm zur DMX-Abfragesprache
@@ -82,7 +82,7 @@ ms.locfileid: "63140556"
  [Lektion 1: Erstellen der Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie mithilfe der `CREATE`-Anweisung Miningstrukturen erstellt werden.  
   
- [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie einer Miningstruktur mithilfe der `ALTER`-Anweisung Miningmodelle hinzugefügt werden.  
   
  [Lektion 3: Verarbeiten der Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
