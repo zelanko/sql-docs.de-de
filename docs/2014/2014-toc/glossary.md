@@ -15,10 +15,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504784"
 ---
 # <a name="glossary"></a>Glossar
@@ -1678,7 +1678,7 @@ ms.technology:
 |Takt|Ein regelmäßiges Signal, das von einem Taktschaltkreis ausgegeben und schnell wiederholt wird.|  
 |Taktanzahl|Eine monoton steigende Zahl, die verwendet wird, um eine Änderung an einem Element in einem Replikat eindeutig zu identifizieren.|  
 |Kachelserver|Eine Zwischenspeicher-Engine für Kartenbilder, die vorgenerierte Kartenbildkacheln mit fester Größe zwischenspeichert und bereitstellt.|  
-|Uhrzeit|Ein SQL Server-Systemdatentyp, mit dem ein Zeitwert zwischen 0:00 und 23:59:59.999999 gespeichert wird.|  
+|time|Ein SQL Server-Systemdatentyp, mit dem ein Zeitwert zwischen 0:00 und 23:59:59.999999 gespeichert wird.|  
 |Zeitintervall|Ein Zeitraum, in dem ein angegebenes Ereignis gültig ist. Das gültige Zeitintervall schließt die gültige Startzeit und alle Zeitmomente bis zur, aber ausschließlich der gültigen Endzeit ein.|  
 |Tokenisierung|Beim Text Mining oder bei der Volltextsuche der Prozess zum Identifizieren sinnvoller Einheiten in Zeichenfolgen, und zwar an Wortgrenzen, Morphemen oder Wortstämmen, sodass verwandte Tokens gruppiert werden können. Obwohl es sich bei "San Francisco" um zwei Wörter handelt, könnte dieser Begriff als einzelnes Token behandelt werden.|  
 |Tombstone|Ein Marker, der ein gelöschtes Element darstellt und verwendet wird, um dieses nachzuverfolgen und seine versehentliche Wiedereinführung in die Synchronisierungscommunity zu verhindern.|  
