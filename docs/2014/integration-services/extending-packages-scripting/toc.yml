@@ -17,7 +17,7 @@
       href: task/coding-and-debugging-the-script-task.md
     - name: Verwenden von Variablen im Skripttask
       href: task/using-variables-in-the-script-task.md
-    - name: 'Herstellen einer Verbindung zu Datenquellen im Skripttask '
+    - name: Herstellen einer Verbindung zu Datenquellen im Skripttask
       href: task/connecting-to-data-sources-in-the-script-task.md
     - name: Auslösen von Ereignissen im Skripttask
       href: task/raising-events-in-the-script-task.md
@@ -57,7 +57,7 @@
       href: data-flow-script-component/understanding-the-script-component-object-model.md
     - name: Verwenden von Variablen in der Skriptkomponente
       href: data-flow-script-component/using-variables-in-the-script-component.md
-    - name: 'Herstellen einer Verbindung zu Datenquellen in der Skriptkomponente '
+    - name: Herstellen einer Verbindung zu Datenquellen in der Skriptkomponente
       href: data-flow-script-component/connecting-to-data-sources-in-the-script-component.md
     - name: Auslösen von Ereignissen in der Skriptkomponente
       href: data-flow-script-component/raising-events-in-the-script-component.md

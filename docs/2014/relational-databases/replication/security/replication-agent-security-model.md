@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960820"
 ---
 # <a name="replication-agent-security-model"></a>Sicherheitsmodell des Replikations-Agents
@@ -77,9 +77,9 @@ ms.locfileid: "62960820"
 |Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|  
 |Warteschlangenlese-Agent|**[\<Verteiler>].\<Ganzzahl>**|  
   
- <sup>1</sup> bei Pushabonnements für Oracle-Veröffentlichungen lautet der Auftragsname ist  **\<Verleger >-\<Verleger**> anstelle von  **\<Verleger >-\< PublicationDatabase >**.  
+ <sup>1</sup> bei Pushabonnements für Oracle-Veröffentlichungen lautet der Auftragsname ist  **\<Verleger >-\<Verleger**> anstelle von  **\<Verleger >-\< PublicationDatabase >** .  
   
- <sup>2</sup> bei Pullabonnements für Oracle-Veröffentlichungen lautet der Auftragsname ist  **\<Verleger >-\<DistributionDatabase**> anstelle von  **\<Verleger >-\< PublicationDatabase >**.  
+ <sup>2</sup> bei Pullabonnements für Oracle-Veröffentlichungen lautet der Auftragsname ist  **\<Verleger >-\<DistributionDatabase**> anstelle von  **\<Verleger >-\< PublicationDatabase >** .  
   
  Wenn Sie die Replikation konfigurieren, geben Sie Konten an, unter denen die Agents ausgeführt werden sollen. Sämtliche Auftragsschritte werden jedoch im Sicherheitskontext eines *Proxys*ausgeführt, somit führt die Replikation folgende Zuordnungen für die von Ihnen angegebenen Agentkonten intern aus:  
   

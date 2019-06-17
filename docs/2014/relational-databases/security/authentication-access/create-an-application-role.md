@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011946"
 ---
 # <a name="create-an-application-role"></a>Erstellen einer Anwendungsrolle
@@ -31,7 +31,7 @@ ms.locfileid: "63011946"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Anwendungsrolle mit**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63011946"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER ANY APPLICATION ROLE-Berechtigung in der Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 ##### <a name="to-create-an-application-role"></a>So erstellen Sie eine Anwendungsrolle  
   
@@ -56,11 +56,11 @@ ms.locfileid: "63011946"
   
 3.  Erweitern Sie den Ordner **Rollen** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anwendungsrollen**, und klicken Sie dann auf **Neue Anwendungsrolle...**.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anwendungsrollen**, und klicken Sie dann auf **Neue Anwendungsrolle...** .  
   
 5.  Geben Sie in das Dialogfeld **Anwendungsrolle – Neu** auf der Seite **Allgemein** den Namen der neuen Anwendungsrolle in das Feld **Rollenname** ein.  
   
-6.  Geben Sie im Feld **Standardschema** das Schema an, das Objekte besitzen soll, die von dieser Rolle durch Eingabe der Objektnamen erstellt wurden. Klicken Sie alternativ auf die Auslassungspunkte **(...)**, um das Dialogfeld **Schema suchen** zu öffnen.  
+6.  Geben Sie im Feld **Standardschema** das Schema an, das Objekte besitzen soll, die von dieser Rolle durch Eingabe der Objektnamen erstellt wurden. Klicken Sie alternativ auf die Auslassungspunkte **(...)** , um das Dialogfeld **Schema suchen** zu öffnen.  
   
 7.  Geben Sie im Feld **Kennwort** ein Kennwort für die neue Rolle ein. Geben Sie im Feld **Kennwort bestätigen** das Kennwort erneut ein.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63011946"
   
 #### <a name="to-create-an-application-role"></a>So erstellen Sie eine Anwendungsrolle  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

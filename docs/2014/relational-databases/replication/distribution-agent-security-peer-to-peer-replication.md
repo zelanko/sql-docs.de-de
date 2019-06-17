@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78d8baed7783459db79bb9facb0141cc570c4127
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721381"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>Sicherheit für den Verteilungs-Agent (Peer-zu-Peer-Replikation)
@@ -37,7 +37,7 @@ ms.locfileid: "62721381"
  Die Datenbank auf dem Peer, der sowohl als Veröffentlichungs- als auch als Abonnementdatenbank dient.  
   
  **Verbindung mit Verteiler**  
- Der Kontext, unter dem die Verbindung mit dem Verteiler hergestellt wird. Lokale Verbindungen werden immer unter dem Kontext des Windows-Kontos hergestellt, das zum Ausführen der Agents verwendet wird. Dieser Assistent erstellt Pushabonnements (die lokale Verbindung ist die Verbindung mit dem Verteiler), damit dieses Feld immer angezeigt werden: **Identität annehmen "\<Domäne >\\< Anmeldung\>"** oder **Impersonate '\<Computer >\\< Anmeldung\>"**.  
+ Der Kontext, unter dem die Verbindung mit dem Verteiler hergestellt wird. Lokale Verbindungen werden immer unter dem Kontext des Windows-Kontos hergestellt, das zum Ausführen der Agents verwendet wird. Dieser Assistent erstellt Pushabonnements (die lokale Verbindung ist die Verbindung mit dem Verteiler), damit dieses Feld immer angezeigt werden: **Identität annehmen "\<Domäne >\\< Anmeldung\>"** oder **Impersonate '\<Computer >\\< Anmeldung\>"** .  
   
  **Verbindung mit Abonnent**  
  Der Kontext, unter dem die Verbindung mit dem Abonnenten hergestellt wird. Die Verbindung kann entweder mithilfe des Kontexts des Windows-Kontos hergestellt werden, unter dem der Agent ausgeführt wird, oder mithilfe des Kontexts einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung. In dem Feld wird eine der folgenden Optionen angezeigt: **Use login '\<Login>'** (Anmeldename verwenden: „<Anmeldename>“), **Impersonate '\<Domain>\\<Login\>'** (Folgende Identität annehmen: „<Domain>\<Anmeldename>“) oder **Impersonate '\<Computer>\\<Login\>'** (Folgende Identität annehmen: <Computer>\<Anmeldename>)“. [!INCLUDE[msCoName](../../includes/msconame-md.md)] empfiehlt, alle Verbindungen unter dem Kontext des Windows-Kontos herzustellen.  

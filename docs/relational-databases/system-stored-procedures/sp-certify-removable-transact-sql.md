@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994397"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -46,7 +46,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumente  
 `[ @dbname = ] 'dbname'` Gibt die Datenbank überprüft werden. *Dbname* ist **Sysname**.  
   
-`[ @autofix = ] 'auto'` Überträgt den Besitz der Datenbank und aller Datenbankobjekte an den Systemadministrator und löscht alle vom Benutzer erstellten Datenbankbenutzer und nicht standardmäßigen Berechtigungen. *automatische* ist **nvarchar(4)**, hat den Standardwert NULL.  
+`[ @autofix = ] 'auto'` Überträgt den Besitz der Datenbank und aller Datenbankobjekte an den Systemadministrator und löscht alle vom Benutzer erstellten Datenbankbenutzer und nicht standardmäßigen Berechtigungen. *automatische* ist **nvarchar(4)** , hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

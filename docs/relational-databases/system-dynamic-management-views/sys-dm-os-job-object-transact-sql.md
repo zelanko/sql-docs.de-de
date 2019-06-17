@@ -21,10 +21,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047044"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL-Datenbank)
@@ -34,7 +34,7 @@ Gibt eine einzelne Zeile, beschreibt die Konfiguration des Auftragsobjekts, die 
 
 Ein Job-Objekt ist ein Windows-Konstrukt, die CPU, Arbeitsspeicher und e/a-Ressourcenkontrolle auf Betriebssystemebene implementiert. Weitere Informationen zu Auftragsobjekte, finden Sie unter [Auftragsobjekte](/windows/desktop/ProcThread/job-objects). 
   
-|Spalte|Datentyp|Description|  
+|Spalte|Datentyp|Beschreibung|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Gibt an, der Teil der Prozessorzyklen an, denen die SQL Server-Threads während jedes Intervall für die Planung verwenden können. Der Wert wird als Prozentsatz der verfügbaren Zyklen in ein Intervall für die Planung der 10000-Zyklus gemeldet. Beispielsweise gibt der Wert 100 bedeutet, dass Threads CPU-Kerne nutzt der vollen Kapazität.|
 |cpu_affinity_mask|**bigint**|Eine Bitmaske, die Beschreibung der logischen Prozessoren kann SQL Server-Prozess in der Gruppe "Prozessor" verwenden. Z. B. Cpu_affinity_mask 255 (1111 1111 binär) bedeutet, dass die ersten acht logische Prozessoren verwendet werden können.|

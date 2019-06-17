@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997069"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object'` Ist der Name, der eine vorhandene Tabelle, Sicht, eine benutzerdefinierte Funktion oder gespeicherte Prozedur in der aktuellen Datenbank. *Objekt* ist ein **nvarchar(776)**, hat keinen Standardwert. *Objekt* kann qualifiziert werden, mit dem Besitzer des vorhandenen Objekts, in der Form _existing_owner.Object_**.** _Objekt_ , wenn das Schema und der schemabesitzer den gleichen Namen haben.  
+`[ @objname = ] 'object'` Ist der Name, der eine vorhandene Tabelle, Sicht, eine benutzerdefinierte Funktion oder gespeicherte Prozedur in der aktuellen Datenbank. *Objekt* ist ein **nvarchar(776)** , hat keinen Standardwert. *Objekt* kann qualifiziert werden, mit dem Besitzer des vorhandenen Objekts, in der Form _existing_owner.Object_ **.** _Objekt_ , wenn das Schema und der schemabesitzer den gleichen Namen haben.  
   
 `[ @newowner = ] 'owner_ '` Ist der Name des Sicherheitskontos, das den neuen des Objekts Besitzer. *Besitzer* ist **Sysname**, hat keinen Standardwert. *Besitzer* muss ein gültiger Datenbankbenutzer, eine Serverrolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldename oder Windows-Gruppe mit Zugriff auf die aktuelle Datenbank. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
   

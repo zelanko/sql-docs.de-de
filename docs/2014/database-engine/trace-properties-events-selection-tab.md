@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089581"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Ablaufverfolgungseigenschaften (Registerkarte 'Ereignisauswahl')
   Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungseigenschaften** können Sie die Ablaufverfolgung von Ereignissen oder Datenspalten anzeigen und angeben.  
   
 ## <a name="options"></a>Optionen  
- Spalte**Ereignisse**   
+ Spalte**Ereignisse**  
  Gibt die Ereignisse an, für die eine Ablaufverfolgung ausgeführt wird, indem das betreffende Kontrollkästchen in der Ereignisspalte aktiviert bzw. deaktiviert werden. Die**Ereignisse** sind nach Ereigniskategorien angeordnet. In der Vorlage angegebene Ereignisklassen werden automatisch ausgewählt. Weitere Informationen finden Sie unter [Ereignisklassen in SQL Server – Referenz](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Datenspalten  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721083"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung
@@ -40,7 +40,7 @@ ms.locfileid: "62721083"
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **ProductReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   
-8.  In der **Sicherheit für den Verteilungs-Agent** Dialogfeld klicken Sie auf die Auslassungspunkte (**...** ) Geben Sie eine Schaltfläche \< _Machine_Name >_**\repl_distribution** in die **Prozesskonto** Geben Sie das Kennwort für dieses auf **OK**, und klicken Sie dann auf **Weiter**.  
+8.  In der **Sicherheit für den Verteilungs-Agent** Dialogfeld klicken Sie auf die Auslassungspunkte ( **...** ) Geben Sie eine Schaltfläche \< _Machine_Name >_ **\repl_distribution** in die **Prozesskonto** Geben Sie das Kennwort für dieses auf **OK**, und klicken Sie dann auf **Weiter**.  
   
 9. Klicken Sie auf **Fertig stellen** , um auf den verbleibenden Seiten die Standardwerte zu übernehmen und den Assistenten zu beenden.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721083"
   
 2.  Klicken Sie auf der Seite **Allgemein** in der Liste **Benutzertyp** auf **Windows-Benutzer**.  
   
-3.  Wählen Sie die **Benutzernamen** ein, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...) in der **Geben Sie den zu verwendenden Objektnamen** Feldtyp < Machine_Name >**\repl_distribution**, klicken Sie auf  **Überprüfen Sie die Namen**, und klicken Sie dann auf **OK**.  
+3.  Wählen Sie die **Benutzernamen** ein, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...) in der **Geben Sie den zu verwendenden Objektnamen** Feldtyp < Machine_Name > **\repl_distribution**, klicken Sie auf  **Überprüfen Sie die Namen**, und klicken Sie dann auf **OK**.  
   
 4.  Wählen Sie auf der Seite **Mitgliedschaft** im Bereich **Mitgliedschaft in Datenbankrollen** die **db_owner**-Rolle aus, und klicken Sie anschließend auf **OK** , um den Benutzer zu erstellen.  
   

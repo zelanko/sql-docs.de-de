@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63143584"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Leistungsprofilerstellung des ODBC-Treibers
@@ -112,7 +112,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Zeitstatistiken  
   
-|SQLPERF-Feld|Description|  
+|SQLPERF-Feld|Beschreibung|  
 |-------------------|-----------------|  
 |msExecutionTime|Die kumulierte Verarbeitungszeit des Treibers nach SQL_PERF_START, einschließlich der Wartezeit des Treibers auf Antworten vom Server|  
 |msNetworkServerTime|Die kumulierte Wartezeit des Treibers auf Antworten vom Server|  

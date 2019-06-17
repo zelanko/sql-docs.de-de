@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070857"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Vorhersagerechner (Tabellenanalysetools für Excel)
@@ -73,7 +73,7 @@ ms.locfileid: "66070857"
 -   In diesem Abschnitt werden die Informationen in den einzelnen Berichten und die Verwendung der verschiedenen Berichtsoptionen beschrieben.  
   
 ### <a name="prediction-report-with-graphs"></a>Vorhersagebericht mit Diagrammen  
- Der erste vorhersagebericht heißt **Rechner Vorhersagebericht für die \<Zielstatus > der \<Zielattribut >**. Er enthält aus der Analyse abgeleitete Tabellen und Faktoren sowie Tools, mit denen Sie die finanziellen Auswirkungen einer bestimmten Analyse bewerten können.  
+ Der erste vorhersagebericht heißt **Rechner Vorhersagebericht für die \<Zielstatus > der \<Zielattribut >** . Er enthält aus der Analyse abgeleitete Tabellen und Faktoren sowie Tools, mit denen Sie die finanziellen Auswirkungen einer bestimmten Analyse bewerten können.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabelle zum Angeben von Kosten und Gewinnen  
  Das erste Tool dieses Berichts befindet sich oben links im Bericht. Es ist eine Tabelle, in der Sie die Kosten und Gewinne angeben können, die mit der richtigen und falschen Vorhersage eines Werts verbunden sind.  Diese Kosten und Gewinne sind erforderlich, um für den Rechner den optimalen Ergebnisschwellenwert zu berechnen.  
@@ -120,7 +120,7 @@ ms.locfileid: "66070857"
  Obwohl das erste Diagramm vorschlägt, dass Sie Ihre Gewinne maximieren können, indem Sie die ersten 500 vom Modell vorhergesagten Kunden erreichen, könnten Sie sich beispielsweise nach einem Blick auf dieses zweite Diagramm entscheiden, dass die Kosten zu hoch sind, wenn diese Kunden fälschlicherweise angesprochen werden. Sie entschließen sich deshalb dazu, die Marketingkampagne auf die ersten 400 Kunden zu beschränken.  
   
 ### <a name="interactive-prediction-calculator"></a>Interaktiver Vorhersagerechner  
- Das zweite, vom Tool Vorhersagerechner erstellte Arbeitsblatt heißt **Vorhersagerechner für den \<Zielstatus > der \<Zielattribut >**. Es ist ein interaktives Arbeitsblatt, mit dem Sie einzelne Ergebnisse berechnen können. Da dieses Arbeitsblatt im Modell gespeicherte Muster und Statistiken nutzt, können Sie mit unterschiedlichen Werten experimentieren und deren Auswirkungen auf das vorhergesagte Ergebnis ermitteln. Dieser Bericht weist auch zwei Abschnitte auf: Einer ist interaktiv, und einer dient als Referenz.  
+ Das zweite, vom Tool Vorhersagerechner erstellte Arbeitsblatt heißt **Vorhersagerechner für den \<Zielstatus > der \<Zielattribut >** . Es ist ein interaktives Arbeitsblatt, mit dem Sie einzelne Ergebnisse berechnen können. Da dieses Arbeitsblatt im Modell gespeicherte Muster und Statistiken nutzt, können Sie mit unterschiedlichen Werten experimentieren und deren Auswirkungen auf das vorhergesagte Ergebnis ermitteln. Dieser Bericht weist auch zwei Abschnitte auf: Einer ist interaktiv, und einer dient als Referenz.  
   
 #### <a name="first-table"></a>Erste Tabelle  
  Sie können auswählen, oder geben Sie einen neuen Wert in der **Wert** -Spalte der Tabelle zu sehen, wie sich die Änderung des Werts auf das Ergebnis auswirkt.  
@@ -152,11 +152,11 @@ ms.locfileid: "66070857"
  In dieser Tabelle sind die einzelnen Ergebnisse für jeden Zustand der Eingabespalten und die relative Auswirkung auf die Ergebnisse dargestellt. Diese Tabelle ist statisch und dient nur als Referenz.  
   
 ### <a name="printable-prediction-calculator"></a>Druckbarer Vorhersagerechner  
- Das dritte, vom Tool Vorhersagerechner erstellte Arbeitsblatt heißt **PrintablePrediction Rechner für die \<Zielstatus > der \<Zielattribut >**. Die Scorecard ist zum Drucken vorgesehen, sodass Sie manuell Ergebnisse berechnen können, wenn Sie nicht am Computer sind.  
+ Das dritte, vom Tool Vorhersagerechner erstellte Arbeitsblatt heißt **PrintablePrediction Rechner für die \<Zielstatus > der \<Zielattribut >** . Die Scorecard ist zum Drucken vorgesehen, sodass Sie manuell Ergebnisse berechnen können, wenn Sie nicht am Computer sind.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>So drucken und verwenden Sie den vom Vorhersagerechner generierten Bewertungsbericht  
   
-1.  Klicken Sie auf der Registerkarte "mit dem Titel" **Druckbarer Vorhersagerechner für \<Attribut >**.  
+1.  Klicken Sie auf der Registerkarte "mit dem Titel" **Druckbarer Vorhersagerechner für \<Attribut >** .  
   
 2.  Wählen Sie im Excel-Datei, **Seitenansicht**.  
   

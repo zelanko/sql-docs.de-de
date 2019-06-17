@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871537"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
@@ -154,7 +154,7 @@ ms.locfileid: "62871537"
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, auf **Microsoft SQL Server 2005**, auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)**), und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)** ), und wählen Sie **Eigenschaften**aus.  
   
 3.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server (***Instanzname***)** auf die Registerkarte **Startparameter**.  
   

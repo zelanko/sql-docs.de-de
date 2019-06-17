@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62990205"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
@@ -111,7 +111,7 @@ ms.locfileid: "62990205"
  Wird erweitert, um die restlichen Eigenschaften anzuzeigen.  
   
  **Sortierung**  
- Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)**, um diese Einstellung zu ändern.  
+ Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)** , um diese Einstellung zu ändern.  
   
  **Spezifikationskategorie der berechneten Spalte**  
  Wird erweitert, um die Eigenschaften für **Formel** und für **Ist Persisted**anzuzeigen. Wenn die Spalte berechnet ist, wird außerdem die Formel angezeigt. Um die Formel zu bearbeiten, erweitern Sie diese Kategorie, und bearbeiten Sie sie in der **Formel** -Eigenschaft.  
@@ -126,7 +126,7 @@ ms.locfileid: "62990205"
  Zeigt die Informationen zum Felddatentyp an, im gleichen Format wie in der SQL-Anweisung CREATE TABLE. Beispiel: Ein Feld, das eine Zeichenfolge variabler Länge mit einer maximalen Länge von 20 Zeichen enthält, würde als "varchar(20)" dargestellt. Um diese Eigenschaft zu ändern, geben Sie den Wert direkt ein.  
   
  **Beschreibung**  
- Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)**, um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
+ Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)** , um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
   
  **Kategorie Volltextspezifikation**  
  Wird erweitert, um die spezifischen Eigenschaften von Volltextspalten anzuzeigen.  

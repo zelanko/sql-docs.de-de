@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079571"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN-Registrierung für eine Analysis Services-Instanz
@@ -79,7 +79,7 @@ ms.locfileid: "66079571"
 |Dienstkonto|Dies ist das Startkonto des Windows-Diensts **MSSQLServerOLAPService** . Es kann sich um ein Windows-Domänenbenutzerkonto, ein virtuelles Konto, ein verwaltetes Dienstkonto (MSA) oder ein integriertes Konto handeln, wie z. B. Pro-Dienst-SID, NetworkService oder LocalSystem. Ein Windows-Domänenbenutzerkonto "Domäne\Benutzer" formatiert werden kann oder user@domain.|  
   
 ##  <a name="bkmk_virtual"></a> SPN-Registrierung für ein virtuelles Konto  
- Virtuelle Konten sind der Standardkontotyp für SQL Server-Dienste. Das virtuelle Konto lautet **NT Service\MSOLAPService** für eine Standardinstanz und **NT Service\MSOLAP$**\<Instanzname > für eine benannte Instanz.  
+ Virtuelle Konten sind der Standardkontotyp für SQL Server-Dienste. Das virtuelle Konto lautet **NT Service\MSOLAPService** für eine Standardinstanz und **NT Service\MSOLAP$** \<Instanzname > für eine benannte Instanz.  
   
  Wie der Name bereits aussagt, sind diese Konten nicht in Active Directory enthalten. Ein virtuelles Konto ist nur auf dem lokalen Computer vorhanden. Bei der Verbindung mit externen Diensten, Anwendungen oder Geräten wird die Verbindung über das lokale Computerkonto hergestellt. Wenn der SPN also für eine Analysis Services-Instanz registriert wird, die unter einem virtuellen Konto ausgeführt wird, handelt es sich tatsächlich um eine SPN-Registrierung für das Computerkonto.  
   
@@ -96,7 +96,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Beispielsyntax für eine benannte Instanz ausgeführt wird als NT Service\MSOLAP$\<Instanzname >**  
   
- In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02** und der Instanzname **AW-FINANCE**. In diesem Fall wird das Computerkonto für den SPN angegeben ist, nicht das virtuelle Konto **NT Service\MSOLAP$**\<Instanzname >.  
+ In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02** und der Instanzname **AW-FINANCE**. In diesem Fall wird das Computerkonto für den SPN angegeben ist, nicht das virtuelle Konto **NT Service\MSOLAP$** \<Instanzname >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

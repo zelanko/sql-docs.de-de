@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011721"
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
@@ -58,7 +58,7 @@ ms.locfileid: "63011721"
   
  In der folgenden Tabelle werden die festen Datenbankrollen und ihre Möglichkeiten aufgeführt. Diese Rollen sind in allen Datenbanken vorhanden.  
   
-|Rollenname auf Datenbankebene|Description|  
+|Rollenname auf Datenbankebene|Beschreibung|  
 |-------------------------------|-----------------|  
 |**db_owner**|Mitglieder der festen Datenbankrolle **db_owner** können alle Aktivitäten zur Konfiguration und Wartung an der Datenbank ausführen und können die Datenbank auch löschen.|  
 |**db_securityadmin**|Mitglieder der festen Datenbankrolle **db_securityadmin** können die Rollenmitgliedschaft ändern und Berechtigungen verwalten. Das Hinzufügen von Prinzipalen zu dieser Rolle könnte zu einer unbeabsichtigten Ausweitung von Privilegien führen.|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087773"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Vergleichen von tabellarischen und mehrdimensionalen Lösungen (SSAS)
@@ -116,7 +116,7 @@ ms.locfileid: "66087773"
 |Benutzerdefinierte Hierarchien|[ja](multidimensional-models/user-defined-hierarchies-create.md)|Ja|  
 |Rückschreiben|[ja](multidimensional-models/set-partition-writeback.md)|Nein|  
   
- * Wenn es sich bei Ihrer Lösung eine sehr große Anzahl von distinct Counts (z. B. viele Millionen von Kunden-IDs) unterstützen muss, tabellarischer Modus zuerst denken. Sie ist in diesem Szenario voraussichtlich leistungsfähiger. Finden Sie im Abschnitt über distinct Counts im Whitepaper [Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösungen](https://msdn.microsoft.com/library/dn751533.aspx).  
+ \* Wenn es sich bei Ihrer Lösung eine sehr große Anzahl von distinct Counts (z. B. viele Millionen von Kunden-IDs) unterstützen muss, tabellarischer Modus zuerst denken. Sie ist in diesem Szenario voraussichtlich leistungsfähiger. Finden Sie im Abschnitt über distinct Counts im Whitepaper [Analysis Services-Fallstudie: Verwenden von tabellarischen Modellen in umfangreichen kommerziellen Lösungen](https://msdn.microsoft.com/library/dn751533.aspx).  
   
 ##  <a name="bkmk_modelsize"></a> Größe des Datenbankmodells  
  Die Gesamtanzahl der Objekte wirkt sich bei den verschiedenen Lösungstypen nicht auf die Modellgröße aus. Allerdings sind die Entwurfstools, die zum Erstellen der einzelnen Lösungen eingesetzt werden, unterschiedlich gut zum Umgang mit einer großen Anzahl von Objekten geeignet. Ein umfangreicheres Modell ist in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] etwas einfacher zu erstellen, da diese Umgebung mehr Möglichkeiten für die Abbildung und Auflistung nach Objekttypen im Objekt-Explorer und Projektmappen-Explorer bietet.  

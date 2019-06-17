@@ -1,34 +1,32 @@
 ---
 title: Löschen einer Bedingung der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, delete policy conditions
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
-author: VanMSFT
-ms.author: vanto
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ae10727f14d84c74d7f57d312908734d14a4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705281"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>Löschen einer Bedingung der richtlinienbasierten Verwaltung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie Sie eine Bedingung der richtlinienbasierten Verwaltung mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ändern.  
   
  **In diesem Thema**  
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Löschen einer Bedingung mit:**  
   
@@ -41,7 +39,7 @@ ms.locfileid: "62705281"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-delete-a-condition"></a>So löschen Sie eine Bedingung  
   

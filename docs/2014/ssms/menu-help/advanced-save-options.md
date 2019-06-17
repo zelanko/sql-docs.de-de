@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678994"
 ---
 # <a name="advanced-save-options"></a>Erweiterte Speicheroptionen
-  Mithilfe dieses Dialogfelds können Sie ein Sprachcodierungsschema auswählen und die Zeichen festlegen, die am Ende jeder Zeile eingefügt werden. Für den Zugriff auf die **Erweiterte Speicheroptionen** Dialogfelds die **Datei** Menü klicken Sie auf **speichern** \<Abfragename >**.sql unter** auf Öffnen Sie die **Datei speichern unter** (Dialogfeld), klicken Sie auf den Pfeil nach unten auf der **speichern** Schaltfläche, und klicken Sie dann auf **mit Codierung speichern**.  
+  Mithilfe dieses Dialogfelds können Sie ein Sprachcodierungsschema auswählen und die Zeichen festlegen, die am Ende jeder Zeile eingefügt werden. Für den Zugriff auf die **Erweiterte Speicheroptionen** Dialogfelds die **Datei** Menü klicken Sie auf **speichern** \<Abfragename > **.sql unter** auf Öffnen Sie die **Datei speichern unter** (Dialogfeld), klicken Sie auf den Pfeil nach unten auf der **speichern** Schaltfläche, und klicken Sie dann auf **mit Codierung speichern**.  
   
 ## <a name="options"></a>Optionen  
  **Codierung**  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb769db0de0e962c52d042e19134b849b3c1c3d
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011347"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche
@@ -24,7 +24,7 @@ ms.locfileid: "66011347"
   
 ##  <a name="BasicsQueryKey"></a> Suchen von Schlüsselausdrücken in Dokumenten  
   
-###  <a name="howtofind"></a> So wird es gemacht: Suchen der Schlüsselausdrücke in Dokumenten mit SEMANTICKEYPHRASETABLE  
+###  <a name="howtofind"></a> Vorgehensweise: Suchen der Schlüsselausdrücke in Dokumenten mit SEMANTICKEYPHRASETABLE  
  Um die Schlüsselausdrücke in bestimmten Dokumenten bzw. Dokumente zu identifizieren, die bestimmte Schlüsselausdrücke enthalten, fragen Sie die Funktion [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) ab.  
   
  SEMANTICKEYPHRASETABLE gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Schlüsselausdrücke zurück, die in der angegebenen Tabelle Spalten zugeordnet sind. Auf diese Rowsetfunktion kann in der FROM-Klausel einer SELECT-Anweisung so verwiesen werden, als handelte es sich dabei um einen regulären Tabellennamen.  

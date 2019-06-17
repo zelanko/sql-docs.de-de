@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 613156430d7c85977aee2e147c5b158124316a94
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078667"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie
@@ -69,11 +69,11 @@ ms.locfileid: "66078667"
   
      Beachten Sie das eindeutige Symbol für dieses Attribut. Dieses Symbol gibt an, dass das Attribut der übergeordnete Schlüssel in einer Über-/Unterordnungshierarchie ist. Beachten Sie ebenso, dass im Eigenschaftenfenster die **Verwendung** -Eigenschaft für das Attribut als **Übergeordnet**definiert ist. Diese Eigenschaft wurde vom Dimensions-Assistenten festgelegt, als die Dimension entworfen wurde. Der Assistent hat die Über-/Unterordnungsbeziehung automatisch erkannt.  
   
-3.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche mit den drei Punkten (**...**) in der **NamingTemplate** -Eigenschaftenzelle.  
+3.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche mit den drei Punkten ( **...** ) in der **NamingTemplate** -Eigenschaftenzelle.  
   
      Im Dialogfeld **Vorlage zur Ebenenbenennung** definieren Sie die Vorlage zur Ebenenbenennung, durch die die Ebenennamen in der Über-/Unterordnungshierarchie bestimmt werden, die Benutzern beim Durchsuchen von Cubes angezeigt werden.  
   
-4.  Geben Sie in der zweiten Zeile, der **\***-Zeile, **Employee Level \*** in der Spalte **Name** ein, und klicken Sie anschließend auf die dritte Zeile.  
+4.  Geben Sie in der zweiten Zeile, der **\*** -Zeile, **Employee Level \*** in der Spalte **Name** ein, und klicken Sie anschließend auf die dritte Zeile.  
   
      Beachten Sie unter **Ergebnis**, dass jede Ebene jetzt „Employee Level“ gefolgt von einer zunehmenden Nummer benannt wird.  
   

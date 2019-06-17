@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012022"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
@@ -38,7 +38,7 @@ ms.locfileid: "63012022"
   
      [Hintergrund](#Background)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Anmeldung, mit:**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63012022"
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die `ALTER ANY LOGIN`-Berechtigung oder die `ALTER LOGIN`-Berechtigung für den Server.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 ##### <a name="to-create-a-sql-server-login"></a>So erstellen Sie eine SQL Server-Anmeldung  
   
@@ -69,13 +69,13 @@ ms.locfileid: "63012022"
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und wählen Sie dann **Anmeldung...** aus.  
   
-3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen...**, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
+3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen...** , um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
      Wenn Sie auf **Suchen...** klicken:  
   
-    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus** auf **Objekttypen...**, um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie beliebige oder alle der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen** und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    1.  Klicken Sie unter **Wählen Sie den Objekttyp aus** auf **Objekttypen...** , um das Dialogfeld **Objekttypen** zu öffnen, und wählen Sie beliebige oder alle der folgenden Optionen aus: **Integrierte Sicherheitsprinzipale**, **Gruppen** und **Benutzer**. Die Optionen**Integrierte Sicherheitsprinzipale** und **Benutzer** sind standardmäßig ausgewählt. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-    2.  Klicken Sie unter **Suchpfad** auf **Speicherorte...**, um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie einen der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+    2.  Klicken Sie unter **Suchpfad** auf **Speicherorte...** , um das Dialogfeld **Speicherorte** zu öffnen, und wählen Sie einen der verfügbaren Serverspeicherorte aus. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
     3.  Geben Sie unter **Geben Sie die zu verwendenden Objektnamen ein (Beispiele)** den Benutzer- oder Gruppennamen ein, den Sie suchen möchten. Weitere Informationen finden Sie unter [Benutzer, Computer oder Gruppen auswählen (Dialogfeld)](https://technet.microsoft.com/library/cc771712.aspx).  
   
@@ -115,31 +115,31 @@ ms.locfileid: "63012022"
 ### <a name="server-roles"></a>Serverrollen  
  Die Seite **Serverrollen** listet alle möglichen Rollen auf, die der neuen Anmeldung zugewiesen werden können. Die folgenden Optionen stehen zur Verfügung:  
   
- Kontrollkästchen**bulkadmin**   
+ Kontrollkästchen**bulkadmin**  
  Mitglieder der festen Serverrolle **bulkadmin** können die BULK INSERT-Anweisung ausführen.  
   
- Kontrollkästchen**dbcreator**   
+ Kontrollkästchen**dbcreator**  
  Mitglieder der festen Serverrolle **dbcreator** können beliebige Datenbanken erstellen, ändern, löschen und wiederherstellen.  
   
- Kontrollkästchen**diskadmin**   
+ Kontrollkästchen**diskadmin**  
  Mitglieder der festen Serverrolle **diskadmin** können Datenträgerdateien verwalten.  
   
- Kontrollkästchen**processadmin**   
+ Kontrollkästchen**processadmin**  
  Mitglieder der festen Serverrolle **processadmin** können Prozesse beenden, die in einer Instanz von [!INCLUDE[ssDE](../../../includes/ssde-md.md)]ausgeführt werden.  
   
- Kontrollkästchen**public**   
+ Kontrollkästchen**public**  
  Alle SQL Server-Benutzer, -Gruppen und -Rollen gehören standardmäßig zur festen Serverrolle **public** .  
   
- Kontrollkästchen**securityadmin**   
+ Kontrollkästchen**securityadmin**  
  Mitglieder der festen Serverrolle **securityadmin** können Anmeldungen und deren Eigenschaften verwalten. Sie verfügen für Berechtigungen auf Serverebene über die Berechtigungen GRANT, DENY und REVOKE. Sie verfügen für Berechtigungen auf Datenbankebene ebenfalls über die Berechtigungen GRANT, DENY und REVOKE. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.  
   
- Kontrollkästchen**serveradmin**   
+ Kontrollkästchen**serveradmin**  
  Mitglieder der festen Serverrolle **serveradmin** können serverweite Konfigurationsoptionen ändern und den Server herunterfahren.  
   
- Kontrollkästchen**setupadmin**   
+ Kontrollkästchen**setupadmin**  
  Mitglieder der festen Serverrolle **setupadmin** können Verbindungsserver hinzufügen und entfernen, und sie können einige gespeicherte Systemprozeduren ausführen.  
   
- Kontrollkästchen**sysadmin**   
+ Kontrollkästchen**sysadmin**  
  Mitglieder der festen Serverrolle **sysadmin** können in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]beliebige Aktivitäten ausführen.  
   
 ### <a name="user-mapping"></a>Benutzerzuordnung  
@@ -181,13 +181,13 @@ ms.locfileid: "63012022"
     > [!NOTE]  
     >  Wenn Sie die Option **Der Server**_Servername_ auswählen, wird das obere Raster automatisch mit allen sicherungsfähigen Objekten des Servers gefüllt.  
   
-3.  Bei Auswahl der Option **Bestimmte Objekte...**:  
+3.  Bei Auswahl der Option **Bestimmte Objekte...** :  
   
-    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus** auf **Objekttypen...**.  
+    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus** auf **Objekttypen...** .  
   
     2.  Wählen Sie im Dialogfeld **Objekttypen auswählen** beliebige oder alle der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen** und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen...**.  
+    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen...** .  
   
     4.  Wählen Sie im Dialogfeld **Nach Objekten suchen** eines der verfügbaren Objekte vom Typ aus, den Sie im Dialogfeld **Objekttypen auswählen** ausgewählt haben, und klicken Sie anschließend auf **OK**.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "63012022"
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>So erstellen Sie eine Anmeldung mit Windows-Authentifizierung  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "63012022"
   
 #### <a name="to-create-a-login-using-sql-server-authentication"></a>So erstellen Sie eine Anmeldung mit SQL Server-Authentifizierung  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "63012022"
   
  Weitere Informationen finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Schritte nach dem Erstellen eines Anmeldenamens  
+##  <a name="FollowUp"></a>Nächster Schritt: Erforderliche Schritte nach dem Erstellen eines Anmeldenamens  
  Nach der Erstellung eines Anmeldenamens kann dieser zwar eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen, er verfügt jedoch nicht unbedingt über ausreichende Berechtigungen, um damit sinnvolle Aufgaben ausführen zu können. Die folgende Liste enthält Links zu häufigen Anmeldeaktionen.  
   
 -   Informationen darüber, wie ein Anmeldename einer Datenbankrolle beitreten kann, finden Sie unter [Verknüpfen einer Rolle](join-a-role.md).  

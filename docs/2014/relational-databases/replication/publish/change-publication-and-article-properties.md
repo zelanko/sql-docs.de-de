@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021316"
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
@@ -42,7 +42,7 @@ ms.locfileid: "63021316"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Artikeleigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels|**sp_droparticle**|Alle Parameter|Artikel können vor dem Erstellen von Abonnements gelöscht werden. Bei Verwendung von gespeicherten Prozeduren kann ein Abonnement eines Artikels gelöscht werden; wird dagegen [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwendet, muss das gesamte Abonnement gelöscht, neu erstellt und synchronisiert werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Ändern eines Spaltenfilters|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
@@ -79,7 +79,7 @@ ms.locfileid: "63021316"
   
 ## <a name="article-properties-for-merge-replication"></a>Artikeleigenschaften für die Mergereplikation  
   
-|Description|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels, der den zuletzt parametrisierten Filter in der Veröffentlichung enthält|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels, der einem Joinfilter oder einem logischen Datensatz übergeordnet ist (mit der Nebenwirkung, dass der Join gelöscht wird).|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  

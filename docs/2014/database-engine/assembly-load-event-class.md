@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065260"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load-Ereignisklasse
@@ -53,6 +53,6 @@ ms.locfileid: "66065260"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erweiterte Ereignisse](../relational-databases/extended-events/extended-events.md)   
- [Assemblys &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
+ [Assemblys &#40;Datenbank-Engine&#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
   
   

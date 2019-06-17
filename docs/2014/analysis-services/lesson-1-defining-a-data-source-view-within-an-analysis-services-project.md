@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079210"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts
@@ -37,7 +37,7 @@ ms.locfileid: "66079210"
  Vergleichen Sie die Ergebnisse mit einer Beispielprojektdatei, die für diese Lektion erstellt wurde. Weitere Informationen zum Herunterladen der Beispielprojekte für dieses Lernprogramm finden Sie auf der Codeplex-Website auf der Seite mit Produktbeispielen unter [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) .  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Definieren und Bereitstellen eines Cubes](lesson-2-defining-and-deploying-a-cube.md)  
+ [Lektion 2: Definieren und Bereitstellen eines Cubes](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   

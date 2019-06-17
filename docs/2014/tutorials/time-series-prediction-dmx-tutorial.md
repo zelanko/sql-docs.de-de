@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044183"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>DMX-Lernprogramm für Zeitreihenvorhersagen
@@ -43,7 +43,7 @@ ms.locfileid: "63044183"
  [Lektion 1: Erstellen ein Zeitreihenmodell Miningmodell und einer Miningstruktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie mithilfe der `CREATE MINING MODEL`-Anweisung ein neues Vorhersagemodell sowie ein entsprechendes Miningmodell hinzugefügt werden.  
   
- [Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie der Zeitreihenstruktur mithilfe der ALTER MINING STRUCTURE-Anweisung neue Miningmodelle hinzugefügt werden. Außerdem erfahren Sie, wie der Algorithmus, der zum Analysieren einer Zeitreihe verwendet wird, angepasst wird.  
   
  [Lektion 3: Verarbeiten von Time Series-Struktur und Modelle](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  

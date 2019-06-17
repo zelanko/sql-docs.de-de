@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63007302"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Übergeben von Parametern an Updategrams (SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "63007302"
  Mit Updategrams können Sie NULL als Parameterwert übergeben. Um die NULL-Parameterwert zu übergeben, geben Sie die **Nullvalue** Attribut. Der Wert, der zugewiesen wird die **Nullvalue** Attribut klicken Sie dann als der Parameterwert bereitgestellt wird. Updategrams behandeln diesen Wert als NULL.  
   
 > [!NOTE]  
->  In  **\<SQL: Header >** und  **\<Updg:header >**, geben Sie die **Nullvalue** nicht als qualifizierte, während im  **\<updg: Sync >**, Sie geben die **Nullvalue** als qualifiziert (z. B. **updg: NullValue**).  
+>  In  **\<SQL: Header >** und  **\<Updg:header >** , geben Sie die **Nullvalue** nicht als qualifizierte, während im  **\<updg: Sync >** , Sie geben die **Nullvalue** als qualifiziert (z. B. **updg: NullValue**).  
   
 ## <a name="examples"></a>Beispiele  
  Um funktionierende Beispiele, die mit den folgenden Beispielen erstellen, müssen Sie die Anforderungen, die im angegebenen erfüllen [Anforderungen für die Ausführung von SQLXML-Beispielen](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  

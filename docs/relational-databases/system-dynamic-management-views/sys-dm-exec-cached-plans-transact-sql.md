@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013531"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "63013531"
 |size_in_bytes|**int**|Anzahl von Bytes, die vom Cacheobjekt belegt werden.|  
 |memory_object_address|**varbinary(8)**|Speicheradresse des zwischengespeicherten Eintrags. Dieser Wert kann verwendet werden, mit [Sys. dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) zum Abrufen des zwischengespeicherten Plans und mit der arbeitsspeicheraufteilung [Sys. dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)speicheraufteilung, um die Kosten für das Zwischenspeichern des Eintrags abzurufen.|  
 |cacheobjtype|**nvarchar(34)**|Typ des Objekts im Cache. Die folgenden Werte sind möglich:<br /><br /> Kompilierter Plan<br /><br /> Stub des kompilierten Plans<br /><br /> Analysestruktur<br /><br /> Erweiterte Prozedur<br /><br /> Kompilierte CLR-Funktion<br /><br /> Kompilierte CLR-Prozedur|  
-|objtype|**nvarchar(16)**|Typ des Objekts. Im folgenden sind die möglichen Werte und die entsprechenden Beschreibungen.<br /><br /> Proc: Gespeicherte Prozedur<br />Vorbereitet: Vorbereitete Anweisung<br />Adhoc: Ad-hoc-Abfrage. Bezieht sich auf [!INCLUDE[tsql](../../includes/tsql-md.md)] als Sprachereignisse mithilfe von gesendete **Osql** oder **Sqlcmd** anstatt als Remoteprozeduraufrufe.<br />ReplProc: Replikationsfilterprozedur<br />Trigger: Trigger<br />Ansicht "Allgemein" Sicht<br />Standard: Standard<br />UsrTab: Benutzertabelle<br />SysTab: Systemtabelle<br />Überprüfen: CHECK-Einschränkung<br />Regel: Rule|  
+|objtype|**nvarchar(16)**|Typ des Objekts. Im folgenden sind die möglichen Werte und die entsprechenden Beschreibungen.<br /><br /> Proc: Gespeicherte Prozedur<br />Vorbereitet: Vorbereitete Anweisung<br />Adhoc: Ad-hoc-Abfrage. Bezieht sich auf [!INCLUDE[tsql](../../includes/tsql-md.md)] als Sprachereignisse mithilfe von gesendete **Osql** oder **Sqlcmd** anstatt als Remoteprozeduraufrufe.<br />ReplProc: Replikationsfilterprozedur<br />Trigger: Trigger<br />Ansicht "Allgemein" Sicht<br />Standard: Default<br />UsrTab: Benutzertabelle<br />SysTab: Systemtabelle<br />Überprüfen: CHECK-Einschränkung<br />Regel: Rule|  
 |plan_handle|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit den folgenden dynamischen Verwaltungsfunktionen verwendet werden:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Die ID des Ressourcenpools, auf die sich diese Planspeicherauslastung bezieht.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832955"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Kandidatenschlüsselprofil (Datenprofilerstellungs-Task)
@@ -76,7 +76,7 @@ ms.locfileid: "62832955"
  Zeigt den Namen der ausgewählten Tabelle an. Diese Option ist schreibgeschützt.  
   
 #### <a name="keycolumns-options"></a>KeyColumns-Optionen  
- Die folgenden Optionen sind für jede Spalte verfügbar, die für die Profilerstellung in **KeyColumns** ausgewählt wird, oder für die Option **(\*)**.  
+ Die folgenden Optionen sind für jede Spalte verfügbar, die für die Profilerstellung in **KeyColumns** ausgewählt wird, oder für die Option **(\*)** .  
   
  Weitere Informationen finden Sie im Abschnitt "Grundlegendes zur Auswahl von Spalten für die KeyColumns-Eigenschaft" in diesem Thema.  
   

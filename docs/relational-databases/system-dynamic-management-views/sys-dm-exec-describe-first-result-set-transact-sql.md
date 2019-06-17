@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013434"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
@@ -45,10 +45,10 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>Argumente  
  *\@tsql*  
- Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
+ Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)** .  
   
  *\@params*  
- \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch analog zu Sp_executesql. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
+ \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch analog zu Sp_executesql. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)** .  
   
  Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Stmt angegebene Parameter muss definiert werden, \@Params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter, \@"Params" ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
   
@@ -66,7 +66,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|Enthält die folgenden Werte:<br /><br /> Wert 1, wenn die Spalte NULL-Werte zulässt.<br /><br /> Wert 0, wenn die Spalte keine NULL-Werte zulässt.<br /><br /> Wert 1, wenn nicht bestimmt werden kann, ob die Spalte NULL-Werte zulässt.|  
 |**system_type_id**|**int**|Enthält die System_type_id des Datentyps für die Spalte wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
 |**system_type_name**|**nvarchar(256)**|Enthält den Namen und die Argumente (z. B. Länge, Genauigkeit oder Skala), die für den Datentyp der Spalte angegeben wurden.<br /><br /> Wenn es sich bei dem Datentyp um einen benutzerdefinierten Aliastyp handelt, wird hier der zugrunde liegende Systemtyp angegeben.<br /><br /> Wenn es sich bei dem Datentyp um einen benutzerdefinierten CLR-Typ handelt, wird in dieser Spalte NULL zurückgegeben.|  
-|**max_length**|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert werden 16- oder den Wert festlegen, indem **Sp_tableoption 'Text in Row'**.|  
+|**max_length**|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert werden 16- oder den Wert festlegen, indem **Sp_tableoption 'Text in Row'** .|  
 |**precision**|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**scale**|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**collation_name**|**sysname**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
@@ -107,7 +107,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
  In der folgenden Tabelle werden die Fehlertypen und deren Beschreibungen aufgeführt.  
   
-|error_type|error_type|Description|  
+|error_type|error_type|Beschreibung|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Alle Fehler, die nicht anderweitig beschrieben sind.|  
 |2|SYNTAX|Im Batch ist ein Syntaxfehler aufgetreten.|  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017849"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
@@ -39,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, die Metadaten für alle Veröffentlichungen bereinigt. Die Veröffentlichung muss bereits vorhanden sein, wenn sie explizit angegeben wird.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** , die Metadaten für alle Veröffentlichungen bereinigt. Die Veröffentlichung muss bereits vorhanden sein, wenn sie explizit angegeben wird.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` Gibt an, ob der Abonnent erneut initialisiert werden soll. *Abonnenten* ist **nvarchar(5)**, kann **"true"** oder **"false"**, hat den Standardwert **"true"**. Wenn **"true"**, Abonnements für die erneute Initialisierung gekennzeichnet. Wenn **"false"**, die Abonnements werden nicht für die erneute Initialisierung markiert.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Gibt an, ob der Abonnent erneut initialisiert werden soll. *Abonnenten* ist **nvarchar(5)** , kann **"true"** oder **"false"** , hat den Standardwert **"true"** . Wenn **"true"** , Abonnements für die erneute Initialisierung gekennzeichnet. Wenn **"false"** , die Abonnements werden nicht für die erneute Initialisierung markiert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  Nach dem **Sp_mergecleanupmetadata** ausgeführt wird, wird standardmäßig alle Abonnements auf den Abonnenten von Veröffentlichungen, die in gespeicherten Metadaten **MSmerge_genhistory**, **' MSmerge_contents '**  und **MSmerge_tombstone** gekennzeichnet sind zur erneuten Initialisierung auf dem Abonnenten alle ausstehenden Änderungen verloren, und die aktuelle Momentaufnahme als veraltet markiert ist.  
 > 
 > [!NOTE]
->  Wenn mehrere Veröffentlichungen in einer Datenbank vorhanden sind, und eine dieser Veröffentlichungen eine unbegrenzte Beibehaltungsdauer Veröffentlichungen verwendet (**@retention**=**0**), ausgeführte  **Sp_mergecleanupmetadata** wird nicht bereinigt die Merge-Replikation Metadaten zur änderungsnachverfolgung für die Datenbank. Aus diesem Grund sollten Sie die unbegrenzte Aufbewahrungsdauer für Veröffentlichungen mit Vorsicht verwenden.  
+>  Wenn mehrere Veröffentlichungen in einer Datenbank vorhanden sind, und eine dieser Veröffentlichungen eine unbegrenzte Beibehaltungsdauer Veröffentlichungen verwendet ( **@retention** =**0**), ausgeführte  **Sp_mergecleanupmetadata** wird nicht bereinigt die Merge-Replikation Metadaten zur änderungsnachverfolgung für die Datenbank. Aus diesem Grund sollten Sie die unbegrenzte Aufbewahrungsdauer für Veröffentlichungen mit Vorsicht verwenden.  
   
- Beim Ausführen dieser gespeicherten Prozedur, können Sie wählen, ob zum erneuten Initialisieren der Abonnenten durch Festlegen der **@reinitialize_subscriber** Parameter **"true"** (Standard) oder **"false"**. Wenn **Sp_mergecleanupmetadata** ausgeführt wird, mit der **@reinitialize_subscriber** Parametersatz zu **"true"**, eine Momentaufnahme wird erneut auf dem Abonnenten angewendet, selbst wenn das Abonnement wurde erstellt, ohne dass eine anfangsmomentaufnahme (z. B., wenn die momentaufnahmedaten und das Schema manuell angewendet oder bereits vorhanden, auf dem Abonnenten war wurden). Festlegen des Parameters auf **"false"** sollte mit Vorsicht, verwendet werden, da, wenn die Veröffentlichung nicht erneut initialisiert wird, müssen Sie sicherstellen, dass die Daten auf dem Verleger und Abonnenten synchronisiert werden.  
+ Beim Ausführen dieser gespeicherten Prozedur, können Sie wählen, ob zum erneuten Initialisieren der Abonnenten durch Festlegen der **@reinitialize_subscriber** Parameter **"true"** (Standard) oder **"false"** . Wenn **Sp_mergecleanupmetadata** ausgeführt wird, mit der **@reinitialize_subscriber** Parametersatz zu **"true"** , eine Momentaufnahme wird erneut auf dem Abonnenten angewendet, selbst wenn das Abonnement wurde erstellt, ohne dass eine anfangsmomentaufnahme (z. B., wenn die momentaufnahmedaten und das Schema manuell angewendet oder bereits vorhanden, auf dem Abonnenten war wurden). Festlegen des Parameters auf **"false"** sollte mit Vorsicht, verwendet werden, da, wenn die Veröffentlichung nicht erneut initialisiert wird, müssen Sie sicherstellen, dass die Daten auf dem Verleger und Abonnenten synchronisiert werden.  
   
- Unabhängig vom Wert der **@reinitialize_subscriber**, **Sp_mergecleanupmetadata** schlägt fehl, wenn Sie vorhanden sind Mergeprozesse, die versuchen, Änderungen für einen Wiederveröffentlichungsabonnenten auf einen Verleger hochgeladen werden. der Zeitpunkt, zu die gespeicherte Prozedur aufgerufen wird.  
+ Unabhängig vom Wert der **@reinitialize_subscriber** , **Sp_mergecleanupmetadata** schlägt fehl, wenn Sie vorhanden sind Mergeprozesse, die versuchen, Änderungen für einen Wiederveröffentlichungsabonnenten auf einen Verleger hochgeladen werden. der Zeitpunkt, zu die gespeicherte Prozedur aufgerufen wird.  
   
  **Ausführen von Sp_mergecleanupmetadata mit @reinitialize_subscriber = "true":**  
   

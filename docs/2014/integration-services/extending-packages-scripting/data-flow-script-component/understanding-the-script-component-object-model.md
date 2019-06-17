@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768436"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Grundlegendes zum Skript-Komponentenobjektmodell
@@ -117,7 +117,7 @@ public override void PreExecute()
   
 -   Eine **\<column>_IsNull**-Eigenschaft für jede ausgewählte Eingabespalte. Diese Eigenschaft ist ebenfalls schreibgeschützt oder weist Lese-/Schreibzugriff auf, abhängig von dem für die Spalte angegebenen **Verwendungstyp**.  
   
--   Eine **DirectRowTo\<outputbuffer>**-Methode für jede konfigurierte Ausgabe. Sie verwenden diese Methoden beim Filtern von Zeilen in eine von mehreren Ausgaben in derselben `ExclusionGroup`.  
+-   Eine **DirectRowTo\<outputbuffer>** -Methode für jede konfigurierte Ausgabe. Sie verwenden diese Methoden beim Filtern von Zeilen in eine von mehreren Ausgaben in derselben `ExclusionGroup`.  
   
 -   Eine `NextRow`-Funktion, um die nächste Eingabezeile abzurufen, und eine `EndOfRowset`-Funktion, um zu bestimmen, ob der letzte Datenpuffer verarbeitet wurde. Normalerweise benötigen Sie diese Funktionen nicht, wenn Sie die in der `UserComponent`-Basisklasse implementierten Eingabeverarbeitungsmethoden verwenden. Im nächsten Abschnitt finden Sie weitere Informationen über die `UserComponent`-Basisklasse.  
   

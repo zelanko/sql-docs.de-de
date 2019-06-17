@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015707"
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Attributeigenschaften – Gruppieren von Attributelementen
@@ -58,7 +58,7 @@ ms.locfileid: "63015707"
   
  Der `<Bucket name>` -Parameter ist ein Zeichenfolgenausdruck, in dem Variablen zum Darstellen von Element- oder Elementgruppeninformationen als Teil des Elementgruppennamens enthalten sein können:  
   
-|Variable|Description|  
+|Variable|Beschreibung|  
 |--------------|-----------------|  
 |%{First bucket member}|Der Elementname des ersten, in der aktuellen Elementgruppe einzuschließenden Elements.|  
 |%{Last bucket member}|Der Elementname des letzten, in der aktuellen Elementgruppe einzuschließenden Elements.|  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997986"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
@@ -51,7 +51,7 @@ sp_articleview [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
   
-`[ @view_name = ] 'view_name'` Ist der Name der Sicht, die den veröffentlichten Artikel definiert. *View_name* ist **nvarchar(386)**, hat den Standardwert NULL.  
+`[ @view_name = ] 'view_name'` Ist der Name der Sicht, die den veröffentlichten Artikel definiert. *View_name* ist **nvarchar(386)** , hat den Standardwert NULL.  
   
 `[ @filter_clause = ] 'filter_clause'` Ist eine Einschränkung (WHERE)-Klausel, die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *Filter_clause* ist **Ntext**, hat den Standardwert NULL.  
   

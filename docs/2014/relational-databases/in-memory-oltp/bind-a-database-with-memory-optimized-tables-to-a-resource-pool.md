@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158803"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>Bestimmen des Mindestwerts für MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT  
  Sobald Sie die Arbeitsspeicheranforderungen für die speicheroptimierten Tabellen bestimmt haben, müssen Sie den erforderlichen Prozentsatz des verfügbaren Arbeitsspeichers bestimmen und die Arbeitsspeicherprozentsätze auf diesen oder einen höheren Wert festlegen.  
   
- **Beispiel:**   
+ **Beispiel:**    
 In diesem Beispiel wird davon ausgegangen, dass Sie Ihre Berechnungen ergeben haben, dass die speicheroptimierten Tabellen und Indizes 16 GB Arbeitsspeicher benötigen. Weiter wird davon ausgegangen, dass Sie über 32 GB Arbeitsspeicher verfügen, der für Ihre Verwendung reserviert ist.  
   
  Auf den ersten Blick müssen Sie MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT scheinbar auf 50 festlegen (50 % von 32 ist 16).  Allerdings würde das Ihren speicheroptimierten Tabellen nicht genügend Arbeitsspeicher zur Verfügung stellen. In der folgenden Tabelle ([Prozentsatz des für speicheroptimierte Tabellen und Indizes verfügbaren Arbeitsspeichers](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)) sehen Sie, dass 32GB Arbeitsspeicher zugesichert sind, wovon jedoch nur 80% für speicheroptimierte Tabellen und Indizes zur Verfügung stehen.  Daher werden die Mindest- und Höchstprozentsätze auf Grundlage des verfügbaren Arbeitsspeichers und nicht des reservierten Arbeitsspeichers berechnet.  

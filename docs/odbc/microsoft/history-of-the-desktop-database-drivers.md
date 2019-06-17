@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a77aeafff6b27b2de0b947700cef1c7251cd7548
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127265"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Versionsgeschichte der Desktop-Datenbanktreiber
 Die folgende Tabelle zeigt den Versionsverlauf für die Desktop-Datenbanktreiber.  
   
-|Version|Veröffentlichungsdatum|Description|  
+|Version|Veröffentlichungsdatum|Beschreibung|  
 |-------------|------------------|-----------------|  
 |1,0|August 1993|Verwendet der Abfrageprozessor SIMBA erzeugten PageAhead Software. SIMBA empfangen ODBC-Aufrufe und SQL-Anweisungen, verarbeitet diese in Microsoft Jet installierbare ISAM-Aufrufe und anschließend aufgerufen, die Microsoft Jet-ISAM-Dispatch-Ebene, um das Laden, und rufen den entsprechenden installierbaren ISAM-Treiber.|  
 |2.0|Dezember 1994|Wird verwendet, mit ODBC-Version 2.0, die ODBC-Funktionalität erheblich erweitert. Die wesentliche Änderung in der Version 2.0 war, dass die Microsoft Jet-Datenbank-Engine den Abfrageprozessor SIMBA ersetzt. Die Microsoft Jet-Datenbank-Engine integriert die Desktop-Datenbanktreiber viel enger mit dem Microsoft Jet installierbare ISAM-Treiber und Microsoft Access-Technologie. Bedeutende Verbesserungen wurden:<br /><br /> -Native Unterstützung für scrollfähige Cursor.<br />-Native Unterstützung für äußere Joins, aktualisiert und heterogene Joins und Transaktionen.<br />-32-Bit-Versionen der Treiber für Microsoft Windows NT.|  

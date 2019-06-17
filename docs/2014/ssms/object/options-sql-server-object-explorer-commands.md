@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62999305"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>Optionen (SQL Server Objekt-Explorer – Befehle)
@@ -43,6 +43,6 @@ ms.locfileid: "62999305"
  Gibt die im erstellten Abfrage-Editor Skript angegebene Anzahl von zurückzugebenden Zeilen an. Die Standardeinstellung ist 1000 Zeilen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004526"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
@@ -33,10 +33,10 @@ ms.locfileid: "63004526"
 
   Gibt eine Zeile für jedes Objekt zurück, bei dem es sich um eine interne Tabelle handelt. Interne Tabellen werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch generiert und dienen der Unterstützung verschiedener Funktionen. Wenn Sie beispielsweise einen primären XML-Index erstellen, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch eine interne Tabelle zur persistenten Aufbewahrung der aufgeteilten XML-Dokumentdaten. Interne Tabellen sind der **Sys** -Schema jeder Datenbank, und weisen eindeutige, systemgenerierte-Namen, die ihre Funktion, z. B. **xml_index_nodes_2021582240_32001** oder  **queue_messages_1977058079**  
   
- Interne Tabellen enthalten keine Daten, auf die von Benutzern zugegriffen werden kann. Ihre Schemas stehen fest und können nicht geändert werden. Sie können in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht auf interne Tabellennamen verweisen. Beispielsweise kann nicht ausführen eine Anweisung wie SELECT \* FROM  *\<internal_table_name >*. Sie können Katalogsichten jedoch abfragen, um die Metadaten interner Tabellen anzuzeigen.  
+ Interne Tabellen enthalten keine Daten, auf die von Benutzern zugegriffen werden kann. Ihre Schemas stehen fest und können nicht geändert werden. Sie können in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht auf interne Tabellennamen verweisen. Beispielsweise kann nicht ausführen eine Anweisung wie SELECT \* FROM  *\<internal_table_name >* . Sie können Katalogsichten jedoch abfragen, um die Metadaten interner Tabellen anzuzeigen.  
   
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**\<Spalten, der von sys.objects geerbten >**||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Der Typ der internen Tabelle:<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **Extended_indexes** (z. B. ein räumlicher Index)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  

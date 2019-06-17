@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a404c18f47fb13464d01f5be6af9869fd10292cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078627"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definieren einer referenzierten Beziehung
@@ -46,7 +46,7 @@ ms.locfileid: "66078627"
   
      Beachten Sie, dass die Cubedimension **Geography** aktuell keine Beziehung zur **Internet Sales** -oder **Reseller Sales** -Measuregruppe aufweist.  
   
-8.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...** ) in der **vollständigen Namen** Zelle am Schnittpunkt der der **Kunden** Dimension und die **Internetverkäufe** Measuregruppe.  
+8.  Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ) in der **vollständigen Namen** Zelle am Schnittpunkt der der **Kunden** Dimension und die **Internetverkäufe** Measuregruppe.  
   
      Beachten Sie im Dialogfeld **Beziehung definieren** , dass eine Beziehung vom Typ **Regulär** zwischen der **DimCustomer** -Dimensionstabelle und der **FactInternetSales** -Measuregruppentabelle basierend auf der **CustomerKey** -Spalte in jeder dieser Tabellen definiert ist. Alle von Ihnen innerhalb dieses Lernprogramms bis zu diesem Punkt definierten Beziehungen waren reguläre Beziehungen.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66078627"
   
 9. Klicken Sie auf **Abbrechen**.  
   
-10. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...** ) in der unbenannten Zelle am Schnittpunkt der **Geography** Dimension und die **Verkäufe des Wiederverkäufers** Measuregruppe.  
+10. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ) in der unbenannten Zelle am Schnittpunkt der **Geography** Dimension und die **Verkäufe des Wiederverkäufers** Measuregruppe.  
   
      Beachten Sie im Dialogfeld **Beziehung definieren** , dass aktuell keine Beziehung zwischen der Geography-Cubedimension und der Reseller Sales-Measuregruppe definiert ist. Sie können keine reguläre Beziehung definieren, weil keine direkte Beziehung zwischen der Dimensionstabelle für die Geography-Dimension und der Faktentabelle für die Reseller Sales-Measuregruppe vorhanden ist.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66078627"
   
      Das Geography Key-Attribut in der Reseller-Dimension wird nur zum Verknüpfen der Geography-Dimension mit der Reseller Sales-Faktentabelle verwendet. Weil es nicht zum Durchsuchen verwendet wird, gibt es keinen Grund dafür, diese Attributhierarchie als sichtbar zu definieren. Zusätzlich wirkt sich das Sortieren und Optimieren der Attributhierarchie nur negativ auf die Verarbeitungsleistung aus. Allerdings muss das Attribut als der Link zwischen den zwei Dimensionen aktiviert sein.  
   
-4.  Wechseln Sie zum Cube-Designer für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, klicken Sie auf die **Dimensionsverwendung** Registerkarte, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**...** ) am Schnittpunkt der **Verkäufe des Wiederverkäufers** Measuregruppe und der **Geography** Cubedimension.  
+4.  Wechseln Sie zum Cube-Designer für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, klicken Sie auf die **Dimensionsverwendung** Registerkarte, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten ( **...** ) am Schnittpunkt der **Verkäufe des Wiederverkäufers** Measuregruppe und der **Geography** Cubedimension.  
   
 5.  Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   

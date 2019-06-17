@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 832e49db5221c2e978cac584e8f1e406d33be30f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63134974"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Erstellen eines Analysis Services-Auftragsschritts
@@ -26,7 +26,7 @@ ms.locfileid: "63134974"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen SQL Server-Auftrag mithilfe von Analysis Services-Befehlen bzw. -Abfragen mit**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63134974"
   
 -   Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>So erstellen Sie einen Auftragsschritt für den Analysis Services-Befehl  
   

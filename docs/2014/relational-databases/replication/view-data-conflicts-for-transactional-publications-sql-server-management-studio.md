@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144411"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen (SQL Server Management Studio)
@@ -56,9 +56,9 @@ ms.locfileid: "63144411"
   
     -   Wählen Sie eine oder mehrere Zeilen im oberen Raster aus, und klicken Sie auf **Entfernen**. Die Zeilen werden dann aus der Metatabelle für Konflikte gelöscht.  
   
-    -   Klicken Sie auf die Eigenschaftenschaltfläche (**…**), um weitere Informationen zu einer am Konflikt beteiligten Zeile anzuzeigen.  
+    -   Klicken Sie auf die Eigenschaftenschaltfläche ( **…** ), um weitere Informationen zu einer am Konflikt beteiligten Zeile anzuzeigen.  
   
-    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten (**...**), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu schließen.  
+    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten ( **...** ), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu schließen.  
   
 6.  Schließen Sie den Replikationskonflikt-Viewer.  
   

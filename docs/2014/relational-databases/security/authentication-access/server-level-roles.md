@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011926"
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
@@ -66,12 +66,12 @@ ms.locfileid: "63011926"
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   
- Weitere Informationen zu Berechtigungen finden Sie unter [Berechtigungen &amp;#40;Datenbank-Engine&amp;#41;](../permissions-database-engine.md) und [sys.fn_builtin_permissions &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
+ Weitere Informationen zu Berechtigungen finden Sie unter [Berechtigungen &#40;Datenbank-Engine&#41;](../permissions-database-engine.md) und [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ## <a name="working-with-server-level-roles"></a>Arbeiten mit Rollen auf Serverebene  
  In der folgenden Tabelle werden die Befehle, Sichten und Funktionen erklärt, die Sie beim Arbeiten mit Rollen auf Serverebene verwenden können.  
   
-|Funktion|Typ|Description|  
+|Funktion|Typ|Beschreibung|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadaten|Gibt eine Liste von Rollen auf Serverebene zurück.|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadaten|Gibt Informationen zu Mitgliedern einer Rolle auf Serverebene zurück.|  

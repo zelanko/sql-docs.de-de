@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071741"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für PowerPivot für SharePoint
@@ -54,7 +54,7 @@ ms.locfileid: "66071741"
   
 4.  Aktivieren oder deaktivieren Sie im Abschnitt **Zu protokollierende Ereignisse** die entsprechenden Kontrollkästchen, um die folgenden Analysis Services-Ereignisse zu aktivieren oder zu deaktivieren:  
   
-    |Ereignis|Description|  
+    |Ereignis|Beschreibung|  
     |-----------|-----------------|  
     |**PowerPivot-Verbindungen**|Das PowerPivot-Verbindungsereignis wird zum Überwachen von PowerPivot-Serververbindungen verwendet, die im Namen eines Benutzers hergestellt werden.|  
     |**PowerPivot-Datenladevorgängen**|Die Funktion PowerPivot Load Data Usage wird zum Überwachen von Anforderungen verwendet, durch die PowerPivot-Daten in den Serverarbeitsspeicher geladen werden. Ein Ladeereignis wird für PowerPivot-Datendateien generiert, die aus einer Inhaltsdatenbank oder dem Cache geladen werden.|  

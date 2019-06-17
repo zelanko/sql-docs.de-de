@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17edc0c7156513befd584f411c2598fc9fc70bcd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046227"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Optimieren von parametrisierten Zeilenfiltern
@@ -45,11 +45,11 @@ ms.locfileid: "63046227"
   
      Mit [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact-Abonnenten muss "keep_partition_changes" auf "true" festgelegt werden, um sicherzustellen, dass Löschvorgänge ordnungsgemäß weitergegeben werden. Wenn die Einstellung auf "false" festgelegt ist, erhält der Abonnent möglicherweise mehr Zeilen als erwartet.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Folgende Einstellungen können zur Optimierung von parametrisierten Zeilenfiltern verwendet werden:  
   
  **Partition Options**  
- Legen Sie diese Option auf der Seite **Eigenschaften** des Dialogfelds **Artikeleigenschaften – \<Artikel>** oder über das Dialogfeld **Filter hinzufügen** fest. Der Zugriff auf beide Dialogfelder ist über den Assistenten für neue Veröffentlichung sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Im Dialogfeld **Artikeleigenschaften -.\<Artikel>**, können Sie weitere Werte für diese Option angeben, die im Dialogfeld **Filter hinzufügen** nicht verfügbar sind.  
+ Legen Sie diese Option auf der Seite **Eigenschaften** des Dialogfelds **Artikeleigenschaften – \<Artikel>** oder über das Dialogfeld **Filter hinzufügen** fest. Der Zugriff auf beide Dialogfelder ist über den Assistenten für neue Veröffentlichung sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Im Dialogfeld **Artikeleigenschaften -.\<Artikel>** , können Sie weitere Werte für diese Option angeben, die im Dialogfeld **Filter hinzufügen** nicht verfügbar sind.  
   
  **Partitionen im Voraus berechnen**  
  Diese Option ist standardmäßig auf **Wahr** festgelegt, wenn die Artikel in Ihrer Veröffentlichung einem Satz von Anforderungen entsprechen. Weitere Informationen zu diesen Anforderungen finden Sie unter [Parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../merge/parameterized-filters-optimize-for-precomputed-partitions.md). Diese Option können Sie auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** ändern.  
@@ -116,13 +116,13 @@ ms.locfileid: "63046227"
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Informationen zur Definition der Filteroptionen für **@keep_partition_changes** und **@use_partition_groups**finden Sie unter [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)optimiert werden.  
+ Informationen zur Definition der Filteroptionen für **@keep_partition_changes** und **@use_partition_groups** finden Sie unter [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)optimiert werden.  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>So geben Sie die Optimierungen für Mergefilter beim Erstellen einer neuen Veröffentlichung an  
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)aus. Geben Sie **@publication** und den Wert `true` für eine der folgenden Parameter:  
   
-    -   **@use_partition_groups**: &ndash; die höchste Leistungsoptimierung, vorausgesetzt, dass die Artikel den Anforderungen für vorausberechnete Partitionen entsprechen. Weitere Informationen finden Sie unter [parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+    -   **@use_partition_groups** : &ndash; die höchste Leistungsoptimierung, vorausgesetzt, dass die Artikel den Anforderungen für vorausberechnete Partitionen entsprechen. Weitere Informationen finden Sie unter [parametrisierte Filter-Leistung mit Vorausberechneten Partitionen optimieren](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
     -   **@keep_partition_changes** &ndash; verwenden Sie diese Optimierung, wenn vorausberechnete Partitionen nicht verwendet werden können.  
   
@@ -146,16 +146,16 @@ ms.locfileid: "63046227"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>So zeigen Sie das Verhalten von Mergefiltern für eine vorhandene Veröffentlichung an und ändern es  
   
-1.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)unter Angabe von **@publication**optimiert werden. Achten Sie auf den Wert von **keep_partition_changes** und **use_partition_groups** im Resultset.  
+1.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)unter Angabe von **@publication** optimiert werden. Achten Sie auf den Wert von **keep_partition_changes** und **use_partition_groups** im Resultset.  
   
-2.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus. Geben Sie den Wert **Use_partition_groups** für **@property** und entweder `true` oder `false` für **@value**.  
+2.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus. Geben Sie den Wert **Use_partition_groups** für **@property** und entweder `true` oder `false` für **@value** .  
   
-3.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus. Geben Sie den Wert **Keep_partition_changes** für **@property** und entweder `true` oder `false` für **@value**.  
+3.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus. Geben Sie den Wert **Keep_partition_changes** für **@property** und entweder `true` oder `false` für **@value** .  
   
     > [!NOTE]  
-    >  Wenn Sie **keep_partition_changes**aktivieren, müssen Sie zuerst **use_partition_groups** deaktivieren und den Wert **1** für **@force_reinit_subscription**optimiert werden.  
+    >  Wenn Sie **keep_partition_changes**aktivieren, müssen Sie zuerst **use_partition_groups** deaktivieren und den Wert **1** für **@force_reinit_subscription** optimiert werden.  
   
-4.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **partition_options** für **@property** und den entsprechenden Wert für **@value**optimiert werden. Informationen zur Definition dieser Filteroptionen finden Sie unter [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) .  
+4.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **partition_options** für **@property** und den entsprechenden Wert für **@value** optimiert werden. Informationen zur Definition dieser Filteroptionen finden Sie unter [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) .  
   
 5.  (Optional) Starten Sie den Momentaufnahme-Agent, um, wenn notwendig, die Momentaufnahme erneut zu generieren. Informationen dazu, welche Änderungen die Generierung einer neuen Momentaufnahme erforderlich machen, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
   

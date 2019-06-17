@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901549"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
@@ -85,9 +85,9 @@ ms.locfileid: "62901549"
   
 |Option für schnelles Laden|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die Option hat die Form `KILOBYTES_PER_BATCH`  =  \<positive ganze Zahl**>**.|  
+|KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die Option hat die Form `KILOBYTES_PER_BATCH`  =  \<positive ganze Zahl **>** .|  
 |FIRE_TRIGGERS|Gibt an, ob in der Einfügetabelle Trigger ausgelöst werden. Die Option hat die Form **FIRE_TRIGGERS**. Das Vorhandensein der Option gibt an, dass Trigger ausgelöst werden.|  
-|ORDER|Gibt die Sortierung der Eingabedaten an. Die Option hat die folgende Form: ORDER \<Spaltenname> ASC&#124;DESC. Es kann eine beliebige Anzahl an Spalten aufgelistet werden. Optional kann die Sortierreihenfolge eingeschlossen werden. Wird die Sortierreihenfolge ausgelassen, geht der Einfügevorgang davon aus, dass die Daten nicht sortiert sind.<br /><br /> Hinweis: Leistung kann verbessert werden, wenn Sie die ORDER-Option verwenden, um die Eingabedaten entsprechend dem gruppierten Index für die Tabelle zu sortieren.|  
+|ORDER|Gibt die Sortierung der Eingabedaten an. Die Option hat die folgende Form: ORDER \<Spaltenname> ASC&#124;DESC. Es kann eine beliebige Anzahl an Spalten aufgelistet werden. Optional kann die Sortierreihenfolge eingeschlossen werden. Wird die Sortierreihenfolge ausgelassen, geht der Einfügevorgang davon aus, dass die Daten nicht sortiert sind.<br /><br /> Hinweis: Die Leistung wird verbessert, wenn die Eingabedaten entsprechend dem gruppierten Index der Tabelle mit der ORDER-Option sortiert werden.|  
   
  Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Schlüsselwörter werden in der Regel in Großbuchstaben eingegeben. Bei den Schlüsselwörtern wird jedoch nicht nach Groß-/Kleinschreibung unterschieden.  
   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62693915"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "62693915"
 > [!NOTE]  
 >  Wenn eine Datenbank nicht an der Spiegelung beteiligt ist, enthalten alle Spalten mit dem Präfix "mirroring_" den Wert NULL.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Die ID der Datenbank. Ist eindeutig innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**mirroring_guid**|**uniqueidentifier**|ID der Spiegelungspartnerschaft.<br /><br /> NULL = Datenbank zugegriffen werden kann oder wird nicht gespiegelt.<br /><br /> Hinweis: Wenn die Datenbank nicht an der Spiegelung beteiligt ist, werden alle Spalten, die mit dem Präfix "mirroring_"den Wert NULL.|  

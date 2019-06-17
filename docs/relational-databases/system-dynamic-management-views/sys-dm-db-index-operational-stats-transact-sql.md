@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684299"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -81,7 +81,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>Zurückgegebene Tabelle    
     
-|Spaltenname|Datentyp|Description|    
+|Spaltenname|Datentyp|Beschreibung|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|Datenbank-ID|    
 |**object_id**|**int**|ID der Tabelle oder Sicht.|    
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Gesamtzahl der im Index oder Heap gestarteten Bereichs- und Tabellenscans.|    
 |**singleton_lookup_count**|**bigint**|Gesamtzahl der Abrufvorgänge einzelner Zeilen aus dem Index oder Heap.|    
 |**forwarded_fetch_count**|**bigint**|Anzahl der über einen weitergeleiteten Datensatz abgerufenen Zeilen.<br /><br /> 0 = Indizes|    
-|**lob_fetch_in_pages**|**bigint**|Gesamtzahl der aus der LOB_DATA-Zuordnungseinheit abgerufenen LOB-Seiten (Large Object). Diese Seiten enthalten Daten, die in Spalten vom Typ gespeichert ist **Text**, **Ntext**, **Image**, **varchar(max)**, **Nvarchar () max)**, **'varbinary(max)'**, und **Xml**. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Gesamtzahl der aus der LOB_DATA-Zuordnungseinheit abgerufenen LOB-Seiten (Large Object). Diese Seiten enthalten Daten, die in Spalten vom Typ gespeichert ist **Text**, **Ntext**, **Image**, **varchar(max)** , **Nvarchar () max)** , **'varbinary(max)'** , und **Xml**. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Gesamtzahl der abgerufenen LOB-Datenbytes.|    
 |**lob_orphan_create_count**|**bigint**|Gesamtzahl verwaister LOB-Werte, die für Massenvorgänge erstellt werden.<br /><br /> 0 = Nicht gruppierter Index|    
 |**lob_orphan_insert_count**|**bigint**|Gesamtzahl verwaister LOB-Werte, die während Massenvorgängen eingefügt werden.<br /><br /> 0 = Nicht gruppierter Index|    
-|**row_overflow_fetch_in_pages**|**bigint**|Gesamtwert der Zeilenüberlauf-Datenseiten, die aus der ROW_OVERFLOW_DATA-Zuordnungseinheit abgerufen werden.<br /><br /> Diese Seiten enthalten Daten in Spalten vom Typ **varchar (n)**, **nvarchar (n)**, **varbinary**, und **Sql_variant** , das seit aus der Zeile verschoben.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Gesamtwert der Zeilenüberlauf-Datenseiten, die aus der ROW_OVERFLOW_DATA-Zuordnungseinheit abgerufen werden.<br /><br /> Diese Seiten enthalten Daten in Spalten vom Typ **varchar (n)** , **nvarchar (n)** , **varbinary**, und **Sql_variant** , das seit aus der Zeile verschoben.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Gesamtzahl der abgerufenen Zeilenüberlauf-Datenbytes.|    
 |**column_value_push_off_row_count**|**bigint**|Gesamtzahl der Spaltenwerte für LOB-Daten und Zeilenüberlaufdaten, die durch Ausführen eines Pushs außerhalb von Zeilen verschoben wurden, damit eine eingefügte oder aktualisierte Zeile auf eine Seite passt.|    
 |**column_value_pull_in_row_count**|**bigint**|Gesamtwert der Spaltenwerte für LOB-Daten und Zeilenüberlaufdaten, die durch Ausführen eines Pulls innerhalb eine Zeile verschoben werden. Dieser Vorgang findet statt, wenn Speicherplatz in einem Datensatz durch einen Updatevorgang frei gemacht wird und die Möglichkeit besteht, durch Ausführen eines Pulls einen oder mehrere Werte außerhalb von Zeilen aus den Zuordnungseinheiten LOB_DATA oder ROW_OVERFLOW_DATA zur IN_ROW_DATA-Zuordnungseinheit zu verschieben.|    

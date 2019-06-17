@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149850"
 ---
 # <a name="column-element-for-index-dta"></a>Column-Element für Index (DTA)
@@ -40,8 +40,8 @@ ms.locfileid: "63149850"
   
 |Spaltenattribut|Description|  
 |----------------------|-----------------|  
-|`Type`|Dies ist optional. Gibt den Indexspaltentyp an. Mit einem **string** -Datentyp können Sie dieses Attribut mit einem der folgenden zulässigen Werte angeben:<br /><br /> `KeyColumn`:<br />                  Gibt an, dass durch einen Indexschlüssel auf die Spalte verwiesen wird. Verwenden Sie die folgende Syntax, um dieses Attribut festzulegen:<br />`<Column Type="KeyColumn">`<br />Weitere Informationen zu Schlüsselspalten finden Sie unter [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`: Gibt an, dass die Spalte eine eingeschlossene Spalte ist (statt einer Schlüsselspalte). Verwenden Sie die folgende Syntax, um dieses Attribut festzulegen:<br />`<Column Type="IncludedColumn">`<br />Weitere Informationen zu eingeschlossenen Spalten finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|`SortOrder`|Dies ist optional. Gibt die Sortierreihenfolge der Spalte an. Mit einem **string** -Datentyp können Sie die Sortierreihenfolge wie folgt als **Aufsteigend** oder **Absteigend** angeben:<br /><br /> `<Column SortOrder="Ascending">`|  
+|`Type`|Optional. Gibt den Indexspaltentyp an. Mit einem **string** -Datentyp können Sie dieses Attribut mit einem der folgenden zulässigen Werte angeben:<br /><br /> `KeyColumn`:<br />                  Gibt an, dass durch einen Indexschlüssel auf die Spalte verwiesen wird. Verwenden Sie die folgende Syntax, um dieses Attribut festzulegen:<br />`<Column Type="KeyColumn">`<br />Weitere Informationen zu Schlüsselspalten finden Sie unter [Beschreibung von gruppierten und nicht gruppierten Indizes](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`: Gibt an, dass die Spalte eine eingeschlossene Spalte ist (statt einer Schlüsselspalte). Verwenden Sie die folgende Syntax, um dieses Attribut festzulegen:<br />`<Column Type="IncludedColumn">`<br />Weitere Informationen zu eingeschlossenen Spalten finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
+|`SortOrder`|Optional. Gibt die Sortierreihenfolge der Spalte an. Mit einem **string** -Datentyp können Sie die Sortierreihenfolge wie folgt als **Aufsteigend** oder **Absteigend** angeben:<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   

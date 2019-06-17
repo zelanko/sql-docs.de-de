@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011962"
 ---
 # <a name="create-a-server-role"></a>Erstellen einer Serverrolle
@@ -32,7 +32,7 @@ ms.locfileid: "63011962"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine neue Serverrolle mit**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63011962"
   
     -   Um einer Serverrolle eine andere Serverrolle als Besitzer zuzuweisen, ist die Mitgliedschaft in der Empfängerserverrolle oder die ALTER-Berechtigung für diese Serverrolle erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-new-server-role"></a>So erstellen Sie eine neue Serverrolle  
   
@@ -67,11 +67,11 @@ ms.locfileid: "63011962"
   
 2.  Erweitern Sie den Ordner **Sicherheit** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverrollen**, und klicken Sie dann auf **Neue Serverrolle...**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Serverrollen**, und klicken Sie dann auf **Neue Serverrolle...** .  
   
-4.  In der **neue Serverrolle -**_Server_role_name_ Dialogfeld auf die **allgemeine** geben einen Namen für die neue Serverrolle in der **serverrollenname**Feld.  
+4.  In der **neue Serverrolle -** _Server_role_name_ Dialogfeld auf die **allgemeine** geben einen Namen für die neue Serverrolle in der **serverrollenname**Feld.  
   
-5.  Geben Sie im Feld **Besitzer** den Namen des Serverprinzipals ein, der die neue Rolle besitzt. Klicken Sie alternativ auf die Auslassungspunkte **(...)**, um das Dialogfeld **Serveranmeldenamen oder -rolle auswählen** zu öffnen.  
+5.  Geben Sie im Feld **Besitzer** den Namen des Serverprinzipals ein, der die neue Rolle besitzt. Klicken Sie alternativ auf die Auslassungspunkte **(...)** , um das Dialogfeld **Serveranmeldenamen oder -rolle auswählen** zu öffnen.  
   
 6.  Wählen Sie unter **Sicherungsfähige Elemente**ein oder mehrere sicherungsfähige Elemente auf Serverebene aus. Wenn ein sicherungsfähiges Element ausgewählt ist, können dieser Serverrolle Berechtigungen für dieses sicherungsfähige Element gewährt oder verweigert werden.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63011962"
   
 #### <a name="to-create-a-new-server-role"></a>So erstellen Sie eine neue Serverrolle  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

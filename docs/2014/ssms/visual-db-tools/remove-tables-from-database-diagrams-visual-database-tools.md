@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63180735"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Entfernen von Tabellen aus Datenbankdiagrammen (Visual Database Tools)
@@ -40,6 +40,6 @@ ms.locfileid: "63180735"
   
 ## <a name="see-also"></a>Siehe auch  
  [Arbeiten mit Datenbankdiagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Löschen von Tabellen &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
+ [Löschen von Tabellen &#40;Datenbank-Engine&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
   
   

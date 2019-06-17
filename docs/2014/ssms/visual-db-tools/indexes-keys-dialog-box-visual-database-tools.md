@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015416"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Indizes und Schlüssel (Dialogfeld) (Visual Database Tools)
@@ -55,7 +55,7 @@ ms.locfileid: "63015416"
  Zeigt den Namen des Schlüssels oder Indexes an. Wenn ein neuer Index erstellt wird, erhält dieser einen Standardnamen, der auf der Tabelle im aktiven Fenster des Tabellen-Designers basiert. Sie können den Namen jederzeit ändern.  
   
  **Beschreibung**  
- Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (**…**) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
+ Ermöglicht die Eingabe einer Beschreibung des Schlüssels oder Index. Klicken Sie zum Erstellen einer detaillierteren Beschreibung auf **Beschreibung**, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten ( **…** ) rechts neben dem Eigenschaftenfeld. Dadurch wird ein größerer Bereich verfügbar, in den Sie Text eingeben können.  
   
  **Kategorie Tabellen-Designer**  
  Wenn diese Kategorie erweitert ist, werden Informationen zu **Als CLUSTERED erstellen**angezeigt.  
@@ -64,7 +64,7 @@ ms.locfileid: "63015416"
  Erstellen Sie den Schlüssel oder Index als CLUSTERED. Pro Tabelle ist nur ein gruppierter Index zulässig. Die Daten in der Tabelle werden in der Reihenfolge des gruppierten Indexes gespeichert. Weitere Informationen finden Sie unter [Erstellen gruppierter Indizes](../../relational-databases/indexes/indexes.md) und [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
  **Datenbereichsspezifikation**  
- Wird dieses Element erweitert, werden Informationen für **(Datenbereichstyp)**, **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
+ Wird dieses Element erweitert, werden Informationen für **(Datenbereichstyp)** , **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
   
  **(Datenbereichstyp)**  
  Gibt an, ob dieser Index oder Schlüssel zu einer Dateigruppe oder einem Partitionsschema gehört.  

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62786745"
 ---
 # <a name="check-out-files"></a>Auschecken von Dateien
@@ -60,7 +60,7 @@ ms.locfileid: "62786745"
      **Name**  
      Zeigt die Namen der Elemente an, die für das Auschecken verfügbar sind. Die ausgewählten Elemente werden mit einem Kontrollkästchen neben dem Namen angezeigt. Wenn ein Element nicht ausgecheckt werden soll, deaktivieren Sie das entsprechende Kontrollkästchen.  
   
-     **Optionen**  
+     **Options**  
      Zeigt die für das Quellcodeverwaltungs-Plug-In spezifischen Optionen zum Auschecken an, wenn Sie auf den Pfeil rechts neben der Schaltfläche klicken.  
   
      **Sort**  

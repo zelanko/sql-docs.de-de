@@ -15,10 +15,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011302"
 ---
 # <a name="sql-server-encryption"></a>SQL Server-Verschlüsselung
@@ -39,7 +39,7 @@ ms.locfileid: "63011302"
  [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md)  
  Allgemeine Informationen über das transparente Verschlüsseln von Daten.  
   
- [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](sql-server-and-database-encryption-keys-database-engine.md)  
+ [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
  Die Verschlüsselungsschlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bestehen aus einer Kombination von öffentlichen, privaten und symmetrischen Schlüsseln, die zum Schutz sensibler Daten verwendet werden. Dieser Abschnitt erklärt, wie Verschlüsselungsschlüssel implementiert und verwaltet werden.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
@@ -67,7 +67,7 @@ ms.locfileid: "63011302"
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;#40;Datenbank-Engine&amp;#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Verschlüsselungsschlüssel für SSRS - sichern und Wiederherstellen von Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026896"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Statusübergangstabellen
@@ -47,7 +47,7 @@ Die Tabellen in diesem Anhang zeigen, wie Funktionen mit ODBC-Übergang von der 
   
 -   **E**  
 
-     **_n_**  , **C_n_**, **S_n_**, oder **D_n_** – die Umgebung, Verbindung, Anweisung oder Deskriptor Zustand verschoben wird, auf den angegebenen Zustand.  
+     **_n_**  , **C_n_** , **S_n_** , oder **D_n_** – die Umgebung, Verbindung, Anweisung oder Deskriptor Zustand verschoben wird, auf den angegebenen Zustand.  
  
 -   **(BEI)**  -Ein ungültiges Handle an die Funktion übergeben wurde. Wenn das Handle ein null-Handle war oder ein gültiges Handle des falschen Typs – z. B. wurde ein Anweisungshandle war erforderlich – die Funktion gibt SQL_INVALID_HANDLE zurück ein Verbindungshandle bei übergeben; Andernfalls ist das Verhalten nicht definiert "und" wahrscheinlich schwerwiegend. Dieser Fehler wird angezeigt, nur, wenn es das einzig mögliche Ergebnis des Funktionsaufrufs im angegebenen Zustand ist. Dieser Fehler ändert sich nicht auf den Zustand und vom Treiber-Manager, wird immer erkannt werden, wie durch die Klammern angegeben.  
   

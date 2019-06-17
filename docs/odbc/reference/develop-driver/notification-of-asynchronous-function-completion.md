@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c54e545bdbd1ae137c24f79c71b53502480cbca9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62690534"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Benachrichtigung der Asynchronen Funktionsvollendung
@@ -30,7 +30,7 @@ Das Windows 8 SDK hinzugefügt ODBC einen Mechanismus, um Anwendungen zu benachr
   
  Wenn ein asynchroner Vorgang in einem Handle Treiber ausgeführt wird, sollte die asynchrone Treiberfunktionen in einem nicht blockierenden Stil funktionieren. Wenn der Vorgang sofort ausführen kann, sollten die-Treiberfunktion SQL_STILL_EXECUTING zurück. Diese Anforderung gilt für sowohl Abruf und Notification-Modus zur Verfügung.  
   
- Ist ein Handle im Notification asynchronen Modus, muss der Treiber die Benachrichtigung Callback-Funktion, mit der Adresse der Wert für das Attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK ist, Aufrufen nach Zurückgeben von SQL_STILL_EXECUTING. Das heißt, muss ein zurückgegebener SQL_STILL_EXECUTING mit einen Aufruf der Rückruffunktion Benachrichtigung kombiniert werden. Sollte der Treiber verwenden den aktuellen Wert des Attributs Handle SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT als Wert für den Aufruf zurück-Funktionsparameter *"pContext"*.  
+ Ist ein Handle im Notification asynchronen Modus, muss der Treiber die Benachrichtigung Callback-Funktion, mit der Adresse der Wert für das Attribut SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK ist, Aufrufen nach Zurückgeben von SQL_STILL_EXECUTING. Das heißt, muss ein zurückgegebener SQL_STILL_EXECUTING mit einen Aufruf der Rückruffunktion Benachrichtigung kombiniert werden. Sollte der Treiber verwenden den aktuellen Wert des Attributs Handle SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT oder SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT als Wert für den Aufruf zurück-Funktionsparameter *"pContext"* .  
   
  Der Treiber muss nicht zurück im Thread aufrufen, die der Treiber-Funktion aufruft. Es gibt keinen Grund, den Fortschritt zu benachrichtigen, bevor die Funktion zurückgibt. Der Treiber sollte einen eigenen Thread zum Rückruf verwenden. Der Treiber-Manager verwendet zum Ausführen von umfangreichen Verarbeitungslogik nicht Rückrufthread des Treibers.  
   

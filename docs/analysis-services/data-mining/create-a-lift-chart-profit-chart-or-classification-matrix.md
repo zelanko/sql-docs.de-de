@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988435"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen
@@ -67,7 +67,7 @@ ms.locfileid: "62988435"
   
     -   Wählen Sie die Option **Miningstrukturtestfälle verwenden**aus, um den vollständigen Satz der Testfälle zu verwenden, die als Teil des zurückgehaltenen Datasets der Miningstrukturen definiert wurden.  
   
-    -   Aktivieren Sie die Option **Anderes Dataset verwenden**, wenn Sie externe Daten verwenden möchten.  Das Dataset muss als Datenquellensicht verfügbar sein.   Klicken Sie auf die Schaltfläche zum Durchsuchen (**...** ) Schaltfläche, um die Datentabellen auszuwählen, für das Genauigkeitsdiagramm verwenden möchten. Weitere Informationen finden Sie unter [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
+    -   Aktivieren Sie die Option **Anderes Dataset verwenden**, wenn Sie externe Daten verwenden möchten.  Das Dataset muss als Datenquellensicht verfügbar sein.   Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) Schaltfläche, um die Datentabellen auszuwählen, für das Genauigkeitsdiagramm verwenden möchten. Weitere Informationen finden Sie unter [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md).  
   
          Wenn Sie ein externes Dataset verwenden, können Sie das Eingabedataset optional filtern. Weitere Informationen finden Sie unter [Anwenden von Filtern zum Modellieren von Testdaten](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md).  
   

@@ -17,10 +17,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011449"
 ---
 # <a name="encryption-hierarchy"></a>Verschlüsselungshierarchie
@@ -110,7 +110,7 @@ ms.locfileid: "63011449"
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine &amp;amp;#41;](../permissions-hierarchy-database-engine.md)   
+ [Berechtigungshierarchie &#40;Datenbank-Engine &#41;](../permissions-hierarchy-database-engine.md)   
  [Sicherungsfähige Elemente](../securables.md)  
   
   

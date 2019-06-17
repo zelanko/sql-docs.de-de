@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771180"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Arbeiten mit dem Oracle CDC Service
@@ -94,7 +94,7 @@ ms.locfileid: "62771180"
 |NAME|Der Name der Oracle-Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.|  
 |config_version|Der Zeitstempel (UTC) für die letzte Änderung in der entsprechenden **xdbcdc_config** -Tabelle der CDC-Datenbank oder der Zeitstempel der aktuellen Zeile in dieser Tabelle.<br /><br /> Der UPDATE-Trigger erzwingt für dieses Element den Wert GETUTCDATE(). Mithilfe von**config_version** kann der CDC-Dienst die CDC-Instanz ermitteln, die auf eine Konfigurationsänderung geprüft oder die aktiviert/deaktiviert werden muss.|  
 |cdc_service_name|Dieses Element bestimmt, welcher Oracle CDC Service die ausgewählte Oracle-Datenbank behandelt.|  
-|aktiviert|Gibt an, ob die Oracle CDC-Instanz aktiviert (1) oder deaktiviert (0) ist. Wenn der Oracle CDC Service gestartet wird, werden nur die als aktiviert (1) markierten Instanzen gestartet.<br /><br /> **Beachten Sie**: Eine Oracle CDC-Instanz kann aufgrund eines Fehlers deaktiviert werden, der nicht wiederholbar ist. In diesem Fall muss die Instanz manuell neu gestartet werden, nachdem der Fehler behoben wurde.|  
+|aktiviert|Gibt an, ob die Oracle CDC-Instanz aktiviert (1) oder deaktiviert (0) ist. Wenn der Oracle CDC Service gestartet wird, werden nur die als aktiviert (1) markierten Instanzen gestartet.<br /><br /> **Hinweis**: Eine Oracle CDC-Instanz kann aufgrund eines Fehlers deaktiviert werden, der nicht wiederholbar ist. In diesem Fall muss die Instanz manuell neu gestartet werden, nachdem der Fehler behoben wurde.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  In dieser Tabelle sind die CDC-Dienste aufgeführt, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hostinstanz zugeordnet sind. Diese Tabelle wird von der CDC Designer Console verwendet, um die Liste der CDC-Dienste zu bestimmen, die für die lokale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz konfiguriert werden. Außerdem wird sie vom CDC-Dienst verwendet, um sicherzustellen, dass nur ein ausgeführter Windows-Dienst jeweils einen bestimmten Oracle CDC Service-Namen behandelt.  
@@ -108,7 +108,7 @@ ms.locfileid: "62771180"
 |ref_count|Dieses Element zählt die Anzahl von Computern, auf denen der gleiche Oracle CDC Service installiert ist. Es wird mit jeder Hinzufügung des gleichnamigen Oracle CDC Service inkrementiert. Es wird entsprechend dekrementiert, wenn ein Dienst entfernt wird. Wenn der Indikator 0 (null) erreicht, wird diese Zeile gelöscht.|  
 |active_service_node|Der Name des Windows-Knotens, der den CDC-Dienst momentan behandelt. Wenn der Dienst ordnungsgemäß beendet wird, wird diese Spalte auf NULL festgelegt, um anzugeben, dass kein aktiver Dienst mehr vorhanden ist.|  
 |active_service_heartbeat|Dieses Element verfolgt den aktuellen CDC-Dienst, um zu ermitteln, ob er noch aktiv ist.<br /><br /> Dieses Element wird in regelmäßigen Abständen mit dem aktuellen Datenbankzeitstempel (UTC) für den aktiven CDC-Dienst aktualisiert. Das Standardintervall beträgt 30 Sekunden, aber Sie können diesen Wert anpassen.<br /><br /> Wenn ein ausstehender CDC-Dienst erkennt, dass der Takt nicht aktualisiert wurde, nachdem das konfigurierte Intervall verstrichen ist, versucht der ausstehende Dienst, die aktive CDC-Dienst-Rolle zu übernehmen.|  
-|options|Dieses Element gibt die sekundären Optionen an, z. B. Ablaufverfolgung oder Optimierung. Es hat die Form **name[=Wert][; ]**. Für die Zeichenfolge options wird die gleiche Semantik wie für die ODBC-Verbindungszeichenfolge verwendet. Wenn die Option ein boolescher Wert ist (ja/nein), kann der Wert nur den Namen enthalten.<br /><br /> mit der Ablaufverfolgung ist die folgenden möglichen Werten:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<Klassenname > [, Klassenname >]<br /><br /> Der Standardwert ist **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** ist das Zeitintervall (in Sekunden), nach dem der Dienst die Spalte „active_service_heartbeat“ aktualisiert. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **service_config_polling_interval** ist das Abrufintervall (in Sekunden), nach dem der CDC-Dienst eine Überprüfung auf Konfigurationsänderungen durchführt. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **sql_command_timeout** ist das Befehlstimeout für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Standardwert ist **1**. Der Maximalwert ist **3600**.|  
+|options|Dieses Element gibt die sekundären Optionen an, z. B. Ablaufverfolgung oder Optimierung. Es hat die Form **name[=Wert][; ]** . Für die Zeichenfolge options wird die gleiche Semantik wie für die ODBC-Verbindungszeichenfolge verwendet. Wenn die Option ein boolescher Wert ist (ja/nein), kann der Wert nur den Namen enthalten.<br /><br /> mit der Ablaufverfolgung ist die folgenden möglichen Werten:<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> off<br /><br /> \<Klassenname > [, Klassenname >]<br /><br /> Der Standardwert ist **false**.<br /><br /> <br /><br /> **service_heartbeat_interval** ist das Zeitintervall (in Sekunden), nach dem der Dienst die Spalte „active_service_heartbeat“ aktualisiert. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **service_config_polling_interval** ist das Abrufintervall (in Sekunden), nach dem der CDC-Dienst eine Überprüfung auf Konfigurationsänderungen durchführt. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **sql_command_timeout** ist das Befehlstimeout für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Standardwert ist **1**. Der Maximalwert ist **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Gespeicherte Prozeduren der MSXDBCDC-Datenbank  
@@ -172,7 +172,7 @@ ms.locfileid: "62771180"
 ##  <a name="BKMK_CDCdatabase"></a> CDC-Datenbanken  
  Jede in einem CDC-Dienst verwendete Oracle CDC-Instanz ist einer bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zugeordnet, die als CDC-Datenbank bezeichnet wird. Diese [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank wird auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz gehostet, die dem Oracle CDC Service zugeordnet ist.  
   
- Die CDC-Datenbank enthält ein spezielles CDC-Schema. Der Oracle CDC Service verwendet dieses Schema in Verbindung mit Tabellennamen mit dem Präfix **xdbcdc_**. Dieses Schema wird zu Sicherheits- und Konsistenzzwecken verwendet.  
+ Die CDC-Datenbank enthält ein spezielles CDC-Schema. Der Oracle CDC Service verwendet dieses Schema in Verbindung mit Tabellennamen mit dem Präfix **xdbcdc_** . Dieses Schema wird zu Sicherheits- und Konsistenzzwecken verwendet.  
   
  Sowohl die Oracle CDC-Instanz als auch die CDC-Datenbanken werden mit der Oracle CDC Designer Console erstellt. Weitere Informationen zu den CDC-Datenbanken finden Sie in der Dokumentation, die im Installationsumfang der Oracle CDC Designer Console enthalten ist.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "62771180"
   
  **sql-username**und **sql-password** sind die zu aktualisierenden Anmeldeinformationen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Wenn sqlacct sowohl einen leeren Benutzernamen als auch ein leeres Kennwort aufweist, stellt der Oracle CDC Service mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her.  
   
- **Beachten Sie**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ###  <a name="BKMK_create"></a> Create  
  Verwenden Sie `Create` , um einen Oracle CDC Service aus einem Skript zu erstellen. Der Befehl muss von einem Computeradministrator ausgeführt werden. Unten ist ein Beispiel für den Befehl `Create` angegeben:  
@@ -243,7 +243,7 @@ ms.locfileid: "62771180"
   
  **sql-username**und **sql-password** sind der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Kontoname bzw. das Kennwort, der bzw. das zum Herstellen der Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwendet wird. Wenn beide Parameter leer sind, stellt CDC Service for Oracle mithilfe der Windows-Authentifizierung eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her.  
   
- **Beachten Sie**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ###  <a name="BKMK_delete"></a> Delete  
  Verwenden Sie `Delete` , um den Oracle CDC Service sauber aus einem Skript zu löschen. Dieser Befehl muss von einem Computeradministrator ausgeführt werden. Unten ist ein Beispiel für den Befehl `Delete` angegeben.  
@@ -258,7 +258,7 @@ ms.locfileid: "62771180"
   
  **cdc-service-name** ist der Name des zu löschenden CDC-Diensts.  
   
- **Beachten Sie**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
+ **Hinweis**: Alle Parameter, die Leerzeichen oder doppelte Anführungszeichen enthalten, müssen in doppelte Anführungszeichen (") gesetzt werden. Eingebettete doppelte Anführungszeichen müssen verdoppelt werden (geben Sie zum Verwenden von **"A#B" D** als Kennwort z.B. **""A#B"" D"** ein).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden der CDC Service-Befehlszeilenschnittstelle](how-to-use-the-cdc-service-command-line-interface.md)   

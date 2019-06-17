@@ -12,10 +12,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 602b8ed0c338ba85c35137cd2752fa4357bf63ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62692701"
 ---
 # <a name="sysdmpdwcomponenthealthstatus-transact-sql"></a>sys.dm_pdw_component_health_status (Transact-SQL)
@@ -23,7 +23,7 @@ ms.locfileid: "62692701"
 
   Enthält Informationen über den aktuellen Status der Komponenten der Appliance.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**||Nicht NULL|  
 |component_id|ssNoversion|Die ID der Komponente. Finden Sie unter [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> Pdw_node_id, Component_id, Property_id und Component_instance_id bilden den Schlüssel für diese Ansicht ein.|Nicht NULL|  

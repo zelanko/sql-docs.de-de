@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092956"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Reparieren einer Distributed Replay-Installation
@@ -32,7 +32,7 @@ ms.locfileid: "66092956"
   
 2.  Wählen Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in die **deinstallieren oder Ändern eines Programms** Fenster, und klicken Sie dann in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] im Dialogfeld klicken Sie auf **reparieren**.  
   
-3.  Führen Sie die Schritte in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Assistenten, und klicken Sie auf die **Features auswählen** Seite, wählen Sie die Distributed Replay-Komponenten, die Sie reparieren möchten, und klicken Sie dann auf **weiter.**.  
+3.  Führen Sie die Schritte in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Assistenten, und klicken Sie auf die **Features auswählen** Seite, wählen Sie die Distributed Replay-Komponenten, die Sie reparieren möchten, und klicken Sie dann auf **weiter.** .  
   
 4.  Schließen Sie den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Installations-Assistenten ab, um die ausgewählten Distributed Replay-Funktionen zu reparieren.  
   

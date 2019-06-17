@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5f3a9b9197862f6bcaf947edc27080dba52b568f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63045083"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Ausführen eines DiffGram-Objekts mit verwalteten SQLXML-Klassen
@@ -55,7 +55,7 @@ ms.locfileid: "63045083"
 </ROOT>  
 ```  
   
- Die  **\<vor >** -Block enthält ein  **\<Kunden >** Element (**diffgr: ID = "Customer1"**). Die  **\<DataInstance >** -Block enthält das entsprechende  **\<Kunden >** -Element mit derselben **Id**. Die  **\<Kunden >** Element in der  **\<NewDataSet >** gibt auch an **diffgr: HasChanges = "modified"**. Dadurch wird ein Updatevorgang angezeigt und der Kundendatensatz in der Cust-Tabelle entsprechend aktualisiert. Beachten Sie, dass bei der **diffgr: HasChanges** -Attribut nicht angegeben ist, die DiffGram-Verarbeitungslogik ignoriert dieses Elements und keine Updates ausgeführt werden.  
+ Die  **\<vor >** -Block enthält ein  **\<Kunden >** Element (**diffgr: ID = "Customer1"** ). Die  **\<DataInstance >** -Block enthält das entsprechende  **\<Kunden >** -Element mit derselben **Id**. Die  **\<Kunden >** Element in der  **\<NewDataSet >** gibt auch an **diffgr: HasChanges = "modified"** . Dadurch wird ein Updatevorgang angezeigt und der Kundendatensatz in der Cust-Tabelle entsprechend aktualisiert. Beachten Sie, dass bei der **diffgr: HasChanges** -Attribut nicht angegeben ist, die DiffGram-Verarbeitungslogik ignoriert dieses Elements und keine Updates ausgeführt werden.  
   
  Im folgenden finden Sie Code für eine C#-Tutorial-Anwendung, die zeigt, wie verwaltete SQLXML-Klassen verwenden, führen Sie die oben genannten Diffgrams und Updates zweier Tabellen (Cust, Ord) Sie auch in Erstellen der **Tempdb** Datenbank.  
   

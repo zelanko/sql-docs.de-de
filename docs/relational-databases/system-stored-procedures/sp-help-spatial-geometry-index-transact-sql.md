@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dcdbc24f817ec618b0d89ec8c9a4128bbd604f33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017749"
 ---
 # <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
@@ -55,7 +55,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `sp_help_spatial_geometry_index` um den räumlichkeitsindex **SIndx_SpatialTable_geometry_col2** für Tabelle definierten **Geometry_col** für das angegebene Abfragebeispiel in **@qs**. Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
+ Im folgenden Beispiel wird `sp_help_spatial_geometry_index` um den räumlichkeitsindex **SIndx_SpatialTable_geometry_col2** für Tabelle definierten **Geometry_col** für das angegebene Abfragebeispiel in **@qs** . Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
   
 ```  
 declare @qs geometry  

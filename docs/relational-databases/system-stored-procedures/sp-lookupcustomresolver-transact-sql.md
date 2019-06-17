@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959640"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
@@ -43,15 +43,15 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @article_resolver = ] 'article_resolver'` Gibt den Namen der benutzerdefinierten Geschäftslogik an, deren Registrierung aufgehoben. *Article_resolver* ist **nvarchar(255)**, hat keinen Standardwert. Wenn die Geschäftslogik, die entfernt wird, eine COM-Komponente ist, ist dieser Parameter der angezeigte Name der Komponente. Wenn die Geschäftslogik eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assembly ist, ist dieser Parameter der Name der Assembly.  
+`[ @article_resolver = ] 'article_resolver'` Gibt den Namen der benutzerdefinierten Geschäftslogik an, deren Registrierung aufgehoben. *Article_resolver* ist **nvarchar(255)** , hat keinen Standardwert. Wenn die Geschäftslogik, die entfernt wird, eine COM-Komponente ist, ist dieser Parameter der angezeigte Name der Komponente. Wenn die Geschäftslogik eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assembly ist, ist dieser Parameter der Name der Assembly.  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Ist der CLSID-Wert, der das COM-Objekt, das durch den Namen der benutzerdefinierten Geschäftslogik im Zusammenhang der *Article_resolver* Parameter. *Resolver_clsid* ist **nvarchar(50)**, hat den Standardwert NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Ist der CLSID-Wert, der das COM-Objekt, das durch den Namen der benutzerdefinierten Geschäftslogik im Zusammenhang der *Article_resolver* Parameter. *Resolver_clsid* ist **nvarchar(50)** , hat den Standardwert NULL.  
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Gibt den Typ der benutzerdefinierten Geschäftslogik, der registriert wird. *Is_dotnet_assembly* ist **Bit**, hat den Standardwert 0. **1** gibt an, dass die benutzerdefinierte Geschäftslogik registriert eine Geschäftslogikhandler-Assembly **0** gibt an, dass es sich um eine COM-Komponente ist.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Ist der Name der Assembly, die den Geschäftslogikhandler implementiert. *Dotnet_assembly_name* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Ist der Name der Assembly, die den Geschäftslogikhandler implementiert. *Dotnet_assembly_name* ist **nvarchar(255)** , hat den Standardwert NULL.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Der Name der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> den Geschäftslogikhandler implementiert. *Dotnet_class_name* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Der Name der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> den Geschäftslogikhandler implementiert. *Dotnet_class_name* ist **nvarchar(255)** , hat den Standardwert NULL.  
   
 `[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL. Verwenden Sie diesen Parameter, wenn die gespeicherte Prozedur nicht vom Verleger aufgerufen wird. Wenn keine Angabe erfolgt, wird davon ausgegangen, dass der lokale Server der Verleger ist.  
   

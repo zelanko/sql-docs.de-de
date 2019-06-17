@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c4d8581374c9805c28ce577249995427fd5c7e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073889"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Grundlegendes zu MDX-Abfragen (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66073889"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Die grundlegende MDX-Abfrage &#40;MDX&#41;](mdx-query-the-basic-query.md)|Stellt grundlegende Syntaxinformationen für die MDX-SELECT-Anweisung bereit.|  
 |[Einschränken der Abfrage mit Abfrage- und Slicerachsen &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)|Beschreibt, was Abfrage- und Slicerachsen sind und wie diese angegeben werden.|  

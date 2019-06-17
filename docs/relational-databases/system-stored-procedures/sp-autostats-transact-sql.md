@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995684"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
@@ -45,7 +45,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @tblname = ] 'table_or_indexed_view_name'` Der Name der Tabelle oder indizierten Sicht, für die AUTO_UPDATE_STATISTICS-Option angezeigt werden soll. *Table_or_indexed_view_name* ist **nvarchar(776)**, hat keinen Standardwert.  
+`[ @tblname = ] 'table_or_indexed_view_name'` Der Name der Tabelle oder indizierten Sicht, für die AUTO_UPDATE_STATISTICS-Option angezeigt werden soll. *Table_or_indexed_view_name* ist **nvarchar(776)** , hat keinen Standardwert.  
   
 `[ @flagc = ] 'stats_value'` Aktualisiert die AUTO_UPDATE_STATISTICS-Option auf einen der folgenden Werte an:  
   
@@ -53,7 +53,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- Wenn *Stats_flag* ist nicht angegeben wird, die die aktuelle AUTO_UPDATE_STATISTICS-Einstellung angezeigt. *Stats_value* ist **varchar(10)**, hat den Standardwert NULL.  
+ Wenn *Stats_flag* ist nicht angegeben wird, die die aktuelle AUTO_UPDATE_STATISTICS-Einstellung angezeigt. *Stats_value* ist **varchar(10)** , hat den Standardwert NULL.  
   
 `[ @indname = ] 'statistics_name'` Ist der Name der Statistik zum Anzeigen oder aktualisieren die AUTO_UPDATE_STATISTICS-Option auf. Um die Statistik für einen Index anzuzeigen, können Sie den Namen des Indexes verwenden. Ein Index und das dazugehörige Statistikobjekt verfügen über den gleichen Namen.  
   
@@ -67,7 +67,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Wenn *Stats_flag* nicht angegeben ist, **Sp_autostats** gibt das folgende Resultset zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**Indexname**|**varchar(60)**|Name des Indexes oder der Statistiken.|  
 |**AUTOSTATS**|**varchar(3)**|Aktueller Wert für die AUTO_UPDATE_STATISTICS-Option.|  

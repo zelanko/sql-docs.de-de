@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144341"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
@@ -28,7 +28,7 @@ ms.locfileid: "63144341"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   [Erstellen eines Wartungsplans mithilfe der Entwurfsoberfläche für Wartungspläne](#SSMSProcedure)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63144341"
      **Zeitplan**  
      Gibt an, nach welchem Zeitplan der Unterplan ausgeführt wird. Klicken Sie auf **Zeitplan des Unterplans** , um das Dialogfeld **Neuer Auftragszeitplan** zu öffnen. Klicken Sie auf **Zeitplan entfernen** , um den Zeitplan aus dem Unterplan zu löschen.  
   
-     Liste**Ausführen als**   
+     Liste**Ausführen als**  
      Wählen Sie das Konto aus, das zum Ausführen dieser Unteraufgabe verwendet werden soll.  
   
 6.  Klicken Sie auf **Zeitplan des Unterplans** , um die Details zum Zeitplan in das Dialogfeld **Neuer Auftragszeitplan** einzugeben.  
@@ -159,16 +159,16 @@ ms.locfileid: "63144341"
          **Einschränkungsoption**  
          Definiert, wie eine Einschränkung zwischen zwei Tasks angewendet wird.  
   
-         Liste**Auswertungsvorgang**    
+         Liste**Auswertungsvorgang**  
          Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Folgende Vorgänge sind möglich: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
   
-         Liste**Wert**   
+         Liste**Wert**  
          Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**. **Erfolg** ist die Standardeinstellung.  
   
         > [!NOTE]  
         >  Die Rangfolgeneinschränkungszeile wird für **Erfolg**grün, für **Fehler**rot und für **Beendigung**blau angezeigt.  
   
-         **Ausdruck**  
+         **expression**  
          Geben Sie, wenn Sie die Vorgänge **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, einen Ausdruck ein. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
   
          **Testen**  
@@ -199,7 +199,7 @@ ms.locfileid: "63144341"
   
     3.  Geben Sie im Dialogfeld **Verbindungseigenschaften** im Feld **Verbindungsname** den Namen der Verbindung ein, die Sie erstellen.  
   
-    4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an** im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)**, und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
+    4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an** im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)** , und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
   
     5.  Wählen Sie unter **Geben Sie Informationen zum Anmelden am Server ein**die Option **Integrierte Sicherheit von Windows NT verwenden** oder **SQL Server-Authentifizierung verwenden**aus. Wenn Sie sich für die Verwendung der SQL Server-Authentifizierung entscheiden, geben Sie die entsprechenden Informationen in die Felder **Benutzername** und **Kennwort** ein.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "63144341"
   
         1.  Wenn Sie **Textdateibericht generieren**auswählen, können Sie entweder **Neue Datei erstellen** oder **An Datei anfügen**auswählen.  
   
-        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Klicken Sie alternativ auf die Auslassungspunkte auf **(...)**  und wählen Sie den Pfad zum Ordner oder Datei von der **Ordner suchen –**_Server_name_ oder **Datenbankdateien suchen –**_Servername_  Dialogfelder.  
+        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Klicken Sie alternativ auf die Auslassungspunkte auf **(...)**  und wählen Sie den Pfad zum Ordner oder Datei von der **Ordner suchen –** _Server_name_ oder **Datenbankdateien suchen –** _Servername_  Dialogfelder.  
   
         3.  Wenn Sie in der Liste **Agentoperator**die Option **Bericht an einen E-Mail-Empfänger senden** auswählen, können Sie den Empfänger des per E-Mail gesendeten Berichts angeben.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "63144341"
   
 12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer**mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
   
-     Die folgenden Optionen befinden sich die **Protokolldatei-Viewer -**_Server_name_ Dialogfeld.  
+     Die folgenden Optionen befinden sich die **Protokolldatei-Viewer -** _Server_name_ Dialogfeld.  
   
      **Protokoll laden**  
      Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  
@@ -251,7 +251,7 @@ ms.locfileid: "63144341"
      Beendet das Laden der Protokolldateieinträge. Diese Option können Sie z. B. verwenden, wenn das Laden einer Remote- oder Offline-Protokolldatei eine lange Zeit in Anspruch nimmt und Sie nur die zuletzt erstellten Einträge anzeigen möchten.  
   
      **Protokolldateizusammenfassung**  
-     In diesem Informationsbereich wird eine Zusammenfassung der Protokolldateifilterung angezeigt. Wenn die Datei nicht gefiltert wurde, wird folgender Text angezeigt: **Kein Filter angewendet**. Nach Anwendung eines Filters auf das Protokoll wird folgender Text angezeigt: **Protokolleinträge auf diesen Fall filtern:**\<Filterkriterien>.  
+     In diesem Informationsbereich wird eine Zusammenfassung der Protokolldateifilterung angezeigt. Wenn die Datei nicht gefiltert wurde, wird folgender Text angezeigt: **Kein Filter angewendet**. Nach Anwendung eines Filters auf das Protokoll wird folgender Text angezeigt: **Protokolleinträge auf diesen Fall filtern:** \<Filterkriterien>.  
   
      **Datum**  
      Zeigt das Datum des Ereignisses an.  

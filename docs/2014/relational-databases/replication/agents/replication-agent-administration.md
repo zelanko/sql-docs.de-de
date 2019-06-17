@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721806"
 ---
 # <a name="replication-agent-administration"></a>Replikations-Agent-Verwaltung
@@ -85,7 +85,7 @@ ms.locfileid: "62721806"
 ## <a name="replication-maintenance-jobs"></a>Aufträge zur Replikationswartung  
  Die Replikation verwendet die folgenden Aufträge zum Ausführen von geplanten und Bedarfswartungen.  
   
-|Cleanupauftrag|Description|Standardzeitplan|  
+|Cleanupauftrag|Beschreibung|Standardzeitplan|  
 |------------------|-----------------|----------------------|  
 |Bereinigung des Agent-Verlaufs: Distribution|Entfernt Verlaufseinträge des Replikations-Agents aus der Verteilungsdatenbank.|Wird alle zehn Minuten ausgeführt.|  
 |Verteilungsbereinigung: Distribution|Entfernt replizierte Transaktionen aus der Verteilungsdatenbank. Deaktiviert Abonnements, die innerhalb der maximalen Beibehaltungsdauer für Verteilung nicht synchronisiert wurden.|Wird alle zehn Minuten ausgeführt.|  

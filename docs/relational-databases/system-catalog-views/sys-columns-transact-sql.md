@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668968"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -54,7 +54,7 @@ ms.locfileid: "62668968"
 |column_id|**int**|ID der Spalte. Ist eindeutig innerhalb des Objekts.<br /><br /> Spalten-IDs sind möglicherweise nicht sequenziell.|  
 |system_type_id|**tinyint**|Die ID des Systemtyps der Spalte.|  
 |user_type_id|**int**|Die ID des vom Benutzer definierten Typs der Spalte.<br /><br /> Stellen Sie einen Join mit der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte her, um den Namen des Typs zurückzugeben.|  
-|max_length|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.<br /><br /> Für **Text** Spalten 16 oder dem durch Sp_tableoption 'Text in Row' festgelegten Wert, wird der Max_length-Wert sein.|  
+|max_length|**smallint**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , oder **Xml**.<br /><br /> Für **Text** Spalten 16 oder dem durch Sp_tableoption 'Text in Row' festgelegten Wert, wird der Max_length-Wert sein.|  
 |precision|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert; andernfalls 0.|  
 |scale|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert; andernfalls 0.|  
 |collation_name|**sysname**|Der Name der Sortierung der Spalte, wenn Sie zeichenbasierte; andernfalls NULL.|  

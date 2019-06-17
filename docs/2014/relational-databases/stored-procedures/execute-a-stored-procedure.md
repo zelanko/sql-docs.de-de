@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63016065"
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
@@ -39,7 +39,7 @@ ms.locfileid: "63016065"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Ausführen einer gespeicherten Prozedur mit:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63016065"
   
 -   Ausführen von gespeicherten Systemprozeduren  
   
-     Systemprozeduren beginnen mit dem Präfix **sp_**. Da sie in allen benutzer- und systemdefinierten Datenbanken logisch angezeigt werden, können sie in jeder Datenbank ausgeführt werden, ohne den Prozedurnamen voll zu qualifizieren. Es wird jedoch empfohlen, die Namen aller Systemprozeduren mit dem **sys** -Schemanamen für das Schema zu qualifizieren, um Namenskonflikte zu vermeiden. Das folgende Beispiel zeigt die empfohlene Methode für das Aufrufen einer Systemprozedur.  
+     Systemprozeduren beginnen mit dem Präfix **sp_** . Da sie in allen benutzer- und systemdefinierten Datenbanken logisch angezeigt werden, können sie in jeder Datenbank ausgeführt werden, ohne den Prozedurnamen voll zu qualifizieren. Es wird jedoch empfohlen, die Namen aller Systemprozeduren mit dem **sys** -Schemanamen für das Schema zu qualifizieren, um Namenskonflikte zu vermeiden. Das folgende Beispiel zeigt die empfohlene Methode für das Aufrufen einer Systemprozedur.  
   
     ```sql  
     EXEC sys.sp_who;  
@@ -125,7 +125,7 @@ ms.locfileid: "63016065"
 ####  <a name="Permissions"></a> Berechtigungen  
  Weitere Informationen finden Sie unter [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)ausführen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>So führen Sie eine gespeicherte Prozedur aus  
   
@@ -209,6 +209,6 @@ EXEC sp_procoption @ProcName = '<procedure name>'
  [Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
- [Gespeicherte Prozeduren &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](stored-procedures-database-engine.md)  
+ [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](stored-procedures-database-engine.md)  
   
   

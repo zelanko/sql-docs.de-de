@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676279"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lektion 1: Erstellen der Market Basket-Miningstruktur
@@ -25,7 +25,7 @@ ms.locfileid: "62676279"
  In dieser Lektion wird die Miningstruktur mithilfe von geschachtelten Tabellen definiert. Geschachtelte Tabellen werden deshalb verwendet, weil die Datendomäne, die durch die Struktur definiert wird, in zwei verschiedenen Quelltabellen enthalten ist. Weitere Informationen zu geschachtelten Tabellen finden Sie unter [geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
 ## <a name="create-mining-structure-statement"></a>CREATE MINING STRUCTURE-Anweisung  
- Verwenden Sie zum Erstellen einer Miningstruktur eine geschachtelte Tabelle enthält die [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Verwenden Sie zum Erstellen einer Miningstruktur eine geschachtelte Tabelle enthält die [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
   
 -   Benennen der Struktur  
   
@@ -187,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  In der nächsten Lektion fügen Sie der soeben erstellten Market Basket-Miningstruktur Miningmodelle hinzu.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

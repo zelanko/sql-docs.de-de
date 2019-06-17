@@ -1,26 +1,23 @@
 ---
 title: Startprogramm für SQL-Volltextfilterdaemon (Registerkarte „Anmelden“) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 984bd529dbd9291f00c1aad86e99c979bf73d82f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62999347"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Startprogramm für SQL-Volltextfilterdaemon (Registerkarte Anmelden)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]wird der Dienst SQL-Volltextfilterdaemon (FDHOST-Startprogramm) von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltextsuche verwendet. Dieser Dienst muss ausgeführt werden, wenn Sie die Volltextsuche verwenden. Informationen über die Prozesse des Filterdaemonhosts finden Sie unter "Architektur der Volltextsuche" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
  Verwenden Sie im Dialogfeld **Eigenschaften von Startprogramm für SQL-Volltextfilterdaemon** die Registerkarte **Anmelden** , um das vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltextdienst verwendete Konto anzugeben, das Kennwort des Kontos zu ändern sowie den Dienst zu starten und zu beenden. Das Ändern eines Kennworts für ein Konto wird nach einem Neustart des Diensts wirksam.  

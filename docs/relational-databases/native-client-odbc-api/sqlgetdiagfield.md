@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014424"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -28,7 +28,7 @@ ms.locfileid: "63014424"
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client-ODBC-Treiber legt die folgenden zusätzlichen Diagnosefelder für **SQLGetDiagField**fest. Diese Felder unterstützen eine umfangreiche Fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anwendungen und sind in allen Diagnosedatensätzen verfügbar, die für verbundene ODBC-Verbindungshandles und ODBC-Anweisungshandles generiert werden. Die Felder werden in sqlncli.h definiert.  
   
-|Diagnosedatensatzfeld|Description|  
+|Diagnosedatensatzfeld|Beschreibung|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Meldet die Zeilennummer einer gespeicherten Prozedur, die einen Fehler verursacht. Der Wert von SQL_DIAG_SS_LINE ist nur aussagekräftig, wenn SQL_DIAG_SS_PROCNAME einen Wert zurückgibt. Der Wert wird als 16-Bit-Ganzzahl ohne Vorzeichen zurückgegeben.|  
 |SQL_DIAG_SS_MSGSTATE|Der Status einer Fehlermeldung. Informationen über den Status der Fehlermeldung finden Sie unter [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  

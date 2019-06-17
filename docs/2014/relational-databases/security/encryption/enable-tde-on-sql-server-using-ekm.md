@@ -16,10 +16,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011509"
 ---
 # <a name="enable-tde-using-ekm"></a>Aktivieren von TDE mit EKM
@@ -33,7 +33,7 @@ ms.locfileid: "63011509"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   [So aktivieren Sie TDE unter Verwendung von EKM, mithilfe von Transact-SQL](#TsqlProcedure)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63011509"
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt keinen Anbieter für erweiterbare Schlüsselverwaltung zur Verfügung. Jeder Anbieter für erweiterbare Schlüsselverwaltung kann über andere Prozeduren zum Installieren, Konfigurieren und Autorisieren von Benutzern verfügen.  Schlagen Sie in der Dokumentation Ihres Anbieters für erweiterbare Schlüsselverwaltung nach, um diesen Schritt auszuführen.  
   
-3.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+3.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 4.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
