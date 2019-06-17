@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855720"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Miningstruktur für Zeitreihen
   In dieser Lektion fügen Sie ein neues Miningmodell, Miningstruktur, die Sie gerade erstellt, in haben [Lektion 1: Erstellen ein Zeitreihenmodell Miningmodell und Miningstruktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE-Anweisung  
- Um einer vorhandenen Miningstruktur ein neues Miningmodell hinzuzufügen, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Um einer vorhandenen Miningstruktur ein neues Miningmodell hinzuzufügen, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
   
 -   Identifizieren der Miningstruktur  
   

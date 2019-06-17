@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299347"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Herstellen einer Verbindung mit DB2-Datenbank (DB2ToSQL)
@@ -47,11 +47,11 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenban
   
 3.  In der **Manager** Feld, Sie haben die Wahl zwischen **Db2 für zOS erörtert**, oder **DB2 für LUW**  
   
-4.  In der **Modus** wählen **Modus "Standard"**, oder **verbindungszeichenfolgenmodus**.  
+4.  In der **Modus** wählen **Modus "Standard"** , oder **verbindungszeichenfolgenmodus**.  
   
     Verwenden Sie Modus "standard", um den Servernamen und Port anzugeben. Verwenden Sie Namen Dienstmodus, um den Namen des DB2-Diensts manuell anzugeben. Verwenden Sie verbindungszeichenfolgenmodus, um eine vollständige Verbindungszeichenfolge bereitstellen.  
   
-5.  Bei Auswahl von **Modus "Standard"**, geben Sie die folgenden Werte:  
+5.  Bei Auswahl von **Modus "Standard"** , geben Sie die folgenden Werte:  
   
     -   In der **Servernamen** Feld eingeben oder auswählen, den Namen oder IP-Adresse des Datenbankservers.  
   

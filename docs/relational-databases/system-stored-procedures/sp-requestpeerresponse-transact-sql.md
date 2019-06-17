@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047780"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
@@ -42,7 +42,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumente  
 `[ @publication = ] 'publication'` Ist der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, die für die der Status überprüft wird. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
-`[ @description = ] 'description'` Benutzerdefinierte Informationen, die zum Identifizieren einzelner statusanforderungen verwendet werden kann. *Beschreibung* ist **nvarchar(4000)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Benutzerdefinierte Informationen, die zum Identifizieren einzelner statusanforderungen verwendet werden kann. *Beschreibung* ist **nvarchar(4000)** , hat den Standardwert NULL.  
   
 `[ @request_id = ] request_id` Gibt die ID der neuen Anforderung zurück. *Request_id* ist **Int** und ein OUTPUT-Parameter ist. Dieser Wert kann verwendet werden, bei der Ausführung [Sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) um alle Antworten auf eine statusanforderung anzuzeigen.  
   

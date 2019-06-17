@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014162"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
@@ -98,13 +98,13 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 
 <a name="sqlcoptssapplicationintent"></a>
 ## <a name="sqlcoptssapplicationintent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind **Readonly** und **"ReadWrite"**. Zum Beispiel:  
+ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind **Readonly** und **"ReadWrite"** . Zum Beispiel:  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- Der Standardwert ist **"ReadWrite"**. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Verfügbarkeitsgruppen, finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Der Standardwert ist **"ReadWrite"** . Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Verfügbarkeitsgruppen, finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
 
 <a name="sqlcoptssattachdbfilename"></a>
 ## <a name="sqlcoptssattachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
@@ -136,7 +136,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssbrowseserver"></a>SQL_COPT_SS_BROWSE_SERVER  
  Dieses Attribut wird verwendet, um das Resultset zurückgegebenes anpassen **SQLBrowseConnect**. SQL_COPT_SS_BROWSE_SERVER gibt den Servernamen für die **SQLBrowseConnect** gibt Informationen zurück.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |computername|**SQLBrowseConnect** gibt eine Liste von Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer. Doppelter umgekehrter Schrägstriche (\\\\) sollte nicht für den Namen des Servers verwendet werden (z. B. anstelle von \\\MyServer, MyServer verwendet werden soll).|  
 |NULL|Standard. **SQLBrowseConnect** gibt Informationen für alle Server in der Domäne zurück.|  
@@ -189,7 +189,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY erzwingt die Verwendung der Windows-Authentifizierung für die Überprüfung des Zugriffs bei der Serveranmeldung. Wenn Windows-Authentifizierung verwendet wird, ignoriert der Treiber als Teil des angegebenen Werte für Benutzer-ID und Kennwort **SQLConnect**, [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md), oder [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)verarbeiten.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |SQL_IS_OFF|Standard. Zum Überprüfen von Benutzer-ID und Kennwort bei der Anmeldung wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
 |SQL_IS_ON|Zum Überprüfen der Zugriffsrechte eines Benutzers auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Windows-Authentifizierungsmodus verwendet.|  
@@ -215,7 +215,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Verfügbarkeitsgruppen, finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |SQL_IS_ON|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ermöglicht im Falle eines Failovers eine schnellere Wiederverbindung.|  
 |SQL_IS_OFF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client stellt im Falle eines Failovers keine schnellere Wiederverbindung bereit.|  
@@ -290,7 +290,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptsstranslate"></a>SQL_COPT_SS_TRANSLATE  
  SQL_COPT_SS_TRANSLATE bewirkt, dass der Treiber beim Austausch von MBCS-Daten Zeichen zwischen den Client- und Servercodeseiten übersetzt. Das Attribut wirkt sich nur Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Char**, **Varchar**, und **Text** Spalten.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |SQL_XL_OFF|Der Treiber übersetzt beim Austausch von Zeichendaten zwischen dem Client und dem Server keine Zeichen von einer Codeseite in eine andere.|  
 |SQL_XL_ON|Standard. Der Treiber übersetzt beim Austausch von Zeichendaten zwischen dem Client und dem Server Zeichen von einer Codeseite in eine andere. Der Treiber konfiguriert die Zeichenübersetzung automatisch und ermittelt dabei die auf dem Server installierte sowie die vom Client verwendete Codeseite.|  
@@ -330,7 +330,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptsswarnoncperror"></a>SQL_COPT_SS_WARN_ON_CP_ERROR  
  Dieses Attribut legt fest, ob eine Warnung angezeigt wird, wenn bei der Konvertierung einer Codeseite Daten verloren gehen. Dies gilt nur für Daten, die vom Server stammen.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |SQL_WARN_YES|Generiert Warnungen, wenn während der Codepagekonvertierung Daten verloren gehen.|  
 |SQL_WARN_NO|(Standard) Generiert keine Warnungen, wenn während der Codepagekonvertierung Daten verloren gehen.|  

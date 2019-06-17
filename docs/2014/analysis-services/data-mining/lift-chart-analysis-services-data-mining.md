@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084313"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
@@ -36,7 +36,7 @@ ms.locfileid: "66084313"
   
  Der Marketingabteilung in diesem Szenario ist bekannt, dass bei Mailing-Kampagnen typischerweise mit einer Antwortquote von 10 Prozent zu rechnen ist. Eine Liste mit 10.000 potenziellen Kunden ist in einer Tabelle in der Datenbank gespeichert. Ausgehend von der typischen Antwortquote ist normalerweise zu erwarten, dass nur ca. 1.000 potenzielle Kunden antworten. Jedoch reicht das für das Projekt angesetzte Budget nicht aus, um alle 10.000 in der Datenbank gespeicherten Kunden anzuschreiben. Zusätzlich soll die Antwortquote verbessert werden. In diesem Szenario wird angenommen, dass das Budget nur für Werbeschreiben an 5.000 Kunden ausreicht. Der Marketingabteilung bieten sich zwei Möglichkeiten:  
   
--   5.000 Kunden nach dem Zufallsprinzip als Empfänger auswählen  
+-   5\.000 Kunden nach dem Zufallsprinzip als Empfänger auswählen  
   
 -   Mithilfe eines Miningmodells die 5.000 Kunden auswählen, bei denen die Wahrscheinlichkeit einer Antwort am höchsten ist  
   

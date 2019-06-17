@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942973"
 ---
 # <a name="escape-sequences-in-odbc"></a>Escapesequenzen in ODBC
@@ -47,9 +47,9 @@ Eine Anzahl von Sprachfeatures wie äußere Joins und Aufrufe von Skalarfunktion
  Die Escape-Sequenz erkannt und analysiert von Treibern, die die Escapesequenzen mit speziellen DBMS-Grammatik zu ersetzen. Weitere Informationen zu escapesequenzsyntax, finden Sie unter [Escapesequenzen für ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Anhang C: SQL-Grammatik.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, dies war die Standardsyntax der Escapesequenz: **--(\*Hersteller (**_Herstellername_**), Product (** _Produktnamens_**)**_Erweiterung_  **\*):**  
+>  In ODBC 2. *x*, dies war die Standardsyntax der Escapesequenz: **--(\*Hersteller (** _Herstellername_ **), Product (** _Produktnamens_ **)** _Erweiterung_  **\*):**  
 >   
->  Zusätzlich zu dieser Syntax eine Kurzsyntax des Formulars definiert wurde: **{**_Erweiterung_**}**  
+>  Zusätzlich zu dieser Syntax eine Kurzsyntax des Formulars definiert wurde: **{** _Erweiterung_ **}**  
 >   
 >  In ODBC 3. *x*die Langform der Escapesequenz ist veraltet und wird ausschließlich die Kurzform verwendet.  
   

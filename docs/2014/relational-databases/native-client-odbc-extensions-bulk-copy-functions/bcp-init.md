@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689065"
 ---
 # <a name="bcpinit"></a>bcp_init
@@ -91,7 +91,7 @@ eDirection
   
 -   Beim Kopieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die Ordnungsposition einer Spalte in der Datendatei der Ordnungsposition einer Spalte in der Datenbanktabelle genau entsprechen. Beim Kopieren aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Bcp_exec** platziert Daten basierend auf der Ordnungsposition der Spalte in der Datenbanktabelle.  
   
--   Ist Datenbank-Datentypen variabler Länge (z. B. **varbinary(22)**) oder wenn eine Datenbankspalte null-Werte enthalten kann, werden der Daten in der Datendatei ein Längen-/Null-Indikator vorangestellt. Die Breite des Indikators ändert sich auf der Grundlage des Datentyps und der Version der Massenkopierfunktion.  
+-   Ist Datenbank-Datentypen variabler Länge (z. B. **varbinary(22)** ) oder wenn eine Datenbankspalte null-Werte enthalten kann, werden der Daten in der Datendatei ein Längen-/Null-Indikator vorangestellt. Die Breite des Indikators ändert sich auf der Grundlage des Datentyps und der Version der Massenkopierfunktion.  
   
  Um für eine Datendatei angegebenen datenformatwerte zu ändern, rufen [Bcp_columns](bcp-columns.md) und [Bcp_colfmt](bcp-colfmt.md).  
   

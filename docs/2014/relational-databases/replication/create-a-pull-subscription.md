@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721592"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
@@ -29,7 +29,7 @@ ms.locfileid: "62721592"
  Das Einrichten eines Pullabonnements für die P2P-Replikation ist mit einem Skript möglich, aber nicht über den Assistenten.  
   
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Erstellen Sie mit dem Assistenten für neue Abonnements ein Pullabonnement auf dem Verleger oder dem Abonnenten. Folgen Sie den Seiten im Assistenten für folgende Aufgaben:  
   
 -   Angeben des Verlegers und der Veröffentlichung.  
@@ -89,24 +89,24 @@ ms.locfileid: "62721592"
   
     -   Wenn **allow_pull** im Resultset den Wert **1**hat, dann unterstützt die Veröffentlichung Pullabonnements.  
   
-    -   Wenn der Wert des **Allow_pull** ist **0**, führen Sie [Sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)Angabe **Allow_pull**für **@property** und `true` für **@value**.  
+    -   Wenn der Wert des **Allow_pull** ist **0**, führen Sie [Sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)Angabe **Allow_pull**für **@property** und `true` für **@value** .  
   
-2.  Führen Sie auf dem Abonnenten [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) aus. Geben Sie **@publisher** und **@publication**eine Momentaufnahme über FTP bereitgestellt wird. Informationen zum Aktualisieren von Abonnements finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  Führen Sie auf dem Abonnenten [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) aus. Geben Sie **@publisher** und **@publication** eine Momentaufnahme über FTP bereitgestellt wird. Informationen zum Aktualisieren von Abonnements finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) aus. Geben Sie Folgendes an:  
   
-    -   Die Parameter **@publisher**, **@publisher_db**und **@publication** .  
+    -   Die Parameter **@publisher** , **@publisher_db** und **@publication** .  
   
-    -   Die Parameter [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Abonnenten ausgeführt wird, für **@job_login** und **@job_password**.  
+    -   Die Parameter [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent auf dem Abonnenten ausgeführt wird, für **@job_login** und **@job_password** .  
   
         > [!NOTE]  
-        >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit **@job_login** und **@job_password**erstellt wird. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Abonnenten immer mithilfe der integrierten Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Verteiler her.  
+        >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit **@job_login** und **@job_password** erstellt wird. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Abonnenten immer mithilfe der integrierten Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Verteiler her.  
   
-    -   (Optional) Der Wert **0** für **@distributor_security_mode** und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@distributor_login** und **@distributor_password**, wenn die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, wenn es sich bei der verbindungsherstellung zum Verteiler.  
+    -   (Optional) Der Wert **0** für **@distributor_security_mode** und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@distributor_login** und **@distributor_password** , wenn die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, wenn es sich bei der verbindungsherstellung zum Verteiler.  
   
     -   Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](specify-synchronization-schedules.md).  
   
-4.  Führen Sie auf dem Verleger [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus, um das Pullabonnement zu registrieren. Geben Sie **@publication**, **@subscriber**und **@destination_db**verfügbar ist. Geben Sie den Wert **pull** für **@subscription_type**.  
+4.  Führen Sie auf dem Verleger [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus, um das Pullabonnement zu registrieren. Geben Sie **@publication** , **@subscriber** und **@destination_db** verfügbar ist. Geben Sie den Wert **pull** für **@subscription_type** .  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>So erstellen Sie ein Pullabonnement für eine Mergeveröffentlichung  
   
@@ -114,32 +114,32 @@ ms.locfileid: "62721592"
   
     -   Wenn **allow_pull** im Resultset den Wert **1**hat, dann unterstützt die Veröffentlichung Pullabonnements.  
   
-    -   Wenn der Wert des **Allow_pull** ist **0**, führen Sie [Sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), wobei **Allow_pull** für **@property** und `true` für **@value**.  
+    -   Wenn der Wert des **Allow_pull** ist **0**, führen Sie [Sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), wobei **Allow_pull** für **@property** und `true` für **@value** .  
   
-2.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql) aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**und die folgenden Parameter an:  
+2.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql) aus. Geben Sie **@publisher** , **@publisher_db** , **@publication** und die folgenden Parameter an:  
   
-    -   **@subscriber_type**: geben Sie für ein Clientabonnement **local** und für ein Serverabonnement **global** an.  
+    -   **@subscriber_type** : geben Sie für ein Clientabonnement **local** und für ein Serverabonnement **global** an.  
   
-    -   **@subscription_priority**: Legen Sie für das Abonnement eine Priorität fest (**0.00** bis **99.99**). Dies ist nur für Serverabonnements erforderlich.  
+    -   **@subscription_priority** : Legen Sie für das Abonnement eine Priorität fest (**0.00** bis **99.99**). Dies ist nur für Serverabonnements erforderlich.  
   
          Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) aus. Geben Sie die folgenden Parameter an:  
   
-    -   **@publisher**, **@publisher_db**und **@publication**.  
+    -   **@publisher** , **@publisher_db** und **@publication** .  
   
-    -   Die Windows-Anmeldeinformationen, unter denen der Merge-Agent auf dem Abonnenten ausgeführt wird, für **@job_login** und **@job_password**.  
+    -   Die Windows-Anmeldeinformationen, unter denen der Merge-Agent auf dem Abonnenten ausgeführt wird, für **@job_login** und **@job_password** .  
   
         > [!NOTE]  
-        >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit **@job_login** und **@job_password**. Der Merge-Agent stellt die lokale Verbindung mit dem Abonnenten immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Verteiler und dem Verleger her.  
+        >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit **@job_login** und **@job_password** . Der Merge-Agent stellt die lokale Verbindung mit dem Abonnenten immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Verteiler und dem Verleger her.  
   
-    -   (Optional) Den Wert **0** für **@distributor_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@distributor_login** und **@distributor_password**, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung für den Verbindungsaufbau mit dem Verteiler verwendet werden muss.  
+    -   (Optional) Den Wert **0** für **@distributor_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@distributor_login** und **@distributor_password** , wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung für den Verbindungsaufbau mit dem Verteiler verwendet werden muss.  
   
-    -   (Optional) Den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung für den Verbindungsaufbau mit dem Verleger verwendet werden muss.  
+    -   (Optional) Den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password** , wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung für den Verbindungsaufbau mit dem Verleger verwendet werden muss.  
   
     -   Einen Zeitplan für den Merge-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-4.  Führen Sie auf dem Verleger [sp_addmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) aus. Geben Sie **@publication**, **@subscriber**, **@subscriber_db**und den Wert **pull** für **@subscription_type**. Damit wird das Pullabonnement registriert.  
+4.  Führen Sie auf dem Verleger [sp_addmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) aus. Geben Sie **@publication** , **@subscriber** , **@subscriber_db** und den Wert **pull** für **@subscription_type** . Damit wird das Pullabonnement registriert.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Im folgenden Beispiel wird ein Pullabonnement für eine Transaktionsveröffentlichung erstellt. Der erste Batch wird auf dem Abonnenten ausgeführt, und der zweite Batch wird auf dem Verleger ausgeführt. Die Werte für den Anmeldenamen und das Kennwort werden zur Laufzeit mithilfe von sqlcmd-Skriptvariablen bereitgestellt.  
