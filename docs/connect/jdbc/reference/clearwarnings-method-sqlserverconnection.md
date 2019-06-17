@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cb911adf-4691-4e57-8fb3-bdd11bef7a2e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73a5bf732d0e18b11be6bf5e44fd00275944a0fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 47c3d8362f555f1663c98b6394ed887fbfcb91dd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727038"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803621"
 ---
 # <a name="clearwarnings-method-sqlserverconnection"></a>clearWarnings-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public void clearWarnings()
 ## <a name="remarks"></a>Remarks  
  Diese ClearWarnings-Methode wird von der ClearWarnings-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

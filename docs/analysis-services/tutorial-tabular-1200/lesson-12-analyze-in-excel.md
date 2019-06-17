@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a558dafb4619ef9c4d66884f1fea9fd98e0881c
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404102"
 ---
 # <a name="lesson-12-analyze-in-excel"></a>Lektion 12: In Excel analysieren
@@ -39,7 +39,7 @@ In dieser ersten Aufgaben durchsuchen Sie Ihr Modell unter Verwendung der Standa
   
     Excel wird mit einer neuen Arbeitsmappe geöffnet. Es wird eine Datenquellenverbindung mit dem aktuellen Benutzerkonto erstellt, und zum Definieren von Anzeigefeldern wird die Standardperspektive verwendet. Das Arbeitsblatt wird automatisch eine PivotTable hinzugefügt.  
   
-3.  In Excel in der **Feldliste "PivotTable"**, beachten Sie, dass die **DimDate** und **"factinternetsales"** Measuregruppen angezeigt werden, als auch die **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, und **"factinternetsales"** Tabellen mit der entsprechenden Spalten angezeigt werden.  
+3.  In Excel in der **Feldliste "PivotTable"** , beachten Sie, dass die **DimDate** und **"factinternetsales"** Measuregruppen angezeigt werden, als auch die **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, und **"factinternetsales"** Tabellen mit der entsprechenden Spalten angezeigt werden.  
   
 4.  Schließen Sie Excel, ohne die Arbeitsmappe zu speichern.  
   

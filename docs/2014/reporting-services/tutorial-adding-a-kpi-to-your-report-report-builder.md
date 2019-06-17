@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098975"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines KPIs zu einem Bericht (Berichts-Generator)
@@ -273,7 +273,7 @@ ms.locfileid: "66098975"
   
 9. Klicken Sie auf **Werte und Status**.  
   
-10. Wählen Sie in der Dropdown-Werteliste, **[SUM(Sales)"angezeigt]**, jedoch keine weiteren Optionen nicht ändern.  
+10. Wählen Sie in der Dropdown-Werteliste, **[SUM(Sales)"angezeigt]** , jedoch keine weiteren Optionen nicht ändern.  
   
      Standardmäßig findet eine Datensynchronisierung im Datenbereich statt, und der Wert **Tablix1**, der Name des Tabellendatenbereichs im Bericht, wird im Feld **Synchronisierungsbereich** angezeigt.  
   

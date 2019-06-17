@@ -10,25 +10,25 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f13746005f05d84bd8b987fe048baf392e81af3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641971"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797789"
 ---
 # <a name="data-source-wizard-screen-1"></a>Datenquellen-Assistent (Bildschirm 1)
 
 Geben Sie den Namen und die Beschreibung der Datenquelle und den Namen des Servers an, auf dem SQL Server ausgeführt wird und mit dem die Datenquelle eine Verbindung herstellen wird. 
     
-## <a name="options"></a>Tastatur
+## <a name="options"></a>enthalten
 
 ### <a name="name"></a>Name
 
 Der von einer ODBC-Anwendung verwendete Datenquellenname, wenn sie eine Verbindung mit der Datenquelle anfordert. Beispielsweise „Personal“. Der Name der Datenquelle wird im Dialogfeld ODBC-Datenquellen-Administrator angezeigt.
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>und Beschreibung
 
 (Optional) Eine Beschreibung der Datenquelle. Zum Beispiel „Einstellungsdatum, Gehaltsverlauf und aktuelle Überprüfung aller Mitarbeiter“.
 

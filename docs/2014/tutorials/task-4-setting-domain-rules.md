@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489075"
 ---
 # <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
-  In dieser Aufgabe erstellen Sie eine Regel für die **Contact Email** Domäne zu überprüfen, ob die e-Mail-Adresse endet **@adventure-works.com**. Finden Sie unter [Erstellen einer Domänenregel](https://msdn.microsoft.com/library/hh510397.aspx) Weitere Informationen auf der Seite.  
+  In dieser Aufgabe erstellen Sie eine Regel für die **Contact Email** Domäne zu überprüfen, ob die e-Mail-Adresse endet **@adventure-works.com** . Finden Sie unter [Erstellen einer Domänenregel](https://msdn.microsoft.com/library/hh510397.aspx) Weitere Informationen auf der Seite.  
   
 1.  Klicken Sie auf **Contact Email** in die **Domänenliste**.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "65489075"
 13. Klicken Sie auf **schließen** schließen die **Testdomänenregel** Dialogfeld.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 5: Festlegung Begriffsbasierter basierend Beziehungen](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Aufgabe 5: Festlegung Begriffsbasierter basierend Beziehungen](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

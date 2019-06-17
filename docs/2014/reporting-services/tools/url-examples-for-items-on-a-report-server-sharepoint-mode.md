@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099450"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66099450"
   
 |Objekt|Description|  
 |------------|-----------------|  
-|SharePoint-Webanwendung|Eine SharePoint-Webanwendung kann als eigenständiger Server oder als Teil einer Farm installiert werden, die eine Auflistung von virtuellen Servern enthält. Eine Webanwendung besitzt eine URL (z.B. http:*/Servername*) und kann mehrere Websites enthalten.|  
+|SharePoint-Webanwendung|Eine SharePoint-Webanwendung kann als eigenständiger Server oder als Teil einer Farm installiert werden, die eine Auflistung von virtuellen Servern enthält. Eine Webanwendung besitzt eine URL (z.B. http: */Servername*) und kann mehrere Websites enthalten.|  
 |Website|Bei einer Website handelt es sich entweder um eine übergeordnete Website für eine Webanwendung oder um eine Unterwebsite.|  
 |SharePoint-Bibliothek|Eine Bibliothek enthält Dokumente oder Ordner. Eine Bibliothek bzw. ein Ordner in einer Bibliothek stellt das einzige Websiteobjekt dar, in dem Berichte, Berichtsmodelle, freigegebene Datenquellen und externe Bilder gespeichert werden können.|  
 |Element|Berichtsserverelemente, auf die Sie in einer URL verweisen können, enthalten eine Berichtsdefinition für einen Bericht oder Unterbericht, ein Berichtsmodell, eine freigegebene Datenquelle oder ein externes Bild.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66099450"
 ### <a name="url-for-a-sharepoint-server"></a>URL für einen SharePoint-Server  
  Wenn Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ein Berichtsserver- oder Berichtsmodellprojekt für den Berichtsserver bereitstellen, müssen Sie eine URL für den SharePoint-Server verwenden.  
   
- Öffnen Sie zum Suchen des zu verwendenden Servernamens einen Browser, und suchen Sie die SharePoint-Bibliothek, in der Sie einen Bericht veröffentlichen möchten. Der Servername wird unmittelbar nach dem Protokollpräfix angezeigt, z.B. http:*//Servername*.  
+ Öffnen Sie zum Suchen des zu verwendenden Servernamens einen Browser, und suchen Sie die SharePoint-Bibliothek, in der Sie einen Bericht veröffentlichen möchten. Der Servername wird unmittelbar nach dem Protokollpräfix angezeigt, z.B. http: *//Servername*.  
   
- Die Verwendung des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Proxyendpunkts wird nicht unterstützt. Ein Proxyendpunkt enthält eine Portnummer, z.B. http:*//Servername:8080/reportserver*.  
+ Die Verwendung des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Proxyendpunkts wird nicht unterstützt. Ein Proxyendpunkt enthält eine Portnummer, z.B. http: *//Servername:8080/reportserver*.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL für eine SharePoint-Serverwebsite oder -Unterwebsite  
  Wenn Sie einen Bericht oder eine Berichtsdatenquelle bereitstellen, müssen Sie eine URL zu einer SharePoint-Website und ggf. -Unterwebsite verwenden. In der URL wird der Name der Website unmittelbar nach dem Servernamen angezeigt, z.B. http://*Servername/Website* oder http://*Servername/Website/Unterwebsite*.  

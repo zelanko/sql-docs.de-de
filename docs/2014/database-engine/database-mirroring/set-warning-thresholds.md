@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805160"
 ---
 # <a name="set-warning-thresholds"></a>Schwellenwerte für Warnung festlegen
@@ -30,7 +30,7 @@ ms.locfileid: "65805160"
   
 ## <a name="options"></a>Optionen  
  *Serverinstanz und zugehöriger Verbindungsstatus*  
- Name einer Partnerserverinstanz in der Form _SYSTEM_**\\**_INSTANZNAME_. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
+ Name einer Partnerserverinstanz in der Form _SYSTEM_ **\\** _INSTANZNAME_. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
   
  Dieses Feld zeigt auch an, ob der Monitor zum aktuellen Zeitpunkt mit der Serverinstanz verbunden ist. Folgende Werte sind für den Verbindungsstatus möglich:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65805160"
 -   **Verbunden mit**  *Name der Serverinstanz*  
   
     > [!NOTE]  
-    >  Wenn Sie kein Mitglied der festen Serverrolle **sysadmin** sind, lautet dieser Statuts **Verbunden mit** *Name der Serverinstanz* **(Begrenzte Berechtigungen)**.  
+    >  Wenn Sie kein Mitglied der festen Serverrolle **sysadmin** sind, lautet dieser Statuts **Verbunden mit** *Name der Serverinstanz* **(Begrenzte Berechtigungen)** .  
   
  Der Name jeder der Partnerserverinstanzen wird in einem separaten Feld für die *Serverinstanz und den zugehörigen Verbindungsstatus* angezeigt. Das oberste Feld listet den Prinzipalserver auf, wenn die Ausführung des Monitors gestartet wurde.  
   

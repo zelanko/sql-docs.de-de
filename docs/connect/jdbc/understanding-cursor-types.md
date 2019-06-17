@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9ac737c528701baca47b8ffd592389cef3fad45
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: c535f7f09505eee1ceb3485d2ccfaebb16885949
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801975"
 ---
 # <a name="understanding-cursor-types"></a>Grundlegendes zu Cursortypen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,20 +34,20 @@ ms.locfileid: "52396334"
 -   Unterstützen von unterschiedlichen Sichtbarkeitsebenen bei Änderungen, die von anderen Benutzern an den Datenbankdaten, die im Resultset dargestellt werden, ausgeführt wurden.  
   
 > [!NOTE]  
->  Eine umfassende Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursortypen finden Sie im Thema zu Cursortypen (Datenbank-Engine) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+>  Eine umfassende Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursortypen finden Sie im Thema „Cursortypen (Datenbank-Engine)“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
  Die JDBC-Spezifikation stellt Unterstützung für Vorwärtscursor und scrollfähige Cursor bereit, die Änderungen durch andere Aufträge berücksichtigen oder nicht berücksichtigen können und schreibgeschützt oder aktualisierbar sein können. Diese Funktionalität wird von der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bereitgestellt.  
   
 ## <a name="remarks"></a>Remarks  
  Der JDBC-Treiber unterstützt die folgenden Cursortypen:  
   
-|Resultset<br /><br /> (Cursor) Typ|SQL Server-Cursortyp|Merkmale|select<br /><br /> Methode|Antwort<br /><br /> Pufferung|Beschreibung|  
+|Resultset<br /><br /> (Cursor) Typ|SQL Server-Cursortyp|Merkmale|select<br /><br /> Methode|Antwort<br /><br /> Pufferung|und Beschreibung|  
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|-----------------|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|–|Vorwärtscursor, schreibgeschützt|direct|Volle|Die Anwendung muss ein Pass-Through (vorwärts) für das Resultset ausführen. Dies ist das Standardverhalten und entspricht einem TYPE_SS_DIRECT_FORWARD_ONLY-Cursor. Der Treiber liest das gesamte Resultset während der Ausführung der Anweisung aus dem Server in einen Speicher.|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|–|Vorwärtscursor, schreibgeschützt|direct|adaptive|Die Anwendung muss ein Pass-Through (vorwärts) für das Resultset ausführen. Das Verhalten entspricht dem Verhalten eines TYPE_SS_DIRECT_FORWARD_ONLY-Cursors. Der Treiber liest Zeilen vom Server, wenn die Anwendung sie anfordert, und minimiert so die Speicherauslastung auf Clientseite.|  
 |TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|Schneller Vorwärtscursor|Vorwärtscursor, schreibgeschützt|cursor|–|Die Anwendung muss mithilfe eines Servercursors ein Pass-Through (vorwärts) für das Resultset ausführen. Das Verhalten entspricht dem Verhalten eines TYPE_SS_SERVER_CURSOR_FORWARD_ONLY-Cursors.<br /><br /> Zeilen werden in durch die Abrufgröße angegebene Blöcke vom Server abgerufen.|  
 |TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|Dynamisch (Vorwärtscursor)|Vorwärtscursor, aktualisierbar|–|–|Die Anwendung muss ein Pass-Through (vorwärts) für das Resultset ausführen, um eine oder mehrere Zeilen zu aktualisieren.<br /><br /> Zeilen werden in durch die Abrufgröße angegebene Blöcke vom Server abgerufen.<br /><br /> Die Abrufgröße ist standardmäßig festgelegt, wenn die Anwendung die [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts aufruft.<br /><br /> **Hinweis:** Der JDBC-Treiber stellt ein Feature für die adaptive Pufferung bereit, mit dem Sie Ergebnisse der Anweisungsausführung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abrufen können, wenn sie in der Anwendung benötigt werden, statt alle Ergebnisse auf einmal abzurufen. Wenn die Anwendung beispielsweise eine große Datenmenge abrufen muss, für die der Anwendungsspeicher nicht ausreicht, kann die Clientanwendung den Wert mithilfe der adaptiven Pufferung als Datenstrom abrufen. Das Verhalten des Treibers ist standardmäßig auf **Adaptiv** festgelegt. Um jedoch die adaptive Pufferung für das aktualisierbare Resultset mit Vorwärtscursor zu aktivieren, muss die Anwendung die [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode des [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekts explizit aufrufen, indem der **String-Wert** "**adaptive"** angegeben wird. Beispielcode finden Sie unter [Aktualisieren großer Datenbeispiel](../../connect/jdbc/updating-large-data-sample.md).|  
-|TYPE_SCROLL_INSENSITIVE|STATIC-Cursor|Scrollfähig, nicht aktualisierbar<br /><br /> Externe Zeilenupdates, -einfügungen und -löschvorgänge sind nicht sichtbar.|N/V|–|Die Anwendung erfordert eine Datenbankmomentaufnahme. Das Resultset kann nicht aktualisiert werden. Nur CONCUR_READ_ONLY wird unterstützt.  Alle anderen Parallelitätstypen führen bei Verwendung mit diesem Cursortyp zu einer Ausnahme.<br /><br /> Zeilen werden in durch die Abrufgröße angegebene Blöcke vom Server abgerufen.|  
+|TYPE_SCROLL_INSENSITIVE|STATIC-Cursor|Scrollfähig, nicht aktualisierbar<br /><br /> Externe Zeilenupdates, -einfügungen und -löschvorgänge sind nicht sichtbar.|–|–|Die Anwendung erfordert eine Datenbankmomentaufnahme. Das Resultset kann nicht aktualisiert werden. Nur CONCUR_READ_ONLY wird unterstützt.  Alle anderen Parallelitätstypen führen bei Verwendung mit diesem Cursortyp zu einer Ausnahme.<br /><br /> Zeilen werden in durch die Abrufgröße angegebene Blöcke vom Server abgerufen.|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|Keyset|Scrollfähig, schreibgeschützt. Externe Zeilenupdates sind sichtbar, und Löschvorgänge werden als fehlende Daten angezeigt.<br /><br /> Externe Zeileneinfügungen sind nicht sichtbar.|–|–|Die Anwendung muss geänderte Daten nur für vorhandene Zeilen anzeigen.<br /><br /> Zeilen werden in durch die Abrufgröße angegebene Blöcke vom Server abgerufen.|  
 |TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_UPDATABLE, CONCUR_SS_SCROLL_LOCKS, CONCUR_SS_OPTIMISTIC_CC, CONCUR_SS_OPTIMISTIC_CCVAL)|Keyset|Scrollfähig, aktualisierbar<br /><br /> Externe und interne Zeilenupdates sind sichtbar, Löschvorgänge werden als fehlende Daten angezeigt, und Einfügungen sind nicht sichtbar.|–|–|Die Anwendung kann Daten in vorhandenen Zeilen mit dem ResultSet-Objekt ändern. Auch Änderungen an Zeilen, die von anderen außerhalb des ResultSet-Objekts vorgenommen werden, müssen für die Anwendung sichtbar sein.<br /><br /> Zeilen werden in durch die Abrufgröße angegebene Blöcke vom Server abgerufen.|  
 |TYPE_SS_DIRECT_FORWARD_ONLY|–|Vorwärtscursor, schreibgeschützt|–|"full" oder "adaptive"|Ganzzahliger Wert = 2003. Stellt einen schreibgeschützten clientseitigen Cursor bereit, der vollständig gepuffert wird. Es wird kein Servercursor erstellt.<br /><br /> Nur der Parallelitätstyp CONCUR_READ_ONLY wird unterstützt. Alle anderen Parallelitätstypen führen bei Verwendung mit diesem Cursortyp zu einer Ausnahme.|  
@@ -112,7 +112,7 @@ ms.locfileid: "52396334"
 >   
 >  SQL Server schränkt Servercursor auf ein einziges Resultset ein. Wenn ein Batch oder eine gespeicherte Prozedur mehrere Anweisungen enthält, muss ein schreibgeschützter Vorwärtsclientcursor verwendet werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Resultsets mit dem JDBC-Treiber](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

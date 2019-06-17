@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 0c763cf3a1822548b1e107ecc7d619d8ef44d0a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601210"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803920"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>API-Referenz für den SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ Der Name der API für den SQLSRV-Treiber in der [!INCLUDE[ssDriverPHP](../../inc
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 Der SQLSRV-Treiber enthält die folgenden Funktionen:  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|beginnt eine Transaktion,|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|Verwirft eine Aussage; bricht ausstehende Ergebnisse der Aussage ab|  
@@ -58,12 +58,12 @@ Der SQLSRV-Treiber enthält die folgenden Funktionen:
 ## <a name="reference"></a>Verweis  
 [PHP-Handbuch](https://php.net/manual)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Erste Schritte mit der Microsoft-Treiber für PHP für SQLServer](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server (Erste Schritte mit dem Microsoft-Treiber für PHP für SQL Server)](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

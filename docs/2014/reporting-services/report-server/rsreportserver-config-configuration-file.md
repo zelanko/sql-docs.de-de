@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1939e3b1f09e6afbc63ba0565e244e66a7cff26f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103230"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
@@ -105,7 +105,7 @@ ms.locfileid: "66103230"
 |**Dsn**|Gibt die Verbindungszeichenfolge für die Verbindung zum Datenbankserver an, der die Berichtsserver-Datenbank hostet. Dieser Wert ist verschlüsselt und wird der Konfigurationsdatei beim Erstellen der Berichtsserver-Datenbank hinzugefügt. Für SharePoint werden die Informationen zur Datenbankverbindung aus der SharePoint-Konfigurationsdatenbank verwendet.|N,S|  
 |**ConnectionType**|Gibt den Anmeldeinformationstyp an, der vom Berichtsserver zum Herstellen der Verbindung zur Berichtsserver-Datenbank verwendet wird. Gültige Werte sind `Default` und `Impersonate`. `Default` wird angegeben, wenn der Berichtsserver zur Verwendung einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder des Dienstkontos konfiguriert ist, um eine Verbindung mit der Berichtsserver-Datenbank herzustellen. `Impersonate` wird angegeben, wenn der Berichtsserver ein Windows-Konto verwendet, um eine Verbindung mit der Berichtsserver-Datenbank herzustellen.|N|  
 |**LogonUser, LogonDomain, LogonCred**|Speichert die Domäne, den Benutzernamen und das Kennwort eines Domänenkontos, das von einem Berichtsserver für die Verbindung zu einer Berichtsserver-Datenbank verwendet wird. Die Werte für `LogonUser`, `LogonDomain` und `LogonCred` werden erstellt, wenn die Berichtsserververbindung für die Verwendung eines Domänenkontos konfiguriert wird. Weitere Informationen zu einer Berichtsserver-Datenbankverbindung finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung (SSRS-Konfigurations-Manager)](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|Ein Bezeichner für die Berichtsserverinstanz. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Dieser Wert gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen an. Standardmäßig ist dieser Wert `MSRS12`  *\<Instancename >*. Ändern Sie diese Einstellung nicht. Folgendes ist ein Beispiel für den vollständigen Wert: `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> Nachfolgend finden Sie eine Beispiel des SharePoint-Modus:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|Ein Bezeichner für die Berichtsserverinstanz. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Dieser Wert gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen an. Standardmäßig ist dieser Wert `MSRS12`  *\<Instancename >* . Ändern Sie diese Einstellung nicht. Folgendes ist ein Beispiel für den vollständigen Wert: `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> Nachfolgend finden Sie eine Beispiel des SharePoint-Modus:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|Ein Bezeichner für die von Setup erstellte Berichtsserverinstallation. Dieser Wert ist auf eine GUID festgelegt. Ändern Sie diese Einstellung nicht.|N|  
 |**SecureConnectionLevel**|Gibt den Grad an, zu dem Webdienstaufrufe Secure Sockets Layer (SSL) verwenden müssen. Diese Einstellung wird sowohl für den Berichtsserver-Webdienst als auch für den Berichts-Manager verwendet. Dieser Wert wird festgelegt, wenn Sie eine URL für die Verwendung von HTTP oder HTTPS im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool konfigurieren. Gültige Werte sind 0 bis 3, wobei 0 die geringste Sicherheit bietet. Weitere Informationen finden Sie unter [Verwenden von sicheren Webdienstmethoden](../report-server-web-service/net-framework/using-secure-web-service-methods.md) und [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
 |**DisableSecureFormsAuthenticationCookie**|Der Standardwert ist False.<br /><br /> Gibt an, ob der Vorgang deaktiviert wird, durch den erzwungen wird, dass das für Formular- und benutzerdefinierte Authentifizierungen verwendete Cookie als sicher gekennzeichnet wird. Ab SQL Server 2012 werden die mit benutzerdefinierten Authentifizierungserweiterungen verwendeten Formularauthentifizierungscookies beim Senden an den Client von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] automatisch als sichere Cookies gekennzeichnet. Indem diese Eigenschaft geändert wird, können Berichtsserveradministratoren und Autoren von benutzerdefinierten Sicherheitserweiterungen wieder zum früheren Verhalten zurückkehren, bei dem der Autor der benutzerdefinierten Sicherheitserweiterung bestimmen konnte, ob das Cookie als sicheres Cookie gekennzeichnet werden soll. Es wird empfohlen, für die Formularauthentifizierung sichere Cookies zu verwenden, um die Netzwerkermittlung und Wiederholungsangriffe zu verhindern.|N|  
@@ -138,7 +138,7 @@ ms.locfileid: "66103230"
   
  Die letzte Spalte der Tabelle gibt an, ob die Einstellung für einen Berichtsserver im einheitlichen Modus (N) oder für einen Berichtsserver im SharePoint-Modus (S) oder für beide gilt.  
   
-|Einstellung|Description|Modus|  
+|Einstellung|Beschreibung|Modus|  
 |-------------|-----------------|----------|  
 |**Application**|Enthält Einstellungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen.|N|  
 |**Name**|Gibt die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendungen an. Gültige Werte sind ReportServerWebService oder ReportManager.|N|  
@@ -261,7 +261,7 @@ ms.locfileid: "66103230"
   
  Alle Übermittlungserweiterungen weisen die Einstellungen **Extension Name**, **MaxRetries**, **SecondsBeforeRetry**und **Configuration**auf. Diese gemeinsamen Einstellungen werden zuerst dokumentiert. Die Beschreibungen der erweiterungsspezifischen Einstellungen folgen in einer zweiten Tabelle.  
   
-|Einstellung|Description|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**Extension Name**|Gibt einen Anzeigenamen und eine Assembly der Übermittlungserweiterung an. Ändern Sie diesen Wert nicht.|  
 |**MaxRetries**|Gibt an, wie oft ein Berichtsserver eine Übermittlung erneut versucht, wenn der erste Versuch fehlschlägt. Der Standardwert ist 3.|  
@@ -271,14 +271,14 @@ ms.locfileid: "66103230"
 ####  <a name="bkmk_fileshare_extension"></a> Konfigurationseinstellungen für die Dateifreigabe-Übermittlungerweiterung  
  Bei der Dateifreigabeübermittlung wird ein Bericht gesendet, der im Anwendungsdateiformat in einen freigegebenen Ordner im Netzwerk exportiert wurde. Weitere Informationen finden Sie unter [File Share Delivery in Reporting Services](../subscriptions/file-share-delivery-in-reporting-services.md).  
   
-|Einstellung|Description|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**, **RenderingExtension**|Diese Einstellungen werden verwendet, um Exportformate auszuschließen, die nicht in der Dateifreigabeübermittlung verwendet werden können. Diese Formate werden in der Regel zur interaktiven Berichterstellung, Vorschau oder zum Vorladen des Berichtscaches verwendet. Sie erzeugen keine Anwendungsdateien, die ganz einfach in einer Desktopanwendung angezeigt werden können. Gültige Werte sind:<br /><br /> **HTMLOWC**<br /><br /> **RGDI**<br /><br /> **NULL**|  
   
 ####  <a name="bkmk_email_extension"></a> Konfigurationseinstellungen für Berichtsserver-E-Mail-Erweiterung  
  Berichtsserver-E-Mail verwendet ein SMTP-Netzwerkgerät, um Berichte an E-Mail-Adressen zu senden. Diese Übermittlungserweiterung muss konfiguriert werden, bevor sie verwendet werden kann. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41; ](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) und [e-Mail-Übermittlung in Reporting Services](../subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-|Einstellung|Description|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**SMTPServer**|Gibt einen Zeichenfolgenwert für die Adresse eines SMTP-Remoteservers oder einer Weiterleitung an. Dieser Wert ist für SMTP-Remotedienste erforderlich. Dabei kann es sich um eine IP-Adresse, den UNC-Namen eines Computers im Intranet Ihres Unternehmens oder um einen vollqualifizierten Domänennamen handeln.|  
 |**SMTPServerPort**|Gibt eine ganze Zahl für den Port an, den der SMTP-Dienst zum Senden ausgehender E-Mails verwendet. Der Port 25 wird normalerweise zum Senden von E-Mail verwendet.|  
@@ -288,7 +288,7 @@ ms.locfileid: "66103230"
 |**SMTPUseSSL**|Gibt einen booleschen Wert an, der für die Verwendung von Secure Sockets Layer (SSL) beim Senden einer SMTP-Nachricht im Netzwerk festgelegt werden kann. Der Standardwert ist 0 (oder False). Diese Einstellung kann verwendet werden, wenn das **SendUsing** -Element auf 2 festgelegt ist.|  
 |**SendUsing**|Gibt die Methode zum Senden von Nachrichten an. Gültige Werte sind:<br /><br /> 1 = Sendet eine Nachricht mithilfe des Abholverzeichnisses des lokalen SMTP-Diensts.<br /><br /> 2 = Sendet die Nachricht mithilfe des Netzwerk-SMTP-Diensts.|  
 |**SMTPAuthenticate**|Gibt eine ganze Zahl für die Authentifizierungsmethode an, die beim Senden von Nachrichten an einen SMTP-Dienst über eine TCP/IP-Verbindung verwendet werden soll. Gültige Werte sind:<br /><br /> 0 = Keine Authentifizierung.<br /><br /> 1 = (Nicht unterstützt).<br /><br /> 2 = NTLM-Authentifizierung (NT-LanMan). Zum Herstellen einer Verbindung zum Netzwerk-SMTP-Dienst wird der Sicherheitskontext des Berichtsserver-Windows-Diensts verwendet.|  
-|**From**|Gibt eine E-Mail-Adresse an, mit der Berichte im Format *abc@host.xyz*. Die Adresse wird in der Zeile **Von** einer ausgehenden E-Mail-Nachricht angezeigt. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver verwenden. Es sollte ein gültiges E-Mail-Konto mit der Berechtigung zum Senden von E-Mail sein.|  
+|**From**|Gibt eine E-Mail-Adresse an, mit der Berichte im Format *abc@host.xyz* . Die Adresse wird in der Zeile **Von** einer ausgehenden E-Mail-Nachricht angezeigt. Dieser Wert ist erforderlich, wenn Sie einen SMTP-Remoteserver verwenden. Es sollte ein gültiges E-Mail-Konto mit der Berechtigung zum Senden von E-Mail sein.|  
 |**EmbeddedRenderFormats, RenderingExtension**|Gibt das Renderingformat zum Einschließen eines Berichts in den Textkörper einer E-Mail-Nachricht an. Bilder im Bericht werden anschließend in den Bericht eingebettet. Gültige Werte sind MHTML und HTML4.0.|  
 |**PrivilegedUserRenderFormats**|Gibt die Renderingformate an, die ein Benutzer für ein Berichtsabonnement auswählen kann, wenn das Abonnieren über den Task "Alle Abonnements verwalten" aktiviert ist. Wenn dieser Wert nicht festgelegt wird, stehen alle nicht ausdrücklich ausgeschlossenen Renderingformate zur Verfügung.|  
 |**ExcludedRenderFormats, RenderingExtension**|Schließt ausdrücklich Formate aus, die nicht für eine bestimmte Übermittlungserweiterung geeignet sind. Es können nicht mehrere Instanzen derselben Renderingerweiterung ausgeschlossen werden. Durch das Ausschließen mehrerer Instanzen wird ein Fehler ausgelöst, wenn der Berichtsserver die Konfigurationsdatei liest. Standardmäßig werden die folgenden Erweiterungen für die E-Mail-Übermittlung ausgeschlossen:<br /><br /> **HTMLOWC**<br /><br /> **NULL**<br /><br /> **RGDI**|  
@@ -356,7 +356,7 @@ ms.locfileid: "66103230"
   
 -   [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- Weitere Informationen zu den Attributen für das untergeordnete **<Erweiterung\<**-Element unter **\<Render>** finden Sie unter:  
+ Weitere Informationen zu den Attributen für das untergeordnete **<Erweiterung\<** -Element unter **\<Render>** finden Sie unter:  
   
 -   [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   

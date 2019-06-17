@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456989b83877b0c94c07f9074719666ebac3a873
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109997"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services (Berichts-Generator)
@@ -40,7 +40,7 @@ ms.locfileid: "66109997"
   
 |Bereich|Funktion|  
 |----------|--------------|  
-|Cube auswählen (Schaltfläche **...**)|Zeigt den aktuell ausgewählten Cube an.|  
+|Cube auswählen (Schaltfläche **...** )|Zeigt den aktuell ausgewählten Cube an.|  
 |Metadaten (Bereich)|Zeigt eine hierarchische Liste von Measures, KPIs (Key Performance Indicators) und Dimensionen an, die für den ausgewählten Cube definiert sind.|  
 |Berechnete Elemente (Bereich)|Zeigt die aktuell definierten berechneten Elemente an, die für eine Verwendung in der Abfrage verfügbar sind.|  
 |Filter (Bereich)|Wird zum Auswählen von Dimensionen und zugehörigen Hierarchien verwendet, um Daten an der Quelle zu filtern und die an den Bericht zurückgegebenen Daten zu beschränken.|  
@@ -90,7 +90,7 @@ ms.locfileid: "66109997"
   
 |Bereich|Funktion|  
 |----------|--------------|  
-|Cube auswählen (Schaltfläche **...**)|Zeigt den aktuell ausgewählten Cube an.|  
+|Cube auswählen (Schaltfläche **...** )|Zeigt den aktuell ausgewählten Cube an.|  
 |Metadaten/Funktionen/Vorlagen (Bereich)|Zeigt eine hierarchische Liste von Measures, KPIs und Dimensionen an, die für den ausgewählten Cube definiert sind.|  
 |Abfragebereich|Zeigt den Abfragetext an.|  
 |Ergebnisbereich|Zeigt die Ergebnisse des Ausführens der Abfrage an.|  

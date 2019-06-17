@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095220"
 ---
 # <a name="feature-selection"></a>Funktionsauswahl
@@ -52,7 +52,7 @@ ms.locfileid: "66095220"
 ### <a name="shared-features"></a>Freigegebene Funktionen  
  Funktionen, die von allen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem einzelnen Computer gemeinsam verwendet werden, werden in einem einzelnen Verzeichnis installiert. Dabei handelt es sich um folgende Elemente:  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] – SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus ist eine serverbasierte Anwendung zum Erstellen, verwalten und Bereitstellen von Berichten in e-Mail-Adresse, mehrere Dateiformate sowie interaktiven webbasierten Formaten. Im SharePoint-Modus werden die Funktionen für die Berichtsanzeige und -verwaltung in SharePoint-Produkte integriert. Weitere Informationen finden Sie unter [Reporting Services-Berichtsserver &#40;SharePoint-Modus&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md).|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte|Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint-Produkte enthält Verwaltungs- und Benutzeroberflächenkomponenten zur Integration eines SharePoint-Produkts in einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver im SharePoint-Modus. Weitere Informationen finden Sie unter [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).|  
@@ -89,7 +89,7 @@ ms.locfileid: "66095220"
 ## <a name="installing-adventureworks-sample-databases"></a>Installieren der AdventureWorks-Beispieldatenbanken  
  Standardmäßig werden Beispieldatenbanken und Beispielcode nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups installiert. Weitere Informationen zum Installieren von Beispieldatenbanken und Beispielcode finden Sie unter den [Microsoft SQL Server Community Projects & Samples](https://go.microsoft.com/fwlink/?LinkId=87843) (https://go.microsoft.com/fwlink/?LinkId=87843).  
   
- Weitere Informationen zu Beispielen stehen nach der Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zur Verfügung. Von der **starten** Menü klicken Sie auf **Programme**, klicken Sie auf **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, klicken Sie auf **Dokumentation und Lernprogramme** , und klicken Sie dann auf  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Samples Overview**.  
+ Weitere Informationen zu Beispielen stehen nach der Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zur Verfügung. Von der **starten** Menü klicken Sie auf **Programme**, klicken Sie auf **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , klicken Sie auf **Dokumentation und Lernprogramme** , und klicken Sie dann auf  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Samples Overview**.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Editionen und Komponenten von SQL Server 2014](../editions-and-components-of-sql-server-2016.md)  

@@ -12,10 +12,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.openlocfilehash: 4cccab2331a564737112d9fb3efc42e5a6b81ed8
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265395"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Installationsanleitung für SQL Server unter Linux
@@ -78,7 +78,7 @@ Sie können SQL Server 2017 unter Linux über die Befehlszeile installieren. Sch
 
 - [Installieren Sie unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installieren Sie unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Installieren unter Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Führen unter Docker aus](quickstart-install-connect-docker.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 

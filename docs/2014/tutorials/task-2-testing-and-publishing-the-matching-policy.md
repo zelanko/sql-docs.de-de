@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484728"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Aufgabe 2: Testen und Veröffentlichen der Abgleichrichtlinie
@@ -24,7 +24,7 @@ ms.locfileid: "65484728"
   
 2.  Prüfen Sie alle übereinstimmenden Datensätze und ihre Treffergenauigkeit im Listenfeld. Ein Datensatz mit einem **Grün** zugeordnete Symbol ist ein Duplikat des pivotdatensatzes, der ihm vorausgeht. Hier einige Beispiele:  
   
-    1.  Der Datensatz mit **Datensatz-ID: 1000005** ist eine Übereinstimmung des Datensatzes mit der **Datensatz-Id: 1000004** mit **Bewertung: 100 %** da sowohl die Datensätze die gleichen Werte für **SupplierID (Voraussetzung)**, **Lieferantenname**, und **ContactEmailAddress-Spalten**. DQS wählt nach dem Zufallsprinzip einen Datensatz als Pivotdatensatz für einen Cluster aus.  
+    1.  Der Datensatz mit **Datensatz-ID: 1000005** ist eine Übereinstimmung des Datensatzes mit der **Datensatz-Id: 1000004** mit **Bewertung: 100 %** da sowohl die Datensätze die gleichen Werte für **SupplierID (Voraussetzung)** , **Lieferantenname**, und **ContactEmailAddress-Spalten**. DQS wählt nach dem Zufallsprinzip einen Datensatz als Pivotdatensatz für einen Cluster aus.  
   
     2.  Der Datensatz **1000023** ist eine Übereinstimmung des Datensatzes **1000022** mit die treffergenauigkeit: 93 %, da die beiden Datensätze die gleichen Werte für haben **SupplierID (Voraussetzung)** und **Lieferantenname** Spalten aber unterschiedliche Werte für die **ContactEmailAddress** die Spalte.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "65484728"
 7.  Klicken Sie in der SQL Server Data Quality Services-Dialogfeld auf **veröffentlichen** , und klicken Sie auf **OK** im Meldungsfeld auf. Nun wird der von Ihnen definierte Abgleichsrichtlinie veröffentlicht, in der **Lieferanten** Knowledge Base. Sie können die Wissensdatenbank verwenden, um den Abgleichsprozess für eine Eingabedatei auszuführen, mit dem Ziel, Duplikate zu identifizieren und zu entfernen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 3: Erstellen und Ausführen von Data Quality-Projekten für den Abgleich](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [Aufgabe 3: Erstellen und Ausführen von Data Quality-Projekten für den Abgleich](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

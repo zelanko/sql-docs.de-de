@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099041"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
@@ -146,7 +146,7 @@ ms.locfileid: "66099041"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf „Ausführen“ (**!**).  
+4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf „Ausführen“ ( **!** ).  
   
      Die Abfrage wird ausgeführt, und das Resultset für die Felder **SalesDate**, **Subcategory**, **Product**, **Sales**und **Quantity**wird angezeigt.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "66099041"
   
      Die Werte im Feld **Sales** sind nun die Werte für die Sparkline.  
   
-8.  Klicken Sie auf das Pluszeichen (+), melden Sie sich kategoriegruppenfeld, und klicken Sie dann auf **"salesdate"**.  
+8.  Klicken Sie auf das Pluszeichen (+), melden Sie sich kategoriegruppenfeld, und klicken Sie dann auf **"salesdate"** .  
   
 9. Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   

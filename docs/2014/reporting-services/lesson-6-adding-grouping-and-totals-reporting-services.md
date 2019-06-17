@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108405"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services)
@@ -40,13 +40,13 @@ ms.locfileid: "66108405"
   
 2.  Wenn Sie den Bereich **Zeilengruppen** nicht sehen, klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche. Klicken Sie auf **Sicht** und dann auf **Gruppierung**.  
   
-3.  Von der **Berichtsdaten** ziehen Sie die `Date` Feld der **Zeilengruppen** Bereich. Platzieren Sie das Feld über der Zeile **(Details)**.  
+3.  Ziehen Sie im **Berichtsdatenbereich** das Feld `Date` in den Bereich **Zeilengruppen**. Platzieren Sie das Feld über der Zeile **(Details)** .  
   
      Beachten Sie, dass das Zeilenhandle nun Klammern zum Anzeigen einer Gruppe aufweist. Außerdem verfügt die Tabelle nun auf jeder Seite der vertikalen gepunkteten Linie einmal über die Spalte Date.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Von der **Berichtsdaten** ziehen Sie die `Order` Feld der **Zeilengruppen** Bereich. Platzieren das Feld unter Date und über **Details**.  
+4.  Ziehen Sie im **Berichtsdatenbereich** das Feld `Order` in den Bereich **Zeilengruppen**. Platzieren das Feld unter Date und über **Details**.  
   
      Beachten Sie, dass das Zeilenhandle nun zweimal Klammern zum Anzeigen von zwei Gruppen aufweist. Die Tabelle verfügt jetzt über zwei `Order` Spalten zu.  
   

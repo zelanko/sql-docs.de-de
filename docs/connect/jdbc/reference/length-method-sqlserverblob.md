@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: aa233ccb-72d3-4ea3-979d-07ef9aa47359
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7353dd7cb01330e1403c5471adffdc6fad093197
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e176624817a67945fa68ef34b2baaad7ed35714c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667378"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803568"
 ---
 # <a name="length-method-sqlserverblob"></a>length-Methode (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public long length()
 ## <a name="remarks"></a>Remarks  
  Diese Länge-Methode wird von der Length-Methode in der java.sql.Blob-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerBlob-Methoden](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob-Elemente](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  

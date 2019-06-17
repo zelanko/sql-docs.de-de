@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095719"
 ---
 # <a name="database-ssrs-native-mode"></a>Datenbank (einheitlicher SSRS-Modus)
@@ -47,7 +47,7 @@ ms.locfileid: "66095719"
  Gibt die Anmeldeinformationen an, die vom Berichtsserver zum Herstellen der Verbindung zur Berichtsserver-Datenbank verwendet werden. Zu den Anmeldeinformationen, die Sie angeben können, gehören das Dienstkonto, ein Windows-Domänenbenutzer, ein lokaler Windows-Benutzer oder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankanmeldung. Weitere Informationen zur Auswahl der Anmeldeinformationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Benutzername**  
- Gibt ein Domänenbenutzerkonto an, wenn Sie Windows-Anmeldeinformationen verwenden, bzw. einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen verwenden. Wenn Sie Windows-Anmeldeinformationen verwenden, geben sie im folgenden Format:  *\<Domäne >\\< Konto\>*.  
+ Gibt ein Domänenbenutzerkonto an, wenn Sie Windows-Anmeldeinformationen verwenden, bzw. einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen verwenden. Wenn Sie Windows-Anmeldeinformationen verwenden, geben sie im folgenden Format:  *\<Domäne >\\< Konto\>* .  
   
  **Kennwort**  
  Gibt das Kennwort für das Konto an.  

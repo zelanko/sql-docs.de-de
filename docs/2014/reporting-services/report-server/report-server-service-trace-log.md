@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103410"
 ---
 # <a name="report-server-service-trace-log"></a>Berichtsserverdienst-Ablaufverfolgungsprotokoll
   Das [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Berichtsserver-Ablaufverfolgungsprotokoll ist eine ASCII-Textdatei, die detaillierte Informationen für Berichtsserver-Dienstvorgänge enthält, einschließlich vom Report Server-Webdienst, vom Berichts-Manager und von der Hintergrundverarbeitung ausgeführte Vorgänge. In den Ablaufverfolgungsprotokollen sind redundante Informationen gespeichert, die in anderen Protokolldateien aufgezeichnet werden, sowie zusätzliche Informationen, die anderweitig nicht verfügbar sind. Ablaufverfolgungsinformationen können beispielsweise zum Debuggen einer Anwendung, die einen Berichtsserver enthält, oder zum Analysieren eines bestimmten Problems, das ins Ereignis- oder Ausführungsprotokoll geschrieben wurde, nützlich sein.  
   
 > [!NOTE]  
->  In vorherigen Versionen waren mehrere Ablaufverfolgungsprotokolldateien vorhanden, eine pro Anwendung. Die folgenden Dateien sind veraltet und werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen nicht mehr erstellt: ReportServerWebApp_*\<Zeitstempel >* log, ReportServer_*\<Zeitstempel >*.log und ReportServerService_main_ *\< Timestamp >*. Log.  
+>  In vorherigen Versionen waren mehrere Ablaufverfolgungsprotokolldateien vorhanden, eine pro Anwendung. Die folgenden Dateien sind veraltet und werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen nicht mehr erstellt: ReportServerWebApp_ *\<Zeitstempel >* log, ReportServer_ *\<Zeitstempel >* .log und ReportServerService_main_ *\< Timestamp >* . Log.  
   
  **In diesem Thema:**  
   

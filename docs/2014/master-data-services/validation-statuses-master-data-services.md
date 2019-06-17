@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b4ad97a783781596fccbbc2c159140d819586b38
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478545"
 ---
 # <a name="validation-statuses-master-data-services"></a>Überprüfungsstatus (Master Data Services)
   Auf der Seite **Version überprüfen** im Bereich **Versionsverwaltung** sind die folgenden Status möglich.  
   
-|Status|Description|  
+|Status|Beschreibung|  
 |------------|-----------------|  
 |Überprüfung wird erwartet|Alle neu erstellten Elemente, die überprüft werden sollen|  
 |Erneute Überprüfung wird erwartet|Vorhandene Elemente, die überprüft werden sollen|  

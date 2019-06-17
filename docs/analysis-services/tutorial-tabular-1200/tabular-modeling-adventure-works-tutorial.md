@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503622"
 ---
 # <a name="adventure-works-internet-sales-tutorial-1200"></a>Adventure Works Internet Sales-Tutorial (1200)
@@ -76,7 +76,7 @@ Dieses Tutorial umfasst die folgenden Lektionen:
 |Lektion|Für den Abschluss voraussichtlich benötigte Zeit|  
 |----------|------------------------------|  
 |[Lektion 1: Erstellen eines neuen tabellarischen Modellprojekts](lesson-1-create-a-new-tabular-model-project.md)|10 Minuten|  
-|[Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md)|20 Minuten|  
+|[Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md)|20 Minuten|  
 |[Lektion 3: Markieren als Datumstabelle](lesson-3-mark-as-date-table.md)|3 Minuten|  
 |[Lektion 4: Erstellen von Beziehungen](lesson-4-create-relationships.md)|10 Minuten|  
 |[Lesson 5: Erstellen von berechneten Spalten](lesson-5-create-calculated-columns.md)|15 Minuten|

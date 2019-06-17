@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482865"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Speichern einer Shortcutabfragedatei (MDS-Add-In für Excel)
@@ -29,7 +29,7 @@ ms.locfileid: "65482865"
   
 1.  Klicken Sie in der Gruppe **Speichern und senden** unter **Abfrage speichern** auf den Pfeil, und klicken Sie auf **Als Abfrage speichern**.  
   
-2.  Dies ist optional. Um die Abfrage umzubenennen, klicken Sie auf den Pfeil unter **Abfrage speichern** und dann auf **Abfragen verwalten**. Wählen Sie die Abfrage aus, und klicken Sie auf **Umbenennen**.  
+2.  Optional. Um die Abfrage umzubenennen, klicken Sie auf den Pfeil unter **Abfrage speichern** und dann auf **Abfragen verwalten**. Wählen Sie die Abfrage aus, und klicken Sie auf **Umbenennen**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ef92aa3410ee12fd5edc4ea602e64a6fa06fdc9c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477222"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Webkonfigurationsreferenz (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "65477222"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] benutzt die Datei „Web.config“, die die Konfigurationseinstellungen enthält, die Internetinformationsdienste (IIS) aktivieren, um die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und den entsprechenden Webdienst zu hosten. Diese Datei Web.config Datei befindet sich im Ordner WebApplication des [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Installationspfads. Weitere Informationen zu Pfaden und Berechtigungen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).  
   
 ## <a name="webconfig-elements"></a>Web.Config-Elemente  
- Die Datei „Web.config“ enthält zusätzlich zu den Konfigurationselementen Standard-IIS, .NET Framework, ASP.NET und Windows Communication Foundation (WCF) ein benutzerdefiniertes [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Element, und zwar **\<masterDataServices>**. Die folgende Tabelle beschreibt die Elemente mit den enthaltenen Web.config-Dateien.  
+ Die Datei „Web.config“ enthält zusätzlich zu den Konfigurationselementen Standard-IIS, .NET Framework, ASP.NET und Windows Communication Foundation (WCF) ein benutzerdefiniertes [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Element, und zwar **\<masterDataServices>** . Die folgende Tabelle beschreibt die Elemente mit den enthaltenen Web.config-Dateien.  
   
 |Konfigurationselement|Description|  
 |---------------------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "65477222"
 |**appSettings**|ASP.NET-Element. Weitere Informationen finden Sie unter [appSettings-Element (allgemeines Einstellungsschema)](https://go.microsoft.com/fwlink/?LinkId=178356) in der MSDN Library.|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices-Element  
- Das **\<masterDataServices>**-Element ist ein benutzerdefiniertes Element, das verwendet wird, um einen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Webdienst mit einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank zu verbinden.  
+ Das **\<masterDataServices>** -Element ist ein benutzerdefiniertes Element, das verwendet wird, um einen [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Webdienst mit einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank zu verbinden.  
   
 ### <a name="syntax"></a>Syntax  
   
@@ -59,10 +59,10 @@ ms.locfileid: "65477222"
 |Element|Description|  
 |----------|-----------------|  
 |**Instanz**|Untergeordnetes Element. Enthält Attribute, die Informationen für den Webdienst und Datenbankverbindungszeichenfolge angeben.|  
-|**virtualPath**|Attribute. Gibt den virtuellen Pfad der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und des entsprechenden Diensts an. Dies entspricht dem Wert des **path**-Attributs des **\<application>**-Elements unter dem **\<site>**-Element der IIS-Datei „ApplicationHost.config“.|  
-|**siteName**|Attribute. Gibt den Namen der Website an, die die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und den entsprechenden Dienst hostet. Dies entspricht dem Wert des **name**-Attributs des **\<site>**-Elements unter dem **\<sites>**-Element der IIS-Datei „ApplicationHost.config“.|  
-|**connectionName**|Attribute. Gibt den Namen der zu verwendeten Verbindung an. Dies entspricht dem **name**-Attribut des **\<add>**-Elements unter dem **\<connectionStrings>**-Element in der Web.config-Datei.|  
-|**serviceName**|Attribute. Gibt den Namen des Web-Services an. Dies entspricht dem **name**-Attribut des **\<service>**-Elements unter dem **\<services>**-Element in der Web.config-Datei.|  
+|**virtualPath**|Attribute. Gibt den virtuellen Pfad der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und des entsprechenden Diensts an. Dies entspricht dem Wert des **path**-Attributs des **\<application>** -Elements unter dem **\<site>** -Element der IIS-Datei „ApplicationHost.config“.|  
+|**siteName**|Attribute. Gibt den Namen der Website an, die die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung und den entsprechenden Dienst hostet. Dies entspricht dem Wert des **name**-Attributs des **\<site>** -Elements unter dem **\<sites>** -Element der IIS-Datei „ApplicationHost.config“.|  
+|**connectionName**|Attribute. Gibt den Namen der zu verwendeten Verbindung an. Dies entspricht dem **name**-Attribut des **\<add>** -Elements unter dem **\<connectionStrings>** -Element in der Web.config-Datei.|  
+|**serviceName**|Attribute. Gibt den Namen des Web-Services an. Dies entspricht dem **name**-Attribut des **\<service>** -Elements unter dem **\<services>** -Element in der Web.config-Datei.|  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Dienst mit dem Namen MDS1 auf der Contoso-Website veranschaulicht und /MDs-Pfad, der eine von MDSDB angegebene Verbindungszeichenfolge verwendet.  

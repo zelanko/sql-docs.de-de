@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.openlocfilehash: b4d29739748b477adbef79bd1d6cf266aa16d2c8
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705538"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Verwenden von Visual Studio Code zum Erstellen und Ausführen von Transact-SQL-Skripts
@@ -84,7 +84,7 @@ Um ein Verbindungsprofil erstellen und eine Verbindung mit einer SQL Server, geh
 
 1. Führen Sie die Anweisungen aus, um die Eigenschaften für das neue Verbindungsprofil anzugeben. Wenn Sie jeden Wert angegeben, drücken Sie die **EINGABETASTE** um den Vorgang fortzusetzen.
 
-   | Verbindungseigenschaft | Description |
+   | Verbindungseigenschaft | Beschreibung |
    |---|---|
    | **Servername oder die ADO-Verbindungszeichenfolge** | Geben Sie den Namen der SQL Server-Instanz. Verwendung *"localhost"* zur Verbindung mit SQL Server-Instanz auf dem lokalen Computer. Geben Sie zum Verbinden mit einem Remotecomputer mit SQL Server den Namen des Zielcomputers mit SQL Server oder die IP-Adresse ein. Geben Sie die IP-Adresse des Containers-Hostcomputer zum Verbinden mit einem SQL Server-Container. Wenn Sie einen anderen Port angeben möchten, verwenden Sie für die Trennung der Name ein Komma. Geben Sie beispielsweise für einen Server über Port 1401 lauscht, `<servername or IP>,1401`.<br/><br/>Als Alternative können Sie die ADO-Verbindungszeichenfolge für Ihre Datenbank hier eingeben. |
    | **Name der Datenbank** (optional) | Die Datenbank, die Sie verwenden möchten. Zum Verbinden mit der Standarddatenbank Geben Sie keine verwenden zu können, hier einen Datenbanknamen. |

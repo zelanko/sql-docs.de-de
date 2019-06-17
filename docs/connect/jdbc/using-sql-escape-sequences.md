@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4c26b94f4aa681d5042b728c5c44e50269fbc31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841726"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798604"
 ---
 # <a name="using-sql-escape-sequences"></a>Verwenden von SQL-Escapesequenzen
 
@@ -62,7 +62,7 @@ Der JDBC-Treiber unterstützt Funktionsescapesequenzen in SQL-Anweisungen mit de
 {fn functionName}  
 ```
 
-Dabei ist `functionName` eine vom JDBC-Treiber unterstützte Funktion. Zum Beispiel: 
+Dabei ist `functionName` eine vom JDBC-Treiber unterstützte Funktion. Beispiel: 
 
 ```sql
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -72,7 +72,7 @@ In der folgenden Tabelle werden die unterschiedlichen Funktionen aufgeführt, di
   
 | Zeichenfolgenfunktionen                                                                                                                                                                                                                                                                                                                        | Numerische Funktionen                                                                                                                                                                                                                                                                                                                                                                                                   | datetime-Funktionen                                                                                                                                                                                                                                                                                                                                             | Systemfunktionen                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> TAGDERWOCHE<br /><br /> TAGDESJAHRES<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> Benutzer |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LSCHNEIDEN<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> TAGDERWOCHE<br /><br /> TAGDESJAHRES<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTAL<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> Benutzer |
 
 > [!NOTE]  
 > Wenn Sie versuchen, eine von der Datenbank nicht unterstützte Funktion zu verwenden, tritt ein Fehler auf.  
@@ -87,13 +87,13 @@ Die Escapesyntax für Datums-, Zeit- und Timestampliterale lautet wie folgt:
 
 Hierbei ist `literal-type` einer der folgenden Typen:  
   
-| Literaltyp | Beschreibung | Wertformat               |
+| Literaltyp | und Beschreibung | Wertformat               |
 | ------------ | ----------- | -------------------------- |
 | d            | date        | yyyy-mm-dd                 |
 | t            | Uhrzeit        | hh:mm:ss [1]               |
-| ts           | Zeitstempel   | yyyy-mm-dd hh:mm:ss[.f...] |
+| ts           | TimeStamp   | yyyy-mm-dd hh:mm:ss[.f...] |
   
-Zum Beispiel:  
+Beispiel:  
 
 ```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}
@@ -131,7 +131,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 
 Dabei ist `table-reference` ein Tabellenname, und `search-condition` ist die Joinbedingung, die für die Tabellen verwendet werden soll.  
   
-Zum Beispiel:  
+Beispiel:  
 
 ```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
@@ -160,6 +160,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 Die Escapesyntax besteht aus zwei Teilen: \<*rows*> ist obligatorisch und gibt die Anzahl der zurückzugebenden Zeilen an. OFFSET und \<*row offset*> sind optional und geben die Anzahl der zu überspringenden Zeilen an, bevor mit der Rückgabe von Zeilen begonnen wird. Der JDBC-Treiber unterstützt nur den obligatorischen Teil, indem er die Abfrageklausel von LIMIT in TOP umwandelt. SQL Server unterstützt die LIMIT-Klausel nicht. **Der JDBC-Treiber unterstützt den optionalen Parameter \<row offset> nicht, und der Treiber löst eine Ausnahme aus, wenn er verwendet wird.**  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
