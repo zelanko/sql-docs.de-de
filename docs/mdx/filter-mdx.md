@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63154631"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
@@ -36,7 +36,7 @@ Filter(Set_Expression, Logical_Expression )
  Ein gültiger logischer MDX-Ausdruck (Multidimensional Expressions), dessen Auswertung TRUE oder FALSE ergibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Filter** -Funktion wertet den angegebenen logischen Ausdruck für jedes Tupel in der angegebenen Menge. Die Funktion gibt einen Satz, der jedes Tupel in der angegebenen Menge besteht, in dem der logische Ausdruck wird zu **"true"**. Wenn kein Tupel ausgewertet **"true"**, ein leerer Satz zurückgegeben wird.  
+ Die **Filter** -Funktion wertet den angegebenen logischen Ausdruck für jedes Tupel in der angegebenen Menge. Die Funktion gibt einen Satz, der jedes Tupel in der angegebenen Menge besteht, in dem der logische Ausdruck wird zu **"true"** . Wenn kein Tupel ausgewertet **"true"** , ein leerer Satz zurückgegeben wird.  
   
  Die **Filter** Funktion funktioniert auf ähnliche Weise die [IIf](../mdx/iif-mdx.md) Funktion. Die **IIf** Funktionsergebnis ist nur eine der beiden Optionen, die zwar auf Grundlage der Auswertung eines logischen MDX-Ausdrucks, der **Filter** Funktionsergebnis ist eine Menge von Tupeln, die die angegebene Suchbedingung erfüllen. Tatsächlich die **Filter** Funktion führt `IIf(Logical_Expression, Set_Expression.Current, NULL)` für jedes Tupel in der Menge aus und gibt das sich ergebende Menge zurück.  
   

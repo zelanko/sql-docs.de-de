@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995676"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -46,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rulename = ] 'rule'` Ist der Name einer Regel, die von der CREATE RULE-Anweisung erstellt. *Regel* ist **nvarchar(776)**, hat keinen Standardwert.  
+`[ @rulename = ] 'rule'` Ist der Name einer Regel, die von der CREATE RULE-Anweisung erstellt. *Regel* ist **nvarchar(776)** , hat keinen Standardwert.  
   
-`[ @objname = ] 'object_name'` Ist in der Tabelle und Spalte oder der Aliasdatentyp, für den die Regel gebunden werden wird. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
+`[ @objname = ] 'object_name'` Ist in der Tabelle und Spalte oder der Aliasdatentyp, für den die Regel gebunden werden wird. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
   
  *Object_name* ist **nvarchar(776)** hat keinen Standardwert. Wenn *Object_name* ist ein einteiliger Name, wird er als einen Aliasdatentyp aufgelöst. Ein zwei- oder dreiteiliger Name wird zunächst als Tabelle und Spalte aufgelöst. Wenn die Auflösung fehlschlägt, wird er als Aliasdatentyp aufgelöst. Vorhandene Spalten des aliasdatentyps erben standardmäßig *Regel* , wenn eine Regel direkt auf die Spalte gebunden wurde.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4478c2799ddc23ce647c607466e0206f72ccf7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638641"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798654"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Verwenden der Datenbankspiegelung (JDBC)
 
@@ -28,7 +28,7 @@ Bei einer Datenbankspiegelung, die für Datenbanken einzeln implementiert wird, 
 
 Die Produktionsdatenbank wird _Prinzipaldatenbank_ genannt. Die Standbykopie wird _Spiegeldatenbank_ genannt. Prinzipaldatenbank und Spiegeldatenbank müssen sich in getrennten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Serverinstanzen) und nach Möglichkeit auf separaten Computern befinden.
 
-Die Produktionsserverinstanz (Prinzipalserver) kommuniziert mit der Standbyserverinstanz (Spiegelserver). Der Prinzipal- und der Spiegelserver agieren in einer Datenbankspiegelungs-Sitzung als Partner. Wenn der Prinzipalserver ausfällt, kann der Spiegelserver seine Datenbank über einen so genannten _Failover_ als Prinzipaldatenbank bestimmen. Beispiel: Partner_A und Partner_B sind zwei Partnerserver. Die Prinzipaldatenbank befindet sich anfänglich auf dem Prinzipalserver Partner_A und die Spiegeldatenbank auf dem Spiegelserver Partner_B. Wenn Partner_A offline geht, kann die Datenbank auf Partner_B ein Failover ausführen, um zur aktuellen Prinzipaldatenbank zu werden. Sobald Partner_A wieder mit der Sitzung verbunden ist, übernimmt er wieder die Rolle des Spiegelservers und seine Datenbank wird zur Spiegeldatenbank.
+Die Produktionsserverinstanz (Prinzipalserver) kommuniziert mit der Standbyserverinstanz (Spiegelserver). Prinzipal- und Spiegelserver fungieren in einer Datenbank-Spiegelungssitzung als Partner. Wenn der Prinzipalserver ausfällt, kann der Spiegelserver seine Datenbank über einen so genannten _Failover_ als Prinzipaldatenbank bestimmen. Beispiel: Partner_A und Partner_B sind zwei Partnerserver. Die Prinzipaldatenbank befindet sich anfänglich auf dem Prinzipalserver Partner_A und die Spiegeldatenbank auf dem Spiegelserver Partner_B. Wenn Partner_A offline geht, kann die Datenbank auf Partner_B ein Failover ausführen, um zur aktuellen Prinzipaldatenbank zu werden. Sobald Partner_A wieder mit der Sitzung verbunden ist, übernimmt er wieder die Rolle des Spiegelservers und seine Datenbank wird zur Spiegeldatenbank.
 
 Falls der Server Partner_A irreparabel beschädigt wird, kann der Server Partner_C in den Onlinemodus versetzt werden und als Spiegelserver für Partner_B fungieren, der jetzt der Prinzipalserver ist. In diesem Szenario muss die Clientanwendung jedoch eine Programmlogik enthalten, die sicherstellt, dass die Verbindungszeichenfolgeneigenschaften mit den neuen Servernamen aktualisiert werden, die in der Datenbankspiegelungskonfiguration verwendet werden, da andernfalls keine Verbindung zu den Servern hergestellt werden kann.
 
@@ -109,6 +109,6 @@ public class ClientFailover {
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

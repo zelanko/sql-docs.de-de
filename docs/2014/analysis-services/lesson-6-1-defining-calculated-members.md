@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078403"
 ---
 # <a name="defining-calculated-members"></a>Definieren berechneter Elemente
@@ -57,7 +57,7 @@ ms.locfileid: "66078403"
   
 5.  Ziehen Sie **Internet Sales-Sales Amount** von der Registerkarte **Metadaten** im Bereich **Berechnungstools** in das Feld **Ausdruck** im Bereich **Berechnungsausdrücke** .  
   
-6.  In der **Ausdruck** geben ein Pluszeichen (`+`) nach dem **[Measures]. [ Internet Sales-Sales Amount]**.  
+6.  In der **Ausdruck** geben ein Pluszeichen (`+`) nach dem **[Measures]. [ Internet Sales-Sales Amount]** .  
   
 7.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Option **Reseller Sales**, und ziehen Sie anschließend **Reseller Sales-Sales Amount** in das Feld **Ausdruck** im Bereich **Berechnungsausdrücke** hinter das Pluszeichen (+).  
   

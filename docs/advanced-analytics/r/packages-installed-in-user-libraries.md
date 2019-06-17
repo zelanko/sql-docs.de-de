@@ -2,17 +2,17 @@
 title: Tipps zur Verwendung von R-Pakete in benutzerbibliotheken – SQL Server Machine Learning Services installiert
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642284"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140505"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>Tipps zur Verwendung von R-Pakete in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ R-Pakete, die auf mehreren computing-Plattformen ausgeführt werden. Achten Sie 
 
 Wenn Sie vor der Installation alle zuvor auf dem Computer, die R-Umgebung geändert haben, stellen sicher, dass die R-Umgebungsvariable `.libPath` nur einen Pfad verwendet.
 
-Dieser Pfad sollte auf den Ordner R_SERVICES für die Instanz verweisen. Weitere Informationen einschließlich Informationen, um zu bestimmen, welche Pakete bereits installiert sind, finden Sie unter [standardmäßige R und Python-Paketen in SQL Server](installing-and-managing-r-packages.md).
+Dieser Pfad sollte auf den Ordner R_SERVICES für die Instanz verweisen. Weitere Informationen einschließlich Informationen, um zu bestimmen, welche Pakete bereits installiert sind, finden Sie unter [standardmäßige R und Python-Paketen in SQL Server](../package-management/default-packages.md).
 
 ## <a name="new-to-sql-server"></a>Neues in SQLServer
 
@@ -73,7 +73,7 @@ Dies funktioniert nicht bei der Ausführung von R-Lösungen in SQL Server, da R-
 
 + Aktualisieren Sie Ihren Code, um direkte Verweise auf die Pfade der R-Pakete oder R-Bibliotheken zu entfernen. 
 
-+ Wissen Sie, welche paketbibliothek, die der Instanz zugeordnet ist. Weitere Informationen finden Sie unter [standardmäßige R und Python-Paketen in SQL Server](installing-and-managing-r-packages.md).
++ Wissen Sie, welche paketbibliothek, die der Instanz zugeordnet ist. Weitere Informationen finden Sie unter [standardmäßige R und Python-Paketen in SQL Server](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>Siehe auch
 

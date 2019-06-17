@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032738"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -47,15 +47,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @procedure_name = ] 'name'` Ist der Name der Prozedur verwendet, um Kataloginformationen zurückzugeben. *Namen* ist **Nvarchar (** 390 **)**, hat den Standardwert %, womit alle Tabellen in der aktuellen Datenbank. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+`[ @procedure_name = ] 'name'` Ist der Name der Prozedur verwendet, um Kataloginformationen zurückzugeben. *Namen* ist **Nvarchar (** 390 **)** , hat den Standardwert %, womit alle Tabellen in der aktuellen Datenbank. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
-`[ @procedure_owner = ] 'owner'` Ist der Name des Besitzers der Prozedur. *Besitzer*ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
+`[ @procedure_owner = ] 'owner'` Ist der Name des Besitzers der Prozedur. *Besitzer*ist **Nvarchar (** 384 **)** , hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
   
  Wenn der aktuelle Benutzer eine Prozedur mit dem angegebenen Namen besitzt, werden Informationen zu dieser Prozedur zurückgegeben. Wenn *Besitzer*ist nicht angegeben wird und der aktuelle Benutzer keine Prozedur mit dem angegebenen Namen, **Sp_sproc_columns** sucht nach einer Prozedur mit dem angegebenen Namen, das dem Datenbankbesitzer gehört. Sofern die Prozedur vorhanden ist, werden Information zu deren Spalten zurückgegeben.  
   
 `[ @procedure_qualifier = ] 'qualifier'` Ist der Name des Prozedurqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*qualifier.owner.name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dieser Parameter dem Datenbanknamen. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
-`[ @column_name = ] 'column_name'` Eine einzelne Spalte aus, und wird verwendet, wenn nur eine Spalte mit Kataloginformationen gewünscht wird. *Column_name* ist **Nvarchar (** 384 **)**, hat den Standardwert NULL. Wenn *Column_name* wird ausgelassen, werden alle Spalten zurückgegeben. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
+`[ @column_name = ] 'column_name'` Eine einzelne Spalte aus, und wird verwendet, wenn nur eine Spalte mit Kataloginformationen gewünscht wird. *Column_name* ist **Nvarchar (** 384 **)** , hat den Standardwert NULL. Wenn *Column_name* wird ausgelassen, werden alle Spalten zurückgegeben. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen ISO-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
 `[ @ODBCVer = ] 'ODBCVer'` Wird die ODBC-Version verwendet wird. *ODBCVer* ist **Int**, hat einen Standardwert von 2 gibt ODBC, Version 2.0. Weitere Informationen zu den Unterschieden zwischen ODBC, Version 2.0 und ODBC, Version 3.0, finden Sie in der ODBC **SQLProcedureColumns** -Spezifikation für ODBC, Version 3.0  
   

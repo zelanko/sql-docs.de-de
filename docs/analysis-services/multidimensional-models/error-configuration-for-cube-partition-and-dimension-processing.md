@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357351"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Fehlerkonfiguration für Cubes, Partitionen und Dimensionsverarbeitung
@@ -77,7 +77,7 @@ ms.locfileid: "65357351"
   
  **Reaktion des Servers auf bestimmte Fehler**  
   
-|Eigenschaft|Standard|Andere Werte|  
+|Eigenschaft|Default|Andere Werte|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Tritt auf, wenn die Fehlerkonfiguration initialisiert wird.|Bei**IgnoreError** wird der Fehler weder protokolliert noch gezählt. Die Verarbeitung wird fortgesetzt, solange die Fehleranzahl unter dem Grenzwert liegt.|Bei**ReportAndContinue** wird der Fehler protokolliert und gezählt.<br /><br /> Bei**ReportAndStop** wird der Fehler gemeldet, und die Verarbeitung wird unabhängig von der Fehlergrenze umgehend beendet.|  
 |**KeyNotFound**<br /><br /> Tritt auf, wenn ein Fremdschlüssel in einer Faktentabelle keinen übereinstimmenden Primärschlüssel in einer verknüpften Dimensionstabelle aufweist (beispielsweise, wenn eine Faktentabelle für Umsatzwerte einen Datensatz mit einer Produkt-ID enthält, die in der Produktdimensionstabelle nicht vorhanden ist). Dieser Fehler kann bei der Verarbeitung von Partitionen oder von Schneeflockendimensionen auftreten.|Bei**ReportAndContinue** wird der Fehler protokolliert und gezählt.|Bei**ReportAndStop** wird der Fehler gemeldet, und die Verarbeitung wird unabhängig von der Fehlergrenze umgehend beendet.<br /><br /> Bei**IgnoreError** wird der Fehler weder protokolliert noch gezählt. Die Verarbeitung wird fortgesetzt, solange die Fehleranzahl unter dem Grenzwert liegt. Datensätze, durch die dieser Fehler ausgelöst wird, werden standardmäßig in das unbekannte Element konvertiert, Sie können die **KeyErrorAction** -Eigenschaft jedoch auch so ändern, dass die Datensätze stattdessen verworfen werden.|  

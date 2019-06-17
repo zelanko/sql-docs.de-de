@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62955899"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Hilfe (F1) für Serververbindungen (SQL Server Management Studio)
@@ -34,19 +34,19 @@ ms.locfileid: "62955899"
   
  [Verbinden mit SQL Server Analysis Services &#40;Eigenschaftenseite Verbindung&#41;](../../database-engine/connect-to-server-connection-properties-page-analysis-services.md)  
   
- [Verbinden mit SQL Server-Datenbank-Engine &amp;amp;#40;Eigenschaftenseite Verbindung&amp;amp;#41;](connect-to-server-connection-properties-page-database-engine.md)  
+ [Verbinden mit SQL Server-Datenbank-Engine &#40;Eigenschaftenseite Verbindung&#41;](connect-to-server-connection-properties-page-database-engine.md)  
   
  [Verbinden mit SQL Server Integration Services &#41;Eigenschaftenseite Verbindung&#40;](../../database-engine/connect-to-server-connection-properties-page-integration-services.md)  
   
  [Verbinden mit SQL Server Reporting Services &#40;Seite „Verbindungseigenschaften“&#41;](../../database-engine/connect-to-server-connection-properties-page-reporting-services.md)  
   
- [Verbindung mit Server herstellen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](connect-to-server-database-engine.md)  
+ [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](connect-to-server-database-engine.md)  
   
  [Verbindung mit Server herstellen &#40;Integration Services&#41;](../../database-engine/connect-to-server-integration-services.md)  
   
  [Verbinden mit SQL Server Analysis Services &#40;Seite Anmeldung&#41;](../../database-engine/connect-to-server-login-page-analysis-services.md)  
   
- [Verbindung mit Server herstellen &amp;#40;Seite Anmeldung in der Datenbank-Engine&amp;#41;](connect-to-server-login-page-database-engine.md)  
+ [Verbindung mit Server herstellen &#40;Seite Anmeldung in der Datenbank-Engine&#41;](connect-to-server-login-page-database-engine.md)  
   
  [Verbinden mit SQL Server Integration Services &#40;Seite Anmeldung&#41;](../../database-engine/connect-to-server-login-page-integration-services.md)  
   

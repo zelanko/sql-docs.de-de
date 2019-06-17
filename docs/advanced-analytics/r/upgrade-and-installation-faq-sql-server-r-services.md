@@ -3,17 +3,17 @@ title: 'Upgrade und Installation gestellte häufig Fragen (FAQ): SQL Server Mach
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
 manager: cgronlun
-ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642317"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140368"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Upgrade und Installation – häufig gestellte Fragen für SQL Server-Machine-Learning oder R-Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Abhängig von der Build von SQL Server, die Sie installieren, können einige der
 
 - In frühen Versionen von SQL Server 2016 R Services wurde der 8.3-Notation auf dem Laufwerk erforderlich, die das Arbeitsverzeichnis enthält. Wenn Sie eine Vorabversion installiert haben, sollte dieses Problems ein Upgrade auf SQL Server 2016 Service Pack 1 behoben werden. Diese Anforderung gilt nicht für Versionen nach SP1.
 
-- Sie können derzeit nicht installieren [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] in einem Failovercluster installieren. Vorschau der SQL Server-2019 bietet Failoverunterstützung jedoch wenn Sie diese Capablity in einer testumgebung zu evaluieren möchten. Weitere Informationen finden Sie unter [neues](../what-s-new-in-sql-server-machine-learning-services.md).
+- Sie können derzeit nicht installieren [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] in einem Failovercluster installieren. Vorschau der SQL Server-2019 bietet Failoverunterstützung jedoch wenn Sie diese Funktion in einer testumgebung zu evaluieren möchten. Weitere Informationen finden Sie unter [neues](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - Klicken Sie auf eine Azure-VM kann einige zusätzliche Konfigurationsschritte erforderlich sein. Beispielsweise müssen Sie eine Firewallausnahme zur Unterstützung von remote-Zugriff erstellen.
 
@@ -63,7 +63,7 @@ Sie können Ihre Version von SQL Server aktualisieren, indem Sie den Setup-Assis
 + [Upgrade von SQLServer mithilfe des Installations-Assistenten](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 Sie können nur für den Computer learning-Komponenten mithilfe eines Prozesses, der als Bindung bezeichnet aktualisieren: 
-+ [Verwenden von SqlBindR zum Aktualisieren von Machine Learning-Komponenten](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Verwenden von SqlBindR zum Aktualisieren von Machine Learning-Komponenten](../install/upgrade-r-and-python.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>Ende des Supports für direkte Upgrades von Vorabversionen
 
@@ -123,7 +123,7 @@ Wenn diese Prozedur nicht das Problem zu beheben, versuchen Sie die folgende Sch
 
 3. Starten Sie den Server neu.
 
-4. Führen Sie SQL Server-Setup aus, und fügen Sie nur das Feature für R Services (Datenbankintern). Aktivieren Sie nicht **R Server (eigenständig)**.
+4. Führen Sie SQL Server-Setup aus, und fügen Sie nur das Feature für R Services (Datenbankintern). Aktivieren Sie nicht **R Server (eigenständig)** .
 
 Im Allgemeinen empfehlen wir, dass Sie nicht sowohl für R Services (Datenbankintern) als auch für R Server (eigenständig) installieren auf dem gleichen Computer. Vorausgesetzt, dass der Server über genügend Kapazität verfügt, können Sie jedoch feststellen, dass R-Server (eigenständig) als ein Entwicklungstool von Nutzen sein kann. Ein anderes mögliches Szenario ist, dass Sie benötigen, verwenden Sie die Funktionen der operationalisierung von R Server, aber auch auf SQL Server-Daten ohne gleichzeitige datenverschiebung zugreifen möchten.
 
