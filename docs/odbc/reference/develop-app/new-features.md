@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658183"
 ---
 # <a name="new-features"></a>Neue Funktionen
-Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x* Anwendung mit einer ODBC 2.*.x* Treiber werden nicht in der Lage, diese Funktion zu verwenden. Der ODBC-3. *x* -Treiber-Manager lässt diese Funktionen nicht zuordnen, bei der Arbeit mit einer ODBC 2.*.x* Treiber.  
+Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3.*x* Anwendung mit einer ODBC 2 *.x* Treiber werden nicht in der Lage, diese Funktion zu verwenden. Der ODBC-3.*x* -Treiber-Manager lässt diese Funktionen nicht zuordnen, bei der Arbeit mit einer ODBC 2 *.x* Treiber.  
   
 -   Funktionen, die einen Deskriptor akzeptieren behandeln, als Argument: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, und **SQLCopyDesc**.  
   
@@ -81,7 +81,7 @@ Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3. *x*
   
 -   Benannte Parameter.  
   
--   Alle von der ODBC-3. *x*-spezifische **SQLGetInfo** Optionen. (Bei einer ODBC-3. *x* Anwendung mit einer ODBC 2. *X* ruft der Treiber die SQL_XXX_CURSOR_ATTRIBUTES1 Informationstypen, die mehrere ODBC 2. ersetzt haben. *X* Informationstypen, einige der Informationen sind möglicherweise in der zuverlässigen, aber einige möglicherweise unzuverlässig. Weitere Informationen finden Sie unter [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Alle von der ODBC-3. *x*-spezifische **SQLGetInfo** Optionen. (Bei einer ODBC-3.*x* Anwendung mit einer ODBC 2.*x* ruft der Treiber die SQL_XXX_CURSOR_ATTRIBUTES1 Informationstypen, die mehrere ODBC 2. ersetzt haben. *X* Informationstypen, einige der Informationen sind möglicherweise in der zuverlässigen, aber einige möglicherweise unzuverlässig. Weitere Informationen finden Sie unter [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Binden Sie Offsets an.  
   

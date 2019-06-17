@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62447539"
 ---
 # <a name="c-data-types"></a>C-Datentypen
@@ -134,7 +134,7 @@ struct tagSQLGUID {
   
  [c] in ODBC 2. *x*, die C-Date, Time und Timestamp-Datentypen sind SQL_C_DATE, SQL_C_TIME und SQL_C_TIMESTAMP.  
   
- [d] ODBC 3.*.x* SQL_C_VARBOOKMARK, nicht SQL_C_BOOKMARK sollte von Anwendungen verwendet. Wenn eine ODBC 3.*.x* Anwendung funktioniert mit einer ODBC 2. *X* -Treiber verwenden, die ODBC 3.*.x* -Treiber-Manager SQL_C_BOOKMARK SQL_C_VARBOOKMARK zugeordnet.  
+ [d] ODBC 3 *.x* SQL_C_VARBOOKMARK, nicht SQL_C_BOOKMARK sollte von Anwendungen verwendet. Wenn eine ODBC 3 *.x* Anwendung funktioniert mit einer ODBC 2.*x* -Treiber verwenden, die ODBC 3 *.x* -Treiber-Manager SQL_C_BOOKMARK SQL_C_VARBOOKMARK zugeordnet.  
   
  [e] eine Anzahl befindet sich in der *Val* -Feld der Struktur SQL_NUMERIC_STRUCT als skaliert eine ganze Zahl im little-endian-Modus (das am weitesten links stehende Byte das niederwertigste Byte). Beispielsweise wird die Anzahl 10,001 Basis 10, mit einer Skala von 4, in eine ganze Zahl von 100010 skaliert. Da dies 186AA im Hexadezimalformat angegeben ist, wäre der Wert in SQL_NUMERIC_STRUCT "AA 86 01 00 00... 00", mit der Anzahl von Bytes, die durch die SQL_MAX_NUMERIC_LEN definierten **#define**.  
   
@@ -146,9 +146,9 @@ struct tagSQLGUID {
   
  [h] __int64 kann nicht durch einige Compiler bereitgestellt werden.  
   
- [i] _SQL_C_BOOKMARK veraltet in ODBC 3.*.x*.  
+ [i] _SQL_C_BOOKMARK veraltet in ODBC 3 *.x*.  
   
- [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC von signierten und nicht signierten Typen ersetzt: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3.*.x* Treiber, die mit ODBC 2. funktionieren sollte. *X* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützen, da Wenn sie aufgerufen werden, der Treiber-Manager über an den Treiber übergeben.  
+ [j] _SQL_C_SHORT SQL_C_LONG und SQL_C_TINYINT wurden in ODBC von signierten und nicht signierten Typen ersetzt: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG, und SQL_C_STINYINT und SQL_C_UTINYINT. Eine ODBC 3 *.x* Treiber, die mit ODBC 2. funktionieren sollte.*x* Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT, unterstützen, da Wenn sie aufgerufen werden, der Treiber-Manager über an den Treiber übergeben.  
   
  [k] SQL_C_GUID kann nur für SQL_CHAR oder SQL_WCHAR konvertiert werden.  
   
