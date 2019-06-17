@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65995088"
 ---
 # <a name="sysexternallanguagefiles-transact-sql"></a>sys.external_language_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Diese Katalogsicht enthält eine Liste der Erweiterungsdateien externer Sprachen in der Datenbank. **R** und **Python** sind reservierte Namen und mit diesen bestimmten Namen kann keine externe Sprache erstellt werden.
+Diese Katalogsicht enthält eine Liste der Erweiterungsdateien externer Sprachen in der Datenbank. **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden.
 
 Wenn eine externe Sprache, die aus einer File_spec erstellt wird, werden die Erweiterung selbst und seine Eigenschaften in dieser Ansicht aufgeführt. Diese Sicht enthält einen Eintrag pro Sprache, die pro Betriebssystem.
 
@@ -37,7 +37,7 @@ Wenn eine externe Sprache, die aus einer File_spec erstellt wird, werden die Erw
 
 Der Katalog Ansicht sys.external_language_files enthält eine Zeile für jede externe Language-Erweiterung in der Datenbank. Parameter
 
-|Spaltenname |Datentyp | Description|
+|Spaltenname |Datentyp | Beschreibung|
 |------|------|------|
 |external_language_id |ssNoversion | ID der externen Sprache|
 |content|varbinary(max) |Inhalt der Erweiterungsdatei externer Sprachen|

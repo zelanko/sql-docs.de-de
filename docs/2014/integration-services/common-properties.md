@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060958"
 ---
 # <a name="common-properties"></a>Allgemeine Eigenschaften
@@ -88,7 +88,7 @@ ms.locfileid: "66060958"
 |--------------|---------------|-----------------|  
 |ComponentClassID|Zeichenfolge|Die CLSID der Komponente.|  
 |ContactInfo|Zeichenfolge|Kontaktinformationen für den Entwickler einer Komponente.|  
-|Description|Zeichenfolge|Die Beschreibung der Datenflusskomponente. Der Standardwert dieser Eigenschaft entspricht dem Namen der Datenflusskomponente.|  
+|Beschreibung|Zeichenfolge|Die Beschreibung der Datenflusskomponente. Der Standardwert dieser Eigenschaft entspricht dem Namen der Datenflusskomponente.|  
 |ID|Integer|Ein Wert, der diese Instanz der Komponente eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Identifiziert die Komponente.|  
 |IsDefaultLocale|Boolean|Gibt an, ob die Komponente das Gebietsschema des Datenflusstasks verwendet, zu dem es gehört.|  
@@ -150,7 +150,7 @@ ms.locfileid: "66060958"
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|Ein Wert, der bestimmt, ob eine Datenfluss-Engine die Ausgabe löscht, wenn sie von einem Pfad getrennt wird.|  
-|Description|Zeichenfolge|Beschreibt die Ausgabe.|  
+|Beschreibung|Zeichenfolge|Beschreibt die Ausgabe.|  
 |ErrorOrTruncationOperation|Zeichenfolge|Eine optionale Zeichenfolge, die die Fehlertypen oder abgeschnittene Daten angibt, die bei der Verarbeitung einer Zeile auftreten können.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der die Behandlung von Fehlern angibt. Mögliche Werte sind `Fail component`, `Ignore failure` und `Redirect row`.|  
 |ExclusionGroup|Integer|Ein Wert, der eine Gruppe sich gegenseitig ausschließender Ausgaben identifiziert.|  
@@ -192,7 +192,7 @@ ms.locfileid: "66060958"
   
 |Eigenschaft|Datentyp|Description|  
 |--------------|---------------|-----------------|  
-|Description|Zeichenfolge|Beschreibt die externe Spalte.|  
+|Beschreibung|Zeichenfolge|Beschreibt die externe Spalte.|  
 |ID|Integer|Ein Wert, der die Spalte eindeutig identifiziert.|  
 |IdentificationString|Zeichenfolge|Eine Zeichenfolge, die die Spalte identifiziert.|  
 |Name|Zeichenfolge|Der Name der externen Spalte.|  

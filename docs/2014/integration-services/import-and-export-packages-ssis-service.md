@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058153"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Import und Export von Paketen (SSIS-Dienst)
@@ -70,7 +70,7 @@ ms.locfileid: "66058153"
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>**, um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>** , um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -82,19 +82,19 @@ ms.locfileid: "66058153"
   
     -   Zum Importieren aus einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]wählen Sie die Option **SQL Server** aus, geben Sie den Server an, und wählen Sie den Authentifizierungsmodus aus. Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung auswählen, geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **OK**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , wählen Sie das zu importierende Paket aus, und klicken Sie auf **OK**.  
   
     -   Zum Importieren aus dem Dateisystem wählen Sie die Option **Dateisystem** aus.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **Öffnen**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , wählen Sie das zu importierende Paket aus, und klicken Sie auf **Öffnen**.  
   
     -   Zum Importieren aus dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher wählen Sie die Option **SSIS-Paketspeicher** aus, und geben Sie den Server an.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **OK**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , wählen Sie das zu importierende Paket aus, und klicken Sie auf **OK**.  
   
 7.  Aktualisieren Sie optional den Paketnamen.  
   
-8.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
+8.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
   
 9. Klicken Sie auf **OK** , um den Import abzuschließen.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66058153"
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>**, um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>** , um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -118,17 +118,17 @@ ms.locfileid: "66058153"
   
     -   Zum Exportieren einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]wählen Sie die Option **SQL Server** aus, geben Sie den Server an, und wählen Sie den Authentifizierungsmodus aus. Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung auswählen, geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und erweitern Sie den Ordner **SSIS-Pakete**, um den Ordner zu suchen, in dem Sie das Paket speichern möchten. Aktualisieren Sie optional den Standardnamen des Pakets, und klicken Sie dann auf **OK**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , und erweitern Sie den Ordner **SSIS-Pakete**, um den Ordner zu suchen, in dem Sie das Paket speichern möchten. Aktualisieren Sie optional den Standardnamen des Pakets, und klicken Sie dann auf **OK**.  
   
     -   Zum Exportieren in das Dateisystem wählen Sie die Option **Dateisystem** aus.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, um den Ordner zu suchen, in den Sie das Paket exportieren möchten, geben Sie den Namen der Paketdatei ein, und klicken Sie dann auf **Speichern**.  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , um den Ordner zu suchen, in den Sie das Paket exportieren möchten, geben Sie den Namen der Paketdatei ein, und klicken Sie dann auf **Speichern**.  
   
     -   Zum Exportieren in den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher wählen Sie die Option **SSIS-Paketspeicher** aus, und geben Sie den Server an.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, erweitern Sie den Ordner **SSIS-Pakete**, und wählen Sie den Ordner aus, in dem Sie das Paket speichern möchten. Geben Sie optional in das Textfeld **Paketname** einen neuen Namen für das Paket ein. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , erweitern Sie den Ordner **SSIS-Pakete**, und wählen Sie den Ordner aus, in dem Sie das Paket speichern möchten. Geben Sie optional in das Textfeld **Paketname** einen neuen Namen für das Paket ein. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
+7.  Zum Aktualisieren der Schutzebene des Pakets klicken Sie auf die Schaltfläche mit den drei Punkten **(…)** , und wählen Sie im Dialogfeld **Paketschutzebene** eine andere Schutzebene aus. Falls die Option **Sensible Daten mit einem Kennwort verschlüsseln** oder **Alle Daten mit einem Kennwort verschlüsseln** ausgewählt ist, geben Sie ein Kennwort ein, und bestätigen Sie es.  
   
 8.  Klicken Sie auf **OK** , um den Export abzuschließen.  
   

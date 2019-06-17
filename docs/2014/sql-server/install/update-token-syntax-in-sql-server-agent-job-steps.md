@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091667"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>Die Tokensyntax in den Auftragsschritten des SQL Server-Agent wurde aktualisiert.
@@ -26,7 +26,7 @@ ms.locfileid: "66091667"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Beschreibung  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwendet die Klammern, wie z. B. $(DATE), anstelle von eckigen Klammern, z. B. [DATE].  
   
  Weitere Informationen finden Sie unter "Verwenden von Token in Auftragsschritten" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  

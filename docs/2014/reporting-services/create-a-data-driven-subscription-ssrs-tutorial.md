@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109691"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
@@ -36,7 +36,7 @@ ms.locfileid: "66109691"
  [Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank](lesson-1-creating-a-sample-subscriber-database.md)  
  In dieser Lektion erfahren Sie, wie eine lokale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank erstellt wird, die Abonnenteninformationen enthält.  
   
- [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](lesson-2-modifying-the-report-data-source-properties.md).  
+ [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](lesson-2-modifying-the-report-data-source-properties.md).  
  In dieser Lektion erfahren Sie, wie Berichtsdatenquelleneigenschaften so geändert werden können, dass der Bericht unbeaufsichtigt ausgeführt werden kann. Für die unbeaufsichtigte Verarbeitung sind gespeicherte Anmeldeinformationen erforderlich. Sie ändern auch das Berichtsdataset, um einen Parameter einzuschließen, der von den Abonnentendaten angegeben wird.  
   
  [Lektion 3: Definieren eines datengesteuerten Abonnements](lesson-3-defining-a-data-driven-subscription.md)  

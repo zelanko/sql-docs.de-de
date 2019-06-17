@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbe4fbfc2cad2df41a1d9bd14fcb2620e2dec5c1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403642"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lektion 3-2: Ändern der Customer-Dimension
@@ -106,7 +106,7 @@ Nachdem Sie eine benannte Berechnung in der Datenquellensicht erstellt haben, k�
   
 4.  Geben Sie im Eigenschaftenfeld **Name** **Full Name**ein.  
   
-5.  Klicken Sie in der **NameColumn** Eigenschaftenfeld am unteren Rand, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
+5.  Klicken Sie in der **NameColumn** Eigenschaftenfeld am unteren Rand, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 6.  Wählen Sie **FullName** weiter unten in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
@@ -178,7 +178,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 2.  Klicken Sie im Bereich **Attribute** auf das **City** -Attribut.  
   
-3.  Klicken Sie im Fenster **Eigenschaften** weiter unten auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+3.  Klicken Sie im Fenster **Eigenschaften** weiter unten auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 4.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **StateProvinceName** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
   
@@ -186,7 +186,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 5.  Klicken Sie auf **OK**.  
   
-6.  Um die **NameColumn** -Eigenschaft des **City** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Fensters „Eigenschaften“ und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+6.  Um die **NameColumn** -Eigenschaft des **City** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Fensters „Eigenschaften“ und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 7.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quellspalte** die Option **City**aus, und klicken Sie anschließend auf **OK**.  
   
@@ -198,7 +198,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 2.  Klicken Sie im Bereich **Attribute** auf das **State-Province** -Attribut.  
   
-3.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+3.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 4.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **EnglishCountryRegionName** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
   
@@ -206,7 +206,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 5.  Klicken Sie auf **OK**.  
   
-6.  Um die **NameColumn** -Eigenschaft des **State-Province** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Fensters „Eigenschaften“ und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+6.  Um die **NameColumn** -Eigenschaft des **State-Province** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Fensters „Eigenschaften“ und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 7.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quellspalte** die Option **StateProvinceName**aus, und klicken Sie anschließend auf **OK**.  
   

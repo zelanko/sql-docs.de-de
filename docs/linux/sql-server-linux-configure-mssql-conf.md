@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66719403"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
@@ -508,7 +508,7 @@ Sie müssen zusätzlich zum Festlegen dieser Werte können auch Konfigurieren de
 
 Es gibt verschiedene andere Einstellungen für die Mssql-Conf, die Sie verwenden können, Überwachung und Problembehandlung von MSDTC aus. Diese Einstellungen werden in die folgende Tabelle kurz beschrieben. Weitere Informationen zu deren Verwendung, finden Sie unter den Details in der Windows-Support-Artikel [Aktivieren von diagnoseablaufverfolgung für MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| mssql-conf setting | Description |
+| mssql-conf setting | Beschreibung |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Konfigurieren von sicheren nur RPC-Aufrufe für verteilte Transaktionen |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Konfigurieren Sie für verteilte Sicherheit nur RPC-Aufrufe |Transaktionen

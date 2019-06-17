@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100989"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Erstellen, Ändern und Löschen von Standardabonnements (Reporting Services im einheitlichen Modus)
@@ -79,7 +79,7 @@ ms.locfileid: "66100989"
   
 8.  Wählen Sie unter Renderformat zur Dateiübermittlung ein Berichtsausgabeformat aus. Wählen Sie ein Format aus, das der Desktopanwendung entspricht, die Sie verwenden, um den Bericht zu öffnen. Vermeiden Sie Formate, die einen Bericht nicht in einem einzigen Datenstrom rendern oder die Interaktivität einführen, die in einer statischen Datei (beispielsweise HTML 4.0) nicht unterstützt wird.  
   
-9. Geben Sie in die Textfelder **Benutzername** und **Kennwort** die Anmeldeinformationen ein, die für den Zugriff auf die Dateifreigabe erforderlich sind. Verwenden Sie für den Benutzernamen das Format *\<Domäne>*\\*\<Benutzername>*.  
+9. Geben Sie in die Textfelder **Benutzername** und **Kennwort** die Anmeldeinformationen ein, die für den Zugriff auf die Dateifreigabe erforderlich sind. Verwenden Sie für den Benutzernamen das Format *\<Domäne>* \\ *\<Benutzername>* .  
   
 10. Geben Sie Optionen zum Überschreiben an. Wenn Sie auf **Die Datei nicht überschreiben, wenn eine frühere Version vorhanden ist**klicken, wird die Übermittlung nicht durchgeführt, falls eine vorhandene Datei entdeckt wird. Wenn Sie auf **Dateinamen inkrementieren, wenn neuere Versionen hinzugefügt werden**klicken, hängt der Berichtsserver eine Zahl an den Dateinamen an, um ihn von vorhandenen Dateien desselben Namens zu unterscheiden.  
   

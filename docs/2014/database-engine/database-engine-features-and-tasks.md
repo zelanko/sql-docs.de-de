@@ -14,17 +14,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064979"
 ---
 # <a name="database-engine-features-and-tasks"></a>Datenbank-Engine-Funktionen und Tasks
   Informieren Sie sich, jede Person-Designer, Entwickler, Analytiker oder Administrator-Erstellung erfordert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Datenbanken.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Datenbank-Engine-Instanzen &amp;#40;SQL Server&amp;#41;](configure-windows/database-engine-instances-sql-server.md)  
+ [Datenbank-Engine-Instanzen &#40;SQL Server&#41;](configure-windows/database-engine-instances-sql-server.md)  
   
  [Datenbankfunktionen](../relational-databases/database-features.md)  
   

@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63243789"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Verwenden Sie eine DNS-Weiterleitung für die nicht zur Appliance gehört DNS-namensauflösung in Analytics Platform System
-Eine DNS-Weiterleitung konfiguriert werden kann, auf den Active Directory-Domänendienste-Knoten (**_Appliance\_Domäne_-AD01** und  **_Appliance\_ Domäne_-AD02**) Ihrer Analytics Platform System Appliance, die Skripts und Anwendungen Zugriff auf externe Server zulässt.  
+Eine DNS-Weiterleitung konfiguriert werden kann, auf den Active Directory-Domänendienste-Knoten ( **_Appliance\_Domäne_-AD01** und  **_Appliance\_ Domäne_-AD02**) Ihrer Analytics Platform System Appliance, die Skripts und Anwendungen Zugriff auf externe Server zulässt.  
   
 ## <a name="ResolveDNS"></a>Verwenden einer DNS-Weiterleitung  
 Die Analytics Platform System Appliance ist konfiguriert, um zu verhindern, dass zum Auflösen von DNS-Namen von Servern, die nicht in der Appliance. Einige Prozesse, z. B. die Windows Software Update Services (WSUS), müssen auf Servern außerhalb der Appliance. Zur Unterstützung dieses Szenarios Verwendung der DNS Analytics Platform System kann konfiguriert werden, um eine Weiterleitung von externen Namen unterstützen, die Analytics Platform System-Hosts und virtuellen Computern (VMs), externe DNS-Servern zum Auflösen von Namen außerhalb der Anwendung verwendet werden kann. Benutzerdefinierte Konfiguration von DNS-Suffixe wird nicht unterstützt, was bedeutet, dass Sie vollständig qualifizierte Domänennamen verwenden müssen, um einen nicht zur Appliance gehört Servernamen zu beheben.  
@@ -58,7 +58,7 @@ SQL Server PDW 2012 bietet integrierte Wartung und Patchen von Funktionen. SQL S
 Für Kunden, die die Appliance, Suchen nach Updates auf den öffentlichen Microsoft-WSUS-Repository konfigurieren, legen Sie die folgenden Anweisungen die entsprechenden Konfigurationsdetails auf dem Gerät.  
   
 > [!NOTE]  
-> Der Netzwerkadministrator Kunden muss die IP-Adresse angeben, für den Unternehmens-DNS-Server, die Namen von auflösen können **"Microsoft.com"**.  
+> Der Netzwerkadministrator Kunden muss die IP-Adresse angeben, für den Unternehmens-DNS-Server, die Namen von auflösen können **"Microsoft.com"** .  
   
 1.  Mithilfe von Remotedesktop, melden Sie sich bei der VMM-VM (<fabric domain>- VMM) mit dem Fabric-Domänenadministratorkonto.  
   
@@ -66,7 +66,7 @@ Für Kunden, die die Appliance, Suchen nach Updates auf den öffentlichen Micros
   
 3.  Klicken Sie in der Verbindungsliste auf **VMSEthernet**, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Wählen Sie **Internet Protocol Version 4 (TCP/IPv4)**, und klicken Sie dann auf **Eigenschaften**.  
+4.  Wählen Sie **Internet Protocol Version 4 (TCP/IPv4)** , und klicken Sie dann auf **Eigenschaften**.  
   
 5.  In der **alternativer DNS-Server** hinzu, und die IP-Adresse, die vom Netzwerkadministrator Kunden bereitgestellt.  
   

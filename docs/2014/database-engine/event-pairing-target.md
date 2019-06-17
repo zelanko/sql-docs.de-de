@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064850"
 ---
 # <a name="event-pairing-target"></a>Ziel 'Ereignispaarbildung'
@@ -30,7 +30,7 @@ ms.locfileid: "66064850"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren der Ereignispaarbildung beschrieben.  
   
-|Option|Zulässige Werte|Description|  
+|Option|Zulässige Werte|Beschreibung|  
 |------------|--------------------|-----------------|  
 |begin_event|Ein beliebiger Ereignisname, der in der aktuellen Sitzung vorhanden ist.|Der Ereignisname, der das Startereignis in einer paarweise zugeordneten Sequenz angibt.|  
 |end_event|Ein beliebiger Ereignisname, der in der aktuellen Sitzung vorhanden ist.|Der Ereignisname, der das Endereignis in einer paarweise zugeordneten Sequenz angibt.|  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b4d7b20c690a1f4d7f3b445afb8348549309e5c
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538208"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF.EXE
@@ -42,7 +42,7 @@ ODBCCONF [switches] action
 ## <a name="remarks"></a>Hinweise  
  Die folgenden Schalter sind verfügbar:  
   
-|Schalter|Description|  
+|Schalter|Beschreibung|  
 |------------|-----------------|  
 |/ A {*Aktion*}|Geben Sie eine Aktion.<br /><br /> / A ist optional, wenn nur eine Aktion angegeben wird.|  
 |/?|Syntax für ODBCCONF anzeigen. EXE-DATEI.|  
@@ -50,7 +50,7 @@ ODBCCONF [switches] action
 |/E|Löschen Sie die Antwortdatei, die mit/f angegeben wird, wenn die Verarbeitung abgeschlossen ist.|  
 |/F|Verwenden Sie eine Antwortdatei, z. B. `odbcconf /F my.rsp`.<br /><br /> My.rsp könnte folgendermaßen aussehen: `REGSVR c:\my.dll`<br /><br /> / A wird nicht in einer Antwortdatei verwendet.|  
 |/H|Syntax (Hilfe) anzeigen. Dieser Schalter ist identisch mit /?.|  
-|/ L [*Modus*] *Dateiname*|Senden der Ausgabe in eine Datei in einem von drei Modi: Normal (n), ausführliche (V) und Debuggen (d). Debuggen Sie im Modus zeichnet die DLLs, die von odbcconf.exe geladen werden.<br /><br /> Wenn Sie/l ohne einen Modus angeben, wird die Protokolldatei leer sein.<br /><br /> Z. B. **/LV "log.txt"**.|  
+|/ L [*Modus*] *Dateiname*|Senden der Ausgabe in eine Datei in einem von drei Modi: Normal (n), ausführliche (V) und Debuggen (d). Debuggen Sie im Modus zeichnet die DLLs, die von odbcconf.exe geladen werden.<br /><br /> Wenn Sie/l ohne einen Modus angeben, wird die Protokolldatei leer sein.<br /><br /> Z. B. **/LV "log.txt"** .|  
 |/R|Die Aktion wird nach einem Neustart ausgeführt werden.|  
 |/S|Unbeaufsichtigter Modus. Fehlermeldungen werden nicht angezeigt werden.|  
   

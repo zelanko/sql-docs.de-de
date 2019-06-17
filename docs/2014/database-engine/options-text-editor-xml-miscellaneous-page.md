@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089210"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Optionen (Text-Editor – XML – Seite „Sonstige“)
@@ -26,7 +26,7 @@ Im Dialogfeld **Optionen** können Sie die Einstellungen für die automatische V
  Der Text-Editor fügt beim Erstellen von XML-Elementen Endtags hinzu. Wenn das Anfangstag eines Elements ausgewählt ist, fügt der Editor das passende Endtag mit dem entsprechenden Namespacepräfix hinzu. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
  **Attributanführungszeichen**  
- Beim Erstellen von XML-Attributen fügt der Editor die Zeichen `="``"` hinzu und fügt zwischen den Anführungszeichen ein Caretzeichen (**^** ) ein. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
+ Beim Erstellen von XML-Attributen fügt der Editor die Zeichen `="``"` hinzu und fügt zwischen den Anführungszeichen ein Caretzeichen ( **^** ) ein. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
  **Namespace-Deklarationen**  
  Der Editor fügt die benötigten Namespacedeklarationen automatisch an den entsprechenden Stellen ein. Dieses Kontrollkästchen ist standardmäßig aktiviert.  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805579"
 ---
 # <a name="create-custom-templates"></a>Erstellen von benutzerdefinierten Vorlagen
@@ -67,7 +67,7 @@ ms.locfileid: "62805579"
   
 10. Geben Sie im Abfrage-Editor **EXECUTE dbo.WorkOrdersForBlade**ein, und drücken Sie anschließend F5, um die Abfrage auszuführen. Überprüfen Sie, ob im Bereich **Ergebnisse** eine Liste mit Bestellungen für Klingen zurückgegeben wird.  
   
-11. Bearbeiten Sie das Vorlagenskript (das Skript in Schritt 7), und Ersetzen Sie dabei den Produktnamen "Blade" mit dem Parameter  <strong>*<* Product_name</strong>, `nvarchar(50)`, <strong>Namen*>*</strong> , an vier Stellen.  
+11. Bearbeiten Sie das Vorlagenskript (das Skript in Schritt 7), und Ersetzen Sie dabei den Produktnamen "Blade" mit dem Parameter  <strong> *<* Product_name</strong>, `nvarchar(50)`, <strong>Namen *>* </strong> , an vier Stellen.  
   
     > [!NOTE]  
     >  Für Parameter sind drei Elemente erforderlich: der Name des zu ersetzenden Parameters, der Datentyp des Parameters und ein Standardwert für den Parameter.  
