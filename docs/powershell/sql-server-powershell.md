@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672351"
 ---
-# <a name="sql-server-powershell"></a>SQL Server-PowerShell
+# <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 **[Installieren von SQL Server PowerShell](download-sql-server-ps-module.md)**

@@ -19,11 +19,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e697adb4df3127468e5e74d5e5c4cbbebbae6615
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508334"
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
   
  Bei negativem Überprüfungsergebnis sollten folgende Punkte bedacht werden:  
   
--   Konfigurieren Sie die Replikationswarnung **Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.**, sodass Sie bei einem Fehler benachrichtigt werden. Weitere Informationen finden Sie unter [Konfigurieren von vordefinierten Replikationswarnungen &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   Konfigurieren Sie die Replikationswarnung **Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.** , sodass Sie bei einem Fehler benachrichtigt werden. Weitere Informationen finden Sie unter [Konfigurieren von vordefinierten Replikationswarnungen &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 -   Ist ein negatives Überprüfungsergebnis ein Problem für Ihre Anwendung? Falls ja, aktualisieren Sie die Daten manuell, damit sie synchronisiert sind, oder initialisieren Sie das Abonnement erneut:  
   
@@ -107,7 +107,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 
 #### <a name="all-articles"></a>Alle Artikel 
   
-1.  Führen Sie beim Verleger für die Veröffentlichungsdatenbank [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md) aus. Geben Sie **@publication** und einen der folgenden Werte für **@rowcount_only**an:  
+1.  Führen Sie beim Verleger für die Veröffentlichungsdatenbank [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md) aus. Geben Sie **@publication** und einen der folgenden Werte für **@rowcount_only** an:  
   
     -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
@@ -119,7 +119,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
   
 #### <a name="single-article"></a>Einzelner Artikel  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) aus. Geben Sie **@publication**, den Namen des Artikels für **@article**und einen der folgenden Werte für **@rowcount_only**an:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) aus. Geben Sie **@publication** , den Namen des Artikels für **@article** und einen der folgenden Werte für **@rowcount_only** an:  
   
     -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
@@ -133,9 +133,9 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 #### <a name="single-subscriber"></a>Einzelner Abonnent 
   
 1.  Öffnen Sie auf dem Verleger für die Veröffentlichungsdatenbank eine explizite Transaktion mit [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md) aus. Geben Sie die Veröffentlichung für **@publication**, den Namen des Abonnenten für **@subscriber**und den Namen der Abonnementdatenbank für **@destination_db**verfügbar sind.    
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md) aus. Geben Sie die Veröffentlichung für **@publication** , den Namen des Abonnenten für **@subscriber** und den Namen der Abonnementdatenbank für **@destination_db** verfügbar sind.    
 3.  (Optional) Wiederholen Sie Schritt 2 für jedes zu überprüfende Abonnement.    
-4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) aus. Geben Sie **@publication**, den Namen des Artikels für **@article**und einen der folgenden Werte für **@rowcount_only**an:    
+4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) aus. Geben Sie **@publication** , den Namen des Artikels für **@article** und einen der folgenden Werte für **@rowcount_only** an:    
     -   **1** - nur Überprüfung der Zeilenanzahl (Standardeinstellung)    
     -   **2** - Zeilenanzahl und binäre Prüfsumme  
   
@@ -213,7 +213,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
     3.  Zeigen Sie die Informationen auf der Registerkarte **Synchronisierungsverlauf** im Textbereich **Letzte Meldung der ausgewählten Sitzung** an.  
 
 ### <a name="using-transact-sql"></a>Verwenden von Transact-SQL
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md) aus. Geben Sie **@publication**, den Namen des Abonnenten für **@subscriber**, den Namen der Abonnementdatenbank für **@subscriber_db**und einen der folgenden Werte für **@level**an:   
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md) aus. Geben Sie **@publication** , den Namen des Abonnenten für **@subscriber** , den Namen der Abonnementdatenbank für **@subscriber_db** und einen der folgenden Werte für **@level** an:   
     -   **1** - Nur Überprüfung der Zeilenzählung    
     -   **3** - Überprüfung der Zeilenzählung und binären Prüfsumme  
   
@@ -240,7 +240,7 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
     3.  Zeigen Sie die Informationen auf der Registerkarte **Synchronisierungsverlauf** im Textbereich **Letzte Meldung der ausgewählten Sitzung** an. 
   
 ### <a name="using-transact-sql"></a>Verwenden von Transact-SQL
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md) aus. Geben Sie **@publication** und einen der folgenden Werte für **@level**an:    
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md) aus. Geben Sie **@publication** und einen der folgenden Werte für **@level** an:    
     -   **1** - Nur Überprüfung der Zeilenzählung   
     -   **3** - Überprüfung der Zeilenzählung und binären Prüfsumme  
   

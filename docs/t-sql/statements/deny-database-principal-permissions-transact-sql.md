@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644572"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (Berechtigungen für Datenbankprinzipal) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +71,15 @@ DENY permission [ ,...n ]
  Gibt eine Berechtigung an, die für den Datenbankprinzipal verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
  USER ::*database_user*  
- Gibt die Klasse und den Namen des Benutzers an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
+ Gibt die Klasse und den Namen des Benutzers an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
  ROLE ::*database_role*  
- Gibt die Klasse und den Namen der Rolle an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
+ Gibt die Klasse und den Namen der Rolle an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
  APPLICATION ROLE ::*application_role*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Gibt die Klasse und den Namen der Anwendungsrolle an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
+ Gibt die Klasse und den Namen der Anwendungsrolle an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
  CASCADE  
  Gibt an, dass die verweigerte Berechtigung auch anderen Prinzipalen verweigert wird, denen diese Berechtigung von diesem Prinzipal erteilt wurde.  
@@ -190,7 +190,7 @@ GO
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

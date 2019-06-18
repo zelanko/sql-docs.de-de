@@ -18,10 +18,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1970f103825d95e77edffd5d2f6c58e405c9469d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946606"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat
@@ -55,10 +55,10 @@ ms.locfileid: "64946606"
  **UDT gibt einen benutzerdefinierten Typ an.  
   
 ## <a name="exporting-using--v-80"></a>Exportieren mit -V 80  
- Bei einem Massenexport von Daten mithilfe des Switch **-V80** werden Daten vom Typ **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML und UDT – wie Daten vom Typ **text**, **image** und **ntext** – anstatt mit einem 8-Byte-Präfix mit einem 4-Byte-Präfix im einheitlichen Modus gespeichert. Dies ist der Standardwert für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen.  
+ Bei einem Massenexport von Daten mithilfe des Switch **-V80** werden Daten vom Typ **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML und UDT – wie Daten vom Typ **text**, **image** und **ntext** – anstatt mit einem 8-Byte-Präfix mit einem 4-Byte-Präfix im einheitlichen Modus gespeichert. Dies ist der Standardwert für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen.  
   
 ## <a name="copying-date-values"></a>Kopieren von Datumswerten  
- Von**bcp** wird die ODBC-API für das Massenkopieren verwendet. Deshalb verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bcp **zum Importieren von Datumswerten in** das ODBC-Datumsformat (*jjjj-mm-tt hh:mm:ss*[*.f...*]).  
+ Von**bcp** wird die ODBC-API für das Massenkopieren verwendet. Deshalb verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bcp **zum Importieren von Datumswerten in** das ODBC-Datumsformat (*jjjj-mm-tt hh:mm:ss*[ *.f...* ]).  
   
  Der Befehl **bcp** exportiert Datendateien im Zeichenformat immer mithilfe des ODBC-Standardformats für **datetime** - und **smalldatetime** -Werte. So wird beispielsweise eine **datetime** -Spalte mit dem Datum `12 Aug 1998` beim Massenkopieren in eine Datendatei als Zeichenfolge `1998-08-12 00:00:00.000`übertragen.  
   

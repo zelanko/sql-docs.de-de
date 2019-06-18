@@ -14,11 +14,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 737872cdf8d05d75a7849c107089f30d25650572
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649510"
 ---
 # <a name="sql-server-filetable-object"></a>SQLServer, FileTable (Objekt)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Das Leistungsobjekt **SQLServer:FileTable** stellt Leistungsindikatoren für Sta
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **FileTable** beschrieben.
 
-|**SQLServer FileTable (Leistungsindikatoren)**|Beschreibung|  
+|**SQLServer FileTable (Leistungsindikatoren)**|und Beschreibung|  
 |-------------|-----------------|  
 |**Durchschn. Zeit für FileTable-Elementlöschvorgang**|Die durchschnittliche Zeit (in Millisekunden) zum Löschen eines FileTable-Elements.|
 |**Durchschn. FileTable-Aufzählungszeit**|Die durchschnittliche Zeit (in Millisekunden) einer Anforderung zum Aufzählen von FileTable-Elementen.|

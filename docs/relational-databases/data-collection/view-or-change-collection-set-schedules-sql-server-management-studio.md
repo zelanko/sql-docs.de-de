@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 328786411c61c5d92d25786b05dacb907b17114a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645493"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Anzeigen oder Ändern von Sammlungssatz-Zeitplänen (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ ms.locfileid: "47777032"
   
  Auf dieser Seite können Sie eine Beschreibung des Sammlungssatzes anzeigen, auf den diese Eigenschaftenseite verweist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Datensammlungen](../../relational-databases/data-collection/manage-data-collection.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
   

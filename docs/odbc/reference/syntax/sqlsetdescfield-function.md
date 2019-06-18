@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62742256"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField-Funktion
@@ -80,7 +80,7 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetDescField** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_DESC und *behandeln* von *DescriptorHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetDescField** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01S02|Optionswert geändert|Der Treiber nicht den Wert im angegebenen  *\*ValuePtr* (Wenn *ValuePtr* war ein Zeiger) oder den Wert in *ValuePtr* (Wenn *ValuePtr*  wurde ein ganzzahliger Wert), oder  *\*ValuePtr* sind ungültig aufgrund von Arbeitsbedingungen Implementierung, damit der Treiber einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -93,7 +93,7 @@ SQLRETURN SQLSetDescField(
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY016|Ein Implementierungszeilendeskriptor kann nicht geändert werden.|Die *DescriptorHandle* Argument wurde ein IRD zugeordnet und die *FieldIdentifier* Argument war kein SQL_DESC_ARRAY_STATUS_PTR oder SQL_DESC_ROWS_PROCESSED_PTR.|  
 |HY021|Inkonsistente deskriptorinformation|Die Felder SQL_DESC_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE bilden keine gültiger ODBC-SQL-Typ oder eine gültige treiberspezifischen SQL-Typ (für Descriptor, IPD) oder einen gültigen Typ für den ODBC-C (für APDs oder ARDs).<br /><br /> Informationen der Sicherheitsbeschreibung, die während einer konsistenzprüfung eingecheckt war nicht konsistent. (Finden Sie unter "Konsistenzprüfung" in **SQLSetDescRec**.)|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM)  *\*ValuePtr* ist eine Zeichenfolge und *Pufferlänge* war kleiner als null aber nicht gleich SQL_NTS.<br /><br /> (DM) der Treiber wurde von einer ODBC 2.*.x* -Treiber der Deskriptor wurde ein ARD, die *ColumnNumber* -Argument wurde auf 0 und dem Wert des Arguments festgelegt *Pufferlänge* wurde nicht gleich 4.|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM)  *\*ValuePtr* ist eine Zeichenfolge und *Pufferlänge* war kleiner als null aber nicht gleich SQL_NTS.<br /><br /> (DM) der Treiber wurde von einer ODBC 2. *.x* -Treiber der Deskriptor wurde ein ARD, die *ColumnNumber* -Argument wurde auf 0 und dem Wert des Arguments festgelegt *Pufferlänge* wurde nicht gleich 4.|  
 |HY091|Ungültiger Deskriptorfeldbezeichner|Der angegebene Wert für die *FieldIdentifier* Argument war es sich nicht um ein Feld mit ODBC-definierten und war keine implementierungsdefinierte Wert.<br /><br /> Die *FieldIdentifier* Argument war ungültig, für die *DescriptorHandle* Argument.<br /><br /> Die *FieldIdentifier* Argument wurde ein Feld schreibgeschützt, ODBC-definierten.|  
 |HY092|Ungültiger Attribut-/Optionsbezeichner|Der Wert in  *\*ValuePtr* war nicht gültig für die *FieldIdentifier* Argument.<br /><br /> Die *FieldIdentifier* Argument war sql_desc_unnamed darf, und *ValuePtr* SQL_NAMED wurde.|  
 |HY105|Ungültiger Parametertyp|(DM) war für das Feld "SQL_DESC_PARAMETER_TYPE" angegebene Wert ungültig. (Weitere Informationen finden Sie unter der "*InputOutputType* Argument" im Abschnitt **SQLBindParameter**.)|  
@@ -140,7 +140,7 @@ SQLRETURN SQLSetDescField(
   
  Die Initialisierung von Headerfeldern ist in der Tabelle beschrieben, die folgt.  
   
-|Header-Feldname|Typ|R/W|Standard|  
+|Header-Feldname|Typ|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R-APD: R-IRD: R-IPD: R|ARD: SQL_DESC_ALLOC_AUTO für implizite oder SQL_DESC_ALLOC_USER für explizite<br /><br /> APD: SQL_DESC_ALLOC_AUTO für implizite oder SQL_DESC_ALLOC_USER für explizite<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD: R/W-APD: R/W-IRD: Nicht verwendete IPD: Nicht verwendet|ARD: [1] APD: [1] IRD: Nicht verwendete IPD: Nicht verwendet|  
@@ -154,7 +154,7 @@ SQLRETURN SQLSetDescField(
   
  Die Initialisierung Datensatzfeldern ist wie in der folgenden Tabelle gezeigt.  
   
-|Datensatz-Feldnamen|Typ|R/W|Standard|  
+|Datensatz-Feldnamen|Typ|R/W|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD: Nicht verwendete APD: Nicht verwendete IRD: R-IPD: Nicht verwendet|ARD: Nicht verwendete APD: Nicht verwendete IRD: D IPD: Nicht verwendet|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD: Nicht verwendete APD: Nicht verwendete IRD: R-IPD: Nicht verwendet|ARD: Nicht verwendete APD: Nicht verwendete IRD: D IPD: Nicht verwendet|  
@@ -416,7 +416,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_LENGTH [All]**  
  Diese SQLULEN-Datensatzfeld ist entweder die maximale oder die tatsächliche Länge einer Zeichenfolge in Zeichen oder ein binärer Datentyp in Byte. Es ist die maximale Länge für einen Datentyp mit fester Länge oder die tatsächliche Länge für einen Datentyp mit variabler Länge. Der Wert umfasst nicht immer die Null-Terminierungszeichen, das die Zeichenfolge endet. Für Werte, deren Typ SQL_TYPE_DATE, SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP oder eines der SQL-Interval-Datentypen ist, ist dieses Feld die Länge in Zeichen des Zeichen eine Zeichenfolgendarstellung des Werts "DateTime" oder das Intervall an.  
   
- Der Wert in dieses Feld möglicherweise von den Wert für "Length" als definiert, in ODBC 2.*.x*. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ Der Wert in dieses Feld möglicherweise von den Wert für "Length" als definiert, in ODBC 2. *.x*. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  Diese schreibgeschützte SQLCHAR * Feld "Record" enthält, oder der Zeichen, die der Treiber als Präfix für ein Literal dieses Datentyps erkennt. Diese Variable enthält eine leere Zeichenfolge für einen Datentyp, der für den ein Zeichenfolgenliteral-Präfix nicht anwendbar ist.  
@@ -462,7 +462,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_PRECISION [All]**  
  Dieses SQLSMALLINT-Datensatzfeld enthält die Anzahl der Ziffern für einen exakten numerischen Typ, die Anzahl der Bits in der Mantisse (Binary-Genauigkeit) für einen ungefähren numerischen Typ oder die Anzahl der Ziffern in der Komponente für Sekundenbruchteile für die SQL_TYPE_TIME, SQL_TYPE _TIMESTAMP oder SQL_INTERVAL_SECOND-Datentyp. Dieses Feld ist für alle anderen Datentypen nicht definiert.  
   
- Der Wert in dieses Feld möglicherweise von den Wert für "Precision" als definiert, in ODBC 2.*.x*. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ Der Wert in dieses Feld möglicherweise von den Wert für "Precision" als definiert, in ODBC 2. *.x*. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_ROWVER [Implementierung Deskriptoren]**  
  Dieses Feld SQLSMALLINTrecord gibt an, ob eine Spalte automatisch vom DBMS geändert wird, wenn eine Zeile (z. B. eine Spalte vom Typ "Timestamp" in SQL Server) aktualisiert wird. Der Wert dieses Felds Datensatz festgelegt ist, SQL_TRUE, wenn die Spalte eine Spalte mit zeilenversionsverwaltung und SQL_FALSE andernfalls. Dieses Spaltenattribut ist vergleichbar mit einem Aufruf **SQLSpecialColumns** mit der SQL_ROWVER IdentifierType, um festzustellen, ob eine Spalte automatisch aktualisiert wird.  
@@ -470,7 +470,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_SCALE [All]**  
  Dieses SQLSMALLINT-Datensatzfeld enthält definierte Anzahl von Dezimalstellen für die Datentypen decimal und numeric. Das Feld ist für alle anderen Datentypen nicht definiert.  
   
- Der Wert in dieses Feld möglicherweise von den Wert für "Scale" gemäß ODBC 2.*.x*. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ Der Wert in dieses Feld möglicherweise von den Wert für "Scale" gemäß ODBC 2. *.x*. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  Diese schreibgeschützte SQLCHAR * Feld "Record" enthält den Schemanamen der Basistabelle, die die Spalte enthält. Der Rückgabewert ist treiberabhängig auf, wenn die Spalte ein Ausdruck ist, oder wenn die Spalte Teil einer Ansicht ist. Wenn die Datenquelle keine Schemas unterstützt oder der Schemaname kann nicht bestimmt werden, enthält diese Variable eine leere Zeichenfolge.  
@@ -478,11 +478,11 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_SEARCHABLE [IRDs]**  
  Dieses Feld schreibgeschützt SQLSMALLINT Datensatz wird auf einen der folgenden Werte festgelegt:  
   
--   SQL_PRED_NONE, wenn die Spalte kann, in verwendet werden einem **, in denen** Klausel. (Dies ist identisch mit der SQL_UNSEARCHABLE-Wert in ODBC 2.*.x*.)  
+-   SQL_PRED_NONE, wenn die Spalte kann, in verwendet werden einem **, in denen** Klausel. (Dies ist identisch mit der SQL_UNSEARCHABLE-Wert in ODBC 2. *.x*.)  
   
--   SQL_PRED_CHAR, wenn die Spalte kann, in verwendet werden eine **, in denen** -Klausel jedoch nur mit der **wie** Prädikat. (Dies ist identisch mit der SQL_LIKE_ONLY-Wert in ODBC 2.*.x*.)  
+-   SQL_PRED_CHAR, wenn die Spalte kann, in verwendet werden eine **, in denen** -Klausel jedoch nur mit der **wie** Prädikat. (Dies ist identisch mit der SQL_LIKE_ONLY-Wert in ODBC 2. *.x*.)  
   
--   SQL_PRED_BASIC, wenn die Spalte kann, in verwendet werden einem **, in denen** -Klausel mit allen Vergleichsoperatoren mit Ausnahme **wie**. (Dies ist identisch mit der SQL_EXCEPT_LIKE-Wert in ODBC 2.*.x*.)  
+-   SQL_PRED_BASIC, wenn die Spalte kann, in verwendet werden einem **, in denen** -Klausel mit allen Vergleichsoperatoren mit Ausnahme **wie**. (Dies ist identisch mit der SQL_EXCEPT_LIKE-Wert in ODBC 2. *.x*.)  
   
 -   SQL_PRED_SEARCHABLE, wenn die Spalte kann, in verwendet werden einem **, in denen** -Klausel mit jedem Vergleichsoperator.  
   
