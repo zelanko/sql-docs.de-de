@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 39b22e5d32d835281e6194e996ab7e27b2c3519d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280469"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Hinzufügen von Datenrastern zu mobilen Berichten | Reporting Services
 Mitunter sind die Daten selbst die beste Visualisierung. Erfahren Sie mehr über die drei *Datenraster*(bzw. Tabellen) zum Anzeigen von Daten in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:

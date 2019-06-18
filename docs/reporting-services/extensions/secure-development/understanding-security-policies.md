@@ -17,14 +17,14 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05d38729762a3226fa05a3362f5454a604aaf382
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6649017002fb3dd5df2dc3ee68a0d759ded24887
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193385"
 ---
 # <a name="understanding-security-policies"></a>Grundlegendes zu Sicherheitsrichtlinien
   Jeder Code, der von einem Berichtsserver ausgeführt wird, muss Teil einer bestimmten Codezugriff-Sicherheitsrichtlinie sein. Diese Sicherheitsrichtlinien bestehen aus Codegruppen, die einem Satz von benannten Berechtigungen Beweise zuordnen. Häufig sind Codegruppen einem benannten Berechtigungssatz zugeordnet, der die zulässigen Berechtigungen für Code in dieser Gruppe angibt. Die Laufzeit bestimmt anhand von Beweisen, die von einem vertrauenswürdigen Host oder dem Ladeprogramm bereitgestellt werden, zu welchen Codegruppen der Code gehört und welche Berechtigungen ihm daher zuzuweisen sind. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet diese von der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Common Language Runtime (CLR) definierte Sicherheitsrichtlinienarchitektur. In den nachfolgenden Abschnitten werden die verschiedenen Codetypen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sowie die damit verknüpften Richtlinienregeln aufgeführt.  
@@ -73,7 +73,7 @@ ms.locfileid: "47839383"
   
  In einigen Fällen müssen Sie einen Vorgang ausführen, der bestimmte Codeberechtigungen in einem Berichtsausdruck erfordert. In der Regel bedeutet dies, dass ein Berichtsausdruck einen Aufruf einer sicheren CLR-Bibliotheksmethode (z. B. einer Methode, die auf Dateien oder die Systemregistrierung zugreift) durchführen muss. In der Dokumentation zu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] werden die Codeberechtigungen beschrieben, die zum Durchführen dieses sicheren Aufrufs notwendig sind. Um den Aufruf ausführen zu können, müssen dem aufrufenden Code diese speziellen, sicheren Berechtigungen gewährt werden. Wenn Sie den Aufruf von einem Berichtsausdruck oder dem **Code**-Element aus durchführen, müssen der Ausdruckshostassembly die entsprechenden Berechtigungen gewährt werden. Nachdem Sie dem Ausdruckshost jedoch die Berechtigung gewährt haben, gilt diese spezielle Berechtigung für jeglichen Code, der in einem Ausdruck eines beliebigen Berichts ausgeführt wird. Es ist sicher, diesen Aufruf von einer benutzerdefinierten Assembly auszuführen und dieser benutzerdefinierten Assembly die speziellen Berechtigungen zuzuweisen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Code Access Security in Reporting Services (Codezugriffssicherheit in Reporting Services)](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
  [Sichere Entwicklung (Reporting Services)](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   

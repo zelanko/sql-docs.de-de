@@ -1,19 +1,19 @@
 ---
-title: 'Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041201"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Lernprogramm: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
 In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
@@ -124,7 +124,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
     ```  
   
-3.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**).  
+3.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ).  
   
     Die Abfrage wird ausgeführt, und das Resultset für die Felder "SalesDate", "Subcategory", "Product", "Sales" und "Quantity" wird angezeigt.  
   
@@ -184,7 +184,7 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
 4.  Klicken Sie auf **Weiter** , um eine Vorschau der Tabelle anzuzeigen, und anschließend auf **Fertig stellen**.  
   
-Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Der Bereich „Zeilengruppen“ umfasst drei Zeilengruppen: SalesDate, Subcategory und Details. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+Die Tabelle wird der Entwurfsoberfläche hinzugefügt. Die Tabelle enthält 5 Spalten und 5 Zeilen. Im Bereich "Zeilengruppen" werden drei Zeilengruppen angezeigt: "SalesDate", "Subcategory" und "Details". Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
   
 ## <a name="FormatCurrency"></a>2. Formatieren von Daten als Währung  
 Die Zusammenfassungsdaten für das Feld "Sales" werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen.   
@@ -236,7 +236,7 @@ Die "SalesDate"-Werte werden im Standarddatumsformat angezeigt.
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Die Zelle zeigt das Beispieldatum an: **[31. Januar 2000]**.  
+    Die Zelle zeigt das Beispieldatum an: **[31. Januar 2000]** .  
   
 7.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   

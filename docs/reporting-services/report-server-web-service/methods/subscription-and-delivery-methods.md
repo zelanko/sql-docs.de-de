@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c99f34b46a6f809cee76985b3db99a88e46326f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 474a54a5233b8d96b060f73dc33dfd4a6f86bcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284481"
 ---
 # <a name="subscription-and-delivery-methods"></a>Abonnement und Übermittlungsmethoden
   Mit diesen Methoden können Sie Abonnements und die Übermittlung von Katalogelementen erstellen und verwalten.  
@@ -36,7 +36,7 @@ ms.locfileid: "47785218"
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|Legt die Werte der Eigenschaften eines datengesteuerten Abonnements fest.|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|Legt die Werte der Eigenschaften eines Abonnements fest.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
