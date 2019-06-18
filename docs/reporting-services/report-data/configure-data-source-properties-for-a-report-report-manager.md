@@ -11,10 +11,10 @@ ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573196"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Konfigurieren von Datenquelleneigenschaften für einen paginierten Bericht
@@ -26,7 +26,7 @@ ms.locfileid: "65573196"
   
 1.  Navigieren Sie im Webportal zu dem Bericht, für den Sie eine berichtsspezifische Datenquelle konfigurieren möchten.  
   
-3.  Klicken Sie auf die Auslassungspunkte (**...**) in der oberen rechten Ecke und anschließend auf **Verwalten**.  
+3.  Klicken Sie auf die Auslassungspunkte ( **...** ) in der oberen rechten Ecke und anschließend auf **Verwalten**.  
   
 4.  Klicken Sie auf die Registerkarte **Datenquellen** . Hiermit wird die Eigenschaftenseite der Datenquelle des Berichts aufgerufen.  
   

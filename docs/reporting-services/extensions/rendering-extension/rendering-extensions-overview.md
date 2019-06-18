@@ -9,14 +9,14 @@ helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027949"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193883"
 ---
 # <a name="rendering-extensions-overview"></a>Übersicht über Renderingerweiterungen
   Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Bilder und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  
@@ -26,7 +26,7 @@ ms.locfileid: "50027949"
   
  In der folgenden Tabelle werden die Renderingerweiterungen beschrieben, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten sind.  
   
-|Extension Name|Beschreibung|  
+|Extension Name|und Beschreibung|  
 |--------------------|-----------------|  
 |**XML**|Rendert einen Bericht im XML-Format. Der Bericht wird in einem Browser geöffnet. Weitere Umwandlungen, die auf dieses XML-Format angewandt werden, können eine kosteneffiziente Methode darstellen, die Entwicklung einer eigenen Renderingerweiterung zu vermeiden.|  
 |**CSV**|Rendert einen Bericht in einem durch Trennzeichen getrennten Format. Der Bericht wird in einem Anzeigetool für Dateien im CSV-Format geöffnet.|  
@@ -56,7 +56,7 @@ ms.locfileid: "50027949"
   
  Ergänzende Dokumentation sowie Whitepapers zu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] finden Sie in den aktuellen technischen Ressourcen auf der [Reporting Services-Website](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementing a Rendering Extension (Implementieren von Renderingerweiterungen)](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

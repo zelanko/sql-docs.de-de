@@ -9,10 +9,10 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582089"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65582089"
   
     2.  Einen Abfrageparameter für jeden kaskadierenden Parameter. Ein Abfrageparameter beschränkt die von der Datenquelle abgerufenen Daten, indem bestimmte Werte angegeben werden, die in die Abfrage eingebunden bzw. von dieser ausgeschlossen werden sollen. Typischerweise sind Abfrageparameter in einer Einschränkungsklausel in der Abfrage enthalten. In einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -SELECT-Anweisung sind Abfrageparameter beispielsweise in der WHERE-Klausel enthalten.  
   
-6.  Klicken Sie auf **Ausführen** (**!**). Nachdem Sie die Abfrageparameter eingebunden und anschließend die Abfrage ausgeführt haben, werden automatisch Berichtsparameter erstellt, die den Abfrageparametern entsprechen.  
+6.  Klicken Sie auf **Ausführen** ( **!** ). Nachdem Sie die Abfrageparameter eingebunden und anschließend die Abfrage ausgeführt haben, werden automatisch Berichtsparameter erstellt, die den Abfrageparametern entsprechen.  
   
     > [!NOTE]  
     >  Die Reihenfolge von Abfrageparametern beim erstmaligen Ausführen einer Abfrage bestimmt die Reihenfolge, in der sie im Bericht erstellt werden. Informationen zum Ändern der Reihenfolge finden Sie unter [Ändern der Reihenfolge von Berichtsparametern (Berichts-Generator und SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "65582089"
   
      Der SELECT DISTINCT-Befehl entfernt doppelte Werte aus dem Resultset, sodass Sie die einzelnen eindeutigen Werte aus der angegebenen Spalte in der angegebenen Tabelle abrufen.  
   
-     Klicken Sie auf **Ausführen** (**!**). Im Resultset werden die Werte angezeigt, die für diesen ersten Parameter verfügbar sind.  
+     Klicken Sie auf **Ausführen** ( **!** ). Im Resultset werden die Werte angezeigt, die für diesen ersten Parameter verfügbar sind.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

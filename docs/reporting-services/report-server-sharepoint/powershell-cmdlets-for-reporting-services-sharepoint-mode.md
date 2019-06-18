@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 998e0e4b400815767135ee81442c4e210aa3ba47
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580620"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services
@@ -69,7 +69,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 
  Die folgende Tabelle enthält die PowerShell-Cmdlets für den freigegebenen SharePoint-Dienst für Reporting Services.  
   
-|Cmdlet|Beschreibung|  
+|Cmdlet|und Beschreibung|  
 |------------|-----------------|  
 |Install-SPRSService|Installiert und registriert bzw. deinstalliert den freigegebenen Reporting Services-Dienst. Dieser Schritt kann nur auf einem Computer erfolgen, auf dem eine SQL Server Reporting Services-Installation im SharePoint-Modus vorhanden ist. Für die Installation sind zwei Vorgänge möglich:<br /><br /> – Der Reporting Services-Dienst wird in der Farm installiert.<br /><br /> – Die Reporting Services-Dienstinstanz wird auf dem aktuellen Computer installiert.<br /><br /> Für die Deinstallation sind zwei Vorgänge möglich:<br /><br /> – Der Reporting Services-Dienst wird auf dem aktuellen Computer deinstalliert.<br /><br /> – Der Reporting Services-Dienst wird in der Farm deinstalliert.<br /><br /> <br /><br /> Wenn die Farm andere Computer umfasst, auf denen der Reporting Services-Dienst installiert ist, oder wenn immer noch Reporting Services-Dienstanwendungen in der Farm ausgeführt werden, wird eine Fehlermeldung angezeigt.|  
 |Install-SPRSServiceProxy|Installiert und registriert bzw. deinstalliert den Reporting Services-Dienstproxy in der SharePoint-Farm.|  
@@ -80,7 +80,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 
  Die folgende Tabelle enthält die PowerShell-Cmdlets für Reporting Services-Dienstanwendungen und ihre zugeordneten Proxys.  
   
-|Cmdlet|Beschreibung|  
+|Cmdlet|und Beschreibung|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Ruft mindestens ein Objekt für eine Reporting Services-Anwendung ab.|  
 |New-SPRSServiceApplication|Erstellen Sie eine neue Reporting Services-Dienstanwendung und zugeordnete Datenbanken.<br /><br /> LogonType-Parameter: Gibt an, ob der Berichtsserver das SSRS-Anwendungspoolkonto oder einen SQL Server-Anmeldenamen für den Zugriff auf die Berichtsserver-Datenbank verwendet. Gültige Werte sind:<br /><br /> 0 Windows-Authentifizierung<br /><br /> 1 SQL Server<br /><br /> 2 Anwendungspoolkonto (Standard)|  
@@ -100,7 +100,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
   
 ## <a name="reporting-services-custom-functionality-cmdlets"></a>Benutzerdefinierte Reporting Services-Funktionalitäts-Cmdlets
   
-|Cmdlet|Beschreibung|  
+|Cmdlet|und Beschreibung|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|Aktualisiert den Verschlüsselungsschlüssel für die angegebene Reporting Services-Dienstanwendung und verschlüsselt die Daten erneut.|  
 |Restore-SPRSEncryptionKey|Stellt einen zuvor gesicherten Verschlüsselungsschlüssel für eine Reporting Services-Dienstanwendung wieder her.|  

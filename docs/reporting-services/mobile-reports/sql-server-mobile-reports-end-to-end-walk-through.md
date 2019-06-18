@@ -1,5 +1,5 @@
 ---
-title: 'mobile SQL Server-Berichte: Ausführliche exemplarische Vorgehensweise'
+title: 'Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise'
 description: Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit dem SQL Server-Publisher für mobile Berichte im Reporting Services-Webportal und deren Anzeige in mobilen Power BI-Apps.
 ms.date: 12/07/2018
 ms.prod: reporting-services
@@ -8,16 +8,16 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502277"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>mobile SQL Server-Berichte: Ausführliche exemplarische Vorgehensweise
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
 
 Erstellen Sie mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rasterzeilen und -spalten sowie flexiblen Elementen für mobile Berichte. Verbinden Sie sich mit einer Vielzahl lokaler Datenquellen, oder laden Sie Excel-Arbeitsmappen hoch, um mobile Berichte zu erstellen. Speichern Sie Ihre Berichte in einem [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] -Webportal, und zeigen Sie sie in einem Browser oder mobilen Power BI-Apps an.  
@@ -36,7 +36,7 @@ Um folgen zu können, benötigen Sie diese Produkte:
 * Zum Erstellen freigegebener Datasets müssen Sie den [Berichts-Generator installieren](../install-windows/install-report-builder.md).  
 * Zum Erstellen mobiler Berichte [installieren Sie den Publisher für mobile Berichte von SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases).  
-*  ODER: World Wide Importers-Beispieldatenbank, die auf der Seite [Microsoft SQL Server-Beispiele](../../sample/microsoft-sql-server-samples.md) verfügbar ist.
+*  ODER: Wide World Importers-Beispieldatenbank (WWI), die auf der Seite [Microsoft SQL Server-Beispiele](../../sample/microsoft-sql-server-samples.md) verfügbar ist.
 * Führen Sie zum Anzeigen von Ergebnissen die folgenden Schritte aus: 
   *   [Registrieren beim Power BI-Dienst](https://go.microsoft.com/fwlink/?LinkID=513879) und
   *  [Herunterladen der mobilen Power BI-App](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) auf Ihr Mobilgerät: iOS, Android-Smartphone oder Windows 10-Gerät.  
@@ -79,7 +79,7 @@ Verwenden Sie ein vorhandenes [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversi
 4. Geben Sie in das Feld „Name“ den Namen des Servers, auf dem Sie die Datenquelle gespeichert hat, in diesem Format ein:   
    
    Name: https://*localhost*/ReportServer  
-   Elemente des Typs „Datenquellen“ (*.rsds)  
+   Elemente vom Typ: Datenquellen (*.rsds)  
    
 5. Klicken Sie auf **Öffnen**, und navigieren Sie zur Datenquelle, die Sie auf diesem Server erstellt haben.  
    
@@ -121,7 +121,7 @@ Sie erstellen KPIs direkt im [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversio
 
 7. Klicken Sie im Feld **Trendsatz** auf **Datasettrend**.  
   
-6. Klicken Sie im Feld **Datasettrend auswählen** auf die Auslassungspunkte (**...**).  
+6. Klicken Sie im Feld **Datasettrend auswählen** auf die Auslassungspunkte ( **...** ).  
    
 7. Wählen Sie ein Feld aus, und klicken Sie auf **OK**.  
 

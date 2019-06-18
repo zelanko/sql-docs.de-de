@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce369a5652e2fe45335a49b6df3d3fc48dd9caf0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200536"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Erstellen und Veröffentlichen von mobilen Berichten mit dem Publisher für mobile Berichte von SQL Server
 Erfahren Sie mehr über mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte, die für mobile Geräte optimiert sind, mit lokalen Daten verbunden sind und über eine Sammlung von Datenvisualisierungen verfügen. 
@@ -36,10 +36,10 @@ Mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]können Sie
 Diese Artikel helfen Ihnen beim Einstieg.
 -  Download des [Publishers für mobile Berichte von SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Create a Reporting Services mobile report (Erstellen eines mobilen Berichts in Reporting Services)](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server Reporting Services (Ausführliche exemplarische Vorgehensweise: Erstellen mobiler Berichte und KPIs in SQL Server Reporting Services)](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Blog von Christopher Finlan)  
-- [Beim Erstellen von mobilen Reporting Services-Berichten wahlweise mit Entwurf oder Daten beginnen  
-- [Daten für mobile Berichte von Reporting Services:](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) Verwenden Sie Daten aus freigegebenen Datasets, oder bereiten Sie Daten aus Excel-Arbeitsmappen auf das Verwenden in Ihren mobilen Berichten vor.
-- [How data refresh works in mobile reports and KPIs in Reporting Services (Funktionsweise der Aktualisierung von Daten in mobilen Berichten und KPIs in Reporting Services)](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Blog von Christopher Finlan): Informationen zum Einrichten der Zwischenspeicherung von freigegebenen Datasets für die Steuerung der Häufigkeit von Datenaktualisierungen und die Beschleunigung der Berichtsleistung.
+-  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server 2016 Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Durchgängige exemplarische Vorgehensweise: Erstellen mobiler Berichte und KPIs in SQL Server Reporting Services) (Blog von Christopher Finlan)  
+- [„Erst Entwurf“ oder „Erst Daten“](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): Entscheiden Sie, ob Sie den Bericht zuerst mit simulierten Daten entwerfen oder mit Ihren eigenen Daten beginnen.  
+- [Daten für mobile Reporting Services-Berichte](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): Verwenden Sie Daten aus freigegebenen Datasets, oder bereiten Sie Daten aus Excel-Arbeitsmappen auf das Verwenden in Ihren mobilen Berichten vor.
+- [How data refresh works in mobile reports and KPIs in Reporting Services (Funktionsweise der Aktualisierung der Daten in mobilen Berichte und KPIs in Reporting Services)](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlans Blog): Erfahren Sie mehr über das Einrichten der Zwischenspeicherung für freigegebene Datasets, um zu steuern, wie oft Daten aktualisiert werden, und um die Berichterstellung zu beschleunigen.
 - [Visualisierungen in mobilen Berichten](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [Messgeräte in mobilen Berichten](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [Karten in mobilen Berichten](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512392"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
 Nachdem Sie im übergeordneten Bericht eine Drillthroughaktion hinzugefügt haben, erstellen Sie im nächsten Schritt einen Datenfilter für die Datentabelle, die Sie für den untergeordneten Bericht definiert haben.  
@@ -39,7 +39,7 @@ Führen Sie folgende Aufgaben aus, um einen tabellenbasierten Filter zu implemen
   
 4.  Wählen Sie im Feld **Ausdruck** aus der Dropdownliste **ProductID** aus. Dies ist die Spalte, auf die Sie den Filter anwenden.  
   
-5.  Klicken Sie in der Dropdownliste**=** Operator **auf den Gleichheitsoperator (** ).  
+5.  Klicken Sie in der Dropdownliste **=** Operator **auf den Gleichheitsoperator (** ).  
   
 6.  Wählen Sie neben dem Feld **Wert** die Ausdrucksschaltfläche aus. Wählen Sie im Bereich **Kategorie** **Parameter** aus, und doppelklicken Sie im Bereich **Werte** auf **productid** . Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen mit **=Parameters!productid.Value**vergleichbaren Ausdruck enthalten.  
   

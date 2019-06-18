@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570699"
 ---
 # <a name="secure-my-reports"></a>Sichern von Meine Berichte
@@ -32,7 +32,7 @@ ms.locfileid: "65570699"
   
  Eine Rollenzuweisung für **Meine Berichte** setzt sich wie folgt zusammen:  
   
--   Der Benutzerordner „Meine Berichte“, der im Ordner „Benutzerordner\\*\<Benutzername>* \Meine Berichte“ gespeichert ist.  
+-   Der Benutzerordner „Meine Berichte“, der im Ordner „Benutzerordner\\ *\<Benutzername>* \Meine Berichte“ gespeichert ist.  
   
 -   Das Benutzerkonto, das beim Aktivieren des Ordners Meine Berichte bestimmt wird. Ein Ordner wird aktiviert, wenn ein Benutzer auf einen Ordner Meine Berichte im Berichts-Manager klickt oder wenn ein Bericht im Berichts-Designer im Ordner Meine Berichte veröffentlicht wird. Dieser Ordner wird außerdem aktiviert, wenn ein Benutzer Eigenschaften über den Link Meine Berichte anfordert.  
   

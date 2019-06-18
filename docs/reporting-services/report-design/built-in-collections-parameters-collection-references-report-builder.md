@@ -9,10 +9,10 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581793"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Parameterauflistungen
@@ -28,7 +28,7 @@ ms.locfileid: "65581793"
 ##  <a name="Single"></a> Verwenden von einwertigen Parametern in Ausdrücken  
  Die folgende Tabelle enthält Beispiele für die zu verwendende Syntax zum Verweisen auf einwertige Parameter beliebigen Datentyps in einem Ausdruck.  
   
-|Beispiel|Beschreibung|  
+|Beispiel|und Beschreibung|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Parametername>* `.IsMultiValue`|Gibt **False**zurück.<br /><br /> Überprüft, ob ein Parameter mehrwertig ist. Wenn **True**zurückgegeben wird, ist der Parameter mehrwertig und stellt eine Auflistung von Objekten dar. Wenn **FALSE**zurückgegeben wird, ist der Parameter einwertig und stellt ein einzelnes Objekt dar.|  
 |`=Parameters!` *\<Parametername>* `.Count`|Gibt den Ganzzahlwert 1 zurück. Für einwertige Parameter ist der Wert stets 1.|  
@@ -42,7 +42,7 @@ ms.locfileid: "65581793"
 ##  <a name="Multi"></a> Verwenden eines mehrwertigen Parameters in einem Ausdruck  
  Die folgende Tabelle enthält Beispiele für die zu verwendende Syntax zum Verweisen auf mehrwertige Parameter beliebigen Datentyps in einem Ausdruck.  
   
-|Beispiel|Beschreibung|  
+|Beispiel|und Beschreibung|  
 |-------------|-----------------|  
 |`=Parameters!` *\<MehrwertigerParametername>* `.IsMultiValue`|Gibt **True** oder **False**zurück.<br /><br /> Überprüft, ob ein Parameter mehrwertig ist. Wenn **True**zurückgegeben wird, ist der Parameter mehrwertig und stellt eine Auflistung von Objekten dar. Wenn **FALSE**zurückgegeben wird, ist der Parameter einwertig und stellt ein einzelnes Objekt dar.|  
 |`=Parameters!` *\<MehrwertigerParametername>* `.Count`|Gibt eine ganze Zahl zurück.<br /><br /> Bezieht sich auf die Anzahl der Werte. Für einwertige Parameter ist der Wert stets 1. Für mehrwertige Parameter ist der Wert 0 oder höher.|  

@@ -18,10 +18,10 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 25a6872cd74faae521f9687d20d54541ef1798a6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580000"
 ---
 # <a name="report-definition-language-ssrs"></a>Berichtsdefinitionssprache (Report Definition Language, RDL) (SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "65580000"
 ##  <a name="bkmk_RDL_Types"></a> RDL-Typen  
  Die folgenden Tabelle führt die in RDL-Elementen und Attributen verwendete Typen auf.  
   
-|Typ|Beschreibung|  
+|Typ|und Beschreibung|  
 |----------|-----------------|  
 |**Binär (Binary)**|Eine Eigenschaft mit einem Base-64-codierten Binärwert.|  
 |**Boolean**|Eine Eigenschaft, die den Wert **true** oder **false** für ein Objekt annehmen kann. Sofern nichts anderes angegeben ist, hat ein nicht angegebenes, optionales Boolean-Objekt den Wert **False**.|  

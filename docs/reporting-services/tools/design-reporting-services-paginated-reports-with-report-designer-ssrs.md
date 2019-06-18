@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577871"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Erstellen von paginierten Berichten von Reporting Services mit dem Berichts-Designer (SSRS)
@@ -99,7 +99,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
  Verwenden Sie die **Vorschau** , um die Berichtsdaten und den Layoutentwurf zu überprüfen. Wenn Sie eine Vorschau eines Berichts anzeigen, überprüft der Berichtsprozessor das Berichtsdefinitionsschema und die Ausdruckssyntax. Probleme werden im Fenster [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) aufgelistet.  
   
 > [!NOTE]  
->  Wenn Sie eine Vorschau für einen Bericht anzeigen, werden die Daten für den Bericht auf dem lokalen Computer in einer Datei zwischengespeichert. Wenn Sie für denselben Bericht erneut eine Vorschau anzeigen, indem Sie dieselbe Abfrage und dieselben Parameter und Anmeldeinformationen verwenden, ruft der Berichts-Designer die zwischengespeicherte Kopie ab, anstatt die Abfrage erneut auszuführen. Die Datendatei wird in demselben Verzeichnis wie die Berichtsdefinitionsdatei unter dem Namen „*\<Berichtsname>*.rdl.data“ gespeichert. Die Datei wird nicht gelöscht, wenn Sie den Berichts-Designer schließen.  
+>  Wenn Sie eine Vorschau für einen Bericht anzeigen, werden die Daten für den Bericht auf dem lokalen Computer in einer Datei zwischengespeichert. Wenn Sie für denselben Bericht erneut eine Vorschau anzeigen, indem Sie dieselbe Abfrage und dieselben Parameter und Anmeldeinformationen verwenden, ruft der Berichts-Designer die zwischengespeicherte Kopie ab, anstatt die Abfrage erneut auszuführen. Die Datendatei wird in demselben Verzeichnis wie die Berichtsdefinitionsdatei unter dem Namen „ *\<Berichtsname>* .rdl.data“ gespeichert. Die Datei wird nicht gelöscht, wenn Sie den Berichts-Designer schließen.  
   
  Sie können eine Vorschau eines Berichts wie folgt anzeigen:  
   
@@ -168,7 +168,7 @@ Paginierte Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werde
   
  In der folgenden Tabelle sind die Fehlerebenen aufgeführt.  
   
-|Fehlerebene|Beschreibung|  
+|Fehlerebene|und Beschreibung|  
 |-----------------|-----------------|  
 |0|Äußerst schwerwiegende und unvermeidliche Erstellungsprobleme, die die Vorschau und Bereitstellung von Berichten verhindern.|  
 |1|Schwere Erstellungsprobleme, die das Berichtslayout drastisch ändern.|  

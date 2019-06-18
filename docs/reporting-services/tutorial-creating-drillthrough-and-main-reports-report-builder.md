@@ -6,23 +6,23 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294739"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie zwei Arten von paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. 
 
 Die folgende Abbildung zeigt die Berichte, die Sie erstellen werden und wie der Feldwert „Games and Toys“ aus dem Hauptbericht im Titel des Drillthroughberichts angezeigt wird. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie „Games and Toys!“.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Das Tutorial erfordert Zugriff auf den Contoso Sales-Cube jeweils für den Drillthrough- und den Hauptbericht. Dieses Dataset umfasst das Data Warehouse „ContosoDW“ und die OLAP -Datenbank (Online Analytical Processing) „Contoso_Retail“. Die Berichte, die Sie in diesem Lernprogramm erstellen, rufen Berichtsdaten aus dem Contoso Sales-Cube ab. Die OLAP-Datenbank Contoso_Retail kann vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=191575)heruntergeladen werden. Sie brauchen lediglich die Datei ContosoBIdemoABF.exe herunterzuladen. Diese Datei enthält die OLAP-Datenbank.  
@@ -101,7 +101,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
   
-1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ auf die Schaltfläche **(...)**.  
+1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ auf die Schaltfläche **(...)** .  
   
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
@@ -161,7 +161,7 @@ In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten 
   
 5.  Ziehen Sie das Measure „Sales Amount“ in den Datenbereich, und legen Sie es rechts neben „Product Subcategory Name“ ab.  
   
-6.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen (!)**.  
+6.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen (!)** .  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -206,7 +206,7 @@ Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatier
   
     Die Tabelle wird der Entwurfsoberfläche hinzugefügt.  
   
-3.  Klicken Sie auf **Ausführen (!)**, um den Bericht in der Vorschau anzuzeigen.  
+3.  Klicken Sie auf **Ausführen (!)** , um den Bericht in der Vorschau anzuzeigen.  
   
 ## <a name="DFormat"></a>2. Formatieren von Daten als Währung  
 Übernehmen Sie die Währungsformatierung für die Sales Amount-Felder im Drillthroughbericht.  
@@ -392,7 +392,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
   
 #### <a name="to-create-query-filters"></a>So erstellen Sie Abfragefilter  
   
-1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ im Cubeabschnitt auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
+1.  Klicken Sie auf der Seite **Abfrage entwerfen** im Bereich „Metadaten“ im Cubeabschnitt auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
   
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
@@ -479,7 +479,7 @@ Erstellen Sie als Nächstes ein eingebettetes Dataset. Hierzu erstellen Sie mit 
   
 4.  Ziehen Sie aus Berechnete Elemente das Element „Net Sales“ in den Datenbereich, und legen Sie es rechts neben `Net QTY`ab.  
   
-5.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen (!)**.  
+5.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen (!)** .  
   
     Überprüfen Sie das Abfrageresultset.  
   
@@ -511,7 +511,7 @@ Sie können in Berichten Teil- und Gesamtergebnisse anzeigen. Die Daten im Haupt
   
 1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
-    Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die Produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Ergebnisse.  
+    Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Wenn Sie den Bericht ausführen, wird jede Zeile folgendermaßen angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die Produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Ergebnisse.  
   
 2.  Klicken Sie auf **Weiter**.  
   
@@ -587,7 +587,7 @@ Verwenden Sie Indikatoren, um den Status von Mengen und Umsätzen für Online- u
   
 4.  Klicken Sie auf den Typ **3 Zeichen** und anschließend auf **OK**.  
   
-5.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)**. Wählen Sie `Net_QTY`aus.  
+5.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)** . Wählen Sie `Net_QTY`aus.  
   
 6.  Wiederholen Sie die Schritte 2 bis 5 für die Zelle `[Sum(Net QTY)]` in der Zeilengruppe `[Product_Category_Name]` innerhalb von **Gesamt**.  
   
@@ -599,7 +599,7 @@ Verwenden Sie Indikatoren, um den Status von Mengen und Umsätzen für Online- u
   
 3.  Klicken Sie auf den Typ **3 Zeichen** und anschließend auf **OK**.  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)**. Wählen Sie `Net_Sales`aus.  
+4.  Klicken Sie mit der rechten Maustaste auf den Indikator, und klicken Sie im Bereich Messgerätdaten auf den Pfeil nach unten neben **(Keine Angabe)** . Wählen Sie `Net_Sales`aus.  
   
 5.  Wiederholen Sie die Schritte 1 bis 4 für die Zelle `[Sum(Net_Sales)]` in der Zeilengruppe `[Product_Category_Name]` innerhalb von **Gesamt**.  
   
@@ -627,7 +627,7 @@ Hinzufügen eines Titels zum Hauptbericht
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **Umsatz in 2009 in Produktkategorie: Online und Wiederverkäufer:**.  
+2.  Geben Sie **2009 Product Category Sales: Online and Reseller Category:** ein.  
   
 3.  Wählen Sie den eingegebenen Text aus.  
   

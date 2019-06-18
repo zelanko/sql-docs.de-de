@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576000"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Dateifreigabeübermittlung in Reporting Services
@@ -72,7 +72,7 @@ ms.locfileid: "65576000"
   
  **Überschreiben:** Sie können Optionen zum Überschreiben angeben, um den Dateinamen bei jeder Berichtsübermittlung oder Erstellung einer neuen Datei wiederzuverwenden. Zum Überschreiben der Datei müssen Sie den gleichen Dateinamen und die gleiche Erweiterung verwenden.  
   
- Ein andere Möglichkeit, eindeutige Dateinamen für jede Übermittlung zu erstellen, ist das Einschließen eines Timestamps in den Dateinamen. Dazu fügen Sie die **@timestamp** -Variable dem Dateinamen hinzu (z.B. *CompanySales@timestamp*). Auf diese Weise ist der Dateiname per definitionem eindeutig und wird daher niemals überschrieben.  
+ Ein andere Möglichkeit, eindeutige Dateinamen für jede Übermittlung zu erstellen, ist das Einschließen eines Timestamps in den Dateinamen. Dazu fügen Sie die **@timestamp** -Variable dem Dateinamen hinzu (z.B. *CompanySales@timestamp* ). Auf diese Weise ist der Dateiname per definitionem eindeutig und wird daher niemals überschrieben.  
   
  Die folgende Abbildung zeigt ein Beispiel der Einstellungen für ein Abonnement, für das die Dateifreigabeübermittlung konfiguriert wurde.  
   

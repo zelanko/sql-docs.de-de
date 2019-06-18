@@ -11,14 +11,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], library
 - library [Reporting Services]
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f7c4ca9eac612cd80796f5ab48ae41648f2811d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 592061a8665bf5dad30ab653f20d062bc0a54257
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193832"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services-Erweiterungsbibliothek
   Die Reporting Services-Erweiterungsbibliothek enthält eine Reihe von Klassen, Schnittstellen und Werttypen, die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] geliefert werden. Diese Bibliothek bietet Zugriff auf Systemfunktionen und wird von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Anwendungen als Grundlage für die Erweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten verwendet.  
@@ -35,7 +35,7 @@ ms.locfileid: "47844518"
  **Microsoft.ReportingServices.ReportRendering**  
  Enthält Klassen und Schnittstellen, die es Ihnen ermöglichen, die Renderingfunktionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zu erweitern. Mit den Membern dieses Namespace und den Membern des <xref:Microsoft.ReportingServices.Interfaces>-Namespace können Sie Ihre eigenen benutzerdefinierten Renderingerweiterungen für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services Extensions (Erweiterungen für Reporting Services)](../../reporting-services/extensions/reporting-services-extensions.md)  
   
   

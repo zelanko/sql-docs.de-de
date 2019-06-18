@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c125c4e1c413fd974ee80fd7f06c8c9f69f33b8d
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026171"
 ---
 # <a name="accessing-the-soap-api"></a>Accessing the SOAP API
   Der Berichtsserver-Webdienst verwendet SOAP (Simple Object Access Protocol) über HTTP und agiert als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver. Der Webdienst verfügt über zwei Endpunkte (einen für die Berichtsausführung und einen für die Berichtsverwaltung) und besteht aus Methoden und einer Reihe komplexer Typenobjekte, anhand derer Sie auf die kompletten Funktionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zugreifen können. Um den Dienst aufzurufen, müssen Sie auf die Reporting Services-WSDL (Web Services Description Language) verweisen.  
@@ -49,7 +49,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
  In der folgenden Tabelle werden die einzelnen Elemente in der URL beschrieben.  
   
-|URL-Element|Beschreibung|  
+|URL-Element|und Beschreibung|  
 |-----------------|-----------------|  
 |*server*|Der Name des Servers, auf dem der Berichtsserver eingesetzt wird.|  
 |*berichtsserver*|Der Name des Ordners, der den XML-Webdienst enthält. Dieser wird während des Setups konfiguriert.|  

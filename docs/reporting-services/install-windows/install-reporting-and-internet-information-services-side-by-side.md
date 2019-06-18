@@ -7,14 +7,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 991eefb50ec949098e132f17f2c18691f4822987
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64330628"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten
 
@@ -24,7 +24,7 @@ ms.locfileid: "51813506"
 
 Sie können SQL Server Reporting Services (SSRS) und die Internetinformationsdienste (IIS) auf dem gleichen Computer installieren und ausführen. Je nach IIS-Version treten bestimmte Interoperabilitätsprobleme auf.  
   
-|IIS-Version|Probleme|Beschreibung|  
+|IIS-Version|Probleme|und Beschreibung|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|Für eine bestimmte Anwendung vorgesehene Anforderungen werden von einer anderen Anwendung angenommen.<br /><br /> HTTP.SYS erzwingt Rangfolgeregeln für URL-Reservierungen. Anforderungen, die an Anwendungen gesendet werden, die den gleichen virtuellen Verzeichnisnamen aufweisen und gemeinsam Port 80 überwachen, erreichen möglicherweise nicht das vorgesehene Ziel, wenn die URL-Reservierung im Vergleich zur URL-Reservierung einer anderen Anwendung schwach ist.|Unter bestimmten Bedingungen empfängt ein registrierter Endpunkt, der einen anderen URL-Endpunkt im URL-Reservierungsschema außer Kraft setzt, HTTP-Anforderungen für die andere Anwendung.<br /><br /> Durch die Verwendung eindeutiger Namen für die virtuellen Verzeichnisse des Berichtsserver-Webdiensts und des [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] s kann dieser Konflikt vermieden werden.<br /><br /> Detaillierte Informationen über dieses Szenario sind in diesem Thema enthalten.|  
   
@@ -52,7 +52,7 @@ Sie können SQL Server Reporting Services (SSRS) und die Internetinformationsdie
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>URL-Reservierungen für IIS 8.0, 8.5 mit SQL Server Reporting Services  
  Anhand der im vorherigen Abschnitt beschriebenen Rangfolgeregeln wird deutlich, wie die für Reporting Services und IIS definierten URL-Reservierungen zur Interoperabilität beitragen. Reporting Services empfängt Anforderungen, die die Namen der virtuellen Verzeichnisse seiner Anwendungen explizit angeben; IIS empfängt alle verbleibenden Anforderungen, die dann an Anwendungen umgeleitet werden können, die innerhalb des IIS-Verarbeitungsmodells ausgeführt werden.  
   
-|Application|URL-Reservierung|Beschreibung|Anforderungsempfang|  
+|Application|URL-Reservierung|und Beschreibung|Anforderungsempfang|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Berichtsserver|`https://+:80/ReportServer`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "ReportServer".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "ReportServer" angeben. Der Berichtsserver-Webdienst empfängt alle Anforderungen an „https://\<Computername>/reportserver“.|  
 |Webportal|`https://+:80/Reports`|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "Reports".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "reports" angeben. Das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] empfängt alle Anforderungen an „https://\<Computername>/reports“.|  

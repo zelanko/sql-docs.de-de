@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573169"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntax für Elementpfade für XML-Berichtsdaten (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "65573169"
 |&#124; (Senkrechter Strich)|Trennt Syntaxelemente voneinander. Sie können nur eines der Elemente auswählen.|  
 |`[ ]` (eckige Klammern)|Optionale Syntaxelemente. Geben Sie die eckigen Klammern nicht mit ein.|  
 |**{ }** (geschweifte Klammern)|Begrenzt Parameter für Syntaxelemente.|  
-|[**,**...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
+|[ **,** ...*n*]|Zeigt an, dass das vorherige Element *n* -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas voneinander getrennt.|  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,7 +76,7 @@ XMLLocalName :: =
 |**ElementNode**|Der XML-Knoten im XML-Dokument. Knoten werden durch Tags gekennzeichnet und sind in einer hierarchischen Beziehung mit anderen Knoten vorhanden. Bei <Kunden\< handelt es sich beispielsweise um den Stammknoten des Elements. <Kunde\< ist ein untergeordnetes Element von <Kunden\<.|  
 |**XMLName**|Der Name des Knotens. Der Name des Knotens Customers ist beispielsweise Customers. Für **XMLName** kann ein Namespacebezeichner als Präfix verwendet werden, um jeden Knoten eindeutig zu benennen.|  
 |**Codierung**|Gibt an, dass der **Value** für dieses Element codiertes XML darstellt und decodiert werden sowie als untergeordnetes Element dieses Elements aufgenommen muss.|  
-|**FieldList**|Definiert eine Gruppe von Elementen und Attributen, die zum Abrufen von Daten verwendet werden.<br /><br /> Wenn dieses Element nicht angegeben wird, werden alle Attribute und untergeordneten Elemente als Felder verwendet. Wenn die leere Feldliste angegeben wird (**{}**), werden keine Felder von diesem Knoten verwendet.<br /><br /> Eine **FieldList** kann nicht gleichzeitig einen **Value** und ein **Element** oder einen **ElementNode**enthalten.|  
+|**FieldList**|Definiert eine Gruppe von Elementen und Attributen, die zum Abrufen von Daten verwendet werden.<br /><br /> Wenn dieses Element nicht angegeben wird, werden alle Attribute und untergeordneten Elemente als Felder verwendet. Wenn die leere Feldliste angegeben wird ( **{}** ), werden keine Felder von diesem Knoten verwendet.<br /><br /> Eine **FieldList** kann nicht gleichzeitig einen **Value** und ein **Element** oder einen **ElementNode**enthalten.|  
 |**Feld**|Gibt die Daten an, die als Datasetfeld abgerufen werden.|  
 |**Attribut**|Ein Name/Wert-Paar innerhalb von **ElementNode**. Beispielsweise handelt es sich bei **ID** im Elementknoten \<Customer ID="1"> um ein Attribut, und **@ID(Integer)** gibt „1“ als Integer-Typ im entsprechenden Datenfeld **ID** zurück.|  
 |**ReplTest1**|Der Wert des Elements. **Value** kann nur für den letzten **ElementNode** im Elementpfad verwendet werden. Da es sich beispielsweise bei \<Return> um einen Blattknoten handelt, ist der Wert von **Return {@}** **Chair**.|  

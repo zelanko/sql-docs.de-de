@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reports [Reporting Services], data
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52bc9d57540cdf3bd57e77e3da039e5e9c6d8e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 464a24e9a23103323a14140c25563e753c6c3e18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512592"
 ---
 # <a name="data-sources-and-connection-methods"></a>Datenquellen- und Verbindungsmethoden
   Mit diesen Methoden können Sie Datenquellenverbindungen und Anmeldeinformationen festlegen und verwalten.  
@@ -37,7 +37,7 @@ ms.locfileid: "47838808"
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|Testet die Verbindung für eine Datenquelle. Diese Methode unterstützt direkte Datenquellentests.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Testet die Verbindung für eine Datenquelle. Diese Methode unterstützt Tests von veröffentlichten Datenquellen, die von Berichten oder Modellen und freigegebenen Datenquellen verwendet werden.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

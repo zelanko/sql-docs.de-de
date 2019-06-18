@@ -13,10 +13,10 @@ ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d57768a580b4343fbe1e6ee2919a8161013371a4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579418"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente
@@ -25,7 +25,7 @@ ms.locfileid: "65579418"
 ## <a name="securable-items"></a>Sicherbare Elemente  
  Für die Website oder Bibliothek definierte Berechtigungen können verwendet werden, um Zugriff auf Berichtsserverelemente zu gewähren. Wenn Sie jedoch einzelne Elemente sichern möchten, können Sie Berechtigungen für die folgenden Inhaltstypen festlegen:  
   
-|Dateityp|Beschreibung|  
+|Dateityp|und Beschreibung|  
 |---------------|-----------------|  
 |RDL|Eine Berichtsdefinitionsdatei, die das Berichtslayout und die zum Abrufen von Daten verwendeten Befehle definiert. Eine Berichtsdefinition verwendet Datenquellen-Verbindungsinformationen, um beim Verarbeiten des Berichts Daten abzurufen. Wenn es sich bei der Berichtsdefinition um einen im Berichts-Generator erstellten Ad-hoc-Bericht handelt, wird dem Bericht eine Berichtsmodelldatei (SMDL) zugeordnet, in der der Gültigkeitsbereich für das Durchsuchen der Daten im gerenderten Bericht festgelegt wird.|  
 |SMDL|Eine Berichtsmodelldatei, in der Datenstrukturen und ihre Beziehungen beschrieben werden. Sie wird zum Erstellen und Ausführen von Berichten des Berichts-Generators verwendet.|  

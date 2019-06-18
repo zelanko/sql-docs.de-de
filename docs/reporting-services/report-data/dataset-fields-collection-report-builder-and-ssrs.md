@@ -9,10 +9,10 @@ ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a893a9a25f4ad19dcc71f538b62110b5838fa3ee
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573156"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Datasetfeldauflistung (Berichts-Generator und SSRS)
@@ -89,7 +89,7 @@ ms.locfileid: "65573156"
   
      Die Datentypen, die der Berichtsprozessor für die neuen Datums- und Uhrzeittypen verwendet, die mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführt werden, sind in der folgenden Tabelle aufgeführt:  
   
-    |SQL-Datentyp|CLR-Datentyp|Beschreibung|  
+    |SQL-Datentyp|CLR-Datentyp|und Beschreibung|  
     |-------------------|-------------------|-----------------|  
     |**Datum**|**DateTime**|Nur Datum|  
     |**Time**|**TimeSpan**|Nur Uhrzeit|  

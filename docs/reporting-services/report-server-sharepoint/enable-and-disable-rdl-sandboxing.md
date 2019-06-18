@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577770"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Aktivieren und Deaktivieren von RDL-Sandkasten für Reporting Services im integrierten SharePoint-Modus
@@ -33,7 +33,7 @@ Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdef
 
  Bei Aktivierung des RDL-Sandboxing werden die folgenden Funktionen deaktiviert:  
   
--   Benutzerdefinierter Code im **\<Code>**-Element einer Berichtsdefinition.  
+-   Benutzerdefinierter Code im **\<Code>** -Element einer Berichtsdefinition.  
   
 -   RDL-Abwärtskompatibilitätsmodus für benutzerdefinierte Berichtselemente von [!INCLUDE[ssRSversion2005](../../includes/ssrsversion2005-md.md)] .  
   
@@ -65,7 +65,7 @@ Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdef
 
  Die folgende Tabelle enthält Informationen zu Konfigurationseinstellungen. Diese Einstellungen werden in der Reihenfolge aufgeführt, in der sie in der Konfigurationsdatei angezeigt werden.  
   
-|Einstellung|Beschreibung|  
+|Einstellung|und Beschreibung|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
 |**MaxResourceSize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  
@@ -74,9 +74,9 @@ Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdef
 |**Typen**|Die Liste der Elemente, die innerhalb von RDL-Ausdrücken zugelassen sind.|  
 |**Allow**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
 |**Namespace**|Attribut für **Erlauben** , das den Namespace darstellt, der mindestens einen gültigen Typ für Value enthält. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|**AllowNew**|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL-**\<Class>**-Element erstellt werden dürfen.<br /><br /> Wenn **RDLSandboxing** aktiviert ist, können in RDL-Ausdrücken keine neuen Arrays erstellt werden, unabhängig von der Einstellung von **AllowNew**.|  
+|**AllowNew**|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL- **\<Class>** -Element erstellt werden dürfen.<br /><br /> Wenn **RDLSandboxing** aktiviert ist, können in RDL-Ausdrücken keine neuen Arrays erstellt werden, unabhängig von der Einstellung von **AllowNew**.|  
 |**ReplTest1**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|**Elemente**|Für die Liste der Typen, die im **\<Types>**-Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
+|**Elemente**|Für die Liste der Typen, die im **\<Types>** -Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
 |**Verweigern**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für keinen Typ zugelassen.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Arbeiten mit Ausdrücken bei aktiviertem RDL-Sandkasten
@@ -106,7 +106,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
 -   Die [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** method.  
   
--   Das **\<Classes>**-Element in der Berichtsdefinition  
+-   Das **\<Classes>** -Element in der Berichtsdefinition  
   
 -   Elemente, die Sie der Sperrliste für einen Typ in der Zulassungsliste hinzugefügt haben.  
   
@@ -120,7 +120,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
  Um ein Element eines Typs zu aktivieren, aber ein Element mit dem gleichen Namen für einen anderen Typ zu verweigern, gehen Sie wie folgt vor:  
   
--   Fügen Sie ein **\<Deny>**-Element für den Elementnamen hinzu.  
+-   Fügen Sie ein **\<Deny>** -Element für den Elementnamen hinzu.  
   
 -   Erstellen Sie ein Proxyelement mit einem anderen Namen für eine Klasse in einer benutzerdefinierten Assembly für das Element, das Sie aktivieren möchten.  
   
@@ -128,7 +128,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
  Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen für .NET Framework hinzuzufügen, fügen Sie die entsprechenden Typen aus dem Namespace „Microsoft.VisualBasic“ zur Zulassungsliste hinzu.  
   
- Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Fügen Sie dem **\<RDLSandboxing>**-Element das folgende XML-Fragment hinzu, um beispielsweise das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Schlüsselwort **Integer** für .NET Framework zu verwenden:  
+ Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Fügen Sie dem **\<RDLSandboxing>** -Element das folgende XML-Fragment hinzu, um beispielsweise das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Schlüsselwort **Integer** für .NET Framework zu verwenden:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -158,7 +158,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
 ### <a name="working-with-operators-and-new"></a>Arbeiten mit Operatoren und „New“
 
- Standardmäßig werden [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Sprachoperatoren für .NET Framework außer **New**immer zugelassen. Der **New**-Operator wird vom **AllowNew**-Attribut des **\<Allow>**-Elements gesteuert. Andere Sprachoperatoren, wie z. B. der standardmäßige Auflistungsungsaccessoroperator **!** und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Umwandlungsmakros von .NET Framework wie **CInt**sind immer zulässig.  
+ Standardmäßig werden [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Sprachoperatoren für .NET Framework außer **New**immer zugelassen. Der **New**-Operator wird vom **AllowNew**-Attribut des **\<Allow>** -Elements gesteuert. Andere Sprachoperatoren, wie z. B. der standardmäßige Auflistungsungsaccessoroperator **!** und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Umwandlungsmakros von .NET Framework wie **CInt**sind immer zulässig.  
   
  Das Hinzufügen von Operatoren, einschließlich benutzerdefinierter Operatoren, zu einer Sperrliste wird nicht unterstützt. Um Operatoren für einen Typ auszuschließen, gehen Sie wie folgt vor:  
   

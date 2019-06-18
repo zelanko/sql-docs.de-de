@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581287"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
@@ -90,9 +90,9 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Globale Variablen werden mit den vorliegenden Namen erstellt und auf die bereitgestellten Werte festgelegt. Durch Angeben von **-v a=**"**1**" **-v b=**"**2**" werden beispielsweise eine Variable namens **a** mit dem Wert**1**und eine Variable **b** mit dem Wert**2**erstellt.  
+ Globale Variablen werden mit den vorliegenden Namen erstellt und auf die bereitgestellten Werte festgelegt. Durch Angeben von **-v a=** "**1**" **-v b=** "**2**" werden beispielsweise eine Variable namens **a** mit dem Wert**1**und eine Variable **b** mit dem Wert**2**erstellt.  
   
- Globale Variablen stehen für alle Funktionen im Skript zur Verfügung. Eine Kombination von umgekehrtem Schrägstrich und einem Anführungszeichen (**\\"**) wird als Anführungszeichen interpretiert. Anführungszeichen sind nur erforderlich, wenn die Zeichenfolge ein Leerzeichen enthält. Namen von Variablen müssen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]gültig sein. Sie müssen mit einem Buchstaben oder Unterstrich beginnen und dürfen ausschließlich Buchstaben, Ziffern oder Unterstriche enthalten. Reservierte Wörter können nicht als Variablennamen verwendet werden. Weitere Informationen zur Verwendung globaler Variablen finden Sie unter [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+ Globale Variablen stehen für alle Funktionen im Skript zur Verfügung. Eine Kombination von umgekehrtem Schrägstrich und einem Anführungszeichen ( **\\"** ) wird als Anführungszeichen interpretiert. Anführungszeichen sind nur erforderlich, wenn die Zeichenfolge ein Leerzeichen enthält. Namen von Variablen müssen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]gültig sein. Sie müssen mit einem Buchstaben oder Unterstrich beginnen und dürfen ausschließlich Buchstaben, Ziffern oder Unterstriche enthalten. Reservierte Wörter können nicht als Variablennamen verwendet werden. Weitere Informationen zur Verwendung globaler Variablen finden Sie unter [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
  (Optional) Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  

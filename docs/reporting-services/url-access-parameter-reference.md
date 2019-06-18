@@ -12,10 +12,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620596"
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
@@ -224,7 +224,7 @@ ms.locfileid: "65620596"
   
      Der Standardwert ist **HTML5**. Weitere Informationen finden Sie unter [Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md).  
   
-     Eine vollständige Liste finden Sie im Abschnitt **\<Render>**-Erweiterung der Datei „rsreportserver.config“ auf dem Berichtsserver.  Weitere Informationen zum Auffinden der Datei finden Sie unter [RSReportServer.config-Konfigurationsdatei](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+     Eine vollständige Liste finden Sie im Abschnitt **\<Render>** -Erweiterung der Datei „rsreportserver.config“ auf dem Berichtsserver.  Weitere Informationen zum Auffinden der Datei finden Sie unter [RSReportServer.config-Konfigurationsdatei](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
      Um beispielsweise von einem im **einheitlichen** Modus ausgeführten Berichtsserver direkt eine PDF-Kopie eines Berichts abzurufen, geben Sie Folgendes an:  
   
@@ -276,7 +276,7 @@ ms.locfileid: "65620596"
                   Schaltet das Ein-/Ausblenden eines Abschnitts im Bericht um. Geben Sie eine positive ganze Zahl an, um den Abschnitt anzugeben, der umgeschaltet werden soll.  
   
 ##  <a name="bkmk_webpart"></a> Befehle des Berichts-Viewer-Webparts (rv:)  
- Die folgenden reservierten Berichtsparameternamen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden zum Auswählen des in SharePoint integrierten Berichts-Viewer-Webparts verwendet. Diese Parameternamen haben das Präfix *rv:*. Für Berichts-Viewer-Webparts kann auch der *rs:ParameterLanguage* -Parameter verwendet werden.  
+ Die folgenden reservierten Berichtsparameternamen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] werden zum Auswählen des in SharePoint integrierten Berichts-Viewer-Webparts verwendet. Diese Parameternamen haben das Präfix *rv:* . Für Berichts-Viewer-Webparts kann auch der *rs:ParameterLanguage* -Parameter verwendet werden.  
   
 -   *Symbolleiste*: Steuert die Symbolleistenanzeige des Bericht-Viewer-Webparts. Der Standardwert ist **Full**. Folgende Werte sind möglich:  
   

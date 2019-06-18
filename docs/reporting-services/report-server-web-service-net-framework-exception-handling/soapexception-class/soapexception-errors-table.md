@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2aec981adb3f0c1c71130dd1c60769ef89d3c6be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 95427ddaa6d220afe3397a138f9b5baa085f324d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741408"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991543"
 ---
 # <a name="soapexception-errors-table"></a>Tabelle für SoapException-Fehler
   Der Berichtsserver generiert die Fehler und Fehlermeldungen in der SOAP-Ausnahme ausgehend von Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]auftreten. In folgender Tabelle sehen Sie die Fehler, die über Methoden durch eine **SoapException** im Berichtsserver-Webdienst zugänglich sind. Die Tabelle ist nach den Methoden geordnet, die die Ausnahme auslösen.  
@@ -97,7 +97,7 @@ ms.locfileid: "47741408"
 |**CancelJob**|**rsJobWasCanceled**|  
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Introducing Exception Handling in Reporting Services (Einführung in die Ausnahmebehandlung in Reporting Services)](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Fehler- und Ereignisreferenz (Reporting Services)](../../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)   
  [SoapException-Klasse von Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   

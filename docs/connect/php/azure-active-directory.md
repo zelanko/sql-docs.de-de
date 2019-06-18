@@ -12,11 +12,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: mbarwin
 ms.openlocfilehash: 30423cd7c15a920d99fad4c0ea08e074beaece0b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522798"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "56828050"
 
 Um Azure AD verwenden möchten, verwenden die **Authentifizierung** oder **AccessToken** Schlüsselwörter (sie sind sich gegenseitig ausschließende), wie in der folgenden Tabelle dargestellt. Weitere technische Informationen finden Sie unter [mithilfe von Azure Active Directory mit dem ODBC-Treiber](../../connect/odbc/using-azure-active-directory.md).
 
-|Schlüsselwort|Werte|Beschreibung|
+|Schlüsselwort|Werte|und Beschreibung|
 |-|-|-|
 |**AccessToken**|Nicht festgelegt (Standard)|Der Authentifizierungsmodus durch andere Schlüsselwörter bestimmt. Weitere Informationen finden Sie unter [Connection Options](../../connect/php/connection-options.md). |
 ||Eine Byte-Zeichenfolge|Azure AD Access Token aus einem OAuth-JSON-Antwort extrahiert. Die Verbindungszeichenfolge darf keine Benutzer-ID, Kennwort oder das Schlüsselwort für die Authentifizierung (erfordert ODBC Driver, Version 17 oder höher unter Linux oder MacOS). |
@@ -34,7 +34,7 @@ Um Azure AD verwenden möchten, verwenden die **Authentifizierung** oder **Acces
 ||`ActiveDirectoryPassword`|Authentifizieren Sie mit einer Azure Active Directory-Identität mit einem Benutzernamen und Kennwort ein. Benutzername und Kennwort müssen in die Verbindungszeichenfolge mithilfe übergeben werden die **UID** und **PWD** Schlüsselwörter. |
 ||`ActiveDirectoryMsi`|Authentifizieren mit einer vom System zugewiesene verwaltete Identität oder eine vom Benutzer zugewiesene verwaltete Identität (ODBC-Treiber Version 17.3.1.1 erfordert oder höher). Eine Übersicht über und Lernprogramme finden Sie unter [neuerungen von verwalteten Identitäten für Azure-Ressourcen?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
 
-Die **Authentifizierung** Schlüsselwort hat Einfluss auf die Einstellungen der verbindungssicherheit. Wenn sie in der Verbindungszeichenfolge aus, und klicken Sie dann in der Standardeinstellung festgelegt ist die **Encrypt** Schlüsselwort auf true festgelegt, was bedeutet, dass der Client fordert Verschlüsselung festgelegt ist. Das Serverzertifikat wird außerdem unabhängig von der die verschlüsselungseinstellung überprüft werden, es sei denn, **TrustServerCertificate** wird festgelegt auf "true" (**"false"** standardmäßig). Dieses Feature wird von der alten, weniger sichere Login-Methode, Unterschieden in der das Serverzertifikat überprüft wird, nur bei der Verschlüsselung in der Verbindungszeichenfolge explizit angefordert wird.
+Die **Authentifizierung** Schlüsselwort hat Einfluss auf die Einstellungen der verbindungssicherheit. Wenn sie in der Verbindungszeichenfolge aus, und klicken Sie dann in der Standardeinstellung festgelegt ist die **Encrypt** Schlüsselwort auf true festgelegt, was bedeutet, dass der Client fordert Verschlüsselung festgelegt ist. Das Serverzertifikat wird außerdem unabhängig von der die verschlüsselungseinstellung überprüft werden, es sei denn, **TrustServerCertificate** wird festgelegt auf "true" ( **"false"** standardmäßig). Dieses Feature wird von der alten, weniger sichere Login-Methode, Unterschieden in der das Serverzertifikat überprüft wird, nur bei der Verschlüsselung in der Verbindungszeichenfolge explizit angefordert wird.
 
 Bei der Verwendung von Azure AD mit den PHP-Treibern für SQL Server unter Windows möglicherweise Sie werden aufgefordert, installieren Sie die [Microsoft Online Services-Anmeldeassistent](https://www.microsoft.com/download/details.aspx?id=41950) (nicht für ODBC 17 + erforderlich).
 

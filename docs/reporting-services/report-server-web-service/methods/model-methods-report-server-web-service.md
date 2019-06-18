@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
 ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a6800914614ba495eb56ff38beaf7749aaa10976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: baecfdb1baef4fbfcc50f2e18e4e898325f31e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284557"
 ---
 # <a name="model-methods---report-server-web-service"></a>Modellmethoden – Berichtsserver-Webdienst
   Sie können Modelle mithilfe dieser Methoden verwalten.  
@@ -34,7 +34,7 @@ ms.locfileid: "47623299"
 |<xref:ReportService2010.ReportingService2010.SetModelDrillthroughReports%2A>|Ordnet mehrere Drillthroughberichte einem Modell zu.|  
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|Legt Sicherheitsrichtlinien für ein Modellelement fest.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

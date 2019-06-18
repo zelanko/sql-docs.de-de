@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573812"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError – Reporting Services-Fehler
@@ -98,9 +98,9 @@ ms.locfileid: "65573812"
   
 -   Die Verarbeitung von *\<Berichtselementtyp>* kann für *\<Berichtselementname>* nicht ausgeführt werden. Daten der Typen *\<Typ>* und *\<Typ>* können nicht verglichen werden. Überprüfen Sie den von *\<Berichtselementname>* zurückgegebenen Datentyp.  
   
--   Fehler beim Auswerten von *\<Eigenschaftenname>*.  
+-   Fehler beim Auswerten von *\<Eigenschaftenname>* .  
   
--   Fehler beim Auswerten von *\<Eigenschaftenname>*. Es wird auf ein Datasetfeld verwiesen, das einen Fehler aufweist: *\<Fehlerzeichenfolge>*.  
+-   Fehler beim Auswerten von *\<Eigenschaftenname>* . Es wird auf ein Datasetfeld verwiesen, das einen Fehler aufweist: *\<Fehlerzeichenfolge>* .  
   
  Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -111,11 +111,11 @@ ms.locfileid: "65573812"
   
 -   Der *\<Berichtselementtyp>* *\<Berichtselementname>* weist einen ungültigen Bereich *\<Bereichsname>* auf. Der Bereich muss der aktuelle Bereich sein oder im aktuellen Bereich enthalten sein.  
   
--   Der *\<Eigenschaftenname>*-Ausdruck für *\<Berichtselementtyp>* „*\<Berichtselementname>*“ weist einen Bereichsparameter auf, der für eine Aggregatfunktion nicht gültig ist. Der Bereichsparameter muss auf eine Zeichenfolgenkonstante festgelegt sein, die einem der folgenden Werte entspricht: dem Namen einer enthaltenden Gruppe, dem Namen eines enthaltenden Datenbereichs oder dem Namen eines Datasets.  
+-   Der *\<Eigenschaftenname>* -Ausdruck für *\<Berichtselementtyp>* „ *\<Berichtselementname>* “ weist einen Bereichsparameter auf, der für eine Aggregatfunktion nicht gültig ist. Der Bereichsparameter muss auf eine Zeichenfolgenkonstante festgelegt sein, die einem der folgenden Werte entspricht: dem Namen einer enthaltenden Gruppe, dem Namen eines enthaltenden Datenbereichs oder dem Namen eines Datasets.  
   
  Für Aggregatfunktionen, die laufende Summen berechnen (**Previous**, **RunningValue**oder **RowNumber**), können Sie einen Bereichsparameter angeben, bei dem es sich entweder um einen Zeilengruppennamen oder einen Spaltengruppennamen handelt. Beides ist nicht möglich. Dies gilt für die folgende Fehlermeldung:  
   
--   Die **Previous**-, **RunningValue**- oder **RowNumber**-Aggregatfunktionen, die in den Datenzellen von *\<Berichtselementtyps>* „*\<Berichtselementname>*“ verwendet wurden, verweisen auf Gruppierungsbereiche in den Spalten und Zeilen von *\<Berichtselementtyp>*. Die Bereichsparameter aller **Previous**-, **RunningValue**- und **RowNumber**-Aggregatfunktionen in einem *\<Berichtselementtyp>* können nur auf Zeilen- oder Datenspaltengruppierungen, aber nicht auf beide Gruppierungen verweisen.  
+-   Die **Previous**-, **RunningValue**- oder **RowNumber**-Aggregatfunktionen, die in den Datenzellen von *\<Berichtselementtyps>* „ *\<Berichtselementname>* “ verwendet wurden, verweisen auf Gruppierungsbereiche in den Spalten und Zeilen von *\<Berichtselementtyp>* . Die Bereichsparameter aller **Previous**-, **RunningValue**- und **RowNumber**-Aggregatfunktionen in einem *\<Berichtselementtyp>* können nur auf Zeilen- oder Datenspaltengruppierungen, aber nicht auf beide Gruppierungen verweisen.  
   
  Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) und [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

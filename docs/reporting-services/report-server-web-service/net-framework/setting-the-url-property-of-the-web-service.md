@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b9f156fed4f83bfb385f70198ba69feaa0883d8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 13fc37cd6b0b7396196ad8f514ec34fb9b317a16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812503"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128835"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Festlegen der URL-Eigenschaft des Webdiensts
-  Sie können die Basis-URL des Berichtsserver-Webdiensts, auf den Ihre Anwendung derzeit weiterleitet, jederzeit in Ihren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen ändern. Hierzu legen Sie einfach die **Url**-Eigenschaft des Dienstobjekts fest. Zum Beispiel:  
+  Sie können die Basis-URL des Berichtsserver-Webdiensts, auf den Ihre Anwendung derzeit weiterleitet, jederzeit in Ihren [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Anwendungen ändern. Hierzu legen Sie einfach die **Url**-Eigenschaft des Dienstobjekts fest. Beispiel:  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -104,7 +104,7 @@ class Sample
   
  Weitere Informationen zum Erstellen des ersten Webdienst-Proxys finden Sie unter [Erstellen des Webdienstproxys](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

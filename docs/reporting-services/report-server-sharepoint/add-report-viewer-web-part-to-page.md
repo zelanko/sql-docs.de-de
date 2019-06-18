@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574790"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Hinzufügen des Webparts des Berichts-Viewers für SQL Server Reporting Services zu einer SharePoint-Seite
@@ -56,7 +56,7 @@ Führen Sie folgende Schritte aus, um das Webpart zu konfigurieren, das auf eine
 
     ![Bearbeiten Sie die Webseite über die Dropdownliste des Webparts.](media/sharepoint-edit-web-part.png)
 
-2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Die URL sollte in etwa wie folgt aussehen: *https://myrsserver/reportserver*.
+2. Geben Sie die **Berichtsserver-URL** des Berichtsserver ein, der Ihren Bericht hostet. Die URL sollte in etwa wie folgt aussehen: *https://myrsserver/reportserver* .
 
 3. Geben Sie den Pfad und den Namen des Berichts an, den Sie im Webpart anzeigen möchten. Dies sollte in etwa wie folgt aussehen: */AdventureWorks Sample Reports/Company Sales*. In diesem Beispiel befindet sich der Bericht *Company Sales* (Firmenumsatz) in einem Ordner mit der Bezeichnung *AdventureWorks Sample Reports* (AdventureWorks-Beispielberichte).
 

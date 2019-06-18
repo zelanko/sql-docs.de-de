@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], methods
 - methods [Reporting Services], scheduling
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 387be09d03396c0bacb4d282ff2b6abdbaa9c4d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284441"
 ---
 # <a name="scheduling-methods"></a>Zeitplanmethoden
   Sie können diese Methoden verwenden, um freigegebene Zeitpläne für die Berichtsausführung und -übermittlung zu erstellen und zu verwalten und die vom Berichtsserver verwendeten Aktualisierungspläne zwischenzuspeichern.  
@@ -40,7 +40,7 @@ ms.locfileid: "47856778"
 |<xref:ReportService2010.ReportingService2010.SetCacheRefreshPlanProperties%2A>|Legt die Eigenschaften eines Cacheaktualisierungsplans fest.|  
 |<xref:ReportService2010.ReportingService2010.SetScheduleProperties%2A>|Legt den Wert der Eigenschaften eines freigegebenen Zeitplans fest.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

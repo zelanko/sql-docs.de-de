@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: bf6b699c7ff8830d1f74d14a077a4d0cb4e68116
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62723475"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL-Eingabeaufforderungs-Hilfsprogramme (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ Informationen zu den *main* SQL-gui und Befehlszeilentools, finden Sie unter [Ü
 |*Kursiv*|Vom Benutzer angegebene Parameter.|  
 |**Fett**|Befehle, Parameter und sonstige Syntaxelemente, die genau wie angezeigt eingegeben werden müssen.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikationsverteilungs-Agent](../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Replikationsprotokolllese-Agent](../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Replikationsmerge-Agent](../relational-databases/replication/agents/replication-merge-agent.md)   

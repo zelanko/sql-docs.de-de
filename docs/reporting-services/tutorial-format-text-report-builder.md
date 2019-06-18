@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042973"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
 
@@ -111,7 +111,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
     UNION SELECT CAST('2015-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Reporting Services (SSRS)' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Klicken Sie auf „Ausführen“ (**!**), um die Abfrage auszuführen.  
+7.  Klicken Sie auf „Ausführen“ ( **!** ), um die Abfrage auszuführen.  
   
     Bei den Abfrageergebnissen handelt es sich um die Daten, die im Bericht angezeigt werden können.  
   
@@ -179,7 +179,7 @@ Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an eine
   
 1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Tabelle** > **Tabellen-Assistent**.  
   
-2.  Klicken Sie auf der Seite **Dataset auswählen** des Assistenten für neue Tabellen oder Matrizen auf **Vorhandenes Dataset in diesem Bericht oder einem freigegebenen Dataset auswählen** > **TextDataset (in diesem Bericht)** > **Weiter**.  
+2.  Klicken Sie auf der Seite **Dataset auswählen** des Assistenten für neue Tabellen oder Matrizen auf **Vorhandenes Dataset in diesem Bericht oder einem freigegebenen Dataset auswählen** > **TextDataset (in diesem Bericht)**  > **Weiter**.  
   
 3.  Ziehen Sie auf der Seite **Felder anordnen** die Felder **Territory**, **LinkText**und **Product** nach **Zeilengruppen**, ziehen Sie das Feld **Sales** nach **Werte**, und klicken Sie anschließend auf **Weiter**.  
 
@@ -254,7 +254,7 @@ In diesem Abschnitt drehen Sie Text in der Tabelle aus den vorherigen Abschnitte
    
 6.  Klicken Sie auf der Registerkarte **Home** in der Gruppe **Absatz** auf die Schaltflächen **Mitte** und **Zentriert**, um den Text sowohl vertikal als auch horizontal im Mittelpunkt der Zelle zu platzieren.  
   
-8.  Klicken Sie auf (**!**).  
+8.  Klicken Sie auf ( **!** ).  
   
 Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von unten nach oben.  
 
@@ -274,7 +274,7 @@ Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von un
   
 5.  (Optional) Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** zweimal auf die Schaltfläche **Dezimalstellen verringern** , um volle Dollarbeträge ohne Centangaben anzuzeigen.  
   
-6.  Klicken Sie auf „Ausführen“ (**!**), um eine Vorschau des Berichts anzuzeigen.  
+6.  Klicken Sie auf „Ausführen“ ( **!** ), um eine Vorschau des Berichts anzuzeigen.  
   
 Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verbessert.  
 
@@ -316,7 +316,7 @@ Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verb
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Klicken Sie auf „Ausführen“ (**!**), um eine Vorschau des Berichts anzuzeigen.  
+8.  Klicken Sie auf „Ausführen“ ( **!** ), um eine Vorschau des Berichts anzuzeigen.  
   
 Der Text im Textfeld wird als Überschrift, Absatz und Aufzählung angezeigt.  
   

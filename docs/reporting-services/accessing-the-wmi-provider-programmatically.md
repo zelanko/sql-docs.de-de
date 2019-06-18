@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 11bbbfd015377186c97e4f8229de5cdbe8919b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8196e045704adedbf235fcba566ba22b009536f7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704582"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Programmgesteuerter Zugriff auf den WMI-Anbieter
 
 ## <a name="wmi-provider-overview"></a>Übersicht über WMI-Anbieter  
- Der Namespace, mit dem die Informationen zu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in den in diesem Thema gezeigten Codebeispielen abgerufen werden, ist der **System.Management**-Namespace, der in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] gefunden wurde. Der **System.Management**-Namespace enthält mehrere verwalteter Codeklassen, über die [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-Anwendungen auf Verwaltungsdaten zugreifen und diese bearbeiten können. Weitere Informationen zur Verwendung der Reporting Services-WMI-Klassen mit dem **System.Management**-Namespace finden Sie unter „Zugriff auf Verwaltungsinformationen mit System.Management“ im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK.  
+ Der Namespace, mit dem die Informationen zu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in den in diesem Thema gezeigten Codebeispielen abgerufen werden, ist der **System.Management** -Namespace, der in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]gefunden wurde. Der **System.Management**-Namespace enthält mehrere verwalteter Codeklassen, über die [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-Anwendungen auf Verwaltungsdaten zugreifen und diese bearbeiten können. Weitere Informationen zur Verwendung der Reporting Services-WMI-Klassen mit dem **System.Management** -Namespace finden Sie unter "Zugriff auf Verwaltungsinformationen mit System.Management" im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -SDK.  
   
 ## <a name="finding-a-report-server-instance"></a>Suchen einer Berichtsserverinstanz  
  Die bevorzugte Art der Suche nach Informationen auf Ihren Berichtsserverinstallationen besteht im Durchlaufen der WMI-Instanzenauflistung. Im nachstehenden Beispiel sehen Sie, wie Eigenschaften auf jeder Berichtsserverinstanz gesucht werden: Es wird eine Auflistung erstellt, die zum Anzeigen der Eigenschaften immer wieder durchlaufen wird.  
@@ -123,7 +123,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Zugreifen auf den Reporting Services-WMI-Anbieter](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
  [RsReportServer.config Configuration File (RSReportServer.config-Konfigurationsdatei)](../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   

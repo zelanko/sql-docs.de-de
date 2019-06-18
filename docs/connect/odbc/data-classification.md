@@ -14,11 +14,11 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211489"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637444"
 ---
 # <a name="data-classification"></a>Datenklassifizierung
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -79,7 +79,7 @@ Bei einem erfolgreichen Aufruf SQLGetDescField, der Puffer verweist *ValuePtr* e
 
  `nn nn [n sensitivityprops]`
 
-Für jede Spalte *(c)*, *n* 4-Byte- *`sensitivityprops`* vorhanden sind:
+Für jede Spalte *(c)* , *n* 4-Byte- *`sensitivityprops`* vorhanden sind:
 
  `ss ss tt tt`
 

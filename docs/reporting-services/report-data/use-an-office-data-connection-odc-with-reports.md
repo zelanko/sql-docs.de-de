@@ -13,10 +13,10 @@ ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574948"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Verwenden einer Office Data Connection (.odc) mit Berichten
@@ -90,7 +90,7 @@ ms.locfileid: "65574948"
   
 10. Wenn für den Bericht benutzerdefinierte Datenquelleninformationen verwendet werden, klicken Sie auf **Freigegeben**.  
   
-11. Klicken Sie unter **Datenquellenlink**auf die Schaltfläche zum Durchsuchen (**...**).  
+11. Klicken Sie unter **Datenquellenlink**auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 12. Wählen Sie die von Ihnen soeben hochgeladene ODC-Datei aus.  
   

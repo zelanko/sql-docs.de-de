@@ -14,10 +14,10 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574717"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "65574717"
 ### <a name="row-and-column-handles"></a>Zeilen- und Spaltenhandles  
  Wenn Sie einen Tablix-Datenbereich auswählen, geben die Grafiken der Zeilen- und Spaltenhandles den Zweck der jeweiligen Zeile bzw. Spalte an. Handles geben Zeilen und Spalten an, die sich in einer Gruppe oder außerhalb einer Gruppe befinden. In der folgenden Tabelle wird eine Vielzahl angezeigter Handles aufgelistet.  
   
-|Symbol|Beschreibung|  
+|Symbol|und Beschreibung|  
 |----------|-----------------|  
 |![Zeilenziehpunkt mit drei parallelen Linien für Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Row handle with 3 parallel lines for details row")|Nur die Detailgruppe in der Zeilengruppenhierarchie|  
 |![Zeilenziehpunkt mit Detailzeile und einer äußeren Gruppe](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Row handle with details row and one outer group")|Eine äußere Gruppe und die untergeordnete Detailgruppe|  
@@ -104,7 +104,7 @@ ms.locfileid: "65574717"
  In Zellen im Tablix-Textbereich können Detaildaten angezeigt werden, wenn sich die jeweilige Zelle in einer Detailzeile bzw. -spalte befindet. In der Zelle können aggregierte Gruppendaten angezeigt werden, wenn sie sich in einer Gruppenzeile oder -spalte befindet. Der Gültigkeitsbereich für die Daten in einer Zelle wird durch die Schnittmenge der innersten Zeilengruppe und der innersten Spaltengruppe gebildet, zu denen die Zelle gehört.  
   
 > [!NOTE]  
->  Die tatsächlich für eine Zelle angezeigten Daten stellen den ausgewerteten Ausdruck für das Berichtselement dar, das in der Zelle enthalten ist (i. d. R. ein Textfeld). In einer Zelle, die zu einer Detailzeile oder -spalte gehört, entspricht der Ausdruck standardmäßig den Detaildaten (z.B. **[LineTotal]**). In einer Zelle, die nicht zu einer Detailzeile oder -spalte gehört, entspricht der Ausdruck standardmäßig einer Aggregatfunktion (z.B. **Sum[LineTotal]**). Wenn ein Ausdruck keine Aggregatfunktion angibt, obwohl die Zelle zu einer Gruppenzeile oder -spalte gehört, wird der erste Wert in der Gruppe angezeigt. Weitere Informationen zu Aggregaten finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Die tatsächlich für eine Zelle angezeigten Daten stellen den ausgewerteten Ausdruck für das Berichtselement dar, das in der Zelle enthalten ist (i. d. R. ein Textfeld). In einer Zelle, die zu einer Detailzeile oder -spalte gehört, entspricht der Ausdruck standardmäßig den Detaildaten (z.B. **[LineTotal]** ). In einer Zelle, die nicht zu einer Detailzeile oder -spalte gehört, entspricht der Ausdruck standardmäßig einer Aggregatfunktion (z.B. **Sum[LineTotal]** ). Wenn ein Ausdruck keine Aggregatfunktion angibt, obwohl die Zelle zu einer Gruppenzeile oder -spalte gehört, wird der erste Wert in der Gruppe angezeigt. Weitere Informationen zu Aggregaten finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Zusammenführen und Teilen von Zellen  
  In einem Tablix-Bereich können Sie mehrere angrenzende Zellen zusammenführen. Sie können z. B. Zellen für Bezeichnungen erstellen, die sich über mehrere Spalten oder Zeilen erstrecken.  

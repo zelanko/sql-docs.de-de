@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5b84e2bf86ad41ffca05af115470fd23d2aef95f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6089e521e5b5fb5015816d2d18ce5a885a4c3327
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193798"
 ---
 # <a name="implementing-a-security-extension"></a>Implementieren von Sicherheitserweiterungen
   Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Authentifizierung ist das primäre System zum Sichern von Berichten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In bestimmten Fällen kann es jedoch sein, dass Sie das [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Sicherheitssystem erweitern müssen, um benutzerdefinierte Sicherheitsfunktionen in Ihr Unternehmen zu integrieren. Hierzu verwenden Sie die Entwicklungsplattform, die von der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-API zur Verfügung gestellt wird. In diesem Abschnitt finden Sie eine Übersicht der Sicherheitserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "50030319"
  [Authorization in Reporting Services (Autorisierung in Reporting Services)](../../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
  Beschreibt die Autorisierung in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.ReportingServices.Interfaces>   
  [Erweiterungen für Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../../../reporting-services/extensions/reporting-services-extension-library.md)  

@@ -11,10 +11,10 @@ ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573937"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Katalogelemente löschen (Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "65573937"
   
  Einen Löschvorgang können Sie nicht rückgängig machen. Wenn Sie ein bereits gelöschtes Element wiederherstellen möchten, müssen Sie dieses entweder erneut erstellen oder eine Sicherungskopie der Berichtsserver-Datenbank wiederherstellen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Name**  
  Gibt den Namen des Elements an, das Sie gerade löschen.  
   

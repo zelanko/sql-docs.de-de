@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581385"
 ---
 # <a name="report-server-service-trace-log"></a>Berichtsserverdienst-Ablaufverfolgungsprotokoll
@@ -101,9 +101,9 @@ Ein Ablaufverfolgungsprotokoll enthält folgende Felder:
 ## <a name="previous-versions"></a>Vorgängerversionen
 
 In vorherigen Releases von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]waren mehrere Ablaufverfolgungs-Protokolldateien vorhanden, eine pro Anwendung. Die folgenden Dateien sind veraltet und werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen nicht mehr erstellt:
-+ ReportServerWebApp_*\<Zeitstempel>*.log
-+ ReportServer_*\<Zeitstempel>*.log
-+ ReportServerService_main_*\<Zeitstempel>*.log
++ ReportServerWebApp_ *\<Zeitstempel>* .log
++ ReportServer_ *\<Zeitstempel>* .log
++ ReportServerService_main_ *\<Zeitstempel>* .log
   
 ## <a name="see-also"></a>Siehe auch
 

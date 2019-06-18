@@ -9,16 +9,16 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570856"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | SharePoint-Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]    
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | SharePoint-Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Berichtsserverkonzepte  
  Ein Berichtsserver ist ein Computer, auf dem eine Instanz von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installiert ist. Ein Berichtsserver speichert intern Elemente, wie z.B. paginierte und mobile Berichte, berichtsbezogene Elemente und Ressourcen, Zeitpläne und Abonnements. Ein Berichtsserver kann als eigenständiger einzelner Server oder als skalierbare Farm konfiguriert werden, oder er kann in SharePoint Server integriert werden. Sie interagieren durch den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Webdienst, WMI-Anbieter, URL-Zugriff oder programmgesteuert durch Skripts mit Berichtsserverelementen. Die Art und Weise, in der Sie mit einem Berichtsserver interagieren, hängt von der Bereitstellungstopologie und der Konfiguration ab.  

@@ -1,19 +1,19 @@
 ---
-title: 'Lernprogramm: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
+title: 'Tutorial: Kartenbericht (Berichts-Generator) | Microsoft-Dokumentation'
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041574"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial erfahren Sie mehr über die Kartenfunktionen, mit denen Sie Daten vor einem geografischen Hintergrund in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht anzeigen können. 
@@ -27,9 +27,9 @@ Geben Sie zum Verändern der Darstellung von Kartenelementen ein Feld mit Werten
 In diesem Tutorial erstellen Sie einen Kartenbericht, in dem Geschäftsstandorte in den Countys des Bundesstaats New York angezeigt werden.  
    
 > [!NOTE]  
-> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle, zum Erstellen eines Datasets und zum Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst: ein Verfahren zum Erstellen des Datasets und ein Verfahren zum Erstellen einer Tabelle. Im ersten Tutorial dieser Reihe erhalten Sie ausführliche Anweisungen zum Navigieren zu einem Berichtsserver, Auswählen einer Datenquelle, Erstellen eines Datasets und Ausführen des Assistenten: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Der Berichtsserver muss für dieses Tutorial für die Unterstützung von Bing Maps als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
@@ -166,16 +166,16 @@ In diesem Abschnitt fügen Sie mithilfe des Kartenebenen-Assistenten eine Punkte
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**).  
+9. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ).  
   
     Das Resultset enthält sieben Spalten mit einem Satz von Geschäften im Bundesstaat New York, die Verbrauchsgüter verkaufen. Im Folgenden finden Sie eine Liste mit Erklärungen für die Spalten, die nicht selbsterklärend sind: 
-    *   **StoreKey**: ein Geschäftsbezeichner.  
+    *   **StoreKey**: ein Geschäftsbezeichner  
     *   **StoreName**
-    *   **SellingArea**: die für eine Produktauslage zur Verfügung stehende Fläche, von 455 sq ft bis 1125 sq ft.
+    *   **SellingArea**: die für eine Produktauslage zur Verfügung stehende Fläche, von 455 sq ft bis hin zu 1125 sq ft
     *   **City**
     *   **County**
-    *   **Sales**: Gesamtumsatz. 
-    *   **SpatialLocation**: Standort, angegeben in Längen- und Breitengrad. 
+    *   **Vertrieb**: Gesamtvertrieb 
+    *   **SpatialLocation**: Position in Längen- und Breitengraden 
 
     ![Berichts-Generator-Abfrage-entwerfen](../reporting-services/media/report-builder-map-design-query.png) 
   

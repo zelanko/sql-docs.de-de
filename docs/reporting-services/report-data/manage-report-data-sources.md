@@ -14,10 +14,10 @@ ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5df5e6b333f91ca69472c6d91bbf72a1ca7c819d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65572638"
 ---
 # <a name="manage-report-data-sources"></a>Verwalten von Berichtsdatenquellen
@@ -40,7 +40,7 @@ ms.locfileid: "65572638"
 ## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Verwaltete Eigenschaften: Datenquelltyp, Verbindungszeichenfolge und Anmeldeinformationen  
  Datenquelleneigenschaften, die Sie auf einem Berichtsserver verwalten können:  
   
-|Eigenschaft|Beschreibung|Verwaltung|  
+|Eigenschaft|und Beschreibung|Verwaltung|  
 |--------------|-----------------|----------------------|  
 |Datenquellentyp|Legt fest, welche Datenverarbeitungserweiterung auf dem Berichtsserver für die externen Daten verwendet werden soll. Beispiele für Datenprozessoren: SQL Server, Analysis Services und Oracle.|Der Datenquellentyp ist eine verwaltete Eigenschaft, da er konfigurierbar ist. Sie sollten einen Datenquellentyp jedoch nur konfigurieren, wenn Sie eine neue freigegebene Datenquelle erstellen.<br /><br /> Ändern Sie den Datenquelltyp nicht auf den Eigenschaftenseiten eines veröffentlichten Berichts oder Modells. Andernfalls wird die Verbindung mit Sicherheit ungültig. Es ist sehr unwahrscheinlich, dass die von einem Bericht oder Modell benötigten Datenstrukturen auf einer anderen Datenplattform identisch sind.|  
 |Verbindungszeichenfolge|Richtet die Anfangsverbindung zu einer externen Datenquelle ein. Ein Bericht kann statische oder dynamische Verbindungszeichenfolgen verwenden.<br /><br /> Eine *statische Verbindungszeichenfolge* ist ein Wertesatz, der verwendet wird, um bei jeder Berichtsausführung eine Verbindung zur selben Datenquelle herzustellen.<br /><br /> Eine *dynamische Verbindungszeichenfolge* ist ein Ausdruck, den Sie in den Bericht aufnehmen. Benutzer können mit diesem Ausdruck auswählen, welche Datenquelle zur Laufzeit verwendet werden soll. Sie müssen den Ausdruck und die Datenquellenauswahlliste beim Erstellen des Berichts im Berichts-Generator in den Bericht integrieren.|Es ist sinnvoll, eine Verbindungszeichenfolge zu ändern, wenn Sie eine Datenquelle auf einen anderen Computer verschieben, oder wenn Sie Berichte, die Sie mit Testdaten erstellt haben, in einer Produktionsdatenbank bereitstellen möchten.<br /><br /> Sie können eine statische Verbindungszeichenfolge verwalten, indem Sie die ursprüngliche Zeichenfolge durch eine andere Zeichenfolge ersetzen.<br /><br /> Die Verwaltung einer dynamischen Verbindungszeichenfolge im Webportal oder auf einer SharePoint-Website ist auf das Ersetzen durch eine statische Verbindungszeichenfolge beschränkt. Sie können den Ausdruck selbst nicht bearbeiten und auch nicht die Auswahlliste der Datenquellen ändern. Um den Ausdruck oder die gültige Werteliste zu ändern, müssen Sie die Berichtsdefinition bearbeiten und auf dem Berichtsserver neu veröffentlichen. Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  

@@ -1,19 +1,19 @@
 ---
-title: 'Lernprogramm: Einführung in Ausdrücke | Microsoft-Dokumentation'
+title: 'Tutorial: Einführung in Ausdrücke | Microsoft-Dokumentation'
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292218"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295591"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial verwenden Sie Ausdrücke mit allgemeinen Funktionen und Operatoren zum Erstellen von leistungsstarken und flexiblen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten. 
@@ -26,7 +26,7 @@ Diese Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den S
   
 ![Berichts-Generator-Ausdruck-Tutorial-in-Browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-Ungefähre Dauer dieses Lernprogramms: 30 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
 ## <a name="requirements"></a>Anforderungen  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -89,7 +89,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
     ```  
 
   
-10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset zeigt 23 Datenzeilen mit den folgenden Spalten an: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
+10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Resultset umfasst 23 Datenzeilen in den folgenden Spalten: FirstName (Vorname), LastName (Nachname), StateProvince (Bundesstaat/Provinz), CountryRegionID (ID des Landes/der Region), Gender (Geschlecht), YTDPurchase (Käufe seit Jahresbeginn) und LastPurchase (Letzter Kauf).  
 
     ![Berichts-Generator-Ausdruck-Tutorial-Abfrage-als-Text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +147,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Anzeigen des Anfangsbuchstabens des Vornamens und des Nachnamens  
-In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **Verketten** (**&**) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
+In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **Verketten** ( **&** ) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
   
 1.  Klicken Sie mit der rechten Maustaste auf die Spalte **StateProvince** , zeigen Sie auf **Spalte einfügen**und klicken Sie auf **Links**.  
   
@@ -169,7 +169,7 @@ In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **
     
     ![Berichts-Generator-Ausdruck-Tutorial-left-Funktion](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
-6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 7.  Doppelklicken Sie in der Liste **Werte** auf **FirstName**.  
   
@@ -263,7 +263,7 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
   
 4.  Doppelklicken Sie in der Liste **Element** auf **Switch**.  
   
-5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 6.  Doppelklicken Sie in der Liste **Werte** auf **Geschlecht**.  
   
@@ -275,7 +275,7 @@ Um bei der Erstellung eines gebänderten Berichts die Farbe beizubehalten, die S
 
 9. Geben Sie nach dem Ausdruck ein Komma ein. 
   
-5.  Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** erneut auf **Geschlecht** .  
+5.  Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** erneut auf **Geschlecht** .  
   
 7.  Geben Sie **="Female",** (einschließlich des Kommas) ein. 
 
@@ -345,7 +345,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Klicken Sie auf **Ausführen** (**!**), um die Abfrage auszuführen.  
+9. Klicken Sie auf **Ausführen** ( **!** ), um die Abfrage auszuführen.  
   
     Abfrage-Ergebnisse sind die Land/Region-Bezeichner und -Namen.  
   
@@ -357,7 +357,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>So schlagen Sie Werte im CountryRegion-Dataset nach  
   
-1.  Klicken Sie auf den Spaltenheader **Country Region ID** und löschen Sie den Text **ID**, sodass nur noch **Country Region** angezeigt wird.  
+1.  Klicken Sie auf den Spaltenheader **Country Region ID** , und löschen Sie den Text **ID**, sodass dort nur noch **Country Region**steht.  
   
 2.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Country Region** und klicken Sie auf **Ausdruck**.  
   
@@ -367,7 +367,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
 4.  Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen** , klicken Sie anschließend auf **Sonstiges**, und doppelklicken Sie in der Liste **Elemente** auf **Suchen**.  
   
-6.  Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **CountryRegionID**.  
+6.  Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **CountryRegionID**.  
   
 8.  Platzieren Sie den Cursor direkt hinter `CountryRegionID.Value`, und geben Sie **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** ein.  
   
@@ -400,7 +400,7 @@ In diesem Abschnitt fügen Sie eine Spalte hinzu und verwenden anschließend die
   
 7.  Geben Sie unmittelbar hinter `DateDiff(` **"d",** (einschließlich der Anführungszeichen "" und des Kommas) ein. 
   
-9. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **LastPurchase**.  
+9. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **LastPurchase**.  
   
 11. Geben Sie unmittelbar hinter `Fields!LastPurchase.Value`ein Komma **,** ein. 
   
@@ -454,13 +454,13 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 4.  Doppelklicken Sie in der Liste **Element** auf **Round**.  
   
-5.  Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
+5.  Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
 7.  Geben Sie unmittelbar hinter `Fields!YTDPurchase.Value`ein Minuszeichen  **-** ein. 
   
 9. Erweitern Sie erneut die **Allgemeinen Funktionen** , klicken Sie auf **Aggregat**, und doppelklicken Sie in der Liste **Element** auf **Avg**.  
   
-11. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
+11. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
 13. Geben Sie unmittelbar hinter `Fields!YTDPurchase.Value` **, "Expressions"))** ein.  
   
@@ -478,13 +478,13 @@ Das Konfigurieren des Indikators und seiner Zustände erfordert viele Schritte. 
   
 19. Doppelklicken Sie in der Liste **Element** auf **Round**.  
   
-20. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
+20. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
 22. Geben Sie unmittelbar hinter `Fields!YTDPurchase.Value`ein Minuszeichen  **-** ein. 
   
 24. Erweitern Sie erneut die **Allgemeinen Funktionen** , klicken Sie auf **Aggregat**, und doppelklicken Sie in der Liste **Element** auf **Avg**.  
   
-26. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**, und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
+26. Klicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** , und doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
 28. Geben Sie unmittelbar hinter `Fields!YTDPurchase.Value` **, "Expressions")) < 0** ein.  
   

@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574838"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Hinzufügen eines Filters (Berichts-Generator und SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65574838"
   
 1.  Öffnen Sie einen Bericht in der **Entwurfssicht** .  
   
-2.  Wählen Sie den Datenbereich auf der Entwurfsoberfläche aus, und klicken Sie anschließend mit der rechten Maustaste auf _\<Datenbereich>_**Eigenschaften**. Wählen Sie bei einem Messgerät **Messgerätbereichseigenschaften**aus. Das Dialogfeld _\<Datenbereich>_**Eigenschaften** wird geöffnet.  
+2.  Wählen Sie den Datenbereich auf der Entwurfsoberfläche aus, und klicken Sie anschließend mit der rechten Maustaste auf _\<Datenbereich>_ **Eigenschaften**. Wählen Sie bei einem Messgerät **Messgerätbereichseigenschaften**aus. Das Dialogfeld _\<Datenbereich>_ **Eigenschaften** wird geöffnet.  
   
     > [!NOTE]  
     >  Klicken Sie im Tablix-Datenbereich mit der rechten Maustaste auf das Handle in der Eckzelle, einer Zeile oder Spalte, und klicken Sie anschließend auf **Tablix-Eigenschaften**.  

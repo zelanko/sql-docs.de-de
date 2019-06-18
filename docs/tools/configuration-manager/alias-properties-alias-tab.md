@@ -15,17 +15,17 @@ ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 48ff3b9485f4e8915299c4ad06709336e7031bfd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63013283"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt;-Eigenschaften (Registerkarte „Alias“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Verwenden Sie die Seite **Alias** im Dialogfeld **\<** Aliasname **> Eigenschaften** zum Anzeigen oder Angeben der Elemente einer Verbindungszeichenfolge eines Alias.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Alias Name**  
  Der Name (Alias), der als Referenz auf diese Verbindung verwendet werden soll.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "51677559"
  **Server**  
  Der Name der Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , zu der eine Verbindung hergestellt wird.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  

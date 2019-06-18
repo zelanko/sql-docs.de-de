@@ -11,10 +11,10 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e87b285eccbd35c6c90cffa2f32e276aaefe0ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581055"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Leistungsindikatoren: ReportServer-Dienst, Leistungsobjekte
@@ -48,7 +48,7 @@ ms.locfileid: "65581055"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|und Beschreibung|  
 |-------------|-----------------|  
 |**Aktive Verbindungen**|Die Anzahl der Verbindungen, die aktuell auf dem Server aktiv sind.|  
 |**Gesamtanzahl der empfangenen Bytes**|Die Anzahl der vom Server empfangenen Bytes. Dieser Leistungsindikator zählt die Rohbytes, die insgesamt vom Berichts-Manager und Berichtsserver empfangen wurden.|  
@@ -81,7 +81,7 @@ ms.locfileid: "65581055"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|und Beschreibung|  
 |-------------|-----------------|  
 |**Auslastungsstatus des Arbeitsspeichers**||  
 |**Umfang der Arbeitsspeicherverringerung**||  

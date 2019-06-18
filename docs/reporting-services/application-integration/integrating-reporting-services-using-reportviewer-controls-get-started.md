@@ -9,10 +9,10 @@ ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1fd408e5459aea50c04c29d234fce54d8a3ab772
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503909"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integrieren von Reporting Services mit den Report Viewer-Steuerelementen – erste Schritte
@@ -232,7 +232,7 @@ Das Report Viewer-Steuerelement wird jetzt als NuGet-Paket ausgeliefert und wird
 
     ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Toolbox, und klicken Sie anschließend auf **Elemente auswählen...**.
+3. Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Toolbox, und klicken Sie anschließend auf **Elemente auswählen...** .
 
     ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

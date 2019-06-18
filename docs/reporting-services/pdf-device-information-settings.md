@@ -12,16 +12,16 @@ ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503677"
 ---
 # <a name="pdf-device-information-settings"></a>PDF-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von Berichten in das PDF-Format aufgeführt.  
   
-|Einstellung|Wert|  
+|Einstellung|value|  
 |-------------|-----------|  
 | **AccessiblePDF** | Gibt an, ob eine barrierefreie PDF-Datei bzw. eine PDF-Datei mit Tags gerendert werden soll. Eine solche Datei ist zwar größer, kann aber von Sprachausgabesoftware und anderen Unterstützungstechnologien besser verarbeitet werden. Der Standardwert ist **false**. (in Power BI-Berichtsserver der Version von März 2018 und in neueren Versionen verfügbar) |
 |**Spalten**|Die für den Bericht gewünschte Anzahl der Spalten. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  

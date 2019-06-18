@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580071"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
@@ -131,7 +131,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  In der folgenden Tabelle sind die Konfigurationselemente für Datenwarnungen, ihre Standardwerte, Beschreibungen und Speicherorte aufgeführt.  
   
-|Einstellung|Standardwert|Beschreibung|Speicherort|  
+|Einstellung|Standardwert|und Beschreibung|Speicherort|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Zeit zwischen Starts des Cleanupzyklus in Minuten.|Konfigurationsdatei des Berichtsservers|  
 |AlertingExecutionLogCleanupMinutes|10080|Zeit für die Aufbewahrung von Ausführungsprotokolleinträgen in Minuten.|Konfigurationsdatei des Berichtsservers|  
@@ -145,7 +145,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
 ### <a name="event-handlers-and-retry"></a>Ereignishandler und Wiederholung  
  Die Ereignishandler sind:  
   
-|Ereignishandler|Beschreibung|  
+|Ereignishandler|und Beschreibung|  
 |-------------------|-----------------|  
 |FireAlert|Klicken Sie im Datenwarnungs-Manager auf **Ausführen**  , um die unmittelbare Verarbeitung einer Warnungsdefinition zu initiieren.|  
 |FireSchedule|Der SQL Server-Agent startet den Auftragszeitplan für eine Warnungsdefinition.|  

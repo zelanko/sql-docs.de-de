@@ -9,14 +9,14 @@ helpviewer_keywords:
 - linked reports [Reporting Services], methods
 - methods [Reporting Services], linked reports
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ad67f5a187ae8ef314ee29122f3cefb866185b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284416"
 ---
 # <a name="linked-reports-methods"></a>Methoden für verknüpfte Berichte
   Sie können diese Methoden verwenden, um verknüpfte Elemente zu erstellen und zu verwalten.  
@@ -28,7 +28,7 @@ ms.locfileid: "47620958"
 |<xref:ReportService2010.ReportingService2010.ListDependentItems%2A>|Gibt eine Liste der Elemente zurück, die mit einem bestimmten Element verknüpft sind.|  
 |<xref:ReportService2010.ReportingService2010.SetItemLink%2A>|Gibt das Katalogelement an, das für die Elementdefinition eines vorhandenen verknüpften Elements verwendet wird.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

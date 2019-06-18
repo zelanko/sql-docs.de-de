@@ -9,10 +9,10 @@ ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582122"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Hinzufügen einer Erweiterungs- oder Reduzieraktion zu einem Element (Berichts-Generator und SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65582122"
   
     -   Wählen Sie **True** aus, wenn das Berichtselement ausgeblendet werden soll.  
   
-    -   Klicken Sie auf **\<Ausdruck>**, um das Dialogfeld **Ausdruck** zu öffnen, in dem Sie einen Ausdruck erstellen können, der zur Laufzeit zum Bestimmen der Sichtbarkeit ausgewertet wird.  
+    -   Klicken Sie auf **\<Ausdruck>** , um das Dialogfeld **Ausdruck** zu öffnen, in dem Sie einen Ausdruck erstellen können, der zur Laufzeit zum Bestimmen der Sichtbarkeit ausgewertet wird.  
   
 5.  Wählen Sie unter **ToggleItem**im Dropdownfeld den Namen eines Textfelds aus, dem das Umschaltbild hinzugefügt werden soll.  
   

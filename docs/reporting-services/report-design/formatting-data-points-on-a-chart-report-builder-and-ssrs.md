@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580338"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
@@ -56,7 +56,7 @@ In einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Hinzufügen von Schlüsselwörtern für Datenpunktbezeichnungen, QuickInfos und Legendentext  
  Sie können ein vorhandenes Element im Diagramm mithilfe von diagrammspezifischen Schlüsselwörtern darstellen, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Diese Schlüsselwörter können nur auf Eigenschaften von QuickInfos, benutzerdefiniertem Legendentext und Datenpunktbezeichnungen angewendet werden. In vielen Fällen ist für ein Diagrammschlüsselwort ein entsprechender einfacher Ausdruck verfügbar, das Schlüsselwort kann jedoch schneller und einfacher eingegeben werden. Im Folgenden finden Sie eine Liste von Diagrammschlüsselwörtern.  
   
-|Diagrammschlüsselwort|Beschreibung|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
+|Diagrammschlüsselwort|und Beschreibung|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Y-Wert des Datenpunkts|All|`=Fields!MyDataField.Value`|  
 |#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|None|  

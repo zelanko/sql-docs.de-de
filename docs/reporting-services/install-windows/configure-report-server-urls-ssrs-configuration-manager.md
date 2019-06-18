@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62514419"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden URLs für den Zugriff auf den Report Server-Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]verwendet. Bevor Sie die eine der Anwendungen verwenden können, müssen Sie mindestens je eine URL für den Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]konfigurieren. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte für beide Anwendungs-URLs, die in den meisten Bereitstellungsszenarien gut funktionieren, auch in parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen.  
@@ -28,7 +28,7 @@ ms.locfileid: "51813343"
 ## <a name="defining-a-report-server-url"></a>Definieren einer Berichtsserver-URL  
  Die URL gibt den Ort für die Instanz einer Berichtsserveranwendung genau im Netzwerk an. Wenn Sie eine Berichtsserver-URL erstellen, müssen Sie die folgenden Teile angeben.  
   
-|Teil|Beschreibung|  
+|Teil|und Beschreibung|  
 |----------|-----------------|  
 |Hostname|Ein TCP/IP-Netzwerk verwendet eine IP-Adresse, um ein Gerät im Netzwerk eindeutig zu bestimmen. Es gibt eine physische IP-Adresse für jede in einem Computer installierte Netzwerkkarte. Wenn die IP-Adresse in einen Hostheader aufgelöst wird, können Sie den Hostheader angeben. Wenn Sie den Berichtsserver in einem Unternehmensnetzwerk bereitstellen, können Sie den Netzwerknamen des Computers verwenden.|  
 |Port|Ein TCP-Port ist ein Endpunkt im Gerät. Der Berichtsserver lauscht Anforderungen auf einem festgelegten Port.|  
@@ -44,7 +44,7 @@ ms.locfileid: "51813343"
   
  Die Einstellungen, die diese URLs verfügbar machen, werden in der folgenden Tabelle angezeigt. Diese Tabelle zeigt die Standardwerte, die eine Berichtsserver-Verbindung über URLs ermöglichen, die einen Hostnamen enthalten:  
   
-|Teil|Wert|Erklärung|  
+|Teil|value|Erklärung|  
 |----------|-----------|-----------------|  
 |IP-Adresse|Alle zugewiesenen|Der Domänennamendienst in Ihrem Netzwerk löst den Hostnamen in der URL in die IP-Adresse des Computers auf. Solange die IP-Adresse in der von Ihnen definierten URL angegeben ist, erreicht eine Anforderung, die an einen bestimmten Host gesandt wird, stets ihr angegebenes Ziel.|  
 |Port|80|Port 80 ist der Standardport für TCP/IP-Verbindungen auf einem Computer. Da der Berichtsserver die Überwachung an Port 80 durchführt, können Sie die Portnummer der URL weglassen. Wenn Sie einen anderen Port angeben, müssen Sie diesen in der URL angeben.|  
@@ -75,5 +75,5 @@ ms.locfileid: "51813343"
  [URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md)  
  Wenn Sie mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf einem Computer installieren, erhöht sich die Wahrscheinlichkeit, dass beim Registrieren einer URL doppelte URLs auftreten. Um diese Fehler zu vermeiden, befolgen Sie in diesem Thema die Empfehlungen zum Erstellen von instanzenspezifischen URL-Reservierungen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 

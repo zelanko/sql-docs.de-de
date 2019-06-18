@@ -9,10 +9,10 @@ ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8a506442cca08dfa40cb3665571662a477ef5345
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581557"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)
@@ -48,7 +48,7 @@ In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Be
     > [!NOTE]  
     >  Wenn der Bereich Eigenschaften geschlossen ist, klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften** .  
   
-2.  Erweitern Sie im Bereich „Eigenschaften“ den Knoten **Auffüllung**, klicken Sie auf **Links**, und wählen Sie in der Dropdownliste den Eintrag **\<Ausdruck…>**.  
+2.  Erweitern Sie im Bereich „Eigenschaften“ den Knoten **Auffüllung**, klicken Sie auf **Links**, und wählen Sie in der Dropdownliste den Eintrag **\<Ausdruck…>** .  
   
 3.  Geben Sie im Ausdruckfenster den folgenden Ausdruck ein:  
   
