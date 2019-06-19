@@ -15,17 +15,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c66e1d0f6a7eeb7835b7a255f0aef253476cee93
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009831"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Dialogfeld 'Neue Bedingung erstellen' oder 'Bedingung öffnen', Seite 'Beschreibung'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie einer richtlinienbasierten Verwaltungsbedingung eine Beschreibung hinzufügen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Beschreibung**  
  Geben Sie eine Beschreibung der Bedingung ein.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "51512859"
  **Geändert von**  
  Der Anmeldename, der die letzte Änderung an der Bedingung vorgenommen hat.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

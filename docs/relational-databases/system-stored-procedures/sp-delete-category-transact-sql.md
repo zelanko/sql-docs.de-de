@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62715787"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
@@ -43,7 +43,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>Argumente  
 `[ @class = ] 'class'` Die Klasse der Kategorie. *Klasse* ist **varchar(8)** und hat keinen Standardwert und muss einen der folgenden Werte aufweisen.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**JOB**|Löscht eine Auftragskategorie|  
 |**ALERT**|Löscht eine Warnungskategorie|  

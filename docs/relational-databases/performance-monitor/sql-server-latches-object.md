@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 3cd5db61a2a64f02f0e34b8c2d8fec9dd0c1fa9f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380531"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649589"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server, Latches-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53380531"
   
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Batches** -Leistungsindikatoren beschrieben.  
   
-|Batches-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Batches-Leistungsindikatoren von SQL Server|und Beschreibung|  
 |---------------------------------|-----------------|  
 |**Durchschnittliche Wartezeit für Latch (in Millisekunden)**|Durchschnittliche Latchwartezeit (in Millisekunden) für wartende Latchanforderungen.|  
 |**Basis für durchschnittliche Latchwartezeit**|Nur zur internen Verwendung.| 

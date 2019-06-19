@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067886"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>CHECK-Einschränkungsausdruck (Dialogfeld) (Visual Database Tools)
@@ -56,7 +56,7 @@ NOT (payment_method = 'credit card') OR
   
  Die SQL-Syntax besteht aus folgenden Parametern:  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |Konstante|Ein Literalwert, wie numerische Daten oder Zeichendaten. Zeichendaten müssen in einfache Anführungszeichen (') eingeschlossen werden.|  
 |column_name|Gibt eine Spalte an.|  

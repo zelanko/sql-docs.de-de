@@ -12,56 +12,39 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 30cdbd1624e2fd8cd17ca4d0cf36cb8cb8f93b92
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 409c6a27b03eb4a7f84038df005a8c625b4011ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974419"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793515"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Erstellen einer Always On-Verfügbarkeitsgruppe mit Transact-SQL (T-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie [!INCLUDE[tsql](../../../includes/tsql-md.md)] zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe für Instanzen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit aktivierter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktion verwendet wird. Eine *Verfügbarkeitsgruppe* definiert einen Satz von Benutzerdatenbanken, für die als eine einzelne Einheit ein Failover ausgeführt wird, sowie einen Satz von Failoverpartnern, die als *Verfügbarkeitsreplikate*bezeichnet werden, die Failover unterstützen.  
   
 > [!NOTE]  
->  Eine Einführung zu Verfügbarkeitsgruppen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
-  
--   **Vorbereitungen:**  
-  
-     [Erforderliche Komponenten](#PrerequisitesRestrictions)  
-  
-     [Sicherheit](#Security)  
-  
-     [Zusammenfassung von Tasks und entsprechenden Transact-SQL-Anweisungen](#SummaryTsqlStatements)  
-  
--   **So erstellen und konfigurieren Sie eine Verfügbarkeitsgruppe:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Beispiel:**  [Konfigurieren einer Verfügbarkeitsgruppe, die die Windows-Authentifizierung verwendet](#ExampleConfigAGWinAuth)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
-  
--   [Verwandte Inhalte](#RelatedContent)  
+>  Eine Einführung zu Verfügbarkeitsgruppen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)erstellt und konfiguriert wird.  
   
 > [!NOTE]  
 >  Als Alternative zur Verwendung von [!INCLUDE[tsql](../../../includes/tsql-md.md)]können Sie den Assistenten zum Erstellen einer Verfügbarkeitsgruppe oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Cmdlets verwenden. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)[Verwenden des Dialogfelds „Neue Verfügbarkeitsgruppe“ &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)[Erstellen einer Verfügbarkeitsgruppe &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
+
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
- Es wird dringend empfohlen, dass Sie diesen Abschnitt lesen, bevor Sie versuchen, Ihre erste Verfügbarkeitsgruppe zu erstellen.  
+## <a name="PrerequisitesRestrictions"></a> Voraussetzungen, Einschränkungen und Empfehlungen  
   
-###  <a name="PrerequisitesRestrictions"></a> Voraussetzungen, Einschränkungen und Empfehlungen  
+-   Überprüfen Sie vor dem Erstellen einer Verfügbarkeitsgruppe, ob sich die Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die Verfügbarkeitsreplikate hosten, auf verschiedenen WSFC-Konten (Windows Server Failover Clustering) des gleichen WSFC-Failoverclusters befinden. Stellen Sie außerdem sicher, dass alle Serverinstanzen alle anderen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Voraussetzungen erfüllen. Für weitere Informationen empfehlen wir Ihnen dringend [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)aktiviert sind, eine Always On-Verfügbarkeitsgruppe zu erstellen.  
   
--   Überprüfen Sie vor dem Erstellen einer Verfügbarkeitsgruppe, ob sich die Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die Verfügbarkeitsreplikate hosten, auf verschiedenen WSFC-Konten (Windows Server Failover Clustering) des gleichen WSFC-Failoverclusters befinden. Stellen Sie außerdem sicher, dass alle Serverinstanzen alle anderen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Voraussetzungen erfüllen. Für weitere Informationen empfehlen wir Ihnen dringend [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sicherheit  
-  
-####  <a name="Permissions"></a> Berechtigungen  
+##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.  
   
+##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe 
+
 ###  <a name="SummaryTsqlStatements"></a> Zusammenfassung von Tasks und entsprechenden Transact-SQL-Anweisungen  
  In der folgenden Tabelle sind die grundlegenden Tasks aufgeführt, die zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe erforderlich sind, und es ist angegeben, welche [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen für diese Tasks zu verwenden sind. Die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Tasks müssen in der Reihenfolge ausgeführt werden, in der sie in der Tabelle dargestellt sind.  
   
-|Task|Transact-SQL-Anweisung(en)|Wo soll der Task ausgeführt werden?**&#42;**|  
+|Task|Transact-SQL-Anweisung(en)|Wo soll der Task ausgeführt werden? **&#42;**|  
 |----------|----------------------------------|---------------------------------|  
 |Erstellen eines Datenbankspiegelungs-Endpunkts (einmal pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz)|[CREATE ENDPOINT](../../../t-sql/statements/create-endpoint-transact-sql.md) *Endpunktname* … FOR DATABASE_MIRRORING|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der der Datenbankspiegelungs-Endpunkt fehlt.|  
 |Erstellen der Verfügbarkeitsgruppe|[CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)|Führen Sie diesen Task auf der Serverinstanz aus, auf der das anfängliche primäre Replikat gehostet werden soll.|  
@@ -69,10 +52,9 @@ ms.locfileid: "57974419"
 |Vorbereiten der sekundären Datenbank|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) und [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Erstellen Sie Sicherungen auf der Serverinstanz, auf der das primäre Replikat gehostet wird.<br /><br /> Stellen Sie mit RESTORE WITH NORECOVERY Sicherungen auf jeder Serverinstanz wieder her, auf der ein sekundäres Replikat gehostet wird.|  
 |Starten der Datensynchronisierung durch Hinzufügen der einzelnen sekundären Datenbanken zur Verfügbarkeitsgruppe|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *Datenbankname* SET HADR AVAILABILITY GROUP = *Gruppenname*|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der ein sekundäres Replikat gehostet wird.|  
   
- *Zur Ausführung eines bestimmten Tasks stellen Sie eine Verbindung mit der bzw. den angegebenen Serverinstanzen her.  
-  
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL zum Erstellen und Konfigurieren einer Verfügbarkeitsgruppe  
-  
+ *Zur Ausführung eines bestimmten Tasks stellen Sie eine Verbindung mit der bzw. den angegebenen Serverinstanzen her.   
+ 
+### <a name="using-transact-sql"></a>Verwenden von Transact-SQL 
 > [!NOTE]  
 >  Eine Vorgehensweise für eine Beispielkonfiguration mit Codebeispielen für jede dieser [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen finden Sie unter [Beispiel: Konfigurieren einer Verfügbarkeitsgruppe, die die Windows-Authentifizierung verwendet](#ExampleConfigAGWinAuth).  
   
@@ -312,7 +294,7 @@ ms.locfileid: "57974419"
 ###  <a name="CompleteCodeExample"></a> Vollständiges Codebeispiel für Beispielkonfigurationsprozedur  
  Im folgenden Beispiel werden die Codebeispiele aus allen Schritten der Beispielkonfigurationsprozedur zusammengeführt. In der folgenden Tabelle werden die in diesem Codebeispiel verwendeten Platzhalterwerte zusammengefasst. Weitere Informationen zu den Schritten in diesem Codebeispiel finden Sie unter [Erforderliche Komponenten für die Verwendung der Beispielkonfigurationsprozedur](#PrerequisitesForExample) und [Beispielkonfigurationsprozedur](#SampleProcedure)weiter oben in diesem Thema.  
   
-|Platzhalter|Beschreibung|  
+|Platzhalter|und Beschreibung|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Fiktive Sicherungsfreigabe.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Sicherungsdatei für MyDb1.|  

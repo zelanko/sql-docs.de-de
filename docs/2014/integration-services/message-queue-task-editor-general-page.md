@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057632"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Editor für den Task 'Nachrichtenwarteschlange' (Seite Allgemein)
@@ -37,10 +37,10 @@ ms.locfileid: "66057632"
  Geben Sie eine Beschreibung des Tasks Nachrichtenwarteschlange ein.  
   
  **Use2000Format**  
- Geben Sie an, ob das 2000-Format von Message Queuing (auch bekannt als MSMQ) verwendet werden soll. Die Standardeinstellung ist `False`.  
+ Geben Sie an, ob das 2000-Format von Message Queuing (auch bekannt als MSMQ) verwendet werden soll. Der Standardwert ist `False`.  
   
  **MSMQConnection**  
- Wählen Sie einen vorhandenen MSMQ-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen MSMQ-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…** >, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [MSMQ-Verbindungs-Manager ](connection-manager/msmq-connection-manager.md), [MSMQ-Verbindungs-Manager-Editor](../../2014/integration-services/msmq-connection-manager-editor.md)  
   

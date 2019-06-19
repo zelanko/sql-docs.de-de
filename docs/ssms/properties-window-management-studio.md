@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 84b7ee124e79e437554d2ddf1dc52be6424a421d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104370"
 ---
 # <a name="properties-window-management-studio"></a>Eigenschaftenfenster (Management Studio)
@@ -29,9 +29,9 @@ Dieses Fenster wird zum Anzeigen der Eigenschaften von ausgewählten Elementen v
   
 Im Eigenschaftenfenster werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
   
-|Element|Beschreibung|  
+|Element|und Beschreibung|  
 |-----------|---------------|  
 |**Objektname**|Führt das aktuell ausgewählte Objekt bzw. die aktuell ausgewählten Objekte auf. Es werden nur die Objekte aus dem aktiven Editor oder Designer angezeigt.|  
 |**Nach Kategorien**|Führt alle Eigenschaften und Eigenschaftswerte für das ausgewählte Objekt nach Kategorie auf. Sie können eine Kategorie reduzieren, um die Anzahl der angezeigten Eigenschaften zu verringern. Wenn Sie eine Kategorie reduzieren oder erweitern, wird ein Pluszeichen (+) bzw. ein Minuszeichen (-) auf der linken Seite des Kategorienamens angezeigt. Kategorien sind in alphabetischer Reihenfolge aufgelistet.|  

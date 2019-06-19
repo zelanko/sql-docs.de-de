@@ -10,19 +10,19 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fb7ccf97443bf95187918fc92dcc9f2c7d03ef83
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794879"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installieren von SQL Server mit SysPrep
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 Sie können außerdem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der Eingabeaufforderung oder einer Konfigurationsdatei vorbereiten und abschließen. Weitere Informationen finden Sie in den folgenden Themen:  
   
@@ -52,7 +52,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 3. Erstellen Sie den Windows-Failovercluster. 
   
-4. Führen Sie „setup.exe“ mit dem Flag **/ACTION=PrepareFailoverCluster** für alle Knoten aus. Zum Beispiel:  
+4. Führen Sie „setup.exe“ mit dem Flag **/ACTION=PrepareFailoverCluster** für alle Knoten aus. Beispiel:  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -226,7 +226,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 1. Legen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsmedium ein. Doppelklicken Sie im Stammordner auf Setup.exe. Wenn Sie eine Installation über eine Netzwerkfreigabe vornehmen möchten, suchen Sie den Stammordner in der Freigabe, und doppelklicken Sie auf setup.exe. 
   
-2. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationscenter wird vom Installations-Assistenten ausgeführt. Um einer vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen hinzuzufügen, klicken Sie auf der Seite **Erweitert** auf **Vorbereiten eines Images von einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. 
+2. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationscenter wird vom Installations-Assistenten ausgeführt. Um einer vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen hinzuzufügen, klicken Sie auf der Seite **Erweitert** auf **Vorbereiten eines Images von einer eigenständigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . 
   
 3. Die Systemkonfigurationsprüfung führt einen Ermittlungsvorgang auf dem Computer aus. Klicken Sie zum Fortsetzen des Vorgangs auf **OK**. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken. 
   
@@ -305,7 +305,7 @@ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 - [Vorgehensweise: Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Was ist Windows SysPrep?](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Wie funktioniert Windows SysPrep?](https://go.microsoft.com/fwlink/?LinkId=143547)  
   

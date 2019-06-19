@@ -22,11 +22,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 087b757911b2944c09ecd825223589df24259a1e
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973199"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716269"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Kombinieren von NEAR mit anderen Begriffen  
- Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
+ Sie können NEAR mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Beispiel:  
   
 -   CONTAINS('NEAR((*Begriff1*, *Begriff2*),5) AND *Begriff3*')  
   

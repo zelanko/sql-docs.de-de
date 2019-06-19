@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 334153d45cbc2f4998fdef5902a3084f5912ad95
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090087"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
@@ -78,9 +78,9 @@ Weitere Informationen zu den Windows-Berechtigungen, die für das [!INCLUDE[ssNo
   
 5.  Wählen Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager im Konsolenbereich **SQL Server-Dienste**aus.  
   
-6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server-Agent**_(Servername)_, wobei *Servername* der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Instanz ist, deren Dienststartkonto Sie ändern möchten. Klicken Sie anschließend auf **Eigenschaften**.  
+6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server-Agent** _(Servername)_ , wobei *Servername* der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Instanz ist, deren Dienststartkonto Sie ändern möchten. Klicken Sie anschließend auf **Eigenschaften**.  
   
-7.  Wählen Sie im Dialogfeld **SQL Server-Agent**_(Servername)_ **Eigenschaften** auf der Registerkarte **Anmelden** unter **Anmelden als** eine der folgenden Optionen aus:  
+7.  Wählen Sie im Dialogfeld **SQL Server-Agent** _(Servername)_ **Eigenschaften** auf der Registerkarte **Anmelden** unter **Anmelden als** eine der folgenden Optionen aus:  
   
     -   **Integriertes Konto**: Wählen Sie diese Option aus, wenn die Aufträge nur Ressourcen vom lokalen Server benötigen. Informationen zum Auswählen eines integrierten Kontotyps finden Sie unter [Auswählen eines Kontos für den SQL Server-Agent-Dienst](https://msdn.microsoft.com/library/ms191543.aspx).  
   

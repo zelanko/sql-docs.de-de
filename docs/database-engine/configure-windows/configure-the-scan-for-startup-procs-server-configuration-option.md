@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 779cd10fa83fdc4d1ec44079ca08ee8dd480468c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55f13de3ecfb6d78219812734d0c559430a914be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799084"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47647778"
   
 -   **Nachverfolgung:**  [Nach dem Konfigurieren der Option „Startprozeduren suchen“](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -88,10 +88,10 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Konfigurieren der Option Startprozeduren suchen  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option „Startprozeduren suchen“  
  Der Server muss neu gestartet werden, bevor die Einstellung wirksam werden kann.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

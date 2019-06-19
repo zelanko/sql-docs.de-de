@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: 6be7286056ce59e9080e58fa9706370481fb5fce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775434"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server-Browserdienst (Datenbank-Engine und SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "52616940"
   
 -   Beliebige **lokale** Domänenkonten  
   
--   Das Konto **Lokaler Dienst**   
+-   Das Konto **Lokaler Dienst**  
   
 -   Das Konto **Lokales System** (wird nicht empfohlen, da es über unnötige Berechtigungen verfügt)  
   
@@ -127,9 +127,9 @@ ms.locfileid: "52616940"
  Bei ausgeblendeten Instanzen handelt es sich um Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die nur Verbindungen im freigegebenen Speicherbereich unterstützen. Legen Sie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]das Flag `HideInstance` fest, um anzugeben, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser nicht mit Informationen zu dieser Serverinstanz reagieren soll.  
   
 ### <a name="using-a-firewall"></a>Verwenden einer Firewall  
- Für die Kommunikation mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst auf einem Server, auf dem eine Firewall verwendet wird, öffnen Sie neben dem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Port (z. B. 1433) den UDP-Port 1434. Informationen zum Umgang mit einer Firewall finden Sie unter "Vorgehensweise: Konfigurieren einer Firewall für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zugriff" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+ Für die Kommunikation mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browserdienst auf einem Server, auf dem eine Firewall verwendet wird, öffnen Sie neben dem von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendeten Port (z. B. 1433) den UDP-Port 1434. Informationen zum Arbeiten mit einer Firewall finden Sie unter „Gewusst wie: Konfigurieren einer Firewall für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zugriff“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../sql-server/install/network-protocols-and-network-libraries.md)  
  [Ausblenden einer Instanz der SQL Server-Datenbank-Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

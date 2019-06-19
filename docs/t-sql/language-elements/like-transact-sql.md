@@ -33,11 +33,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1e26632a80efce073df66f3d4fd564d513e4b28e
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62758703"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  Ist die bestimmte Zeichenfolge, nach der in *match_expression* gesucht werden soll, und kann die folgenden gültigen Platzhalterzeichen enthalten. *pattern* darf maximal 8.000 Bytes umfassen.  
   
-|Platzhalter|Beschreibung|Beispiel|  
+|Platzhalter|und Beschreibung|Beispiel|  
 |------------------------|-----------------|-------------|  
 |%|Eine Zeichenfolge aus null oder mehr Zeichen|WHERE title LIKE '%Computer%' findet alle Buchtitel, die das Wort 'Computer' enthalten.|  
 |_ (Unterstrich)|Ein einzelnes Zeichen.|WHERE au_fname LIKE '_ean' findet alle Vornamen mit vier Buchstaben, die auf ean enden (Dean, Sean usw.).|  
@@ -330,7 +330,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Verwenden von NOT LIKE mit dem Platzhalterzeichen %  
- Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee`-Tabelle, die nicht mit `612` beginnen.  zugreifen.  
+ Das folgende Beispiel findet alle Telefonnummern in der `DimEmployee`-Tabelle, die nicht mit `612` beginnen.  erforderlich.  
   
 ```sql  
 -- Uses AdventureWorks  

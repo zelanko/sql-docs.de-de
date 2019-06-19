@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871945"
 ---
 # <a name="database-properties-mirroring-page"></a>Datenbankeigenschaften (Seite Wird gespiegelt)
@@ -47,7 +47,7 @@ ms.locfileid: "62871945"
   
  Für die Server-Netzwerkadresse gilt folgende grundlegende Syntax:  
   
- TCP **://**_fully_qualified_domain_name_**:**_port_  
+ TCP **://** _fully_qualified_domain_name_ **:** _port_  
   
  Dabei gilt:  
   

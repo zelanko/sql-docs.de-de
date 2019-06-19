@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421187"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462505"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Eine speicheroptimierte Tabelle mit 200 GB Daten erfordert mehr als 200 GB aktiv
 
 Bei einer Datenbank, die im Clouddienst von Azure SQL-Datenbank gehostet wird, wirkt sich die ausgewählte Dienstebene auf die Menge an aktivem Arbeitsspeicher aus, die Ihre Datenbank verwenden darf. Sie sollten planen, die Speicherverwendung Ihrer Datenbank mithilfe einer Warnung zu überwachen. Einzelheiten dazu finden Sie unter:
 
-- Grenzwerte für In-Memory-OLTP-Speicher für Ihre [Preisstufe](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
+- Grenzwerte für In-Memory-OLTP-Speicher für Ihre [Preisstufe](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
 - [Überwachen des In-Memory-OLTP-Speichers](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Speicheroptimierte Tabellenvariablen

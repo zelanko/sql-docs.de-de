@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774497"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -39,7 +39,7 @@ ms.locfileid: "62774497"
   
 ## <a name="primary-server-stored-procedures"></a>Gespeicherte Prozeduren des primären Servers  
   
-|Gespeicherte Prozedur|Description|  
+|Gespeicherte Prozedur|Beschreibung|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql)|Richtet die primäre Datenbank, einschließlich des Sicherungsauftrags sowie des lokalen und Remoteüberwachungseintrags, für eine Protokollversandkonfiguration ein.|  
 |[sp_add_log_shipping_primary_secondary](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql)|Fügt zu einer vorhandenen primären Datenbank den Namen einer sekundären Datenbank hinzu.|  
@@ -92,7 +92,7 @@ ms.locfileid: "62774497"
   
 ## <a name="monitor-server-stored-procedures"></a>Gespeicherte Prozeduren des Überwachungsservers  
   
-|Gespeicherte Prozedur|Description|  
+|Gespeicherte Prozedur|Beschreibung|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](/sql/relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql)|Erstellt einen Warnungsauftrag des Protokollversands, falls dieser noch nicht erstellt wurde.|  
 |[sp_delete_log_shipping_alert_job](/sql/relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql)|Entfernt den Warnungsauftrag des Protokollversands, falls keine zugeordneten primären Datenbanken vorhanden sind.|  

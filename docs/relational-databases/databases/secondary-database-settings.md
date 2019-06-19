@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c98f7a5714d7cd0813d5a4a7df6cf23c7b661414
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652544"
 ---
 # <a name="secondary-database-settings"></a>Einstellungen für die sekundäre Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51560487"
   
  Eine Erläuterung zu den Konzepten des Protokollversands finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Sekundäre Serverinstanz**  
  Zeigt den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die in der Protokollversandkonfiguration derzeit als sekundärer Server konfiguriert ist.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "51560487"
  Zeigt den Namen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrags an, der verwendet wird, um Sicherungsdateien des Transaktionsprotokolls vom primären Server auf den sekundären Server zu kopieren. Wenn Sie den Auftrag erstmalig erstellen, können Sie den Namen durch Eingabe in das entsprechende Feld ändern.  
   
  **Zeitplan**  
- Zeigt den aktuellen Zeitplan für den Kopierauftrag des SQL Server-Agents an, mit dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden. Diesen Zeitplan können Sie ändern. Dazu klicken Sie auf **Zeitplan...**.  
+ Zeigt den aktuellen Zeitplan für den Kopierauftrag des SQL Server-Agents an, mit dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden. Diesen Zeitplan können Sie ändern. Dazu klicken Sie auf **Zeitplan...** .  
   
  **Zeitplan...**  
  Ändert die Parameter des SQL Server-Agentauftrags, von dem die Transaktionsprotokollsicherungen vom primären auf den sekundären Server kopiert werden.  
@@ -109,7 +109,7 @@ ms.locfileid: "51560487"
  Zeigt den Namen des SQL Server-Agentauftrags an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden sollen. Wenn Sie den Auftrag erstmalig erstellen, können Sie den Namen durch Eingabe in das entsprechende Feld ändern.  
   
  **Zeitplan**  
- Zeigt den aktuellen Zeitplan für den SQL Server-Agentauftrag an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden. Diese Option können Sie ändern. Dazu klicken Sie auf **Zeitplan...**.  
+ Zeigt den aktuellen Zeitplan für den SQL Server-Agentauftrag an, von dem die Transaktionsprotokollsicherungen in der sekundären Datenbank wiederhergestellt werden. Diese Option können Sie ändern. Dazu klicken Sie auf **Zeitplan...** .  
   
  **Zeitplan...**  
  Ändert die Parameter, die dem SQL Server-Agentwiederherstellungsauftrag zugeordnet sind.  
@@ -117,7 +117,7 @@ ms.locfileid: "51560487"
  **Diesen Auftrag deaktivieren**  
  Unterdrückt Wiederherstellungsvorgänge in der sekundären Datenbank.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

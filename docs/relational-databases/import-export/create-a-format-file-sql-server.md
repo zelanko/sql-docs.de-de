@@ -15,10 +15,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946228"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
@@ -64,7 +64,7 @@ ms.locfileid: "64946228"
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|und Beschreibung|  
 |----------------|-----------------|  
 |**formatnul-f** _Formatdatei_|Gibt die Nicht-XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  
@@ -94,7 +94,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|und Beschreibung|  
 |----------------|-----------------|  
 |**formatnul-f** _Formatdatei_|Gibt eine Nicht-XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
@@ -193,7 +193,7 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|und Beschreibung|  
 |----------------|-----------------|  
 |**formatnul-f** _Formatdatei_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
@@ -233,7 +233,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|Beschreibung|  
+|Qualifizierer|und Beschreibung|  
 |----------------|-----------------|  
 |**formatnul-f** _Formatdatei_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  

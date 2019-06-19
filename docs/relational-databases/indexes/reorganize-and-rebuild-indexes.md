@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66749192"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ Der erste Schritt bei der Entscheidung für eine Defragmentierungsmethode besteh
   
 Das durch die Funktion **sys.dm_db_index_physical_stats** zurückgegebene Resultset enthält die folgenden Spalten.  
   
-|Spalte|Beschreibung|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Der Prozentsatz der logischen Fragmentierung (falsche Reihenfolge der Seiten in einem Index).|  
 |**fragment_count**|Die Anzahl der Fragmente (physisch aufeinanderfolgende Blattseiten) im Index.|  
@@ -94,7 +94,13 @@ Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigru
 ### <a name="Security"></a> Sicherheit  
   
 #### <a name="Permissions"></a> Berechtigungen  
-Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
+Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied mindestens einer der folgenden Rollen sein:
+
+* Datenbankrolle **db_ddladmin** <sup>1</sup> 
+* Datenbankrolle **db_owner**
+* Serverrolle **sysadmin**  
+
+<sup>1</sup>Die Datenbankrolle **db_ddladmin** hat die [niedrigsten Berechtigungen](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models).
   
 ## <a name="SSMSProcedureFrag"></a> Überprüfen der Indexfragmentierung mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

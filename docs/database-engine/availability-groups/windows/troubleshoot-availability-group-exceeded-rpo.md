@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e1840f9c6d04965ae24d8b9d188b7def303a0b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 207c4aa417f2063cbdca8fa575b45ea380f1da4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408767"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780988"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Physischer Datenträger: Alle Indikatoren**  
   
--   **Physischer Datenträger: Mittlere Sek./Übertragung**  
+-   **Physischer Datenträger: Durchschn. Sek./Übertragung**  
   
 -   **SQL Server: Datenbanken > Wartezeit für Protokollleerungen**  
   

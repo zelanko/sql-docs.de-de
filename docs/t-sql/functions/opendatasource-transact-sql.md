@@ -25,10 +25,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: df3ae48887370bc7b0339b86e32c31b9ce6d360b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944891"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  Der Namen, der als PROGID des OLE DB-Anbieters für den Zugriff auf die Datenquelle registriert ist. *provider_name* ist vom Datentyp **char** und verfügt über keinen Standardwert.  
   
  *init_string*  
- Die Verbindungszeichenfolge, die an die IDataInitialize-Schnittstelle des Zielanbieters übergeben wird. Die Syntax der Anbieterzeichenfolge basiert auf durch Semikolons getrennten Schlüssel-Wert-Paaren im folgenden Format: **'** _keyword1_=_value_ **;** _keyword2_=_value_ **'** .  
+ Die Verbindungszeichenfolge, die an die IDataInitialize-Schnittstelle des Zielanbieters übergeben wird. Die Syntax der Anbieterzeichenfolge basiert auf durch Semikolons getrennten Schlüssel-Wert-Paaren im folgenden Format: **'**_keyword1_=_value_ **;** _keyword2_=_value_**'**.  
   
  Informationen zu bestimmten, vom Anbieter unterstützten Paaren aus Schlüsselwort und Wert finden Sie im MDAC SDK ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access Components Software Development Kit). In dieser Dokumentation wird die grundlegende Syntax definiert. In der folgenden Tabelle werden die am häufigsten im *init_string*-Argument verwendeten Schlüsselwörter aufgelistet.  
   

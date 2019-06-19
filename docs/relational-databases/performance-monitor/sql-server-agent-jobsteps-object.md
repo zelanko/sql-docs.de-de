@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 327a4f93774bd3ea4e40c6b75fe10921e20b38d5
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671781"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server-Agent, Auftragsschritte-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53379941"
   
  Die folgende Tabelle enthält die Leistungsindikatoren von **SQLAgent:Auftragsschritte** .  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |**Aktive Schritte**|Dieser Indikator gibt die Anzahl der aktuell ausgeführten Auftragsschritte an.|  
 |**Schritte in Warteschlange**|Dieser Indikator gibt die Anzahl der Auftragsschritte an, die für das Ausführen durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bereitstehen, deren Ausführung jedoch noch nicht gestartet wurde.|  
@@ -35,7 +35,7 @@ ms.locfileid: "53379941"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Instanz|Beschreibung|  
+|Instanz|und Beschreibung|  
 |--------------|-----------------|  
 |**_Total**|Informationen für alle Auftragsschritte.|  
 |**ActiveScripting**|Informationen für Auftragsschritte, die das **ActiveScripting** -Subsystem verwenden.|  

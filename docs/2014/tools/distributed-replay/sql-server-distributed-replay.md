@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a131d7607c798faed2e99a6e03713095bb6bb60f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150097"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
@@ -47,7 +47,7 @@ ms.locfileid: "63150097"
 ## <a name="distributed-replay-concepts"></a>Konzepte von Distributed Replay  
  Die folgenden Komponenten bilden die Distributed Replay-Umgebung:  
   
--   **Verwaltungstool "Distributed Replay"**: Eine Konsolenanwendung, `DReplay.exe`, zur Kommunikation mit distributed Replay Controller verwendet. Verwenden Sie das Verwaltungstool zum Steuern der verteilten Wiedergabe.  
+-   **Verwaltungstool "Distributed Replay"** : Eine Konsolenanwendung, `DReplay.exe`, zur Kommunikation mit distributed Replay Controller verwendet. Verwenden Sie das Verwaltungstool zum Steuern der verteilten Wiedergabe.  
   
 -   **Distributed Replay-Controller**: Ein Computer unter der Windows-Dienst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Controller. Der Distributed Replay Controller koordiniert die Aktionen der Distributed Replay Clients. Es kann in jeder Distributed Replay-Umgebung jeweils nur eine Controllerinstanz geben.  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9432cd3e3f03db8a96e0535245b50a44777edf75
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727868"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
@@ -117,7 +117,7 @@ ms.locfileid: "65727868"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **MaxNumberOfPatterns**  
  Geben Sie die maximale Anzahl von Mustern an, die das Profil berechnen soll. Der Standardwert dieser Option ist 10. Der Maximalwert ist 100.  
   

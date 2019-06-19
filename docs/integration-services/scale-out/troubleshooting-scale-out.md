@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718277"
 ---
 # <a name="troubleshoot-scale-out"></a>Problembehandlung in Scale Out
@@ -66,7 +66,7 @@ Führen Sie die unten aufgeführten Schritte nacheinander aus, bis Ihr Problem g
 
 ### <a name="symptoms"></a>Symptome
 
-*"System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://*[MachineName]:[Port]*/ClusterManagement/ that could accept the message."* (System.ServiceModel.EndpointNotFoundException: Unter https://[Computername]:[Port]/ClusterManagement/ wurde keine Überwachung durch einen Endpunkt durchgeführt, der die Meldung annehmen konnte.)
+*"System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://* [MachineName]:[Port] */ClusterManagement/ that could accept the message."* (System.ServiceModel.EndpointNotFoundException: Unter https://[Computername]:[Port]/ClusterManagement/ wurde keine Überwachung durch einen Endpunkt durchgeführt, der die Meldung annehmen konnte.)
 
 ### <a name="solution"></a>Lösung
 
@@ -212,7 +212,7 @@ Die Pakete werden erfolgreich ausgeführt, allerdings werden keine Meldungen pro
 Die Fehlermeldungen in dem Paketausführungsbericht reichen für die Problembehandlung nicht aus.
 
 ### <a name="solution"></a>Lösung
-Weitere Ausführungsprotokolle finden Sie im `TasksRootFolder`-Ordner, der in `WorkerSettings.config` konfiguriert ist. Standardmäßig handelt es sich um den Ordner `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. Es handelt sich um *[Konto]*, das den Scale Out-Workerdienst mit dem Standardwert `SSISScaleOutWorker140` ausführt.
+Weitere Ausführungsprotokolle finden Sie im `TasksRootFolder`-Ordner, der in `WorkerSettings.config` konfiguriert ist. Standardmäßig handelt es sich um den Ordner `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. Es handelt sich um *[Konto]* , das den Scale Out-Workerdienst mit dem Standardwert `SSISScaleOutWorker140` ausführt.
 
 Führen Sie den folgenden T-SQL-Befehl aus, um das Protokoll für die Paketausführung mit der *[Ausführungs-ID]* zu suchen, sodass die *[Task-ID]* zurückgegeben wird. Suchen Sie anschließend unter `TasksRootFolder` nach dem Namen des Unterordners, der die *[Task-ID*] enthält.
 

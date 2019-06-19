@@ -1,7 +1,7 @@
 ---
 title: Indizes für speicheroptimierte Tabellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 06/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462471"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Alle speicheroptimierten Tabellen müssen mindestens einen Index enthalten, da die Zeilen durch die Indizes miteinander verbunden werden. Für eine speicheroptimierte Tabelle wird jeder Index auch speicheroptimiert. Es gibt verschiedene Methoden, mit denen sich ein Index für einen speicheroptimierten Index von einem herkömmlichen Index für eine datenträgerbasierte Tabelle unterscheidet:  
@@ -35,7 +36,7 @@ Bei dem Index muss es sich um einen der folgenden handeln:
 - Hashindex  
 - Nicht gruppierter speicheroptimierter Index (d.h. die interne Standardstruktur einer B-Struktur) 
   
-*Hashindizes* werden unter [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index) ausführlicher erläutert.
+*Hashindizes* werden unter [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index) ausführlicher erläutert.  
 *Nicht gruppierte Indizes* werden unter [Nicht gruppierte Indizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) ausführlicher behandelt.  
 *Columnstore* -Indizes werden in einem [anderen Artikel](../../relational-databases/indexes/columnstore-indexes-overview.md)behandelt.  
 
@@ -57,7 +58,7 @@ Für eine Deklaration mit dem Standard DURABILITY = SCHEMA\_AND_DATA muss die sp
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
 > [!NOTE]  
 > Für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] besteht ein Limit von 8 Indizes pro speicheroptimierte Tabelle oder Tabellentyp. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt es keine Begrenzung mehr für die spezifische Anzahl von Indizes für speicheroptimierte Tabellen und Tabellentypen.
@@ -116,11 +117,30 @@ Dieser Unterabschnitt enthält einen Transact-SQL-Codeblock, der die Syntax zum 
   
 ## <a name="duplicate-index-key-values"></a>Doppelte Indexschlüsselwerte
 
-Doppelte Indexschlüsselwerte können die Leistung von Vorgängen an speicheroptimierten Tabellen beeinträchtigen. Eine große Anzahl von Duplikaten (z.B. 100+) macht das Verwalten eines Indexes ineffizient, da für die meisten Indexvorgänge doppelte Ketten durchlaufen werden müssen. Die Beeinträchtigung ist bei `INSERT`-, `UPDATE`- und `DELETE`-Vorgängen in speicheroptimierten Tabellen sichtbar. 
+Durch doppelte Werte für einen Indexschlüssel kann die Leistung speicheroptimierter Tabellen reduziert werden. Duplikate für das System durchlaufen Eingangsketten für die meisten Lese- und Schreibvorgänge für Indizes. Wenn eine Kette mehr als 100 doppelte Einträge umfasst, kann die Leistungsminderung messbar werden.
 
-Dieses Problem ist sowohl aufgrund der niedrigeren Kosten pro Vorgang für Hashindizes als auch der Interferenz großer doppelter Ketten mit der Hashkollisionskette bei Hashindizes stärker sichtbar. Um die Duplizierung in einem Index zu reduzieren, verwenden Sie einen nicht gruppierten Index und fügen am Ende der Indexschlüssel zusätzliche Spalten (z.B. aus dem Primärschlüssel) zum Reduzieren der Anzahl von Duplikaten hinzu. Weitere Informationen zu Hashkollisionen finden Sie unter [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+### <a name="duplicate-hash-values"></a>Doppelte Hashwerte
 
-Ziehen Sie zum Beispiel eine `Customers`-Tabelle mit einem Primärschlüssel für `CustomerId` und einem Index in Spalte `CustomerCategoryID` in Erwägung. In der Regel wird es in einer bestimmten Kategorie viele Kunden und damit viele doppelte Werte für einen bestimmten Schlüssel im Index von „CustomerCategoryID“ geben. In diesem Szenario hat sich die Verwendung eines nicht gruppierten Index für `(CustomerCategoryID, CustomerId)` bewährt. Dieser Index kann für Abfragen verwendet werden, die ein `CustomerCategoryID` einbeziehendes Prädikat verwenden, enthält keine Duplikate und verursacht deshalb keine Ineffizienz bei der Indexwartung.
+Dieses Problem ist bei Hashindizes stärker sichtbar. Hashindizes sind aufgrund der folgenden Aspekte stärker beeinträchtigt:
+
+- Die niedrigeren Kosten pro Vorgang für Hashindizes
+- Die Interferenz großer doppelter Ketten mit der Hashkollisionskette
+
+Um die Duplizierung in einem Index zu reduzieren, können Sie folgende Anpassungen vornehmen:
+
+- Verwenden Sie einen nicht gruppierten Index.
+- Fügen Sie am Ende des Indexschlüssels zusätzliche Spalten hinzu, um die Anzahl von Duplikaten zu verringern.
+  - Sie können beispielsweise Spalten hinzufügen, die auch im Primärschlüssel enthalten sind.
+
+Weitere Informationen zu Hashkollisionen finden Sie unter [Hashindizes für speicheroptimierte Tabellen](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+
+### <a name="example-improvement"></a>Verbesserungsbeispiel
+
+Es folgt ein Beispiel dafür, wie Sie ineffiziente Leistung in Ihrem Index vermeiden können.
+
+Angenommen, Sie haben eine Tabelle `Customers` mit einem Primärschlüssel für `CustomerId` und einem Index in der Spalte `CustomerCategoryID`. In der Regel sind in einer bestimmten Kategorie viele Kunden enthalten. Daher gibt es viele doppelte Werte für „CustomerCategoryID“ in einem bestimmten Schlüssel des Indexes.
+
+In diesem Szenario hat sich die Verwendung eines nicht gruppierten Index für `(CustomerCategoryID, CustomerId)` bewährt. Dieser Index kann für Abfragen verwendet werden, die ein Prädikat unter Einbeziehung von `CustomerCategoryID` verwenden, doch enthält der Indexschlüssel keine Duplikate. Daher wird weder durch die doppelten „CustomerCategoryID“-Werte noch durch die zusätzliche Spalte im Index eine ineffiziente Indexwartung verursacht.
 
 Die folgende Abfrage zeigt die durchschnittliche Anzahl doppelter Indexschlüsselwerte für `CustomerCategoryID` in der Tabelle `Sales.Customers`in der Beispieldatenbank [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
 
@@ -155,15 +175,11 @@ In allen folgenden SELECT-Anweisungen wird ein nicht gruppierter Index gegenübe
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,17 +211,18 @@ Der Hashindex benötigt die `WHERE`-Klausel, um einen Gleichheitstest für die e
   
 Genauso wenig ist der Indextyp nützlich, wenn die `WHERE`-Klausel nur die zweite Spalte im Indexschlüssel angibt.  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>Zusammenfassungstabelle für den Vergleich der Indexverwendungsszenarien  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>Zusammenfassungstabelle für den Vergleich der Indexverwendungsszenarien  
   
 Die folgende Tabelle enthält alle Vorgänge, die von den verschiedenen Indextypen unterstützt werden. *Ja* bedeutet, dass der Index die Anforderung effizient verarbeiten kann, und *Nein* bedeutet, dass der Index die Anforderung nicht effizient erfüllen kann. 
   
 | Vorgang | Speicheroptimiert, <br/> Hashindizes | Speicheroptimiert, <br/> Nicht gruppiert | Datenträgerbasiert, <br/> (nicht) gruppiert |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| Indexscan, alle Tabellenzeilen abrufen. | Benutzerkontensteuerung | Benutzerkontensteuerung | Benutzerkontensteuerung |  
-| Indexsuche nach Gleichheitsprädikaten (=). | Benutzerkontensteuerung <br/> (Vollständiger Schlüssel ist erforderlich.) | Benutzerkontensteuerung  | Benutzerkontensteuerung |  
-| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, `BETWEEN`). | nein <br/> (Führt zu einem Indexscan.) | Ja <sup>1</sup> | Benutzerkontensteuerung |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | nein | Benutzerkontensteuerung | Benutzerkontensteuerung |  
-| Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | nein | nein | Benutzerkontensteuerung |  
+| Indexscan, alle Tabellenzeilen abrufen. | Ja | Ja | Ja |  
+| Indexsuche nach Gleichheitsprädikaten (=). | Ja <br/> (Vollständiger Schlüssel ist erforderlich.) | Ja  | Ja |  
+| Indexsuche nach Ungleichheits- und Bereichsprädikaten <br/> (>, <, <=, >=, `BETWEEN`). | Nein <br/> (Führt zu einem Indexscan.) | Ja <sup>1</sup> | Ja |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht. | Nein | Ja | Ja |  
+| Abrufen von Zeilen in einer Sortierreihenfolge, die der umgekehrten Indexdefinition entspricht. | Nein | Nein | Ja |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Für einen nicht gruppierten speicheroptimierten Index ist der vollständige Schlüssel nicht erforderlich, um eine Indexsuche auszuführen.  
 

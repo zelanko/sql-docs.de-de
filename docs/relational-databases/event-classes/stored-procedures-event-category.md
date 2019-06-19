@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ab7c9a5cf2b002d783e8a46805bce273f885c6dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662583"
 ---
 # <a name="stored-procedures-event-category"></a>Gespeicherte Prozeduren (Ereigniskategorie)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47831798"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[RPC:Completed (Ereignisklasse)](../../relational-databases/event-classes/rpc-completed-event-class.md)|Gibt an, dass ein Remoteprozeduraufruf (RPC, Remote Procedure Call) abgeschlossen wurde.|  
 |[PreConnect:Completed (Ereignisklasse)](../../relational-databases/event-classes/preconnect-completed-event-class.md)|Gibt an, dass die Ausführung einer Klassifizierungsfunktion der Ressourcenkontrolle beendet wird.|  
@@ -45,7 +45,7 @@ ms.locfileid: "47831798"
 |[SP:StmtCompleted (Ereignisklasse)](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)|Gibt an, dass eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in einer gespeicherten Prozedur abgeschlossen wurde.|  
 |[SP:StmtStarting-Ereignisklasse](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|Gibt an, dass eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in einer gespeicherten Prozedur gestartet wurde.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

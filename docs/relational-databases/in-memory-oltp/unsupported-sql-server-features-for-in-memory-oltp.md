@@ -1,7 +1,7 @@
 ---
 title: Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: cfb3e978c407ecdd3394c2d6ca90df9d5b1f8885
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66506592"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktio
 |Verbindungsserver|Sie können auf verknüpfte Server nicht in der gleichen Abfrage oder Transaktion als speicheroptimierte Tabellen zugreifen. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine &#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Massenprotokollierung|Unabhängig vom Wiederherstellungsmodell der Datenbank werden alle Vorgänge in dauerhaften speicheroptimierten Tabellen immer vollständig protokolliert.|  
 |Minimale Protokollierung|Die minimale Protokollierung wird für speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen zur minimalen Protokollierung finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) und [Voraussetzungen für die minimale Protokollierung beim Massenimport](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|Änderungsnachverfolgung|Die Änderungsnachverfolgung kann in einer Datenbank mit In-Memory OLTP-Objekten aktiviert werden. Änderungen in speicheroptimierten Tabellen werden allerdings nicht nachverfolgt.|  
+|Änderungsnachverfolgung|Die Änderungsnachverfolgung kann für eine Datenbank mit In-Memory-OLTP-Objekten nicht aktiviert werden. |
 | DDL-Trigger | DDL-Trigger auf Datenbankebene und Serverebene werden sowohl bei speicherinternen OLTP-Tabellen als auch bei nativ kompilierten Modulen nicht unterstützt. |  
-| Change Data Capture (CDC) | CDC kann nicht mit einer Datenbank mit speicheroptimierten Tabellen verwendet werden, da es intern einen DDL-Trigger für DROP TABLE verwendet. |  
+| Change Data Capture (CDC) | SQL Server 2017 CU15 und höher unterstützt die Aktivierung von CDC für eine Datenbank mit arbeitsspeicheroptimierten Tabellen. Dies gilt nur für die Datenbank und Tabellen auf dem Datenträger in der Datenbank. In früheren Versionen von SQL Server kann CDC nicht mit einer Datenbank mit speicheroptimierten Tabellen verwendet werden, da CDC intern einen DDL-Trigger für DROP TABLE verwendet. |  
 | Fibermodus | Der Fibermodus wird für speicheroptimierte Tabellen nicht unterstützt:<br /><br />Wenn der Fibermodus aktiviert ist, können keine Datenbanken mit speicheroptimierten Dateigruppen erstellt oder speicheroptimierte Dateigruppen zu vorhandenen Datenbanken hinzugefügt werden.<br /><br />Sie können den Fibermodus aktivieren, wenn Datenbanken mit speicheroptimierten Dateigruppen vorhanden sind. Allerdings erfordert das Aktivieren des Fibermodus einen Serverneustart. In einem solchen Fall können Datenbanken mit speicheroptimierten Dateigruppen nicht wiederhergestellt werden. Dann wird eine Fehlermeldung angezeigt, die Ihnen empfiehlt, den Fibermodus zu deaktivieren, um Datenbanken mit speicheroptimierten Dateigruppen nutzen zu können.<br /><br />Das Anfügen und Wiederherstellen von Datenbanken mit speicheroptimierten Dateigruppen schlägt fehl, wenn der Fibermodus aktiviert ist. Die Datenbanken werden als fehlerverdächtig gekennzeichnet.<br /><br />Weitere Informationen finden Sie unter [Lightweightpooling (Serverkonfigurationsoption)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Service Broker-Einschränkung|Kann über eine systemintern kompilierte gespeicherte Prozedur nicht auf eine Warteschlange zugreifen.<br /><br /> Kann in einer Transaktion, die auf speicheroptimierte Tabellen zugreift, nicht auf eine Warteschlange in einer Remotedatenbank zugreifen.|  
 |Replikation auf Abonnenten|Die Transaktionsreplikation in speicheroptimierte Tabellen von Abonnenten wird nur eingeschränkt unterstützt. Weitere Informationen finden Sie unter [Replikation mit Abonnenten von speicheroptimierten Tabellen](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  
@@ -52,7 +52,7 @@ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktio
 Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unterstützt. In der folgenden Tabelle werden unterstützte Szenarien und entsprechende Einschränkungen beschrieben. (Siehe auch [Datenbankübergreifende Abfragen](../../relational-databases/in-memory-oltp/cross-database-queries.md).)  
 
 
-|Datenbanken|Zulässig|Beschreibung|  
+|Datenbanken|Zulässig|und Beschreibung|  
 |---------------|-------------|-----------------|  
 | Benutzerdatenbanken, **Modell**- und **msdb**-Datenbanken | Nein | In den meisten Fällen werden datenbankübergreifende Abfragen und Transaktionen *nicht* unterstützt.<br /><br />Ein Abfrage kann nicht auf andere Datenbanken zugreifen, wenn die Abfrage eine speicheroptimierte Tabelle oder eine nativ kompilierte gespeicherte Prozedur verwendet. Diese Einschränkung gilt für Transaktionen und Abfragen.<br /><br />Ausgenommen sind die Systemdatenbanken **tempdb** und **master**. Hier steht die **master**-Datenbank nur für den schreibgeschützten Zugriff zur Verfügung. |
 | Datenbank **Resource**, **tempdb** | Ja | Bei einer Transaktion, die speicherinterne OLTP-Objekte betrifft, können die Systemdatenbanken **Resource** und **tempdb** ohne zusätzliche Einschränkungen verwendet werden.

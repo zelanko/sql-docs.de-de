@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von replizierten Datenbanken | Microsoft-Dokumentation
+title: Upgraden oder Patchen replizierter Datenbanken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794720"
 ---
-# <a name="upgrade-replicated-databases"></a>Aktualisieren von replizierten Datenbanken
+# <a name="upgrade-or-patch-replicated-databases"></a>Upgraden oder Patchen replizierter Datenbanken
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ Der Upgradepfad für SQL Server unterscheidet sich je nach Bereitstellungsmuster
 
 Das Verschieben von Verleger-Abonnenten-Paaren in Teilen in die neue parallele Umgebung wurde anstelle der Verschiebung der gesamten Topologie als gängige Methode für parallele Upgrades für Replikationstopologien eingeführt. Mithilfe eines solchen inkrementellen Ansatzes lässt sich die Downtime steuern, und die Auswirkungen auf das Unternehmen, das auf die Replikation angewiesen ist, lassen sich zumindest bis zu einem gewissen Grad minimieren.  
 
-
-> [!NOTE]  
-> **Ausführliche Informationen zum Upgrade der Replikationstopologie auf SQL Server 2016 finden Sie im Blogbeitrag [Upgrading a Replication Topology to SQL Server 2016 (Upgrade der Replikationstopologie auf SQL Server 2016)](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+Der Großteil dieses Artikels bezieht sich auf das Upgrade der SQL Server-Version. Die Vorgehensweise für direktes Upgrade sollte aber auch beim Patchen von SQL Server mit einem Service Pack oder kumulativen Update verwendet werden. 
 
  >[!WARNING]
  > Das Upgrade einer Replikationstopologie ist ein aus mehreren Schritten bestehender Vorgang. Es wird empfohlen, ein Upgrade eines Replikats Ihrer Replikationstopologie in einer Testumgebung auszuprobieren, bevor das Upgrade in der eigentlichen Produktionsumgebung durchgeführt wird. Dadurch lässt sich jegliche für eine reibungslose Durchführung des Upgrades erforderliche Dokumentation ganz ohne zusätzliche Kosten und lange Downtimes während des eigentlichen Upgradevorgangs ins Reihe bringen. Kunden konnten die Downtime beim Upgrade ihrer Replikationstopologie mithilfe von Always On-Verfügbarkeitsgruppen und bzw. oder SQL Server-Failoverclusterinstanzen für ihre Produktionsumgebungen deutlich reduzieren. Darüber hinaus wird empfohlen, dass Sie Sicherungen aller Datenbanken anlegen, einschließlich MSDB, Master-, Verteilungs- und Benutzerdatenbanken, die an der Replikation beteiligt sind, bevor Sie das Upgrade ausführen.

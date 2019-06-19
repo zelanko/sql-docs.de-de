@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721702"
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
@@ -30,7 +30,7 @@ ms.locfileid: "62721702"
 ###  <a name="Security"></a> Sicherheit  
  Weitere Informationen finden Sie unter [Replikationsbereitstellung Secure](security/view-and-modify-replication-security-settings.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Sie konfigurieren die Verteilung mit dem Assistenten für neue Veröffentlichung oder mit dem Verteilungskonfigurations-Assistenten. Rufen Sie nach der Konfiguration des Verteilers das Dialogfeld **Verteilereigenschaften - \<Distributor>** auf, und ändern Sie die Eigenschaften. Verwenden Sie den Verteilungskonfigurations-Assistenten, wenn Sie einen Verteiler so konfigurieren möchten, dass die Mitglieder der festen Datenbankrollen **db_owner** Veröffentlichungen erstellen können, oder wenn Sie einen Remoteverteiler konfigurieren möchten, bei dem es sich nicht um einen Verleger handelt.  
   
 #### <a name="to-configure-distribution"></a>So konfigurieren Sie die Verteilung  
@@ -62,25 +62,25 @@ ms.locfileid: "62721702"
   
     -   Wenn der Wert von **installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) auf dem Verteiler für die master-Datenbank aus.  
   
-    -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungsdatenbank für **@database**. Optional können Sie die maximale Transaktionsbeibehaltungsdauer für **@max_distretention** und die Verlaufsbeibehaltungsdauer für **@history_retention**. Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
+    -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungsdatenbank für **@database** . Optional können Sie die maximale Transaktionsbeibehaltungsdauer für **@max_distretention** und die Verlaufsbeibehaltungsdauer für **@history_retention** . Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
   
 2.  Führen Sie auf dem Verteiler, der zugleich der Verleger ist, [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für **@working_directory** an.  
   
-3.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für **@dbname**, den Typ der Replikation für **@optname**, und den Wert `true` für **@value**.  
+3.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für **@dbname** , den Typ der Replikation für **@optname** , und den Wert `true` für **@value** .  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>So konfigurieren Sie die Veröffentlichung mit einem Remoteverteiler  
   
 1.  Führen Sie [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) aus, um zu ermitteln, ob der Server bereits als Verteiler konfiguriert ist.  
   
-    -   Wenn der Wert von **installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie ein starkes Kennwort für **@password**. Dieses Kennwort für das **distributor_admin** -Konto wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
+    -   Wenn der Wert von **installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie ein starkes Kennwort für **@password** . Dieses Kennwort für das **distributor_admin** -Konto wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
   
-    -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungsdatenbank für **@database**. Optional können Sie die maximale Transaktionsbeibehaltungsdauer für **@max_distretention** und die Verlaufsbeibehaltungsdauer für **@history_retention**. Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
+    -   Wenn der Wert von **distribution db installed** im Resultset gleich **0** ist, führen Sie [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) auf dem Verteiler für die master-Datenbank aus. Geben Sie den Namen der Verteilungsdatenbank für **@database** . Optional können Sie die maximale Transaktionsbeibehaltungsdauer für **@max_distretention** und die Verlaufsbeibehaltungsdauer für **@history_retention** . Wenn eine neue Datenbank erstellt wird, geben Sie die gewünschten Eigenschaftenparameter für die Datenbank an.  
   
-2.  Führen Sie auf dem Verteiler die Prozedur [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für **@working_directory** an. Wenn der Verteiler zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@security_mode** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@login** und **@password**.  
+2.  Führen Sie auf dem Verteiler die Prozedur [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für **@working_directory** an. Wenn der Verteiler zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@security_mode** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@login** und **@password** .  
   
-3.  Führen Sie auf dem Verleger für die master-Datenbank die Prozedur [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) aus. Geben Sie das starke Kennwort an, das in Schritt 1 für **@password**. Dieses Kennwort wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
+3.  Führen Sie auf dem Verleger für die master-Datenbank die Prozedur [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) aus. Geben Sie das starke Kennwort an, das in Schritt 1 für **@password** . Dieses Kennwort wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.  
   
-4.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für **@dbname**, den Replikationstyp für **@optname**und den Wert  für **@value**.  
+4.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für **@dbname** , den Replikationstyp für **@optname** und den Wert  für **@value** .  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  Im folgenden Beispiel wird veranschaulicht, wie die Veröffentlichung und die Verteilung programmgesteuert konfiguriert werden. In diesem Beispiel werden der Name des Servers, der als Verleger konfiguriert wird, und ein lokaler Verteiler mithilfe von Skriptvariablen bereitgestellt. Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replikationsprozeduren programmgesteuert konfiguriert werden.  

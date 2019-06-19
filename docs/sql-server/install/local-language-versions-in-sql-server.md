@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 914947a72035b5df2247eb01358253938f6eded6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62682375"
 ---
 # <a name="local-language-versions-in-sql-server"></a>Lokale Sprachversionen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "47663138"
   
 4.  Klicken Sie auf **Übernehmen** , um die Änderung zu bestätigen, und dann auf **OK** , um das Fenster zu schließen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Installieren von SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   

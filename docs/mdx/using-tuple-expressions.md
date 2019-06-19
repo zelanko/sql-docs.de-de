@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251504"
 ---
 # <a name="using-tuple-expressions"></a>Verwenden von Tupelausdrücken
@@ -33,7 +33,7 @@ ms.locfileid: "63251504"
 ## <a name="tuples-and-implicit-members"></a>Tupel und implizite Elemente  
  Ein Tupel, das explizit ein einzelnes Element aus jeder Dimension angibt, die in einem Cube enthalten ist, wird als vollqualifiziertes Tupel bezeichnet. Ein Tupel muss aber nicht vollqualifiziert sein.  
   
- Auf jede Dimension, auf die in einem Tupel nicht explizit verwiesen wird, wird implizit verwiesen. Das Element der Dimension, auf die implizit verwiesen wird, hängt von der Struktur der Dimension und den darin definierten Attributbeziehungen ab. Wenn es in der gleichen Dimension des impliziten Hierarchiebezugs einen expliziten Hierarchiebezug gibt und zwischen den beiden Hierarchien eine direkte oder indirekte Beziehung definiert ist, verhält sich das Tupel, als enthielte es das Element in der Hierarchie, auf die implizit verwiesen wird, die mit dem Element in der Hierarchie vorhanden ist, auf die explizit verwiesen wird.  Wenn z. B. ein Cube eine Kundendimension mit Stadt- und Landattributen enthält und eine Beziehung zwischen beiden Attributen definiert ist, so dass eine Stadt zu genau einem Land gehört, ein Land jedoch mehrere Städte haben kann, stellt die explizite Einbeziehung der Stadt „London“ in ein Tupel einen impliziten Bezug für das Land „England“ her. Wenn jedoch keine Attributbeziehung definiert ist, die Beziehung umgekehrt ist (obwohl Stadt und Land in Beziehung stehen, können Sie z.  B. aus dem Land, in dem jemand lebt, nicht ableiten, in welcher Stadt er lebt) oder keine direkte Beziehung zwischen den beiden Attributen definiert ist (eine Beziehung kann zwischen Kunde und Stadt sowie zwischen Kunde und Land bestehen, ohne dass eine Beziehung zwischen Stadt und Land definiert ist), gelten folgende Regeln:  
+ Auf jede Dimension, auf die in einem Tupel nicht explizit verwiesen wird, wird implizit verwiesen. Das Element der Dimension, auf die implizit verwiesen wird, hängt von der Struktur der Dimension und den darin definierten Attributbeziehungen ab. Wenn es in der gleichen Dimension des impliziten Hierarchiebezugs einen expliziten Hierarchiebezug gibt und zwischen den beiden Hierarchien eine direkte oder indirekte Beziehung definiert ist, verhält sich das Tupel, als enthielte es das Element in der Hierarchie, auf die implizit verwiesen wird, die mit dem Element in der Hierarchie vorhanden ist, auf die explizit verwiesen wird. Wenn z. B. ein Cube eine Kundendimension mit Stadt- und Landattributen enthält und eine Beziehung zwischen beiden Attributen definiert ist, so dass eine Stadt zu genau einem Land gehört, ein Land jedoch mehrere Städte haben kann, stellt die explizite Einbeziehung der Stadt „London“ in ein Tupel einen impliziten Bezug für das Land „England“ her. Wenn jedoch keine Attributbeziehung definiert ist, die Beziehung umgekehrt ist (obwohl Stadt und Land in Beziehung stehen, können Sie z.  B. aus dem Land, in dem jemand lebt, nicht ableiten, in welcher Stadt er lebt) oder keine direkte Beziehung zwischen den beiden Attributen definiert ist (eine Beziehung kann zwischen Kunde und Stadt sowie zwischen Kunde und Land bestehen, ohne dass eine Beziehung zwischen Stadt und Land definiert ist), gelten folgende Regeln:  
   
 -   Hat die Hierarchie, auf die implizit verwiesen wird, ein Standardelement, wird dem Tupel das Standardelement hinzugefügt.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069096"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Registerkarte "Clusterprofile des Sequenzclustermodells" (Miningmodell-Viewer)
@@ -51,7 +51,7 @@ ms.locfileid: "66069096"
   
 -   **\<Attributname > .samples**: Die Histogramme in dieser Zeile zeigen die Sequenzen von Elementen, die jeden Cluster repräsentativ sind. In DMX-Begriffen ausgedrückt, sind dies die Beispielfälle für jeden Cluster.  
   
--   **\<Attributname >**: Die Histogramme in dieser Zeile beschreiben alle Elemente, die der Cluster enthält, sowie ihre gesamtverteilung. Klicken Sie auf ein Histogramm, wenn die **Mininglegende** sichtbar ist, um die jeweiligen numerischen Werte anzuzeigen.  
+-   **\<Attributname >** : Die Histogramme in dieser Zeile beschreiben alle Elemente, die der Cluster enthält, sowie ihre gesamtverteilung. Klicken Sie auf ein Histogramm, wenn die **Mininglegende** sichtbar ist, um die jeweiligen numerischen Werte anzuzeigen.  
   
  **Status**  
  Diese Spalte im Diagramm ist optional und kann durch Auswählen der Option **Legende anzeigen** angezeigt bzw. entfernt werden. Die Spalte **Status** bietet einen Überblick darüber, welcher Status durch welche Farbe im entsprechenden Clusterhistogramm dargestellt wird.  

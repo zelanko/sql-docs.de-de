@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f98f20faeb291524f6426138000aec8b592b35b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045771"
 ---
 # <a name="mssqlserver2515"></a>MSSQLSERVER_2515
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47752858"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2515|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -61,7 +61,7 @@ Wenn DBCC CHECKDB mit einer der REPAIR-Klauseln ausgeführt wird und das Problem
 ### <a name="results-of-running-repair-options"></a>Ergebnis der Ausführung von REPAIR-Optionen  
 Durch Ausführen von REPAIR wird das differenzielle Bitmuster ungültig. Sie können eine differenzielle Sicherung erst nach einer vollständigen Datenbanksicherung ausführen. Die vollständige Datenbanksicherung bietet eine Grundlage für die Neuerstellung des differenziellen Bitmusters.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](~/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
 [MSSQLSERVER_2516](~/relational-databases/errors-events/mssqlserver-2516-database-engine-error.md)  
   

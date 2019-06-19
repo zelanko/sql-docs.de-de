@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce5bf2a376712d603be3099f7ccefa0e6b799219
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62728487"
 ---
 # <a name="dimension-storage"></a>Speichern von Dimensionen
@@ -33,7 +33,7 @@ ms.locfileid: "62728487"
   
 -   Mehrdimensionale OLAP (MOLAP)  
   
- Durch den Speichermodus werden der Speicherort und die Form der Daten einer Dimension bestimmt. MOLAP ist der Standardspeichermodus für Dimensionen. **Verwandte Themen:**[Partition Speichermodi und Verarbeitung](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
+ Durch den Speichermodus werden der Speicherort und die Form der Daten einer Dimension bestimmt. MOLAP ist der Standardspeichermodus für Dimensionen. **Verwandte Themen:** [Partition Speichermodi und Verarbeitung](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  
   
 ## <a name="molap"></a>MOLAP  
  Daten für eine Dimension, die MOLAP verwendet, werden in einer mehrdimensionalen Struktur in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeichert. Diese mehrdimensionale Struktur wird erstellt und aufgefüllt, wenn die Dimension verarbeitet wird. MOLAP-Dimensionen ermöglichen eine bessere Abfrageleistung als ROLAP-Dimensionen.  
@@ -42,7 +42,7 @@ ms.locfileid: "62728487"
  Die Daten für eine Dimension, die ROLAP verwendet, werden eigentlich in den Tabellen gespeichert, die zum Definieren der Dimension verwendet werden. Der ROLAP-Speichermodus kann verwendet werden, um große Dimensionen ohne Kopieren großer Datenmengen zu unterstützen, allerdings zu Lasten der Abfrageleistung. Da die Dimension direkt von den Tabellen in der Datenquellensicht abhängt, die zum Definieren der Dimension verwendet wurden, unterstützt der ROLAP-Speichermodus auch Echtzeit-OLAP.  
   
 > [!IMPORTANT]  
->  Wenn eine Dimension den ROLAP-Speichermodus verwendet und die Dimension in einen Cube eingeschlossen ist, der die MOLAP-Speicherung verwendet, muss auf jede Schemaänderung an der zugehörigen Quelltabelle die sofortige Verarbeitung des Cubes folgen. Erfolgt die Verarbeitung nicht, kann dies zu inkonsistenten Ergebnissen führen, wenn der Cube abgefragt wird. **Verwandtes Thema:**[Automatisieren von Analysis Services-Verwaltungsaufgaben mit SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
+>  Wenn eine Dimension den ROLAP-Speichermodus verwendet und die Dimension in einen Cube eingeschlossen ist, der die MOLAP-Speicherung verwendet, muss auf jede Schemaänderung an der zugehörigen Quelltabelle die sofortige Verarbeitung des Cubes folgen. Erfolgt die Verarbeitung nicht, kann dies zu inkonsistenten Ergebnissen führen, wenn der Cube abgefragt wird. **Verwandtes Thema:** [Automatisieren von Analysis Services-Verwaltungsaufgaben mit SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Speichermodi und Verarbeitung von Partitionen](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)  

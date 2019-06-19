@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65801352"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Erstellen eines Ziels mit der Skriptkomponente
@@ -73,7 +73,7 @@ ms.locfileid: "65801352"
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
  Wenn Sie die vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie diese in den Eigenschaftsfeldern **ReadOnlyVariables** und **ReadWriteVariables** auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** hinzufügen.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten (**...**) neben den Eigenschaftsfeldern für **ReadOnlyVariables** und **ReadWriteVariables** klicken und dann die Variablen im Dialogfeld **Variablen auswählen** festlegen.  
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ) neben den Eigenschaftsfeldern für **ReadOnlyVariables** und **ReadWriteVariables** klicken und dann die Variablen im Dialogfeld **Variablen auswählen** festlegen.  
   
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   

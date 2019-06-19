@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017171"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
@@ -31,7 +31,7 @@ ms.locfileid: "63017171"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ändern Sie die Mitgliedschaft einer Auftragskategorie mit**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63017171"
 ###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-change-the-membership-of-a-job-category"></a>So ändern Sie die Mitgliedschaft einer Auftragskategorie  
   
@@ -56,13 +56,13 @@ ms.locfileid: "63017171"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
   
-4.  Wählen Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ die Auftragskategorie aus, die Sie bearbeiten möchten, und klicken Sie dann auf **Aufträge anzeigen**.  
+4.  Wählen Sie im Dialogfeld **Auftragskategorien verwalten -** _Servername_ die Auftragskategorie aus, die Sie bearbeiten möchten, und klicken Sie dann auf **Aufträge anzeigen**.  
   
 5.  Aktivieren Sie das Kontrollkästchen **Alle Aufträge anzeigen** .  
   
 6.  Um der Kategorie einen Auftrag hinzuzufügen, aktivieren Sie im Hauptraster in der **Select** -Spalte das Kontrollkästchen, das dem Auftrag entspricht. Um einen Auftrag aus der Kategorie zu entfernen, deaktivieren Sie das Kontrollkästchen. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-7.  Schließen Sie das Dialogfeld **Auftragskategorien verwalten -**_Servername_ .  
+7.  Schließen Sie das Dialogfeld **Auftragskategorien verwalten -** _Servername_ .  
   
 ##  <a name="TSQL"></a> Verwenden von Transact-SQL  
   

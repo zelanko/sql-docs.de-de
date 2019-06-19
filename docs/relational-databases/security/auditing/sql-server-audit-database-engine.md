@@ -18,11 +18,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716082"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "56590475"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Datenbankspiegelung und SQL Server Audit  
  Eine Datenbank, für die eine Datenbank-Überwachungsspezifikation definiert wurde und für die Datenbankspiegelung verwendet wird, enthält die Datenbank-Überwachungsspezifikation. Die folgenden Elemente müssen konfiguriert werden, damit sie auf der gespiegelten SQL-Instanz ordnungsgemäß arbeitet:  
   
--   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Diese Einstellung können Sie mit dem Befehl CREATE AUDIT WITH GUID **=**_\<GUID der Quellserverüberwachung_> konfigurieren.  
+-   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Diese Einstellung können Sie mit dem Befehl CREATE AUDIT WITH GUID **=** _\<GUID der Quellserverüberwachung_> konfigurieren.  
   
 -   Bei Binärdateizielen muss das Dienstkonto des Spiegelservers über die erforderlichen Berechtigungen für den Speicherort verfügen, an den der Überwachungspfad geschrieben wird.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "56590475"
 ### <a name="dynamic-views-and-functions"></a>Dynamische Sichten und Funktionen  
  In der folgenden Tabelle werden die dynamischen Sichten und Funktion aufgelistet, die Sie für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  
   
-|Dynamische Sichten und Funktionen|Beschreibung|  
+|Dynamische Sichten und Funktionen|und Beschreibung|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Gibt eine Zeile für jede Überwachungsaktion zurück, die im Überwachungsprotokoll festgehalten werden kann, und für jede Überwachungsaktionsgruppe, die als Teil von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit konfiguriert werden kann.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Stellt Informationen über den aktuellen Status der Überwachung bereit.|  
@@ -164,7 +164,7 @@ ms.locfileid: "56590475"
 ### <a name="catalog-views"></a>Katalogsichten  
  In der folgenden Tabelle werden die Katalogsichten aufgeführt, die Sie für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  
   
-|Katalogsichten|Beschreibung|  
+|Katalogsichten|und Beschreibung|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Enthält Informationen über die Datenbanküberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Enthält Informationen über die Datenbank-Überwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz für alle Datenbanken.|  

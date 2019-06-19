@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4991fd3ad95a633881099b9677c9db55935f6a13
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727600"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig-Task
@@ -31,10 +31,10 @@ ms.locfileid: "65727600"
   
  ![Editor für den Pig-Task](../../integration-services/control-flow/media/hadoop-pig-task.png "Editor für den Pig-Task")  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  Konfigurieren Sie die folgenden Optionen im Hadoop-Dialogfeld **Editor für den Pig-Task** .  
   
-|Feld|Beschreibung|  
+|Feld|und Beschreibung|  
 |-----------|-----------------|  
 |**Hadoop-Verbindung**|Geben Sie einen vorhandenen Hadoop-Verbindungs-Manager an, oder erstellen Sie einen neuen. Dieser Verbindungs-Manager gibt an, wo der Dienst WebHCat gehostet wird.|  
 |**SourceType**|Geben Sie den Quelltyp der Abfrage an. Mögliche Werte sind **ScriptFile** und **DirectInput**.|  

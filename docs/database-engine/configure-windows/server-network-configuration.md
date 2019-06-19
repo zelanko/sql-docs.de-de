@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 2166549274f323894e7ba36b9495c56184745557
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771899"
 ---
 # <a name="server-network-configuration"></a>Server-Netzwerkkonfiguration
@@ -41,7 +41,7 @@ ms.locfileid: "66771899"
  Bei der Konfiguration für dynamische Anschlüsse verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise bei jedem Start einen anderen Anschluss. Wenn Sie durch eine Firewall eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, müssen Sie den von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten Anschluss öffnen. Konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Verwendung eines bestimmten Anschlusses, damit Sie die Firewall so konfigurieren können, dass die Kommunikation mit dem Server möglich ist. Weitere Informationen finden Sie unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Ändern einer Named Pipe  
- Sie können das Named Pipe-Protokoll so konfigurieren, dass an einer bestimmte Named Pipe gelauscht wird. Standardmäßig lauscht die Standardinstanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an der Pipe „\\\\.\pipe\sql\query“ für die Standardinstanz und „\\\\.\pipe\MSSQL$ *\<Instanzname>* \sql\query“ für eine benannte Instanz. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann nur an einer benannten Pipe lauschen, aber Sie können die Pipe bei Bedarf ändern. Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Diensts können Clients die Pipe identifizieren, wenn sie eine Verbindung herstellen. Weitere Informationen finden Sie unter [Konfigurieren eines Servers für die Überwachung einer alternativen Pipe &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ Sie können das Named Pipe-Protokoll so konfigurieren, dass an einer bestimmte Named Pipe gelauscht wird. Standardmäßig lauscht die Standardinstanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an der Pipe „\\\\.\pipe\sql\query“ für die Standardinstanz und „\\\\.\pipe\MSSQL$*\<Instanzname>* \sql\query“ für eine benannte Instanz. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann nur an einer benannten Pipe lauschen, aber Sie können die Pipe bei Bedarf ändern. Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Diensts können Clients die Pipe identifizieren, wenn sie eine Verbindung herstellen. Weitere Informationen finden Sie unter [Konfigurieren eines Servers für die Überwachung einer alternativen Pipe &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Erzwingen der Verschlüsselung  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann so konfiguriert werden, dass bei der Kommunikation mit Clientanwendungen eine Verschlüsselung erforderlich ist. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

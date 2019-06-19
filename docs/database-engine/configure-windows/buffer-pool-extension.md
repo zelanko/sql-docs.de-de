@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43423c8db03d27c26558672d287415fa5e12d638
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 0f0736e2a0a0824187d3a3ba8bac9573efe6bb9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255955"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66786809"
 ---
 # <a name="buffer-pool-extension"></a>Pufferpoolerweiterung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "54255955"
   
  Die folgenden XEvents sind verfügbar.  
   
-|XEvent|Beschreibung|Parameter|  
+|XEvent|und Beschreibung|Parameter|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|Wird ausgelöst, wenn eine Seite oder eine Gruppe von Seiten aus dem Pufferpool in die Pufferpoolerweiterungsdatei geschrieben werden.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|Wird ausgelöst, wenn eine Seite aus der Pufferpoolerweiterungsdatei in den Pufferpool gelesen wird.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  

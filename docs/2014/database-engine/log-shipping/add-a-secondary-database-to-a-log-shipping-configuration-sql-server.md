@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774353"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Hinzufügen einer sekundären Datenbank zu einer Protokollversandkonfiguration (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62774353"
   
 -   **Vorbereitungen:**  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So fügen Sie eine sekundäre Datenbank für den Protokollversand hinzu mit:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62774353"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die gespeicherten Prozeduren für den Protokollversand erfordern die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>So fügen Sie eine sekundäre Datenbank für den Protokollversand hinzu  
   

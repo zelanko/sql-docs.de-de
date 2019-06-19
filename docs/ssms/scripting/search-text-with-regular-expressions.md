@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ddb6a3b343e89f5f844e54788ce88658a1a76e6
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820749"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
@@ -40,7 +40,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  Die folgende Tabelle enthält eine Beschreibung der regulären Ausdrücke, die in der **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|und Beschreibung|  
 |----------------|------------|-----------------|  
 |Beliebiges Zeichen|aus.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
 |0 oder mehr|*|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt alle möglichen Übereinstimmungen vor.|  
@@ -62,7 +62,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  Die Liste aller regulären Ausdrücke, die in **Suchen und Ersetzen** -Vorgängen zulässig sind, ist zu lang, um in der **Verweisliste**angezeigt werden zu können. Sie können auch einen der folgenden regulären Ausdrücke in eine **Suchen nach** -Zeichenfolge einfügen:  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|und Beschreibung|  
 |----------------|------------|-----------------|  
 |Minimal - zero or more|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |Minimal - one or more|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
@@ -86,7 +86,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  In der folgenden Tabelle ist die Syntax für Übereinstimmungen in Bezug auf Standardeigenschaften von Unicode-Zeichen aufgelistet. Die aus zwei Buchstaben bestehende Abkürzung ist mit der in der Datenbank für Eigenschaften von Unicode-Zeichen identisch. Die Abkürzungen lassen sich als Teil eines Zeichensatzes angeben. So entspricht z. B. der Ausdruck [:Nd:Nl:No] einer beliebigen Ziffer.  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|und Beschreibung|  
 |----------------|------------|-----------------|  
 |Großbuchstabe|:Lu|Entspricht einem beliebigen Großbuchstaben. So entspricht :Luhe z. B. "The", aber nicht "the".|  
 |Kleinbuchstabe|:Ll|Entspricht einem beliebigen Kleinbuchstaben. So entspricht :Llhe z. B. "the", aber nicht "The".|  
@@ -121,7 +121,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
  Neben den Standardeigenschaften von Unicode-Zeichen können auch die folgenden zusätzlichen Eigenschaften als Teil eines Zeichensatzes angegeben werden:  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|und Beschreibung|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Entspricht einem beliebigen einzelnen Zeichen. So entspricht :Alhe Wörtern wie "The", "then" und "reached".|  
 |Numerisch|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  

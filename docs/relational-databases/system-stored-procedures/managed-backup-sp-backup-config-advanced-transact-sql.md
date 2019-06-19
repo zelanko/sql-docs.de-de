@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62860953"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Weitere Informationen zur Verschlüsselung von Algorithmen finden Sie unter [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- Verschlüsselungstyp, der entweder "Zertifikat" sein kann oder "ASYMMETRIC_KEY". Die @encryptor_type ist **nvarchar(32)**. Dieser Parameter ist optional, wenn Sie NO_ENCRYPTION für angeben der @encryption_algorithm Parameter.  
+ Verschlüsselungstyp, der entweder "Zertifikat" sein kann oder "ASYMMETRIC_KEY". Die @encryptor_type ist **nvarchar(32)** . Dieser Parameter ist optional, wenn Sie NO_ENCRYPTION für angeben der @encryption_algorithm Parameter.  
   
  @encryptor_name  
  Der Name eines vorhandenen Zertifikats oder asymmetrischen Schlüssels, mit dem die Sicherung verschlüsselt wird. Die @encryptor_name ist **SYSNAME**. Bei Verwendung eines asymmetrischen Schlüssels muss die Konfiguration mit der erweiterten Schlüsselverwaltung (Extensible Key Management, EKM) erfolgen. Dieser Parameter ist optional, wenn Sie NO_ENCRYPTION für angeben der @encryption_algorithm Parameter.  

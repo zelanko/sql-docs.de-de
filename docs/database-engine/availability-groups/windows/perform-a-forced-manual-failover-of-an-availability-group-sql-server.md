@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a11d29e7cd8a44f052ad5e0b9ed9278d79174b39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e79323684bff589f54d3247d2feb710d97ceebe8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798205"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Ausführen eines erzwungenen manuellen Failovers einer Always On-Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,37 +49,8 @@ ms.locfileid: "53208679"
 > [!NOTE]  
 >  Weitere Informationen zu den Voraussetzungen und Empfehlungen zum Erzwingen des Failovers sowie ein Beispielszenario, in dem zur Wiederherstellung nach einem schwerwiegenden Fehler ein erzwungenes Failover verwendet wird, finden Sie weiter unten in diesem Artikel unter [Beispielszenario: Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy).  
   
--   **Vorbereitungen:**  
   
-     [Einschränkungen](#Restrictions)  
-  
-     [Erforderliche Komponenten](#Prerequisites)  
-  
-     [Empfehlungen](#Recommendations)  
-  
-     [Möglichkeiten zum Vermeiden von Datenverlust nach dem Erzwingen eines Quorums](#WaysToAvoidDataLoss)  
-  
-     [Sicherheit](#Security)  
-  
--   **Erzwingen eines Failovers (mit möglichem Datenverlust) mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Nachverfolgung:** [Wichtige Aufgaben nach einem erzwungenen Failover](#FollowUp)  
-  
--   **Beispielszenario:** [Wiederherstellen nach einem schwerwiegenden Fehler mithilfe eines erzwungenen Failovers](#ExampleRecoveryFromCatastrophy)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
-  
--   [Verwandte Inhalte](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="Restrictions"></a> Einschränkungen  
   
 -   Sie können nur dann kein erzwungenes Failover ausführen, wenn der WSFC-Cluster über kein Quorum verfügt.  
   
@@ -94,13 +65,13 @@ ms.locfileid: "53208679"
     > [!NOTE]  
     >  Die Unterstützung für datenbankübergreifende und verteilte Transaktionen unterscheidet sich je nach verwendeter SQL Server- und Betriebssystemversion. Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   Der WSFC-Cluster verfügt über ein Quorum. Wenn der Cluster über kein Quorum verfügt, siehe [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)ausgeführt wird.  
   
 -   Sie müssen eine Verbindung mit einer Serverinstanz herstellen können, die ein Replikat hostet, dessen Rolle den Status SECONDARY oder RESOLVING aufweist.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="Recommendations"></a> Empfehlungen  
   
 -   Erzwingen Sie kein Failover, wenn das primäre Replikat noch ausgeführt wird.  
   
@@ -113,7 +84,7 @@ ms.locfileid: "53208679"
   
 -   Wenn Clients eine Verbindung zum ursprünglichen primären Replikat herstellen können, bringt ein erzwungenes Failover ein gewisses Split-Brain-Risiko mit sich. Daher wird nachdrücklich empfohlen, vor dem Erzwingen des Failovers zu verhindern, dass Clients auf das ursprüngliche primäre Replikat zugreifen. Andernfalls ist es nach dem Erzwingen des Failovers möglich, dass die ursprünglichen primären Datenbanken und die aktuellen primären Datenbanken unabhängig voneinander aktualisiert werden.  
   
-###  <a name="WaysToAvoidDataLoss"></a> Möglichkeiten zum Vermeiden von Datenverlust nach dem Erzwingen eines Quorums  
+##  <a name="WaysToAvoidDataLoss"></a> Möglichkeiten zum Vermeiden von Datenverlust nach dem Erzwingen eines Quorums  
  Bei einigen Fehlerbedingungen nach dem Verlust des Quorums können Sie einen Datenverlust wie folgt verhindern:  
   
 -   **Wenn das ursprüngliche primäre Replikat online geschaltet wird**  
@@ -140,12 +111,11 @@ ms.locfileid: "53208679"
     > [!NOTE]  
     >  Wenn Sie ein Failover auf ein sekundäres Replikat erzwingen, hängt der Umfang des Datenverlusts davon ab, wie weit das Failoverziel hinter dem primären Replikat zurückliegt. Wenn der WSFC-Cluster über kein Quorum verfügt oder ein Quorum erzwungen wurde, können Sie den Umfang des potenziellen Datenverlusts nicht einschätzen. Beachten Sie jedoch, dass Sie mit dem Nachverfolgen des potenziellen Datenverlusts beginnen können, sobald der WSFC-Cluster wieder ein fehlerfreies Quorum aufweist. Weitere Informationen finden Sie im Abschnitt „Nachverfolgen des potenziellen Datenverlusts“ unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)ausgeführt wird.  
   
-###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So erzwingen Sie ein Failover (mit möglichem Datenverlust)**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung zu einer Serverinstanz her, die ein Replikat hostet, dessen Rolle in der Verfügbarkeitsgruppe, für die ein Failover ausgeführt werden muss, den Status SECONDARY oder RESOLVING aufweist, und erweitern Sie die Serverstruktur.  
@@ -297,7 +267,7 @@ ms.locfileid: "53208679"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  Die folgende Abbildung veranschaulicht die Abfolge von Aktionen, die in Reaktion auf einen schwerwiegenden Fehler im Hauptrechenzentrum im Remoterechenzentrum ausgeführt werden.  
   
- ![Schritte nach einem Fehler im Hauptrechenzentrum](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data center")  
+ ![Schritte nach einem Fehler im Hauptrechenzentrum](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Schritte nach einem Fehler im Hauptrechenzentrum")  
   
  In dieser Abbildung sind die folgenden Schritte angegeben:  
   
@@ -319,7 +289,7 @@ ms.locfileid: "53208679"
   
 ||Schritt|Links|  
 |-|----------|-----------|  
-|**1.**|Die Knoten im Hauptrechenzentrum werden wieder online geschaltet und stellen die Kommunikation mit dem WSFC-Cluster wieder her. Die Verfügbarkeitsreplikate werden als sekundäre Replikate mit angehaltenen Datenbanken online geschaltet, und der Datenbankadministrator muss die Ausführung jeder Datenbank möglichst bald manuell fortsetzen.|[Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> Tipp: Wenn Sie Bedenken bezüglich eines möglichen Datenverlusts in den primären Datenbanken nach dem Failover haben, sollten Sie versuchen, von einer der sekundären Datenbanken mit synchronem Commit eine Datenbank-Momentaufnahme für die angehaltenen Datenbanken zu erstellen. Bedenken Sie, dass die Transaktionsprotokollkürzung in einer primären Datenbank verzögert wird, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungsstatus des sekundären Replikats mit synchronem Commit kann auch nicht in HEALTHY übergehen, solange eine der lokalen Datenbanken angehalten ist.|  
+|**1.**|Die Knoten im Hauptrechenzentrum werden wieder online geschaltet und stellen die Kommunikation mit dem WSFC-Cluster wieder her. Die Verfügbarkeitsreplikate werden als sekundäre Replikate mit angehaltenen Datenbanken online geschaltet, und der Datenbankadministrator muss die Ausführung jeder Datenbank möglichst bald manuell fortsetzen.|[Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> Tipp: Wenn Sie Bedenken bezüglich eines möglichen Datenverlusts in den primären Datenbanken nach dem Failover haben, sollten Sie versuchen, von einer der sekundären Datenbanken mit synchronem Commit eine Datenbankmomentaufnahme für die angehaltenen Datenbanken zu erstellen. Bedenken Sie, dass die Transaktionsprotokollkürzung in einer primären Datenbank verzögert wird, solange eine ihrer sekundären Datenbanken angehalten ist. Der Synchronisierungsstatus des sekundären Replikats mit synchronem Commit kann auch nicht in HEALTHY übergehen, solange eine der lokalen Datenbanken angehalten ist.|  
 |**2.**|Sobald die Ausführung der Datenbanken fortgesetzt wird, ändert der Datenbankadministrator das neue primäre Replikat vorübergehend in den Modus für synchrone Commits. Dies umfasst zwei Schritte:<br /><br /> 1) Ändern eines Offlineverfügbarkeitsreplikats in den Modus für asynchrone Commits<br /><br /> 2) Ändern des neuen primären Replikats in den Modus für synchrone Commits Hinweis: Durch diesen Schritt können sekundäre Datenbanken mit synchronem Commit, deren Ausführung fortgesetzt wurde, den Status SYNCHRONIZED annehmen.|[Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
 |**3.**|Nachdem das sekundäre Replikat mit synchronem Commit auf **Knoten 03** (das ursprüngliche primäre Replikat) den Synchronisierungsstatus HEALTHY annimmt, führt der Datenbankadministrator ein geplantes manuelles Failover auf dieses Replikat aus, damit es wieder zum primären Replikat wird. Das Replikat auf **Knoten 04** wird wieder zu einem sekundären Replikat.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|Der Datenbankadministrator stellt eine Verbindung mit dem neuen primären Replikat her und:<br /><br /> 1) Ändert das frühere primäre Replikat (im Remoterechenzentrum) zurück in den Modus für asynchrone Commits.<br /><br /> 2) Ändert das sekundäre Replikat mit asynchronem Commit im Hauptrechenzentrum zurück in den Modus für synchrone Commits.|[Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
@@ -359,7 +329,7 @@ ms.locfileid: "53208679"
   
      [Microsoft-Whitepapers für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Whitepapers des SQL Server-Kundenberatungsteams](https://sqlcat.com/)  
+     [Whitepapers des SQL Server-Kundenberatungsteams](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

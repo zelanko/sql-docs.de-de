@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11c66e1ec21787fa263a999e9beaaf0e22646b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 996def514bc87bde79f85bffbb04056bf487764f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795454"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47646738"
   
 -   Wenn die Verbindung zwischen dem Spiegelserver und dem Zeugen und auch die Verbindung zwischen dem Spiegelserver und dem Prinzipalserver getrennt ist, ist unabhängig vom Status des Prinzipalservers kein automatisches Failover möglich.  
   
- Die Anforderung, dass mindestens zwei der Serverinstanzen verbunden sein müssen, wird als *Quorum*bezeichnet. Durch das Quorum wird sichergestellt, dass die Datenbank jeweils immer nur von einem Partner bedient werden kann. Informationen zur Funktionsweise des Quorums und die Auswirkungen auf eine Sitzung finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)bezeichnet wird.  
+ Die Anforderung, dass mindestens zwei der Serverinstanzen verbunden sein müssen, wird als *Quorum*bezeichnet. Durch das Quorum wird sichergestellt, dass die Datenbank jeweils immer nur von einem Partner bedient werden kann. Informationen zur Funktionsweise des Quorums und zu seinen Auswirkungen auf eine Sitzung finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ##  <a name="AddRemoveWitness"></a> So fügen Sie einen Zeugen hinzu oder entfernen ihn  
  **So fügen Sie einen Zeugen hinzu**  
@@ -77,10 +77,10 @@ ms.locfileid: "47646738"
   
 -   [Entfernen des Zeugen aus einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit (Datenbankspiegelung)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
  [Mögliche Fehler während der Datenbankspiegelung](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Spiegelungsstatus &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

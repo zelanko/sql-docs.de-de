@@ -10,13 +10,13 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b287e4f806f02f2b86493813f29776e118017fb8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: dc39108ea476947e95f237bdccf1fb64a70bd36a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405125"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794731"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
 
@@ -113,7 +113,7 @@ ms.locfileid: "52405125"
   
  **So upgraden Sie mit dem Upgrade der Datenbank-Engine**  
   
-1.  **Nur für [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**: Öffnen Sie **Systemsteuerung** > **Programme und Funktionen**, und deinstallieren Sie Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Nur für [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Öffnen Sie **Systemsteuerung** > **Programme und Funktionen**, und deinstallieren Sie Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Aktualisieren Sie die Datenbank-Engine auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Weitere Informationen finden Sie unter [Auswählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
@@ -150,13 +150,13 @@ ms.locfileid: "52405125"
 3.  Upgraden Sie das MDS-Datenbankschema, erstellen Sie eine Webanwendung, und ordnen Sie die neue Webanwendung der upgegradeten MDS-Datenbank zu. Anweisungen finden Sie in den Schritten 2 – 4 im Abschnitt [Upgrade ohne Datenbank-Engine-Upgrade](#noengine).  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
- **Problem** : Wenn Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] -Webanwendung öffnen, wird die Fehlermeldung „Die Clientversion ist nicht mit der Datenbankversion kompatibel“ angezeigt.  
+ **Problem:** Wenn Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Webanwendung öffnen, wird die Fehlermeldung „Die Clientversion ist nicht mit der Datenbankversion kompatibel“ angezeigt.  
   
- **Lösung**: Dieses Problem tritt auf, wenn eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Master Data Services aktualisiert wurde. Sie müssen stattdessen eine [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Webanwendung verwenden.  
+ **Lösung:** Dieses Problem tritt auf, wenn eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Master Data Services aktualisiert wurde. Sie müssen stattdessen eine [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Webanwendung verwenden.  
   
  Dieses Problem tritt möglicherweise auch auf, wenn Sie beim Upgrade des MDS-Datenbankschemas den **MDS-Anwendungspool** in IIS nicht angehalten und neu gestartet haben. Starten Sie den **MDS-Anwendungspool** neu, um das Problem zu beheben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

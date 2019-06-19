@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9febf511aef30bde1b01a5cad8eba3e3f8845b2f
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62640097"
 ---
 # <a name="model-database"></a>model-Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,35 +53,35 @@ Die Standardwerte für die Dateivergrößerung für SQL Server 2014 finden Sie u
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Benutzerkontensteuerung|  
-|ANSI_NULL_DEFAULT|OFF|Benutzerkontensteuerung|  
-|ANSI_NULLS|OFF|Benutzerkontensteuerung|  
-|ANSI_PADDING|OFF|Benutzerkontensteuerung|  
-|ANSI_WARNINGS|OFF|Benutzerkontensteuerung|  
-|ARITHABORT|OFF|Benutzerkontensteuerung|  
-|AUTO_CLOSE|OFF|Benutzerkontensteuerung|  
-|AUTO_CREATE_STATISTICS|ON|Benutzerkontensteuerung|  
-|AUTO_SHRINK|OFF|Benutzerkontensteuerung|  
-|AUTO_UPDATE_STATISTICS|ON|Benutzerkontensteuerung|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Benutzerkontensteuerung|  
-|CHANGE_TRACKING|OFF|nein|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Benutzerkontensteuerung|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Benutzerkontensteuerung|  
-|CURSOR_DEFAULT|GLOBAL|Benutzerkontensteuerung|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|nein<br /><br /> Benutzerkontensteuerung<br /><br /> Benutzerkontensteuerung|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Benutzerkontensteuerung|  
-|DB_CHAINING|OFF|nein|  
-|ENCRYPTION|OFF|nein|  
-|MIXED_PAGE_ALLOCATION|ON|nein|  
-|NUMERIC_ROUNDABORT|OFF|Benutzerkontensteuerung|  
-|PAGE_VERIFY|CHECKSUM|Benutzerkontensteuerung|  
-|PARAMETERIZATION|SIMPLE|Benutzerkontensteuerung|  
-|QUOTED_IDENTIFIER|OFF|Benutzerkontensteuerung|  
-|READ_COMMITTED_SNAPSHOT|OFF|Benutzerkontensteuerung|  
-|RECOVERY|Hängt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition ab*|Benutzerkontensteuerung|  
-|RECURSIVE_TRIGGERS|OFF|Benutzerkontensteuerung|  
-|Service Broker-Optionen|DISABLE_BROKER|nein|  
-|TRUSTWORTHY|OFF|nein|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|Ja|  
+|ANSI_NULL_DEFAULT|OFF|Ja|  
+|ANSI_NULLS|OFF|Ja|  
+|ANSI_PADDING|OFF|Ja|  
+|ANSI_WARNINGS|OFF|Ja|  
+|ARITHABORT|OFF|Ja|  
+|AUTO_CLOSE|OFF|Ja|  
+|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_SHRINK|OFF|Ja|  
+|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
+|CHANGE_TRACKING|OFF|Nein|  
+|CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
+|CURSOR_DEFAULT|GLOBAL|Ja|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Ja<br /><br /> Ja|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
+|DB_CHAINING|OFF|Nein|  
+|ENCRYPTION|OFF|Nein|  
+|MIXED_PAGE_ALLOCATION|ON|Nein|  
+|NUMERIC_ROUNDABORT|OFF|Ja|  
+|PAGE_VERIFY|CHECKSUM|Ja|  
+|PARAMETERIZATION|SIMPLE|Ja|  
+|QUOTED_IDENTIFIER|OFF|Ja|  
+|READ_COMMITTED_SNAPSHOT|OFF|Ja|  
+|RECOVERY|Hängt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Edition ab*|Ja|  
+|RECURSIVE_TRIGGERS|OFF|Ja|  
+|Service Broker-Optionen|DISABLE_BROKER|Nein|  
+|TRUSTWORTHY|OFF|Nein|  
   
  *Informationen zum Überprüfen des aktuellen Wiederherstellungsmodells der Datenbank finden Sie unter [Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) oder [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   

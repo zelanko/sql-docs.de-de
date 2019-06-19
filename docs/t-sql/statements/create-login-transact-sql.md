@@ -29,10 +29,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095336"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
@@ -318,7 +318,7 @@ Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (i
 ## <a name="logins"></a>Anmeldungen
 
 - Erfordert eine **ALTER ANY LOGIN**-Berechtigung auf dem Server oder eine Mitgliedschaft bei der festen Serverrolle**securityadmin**. Dieser Befehl kann nur auf dem Azure AD-Konto (Azure Active Directory) mit der **ALTER ANY LOGIN**-Berechtigung auf dem Server oder mit einer Mitgliedschaft bei der Serverrolle „securityadmin“ ausgeführt werden
-- Muss in dem gleichen Verzeichnis, das auch für den Azure SQL-Datenbankserver verwendet wird, ein Azure AD-Mitglied sein
+- Muss in dem gleichen Verzeichnis, das auch für den Azure SQL-Datenbank-Server verwendet wird, ein Azure AD-Mitglied sein
 
 ## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens
 

@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aed9a65000724b1b3ac7750fde45dddebbe3682d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946114"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -112,7 +112,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Zum Zurückgeben von Ereignisdaten verwenden Sie die XQuery-Methode **value()** anstelle der Methode **query()** . Bei der **query()** -Methode werden XML-Daten und durch das kaufmännische Und-Zeichen geschützte CR/LF-Instanzen in der Ausgabe zurückgegeben, während bei der **value()** -Methode CR/LF-Instanzen zurückgegeben werden, die in der Ausgabe nicht sichtbar sind.  
+>  Zum Zurückgeben von Ereignisdaten verwenden Sie die XQuery-Methode **value()** anstelle der Methode **query()**. Bei der **query()**-Methode werden XML-Daten und durch das kaufmännische Und-Zeichen geschützte CR/LF-Instanzen in der Ausgabe zurückgegeben, während bei der **value()**-Methode CR/LF-Instanzen zurückgegeben werden, die in der Ausgabe nicht sichtbar sind.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Erstellen einer Protokolltabelle mit Ereignisdaten in einem DDL-Trigger  
 In diesem Beispiel wird eine Tabelle zum Speichern von Informationen zu Ereignissen auf allen Datenbankebenen erstellt und die Tabelle mit einem DDL-Trigger aufgefüllt. Durch die Verwendung von XQuery für die von `EVENTDATA` generierten XML-Daten wird der Ereignistyp und die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erfasst.  

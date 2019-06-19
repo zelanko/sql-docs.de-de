@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188978"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Explizite Datentyp-Konvertierungsfunktion
@@ -29,7 +29,7 @@ Explizite datentypkonvertierung wird in SQL-Datentypdefinitionen angegeben.
   
  Das Format der **konvertieren** -Funktion ist:  
   
- **KONVERTIEREN (** _Value_exp_, _Data_type_**)**  
+ **KONVERTIEREN (** _Value_exp_, _Data_type_ **)**  
   
  Die Funktion gibt den Wert gemäß *Value_exp* konvertiert in den angegebenen *Data_type*, wobei *Data_type* ist eine der folgenden Schlüsselwörter:  
   

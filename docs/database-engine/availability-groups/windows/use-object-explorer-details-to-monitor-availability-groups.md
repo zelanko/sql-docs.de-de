@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8804bc9cc86941acaba7856d3134339abc969059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803436"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Überwachen von Verfügbarkeitsgruppen anhand der Details im Objekt-Explorer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,21 +30,8 @@ ms.locfileid: "47824988"
 > [!NOTE]  
 >  Informationen zum Verwenden des Bereichs mit Details zum Objekt-Explorer finden Sie unter [Detailbereich des Objekt-Explorers](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
   
--   **Überwachen einer Verfügbarkeitsgruppe mit:**  [SQL Server Management Studio](#SSMSProcedure)  
-  
--   **Details zum Objekt-Explorer:**  
-  
-     [Verfügbarkeitsgruppendetails](#AvGroupsDetails)  
-  
-     [Verfügbarkeitsreplikatdetails](#AvReplicaDetails)  
-  
-     [Verfügbarkeitsdatenbank-Details](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
-  
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Sie müssen mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanz) verbunden sein, die entweder das primäre Replikat oder ein sekundäres Replikat hostet.  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
@@ -88,7 +75,7 @@ ms.locfileid: "47824988"
   
  Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Keine Verbindungen zulassen**|Es sind keine direkten Verbindungen zu den Verfügbarkeitsdatenbanken zulässig, wenn dieses Verfügbarkeitsreplikat als sekundäres Replikat dient. Sekundäre Datenbanken sind nicht für Lesezugriff verfügbar.|  
 |**Nur Verbindungen für beabsichtigte Lesevorgänge zulassen**|Es sind nur direkte, schreibgeschützte Verbindungen zulässig, wenn dieses Replikat als sekundäres Replikat dient. Alle Datenbanken im Replikat sind für den Lesezugriff verfügbar.|  
@@ -97,7 +84,7 @@ ms.locfileid: "47824988"
  **Verbindungsstatus**  
  Gibt an, ob ein sekundäres Replikat derzeit mit dem primären Replikat verbunden ist. Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Getrennt**|Gibt bei einem Remoteverfügbarkeitsreplikat an, dass es vom lokalen Verfügbarkeitsreplikat getrennt ist. Die Antwort des lokalen Replikats auf den Status "Getrennt" hängt wie folgt von dessen Rolle ab:<br /><br /> Wenn auf dem primären Replikat ein sekundäres Replikat getrennt ist, werden die sekundären Datenbanken auf dem primären Replikat als **Nicht synchronisiert** gekennzeichnet, und das primäre Replikat wartet, bis das sekundäre Replikat wieder verbunden ist.<br /><br /> Wird erkannt, dass das sekundäre Replikat getrennt ist, wird versucht, die Verbindung des sekundären Replikats mit dem primären Replikat wiederherzustellen.|  
 |**Verbunden**|Ein Remoteverfügbarkeitsreplikat, das derzeit mit dem lokalen Replikat verbunden ist.|  
@@ -106,10 +93,10 @@ ms.locfileid: "47824988"
  **Synchronisierungsstatus**  
  Gibt an, ob ein sekundäres Replikat gerade mit dem primärem Replikat synchronisiert wird. Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Nicht synchronisiert**|Die Datenbank ist nicht synchronisiert oder wurde noch nicht mit der Verfügbarkeitsgruppe verknüpft.|  
-|**Synchronisiert**|Die Datenbank ist mit der primären Datenbank auf dem aktuellen primären Replikat (falls vorhanden) oder auf dem letzten primären Replikat synchronisiert.<br /><br /> Hinweis: Im Leistungsmodus befindet sich die Datenbank nie im Status "Synchronisiert".|  
+|**Synchronisiert**|Die Datenbank ist mit der primären Datenbank auf dem aktuellen primären Replikat (falls vorhanden) oder auf dem letzten primären Replikat synchronisiert.<br /><br /> Hinweis: Im Leistungsmodus befindet sich die Datenbank nie im Status „Synchronisiert“.|  
 |**NULL**|Unbekannter Status. Dieser Wert tritt auf, wenn die lokale Serverinstanz nicht mit dem WSFC-Failovercluster kommunizieren kann (d. h., der lokale Knoten ist nicht Teil des WSFC-Quorums).|  
   
 > [!NOTE]  
@@ -126,7 +113,7 @@ ms.locfileid: "47824988"
   
  Folgende Werte sind für den Synchronisierungsstatus möglich:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |Wird synchronisiert|Die sekundäre Datenbank hat die Transaktionsprotokoll-Datensätze für die primäre Datenbank empfangen, die noch nicht auf den Datenträger geschrieben (festgeschrieben) wurden.<br /><br /> Hinweis: Im Modus mit asynchronem Commit lautet der Synchronisierungsstatus immer **Wird synchronisiert**.|  
 |||  
@@ -134,7 +121,7 @@ ms.locfileid: "47824988"
  **Angehalten**  
  Gibt an, ob die Verfügbarkeitsdatenbank gerade online ist. Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Angehalten**|Dieser Status gibt an, dass die Datenbank lokal angehalten wird und manuell fortgesetzt werden muss.<br /><br /> Auf dem primären Replikat ist der Wert für eine sekundäre Datenbank unzuverlässig. Um zuverlässig zu bestimmen, ob eine sekundäre Datenbank angehalten wird, fragen Sie sie auf dem sekundären Replikat ab, das die Datenbank hostet.|  
 |**Nicht verknüpft**|Gibt an, dass die sekundäre Datenbank entweder nicht mit der Verfügbarkeitsgruppe verknüpft wurde oder aus der Gruppe entfernt wurde.|  
@@ -144,9 +131,9 @@ ms.locfileid: "47824988"
 > [!NOTE]  
 >  Weitere Informationen zu Leistungsindikatoren für Verfügbarkeitsdatenbanken finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Verwenden des Alway On-Dashboards (SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Verwenden des Always On-Dashboards &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Anzeigen von Verfügbarkeitsgruppeneigenschaften (SQL Server)](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   
  [Anzeigen von Verfügbarkeitsreplikateigenschaften &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   

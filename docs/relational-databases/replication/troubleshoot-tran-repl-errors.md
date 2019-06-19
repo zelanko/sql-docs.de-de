@@ -12,11 +12,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154885"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63057462"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen 
 Die Problembehandlung von Replikationsfehlern kann ohne grundlegende Kenntnisse der Transaktionsreplikation frustrierend sein. Der erste Schritt beim Erstellen einer Veröffentlichung besteht darin, den Momentaufnahmen-Agent eine Momentaufnahme erstellen zu lassen und diese im Ordner für Momentaufnahmen zu speichern. Anschließend wendet der Verteilungs-Agent die Momentaufnahme auf den Abonnenten an. 

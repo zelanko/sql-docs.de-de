@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fa1beab7acbdb4eb2b522596b8854e4bc714c640
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795521"
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ ms.locfileid: "52503457"
 ###  <a name="ViewWitness"></a> Anzeigen der Sicherheitseinstellung und des Status des Zeugen  
  Verwenden Sie zum Anzeigen der Sicherheitseinstellung und des Status des Zeugen für eine Datenbank die **sys.database_mirroring** -Katalogsicht. Die wichtigen Spalten sind die folgenden:  
   
-|Faktor|Spalte|Beschreibung|  
+|Faktor|Spalte|und Beschreibung|  
 |------------|-------------|-----------------|  
 |Transaktionssicherheit|**mirroring_safety_level** oder **mirroring_safety_level_desc**|Transaktionssicherheitseinstellung für Updates der Spiegeldatenbank:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= Datenbank ist nicht online.|  
 |Ist ein Zeuge vorhanden?|**mirroring_witness_name**|Servername des Datenbankspiegelungszeugen oder NULL. Damit wird angegeben, das kein Zeuge vorhanden ist.|  
@@ -284,7 +284,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

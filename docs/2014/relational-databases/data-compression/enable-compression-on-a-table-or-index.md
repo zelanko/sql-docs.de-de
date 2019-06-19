@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918289"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Aktivieren der Komprimierung für eine Tabelle oder einen Index
@@ -38,7 +38,7 @@ ms.locfileid: "62918289"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So aktivieren Sie die Komprimierung für eine Tabelle oder einen Index mit:**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62918289"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle oder den Index.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-enable-compression-on-a-table-or-index"></a>So aktivieren Sie die Komprimierung für eine Tabelle oder einen Index  
   

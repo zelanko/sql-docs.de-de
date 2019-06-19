@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f658ae1bfbfca7a487157c0129d67a12e890a2e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 0c01218cf7303653464814a554771d2ea386f1fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523527"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803446"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,19 +27,9 @@ ms.locfileid: "52523527"
 > [!IMPORTANT]  
 >  Für AlwaysOn-Richtlinien werden die Kategorienamen als IDs verwendet. Durch die Änderung des Namens einer AlwaysOn-Kategorie wird deren Funktionalität zur Integritätsüberprüfung unterbrochen. Daher sollte der Name einer AlwaysOn-Kategorie nie geändert werden.  
   
--   **Vorbereitungen:** [Sicherheit](#Security)  
   
--   **Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer Verfügbarkeitsgruppe mit:**  
   
-     [AlwaysOn-Dashboard](#SSMSProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Security"></a> Sicherheit  
-  
-####  <a name="Permissions"></a> Berechtigungen  
+##  <a name="Permissions"></a> Berechtigungen  
  Erfordert CONNECT-, VIEW SERVER STATE- und VIEW ANY DEFINITION-Berechtigungen.  
   
 ##  <a name="SSMSProcedure"></a> Verwenden des AlwaysOn-Dashboards  
@@ -96,7 +86,7 @@ ms.locfileid: "52523527"
   
      Diese Cmdlets akzeptieren die folgenden Optionen:  
   
-    |Option|Beschreibung|  
+    |Option|und Beschreibung|  
     |------------|-----------------|  
     |**AllowUserPolicies**|Führt in den AlwaysOn-Richtlinienkategorien gefundene Benutzerrichtlinien aus.|  
     |**InputObject**|Eine Auflistung von Objekten, die abhängig vom verwendeten Cmdlet den Status von Verfügbarkeitsgruppen, Verfügbarkeitsreplikaten oder Verfügbarkeitsdatenbanken darstellen. Das Cmdlet berechnet die Integrität der angegebenen Objekte.|  
@@ -125,15 +115,15 @@ ms.locfileid: "52523527"
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
  **SQL Server Always On Team Blogs-Monitoring Always On Health with PowerShell (SQL Server Always On Team Blogs: Überwachen der Always On-Integrität mit PowerShell):**  
   
--   [Teil 1: Übersicht über grundlegende Cmdlets](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
+-   [Teil 1: Basic Cmdlet Overview (Überwachen der Always On-Integrität mit PowerShell – Teil 1: Übersicht über grundlegende Cmdlets)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
   
--   [Teil 2: Verwendung erweiterter Cmdlets](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
+-   [Teil 2: Advanced Cmdlet Usage (Überwachen der Always On-Integrität mit PowerShell – Teil 2: Verwendung erweiterter Cmdlets)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
   
--   [Teil 3: Eine einfache Überwachungsanwendung](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+-   [Teil 3: A Simple Monitoring Application (Überwachen der Always On-Integrität mit PowerShell – Teil 3: Eine einfache Überwachungsanwendung)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
   
--   [Teil 4: Integration in SQL Server-Agent](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+-   [Teil 4: Integration with SQL Server Agent (Überwachen der Always On-Integrität mit PowerShell – Teil 4: Integration in SQL Server-Agent)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verwaltung einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   

@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821873"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Verwenden des Hilfsprogramms „sqlcmd“
@@ -41,13 +41,13 @@ ms.locfileid: "65821873"
   
 ## <a name="typically-used-sqlcmd-options"></a>Normalerweise verwendete Optionen für „sqlcmd“  
   
--   Die Serveroption (**-S**) ermittelt eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der **sqlcmd** eine Verbindung herstellt.  
+-   Die Serveroption ( **-S**) ermittelt eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der **sqlcmd** eine Verbindung herstellt.  
   
--   Die Authentifizierungsoptionen (**-E**, **-U**, und **-P**) geben die Anmeldeinformationen an, die **sqlcmd** verwendet, um eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. **HINWEIS:** Die Option **-E** ist die Standardeinstellung und muss nicht angegeben werden.  
+-   Die Authentifizierungsoptionen ( **-E**, **-U**, und **-P**) geben die Anmeldeinformationen an, die **sqlcmd** verwendet, um eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. **HINWEIS:** Die Option **-E** ist die Standardeinstellung und muss nicht angegeben werden.  
   
--   Die Eingabeoptionen (**-Q**, **-q** und **-i**) ermitteln den Eingabespeicherort für **sqlcmd**.  
+-   Die Eingabeoptionen ( **-Q**, **-q** und **-i**) ermitteln den Eingabespeicherort für **sqlcmd**.  
   
--   Die Ausgabeoption (**-o**) gibt die Datei an, in die **sqlcmd** die Ausgabe schreiben soll.  
+-   Die Ausgabeoption ( **-o**) gibt die Datei an, in die **sqlcmd** die Ausgabe schreiben soll.  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>Herstellen einer Verbindung mit dem Hilfsprogramm „sqlcmd“  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65821873"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **HINWEIS:** Im vorherigen Beispiel wurde **-E** nicht angegeben, da dies die Standardeinstellung ist und von **sqlcmd** eine Verbindung mit der Standardinstanz mithilfe der Windows-Authentifizierung hergestellt wird.  
+    > **HINWEIS:** Im vorherigen Beispiel wurde -E nicht angegeben, da dies die Standardeinstellung ist und von **sqlcmd** eine Verbindung mit der Standardinstanz mithilfe der Windows-Authentifizierung hergestellt wird.  
   
 -   Herstellen einer Verbindung mit einer benannten Instanz mithilfe der Windows-Authentifizierung, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen interaktiv auszuführen:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65821873"
     > **TIPP** Eine vollständige Liste der vom Hilfsprogramm **sqlcmd** unterstützten Optionen erhalten Sie, indem Sie folgenden Befehl ausführen: `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Interaktives Ausführen von Transact-SQL-Anweisungen mithilfe von „sqlcmd“  
- Sie können das Hilfsprogramm **sqlcmd** interaktiv verwenden, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Eingabeaufforderungsfenster auszuführen. Führen Sie das Hilfsprogramm zum Angeben von Eingabedateien und zum Abfragen ohne die Optionen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Q **,**-q **,**-Z **, oder**-i **aus, um**-Anweisungen mithilfe von **sqlcmd** interaktiv auszuführen. Beispiel:  
+ Sie können das Hilfsprogramm **sqlcmd** interaktiv verwenden, um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Eingabeaufforderungsfenster auszuführen. Führen Sie das Hilfsprogramm zum Angeben von Eingabedateien und zum Abfragen ohne die Optionen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Q **,** -q **,** -Z **, oder**-i **aus, um**-Anweisungen mithilfe von **sqlcmd** interaktiv auszuführen. Beispiel:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   

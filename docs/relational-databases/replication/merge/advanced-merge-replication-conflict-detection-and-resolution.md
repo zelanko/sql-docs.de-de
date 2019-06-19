@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639771"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Lösen von Konflikten bei einer Mergereplikation[!INCLUDE[appliesto-ss-xxxx-xxxx
   
  Im Konflikt-Viewer werden Informationen aus drei Systemtabellen angezeigt:  
   
--   Die Replikation erstellt eine Konflikttabelle für jede Tabelle in einem Mergeartikel, deren Name das folgende Format aufweist: **MSmerge_conflict_\<PublicationName>_\<ArticleName>**.  
+-   Die Replikation erstellt eine Konflikttabelle für jede Tabelle in einem Mergeartikel, deren Name das folgende Format aufweist: **MSmerge_conflict_\<PublicationName>_\<ArticleName>** .  
   
      Konflikttabellen weisen dieselbe Struktur auf wie die Tabellen, auf denen sie basieren. Eine Zeile in einer dieser Tabellen besteht aus der verlierenden Version einer Konfliktzeile (die gewinnende Version der Zeile befindet sich in der eigentlichen Benutzertabelle).  
   
@@ -147,7 +147,7 @@ Lösen von Konflikten bei einer Mergereplikation[!INCLUDE[appliesto-ss-xxxx-xxxx
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: Anzeigen von Konfliktinformationen zu Mergeveröffentlichungen &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Synchronisieren von Daten](../../../relational-databases/replication/synchronize-data.md)  

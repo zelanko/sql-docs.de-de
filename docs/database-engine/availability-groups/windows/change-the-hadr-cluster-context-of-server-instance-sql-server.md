@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796635"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Ändern des Clusters, der die Metadaten für Replikate in einer Always On-Verfügbarkeitsgruppe verwaltet
 
@@ -30,30 +30,10 @@ ms.locfileid: "53202129"
   
  Wechseln Sie den HADR-Clusterkontext nur während einer clusterübergreifenden Migration von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] zu einer Instanz von [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] auf einem neuen WSFC-Cluster. Die Kreuzclustermigration von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt ein Betriebssystemupgrade auf [!INCLUDE[win8](../../../includes/win8-md.md)] oder [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] mit minimalen Ausfallzeiten der Verfügbarkeitsgruppen. Weitere Informationen finden Sie unter [Lösungen mit hoher Verfügbarkeit (SQL Server)](https://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Vorbereitungen:**  
-  
-     [Einschränkungen](#Restrictions)  
-  
-     [Erforderliche Komponenten](#Prerequisites)  
-  
-     [Empfehlungen](#Recommendations)  
-  
-     [Sicherheit](#Security)  
-  
--   **Wechseln des Clusterkontexts eines Verfügbarkeitsreplikats mithilfe von:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Nachverfolgung:**  [Nach dem Wechseln des Clusterkontexts eines Verfügbarkeitsreplikats](#FollowUp)  
-  
--   [Verwandte Aufgaben](#RelatedTasks)  
-  
--   [Verwandte Inhalte](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
 > [!CAUTION]  
 >  Wechseln Sie den HADR-Clusterkontext nur während der clusterübergreifenden Migration von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Bereitstellungen.  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="Restrictions"></a> Einschränkungen  
   
 -   Sie können mit dem HADR-Clusterkontext nur vom lokalen WSFC-Cluster zu einem Remotecluster und dann zurück vom Remotecluster zum lokalen Cluster wechseln. Sie können den HADR-Clusterkontext nicht von einem Remotecluster zu einem anderen Remotecluster umschalten.  
   
@@ -61,7 +41,7 @@ ms.locfileid: "53202129"
   
 -   Ein Remote-HADR-Clusterkontext kann jederzeit zurück zum lokalen Cluster wechseln. Der Kontext kann jedoch nicht erneut gewechselt werden, solange die Serverinstanz Verfügbarkeitsreplikate hostet.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   Die Serverinstanz, auf der Sie den HADR-Clusterkontext ändern, muss [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] oder höher (ab Enterprise Edition) ausführen.  
   
@@ -78,7 +58,7 @@ ms.locfileid: "53202129"
   
 -   Bevor Sie von einem Remotecluster zum lokalen Cluster wechseln können, müssen alle Replikate mit synchronem Commit SYNCHRONIZED sein.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="Recommendations"></a> Empfehlungen  
   
 -   Es wird empfohlen, dass Sie den vollständigen Domänennamen angeben. Der Grund hierfür ist, dass ALTER SERVER CONFIGURATION die Ziel-IP-Adresse eines Kurznamens mithilfe einer DNS-Auflösung sucht. In einigen Fällen, abhängig von der DNS-Suchreihenfolge, kann die Verwendung eines Kurznamens Verwirrung verursachen. Betrachten Sie zum Beispiel den folgenden Befehl, der für einen Knoten in der Domäne `abc` ausgeführt wird: (`node1.abc.com`). Der vorgesehene Zielcluster ist der `CLUS01` -Cluster in der Domäne `xyz` (`clus01.xyz.com`). Die lokale Domäne hostet jedoch auch einen Cluster mit dem Namen `CLUS01` (`clus01.abc.com`).  
   
@@ -88,9 +68,8 @@ ms.locfileid: "53202129"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+##  <a name="Permissions"></a> Berechtigungen  
   
 -   **SQL Server-Anmeldung**  
   
@@ -111,7 +90,7 @@ ms.locfileid: "53202129"
   
 2.  Verwenden Sie die SET HADR CLUSTER CONTEXT-Klausel der [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) -Anweisung, wie nachfolgend aufgeführt:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'**_windows\_cluster_**'** | LOCAL }  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'** _windows\_cluster_ **'** | LOCAL }  
   
      Erläuterungen:  
   

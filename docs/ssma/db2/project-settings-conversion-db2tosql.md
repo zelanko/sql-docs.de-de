@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273021"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Project Settings (Conversion) (DB2ToSQL)
@@ -260,7 +260,7 @@ SSMA kann DB2 TO_CHAR(date, format) in Prozeduren aus der Sysdb Datenbank konver
   
 -   Bei Auswahl von **TO_CHAR_DATE mithilfe von Funktion**, SSMA konvertiert die TO_CHAR ("Datum", "Format") in TO_CHAR_DATE Funktion mithilfe der englischen Sprache für die Konvertierung.  
   
--   Bei Auswahl von **mithilfe TO_CHAR_DATE_LS-Funktion (NLS Care)**, SSMA konvertiert die TO_CHAR ("Datum", "Format") in TO_CHAR_DATE_LS Funktion mithilfe der sitzungssprache für die Konvertierung  
+-   Bei Auswahl von **mithilfe TO_CHAR_DATE_LS-Funktion (NLS Care)** , SSMA konvertiert die TO_CHAR ("Datum", "Format") in TO_CHAR_DATE_LS Funktion mithilfe der sitzungssprache für die Konvertierung  
   
 Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folgende Einstellung:  
   

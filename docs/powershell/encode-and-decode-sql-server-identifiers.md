@@ -10,12 +10,12 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2acb1b560e6a1399751e263f1437f5da1c85aeb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b537c7b9005ea1ed60ed575c843bfcd8e61411de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64774697"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codierung und Decodierung von SQL Server-Bezeichnern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Zeichen, die nicht in Windows PowerShell-Pfadnamen unterstützt werden, können 
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**Zeichen**|\|/|decodiert werden:|%|\<|>|*|?|[|]|&#124;|  
+|**Zeichen**|\ |/|decodiert werden:|%|\<|>|*|?|[|]|&#124;|  
 |**Hexadezimale Codierung**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> Codieren eines Bezeichners  
@@ -74,7 +74,7 @@ Set-Location (Encode-SqlName "Table:Test")
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Bezeichnern in PowerShell](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)   
  [SQL Server-PowerShell](sql-server-powershell.md)  

@@ -1,7 +1,7 @@
 ---
-title: FROM (Transact-SQL) | Microsoft-Dokumentation
+title: 'FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,20 +35,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334787"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462691"
 ---
-# <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM-Klausel mit JOIN, APPLY, PIVOT (Transact-SQL)
 
-  Legt die Tabellen, Sichten, abgeleiteten Tabellen und verknüpften Tabellen in DELETE-, SELECT- und UPDATE-Anweisungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fest. Die FROM-Klausel wird in der SELECT-Anweisung immer benötigt, es sei denn, die Auswahlliste enthält nur Konstanten, Variablen und arithmetische Ausdrücke (keine Spaltennamen).  
-  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+In Transact-SQL steht die FROM-Klausel in den folgenden Anweisungen zur Verfügung:
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+Die FROM-Klausel ist normalerweise in der SELECT-Anweisung erforderlich. Die Ausnahme ist, wenn keine Tabellenspalten aufgeführt sind und Literale, Variablen oder arithmetische Ausdrücke die einzigen aufgeführten Elemente sind.
+
+Dieser Artikel behandelt auch die folgenden Schlüsselwörter, die in der FROM-Klausel verwendet werden können:
+
+- JOIN
+- APPLY
+- PIVOT
+
+![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -379,13 +392,13 @@ ON (p.ProductID = v.ProductID);
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
- Gibt eine Tabelle mit den Werten für alle Zeilenversionen zurück, die innerhalb des angegebenen Zeitbereichs aktiv waren, unabhängig davon, ob ihre Aktivität vor dem *\<start_date_time>*-Parameterwert für das FROM-Argument begonnen hat oder ihre Aktivität nach dem *\<end_date_time>*-Parameterwert für das TO-Argument geendet hat. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch den FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Datensätze, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
+ Gibt eine Tabelle mit den Werten für alle Zeilenversionen zurück, die innerhalb des angegebenen Zeitbereichs aktiv waren, unabhängig davon, ob ihre Aktivität vor dem *\<start_date_time>* -Parameterwert für das FROM-Argument begonnen hat oder ihre Aktivität nach dem *\<end_date_time>* -Parameterwert für das TO-Argument geendet hat. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch den FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Datensätze, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Gleich wie oben in der Beschreibung zu **FROM \<start_date_time> TO \<end_date_time>**, mit dem Unterschied, dass sie Zeilen enthält, die an dem durch den \<end_date_time>-Endpunkt definierten oberen Grenzwert aktiv wurden.  
+ Gleich wie oben in der Beschreibung zu **FROM \<start_date_time> TO \<end_date_time>** , mit dem Unterschied, dass sie Zeilen enthält, die an dem durch den \<end_date_time>-Endpunkt definierten oberen Grenzwert aktiv wurden.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
@@ -880,11 +893,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

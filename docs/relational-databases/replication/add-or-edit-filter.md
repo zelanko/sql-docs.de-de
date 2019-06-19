@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e91f5bd925ec0a9aba9998f0c4dbdae4afa599e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665744"
 ---
 # <a name="add-or-edit-filter"></a>Hinzufügen oder Bearbeiten von Filtern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47719948"
   
  Mithilfe von Zeilenfiltern können Sie eine zu veröffentlichende Teilmenge von Zeilen aus einer Tabelle angeben. Mithilfe von Zeilenfiltern können Sie Zeilen entfernen, die Benutzern nicht angezeigt werden sollen (z. B. Zeilen mit vertraulichen oder streng vertraulichen Informationen). Mit Zeilenfiltern können Sie auch unterschiedliche Datenpartitionen erstellen, die an verschiedene Abonnenten übermittelt werden. Indem Sie unterschiedliche Datenpartitionen für verschiedene Abonnenten veröffentlichen, können Sie auch Konflikte vermeiden, die andernfalls dadurch entstehen würden, dass mehrere Abonnenten dieselben Daten aktualisieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  Dieses Dialogfeld umfasst einen zweistufigen Vorgang für die Transaktions- und Momentaufnahmeveröffentlichungen sowie einen dreistufigen Vorgang für Mergeveröffentlichungen. Für alle Veröffentlichungstypen ist es erforderlich, dass Sie eine zu filternde Tabelle und eine oder mehrere Spalten auswählen, die im Filter eingeschlossen sein sollen. Der Filter wird als standardmäßige WHERE-Klausel definiert.  
   
 1.  **Wählen Sie die zu filternde Tabelle aus**  
@@ -61,7 +61,7 @@ ms.locfileid: "47719948"
   
  Nachdem Sie einen Filter hinzugefügt oder bearbeitet haben, klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld zu schließen. Der von Ihnen angegebene Filter wird analysiert und für die Tabelle in der SELECT-Klausel ausgeführt. Wenn die Filteranweisung Syntaxfehler oder andere Probleme enthält, werden Sie benachrichtigt und können die Filteranweisung bearbeiten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md)   

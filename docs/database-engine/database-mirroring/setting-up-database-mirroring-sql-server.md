@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38cd77776070b6a7c493e68eaf42da49c79ba425
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 039ff094deed56cd3eddabd22a1035e6455a95e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795194"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Einrichten der Datenbankspiegelung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,9 +94,9 @@ ms.locfileid: "47728772"
         >  Im Modus für hohe Leistung muss WITNESS auf OFF festgelegt sein. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 > [!NOTE]  
->  Ein Beispiel für die Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Ein Beispiel für das Verwenden von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten der Datenbankspiegelung mithilfe der Microsoft Windows-Authentifizierung finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
 >   
->  Ein Beispiel für die Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten einer Datenbank-Spiegelungssitzung mithilfe der zertifikatbasierten Sicherheit finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+>  Ein Beispiel für das Verwenden von [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Einrichten der Datenbankspiegelung mithilfe der zertifikatbasierten Sicherheit finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
 ##  <a name="InThisSection"></a> In diesem Abschnitt  
@@ -153,9 +153,9 @@ ms.locfileid: "47728772"
 -   [Problembehandlung für die Datenbankspiegelungskonfiguration &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Datenbankspiegelung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Datenbankspiegelung: Interoperabilität und gleichzeitige Verwendung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Transportsicherheit für Datenbankspiegelung und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   

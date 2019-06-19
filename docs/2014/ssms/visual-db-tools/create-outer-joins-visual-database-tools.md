@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184305"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Erstellen von äußeren Joins (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63184305"
   
 1.  Erstellen Sie den Joins automatisch oder manuell. Weitere Informationen finden Sie unter [Automatisches Verknüpfen von Tabellen &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) oder [Manuelles Verknüpfen von Tabellen &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Wählen Sie die Joinlinie im Diagrammbereich und dann aus der **Abfrage-Designer** Menü wählen **wählen alle Zeilen aus \<Tablename >**, wählen Sie den Befehl, der die Tabelle enthält, deren zusätzliche Zeilen, die Sie einschließen möchten.  
+2.  Wählen Sie die Joinlinie im Diagrammbereich und dann aus der **Abfrage-Designer** Menü wählen **wählen alle Zeilen aus \<Tablename >** , wählen Sie den Befehl, der die Tabelle enthält, deren zusätzliche Zeilen, die Sie einschließen möchten.  
   
     -   Wählen Sie die erste Tabelle aus, um eine linken äußeren Joins zu erstellen.  
   

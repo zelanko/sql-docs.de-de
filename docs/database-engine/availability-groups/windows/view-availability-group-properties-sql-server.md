@@ -11,23 +11,17 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2abd3526a0f933708c50d99138f96000283d05c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1f3b3b75b659603499c88ec533c5b1a1b8f5962d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780116"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Anzeigen von Verfügbarkeitsgruppeneigenschaften (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie die Eigenschaften einer Verfügbarkeitsgruppe für eine AlwaysOn-Verfügbarkeitsgruppe unter Verwendung von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]angezeigt werden.  
-  
--   **Anzeigen von Verfügbarkeitsgruppeneigenschaften mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie die Eigenschaften einer Verfügbarkeitsgruppe an und ändern sie**  
@@ -38,7 +32,7 @@ ms.locfileid: "47640794"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, deren Eigenschaften Sie anzeigen möchten, und wählen Sie den Befehl **Eigenschaften** aus.  
   
-4.  Verwenden Sie im Dialogfeld **Eigenschaften der Verfügbarkeitsgruppe** die Seiten **Allgemein** und **Sicherungseinstellungen** , um Eigenschaften der ausgewählten Verfügbarkeitsgruppe anzuzeigen und in einigen Fällen zu ändern. Weitere Informationen finden Sie unter [Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe &#40;Seite „Allgemein“&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) und [Eigenschaften der Verfügbarkeitsgruppe: Neue Verfügbarkeitsgruppe &#40;Seite „Sicherungseinstellungen&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  Verwenden Sie im Dialogfeld **Eigenschaften der Verfügbarkeitsgruppe** die Seiten **Allgemein** und **Sicherungseinstellungen** , um Eigenschaften der ausgewählten Verfügbarkeitsgruppe anzuzeigen und in einigen Fällen zu ändern. Weitere Informationen finden Sie unter [Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe &#40;Seite „Allgemein“&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-general-page.md) und [Eigenschaften von Verfügbarkeitsgruppen: Neue Verfügbarkeitsgruppe &#40;Seite „Sicherungseinstellungen“&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      Verwenden Sie die Seite **Berechtigungen** , um die aktuellen Anmeldungen, Rollen und der Verfügbarkeitsgruppe zugeordneten expliziten Berechtigungen anzuzeigen. Weitere Informationen finden Sie unter [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   
@@ -99,7 +93,7 @@ ms.locfileid: "47640794"
   
 -   [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)  

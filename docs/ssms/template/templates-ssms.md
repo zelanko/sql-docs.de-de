@@ -1,5 +1,5 @@
 ---
-Title: Verwenden von Vorlagen in SQL Server Management Studio
+title: Verwenden von Vorlagen in SQL Server Management Studio
 description: Ein Tutorial zur Verwendung von Vorlagen in SSMS.
 keywords: SQL Server, SSMS, SQL Server Management Studio, Vorlagen
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 7d93874f237585dd53f1783e4abcf2fae7ba9cc0
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822941"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Verwenden von Vorlagen in SQL Server Management Studio
 

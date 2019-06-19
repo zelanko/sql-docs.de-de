@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f286a0cd957ed62ab3edb51eb96565431afb22a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723528"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
@@ -196,7 +196,7 @@ Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datenty
 ### <a name="add-variable-dialog-box"></a>Variable hinzufügen (Dialogfeld)
 Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften einer neuen Variablen angeben.  
   
-#### <a name="options"></a>Optionen  
+#### <a name="options"></a>enthalten  
  **Container**  
  Wählen Sie in der Liste einen Container aus. Der Container definiert den Gültigkeitsbereich der Variablen. Der Container kann entweder das Paket oder eine im Paket enthaltene ausführbare Datei sein.  
   
@@ -217,7 +217,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
    
 ## <a name="delete-a-variable"></a>Löschen einer Variable  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, um es zu öffnen.  
   
@@ -233,7 +233,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 ## <a name="change-the-scope-of-a-variable"></a>Ändern des Bereichs einer Variable  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, um es zu öffnen.  
   
@@ -283,7 +283,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 ### <a name="set-variable-properties-in-the-variables-window"></a>Festlegen von Variableneigenschaften im Fenster „Variablen“   
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, um es zu öffnen.  
   
@@ -301,7 +301,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 ### <a name="set-variable-properties-in-the-properties-window"></a>Festlegen von Variableneigenschaften im Fenster „Eigenschaften“  
 
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, um es zu öffnen.  
   

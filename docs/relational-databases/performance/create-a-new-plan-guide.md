@@ -16,11 +16,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 0bcd57b8f3a2c9d136968fd2903a7e591cc777e2
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63013821"
 ---
 # <a name="create-a-new-plan-guide"></a>Erstellen einer neuen Planhinweisliste
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

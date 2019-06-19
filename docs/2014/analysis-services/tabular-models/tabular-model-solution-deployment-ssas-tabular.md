@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0126337fb1f871a4d89354bd65cbfd11932bf5c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066367"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Bereitstellung von Tabellenmodelllösungen (SSAS – tabellarisch)
@@ -91,7 +91,7 @@ ms.locfileid: "66066367"
   
 ##  <a name="bkmk_rt"></a> Verwandte Aufgaben  
   
-|Aufgabe|Description|  
+|Aufgabe|Beschreibung|  
 |----------|-----------------|  
 |[Bereitstellen in SQL Server-Datentools &#40;SSAS – tabellarisch&#41;](deploy-from-sql-server-data-tools-ssas-tabular.md)|Beschreibt das Konfigurieren von Bereitstellungseigenschaften und die Bereitstellung eines tabellarischen Modellprojekts mit dem Bereitstellungsbefehl in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].|  
 |[Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|In Themen in diesem Abschnitt wird beschrieben, wie der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent verwendet wird, um sowohl tabellarische als auch mehrdimensionale Modelllösungen bereitzustellen.|  

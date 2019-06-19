@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 409432676e85dd6d6626b3be2ec5aa375c802424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86c7677754faca57723e93cccc3e55cf76da7a01
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803500"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Anhalten einer Verfügbarkeitsdatenbank (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47700938"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Ein SUSPEND-Befehl gibt einen Wert zurück, sobald es vom Replikat akzeptiert wurde, das die Zieldatenbank hostet. Das Anhalten der Datenbank ist jedoch dadurch asynchron.  
@@ -69,7 +69,7 @@ ms.locfileid: "47700938"
  Sie müssen mit der Serverinstanz verbunden sein, die die Datenbank hostet, die angehalten werden soll. Um eine primäre Datenbank und die entsprechenden sekundären Datenbanken anzuhalten, stellen Sie eine Verbindung mit der Serverinstanz her, die das primäre Replikat hostet. Um eine sekundäre Datenbank anzuhalten und die primäre Datenbank verfügbar zu lassen, stellen Sie eine Verbindung mit dem sekundären Replikat her.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
- Bei Engpässen ist das Anhalten einer oder mehrerer sekundärer Datenbanken möglicherweise kurz nützlich, um die Leistung auf dem primären Replikat vorübergehend zu verbessern. Solange eine sekundäre Datenbank angehalten bleibt, kann das Transaktionsprotokoll der entsprechenden primären Datenbank nicht abgeschnitten werden. Dies führt dazu, dass sich Protokolldatensätze auf der primären Datenbank ansammeln. Daher wird empfohlen, dass Sie eine angehaltene sekundäre Datenbank schnell fortsetzen oder entfernen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Nachverfolgung: Vermeiden eines vollen Transaktionsprotokolls](#FollowUp).  
+ Bei Engpässen ist das Anhalten einer oder mehrerer sekundärer Datenbanken möglicherweise kurz nützlich, um die Leistung auf dem primären Replikat vorübergehend zu verbessern. Solange eine sekundäre Datenbank angehalten bleibt, kann das Transaktionsprotokoll der entsprechenden primären Datenbank nicht abgeschnitten werden. Dies führt dazu, dass sich Protokolldatensätze auf der primären Datenbank ansammeln. Daher wird empfohlen, dass Sie eine angehaltene sekundäre Datenbank schnell fortsetzen oder entfernen. Weitere Informationen finden Sie in diesem Artikel unter [Nachverfolgung: Vermeiden eines vollen Transaktionsprotokolls](#FollowUp).  
   
 ###  <a name="Security"></a> Sicherheit  
   
@@ -126,7 +126,7 @@ ms.locfileid: "47700938"
   
 -   [SQL Server PowerShell-Anbieter](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>Nächster Schritt: Vermeiden eines vollen Transaktionsprotokolls  
  Wenn ein automatischer Prüfpunkt für eine Datenbank ausgeführt wird, wird normalerweise das zugehörige Transaktionsprotokoll nach der nächsten Protokollsicherung auf diesen Prüfpunkt gekürzt. Wenn jedoch eine sekundäre Datenbank angehalten wird, bleiben alle aktuellen Protokolldatensätze auf der primären Datenbank aktiv. Wenn das Transaktionsprotokoll voll ist (weil die maximale Größe erreicht wurde oder weil für die Serverinstanz der Speicherplatz nicht ausreicht), kann die Datenbank keine Updates mehr ausführen.  
   
  Führen Sie eine der folgenden Aktionen aus, um dieses Problem zu umgehen:  
@@ -145,7 +145,7 @@ ms.locfileid: "47700938"
   
 -   [Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Fortsetzen einer Verfügbarkeitsdatenbank &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   

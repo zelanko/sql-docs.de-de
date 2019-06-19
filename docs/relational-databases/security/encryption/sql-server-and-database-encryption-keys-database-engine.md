@@ -12,12 +12,12 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ac5f345a6ee07abb8ddf5f4dbacff914914da5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4656beba4de77e7d245a025911dfc2f417b8e1c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462680"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,13 +26,19 @@ ms.locfileid: "47749038"
  Die Verschlüsselungsschlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bestehen aus einer Kombination von öffentlichen, privaten und symmetrischen Schlüsseln, die zum Schutz sensibler Daten verwendet werden. Der symmetrische Schlüssel wird während der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Initialisierung erstellt, wenn Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz zum ersten Mal starten. Der Schlüssel wird von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet, um sensible Daten zu verschlüsseln, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gespeichert werden. Öffentliche und private Schlüssel werden vom Betriebssystem erstellt und zum Schutz des symmetrischen Schlüssels verwendet. Ein Paar aus einem privaten und einem öffentlichen Schlüssel wird für jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz erstellt, die sensible Daten in einer Datenbank speichert.  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>Anwendungen für SQL&#160;Server- und Datenbankschlüssel  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hat zwei primäre Anwendungen für Schlüssel: einen *Diensthauptschlüssel* (Service Master Key; SMK), der auf einer und für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz generiert wurde, sowie einen *Datenbank-Hauptschlüssel* (Database Master Key; DMK), der für eine Datenbank verwendet wird.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hat zwei primäre Anwendungen für Schlüssel: einen *Diensthauptschlüssel* (Service Master Key; SMK), der auf einer und für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz generiert wurde, sowie einen *Datenbank-Hauptschlüssel* (Database Master Key; DMK), der für eine Datenbank verwendet wird.
+
+### <a name="service-master-key"></a>Diensthauptschlüssel
   
- Der Diensthauptschlüssel wird automatisch generiert, wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz zum ersten Mal gestartet wird. Er wird verwendet, um ein Kennwort für einen Verbindungsserver, Anmeldeinformationen und den Datenbank-Hauptschlüssel zu verschlüsseln. Der Diensthauptschlüssel wird mithilfe des auf dem lokalen Computer verwendeten Computerschlüssels unter Verwendung der Windows-Datenschutz-API (DPAPI) verschlüsselt. Die DPAPI verwendet einen Schlüssel, der von den Windows-Anmeldeinformationen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontos und den Anmeldeinformationen des Computers abgeleitet ist. Der Diensthauptschlüssel kann nur von dem Dienstkonto entschlüsselt werden, unter dem er erstellt wurde, oder von einem Prinzipal, der auf die Anmeldeinformationen des Computers zugreifen kann.  
+ Der Diensthauptschlüssel ist der Stamm der SQL Server -Verschlüsselungshierarchie. Der Diensthauptschlüssel wird automatisch generiert, wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz zum ersten Mal gestartet wird. Er wird verwendet, um ein Kennwort für einen Verbindungsserver, Anmeldeinformationen und den Datenbank-Hauptschlüssel zu verschlüsseln. Der Diensthauptschlüssel wird mithilfe des auf dem lokalen Computer verwendeten Computerschlüssels unter Verwendung der Windows-Datenschutz-API (DPAPI) verschlüsselt. Die DPAPI verwendet einen Schlüssel, der von den Windows-Anmeldeinformationen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontos und den Anmeldeinformationen des Computers abgeleitet ist. Der Diensthauptschlüssel kann nur von dem Dienstkonto entschlüsselt werden, unter dem er erstellt wurde, oder von einem Prinzipal, der auf die Anmeldeinformationen des Computers zugreifen kann.
+
+Der Diensthauptschlüssel kann nur durch das Windows-Dienstkonto geöffnet werden, unter dem er erstellt wurde, oder durch einen Prinzipal mit Zugriff auf den Namen des Dienstkontos und sein Kennwort.
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] SQL Server 2016 schützt den Diensthauptschlüssel (Service Master Key, SMK) und den Datenbank-Hauptschlüssel (Database Master Key, DMK) mithilfe des AES-Verschlüsselungsalgorithmus. AES ist ein neuerer Verschlüsselungsalgorithmus als der in früheren Versionen verwendete 3DES-Algorithmus. Nach dem Aktualisieren einer Instanz von [!INCLUDE[ssDE](../../../includes/ssde-md.md)] auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] sollten SMK und DMK erneut generiert werden, um die Hauptschlüssel auf AES zu aktualisieren. Weitere Informationen zum Neugenerieren des SMK finden Sie unter [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+
+### <a name="database-master-key"></a>Datenbank-Hauptschlüssel
   
- Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Er kann auch zum Verschlüsseln von Daten verwendet werden. Allerdings gelten für diesen Schlüssel Längenbeschränkungen, durch die er für Daten weniger praktisch ist als ein symmetrischer Schlüssel.  
-  
- Beim Erstellen wird der Hauptschlüssel mithilfe des Triple DES-Algorithmus und eines vom Benutzer angegebenen Kennworts verschlüsselt. Um die automatische Entschlüsselung des Hauptschlüssels zu ermöglichen, wird eine Kopie des Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Er wird sowohl in der Datenbank gespeichert, in der er verwendet wird, als auch in der **master** -Systemdatenbank.  
+ Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Er kann auch zum Verschlüsseln von Daten verwendet werden. Allerdings gelten für diesen Schlüssel Längenbeschränkungen, durch die er für Daten weniger praktisch ist als ein symmetrischer Schlüssel. Um die automatische Entschlüsselung des Datenbank-Hauptschlüssels zu ermöglichen, wird eine Kopie des Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Er wird sowohl in der Datenbank gespeichert, in der er verwendet wird, als auch in der **master** -Systemdatenbank.  
   
  Die in der **master** -Systemdatenbank gespeicherte Kopie des Datenbank-Hauptschlüssels wird im Hintergrund aktualisiert, sobald der Datenbank-Hauptschlüssel geändert wird. Diese Standardeinstellung kann jedoch mit der **DROP ENCRYPTION BY SERVICE MASTER KEY** -Option der **ALTER MASTER KEY** -Anweisung geändert werden. Ein Datenbank-Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der **OPEN MASTER KEY** -Anweisung und eines Kennworts geöffnet werden.  
   
@@ -94,7 +100,7 @@ ms.locfileid: "47749038"
   
  [Wiederherstellen eines Datenbank-Hauptschlüssels](../../../relational-databases/security/encryption/restore-a-database-master-key.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
