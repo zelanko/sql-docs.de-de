@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266821"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planen der Unterstützung für Reporting Services und Power View-Browser (Reporting Services 2014)
@@ -35,7 +35,7 @@ ms.locfileid: "63266821"
   
 ##  <a name="bkmk_powerview"></a> Power View-Browserszenarien
 
- Welche Browser und Browserversionen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] unterstützt, hängt vom Typ des geöffneten Dokuments ab. Excel 2013-Arbeitsmappen und "**.rdlx**"-Dateien verwenden unterschiedliche Komponenten.  
+ Welche Browser und Browserversionen [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] unterstützt, hängt vom Typ des geöffneten Dokuments ab. Excel 2013-Arbeitsmappen und " **.rdlx**"-Dateien verwenden unterschiedliche Komponenten.  
   
 |Dokumenttyp|Umgebung|Browserunterstützung|  
 |-------------------|-----------------|---------------------|  
@@ -146,7 +146,7 @@ ms.locfileid: "63266821"
   
  Wenn die Skripterstellung nicht aktiviert ist, wird beim Öffnen eines Berichts eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
-- **Der Browser unterstützt keine Skripts oder konfiguriert wurde, dass die Ausführung von Skripts nicht zulässig. Klicken Sie hier, um den Bericht ohne Skripts anzuzeigen**.  
+- **Der Browser unterstützt keine Skripts oder ist so konfiguriert, dass die Ausführung von Skripts nicht zulässig ist. Klicken Sie hier, um den Bericht ohne Skripts anzuzeigen**.  
   
  Wenn Sie den Bericht ohne Skriptunterstützung anzeigen, wird der Bericht ohne Funktionen des Berichts-Viewers, wie z. B. die Berichtssymbolleiste oder die Dokumentstruktur, in HTML gerendert.  
   

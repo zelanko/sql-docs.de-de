@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071892"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Konfigurationseinstellungsverweis (PowerPivot für SharePoint)
@@ -41,7 +41,7 @@ ms.locfileid: "66071892"
 ##  <a name="LoadingData"></a> Data Load Timeout  
  PowerPivot-Daten werden durch Analysis Services-Serverinstanzen in die Farm abgerufen und geladen. Je nachdem, wie und wann zuletzt auf die Daten zugegriffen wurde, werden sie entweder aus einer Inhaltsbibliothek oder aus einem lokalen Dateicache geladen. Daten werden immer dann in den Arbeitsspeicher geladen, wenn eine Abfrage- oder Verarbeitungsanforderung empfangen wird. Um die Gesamtverfügbarkeit des Servers zu maximieren, können Sie einen Timeoutwert festlegen, der den Server anweist, eine Anforderung zum Laden von Daten zu beenden, wenn sie nicht innerhalb der vorgesehenen Zeit abgeschlossen werden kann.  
   
-|Name|Default|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Beschreibung|  
 |----------|-------------|------------------|-----------------|  
 |Data Load Timeout|1800 (in Sekunden)|1 bis 3600|Gibt an, wie lange eine PowerPivot-Dienstanwendung auf eine Antwort von einer bestimmten Analysis Services-Serverinstanz wartet.<br /><br /> Standardmäßig wartet die Dienstanwendung 30 Minuten auf eine Datennutzlast von der Engine-Dienstinstanz, an die sie eine bestimmte Anforderung weitergeleitet hat.<br /><br /> Wenn die PowerPivot-Datenquelle nicht innerhalb dieses Zeitraums geladen werden kann, wird der Thread beendet und ein neuer gestartet.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66071892"
 ##  <a name="DataRefresh"></a> Datenaktualisierung  
  Geben Sie den Zeitraum an, der einem normalen bzw. typischen Geschäftstag in Ihrer Organisation entspricht. Diese Konfigurationseinstellungen bestimmen den Zeitpunkt, zu dem Datenaktualisierungsvorgänge nach den Geschäftsstunden verarbeitet werden. Die Verarbeitung nach den Geschäftsstunden kann am Ende des Geschäftstags initiiert werden. Die Verarbeitung nach den Geschäftsstunden ist eine Zeitplanoption für Dokumentbesitzer, die eine PowerPivot-Datenquelle mit Transaktionsdaten aktualisieren möchten, die während normaler Geschäftszeiten generiert wurden.  
   
-|Name|Default|Gültige Werte|Description|  
+|Name|Default|Gültige Werte|Beschreibung|  
 |----------|-------------|------------------|-----------------|  
 |Startzeit|04:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Untergrenze eines Geschäftstags fest.|  
 |Beendigungszeit|20:00 Uhr|1 bis 12 Stunden, wobei der Wert einer gültigen ganzen Zahl innerhalb dieses Bereichs entspricht.<br /><br /> Der Typ lautet Zeit.|Legt die Obergrenze eines Geschäftstags fest.|  

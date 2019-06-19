@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 899b202de247a28e4a842c313c32a8b4f57417df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093661"
 ---
 # <a name="other-reporting-services-upgrade-issues"></a>Weitere Upgradeprobleme bei Reporting Services
@@ -32,9 +32,9 @@ ms.locfileid: "66093661"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** : [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
   
-|Problem|Description|Betrifft|  
+|Problem|Beschreibung|Betrifft|  
 |-----------|-----------------|----------------|  
 |Upgrade einer SharePoint-Farm|Aktualisieren Sie den gemeinsamen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst erst, nachdem alle anderen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten in der Farm auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] aktualisiert wurden.<br /><br /> Upgrade [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in einem Knoten mit mehreren SharePoint-farm zu [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], alle Instanzen von der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -add-in für SharePoint in der Farm muss, um aktualisiert werden die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Version vor dem upgrade der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] freigegebenen -Dienst.<br /><br /> Das Rendern von Berichten schlägt fehl, wenn der gemeinsame SharePoint-Dienst von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] aktualisiert wurde, jedoch andere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten in der Farm immer noch die Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aufweisen.<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Tipps &amp; Tricks und Problembehandlung für SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|  
 |Parallele Installation|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus kann nicht parallel mit folgenden Produkten ausgeführt werden:<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-In für SharePoint<br /><br /> Gemeinsamer SharePoint-Dienst von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]<br /><br /> <br /><br /> Die parallele Installation verhindert, dass die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] systemeigenen Modus Windows-Dienst nicht gestartet. Im Windows-Ereignisprotokoll werden Fehlermeldungen wie die Folgenden angezeigt:<br /><br /> Beschreibung: Die Version der Berichtsserver-Datenbank ist ungültig.<br /><br /> Beschreibung: Berichtsserver [Servername] kann nicht mit der Berichtsserver-Datenbank verbinden.|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Einheitlicher Modus|  

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181232"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC-Cursorbibliothek – Fehlercodes
@@ -31,7 +31,7 @@ ms.locfileid: "63181232"
 > [!NOTE]  
 >  Die Cursorbibliothek sortiert nicht Statusdatensätze; der Treiber-Manager und die ODBC-3. *x* Treiber sind verantwortlich für die Sortierung der Statusdatensätze.  
   
-|SQLSTATE|Description|Kann von zurückgegeben werden|  
+|SQLSTATE|Beschreibung|Kann von zurückgegeben werden|  
 |--------------|-----------------|--------------------------|  
 |01000|Cursor kann nicht aktualisiert werden.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|Die Cursorbibliothek nicht verwendet. Fehler beim Laden.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  

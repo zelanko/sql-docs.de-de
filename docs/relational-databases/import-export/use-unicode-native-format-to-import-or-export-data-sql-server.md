@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67f99ed947c4e65a52aadcd701d4e0c19e568d62
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945575"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Unicode-Formats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -42,7 +42,7 @@ Sie können Daten im nativen Unicode-Format in eine Tabelle importieren, indem S
   
 Das native Unicode-Format wird durch die folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|Beschreibung|  
+|Befehl|Option|und Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|Bewirkt, dass das Hilfsprogramm **bcp** das native Unicode-Format verwendet, welches das native (Datenbank-)Datentypen für alle nicht auf Zeichen basierenden Daten und das Unicode-Zeichendatenformat für alle Zeichendaten (**char**, **nchar**, **varchar**, **nvarchar**, **text**und **ntext**) verwendet.|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|Verwendet das native Unicode-Format beim Massenimportieren von Daten|  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057600"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Task 'Nachrichtenwarteschlange' (Seite Senden)
@@ -28,7 +28,7 @@ ms.locfileid: "66057600"
   
 ## <a name="options"></a>Optionen  
  **UseEncryption**  
- Geben Sie an, ob die Nachricht verschlüsselt werden soll. Der Standardwert ist `False`.  
+ Geben Sie an, ob die Nachricht verschlüsselt werden soll. Die Standardeinstellung ist `False`.  
   
  **EncryptionAlgorithm**  
  Wenn Sie die Verschlüsselung verwenden möchten, müssen Sie den Namen des verwendeten Verschlüsselungsalgorithmus angeben. Für den Task "Nachrichtenwarteschlange" können die Algorithmen RC2 und RC4 verwendet werden. Die Standardeinstellung lautet **RC2**.  
@@ -52,17 +52,17 @@ ms.locfileid: "66057600"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Data file message  
  **DataFileMessage**  
- Geben Sie den Pfad der Datendatei an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, um nach der Datei zu suchen.  
+ Geben Sie den Pfad der Datendatei an, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , um nach der Datei zu suchen.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Variable message  
  **VariableMessage**  
- Geben Sie die Variablennamen ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und wählen Sie dann die Variablen aus. Die Variablen werden durch Kommas getrennt.  
+ Geben Sie die Variablennamen ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und wählen Sie dann die Variablen aus. Die Variablen werden durch Kommas getrennt.  
   
  **Verwandte Themen:** Variablen auswählen  
   
 ### <a name="messagetype--string-message"></a>MessageType = Zeichenfolgennachricht  
  **StringMessage**  
- Geben Sie die Zeichenfolgennachricht ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)**, und geben Sie dann im Dialogfeld **Zeichenfolgennachricht eingeben** die Nachricht ein.  
+ Geben Sie die Zeichenfolgennachricht ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(…)** , und geben Sie dann im Dialogfeld **Zeichenfolgennachricht eingeben** die Nachricht ein.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

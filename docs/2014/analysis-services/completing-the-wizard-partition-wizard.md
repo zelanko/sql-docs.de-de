@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087526"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Assistenten abschließen (Partitions-Assistent)
@@ -31,7 +31,7 @@ ms.locfileid: "66087526"
   
  In der folgenden Tabelle sind die verfügbaren Aggregationsoptionen aufgelistet.  
   
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Aggregationen für die Partition jetzt entwerfen**|Entwirft Aggregationen für die neue Partition, nachdem der Partitions-Assistent die neue Partition erstellt hat. Bei Auswahl dieser Option wird der Aggregationsentwurfs-Assistent gestartet, nachdem Sie im Partitions-Assistenten auf **Fertig stellen** geklickt haben. Weitere Informationen zum Aggregationsentwurfs-Assistenten finden Sie unter [Aggregationsentwurfs-Assistent (F1-Hilfe)](aggregation-design-wizard-f1-help.md).|  
 |**Aggregationen später entwerfen**|Erstellt die Partition, ohne gleichzeitig Aggregationen zu entwerfen.|  

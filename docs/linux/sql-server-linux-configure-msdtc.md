@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2bcf87b91423ae7aa79ae6a5194aa8fc31ca71c9
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713264"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Gewusst wie: Konfigurieren der Microsoft Distributed Transaction Coordinator (MSDTC) unter Linux
@@ -28,7 +28,7 @@ Verteilte Transaktionen sind für SQL Server unter Linux durch die Einführung v
 
 SQL Server-2019 führt zwei Konfigurationsparameter für die Mssql-Conf-Hilfsprogramm.
 
-| mssql-conf setting | Description |
+| mssql-conf setting | Beschreibung |
 |---|---|
 | **network.rpcport** | Der TCP-Port, an die der RPC Endpoint Mapper-Prozess gebunden. |
 | **distributedtransaction.servertcpport** | Der Port, dem der MSDTC-Server überwacht. Wenn nicht festgelegt, der MSDTC-Dienst verwendet einen zufälligen kurzlebigen Port auf den-Dienst neu gestartet wird und Firewall-Ausnahmen müssen neu konfiguriert werden, um sicherzustellen, dass die Kommunikation von MSDTC-Dienst fortgesetzt werden kann. |

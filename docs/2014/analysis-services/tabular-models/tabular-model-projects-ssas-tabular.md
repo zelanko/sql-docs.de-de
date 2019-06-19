@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066343"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Tabellenmodellprojekte (SSAS – tabellarisch)
@@ -22,7 +22,7 @@ ms.locfileid: "66066343"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen eines NewTabular Modellprojekts &#40;SSAS – tabellarisch&#41;](create-a-new-tabular-model-project-analysis-services.md)|In diesem Thema wird beschrieben, wie ein neues, leeres Projekt für tabellarische Modelle erstellt wird.|  
 |[Importieren aus Analysis Services &#40;SSAS – tabellarisch&#41;](import-from-analysis-services-ssas-tabular.md)|In diesem Thema wird beschrieben, wie ein neues Projekt für tabellarische Modelle auf der Grundlage eines bereits in Analysis Services enthaltenen Modells erstellt wird. Metadaten aus dem vorhandenen Modell werden extrahiert und für das neue Modell verwendet.|  

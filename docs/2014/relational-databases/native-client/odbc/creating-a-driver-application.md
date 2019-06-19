@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205268"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Erstellen einer SQL Server Native Client-ODBC-Treiberanwendung
@@ -66,7 +66,7 @@ ms.locfileid: "63205268"
   
 -   Durchführen von Massenkopiervorgängen  
   
--   Verwalten von großen Daten (**varchar(max)**, **nvarchar(max)**, und **'varbinary(max)'** Spalten) Vorgänge  
+-   Verwalten von großen Daten (**varchar(max)** , **nvarchar(max)** , und **'varbinary(max)'** Spalten) Vorgänge  
   
 -   Verwenden einer Logik zum Wiederherstellen einer Verbindung, um bei der Konfiguration der Datenbankspiegelung ein Failover zu ermöglichen  
   

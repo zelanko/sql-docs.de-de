@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083528"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
@@ -51,7 +51,7 @@ ms.locfileid: "66083528"
  Die folgenden Abschnitte erklären, wie die Knoten innerhalb jedes dieser Modelltypen angeordnet sind.  
   
 ### <a name="structure-of-an-artxp-model"></a>Struktur des ARTXP-Modells  
- Mit dem ARTXP-Algorithmus wird ein Modell erstellt, das einem Entscheidungsstrukturmodell entspricht. Vorhersagbare Attribute werden gruppiert und immer dann geteilt, wenn signifikante Unterschiede gefunden werden. Aus diesem Grund enthält jedes ARTXP-Modell eine separate Verzweigung für jedes vorhersagbare Attribut. Im Lernprogramm zu Data Mining-Grundlagen wird beispielsweise ein Modell erstellt, das den Betrag der Verkäufe für mehrere Regionen vorhersagt. In diesem Fall ist **[Amount]** das vorhersagbare Attribut, und für jede Region wird eine separate Verzweigung erstellt. Bei zwei vorhersagbaren Attributen, z.B. **[Amount]** und **[Quantity]**, wird für jede Attribut/Region-Kombination eine separate Verzweigung erstellt.  
+ Mit dem ARTXP-Algorithmus wird ein Modell erstellt, das einem Entscheidungsstrukturmodell entspricht. Vorhersagbare Attribute werden gruppiert und immer dann geteilt, wenn signifikante Unterschiede gefunden werden. Aus diesem Grund enthält jedes ARTXP-Modell eine separate Verzweigung für jedes vorhersagbare Attribut. Im Lernprogramm zu Data Mining-Grundlagen wird beispielsweise ein Modell erstellt, das den Betrag der Verkäufe für mehrere Regionen vorhersagt. In diesem Fall ist **[Amount]** das vorhersagbare Attribut, und für jede Region wird eine separate Verzweigung erstellt. Bei zwei vorhersagbaren Attributen, z.B. **[Amount]** und **[Quantity]** , wird für jede Attribut/Region-Kombination eine separate Verzweigung erstellt.  
   
  Der oberste Knoten der ARTXP-Struktur enthält dieselben Informationen wie der Stammknoten einer Entscheidungsstruktur. Dazu gehören die Anzahl der untergeordneten Elemente für diesen Knoten (CHILDREN_CARDINALITY), die Anzahl der Fälle, die die Bedingungen dieses Knotens erfüllen (NODE_SUPPORT), sowie verschiedene beschreibende Statistiken (NODE_DISTRIBUTION).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66083528"
 >  Sie finden die komplette Regressionsformel auf Blattknotenebene, jedoch nicht in Stamm- oder Zwischenebenenknoten.  
   
 ### <a name="structure-of-an-arima-model"></a>Struktur eines ARIMA-Modells  
- Der ARIMA-Algorithmus erstellt eine einzelne Information für jede Kombination einer Datenreihe (z. B. **[Region]**) und einem vorhersagbaren Attribut (z. B. **[Sales Amount]**)-die Formel, beschreibt der Änderung des vorhersagbaren Attributs im Laufe der Zeit.  
+ Der ARIMA-Algorithmus erstellt eine einzelne Information für jede Kombination einer Datenreihe (z. B. **[Region]** ) und einem vorhersagbaren Attribut (z. B. **[Sales Amount]** )-die Formel, beschreibt der Änderung des vorhersagbaren Attributs im Laufe der Zeit.  
   
  Die Formel für jede Reihe wird von mehreren Komponenten abgeleitet, eine für jede in den Daten gefundene periodische Struktur. Wenn Sie beispielsweise über Verkaufsdaten verfügen, die auf monatlicher Basis erfasst werden, können mit dem Algorithmus monatliche, vierteljährliche oder jährliche periodische Strukturen erkannt werden.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66083528"
   
  **ARTXP:**  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |1 (Model)|Zeitreihe|  
 |3 (Innen)|Stellt eine Verzweigung innerhalb einer ARTXP-Zeitreihenstruktur dar.|  
@@ -130,7 +130,7 @@ ms.locfileid: "66083528"
   
  **ARIMA:**  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |27 (ARIMA-Stamm)|Der oberste Knoten einer ARIMA-Struktur.|  
 |28 (ARIMA Periodische Struktur)|Komponente einer ARIMA-Struktur, die eine einzelne periodische Struktur beschreibt.|  

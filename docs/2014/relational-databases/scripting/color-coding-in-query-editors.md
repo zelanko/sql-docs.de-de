@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e939270edd53189f9d8ba77411b8916e94a5ba8f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064171"
 ---
 # <a name="color-coding-in-query-editors"></a>Farbcodierung im Abfrage-Editor
@@ -38,7 +38,7 @@ ms.locfileid: "66064171"
 |Dunkelgrau|Operatoren|  
   
 ## <a name="status-bar"></a>Statusleiste  
- Sie können registrierte Server oder [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Server im Objekt-Explorer konfigurieren, damit sie in der Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors andere Farben aufweisen. Damit können Sie identifizieren, zu welchem Server die einzelnen Editor-Fenster gehören, wenn viele Fenster gleichzeitig geöffnet sind. Weitere Informationen zum Festlegen der Statusleistenfarben finden Sie unter [Statusleiste &amp;#40;Abfrage-Editor der Datenbank-Engine&amp;#41;](status-bar-database-engine-query-editor.md).  
+ Sie können registrierte Server oder [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Server im Objekt-Explorer konfigurieren, damit sie in der Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editors andere Farben aufweisen. Damit können Sie identifizieren, zu welchem Server die einzelnen Editor-Fenster gehören, wenn viele Fenster gleichzeitig geöffnet sind. Weitere Informationen zum Festlegen der Statusleistenfarben finden Sie unter [Statusleiste &#40;Abfrage-Editor der Datenbank-Engine&#41;](status-bar-database-engine-query-editor.md).  
   
  In manchen Editor-Typen wird die Statusleiste nicht angezeigt, oder es werden keine verschiedenen Farben unterstützt.  
   

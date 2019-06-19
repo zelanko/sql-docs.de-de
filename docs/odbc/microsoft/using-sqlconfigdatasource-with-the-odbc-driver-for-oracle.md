@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259334"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Verwenden von SQLConfigDatasource mit dem ODBC-Treiber für Oracle
@@ -38,7 +38,7 @@ ms.locfileid: "63259334"
 |BufferSize|7|65535|1000|Minimale Fetchpuffer Größe bis 65535 Bytes.|  
 |CatalogCap|2|1|0 oder 1|Bei 1 werden nonquoted Bezeichner in Großbuchstaben umwandeln, in dem Katalog Funktionen.|  
 |ConnectString|128|""|A/N|Verbindungszeichenfolge. Erforderliche Methode den Namen des Servers mit dem Treiber Msorcl10.dll angeben.|  
-|Description|256|""|A/N|Beschreibung|  
+|Beschreibung|256|""|A/N|Beschreibung|  
 |DSN|33|""|A/N|Datenquellenname.|  
 |GuessTheColDef|4|0|A/N|Gibt einen Wert ungleich NULL für Spalten ohne Skalierbarkeit Oracle definiert.|  
 |NumberFloat|2|""|0 oder 1|Wenn der Wert 0 ist, werden FLOAT-Spalten als SQL_FLOAT behandelt. Bei 1 werden FLOAT-Spalten als SQL_DOUBLE behandelt.|  

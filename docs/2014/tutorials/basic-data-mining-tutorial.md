@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185574"
 ---
 # <a name="basic-data-mining-tutorial"></a>Lernprogramm zu Data Mining-Grundlagen
@@ -45,7 +45,7 @@ ms.locfileid: "63185574"
  [Lektion 1: Vorbereiten der Analysis Services-Datenbank &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
  In dieser Lektion lernen Sie, wie Sie eine neue [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank anlegen, eine Datenquelle und Datenquellensicht hinzufügen und die neue Datenbank für die Verwendung von Data Mining vorbereiten.  
   
- [Lektion 2: Erstellen einer Targeted Mailing-Struktur &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lektion 2: Erstellen einer Targeted Mailing-Struktur &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  In dieser Lektion erfahren Sie, wie Sie eine Miningmodellstruktur anlegen, die in einem Targeted Mailing-Szenario verwendet werden kann.  
   
  [Lektion 3: Hinzufügen und Verarbeiten von Modellen](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  

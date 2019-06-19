@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65836160"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML-Datentyp und -Spalten (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "65836160"
   
 -   Sie möchten Verwaltungsfunktionen für den Datenbankserver verwenden, um Ihre XML-Daten zu verwalten. Dazu gehören z. B. Sicherung, Wiederherstellung und Replikation der Daten.  
   
- Wenn keine dieser Bedingungen zutrifft, kann es besser sein, die Daten in einem Nicht-XML-Datentyp für große Objekte zu speichern, beispielsweise in **[n]varchar(max)** oder **varbinary(max)**.  
+ Wenn keine dieser Bedingungen zutrifft, kann es besser sein, die Daten in einem Nicht-XML-Datentyp für große Objekte zu speichern, beispielsweise in **[n]varchar(max)** oder **varbinary(max)** .  
   
 ## <a name="xml-storage-options"></a>XML-Speicheroptionen  
  Für das Speichern von XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stehen die folgenden Optionen zur Verfügung:  

@@ -19,11 +19,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5712de8eb79039213aa82383653c1ee99cc2b32d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974189"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716607"
 ---
 # <a name="query-with-full-text-search"></a>Abfragen mit Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ Die Prädikate `CONTAINS` / `FREETEXT` und die Rowsetwertfunktionen `CONTAINSTAB
 
 ### <a name="predicates-contains-and-freetext"></a>Die Prädikate CONTAINS und FREETEXT
 
-**Verwendung:** Verwenden Sie die Volltext-**-Prädikate** CONTAINS und FREETEXT in der WHERE- oder HAVING-Klausel einer SELECT-Anweisung.
+**Verwendung:** Verwenden Sie die Volltext- **-Prädikate** CONTAINS und FREETEXT in der WHERE- oder HAVING-Klausel einer SELECT-Anweisung.
 
 **Ergebnisse:** Die Prädikate CONTAINS und FREETEXT geben einen TRUE- oder FALSE-Wert zurück, der angibt, ob eine bestimmte Zeile mit der Volltextabfrage übereinstimmt. Übereinstimmende Zeilen werden im Resultset zurückgegeben.
 

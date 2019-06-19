@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 335352fbf9753c2be6e0ddbed3d0f8d8032a3649
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946174"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Angeben von Feld- und Zeilenabschlusszeichen (SQL Server)
@@ -70,12 +70,12 @@ ms.locfileid: "64946174"
   
     -   Verwenden des Schalters **-t** zum Angeben des Feldabschlusszeichens für alle Felder mit Ausnahme des letzten Felds in einer Zeile, und Verwenden des Schalters **-r** zum Angeben eines Zeilenabschlusszeichens.  
   
-    -   Verwenden eines Zeichenformatschalters (**-c** oder **-w**) ohne den Schalter **-t** , womit als Feldabschlusszeichen das Tabulatorzeichen (\t) festgelegt wird. Dies entspricht der Angabe von **-t**\t.  
+    -   Verwenden eines Zeichenformatschalters ( **-c** oder **-w**) ohne den Schalter **-t** , womit als Feldabschlusszeichen das Tabulatorzeichen (\t) festgelegt wird. Dies entspricht der Angabe von **-t**\t.  
   
         > [!NOTE]  
         >  Wenn Sie den Schalter **-n** (native Daten) oder den Schalter **-N** (native Unicode-Daten) angeben, werden keine Abschlusszeichen eingefügt.  
   
-    -   Wenn ein interaktiver Befehl **bcp** die Option **in** oder **out** ohne den Formatdateischalter (**-f**) oder einen Datenformatschalter (**-n**, **-c**, **-w**oder **-N**) enthält, und Sie keine Präfixlänge und Feldlänge angegeben haben, erfordert der Befehl die Eingabe des Feldabschlusszeichens für jedes Feld (standardmäßig kein Abschlusszeichen):  
+    -   Wenn ein interaktiver Befehl **bcp** die Option **in** oder **out** ohne den Formatdateischalter ( **-f**) oder einen Datenformatschalter ( **-n**, **-c**, **-w**oder **-N**) enthält, und Sie keine Präfixlänge und Feldlänge angegeben haben, erfordert der Befehl die Eingabe des Feldabschlusszeichens für jedes Feld (standardmäßig kein Abschlusszeichen):  
   
          `Enter field terminator [none]:`  
   
@@ -108,7 +108,7 @@ bcp -r '0x0A'
   
  Der Befehl **bcp** verfügt über folgende Schalter.  
   
-|Schalter|Beschreibung|  
+|Schalter|und Beschreibung|  
 |------------|-----------------|  
 |**-c**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
 |**-t** `,`|Gibt ein Komma (,) als Feldabschlusszeichen an.|  
@@ -136,7 +136,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Abschlusszeichen können für einzelne Felder in einer Formatdatei oder für die gesamten Datendatei angegeben werden, indem die in der folgenden Tabelle aufgeführten Qualifizierer verwendet werden:  
   
-    |Qualifizierer|Beschreibung|  
+    |Qualifizierer|und Beschreibung|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***Feldabschlusszeichen***'**|Gibt das Feldabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \t (Tabstoppzeichen).|  
     |ROWTERMINATOR **='***Zeilenabschlusszeichen***'**|Gibt das Zeilenabschlusszeichen an, das für Zeichen- und Unicodezeichen-Datendateien verwendet werden soll.<br /><br /> Der Standardwert ist \n (Neue-Zeile-Zeichen).|  
@@ -187,8 +187,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |Option|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|Gibt an, dass die Datenfelder als Zeichendaten geladen werden.|  
-|FIELDTERMINATOR **='**`,`**'**|Gibt ein Komma (`,`) als Feldabschlusszeichen an.|  
-|ROWTERMINATOR **='**`\n`**'**|Gibt das Zeilenabschlusszeichen als Neue-Zeile-Zeichen an.|  
+|FIELDTERMINATOR **='** `,` **'**|Gibt ein Komma (`,`) als Feldabschlusszeichen an.|  
+|ROWTERMINATOR **='** `\n` **'**|Gibt das Zeilenabschlusszeichen als Neue-Zeile-Zeichen an.|  
   
  Führen Sie im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] folgenden Code aus:  
   

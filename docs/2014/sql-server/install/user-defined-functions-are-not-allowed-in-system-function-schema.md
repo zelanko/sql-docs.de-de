@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091333"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Benutzerdefinierte Funktionen sind in 'system_function_schema' unzulässig
@@ -26,7 +26,7 @@ ms.locfileid: "66091333"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Beschreibung  
  Die Speicherung und der Zugriff auf Systemobjekte ändern sich wie folgt:  
   
 -   Systemobjekte werden in der schreibgeschützten gespeichert **Ressource** , und direkte systemobjektupdates sind nicht zulässig.  
@@ -54,7 +54,7 @@ ms.locfileid: "66091333"
   
 4.  Ersetzen Sie Verweise auf **System_function_schema** mit **Dbo** in allen Skripts, User-defined Function, DDL-Anweisungen enthalten.  
   
-5.  Ändern Sie die Skripts, die rufen diese Funktionen zur Verwendung von entweder der zweiteilige Name Dbo **.** _Function_name_, oder den dreiteiligen Namen _Database_name_**.** Dbo. *Function_name*.  
+5.  Ändern Sie die Skripts, die rufen diese Funktionen zur Verwendung von entweder der zweiteilige Name Dbo **.** _Function_name_, oder den dreiteiligen Namen _Database_name_ **.** Dbo. *Function_name*.  
   
  Weitere Informationen finden Sie in den folgenden Themen in der SQL Server-Onlinedokumentation:  
   

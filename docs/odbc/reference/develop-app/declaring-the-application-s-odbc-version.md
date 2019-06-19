@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63267693"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Deklarieren die Anwendung&#39;s ODBC-Version
@@ -45,7 +45,7 @@ Bevor eine Anwendung eine Verbindung zuordnet, muss er umgebungsattributs SQL_AT
   
 -   _CatalogName_  **-Argument in SQLTables**. In ODBC 2. *x*, die Platzhalterzeichen ("%" und "_") in der *CatalogName* Argument buchstäblich behandelt werden. In ODBC 3. *x*, werden sie als Platzhalterzeichen behandelt. Daher eine Anwendung, die die ODBC 2. folgt. *x* Spezifikation kann diese nicht als verwenden Platzhalter Zeichen und nicht mit Escapezeichen versehen werden, wenn diese als Literale zu verwenden. Eine Anwendung, die die ODBC 3. folgt. *x* Spezifikation kann diese als Platzhalterzeichen verwenden oder mit Escapezeichen versehen und sie als Literale. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
- Die ODBC 3.*.x* Treiber-Manager und ODBC 3.*.x* Treiber prüfen die Version des ODBC-Spezifikation, die eine Anwendung geschrieben, und entsprechend reagieren. Beispielsweise, wenn die Anwendung die ODBC 2. folgt. *x* -Spezifikation und ruft **SQLExecute** vor dem Aufruf **SQLPrepare**, die ODBC 3.*.x* -Treiber-Manager gibt SQLSTATE S1010 (zurück. Fehler bei Funktionssequenz). Wenn die Anwendung die ODBC 3. folgt *.x* -Spezifikation der Treiber-Manager gibt einen SQLSTATE HY010 (Sequenzfehler funktionieren). Weitere Informationen finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ Die ODBC 3. *.x* Treiber-Manager und ODBC 3. *.x* Treiber prüfen die Version des ODBC-Spezifikation, die eine Anwendung geschrieben, und entsprechend reagieren. Beispielsweise, wenn die Anwendung die ODBC 2. folgt. *x* -Spezifikation und ruft **SQLExecute** vor dem Aufruf **SQLPrepare**, die ODBC 3. *.x* -Treiber-Manager gibt SQLSTATE S1010 (zurück. Fehler bei Funktionssequenz). Wenn die Anwendung die ODBC 3. folgt *.x* -Spezifikation der Treiber-Manager gibt einen SQLSTATE HY010 (Sequenzfehler funktionieren). Weitere Informationen finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
 >  Anwendungen, die die ODBC 3. folgen. *x* Spezifikation muss bedingten Code verwenden, um zu vermeiden, mithilfe von Funktionen noch nicht mit ODBC 3. *X* beim Arbeiten mit ODBC 2. *X* Treiber. ODBC-2. *x* Treiber unterstützen keine Funktionen, die noch nicht mit ODBC 3. *X* nur, weil die Anwendung wird deklariert, dass die ODBC 3. folgt. *X* Spezifikation. Darüber hinaus ODBC 3. *x* Treiber sind nicht zur Unterstützung von Funktionen, die noch nicht mit ODBC 3. eingestellt. *X* nur, weil die Anwendung gibt an, dass sie die ODBC 2. folgt. *X* Spezifikation.
