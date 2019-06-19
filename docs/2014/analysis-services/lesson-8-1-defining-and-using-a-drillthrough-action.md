@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078265"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definieren und Verwenden einer Drillthroughaktion
@@ -106,9 +106,9 @@ ms.locfileid: "66078265"
   
 6.  Ändern der **Namen** -Eigenschaft für die **Order Date Key** Attribut `Order Date` klicken Sie auf die Schaltfläche zum Durchsuchen für die **Spalte "Name"** -Eigenschaft, und in der **Spalte "Name"** wählen Sie im Dialogfeld **Datum** als Quelltabelle und SimpleDate als Quellspalte. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Ändern der **Namen** -Eigenschaft für die **Due Date Key** -Attribut auf `Due Date`, und klicken Sie dann mithilfe derselben Methode wie die **Order Date Key** Attribut, ändern Sie die  **Benennen Sie Spalte** -Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)**.  
+7.  Ändern der **Namen** -Eigenschaft für die **Due Date Key** -Attribut auf `Due Date`, und klicken Sie dann mithilfe derselben Methode wie die **Order Date Key** Attribut, ändern Sie die  **Benennen Sie Spalte** -Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)** .  
   
-8.  Ändern der **Namen** -Eigenschaft für die **Ship Date Key** Attribut `Ship Date`, und ändern Sie dann die **Spalte "Name"** -Eigenschaft für dieses Attribut in  **Date.SimpleDate (WChar)**.  
+8.  Ändern der **Namen** -Eigenschaft für die **Ship Date Key** Attribut `Ship Date`, und ändern Sie dann die **Spalte "Name"** -Eigenschaft für dieses Attribut in  **Date.SimpleDate (WChar)** .  
   
 9. Wechseln Sie zur Registerkarte **Aktionen** des Cube-Designers für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube.  
   
