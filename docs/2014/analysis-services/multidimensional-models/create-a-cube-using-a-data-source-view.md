@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076557"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Erstellen eines Cubes mithilfe einer Datenquellensicht
@@ -61,7 +61,7 @@ ms.locfileid: "66076557"
 ## <a name="selecting-dimensions"></a>Auswählen von Dimensionen  
  Mithilfe der Seite **Dimensionen auswählen** des Assistenten können Sie dem Cube vorhandene Dimensionen hinzufügen. Diese Seite wird nur angezeigt, wenn bereits gemeinsame Dimensionen vorhanden sind, die Dimensionstabellen im neuen Cube entsprechen.  
   
- Um vorhandene Dimensionen hinzuzufügen, wählen Sie mindestens eine Dimension aus der Liste **Gemeinsame Dimensionen** aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts (**>**), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche mit dem Doppelpfeil (**>>**), um alle Dimensionen in der Liste zu verschieben.  
+ Um vorhandene Dimensionen hinzuzufügen, wählen Sie mindestens eine Dimension aus der Liste **Gemeinsame Dimensionen** aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts ( **>** ), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche mit dem Doppelpfeil ( **>>** ), um alle Dimensionen in der Liste zu verschieben.  
   
  Wenn eine vorhandene Dimension entgegen Ihrer Erwartung nicht in der Liste angezeigt wird, können Sie auf **Zurück** klicken und die Tabellentypeinstellungen für mindestens eine Tabelle ändern. Eine vorhandene Dimension muss sich auch auf mindestens eine der Faktentabellen im Cube beziehen, damit sie in der Liste **Gemeinsame Dimensionen** angezeigt wird.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66076557"
   
  Um ein Objekt in der Struktur aus dem Cube zu entfernen, deaktivieren Sie das Kontrollkästchen daneben. Wenn das Kontrollkästchen neben einem Objekt deaktiviert wird, werden auch alle Objekte unterhalb des Objekts entfernt. Da Abhängigkeiten zwischen Objekten erzwungen werden, werden auch alle vom Attribut abhängigen Hierarchieebenen entfernt, wenn Sie ein Attribut entfernen. Wenn Sie beispielsweise ein Kontrollkästchen neben einer Hierarchie deaktivieren, werden die Kontrollkästchen neben allen Ebenen in der Hierarchie ebenfalls deaktiviert und sowohl die Ebenen als auch die Hierarchien entfernt. Das Schlüsselattribut einer Dimension kann nicht entfernt werden.  
   
- Sie können einer jeder Dimension, Attribut, Hierarchie oder Ebene umbenennen, entweder durch Klicken auf den Namen oder durch Rechtsklick auf den Namen und klicken Sie dann auf die im Kontextmenü auf **umbenennen \<Objekt >**, wobei  **\< Objekt >** ist **Dimension**, **Attribut**, oder **Ebene**.  
+ Sie können einer jeder Dimension, Attribut, Hierarchie oder Ebene umbenennen, entweder durch Klicken auf den Namen oder durch Rechtsklick auf den Namen und klicken Sie dann auf die im Kontextmenü auf **umbenennen \<Objekt >** , wobei  **\< Objekt >** ist **Dimension**, **Attribut**, oder **Ebene**.  
   
  Es muss nicht unbedingt eine 1:1-Beziehung zwischen der Anzahl der auf der Assistentenseite **Fakten- und Dimensionstabellen identifizieren** definierten Dimensionstabellen und der Anzahl der auf dieser Seite des Assistenten aufgeführten Dimensionen bestehen. Abhängig von den Beziehungen zwischen den Tabellen in der Datenquellensicht kann der Assistent zwei oder mehr Tabellen verwenden, um eine Dimension zu erstellen (wie z. B. für ein Schneeflockenschema erforderlich).  
   

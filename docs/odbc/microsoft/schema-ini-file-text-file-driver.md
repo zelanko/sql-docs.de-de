@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127907"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei „Schema.ini“ (Textdateitreiber)
@@ -114,7 +114,7 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>Angeben von Datenformaten-Typ und Konvertierungen  
  Die Datei "Schema.ini" enthält mehrere Optionen, die Sie verwenden können, um anzugeben, wie die Daten konvertiert oder angezeigt werden. Die folgende Tabelle enthält jede dieser Optionen.  
   
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**DateTimeFormat**|Kann auf einer Formatzeichenfolge festgelegt werden, die Datums- und Uhrzeitangaben angibt. Sie sollten diesen Eintrag angeben, wenn alle Datum/Uhrzeit-Felder in den Import/Export mit dem gleichen Format verarbeitet werden. Alle Microsoft Jet-Formate, mit Ausnahme der Uhr und Uhr. werden unterstützt. Ist keine Formatzeichenfolge, werden die Optionen für das kurze Datum Windows-Systemsteuerung der Bild und die Uhrzeit verwendet.|  
 |**DecimalSymbol**|Kann auf jedem beliebigen einzelnen Zeichen festgelegt werden, die verwendet wird, um die ganze Zahl von der Bruchteil einer Zahl zu trennen.|  

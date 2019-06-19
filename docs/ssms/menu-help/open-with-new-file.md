@@ -14,17 +14,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fd2e27d4e7d9649b94c85a45c2fb3b67ef12756c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105064"
 ---
 # <a name="open-with-new-file"></a>Öffnen mit (neue Datei)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Sie können ein Dokument in einem oder mehreren Editoren öffnen, indem Sie im Menü **Datei** auf **Öffnen** und danach auf **Datei**klicken. Wählen Sie im Dialogfeld **Datei öffnen** die Datei aus, klicken Sie auf den Pfeil bei **Öffnen** , und klicken Sie dann auf **Öffnen mit**. Klicken Sie im Dialogfeld **Öffnen mit** in der Liste **Wählen Sie das zu öffnende Programm aus** auf das bevorzugte Programm, und klicken Sie dann auf **Öffnen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Wählen Sie das zu öffnende Programm aus**  
 Listet die in [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio für den ausgewählten Dateityp zur Verfügung stehenden Editoren auf. Wählen Sie aus der Liste den Editor aus, mit dem Sie das Dokument öffnen möchten, oder klicken Sie auf **Hinzufügen** , um einen neuen Editor zur Liste hinzuzufügen.  
   

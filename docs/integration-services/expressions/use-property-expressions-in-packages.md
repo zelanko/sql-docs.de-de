@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724882"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
@@ -74,7 +74,7 @@ ms.locfileid: "65724882"
   
  ![Benutzeroberfläche für Eigenschaftsausdrücke](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
   
- Klicken Sie im Fenster **Eigenschaften** und auf der Seite **Ausdrücke** auf der Sammlungsebene **Ausdrücke** auf die Schaltfläche zum Durchsuchen **(…)**, um das Dialogfeld **Eigenschaftsausdruck-Editor** zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließenden Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)**, um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
+ Klicken Sie im Fenster **Eigenschaften** und auf der Seite **Ausdrücke** auf der Sammlungsebene **Ausdrücke** auf die Schaltfläche zum Durchsuchen **(…)** , um das Dialogfeld **Eigenschaftsausdruck-Editor** zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließenden Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)** , um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
   
  Sie können das **Ausdrucks-Generator** -Dialogfeld auch aus dem **Eigenschaftsausdrucks-Editor** -Dialogfeld heraus öffnen.  
   

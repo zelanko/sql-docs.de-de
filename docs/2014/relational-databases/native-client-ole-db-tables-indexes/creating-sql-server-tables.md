@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e780a04f59bacba5063ac0bd6e9b7f3c74fd211a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046375"
 ---
 # <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
@@ -62,7 +62,7 @@ ms.locfileid: "63046375"
   
  Wenn der Consumer ruft **itabledefinition:: CreateTable**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Tabelleneigenschaften wie folgt interpretiert.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|R/W: Lese-/Schreibzugriff<br /><br /> Standard: VARIANT_FALSE Beschreibung: In der Standardeinstellung die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erstellt die Tabellen, die vom Consumer benannt. Wenn VARIANT_TRUE der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter generiert einen temporären Tabellennamen für den Consumer. Der Consumer legt den *pTableID*-Parameter von **CreateTable** auf NULL fest. Der *ppTableID*-Parameter muss einen gültigen Zeiger enthalten.|  
   

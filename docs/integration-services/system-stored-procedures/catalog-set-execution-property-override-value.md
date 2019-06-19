@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a12576e083a30a939964803687198ae0842fb73
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715853"
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
@@ -41,10 +41,10 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Der eindeutige Bezeichner für die Instanz der Ausführung. Der *execution_id* ist **bigint**.  
   
  [ @property_path = ] *property_path*  
- Der Pfad zur Eigenschaft im Paket. Der *property_path* ist **nvarchar(4000)**.  
+ Der Pfad zur Eigenschaft im Paket. Der *property_path* ist **nvarchar(4000)** .  
   
  [ @property_value = ] *property_value*  
- Der Überschreibungswert, der der Eigenschaft zugewiesen werden soll. Der *property_value* ist **nvarchar(max)**.  
+ Der Überschreibungswert, der der Eigenschaft zugewiesen werden soll. Der *property_value* ist **nvarchar(max)** .  
   
  [ @sensitive = ] *sensitive*  
  Wenn der Wert 1 lautet, ist die Eigenschaft vertraulich und wird beim Speichern verschlüsselt. Lautet der Wert 0, ist die Eigenschaft nicht vertraulich, und der Wert wird als Nur-Text gespeichert. Das *sensitive* -Argument lautet **bit**.  

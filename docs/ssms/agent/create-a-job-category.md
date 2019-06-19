@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a4fa8994af0a9a10b2dc08a592d49abc8b4afa94
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099396"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
@@ -52,7 +52,7 @@ In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ss
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
 ### <a name="Restrictions"></a>Einschränkungen  
-Multiserverkategorien sind nur auf einem Masterserver vorhanden. Auf einem Masterserver ist nur eine Standardauftragskategorie verfügbar: [**Nicht kategorisiert (Multiserver)**]. Beim Herunterladen eines Multiserverauftrags wird seine Kategorie auf dem Zielserver in **Aufträge vom MSX** geändert.  
+Multiserverkategorien sind nur auf einem Masterserver vorhanden. Auf einem Masterserver ist nur eine Standardauftragskategorie verfügbar: [**Nicht kategorisiert (Multiserver)** ]. Beim Herunterladen eines Multiserverauftrags wird seine Kategorie auf dem Zielserver in **Aufträge vom MSX** geändert.  
   
 ### <a name="Security"></a>Sicherheit  
 Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md).  
@@ -67,7 +67,7 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Aufträge** , und wählen Sie **Auftragskategorien verwalten**aus.  
   
-4.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ auf **Hinzufügen**.  
+4.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -** _Servername_ auf **Hinzufügen**.  
   
 5.  Geben Sie im neuen Dialogfeld **Name** einen Namen für die neue Auftragskategorie ein.  
   
@@ -75,7 +75,7 @@ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agen
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -**_Servername_ auf **Aktualisieren** , um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
+8.  Klicken Sie im Dialogfeld **Auftragskategorien verwalten -** _Servername_ auf **Aktualisieren** , um sicherzustellen, dass die neue Auftragskategorie aktiv ist. Schließen Sie das Dialogfeld, wenn alles normal aussieht.  
   
 Weitere Informationen zu diesen Dialogfeldern finden Sie unter [Auftragskategorien – Auftragskategorien verwalten](../../ssms/agent/job-categories-manage-job-categories.md) und [Eigenschaften für neue Auftragskategorie – Neue Auftragskategorie](../../ssms/agent/job-categories-properties-new-job-category.md).  
   

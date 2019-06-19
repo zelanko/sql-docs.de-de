@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1811d0e5fc203b9a97336933c3943a684fb5c9a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714859"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -29,7 +29,7 @@ ms.locfileid: "65714859"
   
  Eine ausführbare Datei ist ein Task oder ein Container, den Sie der Ablaufsteuerung eines Pakets hinzufügen.  
   
-|Spaltenname|**Data type**|Beschreibung|  
+|Spaltenname|**Data type**|und Beschreibung|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|Der eindeutige Bezeichner für die ausführbare Datei.|  
 |execution_id|**bigint**|Der eindeutige Bezeichner für die Instanz der Ausführung.|  

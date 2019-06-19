@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5dfcb81955409e2435373e3257ae4e1002ab5e1e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097384"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Eigenschaftenseiten in SQL Server Management Studio
@@ -26,7 +26,7 @@ Die Dialogfelder für Eigenschaftenseiten in [!INCLUDE[msCoName](../includes/msc
   
 Die folgende Tabelle enthält die gemeinsamen Elemente von Dialogfeldern für Eigenschaftenseiten in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
-|Element|Beschreibung|  
+|Element|und Beschreibung|  
 |-----------|---------------|  
 |**Nach Kategorien**|Listet alle Eigenschaften und Eigenschaftswerte für das ausgewählte Objekt nach Kategorie sortiert auf. In der Kategorieansicht können Sie eine Kategorie reduzieren, um die Anzahl von angezeigten Eigenschaften zu verringern. Wenn Sie eine Kategorie erweitern oder reduzieren, wird ein Pluszeichen (+) oder Minuszeichen (-) auf der linken Seite des Kategorienamens angezeigt. Kategorien sind in alphabetischer Reihenfolge aufgelistet.|  
 |**Alphabetisch**|Listet alle Eigenschaften und Eigenschaftswerte für das ausgewählte Objekt alphabetisch sortiert auf.|  

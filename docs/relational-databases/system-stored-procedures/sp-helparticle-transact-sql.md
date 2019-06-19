@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017801"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumente  
 `[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Ist der Name eines Artikels in der Veröffentlichung. *Artikel* ist **Sysname**, hat den Standardwert **%**. Wenn *Artikel* ist nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
+`[ @article = ] 'article'` Ist der Name eines Artikels in der Veröffentlichung. *Artikel* ist **Sysname**, hat den Standardwert **%** . Wenn *Artikel* ist nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
   
 `[ @returnfilter = ] returnfilter` Gibt an, ob die Filterklausel zurückgegeben werden sollen. *Returnfilter* ist **Bit**, hat den Standardwert **1**, die die Filterklausel zurückgegeben.  
   
@@ -84,8 +84,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**filter_owner**|**sysname**|Besitzer des Filters.|  
 |**unqua_filter**|**sysname**|Name des Filters, ohne den Namen des Besitzers.|  
 |**auto_identity_range**|**int**|Flag, das anzeigt, ob die automatische Behandlung von Identitätsbereichen für die Veröffentlichung bei ihrer Erstellung aktiviert wurde. **1** bedeutet, dass der automatische Identitätsbereich aktiviert ist; **0** bedeutet, dass er deaktiviert ist.|  
-|**publisher_identity_range**|**int**|Bereichsgröße des Identitätsbereichs auf dem Verleger, wenn der Artikel enthält *Identityrangemanagementoption* festgelegt **automatisch** oder **Auto_identity_range** festgelegt  **"true"**.|  
-|**identity_range**|**bigint**|Bereichsgröße des Identitätsbereichs auf dem Abonnenten, wenn der Artikel enthält *Identityrangemanagementoption* festgelegt **automatisch** oder **Auto_identity_range** festgelegt  **"true"**.|  
+|**publisher_identity_range**|**int**|Bereichsgröße des Identitätsbereichs auf dem Verleger, wenn der Artikel enthält *Identityrangemanagementoption* festgelegt **automatisch** oder **Auto_identity_range** festgelegt  **"true"** .|  
+|**identity_range**|**bigint**|Bereichsgröße des Identitätsbereichs auf dem Abonnenten, wenn der Artikel enthält *Identityrangemanagementoption* festgelegt **automatisch** oder **Auto_identity_range** festgelegt  **"true"** .|  
 |**threshold**|**bigint**|Prozentwert, der anzeigt, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist.|  
 |**identityrangemanagementoption**|**int**|Gibt die für den Artikel behandelte Identitätsbereichsverwaltung an.|  
 |**fire_triggers_on_snapshot**|**bit**|Gibt an, ob replizierte Benutzertrigger beim Anwenden der Anfangsmomentaufnahme ausgeführt werden.<br /><br /> **1** = Benutzertrigger werden ausgeführt.<br /><br /> **0** = Benutzertrigger werden nicht ausgeführt.|  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a4e4dc5e53f4e45c558b5d709073900b6e724f1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717112"
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap 
@@ -45,21 +45,21 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @task_package_path = ] *task_package_path*  
  Der Paketpfad für den Datenflusstask. Die **PackagePath**-Eigenschaft für den Datenflusstask gibt den Pfad an. Der Pfad berücksichtigt die Groß- und Kleinschreibung. Um den Paketpfad zu suchen, klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] mit der rechten Maustaste auf den Datenflusstask, und klicken Sie dann auf **Eigenschaften**. Die **PackagePath**-Eigenschaft wird im Fenster **Eigenschaften** angezeigt.  
   
- Das Argument *task_package_path* ist vom Typ **nvarchar(max)**.  
+ Das Argument *task_package_path* ist vom Typ **nvarchar(max)** .  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  Die Identifikationszeichenfolge für den Datenflusspfad. Mit einem Pfad werden zwei Datenflusskomponenten verbunden. Die **IdentificationString**-Eigenschaft für den Pfad gibt die Zeichenfolge an.  
   
  Um die Identifikationszeichenfolge zu suchen, klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] mit der rechten Maustaste auf den Pfad zwischen zwei Datenflusskomponenten, und klicken dann auf **Eigenschaften**. Die **IdentificationString**-Eigenschaft wird im Fenster **Eigenschaften** angezeigt.  
   
- Das Argument *dataflow_path_id_string* ist vom Typ **nvarchar(4000)**.  
+ Das Argument *dataflow_path_id_string* ist vom Typ **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
  Der Name der Datei, in der die abgezweigten Daten gespeichert werden. Wenn der Datenflusstask in einer Foreach-Schleife oder einem For-Schleifencontainer ausgeführt wird, werden die abgezweigten Daten für jede Iteration der Schleife in separaten Dateien gespeichert. Jeder Datei wird eine Zahl für die jeweilige Iteration als Präfix vorangestellt.  
   
  Die Datei wird standardmäßig im Ordner „\<*Laufwerk*>:\Programme\Microsoft SQL Server\130\DTS\DataDumps“ gespeichert.  
   
- Das Argument *data_filename* ist vom Typ **nvarchar(4000)**.  
+ Das Argument *data_filename* ist vom Typ **nvarchar(4000)** .  
   
  [ @max_rows = ] *max_rows*  
  Die Anzahl der Zeilen, die während der Datenabzweigung aufgezeichnet werden. Wenn dieser Wert nicht angegeben wird, werden alle Zeilen aufgezeichnet. Das Argument *max_rows* ist vom Typ **int**.  

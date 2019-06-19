@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbe729ebef5d156f6c946e0c5cda62c1cefdcd81
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717199"
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
@@ -50,10 +50,10 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
   
  Um die Identifikationszeichenfolge zu suchen, klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] mit der rechten Maustaste auf den Pfad zwischen zwei Datenflusskomponenten, und klicken dann auf **Eigenschaften**. Die **IdentificationString**-Eigenschaft wird im Fenster **Eigenschaften** angezeigt.  
   
- Das Argument *dataflow_path_id_string* ist vom Typ **nvarchar(4000)**.  
+ Das Argument *dataflow_path_id_string* ist vom Typ **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
- Der Name der Datei, in der die abgezweigten Daten gespeichert werden. Wenn der Datenflusstask in einer Foreach-Schleife oder einem For-Schleifencontainer ausgeführt wird, werden die abgezweigten Daten für jede Iteration der Schleife in separaten Dateien gespeichert. Jeder Datei wird eine Zahl für die jeweilige Iteration als Präfix vorangestellt. Datenabzweigungsdateien werden in den Ordner „*\<Ordner für die SQL Server-Installation>* \130\DTS\\“ geschrieben. Das Argument *data_filename* ist vom Typ **nvarchar(4000)**.  
+ Der Name der Datei, in der die abgezweigten Daten gespeichert werden. Wenn der Datenflusstask in einer Foreach-Schleife oder einem For-Schleifencontainer ausgeführt wird, werden die abgezweigten Daten für jede Iteration der Schleife in separaten Dateien gespeichert. Jeder Datei wird eine Zahl für die jeweilige Iteration als Präfix vorangestellt. Datenabzweigungsdateien werden in den Ordner „ *\<Ordner für die SQL Server-Installation>* \130\DTS\\“ geschrieben. Das Argument *data_filename* ist vom Typ **nvarchar(4000)** .  
   
  [ @max_rows = ] max_rows  
  Die Anzahl der Zeilen, die während der Datenabzweigung aufgezeichnet werden. Wenn dieser Wert nicht angegeben wird, werden alle Zeilen aufgezeichnet. Das Argument „max_rows“ ist vom Typ **int**.  

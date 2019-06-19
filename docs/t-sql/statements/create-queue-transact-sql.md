@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503241"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -144,7 +144,7 @@ CREATE QUEUE <object>
   
  In der folgenden Tabelle werden die Spalten in einer Warteschlange aufgelistet.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|Status der Nachricht. Die RECEIVE-Anweisung gibt alle Nachrichten zurück, die den Status **1** haben. Wenn die Nachrichtenbeibehaltung aktiviert ist, wird der Status auf 0 festgelegt. Wenn die Nachrichtenbeibehaltung deaktiviert ist, wird die Meldung aus der Warteschlange gelöscht. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0** = Empfangene Nachricht wurde beibehalten<br /><br /> **1** = Bereit zu empfangen<br /><br /> **2** = Noch nicht abgeschlossen<br /><br /> **3** = Gesendete Nachricht wurde beibehalten|  
 |priority|**tinyint**|Die Prioritätsebene, die der Nachricht zugewiesen wird.|  

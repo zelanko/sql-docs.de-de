@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049722"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 `[ @owner_name = ] 'owner_name'` Ist der Name des Besitzers der Tabelle. *Owner_name* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Gibt eine Filterklausel, die steuert, welche Zeilen der neu geladenen Daten den Mergenachverfolgungstabellen hinzugefügt werden sollen. *Filter_clause* ist **nvarchar(4000)**, hat den Standardwert NULL. Wenn *Filter_clause* ist **null**, alle in einem Massenvorgang geladenen Zeilen hinzugefügt.  
+`[ @filter_clause = ] 'filter_clause'` Gibt eine Filterklausel, die steuert, welche Zeilen der neu geladenen Daten den Mergenachverfolgungstabellen hinzugefügt werden sollen. *Filter_clause* ist **nvarchar(4000)** , hat den Standardwert NULL. Wenn *Filter_clause* ist **null**, alle in einem Massenvorgang geladenen Zeilen hinzugefügt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

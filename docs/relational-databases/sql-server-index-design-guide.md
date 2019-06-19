@@ -24,11 +24,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985171"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
 ##  <a name="Basics"></a> Grundlagen des Indexentwurfs  
  Ein Index ist eine Struktur auf dem Datenträger oder im Arbeitsspeicher, die einer Tabelle oder einer Sicht zugeordnet ist und durch die das Abrufen von Zeilen aus der Tabelle oder Sicht beschleunigt wird. Ein Index enthält Schlüssel, die aus einer oder mehreren Spalten in der Tabelle oder Sicht erstellt werden. Bei Indizes auf Datenträgern werden diese Schlüssel in einer Struktur (B-Struktur) gespeichert, die es SQL Server ermöglicht, die den Schlüsselwerten zugeordneten Zeilen schnell und effizient zu finden.  
 
- Ein Index speichert Daten logisch in als Tabelle mit Zeilen und Spalten organisierter Form und physisch in einem zeilenbezogenen Format namens *Rowstore*<sup>1</sup> oder in einem spaltenbezogenen Format namens *[Columnstore](#columnstore_index)*.  
+ Ein Index speichert Daten logisch in als Tabelle mit Zeilen und Spalten organisierter Form und physisch in einem zeilenbezogenen Format namens *Rowstore*<sup>1</sup> oder in einem spaltenbezogenen Format namens *[Columnstore](#columnstore_index)* .  
     
  Das Auswählen der richtigen Indizes für eine Datenbank und ihre Arbeitsauslastung ist ein komplexer Vorgang, bei dem ein ausgewogenes Verhältnis zwischen gewünschter Abfragegeschwindigkeit und vertretbaren Updatekosten erzielt werden muss. Schmale Indizes (Indizes mit wenigen Spalten im Indexschlüssel) erfordern weniger Speicherplatz und Wartungsaufwand. Breite Indizes decken jedoch eine größere Anzahl an Abfragen ab. Möglicherweise müssen Sie mit verschiedenen Entwürfen experimentieren, bevor Sie den effizientesten Index ermitteln. Indizes können ohne Auswirkungen auf das Datenbankschema oder den Anwendungsentwurf hinzugefügt, geändert und gelöscht werden. Daher sollten Sie in jedem Fall mit verschiedenen Indizes experimentieren.  
   
@@ -123,7 +123,7 @@ Weitere Informationen zu Volltextindizes finden Sie unter [Auffüllen von Vollte
   
 -   Wählen Sie für gruppierte Indizes einen kurzen Indexschlüssel aus. Gruppierte Indizes bieten darüber hinaus den Vorteil, dass sie für eindeutige oder Nicht-NULL-Spalten erstellt werden.  
   
--   Die Datentypen **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** und **varbinary(max)** können nicht als Indexschlüsselspalten angegeben werden. **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml** -Datentypen können jedoch als Nichtschlüssel-Indexspalten in einen nicht gruppierten Index aufgenommen werden. Weitere Informationen finden Sie im Abschnitt [Index mit eingeschlossenen Spalten](#Included_Columns)in diesem Handbuch.  
+-   Die Datentypen **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** und **varbinary(max)** können nicht als Indexschlüsselspalten angegeben werden. **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** -Datentypen können jedoch als Nichtschlüssel-Indexspalten in einen nicht gruppierten Index aufgenommen werden. Weitere Informationen finden Sie im Abschnitt [Index mit eingeschlossenen Spalten](#Included_Columns)in diesem Handbuch.  
   
 -   Ein **xml** -Datentyp kann nur in einem XML-Index eine Schlüsselspalte sein. Weitere Informationen finden Sie unter [XML-Indizes &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). Mit SQL Server 2012 SP1 wird ein neuer XML-Indextyp eingeführt, der als selektiver XML-Index bezeichnet wird. Durch diesen neuen Index kann die Abfrageleistung bei Daten verbessert werden, die als XML in SQL Server gespeichert sind. Das sorgt für eine schnellere Indizierung großer XML-Datenmengen und für höhere Skalierbarkeit, indem die Speicherkosten des Indexes gesenkt werden. Weitere Informationen finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -278,7 +278,7 @@ Wenn der gruppierte Index nicht mit der `UNIQUE`-Eigenschaft erstellt wird, füg
 
     > [!TIP]
     > Wenn dies nicht anders angegeben ist, erstellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beim Erstellen einer [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md)-Einschränkung einen [gruppierten Index](#Clustered), um diese Einschränkung zu unterstützen.
-    > Obwohl ein *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)*-Datentyp verwendet werden kann, um Eindeutigkeit als PRIMARY KEY zu erzwingen, handelt es sich dabei nicht um einen effizienten Gruppierungsschlüssel.
+    > Obwohl ein *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* -Datentyp verwendet werden kann, um Eindeutigkeit als PRIMARY KEY zu erzwingen, handelt es sich dabei nicht um einen effizienten Gruppierungsschlüssel.
     > Wenn Sie einen *uniqueidentifier*-Datentyp als PRIMARY KEY verwenden, wird empfohlen, diesen als nicht gruppierten Index zu erstellen und eine andere Spalte (z.B. `IDENTITY`) zu verwenden, um den gruppierten Index zu erstellen.   
   
 -   Der Zugriff auf sie erfolgt sequenziell.  
@@ -464,7 +464,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Es passen weniger Indexzeilen auf eine Seite. Dies kann zu einer Zunahme der E/A und verringerter Cacheeffizienz führen.  
   
--   Zum Speichern des Indexes ist eine größere Menge an Speicherplatz erforderlich. Insbesondere das Hinzufügen von **varchar(max)**, **nvarchar(max)**, **varbinary(max)** oder **xml** -Datentypen als Nichtschlüssel-Indexspalten kann die Anforderungen an den Speicherplatz erheblich erhöhen. Der Grund liegt darin, dass die Spaltenwerte in die Blattebene des Indexes kopiert werden. Daher werden sie sowohl im Index als auch in der Basistabelle gespeichert.  
+-   Zum Speichern des Indexes ist eine größere Menge an Speicherplatz erforderlich. Insbesondere das Hinzufügen von **varchar(max)** , **nvarchar(max)** , **varbinary(max)** oder **xml** -Datentypen als Nichtschlüssel-Indexspalten kann die Anforderungen an den Speicherplatz erheblich erhöhen. Der Grund liegt darin, dass die Spaltenwerte in die Blattebene des Indexes kopiert werden. Daher werden sie sowohl im Index als auch in der Basistabelle gespeichert.  
   
 -   Die Indexwartung kann zu einem größeren Zeitaufwand für das Ausführen von Änderungen, Einfügungen, Updates oder Löschvorgängen an der zugrunde liegenden Tabelle oder indizierten Sicht führen.  
   

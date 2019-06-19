@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 72f6c3fd862e6b122513eed605658835ec61442e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105996"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Erstellen von Abfragen zum Einfügen von Ergebnissen (Visual Database Tools)
@@ -78,7 +78,7 @@ Wenn Sie eine Abfrage zum Einfügen von Ergebnissen erstellen, ändert sich der 
     > [!NOTE]  
     > Der Abfrage- und Sicht-Designer kann nicht im Voraus bestimmen, welche Tabellen und Sichten aktualisiert werden können. Daher werden im Dialogfeld **Zieltabelle für Anfügeabfrage auswählen** in der Liste **Tabellenname** alle in der abgefragten Datenverbindung verfügbaren Tabellen und Sichten angezeigt, d. h. auch diejenigen, in die möglicherweise keine Zeilen kopiert werden können.  
   
-4.  Wählen Sie in dem Rechteck, das die Tabelle oder das Tabellenwertobjekt darstellt, die Namen der Spalten aus, deren Inhalt kopiert werden soll. Klicken Sie auf **&#42; (Alle Spalten)**, um vollständige Zeilen zu kopieren.  
+4.  Wählen Sie in dem Rechteck, das die Tabelle oder das Tabellenwertobjekt darstellt, die Namen der Spalten aus, deren Inhalt kopiert werden soll. Klicken Sie auf **&#42; (Alle Spalten)** , um vollständige Zeilen zu kopieren.  
   
     Der Abfrage- und Sicht-Designer fügt die ausgewählten Spalten zur Spalte **Spalte** im Kriterienbereich hinzu.  
   

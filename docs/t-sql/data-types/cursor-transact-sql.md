@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1849a138410485a26be32e6a15603d5aa1a56de8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024021"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046939"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Ein Datentyp für Variablen oder für OUTPUT-Parameter von gespeicherten Prozedu
   
 ## <a name="remarks"></a>Remarks  
 Folgende Vorgänge können auf Variablen und Parameter vom Datentyp **cursor** verweisen:
--   Die Anweisungen DECLARE *@local_variable* und SET *@local_variable*.  
+-   Die Anweisungen DECLARE *@local_variable* und SET *@local_variable* .  
 -   Die Cursoranweisungen OPEN, FETCH, CLOSE und DEALLOCATE.  
 -   Ausgabeparameter der gespeicherten Prozedur.  
 -   Die CURSOR_STATUS-Funktion.  

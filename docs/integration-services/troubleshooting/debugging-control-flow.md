@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6fe2095d7e5bdd47a4442084b9d75c6880a64cfc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713724"
 ---
 # <a name="debugging-control-flow"></a>Debuggen der Ablaufsteuerung
@@ -47,7 +47,7 @@ ms.locfileid: "65713724"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt zehn Unterbrechungsbedingungen bereit, die Sie für alle Tasks und Container aktivieren können. Im Dialogfeld **Breakpoints festlegen** können Sie Breakpoints für die folgenden Bedingungen aktivieren:  
   
-|Unterbrechungsbedingung|Beschreibung|  
+|Unterbrechungsbedingung|und Beschreibung|  
 |---------------------|-----------------|  
 |Wenn der Task oder Container das **OnPreExecute** -Ereignis empfängt.|Wird aufgerufen, unmittelbar bevor ein Task ausgeführt wird. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar bevor er ausgeführt wird.|  
 |Wenn der Task oder Container das **OnPostExecute** -Ereignis empfängt.|Wird aufgerufen, unmittelbar nachdem die Ausführungslogik des Tasks beendet wurde. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar nachdem er ausgeführt wurde.|  
@@ -72,7 +72,7 @@ ms.locfileid: "65713724"
   
  In der folgenden Tabelle sind die Typen der Trefferanzahl aufgeführt.  
   
-|Typ der Trefferanzahl|Beschreibung|  
+|Typ der Trefferanzahl|und Beschreibung|  
 |--------------------|-----------------|  
 |Always|Die Ausführung wird immer angehalten, wenn der Breakpoint erreicht wird.|  
 |Trefferanzahl ist gleich|Die Ausführung wird angehalten, wenn die Anzahl des Auftretens des Breakpoints der Trefferanzahl entspricht.|  
@@ -113,7 +113,7 @@ ms.locfileid: "65713724"
   
  In der folgenden Tabelle sind diese Fenster beschrieben.  
   
-|Fenster|Beschreibung|  
+|Fenster|und Beschreibung|  
 |------------|-----------------|  
 |Breakpoints|Listet die Breakpoints in einem Paket auf und stellt Optionen zum Aktivieren und Löschen von Breakpoints bereit.|  
 |Ausgabe|Zeigt Statusmeldungen für Funktionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]an.|  
@@ -124,7 +124,7 @@ ms.locfileid: "65713724"
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>So legen Sie Breakpoints in einem Paket, einem Task oder einem Container fest  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie auf das Paket, in dem Sie Breakpoints festlegen möchten.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "65713724"
 ## <a name="set-breakpoints"></a>Breakpoints festlegen
   Verwenden Sie das Dialogfeld **Breakpoints festlegen** , um die Ereignisse anzugeben, für die Breakpoints aktiviert werden sollen, sowie um das Verhalten der Breakpoints zu steuern.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Enabled**  
  Wählen Sie diese Option aus, um einen Breakpoint für ein Ergebnis zu aktivieren.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "65713724"
  **Typ der Trefferanzahl**  
  Geben Sie an, wann der Breakpoint wirksam werden soll.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Always**|Die Ausführung wird immer angehalten, wenn der Breakpoint erreicht wird.|  
 |**Trefferanzahl ist gleich**|Die Ausführung wird angehalten, wenn die Anzahl des Auftretens des Breakpoints der Trefferanzahl entspricht.|  

@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c835ea8b1610256f41ee9d0d0787e84b7afcda3d
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503670"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -156,7 +156,7 @@ ms.locfileid: "65503670"
 ## <a name="queue-columns"></a>Spalten in der Warteschlange  
  In der folgenden Tabelle werden die Spalten einer Warteschlange aufgelistet.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|Status der Nachricht. Für Nachrichten, die vom RECEIVE-Befehl zurückgegeben werden, ist der Status immer **0**. Nachrichten in der Warteschlange können einen der folgenden Werte enthalten:<br /><br /> **0**=Bereit **1**=Nachricht empfangen **2**=Noch nicht abgeschlossen **3**=Gesendete Nachricht wurde beibehalten|  
 |**priority**|**tinyint**|Die Prioritätsebene der Konversation, die auf die Nachricht angewendet wird.|  

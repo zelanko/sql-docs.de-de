@@ -14,17 +14,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 51303fc2d37a1100d09275c5750d37c68a647785
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097209"
 ---
 # <a name="add-objects"></a>Objekte hinzufügen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Begrenzt die Dialogfelder zur Objektauswahl auf die für Sie relevanten Objektarten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Bestimmte Objekte**  
 Öffnet das Dialogfeld **Objekte auswählen** , sodass Sie die Suche nach bestimmten Objekten noch besser definieren können.  
   

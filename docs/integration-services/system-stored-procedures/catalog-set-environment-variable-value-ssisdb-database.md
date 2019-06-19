@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8140c8eaa6c8fb317265b470ccbd3712f3b2aa41
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715902"
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value (SSISDB-Datenbank)
@@ -38,13 +38,13 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumente  
  [ @folder_name = ] *folder_name*  
- Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
+ Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)** .  
   
  [ @variable _name = ] *variable _name*  
- Der Name der Umgebungsvariablen. Der *variable _name* ist **nvarchar(128)**.  
+ Der Name der Umgebungsvariablen. Der *variable _name* ist **nvarchar(128)** .  
   
  [ @value = ] *value*  
  Der Wert der Umgebungsvariablen. Der *value* ist **sql_variant**.  

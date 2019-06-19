@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 391a47edc45145bac21ce351e36c613f2a76addd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716103"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (SSISDB-Datenbank)
@@ -39,13 +39,13 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumente  
  [ @folder_name = ] *folder_name*  
- Der Name des Ordners, der das Projekt enthält. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners, der das Projekt enthält. Der *folder_name* ist **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Der Name des Projekts, in dem sich die Parameter befinden. Der *project_name* ist **nvarchar(128)**.  
+ Der Name des Projekts, in dem sich die Parameter befinden. Der *project_name* ist **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Der Name des Pakets. Geben Sie den Paketnamen an, um alle Projektparameter und die Parameter aus einem bestimmten Paket abzurufen. Verwenden Sie NULL, um alle Projektparameter und die Parameter aus allen Paketen abzurufen. Der *package_name* ist **nvarchar(260)**.  
+ Der Name des Pakets. Geben Sie den Paketnamen an, um alle Projektparameter und die Parameter aus einem bestimmten Paket abzurufen. Verwenden Sie NULL, um alle Projektparameter und die Parameter aus allen Paketen abzurufen. Der *package_name* ist **nvarchar(260)** .  
   
  [ @reference_id = ] *reference_id*  
  Der eindeutige Bezeichner eines Umgebungsverweises. Dieser Parameter ist optional. Der *reference_id* ist **bigint**.  
@@ -56,7 +56,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Resultsets  
  Gibt eine Tabelle zurück, die das folgende Format aufweist:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Der Typ des Parameters. Für einen Projektparameter ist der Wert `20` , und für einen Paketparameter ist der Wert `30` .|  
 |parameter_data_type|**nvarchar(128)**|Der Datentyp des Parameters.|  

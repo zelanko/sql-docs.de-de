@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488061"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
@@ -43,11 +43,11 @@ ms.locfileid: "65488061"
   
  Beachten Sie im obigen Screenshot, dass die Entität **Employee** unter **Aktuelle Ebenen** in der Mitte als einzige Ebene angezeigt wird. Die abgeleitete Hierarchie **Preview** auf der rechten Seite zeigt einfach eine Liste aller Elemente der Entität **Employee** an. Der Abschnitt **Verfügbare Ebenen** auf der linken Seite zeigt an, welche Ebenen oberhalb der aktuell obersten Ebene hinzugefügt werden können (**Employee**). Bei den meisten handelt es sich um domänenbasierte Attribute (DBAs) für die Entität **Employee** . Hierzu zählt auch das domänenbasierte Attribut **Department** .  
   
- Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z. B. **Class (zugeordnet über „ClassRegistration.Student“)**. Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
+ Ab [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] gibt es eine neue Art von Ebene, die m:n-Beziehungen modelliert, z. B. **Class (zugeordnet über „ClassRegistration.Student“)** . Der Ebenenname ist ausführlicher als die anderen, um die zusätzliche Information widerzuspiegeln, die zum eindeutigen Beschreiben der Zuordnungsbeziehung erforderlich ist. Fügen Sie diese Ebene per Drag &amp; Drop zur Ebene **Employee** im Abschnitt **Aktuelle Ebenen** hinzu:  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- In der Vorschau werden jetzt die nach Schulungskurs gruppierten Mitarbeiter angezeigt, für die diese registriert sind. Da dies eine m:n-Beziehung ist, kann jedes untergeordnete Element über mehrere übergeordnete Elemente verfügen. Im obigen Beispiel ist der Mitarbeiter **6 {Hillman, Reinout N}** als Teilnehmer für zwei Kurse registriert, **1 {Master Data Services 101}** und **4 {Career-Limiting Moves}**(nicht karriereförderliches Handeln).  
+ In der Vorschau werden jetzt die nach Schulungskurs gruppierten Mitarbeiter angezeigt, für die diese registriert sind. Da dies eine m:n-Beziehung ist, kann jedes untergeordnete Element über mehrere übergeordnete Elemente verfügen. Im obigen Beispiel ist der Mitarbeiter **6 {Hillman, Reinout N}** als Teilnehmer für zwei Kurse registriert, **1 {Master Data Services 101}** und **4 {Career-Limiting Moves}** (nicht karriereförderliches Handeln).  
   
  Diese Zuordnungsbeziehung kann auch umgekehrt angezeigt werden, wobei die Kurse nach Teilnehmern gruppiert werden:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65488061"
 ### <a name="M2MSample"></a> Eine m:n-Beziehung in einem Beispielmodell  
 Eine Vorführung einer m:n-Beziehung finden Sie in der abgeleiteten Hierarchie „Region Climate“ (regionales Klima) im Beispielmodell „Customer“, das in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]enthalten ist.   
   
-Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehung modelliert, ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)**(Klima (über RegionClimate.Region zugeordnet)). ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** (Vorschau) zeigt die Regionen gruppiert nach den Klimatypen, denen sie zugeordnet sind. Hierbei handelt es sich um eine m:n-Beziehung, weil einige Regionen (untergeordnete Elemente) mehreren Klimata (übergeordneten Elementen) zugeordnet sind. So ist ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** (Asien/Pazifik) z.B. ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** (Tropisch) und ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**(Trocken) zugeordnet.  
+Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehung modelliert, ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)** (Klima (über RegionClimate.Region zugeordnet)). ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** (Vorschau) zeigt die Regionen gruppiert nach den Klimatypen, denen sie zugeordnet sind. Hierbei handelt es sich um eine m:n-Beziehung, weil einige Regionen (untergeordnete Elemente) mehreren Klimata (übergeordneten Elementen) zugeordnet sind. So ist ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** (Asien/Pazifik) z.B. ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** (Tropisch) und ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** (Trocken) zugeordnet.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   

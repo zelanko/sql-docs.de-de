@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3692261ca636f85b7e0ebb03812eb31bdd2164b9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714408"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (SSISDB-Datenbank)
@@ -30,7 +30,7 @@ ms.locfileid: "65714408"
 
   Zeigt die Details aller Vorgänge im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|Der eindeutige Bezeichner (ID) des Vorgangs.|  
 |operation_type|**smallint**|Der Typ des Vorgangs.|  
@@ -54,7 +54,7 @@ ms.locfileid: "65714408"
   
  In dieser Sicht werden die folgenden Vorgangstypen angezeigt, wie in der Spalte **operation_type** aufgelistet:  
   
-|Wert von**operation_type** |Beschreibung von**operation_type** |Beschreibung von**object_id** |Beschreibung von**object_name** |  
+|Wert von**operation_type**|Beschreibung von**operation_type**|Beschreibung von**object_id**|Beschreibung von**object_name**|  
 |-------------------------------|-------------------------------------|--------------------------------|----------------------------------|  
 |`1`|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Initialisierung|**NULL**|**NULL**|  
 |`2`|Beibehaltungsdauer<br /><br /> (SQL-Agent-Auftrag)|**NULL**|**NULL**|  

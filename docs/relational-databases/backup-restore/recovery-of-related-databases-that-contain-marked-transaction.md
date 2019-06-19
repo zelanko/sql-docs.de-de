@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025448"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +63,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Transact-SQL-Syntax für das Wiederherstellen bis zu einer Markierung  
  Wenn Sie das Ziel einer markierten Transaktion mithilfe einer[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)-Anweisung festlegen, können Sie eine der folgenden Klauseln verwenden, um ein Anhalten bei oder unmittelbar vor der Markierung zu bewirken:  
   
--   Verwenden Sie die WITH STOPATMARK = **'**_<mark_name>_**'**-Klausel, um anzugeben, dass die markierte Transaktion den Wiederherstellungspunkt darstellt.  
+-   Verwenden Sie die WITH STOPATMARK = **'** _<mark_name>_ **'** -Klausel, um anzugeben, dass die markierte Transaktion den Wiederherstellungspunkt darstellt.  
   
      STOPATMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion in das Rollforward ein.  
   
--   Verwenden Sie die WITH STOPBEFOREMARK = **'**_<mark_name>_**'**-Klausel, um anzugeben, dass der Protokolldatensatz unmittelbar vor der Markierung den Wiederherstellungspunkt darstellt.  
+-   Verwenden Sie die WITH STOPBEFOREMARK = **'** _<mark_name>_ **'** -Klausel, um anzugeben, dass der Protokolldatensatz unmittelbar vor der Markierung den Wiederherstellungspunkt darstellt.  
   
      STOPBEFOREMARK führt ein Rollforward bis zur Markierung aus und schließt die markierte Transaktion aus dem Rollforward aus.  
   
