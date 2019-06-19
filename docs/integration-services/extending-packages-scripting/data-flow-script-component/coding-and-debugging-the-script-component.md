@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78ca74bfb07a8dcc8fa83c6d60a2571edd938c2c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724241"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codieren und Debuggen der Skriptkomponente
@@ -175,7 +175,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |Variablen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Variables**-Collectionklasse im **ComponentWrapper**-Projektelement, die über die **Variables**-Eigenschaft der **ScriptMain**-Klasse bereitgestellt werden.<br /><br /> Die **PreExecute**-Methode kann nur auf schreibgeschützte Variablen zugreifen. Die **PostExecute**-Methode kann sowohl auf schreibgeschützte Variablen als auch auf Lese-/Schreibvariablen zugreifen.|  
 |Verbindungen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Connections**-Collectionklasse im **ComponentWrapper**-Projektelement, die über die **Connections**-Eigenschaft der **ScriptMain**-Klasse bereitgestellt werden.|  
-|Ereignisse|Ereignisse werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der **ScriptMain**-Klasse und den **Fire\<X>**-Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle ausgelöst.|  
+|Ereignisse|Ereignisse werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der **ScriptMain**-Klasse und den **Fire\<X>** -Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle ausgelöst.|  
 |Protokollierung|Protokollierungen werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>-Methode der **ScriptMain**-Klasse ausgeführt.|  
   
 ## <a name="debugging-the-script-component"></a>Debuggen der Skriptkomponente  

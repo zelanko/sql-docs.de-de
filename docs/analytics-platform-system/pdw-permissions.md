@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639519"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Verwalten von Berechtigungen in Parallel Data Warehouse
@@ -28,7 +28,7 @@ Anmeldungen sind einzelne Benutzerkonten für die Anmeldung bei der SQL Server P
 Mitglieder der **Sysadmin** festen Serverrolle (z. B. die **sa** Anmeldung) können mit einer Datenbank verbinden, ohne Sie zu einem Datenbankbenutzer zugeordnet wird. Zugeordnet sind, die **Dbo** Benutzer. Der Besitzer der Datenbank wird auch als zugeordnet der **Dbo** Benutzer.  
   
 **Server-Rollen**  
-Es gibt vier besondere Serverrollen mit einem Satz von vorkonfigurierten Rollen, die Gruppe von Berechtigungen für auf Serverebene zu bieten. Die **Sysadmin**, **"mediumrc"**, **"largerc"**, und **XLargeRCfixed** Serverrollen sind die einzige Server-Rollen, die derzeit in SQL implementiert PDW-Server. Die **sa** Anmeldung ist das einzige Mitglied der **Sysadmin** -Serverrolle sein, und zusätzliche Anmeldungen können nicht hinzugefügt werden die **Sysadmin** Rolle. Anmeldenamen erteilt werden die **CONTROL SERVER** Berechtigung, die ähnlich, jedoch nicht identisch sein, um die **Sysadmin** -Serverrolle sein. Verwendung [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) zum Hinzufügen von Mitgliedern, die andere Serverrollen. Benutzerdefinierte Serverrollen werden in SQL Server PDW nicht unterstützt.  
+Es gibt vier besondere Serverrollen mit einem Satz von vorkonfigurierten Rollen, die Gruppe von Berechtigungen für auf Serverebene zu bieten. Die **Sysadmin**, **"mediumrc"** , **"largerc"** , und **XLargeRCfixed** Serverrollen sind die einzige Server-Rollen, die derzeit in SQL implementiert PDW-Server. Die **sa** Anmeldung ist das einzige Mitglied der **Sysadmin** -Serverrolle sein, und zusätzliche Anmeldungen können nicht hinzugefügt werden die **Sysadmin** Rolle. Anmeldenamen erteilt werden die **CONTROL SERVER** Berechtigung, die ähnlich, jedoch nicht identisch sein, um die **Sysadmin** -Serverrolle sein. Verwendung [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) zum Hinzufügen von Mitgliedern, die andere Serverrollen. Benutzerdefinierte Serverrollen werden in SQL Server PDW nicht unterstützt.  
   
 **Datenbankbenutzer**  
 Anmeldungen erhalten Zugriff auf eine Datenbank durch Erstellen eines Datenbankbenutzers in einer Datenbank, und dieser Datenbankbenutzer einer Anmeldung zugeordnet. Der Datenbank-Benutzername ist in der Regel identisch mit dem Anmeldenamen, obwohl dies nicht so sein muss. Jeder Datenbankbenutzer ist einer einzelnen Anmeldung zugeordnet. Eine Anmeldung kann nur einem Benutzer in einer Datenbank zugeordnet werden, kann aber als Datenbankbenutzer in mehreren unterschiedlichen Datenbanken zugeordnet werden.  
@@ -62,7 +62,7 @@ In der folgenden Liste werden die Standardberechtigungen beschrieben:
   
 -   Wenn ein Anmeldename erstellt wird, durch die using-Direktiven **CREATE LOGIN** -Anweisung, um die Anmeldung empfängt die **CONNECT SQL** ermöglichen die Anmeldung bei der Herstellung einer Verbindung in der SQL Server PDW berechtigt.  
   
--   Wenn ein Datenbankbenutzer erstellt wird, mit der **CREATE USER** -Anweisung, die der Benutzer erhält die **CONNECT ON DATABASE::**_< Database_name >_ Berechtigung ermöglicht das Melden Sie sich mit der Datenbank als ein Benutzer eine Verbindung herstellen.  
+-   Wenn ein Datenbankbenutzer erstellt wird, mit der **CREATE USER** -Anweisung, die der Benutzer erhält die **CONNECT ON DATABASE::** _< Database_name >_ Berechtigung ermöglicht das Melden Sie sich mit der Datenbank als ein Benutzer eine Verbindung herstellen.  
   
 -   Alle Prinzipale, einschließlich der öffentlichen Rolle, haben standardmäßig keine expliziten oder impliziten Berechtigungen, da implizite Berechtigungen in explizite Berechtigungen geerbt werden. Aus diesem Grund werden, wenn keine expliziten Berechtigungen vorhanden sind, es kann auch sein keine impliziten Berechtigungen.  
   

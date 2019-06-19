@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072848"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
@@ -100,7 +100,7 @@ ms.locfileid: "66072848"
      **Zielordner**  
      Zeigt den Namen des Ordners an der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Zielinstanz an, in die die lokale Partition synchronisiert werden soll. Wenn die Spalte den Wert "(Standard)" enthält, muss der Standardspeicherort für die Zielinstanz die lokale Partition enthalten.  
   
-     Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten lokalen Partitionen synchronisiert werden sollen.  
+     Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten lokalen Partitionen synchronisiert werden sollen.  
   
     > [!NOTE]  
     >  Diese Spalte kann für lokale Partitionen, die am Standardspeicherort für die Quellinstanz gespeichert sind, nicht geändert werden.  
@@ -144,12 +144,12 @@ ms.locfileid: "66072848"
      **Zielserver**  
      Zeigt den Namen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, in die die Remotepartitionen synchronisiert werden sollen, die an dem in **Quellserver** und **Quellordner** angegebenen Speicherort gespeichert sind.  
   
-     Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Verbindungs-Manager** aufzurufen, und geben Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
+     Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Verbindungs-Manager** aufzurufen, und geben Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
   
      **Zielordner**  
      Zeigt den Namen des Ordners auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Zielinstanz an, in die die Remotepartition synchronisiert werden soll. Wenn die Spalte den Wert "(Standard)" enthält, muss der Standardspeicherort für die Zielinstanz die Remotepartition enthalten.  
   
-     Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
+     Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
   
      **Größe**  
      Zeigt die geschätzte Größe von den am Speicherort gespeicherten Remotepartitionen an.  

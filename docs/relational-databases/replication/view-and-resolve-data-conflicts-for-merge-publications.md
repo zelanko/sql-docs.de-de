@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047338"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Konfliktlösung für die Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "54129380"
   
 -   Geben Sie einen Beibehaltungswert für den Parameter **@conflict_retention** von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
--   Geben Sie den Wert **conflict_retention** für den **@property**-Parameter und einen Beibehaltungswert für den **@value**-Parameter von [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) an.  
+-   Geben Sie den Wert **conflict_retention** für den **@property** -Parameter und einen Beibehaltungswert für den **@value** -Parameter von [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) an.  
   
  Standardmäßig werden Konfliktinformationen an den folgenden Orten gespeichert:    
 -   Auf dem Verleger und Abonnenten, wenn die Veröffentlichung mindestens einen Kompatibilitätsgrad von 90RTM aufweist.   
@@ -62,7 +62,7 @@ ms.locfileid: "54129380"
   
     -   Wählen Sie eine oder mehrere Zeilen im oberen Raster aus, und klicken Sie auf **Entfernen**, was dem Klicken auf die Schaltfläche **Gewinner absenden** entspricht (ohne Änderungen an den Daten vorzunehmen).  
   
-    -   Klicken Sie auf die Eigenschaftenschaltfläche (**…**), um weitere Informationen zu einer am Konflikt beteiligten Zeile anzuzeigen.  
+    -   Klicken Sie auf die Eigenschaftenschaltfläche ( **…** ), um weitere Informationen zu einer am Konflikt beteiligten Zeile anzuzeigen.  
   
     -   Bearbeiten Sie Daten in den Spalten **Konfliktgewinner** oder **Konfliktverlierer** , bevor Sie die Daten absenden (bei einer grauen Spalte sind die Daten schreibgeschützt).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54129380"
   
     -   Klicken Sie auf **Verlierer absenden** , um die Konfliktlösung zu überschreiben und den als Verlierer des Konflikts ausgewiesenen Wert an alle Knoten der Topologie zu senden.  
   
-    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten (**...**), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
+    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten ( **...** ), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
   
 6.  Schließen Sie den Replikationskonflikt-Viewer.  
 
@@ -88,7 +88,7 @@ Wenn Konflikte während einer Mergereplikations aufgelöst werden, werden die Da
         > [!NOTE]  
         >  Das Konfliktprotokollierungsverhalten einer Mergeveröffentlichung wird mithilfe des **@conflict_logging** -Parameters von [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Der **@centralized_conflicts** -Parameter wurde als veraltet markiert.  
   
-     In der folgenden Tabelle werden die Werte dieser Spalten in Abhängigkeit von dem für **@conflict_logging**.  
+     In der folgenden Tabelle werden die Werte dieser Spalten in Abhängigkeit von dem für **@conflict_logging** .  
   
     |@conflict_logging-Wert|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -100,9 +100,9 @@ Wenn Konflikte während einer Mergereplikations aufgelöst werden, werden die Da
   
 3.  (Optional) Überprüfen Sie die Konfliktzeilen für die Artikel, die von Interesse sind. Wählen Sie abhängig von den Werten von **centralized_conflicts** und **decentralized_conflicts** aus Schritt 1 eine der folgenden Vorgehensweisen:  
   
-    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)aus. Geben Sie für den Artikel (aus Schritt 1) eine Konflikttabelle für **@conflict_table**. (Optional) Geben Sie den Wert **@publication** an, um die Rückgabe von Konfliktinformationen auf eine bestimmte Veröffentlichung zu beschränken. Damit werden Zeilendaten und andere Informationen für die verlierende Zeile zurückgegeben.  
+    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)aus. Geben Sie für den Artikel (aus Schritt 1) eine Konflikttabelle für **@conflict_table** . (Optional) Geben Sie den Wert **@publication** an, um die Rückgabe von Konfliktinformationen auf eine bestimmte Veröffentlichung zu beschränken. Damit werden Zeilendaten und andere Informationen für die verlierende Zeile zurückgegeben.  
   
-    -   Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)aus. Geben Sie für den Artikel (aus Schritt 1) eine Konflikttabelle für **@conflict_table**. Damit werden Zeilendaten und andere Informationen für die verlierende Zeile zurückgegeben.  
+    -   Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)aus. Geben Sie für den Artikel (aus Schritt 1) eine Konflikttabelle für **@conflict_table** . Damit werden Zeilendaten und andere Informationen für die verlierende Zeile zurückgegeben.  
   
 ## <a name="conflict-where-delete-failed"></a>Konflikt durch Fehler beim Löschen   
   
@@ -119,9 +119,9 @@ Wenn Konflikte während einer Mergereplikations aufgelöst werden, werden die Da
   
 3.  (Optional) Überprüfen Sie die Konfliktinformationen für Löschkonflikte. Wählen Sie abhängig von den Werten von **centralized_conflicts** und **decentralized_conflicts** aus Schritt 1 eine der folgenden Vorgehensweisen:  
   
-    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)aus. Geben Sie den Namen der Quelltabelle (aus Schritt 1) an, in der der Konflikt bezüglich **@source_object**. (Optional) Geben Sie den Wert **@publication** an, um die Rückgabe von Konfliktinformationen auf eine bestimmte Veröffentlichung zu beschränken. Damit werden auf dem Verleger gespeicherte Informationen zu Löschkonflikten zurückgegeben.  
+    -   Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)aus. Geben Sie den Namen der Quelltabelle (aus Schritt 1) an, in der der Konflikt bezüglich **@source_object** . (Optional) Geben Sie den Wert **@publication** an, um die Rückgabe von Konfliktinformationen auf eine bestimmte Veröffentlichung zu beschränken. Damit werden auf dem Verleger gespeicherte Informationen zu Löschkonflikten zurückgegeben.  
   
-    -   Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)aus. Geben Sie den Namen der Quelltabelle (aus Schritt 1) an, in der der Konflikt bezüglich **@source_object**. (Optional) Geben Sie den Wert **@publication** an, um die Rückgabe von Konfliktinformationen auf eine bestimmte Veröffentlichung zu beschränken. Damit werden auf dem Abonnenten gespeicherte Informationen zu Löschkonflikten zurückgegeben.  
+    -   Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)aus. Geben Sie den Namen der Quelltabelle (aus Schritt 1) an, in der der Konflikt bezüglich **@source_object** . (Optional) Geben Sie den Wert **@publication** an, um die Rückgabe von Konfliktinformationen auf eine bestimmte Veröffentlichung zu beschränken. Damit werden auf dem Abonnenten gespeicherte Informationen zu Löschkonflikten zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Konflikterkennung und -lösung der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

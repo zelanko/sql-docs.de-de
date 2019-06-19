@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d49b81ce49cd30115e89936a56e70a7f7699643
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821699"
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL Debugger – Ausgabefenster
@@ -29,7 +29,7 @@ ms.locfileid: "65821699"
   
 -   Klicken Sie im Menü **Ansicht** auf **Weitere Fenster**, und klicken Sie dann auf **Ausgabe**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Liste der Ausgabebereiche**  
  Zeigt eine Liste der Ausgabebereiche an, die angezeigt werden können. Es können mehrere Informationsbereiche verfügbar sein, je nachdem, welche Tools das Fenster **Ausgabe** nutzen, um Informationen an den Benutzer zu übermitteln.  
   

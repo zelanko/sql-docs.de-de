@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73871d69a8fbdc56b2359aa888cbc08e572a6107
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716912"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (SSISDB-Datenbank)
@@ -40,19 +40,19 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumente  
  [ @folder_name = ] *folder_name*  
- Der Name des Ordners des Projekts, das auf die Umgebung verweist. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners des Projekts, das auf die Umgebung verweist. Der *folder_name* ist **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Der Name des Projekts, das auf die Umgebung verweist. Der *project_name* ist **nvarchar(128)**.  
+ Der Name des Projekts, das auf die Umgebung verweist. Der *project_name* ist **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Der Name der Umgebung, auf die verwiesen wird. Der *environment_name* ist **nvarchar(128)**.  
+ Der Name der Umgebung, auf die verwiesen wird. Der *environment_name* ist **nvarchar(128)** .  
   
  [ @reference_location = ] *reference_location*  
- Gibt an, ob sich die Umgebung im gleichen Ordner wie das Projekt (relativer Verweis) oder in einem anderen Ordner (absoluter Verweis) befinden kann. Verwenden Sie den Wert `R` , um einen relativen Verweis anzugeben. Verwenden Sie den Wert `A` , um einen absoluten Verweis anzugeben. Der *reference_location* ist **char(1)**.  
+ Gibt an, ob sich die Umgebung im gleichen Ordner wie das Projekt (relativer Verweis) oder in einem anderen Ordner (absoluter Verweis) befinden kann. Verwenden Sie den Wert `R` , um einen relativen Verweis anzugeben. Verwenden Sie den Wert `A` , um einen absoluten Verweis anzugeben. Der *reference_location* ist **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- Der Name des Ordners, in dem sich die Umgebung befindet, auf die verwiesen wird. Dieser Wert ist für absolute Verweise erforderlich. Der *environment_folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners, in dem sich die Umgebung befindet, auf die verwiesen wird. Dieser Wert ist für absolute Verweise erforderlich. Der *environment_folder_name* ist **nvarchar(128)** .  
   
  [ @reference_id = ] *reference_id*  
  Gibt den eindeutigen Bezeichner für den neuen Verweis zurück. Dieser Parameter ist optional. Der *reference_id* ist **bigint**.  

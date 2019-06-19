@@ -10,11 +10,11 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63299490"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Bestimmen von Nutzungsstatistiken und der Leistung von Ansichten mit DMV
 Dieser Artikel behandelt Methoden und Skripts, mit denen Sie Informationen zur **Leistung von Abfragen, die Sichten verwenden** abrufen können. Der Zweck dieser Skripts besteht darin, Indikatoren für die Nutzung und Leistung verschiedener Sichten in einer Datenbank zu liefern. 

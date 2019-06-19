@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 96009100820014cd819e3e87bf725716319013f7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095832"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Auftragseigenschaften – Neuer Auftrag (Schrittseite)
@@ -29,7 +29,7 @@ ms.locfileid: "65095832"
 
 Mithilfe dieser Seite können Sie Auftragsschritte für einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und planen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Auftragsschrittliste**  
 Führt die Auftragsschritte für diesen Auftrag auf.  
   

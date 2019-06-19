@@ -20,11 +20,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55e6800063ba308fca51f60e253500f147e2acb1
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242111"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026074"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "54242111"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  Die FROM **=** \<*Sicherungsgerät>*-Klausel wird für reine Wiederherstellungsvorgänge nicht verwendet, da keine Sicherung erforderlich ist.  
+>  Die FROM **=** \<*Sicherungsgerät>* -Klausel wird für reine Wiederherstellungsvorgänge nicht verwendet, da keine Sicherung erforderlich ist.  
   
  **Beispiel**  
   
@@ -65,7 +65,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Die [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)-Syntax für eine reine Dateiwiederherstellung lautet:  
   
- RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
   
  **Beispiel**  
   

@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: adf5d9682ad1b2b9002a69884a183b30b3454c61
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094687"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Anfängliche Konfiguration (PowerPivot für SharePoint)
@@ -73,7 +73,7 @@ ms.locfileid: "66094687"
   
 4.  Klicken Sie auf **Lösung bereitstellen.**  
   
-5.  In **bereitstellen für?**, wählen Sie die SharePoint-Webanwendung, die Sie die PowerPivot-funktionsunterstützung hinzufügen möchten.  
+5.  In **bereitstellen für?** , wählen Sie die SharePoint-Webanwendung, die Sie die PowerPivot-funktionsunterstützung hinzufügen möchten.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66094687"
   
 2.  Klicken Sie im Menüband Dienstanwendungen unter Erstellen auf **neu**.  
   
-3.  Wählen Sie **Secure Store Service-**.  
+3.  Wählen Sie **Secure Store Service-** .  
   
 4.  In der **Secure Store-Anwendung erstellen** Seite, geben Sie einen Namen für die Anwendung.  
   

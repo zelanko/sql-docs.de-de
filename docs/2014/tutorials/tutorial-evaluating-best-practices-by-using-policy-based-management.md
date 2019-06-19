@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064431"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutorial: Auswerten von Best Practices mithilfe der richtlinienbasierten Verwaltung
@@ -36,7 +36,7 @@ ms.locfileid: "66064431"
  [Lektion 1: Auswerten von Best Practices für eine nur bei Bedarf](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  In dieser Lektion führen Sie die bedarfsgesteuerte Auswertung der Richtlinien gegen mindestens eine Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aus.  
   
- [Lektion 2: Auswerten von Best Practices-Richtlinien auf Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lektion 2: Auswerten von Best Practices-Richtlinien auf Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  In dieser Lektion konfigurieren Sie Best Practices-Richtlinien für die zeitgesteuerte Ausführung. Die Lektion zeigt, wie Sie geplante Richtlinien für eine einzelne Instanz konfigurieren und geplante Richtlinien von einem zentralen Ort aus für mehrere Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitstellen.  
   
 ## <a name="requirements"></a>Anforderungen  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47ca12ee0118e0c2b63da05cf2d508ec0c2f5f92
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066955"
 ---
 # <a name="model-properties-ssas-tabular"></a>Model Properties (SSAS Tabular)
@@ -32,7 +32,7 @@ ms.locfileid: "66066955"
 ##  <a name="bkmk_model_properties"></a> Modelleigenschaften  
  **Erweitert**  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Buildvorgang**|Kompilieren|Diese Eigenschaft gibt die Funktion der Datei beim Erstellungs- und Bereitstellungsprozess an. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Kompilieren Sie** – ein normaler Buildvorgang wird ausgeführt. Definitionen für Modellobjekte werden in die ASDATABASE-Datei geschrieben.<br /><br /> **Keine** – die Ausgabe in die asdatabase-Datei ist leer sein.|  
 |**In Ausgabeverzeichnis kopieren**|Nicht kopieren|Diese Eigenschaft gibt an, dass die Quelldatei in das Ausgabeverzeichnis kopiert wird. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Kopieren Sie nicht** – im Ausgabeverzeichnis wird keine Kopie erstellt.<br /><br /> **Immer kopieren** – im Ausgabeverzeichnis wird immer eine Kopie erstellt.<br /><br /> **Kopieren, wenn neuer** – Im Ausgabeverzeichnis wird nur eine Kopie erstellt, wenn die Datei „model.bim“ geändert wurde.|  
@@ -45,7 +45,7 @@ ms.locfileid: "66066955"
 > [!NOTE]  
 >  Auf die Eigenschaften Arbeitsbereichsserver, Arbeitsbereich beibehalten und Datensicherung werden beim Erstellen eines neuen Modellprojekts die Standardeinstellungen angewendet. Die Standardeinstellungen für neue Modelle können in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden. Diese und andere Eigenschaften können auch für jedes Modell im Eigenschaftenfenster festgelegt werden. Weitere Informationen finden Sie unter [Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](properties-ssas-tabular.md).  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Sortierung**|Die Standardsortierung für den Computer, für den Visual Studio installiert wurde.|Der Sortierungskennzeichner für das Modell.|  
 |**Kompatibilitätsgrad**|Standardmäßiger oder anderer Wert ist beim Erstellen des Projekts ausgewählt.|Gilt für SQL Server 2012 Analysis Services SP1 oder höher. Gibt die für dieses Modell verfügbaren Funktionen und Einstellungen an. Weitere Informationen finden Sie unter [Kompatibilitätsgrad &#40;SSAS – tabellarisch, SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md).|  

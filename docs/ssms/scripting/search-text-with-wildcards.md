@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d60d93f9ca42adceb35145699dea9d7733d2eae4
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821477"
 ---
 # <a name="search-text-with-wildcards"></a>Suchen von Text mit Platzhaltern
@@ -36,7 +36,7 @@ ms.locfileid: "65821477"
   
  Die folgende Tabelle enthält eine Beschreibung der Platzhalter, die unter **Verweisliste**verfügbar sind.  
   
-|expression|Syntax|Beschreibung|  
+|expression|Syntax|und Beschreibung|  
 |----------------|------------|-----------------|  
 |Ein einzelnes Zeichen|?|Entspricht einem beliebigen einzelnen Zeichen.|  
 |Eine einzelne Ziffer|#|Entspricht einer beliebigen einzelnen Ziffer. Beispiel: 7# entspricht Zahlen, die aus einer 7 bestehen, gefolgt von einer anderen Zahl, wie 71, nicht aber 17.|  

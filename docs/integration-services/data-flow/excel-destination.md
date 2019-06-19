@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bca1c858dd57d13ed89b817c97818784cf275a2b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726889"
 ---
 # <a name="excel-destination"></a>Excel-Ziel
@@ -76,7 +76,7 @@ ms.locfileid: "65726889"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Beschreibung|  
+|Option|und Beschreibung|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Lädt Daten aus einem Arbeitsblatt oder dem benannten Bereich einer Excel-Datenquelle.|  
 |Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -117,7 +117,7 @@ ms.locfileid: "65726889"
 ## <a name="excel-destination-editor-mappings-page"></a>Ziel-Editor für Excel (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Excel** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65726889"
 ## <a name="excel-destination-editor-error-output-page"></a>Ziel-Editor für Excel (Seite Fehlerausgabe)
   Auf der Seite **Erweitert** in **Ziel-Editor für Excel** können Sie die Optionen für die Fehlerbehandlung angeben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157470"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Verwaltung von arbeitsauslastungen in Analytics Platform System
@@ -47,7 +47,7 @@ For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../s
 -->
   
 ### <a name="adjust-resource-allocations"></a>Ressourcenzuweisungen anpassen  
-Um die Ressourcenverwendung anzupassen, ändern Sie Mitgliedschaft der Ressource der Anmeldung, die die Anforderung übermittelt wird. Die Resource-Klasse-Server-Rollen sind mit dem Namen **"mediumrc"**, **"largerc"**, und **"xlargerc"**. Sie stellen Mittel, Groß und Extragroß ressourcenzuordnungen bzw. dar.  
+Um die Ressourcenverwendung anzupassen, ändern Sie Mitgliedschaft der Ressource der Anmeldung, die die Anforderung übermittelt wird. Die Resource-Klasse-Server-Rollen sind mit dem Namen **"mediumrc"** , **"largerc"** , und **"xlargerc"** . Sie stellen Mittel, Groß und Extragroß ressourcenzuordnungen bzw. dar.  
   
 Z. B. um eine große Menge an Systemressourcen auf eine Anforderung zuzuordnen, Hinzufügen der Anmeldename, der die Anforderung übermittelt die **"largerc"** -Serverrolle. Die folgende ALTER SERVER ROLE-Anweisung wird die Serverrolle "largerc" der Anmeldename Anna hinzugefügt.  
   

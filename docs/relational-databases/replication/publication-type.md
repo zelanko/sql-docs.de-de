@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37086a91a9fb65739181284efd1c57cee34bde81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825268"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047281"
 ---
 # <a name="publication-type"></a>Veröffentlichungstyp
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "47825268"
   
  Welchen Typ oder welche Typen der Replikation Sie für die Anwendung auswählen, hängt von der physischen Replikationsumgebung ab, dem Typ und der Menge der zu replizierenden Daten und davon, ob die Daten auf dem Abonnenten aktualisiert werden. Die physische Umgebung beinhaltet die Anzahl und den Standort der von der Replikation betroffenen Computer und ob diese Computer Clients (Arbeitsstationen, Laptops oder Handheldgeräte) oder Server sind. Weitere Informationen finden Sie unter [Replikationstypen](../../relational-databases/replication/types-of-replication.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Publication type**  
  Wählen Sie den geeigneten Replikationstyp für diese Veröffentlichung aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   

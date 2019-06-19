@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ca91b9a6e432346e4ecb6e43e333a80e7cded22f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721245"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>Lektion 6.1: Kopieren des Pakets aus Lektion 5
@@ -49,7 +49,7 @@ Gehen Sie wie folgt vor, wenn Sie das fertige Paket aus Lektion 5 kopieren möch
 
 7.  Ändern Sie im Fenster **Eigenschaften** die Eigenschaft **Name** in **Lesson 6** (Lektion 6).
 
-8.  Aktivieren Sie zunächst das Kontrollkästchen für die Eigenschaft **ID**, klicken Sie dann auf den Dropdownpfeil und anschließend auf **\<Neue ID generieren>**.
+8.  Aktivieren Sie zunächst das Kontrollkästchen für die Eigenschaft **ID**, klicken Sie dann auf den Dropdownpfeil und anschließend auf **\<Neue ID generieren>** .
 
 ## <a name="add-the-completed-lesson-5-package"></a>Hinzufügen des abgeschlossenen Pakets aus Lektion 5
 
@@ -59,7 +59,7 @@ Gehen Sie wie folgt vor, wenn Sie das fertige Paket aus Lektion 5 kopieren möch
 
 3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.
 
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, navigieren Sie zu **Lesson 5.dtsx** auf Ihrem Computer, und wählen Sie anschließend **Öffnen** aus.
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , navigieren Sie zu **Lesson 5.dtsx** auf Ihrem Computer, und wählen Sie anschließend **Öffnen** aus.
 
 5.  Kopieren Sie das Paket aus Lektion 5, und fügen Sie es wie in den Schritten 3 bis 8 im vorherigen Abschnitt beschrieben ein.
 

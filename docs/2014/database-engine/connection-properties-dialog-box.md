@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808398"
 ---
 # <a name="connection-properties-dialog-box"></a>Verbindungseigenschaften (Dialogfeld)
@@ -102,6 +102,6 @@ ms.locfileid: "62808398"
   
 ## <a name="see-also"></a>Siehe auch  
  [Eigenschaftenseiten in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Verbindung mit Server herstellen &amp;#40;Seite Anmeldung in der Datenbank-Engine&amp;#41;](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Verbindung mit Server herstellen &#40;Seite Anmeldung in der Datenbank-Engine&#41;](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

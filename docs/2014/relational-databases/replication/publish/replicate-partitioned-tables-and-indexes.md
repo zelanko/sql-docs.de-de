@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266577"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replizieren partitionierter Tabellen und Indizes
@@ -70,7 +70,7 @@ ms.locfileid: "63266577"
 ### <a name="enabling-partition-switching"></a>Aktivieren des Partitionswechsels  
  Die folgenden Eigenschaften von Transaktionsveröffentlichungen ermöglichen es den Benutzern, das Verhalten von Partitionswechseln in einer replizierten Umgebung zu steuern:  
   
--   **@allow_partition_switch**, wenn `true`, kann SWITCH PARTITION für die Veröffentlichungsdatenbank ausgeführt werden.  
+-   **@allow_partition_switch** , wenn `true`, kann SWITCH PARTITION für die Veröffentlichungsdatenbank ausgeführt werden.  
   
 -   **@replicate_partition_switch** bestimmt, ob die SWITCH PARTITION DDL-Anweisung auf Abonnenten repliziert werden soll. Diese Option ist nur gültig, wenn **@allow_partition_switch** nastaven NA hodnotu `true`.  
   

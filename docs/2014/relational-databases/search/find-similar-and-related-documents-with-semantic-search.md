@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011320"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche
@@ -24,7 +24,7 @@ ms.locfileid: "66011320"
   
 ##  <a name="BasicsQuerySimilar"></a> Suchen von ähnlichen oder verwandten Dokumenten  
   
-###  <a name="HowToQuerySimilar"></a> So wird es gemacht: Suchen von ähnlichen oder verwandten Dokumenten mit SEMANTICSIMILARITYTABLE  
+###  <a name="HowToQuerySimilar"></a> Vorgehensweise: Suchen von ähnlichen oder verwandten Dokumenten mit SEMANTICSIMILARITYTABLE  
  Fragen Sie zum Identifizieren ähnlicher oder verwandter Dokumente in einer bestimmten Spalte die Funktion [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) ab.  
   
  **SEMANTICSIMILARITYTABLE** gibt eine Tabelle mit keiner Zeile, einer Zeile oder mehreren Zeilen zurück, deren Inhalt in der angegebenen Spalte dem angegebenen Dokument semantisch ähnelt. Auf diese Rowsetfunktion kann in der FROM-Klausel einer SELECT-Anweisung wie auf einen regulären Tabellennamen verwiesen werden.  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> Suchen Informationen dazu, wie Dokumente ähnlich oder verwandt sind  
   
-###  <a name="HowToQuerySimilarity"></a> So wird es gemacht: Informieren Sie sich zur Suche nach Dokumente ähnlich oder verwandt mit SEMANTICSIMILARITYDETAILSTABLE  
+###  <a name="HowToQuerySimilarity"></a> Vorgehensweise: Informieren Sie sich zur Suche nach Dokumente ähnlich oder verwandt mit SEMANTICSIMILARITYDETAILSTABLE  
  Um weitere Informationen zu den Schlüsselausdrücken abzurufen, die bewirken, dass Dokumente ähnlich oder verwandt sind, können Sie die Funktion [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) abfragen.  
   
  **SEMANTICSIMILARITYDETAILSTABLE** gibt eine Tabelle mit keiner, einer oder mehreren Zeilen von Schlüsselausdrücken zurück, die in zwei Dokumenten (einem Quelldokument und einem verglichenen Dokument) vorkommen, deren Inhalt semantisch ähnlich ist. Auf diese Rowsetfunktion kann in der FROM-Klausel einer SELECT-Anweisung wie auf einen regulären Tabellennamen verwiesen werden.  

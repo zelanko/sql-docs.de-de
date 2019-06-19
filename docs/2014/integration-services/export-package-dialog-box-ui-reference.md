@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058910"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren
@@ -53,10 +53,10 @@ ms.locfileid: "66058910"
  Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
- Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
+ Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
   
  **Schutzebene**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Kopie des Pakets speichern](../../2014/integration-services/save-copy-of-package.md)   

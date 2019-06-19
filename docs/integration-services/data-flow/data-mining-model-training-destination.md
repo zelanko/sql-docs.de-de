@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 195b33c9cac8e9009f2db39d12544e48387da5c9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727032"
 ---
 # <a name="data-mining-model-training-destination"></a>Ziel des Data Mining-Modelltrainings
@@ -57,7 +57,7 @@ ms.locfileid: "65727032"
 ## <a name="data-mining-model-training-editor-connection-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Verbindung)
   Wählen Sie auf der Seite **Verbindung** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** ein Mining-Modell zum Trainieren aus.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verbindungs-Manager**  
  Wählen Sie eine Verbindung aus der Liste der vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungen aus, oder erstellen Sie wie im Folgenden beschrieben über die Schaltfläche [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Neu **eine neue** -Verbindung.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65727032"
 ## <a name="data-mining-model-training-editor-columns-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Spalten)
   Mithilfe der Seite **Spalten** des Dialogfelds **Trainings-Editor für Data Mining-Modelle** können Sie Eingabespalten Spalten in der Miningstruktur zuordnen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Ziehen Sie Eingabespalten, um sie Miningstrukturspalten zuzuordnen.  
   

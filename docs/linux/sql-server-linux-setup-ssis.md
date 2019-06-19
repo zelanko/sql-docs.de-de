@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 4e85755cd794f5c7f61f63579b65ed294ee4d893
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705090"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installieren von SQL Server Integration Services (SSIS) unter Linux
@@ -132,7 +132,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Umgebungsvariablen für die unbeaufsichtigte installation
 
-| Umgebungsvariable | Description |
+| Umgebungsvariable | Beschreibung |
 |---|---|
 | **ACCEPT_EULA** | Akzeptiert die SQL Server-Lizenzbedingungen, die bei Festlegung auf einen beliebigen Wert (z. B. `Y`).|
 | **SSIS_PID** | Legt die Edition oder Product Key für SQL Server fest. Hier sind die möglichen Werte ein:<br/>Evaluation<br/>Entwickler<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Einen Product key<br/><br/>Wenn Sie einen Product Key angeben, muss der Product Key im Format `#####-#####-#####-#####-#####`, wobei `#` ein Buchstabe oder eine Zahl.  |

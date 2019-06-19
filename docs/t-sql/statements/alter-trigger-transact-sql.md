@@ -23,18 +23,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a44415653cffdbd98f7ef7bc1a39ba58c5473a86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666555"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Diese Anweisung ändert die Definition eines DML-, DDL- oder LOGON-Triggers, der zuvor mit der CREATE TRIGGER-Anweisung erstellt wurde. Trigger werden mit CREATE TRIGGER erstellt. Sie können direkt aus [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder aus Methoden von Assemblys erstellt werden, die in der Common Language Runtime (CLR) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] erstellt werden und durch Hochladen an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übertragen werden. Weitere Informationen zu den in der ALTER TRIGGER-Anweisung verwendeten Parametern finden Sie unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -191,7 +191,7 @@ AS { sql_statement
   
  INSTEAD OF-Trigger sind in Sichten die mit WITH CHECK OPTION erstellt wurden, nicht zulässig. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löst einen Fehler aus, wenn ein INSTEAD OF-Trigger einer Sicht hinzufügt wird, für die die WITH CHECK OPTION angegeben wurde. Der Benutzer muss die Option mithilfe von ALTER VIEW entfernen, bevor der INSTEAD OF-Trigger definiert wird.  
   
- { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] } | { [INSERT ] [ , ] [ UPDATE ] }   
+ { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] } | { [INSERT ] [ , ] [ UPDATE ] }  
  Gibt die Datenänderungsanweisungen an, die den DML-Trigger aktivieren, wenn sie auf diese Tabelle oder Sicht angewendet werden. Es muss mindestens eine Option angegeben werden. Die Optionen können in beliebiger Kombination und Reihenfolge in der Triggerdefinition angegeben werden. Wenn Sie mehrere Optionen angeben, trennen Sie diese durch Kommas.  
   
  Für INSTEAD OF-Trigger ist die Option DELETE nicht für Tabellen mit einer referenziellen Beziehung untereinander zulässig, wenn für ON DELETE die Option CASCADE angegeben ist. Ebenso ist die Option UPDATE nicht für Tabellen mit einer referenziellen Beziehung untereinander zulässig, wenn für ON UPDATE die Option CASCADE angegeben ist. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -264,7 +264,7 @@ AS RAISERROR ('Notify Compensation', 16, 10);
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   

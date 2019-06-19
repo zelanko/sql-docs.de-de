@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef0312076baa49f264baba5fbd3eaf24bce8a47
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725872"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation für langsam veränderliche Dimensionen
@@ -69,7 +69,7 @@ ms.locfileid: "65725872"
   
  In der folgenden Tabelle werden die Transformationsausgaben und die Anforderungen der nachfolgenden Datenflüsse beschrieben. Für die Anforderungen wird der Datenfluss beschrieben, den der Assistent für langsam veränderliche Dimensionen erstellt.  
   
-|Ausgabe|Beschreibung|Datenflussanforderungen|  
+|Ausgabe|und Beschreibung|Datenflussanforderungen|  
 |------------|-----------------|----------------------------|  
 |**Ausgabe: Updates von veränderlichen Attributen**|Der Datensatz in der Nachschlagetabelle wird aktualisiert. Diese Ausgabe wird für veränderliche Attributzeilen verwendet.|Eine Transformation für OLE DB-Befehl aktualisiert den Datensatz mithilfe einer UPDATE-Anweisung.|  
 |**Ausgabe des festen Attributs**|Die Werte in Zeilen, die nicht geändert werden dürfen, stimmen nicht mit Werten in der Nachschlagetabelle überein. Diese Ausgabe wird für feste Attributzeilen verwendet.|Es wird kein Standarddatenfluss erstellt. Falls für die Transformation konfiguriert ist, dass sie fortgesetzt wird, wenn Änderungen an Spalten fester Attribute gefunden werden, sollten Sie einen Datenfluss zum Aufzeichnen dieser Zeilen erstellen.|  

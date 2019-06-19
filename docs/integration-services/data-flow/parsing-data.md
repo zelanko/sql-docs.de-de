@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 86100d0a94030cc7db8f7a5b9574c22cec58903e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726592"
 ---
 # <a name="parsing-data"></a>Analysieren von Daten
@@ -91,7 +91,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   ISO 8601-Formate, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|Beschreibung|  
+    |Format|und Beschreibung|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Basisformate und erweiterte Formate für eine vierstellige Jahresangabe, eine zweistellige Monatsangabe und eine zweistellige Tagesangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
     |YYYY-MM|Basisformate und erweiterte Formate mit reduzierter Genauigkeit für eine vierstellige Jahresangabe und eine zweistellige Monatsangabe. Beim erweiterten Format werden die Datumsteile durch einen Bindestrich (-) getrennt.|  
@@ -122,7 +122,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   ISO 8601-Zeitformate, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|Beschreibung|  
+    |Format|und Beschreibung|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|Basisformate und erweiterte Formate für eine zweistellige Stundenangabe, eine zweistellige Minutenangabe und eine zweistellige Sekundenangabe. Beim erweiterten Format werden die Zeitteile durch einen Doppelpunkt (:) getrennt.|  
     |HHMI<br /><br /> HH:MI|Basisformate und erweiterte abgeschnittene Formate für eine zweistellige Stundenangabe und eine zweistellige Minutenangabe. Beim erweiterten Format werden die Zeitteile durch einen Doppelpunkt (:) getrennt.|  
@@ -131,7 +131,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   Zeitformate, die eine Zeitzone angeben, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|Beschreibung|  
+    |Format|und Beschreibung|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|Basisformate und erweiterte Formate, die die Anzahl von Stunden und Minuten angeben, die zur koordinierten Weltzeit (UTC) addiert werden, um die lokale Zeit zu ermitteln.|  
     |-HH:MI<br /><br /> -HHMI|Basisformate und erweiterte Formate, die die Anzahl von Stunden und Minuten angeben, die von der koordinierten Weltzeit (UTC) subtrahiert werden, um die lokale Zeit zu ermitteln.|  
@@ -149,7 +149,7 @@ Die schnelle Analyse stellt schnelle, einfache Routinen zum Analysieren von Date
   
 -   Zeitformate, die einen Dezimalbruch enthalten, wie in der folgenden Tabelle aufgeführt:  
   
-    |Format|Beschreibung|  
+    |Format|und Beschreibung|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n ist ein Wert zwischen 0 und 9999999, der einen Stundenbruchteil darstellt. Die Klammern geben an, dass dieser Wert optional ist.<br /><br /> Beispielsweise steht der Wert 12.750 für 12:45.|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n ist ein Wert zwischen 0 und 9999999, der einen Minutenbruchteil darstellt. Die Klammern geben an, dass dieser Wert optional ist.<br /><br /> Beispielsweise steht der Wert 1220.500 für 12:20:30.|  

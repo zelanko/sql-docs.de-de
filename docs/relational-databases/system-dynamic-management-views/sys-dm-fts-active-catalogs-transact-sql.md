@@ -22,10 +22,10 @@ ms.author: pelopes
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3157284e23c2ec2ccee6df89b24c557403ecc5a8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944401"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "65944401"
 >  Die folgenden Spalten werden in einer zukünftigen Version entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Is_paused, Previous_status, Previous_status_description, Row_count_in_thousands, Status, Status_description und Worker_count. Verwenden Sie diese Spalten in Neuentwicklungen nicht. Planen Sie die Änderung von Anwendungen, die diese Spalten derzeit verwenden.  
   
  
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, die den aktiven Volltextkatalog enthält.|  
 |**catalog_id**|**int**|ID des aktiven Volltextkatalogs.|  

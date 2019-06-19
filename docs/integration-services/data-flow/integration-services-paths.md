@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d66c98acec072ff2ce3afa4fb2ecfb0236f05ec
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726873"
 ---
 # <a name="integration-services-paths"></a>SQL Server Integration Services-Pfade
@@ -49,7 +49,7 @@ ms.locfileid: "65726873"
 ## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Festlegen der Eigenschaften eines Pfads mit dem Datenflusspfad-Editor
 Mit Pfaden werden zwei Datenflusskomponenten verbunden. Wenn Sie Pfadeigenschaften festlegen möchten, muss der Datenfluss mindestens zwei verbundene Datenflusskomponenten enthalten.
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
   
 2.  Doppelklicken Sie im Projektmappen-Explorer auf das Paket, um es zu öffnen.  
   
@@ -66,7 +66,7 @@ Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften f
   
  Mit dem Knoten **Allgemein** des Dialogfelds **Datenflusspfad-Editor** werden der Pfad benannt und beschrieben und die Optionen für die Pfadanmerkungen angegeben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Pfad an.  
   
@@ -91,7 +91,7 @@ Mithilfe des Dialogfelds **Datenflusspfad-Editor** legen Sie Pfadeigenschaften f
 ## <a name="metadata-page---data-flow-path-editor"></a>Seite „Metadaten“ – Datenflusspfad-Editor
 Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , um die Metadaten der Pfadspalten anzuzeigen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Pfadmetadaten**  
  Listet die Spaltenmetadaten auf. Klicken Sie auf die Spaltenüberschriften, um die Spaltendaten zu sortieren.  
   
@@ -131,7 +131,7 @@ Verwenden Sie die Seite **Metadaten** im Dialogfeld **Datenflusspfad-Editor** , 
 ## <a name="data-viewers-page---data-flow-path-editor"></a>Seite „Daten-Viewer“ – Datenflusspfad-Editor
 Verwenden Sie die Seite **Daten-Viewer** des Dialogfelds **Datenflusspfad-Editor** , um die Daten-Viewer zu verwalten, die dem Pfad zugeordnet sind.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Name**  
  Listet die Daten-Viewer auf.  
   
@@ -157,7 +157,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
   
  Die folgende Tabelle beschreibt die konfigurierbaren Eigenschaften der Pfade in einem Datenfluss. Die Datenfluss-Engine weist auch zusätzlichen schreibgeschützten Eigenschaften, die nicht hier aufgelistet sind, Werte zu.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob eine Anmerkung mit dem Pfad auf der Designeroberfläche angezeigt werden soll. Die möglichen Werte sind **AsNeeded**, **SourceName**, **PathName**und **Never**. Der Standardwert ist **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|Die dem Pfad zugeordnete Eingabe.|  

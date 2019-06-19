@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098849"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Einführung in Ausdrücke
@@ -123,7 +123,7 @@ ms.locfileid: "66098849"
   
      Die Abfrage spezifiziert Spaltennamen mit Geburtsname, Vorname, Nachname, Bundesland oder Kanton, Bezeichner für Land bzw. Region, Geschlecht sowie Käufe des laufenden Jahrs.  
   
-10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset enthält 20 Datenzeilen und enthält die folgenden Spalten: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
+10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Resultset enthält 20 Datenzeilen und enthält die folgenden Spalten: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
   
 11. Klicken Sie auf **Weiter**.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66098849"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Concatenate"></a> 3. Anzeigen des Vornamens, des Anfangsbuchstabens des zweiten Vornamens und des Nachnamens  
- Verwenden Sie die **Left**-Funktion und den **Concatenate (Verketten)** (**&**)-Operator in einem Ausdruck, um einen Namen mit den Anfangsbuchstaben des zweiten Vornamens und dem Nachnamen zu erhalten. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.  
+ Verwenden Sie die **Left**-Funktion und den **Concatenate (Verketten)** ( **&** )-Operator in einem Ausdruck, um einen Namen mit den Anfangsbuchstaben des zweiten Vornamens und dem Nachnamen zu erhalten. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.  
   
 #### <a name="to-add-the-name-column"></a>So fügen Sie die Spalte "Name" hinzu  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66098849"
   
      Die Funktion **Left** wird dem Ausdruck hinzugefügt.  
   
-6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 7.  Doppelklicken Sie in der Liste **Werte** auf **FirstName**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "66098849"
   
 4.  Doppelklicken Sie in der Liste **Element** auf **Switch**.  
   
-5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 6.  Doppelklicken Sie in der Liste **Werte** auf **Geschlecht**.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66098849"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Klicken Sie auf **Ausführen** (**!**), um die Abfrage auszuführen.  
+9. Klicken Sie auf **Ausführen** ( **!** ), um die Abfrage auszuführen.  
   
      Abfrage-Ergebnisse sind die Land/Region-Bezeichner und -Namen.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "66098849"
   
 5.  Doppelklicken Sie in der Liste **Element** auf **Lookup**.  
   
-6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 7.  In der **Werte** auflisten, doppelklicken Sie auf `CountryRegionID`.  
   
@@ -393,7 +393,7 @@ ms.locfileid: "66098849"
   
 8.  Geben Sie **„d“,** ein.  
   
-9. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+9. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 10. Doppelklicken Sie in der Liste **Werte** auf **LastPurchase**.  
   
@@ -449,7 +449,7 @@ ms.locfileid: "66098849"
   
 4.  Doppelklicken Sie in der Liste **Element** auf **Round**.  
   
-5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 6.  Doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
@@ -461,7 +461,7 @@ ms.locfileid: "66098849"
   
 10. Doppelklicken Sie in der Liste **Element** auf **Avg**.  
   
-11. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+11. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 12. Doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "66098849"
   
 19. Doppelklicken Sie in der Liste **Element** auf **Round**.  
   
-20. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+20. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 21. Doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
@@ -493,7 +493,7 @@ ms.locfileid: "66098849"
   
 25. Doppelklicken Sie in der Liste **Element** auf **Avg**.  
   
-26. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+26. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 27. Doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
@@ -588,7 +588,7 @@ ms.locfileid: "66098849"
   
 9. Doppelklicken Sie in der Liste **Element** auf **RunningValue**.  
   
-10. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
+10. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
   
 11. Doppelklicken Sie in der Liste **Werte** auf **FirstName**.  
   

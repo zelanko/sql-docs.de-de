@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: dd3469b826ac4f577ff0e883b1a92a3acec4a981
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66698534"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Gibt den Typ des Cursors verwendet eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Verwendet einen dynamischen Cursor. Hinzufügungen, Änderungen und löschungen von anderen Benutzern sind sichtbar, und alle Arten von Verkehr über den **Recordset** zulässig ist, mit Ausnahme von Lesezeichen, wenn der Anbieter diese nicht unterstützt.|  
 |**adOpenForwardOnly**|0|Standard. Verwendet einen vorwärtsgerichteten Cursor. Identisch mit einem statischen Cursor, mit dem Unterschied, dass Sie nur vorwärts durch die Datensätze scrollen können. Dies verbessert die Leistung, wenn Sie nur eine durchlaufen müssen einer **Recordset**.|  

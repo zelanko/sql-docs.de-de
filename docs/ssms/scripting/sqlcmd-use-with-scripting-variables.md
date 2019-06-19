@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7fbf5c43d58f56a3a383023e5818f1494e86ed68
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821868"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>Verwenden von „sqlcmd“ mit Skriptvariablen
@@ -87,7 +87,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
   
 -   Variablennamen dürfen keine Leerzeichen oder Anführungszeichen enthalten.  
   
--   Variablennamen dürfen nicht die gleiche Form wie Variablenausdrücke (beispielsweise *$(var)*) aufweisen.  
+-   Variablennamen dürfen nicht die gleiche Form wie Variablenausdrücke (beispielsweise *$(var)* ) aufweisen.  
   
 -   Bei Skriptvariablen wird nicht zwischen Groß- und Kleinschreibung unterschieden.  
   
@@ -129,7 +129,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDEDITOR            |                | R/W | "edit.com"              |
 | SQLCMDINI               |                | R   | ""                      |
 
-* SQLCMDUSER, SQLCMDPASSWORD und SQLCMDSERVER werden festgelegt, wenn **:Connect** verwendet wird.  
+\* SQLCMDUSER, SQLCMDPASSWORD und SQLCMDSERVER werden festgelegt, wenn **:Connect** verwendet wird.  
 
 Durch R wird angezeigt, dass der Wert nur einmal während der Programminitialisierung festgelegt werden kann.  
   
@@ -334,6 +334,6 @@ C:\> sqlcmd
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des Hilfsprogramms sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md)   
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

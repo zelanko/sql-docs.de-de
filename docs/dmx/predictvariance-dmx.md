@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 876923763d6aad1319b0409143dd5fca6e23e92a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658777"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -32,7 +32,7 @@ PredictVariance(<scalar column reference>)
  Ein skalare Spalte.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Ein Skalarwert des Typs, der angegebenen  *\<skalarspaltenverweis >*.  
+ Ein Skalarwert des Typs, der angegebenen  *\<skalarspaltenverweis >* .  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Spaltenverweis diskret ist **PredictVariance** gibt 0 zurück, weil aus diskreten Werten die Varianz berechnet werden kann.  

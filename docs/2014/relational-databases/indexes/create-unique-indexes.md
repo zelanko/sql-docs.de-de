@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162352"
 ---
 # <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
@@ -42,7 +42,7 @@ ms.locfileid: "63162352"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie einen eindeutigen Index auf einer Tabelle mithilfe von:**  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63162352"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>So erstellen Sie einen eindeutigen Index mit dem Tabellen-Designer  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63162352"
   
 7.  Wählen Sie im Hauptraster unter **(Allgemein)** **Typ** aus, und wählen Sie dann **Index** aus der Liste aus.  
   
-8.  Wählen Sie **Spalten** aus, und klicken Sie dann auf die Auslassungspunkte **(...)**.  
+8.  Wählen Sie **Spalten** aus, und klicken Sie dann auf die Auslassungspunkte **(...)** .  
   
 9. Wählen Sie im Dialogfeld **Indexspalten** unter **Spaltenname**die Spalten aus, die Sie indizieren möchten. Sie können bis zu 16 Spalten auswählen. Um optimale Ergebnisse zu gewährleisten, sollten Sie für jeden Index höchstens zwei Spalten auswählen. Für jede ausgewählte Spalte können Sie festlegen, ob die darin enthaltenen Werte über den Index in aufsteigender oder absteigender Reihenfolge geordnet werden.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "63162352"
   
 6.  Aktivieren Sie das Kontrollkästchen **Eindeutig** .  
   
-7.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…**.  
+7.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…** .  
   
 8.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
   

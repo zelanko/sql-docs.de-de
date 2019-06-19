@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06656cdbeabe8e439b2a73bf78f5d90bfc44b8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025553"
 ---
 # <a name="mssqlserver601"></a>MSSQLSERVER_601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47637518"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|601|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -43,7 +43,7 @@ Normalerweise wird der Zugriff auf Daten verweigert, die durch eine andere Trans
 ## <a name="user-action"></a>Benutzeraktion  
 Durch diesen Fehler wird die Abfrage abgebrochen. Übermitteln Sie die Abfrage erneut, oder entfernen Sie den Sperrhinweis NOLOCK.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [MSSQLSERVER_605](../../relational-databases/errors-events/mssqlserver-605-database-engine-error.md)  
 [Tabellenhinweise &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)  
 [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  
