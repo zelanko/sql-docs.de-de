@@ -41,11 +41,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999520"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ ms.locfileid: "54127660"
  Geben Sie die E-Mail-Adresse ein, die für Antworten auf E-Mail-Nachrichten aus diesem Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent könnten beispielsweise an den Datenbankadministrator gehen, danw@Adventure-Works.com.  
   
  **Servername**  
- Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. Normalerweise hat der Eintrag ein ähnliches Format wie **smtp.**_<Ihr_Unternehmen>_**.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
+ Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. Normalerweise hat der Eintrag ein ähnliches Format wie **smtp.** _<Ihr_Unternehmen>_ **.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
   
  **Portnummer**  
  Geben Sie die Portnummer des SMTP-Servers für dieses Konto ein. Die meisten SMTP-Server verwenden Port 25.  
@@ -196,13 +196,13 @@ ms.locfileid: "54127660"
  In diesem Bereich können Sie die Beschreibung des Kontos anzeigen oder bearbeiten. Die Beschreibung ist optional.  
   
  **E-Mail-Adresse**  
- Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für Microsoft SQL Server Agent könnte E-Mails beispielsweise von der Adresse **SqlAgent@Adventure-Works.com**.  
+ Hier können Sie den Namen der E-Mail-Adresse für das Konto anzeigen oder aktualisieren. Dies ist die E-Mail-Adresse, von der aus E-Mails versendet werden. Ein Konto für Microsoft SQL Server Agent könnte E-Mails beispielsweise von der Adresse **SqlAgent@Adventure-Works.com** .  
   
  **Anzeigename**  
  Hier können Sie den Namen anzeigen oder bearbeiten, der in den von diesem Konto aus versendeten E-Mail-Nachrichten angezeigt wird. Der angezeigte Name ist optional. Es handelt sich dabei um den Namen, der in den von diesem Konto versendeten Nachrichten angezeigt wird. Ein Konto für SQL Server Agent könnte beispielsweise den Namen **SQL Server Agent Automated Mailer** in den E-Mails anzeigen.  
   
  **Antwort-E-Mail**  
- Hier können Sie die E-Mail-Adresse anzeigen und bearbeiten, die für Antworten auf E-Mail-Nachrichten für dieses Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von SQL Server Agent könnten beispielsweise an den Datenbankadministrator gehen, **danw@Adventure-Works.com**.  
+ Hier können Sie die E-Mail-Adresse anzeigen und bearbeiten, die für Antworten auf E-Mail-Nachrichten für dieses Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von SQL Server Agent könnten beispielsweise an den Datenbankadministrator gehen, **danw@Adventure-Works.com** .  
   
  **Servername**  
  Hier können Sie den Namen des SMTP-Servernamens anzeigen und bearbeiten, der zum Senden von E-Mail von diesem Konto verwendet wird. Normalerweise hat der Eintrag ein ähnliches Format wie **smtp.<Ihr_Unternehmen>.com**. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
@@ -393,7 +393,7 @@ ms.locfileid: "54127660"
  Die maximale Größe einer Anlage in Bytes.  
   
  **Unzulässige Erweiterungen für Anlagendateien**  
- Eine durch Trennzeichen getrennte Liste mit Erweiterungen, die nicht als Anlagen einer E-Mail-Nachricht gesendet werden können. Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um zusätzliche Erweiterungen hinzuzufügen.  
+ Eine durch Trennzeichen getrennte Liste mit Erweiterungen, die nicht als Anlagen einer E-Mail-Nachricht gesendet werden können. Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um zusätzliche Erweiterungen hinzuzufügen.  
   
  **Minimale Lebensdauer der ausführbaren Datei von der Datenbank-E-Mail (Sekunden)**  
  Gibt an, wie lange (in Sekunden) der externe E-Mail-Prozess mindestens aktiv bleibt. Der Prozess bleibt aktiv, solange sich E-Mails in der Datenbank-E-Mail-Warteschlange befinden. Dieser Parameter gibt die Zeitdauer an, für die der Prozess aktiv bleibt, wenn keine Nachrichten zum Verarbeiten vorhanden sind.  
@@ -420,7 +420,7 @@ ms.locfileid: "54127660"
  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Verwenden Sie die Seite **Test-E-Mail senden von**_<Instanzname>_, um eine E-Mail mithilfe des angegebenen Datenbank-E-Mail-Profils zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
+ Verwenden Sie die Seite **Test-E-Mail senden von** _<Instanzname>_ , um eine E-Mail mithilfe des angegebenen Datenbank-E-Mail-Profils zu senden. Nur Mitglieder der festen Serverrolle **sysadmin** können Test-E-Mails über diese Seite senden.  
   
  **Datenbank-E-Mail-Profil**  
  Wählen Sie aus der Liste ein Datenbank-E-Mail-Profil aus. Dies ist ein Pflichtfeld. Wenn keine Profile angezeigt werden, gibt es keine Profile, oder Sie haben für ein Profil keine Berechtigung. Verwenden Sie den **Assistent zum Konfigurieren von Datenbank-E-Mail** zum Erstellen und Konfigurieren von Profilen. Wenn keine Profile angezeigt werden, erstellen Sie mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mail ein Profil für die eigene Verwendung.  

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042316"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Herunterladen und Anwenden von Microsoft-Updates für Analytics Platform System
@@ -107,7 +107,7 @@ Bevor Sie diese Schritte ausführen, müssen Sie:
   
 1.  Bevor Sie beginnen, öffnen Sie die [Überwachen der Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), klicken Sie auf der **Anwendungszustand** Registerkarte, und überprüfen Sie, ob die  **Cluster** und **Netzwerk** Spalten anzeigen Grün (oder NV) für alle Knoten. Wenn keine Warnungen in diesen Spalten vorhanden sind, das Gerät nicht ordnungsgemäß installiert. Updates möglicherweise. Beheben Sie alle vorhandene Warnungen in der **Cluster** und **Netzwerk** Spalten, bevor Sie fortfahren.  
   
-2.  Melden Sie sich an den _< Domänenname >_**-HST01** als Domänenadministrator Fabric-Knoten.  
+2.  Melden Sie sich an den _< Domänenname >_ **-HST01** als Domänenadministrator Fabric-Knoten.  
   
 3.  Um alle Updates für WSUS genehmigt anzuwenden, führen Sie das Update-Programm. Finden Sie unter [führen Sie das Update-Programm](#RunUpdateWizard) folgenden Anweisungen.  
   
@@ -123,7 +123,7 @@ Bevor Sie diese Schritte ausführen, müssen Sie:
   
 5.  In der **Status** wählen Sie im Dropdownmenü **alle** , und klicken Sie auf **aktualisieren**.  
   
-6.  Erweitern Sie **Dienste aktualisieren**, *<appliance name>*- VMM **Updates**, **alle Updates**, wobei *<appliance name>* ist der Name des Geräts.  
+6.  Erweitern Sie **Dienste aktualisieren**, *<appliance name>* - VMM **Updates**, **alle Updates**, wobei *<appliance name>* ist der Name des Geräts.  
   
 7.  In der **alle Updates** legen **Genehmigung** zu **alle bis auf abgelehnte**.  
   

@@ -14,10 +14,10 @@ ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776029"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
@@ -104,7 +104,7 @@ Adaptive Joins im Batchmodus funktionieren bei der ersten Ausführung einer Anwe
 ### <a name="tracking-adaptive-join-activity"></a>Nachverfolgen der Aktivität adaptiver Joins
 Der Operator für adaptive Joins verfügt über folgende Planoperatorattribute:
 
-| Planattribut | Beschreibung |
+| Planattribut | und Beschreibung |
 |--- |--- |
 | AdaptiveThresholdRows | Gibt den beim Wechsel von einem Hashjoin zu einem Nested Loop-Join zu verwendenden Schwellenwert an |
 | EstimatedJoinType | Gibt den erwarteten Jointyp an |
@@ -240,7 +240,7 @@ Seitdem das Feedback zur Speicherzuweisung im Zeilenmodus verfügbar ist, werden
 
 *LastRequestedMemory* zeigt den zugewiesenen Speicher in KB von der vorherigen Abfrageausführung an. Mit dem Attribut *IsMemoryGrantFeedbackAdjusted* können Sie den Feedbackstatus einer Speicherzuweisung für die Anweisung in einem Abfrageausführungsplan überprüfen. Folgende Werte werden in diesem Attribut angezeigt:
 
-| Wert IsMemoryGrantFeedbackAdjusted | Beschreibung |
+| Wert IsMemoryGrantFeedbackAdjusted | und Beschreibung |
 |---|---|
 | No: First Execution | Das Feedback zur Speicherzuweisung passt den Speicher für die erste Kompilierung und die zugeordnete Ausführung nicht an.  |
 | No: Accurate Grant | Wenn es keinen Überlauf auf dem Datenträger gibt und die Anweisung mindestens 50 % des zugewiesenen Speichers nutzt, wird Feedback zur Speicherzuweisung nicht ausgelöst. |
@@ -317,14 +317,14 @@ Sobald ein verschachtelter Ausführungsplan zwischengespeichert wurde, wird der 
 ### <a name="tracking-interleaved-execution-activity"></a>Nachverfolgen der Aktivität von verschachtelten Ausführungen
 Sie können sich Verwendungsattribute im Ausführungsplan der Abfrage anschauen:
 
-| Ausführungsplanattribut | Beschreibung |
+| Ausführungsplanattribut | und Beschreibung |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Gilt für den Knoten *QueryPlan*. Wenn dieser *true* lautet, gibt dieser an, dass der Plan mögliche Kandidaten für die überlappende Ausführung enthält. |
 | IsInterleavedExecuted | Das Attribut des Elements *RuntimeInformation* befindet sich für den Knoten „TVF“ unter „RelOp“. Wenn es *true* entspricht, wurde der Vorgang im Zuge einer überlappenden Ausführung materialisiert. |
 
 Sie können überlappende Ausführungen auch mit den folgenden XEvents nachverfolgen:
 
-| XEvent | Beschreibung |
+| XEvent | und Beschreibung |
 | ---- | --- |
 | interleaved_exec_status | Dieses Ereignis wird ausgelöst, wenn eine verschachtelte Ausführung durchgeführt wird. |
 | interleaved_exec_stats_update | Dieses Ereignis beschreibt die von der verschachtelten Ausführung aktualisierten Kardinalitätsschätzungen. |

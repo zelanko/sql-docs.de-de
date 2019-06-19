@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 983c5536d08d9701fd301ace4ca8d2b5d7e76f71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046417"
 ---
 # <a name="mssqlserver2546"></a>MSSQLSERVER_2546
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47597748"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2546|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -39,7 +39,7 @@ Der angegebene Index ist als offline markiert oder deaktiviert. Daher kann diese
 ## <a name="user-action"></a>Benutzeraktion  
 Erstellen Sie den Index mithilfe von ALTER INDEX neu.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
 [Neuorganisieren und Neuerstellen von Indizes](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   

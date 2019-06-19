@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722548"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lektion 2.3: Ändern des Verbindungs-Managers für Flatfiles
@@ -34,11 +34,11 @@ Wenn Sie den Verbindungs-Manager so ändern, dass der Wert der benutzerdefiniert
 
 2.  Stellen Sie im Fenster **Eigenschaften** sicher, dass der **PackagePath** mit **\Package.Connections** beginnt. Wenn nicht, klicken Sie im Bereich **Verbindungs-Manager** mit der rechten Maustaste auf **Beispielquelldaten von Flatfiles**, und wählen Sie **In Paketverbindung konvertieren**.
   
-3.  Klicken Sie im Fenster **Eigenschaften** für **Ausdrücke** in die leere Zelle, und klicken Sie anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
+3.  Klicken Sie im Fenster **Eigenschaften** für **Ausdrücke** in die leere Zelle, und klicken Sie anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
   
 4.  Geben Sie in das Dialogfeld **Eigenschaftsausdrucks-Editor** in der Spalte **Eigenschaft** die Option **ConnectionString** ein, oder wählen Sie sie aus.  
   
-5.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Dialogfeld **Ausdrucks-Generator** zu öffnen.  
+5.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Dialogfeld **Ausdrucks-Generator** zu öffnen.  
   
 6.  Erweitern Sie im Dialogfeld **Ausdrucks-Generator** den Knoten **Variablen**.  
   
