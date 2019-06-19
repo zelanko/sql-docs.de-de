@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62500427"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
@@ -44,7 +44,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` Ist der Besitzer des Abonnements an. *Besitzer* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @tranid = ] 'transaction_id'` Die Ausgabe nach der Transaktions-ID gefiltert werden können *Transaction_id* ist **nvarchar(70)**, hat den Standardwert NULL. Falls angegeben, wird die Transaktions-ID angezeigt, die dem Befehl in der Warteschlange zugeordnet ist. Bei einem Wert von NULL werden alle Befehle in der Warteschlange angezeigt.  
+`[ @tranid = ] 'transaction_id'` Die Ausgabe nach der Transaktions-ID gefiltert werden können *Transaction_id* ist **nvarchar(70)** , hat den Standardwert NULL. Falls angegeben, wird die Transaktions-ID angezeigt, die dem Befehl in der Warteschlange zugeordnet ist. Bei einem Wert von NULL werden alle Befehle in der Warteschlange angezeigt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

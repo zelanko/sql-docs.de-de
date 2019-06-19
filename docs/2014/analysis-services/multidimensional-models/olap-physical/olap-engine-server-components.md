@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 138a5ec08ae7ca427352f8c0332b2012e6c0ea3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725079"
 ---
 # <a name="olap-engine-server-components"></a>OLAP-Engine-Serverkomponenten
@@ -53,7 +53,7 @@ ms.locfileid: "62725079"
 ## <a name="xmla-listener"></a>XMLA-Überwachung  
  Die XMLA-Überwachungskomponente verarbeitet die gesamte XMLA-Kommunikation zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und den zugehörigen Clients. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Konfigurationseinstellung in der Datei "Msmdsrv.ini" kann verwendet werden, um einen anderen Port angeben, auf denen eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz überwacht. Wird in dieser Datei der Wert 0 angegeben, wird der Standardport von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] überwacht. Falls nicht anders angegeben, verwendet [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die folgenden TCP-Standardports:  
   
-|Port|Description|  
+|Port|Beschreibung|  
 |----------|-----------------|  
 |2383|Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |2382|Redirector für andere Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  

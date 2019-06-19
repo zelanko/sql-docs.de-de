@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 18e28d840373ae25f5045e8456fe6ecf479bfbe9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787843"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "66787843"
      Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    Der SQL Server Service Broker ist nicht mit Multisubnetzen kompatibel. Verwenden Sie in jedem Fall „registerallprovidersip“ mit der Einstellung 0 (null), und vergewissern Sie sich, dass Sie keine statischen IP-Adressen im DNS verwenden und dadurch die erforderlich Berechtigung zum Erstellen von Clustern im DNS gewähren (siehe Definition unter https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server). Der Broker verzögert Meldungen möglicherweise mit dem Status „CONVERSING“, weil er versucht, eine deaktivierte IP zu verwenden.
+    Der SQL Server Service Broker ist nicht mit Multisubnetzen kompatibel. Verwenden Sie in jedem Fall „registerallprovidersip“ mit der Einstellung 0 (null), und vergewissern Sie sich, dass Sie keine statischen IP-Adressen im DNS verwenden und dadurch die erforderlich Berechtigung zum Erstellen von Clustern im DNS gewähren (siehe Definition unter https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server ). Der Broker verzögert Meldungen möglicherweise mit dem Status „CONVERSING“, weil er versucht, eine deaktivierte IP zu verwenden.
 
 3.  **Erteilen Sie die CONNECT-Berechtigung für den Endpunkt.**  
   

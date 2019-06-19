@@ -10,11 +10,11 @@ ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
 ms.openlocfilehash: ec052141483207da4f1af22e8b74d9edcccf6105
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506308"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server: Partner für Hochverfügbarkeit und Notfallwiederherstellung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ Es gibt eine große Auswahl an branchenführenden Tools, die die Komponenten „
 <!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
-| Partner | Beschreibung | Links | 
+| Partner | und Beschreibung | Links | 
 | --- | --- | --- |
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery repliziert Workloads, die auf virtuellen Computern oder physischen Servern ausgeführt werden, damit sie an einem sekundären Speicherort weiterhin verfügbar sind, wenn der primäre Speicherort nicht verfügbar ist. Sie können virtuelle Computer mit SQL Server replizieren oder einen Failover ausführen. Dabei können Daten von lokalen Rechenzentren in Azure oder auf ein anderes lokales Rechenzentrum oder von einem Azure-Rechenzentrum auf ein anderes verschoben werden.<br><br> Enterprise- und Standard-Editionen von SQL Server 2008 R2 – SQL Server 2016|[Website][azure_website]<br>[Marketplace][azure_marketplace]<br>[Datenblatt][azure_datasheet]<br>[Twitter][azure_twitter]<br>[Video][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise ist eine Smart Availability-Software für Windows, Linux und Docker, mit der Ihre geplanten und ungeplanten Ausfallzeiten nahezu bei null liegen und die Sie außerdem dabei unterstützt, hohe Kosteneinsparungen zu erzielen, die Verwaltung zu vereinfachen und Ihre physischen und logischen Komponenten zu konsolidieren.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[Website][dh2i_website]<br>[Datenblatt][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Video][dh2i_youtube]|

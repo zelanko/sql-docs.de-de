@@ -14,10 +14,10 @@ manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 1825b26912b507b8e58b1828437102cf3650d5e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015037"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ausführen von Paketen in SSIS Scale Out (SQL Server Integration Services)
@@ -119,7 +119,7 @@ Führen Sie die folgenden Schritte aus, um den Standardausführungsmodus für Pa
 
 2.  Legen Sie im Dialogfeld **Katalogeigenschaften** für den **serverweiten Standardausführungsmodus** die Option **Scale Out** fest.
 
-Nachdem Sie diesen Standardausführungsmodus festgelegt haben, müssen Sie den **@runinscaleout**-Parameter nicht mehr angeben, wenn Sie die gespeicherte Prozedur `[catalog].[create_execution]` aufrufen. Pakete werden in Scale Out automatisch ausgeführt. 
+Nachdem Sie diesen Standardausführungsmodus festgelegt haben, müssen Sie den **@runinscaleout** -Parameter nicht mehr angeben, wenn Sie die gespeicherte Prozedur `[catalog].[create_execution]` aufrufen. Pakete werden in Scale Out automatisch ausgeführt. 
 
 ![Ausführungsmodus](media/exe-mode.PNG)
 

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62817139"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "62817139"
 
   Die **MSdistribution_agents** Tabelle enthält eine Zeile für jeden auf dem lokalen Verteiler ausgeführten Verteilungs-Agent. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Die ID des Verteilungs-Agents.|  
 |**name**|**nvarchar(100)**|Der Name des Verteilungs-Agents.|  

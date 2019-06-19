@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102528"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Veröffentlichen eines Berichts in einer SharePoint-Bibliothek
@@ -30,19 +30,19 @@ ms.locfileid: "66102528"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]öffnen Sie ein vorhandenes oder neues Berichtsserverprojekt.  
   
-2.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Das Dialogfeld _\<Projekt>_**Eigenschaftenseiten** wird geöffnet.  
+2.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Das Dialogfeld _\<Projekt>_ **Eigenschaftenseiten** wird geöffnet.  
   
-3.  Wählen Sie in der Liste **Konfiguration** den Namen einer Projektmappenkonfiguration aus, die Sie zum Erstellen und Veröffentlichen Ihres Berichts verwenden können. Die aktuelle Konfiguration wird als **Active**(*\<Konfiguration>*) (Aktiv) aufgelistet.  
+3.  Wählen Sie in der Liste **Konfiguration** den Namen einer Projektmappenkonfiguration aus, die Sie zum Erstellen und Veröffentlichen Ihres Berichts verwenden können. Die aktuelle Konfiguration wird als **Active**( *\<Konfiguration>* ) (Aktiv) aufgelistet.  
   
 4.  Wenn Sie die freigegebenen Datenquellen in Ihrem Projekt veröffentlichen und bereits veröffentlichte freigegebene Datenquellen überschreiben möchten, legen Sie **OverwriteDataSources** auf **True**fest.  
   
-5.  (Optional) Für **TargetDataSourceFolder**, geben Sie eine URL zu einer SharePoint-Bibliothek oder einem Bibliotheksordner (z. B. *http://TestServer/TestSite/Documents/DataSources)*.  
+5.  (Optional) Für **TargetDataSourceFolder**, geben Sie eine URL zu einer SharePoint-Bibliothek oder einem Bibliotheksordner (z. B. *http://TestServer/TestSite/Documents/DataSources)* .  
   
      Wenn Sie keinen Wert angeben, wird der Wert **TargetReportFolder** verwendet.  
   
-6.  Für **TargetReportFolder**, geben Sie eine URL zu einer Bibliothek oder den Ordner "Library" (z. B. *http://TestServer/TestSite/Documents/Reports)*.  
+6.  Für **TargetReportFolder**, geben Sie eine URL zu einer Bibliothek oder den Ordner "Library" (z. B. *http://TestServer/TestSite/Documents/Reports)* .  
   
-7.  Geben Sie für **TargetServerURL**eine URL zu einer SharePoint-Website auf oberster Ebene oder zu einer Unterwebsite ein. Wenn Sie keine Website angeben, wird die standardmäßige Stammwebsite verwendet (z. B. *http://servername*, *http://servername/site*, oder *http://servername/site/subsite*).  
+7.  Geben Sie für **TargetServerURL**eine URL zu einer SharePoint-Website auf oberster Ebene oder zu einer Unterwebsite ein. Wenn Sie keine Website angeben, wird die standardmäßige Stammwebsite verwendet (z. B. *http://servername* , *http://servername/site* , oder *http://servername/site/subsite* ).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

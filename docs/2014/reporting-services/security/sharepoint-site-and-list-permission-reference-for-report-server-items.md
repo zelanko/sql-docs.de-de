@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e97899fb58049b04860a564b3769feb13217fc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101528"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente
@@ -44,7 +44,7 @@ ms.locfileid: "66101528"
 ## <a name="list-permissions"></a>Listenberechtigungen  
  Mit den Berechtigungen, die Sie für die Bibliothek festlegen, die Berichtsserverelemente enthält, legen Sie fest, wie Benutzer auf diese Elemente zugreifen.  
   
-|Berechtigung|Description|V|c|B|Berichtsservervorgang|  
+|Berechtigung|Beschreibung|V|c|B|Berichtsservervorgang|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Listen verwalten|Listen erstellen oder löschen, Spalten einer Liste erstellen oder löschen und öffentliche Sichten einer Liste hinzufügen oder löschen.|X|||Während eines Veröffentlichungsvorgangs von einem Erstellungstool aus einen Ordner in einer SharePoint-Bibliothek erstellen. Diese Berechtigung wird auch zum Verwalten des Berichtsverlaufs benötigt.|  
 |Elemente hinzufügen|Listen Elemente hinzufügen, Dokumentbibliotheken Dokumente hinzufügen und Webdiskussionskommentare hinzufügen.|X|X||SharePoint-Bibliotheken Berichte, Berichtsmodelle, freigegebene Datenquellen und Ressourcen (externe Bilddateien) hinzufügen. Freigegebene Datenquellen erstellen. Berichtsmodelle aus freigegebenen Datenquellen generieren. Den Berichts-Generator starten und einen neuen Bericht erstellen oder ein Modell in den Berichts-Generator laden.|  

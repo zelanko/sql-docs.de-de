@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 65ae2069a41ce6743ae387dff4e5fae429841134
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380991"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649825"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, Allgemeine Statistik-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53380991"
   
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Leistungsindikatoren von** beschrieben.  
   
-|Allgemeine Statistik-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Allgemeine Statistik-Leistungsindikatoren von SQL Server|und Beschreibung|  
 |--------------------------------------------|-----------------|  
 |**Aktive temporäre Tabellen**|Anzahl der verwendeten temporären Tabellen/Tabellenvariablen|  
 |**Connection Resets/Sek**|Gesamtzahl von Anmeldungen vom Verbindungspool aus.|  

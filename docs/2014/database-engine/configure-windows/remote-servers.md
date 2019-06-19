@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809758"
 ---
 # <a name="remote-servers"></a>Remoteserver
@@ -57,7 +57,7 @@ ms.locfileid: "62809758"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
 ### <a name="remote-server-security-example"></a>Beispiel für die Sicherheit von Remoteservern  
- Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend**namens **Joe**wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive**_,_ namens **Joe**zugeordnet.  
+ Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend**namens **Joe**wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive** _,_ namens **Joe**zugeordnet.  
   
  Der folgende Transact-SQL-Beispielcode konfiguriert `serverSend` so, dass Remoteprozeduraufrufe auf `serverReceive`ausgeführt werden können.  
   
@@ -96,7 +96,7 @@ GO
  Sie können die erweiterte gespeicherte Prozedur **xp_msver** verwenden, um Serverattribute von lokalen oder Remoteservern zu überprüfen. Diese Attribute enthalten die Versionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Typ und Anzahl von Prozessoren des Computers, sowie die Version des Betriebssystems. Sie können vom lokalen Server Datenbanken, Dateien, Anmeldungen und Tools eines Remoteserver anzeigen. Weitere Informationen finden Sie unter [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verbindungsserver &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
+ [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

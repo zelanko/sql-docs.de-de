@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591764"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62860673"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Schätzen der Größe eines Heaps
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53591764"
   
 3.  Ein Teil der Zeile, der als NULL-Bitmuster (Null_Bitmap) bezeichnet wird, wird für das Verwalten der NULL-Zulässigkeit der Spalte reserviert. Berechnen Sie dessen Größe:  
   
-     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
   
      Nur der ganzzahlige Teil dieses Ausdrucks darf verwendet werden. Der Rest wird verworfen.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53591764"
   
      Wenn die Tabelle Spalten variabler Länge enthält, müssen Sie den Speicherplatz ermitteln, der von den Spalten innerhalb der Zeile verwendet wird:  
   
-     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** × 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** × 2) + **_Max_Var_Size_**  
   
      Die zu **_Max_Var_Size_** hinzugefügten Bytes dienen der Nachverfolgung der einzelnen Spalten mit variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den Wert **_Max_Var_Size_** mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
@@ -66,19 +66,19 @@ ms.locfileid: "53591764"
   
 5.  Berechnen Sie die Gesamtzeilenlänge:  
   
-     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
+     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
   
      Der Wert 4 in der Formel ist der Zeilenüberschriftenaufwand der Datenzeile.  
   
 6.  Berechnen Sie die Anzahl der Zeilen pro Seite (8.096 freie Byte pro Seite):  
   
-     **_Rows_Per_Page_**  = 8.096 / (**_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8.096 / ( **_Row_Size_** + 2)  
   
      Da sich eine Zeile nicht auf zwei Seiten erstreckt, muss die Anzahl der Zeilen pro Seite auf die nächste ganze Zeile abgerundet werden. Die Angabe 2 in der Formel bezieht sich auf den Eingang der Zeile in das Slotarray der Seite.  
   
 7.  Berechnen Sie die Anzahl der Seiten, die zum Speichern aller Zeilen benötigt werden:  
   
-     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
+     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
   
      Die geschätzte Seitenanzahl muss auf die nächste ganze Seite aufgerundet werden.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53591764"
   
 -   LOB-Werte (Large Object)  
   
-     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntextxml**und **image** erforderlich ist, ist komplex. Es reicht aus, lediglich die Durchschnittsgröße der erwarteten LOB-Werte zu addieren und diesen Wert zur Heapgesamtgröße zu addieren.  
+     Der Algorithmus zum Berechnen des genauen Speicherplatzes, der zum Speichern der Werte der LOB-Datentypen **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml**und **image** erforderlich ist, ist komplex. Es reicht aus, lediglich die Durchschnittsgröße der erwarteten LOB-Werte zu addieren und diesen Wert zur Heapgesamtgröße zu addieren.  
   
 -   Komprimierung  
   

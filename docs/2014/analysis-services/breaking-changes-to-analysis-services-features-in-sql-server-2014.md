@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064416"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>Wichtige Änderungen von Analysis Services-Funktionen in SQL Server 2014
@@ -56,7 +56,7 @@ ms.locfileid: "66064416"
 ##  <a name="bkmk_sql10"></a> Wichtige Änderungen in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
  Dieser Abschnitt enthält alle wichtigen Änderungen gegenüber vorherigen Versionen. Wenn Sie ein Upgrade von [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]ausführen, sollten Sie die wichtigen Änderungen überprüfen, die in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]eingeführt wurden.  
   
-|Problem|Description|  
+|Problem|Beschreibung|  
 |-----------|-----------------|  
 |Die flache Exists-Funktion funktioniert jetzt anders für benannte Mengen, die aufgelistete Mitglieder oder Kreuzverknüpfungen von Enumsets enthalten.|In [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]konnte die flache Exists-Funktion nicht für benannte Mengen verwendet werden, die aufgelistete Member oder Kreuzjoins von Enumsets enthielt. Um eine Abwärtskompatibilität zur Originalversion und SP1 von [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]zu erzielen, können Sie die Konfigurationseigenschaft „ConfigurationSettings\OLAP\Query\NamedSetShallowExistsMode“ auf 1 setzen, und für die Abwärtskompatibilität mit [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] SP2 auf 2.|  
 |VBA-Funktionen behandeln Nullwerte und leere Werte anders, als dies in [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] der Fall war.|Wenn Nullwerte oder leere Werte in [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]als Argumente verwendet wurden, gaben VBA-Funktionen "0" (Null) oder eine leere Zeichenfolge zurück. In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]wird NULL zurückgegeben.|  

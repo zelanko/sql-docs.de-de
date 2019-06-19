@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4edd0b6e3928a2bc3a280403a87eda5bb797e620
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099482"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)
@@ -135,7 +135,7 @@ ms.locfileid: "66099482"
   
      **Or**  
   
-     Zeigen Sie im Menü **Start**auf **Alle Programme**und anschließend auf [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], und klicken Sie auf **SQL Server Data Tools (SSDT)**.  
+     Zeigen Sie im Menü **Start**auf **Alle Programme**und anschließend auf [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], und klicken Sie auf **SQL Server Data Tools (SSDT)** .  
   
 2.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   

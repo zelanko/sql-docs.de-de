@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470745"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "62470745"
 |**retry_attempts**|**int**|Anzahl der Wiederholungsversuche, wenn der Schritt einen Fehler erzeugt.|  
 |**retry_interval**|**int**|Zeit, die zwischen Wiederholungsversuchen gewartet wird.|  
 |**os_run_priority**|**int**|Reserviert.|  
-|**output_file_name**|**nvarchar(200)**|Name der Datei, in dem die Ausgabe des Schritts, gespeichert wird, wenn **Subsystem** Wert TSQL, PowerShell oder **CmdExec**_._|  
+|**output_file_name**|**nvarchar(200)**|Name der Datei, in dem die Ausgabe des Schritts, gespeichert wird, wenn **Subsystem** Wert TSQL, PowerShell oder **CmdExec** _._|  
 |**last_run_outcome**|**int**|Ergebnis der vorherigen Ausführung des Auftragsschritts.<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **2** = wiederholen<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**last_run_duration**|**int**|Dauer (hhmmss) der letzten Ausführung des Schritts.|  
 |**last_run_retries**|**int**|Anzahl der Wiederholungsversuche bei der letzten Ausführung des Auftragsschritts.|  

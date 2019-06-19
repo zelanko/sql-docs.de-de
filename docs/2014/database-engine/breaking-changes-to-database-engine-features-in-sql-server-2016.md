@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813223"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014
@@ -67,7 +67,7 @@ ms.locfileid: "62813223"
 |sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|"sys.data_spaces" und "sys.partition_functions" wurde eine neue Spalte (is_system) hinzugefügt. ("sys.partition_schemes" und "sys.filegroups" erben die Spalten von "sys.data_spaces".)<br /><br /> Der Wert 1 in dieser Spalte gibt an, dass das Objekt für Volltextindexfragmente verwendet wird.<br /><br /> In "sys.partition_functions", "sys.partition_schemes" und "sys.filegroups" ist die neue Spalte nicht die letzte Spalte. Überarbeiten Sie vorhandene Abfragen, die auf der Reihenfolge der Spalten basieren, die von diesen Katalogsichten zurückgegeben wurden.|  
   
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>SQL CLR-Datentypen (geometry, geography und hierarchyid)  
- Die Assembly **"Microsoft.SqlServer.Types.dll"**, die die Typen von räumlichen Daten und den Hierarchyid-Typ enthält, wurde aktualisiert von Version 10.0 auf Version 11.0. Benutzerdefinierte Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl, wenn die folgenden Bedingungen den Wert "true" aufweisen.  
+ Die Assembly **"Microsoft.SqlServer.Types.dll"** , die die Typen von räumlichen Daten und den Hierarchyid-Typ enthält, wurde aktualisiert von Version 10.0 auf Version 11.0. Benutzerdefinierte Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl, wenn die folgenden Bedingungen den Wert "true" aufweisen.  
   
 -   Wenn Sie verschieben eine benutzerdefinierte Anwendung auf einem Computer auf dem [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] installiert wurde, an einem Computer, auf dem nur [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ist installiert, die Anwendung schlägt fehl, da die referenzierte Version 10.0, die von der **"SqlTypes"** Assembly ist nicht vorhanden. Möglicherweise wird folgende Fehlermeldung angezeigt: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
@@ -218,7 +218,7 @@ ms.locfileid: "62813223"
   
 ### <a name="errors-and-events"></a>Fehler und Ereignisse  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |Fehler beim Anmelden|In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] wird der Fehler 18452 zurückgegeben, wenn versucht wird, mit einem SQL-Anmeldenamen eine Verbindung zu einem Server herzustellen, der nur die Windows-Authentifizierung verwendet. In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] wird stattdessen der Fehler 18456 zurückgegeben.|  
   

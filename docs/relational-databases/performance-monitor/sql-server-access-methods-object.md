@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: b838dd65d4442161f70f7f658a485ec0bfd644b0
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380641"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671728"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Zugriffsmethoden-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53380641"
   
  Diese Tabelle enthält eine Beschreibung der Indikatoren für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zugriffsmethoden** -Leistungsindikatoren überwacht.  
   
-|Zugriffsmethoden-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Zugriffsmethoden-Leistungsindikatoren von SQL Server|und Beschreibung|  
 |----------------------------------------|-----------------|  
 |**Cleanupbatches für AUs/Sekunde**|Anzahl der Batches pro Sekunde, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Zuordnungseinheiten erfolgreich ausgeführt wurden.|  
 |**Cleanups für AUs/Sekunde**|Anzahl der Zuordnungseinheiten pro Sekunde, die durch den Hintergrundtask für den Cleanup zurückgestellter gelöschter Zuordnungseinheiten erfolgreich gelöscht wurden. Für jeden Einheitenlöschvorgang sind mehrere Batches erforderlich.|  

@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 92f83e1e2b3553f85301574e98f95ed7e22c1184
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148978"
 ---
 # <a name="create-hierarchies"></a>Erstellen von Hierarchien
 
@@ -39,7 +39,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
 2.  Klicken Sie auf, und ziehen Sie die **"productcategoryname"** Spalte mit dem neuen **Kategorie** Hierarchie.  
   
-3.  In der **Kategorie** Hierarchie mit der rechten Maustaste **"productcategoryname"** > **umbenennen**, und geben Sie dann **Kategorie**.  
+3.  In der **Kategorie** Hierarchie mit der rechten Maustaste **"productcategoryname"**  > **umbenennen**, und geben Sie dann **Kategorie**.  
   
     > [!NOTE]  
     > Durch das Umbenennen einer Spalte in einer Hierarchie wird die betreffende Spalte in der Tabelle nicht umbenannt. Eine Spalte in einer Hierarchie ist nur eine Darstellung der Spalte in der Tabelle.  

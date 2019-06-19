@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9f6eff58d5d9c536dd6c6c9f40d389bab1532e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101791"
 ---
 # <a name="predefined-roles"></a>Vordefinierte Rollen
@@ -39,7 +39,7 @@ ms.locfileid: "66101791"
   
  In der folgenden Tabelle werden die vordefinierten Rollen, ihr Bereich und ihre Verwendung beschrieben.  
   
-|Vordefinierte Rolle|Bereich|Description|  
+|Vordefinierte Rolle|Bereich|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |[Inhalts-Manager-Rolle](#bkmk_content)|Element|Schließt alle Aufgaben auf Elementebene ein. Benutzer, die dieser Rolle zugewiesen sind, haben die Vollberechtigung zum Verwalten von Berichtsserverinhalt. In diesem Rahmen können Sie anderen Benutzern Berechtigungen gewähren und die Ordnerstruktur zum Speichern von Berichten und anderen Elementen definieren.|  
 |[Verleger-Rolle](#bkmk_publisher)|Element|Benutzer, die dieser Rolle zugewiesen sind, können einem Berichtsserver Elemente hinzufügen und die Ordner erstellen und verwalten, in denen diese Elemente enthalten sind.|  
@@ -201,7 +201,7 @@ ms.locfileid: "66101791"
   
 ### <a name="system-user-tasks"></a>Systembenutzeraufgaben  
   
-|Aufgabe|Description|  
+|Aufgabe|Beschreibung|  
 |----------|-----------------|  
 |Berichtsdefinitionen ausführen|Führen Sie einen Bericht aus, ohne ihn auf einem Berichtsserver zu veröffentlichen.|  
 |Berichtsservereigenschaften anzeigen|Eigenschaften für den Berichtsserver anzeigen, wie z. B. den Anwendungsnamen, Standardwerte für den Berichtsverlauf sowie ob Meine Berichte aktiviert ist.<br /><br /> Wenn Sie diese Aufgabe aus der **Systembenutzer** -Rolle entfernen, ist die Seite Siteeinstellungen nicht verfügbar. Außerdem wird der Titel der Anwendung nicht oben auf jeder Seite angezeigt. Standardmäßig lautet der Titel für den Berichtsmanager "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  

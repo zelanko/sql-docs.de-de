@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7998e54b8aecf99519dea2edb977279c6bb0005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508259"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Definieren und Ändern eines Spaltenfilters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47654258"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -76,17 +76,17 @@ ms.locfileid: "47654258"
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)aus. Damit werden die Spalten definiert, die in den Artikel aufgenommen oder daraus entfernt werden sollen.  
   
-    -   Wenn nur einige wenige Spalten aus einer viele Spalten umfassenden Tabelle veröffentlicht werden sollen, führen Sie [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede hinzuzufügende Spalte aus. Geben Sie den Spaltennamen für **@column** und den Wert **add** für **@operation**Spaltenfilter definiert und geändert werden.  
+    -   Wenn nur einige wenige Spalten aus einer viele Spalten umfassenden Tabelle veröffentlicht werden sollen, führen Sie [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede hinzuzufügende Spalte aus. Geben Sie den Spaltennamen für **@column** und den Wert **add** für **@operation** Spaltenfilter definiert und geändert werden.  
   
-    -   Wenn die meisten Spalten einer umfangreichen Tabelle veröffentlicht werden sollen, führen Sie [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)unter Angabe des Werts **null** für **@column** und den Wert **add** für **@operation** aus, um alle Spalten hinzuzufügen. Führen Sie dann für die auszuschließenden Spalten jeweils einmal [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)unter Angabe des Werts **drop** für **@operation** und des Namens der auszuschließenden Spalte für **@column**Spaltenfilter definiert und geändert werden.  
+    -   Wenn die meisten Spalten einer umfangreichen Tabelle veröffentlicht werden sollen, führen Sie [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)unter Angabe des Werts **null** für **@column** und den Wert **add** für **@operation** aus, um alle Spalten hinzuzufügen. Führen Sie dann für die auszuschließenden Spalten jeweils einmal [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)unter Angabe des Werts **drop** für **@operation** und des Namens der auszuschließenden Spalte für **@column** Spaltenfilter definiert und geändert werden.  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung für **@publication** und den Namen des gefilterten Artikels für **@article**Spaltenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erstellt.  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung für **@publication** und den Namen des gefilterten Artikels für **@article** Spaltenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erstellt.  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>So ändern Sie einen Spaltenfilter, um zusätzliche Spalten in einen Artikel aufzunehmen, der in einer Momentaufnahme- oder Transaktionsveröffentlichung veröffentlicht wurde  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu hinzuzufügende Spalte aus. Geben Sie den Spaltennamen für **@column** und den Wert **add** für **@operation**Spaltenfilter definiert und geändert werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu hinzuzufügende Spalte aus. Geben Sie den Spaltennamen für **@column** und den Wert **add** für **@operation** Spaltenfilter definiert und geändert werden.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung für **@publication** und den Namen des gefilterten Artikels für **@article**Spaltenfilter definiert und geändert werden. Wenn für die Veröffentlichung Abonnements vorhanden sind, geben Sie den Wert **1** für **@change_active**Spaltenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erneut erstellt.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung für **@publication** und den Namen des gefilterten Artikels für **@article** Spaltenfilter definiert und geändert werden. Wenn für die Veröffentlichung Abonnements vorhanden sind, geben Sie den Wert **1** für **@change_active** Spaltenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erneut erstellt.  
   
 3.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "47654258"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>So ändern Sie einen Spaltenfilter, um Spalten aus einem Artikel zu entfernen, der in einer Momentaufnahme- oder Transaktionsveröffentlichung veröffentlicht wurde  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu entfernende Spalte aus. Geben Sie den Spaltennamen für **@column** und den Wert **drop** für **@operation**Spaltenfilter definiert und geändert werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu entfernende Spalte aus. Geben Sie den Spaltennamen für **@column** und den Wert **drop** für **@operation** Spaltenfilter definiert und geändert werden.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung für **@publication** und den Namen des gefilterten Artikels für **@article**Spaltenfilter definiert und geändert werden. Wenn für die Veröffentlichung Abonnements vorhanden sind, geben Sie den Wert **1** für **@change_active**Spaltenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erneut erstellt.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung für **@publication** und den Namen des gefilterten Artikels für **@article** Spaltenfilter definiert und geändert werden. Wenn für die Veröffentlichung Abonnements vorhanden sind, geben Sie den Wert **1** für **@change_active** Spaltenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erneut erstellt.  
   
 3.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen.  
   
@@ -104,17 +104,17 @@ ms.locfileid: "47654258"
   
 #### <a name="to-define-a-column-filter-for-an-article-published-in-a-merge-publication"></a>So definieren Sie einen Spaltenfilter für einen Artikel, der in einer Mergeveröffentlichung veröffentlicht wurde  
   
-1.  Definieren Sie den zu filternden Artikel. Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Definieren Sie den zu filternden Artikel. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)aus. Damit werden die Spalten definiert, die in den Artikel aufgenommen oder daraus entfernt werden sollen.  
   
-    -   Wenn nur einige wenige Spalten aus einer viele Spalten umfassenden Tabelle veröffentlicht werden sollen, führen Sie [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) einmal für jede hinzuzufügende Spalte aus. Geben Sie den Spaltennamen für **@column** und den Wert **add** für **@operation**Spaltenfilter definiert und geändert werden.  
+    -   Wenn nur einige wenige Spalten aus einer viele Spalten umfassenden Tabelle veröffentlicht werden sollen, führen Sie [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) einmal für jede hinzuzufügende Spalte aus. Geben Sie den Spaltennamen für **@column** und den Wert **add** für **@operation** Spaltenfilter definiert und geändert werden.  
   
-    -   Wenn die meisten Spalten einer umfangreichen Tabelle veröffentlicht werden sollen, führen Sie [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)unter Angabe des Werts **null** für **@column** und den Wert **add** für **@operation** aus, um alle Spalten hinzuzufügen. Führen Sie dann für die auszuschließenden Spalten jeweils einmal [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)unter Angabe des Werts **drop** für **@operation** und des Namens der auszuschließenden Spalte für **@column**Spaltenfilter definiert und geändert werden.  
+    -   Wenn die meisten Spalten einer umfangreichen Tabelle veröffentlicht werden sollen, führen Sie [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)unter Angabe des Werts **null** für **@column** und den Wert **add** für **@operation** aus, um alle Spalten hinzuzufügen. Führen Sie dann für die auszuschließenden Spalten jeweils einmal [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)unter Angabe des Werts **drop** für **@operation** und des Namens der auszuschließenden Spalte für **@column** Spaltenfilter definiert und geändert werden.  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-merge-publication"></a>So ändern Sie einen Spaltenfilter, um zusätzliche Spalten in einen Artikel aufzunehmen, der in einer Mergeveröffentlichung veröffentlicht wurde  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) einmal für jede zu hinzuzufügende Spalte aus. Geben Sie den Spaltennamen für **@column**, den Wert **add** für **@operation** und den Wert **1** sowohl für **@force_invalidate_snapshot** als auch für **@force_reinit_subscription**Spaltenfilter definiert und geändert werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) einmal für jede zu hinzuzufügende Spalte aus. Geben Sie den Spaltennamen für **@column** , den Wert **add** für **@operation** und den Wert **1** sowohl für **@force_invalidate_snapshot** als auch für **@force_reinit_subscription** Spaltenfilter definiert und geändert werden.  
   
 2.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "47654258"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-merge-publication"></a>So ändern Sie einen Spaltenfilter, um Spalten aus einem Artikel zu entfernen, der in einer Mergeveröffentlichung veröffentlicht wurde  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) einmal für jede zu entfernende Spalte aus. Geben Sie den Spaltennamen für **@column**, den Wert **drop** für **@operation** und den Wert **1** sowohl für **@force_invalidate_snapshot** als auch für **@force_reinit_subscription**Spaltenfilter definiert und geändert werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) einmal für jede zu entfernende Spalte aus. Geben Sie den Spaltennamen für **@column** , den Wert **drop** für **@operation** und den Wert **1** sowohl für **@force_invalidate_snapshot** als auch für **@force_reinit_subscription** Spaltenfilter definiert und geändert werden.  
   
 2.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47654258"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-colu_2.sql)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md)   
  [Filtern veröffentlichter Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)  

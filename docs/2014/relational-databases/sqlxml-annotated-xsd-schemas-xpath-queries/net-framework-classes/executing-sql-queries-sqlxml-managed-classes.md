@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8e16ff3651b9ce23fafe99137b4905eb3961ce
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014941"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Ausführen von SQL-Abfragen (verwaltete SQLXML-Klassen)
@@ -30,7 +30,7 @@ ms.locfileid: "66014941"
   
 -   Zuweisen von Werten an den Eigenschaften der SqlXmlParameter-Objekte (Name und Wert).  
   
- In diesem Beispiel wird eine einfache SQL-Abfrage ausgeführt, um Vornamen, Nachnamen und Geburtsdatum des Mitarbeiters abzufragen, dessen Nachname als Parameterwert übergeben wird. Angeben des Parameters (*"LastName"*), nur die Value-Eigenschaft festgelegt ist. Die Name-Eigenschaft ist nicht festgelegt, da in dieser Abfrage um einen Positionsparameter handelt und kein Name erforderlich ist.  
+ In diesem Beispiel wird eine einfache SQL-Abfrage ausgeführt, um Vornamen, Nachnamen und Geburtsdatum des Mitarbeiters abzufragen, dessen Nachname als Parameterwert übergeben wird. Angeben des Parameters ( *"LastName"* ), nur die Value-Eigenschaft festgelegt ist. Die Name-Eigenschaft ist nicht festgelegt, da in dieser Abfrage um einen Positionsparameter handelt und kein Name erforderlich ist.  
   
  Die CommandType-Eigenschaft des SqlXmlCommand-Objekt, in der Standardeinstellung ist **Sql**. Deshalb wird die Eigenschaft nicht explizit festgelegt.  
   

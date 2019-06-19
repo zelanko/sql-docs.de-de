@@ -15,11 +15,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f19be799e47d734b2d645bdf5885a234fd6feb3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973799"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716252"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dien
   
 1.  Zeigen Sie im Menü **Start** auf **Programme**, erweitern Sie [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie anschließend auf **SQL Server 2016-Konfigurations-Manager**.  
   
-2.  Klicken Sie im **SQL Server-Konfigurations-Manager**auf **SQL Server-Dienste**, klicken Sie mit der rechten Maustaste auf **SQL-Volltextfilterdaemon-Startprogramm (**_Instanzname_**)**, und klicken Sie anschließend auf **Eigenschaften**.  
+2.  Klicken Sie im **SQL Server-Konfigurations-Manager**auf **SQL Server-Dienste**, klicken Sie mit der rechten Maustaste auf **SQL-Volltextfilterdaemon-Startprogramm (** _Instanzname_ **)** , und klicken Sie anschließend auf **Eigenschaften**.  
   
 3.  Klicken Sie im Dialogfeld auf die Registerkarte **Anmelden**, und wählen Sie anschließend das Konto aus, unter dem die vom SQL-Volltextfilterdaemon-Startprogrammdienst erstellten Prozesse ausgeführt werden sollen, oder geben Sie das Konto ein.  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014388"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Einführung in den SQLXMLOLEDB-Anbieter (SQLXML 4.0)
@@ -37,13 +37,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Anbieterspezifische SQLXMLOLEDB-Eigenschaften  
  Der SQLXMLOLEDB-Anbieter stellt die folgenden anbieterspezifischen Verbindungseigenschaften zur Verfügung.  
   
-|Verbindung<br /><br /> property|Default<br /><br /> (ggf.)|Description|  
+|Verbindung<br /><br /> property|Default<br /><br /> (ggf.)|Beschreibung|  
 |-----------------------------|----------------------------|-----------------|  
 |Datenanbieter||Stellt die PROGID des OLE DB-Anbieters zur Verfügung, durch die SQLXMLOLEDB die Befehle ausführt. Ab SQLXML 4.0 und [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist dieser Anbieter in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthalten. Daher ist dieser Eigenschaftswert auf "SQLNCLI11" beschränkt. Weitere Informationen finden Sie unter [SQL Server Native Client-Programmierung](../../native-client/sql-server-native-client-programming.md).|  
   
  Der SQLXMLOLEDB-Anbieter stellt die folgenden anbieterspezifischen Befehlseigenschaften zur Verfügung.  
   
-|Befehl<br /><br /> property|Default<br /><br /> (ggf.)|Description|  
+|Befehl<br /><br /> property|Default<br /><br /> (ggf.)|Beschreibung|  
 |--------------------------|----------------------------|-----------------|  
 |Basispfad|""|Gibt den Basispfad der Datei an. Der Basispfad der Datei gibt den Speicherort der XSL-Dateien (XML Stylesheet Language) oder der Zuordnungsschemadateien an. Der basisdateipfad wird auch zum Auflösen der relativen Pfade der XSL- oder zuordnungsschemadateien auf, die in den Eigenschaften der XSL- oder Mapping-Schema angegeben wurden.<br /><br /> Ein Beispiel, in dem diese Eigenschaft wird verwendet, finden Sie unter [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Legen Sie diese Eigenschaft auf True fest, wenn die Konvertierung des Rowsets in XLM statt auf dem Server auf dem Client erfolgen soll. Dies ist nützlich, wenn Sie die Ladeleistungslast auf die mittlere Ebene verschieben möchten.<br /><br /> Ein Beispiel, in dem diese Eigenschaft wird verwendet, finden Sie unter [SQL-Abfragen ausführen &#40;SQLXMLOLEDB-Anbieter&#41; ](executing-sql-queries-sqlxmloledb-provider.md) oder [Ausführen von Vorlagen, dass enthalten SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41; ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  

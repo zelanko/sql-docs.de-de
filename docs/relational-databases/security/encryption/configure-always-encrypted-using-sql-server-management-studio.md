@@ -18,11 +18,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a6cc6dcb53bb7c535db570bbaa68db0673a83879
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531115"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521649"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Konfigurieren von Always Encrypted mithilfe von SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -229,7 +229,7 @@ Mit dem Dialogfeld **Neuer Spaltenhauptschlüssel** können Sie einen Spaltenhau
     - **Zertifikatspeicher – Aktueller Benutzer**: Gibt den Zertifikatspeicherort des aktuellen Benutzers im Windows-Zertifikatspeicher an, der Ihrem persönlichen Zertifikatspeicher entspricht. 
     - **Zertifikatspeicher – Lokaler Computer**: Gibt den Zertifikatspeicherort des lokalen Computers im Windows-Zertifikatspeicher an. 
     - **Azure Key Vault**: Sie müssen sich bei Azure anmelden (klicken Sie auf **Anmelden**). Sobald Sie sich angemeldet haben, können Sie eines Ihrer Azure-Abonnements und einen Schlüsselspeicher auswählen.
-    - **Schlüsselspeicheranbieter (CNG)**: Gibt einen Schlüsselspeicher an, der über einen Schlüsselspeicheranbieter (KSP) zugänglich ist, der die Cryptography Next Generation-API (CNG) implementiert. Bei dieser Art von Speicher handelt sich in der Regel um ein Hardwaresicherheitsmodul (HSM). Nachdem Sie diese Option ausgewählt haben, müssen Sie einen KSP auswählen. Standardmäßig ist der**Softwareschlüsselspeicher-Anbieter von Microsoft** aktiviert. Wenn Sie einen in einem HSM gespeicherten Spaltenhauptschlüssel verwenden möchten, wählen Sie einen KSP für Ihr Gerät aus (muss installiert und auf dem Computer konfiguriert werden, bevor Sie das Dialogfeld öffnen).
+    - **Schlüsselspeicheranbieter (CNG)** : Gibt einen Schlüsselspeicher an, der über einen Schlüsselspeicheranbieter (KSP) zugänglich ist, der die Cryptography Next Generation-API (CNG) implementiert. Bei dieser Art von Speicher handelt sich in der Regel um ein Hardwaresicherheitsmodul (HSM). Nachdem Sie diese Option ausgewählt haben, müssen Sie einen KSP auswählen. Standardmäßig ist der**Softwareschlüsselspeicher-Anbieter von Microsoft** aktiviert. Wenn Sie einen in einem HSM gespeicherten Spaltenhauptschlüssel verwenden möchten, wählen Sie einen KSP für Ihr Gerät aus (muss installiert und auf dem Computer konfiguriert werden, bevor Sie das Dialogfeld öffnen).
     -   **Kryptografiedienstanbieter (Kryptografie-API)** – Ein Schlüsselspeicher, der über einen Kryptografiedienstanbieter (CSP) zugänglich ist, der die Kryptografie-API (Cryptography API; CAPI) implementiert. Bei dieser Art von Speicher handelt sich in der Regel um ein Hardwaresicherheitsmodul (HSM). Nachdem Sie diese Option ausgewählt haben, müssen Sie einen CSP auswählen.  Wenn Sie einen in einem HSM gespeicherten Spaltenhauptschlüssel verwenden möchten, wählen Sie einen CSP für Ihr Gerät aus (muss installiert und auf dem Computer konfiguriert werden, bevor Sie das Dialogfeld öffnen).
     
     > [!NOTE]
@@ -263,8 +263,8 @@ in der Datenbank über die Berechtigungen *ALTER ANY ENCRYPTION MASTER KEY* und 
 Sie benötigen möglicherweise Berechtigungen für Schlüsselspeicher oder/und den Schlüssel, um auf einen Schlüsselspeicher zugreifen und den Spaltenhauptschlüssel verwenden zu können:
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
 - **Azure Key Vault**: Sie benötigen die Berechtigungen *get*, *unwrapKey*, *wrapKey*, *sign* und *verify* für den Tresor mit dem Spaltenhauptschlüssel.
-- **Schlüsselspeicheranbieter (CNG)**: Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
-- **Kryptografiedienstanbieter (Kryptografie-API)**: Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
+- **Schlüsselspeicheranbieter (CNG)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
+- **Kryptografiedienstanbieter (Kryptografie-API)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
 
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
@@ -295,7 +295,7 @@ SQL Server Management Studio erhält die Metadaten der Spaltenverschlüsselungss
 
 **Schritt 3: Konfigurieren Ihrer Anwendungen mit dem neuen Spaltenhauptschlüssel**
 
-In diesem Schritt geht es um alle Ihre Clientanwendungen, die Datenbankspalten abfragen, die mit dem zu rotierenden Spaltenhauptschlüssel geschützt werden (d.h. mit einem Spaltenverschlüsselungsschlüssel verschlüsselt sind, der wiederum mit dem zu rotierenden Spaltenhauptschlüssel verschlüsselt ist). Sie müssen sicherstellen, dass diese Clientanwendungen auf den neuen Spaltenhauptschlüssel zugreifen können. Ihr Vorgehen in diesem Schritt hängt vom Typ des Zertifikatspeichers ab, in dem sich Ihr neuer Spaltenhauptschlüssel befindet. Zum Beispiel:
+In diesem Schritt geht es um alle Ihre Clientanwendungen, die Datenbankspalten abfragen, die mit dem zu rotierenden Spaltenhauptschlüssel geschützt werden (d.h. mit einem Spaltenverschlüsselungsschlüssel verschlüsselt sind, der wiederum mit dem zu rotierenden Spaltenhauptschlüssel verschlüsselt ist). Sie müssen sicherstellen, dass diese Clientanwendungen auf den neuen Spaltenhauptschlüssel zugreifen können. Ihr Vorgehen in diesem Schritt hängt vom Typ des Zertifikatspeichers ab, in dem sich Ihr neuer Spaltenhauptschlüssel befindet. Beispiel:
 - Wenn der neue Spaltenhauptschlüssel ein im Windows-Zertifikatspeicher gespeichertes Zertifikat ist, müssen Sie das Zertifikat an dem Zertifikatspeicherort speichern (*Aktueller Benutzer* oder *Lokaler Computer*), der auch im Schlüsselpfad Ihres Spaltenhauptschlüssels in der Datenbank angegeben ist. Die Anwendung muss auf das Zertifikat zugreifen können:
     - Wenn das Zertifikat am Zertifikatspeicherort *Aktueller Benutzer* gespeichert wird, muss das Zertifikat in den Speicherort „Aktueller Benutzer“ der Windows-Identität (Benutzer) der Anwendung importiert werden.
     - Wenn das Zertifikat am Zertifikatspeicherort *Lokaler Computer* gespeichert wird, benötigt die Windows-Identität der Anwendung die Berechtigung zum Zugriff auf das Zertifikat.
@@ -344,8 +344,8 @@ Die Rotation eines Spaltenhauptschlüssels erfordert die folgenden Berechtigunge
 Sie müssen sowohl auf den alten als auch auf den neuen Spaltenhauptschlüssel in ihren jeweiligen Schlüsselspeichern zugreifen können. Sie benötigen möglicherweise Berechtigungen für Schlüsselspeicher oder/und den Schlüssel, um auf einen Schlüsselspeicher zugreifen und einen Spaltenhauptschlüssel verwenden zu können:
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
 - **Azure Key Vault**: Sie benötigen die Berechtigungen *create*, *get*, *unwrapKey*, *wrapKey*, *sign*und *verify* für den Tresor, der den bzw. die Spaltenhauptschlüssel enthält.
-- **Schlüsselspeicheranbieter (CNG)**: Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
-- **Kryptografiedienstanbieter (Kryptografie-API)**: Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
+- **Schlüsselspeicheranbieter (CNG)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
+- **Kryptografiedienstanbieter (Kryptografie-API)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
 
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
@@ -377,8 +377,8 @@ Die Rotation eines Spaltenhauptschlüssels erfordert die folgenden Berechtigunge
 Sie müssen sowohl für den alten als auch für den neuen Spaltenverschlüsselungsschlüssel auf den Spaltenhauptschlüssel zugreifen können. Sie benötigen möglicherweise Berechtigungen für Schlüsselspeicher oder/und den Schlüssel, um auf einen Schlüsselspeicher zugreifen und einen Spaltenhauptschlüssel verwenden zu können:
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen einen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
 - **Azure Key Vault**: Sie benötigen die Berechtigungen „get“, „unwrapKey“, und „verify“ für den Tresor, der den Spaltenhauptschlüssel enthält.
-- **Schlüsselspeicheranbieter (CNG)**: Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
-- **Kryptografiedienstanbieter (Kryptografie-API)**: Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
+- **Schlüsselspeicheranbieter (CNG)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
+- **Kryptografiedienstanbieter (Kryptografie-API)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
 
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
@@ -409,8 +409,8 @@ Je nach den Unterschieden zwischen den Schemas der DACPAC-Datei und der Zieldate
 Wenn der Upgradevorgang eine Datenverschlüsselung auslöst, müssen Sie auch auf die für die betroffenen Spalten konfigurierten Spaltenhauptschlüssel zugreifen können:
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
 - **Azure Key Vault**: Sie benötigen die Berechtigungen *create*, *get*, *unwrapKey*, *wrapKey*, *sign*und *verify* für den Tresor, der den Spaltenhauptschlüssel enthält.
-- **Schlüsselspeicheranbieter (CNG)**: Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
-- **Kryptografiedienstanbieter (Kryptografie-API)**: Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
+- **Schlüsselspeicheranbieter (CNG)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des KSP abhängen.
+- **Kryptografiedienstanbieter (Kryptografie-API)** : Bei der Verwendung eines Schlüsselspeichers oder Schlüssels werden Sie möglicherweise aufgefordert, die erforderlichen Berechtigungen und Anmeldeinformationen anzugeben, welche von der Konfiguration des Speichers und des CSP abhängen.
 
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
@@ -453,8 +453,8 @@ Sie müssen in der Quelldatenbank über die Berechtigungen **VIEW ANY COLUMN MAS
 Außerdem benötigen Sie Zugriff auf die Spaltenhauptschlüssel, die für die Spalten konfiguriert wurden, in denen die zu ver- oder entschlüsselnden Daten gespeichert sind:
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen einen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
 - **Azure Key Vault**: Sie benötigen die Berechtigungen „get“, „unwrapKey“, „wrapKey“, „sign“ und „verify“ für den Tresor mit dem Spaltenhauptschlüssel.
-- **Schlüsselspeicheranbieter (Cryptography Next Generation; CNG)**: Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Schlüsselspeicheranbieters (Key Storage Provider; KSP) ab.
-- **Kryptografiedienstanbieter (Kryptografie-API)**: Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Kryptografiedienstanbieters (Cryptographic Service Provider; CSP) ab.
+- **Schlüsselspeicheranbieter (Cryptography Next Generation; CNG)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Schlüsselspeicheranbieters (Key Storage Provider; KSP) ab.
+- **Kryptografiedienstanbieter (Kryptografie-API)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, zu deren Eingabe Sie möglicherweise aufgefordert werden, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, hängen von der Konfiguration des Speichers und des Kryptografiedienstanbieters (Cryptographic Service Provider; CSP) ab.
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
 ## <a name="see-also"></a>Weitere Informationen

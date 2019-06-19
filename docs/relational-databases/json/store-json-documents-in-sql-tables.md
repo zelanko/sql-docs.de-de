@@ -11,18 +11,18 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.openlocfilehash: 385ae3aafb58d012e6473abc0fe4b8f8f5d40eb6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033251"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705969"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank
 SQL Server und Azure SQL-Datenbank verfügen über native JSON-Funktionen, mit denen Sie JSON-Dokumente durch die standardmäßige SQL-Sprache analysieren können. Jetzt können Sie JSON-Dokumente in SQL Server oder SQL-Datenbank speichern und JSON-Daten wie in einer NoSQL-Datenbank abfragen. Dieser Artikel beschreibt die Optionen zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank.
 
 ## <a name="classic-tables"></a>Klassische Tabellen
 
-Die einfachste Möglichkeit zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank stellt die Erstellung einer zweispaltigen Tabelle dar, die die ID und den Inhalt des Dokuments enthält. Zum Beispiel:
+Die einfachste Möglichkeit zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank stellt die Erstellung einer zweispaltigen Tabelle dar, die die ID und den Inhalt des Dokuments enthält. Beispiel:
 
 ```sql
 create table WebSite.Logs (
@@ -35,7 +35,7 @@ Diese Struktur entspricht den Sammlungen, die Sie in klassischen Dokumentdatenba
 
 Mit dem Datentyp „nvarchar(max)“ können Sie JSON-Dokumente mit einer Größe von bis zu 2 GB speichern. Wenn Sie jedoch sicher sind, dass Ihre JSON-Dokumente nicht größer als 8 KB sind, wird empfohlen, aus Leistungsgründen NVARCHAR(4000) anstelle von NVARCHAR(max) zu verwenden.
 
-Bei der im vorherigen Beispiel erstellten Beispieltabelle wird davon ausgegangen, dass gültige JSON-Dokumente in der Spalte `log` gespeichert sind. Wenn Sie sichergehen wollen, dass ein gültiges JSON-Objekt in der Spalte `log` gespeichert ist, können Sie für die Spalte eine CHECK-Einschränkung hinzufügen. Zum Beispiel:
+Bei der im vorherigen Beispiel erstellten Beispieltabelle wird davon ausgegangen, dass gültige JSON-Dokumente in der Spalte `log` gespeichert sind. Wenn Sie sichergehen wollen, dass ein gültiges JSON-Objekt in der Spalte `log` gespeichert ist, können Sie für die Spalte eine CHECK-Einschränkung hinzufügen. Beispiel:
 
 ```sql
 ALTER TABLE WebSite.Logs
@@ -45,7 +45,7 @@ ALTER TABLE WebSite.Logs
 
 Jedes Mal, wenn ein Dokument in die Tabelle eingefügt oder in der Tabelle aktualisiert wird, überprüft diese Einschränkung, ob das JSON-Dokument korrekt formatiert ist. Ohne diese Einschränkung ist die Tabelle für Einfügungen optimiert, da jedes JSON-Dokument ohne weitere Verarbeitung direkt zur Spalte hinzugefügt wird.
 
-Wenn Sie die JSON-Dokumente in der Tabelle speichern, können Sie zum Abfragen der Dokumente die Standardsprache Transact-SQL verwenden. Zum Beispiel:
+Wenn Sie die JSON-Dokumente in der Tabelle speichern, können Sie zum Abfragen der Dokumente die Standardsprache Transact-SQL verwenden. Beispiel:
 
 ```sql
 SELECT TOP 100 JSON_VALUE(log, '$.severity'), AVG( CAST( JSON_VALUE(log,'$.duration') as float))
@@ -64,7 +64,7 @@ Diese Fähigkeit, umfassende T-SQL-Abfragesyntax zu verwenden, ist der entscheid
 
 Wenn Sie feststellen, dass Ihre Abfragen häufig Dokumente nach bestimmten Eigenschaften durchsuchen (z.B. nach einer `severity`-Eigenschaft in einem JSON-Dokument), können Sie einen klassischen NONCLUSTERED-Index für die Eigenschaft hinzufügen, um die Abfragen zu beschleunigen.
 
-Sie können eine berechnete Spalte erstellen, die JSON-Werte von den JSON-Spalten für den angegebenen Pfad (d.h. für den Pfad `$.severity`) verfügbar macht, und einen Standardindex für diese berechnete Spalte erstellen. Zum Beispiel:
+Sie können eine berechnete Spalte erstellen, die JSON-Werte von den JSON-Spalten für den angegebenen Pfad (d.h. für den Pfad `$.severity`) verfügbar macht, und einen Standardindex für diese berechnete Spalte erstellen. Beispiel:
 
 ```sql
 create table WebSite.Logs (
@@ -120,7 +120,7 @@ create table WebSite.Logs (
 
 Eine speicheroptimierte Tabelle ist die beste Option für häufig geänderte Dokumente. Wenn Sie speicheroptimierte Tabellen in Erwägung ziehen, sollten Sie auch die Leistung berücksichtigen. Verwenden Sie für die JSON-Dokumente in Ihren speicheroptimierten Sammlungen möglichst NVARCHAR(4000) anstelle von NVARCHAR(max), da die Leistung hierdurch deutlich verbessert werden kann.
 
-Wie bei klassischen Tabellen können Sie durch berechnete Spalten Indizes für die Felder, die Sie in speicheroptimierten Tabellen verfügbar machen, hinzufügen. Zum Beispiel:
+Wie bei klassischen Tabellen können Sie durch berechnete Spalten Indizes für die Felder, die Sie in speicheroptimierten Tabellen verfügbar machen, hinzufügen. Beispiel:
 
 ```sql
 create table WebSite.Logs (
@@ -136,7 +136,7 @@ create table WebSite.Logs (
 
 Um die Leistung zu maximieren, sollten Sie den JSON-Wert in den kleinstmöglichen Typ umwandeln, der zum Speichern des Eigenschaftswerts verwendet werden kann. Im vorherigen Beispiel wurde **tinyint** verwendet.
 
-Sie können auch SQL-Abfragen, die JSON-Dokumente aktualisieren, in gespeicherte Prozeduren einbinden, um von den Vorteilen der nativen Kompilierung zu profitieren. Zum Beispiel:
+Sie können auch SQL-Abfragen, die JSON-Dokumente aktualisieren, in gespeicherte Prozeduren einbinden, um von den Vorteilen der nativen Kompilierung zu profitieren. Beispiel:
 
 ```sql
 CREATE PROCEDURE WebSite.UpdateData(@Id int, @Property nvarchar(100), @Value nvarchar(100))

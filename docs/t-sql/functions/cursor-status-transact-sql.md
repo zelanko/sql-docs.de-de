@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d9a981cb1302b8edb1776a5808221eaddd2263b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943837"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
@@ -72,7 +72,7 @@ Der Name der Cursorvariablen. Eine Cursorvariable muss mithilfe des **cursor**-D
 |-2|Nicht verfügbar.|Eine der folgenden Möglichkeiten trifft zu:<br /><br /> Die zuvor aufgerufene Prozedur hat dieser OUTPUT-Variablen keinen Cursor zugewiesen.<br /><br /> Die zuvor zugewiesene Prozedur hat dieser OUTPUT-Variablen einen Cursor zugewiesen, aber der Cursor war bei Abschluss der Prozedur geschlossen. Deshalb wird die Zuordnung des Cursors aufgehoben, und der Cursor wird nicht an die aufrufende Prozedur zurückgegeben.<br /><br /> Der deklarierten Cursorvariablen wird kein Cursor zugewiesen.|  
 |-3|Ein Cursor mit dem angegebenen Namen ist nicht vorhanden.|Eine Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder ihr wurde, wenn sie vorhanden ist, noch kein Cursor zugeordnet.|  
   
-* Dynamische Cursor geben dieses Ergebnis nie zurück.
+\* Dynamische Cursor geben dieses Ergebnis nie zurück.
   
 ## <a name="examples"></a>Beispiele  
 In diesem Beispiel wird die `CURSOR_STATUS`-Funktion verwendet, um den Status eines Cursors mitzuteilen: nach seiner Deklaration, nachdem er geöffnet und nachdem er geschlossen wurde.

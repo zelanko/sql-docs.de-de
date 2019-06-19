@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0384498d5068171b205bcafdfd28222a86e1bab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069940"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Skriptverwaltungsaufgaben in Analysis Services
@@ -25,7 +25,7 @@ ms.locfileid: "66069940"
   
  Alle Methoden, die sich unter den Unterstützungsskripts befinden, die zu einer Datei gespeichert werden können und als unabhängiger Vorgang ausgeführt werden können. Da die für tabellarische Modelle und PowerPivot-Arbeitsmappen verwendete Programmiersprache Data Analysis Expression (DAX) die Kriterien nicht erfüllt, ist sie in der folgenden Liste nicht enthalten.  
   
-|Methodik|Dateiformat|Description|Links|  
+|Methodik|Dateiformat|Beschreibung|Links|  
 |-----------------|-----------------|-----------------|-----------|  
 |PowerShell|.ps1|Analysis Services unterstützen die SQL Server PowerShell-Skriptumgebung durch einen neuen Anbieter, der die Objektnavigation aus der Befehlszeile hinzufügt, sowie neue Cmdlets für administrative Aufgaben z. B. Sicherung, Wiederherstellung, Verarbeitung und Rollenverwaltung.<br /><br /> Darüber hinaus enthält der SQL Server PowerPivot-Anbieter (SQLPS) ein allgemeines Cmdlet, `Invoke-ASCmd`, mit dem Sie innerhalb einer PowerShell-Sitzung XMLA, MDX oder DMX-Skriptdateien ausführen können.<br /><br /> Die Analysis Services PowerShell-Skripterstellung wird für mehrdimensionale und tabellarische Modelle unterstützt, aber nicht für PowerPivot-Arbeitsmappen, auf die aus SharePoint zugegriffen wird.|[Analysis Services-PowerShell](analysis-services-powershell.md)<br /><br /> [Windows PowerShell Survival-Guide](https://go.microsoft.com/fwlink/?LinkId=233747)|  
 |ASSL- oder XMLA-Skript|XMLA|Analysis Services Scripting Language (ASSL) ist eine Erweiterung zu XMLA, die Datenzugriff auf Objekte und Vorgänge auf einer im tabellarischen oder mehrdimensionalen Modus ausgeführten Analysis Services-Instanz ermöglicht. ASSL schließt Datendefinition und Befehlssprachenunterstützung ein und aktiviert den vollständigen Ausdruck von Analysis Services-Objekten und Vorgängen in einem XML-Format. Skripts, die Objekte und die von ASSL bereitgestellten Befehle verwenden, werden als XMLA-Dateien gespeichert. Innerhalb des Kontexts von Analysis Services ist es allgemeine Praxis, auf ASSL als XMLA-Skript zu verweisen. Wählen Sie diesen Ansatz, wenn Ihre Anforderungen Folgendes einschließen:<br /><br /> Das Skript erstellt Objekte direkt auf einem Server oder führt sowohl Datendefinition als auch funktionstüchtige Aufgaben (beispielsweise die Neuerstellung und Verarbeitung einer Datenbank) aus.<br /><br /> Sie benötigen eine maximale Skriptwiederverwendung über mehrere Tools und Technologien hinweg. XMLA-Skripts können Analysis Services-Befehlstasks in SQL Server-Agent hinzugefügt werden, und zwar als Verweis in SSIS-Paketen oder PowerShell-Skripts.<br /><br /> Das Skript muss unbeaufsichtigt ausgeführt werden. Sie können mit dem SQL Server-Agent einen Auftrag planen, der ein XMLA-Skript oder ein SSIS-Paket mit XMLA enthält.<br /><br /> Es bestehen Anwendungsanforderungen zum Verwenden von XMLA. XMLA ist eine Schnittstelle, die keine verwaltete Codeumgebung erfordert. Sie können ein XMLA-Skript in einer Anwendung ausführen, die .NET Framework nicht verwendet.|[Erstellen von Analysis Services-Skripts in Management Studio](instances/create-analysis-services-scripts-in-management-studio.md)<br /><br /> [Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)<br /><br /> [Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent](instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)<br /><br /> [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)<br /><br /> [Invoke-ASCmd cmdlet (Invoke-ASCmd-Cmdlet)](/sql/analysis-services/powershell/invoke-ascmd-cmdlet)|  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1983600c3eccc389bbc0a3a8995957688c173a37
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62507764"
 ---
 # <a name="validate-subscription"></a>Abonnement überprüfen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "54135130"
   
  Wenn Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf eine Veröffentlichung klicken und dann auf **Alle Abonnements überprüfen**klicken, können Sie auch alle Abonnements einer Mergeveröffentlichung überprüfen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Datum der letzten versuchten Überprüfung**  
  Das Datum der letzten Merge-Agent-Sitzung, bei der Abonnements überprüft wurden. Der Erfolg der Überprüfung ist dabei nicht entscheidend.  
   

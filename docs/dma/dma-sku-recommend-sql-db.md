@@ -16,10 +16,10 @@ author: HJToland3
 ms.author: jtoland
 manager: jroth
 ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794315"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifizieren Sie das Recht Azure SQL-Datenbank/verwaltete Instanz SKU für Ihre lokale Datenbank

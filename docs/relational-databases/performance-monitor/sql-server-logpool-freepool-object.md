@@ -14,11 +14,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 9039285fa2911d87e19d4a22ec952eaf78811a0b
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380351"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649540"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQLServer, LogPool FreePool (Objekt)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Das Leistungsobjekt **SQLServer:LogPool FreePool** bietet Leistungsindikatoren f
 
 In der folgenden Tabelle werden die SQL Server-Leistungsobjekte für **LogPool FreePool** beschrieben.
 
-|**SQLServer LogPool FreePool (Leistungsindikatoren)**|Beschreibung|  
+|**SQLServer LogPool FreePool (Leistungsindikatoren)**|und Beschreibung|  
 |-------------|-----------------|  
 |**Auffüllungen freier Puffer/Sek.**|Die Anzahl der Puffer, die pro Sekunde zum Auffüllen zugeordnet werden.|
 |**Länge der Freiliste**|Die Länge der Freiliste.|

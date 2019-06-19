@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e20ed69a9fdff95914dd0d5086e3c0774421d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671720"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47599948"
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie dann auf **Konfigurationstools**, und klicken Sie dann auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager**.  
   
-2.  Erweitern Sie in der Konsolenstruktur des **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers** die Elemente **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration** und **Protokolle für \<Instanzname>**. Doppelklicken Sie dann auf **TCP/IP**.  
+2.  Erweitern Sie in der Konsolenstruktur des **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers** die Elemente **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration** und **Protokolle für \<Instanzname>** . Doppelklicken Sie dann auf **TCP/IP**.  
   
 3.  Im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **IP-Adressen** werden mehrere IP-Adressen im Format **IP1**, **IP2**und bis zu **IPAll**angezeigt. Eine dieser Angaben ist die IP-Adresse des Loopbackadapters (127.0.0.1). Für alle IP-Adressen, die auf dem Computer konfiguriert wurden, werden zusätzliche IP-Adressen angezeigt.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "47599948"
 10. Überprüfen Sie die Optionen auf der Seite **Aktion** . In diesem Beispiel verwenden Sie nicht die Firewall, um sichere Verbindungen zu gewährleisten. Klicken Sie daher auf **Verbindung zulassen**und anschließend auf **Weiter**.  
   
     > [!NOTE]  
-    >  Möglicherweise sind für die Umgebung sichere Verbindungen erforderlich. Wenn Sie eine der Optionen für sichere Verbindungen auswählen, müssen Sie möglicherweise ein Zertifikat und die Option **Verschlüsselung erzwingen** konfigurieren. Weitere Informationen zu sicheren Verbindungen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit der Datenbank-Engine &amp;#40;SQL Server Configuration Manager&amp;#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp; #40; SQL Server-Konfigurations-Manager &amp; #41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Möglicherweise sind für die Umgebung sichere Verbindungen erforderlich. Wenn Sie eine der Optionen für sichere Verbindungen auswählen, müssen Sie möglicherweise ein Zertifikat und die Option **Verschlüsselung erzwingen** konfigurieren. Weitere Informationen zu sicheren Verbindungen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit der Datenbank-Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)[Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine & #40; SQL Server-Konfigurations-Manager & #41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 11. Wählen Sie auf der Seite **Profil** mindestens ein Profil für die Regel aus. Wenn Sie mit Firewallprofilen nicht vertraut sind, klicken Sie im Firewallprogramm auf den Link **Weitere Informationen zu Profilen** .  
   
@@ -140,8 +140,8 @@ ms.locfileid: "47599948"
   
 9. Um die anderen IP-Adressen auf einem mehrfach vernetzten Computer zu konfigurieren, wiederholen Sie diesen Vorgang mit einer anderen IP-Adresse und einer anderen Regel.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [SQL Server-Browserdienst &amp;amp;#40;Datenbank-Engine und SSAS&amp;amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Verbindungsaufbau mit SQL Server über einen Proxyserver &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   
   

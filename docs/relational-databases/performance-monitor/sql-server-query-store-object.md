@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: aba8942612be6c7b33883bb109146170583b5b95
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380321"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649417"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, Abfragespeicherobjekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "53380321"
   
  In dieser Tabelle werden die **SQLServer:Abfragespeicher**-Leistungsindikatoren beschrieben.  
   
-|Leistungsindikatoren des SQL Server-Abfragespeichers|Beschreibung|  
+|Leistungsindikatoren des SQL Server-Abfragespeichers|und Beschreibung|  
 |-------------------------------------|-----------------|  
 |**CPU-Verwendung des Abfragespeichers**|Gibt die CPU-Nutzung durch Abfragespeicher an.|  
 |**Logische Lesevorgänge des Abfragespeichers**|Gibt die Anzahl der logischen Lesevorgänge an, die durch den Abfragespeicher vorgenommen werden.|  
@@ -37,7 +37,7 @@ ms.locfileid: "53380321"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Abfragespeicherinstanz|Beschreibung|  
+|Abfragespeicherinstanz|und Beschreibung|  
 |--------------------------|-----------------|  
 |**_Total**|Informationen für den Abfragespeicher für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |\<Name der Datenbank>|Abfragespeicherinformationen für diese Datenbank.|  

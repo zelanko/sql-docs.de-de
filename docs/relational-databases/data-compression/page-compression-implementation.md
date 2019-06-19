@@ -16,11 +16,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9256ecdba8aa898cc0eb927f90a2f4f6e6a6a6e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665643"
 ---
 # <a name="page-compression-implementation"></a>Implementierung von Seitenkomprimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "52516763"
   
  Wenn auf eine vorhandene Tabelle, die Daten enthält, Seitenkomprimierung angewendet wird, wird jede Seite neu erstellt und bewertet. Das Neuerstellen aller Seiten hat die Neuerstellung der Tabelle, des Indexes oder der Partition zur Folge.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)   
  [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)  
   

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639318"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bewährte Methoden für zeitbasierte Zeilenfilter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,9 +92,9 @@ GO
   
  Die Ereignisse für die nächste Woche sind nunmehr als replikationsbereit markiert. Wird der Merge-Agent das nächste Mal für das Abonnement ausgeführt, das der Ereigniskoordinator 112 verwendet, werden die Zeilen 2, 3 und 4 auf den Abonnenten heruntergeladen, und die Zeile 1 wird vom Abonnenten entfernt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [Implementieren von Aufträgen](../../../ssms/agent/implement-jobs.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

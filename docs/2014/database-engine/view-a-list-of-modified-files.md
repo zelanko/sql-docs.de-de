@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773428"
 ---
 # <a name="view-a-list-of-modified-files"></a>Anzeigen einer Liste geänderter Dateien
@@ -38,7 +38,7 @@ ms.locfileid: "62773428"
      **Kommentare**  
      Ordnet dem ausstehenden Eincheckvorgang einen Nur-Text-Kommentar zu. Für jede Version eines Projekts wird ein Kommentar erstellt und zugeordnet und in der Datenbank für die Quellcodeverwaltung gespeichert.  
   
-     **Optionen**  
+     **Options**  
      Gibt an, die Aktionen, die quellcodeverwaltung ausgeführt werden soll, wenn Sie auf die **Einchecken** Schaltfläche.  
   
     -   **Alle ausgecheckt lassen**  

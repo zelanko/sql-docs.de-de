@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070319"
 ---
 # <a name="lesson-3-rename-columns"></a>Lektion 3: Umbenennen von Spalten
@@ -26,7 +26,7 @@ ms.locfileid: "66070319"
  Geschätzte Zeit zum Abschließen dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  
+ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Umbenennen von Spalten  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66070319"
     |Dealer Price|Dealer Price|  
     |ModelName|Model Name|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|Description|  
+    |EnglishDescription|Beschreibung|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |Status|Product Status|  

@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 34ac4e4eac35a4086689e08c2f4c1eff9994ad0f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095618"
 ---
 # <a name="create-a-multiserver-environment"></a>Erstellen einer Multiserverumgebung
@@ -56,7 +56,7 @@ Beachten Sie die folgenden Punkte, wenn Sie eine Multiserverumgebung erstellen:
 ## <a name="related-tasks"></a>Related Tasks  
 In den folgenden Themen werden allgemeine Aufgaben zum Erstellen einer Multiserverumgebung beschrieben.  
   
-|Beschreibung|Thema|  
+|und Beschreibung|Thema|  
 |---------------|---------|  
 |Beschreibt, wie ein Masterserver erstellt wird.|[Einrichten eines Masterservers](../../ssms/agent/make-a-master-server.md)|  
 |Beschreibt, wie ein Zielserver erstellt wird.|[Erstellen eines Zielservers](../../ssms/agent/make-a-target-server.md)|  

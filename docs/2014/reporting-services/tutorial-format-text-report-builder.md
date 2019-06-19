@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098901"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatieren von Text (Berichts-Generator)
@@ -128,7 +128,7 @@ ms.locfileid: "66098901"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Klicken Sie auf „Ausführen“ (**!**), um die Abfrage auszuführen.  
+7.  Klicken Sie auf „Ausführen“ ( **!** ), um die Abfrage auszuführen.  
   
      Bei den Abfrageergebnissen handelt es sich um die Daten, die im Bericht angezeigt werden können.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66098901"
   
 1.  Auf der **einfügen** Menü klicken Sie auf **Tabelle**, und klicken Sie dann auf **Tabellenassistenten**.  
   
-2.  Auf der **wählen Sie ein Dataset** Seite des Assistenten neue Tabelle oder Matrix, klicken Sie auf **wählen Sie ein vorhandenes Dataset in diesem Bericht oder ein freigegebenes Dataset**, und klicken Sie auf **TextDataset (in diesem Bericht)**, und klicken Sie dann auf **Weiter**.  
+2.  Auf der **wählen Sie ein Dataset** Seite des Assistenten neue Tabelle oder Matrix, klicken Sie auf **wählen Sie ein vorhandenes Dataset in diesem Bericht oder ein freigegebenes Dataset**, und klicken Sie auf **TextDataset (in diesem Bericht)** , und klicken Sie dann auf **Weiter**.  
   
 3.  Auf der **Anordnen von Feldern** Seite, ziehen Sie die **Territory**, **LinkText**, und **Produkt** Felder **Zeilengruppen**, ziehen Sie die **Sales** Feld **Werte**, und klicken Sie dann auf **Weiter**.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "66098901"
   
 4.  Klicken Sie auf **Gehe zu URL**.  
   
-5.  In der **URL auswählen** auf **[URL]**, und klicken Sie dann auf **OK**.  
+5.  In der **URL auswählen** auf **[URL]** , und klicken Sie dann auf **OK**.  
   
 6.  Das Aussehen des Texts unterscheidet sich nicht. Es muss jedoch dem des Linktexts entsprechen.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66098901"
   
 7.  Auf der **Startseite** Registerkarte die **Absatz** auf die **mittleren** und **Center** Schaltflächen, um den Text in der Mitte der Zelle zu platzieren vertikal und horizontal.  
   
-8.  Klicken Sie auf (**!**).  
+8.  Klicken Sie auf ( **!** ).  
   
  Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von unten nach oben.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66098901"
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Klicken Sie auf „Ausführen“ (**!**), um eine Vorschau des Berichts anzuzeigen.  
+8.  Klicken Sie auf „Ausführen“ ( **!** ), um eine Vorschau des Berichts anzuzeigen.  
   
  Der Text im Textfeld wird als Überschrift, Absatz und Aufzählung angezeigt.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "66098901"
   
 5.  (Optional) Klicken Sie auf der Registerkarte **Stamm** in der Gruppe **Zahl** zweimal auf die Schaltfläche **Dezimalstellen verringern** , um volle Dollarbeträge ohne Centangaben anzuzeigen.  
   
-6.  Klicken Sie auf „Ausführen“ (**!**), um eine Vorschau des Berichts anzuzeigen.  
+6.  Klicken Sie auf „Ausführen“ ( **!** ), um eine Vorschau des Berichts anzuzeigen.  
   
  Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verbessert.  
   

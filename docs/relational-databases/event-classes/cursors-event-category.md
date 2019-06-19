@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c746a02b57e548735e534960a1ca63c075e8a00d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685901"
 ---
 # <a name="cursors-event-category"></a>Cursor-Ereigniskategorie
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47791112"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[CursorClose-Ereignisklasse](../../relational-databases/event-classes/cursorclose-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn (Application Programming Interface, Anwendungsprogrammierschnittstelle) das Schließen des Cursors bewirken.|  
 |[CursorExecute (Ereignisklasse)](../../relational-databases/event-classes/cursorexecute-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn das Ausführen des Cursors bewirken.|  
@@ -38,7 +38,7 @@ ms.locfileid: "47791112"
 |[CursorRecompile (Ereignisklasse)](../../relational-databases/event-classes/cursorrecompile-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn das erneute Kompilieren des Cursors bewirken.|  
 |[CursorUnprepare-Ereignisklasse](../../relational-databases/event-classes/cursorunprepare-event-class.md)|Beschreibt Ereignisse, die bei API-Cursorn die Aufhebung der Cursorvorbereitung bewirken.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   

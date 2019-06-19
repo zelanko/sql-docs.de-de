@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107639"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Speichern von Berichten auf einem Berichtsserver (Berichts-Generator)
@@ -25,7 +25,7 @@ ms.locfileid: "66107639"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>So speichern Sie einen Bericht auf einem Berichtsserver  
   
-1.  Klicken Sie über die Schaltfläche Berichts-Generator auf **Speichern**. Die **speichern**_\<Berichtselement\>_  Dialogfeld wird geöffnet.  
+1.  Klicken Sie über die Schaltfläche Berichts-Generator auf **Speichern**. Die **speichern** _\<Berichtselement\>_  Dialogfeld wird geöffnet.  
   
     > [!NOTE]  
     >  Wenn Sie einen Bericht erneut speichern, wird er automatisch am vorherigen Speicherort erneut gespeichert. Verwenden Sie die Option Speichern unter, um den Speicherort zu ändern.  
@@ -40,7 +40,7 @@ ms.locfileid: "66107639"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>So speichern Sie einen Bericht unter einem anderen Namen  
   
-1.  Klicken Sie auf die Schaltfläche "Berichts-Generator" und anschließend auf **Speichern unter**. Die **speichern**_\<Berichtselement\>_  Dialogfeld wird geöffnet.  
+1.  Klicken Sie auf die Schaltfläche "Berichts-Generator" und anschließend auf **Speichern unter**. Die **speichern** _\<Berichtselement\>_  Dialogfeld wird geöffnet.  
   
 2.  Wechseln Sie zu dem Speicherort auf dem Berichtsserver oder zu der Dateifreigabe, in der Sie den Bericht speichern möchten.  
   
