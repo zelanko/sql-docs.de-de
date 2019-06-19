@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcd7c0cf972a6744cf35ace20fb21dcbf7deb7f0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726490"
 ---
 # <a name="recordset-destination-custom-properties"></a>Benutzerdefinierte Eigenschaften des Recordsetziels
@@ -27,7 +27,7 @@ ms.locfileid: "65726490"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des Recordsetziels. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
 |VariableName|Zeichenfolge|Der Name der Variablen, die das ADO-Recordset enthält.|  
   

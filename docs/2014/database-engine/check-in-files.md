@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812584"
 ---
 # <a name="check-in-files"></a>Einchecken von Dateien
@@ -50,7 +50,7 @@ ms.locfileid: "62812584"
      **Name**  
      Zeigt die Namen der einzucheckenden Elemente an. Die Elemente werden mit einem aktivierten Kontrollkästchen neben dem Namen angezeigt. Wenn ein Element nicht eingecheckt werden soll, deaktivieren Sie das entsprechende Kontrollkästchen.  
   
-     **Optionen**  
+     **Options**  
      Zeigt die für das Quellcodeverwaltungs-Plug-In spezifischen Eincheckoptionen an, wenn Sie auf den Pfeil rechts neben der Schaltfläche klicken.  
   
      **Sort**  

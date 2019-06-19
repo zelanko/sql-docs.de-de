@@ -13,17 +13,17 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e5f746ed9aeea4356b619cff2439292d73384a7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9b9bf633e4014197dcf92d730806b669540f6403
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212479"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66777630"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** und **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
+  In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** und **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
   
 |Registerkarte|Kurze Beschreibung|  
 |---------|-----------------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "53212479"
  Geben Sie folgendermaßen die Listenereinstellungen für diese Verfügbarkeitsgruppe an:  
   
  **DNS-Name des Listeners**  
- Geben Sie den Netzwerknamen des Listeners an. Dieser Name muss in der Domäne eindeutig sein und kann nur alphanumerische Zeichen, Bindestriche (**-**) und Unterstriche (**_**) in beliebiger Reihenfolge enthalten. Wird der DNS-Name mit der Registerkarte **Listener** angegeben, kann er bis zu 15 Zeichen lang sein.  
+ Geben Sie den Netzwerknamen des Listeners an. Dieser Name muss in der Domäne eindeutig sein und kann nur alphanumerische Zeichen, Bindestriche ( **-** ) und Unterstriche ( **_** ) in beliebiger Reihenfolge enthalten. Wird der DNS-Name mit der Registerkarte **Listener** angegeben, kann er bis zu 15 Zeichen lang sein.  
   
 > [!IMPORTANT]  
 >  Wenn Sie einen ungültigen DNS-Listenernamen (oder eine ungültige Portnummer) auf der Registerkarte **Listener** eingeben, wird die Schaltfläche **Weiter** auf der Seite **Replikate angeben** deaktiviert.  
@@ -166,10 +166,10 @@ ms.locfileid: "53212479"
   
  Wenn **Statische IP** als Netzwerkmodus ausgewählt wird (Standardauswahl), werden in einem Raster die Spalten **Subnetz** und **IP-Adresse** sowie die zugehörigen Schaltflächen **Hinzufügen** und **Entfernen** angezeigt. Beachten Sie, dass das Raster leer ist, bis Sie das erste Subnetz hinzufügen.  
   
- Spalte**Subnetz**   
+ Spalte**Subnetz**  
  Zeigt die Subnetzadresse an, die Sie für alle Subnetze ausgewählt haben, die Sie für den Listener hinzugefügt haben.  
   
- Spalte**IP-Adresse**   
+ Spalte**IP-Adresse**  
  Zeigt die IPv4- oder IPv6-Adresse an, die Sie für ein bestimmtes Subnetz angegeben haben.  
   
  **Hinzufügen**  

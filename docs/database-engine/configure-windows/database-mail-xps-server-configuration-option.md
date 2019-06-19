@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2bd57caf166bc86cbd894d316cb62466f3324750
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: f350a5027957acba7e9e8689b8650bb545368030
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66767921"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs (Serverkonfigurationsoption)
 
@@ -68,5 +68,5 @@ BEGIN
 END
 ```
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)  

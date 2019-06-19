@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108808"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installieren des Reporting Services-Berichtsservers im einheitlichen Modus
@@ -83,7 +83,7 @@ ms.locfileid: "66108808"
   
 -   Das zur Ausführung des Setups verwendete Benutzerkonto muss Mitglied der lokalen Administratorgruppe sein und die Berechtigung zum Datenbankzugriff sowie zur Datenbankerstellung mithilfe der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz besitzen, die die Berichtsserver-Datenbanken hostet.  
   
--   Setup muss die Standardwerte für die URL-Reservierung verwenden können, mit denen auf den Berichtsserver und den Berichts-Manager zugegriffen wird. Zu diesen Werten gehören Port 80, ein starker Platzhalter und die Namen der virtuellen Verzeichnisse im Format **ReportServer_\<***Instanzname***>** und **Reports\<***_Instanzname***>**.  
+-   Setup muss die Standardwerte für die URL-Reservierung verwenden können, mit denen auf den Berichtsserver und den Berichts-Manager zugegriffen wird. Zu diesen Werten gehören Port 80, ein starker Platzhalter und die Namen der virtuellen Verzeichnisse im Format **ReportServer_\<***Instanzname***>** und **Reports\<***_Instanzname***>** .  
   
 -   Setup muss die Standardwerte für die Erstellung der Berichtsserver-Datenbanken verwenden können. Diese Werte lauten **ReportServer** und **ReportServerTempDB**. Wenn Sie über bestehende Datenbanken aus einer früheren Installation verfügen, wird das Setup blockiert, weil es den Berichtsserver nicht in der Standardkonfiguration für den einheitlichen Modus konfigurieren kann. Sie müssen die Datenbanken umbenennen, verschieben oder löschen, um die Blockierung des Setups aufzuheben.  
   
@@ -94,10 +94,10 @@ ms.locfileid: "66108808"
 ##  <a name="bkmk_defaultURLreservations"></a> Standard-URL-Reservierungen  
  URL-Reservierungen bestehen aus Präfix, Hostname, Port und virtuellem Verzeichnis:  
   
-|Teil|Description|  
+|Teil|Beschreibung|  
 |----------|-----------------|  
 |Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein SSL-Zertifikat (Secure Sockets Layer) installiert haben, versucht das Setup, die URL-Reservierungen mit dem Präfix HTTPS zu erstellen.|  
-|Hostname|Der Standardhostname ist ein Platzhalter (+). Es gibt an, dass der Berichtsserver jede HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen, die den Computer akzeptiert, einschließlich http://\<Computername > / Reportserver, http://localhost/reportserver, oder http://\<IP-Adresse > / ReportServer.|  
+|Hostname|Der Standardhostname ist ein Platzhalter (+). Es gibt an, dass der Berichtsserver jede HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen, die den Computer akzeptiert, einschließlich http://\<Computername > / Reportserver, http://localhost/reportserver , oder http://\< IP-Adresse > / ReportServer.|  
 |Port|Der Standardport ist 80. Hinweis: Wenn Sie einen anderen Port als Port 80 verwenden, müssen Sie diesen ausdrücklich der URL hinzufügen, wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webanwendung in einem Browserfenster öffnen.|  
 |Virtuelles Verzeichnis|Standardmäßig werden virtuelle Verzeichnisse im Format reportserver_ erstellt\<*Instance_name*> für die Berichtsserver-Webdienst und Reports_\<*Instance_name*> für Berichts-Manager. Beim Berichtsserver-Webdienst lautet der Standardname für das virtuelle Verzeichnis **reportserver**. Beim Berichts-Manager lautet der Standardname für das virtuelle Verzeichnis **reports**.|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66108808"
   
 -   http://+:80/reportserver bietet Zugriff auf den Berichtsserver.  
   
--   http://+:80/reports, bietet Zugriff zum Berichts-Manager.  
+-   http://+:80/reports , bietet Zugriff zum Berichts-Manager.  
   
 ##  <a name="bkmk_installwithwizard"></a> Installieren des einheitlichen Modus mit der SQL Server-Installations-Assistenten  
  Die folgende Liste beschreibt die  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -spezifischen Schritte und Optionen, die Sie im SQL Server-Installations-Assistenten auswählen. Die Liste beschreibt nicht jede im Installations-Assistenten angezeigte Seite. Es werden nur die auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bezogenen Seiten beschrieben, die Teil einer Installation im einheitlichen Modus sind.  

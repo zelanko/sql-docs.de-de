@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c188f7ba04162b3cd385606789c94e9c08354e4
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805247"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Überwachen der Ausführung von Paketen und anderen Vorgängen
@@ -140,7 +140,7 @@ ms.locfileid: "65805247"
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|Beschreibung|  
+|Abschnitt|und Beschreibung|  
 |-------------|-----------------|  
 |**Ausführungsinformationen**|Zeigt die Anzahl von Ausführungen an, die in den vergangenen 24 Stunden unterschiedliche Status (fehlerhaft, ausgeführt, erfolgreich, andere) aufgewiesen haben.|  
 |**Paketinformationen**|Zeigt die Gesamtanzahl der Pakete, die in den letzten 24 Stunden ausgeführt wurden.|  
@@ -154,7 +154,7 @@ ms.locfileid: "65805247"
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|Beschreibung|  
+|Abschnitt|und Beschreibung|  
 |-------------|-----------------|  
 |Filtern|Zeigt den aktuellen Filter an, der für den Bericht verwendet wird, z. B. der Startzeitraum.|  
 |Ausführungsinformationen|Zeigt die Startzeit, die Endzeit und die Dauer für jede Paketausführung an. Sie können eine Liste der Parameterwerte anzeigen, die bei einer Paketausführung verwendet wurden, z. B. Werte, die mit dem Task "Paket ausführen" an ein untergeordnetes Paket übergeben wurden. Um die Parameterliste anzuzeigen, klicken Sie auf "Übersicht".|  
@@ -168,7 +168,7 @@ ms.locfileid: "65805247"
   
  Der Bericht zeigt die folgenden Abschnitte von Informationen an.  
   
-|Abschnitt|Beschreibung|  
+|Abschnitt|und Beschreibung|  
 |-------------|-----------------|  
 |Filtern|Zeigt den aktuellen Filter an, der für den Bericht verwendet wird, z. B. Verbindungen mit einer angegebenen Zeichenfolge und dem Bereich **Uhrzeit des letzten Fehlers** .<br /><br /> Sie legen den Bereich **Uhrzeit des letzten Fehlers** fest, um lediglich Verbindungsfehler anzuzeigen, die während eines Datumsbereichs aufgetreten sind. Der Bereich kann mehrere Tage, Monate oder Jahre umfassen.|  
 |Details|Zeigt die Verbindungszeichenfolge, die Anzahl der Ausführungen, bei denen eine Verbindung nicht hergestellt werden konnte, und das Datum an, wann die Verbindung zuletzt nicht hergestellt werden konnte.|  

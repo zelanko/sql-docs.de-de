@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086833"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Abrufabfrage erstellen' (Analysis Services – Mehrdimensionale Daten)
-  Verwenden Sie das Dialogfeld **Abrufabfrage erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um im Dialogfeld **Speicheroptionen** auf der Registerkarte **Benachrichtigungen** eine Abrufabfrage zu erstellen. Eine Abrufabfrage ist normalerweise eine SINGLETON-Abfrage, die einen Wert zurückgibt, mit dessen Hilfe [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bestimmen kann, ob an Tabellen oder anderen relationalen Objekten Änderungen vorgenommen wurden. Klicken Sie zum Anzeigen des Dialogfelds **Abrufabfrage erstellen** in der Spalte **Abrufabfrage** des Rasters für die Option **Geplantes Abrufen** auf der Registerkarte **Benachrichtigungen** des Dialogfelds **Speicheroptionen** auf die Schaltfläche mit den Auslassungspunkten (**...**). Weitere Informationen zur Registerkarte **Benachrichtigungen** des Dialogfelds **Speicheroptionen** finden Sie unter [Benachrichtigungen &#40;Dialogfeld „Speicheroptionen“&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
+  Verwenden Sie das Dialogfeld **Abrufabfrage erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , um im Dialogfeld **Speicheroptionen** auf der Registerkarte **Benachrichtigungen** eine Abrufabfrage zu erstellen. Eine Abrufabfrage ist normalerweise eine SINGLETON-Abfrage, die einen Wert zurückgibt, mit dessen Hilfe [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bestimmen kann, ob an Tabellen oder anderen relationalen Objekten Änderungen vorgenommen wurden. Klicken Sie zum Anzeigen des Dialogfelds **Abrufabfrage erstellen** in der Spalte **Abrufabfrage** des Rasters für die Option **Geplantes Abrufen** auf der Registerkarte **Benachrichtigungen** des Dialogfelds **Speicheroptionen** auf die Schaltfläche mit den Auslassungspunkten ( **...** ). Weitere Informationen zur Registerkarte **Benachrichtigungen** des Dialogfelds **Speicheroptionen** finden Sie unter [Benachrichtigungen &#40;Dialogfeld „Speicheroptionen“&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
   
  Welcher Werttyp durch die Abrufabfrage zurückgegeben wird, ist von der Art des Updates abhängig, das für den mehrdimensionalen OLAP-Zwischenspeicher (MOLAP) für das Objekt geplant ist, das auf der Tabelle basiert, für die die Abfrage ausgeführt wird:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66086833"
  **Symbolleiste**  
  Mithilfe der Symbolleiste können Sie Datasets verwalten, Bereiche zur Anzeige auswählen und unterschiedliche Abfragefunktionen steuern.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Zum Standardabfrage-Generator wechseln**|Wählen Sie diese Option aus, um nur die Optionen anzuzeigen, die in der Sicht des Standardabfrage-Generators verfügbar sind. Es werden nur die folgenden Optionen angezeigt:<br /><br /> **SQL-Bereich**<br /><br /> **Ergebnisbereich**<br /><br /> **Symbolleiste**, nur mit den Schaltflächen **Zum VDT-Abfrage-Generator wechseln** und **Ausführen**<br /><br /> <br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **zum VDT-Abfrage-Generator** ausgewählt ist.|  
 |**Zum VDT-Abfrage-Generator wechseln**|Wählen Sie diese Option aus, um alle Optionen anzuzeigen, die in der Sicht VDT-Abfrage-Generator (Visual Database Tools) verfügbar sind.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **wechseln Sie zum Standardabfrage-Generator** ausgewählt ist.|  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5fecc4e8454842c059ecd74ca7da5e78135342c9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728431"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Arbeiten mit dem Oracle CDC Service
@@ -113,7 +113,7 @@ ms.locfileid: "65728431"
 |ref_count|Dieses Element zählt die Anzahl von Computern, auf denen der gleiche Oracle CDC Service installiert ist. Es wird mit jeder Hinzufügung des gleichnamigen Oracle CDC Service inkrementiert. Es wird entsprechend dekrementiert, wenn ein Dienst entfernt wird. Wenn der Indikator 0 (null) erreicht, wird diese Zeile gelöscht.|  
 |active_service_node|Der Name des Windows-Knotens, der den CDC-Dienst momentan behandelt. Wenn der Dienst ordnungsgemäß beendet wird, wird diese Spalte auf NULL festgelegt, um anzugeben, dass kein aktiver Dienst mehr vorhanden ist.|  
 |active_service_heartbeat|Dieses Element verfolgt den aktuellen CDC-Dienst, um zu ermitteln, ob er noch aktiv ist.<br /><br /> Dieses Element wird in regelmäßigen Abständen mit dem aktuellen Datenbankzeitstempel (UTC) für den aktiven CDC-Dienst aktualisiert. Das Standardintervall beträgt 30 Sekunden, aber Sie können diesen Wert anpassen.<br /><br /> Wenn ein ausstehender CDC-Dienst erkennt, dass der Takt nicht aktualisiert wurde, nachdem das konfigurierte Intervall verstrichen ist, versucht der ausstehende Dienst, die aktive CDC-Dienst-Rolle zu übernehmen.|  
-|options|Dieses Element gibt die sekundären Optionen an, z. B. Ablaufverfolgung oder Optimierung. Es hat die Form **name[=Wert][; ]**. Für die Zeichenfolge options wird die gleiche Semantik wie für die ODBC-Verbindungszeichenfolge verwendet. Wenn die Option ein boolescher Wert ist (ja/nein), kann der Wert nur den Namen enthalten.<br /><br /> Die Ablaufverfolgung (trace) hat die folgenden möglichen Werte.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<Klassenname>[,Klassenname>]**<br /><br /> <br /><br /> Der Standardwert ist **false**.<br /><br /> **service_heartbeat_interval** ist das Zeitintervall (in Sekunden), nach dem der Dienst die Spalte „active_service_heartbeat“ aktualisiert. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **service_config_polling_interval** ist das Abrufintervall (in Sekunden), nach dem der CDC-Dienst eine Überprüfung auf Konfigurationsänderungen durchführt. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **sql_command_timeout** ist das Befehlstimeout für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Standardwert ist **1**. Der Maximalwert ist **3600**.|  
+|options|Dieses Element gibt die sekundären Optionen an, z. B. Ablaufverfolgung oder Optimierung. Es hat die Form **name[=Wert][; ]** . Für die Zeichenfolge options wird die gleiche Semantik wie für die ODBC-Verbindungszeichenfolge verwendet. Wenn die Option ein boolescher Wert ist (ja/nein), kann der Wert nur den Namen enthalten.<br /><br /> Die Ablaufverfolgung (trace) hat die folgenden möglichen Werte.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<Klassenname>[,Klassenname>]**<br /><br /> <br /><br /> Der Standardwert ist **false**.<br /><br /> **service_heartbeat_interval** ist das Zeitintervall (in Sekunden), nach dem der Dienst die Spalte „active_service_heartbeat“ aktualisiert. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **service_config_polling_interval** ist das Abrufintervall (in Sekunden), nach dem der CDC-Dienst eine Überprüfung auf Konfigurationsänderungen durchführt. Der Standardwert ist **30**. Der Maximalwert ist **3600**.<br /><br /> **sql_command_timeout** ist das Befehlstimeout für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der Standardwert ist **1**. Der Maximalwert ist **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Gespeicherte Prozeduren der MSXDBCDC-Datenbank  
@@ -177,7 +177,7 @@ ms.locfileid: "65728431"
 ##  <a name="BKMK_CDCdatabase"></a> CDC-Datenbanken  
  Jede in einem CDC-Dienst verwendete Oracle CDC-Instanz ist einer bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zugeordnet, die als CDC-Datenbank bezeichnet wird. Diese [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank wird auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz gehostet, die dem Oracle CDC Service zugeordnet ist.  
   
- Die CDC-Datenbank enthält ein spezielles CDC-Schema. Der Oracle CDC Service verwendet dieses Schema in Verbindung mit Tabellennamen mit dem Präfix **xdbcdc_**. Dieses Schema wird zu Sicherheits- und Konsistenzzwecken verwendet.  
+ Die CDC-Datenbank enthält ein spezielles CDC-Schema. Der Oracle CDC Service verwendet dieses Schema in Verbindung mit Tabellennamen mit dem Präfix **xdbcdc_** . Dieses Schema wird zu Sicherheits- und Konsistenzzwecken verwendet.  
   
  Sowohl die Oracle CDC-Instanz als auch die CDC-Datenbanken werden mit der Oracle CDC Designer Console erstellt. Weitere Informationen zu den CDC-Datenbanken finden Sie in der Dokumentation, die im Installationsumfang der Oracle CDC Designer Console enthalten ist.  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66772229"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Konfiguration der PolyBase-Netzwerkkonnektivität (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -46,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@configname=** ] **'**_option\_name_**'**  
- Der Name einer Konfigurationsoption. *option_name* ist vom Datentyp **varchar(35)**. Der Standardwert ist NULL. Erfolgt keine Angabe, wird die gesamte Liste der Optionen zurückgegeben.  
+ [ **@configname=** ] **'** _option\_name_ **'**  
+ Der Name einer Konfigurationsoption. *option_name* ist vom Datentyp **varchar(35)** . Der Standardwert ist NULL. Erfolgt keine Angabe, wird die gesamte Liste der Optionen zurückgegeben.  
   
- [ **@configvalue=** ] **'**_value_**'**  
+ [ **@configvalue=** ] **'** _value_ **'**  
  Die neue Konfigurationseinstellung. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Maximalwert kann je nach Option unterschiedlich sein.  
   
  **'hadoop connectivity'**  
@@ -75,7 +75,7 @@ RECONFIGURE
   
 -   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 und 5.13 unter Linux  
   
--   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 und 3.0 unter Linux  
+-   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 unter Linux  
   
 -   Option 7: Hortonworks 2.1, 2.2 und 2.3 unter Windows Server  
   
@@ -92,13 +92,13 @@ RECONFIGURE
 ##  <a name="ResultSets"></a> Resultsets  
  Bei der Ausführung ohne Parameter gibt **sp_configure** ein Resultset mit fünf Spalten zurück.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
-|**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  
-|**maximum**|**int**|Der Höchstwert der Konfigurationsoption.|  
-|**config_value**|**int**|Mithilfe von **sp_configure**festgelegter Wert.|  
-|**run_value**|**int**|Von PolyBase aktuell verwendeter Wert. Dieser Wert wird durch Ausführen von RECONFIGURE festgelegt.<br /><br /> **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.<br /><br /> Bevor dieser Ausführungswert richtig ist, ist möglicherweise ein Neustart erforderlich, falls gerade eine Neukonfiguration ausgeführt wird.|  
+|**minimum**|**ssNoversion**|Der Mindestwert der Konfigurationsoption.|  
+|**maximum**|**ssNoversion**|Der Höchstwert der Konfigurationsoption.|  
+|**config_value**|**ssNoversion**|Mithilfe von **sp_configure**festgelegter Wert.|  
+|**run_value**|**ssNoversion**|Von PolyBase aktuell verwendeter Wert. Dieser Wert wird durch Ausführen von RECONFIGURE festgelegt.<br /><br /> **config_value** und **run_value** sind in der Regel gleich, sofern der Wert nicht gerade geändert wird.<br /><br /> Bevor dieser Ausführungswert richtig ist, ist möglicherweise ein Neustart erforderlich, falls gerade eine Neukonfiguration ausgeführt wird.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]müssen Sie nach der Ausführung von RECONFIGURE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]neu starten, damit der Ausführungswert von „hadoop connectivity“ wirksam wird.  
@@ -142,7 +142,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
