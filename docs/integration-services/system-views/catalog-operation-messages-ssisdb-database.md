@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a45ce170d7965ca8358dd6a442a25a67190651cb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714377"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB-Datenbank)
@@ -30,7 +30,7 @@ ms.locfileid: "65714377"
 
   Zeigt Meldungen an, die während der Vorgänge im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog protokolliert werden.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Der eindeutige Bezeichner (ID) der Meldung.|  
 |operation_id|**bigint**|Die eindeutige ID des Vorgangs.|  
@@ -45,7 +45,7 @@ ms.locfileid: "65714377"
   
  In dieser Sicht werden die folgenden Meldungstypen angezeigt:  
   
-|Wert von **message_type**|Beschreibung|  
+|Wert von **message_type**|und Beschreibung|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
 |120|Fehler|  
@@ -67,7 +67,7 @@ ms.locfileid: "65714377"
   
  In dieser Sicht werden die folgenden Meldungsquelltypen angezeigt:  
   
-|**message_source_type**|Beschreibung|  
+|**message_source_type**|und Beschreibung|  
 |-------------------------------|-----------------|  
 |10|Eintrag-APIs, z. B. T-SQL und gespeicherte CLR-Prozeduren|  
 |20|Externer Prozess, der verwendet wurde, um das Paket (ISServerExec.exe) auszuführen|  

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6bd29508a760421722a776aa3924c3866bee79f6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725741"
 ---
 # <a name="unpivot-transformation"></a>Entpivotierungstransformation
@@ -64,7 +64,7 @@ ms.locfileid: "65725741"
 > [!NOTE]  
 >  In diesem Thema wird die Verwendung der Optionen auf der Grundlage des in [Entpivotierungstransformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) beschriebenen Entpivotierungsszenarios veranschaulicht.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Geben Sie mithilfe der Kontrollkästchen die Spalten an, die in Zeilen neu angeordnet werden sollen.  
   

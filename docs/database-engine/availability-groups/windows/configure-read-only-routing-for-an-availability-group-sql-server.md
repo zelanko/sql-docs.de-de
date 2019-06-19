@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 405a8d9d63db1f295e4a4fd95ede4c5ff1950877
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66793657"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Konfigurieren des schreibgeschützten Routing für eine Always On-Verfügbarkeitsgruppe

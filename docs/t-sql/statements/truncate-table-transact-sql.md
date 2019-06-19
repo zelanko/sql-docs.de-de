@@ -27,10 +27,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82107dd0e4e5927eec1670a2a4e9fcf933ae35df
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503312"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -70,7 +70,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  Der Name des Schemas, zu dem die Tabelle gehört.  
   
  *table_name*  
- Der Name der Tabelle, die gekürzt werden soll oder aus der alle Zeilen entfernt werden. *table_name* muss ein Literal sein. *table_name* kann nicht die **OBJECT_ID()**-Funktion oder eine Variable sein.  
+ Der Name der Tabelle, die gekürzt werden soll oder aus der alle Zeilen entfernt werden. *table_name* muss ein Literal sein. *table_name* kann nicht die **OBJECT_ID()** -Funktion oder eine Variable sein.  
   
  WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658))

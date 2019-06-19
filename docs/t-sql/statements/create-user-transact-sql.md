@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae453fa3cc9d51fae7402469989c3a25fc782e1c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488313"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -177,7 +177,7 @@ CREATE USER user_name
  Gibt den Namen an, mit dem der Benutzer innerhalb dieser Datenbank identifiziert wird. *user_name* ist vom Datentyp **sysname**. Der Name kann bis zu 128 Zeichen lang sein. Wenn Sie einen Benutzer auf Basis eines Windows-Prinzipals erstellen, wird der Prinzipalname von Windows als Benutzername verwendet, es sei denn, ein abweichender Benutzername wird angegeben.  
   
  LOGIN *login_name*  
- Gibt die Anmeldung an, für die der Datenbankbenutzer erstellt wird. *login_name* muss ein gültiger Anmeldename im Server sein. Dies kann ein Anmeldename auf Basis eines Windows-Prinzipals (Benutzer oder Gruppe) oder ein Anmeldename mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung sein. Wird diese SQL Server-Anmeldung in die Datenbank eingetragen, erhält sie den Namen und die ID des Datenbankbenutzers, der erstellt wird. Verwenden Sie das Format **[**_\<domainName\>_**\\**_\<loginName\>_**]**, wenn Sie einen von einem Windows-Prinzipal zugeordneten Anmeldenamen erstellen. Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary).  
+ Gibt die Anmeldung an, für die der Datenbankbenutzer erstellt wird. *login_name* muss ein gültiger Anmeldename im Server sein. Dies kann ein Anmeldename auf Basis eines Windows-Prinzipals (Benutzer oder Gruppe) oder ein Anmeldename mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung sein. Wird diese SQL Server-Anmeldung in die Datenbank eingetragen, erhält sie den Namen und die ID des Datenbankbenutzers, der erstellt wird. Verwenden Sie das Format **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** , wenn Sie einen von einem Windows-Prinzipal zugeordneten Anmeldenamen erstellen. Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary).  
   
  Wenn CREATE USER die einzige Anweisung in einem SQL-Batch ist, unterstützt Windows Azure SQL-Datenbank die WITH LOGIN-Klausel. Wenn CREATE USER nicht die einzige Anweisung in einem SQL-Batch ist oder in dynamischem SQL-Code ausgeführt wird, wird die WITH LOGIN-Klausel nicht unterstützt.  
   
@@ -185,7 +185,7 @@ CREATE USER user_name
  Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten für diesen Datenbankbenutzer durchsucht wird.  
   
  '*windows_principal*'  
- Gibt den Windows-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *windows_principal* kann ein Windows-Benutzer oder eine Windows-Gruppe sein. Der Benutzer wird auch dann erstellt, wenn kein Anmeldename für *windows_principal* vorhanden ist. Wenn *windows_principal* beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht über einen Anmeldenamen verfügt, muss vom Windows-Prinzipal über die Mitgliedschaft in einer Windows-Gruppe mit einem Anmeldenamen eine Authentifizierung bei [!INCLUDE[ssDE](../../includes/ssde-md.md)] durchgeführt werden, oder die eigenständige Datenbank muss in der Verbindungszeichenfolge als Anfangskatalog angegeben sein. Verwenden Sie das Format **[**_\<domainName\>_**\\**_\<loginName\>_**]**, wenn Sie einen Benutzer aus einem Windows-Prinzipal erstellen. Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary). Benutzer auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt.
+ Gibt den Windows-Prinzipal an, für den der Datenbankbenutzer erstellt wird. *windows_principal* kann ein Windows-Benutzer oder eine Windows-Gruppe sein. Der Benutzer wird auch dann erstellt, wenn kein Anmeldename für *windows_principal* vorhanden ist. Wenn *windows_principal* beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht über einen Anmeldenamen verfügt, muss vom Windows-Prinzipal über die Mitgliedschaft in einer Windows-Gruppe mit einem Anmeldenamen eine Authentifizierung bei [!INCLUDE[ssDE](../../includes/ssde-md.md)] durchgeführt werden, oder die eigenständige Datenbank muss in der Verbindungszeichenfolge als Anfangskatalog angegeben sein. Verwenden Sie das Format **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** , wenn Sie einen Benutzer aus einem Windows-Prinzipal erstellen. Beispiele finden Sie unter [Syntaxzusammenfassung](#SyntaxSummary). Benutzer auf Grundlage von Active Directory-Benutzern sind auf Namen mit weniger als 21 Zeichen beschränkt.
   
  '*Azure_Active_Directory_principal*'  
  **Gilt für**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
@@ -259,7 +259,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF**]
   
  Durch die WITHOUT LOGIN-Klausel wird ein Benutzer erstellt, der keiner SQL Server-Anmeldung zugeordnet ist. Er kann als guest Verbindungen mit anderen Datenbanken herstellen. Dem Benutzer ohne Anmeldung können Berechtigungen zugewiesen werden, und wenn der Sicherheitskontext in einen Benutzer ohne Anmeldung geändert wird, erhalten die ursprünglichen Benutzer die Berechtigungen des Benutzers ohne Anmeldung. Siehe Beispiel [D: Erstellen und Verwenden eines Benutzers ohne Anmeldename](#withoutLogin).  
   
- Nur Benutzernamen, die Windows-Prinzipalen zugeordnet sind, können den umgekehrten Schrägstrich (**\\**) enthalten.
+ Nur Benutzernamen, die Windows-Prinzipalen zugeordnet sind, können den umgekehrten Schrägstrich ( **\\** ) enthalten.
   
  Mithilfe von CREATE USER kann kein guest-Benutzer erstellt werden, da der guest-Benutzer bereits in jeder Datenbank vorhanden ist. Sie können den guest-Benutzer durch Erteilen der CONNECT-Berechtigung aktivieren (siehe Beispiel):  
   

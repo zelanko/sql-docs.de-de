@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099127"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
@@ -108,7 +108,7 @@ ms.locfileid: "66099127"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Optional) Klicken Sie auf die Schaltfläche „Ausführen“ (**!**), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
+8.  (Optional) Klicken Sie auf die Schaltfläche „Ausführen“ ( **!** ), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
   
 9. Klicken Sie auf **Weiter**.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66099127"
   
 9. Mit der rechten Maustaste in den Titel der vertikalen Achse auf der Seite des Diagramms, und klicken Sie auf **Achsentiteleigenschaften**.  
   
-10. Ersetzen Sie den Text in die **Titeltext** Feld mit dem folgenden Text: **Gesamtumsatz (in Tausend)**. Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
+10. Ersetzen Sie den Text in die **Titeltext** Feld mit dem folgenden Text: **Gesamtumsatz (in Tausend)** . Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dce53a4b4ae5a64a898eec2b30921fe7a7f2e242
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404252"
 ---
 # <a name="lesson-10-create-partitions"></a>Lektion 10: Erstellen von Partitionen
@@ -30,7 +30,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
   
 #### <a name="to-create-partitions-in-the-factinternetsales-table"></a>Zum Erstellen von Partitionen in der Tabelle "factinternetsales"  
   
-1.  Erweitern Sie im tabellarischen Modell-Explorer **Tabellen**, mit der rechten Maustaste **"factinternetsales"** > **Partitionen**.  
+1.  Erweitern Sie im tabellarischen Modell-Explorer **Tabellen**, mit der rechten Maustaste **"factinternetsales"**  > **Partitionen**.  
   
 2.  Klicken Sie im Dialogfeld Partitions-Manager auf **Kopie**.  
   

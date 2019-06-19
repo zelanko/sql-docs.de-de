@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1307ae8e5fdc81a0c42d17899fb9ea0fa3a1e2f7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727891"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>Optionen für Anforderung für Verteilungsprofil für Spaltenlänge (Datenprofilerstellungs-Task)
@@ -76,7 +76,7 @@ ms.locfileid: "65727891"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **IgnoreLeadingSpaces**  
  Geben Sie an, ob führende Leerzeichen ignoriert werden sollen, wenn das Profil Zeichenfolgenwerte vergleicht. Der Standardwert für diese Option ist **False**.  
   

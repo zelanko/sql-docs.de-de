@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.openlocfilehash: e552b1392716625cd2ce3f7927a1554c25bdb8e4
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713396"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
@@ -148,7 +148,7 @@ Eine Verfügbarkeitsgruppe mit dem Clustertyp None haben ihre Replikate OS-Grenz
 
 Eine verteilte Verfügbarkeitsgruppe kann auch OS-Grenzen überschreiten. Die zugrunde liegende Verfügbarkeitsgruppen anhand der Regeln gebunden sind, für deren, z. B. eine, bei denen externe Konfiguration nur-Linux-, aber die Verfügbarkeitsgruppe, die sie hinzugefügt wurde mit einem WSFC konfiguriert werden konnte. Betrachten Sie das folgende Beispiel:
 
-![Hybrid Dist AG](./media/sql-server-linux-availability-group-overview/image2.png)
+![Hybrid-Dist-Verfügbarkeitsgruppe](./media/sql-server-linux-availability-group-overview/image2.png)
 
 <!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 100dbd947b8b5b8de340bfd45a4d2705a4b0d475
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726984"
 ---
 # <a name="data-viewer"></a>Daten-Viewer
@@ -29,7 +29,7 @@ ms.locfileid: "65726984"
 
   Wenn ein Pfad zu einem Daten-Viewer konfiguriert ist, zeigt dieser Daten-Viewer die Daten pufferweise an, während sie zwischen zwei Datenflusskomponenten fließen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Grüner Pfeil**  
  Klicken Sie auf den Pfeil, um die Daten des nächsten Puffers anzuzeigen. Wenn die Daten in einem einzigen Puffer verschoben werden können, ist diese Option nicht verfügbar.  
   

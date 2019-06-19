@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f05baa17bb09b5cafcd775160d2f585004d00b1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723826"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten
@@ -91,7 +91,7 @@ Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Specify 
 ## <a name="step-6---pick-the-table-to-copy"></a>Schritt 6: Auswählen der Tabelle, die kopiert werden soll
 Wählen Sie auf der nächsten Seite (**Quelltabellen und -sichten auswählen**) die Tabelle(n) aus, die Sie aus der Datenquelle kopieren möchten. Anschließend ordnen Sie jede ausgewählte Quelltabellen einer neuen oder vorhandenen Zieltabelle zu.
 
-In diesem Beispiel ist das **WizardWalkthrough$**-Arbeitsblatt in der **Quellspalte** standardmäßig einer neuen Tabelle mit demselben Namen im SQL Server-Ziel zugeordnet. (Die Excel-Arbeitsmappe enthält nur ein einziges Arbeitsblatt.)
+In diesem Beispiel ist das **WizardWalkthrough$** -Arbeitsblatt in der **Quellspalte** standardmäßig einer neuen Tabelle mit demselben Namen im SQL Server-Ziel zugeordnet. (Die Excel-Arbeitsmappe enthält nur ein einziges Arbeitsblatt.)
 -   Das Dollarzeichen ($) im Namen der Quelltabelle deutet auf ein Excel-Arbeitsblatt hin. (In Excel wird ein benannter Bereich nur mit seinem Namen dargestellt.)
 -   Der Stern auf dem Symbol der Zieltabelle deutet darauf hin, dass der Assistent eine neue Zieltabelle erstellen wird.
 

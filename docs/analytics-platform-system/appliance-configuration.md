@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63276050"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Checklisten für die Appliance Konfigurationen für Analytics Platform System
@@ -49,7 +49,7 @@ Die SQL Server PDW**Configuration Manager** (PDWCM) ist ein Tool für die Applia
   
 Verwendung **Configuration Manager** die folgenden Konfigurationsaufgaben ausführen.  
   
-|Konfigurationstask|Description|  
+|Konfigurationstask|Beschreibung|  
 |----------------------|---------------|  
 |Mit dem Namen der physischen Komponenten vertraut zu machen|[Physische Komponenten von PDW und Appliance Fabric &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |Launch SQL Server PDW Configuration Manager|[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)|  
