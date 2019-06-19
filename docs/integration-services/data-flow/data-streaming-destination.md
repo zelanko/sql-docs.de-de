@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727000"
 ---
 # <a name="data-streaming-destination"></a>Konfigurieren des Datenstreamingziels
@@ -61,7 +61,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="component-properties-tab"></a>Registerkarte „Komponenteneigenschaften“  
  Auf dieser Registerkarte können die folgenden Elemente bearbeitet werden:  
   
-|Feld|Beschreibung|  
+|Feld|und Beschreibung|  
 |-----------|-----------------|  
 |Name|Name der Datenstreamingziel-Komponente im Paket.|  
 |ValidateExternalMetadata|Gibt an, ob die Komponente zur Entwurfszeit mit externen Datenquellen überprüft wird. Ist diese Option auf „false“ festgelegt, wird die Überprüfung anhand externer Datenquellen bis zur Laufzeit verzögert.|  

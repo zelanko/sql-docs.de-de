@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93cd0c424a5173539eedfa4d53ac93fa04f5962c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100442"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio
@@ -45,7 +45,7 @@ ms.locfileid: "66100442"
   
 2.  Klicken Sie auf **Verbinden** , um die Liste der Servertypen anzuzeigen, und wählen Sie dann **Reporting Services**.  
   
-3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<Servername>[\\<Instanzname\>]*.  
+3.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<Servername>[\\<Instanzname\>]* .  
   
 4.  Wählen Sie den Authentifizierungstyp aus. Wenn Sie die Windows-Authentifizierung verwenden, müssen Sie die Verbindung mit Ihren Anmeldeinformationen herstellen. Wenn Sie die Standardauthentifizierung oder die Formularauthentifizierung auswählen, geben Sie das Konto und das Kennwort ein.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66100442"
   
 4.  Geben Sie für **Servername**einen Wert ein. Der einzugebende Wert ist abhängig vom Servermodus:  
   
-    -   Geben Sie für einen Berichtsserver im einheitlichen Modus den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<Servername>[\\<Instanzname\>]*.  
+    -   Geben Sie für einen Berichtsserver im einheitlichen Modus den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<Servername>[\\<Instanzname\>]* .  
   
     -   Bei einem Server, der im integrierten SharePoint-Modus ausgeführt wird, müssen Sie eine Verbindung mit der SharePoint-Website herstellen, mit der der Berichtsserver verbunden ist. Die Verbindung mit der SharePoint-Website ist notwendig, damit Sie die Berechtigungsebenen überprüfen können, mit denen der Berichtsserverinhalt und die Berichtsservervorgänge gesteuert werden. Sie können eine beliebige Site in der Siteauflistung angeben. Das folgende Beispiel veranschaulicht die Syntax: http://mysharepointsite.  
   

@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47a17c2802b9de56c567d4f12a2edcff84f1061
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726118"
 ---
 # <a name="export-column-transformation"></a>Transformation für das Exportieren von Spalten
@@ -79,7 +79,7 @@ ms.locfileid: "65726118"
 ## <a name="export-column-transformation-editor-columns-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Spalten)
   Auf der Seite **Spalten** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** können Sie die Spalten im Datenfluss angeben, die in Dateien extrahiert werden sollen. Sie können angeben, ob die Daten durch die Transformation für das Exportieren von Spalten an eine Datei angefügt werden, oder ob eine vorhandene Datei mit den Daten überschrieben wird.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Spalte extrahieren**  
  Wählen Sie Spalten aus der Liste der Eingabespalten aus, die Text- oder Bilddaten enthalten. Alle Zeilen sollten Definitionen für **Spalte extrahieren** und **Dateipfadspalte**aufweisen.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65726118"
 ## <a name="export-column-transformation-editor-error-output-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Transformations-Editor für das Exportieren von Spalten** geben Sie Optionen für die Fehlerbehandlung an.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Eingabe/Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an. Klicken Sie auf den Namen, um die Sicht zu erweitern und Spalten einzuschließen.  
   
