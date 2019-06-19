@@ -30,10 +30,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba1a50942233f44586be498306e2b58f6fa04223
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726100"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
@@ -108,7 +108,7 @@ ms.locfileid: "65726100"
 > [!NOTE]  
 >  Auf dem von der Verbindung angegebenen Server muss [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt werden. Die Transformation für Fuzzygruppierung erstellt temporäre Datenobjekte in tempdb, die so groß sein können wie die gesamte Eingabe der Transformation. Während die Transformation ausgeführt wird, werden Abfragen für diese temporären Objekte ausgegeben. Dadurch kann die Gesamtleistung des Servers beeinträchtigt werden.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Teilcache**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "65726100"
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Transformations-Editor für Fuzzygruppierung (Registerkarte Spalten)
   Mithilfe der Registerkarte **Spalten** des Dialogfelds **Transformations-Editor für Fuzzygruppierung** können Sie die Spalten angeben, die zum Gruppieren von Zeilen mit doppelten Werten verwendet werden sollen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Wählen Sie aus dieser Liste die Eingabespalten, mit denen Zeilen mit doppelten Werten gruppiert werden sollen.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "65726100"
  **Zahlen**  
  Gibt die Bedeutung führender und nachfolgender Zahlen beim Vergleichen der Spaltendaten an. Wenn beispielsweise führende Zahlen von Bedeutung sind, wird "123 Main Street" nicht mit "456 Main Street" gruppiert.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Neither**|Weder führende noch nachfolgende Zahlen sind von Bedeutung.|  
 |**Leading**|Nur führende Zahlen sind von Bedeutung.|  
@@ -165,7 +165,7 @@ ms.locfileid: "65726100"
 > [!NOTE]  
 >  Die **Exhaustive** - und **MaxMemoryUsage** -Eigenschaften der Transformation für Fuzzgruppierung sind im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, können jedoch mit dem Dialogfeld **Erweiterter Editor**festgelegt werden. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt Transformation für Fuzzgruppierung von [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Name der Eingabeschlüsselspalte**  
  Geben Sie den Namen einer Ausgabespalte an, die den eindeutigen Bezeichner für jede Eingabezeile enthält. Die **_key_in** -Spalte enthält einen für jede Zeile eindeutigen Wert.  
   

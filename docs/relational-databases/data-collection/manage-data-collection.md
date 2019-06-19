@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 023d0f1e720965725438682ce7df8b035d43620f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051806"
 ---
 # <a name="manage-data-collection"></a>Verwalten von Datensammlungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit dem Datensammler verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|und Beschreibung|  
 |--------------------|-----------------|  
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|Aktiviert den Datensammler.|  
 |[sp_syscollector_disable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)|Deaktiviert den Datensammler.|  
@@ -81,7 +81,7 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Sammlungssätzen verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|und Beschreibung|  
 |--------------------|-----------------|  
 |[sp_syscollector_run_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)|Führt bei Bedarf einen Sammlungssatz aus.|  
 |[sp_syscollector_start_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)|Startet einen Sammlungssatz.|  
@@ -95,7 +95,7 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Sammelelementen verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|und Beschreibung|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)|Erstellt ein Auflistelement.|  
 |[sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)|Löscht ein Sammelelement.|  
@@ -105,7 +105,7 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Sammlertypen verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|und Beschreibung|  
 |--------------------|-----------------|  
 |[sp_syscollector_create_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collector-type-transact-sql.md)|Erstellt einen Sammlertyp.|  
 |[sp_syscollector_update_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|Aktualisiert einen Sammlertyp.|  
@@ -115,7 +115,7 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die Sichten beschrieben, die Sie zum Abrufen von Konfigurationsinformationen und Ausführungsprotokolldaten verwenden können.  
   
-|Sichtname|Beschreibung|  
+|Sichtname|und Beschreibung|  
 |---------------|-----------------|  
 |[syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)|Ruft die Datensammlerkonfiguration ab.|  
 |[syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)|Ruft Informationen zum Sammelelement ab.|  
@@ -129,7 +129,7 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Konfigurieren des Zugriffs auf das Management Data Warehouse verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|und Beschreibung|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_warehouse_database_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)|Gibt den in der Verbindungszeichenfolge für das Management Data Warehouse definierten Datenbanknamen an.|  
 |[sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)|Gibt die in der Verbindungszeichenfolge für das Management Data Warehouse definierte Instanz an.|  
@@ -138,7 +138,7 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit der Konfiguration des Management Data Warehouse verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|und Beschreibung|  
 |--------------------|-----------------|  
 |[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|Erstellt einen Auflistungssnapshot im Management Data Warehouse.|  
 |[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|Aktualisiert die Datenquelle für die Datensammlung.|  
@@ -150,7 +150,7 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit Uploadpaketen verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|und Beschreibung|  
 |--------------------|-----------------|  
 |[sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)|Konfiguriert die Anzahl von Wiederholungen für Datenuploads.|  
 |[sp_syscollector_set_cache_directory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|Gibt eine temporäre Speicherung für Daten zwischen Uploadwiederholungen an.|  
@@ -159,14 +159,14 @@ ms.locfileid: "51666559"
   
  In der folgenden Tabelle werden die gespeicherten Prozeduren beschrieben, die Sie zum Arbeiten mit dem Ausführungsprotokoll der Datensammlung verwenden können.  
   
-|Name der Prozedur|Beschreibung|  
+|Name der Prozedur|und Beschreibung|  
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql.md)|Löscht Einträge des Sammlungssatzes aus dem Ausführungsprotokoll.|  
   
 ### <a name="functions"></a>Funktionen  
  In der folgenden Tabelle werden die Funktionen beschrieben, die Sie zum Abrufen von Ausführungs- und Überwachungsinformationen verwenden können.  
   
-|Funktionsname|Beschreibung|  
+|Funktionsname|und Beschreibung|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|Ruft [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Ausführungsprotokolldaten für ein bestimmtes Paket ab.|  
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|Ruft Ausführungsstatistiken für einen Sammlungssatz oder ein Paket ab. Diese Informationen umfassen Fehler, die protokolliert werden.|  

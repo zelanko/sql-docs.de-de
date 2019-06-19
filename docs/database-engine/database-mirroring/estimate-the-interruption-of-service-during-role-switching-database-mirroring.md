@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 574045de5626d3f573988b96dd3c40b3d08df03b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534091"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795464"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52534091"
  Die Failoverzeit setzt sich hauptsächlich aus der Zeit zusammen, die der frühere Spiegelserver benötigt, um ein Rollforward für Protokolle in der Wiederholungswarteschlange auszuführen, sowie einem kurzen zusätzlichen Zeitraum (weitere Informationen zur Verarbeitung von Protokolldatensätzen durch den Spiegelserver finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)). Informationen zum Schätzen der Failoverzeit finden Sie unter "Schätzen der Rollforwardrate für das Failover" weiter unten in diesem Thema.  
   
 > [!IMPORTANT]  
->  Wenn ein Failover während einer Transaktion auftritt, in der ein Index oder eine Tabelle erstellt und anschließend geändert wird, kann das Failover mehr Zeit als gewöhnlich in Anspruch nehmen.  So kann ein Failover während der folgenden Folge von Operationen die Failoverzeit verlängern: BEGIN TRANSACTION, CREATE INDEX in einer Tabelle und SELECT INTO für die Tabelle. Die Möglichkeit einer erhöhten Failoverzeit während einer solchen Transaktion bleibt bis zu ihrem Abschluss durch eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung bestehen.  
+>  Wenn ein Failover während einer Transaktion auftritt, in der ein Index oder eine Tabelle erstellt und anschließend geändert wird, kann das Failover mehr Zeit als gewöhnlich in Anspruch nehmen.  So kann ein Failover während des folgenden Ablaufs von Vorgängen die Failoverzeit verlängern:  BEGIN TRANSACTION, CREATE INDEX in einer Tabelle und SELECT INTO für die Tabelle. Die Möglichkeit einer erhöhten Failoverzeit während einer solchen Transaktion bleibt bis zu ihrem Abschluss durch eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung bestehen.  
   
 ### <a name="the-redo-queue"></a>Wiederholungswarteschlange  
  Um ein Rollforward für die Datenbank auszuführen, müssen die Protokolldatensätze angewandt werden, die sich derzeit in der Wiederholungswarteschlange auf dem Spiegelserver befinden. Die *Wiederholungswarteschlange* besteht aus den Protokolldatensätzen, die auf den Datenträger des Spiegelservers geschrieben wurden, für die aber noch kein Rollforward in der Spiegeldatenbank ausgeführt wurde.  
@@ -76,7 +76,7 @@ ms.locfileid: "52534091"
   
  ![Error detection and failover time (Fehlererkennung und Failoverzeit)](../../database-engine/database-mirroring/media/dbm-failovauto-time.gif "Error detection and failover time (Fehlererkennung und Failoverzeit)")  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Betriebsmodi der Datenbankspiegelung](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  

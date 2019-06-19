@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57ab14256d3c1e7c909b125e470fca06ef3e7808
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724457"
 ---
 # <a name="coding-a-custom-task"></a>Codieren eines benutzerdefinierten Tasks
@@ -168,7 +168,7 @@ End Class
   
  In der folgenden Tabelle sind die für den Task in der <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>-Methode bereitgestellten Parameter aufgeführt.  
   
-|Parameter|Beschreibung|  
+|Parameter|und Beschreibung|  
 |---------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Connections>|Enthält eine Auflistung von <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekten, die für den Task verfügbar sind.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Enthält die Variablen, die für den Task verfügbar sind. Die Tasks verwenden Variablen durch den VariableDispenser; die Tasks verwenden keine Variablen direkt. Der VariableDispenser sperrt und entsperrt Variablen und verhindert Deadlocks oder Überschreibungen.|  

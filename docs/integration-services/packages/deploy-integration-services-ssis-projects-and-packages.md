@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 97feadfea27ee4957e71940dbbf773e215e61418
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720051"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469653"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65720051"
 Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Legacy-Paketbereitstellung &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Mit diesem Bereitstellungsmodell konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] wurde das Modell zur Paketbereitstellung eingeführt, mit dem Sie Pakete in einem vorhandenen oder neuen Projekt bereitstellen können, ohne das gesamte Projekt bereitzustellen.  
+>  Das Projektbereitstellungsmodell wurde in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]eingeführt. Mit diesem Bereitstellungsmodell konnten Sie keine Pakete bereitstellen, ohne das gesamte Projekt bereitzustellen. In [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] wurde die Funktion für inkrementelle Paketbereitstellung eingeführt, mit der Sie ein oder mehrere Pakete bereitstellen können, ohne das gesamte Projekt bereitzustellen.  
 
 > [!NOTE]
 > In diesem Artikel wird beschrieben, wie Sie SSIS-Pakete allgemein und lokal bereitstellen. Sie können SSIS-Pakete auch auf folgenden Plattformen bereitstellen:
@@ -65,7 +65,7 @@ Weitere Informationen zum Legacy-Paketbereitstellungsmodell finden Sie unter [Le
 ## <a name="features-of-project-deployment-model"></a>Funktionen des Projektbereitstellungsmodells  
  In der folgenden Tabelle sind die Funktionen aufgeführt, die für Projekte, die nur für das Projektbereitstellungsmodell entwickelt wurden, verfügbar sind.  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |-------------|-----------------|  
 |Parameter|Ein Parameter gibt die Daten an, die von einem Paket verwendet werden. Sie können die Gültigkeit von Parametern Paketparametern und Projektparametern auf die Paketebene bzw. Projektebene beschränken. Parameter können in Ausdrücken oder Tasks verwendet werden. Wenn das Projekt im Katalog bereitgestellt wird, können Sie einen Literalwert für jeden Parameter zuweisen oder den Standardwert verwenden, der zur Entwurfszeit zugewiesen wurde. Statt eines Literalwerts kann auch auf eine Umgebungsvariable verwiesen werden. Umgebungsvariablenwerte werden zur Laufzeit der Paketausführung aufgelöst.|  
 |Umgebungen|Eine Umgebung ist ein Container für Variablen, auf die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten verwiesen werden kann. Jedes Projekt kann über mehrere Umgebungsverweise verfügen, aber eine einzelne Instanz der Paketausführung kann nur auf Variablen von einer einzelnen Umgebung verweisen. Umgebungen ermöglichen es Ihnen, die Werte zu organisieren, die Sie einem Paket zuweisen. Sie könnten z. B. Umgebungen mit den Namen "Entwicklung", "Test" und "Produktion" definieren.|  

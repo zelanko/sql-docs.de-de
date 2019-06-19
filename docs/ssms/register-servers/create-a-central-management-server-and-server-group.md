@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 38a26849e3055afa98f9934b1a5640b77fbb18c0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105292"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Erstellen eines zentralen Verwaltungsservers und einer Servergruppe
@@ -63,7 +63,7 @@ ms.locfileid: "65105292"
   
 4.  Geben Sie im Feld **Registrierter Server**einen Servernamen und ggf. eine Beschreibung ein.  
   
-5.  Prüfen oder ändern Sie auf der Registerkarte **Verbindungseigenschaften** die Netzwerk- und Verbindungseigenschaften. Weitere Informationen finden Sie unter [Verbinden mit SQL Server-Datenbank-Engine &amp;#40;Eigenschaftenseite Verbindung&amp;#41;](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a).  
+5.  Prüfen oder ändern Sie auf der Registerkarte **Verbindungseigenschaften** die Netzwerk- und Verbindungseigenschaften. Weitere Informationen finden Sie unter [Verbinden mit SQL Server-Datenbank-Engine &#40;Eigenschaftenseite Verbindung&#41;](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a).  
   
 6.  Klicken Sie auf **Testen**, um die Verbindung zu testen.  
   

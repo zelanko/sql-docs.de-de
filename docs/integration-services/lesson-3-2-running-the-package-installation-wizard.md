@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721975"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lektion 3-2: Ausführen des Paketinstallations-Assistenten
@@ -51,7 +51,7 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
   
 9. Klicken Sie auf der Seite Installationsordner auswählen auf **Durchsuchen**.  
   
-10. Erweitern Sie im Dialogfeld **Nach Ordner suchen** die Option **Arbeitsplatz** , und klicken Sie anschließend auf **Lokaler Datenträger (C:)**.  
+10. Erweitern Sie im Dialogfeld **Nach Ordner suchen** die Option **Arbeitsplatz** , und klicken Sie anschließend auf **Lokaler Datenträger (C:)** .  
   
 11. Klicken Sie auf **Neuen Ordner erstellen** , und ersetzen Sie den Standardnamen des neuen Ordners, **Neuer Ordner**, durch **DeploymentTutorialInstall**.  
   
@@ -70,14 +70,14 @@ In einer früheren Lektion haben Sie die Pakete des Lernprogramms so geändert, 
   
 16. Klicken Sie in der Liste **Konfigurationsdatei** auf **datatransferconfig.dtsconfig**, erweitern Sie Eigenschaft in der **Pfad** -Spalte des Felds **Konfigurationen** , und aktualisieren Sie die **Wert** -Spalte mit den folgenden Werten:  
   
-    |Eigenschaft|Wert|Aktualisierter Wert|  
+    |Eigenschaft|value|Aktualisierter Wert|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Klicken Sie in der Liste **Konfigurationsdatei** auf loadxmldataconfig.dtsconfig, erweitern Sie Eigenschaft in der **Pfad** -Spalte des Felds **Konfigurationen** , und aktualisieren Sie die **Wert** -Spalte mit den folgenden Werten:  
   
-    |Eigenschaft|Wert|Aktualisierter Wert|  
+    |Eigenschaft|value|Aktualisierter Wert|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Programme\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  

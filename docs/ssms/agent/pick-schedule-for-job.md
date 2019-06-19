@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce303fcf282a25515e87005ac9e8225e612e17fd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088855"
 ---
 # <a name="pick-schedule-for-job"></a>Zeitplan für Auftrag auswählen
@@ -31,7 +31,7 @@ ms.locfileid: "65088855"
 
 Wählen Sie in diesem Dialogfeld einen vorhandenen Zeitplan für den Auftrag des [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Verfügbare Zeitpläne**  
 Führt die verfügbaren Zeitpläne für diesen Auftrag auf. Weil ein Auftrag und ein Zeitplan denselben Besitzer haben müssen, enthält diese Liste nur Zeitpläne, die dem Besitzer des Auftrags gehören.  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 077ea12b10278be8a38a50f82b6b7e6873be5dab
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727088"
 ---
 # <a name="create-infosource-for-master-data"></a>InfoSource für Masterdaten erstellen
@@ -42,7 +42,7 @@ ms.locfileid: "65727088"
   
 5.  Wählen Sie im Dialogfeld **InfoSource erstellen** die Option **Masterdaten**aus, und klicken Sie dann auf **OK**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **InfoObject-Name**  
  Geben Sie den Namen des InfoObject ein, auf dem die neue InfoSource basieren soll.  
   

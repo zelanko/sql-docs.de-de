@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078459"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
@@ -126,7 +126,7 @@ ms.locfileid: "66078459"
   
      Beachten Sie, dass die **Mitarbeiter** und `Date` Cubedimensionen verknüpft sind, um die **Sales Quotas-und Sales Quotas 1** Measuregruppen durch reguläre Beziehungen. Beachten Sie außerdem, dass die **Sales Territory** -Cubedimension mit keiner dieser Measuregruppen verknüpft ist.  
   
-4.  Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die `Sales Quotas` Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
+4.  Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die `Sales Quotas` Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
 5.  Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66078459"
   
 10. Klicken Sie auf **OK**.  
   
-11. Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas 1** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
+11. Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** Dimension und die **Sales Quotas 1** Measuregruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
 12. Wählen Sie in der Liste **Beziehungstyp auswählen** die Option **Referenziert**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66078459"
   
      Umbenennen der **Bestelldatum** Cubedimension in `Date` erleichtert es Benutzern, ihre Rolle als primäre Datendimension in diesem Cube zu verstehen.  
   
-20. Klicken Sie auf die Schaltfläche zum Durchsuchen (**...** ) in der Zelle am Schnittpunkt der `Sales Quotas` Measuregruppe und der `Date` Dimension.  
+20. Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) in der Zelle am Schnittpunkt der `Sales Quotas` Measuregruppe und der `Date` Dimension.  
   
 21. Wählen Sie im Dialogfeld **Beziehung definieren** in der Liste **Beziehungstyp auswählen** den Eintrag **Regulär** aus.  
   

@@ -21,16 +21,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 002d4632dbe988fa29e25eb775afe5bd90ffdeea
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946396"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den ursprünglichen Ausgangswert (als **numeric**( **@@** MAXPRECISION,0)) zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht festgelegt wurde. Das Ändern des aktuellen Werts einer Identitätsspalte mit DBCC CHECKIDENT ändert nicht den Wert, der von dieser Funktion zurückgegeben wird.  
+  Gibt den ursprünglichen Ausgangswert (als **numeric**(**@@** MAXPRECISION,0)) zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht festgelegt wurde. Das Ändern des aktuellen Werts einer Identitätsspalte mit DBCC CHECKIDENT ändert nicht den Wert, der von dieser Funktion zurückgegeben wird.  
   
  ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e3ccbd04f8d940cbe2ae9ecce3243c8aa8021d33
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724070"
 ---
 # <a name="raising-events-in-the-script-task"></a>Auslösen von Ereignissen im Skripttask
@@ -39,7 +39,7 @@ ms.locfileid: "65724070"
   
  Um ein Ereignis auszulösen, ruft der Skripttask eine der Methoden auf, die von der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>-Eigenschaft verfügbar gemacht werden. In der folgenden Tabelle werden die Methoden aufgelistet, die von der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>-Eigenschaft verfügbar gemacht werden.  
   
-|Ereignis|Beschreibung|  
+|Ereignis|und Beschreibung|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>|Löst ein benutzerdefiniertes Ereignis im Paket aus.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>|Informiert das Paket über eine Fehlerbedingung.|  

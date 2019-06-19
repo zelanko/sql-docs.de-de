@@ -30,10 +30,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725813"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
@@ -190,7 +190,7 @@ ms.locfileid: "65725813"
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausdrucksextrahierung)
   Auf der Registerkarte **Ausdrucksextrahierung** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Textspalte mit dem zu extrahierenden Text angeben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen eine einzelne Textspalte aus, die für die Ausdrucksextrahierung verwendet wird.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "65725813"
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausschluss)
   Auf der Registerkarte **Ausschluss** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Verbindung mit einer Ausschlusstabelle einrichten und die Spalten mit den Ausschlussausdrücken angeben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Ausschlussausdrücke verwenden**  
  Geben Sie an, ob bei der Ausdrucksextrahierung bestimmte Ausdrücke ausgeschlossen werden sollen, indem eine Spalte mit Ausschlussausdrücken angegeben wird. Wenn Sie bestimmte Ausdrücke ausschließen möchten, müssen Sie folgende Quelleigenschaften angeben.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "65725813"
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Erweitert)
   Auf der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie Eigenschaften für die Extrahierung angeben, wie z. B. Häufigkeit, Länge und ob Wörter oder Ausdrücke extrahiert werden sollen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Nomen**  
  Gibt an, dass durch die Transformation nur einzelne Nomen extrahiert werden.  
   

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ba8cbd66c809e5d32448e1489f38d02ddadf921
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725125"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Numerische, Zeichenfolgen- und boolesche Literale
@@ -39,7 +39,7 @@ ms.locfileid: "65725125"
   
  In der folgenden Tabelle sind Suffixe für numerische Literale aufgeführt.  
   
-|Suffix|Beschreibung|  
+|Suffix|und Beschreibung|  
 |------------|-----------------|  
 |L oder l|Ein langes numerisches Literal.|  
 |U oder u|Ein numerisches Literal ohne Vorzeichen.|  
@@ -47,7 +47,7 @@ ms.locfileid: "65725125"
   
  In der folgenden Tabelle sind numerische Ausdruckselemente und deren reguläre Ausdrücke aufgeführt.  
   
-|Ausdruckselement|Regulärer Ausdruck|Beschreibung|  
+|Ausdruckselement|Regulärer Ausdruck|und Beschreibung|  
 |------------------------|------------------------|-----------------|  
 |Ziffern, ausgedrückt als D.|[0-9]|Eine beliebige Ziffer.|  
 |Wissenschaftliche Schreibweise, ausgedrückt als E.|[Ee][+-]?{D}+|e (Groß- oder Kleinbuchstabe), optional + oder -, und mindestens eine Ziffer gemäß der Definition in D.|  
@@ -57,7 +57,7 @@ ms.locfileid: "65725125"
   
  In der folgenden Tabelle sind gültige numerische Literale mithilfe der regulären Ausdruckssprache beschrieben.  
   
-|Regulärer Ausdruck|Beschreibung|  
+|Regulärer Ausdruck|und Beschreibung|  
 |------------------------|-----------------|  
 |{D}+{IS}|Ein integrales numerisches Literal mit mindestens einer Ziffer (D) und optional dem Suffix long und/oder unsigned (IS).  Beispiele: 457, 785u, 986L und 7945ul.|  
 |{D}+{E}{FS}|Ein integrales numerisches Literal mit mindestens einer Ziffer (D) in wissenschaftlicher Schreibweise und dem Suffix long oder float.  Beispiele: 4E8l, 13e-2f und 5E+L.|  
@@ -101,7 +101,7 @@ ms.locfileid: "65725125"
   
  Zeichenfolgen können andere Zeichen einschließen, die eine Escapesequenz erfordern. In der folgenden Tabelle sind Escapesequenzen für Zeichenfolgenliterale aufgeführt.  
   
-|Escapesequenz|Beschreibung|  
+|Escapesequenz|und Beschreibung|  
 |---------------------|-----------------|  
 |\a|Warnung|  
 |\b|Rücktaste|  

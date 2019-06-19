@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943685"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469639"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann:
 Bei *date* akzeptiert `DATEADD` einen Spaltenausdruck, einen Ausdruck, ein Zeichenfolgenliteral oder eine benutzerdefinierte Variable. Ein Zeichenfolgenliteralwert muss in ein **datetime**-Argument aufgelöst werden. Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden. Unter [Konfigurieren der Serverkonfigurationsoption „Umstellungsjahr für Angaben mit zwei Ziffern“](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) finden Sie weitere Informationen zu zweistelligen Jahreszahlen.
   
 ## <a name="return-types"></a>Rückgabetypen
-Der Datentyp des *date*-Arguments wird zum Datentyp des Rückgabewerts `DATEADD`, mit Ausnahme der *date*-Werte des Zeichenfolgenliterals. Bei einem Zeichenfolgenliteral gibt `DATEADD` einen **datetime**-Wert zurück. `DATEADD` löst einen Fehler aus, wenn die Staffelung des Zeichenfolgenliterals in Sekunden mehr als drei Dezimalstellen (,nnn) umfasst oder wenn das Zeichenfolgenliteral den Teil des Zeitzonenoffsets enthält.
+
+Der Datentyp des Rückgabewerts für diese Methode ist dynamisch. Der Rückgabetyp hängt von dem Argument ab, das für `date` angegeben wird. Wenn der Wert für `date` ein Zeichenfolgenliterale für ein Datum ist, gibt `DATEADD` einen **datetime** Wert zurück. Wenn für `date` ein anderer gültiger Eingabedatentyp angegeben wird, gibt `DATEADD` denselben Datentyp zurück. `DATEADD` löst einen Fehler aus, wenn die Staffelung des Zeichenfolgenliterals in Sekunden mehr als drei Dezimalstellen (,nnn) umfasst oder wenn das Zeichenfolgenliteral den Teil des Zeitzonenoffsets enthält.
   
 ## <a name="return-value"></a>Rückgabewert  
   

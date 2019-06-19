@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 73130efac268afb0d80cf144fb3f2bbcbe5efeba
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099254"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Speichern von Datenbankdiagrammen (Visual Database Tools)
@@ -28,7 +28,7 @@ Beim Speichern eines Datenbankdiagramms werden alle daran vorgenommenen Änderun
   
 ### <a name="to-save-the-database-diagram"></a>So speichern Sie das Datenbankdiagramm  
   
-1.  Wählen Sie im Menü **Datei** den Befehl **Speichern \<**_Tabellenname_**>** aus.  
+1.  Wählen Sie im Menü **Datei** den Befehl **Speichern \<** _Tabellenname_ **>** aus.  
   
 2.  Wenn es sich um ein neues Diagramm handelt, das zum ersten Mal gespeichert werden soll, wird das Dialogfeld **Speichern unter** geöffnet. Geben Sie einen Namen für das Diagramm ein.  
   

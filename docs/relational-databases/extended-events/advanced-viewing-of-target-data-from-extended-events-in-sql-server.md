@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 84c23f7518850b25e1216a7e380871fc6cb99888
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198347"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744134"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Erweiterte Ansicht von Zieldaten aus erweiterten Ereignissen in SQL Server
 
@@ -133,7 +133,7 @@ Die Option **Zieldaten anzeigen** zeigt die Daten an, die bisher erfasst wurden.
 
 Im Bereich **Objekt-Explorer** können Sie die Knoten erweitern und dann mit der rechten Maustaste auf folgende Optionen klicken:
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  >  *[Ihr_Zielknoten]*  > **Zieldaten anzeigen**.
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > *[Ihr_Zielknoten]* > **Zieldaten anzeigen**.
 
 
 Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt. Dies wird im folgenden Screenshot gezeigt.
@@ -153,7 +153,7 @@ Die Zieldaten werden in SSMS in einem Bereich im Registerkartenformat angezeigt.
 Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit anzeigen, so wie sie vom Ziel empfangen werden.
 
 
-- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  > **Livedaten anzeigen**.
+- **Verwaltung** > **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Livedaten anzeigen**.
 
 
 ![Ihre Sitzung > Livedaten anzeigen](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -161,7 +161,7 @@ Wenn Ihre Ereignissitzung aktiv ist, können Sie die Ereignisdaten in Echtzeit a
 
 Die Datenanzeige wird in einem von Ihnen angegebenen Intervall aktualisiert. Siehe **Maximale Verteilungslatenzzeit** unter:
 
-- **Erweiterte Ereignisse** > **Sitzungen** >  *[Ihre_Sitzung]*  > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**
+- **Erweiterte Ereignisse** > **Sitzungen** > *[Ihre_Sitzung]* > **Eigenschaften** > **Erweitert** > **Maximale Verteilungslatenzzeit**
 
 
 
@@ -321,3 +321,5 @@ Das Ereignis **query_post_execution_showplan** ermöglicht Ihnen die Anzeige des
 ## <a name="see-also"></a>Siehe auch
 
 [XELite: Plattformübergreifende Bibliothek zum Lesen von XEvents aus XEL-Dateien oder SQL-Livestreams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/) (Veröffentlicht: Mai 2019).
+
+[PowerShell-Cmdlet Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent) (Veröffentlicht: Juni 2019).

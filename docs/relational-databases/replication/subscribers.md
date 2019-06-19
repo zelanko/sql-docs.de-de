@@ -17,17 +17,17 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 508abbeac89bb374fbfb68e368e68988218e0e91
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521861"
 ---
 # <a name="subscribers"></a>Abonnenten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Geben Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten oder die Nichtabonnenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die ein Abonnent für die ausgewählte Veröffentlichung erhalten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Abonnenten**  
  Aktivieren Sie das Kontrollkästchen im Raster, um die zugehörige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle oder nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stammende Datenquelle als Abonnent für die auf der Seite **Veröffentlichung** ausgewählte Veröffentlichung zu aktivieren. Wenn der Abonnent nicht aufgeführt ist, klicken Sie auf **Abonnent hinzufügen** oder **SQL Server-Abonnenten hinzufügen**.  
   

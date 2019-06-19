@@ -1,7 +1,7 @@
 ---
 title: Übersicht über erweiterte Ereignisse (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 0ea8f2a0202793380d80c09694a2a844e6859af9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66744012"
 ---
 # <a name="extended-events-overview"></a>Übersicht über erweiterte Ereignisse
 
@@ -103,7 +103,10 @@ Durch Verwenden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] od
 |Beschreibt, wie Sie anhand von erweiterten Ereignissen mit der Ereignisablaufverfolgung für Windows die Systemaktivität überwachen.|[Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | Verwenden der Katalogsichten und dynamischen Verwaltungssichten für erweiterte Ereignisse | [SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
-  
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Codebeispiele können für Azure SQL-Datenbank abweichend sein.
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
@@ -111,4 +114,5 @@ Durch Verwenden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] od
  [Überwachen von Datenebenenanwendungen](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [Dynamische Verwaltungssichten für erweiterte Ereignisse](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Katalogsichten für erweiterte Ereignisse &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite: Plattformübergreifende Bibliothek zum Lesen von XEvents aus XEL-Dateien oder SQL-Livestreams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/) (Veröffentlicht: Mai 2019).  
+ [XELite: Plattformübergreifende Bibliothek zum Lesen von XEvents aus XEL-Dateien oder SQL-Livestreams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/) (Veröffentlicht: Mai 2019).   
+ [PowerShell-Cmdlet Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent) (Veröffentlicht: Juni 2019).

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc54a1f10345d342b536e049f8288f57708055c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726192"
 ---
 # <a name="data-mining-query-transformation"></a>Transformation für Data Mining-Abfragen
@@ -52,7 +52,7 @@ ms.locfileid: "65726192"
 ## <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Transformations-Editor für Data Mining-Abfragen (Registerkarte Miningmodell)
   Mithilfe der Registerkarte **Miningmodell** des Dialogfelds **Transformations-Editor für Data Mining-Abfragen** können Sie die Miningstruktur und deren Miningmodelle angeben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verbindung**  
  Wählen Sie mithilfe des Listenfelds eine vorhandene Analysis Services-Verbindung aus, oder erstellen Sie mit der Schaltfläche **Neu** wie nachstehend beschrieben eine neue Verbindung.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65726192"
 ## <a name="data-mining-query-transformation-editor-query-tab"></a>Transformations-Editor für Data Mining-Abfragen (Registerkarte Abfrage)
   Auf der Registerkarte **Abfrage** des Dialogfelds **Transformations-Editor für Data Mining-Abfragen** können Sie eine Vorhersageabfrage erstellen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Data Mining-Abfrage**  
  Geben Sie die DMX-Abfrage (Data Mining Extension, Data Mining-Erweiterung) direkt in das Textfeld ein.  
   

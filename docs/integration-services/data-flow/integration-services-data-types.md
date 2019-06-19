@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64fb0e9310230634c36ee0c1bca0cf9c89914bab
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726882"
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
@@ -37,7 +37,7 @@ ms.locfileid: "65726882"
   
  In der folgenden Tabelle sind die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen aufgeführt. Bei einigen der Datentypen in der Tabelle werden auch die für sie geltende Genauigkeit und die Anzahl der Dezimalstellen genannt. Weitere Informationen zu Genauigkeit und Dezimalstellen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-|Datentyp|Beschreibung|  
+|Datentyp|und Beschreibung|  
 |---------------|-----------------|  
 |DT_BOOL|Ein boolescher Wert.|  
 |DT_BYTES|Ein binärer Datenwert. Die Länge ist variabel, und die maximale Länge beträgt 8000 Bytes.|  

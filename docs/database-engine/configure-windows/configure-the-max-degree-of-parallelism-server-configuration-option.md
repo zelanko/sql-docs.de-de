@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00f2dd9628419bf517c683358bfae89d8625c702
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+manager: jroth
+ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65936360"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794136"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ Verwenden Sie ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] die folgenden
 
 ||||
 |----------------|-----------------|-----------------|
-|Server mit einzelnem NUMA-Knoten|Weniger als 16 logische Prozessoren|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren|
-|Server mit einzelnem NUMA-Knoten|Mehr als 16 logische Prozessoren|Sorgen Sie dafür, dass MAXDOP der Hälfte der logischen Prozessoren mit einem MAX-Wert von 16 entspricht.|
-|Server mit mehreren NUMA-Knoten|Weniger als 16 logische Prozessoren pro NUMA-Knoten|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren pro NUMA-Knoten|
+|Server mit einzelnem NUMA-Knoten|Weniger als oder gleich 8 logische Prozessoren|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren|
+|Server mit einzelnem NUMA-Knoten|Mehr als 8 logische Prozessoren|Belassen Sie MAXDOP bei 8|
+|Server mit mehreren NUMA-Knoten|Weniger als oder gleich 16 logische Prozessoren pro NUMA-Knoten|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren pro NUMA-Knoten|
 |Server mit mehreren NUMA-Knoten|Mehr als 16 logische Prozessoren pro NUMA-Knoten|Sorgen Sie dafür, dass MAXDOP der Hälfte der logischen Prozessoren pro NUMA-Knoten mit einem MAX-Wert von 16 entspricht.|
   
 > [!NOTE]
@@ -67,9 +67,9 @@ Verwenden Sie von **bis** die folgenden Richtlinien beim Konfigurieren des Serve
 
 ||||
 |----------------|-----------------|-----------------|
-|Server mit einzelnem NUMA-Knoten|Weniger als 8 logische Prozessoren|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren|
+|Server mit einzelnem NUMA-Knoten|Weniger als oder gleich 8 logische Prozessoren|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren|
 |Server mit einzelnem NUMA-Knoten|Mehr als 8 logische Prozessoren|Belassen Sie MAXDOP bei 8|
-|Server mit mehreren NUMA-Knoten|Weniger als 8 logische Prozessoren pro NUMA-Knoten|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren pro NUMA-Knoten|
+|Server mit mehreren NUMA-Knoten|Weniger als oder gleich 8 logische Prozessoren pro NUMA-Knoten|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren pro NUMA-Knoten|
 |Server mit mehreren NUMA-Knoten|Mehr als 8 logische Prozessoren pro NUMA-Knoten|Belassen Sie MAXDOP bei 8|
   
 ###  <a name="Security"></a> Sicherheit  

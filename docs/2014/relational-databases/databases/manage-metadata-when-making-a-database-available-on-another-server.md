@@ -35,10 +35,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917356"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz (SQL Server)
@@ -105,7 +105,7 @@ ms.locfileid: "62917356"
 ##  <a name="credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind in einem Datensatz gespeichert, in dem die Authentifizierungsinformationen enthalten sind, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich sind. Die meisten Anmeldeinformationen bestehen aus einem Windows-Anmeldenamen und -Kennwort.  
   
- Weitere Informationen zu diesem Feature finden Sie unter [Anmeldeinformationen &amp;#40;Datenbank-Engine&amp;#41;](../security/authentication-access/credentials-database-engine.md).  
+ Weitere Informationen zu diesem Feature finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../security/authentication-access/credentials-database-engine.md).  
   
 > [!NOTE]  
 >  Für Proxykonten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents werden Anmeldeinformationen verwendet. Die ID der von einem Proxykonto verwendeten Anmeldeinformationen kann anhand der [sysproxies](/sql/relational-databases/system-tables/dbo-sysproxies-transact-sql) -Systemtabelle festgestellt werden.  
@@ -125,7 +125,7 @@ ms.locfileid: "62917356"
  Wenn eine Datenbank auf einem anderen Computer wiederhergestellt wird, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename oder der Windows-Benutzer, der den Wiederherstellungsvorgang initiiert, automatisch zum Besitzer der neuen Datenbank. Nach dem Wiederherstellen der Datenbank kann der Systemadministrator oder der neue Datenbankbesitzer den Datenbankbesitz ändern.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> Verteilte Abfragen und Verbindungsserver  
- Verteilte Abfragen und Verbindungsserver werden für OLE DB-Anwendungen unterstützt. Verteilte Abfragen greifen auf Daten von mehreren heterogenen Datenquellen auf demselben oder auf unterschiedlichen Computern zu. Durch die Konfiguration von Verbindungsservern ist es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglich, Befehle für OLE DB-Datenquellen auf Remoteservern auszuführen. Weitere Informationen zu diesen Features finden Sie unter [Verbindungsserver &amp;#40;Datenbank-Engine&amp;#41;](../linked-servers/linked-servers-database-engine.md).  
+ Verteilte Abfragen und Verbindungsserver werden für OLE DB-Anwendungen unterstützt. Verteilte Abfragen greifen auf Daten von mehreren heterogenen Datenquellen auf demselben oder auf unterschiedlichen Computern zu. Durch die Konfiguration von Verbindungsservern ist es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglich, Befehle für OLE DB-Datenquellen auf Remoteservern auszuführen. Weitere Informationen zu diesen Features finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../linked-servers/linked-servers-database-engine.md).  
   
  [&#91;Nach oben&#93;](#information_entities_and_objects)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62917356"
   
  Um die automatische Entschlüsselung des Datenbank-Hauptschlüssels auf einer Serverinstanz zu ermöglichen, wird eine Kopie dieses Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Diese verschlüsselte Kopie wird sowohl in der Datenbank als auch in der **master**-Datenbank gespeichert. In der Regel wird die in **master** gespeicherte Kopie im Hintergrund aktualisiert, sobald der Hauptschlüssel geändert wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn beim Entschlüsseln ein Fehler auftritt, wird der Anmeldeinformationsspeicher von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Anmeldeinformationen des Hauptschlüssels durchsucht, die dieselbe Familien-GUID wie die Datenbank aufweisen, für die der Hauptschlüssel benötigt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind. Ein Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der OPEN MASTER KEY-Anweisung und eines Kennworts geöffnet werden.  
   
- Wird eine verschlüsselte Datenbank auf eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kopiert, auf dieser wiederhergestellt oder an diese angefügt, wird keine Kopie des vom Diensthauptschlüssels verschlüsselten Datenbank-Hauptschlüssels in der **master** -Datenbank der Zielserverinstanz gespeichert. Auf der Zielserverinstanz müssen Sie den Hauptschlüssel der Datenbank öffnen. Um den Hauptschlüssel zu öffnen, führen Sie die folgende Anweisung aus: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***Kennwort***"**. Es empfiehlt sich, anschließend die automatische Entschlüsselung des Datenbank-Hauptschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Durch diese ALTER MASTER KEY-Anweisung wird für die Serverinstanz eine Kopie des mit dem Diensthauptschlüssel verschlüsselten Datenbank-Hauptschlüssels bereitgestellt. Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Wird eine verschlüsselte Datenbank auf eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kopiert, auf dieser wiederhergestellt oder an diese angefügt, wird keine Kopie des vom Diensthauptschlüssels verschlüsselten Datenbank-Hauptschlüssels in der **master** -Datenbank der Zielserverinstanz gespeichert. Auf der Zielserverinstanz müssen Sie den Hauptschlüssel der Datenbank öffnen. Um den Hauptschlüssel zu öffnen, führen Sie die folgende Anweisung aus: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***Kennwort***"** . Es empfiehlt sich, anschließend die automatische Entschlüsselung des Datenbank-Hauptschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Durch diese ALTER MASTER KEY-Anweisung wird für die Serverinstanz eine Kopie des mit dem Diensthauptschlüssel verschlüsselten Datenbank-Hauptschlüssels bereitgestellt. Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Informationen zum Aktivieren der automatischen Entschlüsselung des Datenbank-Hauptschlüssels einer Spiegeldatenbank finden Sie unter [Einrichten einer verschlüsselten Spiegeldatenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   

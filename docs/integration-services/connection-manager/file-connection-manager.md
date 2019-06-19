@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8b2eb595f6c12d6ed1cb777ee4c36de957f96cf
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728289"
 ---
 # <a name="file-connection-manager"></a>Dateiverbindungs-Manager
@@ -39,7 +39,7 @@ ms.locfileid: "65728289"
   
  In der folgenden Tabelle sind die Werte von **FileUsageType**aufgeführt.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**0**|Der Dateiverbindungs-Manager verwendet eine vorhandene Datei.|  
 |**1**|Der Dateiverbindungs-Manager erstellt eine Datei.|  
@@ -76,11 +76,11 @@ ms.locfileid: "65728289"
   
  Weitere Informationen zum Dateiverbindungs-Manager finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verwendungstyp**  
  Geben Sie an, ob die Verbindung vom **Dateiverbindungs-Manager** zu einer vorhandenen Datei oder einem vorhandenen Ordner hergestellt werden soll, oder ob dafür eine neue Datei oder ein neuer Ordner erstellt werden soll.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |Datei erstellen|Erstellen Sie zur Laufzeit eine neue Datei.|  
 |Vorhandene Datei|Verwenden Sie eine vorhandene Datei.|  

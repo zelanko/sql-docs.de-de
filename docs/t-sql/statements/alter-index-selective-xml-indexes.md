@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b3f15837f71e920c7b604e95039c94fd3383b0f7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65504035"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (selektive XML-Indizes)
@@ -125,7 +125,7 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ]  
  Die Liste der von den zu indizierenden Pfaden verwendeten Namespaces. Weitere Informationen zur Syntax der WITH XMLNAMESPACES-Klausel finden Sie unter [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
  FOR **(** \<promoted_node_path_action_list> **)**  
@@ -135,7 +135,7 @@ identifier
   
 -   **Einen Pfad mit REMOVE entfernen.** Wenn Sie einen Pfad ENTFERNEN, geben Sie den Namen an, der dem Pfad bei seiner Erstellung zugewiesen wurde.  
   
- [WITH **(** \<index_options> **)**]  
+ [WITH **(** \<index_options> **)** ]  
  Sie können \<index_options> nur angeben, wenn Sie ALTER INDEX ohne die FOR-Klausel verwenden. Wenn Sie ALTER INDEX verwenden, um Pfade im Index hinzuzufügen oder sie daraus zu entfernen, sind die Indexoptionen keine gültigen Argumente. Informationen zu Indexoptionen finden Sie unter [CREATE XML INDEX &#40;Selective XML Indexes&#41; (CREATE XML INDEX (selektive XML-Indizes))](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Remarks  

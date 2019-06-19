@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 01a523c57399bb5d4a2ebf5a5d866bac3cb39e1c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795526"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Datenbankspiegelungs-Monitor (Seite Warnungen)
@@ -50,7 +50,7 @@ ms.locfileid: "66795526"
  Weitere Informationen finden Sie unter "Hinweise" weiter unten in diesem Thema.  
   
 ## <a name="remarks"></a>Remarks  
- Falls Informationen zum jetzigen Zeitpunkt für eine Serverinstanz nicht verfügbar sind, zeigen die Zellen der entsprechenden Spalte **Schwellenwert auf** einen grauen Hintergrund und Wasserzeichentext an. Wenn der Monitor nicht mit der Serverinstanz verbunden ist, zeigt das Raster in jeder Zelle, abhängig davon, ob es sich bei der Instanz um die Standardinstanz oder um eine benannte Instanz handelt, entweder **Nicht verbunden mit** _<SYSTEM_NAME>_ oder **Nicht verbunden mit** _<SYSTEM_NAME>_ **\\** _<Instanzname>_ an. Wenn der Monitor auf die Rückgabe einer Abfrage wartet, zeigt das Raster in jeder Zelle **Auf Daten wird gewartet...** an.  
+ Falls Informationen zum jetzigen Zeitpunkt für eine Serverinstanz nicht verfügbar sind, zeigen die Zellen der entsprechenden Spalte **Schwellenwert auf** einen grauen Hintergrund und Wasserzeichentext an. Wenn der Monitor nicht mit der Serverinstanz verbunden ist, zeigt das Raster in jeder Zelle, abhängig davon, ob es sich bei der Instanz um die Standardinstanz oder um eine benannte Instanz handelt, entweder **Nicht verbunden mit** _<SYSTEM_NAME>_ oder **Nicht verbunden mit** _<SYSTEM_NAME>_**\\**_<Instanzname>_ an. Wenn der Monitor auf die Rückgabe einer Abfrage wartet, zeigt das Raster in jeder Zelle **Auf Daten wird gewartet...** an.  
   
  Wenn Informationen verfügbar sind, zeigt die Zelle für jede Warnung entweder einen angegebenen Schwellenwert (und eine Maßeinheit) oder **Nicht aktiviert**an.  
   

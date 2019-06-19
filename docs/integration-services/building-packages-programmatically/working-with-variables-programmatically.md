@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 13543306533afaf22bbfd12a283d6a6a3e8bdef1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729250"
 ---
 # <a name="working-with-variables-programmatically"></a>Programmgesteuertes Arbeiten mit Variablen
@@ -167,7 +167,7 @@ End Module
   
  Die verfügbaren Systemvariablen sind je nach Containertyp unterschiedlich. Eine Liste der für Pakete, Container, Tasks und Ereignishandler verfügbaren Systemvariablen finden Sie unter [System Variables](../../integration-services/system-variables.md) (Systemvariablen).  
   
-## <a name="value"></a>Wert  
+## <a name="value"></a>value  
  Der Wert einer benutzerdefinierten Variablen kann ein Literal oder ein Ausdruck sein:  
   
 -   Wenn die Variable einen Literalwert enthalten soll, legen Sie den Wert seiner <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>-Eigenschaft fest.  

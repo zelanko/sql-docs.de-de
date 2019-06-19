@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560112"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744171"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [Senden Sie uns Ihr Feedback zur Hubseite der SQL-Dokumentation!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 Dieses Thema bietet detaillierte Informationen zu den von verschiedenen SQL Server 2017-Versionen unterstützten Funktionen. 
 
@@ -194,9 +196,9 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Resource Governor|Ja|Nein|Nein|Nein|Nein|  
 |Parallelverarbeitung für partitionierte Tabellen|Ja|Nein|Nein|Nein|Nein|
 |Mehrere FILESTREAM-Container|Ja|Ja|Ja|Ja|Ja|
-|NUMA-basierter und großer Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein|Nein|Nein|Nein|
+|NUMA-basierter Arbeitsspeicher für umfangreiche Seiten und Zuordnung von Pufferarrays|Ja|Nein|Nein|Nein|Nein|
 |Pufferpoolerweiterung|Ja|Ja|Nein|Nein|Nein|
-|Ressourcenkontrolle für E/A-Vorgänge|Ja|Nein|Nein|Nein|Nein|  
+|Ressourcengovernance für E/A-Vorgänge|Ja|Nein|Nein|Nein|Nein|  
 |Vorauslesen (Read-Ahead)|Ja|Nein|Nein|Nein|Nein|
 |Erweitertes Scannen|Ja|Nein|Nein|Nein|Nein|
 |Verzögerte Dauerhaftigkeit|Ja|Ja|Ja|Ja|Ja|

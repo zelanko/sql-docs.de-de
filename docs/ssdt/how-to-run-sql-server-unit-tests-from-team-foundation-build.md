@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099648"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Gewusst wie: Ausführen von SQL Server-Komponententests aus Team Foundation Build
@@ -115,7 +115,7 @@ Team Foundation Build erstellt standardmäßig eine Konfigurationsdatei aus der 
   
 3.  Klicken Sie mit der rechten Maustaste auf die Datei **Kopie von app.config**, und klicken Sie auf „Umbenennen“.  
   
-4.  Geben Sie _BuildComputer_**.sqlunitttest.config** ein, und drücken Sie die EINGABETASTE. Dabei entspricht *BuildComputer* dem Namen des Computers, auf dem der Build-Agent ausgeführt wird.  
+4.  Geben Sie _BuildComputer_ **.sqlunitttest.config** ein, und drücken Sie die EINGABETASTE. Dabei entspricht *BuildComputer* dem Namen des Computers, auf dem der Build-Agent ausgeführt wird.  
   
 5.  Doppelklicken Sie auf „*BuildComputer*.sqlunitttest.config“.  
   
@@ -274,7 +274,7 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 1.  Erweitern Sie im Team-Explorer erst den Teamprojektknoten und dann den Knoten Builds. Klicken Sie mit der rechten Maustaste auf die Builddefinition, die Sie ausführen möchten, und klicken Sie dann auf Neuen Build in Warteschlange.  
   
-    Das Dialogfeld **Build {**_TeamProjectName_**} zur Warteschlange hinzufügen** wird mit einer Liste aller vorhandenen Buildtypen angezeigt.  
+    Das Dialogfeld **Build {** _TeamProjectName_ **} zur Warteschlange hinzufügen** wird mit einer Liste aller vorhandenen Buildtypen angezeigt.  
   
 2.  Klicken Sie unter **Builddefinition** ggf. auf die neue Builddefinition.  
   

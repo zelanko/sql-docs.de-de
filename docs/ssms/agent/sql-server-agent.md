@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6788b27f4260905c18487866d22fe9434f34b5ff
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097549"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
@@ -131,7 +131,7 @@ Ein Subsystem ist ein vordefiniertes Objekt, das die für einen Auftragsschritt 
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert die in der folgenden Tabelle aufgeführten Subsysteme:  
   
-|Name des Subsystems|Beschreibung|  
+|Name des Subsystems|und Beschreibung|  
 |--------------|-----------|  
 |Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br />**Warnung:** Das ActiveX-Skriptsubsystem wird in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |Betriebssystem (**CmdExec**)|Ausführen eines ausführbaren Programms.|  
@@ -171,7 +171,7 @@ Falls Sie mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 Verwenden Sie für die ersten Schritte mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent die folgenden Aufgaben:  
   
-|Beschreibung|Thema|  
+|und Beschreibung|Thema|  
 |-----------|-----|  
 |Beschreibt, wie der SQL Server-Agent konfiguriert wird.|[Konfigurieren des SQL Server-Agents](../../ssms/agent/configure-sql-server-agent.md)|  
 |Beschreibt, wie der SQL Server-Agent-Dienst gestartet, beendet und angehalten wird.|[Starten, Beenden oder Anhalten des SQL Server-Agent-Diensts](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  

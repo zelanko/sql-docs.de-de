@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065458"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
@@ -141,7 +141,7 @@ idxServerCol
   
 -   Die Länge der optionalen abschließenden Bytesequenz  
   
- Jeder Aufruf von **Bcp_colfmt** gibt das Format für eine benutzerdateispalte an. Z. B. um die Standardeinstellungen für drei Spalten in einer Datendatei für die Benutzer mit fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](bcp-columns.md)**(5)**, und rufen dann **Bcp_colfmt** fünfmal, drei dieser Aufrufe Ihr bentuzerdefiniertes Format. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 und *CbIndicator*, *CbUserData*, und *CbUserDataTerm* auf 0 (null) SQL_VARLEN "_Data", und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
+ Jeder Aufruf von **Bcp_colfmt** gibt das Format für eine benutzerdateispalte an. Z. B. um die Standardeinstellungen für drei Spalten in einer Datendatei für die Benutzer mit fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](bcp-columns.md) **(5)** , und rufen dann **Bcp_colfmt** fünfmal, drei dieser Aufrufe Ihr bentuzerdefiniertes Format. Legen Sie für die verbleibenden zwei Aufrufe *eUserDataType* auf 0 und *CbIndicator*, *CbUserData*, und *CbUserDataTerm* auf 0 (null) SQL_VARLEN "_Data", und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
  Für *CbIndicator*, ein Wert von 8, um einen großen Werttyp anzugeben ist jetzt gültig. Wenn das Präfix für ein Feld angegeben wird, dessen entsprechende Spalte den neuen max-Typ aufweist, kann dafür nur 8 festgelegt werden. Weitere Informationen finden Sie unter [Bcp_bind](bcp-bind.md).  
   

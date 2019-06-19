@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: da2d50d1601567c15622350a461d32b2e21ebd37
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099503"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Warnungseigenschaften – Neue Warnung (Seite „Antwort“)
@@ -29,7 +29,7 @@ ms.locfileid: "65099503"
 
 Verwenden Sie diese Seite, um einen Auftrag, den Sie ausführen möchten, festzulegen und um eine Liste der Operatoren abzurufen, die bei einer [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnung benachrichtigt werden sollen.  
 
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Auftrag ausführen**  
 Aktiviert die Optionen **Auftragsliste**, **Neuer Auftrag** und **Auftrag anzeigen** .  
   

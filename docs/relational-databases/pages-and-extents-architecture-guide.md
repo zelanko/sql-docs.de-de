@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974369"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026961"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Handbuch zur Architektur von Seiten und Blöcken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,10 +109,10 @@ Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenstrukturen, die 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet zwei Arten von Zuordnungstabellen, um die Zuordnung von Blöcken zu erfassen: 
 
-- **Global Allocation Map (GAM)**   
+- **Global Allocation Map (GAM)**    
   GAM-Seiten zeichnen auf, welche Blöcke zugeordnet wurden. Jede GAM erfasst 64.000 Blöcke, was fast 4 GB an Daten entspricht. Die GAM verfügt über ein Bit für jeden Block in dem von ihr abgedeckten Intervall. Hat das Bit den Wert 1, ist der Block frei; hat das Bit den Wert 0, ist der Block zugeordnet. 
 
-- **Shared Global Allocation Map (SGAM)**   
+- **Shared Global Allocation Map (SGAM)**    
   SGAM-Seiten zeichnen auf, welche Blöcke zurzeit als gemischte Blöcke verwendet werden und über mindestens eine nicht verwendete Seite verfügen. Jede SGAM erfasst 64.000 Blöcke, was fast 4 GB an Daten entspricht. Die SGAM verfügt über ein Bit für jeden Block in dem von ihr abgedeckten Intervall. Wenn das Bit den Wert 1 hat, wird der Block als gemischter Block verwendet und verfügt über eine freie Seite. Wenn das Bit den Wert 0 hat, wird der Block nicht als gemischter Block verwendet, oder er wird als gemischter Block verwendet, aber alle seine Seiten werden verwendet. 
 
 Für jeden Block wird auf der Grundlage der aktuellen Verwendung eines der folgenden Bitmuster in der GAM oder der SGAM festgelegt. 
@@ -177,10 +177,10 @@ Ein neuer Block für eine Zuordnungseinheit wird nur dann von [!INCLUDE[ssDEnove
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet zwei interne Datenstrukturen zum Nachverfolgen von durch Massenkopiervorgänge geänderten Blöcken sowie von Blöcken, die seit der letzten vollständigen Sicherung geändert wurden. Diese Datenstrukturen beschleunigen differenzielle Sicherungen erheblich. Sie beschleunigen außerdem das Protokollieren von Massenkopiervorgängen, wenn eine Datenbank das Modell der massenprotokollierten Wiederherstellung verwendet. Ähnlich wie bei den GAM-Seiten (Global Allocation Map) und den SGAM-Seiten (Shared Global Allocation Map) handelt es sich bei diesen Strukturen um Bitmuster, wobei jedes Bit einen einzelnen Block darstellt. 
 
-- **Differential Changed Map (DCM)**   
+- **Differential Changed Map (DCM)**    
    DCM protokolliert die Blöcke, die seit der letzten Ausführung der `BACKUP DATABASE`-Anweisung geändert wurden. Falls das Bit für einen Block den Wert 1 besitzt, wurde der Block seit der letzten Ausführung der `BACKUP DATABASE`-Anweisung geändert. Falls das Bit den Wert 0 aufweist, wurde der Block nicht geändert. Differenzielle Sicherungen lesen nur die DCM-Seiten, um zu ermitteln, welche Blöcke geändert wurden. Dadurch wird die Anzahl an Seiten, die eine differenzielle Sicherung scannen muss, erheblich verringert. Die Dauer der Ausführung einer differenziellen Sicherung ist proportional zu der Anzahl an Blöcken, die seit der letzten Ausführung der BACKUP DATABASE-Anweisung geändert wurden, und nicht proportional zu der Gesamtgröße der Datenbank. 
 
-- **Bulk Changed Map (BCM)**   
+- **Bulk Changed Map (BCM)**    
    BCM protokolliert die Blöcke, die seit der letzten Ausführung der `BACKUP LOG`-Anweisung durch massenprotokollierte Vorgänge geändert wurden. Falls das Bit für einen Block den Wert 1 aufweist, wurde der Block seit der letzten Ausführung der `BACKUP LOG`-Anweisung durch einen massenprotokollierten Vorgang geändert. Falls das Bit den Wert 0 besitzt, wurde der Block nicht durch massenprotokollierte Vorgänge geändert. BCM-Seiten treten in allen Datenbanken auf, sind jedoch nur dann relevant, wenn die Datenbank das Modell der massenprotokollierten Wiederherstellung verwendet. Wenn bei diesem Wiederherstellungsmodell eine `BACKUP LOG`-Anweisung ausgeführt wird, scannt der Sicherungsvorgang die BCM-Seiten nach Blöcken, die geändert wurden. Diese Blöcke werden dann in die Protokollsicherung eingeschlossen. Dadurch können die massenprotokollierten Vorgänge wiederhergestellt werden, wenn die Datenbank aus einer Datenbanksicherung und einer Folge von Transaktionsprotokollsicherungen wiederhergestellt wird. BCM-Seiten sind in einer Datenbank, die das einfache Wiederherstellungsmodell verwendet, nicht relevant, da keine massenprotokollierten Vorgänge protokolliert sind. Sie sind in einer Datenbank, die das Modell der vollständigen Wiederherstellung verwendet, relevant, da bei diesem Wiederherstellungsmodell massenprotokollierte Vorgänge wie vollständig protokollierte Vorgänge behandelt werden. 
 
 Der Abstand zwischen DCM-Seiten und BCM-Seiten ist derselbe Abstand wie zwischen GAM- und SGAM-Seiten; 64.000 Blöcke. Die DCM- und BCM-Seiten befinden sich direkt hinter den GAM- und SGAM-Seiten in einer physischen Datei:

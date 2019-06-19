@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 680712fb2ac5b31484fc7650a8a4fab8047fc7af
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103274"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
@@ -72,7 +72,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  In der folgenden Tabelle werden die Schlüsselausdrücke beschrieben, die von dieser Rowset-Funktion zurückgegeben werden.  
   
-|Column_name|Typ|Description|  
+|Column_name|Typ|Beschreibung|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|Der Schlüsselausdruck, der zur Ähnlichkeit zwischen Quelldokument und übereinstimmendem Dokument beiträgt.|  
 |**score**|**REAL**|Ein relativer Wert für diesen Schlüsselausdruck in der Beziehung mit allen anderen Schlüsselausdrücken, die in den beiden Dokumenten ähnlich sind.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Gewichtung und 1,0 ein perfektes Ergebnis darstellt.|  

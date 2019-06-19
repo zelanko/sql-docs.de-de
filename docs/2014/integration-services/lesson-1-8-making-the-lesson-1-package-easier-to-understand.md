@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767592"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Schritt 8: Vereinfachen des Pakets aus Lektion 1 zu verstehen
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion 1
   Nachdem Sie nun die Konfiguration des Lektion 1-Pakets abgeschlossen haben, bietet es sich an, den Inhalt des Paketlayouts wieder in eine klare Anordnung zu bringen. Wenn die Formen in den Ablaufsteuerungs- und Datenflusslayouts beliebig groß oder nicht ausgerichtet oder gruppiert sind, lässt sich die Funktionsweise des Pakets möglicherweise schwerer nachvollziehen.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools werden Ihnen Tools bereitgestellt, mit denen Sie das Paketlayout schnell und problemlos formatieren können. Mit den bereitgestellten Formatierungsfunktionen können Sie u. a. die Größe von Formen anpassen, Formen ausrichten und die horizontalen und vertikalen Zwischenräume zwischen Formen ändern.  

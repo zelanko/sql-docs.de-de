@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728977"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
@@ -209,9 +209,9 @@ go
 ```  
   
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Abrufen weiterer Metadaten mit den Änderungsdaten  
- Obwohl die zuvor gezeigte vom Benutzer erstellte Tabellenwert-Funktion nur die **__$operation**-Spalte verwendet, gibt die **cdc.fn_cdc_get_net_changes_<Aufzeichnungsinstanz>**-Funktion für jede Änderungszeile vier Metadatenspalten zurück. Wenn Sie diese Werte in Ihrem Datenfluss verwenden möchten, können Sie diese als zusätzliche Spalten aus der Tabellenwert-Wrapperfunktion zurückgeben.  
+ Obwohl die zuvor gezeigte vom Benutzer erstellte Tabellenwert-Funktion nur die **__$operation**-Spalte verwendet, gibt die **cdc.fn_cdc_get_net_changes_<Aufzeichnungsinstanz>** -Funktion für jede Änderungszeile vier Metadatenspalten zurück. Wenn Sie diese Werte in Ihrem Datenfluss verwenden möchten, können Sie diese als zusätzliche Spalten aus der Tabellenwert-Wrapperfunktion zurückgeben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn beispielsweise bei einem Updatevorgang in der Quelltabelle zwei unterschiedliche Zeilen geändert werden, enthält die Änderungstabelle vier Zeilen (zwei mit den alten Werten und zwei mit den neuen Werten), die jeweils denselben **__$start_lsn** -Wert aufweisen.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  

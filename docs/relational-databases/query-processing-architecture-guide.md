@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161687"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462714"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -423,7 +423,7 @@ Der Ausführungsplan für gespeicherte Prozeduren und Trigger wird getrennt von 
 - **Abfrageausführungsplan**     
   Bei dem größten Teil des Ausführungsplans handelt es sich um eine eintrittsinvariante, schreibgeschützte Datenstruktur, die von einer beliebigen Anzahl von Benutzern verwendet werden kann. Man bezeichnet diesen Teil als Abfrageplan. Im Abfrageplan wird kein Benutzerkontext gespeichert. Im Arbeitsspeicher befinden sich immer nur eine oder zwei Kopien des Abfrageplans: eine Kopie für alle seriellen Ausführungen und eine weitere für alle parallelen Ausführungen. Die parallele Kopie deckt alle parallelen Ausführungen ab, und zwar unabhängig von ihrem Grad an Parallelität. 
 - **Ausführungskontext**     
-  Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z. B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
+  Jeder Benutzer, der die Abfrage zurzeit ausführt, verfügt über eine Datenstruktur mit den Daten, die für diese Ausführung spezifisch sind, z.B. Parameterwerte. Diese Datenstruktur wird als Ausführungskontext bezeichnet. Die Datenstrukturen des Ausführungskontexts werden wiederverwendet. Wenn ein Benutzer eine Abfrage ausführt und eine der Strukturen nicht verwendet wird, wird diese Struktur erneut initialisiert, und zwar diesmal mit dem Kontext für den neuen Benutzer. 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
@@ -728,6 +728,8 @@ Parameterwerte werden während der Kompilierung oder Neukompilierung für die fo
 -  Gespeicherte Prozeduren
 -  Abfragen, die über „sp_executesql“ übermittelt werden 
 -  Vorbereitete Abfragen
+
+Weitere Informationen zur Problembehandlung bei fehlerhafter Parameterermittlung finden Sie unter [Problembehandlung bei Abfragen mit parameterempfindlichem Abfrageausführungsplan](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues).
 
 > [!NOTE]
 > Für Abfragen, die den `RECOMPILE`-Hinweis verwenden, werden jeweils die Parameterwerte und aktuellen Werte der lokalen Variablen ermittelt. Die ermittelten Werte (der Parameter und lokalen Variablen) sind die, die an dem Ort direkt vor der Anweisung mit dem `RECOMPILE`-Hinweis vorhanden sind. Im Gegensatz dazu werden bei Parametern die Werte, die innerhalb des Batchaufrufs übermittelt werden, nicht geprüft.

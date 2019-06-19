@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff785052650e18bbd6f8763771c7a7495f10dcd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726863"
 ---
 # <a name="excel-source"></a>Excel-Quelle
@@ -78,7 +78,7 @@ ms.locfileid: "65726863"
  **Datenzugriffsmodus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |Tabelle oder Sicht|Ruft Daten aus einem Arbeitsblatt oder dem benannten Bereich einer Excel-Datei ab.|  
 |Variable für Tabellenname oder Sichtname|Geben Sie den Namen des Arbeitsblatts oder Bereichs in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -121,7 +121,7 @@ ms.locfileid: "65726863"
 ## <a name="excel-source-editor-columns-page"></a>Quellen-Editor für Excel (Seite Spalten)
   Mithilfe der Seite **Spalten** des Dialogfelds **Quellen-Editor für Excel** können Sie jeder externen (Quell-)Spalte eine Ausgabespalte zuordnen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "65726863"
 ## <a name="excel-source-editor-error-output-page"></a>Quellen-Editor für Excel (Seite Fehlerausgabe)
   Mithilfe der Seite **Fehlerausgabe** des Dialogfelds **Quellen-Editor für Excel** können Sie Fehlerbehandlungsoptionen auswählen und Eigenschaften für Fehlerausgabespalten festlegen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   

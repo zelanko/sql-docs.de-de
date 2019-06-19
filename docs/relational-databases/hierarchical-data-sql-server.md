@@ -1,7 +1,7 @@
 ---
 title: Hierarchische Daten (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/01/2017
+ms.date: 09/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,15 +19,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4cca30125bd6b8fb69893332924d18fbb461cd9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659480"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706915"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Der integrierte Datentyp **hierarchyid** vereinfacht das Speichern und Abfragen hierarchischer Daten. **hierarchyid** wird zum Darstellen von Strukturen, dem häufigsten Typ hierarchischer Daten, optimiert.  
   
  Hierarchische Daten sind definiert als Satz von Datenelementen, die durch hierarchische Beziehungen miteinander verbunden sind. Hierarchische Beziehungen sind vorhanden, wenn ein Datenelement einem anderen Element übergeordnet ist. Beispiele für die hierarchischen Daten, die im Allgemeinen in Datenbanken gespeichert werden:  
@@ -82,7 +84,7 @@ ms.locfileid: "51659480"
 ### <a name="parentchild"></a>Über- und untergeordnet  
  Beim Ansatz mit über- und untergeordneten Elementen enthält jede Zeile einen Verweis auf das übergeordnete Element. Im folgenden Beispiel wird eine typische Tabelle definiert, welche die über- und untergeordneten Zeilen einer Über-/Unterordnungsbeziehung enthält.  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
   
@@ -115,7 +117,7 @@ GO
   
      Wenn sich innere Knotenteilstrukturen häufig verschieben und die Leistung wichtig ist, jedoch die meisten Verschiebeoperationen auf einer wohldefinierten Ebene der Hierarchie stattfinden, sollten Sie erwägen, die höheren und niedrigeren Ebenen in zwei Hierarchien aufzuteilen. Dadurch beschränken sich alle Verschiebungen auf Blattebenen der höheren Hierarchie. Betrachten Sie beispielsweise eine Hierarchie der von einem Dienst gehosteten Websites. Websites enthalten viele auf hierarchische Weise angeordnete Seiten. Gehostete Sites können an einen anderen Ort innerhalb der Site-Hierarchie verschoben werden, jedoch werden die untergeordneten Seiten nur selten neu angeordnet. Dies könnte wie folgt dargestellt werden:  
   
-    ```  
+    ```sql
     CREATE TABLE HostedSites   
        (  
         SiteId hierarchyid, PageId hierarchyid  
@@ -137,7 +139,7 @@ GO
   
  Wenn eine Anwendung zum Beispiel mehrere Organisationen verfolgt, immer die gesamte Organisationshierarchie speichert und abruft sowie keine einzelne Organisation abfragt, dann könnte eine Tabelle der folgenden Form sinnvoll sein:  
   
-```  
+```sql
 CREATE TABLE XMLOrg   
     (  
     Orgid int,  
@@ -162,14 +164,14 @@ GO
   
      In einem Breitensuchindex sind alle einem Knoten untergeordneten Knoten zusammen angeordnet. Daher sind Breitensuchindizes besonders effizient bei der Abfrage von unmittelbar untergeordneten Elementen, etwa bei Abfragen des Typs "Ermittle alle Angestellten, die direkt diesem Manager berichten".  
   
- Ob Sie einen Tiefen- oder Breitensuchindex verwenden und welchen Sie (wenn überhaupt) als Gruppierungsschlüssel definieren, hängt von der relativen Wichtigkeit der oben genanten Abfragetypen ab sowie von der relativen Wichtigkeit von SELECT- gegenüber DML-Vorgängen. Ein ausführliches Beispiel zu Indizierungsstrategien finden Sie unter [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Ob Sie einen Tiefen- oder Breitensuchindex verwenden und welchen Sie (wenn überhaupt) als Gruppierungsschlüssel definieren, hängt von der relativen Wichtigkeit der oben genanten Abfragetypen ab sowie von der relativen Wichtigkeit von SELECT- gegenüber DML-Vorgängen. Ein ausführliches Beispiel zu Indizierungsstrategien finden Sie unter [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Erstellen von Indizes  
  Die Methode „GetLevel()“ kann verwendet werden, um eine Breitensuchreihenfolge zu erstellen. Im folgenden Beispiel werden sowohl Breitensuch- als auch Tiefensuchindizes erstellt:  
   
-```wmimof  
-USE AdventureWorks2012 ;   
+```sql
+USE AdventureWorks2012 ;   -- wmimof
 GO  
   
 CREATE TABLE Organization  
@@ -181,11 +183,11 @@ CREATE TABLE Organization
 GO  
   
 CREATE CLUSTERED INDEX Org_Breadth_First   
-ON Organization(OrgLevel,BusinessEntityID) ;  
+    ON Organization(OrgLevel,BusinessEntityID) ;  
 GO  
   
 CREATE UNIQUE INDEX Org_Depth_First   
-ON Organization(BusinessEntityID) ;  
+    ON Organization(BusinessEntityID) ;  
 GO  
 ```  
   
@@ -195,18 +197,20 @@ GO
 ### <a name="simple-example"></a>Einfaches Beispiel  
  Das folgende Beispiel wurde absichtlich einfach gehalten, um Ihnen die ersten Schritte zu erleichtern. Erstellen Sie zunächst eine Tabelle, in der einige geografischen Daten gespeichert werden sollen.  
   
-```  
+```sql
 CREATE TABLE SimpleDemo  
-(Level hierarchyid NOT NULL,  
-Location nvarchar(30) NOT NULL,  
-LocationType nvarchar(9) NULL);  
+(
+    Level hierarchyid NOT NULL,  
+    Location nvarchar(30) NOT NULL,  
+    LocationType nvarchar(9) NULL
+);
 ```  
   
  Fügen Sie nun Daten für einige Kontinente, Länder, Bundesstaaten und Städte ein.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES   
+    VALUES   
 ('/1/', 'Europe', 'Continent'),  
 ('/2/', 'South America', 'Continent'),  
 ('/1/1/', 'France', 'Country'),  
@@ -223,9 +227,9 @@ VALUES
   
  Wählen Sie die Daten aus, und fügen Sie eine Spalte hinzu, durch die die Daten für die Ebene (Level) in einen leicht verständlichen Textwert konvertiert werden. Mit dieser Abfrage wird das Ergebnis auch nach dem **hierarchyid** -Datentyp sortiert.  
   
-```  
+```sql
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *   
-FROM SimpleDemo ORDER BY Level;  
+    FROM SimpleDemo ORDER BY Level;  
 ```  
   
  [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
@@ -250,9 +254,9 @@ Converted Level  Level     Location         LocationType
   
  Fügen Sie eine weitere Zeile hinzu, und wählen Sie die Ergebnisse aus.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
+    VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
@@ -260,9 +264,9 @@ SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDE
   
  Auch in dieser Tabelle wurde die oberste Hierarchieebene `'/'`nicht verwendet. Sie wurde weggelassen, weil die Kontinente kein gemeinsames übergeordnetes Element aufweisen. Sie können den gesamten Planeten hinzufügen, falls Sie ein gemeinsames übergeordnetes Element benötigen.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/', 'Earth', 'Planet');  
+    VALUES ('/', 'Earth', 'Planet');  
 ```  
   
 ##  <a name="tasks"></a> Verwandte Aufgaben  
@@ -290,7 +294,7 @@ VALUES ('/', 'Earth', 'Planet');
 #### <a name="example-using-error-detection"></a>Beispiel für Fehlererkennung  
  Der Code im folgenden Beispiel berechnet den **EmployeeId** -Wert des neuen untergeordneten Elements, und spürt anschließend eine Schlüsselverletzung auf, worauf er zur Markierung **INS_EMP** zurückkehrt, um den **EmployeeId** -Wert für die neue Zeile neu zu berechnen:  
   
-```  
+```sql
 USE AdventureWorks ;  
 GO  
   
@@ -302,18 +306,18 @@ CREATE TABLE Org_T1
    ) ;  
 GO  
   
-CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId)  
+CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId);
 GO  
   
 CREATE PROCEDURE AddEmp(@mgrid hierarchyid, @EmpName nvarchar(50) )   
 AS  
 BEGIN  
-    DECLARE @last_child hierarchyid  
+    DECLARE @last_child hierarchyid;
 INS_EMP:   
     SELECT @last_child = MAX(EmployeeId) FROM Org_T1   
-    WHERE EmployeeId.GetAncestor(1) = @mgrid  
-INSERT Org_T1 (EmployeeId, EmployeeName)  
-SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName   
+        WHERE EmployeeId.GetAncestor(1) = @mgrid;
+    INSERT INTO Org_T1 (EmployeeId, EmployeeName)  
+        SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName;
 -- On error, return to INS_EMP to recompute @last_child  
 IF @@error <> 0 GOTO INS_EMP   
 END ;  
@@ -324,7 +328,7 @@ GO
 #### <a name="example-using-a-serializable-transaction"></a>Beispiel für eine serialisierbare Transaktion  
  Für den **Org_BreadthFirst** -Index stellt sicher, dass **@last_child** mittels einer Bereichssuche ermittelt wird. Zusätzlich zu anderen Fehlerfällen könnte eine Anwendung prüfen, ob eine Verletzung aufgrund doppelter Schlüssel darauf hindeutet, dass versucht wurde, mehrere Angestellte mit der gleichen ID einzufügen, weshalb **@last_child** neu berechnet werden muss. Im folgenden Code werden eine serialisierbare Transaktion und ein Breitensuchindex verwendet, um den neuen Knotenwert zu berechnen:  
   
-```  
+```sql
 CREATE TABLE Org_T2  
     (  
     EmployeeId hierarchyid PRIMARY KEY,  
@@ -351,7 +355,7 @@ END ;
   
  Im folgenden Code wird die Tabelle mit drei Zeilen aufgefüllt. Anschließend werden die Ergebnisse zurückgegeben:  
   
-```  
+```sql
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(hierarchyid::GetRoot(), 'David') ;  
 GO  
@@ -376,7 +380,7 @@ EmployeeId LastChild EmployeeName
 ###  <a name="BKMK_EnforcingTrees"></a> Durchsetzen einer Struktur  
  In den Beispielen oben wird veranschaulicht, wie eine Anwendung sicherstellen kann, dass eine Struktur gewahrt bleibt. Um eine Struktur mithilfe von Einschränkungen durchzusetzen, kann eine berechnete Spalte mit einer Fremdschlüsseleinschränkung für die Primärschlüssel-ID erstellt werden, die das übergeordnete Element jedes Knotens berechnet.  
   
-```  
+```sql
 CREATE TABLE Org_T3  
 (  
    EmployeeId hierarchyid PRIMARY KEY,  
@@ -396,17 +400,17 @@ GO
   
  Verwenden Sie den folgenden CLR-Code, um die Vorgänger aufzulisten und den kleinsten gemeinsamen Vorgänger zu ermitteln:  
   
-```  
+```csharp
 using System;  
 using System.Collections;  
 using System.Text;  
-using Microsoft.SqlServer.Server;  
-using Microsoft.SqlServer.Types;  
+using Microsoft.SqlServer.Server;  // SqlFunction Attribute
+using Microsoft.SqlServer.Types;   // SqlHierarchyId
   
 public partial class HierarchyId_Operations  
 {  
-    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]  
-    public static IEnumerable ListAncestors(SqlHierarchyId h)  
+    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]
+    public static IEnumerable ListAncestors(SqlHierarchyId h)
     {  
         while (!h.IsNull)  
         {  
@@ -414,14 +418,20 @@ public partial class HierarchyId_Operations
             h = h.GetAncestor(1);  
         }  
     }  
-    public static void FillRow_ListAncestors(Object obj, out SqlHierarchyId ancestor)  
+    public static void FillRow_ListAncestors(
+        Object obj,
+        out SqlHierarchyId ancestor
+        )
     {  
         ancestor = (SqlHierarchyId)obj;  
     }  
   
-    public static HierarchyId CommonAncestor(SqlHierarchyId h1, HierarchyId h2)  
+    public static HierarchyId CommonAncestor(
+        SqlHierarchyId h1,
+        HierarchyId h2
+        )  
     {  
-        while (!h1.IsDescendant(h2))  
+        while (!h1.IsDescendantOf(h2))  
             h1 = h1.GetAncestor(1);  
   
         return h1;  
@@ -431,9 +441,9 @@ public partial class HierarchyId_Operations
   
  Um die Methoden **ListAncestor** und **CommonAncestor** in den folgenden [!INCLUDE[tsql](../includes/tsql-md.md)] -Beispielen verwenden zu können, müssen Sie die DLL und die **HierarchyId_Operations** -Assembly in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erstellen, indem Sie Code ähnlich dem folgenden ausführen:  
   
-```  
+```sql
 CREATE ASSEMBLY HierarchyId_Operations   
-FROM '<path to DLL>\ListAncestors.dll'  
+    FROM '<path to DLL>\ListAncestors.dll';
 GO  
 ```  
   
@@ -443,7 +453,7 @@ GO
   
  Verwenden von [!INCLUDE[tsql](../includes/tsql-md.md)]:  
   
-```  
+```sql
 CREATE FUNCTION ListAncestors (@node hierarchyid)  
 RETURNS TABLE (node hierarchyid)  
 AS  
@@ -453,7 +463,7 @@ GO
   
  Beispiel für die Verwendung:  
   
-```  
+```sql
 DECLARE @h hierarchyid  
 SELECT @h = OrgNode   
 FROM HumanResources.EmployeeDemo    
@@ -470,7 +480,7 @@ GO
 ###  <a name="lowestcommon"></a> Ermitteln des kleinsten gemeinsamen Vorgängers  
  Erstellen Sie mithilfe der oben definierten **HierarchyId_Operations** -Klasse die folgende [!INCLUDE[tsql](../includes/tsql-md.md)] -Funktion, die den kleinsten gemeinsamen Vorgänger zweier Knoten in einer Hierarchie ermittelt:  
   
-```  
+```sql
 CREATE FUNCTION CommonAncestor (@node1 hierarchyid, @node2 hierarchyid)  
 RETURNS hierarchyid  
 AS  
@@ -480,16 +490,16 @@ GO
   
  Beispiel für die Verwendung:  
   
-```  
-DECLARE @h1 hierarchyid, @h2 hierarchyid  
+```sql
+DECLARE @h1 hierarchyid, @h2 hierarchyid;
   
 SELECT @h1 = OrgNode   
 FROM  HumanResources.EmployeeDemo   
-WHERE LoginID = 'adventure-works\jossef0' -- Node is /1/1/3/  
+WHERE LoginID = 'adventure-works\jossef0'; -- Node is /1/1/3/  
   
 SELECT @h2 = OrgNode   
 FROM HumanResources.EmployeeDemo    
-WHERE LoginID = 'adventure-works\janice0' -- Node is /1/1/5/2/  
+WHERE LoginID = 'adventure-works\janice0'; -- Node is /1/1/5/2/  
   
 SELECT OrgNode.ToString() AS LogicalNode, LoginID   
 FROM HumanResources.EmployeeDemo    
@@ -502,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
 ###  <a name="BKMK_MovingSubtrees"></a> Verschieben von Teilstrukturen  
  Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Die Prozedur unten macht die Teilstruktur **@oldMgr** (einschließlich **@oldMgr**) zu einer Teilstruktur von **@newMgr**bedeutend schneller.  
   
-```  
+```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
 AS  
 BEGIN  
@@ -520,15 +530,15 @@ UPDATE HumanResources.EmployeeDemo
 SET OrgNode = OrgNode.GetReparentedValue(@nold, @nnew)  
 WHERE OrgNode.IsDescendantOf(@nold) = 1 ;  
   
-COMMIT TRANSACTION  
+COMMIT TRANSACTION;
 END ;  
 GO  
 ```  
   
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [hierarchyid-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

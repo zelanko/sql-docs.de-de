@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 257f4ebaba273ad465c259a9bdd633e6513cda53
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726954"
 ---
 # <a name="dimension-processing-destination"></a>Ziel für Dimensionsverarbeitung
@@ -61,7 +61,7 @@ ms.locfileid: "65726954"
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Verbindungs-Manager)
   Geben Sie im Dialogfeld **Ziel-Editor für Dimensionsverarbeitung** auf der Seite **Verbindungs-Manager** eine Verbindung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt oder einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]an.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Connection manager**  
  Wählen Sie einen vorhandenen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65726954"
  **Verarbeitungsmethode**  
  Wählen Sie die Verarbeitungsmethode aus, die auf die in der Liste ausgewählte Dimension angewendet werden soll. Der Standardwert für diese Option ist **Vollständig**.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**Hinzufügen (inkrementell)**|Führt eine inkrementelle Verarbeitung der Dimension aus.|  
 |**Vollständig**|Führt eine vollständige Verarbeitung der Dimension aus.|  
@@ -83,7 +83,7 @@ ms.locfileid: "65726954"
 ## <a name="dimension-processing-destination-editor-mappings-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Zuordnungen)
   Auf der Seite **Zuordnungen** des Dialogfelds **Ziel-Editor für Dimensionsverarbeitung** können Sie eine Zuordnung von Eingabe- zu Dimensionsspalten vornehmen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -99,14 +99,14 @@ ms.locfileid: "65726954"
 ## <a name="dimension-processing-destination-editor-advanced-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Erweitert)
   Verwenden Sie zum Konfigurieren der Fehlerbehandlung die Seite **Erweitert** im Dialogfeld **Ziel-Editor für Dimensionsverarbeitung** .  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Standardfehlerkonfiguration verwenden**  
  Gibt an, ob die Standardfehlerbehandlung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet werden soll. Standardmäßig ist dieser Wert **True**.  
   
  **Schlüsselfehleraktion**  
  Gibt an, wie Datensätze behandelt werden, die unzulässige Schlüsselwerte aufweisen.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Konvertiert den unzulässigen Schlüsselwert in den Wert **UnknownMember** .|  
 |**DiscardRecord**|Verwirft den Datensatz.|  
@@ -123,7 +123,7 @@ ms.locfileid: "65726954"
  **Aktion bei Fehler**  
  Gibt die Aktion an, die bei Erreichen des Fehlergrenzwertes ausgeführt wird, wenn Sie **Bei Fehler beenden**ausgewählt haben.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**StopProcessing**|Beendet die Verarbeitung.|  
 |**StopLogging**|Beendet das Protokollieren der Fehler.|  
@@ -131,7 +131,7 @@ ms.locfileid: "65726954"
  **Schlüssel nicht gefunden**  
  Gibt die Aktion an, die beim Fehler Schlüssel nicht gefunden ausgeführt werden soll. Standardmäßig ist dieser Wert **ReportAndContinue**.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -140,7 +140,7 @@ ms.locfileid: "65726954"
  **Doppelter Schlüssel**  
  Gibt die Aktion an, die beim Fehler Doppelter Schlüssel ausgeführt werden soll. Standardmäßig ist dieser Wert **IgnoreError**.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -149,7 +149,7 @@ ms.locfileid: "65726954"
  **NULL-Schlüssel in unbekanntes Element konvertiert**  
  Gibt die Aktion an, die ausgeführt werden soll, wenn ein NULL-Schlüssel in den Wert **UnknownMember** konvertiert wurde. Standardmäßig ist dieser Wert **IgnoreError**.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
@@ -158,14 +158,14 @@ ms.locfileid: "65726954"
  **NULL-Schlüssel nicht zulässig**  
  Gibt die Aktion an, die ausgeführt wird, wenn NULL-Schlüssel unzulässig sind und ein NULL-Schlüssel entdeckt wurde. Standardmäßig ist dieser Wert **ReportAndContinue**.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignoriert den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndContinue**|Berichtet den Fehler, und setzt die Verarbeitung fort.|  
 |**ReportAndStop**|Berichtet den Fehler, und beendet die Verarbeitung.|  
   
  **Fehlerprotokollpfad**  
- Geben Sie den Pfad für das Fehlerprotokoll ein, oder klicken Sie auf die Schaltfläche **Durchsuchen (…)**, um einen Zielpfad festzulegen.  
+ Geben Sie den Pfad für das Fehlerprotokoll ein, oder klicken Sie auf die Schaltfläche **Durchsuchen (…)** , um einen Zielpfad festzulegen.  
   
  **Durchsuchen (…)**  
  Wählen Sie einen Pfad für das Fehlerprotokoll aus.  

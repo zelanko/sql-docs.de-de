@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720141"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
@@ -69,27 +69,27 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> Überlegungen zur Installation auf 64-Bit-Computern  
  Auf einem 64-Bit-Computer installiert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine 64-Bit-Version des Hilfsprogramms **dtexec** (dtexec.exe). Wenn Sie bestimmte Pakete im 32-Bit-Modus ausführen möchten, müssen Sie die 32-Bit-Version des Hilfsprogramms **dtexec** installieren. Wählen Sie zum Installieren der 32-Bit-Version des Hilfsprogramms **dtexec** während des Setups entweder Clienttools oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
- Standardmäßig wird auf einem 64-Bit-Computer, auf dem sowohl die 64-Bit-Version als auch die 32-Bit-Version eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Befehlszeilen-Hilfsprogramms installiert ist, die 32-Bit-Version an der Eingabeaufforderung ausgeführt. Die 32-Bit-Version wird ausgeführt, da der Verzeichnispfad für die 32-Bit-Version in der PATH-Umgebungsvariablen vor dem Verzeichnispfad für die 64-Bit-Version aufgeführt wird. (Typischerweise ist der 32-Bit-Verzeichnispfad „*\<Laufwerk>*:\Programme (x86)\Microsoft SQL Server\110\DTS\Binn“, während der 64-Bit-Verzeichnispfad „*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\DTS\Binn“ lautet.)  
+ Standardmäßig wird auf einem 64-Bit-Computer, auf dem sowohl die 64-Bit-Version als auch die 32-Bit-Version eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Befehlszeilen-Hilfsprogramms installiert ist, die 32-Bit-Version an der Eingabeaufforderung ausgeführt. Die 32-Bit-Version wird ausgeführt, da der Verzeichnispfad für die 32-Bit-Version in der PATH-Umgebungsvariablen vor dem Verzeichnispfad für die 64-Bit-Version aufgeführt wird. (Typischerweise ist der 32-Bit-Verzeichnispfad „ *\<Laufwerk>* :\Programme (x86)\Microsoft SQL Server\110\DTS\Binn“, während der 64-Bit-Verzeichnispfad „ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn“ lautet.)  
   
 > **HINWEIS:** Wenn Sie das Hilfsprogramm mithilfe des SQL Server-Agents ausführen, verwendet dieser automatisch die 64-Bit-Version des Hilfsprogramms. Der SQL Server-Agent sucht die richtige ausführbare Datei für das Hilfsprogramm in der Registrierung und nicht in der PATH-Umgebungsvariablen.  
   
  Wenn Sie sicherstellen möchten, dass die 64-Bit-Version des Hilfsprogramms an der Eingabeaufforderung ausgeführt wird, können Sie einen der folgenden Schritte ausführen:  
   
--   Öffnen Sie ein Eingabeaufforderungsfenster, wechseln Sie in das Verzeichnis mit der 64-Bit-Version des Hilfsprogramms („*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\DTS\Binn“), und führen Sie dann das Hilfsprogramm aus diesem Verzeichnis aus.  
+-   Öffnen Sie ein Eingabeaufforderungsfenster, wechseln Sie in das Verzeichnis mit der 64-Bit-Version des Hilfsprogramms („ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn“), und führen Sie dann das Hilfsprogramm aus diesem Verzeichnis aus.  
   
--   Führen Sie an der Eingabeaufforderung das Hilfsprogramm aus, indem Sie den vollständigen Pfad („*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\DTS\Binn“) der 64-Bit-Version des Hilfsprogramms eingeben.  
+-   Führen Sie an der Eingabeaufforderung das Hilfsprogramm aus, indem Sie den vollständigen Pfad („ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn“) der 64-Bit-Version des Hilfsprogramms eingeben.  
   
--   Ändern Sie die Reihenfolge der Pfade in der PATH-Umgebungsvariablen dauerhaft, indem Sie den 64-Bit-Pfad („*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\DTS\Binn“) in der Variable vor den 32-Bit-Pfad („*\<Laufwerk>*:\ Programme (x86)\Microsoft SQL Server\110\DTS\Binn“) platzieren.  
+-   Ändern Sie die Reihenfolge der Pfade in der PATH-Umgebungsvariablen dauerhaft, indem Sie den 64-Bit-Pfad („ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn“) in der Variable vor den 32-Bit-Pfad („ *\<Laufwerk>* :\ Programme (x86)\Microsoft SQL Server\110\DTS\Binn“) platzieren.  
   
 ##  <a name="side"></a> Überlegungen zu Computern mit parallelen Installationen  
  Wenn [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] auf einem Computer installiert wird, auf dem [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] installiert ist, sind mehrere Versionen des Hilfsprogramms **dtexec** installiert.  
   
- Führen Sie das Hilfsprogramm an der Eingabeaufforderung aus, indem Sie den vollständigen Pfad („*\<Laufwerk>*:\Programme\Microsoft SQL Server\\<Version\>\DTS\Binn“) eingeben, um sicherzustellen, dass Sie die korrekte Version des Hilfsprogramms ausführen.  
+ Führen Sie das Hilfsprogramm an der Eingabeaufforderung aus, indem Sie den vollständigen Pfad („ *\<Laufwerk>* :\Programme\Microsoft SQL Server\\<Version\>\DTS\Binn“) eingeben, um sicherzustellen, dass Sie die korrekte Version des Hilfsprogramms ausführen.  
   
 ##  <a name="phases"></a> Ausführungsphasen  
  Bei der Ausführung des Hilfsprogramms werden vier Phasen durchlaufen. Es handelt sich um die folgenden Phasen:  
   
-1.  Befehlsermittlungsphase: Die Eingabeaufforderung liest die Liste der Optionen und Argumente, die angegeben wurden. Alle weiteren Phasen werden übersprungen, wenn eine **/?**- oder **/HELP** -Option festgestellt wird.  
+1.  Befehlsermittlungsphase: Die Eingabeaufforderung liest die Liste der Optionen und Argumente, die angegeben wurden. Alle weiteren Phasen werden übersprungen, wenn eine **/?** - oder **/HELP** -Option festgestellt wird.  
   
 2.  Paketladephase: Das durch die Optionen **/SQL**, **/FILE** oder **/DTS** angegebene Paket wird geladen.  
   
@@ -166,7 +166,7 @@ dtexec /option [value] [/option [value]]...
   
      Wenn Sie ein *Optionsname* -Argument angeben, startet **dtexec** die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation und zeigt das Thema für das Hilfsprogramm „dtexec“ an.  
   
--   **/Ca[llerInfo]**: (Optional). Gibt weitere Informationen für eine Paketausführung an. Wenn Sie mit dem SQL Server-Agent ein Paket ausführen, legt der Agent dieses Argument fest, um anzuzeigen, dass die Paketausführung vom SQL Server-Agent aufgerufen wird. Dieser Parameter wird ignoriert, wenn das Hilfsprogramm **dtexec** in der Befehlszeile ausgeführt wird.  
+-   **/Ca[llerInfo]** : (Optional). Gibt weitere Informationen für eine Paketausführung an. Wenn Sie mit dem SQL Server-Agent ein Paket ausführen, legt der Agent dieses Argument fest, um anzuzeigen, dass die Paketausführung vom SQL Server-Agent aufgerufen wird. Dieser Parameter wird ignoriert, wenn das Hilfsprogramm **dtexec** in der Befehlszeile ausgeführt wird.  
   
 -   **/CheckF[ile]** _filespec_: (Optional). Legt den Pfad und die Datei, der bzw. die in der **Dateiangabe** angegeben ist, als Wert für die *CheckpointFileName*-Eigenschaft des Pakets fest. Diese Datei wird beim erneuten Starten des Pakets verwendet. Wird diese Option angegeben, ohne einen Wert für den Dateinamen bereitzustellen, wird für die **CheckpointFileName** -Eigenschaft des Pakets eine leere Zeichenfolge festgelegt. Wenn diese Option nicht angegeben wird, werden die Werte im Paket beibehalten.  
   
@@ -182,7 +182,7 @@ dtexec /option [value] [/option [value]]...
   
      Sie können die Option **/ConfigFile** verwenden, um zur Laufzeit zusätzliche Konfigurationen zu laden, die Sie zur Entwurfszeit nicht angegeben haben. Sie können die Option **/ConfigFile** jedoch nicht verwenden, um konfigurierte Werte zu ersetzen, die Sie auch zur Entwurfszeit angegeben haben. Weitere Informationen zur Anwendung von Paketkonfigurationen finden Sie unter [Paketkonfigurationen](../../integration-services/packages/package-configurations.md).  
   
--   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_: (Optional). Gibt an, dass sich der Verbindungs-Manager mit dem angegebenen Namen oder GUID im Paket befindet. Eine Verbindungszeichenfolge wird ebenfalls angegeben.  
+-   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ : (Optional). Gibt an, dass sich der Verbindungs-Manager mit dem angegebenen Namen oder GUID im Paket befindet. Eine Verbindungszeichenfolge wird ebenfalls angegeben.  
   
      Wenn diese Option verwendet wird, müssen beide Parameter angegeben werden: Der Name oder die GUID des Verbindungs-Managers muss mit dem *ID_oder_Name*-Argument bereitgestellt werden, und mit dem *Verbindungszeichenfolge*-Argument muss eine gültige Verbindungszeichenfolge angegeben werden. Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
@@ -190,7 +190,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (Optional). Zeigt während der Paketausführung bestimmte Protokolleinträge an der Konsole an. Wenn die Option nicht angegeben wird, werden keine Protokolleinträge an der Konsole angezeigt. Wenn die Option ohne Parameter zur Begrenzung der Anzeige angegeben wird, werden alle Protokolleinträge angezeigt. Wenn Sie die an der Konsole angezeigten Einträge begrenzen möchten, können Sie die anzuzeigenden Spalten mithilfe des *Anzeigeoptionen* -Parameters angeben und die Protokolleintragstypen mithilfe des *Listenoptionen* -Parameters begrenzen.  
   
-    > **HINWEIS:**  Beim Ausführen eines Pakets auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server mithilfe des **/ISSERVER**-Parameters ist die Konsolenausgabe begrenzt, und die meisten der **/Cons[oleLog]**-Optionen sind nicht anwendbar. Alle Ausführungsprotokolle können in den verwandten Sichten vom Server oder über Standardberichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zu den Berichten finden Sie unter [Berichte für den Integration Services-Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
+    > **HINWEIS:**  Beim Ausführen eines Pakets auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server mithilfe des **/ISSERVER**-Parameters ist die Konsolenausgabe begrenzt, und die meisten der **/Cons[oleLog]** -Optionen sind nicht anwendbar. Alle Ausführungsprotokolle können in den verwandten Sichten vom Server oder über Standardberichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zu den Berichten finden Sie unter [Berichte für den Integration Services-Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
      Die *Anzeigeoptionen* -Werte lauten wie folgt:  
   
@@ -244,7 +244,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_: Standardmäßig speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugdumpdateien im Ordner „*\<Laufwerk*>:\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
+     **/Dump** _error code_: Standardmäßig speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugdumpdateien im Ordner „ *\<Laufwerk*>:\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
   
     > **HINWEIS:** Debugdumpdateien können vertrauliche Informationen enthalten. Verwenden Sie eine Zugriffssteuerungsliste, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren. Bevor Sie Ihre Debugdateien beispielsweise an Microsoft Support Services senden, wird empfohlen, vertrauliche Informationen zu entfernen.  
   
@@ -256,7 +256,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (Optional) Erstellt die Debugdumpdateien MDMP und TMP, wenn bei der Ausführung des Pakets ein beliebiger Fehler auftritt.  
   
-     In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugsicherungsdateien im Ordner „*\<Laufwerk>*:\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
+     In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugsicherungsdateien im Ordner „ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
   
     > **HINWEIS:** Debugdumpdateien können vertrauliche Informationen enthalten. Verwenden Sie eine Zugriffssteuerungsliste, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren. Bevor Sie Ihre Debugdateien beispielsweise an Microsoft Support Services senden, wird empfohlen, vertrauliche Informationen zu entfernen.  
   
@@ -273,7 +273,7 @@ dtexec /option [value] [/option [value]]...
      Verwenden Sie die **/Env[Verweis]** -Option zusammen mit der **/ISServer** - und **/Server** -Option.  
   
      Dieser Parameter wird vom SQL Server-Agent verwendet.  
-  --   **/F[ile]** _filespec_: (Optional). Lädt ein im Dateisystem gespeichertes Paket. Pakete, die im Dateisystem gespeichert wurden, werden mithilfe des Legacy-Projektbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen ](deploy-integration-services-ssis-projects-and-packages.md).  
+  --    **/F[ile]** _filespec_: (Optional). Lädt ein im Dateisystem gespeichertes Paket. Pakete, die im Dateisystem gespeichert wurden, werden mithilfe des Legacy-Projektbereitstellungsmodells bereitgestellt. Verwenden Sie die Option [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] /ISServer **, um Pakete auszuführen, die mithilfe des Projektbereitstellungsmodells auf dem** -Server bereitgestellt werden. Weitere Informationen zu Paket- und Projektbereitstellungsmodellen finden Sie unter [Bereitstellung von Projekten und Paketen ](deploy-integration-services-ssis-projects-and-packages.md).  
 
   Mit dem *Dateiangabe* -Argument werden Pfad und Dateiname des Pakets angegeben. Sie können den Pfad entweder als UNC-Pfad (Universal Naming Convention) oder als lokalen Pfad angeben. Enthält der im *Dateiangabe* -Argument angegebene Pfad- oder Dateiname ein Leerzeichen, muss das *Dateiangabe* -Argument in Anführungszeichen gesetzt werden.  
   
@@ -367,7 +367,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Rem** _comment_: (Optional). Schließt einen Kommentar in die Befehlszeile oder in Befehlsdateien ein. Das Argument ist optional. Der Wert für *Kommentar* ist eine Zeichenfolge, die entweder in Anführungszeichen eingeschlossen werden muss oder keine Leerzeichen enthalten darf. Wird kein Argument angegeben, wird eine leere Zeile eingefügt. Während der Befehlsermittlungsphase werden*Kommentar* -Werte nicht berücksichtigt.  
   
--   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]]: (Optional). Gibt an, welche Meldungstypen gemeldet werden sollen. Für *Ebene* stehen folgende Berichtsoptionen zur Verfügung:  
+-   **/Rep[orting]** _level_ [ *;event_guid_or_name*[ *;event_guid_or_name*[...]]: (Optional). Gibt an, welche Meldungstypen gemeldet werden sollen. Für *Ebene* stehen folgende Berichtsoptionen zur Verfügung:  
   
      **N** Keine Berichterstellung.  
   
@@ -439,15 +439,15 @@ dtexec /option [value] [/option [value]]...
   
      Die Option **/SQL** kann nicht zusammen mit der Option **/DTS** oder **/File** verwendet werden. Wenn mehrere Optionen angegeben werden, misslingt die Ausführung von **dtexec** .  
   
--   **/Su[m]**: (Optional). Zeigt einen inkrementellen Zähler an, der die Anzahl der Zeilen enthält, die von der nächsten Komponente empfangen werden.  
+-   **/Su[m]** : (Optional). Zeigt einen inkrementellen Zähler an, der die Anzahl der Zeilen enthält, die von der nächsten Komponente empfangen werden.  
   
 -   **/U[ser]** _user_name_: (Optional). Ermöglicht das Abrufen eines Pakets, das durch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung geschützt ist. Diese Option wird nur verwendet, wenn die Option **/SQL** angegeben wird. Der *Benutzername* -Wert kann in Anführungszeichen eingeschlossen werden.  
   
     > **WICHTIG!**  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
--   **/Va[lidate]**: (Optional). Beendet das Ausführen des Pakets nach der Überprüfungsphase, ohne das Paket tatsächlich auszuführen. Während der Überprüfung bewirkt die Verwendung von **/WarnAsError** , dass **dtexec** eine Warnung wie einen Fehler behandelt. Daher erzeugt das Paket einen Fehler, wenn während des Überprüfens eine Warnung ausgegeben wird.  
+-   **/Va[lidate]** : (Optional). Beendet das Ausführen des Pakets nach der Überprüfungsphase, ohne das Paket tatsächlich auszuführen. Während der Überprüfung bewirkt die Verwendung von **/WarnAsError** , dass **dtexec** eine Warnung wie einen Fehler behandelt. Daher erzeugt das Paket einen Fehler, wenn während des Überprüfens eine Warnung ausgegeben wird.  
   
--   **/VerifyB[uild]** _major_[*;minor*[*;build*]]: (Optional). Überprüft die Buildnummer eines Pakets anhand der Buildnummern, die während der Überprüfungsphase mit den Argumenten *Hauptversion*, *Nebenversion*und *Build* angegeben wurden. Stimmen die Buildnummern nicht überein, wird das Paket nicht ausgeführt.  
+-   **/VerifyB[uild]** _major_[ *;minor*[ *;build*]]: (Optional). Überprüft die Buildnummer eines Pakets anhand der Buildnummern, die während der Überprüfungsphase mit den Argumenten *Hauptversion*, *Nebenversion*und *Build* angegeben wurden. Stimmen die Buildnummern nicht überein, wird das Paket nicht ausgeführt.  
   
      Bei den Werten handelt es sich um lange ganze Zahlen. Das Argument kann eine von drei Formen annehmen, wobei ein Wert für *Hauptversion* immer erforderlich ist:  
   
@@ -459,7 +459,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyP[ackageID]** _packageID_: (Optional). Überprüft die GUID des auszuführenden Pakets anhand des Werts, der im *Paket-ID* -Argument angegeben wurde.  
   
--   **/VerifyS[igned]**: (Optional). Veranlasst [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dazu, die digitale Signatur des Pakets zu überprüfen. Wenn das Paket nicht signiert oder die Signatur nicht gültig ist, schlägt das Paket fehl. Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
+-   **/VerifyS[igned]** : (Optional). Veranlasst [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dazu, die digitale Signatur des Pakets zu überprüfen. Wenn das Paket nicht signiert oder die Signatur nicht gültig ist, schlägt das Paket fehl. Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > **WICHTIG!** Wenn Sie die Überprüfung der Signatur des Pakets konfiguriert haben, prüft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lediglich, ob die digitale Signatur vorhanden und gültig ist und ob die Quelle vertrauenswürdig ist. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] überprüft nicht, ob Änderungen am Paket vorgenommen wurden.  
   
@@ -467,11 +467,11 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyV[ersionID]** _versionID_: (Optional). Überprüft die Versions-GUID eines auszuführenden Pakets; diese wird mit dem Wert verglichen, der während der Paketüberprüfungsphase im *Versions-ID* -Argument angegeben wurde.  
   
--   **/VLog** _[Filespec]_: (Optional). Schreibt alle Integration Services-Paketereignisse an die Protokollanbieter, die beim Entwurf des Pakets aktiviert wurden. Geben Sie im *Dateiangabe* -Parameter einen Pfad- und Dateinamen an, damit Integration Services einen Protokollanbieter für Textdateien aktiviert und Protokollereignisse in eine festgelegte Textdatei schreibt.  
+-   **/VLog** _[Filespec]_ : (Optional). Schreibt alle Integration Services-Paketereignisse an die Protokollanbieter, die beim Entwurf des Pakets aktiviert wurden. Geben Sie im *Dateiangabe* -Parameter einen Pfad- und Dateinamen an, damit Integration Services einen Protokollanbieter für Textdateien aktiviert und Protokollereignisse in eine festgelegte Textdatei schreibt.  
   
      Wenn Sie den *Dateiangabe* -Parameter nicht einschließen, aktiviert Integration Services keinen Protokollanbieter für Textdateien. Integration Services schreibt dann Protokollereignisse nur an die Protokollanbieter, die beim Entwurf des Pakets aktiviert wurden.  
   
--   **/W[arnAsError]**: (Optional). Bewirkt, dass das Paket eine Warnung wie einen Fehler behandelt. Das Paket erzeugt daher einen Fehler, wenn während des Überprüfens eine Warnung ausgegeben wird. Wenn während des Überprüfens keine Warnung ausgegeben wird und die Option **/Validate** nicht angegeben wurde, wird das Paket ausgeführt.  
+-   **/W[arnAsError]** : (Optional). Bewirkt, dass das Paket eine Warnung wie einen Fehler behandelt. Das Paket erzeugt daher einen Fehler, wenn während des Überprüfens eine Warnung ausgegeben wird. Wenn während des Überprüfens keine Warnung ausgegeben wird und die Option **/Validate** nicht angegeben wurde, wird das Paket ausgeführt.  
   
 -   **/X86**: (Optional). Veranlasst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, das Paket im 32-Bit-Modus auf einem 64-Bit-Computer auszuführen. Diese Option wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent festgelegt, wenn die folgenden Bedingungen den Wert True haben:  
   

@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 170104d07302b7921dd06b30f91b386238fe6d55
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946387"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -80,21 +80,21 @@ Um Daten im systemeigenen Format erfolgreich zu importieren, müssen folgende Pu
   
      Wenn der Datentyp der Zielspalte nicht [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)ist, werden alle Datenwerte unter Einhaltung der üblichen Regeln der impliziten Datenkonvertierung in den Datentyp der Zielspalte konvertiert. Wenn während der Datenkonvertierung ein Fehler auftritt, wird für den aktuellen Batch ein Rollback ausgeführt. Bei Werten vom Typ [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) und [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), die zwischen [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)-Spalten übertragen werden, treten möglicherweise Probleme bei der Codepagekonvertierung auf.  
   
-     Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+     Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 ## Befehlsoptionen für das systemeigene Format<a name="command_options"></a>  
 Sie können Daten im nativen Format importieren, unter Verwendung von [BCP](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md).  Für einen [bcp](../../tools/bcp-utility.md) -Befehl oder eine [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) -Anweisung können Sie das Datenformat in der Anweisung angeben.  Für eine [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
 
 Das native Format wird durch die folgenden Befehlsoptionen unterstützt:  
 
-|Befehl|Option|Beschreibung|  
+|Befehl|Option|und Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Veranlasst das Hilfsprogramm „bcp“, die nativen Datentypen der Daten zu verwenden.*|  
 |BULK INSERT|DATAFILETYPE **='native'**|Verwendet die systemeigenen Datentypen (native oder widenative) der Daten. Beachten Sie, dass DATAFILETYPE nicht erforderlich ist, wenn eine Formatdatei die Datentypen angibt.|  
 |OPENROWSET|–|Muss eine Formatdatei verwenden|
 
   
- \*Verwenden Sie zum Laden nativer Daten (**-n**) in ein Format, das mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients kompatibel ist, den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \*Verwenden Sie zum Laden nativer Daten ( **-n**) in ein Format, das mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients kompatibel ist, den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
 > [!NOTE]
 >  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)erforderlich.

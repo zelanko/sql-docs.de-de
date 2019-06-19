@@ -16,53 +16,32 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c56c6586330830c0dbda3ece592db7a3bc71d4f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213154"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799291"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Verknüpfen eines sekundären Replikats mit einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie ein sekundäres Replikat in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]mit [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]oder PowerShell mit einer Always On-Verfügbarkeitsgruppe verknüpft wird. Nachdem ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe hinzugefügt wurde, muss das sekundäre Replikat mit der Verfügbarkeitsgruppe verknüpft werden. Der Joinvorgang für das Replikat muss auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ausgeführt werden, die das sekundäre Replikat hostet.  
+
   
--   **Vorbereitungen:**  
+##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
-     [Erforderliche Komponenten](#Prerequisites)  
-  
-     [Sicherheit](#Security)  
-  
--   **So bereiten Sie eine sekundäre Datenbank vor mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Nachverfolgung:** [Konfigurieren von sekundären Datenbanken](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
-  
--   Das primäre Replikat der Verfügbarkeitsgruppe muss derzeit online sein.  
-  
--   Sie müssen mit der Serverinstanz verbunden sein, die ein sekundäres Replikat hostet, das noch nicht mit der Verfügbarkeitsgruppe verknüpft wurde.  
-  
+-   Das primäre Replikat der Verfügbarkeitsgruppe muss derzeit online sein.    
+-   Sie müssen mit der Serverinstanz verbunden sein, die ein sekundäres Replikat hostet, das noch nicht mit der Verfügbarkeitsgruppe verknüpft wurde.    
 -   Die lokale Serverinstanz muss in der Lage sein, eine Verbindung mit dem Datenbankspiegelungs-Endpunkt der Serverinstanz herzustellen, die das primäre Replikat hostet.  
   
 > [!IMPORTANT]  
 >  Sobald eine Voraussetzung nicht erfüllt ist, tritt bei dem Joinvorgang ein Fehler auf. Nach einem fehlerhaften Joinversuch müssen Sie möglicherweise eine Verbindung mit der Serverinstanz herstellen, die das primäre Replikat hostet, um das sekundäre Replikat zu entfernen und erneut hinzuzufügen, bevor Sie es mit der Verfügbarkeitsgruppe verknüpfen können. Weitere Informationen finden Sie unter [Entfernen eines sekundären Replikats aus einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) und [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sicherheit  
-  
-####  <a name="Permissions"></a> Berechtigungen  
+##  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So verknüpfen Sie ein Verfügbarkeitsreplikat mit einer Verfügbarkeitsgruppe**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das sekundäre Replikat hostet, und klicken Sie auf den Servernamen, um die Serverstruktur zu erweitern.  

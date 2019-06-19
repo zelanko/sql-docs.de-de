@@ -23,17 +23,17 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d8a6390ded6250355936dbef29051f76be14266
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980695"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Angeben des sql:inverse-Attributs für sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Die **SQL: inverse** Attribut ist nützlich, nur wenn das XSD-Schema zum Massenladen oder von einem Updategram verwendet wird. Die **SQL: inverse** -Attribut angegeben werden, auf die  **\<SQL: Relationship >** Element. In Updategrams interpretiert die Updategramlogik das Schema beim Bestimmen der Tabellen und Spalten, die durch den Updategramvorgang aktualisiert werden. Die im Schema angegebenen Über-/Unterordnungsbeziehungen legen die Reihenfolge fest, in der die Datensätze modifiziert (eingefügt oder gelöscht) werden.  
   
- Wenn ein XSD-Schema gegeben ist, in dem die Über-/Unterordnungsbeziehung invers zur Primär-/Fremdschlüssel-Beziehung zwischen den zugehörigen Datenbankspalten angegeben ist, dann schlägt der Updategramvorgang zum Einfügen oder Löschen wegen der Primär-/Fremdschlüsselverletzung fehl. In solchen Fällen die **SQL: inverse** -Attribut angegeben ist (**SQL: Inverse = "true"**) in der  **\<SQL: Relationship >** Element, und die updategramlogik Gegenstücke der Interpretation der über-/ unterordnungsbeziehung im Schema angegeben.  
+ Wenn ein XSD-Schema gegeben ist, in dem die Über-/Unterordnungsbeziehung invers zur Primär-/Fremdschlüssel-Beziehung zwischen den zugehörigen Datenbankspalten angegeben ist, dann schlägt der Updategramvorgang zum Einfügen oder Löschen wegen der Primär-/Fremdschlüsselverletzung fehl. In solchen Fällen die **SQL: inverse** -Attribut angegeben ist (**SQL: Inverse = "true"** ) in der  **\<SQL: Relationship >** Element, und die updategramlogik Gegenstücke der Interpretation der über-/ unterordnungsbeziehung im Schema angegeben.  
   
  Die **SQL: inverse** Attribut akzeptiert einen booleschen Wert (0 = False, 1 = True). Zulässig sind die Werte 0, 1, true und false.  
   

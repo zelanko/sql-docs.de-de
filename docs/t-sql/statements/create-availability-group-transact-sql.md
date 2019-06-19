@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e467af9ecc9879229172b2d1b25471c071a66612
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66413419"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
@@ -228,12 +228,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Informationen zu den Voraussetzungen für WSFC-Knoten und Serverinstanzen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
+ ENDPOINT_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Gibt den URL-Pfad des [Datenbankspiegelungsendpunkts](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an, die das Verfügbarkeitsreplikat hostet, das Sie in der aktuellen REPLICA ON-Klausel definieren.  
   
  Die ENDPOINT_URL-Klausel ist erforderlich. Weitere Informationen finden Sie unter [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)zu unterstützen.  
   
- **'** TCP **://** _system-address_ **:** _port_ **'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Gibt eine URL zum Bestimmen einer Endpunkt-URL oder einer URL für das schreibgeschützte Routing an. Die URL-Parameter lauten wie folgt:  
   
  *system-address*  
@@ -316,10 +316,10 @@ CREATE AVAILABILITY GROUP group_name
   
  Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Gibt die URL an, die zum Weiterleiten von Verbindungsanforderungen für beabsichtigte Lesevorgänge zu diesem Verfügbarkeitsreplikat verwendet werden soll. Dies ist die URL, die die SQL Server-Datenbank-Engine überwacht. In der Regel überwacht die Standardinstanz der SQL Server-Datenbank-Engine auf TCP-Port 1433.  
   
- Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener (**type_desc='TSQL'** ).  
+ Für eine benannte Instanz können Sie die Portnummer durch das Abfragen der Spalten **port** und **type_desc** der dynamischen [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)-Verwaltungssicht abrufen. Die Serverinstanz verwendet den Transact-SQL-Listener (**type_desc='TSQL'**).  
   
  Weitere Informationen zum Berechnen der schreibgeschützten Routing-URL für ein Replikat finden Sie unter [Calculating read_only_routing_url for Always On (Berechnen von „read_only_routing_url“ für Always On)](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx).  
   
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist das Standardverhalten.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘** \<server_instance> **’** [ **,** ...*n* ] **)** | NONE } gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die beim Ausführen unter der sekundären Rolle die folgenden Anforderungen erfüllen:  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die beim Ausführen unter der sekundären Rolle die folgenden Anforderungen erfüllen:  
   
 -   Wird konfiguriert, um alle Verbindungen oder schreibgeschützte Verbindungen (siehe das obige ALLOW_CONNECTIONS-Argument der SECONDARY_ROLE-Option) zuzulassen.  
   
@@ -372,12 +372,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> gibt den Namen der Verfügbarkeitsgruppe an, die eine Hälfte der verteilten Verfügbarkeitsgruppe ausmacht.  
   
- LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  Gibt den URL-Pfad für den Listener an, der der Verfügbarkeitsgruppe zugeordnet ist.  
   
  Die LISTENER-Klausel ist erforderlich.  
   
- **'** TCP **://** _system-address_ **:** _port_ **'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Gibt eine URL für den Listener an, der der Verfügbarkeitsgruppe zugeordnet ist. Die URL-Parameter lauten wie folgt:  
   
  *system-address*  
@@ -436,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER verwendet eine der folgenden \<listener_option>-Optionen: 
   
- WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  Gibt an, dass der Verfügbarkeitsgruppenlistener das Dynamic Host Configuration-Protokoll (DHCP) verwendet.  Verwenden Sie die ON-Klausel optional, um das Netzwerk zu identifizieren, auf dem dieser Listener erstellt wird. DHCP ist auf ein einzelnes Subnetz beschränkt, das für alle Serverinstanzen verwendet wird, die ein Replikat in der Verfügbarkeitsgruppe hosten.  
   
 > [!IMPORTANT]  
@@ -446,7 +446,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Gibt an, dass der Verfügbarkeitsgruppenlistener statt DHCP mindestens eine statische IP-Adresse verwendet. Um eine Verfügbarkeitsgruppe über mehrere Subnetze zu erstellen, erfordert jedes Subnetz in der Listenerkonfiguration eine statische IP-Adresse. Für ein angegebenes Subnetz kann die statische IP-Adresse entweder eine IPv4-Adresse oder eine IPv6-Adresse sein. Wenden Sie sich an Ihren Netzwerkadministrator, um eine statische IP-Adresse für jedes Subnetz zu erhalten, das ein Replikat für die neue Verfügbarkeitsgruppe hostet.  
   
  Beispiel:  

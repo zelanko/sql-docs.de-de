@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d129c6d0efb5659c0e10aa1c131b6e99a930896d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946404"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
@@ -55,7 +55,7 @@ Beim Verwenden des Zeichenformats sollten Sie Folgendes berücksichtigen:
   
 -   Um den Verlust von Sonderzeichen zu verhindern, verwenden Sie das Unicode-Zeichenformat, oder geben Sie eine Codepage an.  
   
--   Alle [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Format konvertiert. Beim Importieren in eine [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Spalte werden die Daten als [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) werden die Daten mithilfe der impliziten Konvertierung von [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+-   Alle [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Format konvertiert. Beim Importieren in eine [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Spalte werden die Daten als [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) werden die Daten mithilfe der impliziten Konvertierung von [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 -   Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) exportiert [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)-Werte in Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne Symbole für die Zifferngruppierung, wie z.B. Kommas. So wird z.B. eine [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) -Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
   
@@ -64,13 +64,13 @@ Sie können Daten im Zeichenformat in eine Tabelle importieren, indem Sie die fo
   
 Das Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|Beschreibung|  
+|Befehl|Option|und Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Bewirkt, dass das Hilfsprogramm „bcp“ Zeichendaten verwendet.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Verwendet das Zeichenformat beim Massenimport von Daten.|  
 |OPENROWSET|–|Muss eine Formatdatei verwenden|
   
- \*Um Zeichendaten (**-c**) in ein Format zu laden, das mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients kompatibel ist, verwenden Sie den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \*Um Zeichendaten ( **-c**) in ein Format zu laden, das mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients kompatibel ist, verwenden Sie den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
    
 > [!NOTE]
 >  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)erforderlich.

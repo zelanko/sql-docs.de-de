@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d8610467022235207baca20b318971d33671998
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+manager: jroth
+ms.openlocfilehash: d54ee0a26e82c660c93e8c1f185c4e60e8b75805
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626740"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775245"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ Das Herstellen einer Verbindung mit SQL Server über TCP/IP erfordert, dass Wind
 
 ## <a name="testing-a-local-connection"></a>Testen einer lokalen Verbindung
 
-Überprüfen Sie vor der Problembehandlung eines Verbindungsproblems von einem anderen Computer zunächst, ob Sie eine Verbindung von einer Clientanwendung aus herstellen können, die lokal auf dem Computer installiert ist, der SQL Server ausführt. Das herstellen einer lokalen Verbindung vermeidet Probleme mit Netzwerken und Firewalls. Dieses Verfahren verwendet SQL Server Management Studio. Wenn Sie Management Studio nicht installiert haben, besuchen Sie das [Download Center von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). Wenn Sie Management Studio nicht installieren können, können Sie die Verbindung mithilfe des Hilfsprogramms `sqlcmd.exe` überprüfen.  `sqlcmd.exe` wird zusammen mit der Datenbank-Engine installiert. Weitere Informationen zu `sqlcmd.exe`finden Sie unter [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md).)
+Überprüfen Sie vor der Problembehandlung eines Verbindungsproblems von einem anderen Computer zunächst, ob Sie eine Verbindung von einer Clientanwendung aus herstellen können, die lokal auf dem Computer installiert ist, der SQL Server ausführt. Das herstellen einer lokalen Verbindung vermeidet Probleme mit Netzwerken und Firewalls. Dieses Verfahren verwendet SQL Server Management Studio. Wenn Sie Management Studio nicht installiert haben, besuchen Sie das [Download Center von SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). Wenn Sie Management Studio nicht installieren können, können Sie die Verbindung mithilfe des Hilfsprogramms `sqlcmd.exe` überprüfen. `sqlcmd.exe` wird zusammen mit der Datenbank-Engine installiert. Weitere Informationen zu `sqlcmd.exe`finden Sie unter [sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md).)
 
 1. Melden Sie sich mithilfe eines Anmeldenamens, der über Zugriffsberechtigung für SQL Server verfügt, auf dem Computer an, auf dem SQL Server installiert ist. (Während der Installation benötigt SQL Server mindestens einen Anmeldenamen, der als SQL Server-Administrator angegeben ist. Wenn Ihnen kein Administrator bekannt ist, gehen Sie unter [Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind](connect-to-sql-server-when-system-administrators-are-locked-out.md).)
 2. Tippen Sie auf der Startseite oder auf älteren Versionen von Windows im Startmenü **SQL Server Management Studio**ein, zeigen Sie auf **Alle Programme**und anschließend auf **Microsoft SQL Server**, und klicken Sie anschließend auf **SQL Server Management Studio**.

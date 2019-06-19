@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0b8c2dbe2b9129ae52432de1b70079a53a963c27
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948391"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -48,12 +48,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>Argumente  
  **'** *login* **'**  
-**Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für **: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Der Anmeldename des Benutzers. *login* ist vom Datentyp **sysname**. *login* ist optional und kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer bzw. eine -Gruppe darstellen. Falls *login* nicht angegeben wird, werden Informationen über den aktuellen Sicherheitskontext zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
   
  *Param2*  
-**Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Gibt an, ob der Anmeldename validiert wird. *Param2* weist den Typ **int** auf und ist optional. Wenn *Param2* den Wert 0 hat, wird der Anmeldename nicht überprüft. Wenn für*Param2* nicht der Wert 0 angegeben wird, wird überprüft, ob der Windows-Anmeldename genau mit dem in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherten Anmeldenamen übereinstimmt.  
   
@@ -81,7 +81,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-susersid-with-a-specific-login"></a>B. Verwenden von SUSER_SID mit bestimmten Anmeldedaten  
  Im folgenden Beispiel wird die Sicherheits-ID für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`-Anmeldenamen zurückgegeben.  
   
-**Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -91,7 +91,7 @@ GO
 ### <a name="c-using-susersid-with-a-windows-user-name"></a>C. Verwenden von SUSER_SID mit einem Windows-Benutzernamen  
  Im folgenden Beispiel wird die Sicherheits-ID für den Windows-Benutzer `London\Workstation1` zurückgegeben.  
   
-**Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -119,7 +119,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Vergleichen des Windows-Anmeldenamens mit dem in SQL Server gespeicherten Anmeldenamen  
  Das folgende Beispiel zeigt, wie Sie *Param2* zum Abrufen der SID von Windows verwenden und wie diese SID als Eingabe für die `SUSER_SNAME`-Funktion verwendet wird. Im Beispiel wird die Anmeldung in dem Format verwendet, in dem sie unter Windows gespeichert ist (`TestComputer\User`). Die Anmeldung wird dann in dem Format zurückgegeben, in dem sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist (`TESTCOMPUTER\User`).  
   
-**Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Gilt für **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

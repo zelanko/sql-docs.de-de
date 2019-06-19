@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f634c206a2128369d8eee92a6355d26a620c3c4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104307"
 ---
 # <a name="report-sections-dialog-box"></a>Berichtsabschnitte (Dialogfeld)
-  Wenn Sie einen Bericht öffnen, Berichts-Designer überprüft, ob der Bericht nur ein Berichtsdefinitionssprache (RDL) enthält  **\<Abschnitt >** Element. Das Öffnen eines Berichts mit mehreren **\<Section>**-Elementen wird nicht unterstützt.  
+  Wenn Sie einen Bericht öffnen, Berichts-Designer überprüft, ob der Bericht nur ein Berichtsdefinitionssprache (RDL) enthält  **\<Abschnitt >** Element. Das Öffnen eines Berichts mit mehreren **\<Section>** -Elementen wird nicht unterstützt.  
   
  Obwohl eine Berichtsdefinition mit mehreren Abschnitten programmgesteuert generiert werden kann, wird die Bearbeitung eines solchen Berichtes in einer Berichterstellungsumgebung nicht unterstützt.  
   

@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: d8d1871e4057673d9a7169c4cfa13f4672b07d9f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380201"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649526"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, Sperren-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53380201"
   
  In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Sperren** beschrieben.  
   
-|Sperren-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Sperren-Leistungsindikatoren von SQL Server|und Beschreibung|  
 |-------------------------------|-----------------|  
 |**Durchschnittliche Wartezeit (ms)**|Die durchschnittliche Länge der Wartezeit (in Millisekunden) für jede Sperranforderung, die nicht sofort erfüllt werden konnte.|  
 |**Basis für durchschnittliche Wartezeit**|Nur zur internen Verwendung.|
@@ -40,7 +40,7 @@ ms.locfileid: "53380201"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die folgenden Ressourcen sperren.  
   
-|Element|Beschreibung|  
+|Element|und Beschreibung|  
 |----------|-----------------|  
 |**_Total**|Informationen für alle Sperren.|  
 |**AllocUnit**|Eine Sperre für eine Zuweisungseinheit.|  

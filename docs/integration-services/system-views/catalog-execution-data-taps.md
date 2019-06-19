@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe54f3560c0c4584dcf7c9f84864a3552ed23172
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714784"
 ---
 # <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps 
@@ -27,7 +27,7 @@ ms.locfileid: "65714784"
 
   Zeigt Informationen für jede in einer Ausführung definierte Datenabzweigung an.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |data_tap_id|**bigint**|Eindeutiger Bezeichner (ID) der Datenabzweigung.|  
 |execution_id|**bigint**|Der eindeutige Bezeichner (ID) für die Instanz der Ausführung.|  

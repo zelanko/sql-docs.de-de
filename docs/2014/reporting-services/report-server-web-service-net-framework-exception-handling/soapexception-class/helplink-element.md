@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046023"
 ---
 # <a name="helplink-element"></a>HelpLink-Element
   Das **HelpLink** -Element der **Detail** -Eigenschaft ist eine URL-Zeichenfolge, die vom Berichtsserver generiert wird. Die URL steuert eine Webseite an, die von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Hilfe und Support verwaltet wird. Sie liefert zusätzliche Hilfestellungen und Artikel der Kowledge Base zu bestimmten Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]auftreten. Die URL hat folgende Syntax:  
   
- **http://** www.microsoft.com**/** Produkte**/** Ee**/** transform.aspx **? EvtSrc**=_Wert_**& EvtID**=_Wert_**& %ProdName** = _Wert_**& ProdVer**=_Wert_  
+ **http://** www.microsoft.com **/** Produkte **/** Ee **/** transform.aspx **? EvtSrc**=_Wert_ **& EvtID**=_Wert_ **& %ProdName** = _Wert_ **& ProdVer**=_Wert_  
   
  In der folgenden Tabelle sind die Argumente der **HelpLink** -URL aufgeführt.  
   

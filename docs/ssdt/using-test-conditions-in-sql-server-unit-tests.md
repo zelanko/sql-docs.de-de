@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101884"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Verwenden von Testbedingungen in SQL Server-Komponententests
@@ -73,7 +73,7 @@ Erläuterungen:
   
 Nicht festgelegte Parameter werden ignoriert. Sie übergeben diese Parameter an die **THROW** -Anweisung im Datenbankcode. Wenn Sie „MatchFirstError = false“ angeben, werden alle „SqlErrors“ in der Ausnahme vom Attribut verglichen. Das Standardverhalten („MatchFirstError = true“) besteht darin, dass nur der erste aufgetretene Fehler vom Attribut verglichen wird.  
   
-Ein Beispiel zur Verwendung erwarteter Ausnahmen und einen negativen SQL Server-Komponententest finden Sie unter [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Ein Beispiel zur Verwendung erwarteter Ausnahmen und einen negativen SQL Server-Komponententest finden Sie unter [Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="SpecifyDataChecksum"></a>Angeben einer Datenprüfsumme  
 Um den SQL Server-Komponententest-Designer anzuzeigen, doppelklicken Sie im **Projektmappen-Explorer** auf die Quellcodedatei eines Komponententests.  

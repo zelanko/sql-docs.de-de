@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947074"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
@@ -53,7 +53,7 @@ Der zu suchende Zeichenausdruck.
 Ein **integer**- oder **bigint**-Ausdruck, bei dem die Suche beginnt. Wenn *start_location* nicht angegeben ist, einen negativen Wert oder den Wert 0 (null) besitzt, wird mit der Suche am Anfang von *expressionToSearch* begonnen.
   
 ## <a name="return-types"></a>Rückgabetypen
-**bigint**, wenn *expressionToSearch* vom Datentyp **nvarchar(max)** , **varbinary(max)** oder **varchar(max)** ist; andernfalls **int**.
+**bigint**, wenn *expressionToSearch* vom Datentyp **nvarchar(max)**, **varbinary(max)** oder **varchar(max)** ist; andernfalls **int**.
   
 ## <a name="remarks"></a>Remarks  
 Wenn entweder der Ausdruck *expressionToFind* oder der Ausdruck *expressionToSearch* einen Unicode-Datentyp aufweist (**nchar** oder **nvarchar**), und der andere Ausdruck nicht, konvertiert die CHARINDEX-Funktion diesen anderen Ausdruck in einen Unicode-Datentyp. CHARINDEX kann nicht mit den Datentypen **image**, **ntext** oder **text** verwendet werden.
@@ -66,7 +66,7 @@ CHARINDEX führt Vergleiche basierend auf der Sortierung der Eingabe aus. Verwen
   
 Die zurückgegebene Startposition ist 1-basiert, nicht 0-basiert.
   
-0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in CHARINDEX enthalten sein.
+0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in CHARINDEX enthalten sein.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
 Bei Verwendung von SC-Sortierungen werden Ersatzzeichenpaare sowohl von *start_location* als auch vom Rückgabewert als ein anstelle von zwei Zeichen gezählt. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).

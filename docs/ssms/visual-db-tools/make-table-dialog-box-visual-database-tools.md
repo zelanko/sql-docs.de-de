@@ -15,17 +15,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6a4a512a552448c1ef50320dd3269365ab487968
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096733"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Tabelle erstellen (Dialogfeld) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Ermöglicht das Benennen einer erstellten Tabelle, in die Zeilen kopiert werden. Dieses Dialogfeld wird angezeigt, wenn Sie einen Abfragetyp in eine MAKE TABLE-Abfrage ändern. Um einen Abfragetyp zu ändern, zeigen Sie im Menü **Abfrage-Designer** auf **Typ ändern**, und klicken Sie dann auf **Tabelle erstellen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Tabellenname**  
 Geben Sie den Namen der Tabelle ein, die erstellt werden soll. Der Abfrage- und Sicht-Designer überprüft nicht, ob der Name bereits verwendet wird oder ob Sie über eine Berechtigung zum Erstellen der Tabelle verfügen.  
   

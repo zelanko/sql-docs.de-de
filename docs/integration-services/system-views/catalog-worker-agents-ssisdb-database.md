@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e7ba7f740e970292abe922a89a0a015cb5ef792
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713703"
 ---
 # <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (SSISDB-Datenbank)
@@ -27,12 +27,12 @@ ms.locfileid: "65713703"
 
 Zeigt die Informationen für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out-Worker an.
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |WorkerAgentId|**uniqueidentifier**|Die Worker-Agent-ID für den Scale Out-Worker.|
 |isEnabled|**bit**|Gibt an, ob der Scale Out-Worker aktiviert ist.|
 |DisplayName|**nvarchar(256)**|Der Anzeigename des Scale Out-Workers.|
-|Beschreibung|**nvarchar(256)**|Die Beschreibung des Scale Out-Workers.|
+|und Beschreibung|**nvarchar(256)**|Die Beschreibung des Scale Out-Workers.|
 |MachineName|**nvarchar(256)**|Der Computername für den Scale Out-Worker.|
 |Tags|**nvarchar(max)**|Die Tags des Scale Out-Workers.|
 |UserAccount|**nvarchar(256)**|Das Benutzerkonto, unter dem der Dienst für den Scale Out-Worker ausgeführt wird.|

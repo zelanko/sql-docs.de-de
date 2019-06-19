@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860631"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789652"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Konfigurieren erweiterter Ereignisse für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860631"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Alwayson_health-Sitzung](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [Erweiterte Ereignisse zum Debuggen](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Referenz zu erweiterten Ereignisse von Always On-Verfügbarkeitsgruppen](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health-Sitzung  
  Die alwayson_health-Sitzung mit den erweiterten Ereignissen wird automatisch beim Erstellen der Verfügbarkeitsgruppe erstellt und erfasst eine Teilmenge verwandter Ereignisse der Verfügbarkeitsgruppe. Diese Sitzung ist als nützliches und praktisches Tool vorkonfiguriert, mit dem Sie schnell die ersten Schritte bei der Behandlung von Problemen mit einer Verfügbarkeitsgruppe durchführen können. Der Assistent zum Erstellen von Verfügbarkeitsgruppen startet automatisch die Sitzung für jedes beteiligte Verfügbarkeitsreplikat, das im Assistenten konfiguriert ist.  
   
@@ -88,15 +82,15 @@ Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden S
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|Beschreibung|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |Name|availability_replica_state_change|  
-|Kategorie|alwayson|  
+|Kategorie|Always On|  
 |Channel|Operational|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|und Beschreibung|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -119,15 +113,15 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|Beschreibung|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |Name|availability_group_lease_expired|  
-|Kategorie|alwayson|  
+|Kategorie|Always On|  
 |Channel|Operational|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|und Beschreibung|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -147,15 +141,15 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Kategorie|alwayson|  
+|Kategorie|Always On|  
 |Channel|Analytic|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|und Beschreibung|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -184,7 +178,7 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (mehrere Fehlernummern): bei Transport- oder Verbindungsproblemen  
  Jedes gefilterte Ereignis zeigt an, dass ein Konnektivitätsproblem beim Transport- oder Datenbankspiegelungsendpunkt, von dem diese Verfügbarkeitsgruppe abhängig ist, aufgetreten ist.  
   
-|Spalte|Beschreibung|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |Name|error_reported<br /><br /> Zu filternde Zahlen: 35201, 35202, 35206, 35204, 35207, 9642, 9666, 9691, 9692, 9693, 28034, 28036, 28080, 28091, 33309|  
 |Kategorie|errors|  
@@ -192,7 +186,7 @@ GO
   
 #### <a name="error-numbers-to-filter"></a>Zu filternde Fehlernummern  
   
-|Fehlernummer|Beschreibung|  
+|Fehlernummer|und Beschreibung|  
 |------------------|-----------------|  
 |35201|Bei dem Versuch, eine Verbindung mit dem Verfügbarkeitsreplikat '%ls' herzustellen, ist ein Timeout aufgetreten.|  
 |35202|Für die Verfügbarkeitsgruppe '%ls' wurde erfolgreich eine Verbindung zwischen dem Verfügbarkeitsreplikat '%ls' mit der ID [%ls] und dem mit der ID [%ls] hergestellt.  Diese Meldung dient nur zu Informationszwecken. Es ist keine Benutzeraktion erforderlich.|  
@@ -247,17 +241,17 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|Beschreibung|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |Name|data_movement_suspend_resume|  
-|Kategorie|Alwayson|  
+|Kategorie|Always On|  
 |Channel|Operational|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
 ||||  
 |-|-|-|  
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|und Beschreibung|  
 |availability_group_id|guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe, falls vorhanden.|  
 |availability_replica_id|guid|Die ID des Verfügbarkeitsreplikats.|  
@@ -290,15 +284,15 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|Beschreibung|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |Name|alwayson_ddl_execution|  
-|Kategorie|alwayson|  
+|Kategorie|Always On|  
 |Channel|Analytic|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|und Beschreibung|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|Die ID der Verfügbarkeitsgruppe.|  
 |availability_group_name|unicode_string|Der Name der Verfügbarkeitsgruppe.|  
@@ -323,15 +317,15 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|Beschreibung|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |Name|availability_replica_manager_state_change|  
-|Kategorie|alwayson|  
+|Kategorie|Always On|  
 |Channel|Operational|  
   
 #### <a name="event-fields"></a>Ereignisfelder  
   
-|Name|Type_name|Beschreibung|  
+|Name|Type_name|und Beschreibung|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|Der aktuelle Status des Verfügbarkeitsreplikat-Managers.<br /><br /> Online<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
   
@@ -354,7 +348,7 @@ GO
   
 #### <a name="event-information"></a>Informationen zu Ereignissen  
   
-|Spalte|Beschreibung|  
+|Spalte|und Beschreibung|  
 |------------|-----------------|  
 |Name|error_reported<br /><br /> Fehlernummer 1480: The REPLICATION_TYPE_MSG database "DATABASE_NAME" is changing roles from "OLD_ROLE" to "NEW_ROLE" due to REASON_MSG (Bei der REPLICATION_TYPE_MSG-Datenbank „DATABASE_NAME“ werden aufgrund von REASON_MSG Rollen von „OLD_ROLE“ in „NEW_ROLE“ geändert)|  
 |Kategorie|errors|  

@@ -26,10 +26,10 @@ ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626688"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
@@ -277,7 +277,7 @@ In diesem Abschnitt werden neue mit Kompatibilitätsgrad 100 eingeführte Verhal
 |Die Aktualisierung von Spalten mithilfe einer bidirektionalen Zuweisung, wie z.B. `UPDATE T1 SET @v = column_name = <expression>`, kann zu unerwarteten Ergebnissen führen, weil während der Ausführung der Anweisung anstelle des Anfangswerts der aktuelle Wert der Variablen in anderen Klauseln verwendet werden kann, wie z.B. in der `WHERE`- und `ON`-Klausel. Dies kann dazu führen, dass sich die Bedeutungen der Prädikate für jede Zeile einzeln unvorhersehbar ändern.<br /><br /> Dieses Verhalten gilt nur, wenn der Kompatibilitätsgrad auf 90 festgelegt ist.|Die Aktualisierung von Spalten mithilfe einer zweiseitigen Zuweisung liefert die erwarteten Ergebnisse, weil während der Ausführung der Anweisung nur auf den Anweisungsanfangswert der Spalte zugegriffen wird.|Low|
 |Weitere Informationen finden Sie im Beispiel E weiter unten im Abschnitt „Beispiele“.|Siehe Beispiel F im nachfolgenden Abschnitt „Beispiele“.|Low|
 |Die ODBC-Funktion &lt;legacyBold&gt;{fn CONVERT ()}&lt;/legacyBold&gt; verwendet das Standarddatumsformat der Sprache. Bei einigen Sprachen lautet das Standardformat YDM. Dies kann zu Konvertierungsfehlern führen, wenn CONVERT() mit anderen Funktionen kombiniert wird, die ein YMD-Format erwarten, wie z.B. `{fn CURDATE()}`.|Die ODBC-Funktion `{fn CONVERT()}` verwendet für die Konvertierung in die ODBC-Datentypen SQL_TIMESTAMP, SQL_DATE, SQL_TIME, SQLDATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP das sprachenunabhängige XMD-Format im Format 121.|Low|
-|Für systeminterne datetime-Funktionen, wie z.&amp;#160;B. DATEPART, ist es nicht erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. `SELECT DATEPART (year, '2007/05-30')` wird beispielsweise erfolgreich kompiliert.|Für systeminterne datetime-Funktionen wie z.B. `DATEPART` ist es erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. Fehler 241 wird zurückgegeben, wenn ein ungültiges datetime-Literal verwendet wird.|Low|
+|Für systeminterne datetime-Funktionen, wie z.&#160;B. DATEPART, ist es nicht erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. `SELECT DATEPART (year, '2007/05-30')` wird beispielsweise erfolgreich kompiliert.|Für systeminterne datetime-Funktionen wie z.B. `DATEPART` ist es erforderlich, dass Zeichenfolgeneingabewerte gültige datetime-Literale sind. Fehler 241 wird zurückgegeben, wenn ein ungültiges datetime-Literal verwendet wird.|Low|
 
 ## <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
 

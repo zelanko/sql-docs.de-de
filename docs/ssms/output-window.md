@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a070121a50f056ad293bc4aec6af305587a9b6c3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095669"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>Das Ausgabefenster in SQL Server Management Studio
@@ -28,7 +28,7 @@ Das Ausgabefenster kann über das Menü „Ansicht“ oder mithilfe der Tastenko
 
 In der folgenden Tabelle finden Sie eine Übersicht über die Nachrichtentypen, die den einzelnen Ausgabekanälen zugeordnet sind.
 
-|Channel|Beschreibung|
+|Channel|und Beschreibung|
 |-----------|---------------|  
 |**Telemetrie**|Telemetrie ist der Datenstrom [anonymer Nutzungsdaten](sql-server-management-studio-ssms.md), die von Microsoft gesammelt werden. Diese Ereignisse könnten für Ihre eigene Dokumentation der SSMS-Nutzung hilfreich sein. Sie haben damit z.B. die Möglichkeit zu ermitteln, welche Objekt-Explorer-Knoten Sie erweitert und welche Befehle Sie während der SSMS-Sitzung ausgeführt haben, während das Ausgabefenster geöffnet war.|
 |**Objekt-Explorers**|Dieser Kanal gibt den Abfragetext von und die verstrichene Zeit während SQL-Abfragen für Knotenerweiterungen im Objekt-Explorer aus. Für jede Abfrage werden jeweils die Ereignisse „Abfragebeginn“ und „Abfrageende“ protokolliert. Jedes Ereignis verfügt außerdem über einen Zeitstempel und den URN, der der abgefragten Entität zugeordnet ist. Der [URN](https://technet.microsoft.com/library/microsoft.sqlserver.management.smo.urn(v=sql.90).aspx) bezieht sich auf das zugrunde liegende SQL Management Object und besteht aus einer XPath-Hierarchie. Der URN für eine Tabelle mit dem Namen „Table1“ in der Datenbank „Db“ auf dem Server „MyServer“ wäre z.B. „Server[@Name='MyServer']/Database[@Name="Db"]/Table[/@Name="Table1"]“. Durch das Erweitern eines Knotens im Objekt-Explorer können mehrere solcher Abfragen mit verschiedenen Parametern ausgeführt werden. Das Ereignis „Abfrageende“ enthält die verstrichene Zeit der Abfrage zusammen mit dem TSQL-Text. Diese Abfragedaten können dann für Serverleistungsanalysen nützlich sein, wenn der Objekt-Explorer für das Erweitern eines bestimmten Knotens ungewöhnlich lange braucht. **Hinweis:** Nicht jeder Knoten im Objekt-Explorer stellt beim Erweitern so viele Details zur Abfrage bereit.|

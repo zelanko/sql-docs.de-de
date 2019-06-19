@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d65cabf9e0dad9e6c3ee5824a59ce33815722042
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725668"
 ---
 # <a name="xml-source-custom-properties"></a>Benutzerdefinierte Eigenschaften der XML-Quelle
@@ -27,7 +27,7 @@ ms.locfileid: "65725668"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der XML-Quelle beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|Der zum Zugreifen auf die XML-Daten verwendete Modus.|  
 |UseInlineSchema|Boolean|Ein Wert, der angibt, ob eine Inlineschemadefinition innerhalb der XML-Quelle verwendet werden soll. Der Standardwert dieser Eigenschaft ist **False**.|  
@@ -36,7 +36,7 @@ ms.locfileid: "65725668"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabe der XML-Quelle. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
 |RowsetID|Zeichenfolge|Ein Wert, der das der Ausgabe zugeordnete Rowset identifiziert.|  
   

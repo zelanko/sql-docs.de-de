@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
-ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65461818"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
@@ -91,9 +91,9 @@ ms.locfileid: "65461818"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Datenwiederherstellung|Vollständige Wiederherstellung (falls das Protokoll verfügbar ist).|Gefahr des Datenverlusts.|Alle Daten seit der letzten vollständigen Sicherung oder differenziellen Sicherung gehen verloren.|  
 |Wiederherstellung bis zu einem bestimmten Zeitpunkt|Jeder von den Protokollsicherungen abgedeckte Zeitpunkt.|Nicht zulässig, wenn die Protokollsicherung massenprotokollierte Änderungen enthält.|Wird nicht unterstützt.|  
-|File restore **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
-|Page restore **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Keine.|  
-|Schrittweise Wiederherstellung (Dateigruppenebene) **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
+|File restore **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
+|Page restore **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Keine.|  
+|Schrittweise Wiederherstellung (Dateigruppenebene) **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
   
  **\*** Verfügbar nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

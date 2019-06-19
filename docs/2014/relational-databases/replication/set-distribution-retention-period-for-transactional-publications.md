@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c272cef68f1fc392aed05a3d8d45ab665674e39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676625"
 ---
 # <a name="set-the-distribution-retention-period-for-transactional-publications-sql-server-management-studio"></a>Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen (SQL Server Management Studio)
@@ -25,7 +25,7 @@ ms.locfileid: "62676625"
   
 ### <a name="to-specify-the-distribution-retention-period"></a>So geben Sie die Beibehaltungsdauer für die Verteilung an  
   
-1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften > \<Verteiler>** auf die Schaltfläche mit den Auslassungspunkten (**…**) für die Verteilungsdatenbank.  
+1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften > \<Verteiler>** auf die Schaltfläche mit den Auslassungspunkten ( **…** ) für die Verteilungsdatenbank.  
   
 2.  Zum Angeben der Mindestbeibehaltungsdauer geben Sie einen Wert in das Feld **Mindestens** ein; zum Angeben der maximalen Beibehaltungsdauer geben Sie einen Wert in das Feld **Aber nicht länger als** ein.  
   

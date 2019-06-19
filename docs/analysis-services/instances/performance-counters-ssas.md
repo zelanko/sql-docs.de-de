@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 79b4ecc40d69e8f40a5a1612985477d8ee6f166a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62709729"
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
@@ -49,7 +49,7 @@ ms.locfileid: "62709729"
 ###  <a name="bkmk_Cache"></a> Cache  
  Statistik zum Microsoft Analysis Services-Aggregationscache.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |KB aktuell|Aktueller vom Aggregationscache verwendeter Arbeitsspeicher (in KB).|  
 |Pro Sekunde hinzugefügte KB|Menge des Arbeitsspeichers, die dem Cache hinzugefügt wird (in KB/s).|  
@@ -106,7 +106,7 @@ ms.locfileid: "62709729"
 ###  <a name="bkmk_Locks"></a> Locks  
  Statistik zu internen Microsoft Analysis Services-Serversperren.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Latchwartevorgänge|Aktuelle Anzahl von Threads, die auf einen Latch warten.  Dies sind Latchanforderungen, die nicht unmittelbar genehmigt werden konnten und sich im Wartezustand befinden.|  
 |Latchwartevorgänge/s|Rate der Latchwartevorgänge, die nicht umgehend genehmigt werden konnten und vor der Genehmigung in einen Wartezustand versetzt wurden.|  
@@ -256,7 +256,7 @@ ms.locfileid: "62709729"
 ###  <a name="bkmk_ProcIndexes"></a> Verarbeiten von Indizes  
  Statistik zur Verarbeitung von Indizes für MOLAP-Datendateien in Microsoft Analysis Services.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Partitionen|Aktuelle Anzahl der Partitionen, die verarbeitet werden.|  
 |Gesamte Partitionen|Gesamtanzahl der verarbeiteten Partitionen (unabhängig vom Erfolg).|  
@@ -278,7 +278,7 @@ ms.locfileid: "62709729"
 ###  <a name="bkmk_StorageEngineQuery"></a> Speichermodulabfrage  
  Statistik zu Microsoft Analysis Services-Speicher-Engine-Abfragen.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Measuregruppenabfragen|Aktuelle Anzahl der Measuregruppenabfragen, die aktiv bearbeitet werden.|  
 |Measuregruppenabfragen/s|Rate der Measuregruppenabfragen|  
@@ -321,7 +321,7 @@ ms.locfileid: "62709729"
 ###  <a name="bkmk_Threads"></a> Threads  
  Statistik zu Microsoft Analysis Services-Threads.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Kurze Analysethreads im Leerlauf|Anzahl der Leerlaufthreads im Pool für kurze Analysethreads.|  
 |Ausgelastete kurze Analysethreads|Anzahl der ausgelasteten Threads im Pool für kurze Analysethreads.|  

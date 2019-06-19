@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2ff22b3a5dfde43e4202062cb40737fb7d4c02e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714846"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB-Datenbank)
@@ -30,7 +30,7 @@ ms.locfileid: "65714846"
 
   Zeigt die Instanzen der Paketausführung im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog an. Die Ausführung von Paketen mit dem Task "Paket ausführen" erfolgt in der gleichen Ausführungsinstanz wie die Ausführung des übergeordneten Pakets.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Der eindeutige Bezeichner (ID) der Ausführungsinstanz.|  
 |folder_name|**sysname(nvarchar(128))**|Der Name des Ordners, der das Projekt enthält.|  

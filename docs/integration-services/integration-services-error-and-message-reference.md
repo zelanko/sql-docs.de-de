@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 67b6514534083c05f40b40adcda2bae5c30a4591
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723642"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
@@ -51,7 +51,7 @@ ms.locfileid: "65723642"
 ##  <a name="msgError"></a> Fehlermeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTS_E_**.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Die gespeicherte Prozedur "%1" wird am Ziel überschrieben.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|Der Datentyp "%1"in Spalte %2 wird für %3 nicht unterstützt. Diese Spalte wird in DT_NTEXT umgewandelt.|  
@@ -2025,7 +2025,7 @@ ms.locfileid: "65723642"
 ##  <a name="msgWarning"></a> Warnmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Warnmeldungen beginnen mit **DTS_W_**.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|Es bleiben %1!lu! Tage für die Evaluierung. Nach Ablauf der Evaluierung können die Pakete nicht mehr ausgeführt werden.|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|Warnung(en) wurde(n) ausgelöst. Vorher sollten genauere Warnungen ausgegeben worden sein, die die Bedeutung der Warnung(en) erläutern.|  
@@ -2171,7 +2171,7 @@ ms.locfileid: "65723642"
 ##  <a name="msgInfo"></a> Informationsmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Informationsmeldungen beginnen mit **DTS_I_**.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|Verteilte Transaktion für diesen Container wird gestartet.|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|Commit für verteilte Transaktion, die von diesem Container gestartet wurde, wird ausgeführt.|  
@@ -2270,7 +2270,7 @@ ms.locfileid: "65723642"
 ##  <a name="msgGeneral"></a> Allgemeine Meldungen und Ereignismeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTS_MSG_**.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Falsche Funktion.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Die angegebene Datei wurde nicht gefunden.|  
@@ -2309,7 +2309,7 @@ ms.locfileid: "65723642"
 ##  <a name="msgSuccess"></a> Erfolgsmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Erfolgsmeldungen beginnen mit **DTS_S_**.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|Der Wert ist NULL.|  
 |0x40005|262149|DTS_S_TRUNCATED|Der Zeichenfolgenwert war abgeschnitten. Der Puffer hat eine Zeichenfolge empfangen, die für die Spalte zu lang war. Die Zeichenfolge wurde deshalb vom Puffer abgeschnitten.|  
@@ -2318,7 +2318,7 @@ ms.locfileid: "65723642"
 ##  <a name="msgPipeline"></a> Fehlermeldungen der Datenflusskomponenten  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Fehlermeldungen beginnen mit **DTSBC_E_**, wobei „BC“ auf die systemeigene Basisklasse verweist, von der die meisten Microsoft-Datenflusskomponenten abgeleitet werden.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|und Beschreibung|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|Die Gesamtanzahl der Ausgaben und Fehlerausgaben (%1!lu!) ist falsch. Dieser Wert muss genau %2!lu! betragen.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|Die Ausgabe mit dem Index %1!lu! kann nicht abgerufen werden.|  

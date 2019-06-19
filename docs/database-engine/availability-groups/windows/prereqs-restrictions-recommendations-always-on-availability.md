@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798153"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen
@@ -84,7 +84,7 @@ ms.locfileid: "66798153"
   
 3.  Verwenden Sie das **Get-ClusterResource** -Cmdlet, um die Netzwerknamenressource anzuzeigen, und verwenden Sie das **Set-ClusterParameter** -Cmdlet, um den **HostRecordTTL** -Wert wie folgt festzulegen:  
   
-     Get-ClusterResource „ *\<Netzwerkressourcenname>* “ | Set-ClusterParameter-HostRecordTTL *\<Zeit_in_Sekunden>*  
+     Get-ClusterResource „*\<Netzwerkressourcenname>*“ | Set-ClusterParameter-HostRecordTTL *\<Zeit_in_Sekunden>*  
   
      Im folgenden PowerShell-Beispiel wird der HostRecordTTL für eine Netzwerknamenressource mit dem Namen `SQL Network Name (SQL35)` auf 300 Sekunden festgelegt.  
   
