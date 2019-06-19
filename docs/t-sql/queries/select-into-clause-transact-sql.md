@@ -31,11 +31,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334537"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705645"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, un
  **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Datentypen  
- Beim FILESTREAM-Attribut werden keine Daten in die neue Tabelle übertragen. FILESTREAM-BLOBs werden kopiert und in der neuen Tabelle als **varbinary(max)**-BLOBs gespeichert. Ohne das FILESTREAM-Attribut verfügt der **varbinary(max)**-Datentyp über eine Einschränkung von 2 GB. Wenn ein FILESTREAM-BLOB diesen Wert überschreitet, wird Fehler 7119 ausgelöst, und die Anweisung wird beendet.  
+ Beim FILESTREAM-Attribut werden keine Daten in die neue Tabelle übertragen. FILESTREAM-BLOBs werden kopiert und in der neuen Tabelle als **varbinary(max)** -BLOBs gespeichert. Ohne das FILESTREAM-Attribut verfügt der **varbinary(max)** -Datentyp über eine Einschränkung von 2 GB. Wenn ein FILESTREAM-BLOB diesen Wert überschreitet, wird Fehler 7119 ausgelöst, und die Anweisung wird beendet.  
   
  Bei der Auswahl einer vorhandenen Identitätsspalte in einer neuen Tabelle erbt die neue Spalte die IDENTITY-Eigenschaft, es sein denn, eine der folgenden Bedingungen trifft zu:  
   

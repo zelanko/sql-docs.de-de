@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2e939e27263f52dc3a6ac607bc59cd8db6c1806
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250708"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, CLR-Objekt
@@ -25,7 +25,7 @@ ms.locfileid: "63250708"
   
  In der folgenden Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** -Indikatoren beschrieben.  
   
-|CLR-Indikatoren|Description|  
+|CLR-Indikatoren|Beschreibung|  
 |------------------|-----------------|  
 |**CLR Execution**|Gesamtausführungszeit in CLR ( Mikrosekunden ).|  
   

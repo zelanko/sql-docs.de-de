@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77828ab512373c93313c8b0602423a9eaa38a426
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939791"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -59,7 +59,7 @@ SET QUOTED_IDENTIFIER ON
 
 Wenn SET QUOTED_IDENTIFIER auf ON festgelegt ist, können Bezeichner in Anführungszeichen eingeschlossen werden, und Literale müssen in einfache Anführungszeichen eingeschlossen werden. Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, können Bezeichner nicht in Anführungszeichen eingeschlossen werden und müssen allen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md). Literale können in einfache oder doppelte Anführungszeichen eingeschlossen werden.
 
-Wenn SET QUOTED_IDENTIFIER auf ON (Standardeinstellung) festgelegt ist, werden alle in doppelten Anführungszeichen eingeschlossenen Zeichenfolgen als Objektbezeichner interpretiert. Daher müssen Bezeichner in Anführungszeichen nicht den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Regeln für Bezeichner entsprechen. Sie können reservierte Schlüsselwörter darstellen und Zeichen einschließen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichnern sonst nicht zulässig sind. Doppelte Anführungszeichen dürfen nicht zum Begrenzen von Ausdrücken mit Literalzeichenfolgen verwendet werden, da Literalzeichenfolgen in einfache Anführungszeichen eingeschlossen werden müssen. Wenn ein einfaches Anführungszeichen (**'**) Teil der Literalzeichenfolge ist, kann es durch zwei einfache Anführungszeichen (**"**) dargestellt werden. SET QUOTED_IDENTIFIER muss auf ON festgelegt sein, wenn reservierte Schlüsselwörter für Objektnamen in der Datenbank verwendet werden.
+Wenn SET QUOTED_IDENTIFIER auf ON (Standardeinstellung) festgelegt ist, werden alle in doppelten Anführungszeichen eingeschlossenen Zeichenfolgen als Objektbezeichner interpretiert. Daher müssen Bezeichner in Anführungszeichen nicht den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Regeln für Bezeichner entsprechen. Sie können reservierte Schlüsselwörter darstellen und Zeichen einschließen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichnern sonst nicht zulässig sind. Doppelte Anführungszeichen dürfen nicht zum Begrenzen von Ausdrücken mit Literalzeichenfolgen verwendet werden, da Literalzeichenfolgen in einfache Anführungszeichen eingeschlossen werden müssen. Wenn ein einfaches Anführungszeichen ( **'** ) Teil der Literalzeichenfolge ist, kann es durch zwei einfache Anführungszeichen ( **"** ) dargestellt werden. SET QUOTED_IDENTIFIER muss auf ON festgelegt sein, wenn reservierte Schlüsselwörter für Objektnamen in der Datenbank verwendet werden.
 
 Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, können Literalzeichenfolgen in Ausdrücken in einfache oder doppelte Anführungszeichen eingeschlossen werden. Eine in doppelte Anführungszeichen eingeschlossene Literalzeichenfolge kann eingebundene einfache Anführungszeichen, wie z. B. Apostrophe, enthalten.
 
@@ -89,7 +89,7 @@ Statische SQL-Anweisungen in einer gespeicherten Prozedur werden mithilfe der QU
 
 Für einen geschachtelten Batch, der sp_executesql oder exec() verwendet, beginnt die Analyse unter Verwendung der QUOTED_IDENTIFIER-Einstellung der Sitzung. Wenn sich der geschachtelte Batch innerhalb einer gespeicherten Prozedur befindet, startet die Analyse unter Verwendung der QUOTED_IDENTIFIER-Einstellung der gespeicherten Prozedur. Bei der Analyse des geschachtelten Batches verändert jedes Auftreten von SET QUOTED_IDENTIFIER ab diesem Zeitpunkt das Analyseverhalten, aber die QUOTED_IDENTIFIER-Einstellung der Sitzung wird nicht aktualisiert.
 
-Die Verwendung von Klammern, **[** und **]**, zum Begrenzen von Bezeichnern ist nicht von der QUOTED_IDENTIFIER-Einstellung betroffen.
+Die Verwendung von Klammern, **[** und **]** , zum Begrenzen von Bezeichnern ist nicht von der QUOTED_IDENTIFIER-Einstellung betroffen.
 
 Um die aktuelle Einstellung anzuzeigen, führen Sie die folgende Abfrage aus.
 

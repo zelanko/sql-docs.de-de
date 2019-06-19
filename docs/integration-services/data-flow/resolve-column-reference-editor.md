@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726469"
 ---
 # <a name="resolve-column-reference-editor"></a>Editor zum Auflösen von Spaltenverweisen
@@ -33,17 +33,17 @@ ms.locfileid: "65726469"
   
  Nachdem alle Spaltenverweise aufgelöst wurden und keine weiteren Datenpfadfehler auftreten, werden neben den Datenpfaden keine Fehlersymbole angezeigt.  
   
-## <a name="options"></a>Optionen  
- **Nicht zugeordnete Ausgabespalten (Quelle)**    
+## <a name="options"></a>enthalten  
+ **Nicht zugeordnete Ausgabespalten (Quelle)**     
  Spalten vom Upstreampfad, die derzeit nicht zugeordnet sind.  
   
-**Zugeordnete Spalten (Quelle)**    
+**Zugeordnete Spalten (Quelle)**     
  Spalten vom Upstreampfad, die Spalten vom Downstreampfad zugeordnet sind.  
   
-**Zugeordnete Spalten (Ziel)**    
+**Zugeordnete Spalten (Ziel)**     
  Spalten vom Upstreampfad, die Spalten vom Downstreampfad zugeordnet sind.  
   
-**Nicht zugeordnete Eingabespalten (Ziel)**    
+**Nicht zugeordnete Eingabespalten (Ziel)**     
  Spalten vom Downstreampfad, die derzeit nicht zugeordnet sind.  
   
 **Nicht zugeordnete Eingabespalten löschen**  

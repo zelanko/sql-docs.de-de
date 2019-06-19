@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 815eedc74e64a8c9e6ef38ba8cb9c8b0048aecbd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725079"
 ---
 # <a name="property-expressions-editor"></a>Eigenschaftsausdrucks-Editor
@@ -29,7 +29,7 @@ ms.locfileid: "65725079"
 
   Verwenden Sie das Dialogfeld **Eigenschaftsausdrucks-Editor** , um die Eigenschaftsausdrücke, durch die Eigenschaftswerte aktualisiert werden, zu erstellen, zu bearbeiten oder zu löschen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Eigenschaft**  
  Wählen Sie eine Objekteigenschaft aus der Liste aus.  
   

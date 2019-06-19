@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22e6e8b75dc488a159756cd8d4aa2c47b558b72b
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945878"
 ---
 # <a name="sysxmlschemamodelgroups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "64945878"
 
   Gibt eine Zeile pro XML-Schemakomponente zurück, die einer Modellgruppe entspricht. Dabei ist **symbol_space** gleich **T**.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**\<geerbte Spalten >**||Erbt Spalten von [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**compositor**|**char(1)**|Art der compositor-Gruppe:<br /><br /> A = XSD- \<alle > Gruppe<br /><br /> C = XSD- \<Wahl > Gruppe<br /><br /> S = XSD- \<Sequenz > Gruppe|  

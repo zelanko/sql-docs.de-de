@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3da927ec00fe6402a9c7612beae90453e30c4e26
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210399"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661366"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "53210399"
  Hinzufügen eines Artikels beinhaltet Folgendes: Hinzufügen des Artikels zur Veröffentlichung; Erstellen einer neuen Momentaufnahme für die Veröffentlichung und Synchronisieren des Abonnements zum Zuweisen des Schemas und der Daten für den neuen Artikel.  
   
 > [!NOTE]
->  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des **@processing_order** -Parameters von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) und [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)eine Verarbeitungsreihenfolge für die beiden Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **@processing_order** -Parameter von **sp_addmergearticle**an, und geben Sie einen Wert von **2** für den **@processing_order** -Parameter von **sp_changemergearticle**an. Geben Sie dann den Tabellennamen für den **@article**. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für die einzelnen Artikel verwenden, dabei muss jedoch die Nummer für die Funktion kleiner als die Nummer der Tabelle sein.  
+>  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des **@processing_order** -Parameters von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) und [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)eine Verarbeitungsreihenfolge für die beiden Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **@processing_order** -Parameter von **sp_addmergearticle**an, und geben Sie einen Wert von **2** für den **@processing_order** -Parameter von **sp_changemergearticle**an. Geben Sie dann den Tabellennamen für den **@article** . Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für die einzelnen Artikel verwenden, dabei muss jedoch die Nummer für die Funktion kleiner als die Nummer der Tabelle sein.  
   
 1.  Zum Hinzufügen einzelner oder mehrerer Artikel stehen die folgenden Methoden zur Verfügung:  
   

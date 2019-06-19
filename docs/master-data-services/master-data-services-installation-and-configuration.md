@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994119"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
@@ -35,8 +35,8 @@ Einen Überblick darüber, wie Sie Daten in [!INCLUDE[ssMDSshort_md](../includes
 Links zu Videos und Ressourcen zum Erlernen von [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] finden Sie unter [Erlernen von SQL Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
-> -   Navigieren Sie zum Herunterladen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
-> -   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**, um einen virtuellen Computer zu starten, auf dem SQL Server bereits installiert ist.  
+> -   Navigieren Sie zum Herunterladen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
+> -   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , um einen virtuellen Computer zu starten, auf dem SQL Server bereits installiert ist.  
 > 
 > **Sie können keine MDS-Website erstellen?**
 > >Lesen Sie diesen Microsoft Support-Artikel für Anweisungen zum Lösen dieses Problems.
@@ -94,7 +94,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. Klicken Sie im linken Bereich auf **Rolle 'Webserver' (IIS)**, und klicken Sie anschließend auf **Rollendienste**.
+10. Klicken Sie im linken Bereich auf **Rolle 'Webserver' (IIS)** , und klicken Sie anschließend auf **Rollendienste**.
 11. Bestätigen Sie auf der Seite **Rollendienste**, dass die folgenden Dienste ausgewählt sind, und klicken Sie dann auf **Weiter**. Diese Dienste werden für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] unter [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] benötigt.
 
     > [!WARNING]  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245985"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
@@ -123,9 +123,9 @@ ms.locfileid: "63245985"
   
  <sup>2</sup> Auftragsbesitz nicht ändern.  
   
- <sup>3</sup> **SQLAgentOperatorRole** können aktivieren oder deaktivieren Sie die lokale Aufträge, die sie kein besitzen mithilfe der gespeicherten Prozedur **Sp_update_job** und Angeben von Werten für die **@enabled** und **@job_id** (oder **@job_name**) Parameter. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.  
+ <sup>3</sup> **SQLAgentOperatorRole** können aktivieren oder deaktivieren Sie die lokale Aufträge, die sie kein besitzen mithilfe der gespeicherten Prozedur **Sp_update_job** und Angeben von Werten für die **@enabled** und **@job_id** (oder **@job_name** ) Parameter. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.  
   
- <sup>4</sup> **SQLAgentOperatorRole** können aktivieren oder Deaktivieren von Zeitplänen, die sie kein besitzen mithilfe der gespeicherten Prozedur **Sp_update_schedule** und Angeben von Werten für die **@enabled** und **@schedule_id** (oder **@name**) Parameter. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.  
+ <sup>4</sup> **SQLAgentOperatorRole** können aktivieren oder Deaktivieren von Zeitplänen, die sie kein besitzen mithilfe der gespeicherten Prozedur **Sp_update_schedule** und Angeben von Werten für die **@enabled** und **@schedule_id** (oder **@name** ) Parameter. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.  
   
 ## <a name="assigning-users-multiple-roles"></a>Zuweisen von mehreren Rollen an Benutzer  
  Die Mitglieder der festen Serverrolle **sysadmin** haben Zugriff auf alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Funktionen. Wenn ein Benutzer nicht Mitglied der **sysadmin** -Rolle ist, sondern von mehr als einer festen Datenbankrolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, sollten Sie das konzentrische Berechtigungsmodell dieser Rollen berücksichtigen. Da die Rollen mit höheren Berechtigungen immer alle Berechtigungen der Rollen mit niedrigeren Berechtigungen enthalten, hat ein Benutzer, der Mitglied von mehreren Rollen ist, automatisch die Berechtigungen der Rolle mit den höchsten Berechtigungen, deren Mitglied der Benutzer ist.  

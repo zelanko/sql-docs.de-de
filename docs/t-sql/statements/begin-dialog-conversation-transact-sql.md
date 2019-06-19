@@ -32,11 +32,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124790"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051731"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +69,13 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  Gibt den Dienst an, der den Dialog initialisiert. Bei dem angegebenen Namen muss es sich um den Namen eines Diensts in der aktuellen Datenbank handeln. Die als Initiatordienst angegebene Warteschlange empfängt Nachrichten, die vom Zieldienst zurückgegeben werden, sowie Nachrichten, die von Service Broker für diese Konversation erstellt wurden.  
   
- TO SERVICE **'**_target_service_name_**'**  
- Gibt den Zieldienst an, mit dem der Dialog initialisiert werden soll. Der *target_service_name* ist vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *target_service_name*-Zeichenfolge aus. Das heißt, dass bei dem Vergleich die Groß- und Kleinschreibung beachtet und die aktuelle Sortierung nicht berücksichtigt wird.  
+ TO SERVICE **'** _target_service_name_ **'**  
+ Gibt den Zieldienst an, mit dem der Dialog initialisiert werden soll. Der *target_service_name* ist vom Typ **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *target_service_name*-Zeichenfolge aus. Das heißt, dass bei dem Vergleich die Groß- und Kleinschreibung beachtet und die aktuelle Sortierung nicht berücksichtigt wird.  
   
  *service_broker_guid*  
  Gibt die Datenbank an, auf der sich der Zieldienst befindet. Wenn mehrere Datenbanken eine Instanz des Zieldiensts hosten, können Sie mit einer bestimmten Datenbank kommunizieren, indem Sie *service_broker_guid* angeben.  
   
- Die *service_broker_guid* ist vom Typ **nvarchar(128)**. Führen Sie die folgende Abfrage in der Datenbank aus, um die *service_broker_guid* für eine Datenbank zu ermitteln:  
+ Die *service_broker_guid* ist vom Typ **nvarchar(128)** . Führen Sie die folgende Abfrage in der Datenbank aus, um die *service_broker_guid* für eine Datenbank zu ermitteln:  
   
 ```  
 SELECT service_broker_guid  
@@ -92,13 +92,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Gibt den Vertrag an, dem diese Konversation entspricht. Der Vertrag muss in der aktuellen Datenbank vorhanden sein. Wenn der Zieldienst für den angegebenen Vertrag keine neuen Konversationen akzeptiert, gibt [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Fehlermeldung zur Konversation zurück. Wird diese Klausel weggelassen, folgt die Konversation dem Vertrag mit dem Namen **DEFAULT**.  
   
- RELATED_CONVERSATION **=**_related_conversation_handle_  
+ RELATED_CONVERSATION **=** _related_conversation_handle_  
  Gibt die vorhandene Konversationsgruppe an, der der neue Dialog hinzugefügt wird. Wenn diese Klausel vorhanden ist, gehört der neue Dialog derselben Konversationsgruppe an, wie der mit *related_conversation_handle* angegebene Dialog. *related_conversation_handle* muss implizit in den Typ **uniqueidentifier** konvertierbar sein. Die Anweisung schlägt fehl, wenn *related_conversation_handle* nicht auf einen vorhandenen Dialog verweist.  
   
- RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
+ RELATED_CONVERSATION_GROUP **=** _related_conversation_group_id_  
  Gibt die vorhandene Konversationsgruppe an, der der neue Dialog hinzugefügt wird. Wenn diese Klausel vorhanden ist, wird der neue Dialog zu der mit *related_conversation_group_id* angegebenen Konversationsgruppe hinzugefügt. *related_conversation_group_id* muss implizit in den Typ **uniqueidentifier** konvertierbar sein. Wenn *related_conversation_group_id* nicht auf eine vorhandene Konversationsgruppe verweist, erstellt der Service Broker eine neue Konversationsgruppe mit der angegebenen *related_conversation_group_id* und verknüpft den neuen Dialog mit dieser Konversationsgruppe.  
   
- LIFETIME **=**_dialog_lifetime_  
+ LIFETIME **=** _dialog_lifetime_  
  Gibt den maximalen Zeitraum an, in dem der Dialog geöffnet bleibt. Damit der Dialog erfolgreich abgeschlossen wird, müssen beide Endpunkte den Dialog explizit beenden, bevor die Lebensdauer abläuft. Der Wert für *dialog_lifetime* muss in Sekunden angegeben werden. „Lifetime“ ist vom Typ **int**. Wird keine LIFETIME-Klausel angegeben, entspricht die Lebensdauer des Dialogs dem maximalen Wert des Datentyps **int**.  
   
  ENCRYPTION  

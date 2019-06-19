@@ -22,10 +22,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c7f65ad3957280953faa58792ea39e48ce16f20e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089711"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
@@ -102,7 +102,7 @@ Die folgende Tabelle enthält einen Überblick über die **SQLAgentOperatorRole*
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |Erstellen/Ändern/Löschen|Nein|Nein|Ja (nur Aufträge mit Besitzer)<br /><br />Der Auftragsbesitz kann nicht geändert werden.|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
 |Liste anzeigen (aufzählen)|Ja|Ja<br /><br />Die Liste mit verfügbaren Operatoren kann zum Verwenden in **sp_notify_operator** und im Dialogfeld **Auftragseigenschaften** von Management Studio abgerufen werden.|Ja|Ja|Ja|Ja|  
-|Aktivieren/Deaktivieren|Nein|Nein|Ja<br /><br />**SQLAgentOperatorRole** können lokale Aufträge, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_job** verwenden und Werte für die **@enabled** und **@job_id** -Parameter (oder **@job_name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nein|Ja<br /><br />**SQLAgentOperatorRole** können Zeitpläne, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_schedule** verwenden und Werte für die **@enabled** und **@schedule_id** -Parameter (oder **@name**) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nicht verfügbar|  
+|Aktivieren/Deaktivieren|Nein|Nein|Ja<br /><br />**SQLAgentOperatorRole** können lokale Aufträge, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_job** verwenden und Werte für die **@enabled** und **@job_id** -Parameter (oder **@job_name** ) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nein|Ja<br /><br />**SQLAgentOperatorRole** können Zeitpläne, deren Besitzer sie nicht sind, aktivieren oder deaktivieren, indem sie die gespeicherte Prozedur **sp_update_schedule** verwenden und Werte für die **@enabled** und **@schedule_id** -Parameter (oder **@name** ) angeben. Wenn ein Mitglied dieser Rolle einen anderen Parameter für diese gespeicherte Prozedur angibt, erzeugt die Ausführung der Prozedur einen Fehler.|Nicht verfügbar|  
 |Eigenschaften anzeigen|Ja|Ja|Ja|Ja|Ja|Ja|  
 |Eigenschaften bearbeiten|Nein|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|Ja|Nein|Nicht verfügbar|Nicht verfügbar|  

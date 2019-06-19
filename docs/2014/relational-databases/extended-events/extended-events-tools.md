@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137055"
 ---
 # <a name="extended-events-tools"></a>Tools für erweiterte Ereignisse
@@ -47,7 +47,7 @@ ms.locfileid: "63137055"
 ## <a name="catalog-views"></a>Katalogsichten  
  Verwenden Sie die folgenden Katalogsichten, um die beim Erstellen einer Ereignissitzung erstellten Metadaten abzurufen.  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)|Listet alle Ereignissitzungsdefinitionen auf.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql)|Gibt für jede Aktion jedes Ereignisses einer Ereignissitzung eine Zeile zurück.|  

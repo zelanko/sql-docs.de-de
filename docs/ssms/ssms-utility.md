@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f36faf136a97d185cf1461f7affc414370b813f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102609"
 ---
 # <a name="ssms-utility"></a>Ssms-Hilfsprogramm
@@ -53,35 +53,35 @@ Ssms
  *solutionfile*  
  Gibt eine zu öffnende Lösung an. Der Parameter muss den vollständigen Pfad zur Lösungsdatei enthalten.  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
   Servername  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
   Datenbankname  
 
- [**-G**] Herstellen einer Verbindung mithilfe von Active Directory-Authentifizierung. Der Verbindungstyp wird bestimmt, gleich ob **-P** und/oder **-U** angegeben wurde(n).
+ [ **-G**] Herstellen einer Verbindung mithilfe von Active Directory-Authentifizierung. Der Verbindungstyp wird bestimmt, gleich ob **-P** und/oder **-U** angegeben wurde(n).
  - Wenn **-U** und **-P** *nicht* angegeben wurden, wird **Active Directory: Integriert** verwendet, und es wird kein Dialogfeld angezeigt.
  - Wenn sowohl **-U** als auch **-P** angegeben wurden, wird **Active Directory: Kennwort** verwendet. Die Verwendung dieser Option wird **nicht empfohlen**, da Sie dann ein unverschlüsseltes Kennwort in der Befehlszeile angeben müssen, wovon wir ausdrücklich abraten.
  - Wenn **-U** angegeben wird, **-P** jedoch nicht, wird ein Authentifizierungsdialogfeld angezeigt, jedoch misslingen alle Anmeldungsversuche. 
 
   Beachten Sie, dass **Active Directory: Universell mit MFA-Unterstützung** aktuell nicht unterstützt wird. 
   
-[**-U** _username_]  
+[ **-U** _username_]  
  Benutzername beim Herstellen der Verbindung mit 'SQL-Authentifizierung' oder 'Active Directory: Kennwort'  
   
-[**-P** _password_]  
+[ **-P** _password_]  
  Kennwort beim Herstellen der Verbindung mit 'SQL-Authentifizierung' oder 'Active Directory: Kennwort'
   
-[**-E**]  
+[ **-E**]  
  Verbindung mithilfe der Windows-Authentifizierung herstellen  
   
-[**-nosplash**]  
+[ **-nosplash**]  
  Verhindert, dass [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] beim Öffnen den Begrüßungsbildschirm anzeigt. Verwenden Sie diese Option, wenn Sie eine Verbindung zum Computer mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] herstellen und hierfür Terminaldienste über eine Verbindung mit begrenzter Bandbreite einsetzen. Bei diesem Argument wird die Groß- und Kleinschreibung nicht beachtet. Es kann vor oder nach anderen Argumenten angegeben werden.  
   
-[**-log**_[filename]?_]  
+[ **-log** _[filename]?_ ]  
  Protokolliert die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Aktivität zur Problembehandlung in der angegebenen Datei.  
   
-[**-?**]  
+[ **-?** ]  
  Zeigt die Hilfe zur Befehlszeile an.  
   
 ## <a name="remarks"></a>Remarks  

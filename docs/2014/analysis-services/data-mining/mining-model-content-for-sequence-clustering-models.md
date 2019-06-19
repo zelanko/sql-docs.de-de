@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083566"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Sequence Clustering-Modellen (Analysis Services – Data Mining)
@@ -53,7 +53,7 @@ ms.locfileid: "66083566"
  NODE_TYPE  
  Ein Sequence Clustering-Modell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |1 (Model)|Stammknoten für das Modell|  
 |5 (Cluster)|Enthält die Anzahl der im Cluster enthaltenen Übergänge, eine Liste der Attribute und die Statistik, die die Werte im Cluster beschreibt.|  

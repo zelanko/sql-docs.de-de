@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ac9ce3c3def4341fd653d7e4c750890c58a77c76
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096839"
 ---
 # <a name="job-categories-properties---new-job-category"></a>Eigenschaften für Auftragskategorien – Neue Auftragskategorie
@@ -29,7 +29,7 @@ ms.locfileid: "65096839"
 
 Zeigt eine Liste der Aufträge in einer Auftragskategorie oder allen Auftragskategorien an und ermöglicht Ihnen das Hinzufügen einer neuen Auftragskategorie.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
 **Name**  
 Geben Sie den Namen der neuen Auftragskategorie ein. Wenn dies das Dialogfeld mit den Eigenschaften der Auftragskategorie ist, wird hier die von Ihnen eingesehene Kategorie angezeigt.  
   

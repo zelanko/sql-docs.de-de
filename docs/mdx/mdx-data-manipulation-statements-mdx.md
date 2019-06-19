@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187647"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX-Datenbearbeitungsanweisungen (MDX)
@@ -23,7 +23,7 @@ ms.locfileid: "63187647"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[CALL-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|Führt eine gespeicherte Prozedur, die "void" zurückgibt, im aktuellen Bereich oder optional für einen angegebenen Cube aus.|  
 |[CLEAR CALCULATIONS-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Entfernt alle Berechnungen aus dem Cube und setzt den Cube auf den Berechnungsdurchlauf 0 zurück.|  

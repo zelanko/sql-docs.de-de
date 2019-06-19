@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: e4b24b70a427e7ac3e3f058b1db332b899729034
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802816"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Verwendung von Notebooks in der Vorschau von SQL Server-2019
@@ -97,7 +97,7 @@ Wenn die Installation erfolgreich war, finden Sie eine Benachrichtigung in der G
 
 ![Jupyter-Back-End](media/notebooks-guidance/jupyter-backend.png)
 
-|Kernel|Description
+|Kernel|Beschreibung
 |:-----|:-----
 | SQL Kernel | Schreiben Sie SQL-Code an Ihre relationale Datenbank gerichtet sind.
 |PySpark3 und PySpark-Kernel| Schreiben Sie Python-Code, die mit Spark Compute aus dem Cluster.

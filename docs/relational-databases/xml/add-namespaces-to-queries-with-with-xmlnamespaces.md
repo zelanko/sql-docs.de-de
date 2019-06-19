@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1905daf01b919e3e661b4c93302418c418cf7b69
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511477"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668373"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -220,7 +220,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- In der vorherigen Abfrage deklarieren die **query()**- und die **exist()**-Methode in ihrem Prolog denselben Namespace. Beispiel:  
+ In der vorherigen Abfrage deklarieren die **query()** - und die **exist()** -Methode in ihrem Prolog denselben Namespace. Beispiel:  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

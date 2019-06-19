@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1c2789d8d10928bcbe576fc57f630675fdbd405
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723898"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer Flatfile-Datenquelle (SQL Server-Import/Export-Assistent)
@@ -208,7 +208,7 @@ Beachten Sie im Screenshot, dass die Spalte **id**, die Zahlen enthält, anfäng
 |Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**Name**|Geben Sie einen beschreibenden Spaltennamen an. Wenn Sie keinen Namen eingeben, wird in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] automatisch ein Name im Format „Spalte 0“, „Spalte 1“ usw. erstellt.|
-|**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}**. Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}**. Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}**. Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}**. Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}**. Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}**. Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}**. Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}**. Als Trennzeichen für Spalten dient ein senkrechter Strich.|
+|**ColumnDelimiter**|Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie Spaltentrennzeichen auswählen, deren Auftreten als Zeichen im Text unwahrscheinlich ist. Bei Spalten fester Breite wird dieser Wert ignoriert.<br /><br /> **{CR}{LF}** . Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.<br /><br /> **{CR}** . Als Trennzeichen für Spalten dient ein Wagenrücklauf.<br /><br /> **{LF}** . Als Trennzeichen für Spalten dient ein Zeilenvorschub.<br /><br /> **Semikolon {;}** . Als Trennzeichen für Spalten dient ein Semikolon.<br /><br /> **Doppelpunkt {:}** . Als Trennzeichen für Spalten dient ein Doppelpunkt.<br /><br /> **Komma {,}** . Als Trennzeichen für Spalten dient ein Komma.<br /><br /> **Tabulator {t}** . Als Trennzeichen für Spalten dient ein Tabulator.<br /><br /> **Senkrechter Strich {&#124;}** . Als Trennzeichen für Spalten dient ein senkrechter Strich.|
 |**ColumnType**|Gibt an, ob eine Spalte getrennt ist, eine feste Breite hat bzw. einen unregelmäßigen rechten Rand aufweist. Diese Eigenschaft ist schreibgeschützt. Bei Dateien mit rechtem Flatterrand haben die Spalten mit Ausnahme der letzten Spalte eine feste Breite. Die Trennung der letzten Spalte erfolgt mit einem Zeilentrennzeichen.|  
 |**InputColumnWidth**|Geben Sie einen Wert an, der als Anzahl von Bytes gespeichert werden soll. Bei Unicode-Dateien entspricht dieser Wert einer Zeichenanzahl. Bei mit Trennzeichen versehenen Spalten wird dieser Wert ignoriert.<br /><br /> **Hinweis:** Im Objektmodell heißt diese Eigenschaft ColumnWidth.|
 |**DataPrecision**|Gibt die Präzision numerischer Daten an. Präzision heißt in diesem Fall die Anzahl der Stellen.|
@@ -226,7 +226,7 @@ Beachten Sie im Screenshot, dass die Spalte **id**, die Zahlen enthält, anfäng
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  
 |**Einfügen nach**|Fügt nach der ausgewählten Spalte eine neue Spalte ein.|  
   
- **Delete**  
+ **Löschen**  
  Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Löschen**klicken.  
   
  **Typen vorschlagen**  
