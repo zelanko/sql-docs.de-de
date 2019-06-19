@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 993cf560f8bd3c07b5930219ca041ebe5c411ea1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727448"
 ---
 # <a name="select-variables-page"></a>Variablen auswählen (Seite)
@@ -32,7 +32,7 @@ ms.locfileid: "65727448"
   
  Um das Dialogfeld **Variablen auswählen** zu öffnen, suchen Sie im Dialogfeld **Transformations-Editor für Skripterstellung** auf der Seite **Skript** unter **Benutzerdefinierte Eigenschaften** entweder nach der **ReadOnlyVariables**-Eigenschaft oder nach der **ReadWriteVariables**-Eigenschaft, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (...), die dieser Eigenschaft zugeordnet ist.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  Auswahlfeld  
  Wählt eine bestimmte Variable aus, wählt alle Variablen aus, oder hebt die Auswahl aller Variablen auf.  
   

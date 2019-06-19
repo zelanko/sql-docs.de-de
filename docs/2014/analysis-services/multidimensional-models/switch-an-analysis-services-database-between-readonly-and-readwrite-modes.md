@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072888"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
@@ -51,7 +51,7 @@ ms.locfileid: "66072888"
   
 6.  Mit der rechten Maustaste die **Datenbanken** Ordner, und wählen **anfügen...**  
   
-7.  Geben Sie im Textfeld **Ordner** den ursprünglichen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen (**...** ) nach dem Datenbankordner suchen.  
+7.  Geben Sie im Textfeld **Ordner** den ursprünglichen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen ( **...** ) nach dem Datenbankordner suchen.  
   
 8.  Wählen Sie den Lese-/Schreibmodus für die Datenbank aus.  
   

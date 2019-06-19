@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64deeb6482784c77fa68d4eea3d7c91c58b4ee64
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726503"
 ---
 # <a name="request-log"></a>Anforderungsprotokoll
@@ -46,14 +46,14 @@ ms.locfileid: "65726503"
     > [!NOTE]  
     >  Wenn Sie auf **Vorschau** klicken, wird auch das Dialogfeld **Vorschau** geöffnet. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Preview](../../integration-services/data-flow/preview.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Zeit**  
  Zeigt die Uhrzeit an, zu der das Ereignis protokolliert wurde.  
   
  **Typ**  
  Zeigt den Typ des protokollierten Ereignisses an. In der folgenden Tabelle sind die möglichen Ereignistypen aufgelistet.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |S|Eine Erfolgsmeldung.|  
 |E|Fehlermeldung|  

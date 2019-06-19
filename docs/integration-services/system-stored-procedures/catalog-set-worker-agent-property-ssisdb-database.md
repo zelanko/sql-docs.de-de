@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f2442cc389e6ca9becc1b2a210a4056361fb94
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715759"
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB-Datenbank)
@@ -38,10 +38,10 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 Die Worker-Agent-ID für den Scale Out-Worker. Das Argument *WorkerAgentId* ist vom Typ **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Der Name der Eigenschaft. Das Argument *PropertyName* ist vom Typ **nvarchar(256)**.
+Der Name der Eigenschaft. Das Argument *PropertyName* ist vom Typ **nvarchar(256)** .
 
 [@PropertyValue =] *PropertyValue*  
-Der Wert der Eigenschaft. Das Argument *PropertyValue* ist vom Typ **nvarchar(max)**.
+Der Wert der Eigenschaft. Das Argument *PropertyValue* ist vom Typ **nvarchar(max)** .
 
 ## <a name="remarks"></a>Remarks
 Die gültigen Eigenschaftennamen sind **DisplayName**, **Description**, **Tags**.

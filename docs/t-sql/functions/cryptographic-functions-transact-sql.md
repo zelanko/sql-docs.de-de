@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2df32344ce2359419f5b0b66b7f5e429f9edebc0
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944566"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>Kryptografiefunktionen (Transact-SQL)
@@ -80,7 +80,7 @@ Diese Funktionen unterstützen digitale Signaturen, die Überprüfung von digita
 ## <a name="see-also"></a>Siehe auch
 [Funktionen](../../t-sql/functions/functions.md)  
 [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[Berechtigungshierarchie &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+[Berechtigungshierarchie &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  

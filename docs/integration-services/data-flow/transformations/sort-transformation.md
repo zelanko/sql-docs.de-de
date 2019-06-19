@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8cb120d8934ca909408de71caf2b2c049bb853
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725838"
 ---
 # <a name="sort-transformation"></a>Transformation zum Sortieren
@@ -64,7 +64,7 @@ ms.locfileid: "65725838"
 ## <a name="sort-transformation-editor"></a>Transformations-Editor für Sortierung
   Mithilfe des Dialogfelds **Transformations-Editor für Sortierung** können Sie die zu sortierenden Spalten auswählen, die Sortierreihenfolge festlegen und angeben, ob Duplikate entfernt werden.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Verfügbare Eingabespalten**  
  Geben Sie mithilfe der Kontrollkästchen die zu sortierenden Spalten an.  
   

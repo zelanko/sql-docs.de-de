@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c79df90c6093ed93668e504e574c712a2ba2146a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716020"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project (SSISDB-Datenbank)
@@ -37,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argumente  
  [ @source_folder = ] *source_folder*  
- Der Name des Quellordners, in dem sich das Projekt vor dem Verschieben befindet. Der *source_folder* ist **nvarchar(128)**.  
+ Der Name des Quellordners, in dem sich das Projekt vor dem Verschieben befindet. Der *source_folder* ist **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Der Name des Projekts, das verschoben werden soll. Der *project_name* ist **nvarchar(128)**.  
+ Der Name des Projekts, das verschoben werden soll. Der *project_name* ist **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Der Name des Zielordners, in dem sich das Projekt nach dem Verschieben befindet. Der *destination_folder* ist **nvarchar(128)**.  
+ Der Name des Zielordners, in dem sich das Projekt nach dem Verschieben befindet. Der *destination_folder* ist **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721214"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Lektion 5.3: Ändern des Directory-Eigenschaftskonfigurationswerts
@@ -30,7 +30,7 @@ Im Rahmen dieser Aufgabe ändern Sie die in der Datei **SSISTutorial.dtsConfig**
   
 1.  Suchen und öffnen Sie in Editor oder einem beliebigen anderen Text-Editor die Konfigurationsdatei **SSISTutorial.dtsConfig**, die Sie mithilfe des Paketkonfigurations-Assistenten in der vorhergehenden Aufgabe erstellt haben.  
   
-2.  Ändern Sie den Wert des **ConfiguredValue** -Elements so, dass er mit dem Pfad des Ordners **New Sample Data** übereinstimmt, den Sie in der vorherigen Aufgabe erstellt haben. Schließen Sie den Pfad nicht in Anführungszeichen ein. Wenn sich der Ordner **New Sample Data** auf der Stammebene des Laufwerks (z. B. **C:\\**) befindet, sollten die aktualisierten XML-Daten dem folgenden Beispiel ähneln:  
+2.  Ändern Sie den Wert des **ConfiguredValue** -Elements so, dass er mit dem Pfad des Ordners **New Sample Data** übereinstimmt, den Sie in der vorherigen Aufgabe erstellt haben. Schließen Sie den Pfad nicht in Anführungszeichen ein. Wenn sich der Ordner **New Sample Data** auf der Stammebene des Laufwerks (z. B. **C:\\** ) befindet, sollten die aktualisierten XML-Daten dem folgenden Beispiel ähneln:  
   
     ```
     <?xml version="1.0"?>

@@ -15,10 +15,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: bd5ea0433b1cbdee6adf97dbab9a2dcdddcb8389
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577468"
 ---
 # <a name="json-functions-transact-sql"></a>JSON-Funktionen (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "65577468"
 
 Verwenden Sie die Funktionen, die auf den Seiten in diesem Abschnitt beschrieben werden, um JSON-Text zu überprüfen oder zu ändern sowie um einfache oder komplexe Werte zu extrahieren.  
   
-|Funktion|Beschreibung|  
+|Funktion|und Beschreibung|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|Testet, ob eine Zeichenfolge gültiges JSON enthält.|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|Extrahiert einen Skalarwert aus einer JSON-Zeichenfolge.|  

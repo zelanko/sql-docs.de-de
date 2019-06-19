@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071123"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
@@ -38,7 +38,7 @@ ms.locfileid: "66071123"
 ##  <a name="items"></a> Übersicht über die Abschnitte des Dashboards  
  Das PowerPivot-Management-Dashboard enthält Webparts und eingebettete Berichte, die einen Drilldown in bestimmte Informationskategorien ermöglichen. In der folgenden Liste werden die einzelnen Bestandteile des Dashboards beschrieben:  
   
-|Dashboard|Description|  
+|Dashboard|Beschreibung|  
 |---------------|-----------------|  
 |Infrastruktur - Serverintegrität|Zeigt Trends zur CPU-Verwendung, Arbeitsspeichernutzung sowie zu Abfrageantwortzeiten im zeitlichen Verlauf an, damit Sie beurteilen können, ob die maximale Kapazität der Systemressourcen bald erreicht ist oder ob diese unterausgelastet sind.|  
 |Aktionen|Enthält Links zu anderen Seiten in der Zentraladministration, darunter die aktuelle Dienstanwendung, eine Liste der Dienstanwendungen sowie die Verwendungsprotokollierung.|  

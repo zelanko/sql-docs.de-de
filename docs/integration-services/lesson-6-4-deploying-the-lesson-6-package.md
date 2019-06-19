@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720820"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lektion 6.4: Bereitstellen des Pakets aus Lektion 6
@@ -97,7 +97,7 @@ Wenn Sie den Assistenten zum Konvertieren von Integration Services-Projekten sch
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Erstellen und Füllen eines neuen Beispieldatenordners  
   
-1.  Erstellen Sie im **Windows-Explorer** im Stammverzeichnis Ihres Laufwerks (beispielsweise **C:\\**) einen neuen Ordner mit dem Namen **Beispieldaten Zwei**.  
+1.  Erstellen Sie im **Windows-Explorer** im Stammverzeichnis Ihres Laufwerks (beispielsweise **C:\\** ) einen neuen Ordner mit dem Namen **Beispieldaten Zwei**.  
   
 2.  Öffnen Sie den Ordner **Beispieldaten** aus [Lektion 1 – Voraussetzungen](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), und kopieren Sie alle drei Beispieldateien.  
   

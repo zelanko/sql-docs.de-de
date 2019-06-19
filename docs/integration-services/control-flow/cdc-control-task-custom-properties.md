@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3d207f253b3604cfc15b5cf5cc792eeba4e668fe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727909"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks
@@ -25,7 +25,7 @@ ms.locfileid: "65727909"
 
   In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des CDC-Steuerungstasks beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|und Beschreibung|  
 |-------------------|---------------|-----------------|  
 |Verbindung|ADO.NET-Verbindung|Eine ADO.NET-Verbindung zur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -CDC-Datenbank für Zugriff auf die Änderungstabellen und den CDC-Status, falls diese Daten in derselben Datenbank gespeichert werden.<br /><br /> Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.|  
 |TaskOperation|Ganze Zahl (Enumeration)|Der ausgewählte Vorgang für den CDC-Steuerungstask. Die möglichen Werte sind **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**und **Reset CDC State**.<br /><br /> Wenn Sie beim Arbeiten mit **CDC (also nicht mit Oracle) die Option**MarkCdcStart **,** MarkInitialLoadStart **oder** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen, muss im Verbindungs-Manager ein Benutzer mit der Berechtigung  **db_owner** oder **sysadmin**angegeben werden.<br /><br /> Weitere Informationen zu diesen Vorgängen finden Sie unter [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) und [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80f4948d7223dbe4f95b7b81fcc7043796cf2809
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728310"
 ---
 # <a name="cache-connection-manager"></a>Cacheverbindungs-Manager
@@ -71,7 +71,7 @@ ms.locfileid: "65728310"
 ###  <a name="generaltab"></a> Registerkarte Allgemein  
  Geben Sie auf der Registerkarte **Allgemein** des Dialogfelds **Editor für den Cacheverbindungs-Manager** an, ob der Cache aus einer Datei gelesen werden soll oder ob der Cache in einer Datei gespeichert werden soll.  
   
-#### <a name="options"></a>Optionen  
+#### <a name="options"></a>enthalten  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Cacheverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "65728310"
 ###  <a name="columnstab"></a> Registerkarte 'Spalten'  
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
-#### <a name="options"></a>Optionen  
+#### <a name="options"></a>enthalten  
  **Spalte**  
  Geben Sie den Spaltennamen an.  
   

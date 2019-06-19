@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5f187d7efb44997cf53a4064daee4a83206a82
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728584"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Angeben eines Intervalls von Änderungsdaten
@@ -86,7 +86,7 @@ ms.locfileid: "65728584"
   
 1.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers dem Paket einen Task "SQL ausführen" hinzu.  
   
-2.  Öffnen Sie den **Editor für den Task 'SQL ausführen'**, und aktivieren Sie auf der Seite **Allgemein** des Editors die folgenden Optionen:  
+2.  Öffnen Sie den **Editor für den Task 'SQL ausführen'** , und aktivieren Sie auf der Seite **Allgemein** des Editors die folgenden Optionen:  
   
     1.  Wählen Sie für **ResultSet**die Option **Einzelne Zeile**aus.  
   

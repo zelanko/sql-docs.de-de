@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713872"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Neuigkeiten in Integration Services in SQL Server 2016
@@ -203,7 +203,7 @@ Mit der Funktion für inkrementelle Paketbereitstellung können Sie ein oder meh
  Der neue Protokolliergrad **RuntimeLineage** des SSIS-Katalogs sammelt die zur Nachverfolgung der Herkunftsinformationen im Datenfluss erforderlichen Daten. Sie können diese Herkunftsinformationen analysieren, um die Herkunftsbeziehung zwischen Tasks zu bestimmen. Unabhängige Softwareentwickler (ISVs) und Entwickler können mit diesen Informationen benutzerdefinierte Herkunftszuordnungstools erstellen. 
 
 ####  <a name="CustomLogging"></a> Neuer benutzerdefinierter Protokolliergrad im SSIS-Katalog  
- Vorgängerversionen des SSIS-Katalogs boten Ihnen für die Ausführung eines Pakets die Wahl zwischen vier Protokolliergraden: **None (Keiner), Basic (Basis), Performance (Leistung) und Verbose (Ausführlich)**. SQL Server 2016 fügt den Protokolliergrad **RuntimeLineage** hinzu. Darüber hinaus können Sie jetzt zahlreiche benutzerdefinierte Protokolliergrade im SSIS-Katalog erstellen und speichern und den Standardprotokolliergrad für jede Paketausführung bestimmen. Wählen Sie für jeden benutzerdefinierten Protokolliergrad nur die Statistiken und Ereignisse aus, die Sie erfassen möchten. Optional können Sie den Ereigniskontext mit aufnehmen, um variable Werte, Verbindungszeichenfolgen und die Eigenschaften von Tasks anzeigen zu lassen. Weitere Informationen finden Sie unter [Aktivieren der Protokollierung für die Paketausführung auf dem SSIS-Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Vorgängerversionen des SSIS-Katalogs boten Ihnen für die Ausführung eines Pakets die Wahl zwischen vier Protokolliergraden: **None (Keiner), Basic (Basis), Performance (Leistung) und Verbose (Ausführlich)** . SQL Server 2016 fügt den Protokolliergrad **RuntimeLineage** hinzu. Darüber hinaus können Sie jetzt zahlreiche benutzerdefinierte Protokolliergrade im SSIS-Katalog erstellen und speichern und den Standardprotokolliergrad für jede Paketausführung bestimmen. Wählen Sie für jeden benutzerdefinierten Protokolliergrad nur die Statistiken und Ereignisse aus, die Sie erfassen möchten. Optional können Sie den Ereigniskontext mit aufnehmen, um variable Werte, Verbindungszeichenfolgen und die Eigenschaften von Tasks anzeigen zu lassen. Weitere Informationen finden Sie unter [Aktivieren der Protokollierung für die Paketausführung auf dem SSIS-Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Spaltennamen für Fehler im Datenfluss  
  Wenn Sie die Zeilen im Datenfluss, die einen Fehler enthalten umleiten, enthält die Ausgabe einen numerischen Bezeichner für die Spalte, in der der Fehler aufgetreten ist, sondern zeigt den Namen der Spalte nicht. Der Name der fehlerhaften Spalte kann auf verschiedenen Wegen gesucht oder angezeigt werden.  

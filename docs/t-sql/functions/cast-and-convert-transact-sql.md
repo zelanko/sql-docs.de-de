@@ -37,10 +37,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942894"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
@@ -203,7 +203,7 @@ Beim Konvertieren zwischen **datetimeoffset** und den Zeichentypen **char**, **n
 >  
 >  Da Unicode-Daten immer eine gerade Anzahl von Bytes verwenden, muss das Konvertieren von **binary**- oder **varbinary**-Datentypen in oder von Unicode-Datentypen vorsichtig erfolgen. Die folgende Konvertierung gibt beispielsweise nicht den Hexadezimalwert 41 zurück. Sie gibt den Hexadezimalwert 4100 zurück: `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`.  
   
-## <a name="large-value-data-types"></a>Datentypen mit umfangreichen Werten 
+## <a name="large-value-data-types"></a>Datentypen mit umfangreichen Werten
 Datentypen mit hohen Werten weisen das gleiche implizite und explizite Konvertierungsverhalten auf wie ihre Entsprechungen mit kleineren Werten, insbesondere die Datentypen **nvarchar**, **varbinary** und **varchar**. Beachten Sie jedoch folgende Richtlinien:
 -   Die Konvertierung von **image** in **varbinary(max)** und umgekehrt stellt ebenso wie zwischen **text** und **varchar(max)** sowie **ntext** und **nvarchar(max)** eine implizite Konvertierung dar.  
 -   Die Konvertierung von Datentypen mit hohen Werten, z.B. **varchar(max)** , in einen entsprechenden kleineren Datentyp, z.B. **varchar**, ist zwar eine implizite Konvertierung, doch kommt es zu einer Abschneidung, wenn die Größe des hohen Werts die angegebene Länge des kleineren Datentyps überschreitet.  

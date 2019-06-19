@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ea6c4886a3c5397777b7a65afe96ab7e1b422bd
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620545"
 ---
 # <a name="create-a-distributed-transaction"></a>Erstellen einer verteilten Transaktions
@@ -53,7 +53,7 @@ MSDTC wird aufgerufen, durch den SQL Server Native Client-Treiber für Open Data
 3. Aktualisiert die Anwendung einige Daten auf dem SQL Server-Y auf Computer B.
     - Wenn ein Update auf dem SQL Server-Y ein Fehler auftritt, werden alle ohne ausgeführten Commit-Updates auf beiden SQL Server-Instanzen ein Rollback ausgeführt.
 
-4. Schließlich die Anwendung beendet die Transaktion durch Aufrufen von [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), mit der Option SQL_COMMIT oder SQL_ROLLBACK-Option.
+4. Schließlich die Anwendung beendet die Transaktion durch Aufrufen von [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), mit der Option SQL_COMMIT oder SQL_ROLLBACK-Option.
 
 _(1)_  MSDTC kann aufgerufen werden, ohne zu ODBC. In diesem Fall wird MSDTC der Transaktions-Manager, und die Anwendung nicht mehr verwendet **SQLEndTran**.
 

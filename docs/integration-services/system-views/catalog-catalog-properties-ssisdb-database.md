@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 455bea0ce159382e30dfae98d8d43041c0d16879
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715495"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB-Datenbank)
@@ -27,7 +27,7 @@ ms.locfileid: "65715495"
 
   Zeigt die Eigenschaften des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalogs an.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Der Name der Katalogeigenschaft.|  
 |property_value|**nvarchar(256)**|Der Wert der Katalogeigenschaft.|  
@@ -35,7 +35,7 @@ ms.locfileid: "65715495"
 ## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jede Katalogeigenschaft angezeigt.
   
-|Eigenschaftsname|Beschreibung|  
+|Eigenschaftsname|und Beschreibung|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|Der serverweite Standardausführungsmodus für Pakete, `Server` (0) oder `Scale Out` (1). |
 |**ENCRYPTION_ALGORITHM**|Der Typ des Verschlüsselungsalgorithmus, mit dem sensible Daten verschlüsselt werden. Die unterstützten Werte lauten: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192`und `AES_256`. Hinweis: Zum Ändern dieser Eigenschaft muss sich die Katalogdatenbank im Einzelbenutzermodus befinden.|

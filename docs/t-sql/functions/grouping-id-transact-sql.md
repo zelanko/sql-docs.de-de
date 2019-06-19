@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943080"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
@@ -307,21 +307,21 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
 |Year|Month|Day|Total Due|Bitvektor (Basis-2)|Ganzzahlige Entsprechung|Gruppierungsebene|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1.497.452,6066|000|0|Jahr, Monat, Tag|  
+|2007|1|1|1\.497.452,6066|000|0|Jahr, Monat, Tag|  
 |2007|1|2|21.772,3494|000|0|Jahr, Monat, Tag|  
 |2007|2|1|2705653,5913|000|0|Jahr, Monat, Tag|  
 |2007|2|2|21.684,4068|000|0|Jahr, Monat, Tag|  
-|2008|1|1|1.908.122,0967|000|0|Jahr, Monat, Tag|  
+|2008|1|1|1\.908.122,0967|000|0|Jahr, Monat, Tag|  
 |2008|1|2|46.458,0691|000|0|Jahr, Monat, Tag|  
-|2008|2|1|3.108.771,9729|000|0|Jahr, Monat, Tag|  
+|2008|2|1|3\.108.771,9729|000|0|Jahr, Monat, Tag|  
 |2008|2|2|54.598,5488|000|0|Jahr, Monat, Tag|  
-|2007|1|NULL|1.519.224,956|100|1|Year Month|  
-|2007|2|NULL|2.727.337,9981|100|1|Year Month|  
+|2007|1|NULL|1\.519.224,956|100|1|Year Month|  
+|2007|2|NULL|2\.727.337,9981|100|1|Year Month|  
 |2008|1|NULL|1954580,1658|100|1|Year Month|  
-|2008|2|NULL|3.163.370,5217|100|1|Year Month|  
-|2007|NULL|NULL|4.246.562,9541|110|3|Year|  
-|2008|NULL|NULL|5.117.950,6875|110|3|Year|  
-|NULL|NULL|NULL|9.364.513,6416|111|7|Grand Total|  
+|2008|2|NULL|3\.163.370,5217|100|1|Year Month|  
+|2007|NULL|NULL|4\.246.562,9541|110|3|Year|  
+|2008|NULL|NULL|5\.117.950,6875|110|3|Year|  
+|NULL|NULL|NULL|9\.364.513,6416|111|7|Grand Total|  
   
 #### <a name="cube-example"></a>CUBE-Beispiel  
  In diesen Beispielen wird die `GROUPING_ID()`-Funktion verwendet, um einen Wert für jede Zeile in der `Grouping Level`-Spalte zu erstellen, über den die Gruppierungsebene ermittelt wird.  
@@ -388,33 +388,33 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
 |Year|Month|Day|Total Due|Bitvektor (Basis-2)|Ganzzahlige Entsprechung|Gruppierungsebene|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
-|2007|1|1|1.497.452,6066|000|0|Jahr, Monat, Tag|  
+|2007|1|1|1\.497.452,6066|000|0|Jahr, Monat, Tag|  
 |2007|1|2|21.772,3494|000|0|Jahr, Monat, Tag|  
 |2007|2|1|2705653,5913|000|0|Jahr, Monat, Tag|  
 |2007|2|2|21.684,4068|000|0|Jahr, Monat, Tag|  
-|2008|1|1|1.908.122,0967|000|0|Jahr, Monat, Tag|  
+|2008|1|1|1\.908.122,0967|000|0|Jahr, Monat, Tag|  
 |2008|1|2|46.458,0691|000|0|Jahr, Monat, Tag|  
-|2008|2|1|3.108.771,9729|000|0|Jahr, Monat, Tag|  
+|2008|2|1|3\.108.771,9729|000|0|Jahr, Monat, Tag|  
 |2008|2|2|54.598,5488|000|0|Jahr, Monat, Tag|  
-|2007|1|NULL|1.519.224,956|100|1|Year Month|  
-|2007|2|NULL|2.727.337,9981|100|1|Year Month|  
+|2007|1|NULL|1\.519.224,956|100|1|Year Month|  
+|2007|2|NULL|2\.727.337,9981|100|1|Year Month|  
 |2008|1|NULL|1954580,1658|100|1|Year Month|  
-|2008|2|NULL|3.163.370,5217|100|1|Year Month|  
-|2007|NULL|1|4.203.106,1979|010|2|Jahr und Tag|  
+|2008|2|NULL|3\.163.370,5217|100|1|Year Month|  
+|2007|NULL|1|4\.203.106,1979|010|2|Jahr und Tag|  
 |2007|NULL|2|43456,7562|010|2|Jahr und Tag|  
-|2008|NULL|1|5.016.894,0696|010|2|Jahr und Tag|  
+|2008|NULL|1|5\.016.894,0696|010|2|Jahr und Tag|  
 |2008|NULL|2|101.056,6179|010|2|Jahr und Tag|  
-|2007|NULL|NULL|4.246.562,9541|110|3|Year|  
-|2008|NULL|NULL|5.117.950,6875|110|3|Year|  
-|NULL|1|1|3.405.574,7033|001|4|Monat und Tag|  
+|2007|NULL|NULL|4\.246.562,9541|110|3|Year|  
+|2008|NULL|NULL|5\.117.950,6875|110|3|Year|  
+|NULL|1|1|3\.405.574,7033|001|4|Monat und Tag|  
 |NULL|1|2|68.230,4185|001|4|Monat und Tag|  
-|NULL|2|1|5.814.425,5642|001|4|Monat und Tag|  
+|NULL|2|1|5\.814.425,5642|001|4|Monat und Tag|  
 |NULL|2|2|76.282,9556|001|4|Monat und Tag|  
-|NULL|1|NULL|3.473.805,1218|101|5|Month|  
-|NULL|2|NULL|5.890.708,5198|101|5|Month|  
-|NULL|NULL|1|9.220.000,2675|011|6|Day|  
+|NULL|1|NULL|3\.473.805,1218|101|5|Month|  
+|NULL|2|NULL|5\.890.708,5198|101|5|Month|  
+|NULL|NULL|1|9\.220.000,2675|011|6|Day|  
 |NULL|NULL|2|144.513,3741|011|6|Day|  
-|NULL|NULL|NULL|9.364.513,6416|111|7|Grand Total|  
+|NULL|NULL|NULL|9\.364.513,6416|111|7|Grand Total|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   

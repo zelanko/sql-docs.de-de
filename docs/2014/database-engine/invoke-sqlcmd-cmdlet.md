@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064709"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd-Cmdlet
@@ -91,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Vergleichen von Invoke-Sqlcmd und dem sqlcmd-Hilfsprogramm  
  Mit**Invoke-Sqlcmd** können zahlreiche der Skripts ausgeführt werden, die auch mit dem **sqlcmd** Hilfsprogramm ausgeführt werden können. **Invoke-Sqlcmd** wird jedoch in einer Windows PowerShell-Umgebung ausgeführt, die sich von der Eingabeaufforderungsumgebung unterscheidet, in der **sqlcmd** ausgeführt wird. Das Verhalten von **Invoke-Sqlcmd** wurde für die Ausführung in einer Windows PowerShell-Umgebung angepasst.  
   
- Nicht alle **sqlcmd** -Befehle sind in **Invoke-Sqlcmd**implementiert. Befehle, die nicht implementiert werden, sind die folgenden: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, and **:serverlist**.  
+ Nicht alle **sqlcmd** -Befehle sind in **Invoke-Sqlcmd**implementiert. Befehle, die nicht implementiert werden, sind die folgenden: **:!!** , **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, and **:serverlist**.  
   
  **Invoke-Sqlcmd** initialisiert die **sqlcmd** -Umgebung oder Skriptvariablen wie SQLCMDDBNAME oder SQLCMDWORKSTATION nicht.  
   
@@ -103,7 +103,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  Nicht alle **sqlcmd** -Parameter werden in einer PowerShell-Umgebung benötigt. Beispielsweise formatiert Windows PowerShell alle Ausgaben von Cmdlets, sodass die **sqlcmd** -Parameter, die Formatierungsoptionen festlegen, nicht in **Invoke-Sqlcmd**implementiert werden. In der folgenden Tabelle wird die Beziehung zwischen den **Invoke-Sqlcmd** -Parametern und den Optionen **sqlcmd** dargestellt:  
   
-|Description|sqlcmd-Option|Invoke-Sqlcmd-Parameter|  
+|Beschreibung|sqlcmd-Option|Invoke-Sqlcmd-Parameter|  
 |-----------------|-------------------|------------------------------|  
 |Server- und Instanzname.|-S|-ServerInstance|  
 |Die zu verwendende ursprüngliche Datenbank.|-d|-Database|  

@@ -29,10 +29,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945715"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
@@ -160,12 +160,12 @@ Das Nummerierungssystem anderer Länder oder Regionen entspricht möglicherweise
   
 |Erster Tag der Woche|Erste Woche im Jahr enthält|Doppelt zugewiesene Wochen|Verwendet von/in|  
 |---|---|---|---|
-|Sonntag|1. Januar<br /><br /> Erster Samstag<br /><br /> 1–7 Tage im Jahr|Ja|United States|  
-|Montag|1. Januar<br /><br /> Erster Sonntag<br /><br /> 1–7 Tage im Jahr|Ja|Die meisten Länder Europas und das Vereinigte Königreich|  
-|Montag|4. Januar<br /><br /> Erster Donnerstag<br /><br /> 4–7 Tage im Jahr|Nein|ISO 8601, Norwegen und Schweden|  
-|Montag|7. Januar,<br /><br /> Erster Montag<br /><br /> 7 Tage im Jahr|Nein||  
-|Mittwoch|1. Januar<br /><br /> Erster Dienstag<br /><br /> 1–7 Tage im Jahr|Ja||  
-|Samstag|1. Januar<br /><br /> Erster Freitag<br /><br /> 1–7 Tage im Jahr|Ja||  
+|Sonntag|1\. Januar<br /><br /> Erster Samstag<br /><br /> 1–7 Tage im Jahr|Ja|United States|  
+|Montag|1\. Januar<br /><br /> Erster Sonntag<br /><br /> 1–7 Tage im Jahr|Ja|Die meisten Länder Europas und das Vereinigte Königreich|  
+|Montag|4\. Januar<br /><br /> Erster Donnerstag<br /><br /> 4–7 Tage im Jahr|Nein|ISO 8601, Norwegen und Schweden|  
+|Montag|7\. Januar,<br /><br /> Erster Montag<br /><br /> 7 Tage im Jahr|Nein||  
+|Mittwoch|1\. Januar<br /><br /> Erster Dienstag<br /><br /> 1–7 Tage im Jahr|Ja||  
+|Samstag|1\. Januar<br /><br /> Erster Freitag<br /><br /> 1–7 Tage im Jahr|Ja||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` gibt den Wert **TZoffset** (**tz**) als Anzahl der Minuten (mit Vorzeichen) zurück. Diese Anweisung gibt einen Zeitzonenoffset von 310 Minuten zurück:

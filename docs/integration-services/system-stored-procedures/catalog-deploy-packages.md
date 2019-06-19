@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4ee8e7d796016f07339f5ef083fe1fde23d859d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716366"
 ---
 # <a name="catalogdeploypackages"></a>catalog.deploy_packages 
@@ -35,13 +35,13 @@ ms.locfileid: "65716366"
   
 ## <a name="arguments"></a>Argumente  
  [ @folder_name = ] *folder_name*  
- Der Name des Ordners. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners. Der *folder_name* ist **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Der Name des Projekts im Ordner. Der *project_name* ist **nvarchar(128)**.  
+ Der Name des Projekts im Ordner. Der *project_name* ist **nvarchar(128)** .  
   
  [ @packages_table = ] *packages_table*  
- Die binären Inhalte der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketdatei(en) (DTSX). Das Argument *packages_table* ist vom Typ **[catalog].[Package_Table_Type]**.  
+ Die binären Inhalte der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketdatei(en) (DTSX). Das Argument *packages_table* ist vom Typ **[catalog].[Package_Table_Type]** .  
   
  [ @operation_id = ] *operation_id*  
  Gibt den eindeutigen Bezeichner für den Bereitstellungsvorgang zurück. Der *operation_id* ist **bigint**.  

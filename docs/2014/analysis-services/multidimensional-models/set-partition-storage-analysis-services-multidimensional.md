@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072991"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Festlegen des Partitionsspeichers (Analysis Services – Mehrdimensional)
@@ -54,7 +54,7 @@ ms.locfileid: "66072991"
   
 ## <a name="storage-settings-descriptions"></a>Beschreibungen der Speichereinstellungen  
   
-|Standardspeichereinstellung|Description|  
+|Standardspeichereinstellung|Beschreibung|  
 |------------------------------|-----------------|  
 |Echtzeit-ROLAP|OLAP wird in Echtzeit ausgeführt. Detaildaten und Aggregationen werden im relationalen Format gespeichert. Der Server überwacht Benachrichtigungen, wenn Daten geändert werden und alle Abfragen den aktuellen Status der Daten wiedergeben (keine Latenzzeit).<br /><br /> Diese Einstellung wird normalerweise für eine Datenquelle mit sehr häufigen und fortlaufenden Updates verwendet, wenn Benutzer immer die letzten Daten benötigen. Abhängig von den Abfragetypen, die von den Clientanwendungen generiert wurden, sind bei dieser Methode die Antwortzeiten wahrscheinlich am langsamsten.|  
 |Echtzeit-HOLAP|OLAP wird in Echtzeit ausgeführt. Detaildaten werden im relationalen Format und Aggregationen werden in einem mehrdimensionalen Format gespeichert. Der Server überwacht Benachrichtigungen, wenn Daten geändert werden und aktualisiert die mehrdimensionalen OLAP-Aggregationen (MOLAP) bei Bedarf. Ein MOLAP-Cache wird nicht erstellt. Bei jedem Update der Datenquelle wechselt der Server zur relationalen Echtzeit-OLAP (ROLAP), bis die Aggregationen aktualisiert werden. Alle Abfragen geben den aktuellen Status der Daten (keine Latenzzeit) wieder.<br /><br /> Diese Einstellung wird in der Regel für eine Datenquelle mit häufigen und fortlaufenden Updates (aber nicht so häufig, dass Echtzeit-ROLAP erforderlich wäre) verwendet, und von den Benutzern werden immer die letzten Daten benötigt. Bei dieser Methode ist normalerweise die Gesamtleistung besser als bei der ROLAP-Speicherung. Wenn die Datenquelle lange genug still ist, können Benutzer mit dieser Einstellung MOLAP-Leistung bekommen.|  

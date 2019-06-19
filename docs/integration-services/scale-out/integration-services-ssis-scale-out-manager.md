@@ -11,10 +11,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718761"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out-Manager
@@ -66,7 +66,7 @@ Der Status des Scale Out-Workers wird auf der Seite **Worker-Manager** angezeigt
 ![Portal: Worker-Manager](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Hinzufügen eines Scale Out-Workers
-Klicken Sie im unteren Bereich der Liste „Scale Out-Worker“ auf **+**, um einen Scale Out-Worker hinzuzufügen. 
+Klicken Sie im unteren Bereich der Liste „Scale Out-Worker“ auf **+** , um einen Scale Out-Worker hinzuzufügen. 
 
 Geben Sie den Computernamen des Scale Out-Workers ein, den Sie hinzufügen möchten, und klicken Sie auf **Überprüfen**. Der Scale Out-Manager überprüft, ob der aktuelle Benutzer Zugriff auf die Zertifikatspeicher der Computer des Scale Out-Masters und des Scale Out-Workers hat.
 
@@ -93,7 +93,7 @@ Falls nicht auf die Workereinstellung zugegriffen werden kann, müssen Sie diese
 Aktivieren Sie das Kontrollkästchen **Bestätigen**, und klicken Sie dann auf **OK**, um den Vorgang zum Hinzufügen eines Scale Out-Workers zu starten.
 
 ### <a name="delete-a-scale-out-worker"></a>Löschen eines Scale Out-Workers
-Wählen Sie einen Scale Out-Worker aus, und klicken Sie im unteren Bereich der Liste „Scale Out-Worker“ auf **-**, um einen Scale Out-Worker zu löschen.
+Wählen Sie einen Scale Out-Worker aus, und klicken Sie im unteren Bereich der Liste „Scale Out-Worker“ auf **-** , um einen Scale Out-Worker zu löschen.
 
 ### <a name="enable-or-disable-a-scale-out-worker"></a>Aktivieren oder Deaktivieren eines Scale Out-Workers
 Wählen Sie einen Scale Out-Worker aus, und klicken Sie auf die Schaltfläche **Worker aktivieren** oder **Worker deaktivieren**, um einen Scale Out-Worker zu aktivieren bzw. zu deaktivieren. Wenn der Worker online ist, ändert sich dessen Status, der im Scale Out-Manager angezeigt wird, umgehend.

@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57be9c0aabc429e1c9a6d3e148ab5a11461f2d32
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943248"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
@@ -48,7 +48,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Eine Zeichenfolge von Unicode-Zeichendaten. *character_string* ist vom Datentyp **sysname** und auf 128 Zeichen beschränkt. Eingaben, die größer als 128 Zeichen sind, geben NULL zurück.  
   
  '*quote_character*'  
- Eine Zeichenfolge mit einem Zeichen, das als Trennzeichen verwendet wird. Dies kann ein einfaches Anführungszeichen ( **'** ) sein, eine linke oder recht eckige Klammer ( **[]** ), ein doppeltes Anführungszeichen ( **"** ), eine linke oder recht runde Klammer ( **()** ), ein größer als- oder kleiner als-Zeichen ( **><** ), eine linke oder rechte geschweifte Klammer ( **{}** ) oder ein Hochkomma/Backtick ( **\`**). NULL wird zurückgegeben, wenn ein unzulässiges Zeichen angegeben wird. Wenn *quote_character* nicht angegeben wird, werden eckige Klammern verwendet.  
+ Eine Zeichenfolge mit einem Zeichen, das als Trennzeichen verwendet wird. Dies kann ein einfaches Anführungszeichen ( **'** ) sein, eine linke oder recht eckige Klammer ( **[]** ), ein doppeltes Anführungszeichen ( **"** ), eine linke oder recht runde Klammer ( **()** ), ein größer als- oder kleiner als-Zeichen ( **><** ), eine linke oder rechte geschweifte Klammer ( **{}** ) oder ein Hochkomma/Backtick ( **\`** ). NULL wird zurückgegeben, wenn ein unzulässiges Zeichen angegeben wird. Wenn *quote_character* nicht angegeben wird, werden eckige Klammern verwendet.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(258)**  

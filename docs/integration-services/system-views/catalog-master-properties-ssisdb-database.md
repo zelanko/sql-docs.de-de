@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97cde3fcfb5effa7c61fde6673a830f67d9fc634
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714563"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (SSISDB-Datenbank)
@@ -27,7 +27,7 @@ ms.locfileid: "65714563"
 
 Zeigt die Eigenschaften des ausgewählten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Masters an.
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Der Name der Scale Out Master-Eigenschaft.|  
 |property_value|**nvarchar(max)**|Der Wert der Scale Out Master-Eigenschaft.|
@@ -35,7 +35,7 @@ Zeigt die Eigenschaften des ausgewählten [!INCLUDE[ssISnoversion](../../include
 ## <a name="remarks"></a>Remarks
 In dieser Sicht wird für jede Scale Out Master-Eigenschaft eine Zeile angezeigt. In dieser Sicht werden folgende Eigenschaften angezeigt:
 
-|Eigenschaftsname|Beschreibung|  
+|Eigenschaftsname|und Beschreibung|  
 |-------------------|-----------------| 
 |**CLUSTER_LOGDB_SERVER**|Die SQL Server-Instanz, die die Protokolldatenbank enthält.|
 |**LAST_ONLINE_TIME**|Zeitpunkt, zu dem der Scale Out Master zuletzt online war.|

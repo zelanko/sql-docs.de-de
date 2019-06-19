@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2026e33a9e31f437615e8270c61681ec95b287b2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728111"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
@@ -31,7 +31,7 @@ ms.locfileid: "65728111"
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Hinzufügen eines OData-Verbindungs-Managers zu einem SSIS-Paket  
  Sie können einem SSIS-Paket einen neuen OData-Verbindungs-Manager auf drei Arten hinzufügen:  
   
--   Klicken Sie im **Quellen-Editor für OData** auf die Schaltfläche **Neu...**.  
+-   Klicken Sie im **Quellen-Editor für OData** auf die Schaltfläche **Neu...** .  
   
 -   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Ordner **Verbindungs-Manager**, und klicken Sie anschließend auf **Neuer Verbindungs-Manager**. Wählen Sie unter **Typ des Verbindungs-Managers** die Option **ODATA**aus.  
   
@@ -64,7 +64,7 @@ Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht ver
   
 |||  
 |-|-|  
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|und Beschreibung|  
 |URL|Die URL zum Dienstdokument.|  
 |UserName|Benutzername für die Authentifizierung, falls erforderlich.|  
 |Kennwort|Kennwort für die Authentifizierung, falls erforderlich.|  
@@ -73,7 +73,7 @@ Sie können die **Microsoft Online Services**-Authentifizierungsoption nicht ver
 ## <a name="odata-connection-manager-editor"></a>OData-Verbindungs-Manager-Editor
   Verwenden Sie das Dialogfeld **OData-Verbindungs-Manager-Editor**, um eine Verbindung hinzufügen oder eine vorhandene Verbindung mit einer OData-Datenquelle zu bearbeiten.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  **Name des Verbindungs-Managers**  
  Name des Verbindungs-Managers.  
   
