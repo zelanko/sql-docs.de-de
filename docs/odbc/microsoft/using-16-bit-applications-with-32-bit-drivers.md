@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209967"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Verwenden von 16-Bit-Anwendungen mit 32-Bit-Treibern
@@ -36,7 +36,7 @@ ms.locfileid: "63209967"
 >  Jedes Mal, wenn eine 16-Bit-Anwendung mit einem 32-Bit-Treiber interagiert, gibt der 32-Bit-Treiber-Manager immer "2.0" als ODBC-Version vom Treiber unterstützt werden.  
   
 ## <a name="administration"></a>Verwaltung  
- Sie können Datenquellen für 32-Bit-Treibern mithilfe von ODBC-Datenquellen-Administrator verwalten. Um den ODBC-Administrator auf Computern unter Microsoft® Windows® 2000 öffnen, öffnen Sie die Windows-Systemsteuerung, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie dann auf **Datenquellen (ODBC)**. Auf Computern unter früheren Versionen von Microsoft Windows heißt das Symbol **32-Bit-ODBC-** oder einfach **ODBC**.  
+ Sie können Datenquellen für 32-Bit-Treibern mithilfe von ODBC-Datenquellen-Administrator verwalten. Um den ODBC-Administrator auf Computern unter Microsoft® Windows® 2000 öffnen, öffnen Sie die Windows-Systemsteuerung, doppelklicken Sie auf **Verwaltung**, und doppelklicken Sie dann auf **Datenquellen (ODBC)** . Auf Computern unter früheren Versionen von Microsoft Windows heißt das Symbol **32-Bit-ODBC-** oder einfach **ODBC**.  
   
  Die folgende Abbildung zeigt, wie eine 16-Bit-Anwendung eine Setup-DLL für 32-Bit-Treiber aufruft. Zwischen den 16-Bit-Installationsprogramm-DLL und die 32-Bit-Treiber ist die Setup-DLL für einen generischen thunking-DLL, die 16-Bit-Installer-DLL-Aufrufe auf 32-Bit-Installer-DLL-Aufrufe konvertiert.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63209967"
   
  Darüber hinaus die folgenden Dateien zusammen mit der 16-Bit-2.10-ODBC-Treiber-Manager, die nicht Teil von ODBC 3.51 sind, sind erforderlich und sollte mit der 16-Bit-Anwendung installiert werden.  
   
-|Dateiname|Description|  
+|Dateiname|Beschreibung|  
 |---------------|-----------------|  
 |Odbc.dll|16-Bit-Treiber-Manager|  
 |Odbcinst.dll|16-Bit-Installationsprogramm-DLL|  

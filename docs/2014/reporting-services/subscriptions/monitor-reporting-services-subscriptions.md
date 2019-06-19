@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100760"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
@@ -45,7 +45,7 @@ ms.locfileid: "66100760"
   
  Die folgende Tabelle enthält die möglichen Werte für die Spalte **Status** .  
   
-|Status|Description|  
+|Status|Beschreibung|  
 |------------|-----------------|  
 |Neues Abonnement|Wird beim Erstellen des Abonnements angezeigt.|  
 |Inaktiv|Wird angezeigt, wenn ein Abonnement nicht verarbeitet werden kann. Weitere Informationen finden Sie weiter unten unter "Verwalten inaktiver Abonnements".|  
@@ -87,9 +87,9 @@ ms.locfileid: "66100760"
   
 1.  Navigieren Sie zu der Dokumentbibliothek, die den Bericht enthält.  
   
-2.  Öffnen Sie das Kontextmenü des Berichts (**...**).  
+2.  Öffnen Sie das Kontextmenü des Berichts ( **...** ).  
   
-3.  Wählen Sie die erweiterte Menüoption (**...**) aus.  
+3.  Wählen Sie die erweiterte Menüoption ( **...** ) aus.  
   
 4.  Wählen Sie **Abonnements verwalten**aus.  
   

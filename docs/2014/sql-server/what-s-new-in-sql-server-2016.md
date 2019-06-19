@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63295244"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>Was&#39;Neues in SQLServer 2014
@@ -77,7 +77,7 @@ ms.locfileid: "63295244"
 -   **Neue DMF zum Abrufen von Eingabepuffer in SQL Server:** Eine neue DMF zum Abrufen des Eingabepuffers für eine Sitzung/Anforderung (sys.dm_exec_input_buffer) ist jetzt verfügbar. Diese ist funktionell äquivalent zu DBCC INPUTBUFFER. [Finden Sie im Blog Informationen](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/).
 -   **Entschärfung für die arbeitsspeicherzuweisung unterschätzte und überschätzt:** Hinzugefügte neue Abfragehinweise für die Ressourcenkontrolle über MIN_GRANT_PERCENT und MAX_GRANT_PERCENT. Dadurch können Sie diese Hinweise zu nutzen, während der Ausführung von Abfragen durch deren arbeitsspeicherzuweisungen speicherzuweisungen beschränken. Weitere Informationen finden Sie unter [Knowledge Base-Artikel KB310740](https://support.microsoft.com/en-us/kb/3107401)
 -   **Bessere Arbeitsspeicher Diagnose der speicherzuweisung:** Die Liste der Ablaufverfolgungsfunktionen in SQL Server (Query_memory_grant_usage) zum Nachverfolgen der speicherzuweisungen angefordert und erteilt wurde eine neue erweiterte Ereignisse hinzugefügt. Dies bietet eine bessere Ablaufverfolgungs- und Analysis-Funktionen für die Problembehandlung bei der Ausführung in Zusammenhang mit Abfragen im Zusammenhang mit der arbeitsspeicherzuweisungen. Weitere Informationen finden Sie unter [Knowledge Base-Artikel KB3107173](https://support.microsoft.com/en-us/kb/3107173).
--   **Abfrageausführungsdiagnose bei Tempdb Spill:**-Hash Warning und Sort Warnings verfügen nun über zusätzliche Spalten zum Nachverfolgen von physischen e/a-Statistiken, verwendete Speicher und betroffenen Zeilen. Wir darüber hinaus eine neue erweiterte Ereignisse von Hash_spill_details eingeführt. Nachdem Sie detaillierte Informationen für Ihre Warnungen Hash- und nachverfolgen können ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Diese Verbesserung wird nun auch über die XML-Abfragepläne in Form von ein neues Attribut mit dem SpillToTempDbType komplexen Typ verfügbar gemacht ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Jetzt zeigt die Arbeitstabelle Statistiken zu sortieren, legen Sie für Statistiken. .
+-   **Abfrageausführungsdiagnose bei Tempdb Spill:** -Hash Warning und Sort Warnings verfügen nun über zusätzliche Spalten zum Nachverfolgen von physischen e/a-Statistiken, verwendete Speicher und betroffenen Zeilen. Wir darüber hinaus eine neue erweiterte Ereignisse von Hash_spill_details eingeführt. Nachdem Sie detaillierte Informationen für Ihre Warnungen Hash- und nachverfolgen können ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Diese Verbesserung wird nun auch über die XML-Abfragepläne in Form von ein neues Attribut mit dem SpillToTempDbType komplexen Typ verfügbar gemacht ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Jetzt zeigt die Arbeitstabelle Statistiken zu sortieren, legen Sie für Statistiken. .
 -   **Verbesserte Diagnosefunktionen für Abfrageausführungspläne, die residual-Prädikat-pushdowns umfassen:** Die tatsächlichen gelesen Zeilen werden jetzt in die Abfrageausführungspläne zur Verbesserung der Problembehandlung der abfrageleistung gemeldet. Dies sollte die Notwendigkeit, erfassen SET STATISTICS IO separat negieren. Jetzt können Sie Informationen für ein residual-Prädikat-pushdowns in einem Abfrageplan angezeigt. Weitere Informationen finden Sie unter [Knowledge Base-Artikel KB3107397](https://support.microsoft.com/en-us/kb/3107397).
 
 

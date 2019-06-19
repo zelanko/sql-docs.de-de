@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09927ba3835b1a5e633adfec6e865600386336e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013831"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638655"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE (Berechtigungen für XML-Schemaauflistungen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Gibt eine Berechtigung an, die für eine XML-Schemaauflistung aufgehoben werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- ON XML SCHEMA COLLECTION :: [ _Schemaname_**.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _Schemaname_ **.** ] *XML_schema_collection_name*  
  Gibt die XML-Schemaauflistung an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer (::) ist erforderlich. Wenn *schema_name* nicht angegeben ist, wird das Standardschema verwendet. Wenn *schema_name* angegeben ist, ist der Schemabereichsqualifizierer (.) erforderlich.  
   
  GRANT OPTION  
@@ -135,8 +135,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  [DENY (Berechtigungen für XML-Schemaauflistungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
 

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: faa9d90cf78df5d73f125c7660b79d39e2bd5622
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770940"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Das Lesen und Schreiben in SQL Server aus Spark mithilfe von der MSSQL-Spark-Connector
@@ -28,7 +28,7 @@ MSSQL-Spark-Connector basiert auf Spark-Datenquelle, APIs und bietet eine vertra
 
 Die folgende Tabelle beschreibt die Parameter für die Benutzeroberfläche, die geändert oder sind neu:
 
-| Eigenschaftenname | Optional | Description |
+| Eigenschaftenname | Optional | Beschreibung |
 |---|---|---|
 | **isolationLevel** | Ja | Hier wird beschrieben, die Isolationsstufe der Verbindung. Der Standardwert für MSSQLSpark Connector ist **READ_COMMITTED** |
 

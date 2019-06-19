@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725655"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Datenbankobjekte (Analysis Services - Mehrdimensionale Daten)
@@ -33,7 +33,7 @@ ms.locfileid: "62725655"
   
  Das <xref:Microsoft.AnalysisServices.Database>-Objekt stellt den Container für alle Datenobjekte dar, die für ein Business Intelligence-Projekt benötigt werden (beispielsweise OLAP-Cubes, Dimensionen und Data Mining-Strukturen) sowie deren Unterstützungsobjekte (beispielsweise<xref:Microsoft.AnalysisServices.DataSource>, <xref:Microsoft.AnalysisServices.Account> und <xref:Microsoft.AnalysisServices.Role>).  
   
- Ein <xref:Microsoft.AnalysisServices.Database>-Objekt bietet u.&amp;#160;a. Zugriff auf folgende Objekte und Attribute:  
+ Ein <xref:Microsoft.AnalysisServices.Database>-Objekt bietet u.&#160;a. Zugriff auf folgende Objekte und Attribute:  
   
 -   Eine Auflistung aller Cubes, auf die Sie Zugriff haben.  
   

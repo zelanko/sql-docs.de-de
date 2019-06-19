@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62945758"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (Berechtigungen für Serverprinzipal) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  Gibt eine Berechtigung an, die für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen aufgehoben werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
  LOGIN **::** *SQL_Server_login*  
- Gibt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an, für den die Berechtigung aufgehoben wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
+ Gibt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen an, für den die Berechtigung aufgehoben wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
  SERVER ROLE **::** *server_role*  
- Gibt die Serverrolle an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer (**::**) ist erforderlich.  
+ Gibt die Serverrolle an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich.  
   
  { FROM | TO } \<server_principal> Gibt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen oder die Serverrolle an, für den bzw. für die die Berechtigung aufgehoben wird.  
   
@@ -147,9 +147,8 @@ GO
  [GRANT (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   
  [DENY (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Gespeicherte Sicherheitsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   

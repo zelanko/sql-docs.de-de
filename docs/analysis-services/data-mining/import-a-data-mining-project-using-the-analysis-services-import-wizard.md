@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52e98d6916b66c4ab26b2791d023d25bffc4cab8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043960"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten
@@ -39,7 +39,7 @@ ms.locfileid: "63043960"
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Datei** , auf **Neu**und dann auf **Projekt**.  
   
-2.  Klicken Sie im Dialogfeld **Neues Projekt** unter **Installierte Vorlagen**auf **Business Intelligence**und anschließend auf **Analysis Services**&gt; **Import from Server (Multidimensional/Data Mining)**(Von Server importieren (Multidimensional/Data Mining)).  
+2.  Klicken Sie im Dialogfeld **Neues Projekt** unter **Installierte Vorlagen**auf **Business Intelligence**und anschließend auf **Analysis Services**&gt; **Import from Server (Multidimensional/Data Mining)** (Von Server importieren (Multidimensional/Data Mining)).  
   
 3.  Geben Sie unter **Name**einen Namen für das Projekt ein. Geben Sie dann einen Speicherort und einen Projektmappennamen an, und klicken Sie auf **OK**.  
   

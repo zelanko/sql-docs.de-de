@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158023"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
@@ -65,7 +65,7 @@ ms.locfileid: "63158023"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In diesem Abschnitt finden Sie Informationen zu den folgenden Konzepten:  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Anforderungen für die Verwendung speicheroptimierter Tabellen](memory-optimized-tables.md)|Erläutert Hardware- und Softwareanforderungen und Richtlinien zum Verwenden von speicheroptimierten Tabellen.|  
 |[Verwenden von In-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Erläutert die Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in einer virtualisierten Umgebung.|  

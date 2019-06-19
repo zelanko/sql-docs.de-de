@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 418921c7ce0f37cbbf7953f6b8023a717f8ae54b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726782"
 ---
 # <a name="hdfs-file-destination"></a>HDFS-Dateiziel
@@ -31,10 +31,10 @@ ms.locfileid: "65726782"
 
  ![HDFS-Dateiziel-Editor](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS-Dateiziel-Editor")
 
-## <a name="options"></a>Optionen
+## <a name="options"></a>enthalten
  Konfigurieren Sie die folgenden Optionen auf der Registerkarte **Allgemein** im Dialogfeld **Dateiziel-Editor für Hadoop** .
 
-|Feld|Beschreibung|
+|Feld|und Beschreibung|
 |-----------|-----------------|
 |**Hadoop-Verbindung**|Geben Sie einen vorhandenen Hadoop-Verbindungs-Manager an, oder erstellen Sie einen neuen. Dieser Verbindungs-Manager gibt an, wo die HDFS-Dateien gehostet werden.|
 |**Dateipfad**|Geben Sie den Namen der HDFS-Datei an.|

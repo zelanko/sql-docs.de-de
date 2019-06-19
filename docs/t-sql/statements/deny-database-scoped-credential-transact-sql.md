@@ -21,11 +21,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f58fa15ba67cfcf84a35f130fa70eff0d981c0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017739"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Gibt eine Berechtigung an, die für die datenbankweit gültigen Anmeldeinformationen verweigert werden kann. Unten aufgeführt.  
   
- ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
+ ON DATABASE SCOPED CREDENTIAL **::** _credential_name_  
  Gibt die datenbankweit gültigen Anmeldeinformationen an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
@@ -112,9 +112,8 @@ DENY permission  [ ,...n ]
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
  [REVOKE (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

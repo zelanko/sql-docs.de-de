@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204721"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur
@@ -27,7 +27,7 @@ ms.locfileid: "63204721"
  Zeigen Sie an, die Auswirkungen der Änderung der *MINIMUM_PROBABILTY* Parameter in einer späteren Lektion.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE-Anweisung  
- Um ein Miningmodell hinzuzufügen, die einer Miningstruktur eine geschachtelte Tabelle enthält, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:   
+ Um ein Miningmodell hinzuzufügen, die einer Miningstruktur eine geschachtelte Tabelle enthält, verwenden Sie die [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte:  
   
 -   Identifizieren der Miningstruktur  
   

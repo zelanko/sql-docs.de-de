@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e59dea663e0a18dd9a6b7505d3c4491f0e7128c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727073"
 ---
 # <a name="data-flow"></a>Datenfluss
@@ -102,7 +102,7 @@ ms.locfileid: "65727073"
 ### <a name="sources-available-for-download"></a>Quellen, die zum Download zur Verfügung stehen  
  In der folgenden Tabelle sind zusätzliche Quellen aufgeführt, die Sie von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website herunterladen können.  
   
-|Quelle|Beschreibung|  
+|Quelle|und Beschreibung|  
 |------------|-----------------|  
 |Oracle-Quelle|Die Oracle-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity umfasst auch einen Verbindungs-Manager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |SAP BI-Quelle|Die SAP BI-Quelle ist die Quellkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI enthält außerdem einen Verbindungsmanager und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  
@@ -163,7 +163,7 @@ ms.locfileid: "65727073"
 ### <a name="destinations-available-for-download"></a>Ziele, die zum Herunterladen zur Verfügung stehen  
  In der folgenden Tabelle sind zusätzliche Ziele aufgeführt, die Sie von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Website herunterladen können.  
   
-|Quelle|Beschreibung|  
+|Quelle|und Beschreibung|  
 |------------|-----------------|  
 |Oracle-Ziel|Das Oracle-Ziel ist die Zielkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für Oracle von Attunity enthält auch einen Verbindungs-Manager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384).|  
 |SAP BI-Ziel|Das SAP BI-Ziel ist die Zielkomponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector für SAP BI enthält auch einen Verbindungsmanager und eine Quelle. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).|  

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253327"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySqlToSql)
@@ -50,11 +50,11 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenban
   
 2.  In der **Anbieter** wählen MySQL 5.1 Odbcdriver (vertrauenswürdig). Es ist der Standardanbieter in den Modus "standard".  
   
-3.  In der **Modus** Kontrollkästchen **Modus "Standard"**. Es handelt sich hierbei um den Standardmodus.  
+3.  In der **Modus** Kontrollkästchen **Modus "Standard"** . Es handelt sich hierbei um den Standardmodus.  
   
     Verwenden Sie Modus "standard", um den Servernamen und Port anzugeben.  
   
-4.  In **Modus "Standard"**, geben Sie die folgenden Werte:  
+4.  In **Modus "Standard"** , geben Sie die folgenden Werte:  
   
     1.  In der **Servernamen** Geben Sie den Namen des MySQL-Servers. In der **Serverport** Geben Sie die Portnummer, um 3306 sein. Es ist der Standardport.  
   
@@ -67,7 +67,7 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenban
 6.  **Konfigurieren:** Es bietet eine Option aus, um die Verbindung mit MySQL über Secure Socket Layer (SSL) konfigurieren.  
   
     > [!NOTE]  
-    > So aktivieren Sie **konfigurieren**, SSL muss festgelegt werden, um **"true"**.  
+    > So aktivieren Sie **konfigurieren**, SSL muss festgelegt werden, um **"true"** .  
   
     Wird Sie durch Klicken auf die Schaltfläche "Konfigurieren", ein Dialogfeld angezeigt. Definiert [Privacy Enhanced Mail-Zertifikate (PEM)], Verschlüsselung zu verwenden, beim Herstellen einer Verbindung mit MySQL-Datenbank, Pfad, an den folgenden drei Dateien, die in das Dialogfeld vorhanden sein muss:  
   

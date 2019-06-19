@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638420"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ SET ANSI_PADDING ON
   
 |Einstellung|char(*n*) NOT NULL oder binary(*n*) NOT NULL|char(*n*) NULL oder binary(*n*) NULL|varchar(*n*) oder varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Füllt den ursprünglichen Wert (mit nachfolgenden Leerräumen für **char**-Spalten und nachfolgenden Nullen für **binary**-Spalten) bis zur Spaltenlänge auf.|Folgt den gleichen Regeln wie für **char(**_n_**)** oder **binary(**_n_**)** NOT NULL, wenn SET ANSI_PADDING auf ON festgelegt ist.|Nachfolgende Leerräume in Zeichenwerten, die in **varchar**-Spalten eingefügt werden, werden nicht abgeschnitten. Nachfolgende Nullen in Binärwerten, die in **varbinary**-Spalten eingefügt werden, werden nicht abgeschnitten. Werte werden nicht bis zur Spaltenlänge aufgefüllt.|  
+|ON|Füllt den ursprünglichen Wert (mit nachfolgenden Leerräumen für **char**-Spalten und nachfolgenden Nullen für **binary**-Spalten) bis zur Spaltenlänge auf.|Folgt den gleichen Regeln wie für **char(** _n_ **)** oder **binary(** _n_ **)** NOT NULL, wenn SET ANSI_PADDING auf ON festgelegt ist.|Nachfolgende Leerräume in Zeichenwerten, die in **varchar**-Spalten eingefügt werden, werden nicht abgeschnitten. Nachfolgende Nullen in Binärwerten, die in **varbinary**-Spalten eingefügt werden, werden nicht abgeschnitten. Werte werden nicht bis zur Spaltenlänge aufgefüllt.|  
 |OFF|Füllt den ursprünglichen Wert (mit nachfolgenden Leerräumen für **char**-Spalten und nachfolgenden Nullen für **binary**-Spalten) bis zur Spaltenlänge auf.|Folgt den gleichen Regeln wie für **varchar** oder **varbinary**, wenn SET ANSI_PADDING auf OFF festgelegt ist.|Nachfolgende Leerräume in Zeichenwerten, die in eine **varchar**-Spalte eingefügt werden, werden abgeschnitten. Nachfolgende Nullen in Binärwerten, die in eine **varbinary**-Spalte eingefügt werden, werden abgeschnitten.|  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ Für ANSI_PADDING muss beim Erstellen oder Ändern von Indizes für berechnete S
   
 Die Standardeinstellung für SET ANSI_PADDING ist ON. Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_PADDING beim Herstellen einer Verbindung automatisch ON fest. Diese Einstellung kann in ODBC-Datenquellen, in ODBC-Verbindungsattributen oder in OLE DB-Verbindungseigenschaften konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung hergestellt wird. Die Standardeinstellung für SET ANSI_PADDING für Verbindungen von DB-Library-Anwendungen ist OFF.  
   
- Die Einstellung SET ANSI_PADDING hat keine Auswirkungen auf die Datentypen **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** und **nvarchar(max)**. Diese zeigen immer das Verhalten von SET ANSI_PADDING ON. Das heißt, dass nachfolgende Leerzeichen und Nullen nicht abgeschnitten werden.  
+ Die Einstellung SET ANSI_PADDING hat keine Auswirkungen auf die Datentypen **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)** , **varchar(max)** und **nvarchar(max)** . Diese zeigen immer das Verhalten von SET ANSI_PADDING ON. Das heißt, dass nachfolgende Leerzeichen und Nullen nicht abgeschnitten werden.  
   
 Ist ANSI_DEFAULTS auf ON festgelegt, so ist ANSI_PADDING aktiviert.  
   

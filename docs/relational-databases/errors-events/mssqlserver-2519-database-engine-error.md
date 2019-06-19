@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f73e7f2ac6cfcaf002ff8951ffcd7b5ebf399e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045399"
 ---
 # <a name="mssqlserver2519"></a>MSSQLSERVER_2519
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47740224"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2519|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -39,6 +39,6 @@ Die Informationsmeldung gibt an, dass DBCC vom Abfrageprozessor kein internes Ob
 ## <a name="user-action"></a>Benutzeraktion  
 None  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [MSSQLSERVER_2518](~/relational-databases/errors-events/mssqlserver-2518-database-engine-error.md)  
   

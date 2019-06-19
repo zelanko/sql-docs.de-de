@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269986"
 ---
 # <a name="setting-project-options-db2tosql"></a>Festlegen von Projektoptionen (DB2ToSQL)
@@ -37,7 +37,7 @@ SSMA verfügt über fünf verschiedene projekteinstellungen:
   
 Es verfügt auch über vier Modi zum Konfigurieren dieser Einstellungen:  
   
--   Standard  
+-   Default  
   
 -   Optimistisch  
   

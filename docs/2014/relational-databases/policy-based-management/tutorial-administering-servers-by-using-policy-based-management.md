@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63256061"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung
@@ -31,7 +31,7 @@ ms.locfileid: "63256061"
  [Lektion 1: Erstellen und Anwenden einer Standardrichtlinie deaktiviert](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  In dieser Lektion wird eine Richtlinie erstellt, die festlegt, dass Datenbank-E-Mail nicht auf dem Server aktiviert ist. Anschließend überprüft die Richtlinie, ob der Server diese Richtlinie einhält, und konfiguriert den Server, indem Datenbank-E-Mail deaktiviert wird.  
   
- [Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  In dieser Lektion wird eine Richtlinie erstellt, die einen Benennungsstandard für Tabellen definiert und erzwingt.  
   
 ## <a name="requirements"></a>Anforderungen  

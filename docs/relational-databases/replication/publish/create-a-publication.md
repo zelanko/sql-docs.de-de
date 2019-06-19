@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 338e076b2a95d7086b0acc22dff1d85e4327844d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661281"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,19 +110,19 @@ ms.locfileid: "51665819"
   
     -   Wenn Sie sich nicht sicher sind, ob ein Protokolllese-Agentauftrag für die Veröffentlichungsdatenbank vorhanden ist, dann führen Sie [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
-    -   Wenn das Resultset leer ist, erstellen Sie einen Auftrag des Protokolllese-Agents. Führen Sie auf dem Verleger [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) aus. Geben Sie die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Anmeldeinformationen, unter denen der Agent ausgeführt wird, für **@job_name** und **@password**aktiviert wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Fahren Sie mit Schritt 3 fort.  
+    -   Wenn das Resultset leer ist, erstellen Sie einen Auftrag des Protokolllese-Agents. Führen Sie auf dem Verleger [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) aus. Geben Sie die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Anmeldeinformationen, unter denen der Agent ausgeführt wird, für **@job_name** und **@password** aktiviert wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password** . Fahren Sie mit Schritt 3 fort.  
   
-3.  Führen Sie auf dem Verleger [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) aus. Geben Sie einen Veröffentlichungsnamen für **@publication**und für den **@repl_freq** -Parameter den Wert **snapshot** (bei einer Momentaufnahmeveröffentlichung) oder den Wert **continuous** (bei einer Transaktionsveröffentlichung) an. Geben Sie eventuell weitere Veröffentlichungsoptionen an. Dadurch wird die Veröffentlichung definiert.  
+3.  Führen Sie auf dem Verleger [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) aus. Geben Sie einen Veröffentlichungsnamen für **@publication** und für den **@repl_freq** -Parameter den Wert **snapshot** (bei einer Momentaufnahmeveröffentlichung) oder den Wert **continuous** (bei einer Transaktionsveröffentlichung) an. Geben Sie eventuell weitere Veröffentlichungsoptionen an. Dadurch wird die Veröffentlichung definiert.  
   
     > [!NOTE]  
     >  Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten:  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-4.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 3 für **@publication** verwendeten Veröffentlichungsnamen und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@snapshot_job_name** und **@password**aktiviert wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**aktiviert wird. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+4.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 3 für **@publication** verwendeten Veröffentlichungsnamen und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@snapshot_job_name** und **@password** aktiviert wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password** aktiviert wird. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 5.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -139,10 +139,10 @@ ms.locfileid: "51665819"
     >   
     >  % * [ ] | : " ? \ / < >  
   
-3.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 2 für **@publication** verwendeten Veröffentlichungsnamen und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@snapshot_job_name** und **@password**aktiviert wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**aktiviert wird. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+3.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie den in Schritt 2 für **@publication** verwendeten Veröffentlichungsnamen und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@snapshot_job_name** und **@password** aktiviert wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password** aktiviert wird. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 4.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -196,14 +196,14 @@ ms.locfileid: "51665819"
   
     -   (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger verwenden.  
   
-    -   (Optional) Verwenden Sie den inklusiven logischen OR-Operator (**|** in Visual C# und **Or** in Visual Basic) und den exklusiven logischen OR-Operator (**^** in Visual C# und **Xor** in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft festzulegen.  
+    -   (Optional) Verwenden Sie den inklusiven logischen OR-Operator ( **|** in Visual C# und **Or** in Visual Basic) und den exklusiven logischen OR-Operator ( **^** in Visual C# und **Xor** in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft festzulegen.  
   
     -   (Optional) Den Namen des Verlegers für <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> , wenn der Verleger ein Nicht-SQL Server-Verleger ist.  
   
 6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode auf, um die Veröffentlichung zu erstellen.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 7.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>-Methode auf, um den Momentaufnahme-Agentauftrag für die Veröffentlichung zu erstellen.  
   
@@ -228,12 +228,12 @@ ms.locfileid: "51665819"
         > [!NOTE]  
         >  Wenn die Veröffentlichung von einem Mitglied der festen Serverrolle <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> erstellt wird, müssen Sie **P:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity** nicht festlegen. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-    -   (Optional) Verwenden Sie den inklusiven logischen OR-Operator (**|** in Visual C# und **Or** in Visual Basic) und den exklusiven logischen OR-Operator (**^** in Visual C# und **Xor** in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes> -Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft.  
+    -   (Optional) Verwenden Sie den inklusiven logischen OR-Operator ( **|** in Visual C# und **Or** in Visual Basic) und den exklusiven logischen OR-Operator ( **^** in Visual C# und **Xor** in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes> -Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> -Eigenschaft.  
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> -Methode auf, um die Veröffentlichung zu erstellen.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;#40;SQL Server-Konfigurations-Manager&amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> -Methode auf, um den Momentaufnahme-Agentauftrag für die Veröffentlichung zu erstellen.  
   
@@ -250,7 +250,7 @@ ms.locfileid: "51665819"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von sqlcmd mit Skriptvariablen](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   

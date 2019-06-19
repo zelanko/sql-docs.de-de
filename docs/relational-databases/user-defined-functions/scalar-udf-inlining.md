@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775145"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -48,14 +48,15 @@ Mit dem Feature für das Inlining benutzerdefinierter Skalarfunktionen soll die 
 
 Mit diesem neuen Feature werden benutzerdefinierte Skalarfunktionen automatisch in Skalarausdrücke oder skalare Unterabfragen transformiert, die in der aufrufenden Abfrage den UDF-Operator ersetzen. Diese Ausdrücke und Unterabfragen werden anschließend optimiert. Dadurch enthält der Abfrageplan keinen UDF-Operator mehr. Seine Auswirkungen werden im Plan überwacht, z.B. Ansichten oder Inline-Tabellenwertfunktionen.
 
-### <a name="example-1---single-statement-scalar-udf"></a>1. Beispiel: Benutzerdefinierte Skalarfunktion mit einer einzelnen Anweisung
+### <a name="example-1---single-statement-scalar-udf"></a>1\. Beispiel: Benutzerdefinierte Skalarfunktion mit einer einzelnen Anweisung
 
 Sehen Sie sich die folgende Abfrage an:
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
 ```
 
@@ -74,8 +75,9 @@ Die Abfrage kann nun geändert werden, um diese benutzerdefinierte Funktion aufz
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 ```
 
@@ -87,7 +89,7 @@ Wie zuvor beschrieben ist die Leistung der Abfrage mit der benutzerdefinierten F
 
 Diese Zahlen basieren auf einer CCI-Datenbank mit 10 GB (mit dem TPC-H-Schema), die auf einem Computer mit Dualprozessor (12 Kerne), 96 GB RAM und SSD-Sicherung ausgeführt wird. Dabei wurden die Kompilier- und die Ausführungszeit mit einem kalten Prozedurcache und Pufferpool eingeschlossen. Die Standardkonfiguration wurde verwendet, und es wurden keine weiteren Indizes erstellt.
 
-### <a name="example-2---multi-statement-scalar-udf"></a>2. Beispiel: Benutzerdefinierte Skalarfunktion mit einer mehreren Anweisungen
+### <a name="example-2---multi-statement-scalar-udf"></a>2\. Beispiel: Benutzerdefinierte Skalarfunktion mit einer mehreren Anweisungen
 
 Für benutzerdefinierte Skalarfunktionen, die über mehrere T-SQL-Anweisungen implementiert werden, z.B. Variablenzuweisungen und bedingte Verzweigungen, kann ebenfalls ein Inlining durchgeführt werden. Sehen Sie sich folgende benutzerdefinierte Skalarfunktion an, die die Servicekategorie für einen bestimmten Kunden bestimmt, wenn ein benutzerdefinierter Schlüssel vorhanden ist. Die Kategorie wird erreicht, indem zuerst der Gesamtpreis aller Bestellungen des Kunden mithilfe einer SQL-Abfrage berechnet wird. Anschließend wird eine `IF-ELSE`-Logik verwendet, um die Kategorie auf Grundlage des Gesamtpreises zu bestimmen.
 
@@ -180,7 +182,7 @@ Wenn alle Bedingungen erfüllt sind und SQL Server ein Inlining durchführt, wir
 
 ## <a name="enabling-scalar-udf-inlining"></a>Aktivieren des Inlinings benutzerdefinierter Skalarfunktionen
 
-Sie können Workloads automatisch für das Inlining benutzerdefinierter Skalarfunktionen zulassen, indem Sie den Kompatibilitätsgrad 150 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Zum Beispiel:  
+Sie können Workloads automatisch für das Inlining benutzerdefinierter Skalarfunktionen zulassen, indem Sie den Kompatibilitätsgrad 150 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Beispiel:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -202,12 +204,13 @@ Führen Sie folgende Anweisung im Kontext einer Datenbank aus, um das Inlining f
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-Wenn die Option auf ON festgelegt ist, wird die Einstellung in [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als „aktiviert“ angezeigt. Sie können das Inlining benutzerdefinierter Skalarfunktionen für eine bestimmte Abfrage auch deaktivieren, indem Sie `DISABLE_TSQL_SCALAR_UDF_INLINING` als `USE HINT`-Abfragehinweis festlegen. Zum Beispiel:
+Wenn die Option auf ON festgelegt ist, wird die Einstellung in [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als „aktiviert“ angezeigt. Sie können das Inlining benutzerdefinierter Skalarfunktionen für eine bestimmte Abfrage auch deaktivieren, indem Sie `DISABLE_TSQL_SCALAR_UDF_INLINING` als `USE HINT`-Abfragehinweis festlegen. Beispiel:
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
@@ -215,7 +218,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 Ein `USE HINT`-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Einstellung des Kompatibilitätsgrads.
 
 Das Inlining benutzerdefinierter Skalarfunktionen kann auch für eine bestimmte benutzerdefinierte Funktion deaktiviert werden, indem Sie die INLINE-Klausel in der `CREATE FUNCTION`- oder `ALTER FUNCTION`-Anweisung verwenden.
-Zum Beispiel:
+Beispiel:
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))

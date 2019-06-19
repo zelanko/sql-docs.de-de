@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245666"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools
@@ -29,7 +29,7 @@ ms.locfileid: "63245666"
   
 2.  In der **öffnen** geben `wmimgmt.msc`, und klicken Sie dann auf **OK**.  
   
-3.  Klicken Sie im Programm **Windows-Verwaltungsinfrastruktur** mit der rechten Maustaste auf **WMI-Steuerung (Lokal)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im Programm **Windows-Verwaltungsinfrastruktur** mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** , und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Erweitern Sie im Dialogfeld **Eigenschaften von WMI-Steuerung (Lokal)** auf der Registerkarte **Sicherheit** den Eintrag **Root**, und klicken Sie dann auf **CIMV2**.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63245666"
   
 6.  Fügen Sie zum Feld **Gruppen- oder Benutzernamen** eine Gruppe oder einen Benutzer hinzu, und markieren Sie die Gruppe bzw. den Benutzer.  
   
-7.  In der **Berechtigungen für**_\<Gruppen- oder Benutzername >_ wählen Sie im der **zulassen** Spalte, für die **Remoteaktivierung** Berechtigung , für Benutzer, die Sie Remote möchten der Dienststatus erkannt.  
+7.  In der **Berechtigungen für** _\<Gruppen- oder Benutzername >_ wählen Sie im der **zulassen** Spalte, für die **Remoteaktivierung** Berechtigung , für Benutzer, die Sie Remote möchten der Dienststatus erkannt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](agent/start-stop-or-pause-the-sql-server-agent-service.md)  
