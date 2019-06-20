@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1151b2e4cd8c51caca3bae4d97e9d616720fda0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481284"
 ---
 # <a name="install-data-quality-services"></a>Installieren von Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) enthält die folgenden zwei Komponenten: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** und **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) enthält die folgenden zwei Komponenten: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** und **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** .  
   
 |DQS-Komponente|Description|  
 |-------------------|-----------------|  
@@ -68,10 +68,10 @@ ms.locfileid: "65481284"
 ##  <a name="PostInstallationTasks"></a> Installationsnachbereitung  
  Nach dem Abschließen des SQL Server-Installations-Assistenten müssen Sie die in diesem Abschnitt erläuterten zusätzlichen Schritte ausführen, um die Installation von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] abzuschließen, ihn zu konfigurieren und in Betrieb zu nehmen.  
   
-|Aktion|Description|Verwandte Themen|  
+|Aktion|Beschreibung|Verwandte Themen|  
 |------------|-----------------|--------------------|  
 |Abschließen der [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]-Installation|Führen Sie die Datei DQSInstaller.exe aus. Beim Ausführen der Datei DQSInstaller.exe geschieht Folgendes:<br /><br /> Die Datenbanken DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA werden erstellt.<br /><br /> Die Anmeldenamen ##MS_dqs_db_owner_login## und ##MS_dqs_service_login## werden erstellt.<br /><br /> Die Rollen dqs_administrator, dqs_kb_editor und dqs_kb_operator werden in der DQS_MAIN-Datenbank erstellt.<br /><br /> Die gespeicherte DQInitDQS_MAIN-Prozedur wird in der master-Datenbank erstellt.<br /><br /> Die Datei DQS_install.log wird normalerweise in der c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12 erstellt. *< Instance_name >* \MSSQL\Log-Ordner. Die Datei enthält Informationen zu den Aktionen, die beim Ausführen der Datei DQSInstaller.exe ablaufen.<br /><br /> Wenn eine Master Data Services-Datenbank in der gleichen SQL Server-Instanz wie [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]vorhanden ist, wird ein der Master Data Services-Anmeldung zugeordneter Benutzer erstellt und ihm die dqs_administrator-Rolle in der Datenbank DQS_MAIN erteilt.<br /><br /> <br /><br /> Damit ist die Installation von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] abgeschlossen.|[Ausführen von DQSInstaller.exe zum Abschließen der Installation von Data Quality Server](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
-|Zuweisen von DQS-Rollen an Benutzer|Für die Anmeldung [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mit [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], ein Benutzer muss eine der folgenden drei Rollen in der Datenbank DQS_MAIN verfügen: **"dqs_administrator"**, **Rolle "dqs_kb_editor"**, oder **Dqs_kb_ Operator**. Wenn das Benutzerkonto ein Element der festen Serverrolle sysadmin ist, können Sie sich standardmäßig am [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] anmelden, der den [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] verwendet, auch wenn dem Benutzerkonto keine der DQS-Rollen gewährt wird. Weitere Informationen zu den drei DQS-Rollen finden Sie unter [DQS-Sicherheit](../dqs-security.md).<br /><br /> Hinweis: Die drei DQS-Rollen sind für die Datenbanken DQS_PROJECTS und DQS_STAGING_DATA nicht verfügbar.|[Zuweisen von DQS-Rollen an Benutzer](grant-dqs-roles-to-users.md)|  
+|Zuweisen von DQS-Rollen an Benutzer|Für die Anmeldung [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mit [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)], ein Benutzer muss eine der folgenden drei Rollen in der Datenbank DQS_MAIN verfügen: **"dqs_administrator"** , **Rolle "dqs_kb_editor"** , oder **Dqs_kb_ Operator**. Wenn das Benutzerkonto ein Element der festen Serverrolle sysadmin ist, können Sie sich standardmäßig am [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] anmelden, der den [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] verwendet, auch wenn dem Benutzerkonto keine der DQS-Rollen gewährt wird. Weitere Informationen zu den drei DQS-Rollen finden Sie unter [DQS-Sicherheit](../dqs-security.md).<br /><br /> Hinweis: Die drei DQS-Rollen sind für die Datenbanken DQS_PROJECTS und DQS_STAGING_DATA nicht verfügbar.|[Zuweisen von DQS-Rollen an Benutzer](grant-dqs-roles-to-users.md)|  
 |Bereitstellen von Daten für DQS-Vorgänge|Stellen Sie sicher, dass Sie auf die Quelldaten für die DQS-Vorgänge zugreifen können, und dass Sie die verarbeiteten Daten in eine Tabelle in einer Datenbank exportieren können.|[Zugriff auf Daten für DQS-Vorgänge](access-data-for-the-dqs-operations.md)|  
   
 ## <a name="see-also"></a>Siehe auch  

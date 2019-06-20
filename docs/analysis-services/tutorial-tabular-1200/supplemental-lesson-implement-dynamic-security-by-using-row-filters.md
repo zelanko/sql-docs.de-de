@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d84f208fc36c0bb647537aa174b86e06ba70abc3
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: dfc217b3a4e5fa58b171677c2acedc313a090285
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403382"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263355"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Ergänzende Lektion – Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynami
   
 Um dynamische Sicherheit zu implementieren, müssen Sie dem Modell eine Tabelle hinzufügen, die die Windows-Benutzernamen der Benutzer enthält, die eine Verbindung mit dem Modell als Datenquelle erstellen und Modellobjekte und Daten durchsuchen dürfen. In diesem Lernprogramm erstellen Sie ein Modell im Kontext der Adventure Works Corp. Sie müssen jedoch eine Tabelle mit Benutzern Ihrer Domäne hinzufügen, um diese Lektion abzuschließen. Die Kennwörter für die hinzuzufügenden Benutzernamen sind nicht erforderlich. Um eine Tabelle "employeesecurity" mit einer kleinen Stichprobe von Benutzern aus Ihrer eigenen Domäne zu erstellen, verwenden Sie die Funktion zum Einfügen, Mitarbeiterdaten aus einem Excel-Arbeitsblatt. In der wirklichen Welt verwendet die Tabelle mit den Benutzernamen, die Sie einem Modell hinzugefügt haben, in der Regel eine Tabelle aus einer tatsächlichen Datenbank als Datenquelle, z. B. eine reale dimEmployee-Tabelle.  
   
-Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktionen: [USERNAME-Funktion (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) und [LOOKUPVALUE-Funktion (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Mit der LOOKUPVALUE-Funktion, die die Formel gibt einen Wert aus der Tabelle "employeesecurity" und übergibt dann, dass der Wert, der die USERNAME-Funktion, die den Namen des angemeldeten Benutzers angibt, die dieser Rolle gehört. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Szenario legen Sie fest, dass Verkaufsmitarbeiter nur nach Internetumsatzdaten für die Vertriebsgebiete, denen sie angehören, suchen können.  
+Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktionen: [USERNAME-Funktion (DAX)](/dax/username-function-dax) und [LOOKUPVALUE-Funktion (DAX)](/dax/lookupvalue-function-dax). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Mit der LOOKUPVALUE-Funktion, die die Formel gibt einen Wert aus der Tabelle "employeesecurity" und übergibt dann, dass der Wert, der die USERNAME-Funktion, die den Namen des angemeldeten Benutzers angibt, die dieser Rolle gehört. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Szenario legen Sie fest, dass Verkaufsmitarbeiter nur nach Internetumsatzdaten für die Vertriebsgebiete, denen sie angehören, suchen können.  
   
 In dieser ergänzenden Lektion führen Sie eine Reihe von Aufgaben durch. Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
@@ -77,7 +77,7 @@ Da die Tabelle dimEmployee in der Beispieldatenbank AdventureWorksDW Benutzer in
 
 3.  Ersetzen Sie den Vornamen, Nachnamen und "Domäne\Benutzername" mit den Namen und Anmelde-Ids von drei Benutzern in Ihrer Organisation an. Geben Sie den gleichen Benutzer in den ersten beiden Zeilen für EmployeeId 1. Dadurch wird angezeigt, dass der Benutzer zu mehreren Vertriebsgebieten gehört. Lassen Sie die Felder "EmployeeID" und "salesterritoryid" aus, wie sie sind.  
   
-4.  Speichern Sie das Arbeitsblatt als **"sampleemployee"**.  
+4.  Speichern Sie das Arbeitsblatt als **"sampleemployee"** .  
   
 5.  Wählen Sie im Arbeitsblatt alle Zellen mit Mitarbeiterdaten, einschließlich des Headers, und klicken Sie dann mit der rechten Maustaste in der ausgewählten Daten, und klicken Sie dann auf **Kopie**.  
   
@@ -85,7 +85,7 @@ Da die Tabelle dimEmployee in der Beispieldatenbank AdventureWorksDW Benutzer in
   
     Wenn einfügen abgeblendet ist, klicken Sie auf eine Spalte in eine beliebige Tabelle im Modell-Designer-Fenster, und versuchen Sie es erneut.  
   
-7.  In der **Vorschau einfügen** Dialogfeld **Tabellenname**, Typ **"employeesecurity"**.  
+7.  In der **Vorschau einfügen** Dialogfeld **Tabellenname**, Typ **"employeesecurity"** .  
   
 8.  In **einzufügende Daten**, ob die Daten alle Benutzerdaten und Kopfzeilen aus dem Arbeitsblatt "sampleemployee" einschließen.  
   
@@ -186,6 +186,6 @@ In dieser Aufgabe werden analysieren in Excel-Funktion in SSDT können Sie um di
     Dieser Benutzer kann nur Internetumsatzdaten des Gebiets, dem er zugeordnet ist, durchsuchen oder abfragen, da der für die Tabelle Sales Territory in der Benutzerrolle Sales Employees by Territory definierte Zeilenfilter eine effektive Sicherung der Daten in Bezug auf andere Vertriebsgebiete bedeutet.  
   
 ## <a name="see-also"></a>Siehe auch  
-[USERNAME-Funktion (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
-[LOOKUPVALUE-Funktion (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
-[CUSTOMDATA-Funktion (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+[USERNAME-Funktion (DAX)](/dax/username-function-dax)  
+[LOOKUPVALUE-Funktion (DAX)](/dax/lookupvalue-function-dax)  
+[CUSTOMDATA-Funktion (DAX)](/dax/customdata-function-dax)  

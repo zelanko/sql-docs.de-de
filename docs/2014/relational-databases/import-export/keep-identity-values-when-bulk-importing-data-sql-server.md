@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011909"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server)
@@ -76,7 +76,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Mit "bcp" und unter Beibehaltung der Identitätswerte  
  Anhand des nachfolgenden Beispiels wird veranschaulicht, wie Identitätswerte beibehalten werden können, wenn `bcp` für den Massenimport von Daten verwendet wird. Der Befehl `bcp` verwendet die Formatdatei `myDepartment-f-n-x.Xml` und enthält folgende Schalter:  
   
-|Qualifizierer|Description|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
 |**-E**|Gibt an, dass Identitätswerte in der Datendatei für die Identitätsspalte verwendet werden sollen.|  
 |**-T**|Gibt an, dass die `bcp` Hilfsprogramm eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine vertrauenswürdige Verbindung.|  

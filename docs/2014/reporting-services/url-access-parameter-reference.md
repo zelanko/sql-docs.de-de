@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098720"
 ---
 # <a name="url-access-parameter-reference"></a>URL-Zugriffsparameterreferenz
@@ -68,7 +68,7 @@ ms.locfileid: "66098720"
 |*ShowHideToggle*|Schaltet das Ein-/Ausblenden eines Abschnitts im Bericht um. Geben Sie eine positive ganze Zahl an, um den Abschnitt anzugeben, der umgeschaltet werden soll.|  
   
 ## <a name="report-viewer-web-part-commands-rv"></a>Befehle des Berichts-Viewer-Webparts (rv:)  
- In der folgenden Tabelle werden die für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reservierten Berichtsparameternamen beschrieben, die zum Auswählen des in SharePoint integrierten Berichts-Viewer-Webparts verwendet werden. Diese Parameternamen haben das Präfix *rv:*. Für Berichts-Viewer-Webparts kann auch der *rs:ParameterLanguage* -Parameter verwendet werden.  
+ In der folgenden Tabelle werden die für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reservierten Berichtsparameternamen beschrieben, die zum Auswählen des in SharePoint integrierten Berichts-Viewer-Webparts verwendet werden. Diese Parameternamen haben das Präfix *rv:* . Für Berichts-Viewer-Webparts kann auch der *rs:ParameterLanguage* -Parameter verwendet werden.  
   
 |Parameter|Aktion|  
 |---------------|------------|  

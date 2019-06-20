@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste (IIS) 8.0 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42ccdae89fdb0883201ec022479e51a327ea0b33
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080165"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263226"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste (IIS) 8.0
   In diesem Artikel wird beschrieben, wie Sie einen HTTP-Endpunkt für den Zugriff auf eine Analysis Services-Instanz einrichten. Sie können den HTTP-Zugriff aktivieren, indem Sie MSMDPUMP.dll konfigurieren, eine ISAPI-Erweiterung, die in Internetinformationsdienste (IIS) ausgeführt wird und Datapump zu und von Clientanwendungen und einem Analysis Services-Server ausführt. Dieser Ansatz bietet eine Alternative zum Herstellen einer Verbindung mit Analysis Services, wenn die BI-Lösung die folgenden Funktionen erfordert:  
@@ -261,7 +261,7 @@ ms.locfileid: "66080165"
 ##  <a name="bkmk_test"></a> Schritt 6: Testen der Konfiguration  
  Die Verbindungszeichenfolgensyntax für MSMDPUMP entspricht der URL zur Datei MSMDPUMP.dll.  
   
- Wenn die Webanwendung an einem festen Port lauscht, hängen Sie die Portnummer an den Servernamen oder IP-Adresse (z. B. http://my-web-srv01:8080/OLAP/msmdpump.dll oder http://123.456.789.012:8080/OLAP/msmdpump.dll.  
+ Wenn die Webanwendung an einem festen Port lauscht, fügen Sie die Portnummer an den Servernamen oder IP-Adresse, z. B. `http://my-web-srv01:8080/OLAP/msmdpump.dll` oder `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
   
  Eine schnelle Methode zum Testen der Verbindung ist das Öffnen einer Verbindung mit Microsoft Excel oder SQL Server Management Studio.  
   

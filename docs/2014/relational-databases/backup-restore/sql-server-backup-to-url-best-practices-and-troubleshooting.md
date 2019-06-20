@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619586"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung
@@ -94,7 +94,7 @@ ms.locfileid: "65619586"
 -   Bei der Wiederherstellung von einer komprimierten Sicherung kann eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt werden:  
   
     -   **SqlException 3284 aufgetreten. Schweregrad: 16; Status: 5**  
-        **Nachricht Dateimarkierung für Gerät "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' ist nicht ausgerichtet. Wiederholen Sie die Restore-Anweisung mit derselben Blockgröße, die zum Erstellen des Sicherungssatzes verwendet: '65536' sieht wie ein möglicher Wert.**  
+        **Nachricht Dateimarkierung für Gerät "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' ist nicht ausgerichtet. Wiederholen Sie die Restore-Anweisung mit derselben Blockgröße, die zum Erstellen des Sicherungssatzes verwendet: '65536' sieht wie ein möglicher Wert.**  
   
          Um diesen Fehler zu beheben, übergeben Sie die `BACKUP`-Anweisung erneut mit `BLOCKSIZE = 65536`.  
   
@@ -117,15 +117,15 @@ ms.locfileid: "65619586"
   
  Proxyserver können über Einstellungen verfügen, die die Anzahl der Verbindungen pro Minute begrenzen. Der URL-Sicherungsprozess ist ein Multithreadprozess und kann diese Begrenzung folglich überschreiten. In diesem Fall wird die Verbindung vom Proxyserver abgebrochen. Um das Problem zu beheben, ändern Sie die Proxyeinstellungen, damit der Proxy von SQL Server nicht verwendet wird.   Im Folgenden einige Beispiele für Fehlertypen oder -meldungen, die im Fehlerprotokoll angezeigt werden können:  
   
--   Schreiben Sie auf "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" Fehler: URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
+-   Schreiben Sie auf "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak " Fehler: URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
   
--   Nicht behebbarer E/A-Fehler für die Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint. (Fehler konnte am Endpunkt nicht erfasst werden.)  
+-   Nicht behebbarer E/A-Fehler für die Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " Error could not be gathered from Remote Endpoint. (Fehler konnte am Endpunkt nicht erfasst werden.)  
   
      Meldung 3013, Ebene 16, Status 1, Zeile 2  
   
      BACKUP DATABASE wird fehlerbedingt beendet.  
   
--   Backupiorequest::: Schreibfehler auf Sicherungsmedium "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak". Betriebssystemfehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
+-   Backupiorequest::: Schreibfehler auf Sicherungsmedium "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak ". Betriebssystemfehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Kann nicht zum Lesen von Daten aus der transportverbindung: Die Verbindung wurde geschlossen.  
   
  Wenn Sie die ausführliche Protokollierung mit Ablaufverfolgungsflag 3051 aktivieren, können auch folgende Meldungen in den Protokollen angezeigt werden:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619586"
   
  **Standardproxyeinstellungen wurden nicht abgerufen:**  
   
- In einigen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxyauthentifizierungsfehler wie der folgende verursacht werden: *Nicht behebbarer E/A-Fehler für die Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" BACKUP TO URL hat eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: The remote server returned an error: (407)*  **Proxyauthentifizierung erforderlich**.  
+ In einigen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxyauthentifizierungsfehler wie der folgende verursacht werden: *Nicht behebbarer E/A-Fehler für die Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " BACKUP TO URL hat eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: The remote server returned an error: (407)*  **Proxyauthentifizierung erforderlich**.  
   
  Um dieses Problem zu beheben, erstellen Sie mithilfe folgender Schritte eine Konfigurationsdatei, durch die beim URL-Sicherungsprozess die Standardproxyeinstellungen verwendet werden können:  
   

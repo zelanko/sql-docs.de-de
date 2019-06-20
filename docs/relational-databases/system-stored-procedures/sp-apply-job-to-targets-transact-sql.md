@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998029"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielservergruppen, für die der angegebene Auftrag angewendet wird. *Target_server_groups* ist **nvarchar(2048)**, hat den Standardwert NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielservergruppen, für die der angegebene Auftrag angewendet wird. *Target_server_groups* ist **nvarchar(2048)** , hat den Standardwert NULL.  
   
-`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Zielservern auf die der angegebene Auftrag angewendet werden. *target_server*ist **nvarchar(2048)**, hat den Standardwert NULL.  
+`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Zielservern auf die der angegebene Auftrag angewendet werden. *target_server*ist **nvarchar(2048)** , hat den Standardwert NULL.  
   
-`[ @operation = ] 'operation'` Ist Sie, ob der angegebene Auftrag angewendet oder aus dem angegebenen Zielserver oder Zielservergruppen entfernt werden sollten. *Vorgang*ist **vom Datentyp varchar(7)**, hat den Standardwert übernehmen. Gültige Vorgänge sind **übernehmen** und **entfernen**.  
+`[ @operation = ] 'operation'` Ist Sie, ob der angegebene Auftrag angewendet oder aus dem angegebenen Zielserver oder Zielservergruppen entfernt werden sollten. *Vorgang*ist **vom Datentyp varchar(7)** , hat den Standardwert übernehmen. Gültige Vorgänge sind **übernehmen** und **entfernen**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

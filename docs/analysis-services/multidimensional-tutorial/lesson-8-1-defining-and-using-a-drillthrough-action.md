@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0b42e3d5b74b730a197b4c8cb595e871a247c6
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403512"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lektion 8 – 1: definieren und Verwenden einer Drillthroughaktion
@@ -107,9 +107,9 @@ Im Rahmen der Tasks in diesem Thema definieren Sie eine Drillthroughaktion, die 
   
 6.  Ändern Sie die **Name** -Eigenschaft für das **Order Date Key** -Attribut auf **Order Date** . Klicken Sie anschließend für die **Name Column** -Eigenschaft auf die Schaltfläche zum Durchsuchen. Wählen Sie im Dialogfeld **Namensspalte** **Date** als Quelltabelle und SimpleDate als Quellspalte aus. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Ändern Sie die **Name** -Eigenschaft für das **Due Date Key** -Attribut in **Due Date**und anschließend mithilfe derselben Methode wie das **Order Date Key** -Attribut die **Name Column** -Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)**.  
+7.  Ändern Sie die **Name** -Eigenschaft für das **Due Date Key** -Attribut in **Due Date**und anschließend mithilfe derselben Methode wie das **Order Date Key** -Attribut die **Name Column** -Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)** .  
   
-8.  Ändern Sie die **Name** -Eigenschaft für das **Ship Date Key** -Attribut in **Ship Date**und anschließend die **Name Column** -Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)**.  
+8.  Ändern Sie die **Name** -Eigenschaft für das **Ship Date Key** -Attribut in **Ship Date**und anschließend die **Name Column** -Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)** .  
   
 9. Wechseln Sie zur Registerkarte **Aktionen** des Cube-Designers für den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial-Cube.  
   

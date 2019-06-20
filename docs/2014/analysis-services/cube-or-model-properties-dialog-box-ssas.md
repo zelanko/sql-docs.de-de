@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086603"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Dialogfeld für Cube- oder Modelleigenschaften (SSAS)
@@ -41,7 +41,7 @@ ms.locfileid: "66086603"
 |**Letztes Schemaupdate**|Zeigt den Zeitpunkt (Datum und Uhrzeit) an, zu dem die Metadaten des Cubes oder Modells zuletzt aktualisiert wurden.|  
 |**Verarbeitungsmodus des Skriptcaches**|Wählen Sie den Verarbeitungsmodus aus, der für den Skriptcache vom Cube oder Modell verwendet werden soll. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Verarbeitungsmodus des skriptcaches**|Wählen Sie den Verarbeitungsmodus aus, der für den Cube oder das Modell zu verwenden ist. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
-|**Speicherort**|Geben Sie den Ordner ein, der als Standardspeicherort für Measuregruppen und Partitionen zu verwenden ist, die dem Cube oder Modell zugewiesen sind. Klicken Sie alternativ auf die Schaltfläche mit den Auslassungszeichen (**...**), um zur Auswahl eines Ordners das Dialogfeld **Nach Remoteordner suchen** anzuzeigen. Weitere Informationen zum Dialogfeld **Nach Remoteordner suchen** finden Sie unter [Dialogfeld „Nach Remoteordner suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
+|**Speicherort**|Geben Sie den Ordner ein, der als Standardspeicherort für Measuregruppen und Partitionen zu verwenden ist, die dem Cube oder Modell zugewiesen sind. Klicken Sie alternativ auf die Schaltfläche mit den Auslassungszeichen ( **...** ), um zur Auswahl eines Ordners das Dialogfeld **Nach Remoteordner suchen** anzuzeigen. Weitere Informationen zum Dialogfeld **Nach Remoteordner suchen** finden Sie unter [Dialogfeld „Nach Remoteordner suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
 |**Zustand**|Zeigt den Verarbeitungsstatus vom Cube oder Modell an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Zeigt den Zeitpunkt (Datum und Uhrzeit) an, zu dem der Cube oder das Modell zuletzt verarbeitet wurde.|  
   

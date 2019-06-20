@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0ddaae66e60f77156b2d7c7e975875bb78d56cb
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537328"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle-Funktion
@@ -35,7 +35,7 @@ ms.locfileid: "65537328"
  **SQLFreeHandle** gibt ein bestimmtes Umgebung, Verbindung, Anweisung oder Deskriptor Handle zugeordneten Ressourcen frei.  
   
 > [!NOTE]
->  Diese Funktion ist eine generische Funktion für das Freigeben des Handles. Er ersetzt die Funktionen der ODBC 2.0 **SQLFreeConnect** (für die Freigabe ein Verbindungshandle) und **SQLFreeEnv** (für die Freigabe ein Umgebungshandle). **SQLFreeConnect** und **SQLFreeEnv** sind sowohl in ODBC 3. veraltet *.x*. **SQLFreeHandle** auch die ODBC 2.0-Funktion ersetzt **SQLFreeStmt** (mit der SQL_DROP *Option*) für das Freigeben eines Anweisungshandles. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen dazu, was der Treiber-Manager diese Funktion auf, wenn eine ODBC 3. zuordnet *.x* Anwendung arbeitet mit einer ODBC 2.*.x* -Treiber verwenden, finden Sie unter [Zuordnen von Ersatzfunktionen für rückwärts Kompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Diese Funktion ist eine generische Funktion für das Freigeben des Handles. Er ersetzt die Funktionen der ODBC 2.0 **SQLFreeConnect** (für die Freigabe ein Verbindungshandle) und **SQLFreeEnv** (für die Freigabe ein Umgebungshandle). **SQLFreeConnect** und **SQLFreeEnv** sind sowohl in ODBC 3. veraltet *.x*. **SQLFreeHandle** auch die ODBC 2.0-Funktion ersetzt **SQLFreeStmt** (mit der SQL_DROP *Option*) für das Freigeben eines Anweisungshandles. Weitere Informationen finden Sie unter "Kommentare". Weitere Informationen dazu, was der Treiber-Manager diese Funktion auf, wenn eine ODBC 3. zuordnet *.x* Anwendung arbeitet mit einer ODBC 2. *.x* -Treiber verwenden, finden Sie unter [Zuordnen von Ersatzfunktionen für rückwärts Kompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -84,7 +84,7 @@ SQLRETURN SQLFreeHandle(
 |HY017|Ungültige Verwendung einer automatisch zugeordneten Deskriptorhandles.|(DM) die *behandeln* -Argument wurde auf das Handle für einen automatisch zugewiesenen Deskriptor festgelegt.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) die *HandleType* Argument war SQL_HANDLE_DESC und des Treibers einer ODBC 2.*.x* Treiber.<br /><br /> (DM) die *HandleType* Argument SQL_HANDLE_STMT auf, und der Treiber nicht wurde ein gültiger ODBC-Treiber.|  
+|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) die *HandleType* Argument war SQL_HANDLE_DESC und des Treibers einer ODBC 2. *.x* Treiber.<br /><br /> (DM) die *HandleType* Argument SQL_HANDLE_STMT auf, und der Treiber nicht wurde ein gültiger ODBC-Treiber.|  
   
 ## <a name="comments"></a>Kommentare  
  **SQLFreeHandle** wird zum Freigeben des Handles für Umgebungen, die Verbindungen, Anweisungen und Deskriptoren, wie in den folgenden Abschnitten beschrieben. Allgemeine Informationen zu Handles finden Sie unter [Handles](../../../odbc/reference/develop-app/handles.md).  
@@ -110,7 +110,7 @@ SQLRETURN SQLFreeHandle(
  Ein Aufruf von **SQLFreeHandle** mit einer *HandleType* von SQL_HANDLE_DESC frei Deskriptorhandles in *behandeln*. Der Aufruf von **SQLFreeHandle** aufgehoben, Arbeitsspeicher, der von der Anwendung, die von einem Zeigerfeld (einschließlich SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR) referenziert werden kann, belegt der anwendungsparameterdeskriptor-Datensatz der *behandeln*. Die Speichermenge, die vom Treiber für Felder, die keine Zeiger Felder sind wird freigegeben, wenn das Handle freigegeben wird. Wenn ein vom Benutzer zugewiesener Deskriptorhandle freigegeben wird, können Sie alle Anweisungen, denen das freigegebene Handle zugeordnet wurde mussten auf ihre jeweiligen automatisch zugeordneten Deskriptorhandles zurückgesetzt.  
   
 > [!NOTE]
->  ODBC 2.*.x* Treiber unterstützen keine freigebenden Deskriptorhandles, wie sie beim Zuordnen von Deskriptorhandles nicht unterstützen.  
+>  ODBC 2. *.x* Treiber unterstützen keine freigebenden Deskriptorhandles, wie sie beim Zuordnen von Deskriptorhandles nicht unterstützen.  
   
  Beachten Sie, dass **SQLDisconnect** löscht automatisch alle Anweisungen und Deskriptoren öffnen, für die Verbindung. Wenn eine Anwendung ein Anweisungshandle frei, gibt der Treiber alle automatisch generierten Deskriptoren dieser Handle zugeordneten frei.  
   

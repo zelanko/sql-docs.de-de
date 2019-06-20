@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f6d9ebe43d45ce16ca4889d08656029cad22dcf
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404032"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lektion 6-2: Definieren von benannten Mengen
@@ -33,7 +33,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie zwei benannte Mengen: die ben
   
     Wenn Sie eine neue Berechnung auf der Registerkarte **Berechnungen** definieren, sollten Sie daran denken, dass Berechnungen in der Reihenfolge aufgelöst werden, in der sie im Bereich **Skriptplaner** angezeigt werden. Ihr Fokus innerhalb dieses Bereichs bestimmt beim Erstellen einer neuen Berechnung die Reihenfolge, in der die Berechnung ausgeführt wird. Eine neue Berechnung wird unmittelbar nach der Berechnung definiert, die gerade den Fokus besitzt.  
   
-3.  Ändern Sie im Feld **Name** den Namen der neuen benannten Menge zu **[Core Products]**(Kernprodukte).  
+3.  Ändern Sie im Feld **Name** den Namen der neuen benannten Menge zu **[Core Products]** (Kernprodukte).  
   
     Achten Sie im Bereich **Skriptplaner** auf das spezielle Symbol, das eine benannte Menge von einem Skriptbefehl oder einem berechneten Element unterscheidet.  
   
@@ -50,7 +50,7 @@ Im Rahmen der Tasks in diesem Thema definieren Sie zwei benannte Mengen: die ben
   
 1.  Klicken Sie mit der rechten Maustaste im Bereich **Skriptplaner** auf **[Core Products]** , und klicken Sie anschließend auf **Neue benannte Menge**.  
   
-2.  Ändern Sie im Feld **Name** den Namen dieser benannten Menge zu **[Large Resellers]**.  
+2.  Ändern Sie im Feld **Name** den Namen dieser benannten Menge zu **[Large Resellers]** .  
   
 3.  Geben Sie in das Feld **Ausdruck** **Exists()** ein.  
   

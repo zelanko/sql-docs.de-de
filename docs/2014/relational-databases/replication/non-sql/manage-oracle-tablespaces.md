@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022296"
 ---
 # <a name="manage-oracle-tablespaces"></a>Verwalten von Oracle-Tabellenbereichen
@@ -31,15 +31,15 @@ ms.locfileid: "63022296"
   
 -   Verwenden Sie [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Soll **sp_changearticle**verwendet werden, geben Sie Folgendes an:  
   
-    -   Den Namen des Oracle-Verlegers für den Parameter **@publisher**entspricht.  
+    -   Den Namen des Oracle-Verlegers für den Parameter **@publisher** entspricht.  
   
-    -   Den Namen der Oracle-Veröffentlichung für den Parameter **@publication**entspricht.  
+    -   Den Namen der Oracle-Veröffentlichung für den Parameter **@publication** entspricht.  
   
-    -   Den Namen des Artikels für den Parameter **@article**entspricht.  
+    -   Den Namen des Artikels für den Parameter **@article** entspricht.  
   
-    -   Wert 'tablespace' für den Parameter **@property**entspricht.  
+    -   Wert 'tablespace' für den Parameter **@property** entspricht.  
   
-    -   Name des Tabellenbereichs für den Parameter **@value**entspricht.  
+    -   Name des Tabellenbereichs für den Parameter **@value** entspricht.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md)   

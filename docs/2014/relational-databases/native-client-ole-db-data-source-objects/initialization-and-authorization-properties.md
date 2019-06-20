@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 580839c3640023c25a8038995fc751354aa076d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63201095"
 ---
 # <a name="initialization-and-authorization-properties"></a>Initialisierungs- und Autorisierungseigenschaften
@@ -52,7 +52,7 @@ ms.locfileid: "63201095"
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERDBINIT der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter definiert diese zusätzlichen Initialisierungseigenschaften.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_OLD_PASSWORD|Typ: VT_BSTR<br /><br /> R/W: Schreiben<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Das aktuelle oder abgelaufene Kennwort. Weitere Informationen finden Sie unter [programmgesteuert ändern von Kennwörtern](../native-client/features/changing-passwords-programmatically.md).|  
 |SSPROP_INIT_APPNAME|Typ: VT_BSTR<br /><br /> R/W: Lese-/Schreibzugriff<br /><br /> Beschreibung: Der Name der Clientanwendung.|  

@@ -12,10 +12,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
 ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798095"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
@@ -377,7 +377,7 @@ Die *Public Preview von Juli* konzentriert sich auf die folgenden Elemente:
 
 ## <a name="may-2018"></a>Mai 2018
 
-7. Mai 2018 &nbsp;  /  &nbsp; Version: 0.29.3 &nbsp;  /  &nbsp; öffentliche Vorschau
+7\. Mai 2018 &nbsp;  /  &nbsp; Version: 0.29.3 &nbsp;  /  &nbsp; öffentliche Vorschau
 
 Die *Public Preview kann* konzentriert sich auf die Stabilität und Fehlerbehebungen.
 

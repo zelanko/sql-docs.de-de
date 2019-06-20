@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538190"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect-Funktion
@@ -75,7 +75,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLBrowseConnect** gibt SQL_ERROR, SQL_SUCCESS_WITH_INFO oder SQL_NEED_DATA zurückgegeben, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und ein *Handle des ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLBrowseConnect** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Der Puffer \* *OutConnectionString* nicht groß genug war, um die Verbindungszeichenfolge für den gesamten durchsuchen Ergebnis und zurückzugeben, damit die Zeichenfolge abgeschnitten wurde. Der Puffer **StringLength2Ptr* enthält die Länge der Ergebniszeichenfolge Verbindung den ungekürzten durchsuchen. (Die Funktion wird SQL_NEED_DATA zurückgegeben.)|  
@@ -129,7 +129,7 @@ SQLRETURN SQLBrowseConnect(
  Die Verbindungszeichenfolge der durchsuchen-Ergebnis ist eine Liste der Verbindungsattribute. Ein Verbindungsattribut besteht aus einem Attribut-Schlüsselwort und Wert eines entsprechenden. Die Verbindungszeichenfolge der durchsuchen-Ergebnis weist die folgende Syntax:  
   
  *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
- *Attribut* :: = [`*`]*-Schlüsselwort*`=`*Attribut / Wert*<br>
+ *Attribut* :: = [`*`] *-Schlüsselwort*`=`*Attribut / Wert*<br>
  *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC-Attribut-Schlüsselwort* = {`UID` &#124; `PWD`} [`:`*lokalisierter Bezeichner*] *-definierten-Attribut-Schlüsselwort Driver* :: = *Bezeichner*[`:`*lokalisierter Bezeichner*] *Attribut / Wert* :: = `{` *Attribut-Wert-Liste* `}` &#124; `?` (Die geschweiften Klammern sind literal; sie werden vom Treiber zurückgegebene.)<br>
  *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>

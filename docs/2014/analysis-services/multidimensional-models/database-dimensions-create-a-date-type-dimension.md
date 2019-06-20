@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075937"
 ---
 # <a name="create-a-date-type-dimension"></a>Erstellen einer Datumstypdimension
@@ -51,7 +51,7 @@ ms.locfileid: "66075937"
   
  Diese verschiedenen Kalender können Sie manuell im Dimensions-Designer erstellen. Der Dimensions-Assistent stellt jedoch verschiedene Hierarchievorlagen bereit, mit denen Sie automatisch verschiedene Kalendertypen generieren können, wenn Sie eine Zeitdimension oder eine Serverzeitdimension erstellen. Die folgende Tabelle beschreibt die verschiedenen Kalender, die mit dem Dimensions-Assistenten generiert werden können.  
   
-|Kalender|Description|  
+|Kalender|Beschreibung|  
 |--------------|-----------------|  
 |Standardkalender|Ein zwölfmonatiger gregorianischer Kalender, der am 1. Januar beginnt und am 31. Dezember endet.<br /><br /> Unabhängig davon, ob Sie mit dem Dimensions-Assistenten eine Zeitdimension oder eine Serverzeitdimension erstellen, generiert der Assistent eine Hierarchie für einen Standardkalender, nachdem Sie die Attribute definiert haben, die die Zeiträume der Dimension darstellen. Wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen, können Sie das Anfangsdatum des Standardkalenders auf einen anderen Tag als den 1. Januar legen.|  
 |Geschäftskalender|Ein zwölfmonatiger Geschäftskalender. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag des vom Unternehmen verwendeten Geschäftsjahres angeben.<br /><br /> Hinweis: Dieser Kalender ist nur verfügbar, wenn Sie den Dimensions-Assistenten verwenden, um eine Serverzeitdimension erstellen.|  

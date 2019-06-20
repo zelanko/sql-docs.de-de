@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148135"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263159"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "50148135"
  In diesem Beispiel wird verdeutlicht, wie Sie in SQL Server Management Studio eine MDX-Abfrage erstellen, indem Sie eine tabellarische Modelldatenbank als Datenquelle verwenden. Um dieses Beispiel auf Ihrem Computer zu wiederholen, können Sie das [Adventureworks-Beispielprojekt mit einem tabellarischen Modell herunterladen](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  Es ist nicht möglich, MDX-Abfragen für tabellarische Modelle zu verwenden, die im DirectQuery-Modus bereitgestellt werden. Sie können jedoch äquivalente Abfragen senden, indem Sie die DAX-Tabellenabfragen in Verbindung mit dem EVALUATE-Befehl verwenden. Weitere Informationen finden Sie unter [DAX-Abfrageparameter](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
+>  Es ist nicht möglich, MDX-Abfragen für tabellarische Modelle zu verwenden, die im DirectQuery-Modus bereitgestellt werden. Sie können jedoch äquivalente Abfragen senden, indem Sie die DAX-Tabellenabfragen in Verbindung mit dem EVALUATE-Befehl verwenden. Weitere Informationen finden Sie unter [DAX-Abfrageparameter](/dax/dax-queries#parameters-in-dax-queries).  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>Erstellen einer MDX-Abfrage aus einer Vorlage  
   
@@ -58,13 +58,13 @@ ms.locfileid: "50148135"
   
 3.  Ziehen Sie mithilfe von **Metadaten-Explorer**die folgenden Felder und Measures in die Abfragevorlage:  
   
-    1.  Ersetzen Sie dies \<Row_axis, Mdx_set > mit **[Product Category]. [ Product Category Name]**.  
+    1.  Ersetzen Sie dies \<Row_axis, Mdx_set > mit **[Product Category]. [ Product Category Name]** .  
   
     2.  Ersetzen Sie dies \<Column_axis, Mdx_set > mit **[Date]. [ Calendar Year]. [Kalenderjahr]** .  
   
-    3.  Ersetzen Sie dies \<From_clause, Mdx_name > mit **[Internet Sales]**.  
+    3.  Ersetzen Sie dies \<From_clause, Mdx_name > mit **[Internet Sales]** .  
   
-    4.  Ersetzen Sie dies \<Where_clause, Mdx_set > mit **[Measures]. [ Internet Total Sales]**.  
+    4.  Ersetzen Sie dies \<Where_clause, Mdx_set > mit **[Measures]. [ Internet Total Sales]** .  
   
 4.  Sie können die Abfrage unverändert ausführen, aber in den meisten Fällen sind ggf. einige Änderungen erforderlich, z. B. das Hinzufügen einer Funktion zum Zurückgeben bestimmter Elemente. Geben Sie z.B. **.members** nach **[Product Category].[Product Category Name]** ein. Weitere Informationen finden Sie unter [Using Member Expressions](../../mdx/using-member-expressions.md).  
   
@@ -154,14 +154,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Referenz zu Analysis Services-Vorlagen  
  Die folgenden Vorlagen werden zum Verwenden von Analysis Services-Datenbanken und den Objekten innerhalb der Datenbank bereitgestellt, einschließlich Miningstrukturen und -modellen, Cubes und tabellarischer Modelle:  
   
-|Kategorie|Elementvorlage|Description|  
+|Kategorie|Elementvorlage|Beschreibung|  
 |--------------|-------------------|-----------------|  
-|DMX\Modellinhalt|Content Query|Veranschaulicht, wie Sie mit der DMX SELECT FROM  *\<Modell >*. CONTENT-für-Schritt-Anweisung für den Schema Rowsets Miningmodellinhalt für ein bestimmtes Miningmodell abrufen.|  
+|DMX\Modellinhalt|Content Query|Veranschaulicht, wie Sie mit der DMX SELECT FROM  *\<Modell >* . CONTENT-für-Schritt-Anweisung für den Schema Rowsets Miningmodellinhalt für ein bestimmtes Miningmodell abrufen.|  
 ||Continuous Column Values|Veranschaulicht, wie Sie mit der DMX SELECT DISTINCT FROM  *\<Modell >* -Anweisung mit der DMX **RangeMin** und **RangeMax** abzurufenden einen Satz von Funktionen die Werte innerhalb eines angegebenen Bereichs aus kontinuierlichen Spalten in einem angegebenen Miningmodell.|  
 ||Discrete Column Values|Veranschaulicht, wie Sie mit der DMX SELECT DISTINCT FROM  *\<Modell >* Anweisung einen vollständigen Satz von Werten aus diskreten Spalten in einem angegebenen Miningmodell abrufen.|  
 ||Drillthrough Query|Zeigt, wie Sie mithilfe der DMX-Anweisung SELECT * FROM Modell.CASES in Verbindung mit der DMX-Funktion IsInNode eine Drillthroughabfrage ausführen können.|  
 ||Modellattribute|Zeigt, wie Sie mithilfe der DMX-Funktion System.GetModelAttributes eine Liste der von einem Modell verwendeten Attribute zurückgeben können.|  
-||PMML Content|Veranschaulicht, wie Sie mit der DMX SELECT \* FROM  *\<Modell >*. PMML-Anweisung, die die Darstellung der Predictive Model Markup Language (PMML) des Miningmodells, für die Algorithmen abzurufen, die diese Funktionalität zu unterstützen.|  
+||PMML Content|Veranschaulicht, wie Sie mit der DMX SELECT \* FROM  *\<Modell >* . PMML-Anweisung, die die Darstellung der Predictive Model Markup Language (PMML) des Miningmodells, für die Algorithmen abzurufen, die diese Funktionalität zu unterstützen.|  
 |DMX\Modellverwaltung|Add Model|Zeigt, wie Sie mithilfe der DMX-Anweisung ALTER MINING MODEL STRUCTURE ein Miningmodell hinzufügen können.|  
 ||Clear Model|Zeigt, wie Sie mithilfe der DMX-Anweisung DELETE * FROM MINING MODEL den Inhalt eines angegebenen Miningmodells löschen können.|  
 ||Clear Structure Cases|Zeigt, wie Sie mithilfe der DMX-Anweisung DELETE FROM MINING STRUCTURE Miningmodell-Strukturfälle löschen können.|  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63249879"
 ---
 # <a name="and-mdx"></a>AND (MDX)
@@ -36,10 +36,10 @@ Expression1 AND Expression2
  Ein gültiger MDX-Ausdruck, der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der gibt "true", wenn beide Parameter ausgewertet **"true"** ist, andernfalls **"false"**.  
+ Ein boolescher Wert, der gibt "true", wenn beide Parameter ausgewertet **"true"** ist, andernfalls **"false"** .  
   
 ## <a name="remarks"></a>Hinweise  
- Die **und** -Operator behandelt beide Ausdrücke als boolesche Werte (null, 0 (null) als **"false"** ist, andernfalls **"true"**), bevor der Operator die logische Konjunktion ausführt. In der folgende Tabelle wird veranschaulicht, wie die **und** -Operator führt die logische Konjunktion.  
+ Die **und** -Operator behandelt beide Ausdrücke als boolesche Werte (null, 0 (null) als **"false"** ist, andernfalls **"true"** ), bevor der Operator die logische Konjunktion ausführt. In der folgende Tabelle wird veranschaulicht, wie die **und** -Operator führt die logische Konjunktion.  
   
 |*Expression1*|*Expression2*|Rückgabewert|  
 |-------------------|-------------------|------------------|  

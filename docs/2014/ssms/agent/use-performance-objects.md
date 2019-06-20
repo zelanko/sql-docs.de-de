@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ccba43aa28cadef1995fab001f66e1f4bebacde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245852"
 ---
 # <a name="use-performance-objects"></a>Verwenden von Leistungsobjekten
@@ -36,7 +36,7 @@ ms.locfileid: "63245852"
   
 |Instanztyp|Objektname|  
 |-------------------|-----------------|  
-|Standard|**SQLAgent:** *Objekt*:*Leistungsindikator*|  
+|Default|**SQLAgent:** *Objekt*:*Leistungsindikator*|  
 |Benannt|**SQLAgent$**<br /> ***Instanzname* :** *Objekt*:*Leistungsindikator*|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beinhaltet die folgenden Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent.  

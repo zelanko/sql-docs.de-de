@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807659"
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
@@ -37,7 +37,7 @@ ms.locfileid: "62807659"
  Die Sitzung für die Datenbankspiegelung erfolgt synchron und verwendet optional einen Zeugen sowie den Prinzipalserver und Spiegelserver.  
   
  Transaktionssicherheit  
- Entspricht einer spiegelungsspezifischen Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron ausgeführt wird. Es gibt zwei Sicherheitsstufen: VOLLSTÄNDIGE aktivieren und deaktivieren.  
+ Entspricht einer spiegelungsspezifischen Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron ausgeführt wird. Es gibt zwei Sicherheitsstufen: FULL und OFF.  
   
  Zeuge  
  Ist nur für den Modus mit hoher Sicherheit bestimmt und entspricht einer optionalen SQL Server-Instanz, durch die der Spiegelserver erkennen kann, ob die Initiierung eines automatischen Failovers auszulösen ist. Im Gegensatz zu den zwei Failoverpartnern bedient der Zeuge nicht die Datenbank. Die Unterstützung des automatischen Failovers ist die einzige Aufgabe des Zeugen.  
@@ -146,7 +146,7 @@ ms.locfileid: "62807659"
   
  Im Gegensatz zu den beiden Partnern stellt der Zeuge die Datenbank nicht bereit. Der Zeuge unterstützt das automatische Failover einfach dadurch, dass er prüft, ob der Prinzipalserver aktiv und funktionsfähig ist. Der Spiegelserver initiiert das automatische Failover nur, wenn der Spiegel und der Zeuge miteinander verbunden bleiben, nachdem beide vom Prinzipalserver getrennt wurden.  
   
- Wenn ein Zeuge festgelegt ist, benötigt die Sitzung das *Quorum*, eine Beziehung zwischen mindestens zwei Serverinstanzen, damit die Datenbank verfügbar gemacht werden kann. Weitere Informationen finden Sie unter [Database Mirroring Witness](database-mirroring-witness.md) und [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Wenn ein Zeuge festgelegt ist, benötigt die Sitzung das *Quorum*, eine Beziehung zwischen mindestens zwei Serverinstanzen, damit die Datenbank verfügbar gemacht werden kann. Weitere Informationen finden Sie unter [Datenbank-Spiegelungszeuge](database-mirroring-witness.md) und [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Für automatisches Failover müssen folgende Bedingungen erfüllt sein:  
   
@@ -181,7 +181,7 @@ ms.locfileid: "62807659"
 
   
 ####  <a name="TxnSafety"></a> Transaction Safety  
- Bei der Transaktionssicherheit handelt es sich um eine spiegelungsspezifische Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron betrieben wird. Es gibt zwei Sicherheitsstufen: VOLLSTÄNDIGE aktivieren und deaktivieren.  
+ Bei der Transaktionssicherheit handelt es sich um eine spiegelungsspezifische Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron betrieben wird. Es gibt zwei Sicherheitsstufen: FULL und OFF.  
   
 -   SAFETY FULL  
   
