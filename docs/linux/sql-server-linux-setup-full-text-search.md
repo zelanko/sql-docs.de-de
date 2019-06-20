@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705047"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installieren von SQL Server-Volltextsuche unter Linux
@@ -147,7 +147,7 @@ Volltext-Suchdienst verwendet [wörtertrennungen](../relational-databases/search
 
 Volltextsuche funktioniert auch mit dem Text in binäre Dateien gespeichert. Aber in diesem Fall ein installierter Filter zum Verarbeiten der Datei erforderlich ist. Weitere Informationen zu filtern, finden Sie unter [konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltext_system_components 'Filter'** . Für SQL Server werden die folgenden Filter installiert:
+Sie sehen eine Liste der installierten Filter durch den Aufruf **Sp_help_fulltext_system_components 'Filter'**. Für SQL Server werden die folgenden Filter installiert:
 
 | Komponentenname | Klassen-ID | Version |
 |---|---|---|

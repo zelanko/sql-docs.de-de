@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755596"
 ---
 # <a name="connect-to-server-analysis-services"></a>Verbindung mit Server herstellen (Analysis Services)
@@ -44,7 +44,7 @@ ms.locfileid: "62755596"
  **Verbinden**  
  Klicken Sie hier, um eine Verbindung mit dem oben ausgewählten Server herzustellen.  
   
- **Optionen**  
+ **Options**  
  Klicken Sie auf diese Schaltfläche, um zusätzliche Optionen für die Serververbindung anzuzeigen, z. B. zum Registrieren eines Servers oder zum Speichern des Kennworts.  
   
   

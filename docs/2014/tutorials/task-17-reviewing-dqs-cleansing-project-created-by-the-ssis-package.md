@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484712"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Aufgabe 17: Überprüfung des vom SSIS-Paket erstellten DQS-Bereinigungsprojekts
@@ -38,7 +38,7 @@ ms.locfileid: "65484712"
   
 8.  Auf der Hauptseite des **DQS-Client**, klicken Sie auf **Open Data Quality-Projekt** in die **Data Quality-Projekte** Bereich.  
   
-9. Wählen Sie in der Liste der Projekte das Projekt aus, das von der SSIS-DQS-Bereinigungskomponente erstellt wird. Der Name des Projekts sollte im Format aufweisen:  **CleanseAndCurate.Cleanse Supplier Data.GUID (in Rot)**. Möglicherweise müssen Sie die Liste basierend auf sortieren **Erstellungsdatum** Spalte und suchen Sie nach der neueste Datensatz.  
+9. Wählen Sie in der Liste der Projekte das Projekt aus, das von der SSIS-DQS-Bereinigungskomponente erstellt wird. Der Name des Projekts sollte im Format aufweisen:  **CleanseAndCurate.Cleanse Supplier Data.GUID (in Rot)** . Möglicherweise müssen Sie die Liste basierend auf sortieren **Erstellungsdatum** Spalte und suchen Sie nach der neueste Datensatz.  
   
 10. Klicken Sie auf **Weiter**.  
   

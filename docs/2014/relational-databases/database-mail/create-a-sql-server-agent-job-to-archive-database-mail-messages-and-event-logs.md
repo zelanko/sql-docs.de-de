@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917592"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen
@@ -47,11 +47,11 @@ ms.locfileid: "62917592"
   
 -   Die erste Prozedur erstellt den Auftrag "Datenbank-E-Mail archivieren" in den folgenden Schritten:  
   
-    1.  Kopieren Sie alle Nachrichten aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_**_Jahr_Monat_ benannt wird.  
+    1.  Kopieren Sie alle Nachrichten aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_** _Jahr_Monat_ benannt wird.  
   
-    2.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Anlagen aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Attachments_**_Jahr_Monat_ benannt wird.  
+    2.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Anlagen aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Attachments_** _Jahr_Monat_ benannt wird.  
   
-    3.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Ereignisse aus dem Datenbank-E-Mail-Ereignisprotokoll aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Log_**_Jahr_Monat_ benannt wird.  
+    3.  Kopieren Sie die zu den im ersten Schritt kopierten Nachrichten gehörenden Ereignisse aus dem Datenbank-E-Mail-Ereignisprotokoll aus den Datenbank-E-Mail-Tabellen in eine neue Tabelle, die nach dem vorhergehenden Monat im Format **DBMailArchive_Log_** _Jahr_Monat_ benannt wird.  
   
     4.  Löschen Sie die Datensätze der übertragenen E-Mail-Elemente aus den Datenbank-E-Mail-Tabellen.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Datenbank-E-Mail-Elemente kopieren**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
   
 4.  Klicken Sie im Feld **Datenbank** auf **msdb**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Datenbank-E-Mail-Anlagen kopieren**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
   
 4.  Klicken Sie im Feld **Datenbank** auf **msdb**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Datenbank-E-Mail-Protokoll kopieren**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
   
 4.  Klicken Sie im Feld **Datenbank** auf **msdb**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Zeilen aus Datenbank-E-Mail entfernen**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
   
 4.  Klicken Sie im Feld **Datenbank** auf **msdb**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "62917592"
   
 2.  Geben Sie im Feld **Schrittname** den Namen **Zeilen aus dem Datenbank-E-Mail-Protokoll entfernen**ein.  
   
-3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)**.  
+3.  Klicken Sie im Feld **Typ** auf **Transact-SQL-Skript (T-SQL)** .  
   
 4.  Geben Sie im Feld **Befehl** die folgende Anweisung ein, um Zeilen aus dem Datenbank-E-Mail-Ereignisprotokoll zu entfernen, die älter als der aktuelle Monat sind:  
   

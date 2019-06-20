@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a23d2753f6fe1d94fcccab648766c3471581906
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472292"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263390"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Erstellen und Verwalten von tabellenmodellpartitionen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "62472292"
   Durch Partitionen wird eine Tabelle logisch unterteilt. Jede Partition kann unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden. Während der Modellerstellung werden die für ein Modell definierten Partitionen in ein bereitgestelltes Modell dupliziert. Nach der Bereitstellung können Sie diese Partitionen mit dem Dialogfeld **Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mithilfe eines Skripts verwalten. In den Tasks in diesem Thema wird beschrieben, wie Partitionen für ein bereitgestelltes Modell erstellt und verwaltet werden.  
   
   > [!NOTE]  
->  Partitionen in tabellarischen Modellen mit Kompatibilitätsgrad 1400 erstellt werden, mithilfe einer M-Query-Anweisung definiert. Weitere Informationen finden Sie unter [M Verweis](https://msdn.microsoft.com/library/mt211003.aspx). 
+>  Partitionen in tabellarischen Modellen mit Kompatibilitätsgrad 1400 erstellt werden, mithilfe einer M-Query-Anweisung definiert. Weitere Informationen finden Sie unter [M Verweis](/powerquery-m/power-query-m-reference). 
 >
   
 ## <a name="tasks"></a>Richtlinienübersicht  

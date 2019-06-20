@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090615"
 ---
 # <a name="create-the-finance-name-policy"></a>Erstellen der Richtlinie Finance Name
@@ -39,7 +39,7 @@ ms.locfileid: "66090615"
   
 3.  Wählen Sie in der Liste **Facet** die Option **Mehrteiliger Name**aus.  
   
-4.  Geben Sie im Dialogfeld **Ausdruck** im Feld **Feld** die Option **@Name**aus, wählen Sie im Feld **Operator** die Option **Like**aus, und geben Sie in das Feld **Wert** den Namen **'fintbl%'** ein, um zu erzwingen, dass alle Namen mit den Buchstaben **fintbl**anfangen.  
+4.  Geben Sie im Dialogfeld **Ausdruck** im Feld **Feld** die Option **@Name** aus, wählen Sie im Feld **Operator** die Option **Like**aus, und geben Sie in das Feld **Wert** den Namen **'fintbl%'** ein, um zu erzwingen, dass alle Namen mit den Buchstaben **fintbl**anfangen.  
   
 5.  Geben Sie auf der Seite **Beschreibung** die Beschreibung **Finanz_Tabellen-Namen müssen mit fintbl beginnen**ein, und klicken Sie anschließend auf **OK** , um die Bedingung zu erstellen.  
   

@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088506"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -43,9 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@tsql = ] 'Transact-SQL\_batch'` Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (**_n_**)** oder **nvarchar(max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (** _n_ **)** oder **nvarchar(max)** .  
   
-`[ \@params = ] N'parameters'` \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, ähnlich wie mit der Funktionsweise von Sp_executesql funktioniert. *Parameter* möglicherweise **Nvarchar (**_n_**)** oder **nvarchar(max)**.  
+`[ \@params = ] N'parameters'` \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, ähnlich wie mit der Funktionsweise von Sp_executesql funktioniert. *Parameter* möglicherweise **Nvarchar (** _n_ **)** oder **nvarchar(max)** .  
   
  Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die eingebetteten *Transact-SQL_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. Dabei ist n ein Platzhalter für zusätzlicher Parameterdefinitionen. Wenn die Transact-SQL-Anweisung oder den Batch in der Anweisung keine Parameter enthält \@"Params" ist nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
@@ -192,15 +192,15 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   Money-Datentypen (**Smallmoney**, **Geld**)  
   
-    -   Gleitkomma-Datentypen (**"float"**, **echte**)  
+    -   Gleitkomma-Datentypen ( **"float"** , **echte**)  
   
     -   **Numeric (38, 19)** – andere numerische oder dezimale Datentypen werden nicht berücksichtigt.  
   
-    -   **varchar(8000)**, **varchar(max)**, **nvarchar(4000)**, und **nvarchar(max)** – andere string-Datentypen (z. B. **Text**, **char(8000)**, **nvarchar(30)** usw.) werden nicht berücksichtigt.  
+    -   **varchar(8000)** , **varchar(max)** , **nvarchar(4000)** , und **nvarchar(max)** – andere string-Datentypen (z. B. **Text**, **char(8000)** , **nvarchar(30)** usw.) werden nicht berücksichtigt.  
   
-    -   **varbinary(8000)-Spalten)** und **'varbinary(max)'** – andere binäre Datentypen werden nicht berücksichtigt (z. B. **Image**, **binary(8000)**, **Varbinary (30)** usw.).  
+    -   **varbinary(8000)-Spalten)** und **'varbinary(max)'** – andere binäre Datentypen werden nicht berücksichtigt (z. B. **Image**, **binary(8000)** , **Varbinary (30)** usw.).  
   
-    -   **Datum**, **time(7)**, **Smalldatetime**, **"DateTime"**, **datetime2(7)**, **datetimeoffset(7)**  – Andere Daten- und Uhrzeittypen, z. B. **time(4)**, werden nicht berücksichtigt.  
+    -   **Datum**, **time(7)** , **Smalldatetime**, **"DateTime"** , **datetime2(7)** , **datetimeoffset(7)**  – Andere Daten- und Uhrzeittypen, z. B. **time(4)** , werden nicht berücksichtigt.  
   
     -   **sql_variant**  
   
@@ -233,7 +233,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Diese Regel gilt nur, wenn zwischen jedem Datentyp, der nach Regel 1 genauso wenige Konvertierungen wie ein anderer erzeugt, und dem Datentyp mit dem höchsten Rang eine implizite Konvertierung erfolgt. Wenn keine implizite Konvertierung erfolgt, tritt bei der Datentypableitung ein Fehler auf. In der Abfrage z. B. `SELECT @p FROM t`, Datentyp zur typableitung ein Fehler auftritt, weil jeder für Datentyp \@p gleich gut wäre. Angenommen, es gibt keine implizite Konvertierung von **Int** zu **Xml**.  
   
-3.  Wenn zwei ähnliche Datentypen unter Regel 1, z. B. Verknüpfen **varchar(8000)** und **varchar(max)**, wird der kleinere Datentyp (**varchar(8000)**) ausgewählt ist. Das gleiche Prinzip gilt für **Nvarchar** und **Varbinary** -Datentypen.  
+3.  Wenn zwei ähnliche Datentypen unter Regel 1, z. B. Verknüpfen **varchar(8000)** und **varchar(max)** , wird der kleinere Datentyp (**varchar(8000)** ) ausgewählt ist. Das gleiche Prinzip gilt für **Nvarchar** und **Varbinary** -Datentypen.  
   
 4.  Für die Zwecke der Regel 1 bevorzugt der Typableitungsalgorithmus bestimmte Konvertierungen gegenüber anderen. Die Konvertierungen werden in der folgenden Reihenfolge bevorzugt (beste bis schlechteste):  
   
@@ -245,7 +245,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  Jede andere Konvertierung.  
   
- Für die Abfrage beispielsweise `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar(8000)** wird ausgewählt, da die Konvertierung (a) am besten geeignet ist. Für die Abfrage `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar(8000)** wird immer noch ausgewählt werden, da er bewirkt, dass eine Konvertierung vom Typ (b) und eine andere Option (z. B. **varchar(4000)**) würde dazu führen, dass eine typkonvertierung (d).  
+ Für die Abfrage beispielsweise `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar(8000)** wird ausgewählt, da die Konvertierung (a) am besten geeignet ist. Für die Abfrage `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar(8000)** wird immer noch ausgewählt werden, da er bewirkt, dass eine Konvertierung vom Typ (b) und eine andere Option (z. B. **varchar(4000)** ) würde dazu führen, dass eine typkonvertierung (d).  
   
  Als letztes Beispiel: übergeben Sie eine Abfrage `SELECT NULL + @p`, **Int** wird ausgewählt, für die \@p da eine typkonvertierung (c) ausgeführt werden.  
   
