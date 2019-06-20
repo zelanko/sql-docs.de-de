@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bad45d18c351e838ec944b1ae67e3ce88c7e1d20
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685241"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263309"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Ergänzende Lektion: Detailzeilen
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685241"
 
 In dieser ergänzenden Lektion verwenden Sie den DAX-Editor, um einen benutzerdefinierten Detailzeilenausdruck zu definieren. Ein Detailzeilenausdrucks ist es sich um eine Eigenschaft auf ein Measure, die Endbenutzer Weitere Informationen zu aggregierten Ergebnissen eines Measures. 
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **10 Minuten**  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
 
@@ -81,6 +81,6 @@ Was wir hier ist eine Tabelle mit Spalten und Zeilen mit Daten, die zum aggregie
   
 ## <a name="see-also"></a>Siehe auch  
 
-[SELECTCOLUMNS-Funktion (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
+[SELECTCOLUMNS-Funktion (DAX)](/dax/selectcolumns-function-dax)  
 [Ergänzende Lektion – Dynamische Sicherheit](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Ergänzende Lektion – Unregelmäßige Hierarchien](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

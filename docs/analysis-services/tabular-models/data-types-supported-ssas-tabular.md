@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22109f1cd7f3ebce652ae4c006473866321f7f0e
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472199"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263418"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Unterstützte Datentypen in tabellarischen Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die
 >  Sie können keine Elemente aus einer **varchar(max)** -Spalte importieren, die eine Zeichenfolgenlänge von mehr als 131.072 Zeichen enthält.  
   
 ### <a name="table-data-type"></a>Table (Datentyp)  
- Außerdem verwendet DAX einen *table* -Datentyp. Dieser Datentyp wird von DAX in vielen Funktionen verwendet, z. B. in Aggregationen und Zeitintelligenzberechnungen. Einige Funktionen erfordern einen Verweis auf eine Tabelle, während andere Funktionen eine Tabelle zurückgeben, die als Eingabe für andere Funktionen verwendet werden kann. In einigen Funktionen, die eine Tabelle als Eingabe erfordern, können Sie einen Ausdruck angeben, der eine Tabelle ergibt. Bei einigen Funktionen ist ein Verweis auf eine Basistabelle erforderlich. Informationen zu den Anforderungen bestimmter Funktionen finden Sie in der [DAX-Funktionsreferenz](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Außerdem verwendet DAX einen *table* -Datentyp. Dieser Datentyp wird von DAX in vielen Funktionen verwendet, z. B. in Aggregationen und Zeitintelligenzberechnungen. Einige Funktionen erfordern einen Verweis auf eine Tabelle, während andere Funktionen eine Tabelle zurückgeben, die als Eingabe für andere Funktionen verwendet werden kann. In einigen Funktionen, die eine Tabelle als Eingabe erfordern, können Sie einen Ausdruck angeben, der eine Tabelle ergibt. Bei einigen Funktionen ist ein Verweis auf eine Basistabelle erforderlich. Informationen zu den Anforderungen bestimmter Funktionen finden Sie in der [DAX-Funktionsreferenz](/dax/dax-function-reference).  
   
 ##  <a name="bkmk_implicit"></a> Implizite und explizite datentypkonvertierungen in DAX-Formeln
   
@@ -136,7 +136,7 @@ Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die
  Wenn beispielsweise eine ganze Zahl bei einer Division mit einem Währungswert kombiniert wird, werden beide Werte in reelle Zahlen konvertiert, und das Ergebnis ist ebenfalls ein reeller Wert.  
   
 #### <a name="comparison-operators"></a>Vergleichsoperatoren  
-Es wird nur eine begrenzte Anzahl von gemischten Datentyp-Kombinationen für Vergleichsvorgänge unterstützt. Weitere Informationen finden Sie unter [DAX-Operator (Referenz)](https://msdn.microsoft.com/library/ee634237.aspx).  
+Es wird nur eine begrenzte Anzahl von gemischten Datentyp-Kombinationen für Vergleichsvorgänge unterstützt. Weitere Informationen finden Sie unter [DAX-Operator (Referenz)](/dax/dax-operator-reference).  
   
 ## <a name="bkmk_hand_blanks"></a> Behandlung von Leerzeichen, leeren Zeichenfolgen und Nullwerten  
  In der folgende Tabelle werden die Unterschiede zwischen DAX und Microsoft Excel, in der Behandlung von Leerzeichen zusammengefasst:  
@@ -157,5 +157,5 @@ Es wird nur eine begrenzte Anzahl von gemischten Datentyp-Kombinationen für Ver
 |BLANK OR BLANK|BLANK|Fehler|  
 |BLANK AND BLANK|BLANK|Fehler|  
   
- Informationen zur Behandlung von Leerzeichen durch eine bestimmte Funktion oder einen Operator finden Sie in den einzelnen Themen zu den verschiedenen DAX-Funktionen im Abschnitt [DAX-Funktionsreferenz](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Informationen zur Behandlung von Leerzeichen durch eine bestimmte Funktion oder einen Operator finden Sie in den einzelnen Themen zu den verschiedenen DAX-Funktionen im Abschnitt [DAX-Funktionsreferenz](/dax/dax-function-reference).  
   

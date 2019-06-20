@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 114bc96623b608cfbb520a9d2f35f23a04310a74
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014801"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Einführung in Updategrams (SQLXML 4.0)
@@ -40,10 +40,10 @@ ms.locfileid: "66014801"
 >  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Für ältere Anwendungen, die XDR verwenden, finden Sie unter [XDR-Schemas mit Anmerkungen versehen &#40;in SQLXML 4.0 veraltet&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Erforderliche Namespaces im Updategram  
- Die Schlüsselwörter in einem Updategram, wie z. B.  **\<Sync >**,  **\<vor >**, und  **\<nach >**, vorhanden sind, in der `urn:schemas-microsoft-com:xml-updategram`Namespace. Sie können ein beliebiges Namespacepräfix verwenden. In dieser Dokumentation gibt das Präfix `updg` den Namespace `updategram` an.  
+ Die Schlüsselwörter in einem Updategram, wie z. B.  **\<Sync >** ,  **\<vor >** , und  **\<nach >** , vorhanden sind, in der `urn:schemas-microsoft-com:xml-updategram`Namespace. Sie können ein beliebiges Namespacepräfix verwenden. In dieser Dokumentation gibt das Präfix `updg` den Namespace `updategram` an.  
   
 ## <a name="reviewing-syntax"></a>Überprüfen der Syntax  
- Ein Updategram ist eine Vorlage mit  **\<Sync >**,  **\<vor >**, und  **\<nach >** Blöcke, die die Syntax der bilden die Updategram. Der folgende Code zeigt diese Syntax in ihrer einfachsten Form:  
+ Ein Updategram ist eine Vorlage mit  **\<Sync >** ,  **\<vor >** , und  **\<nach >** Blöcke, die die Syntax der bilden die Updategram. Der folgende Code zeigt diese Syntax in ihrer einfachsten Form:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

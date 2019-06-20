@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f211a7300dceb542235538e0e7067e8dd989fe6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046756"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
   Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault ermöglicht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verschlüsselung zu nutzen, den Azure Key Vault-Dienst als eine [Extensible Key Management &#40;EKM&#41; ](extensible-key-management-ekm.md) Anbieter zum Schutz der Verschlüsselungsschlüssel.  
@@ -52,7 +52,7 @@ ms.locfileid: "63011526"
  ![SQL Server-EKM mit Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
   
 ##  <a name="Step1"></a>Schritt 1: Einrichten von Key Vault für die Verwendung durch SQL Server  
- Führen Sie die folgenden Schritte aus, um einen Schlüsseltresor für die Verwendung mit der [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] für den Schutz des Verschlüsselungsschlüssels einzurichten. Für die Organisation wird möglicherweise bereits ein Tresor verwendet. Wenn kein Tresor vorhanden ist, kann der Azure-Administrator in Ihrem Unternehmen, der die Verschlüsselungsschlüssel verwaltet, einen Tresor erstellen, einen asymmetrischen Schlüssel im Tresor generieren und dann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autorisieren, den Schlüssel zu verwenden. Machen Sie sich unter [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)und der Referenz zu PowerShell- [Azure Key Vault-Cmdlets](/powershell/module/azurerm.keyvault/) mit dem Schlüsseltresordienst vertraut.  
+ Führen Sie die folgenden Schritte aus, um einen Schlüsseltresor für die Verwendung mit der [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] für den Schutz des Verschlüsselungsschlüssels einzurichten. Für die Organisation wird möglicherweise bereits ein Tresor verwendet. Wenn kein Tresor vorhanden ist, kann der Azure-Administrator in Ihrem Unternehmen, der die Verschlüsselungsschlüssel verwaltet, einen Tresor erstellen, einen asymmetrischen Schlüssel im Tresor generieren und dann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autorisieren, den Schlüssel zu verwenden. Machen Sie sich unter [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)und der Referenz zu PowerShell- [Azure Key Vault-Cmdlets](https://docs.microsoft.com/powershell/module/azurerm.keyvault) mit dem Schlüsseltresordienst vertraut.  
   
 > [!IMPORTANT]  
 >  Wenn Sie über mehrere Azure-Abonnements verfügen, müssen Sie das Abonnement nehmen, das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]enthält.  
@@ -85,7 +85,7 @@ ms.locfileid: "63011526"
   
     -   **Dienstprinzipal** für die [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** und **SECRET_DBEngine**.  
   
-4.  **GRANT-Berechtigung für die Dienstprinzipale zum Zugriff auf den Schlüsseltresor:** Sowohl die **CLIENTID_sysadmin_login** und **CLIENTID_DBEngineService Prinzipale** erfordern die **erhalten**, **Liste**,  **"wrapkey"**, und **UnwrapKey** Berechtigungen im schlüsseltresor. Wenn Sie beabsichtigen, Schlüssel über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu erstellen, müssen Sie auch die Berechtigung **create** im Schlüsseltresor erteilen.  
+4.  **GRANT-Berechtigung für die Dienstprinzipale zum Zugriff auf den Schlüsseltresor:** Sowohl die **CLIENTID_sysadmin_login** und **CLIENTID_DBEngineService Prinzipale** erfordern die **erhalten**, **Liste**,  **"wrapkey"** , und **UnwrapKey** Berechtigungen im schlüsseltresor. Wenn Sie beabsichtigen, Schlüssel über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu erstellen, müssen Sie auch die Berechtigung **create** im Schlüsseltresor erteilen.  
   
     > [!IMPORTANT]  
     >  Benutzer müssen mindestens über die Vorgänge **wrapKey** und **unwrapKey** für den Schlüsseltresor verfügen.  
@@ -98,7 +98,7 @@ ms.locfileid: "63011526"
   
     -   [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   Referenz der PowerShell- [Azure Key Vault-Cmdlets](https://go.microsoft.com/fwlink/?LinkId=521403)  
+    -   Referenz der PowerShell- [Azure Key Vault-Cmdlets](https://docs.microsoft.com/powershell/module/azurerm.keyvault)  
   
 ##  <a name="Step2"></a>Schritt 2: Installieren des SQL Server-Connectors  
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector wird vom Administrator des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers heruntergeladen und installiert. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector steht im [Microsoft-Downloadcenter](https://go.microsoft.com/fwlink/p/?LinkId=521700)als Download zur Verfügung.  Suchen Sie nach **SQL Server-Connector für Microsoft Azure Key Vault**. Überprüfen Sie die Details, Systemanforderungen und Installationsanweisungen, wählen Sie den Download des Connectors, und starten Sie die Installation mit **Ausführen**. Lesen Sie die Lizenzbedingungen, stimmen Sie ihnen zu, und setzen Sie den Vorgang fort.  

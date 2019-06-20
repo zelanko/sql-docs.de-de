@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011668"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "66011668"
   
 -   Um den Verlust von Sonderzeichen zu verhindern, verwenden Sie das Unicode-Zeichenformat, oder geben Sie eine Codepage an.  
   
--   Alle `sql_variant`-Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das `char`-Format konvertiert. Beim Importieren in eine `sql_variant`-Spalte werden die Daten als `char`-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als `sql_variant` werden die Daten von `char` mithilfe der impliziten Konvertierung konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
+-   Alle `sql_variant`-Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das `char`-Format konvertiert. Beim Importieren in eine `sql_variant`-Spalte werden die Daten als `char`-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als `sql_variant` werden die Daten von `char` mithilfe der impliziten Konvertierung konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 -   Die **Bcp** Hilfsprogramm Exporte `money` Werte wie Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne alle Symbole wie z. B. Kommas als Trennzeichen. So wird z. B. eine `money`-Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66011668"
   
  Das Zeichenformat wird von den folgenden Befehlszeilenoptionen unterstützt:  
   
-|Befehl|Option|Description|  
+|Befehl|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |**bcp**|**-c**|Bewirkt, dass die **Bcp** Dienstprogramm mit Zeichendaten enthalten sind.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Verwendet das Zeichenformat beim Massenimport von Daten.|  

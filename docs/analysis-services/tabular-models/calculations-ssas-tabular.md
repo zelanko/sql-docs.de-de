@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53455f542e10e816aa55272026a875cf3cf87107
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.openlocfilehash: c7096cac1f4721531f1905b11f2ca3b901661204
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984071"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263427"
 ---
 # <a name="calculations-in-tabular-models"></a>Berechnungen in tabellarischen Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52984071"
 |-----------|-----------------|  
 |[Grundlegendes zu DAX in tabellarischen Modellen](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)|Beschreibt die Data Analysis Expressions (DAX)-Formelsprache, die zum Erstellen von Berechnungen für berechnete Spalten, Measures und Zeilenfilter in tabellarischen Modellen verwendet wird.|  
 |[DAX-formelkompatibilität im DirectQuery-Modus](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e)|Beschreibt die Unterschiede und listet die Funktionen auf, die nicht im DirectQuery-Modus unterstützt werden. Des Weiteren werden die Funktionen aufgelistet, die unterstützt werden, aber andere Ergebnisse zurückgeben können.|  
-|[DAX-Referenz (Data Analysis Expressions)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)|Dieser Abschnitt enthält ausführliche Beschreibungen der DAX-Syntax, -Operatoren und -Funktionen.|  
+|[DAX-Referenz (Data Analysis Expressions)](/dax/data-analysis-expressions-dax-reference)|Dieser Abschnitt enthält ausführliche Beschreibungen der DAX-Syntax, -Operatoren und -Funktionen.|  
   
 > [!NOTE]  
 >  Dieser Abschnitt enthält keine Schritt-für-Schritt-Anweisungen zum Erstellen von Berechnungen. Da Berechnungen in berechneten Spalten, Measures und Zeilenfiltern (in Rollen) angegeben werden, werden die Anweisungen zum Erstellen von DAX-Formeln in Aufgaben für diese Funktionen bereitgestellt. Weitere Informationen finden Sie unter [Erstellen einer berechneten Spalte](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md), [erstellen und Verwalten von Measures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md), und [erstellen und Verwalten von Rollen](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 711b577b737b48012e1bed0a52ba599cf17b3d8f
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 1f322b395f897780f3693d1186767aeef7dbfd4a
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685757"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263268"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Neuerungen in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -38,7 +38,7 @@ In SSDT können Sie den neuen Kompatibilitätsgrad 1400 auswählen, wenn Sie neu
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-So aktualisieren ein vorhandenes tabellarisches Modell in SSDT im Projektmappen-Explorer mit der rechten Maustaste **Model.bim**, und klicken Sie dann im **Eigenschaften**legen die **Kompatibilitätsgrad** Eigenschaft  **SQL Server 2017 (1400)**. 
+So aktualisieren ein vorhandenes tabellarisches Modell in SSDT im Projektmappen-Explorer mit der rechten Maustaste **Model.bim**, und klicken Sie dann im **Eigenschaften**legen die **Kompatibilitätsgrad** Eigenschaft  **SQL Server 2017 (1400)** . 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -111,7 +111,7 @@ Mit der Eigenschaft **Detailzeilenausdruck** für Measures können Modellautoren
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-Die [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX-Funktion wird üblicherweise in einem Detailzeilenausdruck verwendet. Mit dem folgenden Beispiel werden die Spalten definiert, die für Zeilen in der Tabelle „Internetumsatz“ im Beispieltabellenmodell von Adventure Works zurückgegeben werden:
+Die [SELECTCOLUMNS](/dax/selectcolumns-function-dax) DAX-Funktion wird üblicherweise in einem Detailzeilenausdruck verwendet. Mit dem folgenden Beispiel werden die Spalten definiert, die für Zeilen in der Tabelle „Internetumsatz“ im Beispieltabellenmodell von Adventure Works zurückgegeben werden:
 
 ```
 SELECTCOLUMNS(
@@ -179,9 +179,9 @@ Diese Version enthält Verbesserungen an [Dynamic Management Views](https://docs
 [MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) Verbesserungen sind enthalten, für diese DMV, die von verschiedenen Clienttools verwendet wird, um Measure Dimensionalität anzuzeigen. Die Durchsuchen-Funktion in Excel-Pivot-Tabellen kann z. B. den Benutzer, Cross-Drills für Dimensionen, die im Zusammenhang mit der die ausgewählten Measures. Diese Version behebt die Kardinalität-Spalten, die zuvor falsche Werte angezeigt wurden.
 
 ## <a name="dax-enhancements"></a>DAX-Verbesserungen
-Diese Version enthält Unterstützung für neue DAX-Funktionen und Funktionalität. Um die Vorteile nutzen zu können, müssen Sie die neueste Version von SSDT verwenden. Weitere Informationen finden Sie unter [neue DAX-Funktionen](https://msdn.microsoft.com/library/mt704075.aspx).
+Diese Version enthält Unterstützung für neue DAX-Funktionen und Funktionalität. Um die Vorteile nutzen zu können, müssen Sie die neueste Version von SSDT verwenden. Weitere Informationen finden Sie unter [neue DAX-Funktionen](/dax/new-dax-functions).
 
-Einer der wichtigsten Teile der neuen DAX-Funktionen ist die neue [IN-Operator / CONTAINSROW Funktion](https://msdn.microsoft.com/library/mt842621.aspx) für DAX-Ausdrücke. Dies ist vergleichbar mit dem [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) -Operator, der üblicherweise verwendet wird, um mehrere Werte in einer `WHERE` -Klausel anzugeben.
+Einer der wichtigsten Teile der neuen DAX-Funktionen ist die neue [IN-Operator / CONTAINSROW Funktion](/dax/in-operator-containsrow-function) für DAX-Ausdrücke. Dies ist vergleichbar mit dem [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) -Operator, der üblicherweise verwendet wird, um mehrere Werte in einer `WHERE` -Klausel anzugeben.
 
 Früher war es üblich, mithilfe des logischen `OR` -Operators Filter für mehrere Werte anzugeben, wie beispielsweise im folgenden Measureausdruck:
 

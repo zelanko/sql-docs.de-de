@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 299a7db7304a0f6a1090d7d60dbbe4a7e451179d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66719418"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Konfigurieren von SQL Server-Einstellungen mit Umgebungsvariablen unter Linux
@@ -44,7 +44,7 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, so konfigurieren 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Umgebungsvariable | Description |
+| Umgebungsvariable | Beschreibung |
 |-----|-----|
 | **ACCEPT_EULA** | Akzeptieren Sie die SQL Server-Lizenzbedingungen, die bei Festlegung auf einen beliebigen Wert (z. B. "Y"). |
 | **MSSQL_SA_PASSWORD** | Konfigurieren Sie das Kennwort des SA-Benutzers ein. |
@@ -68,7 +68,7 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, so konfigurieren 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Umgebungsvariable | Description |
+| Umgebungsvariable | Beschreibung |
 |-----|-----|
 | **ACCEPT_EULA** | Akzeptieren Sie die SQL Server-Lizenzbedingungen, die bei Festlegung auf einen beliebigen Wert (z. B. "Y"). |
 | **MSSQL_SA_PASSWORD** | Konfigurieren Sie das Kennwort des SA-Benutzers ein. |

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484906"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>Aufgabe 1: Erstellen eines Data Quality-Projekts
@@ -33,6 +33,6 @@ ms.locfileid: "65484906"
      ![Neue Data Quality-Projektseite - Bereinigung ausgewählt](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "neuen Data Quality-Projektseite - Bereinigung ausgewählt")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Task 2: Zuordnen von Excel-Spalten zu DQS-Domänen](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
+ [Aufgabe 2: Zuordnen von Excel-Spalten zu DQS-Domänen](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
   
   

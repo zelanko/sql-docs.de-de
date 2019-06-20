@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cefa6ac39d68040106d38e5f1cfbec8a6eff8358
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700695"
 ---
 # <a name="jumping-to-a-record"></a>Springen zu einem Datensatz
@@ -33,9 +33,9 @@ oRs.Move NumRecords, Start
   
  Wenn die *NumRecords* Argument ist größer als 0 (null), die Position des aktuelle Datensatzes wird vorwärts verschoben (gegen Ende der **Recordset**). Wenn *NumRecords* ist kleiner als 0 (null), die Position des aktuelle Datensatzes verschiebt diesen rückwärts (bis zum Anfang der **Recordset**).  
   
- Wenn die **verschieben** aufrufen würde die Position des aktuelle Datensatzes auf einen Zeitpunkt vor dem ersten Datensatz verschoben, ADO legt den aktuellen Datensatz auf die Position vor dem ersten Datensatz in die **Recordset** (**BOF** ist **"true"** ). Der Versuch, verschieben Abwärtskompatibilität bei der **BOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
+ Wenn die **verschieben** aufrufen würde die Position des aktuelle Datensatzes auf einen Zeitpunkt vor dem ersten Datensatz verschoben, ADO legt den aktuellen Datensatz auf die Position vor dem ersten Datensatz in die **Recordset** (**BOF** ist **"true"**). Der Versuch, verschieben Abwärtskompatibilität bei der **BOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
   
- Wenn die **verschieben** Aufruf wird die Position des aktuelle Datensatzes zu einem Zeitpunkt nach dem letzten Datensatz verschieben, ADO legt den aktuellen Datensatz auf die Position hinter dem letzten Datensatz in die **Recordset** (**EOF** ist **"true"** ). Der Versuch, forward When Verschieben der **EOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
+ Wenn die **verschieben** Aufruf wird die Position des aktuelle Datensatzes zu einem Zeitpunkt nach dem letzten Datensatz verschieben, ADO legt den aktuellen Datensatz auf die Position hinter dem letzten Datensatz in die **Recordset** (**EOF** ist **"true"**). Der Versuch, forward When Verschieben der **EOF** Eigenschaft ist bereits **"true"** wird ein Fehler generiert.  
   
  Aufrufen der **verschieben** Methode aus einer leeren **Recordset** Objekt wird ein Fehler generiert.  
   

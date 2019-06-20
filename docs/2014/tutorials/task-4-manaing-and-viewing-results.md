@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489455"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Aufgabe 4: Verwalten und Anzeigen der Ergebnisse
@@ -52,7 +52,7 @@ ms.locfileid: "65489455"
   
     1.  Beachten Sie, dass **A. Datum Corp.** wird korrigiert, um **A. Datum Corporation** und **Grund** nastaven NA hodnotu **begriffsbasierte Beziehung. A. Datum Corporation** ist ein Domänenwert in DQS, da es während des wissensermittlungsprozesses ermittelt wurde. Daher ist DQS **100 % überzeugt** von diesen Korrektur.  
   
-    2.  Beachten Sie, dass **Lazy Country Storex** wird korrigiert, um **Lazy Country Store**, **Vertrauensgrad** nastaven NA hodnotu **100 %**, und die **Grund** nastaven NA hodnotu **Domänenwert**. Während des wissensermittlungsprozesses, legen Sie **Lazy Country Storex** als Fehler mit **Lazy Country Store** als die **Korrektur**, sodass DQS **100 % sicher** dieser Korrektur.  
+    2.  Beachten Sie, dass **Lazy Country Storex** wird korrigiert, um **Lazy Country Store**, **Vertrauensgrad** nastaven NA hodnotu **100 %** , und die **Grund** nastaven NA hodnotu **Domänenwert**. Während des wissensermittlungsprozesses, legen Sie **Lazy Country Storex** als Fehler mit **Lazy Country Store** als die **Korrektur**, sodass DQS **100 % sicher** dieser Korrektur.  
   
     3.  DQS ist nicht mit den anderen Werten in der Liste vertraut, aber sie finden die Korrekturen für diese Werte mithilfe der **Rechtschreibprüfung** und die entsprechenden Korrekturen vorschlägt. DQS ist **nicht 100 %** sicher hinsichtlich dieser Korrekturen, aber der Vertrauensgrad liegt über 80 %, dies der Schwellenwert ist für Korrekturen, sodass DQS Korrekturen vorschlägt.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65489455"
   
 20. Wechseln Sie zu der **korrigiert** Registerkarte.  
   
-21. Beachten Sie, dass **Zustand** für den Datensatz mit **City** als **Berlin** nastaven NA hodnotu **Zertifizierungsstelle** jetzt. Beachten Sie in der **Grund** Feld ist, das **korrigiert von Regel "City-Regel"**.  
+21. Beachten Sie, dass **Zustand** für den Datensatz mit **City** als **Berlin** nastaven NA hodnotu **Zertifizierungsstelle** jetzt. Beachten Sie in der **Grund** Feld ist, das **korrigiert von Regel "City-Regel"** .  
   
      ![Korrektur der City](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "City Korrektur")  
   
@@ -87,6 +87,6 @@ ms.locfileid: "65489455"
 25. Klicken Sie auf **Weiter** zum Wechseln der **exportieren** Seite.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Exceldatei](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Exceldatei](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

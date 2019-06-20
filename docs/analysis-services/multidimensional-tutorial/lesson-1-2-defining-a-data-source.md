@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e52d6b6ef2a98089f17fe83a55d50b7693dbbc1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404012"
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lektion 1 – 2: Definieren einer Datenquelle
@@ -37,7 +37,7 @@ In der folgenden Aufgabe definieren Sie die AdventureWorksDWSQLServer2012-Beispi
   
 5.  Geben Sie im Textfeld **Servername** die Eingabe **localhost**ein.  
   
-    Um eine Verbindung mit einer benannten Instanz auf Ihrem lokalen Computer herzustellen, geben Sie **localhost\\<instance name>**. Geben Sie den Computernamen oder die IP-Adresse ein, um eine Verbindung zu einem spezifischen Computer statt zum lokalen Computer herzustellen.  
+    Um eine Verbindung mit einer benannten Instanz auf Ihrem lokalen Computer herzustellen, geben Sie **localhost\\<instance name>** . Geben Sie den Computernamen oder die IP-Adresse ein, um eine Verbindung zu einem spezifischen Computer statt zum lokalen Computer herzustellen.  
   
 6.  Überprüfen Sie, ob **Windows-Authentifizierung verwenden** ausgewählt ist. Wählen Sie im Listenfeld **Datenbanknamen eingeben oder auswählen** den Eintrag **AdventureWorksDW2012**aus.  
   

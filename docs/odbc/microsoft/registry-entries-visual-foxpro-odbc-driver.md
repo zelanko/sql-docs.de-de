@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316829"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Registrierungseinträge (Visual FoxPro-ODBC-Treiber)
@@ -48,7 +48,7 @@ Bei der Installation der Visual FoxPro-ODBC-Treiber aktualisiert das Installatio
 |Name des Werts (Schlüsselwort)|Werttyp|Wert|  
 |----------------------------|----------------|-----------|  
 |Sortieren|REG_SQ|Alle unterstützten Sortierreihenfolge|  
-|Description|REG_SZ|Benutzer-Beschreibung der Datenquelle|  
+|Beschreibung|REG_SZ|Benutzer-Beschreibung der Datenquelle|  
 |Treiber||Systempfad zur Datei vfpodbc.dll|  
 |Exclusive||Ja oder Nein|  
 |BackgroundFetch||Ja oder Nein|  

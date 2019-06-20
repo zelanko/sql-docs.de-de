@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f32e23be700f17fee88cc6354f8652bb1333a12c
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537347"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN-Funktion
@@ -74,7 +74,7 @@ BOOL SQLReadFileDSN(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLReadFileDSN** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Die *LpszString* -Argument war NULL.<br /><br /> Die *CbString* Argument war kleiner als oder gleich 0.|  

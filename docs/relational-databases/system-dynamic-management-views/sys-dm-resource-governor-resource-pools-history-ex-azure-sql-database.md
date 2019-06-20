@@ -22,10 +22,10 @@ ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: d585f1f1245457aa9051f25bca696cf4495d93ed
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66743927"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "66743927"
 
 Gibt die Momentaufnahme in Intervallen von 15 Sekunden für die letzten 30 Minuten der Resource pools Statistiken für eine Azure SQL-Datenbank.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|ssNoversion|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu.
 |**name**|sysname|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu.|

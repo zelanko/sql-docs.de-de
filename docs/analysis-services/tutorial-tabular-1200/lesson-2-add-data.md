@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e5a4d0ec80da5c29d513e74df1becca2d5cbb84
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404872"
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
@@ -46,7 +46,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
   
 4.  In **Servernamen**, geben Sie den Namen des Servers, auf dem Sie die Datenbank "AdventureWorksDW" installiert.  
   
-5.  In der **Datenbanknamen** die Option **"AdventureWorksDW"**, und klicken Sie dann auf **Weiter**.  
+5.  In der **Datenbanknamen** die Option **"AdventureWorksDW"** , und klicken Sie dann auf **Weiter**.  
   
     ![as-tabular-lesson2-tiw-name](media/as-tabular-lesson2-tiw-name.png)
   
@@ -57,7 +57,7 @@ Dieses Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der e
   
 7.  Überprüfen Sie auf der Seite **Auswählen, wie die Daten importiert werden sollen** , ob die Option **Aus einer Liste von Tabellen und Sichten auswählen, um die zu importierenden Daten zu bestimmen** ausgewählt ist. Sie möchten in einer Liste von Tabellen und Sichten eine Auswahl treffen. Klicken Sie daher auf **Weiter** , um eine Liste aller Quelltabellen in der Quelldatenbank anzuzeigen.  
   
-8.  In der **Tabellen und Sichten auswählen** Seite, wählen Sie das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, und **"factinternetsales"**.  
+8.  In der **Tabellen und Sichten auswählen** Seite, wählen Sie das Kontrollkästchen für die folgenden Tabellen: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, und **"factinternetsales"** .  
   
     Klicken Sie**NICHT** auf **Fertig stellen**.  
   

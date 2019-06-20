@@ -31,10 +31,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980704"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Angeben von Beziehungen mit 'sql:relationship' (SQLXML 4.0)
@@ -57,7 +57,7 @@ ms.locfileid: "65980704"
  Gibt den eindeutigen Namen der Beziehung an.  
   
  **Parent**  
- Gibt die übergeordnete Beziehung (Tabelle) an. Dieses Attribut ist optional. Wird es nicht angegeben, wird der Name der übergeordneten Tabelle aus den Informationen in der untergeordneten Hierarchie des Dokuments abgerufen. Wenn das Schema zwei über-/ unterordnungshierarchien angibt, die die gleiche  **\<SQL: Relationship >** aber unterschiedliche übergeordnete Elemente verwenden, Sie geben nicht das übergeordnete Attribut in  **\<Sql: Beziehung >**. Diese Informationen werden aus der Hierarchie im Schema abgerufen.  
+ Gibt die übergeordnete Beziehung (Tabelle) an. Dieses Attribut ist optional. Wird es nicht angegeben, wird der Name der übergeordneten Tabelle aus den Informationen in der untergeordneten Hierarchie des Dokuments abgerufen. Wenn das Schema zwei über-/ unterordnungshierarchien angibt, die die gleiche  **\<SQL: Relationship >** aber unterschiedliche übergeordnete Elemente verwenden, Sie geben nicht das übergeordnete Attribut in  **\<Sql: Beziehung >** . Diese Informationen werden aus der Hierarchie im Schema abgerufen.  
   
  **parent-key**  
  Gibt den übergeordneten Schlüssel des übergeordneten Elements an. Wenn der übergeordnete Schlüssel aus mehreren Spalten besteht, werden Werte mit einer Leerstelle angegeben. Es besteht eine positionelle Zuordnung zwischen den Werten, die für den mehrspaltigen Schlüssel und für den entsprechenden untergeordneten Schlüssel festgelegt wurden.  
@@ -71,7 +71,7 @@ ms.locfileid: "65980704"
  **Inverse**  
  Dieses in angegebene Attribut  **\<SQL: Relationship >** wird von Updategrams verwendet. Weitere Informationen finden Sie unter [angeben des SQL: Inverse-Attributs für SQL: Relationship](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- Die **SQL: Key-Felder** Anmerkung muss angegeben werden, in einem Element, das ein untergeordnetes Element enthält, die eine  **\<SQL: Relationship >** zwischen dem Element und dem untergeordneten Element definiert und ausführt Geben Sie nicht den Primärschlüssel der im übergeordneten Element angegebenen Tabelle. Auch wenn das Schema keine-Beziehung angibt  **\<SQL: Relationship >**, Sie müssen angeben, **SQL: Key-Felder** um die richtige Hierarchie zu erzeugen. Weitere Informationen finden Sie unter [Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Felder](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ Die **SQL: Key-Felder** Anmerkung muss angegeben werden, in einem Element, das ein untergeordnetes Element enthält, die eine  **\<SQL: Relationship >** zwischen dem Element und dem untergeordneten Element definiert und ausführt Geben Sie nicht den Primärschlüssel der im übergeordneten Element angegebenen Tabelle. Auch wenn das Schema keine-Beziehung angibt  **\<SQL: Relationship >** , Sie müssen angeben, **SQL: Key-Felder** um die richtige Hierarchie zu erzeugen. Weitere Informationen finden Sie unter [Identifizieren von Schlüsselspalten mithilfe von SQL: Key-Felder](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
  Um die richtige Schachtelung im Ergebnis zu erzeugen, es wird empfohlen, **SQL: Key-Felder** in allen Schemas angegeben werden.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "65980704"
 </xsd:schema>  
 ```  
   
- Statt eine benannte Beziehung anzugeben, können Sie eine anonyme Beziehung angeben. In diesem Fall ist der gesamte Inhalt des  **\<Annotation >**...  **\</annotation >**, die die beiden Beziehungen beschreibt, werden als ein untergeordnetes Element des  **\<Product >**.  
+ Statt eine benannte Beziehung anzugeben, können Sie eine anonyme Beziehung angeben. In diesem Fall ist der gesamte Inhalt des  **\<Annotation >** ...  **\</annotation >** , die die beiden Beziehungen beschreibt, werden als ein untergeordnetes Element des  **\<Product >** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -385,9 +385,9 @@ ms.locfileid: "65980704"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Angeben von "sql:relationship" für mehrere Elemente  
- In diesem Beispiel, das mit Anmerkungen versehene XSD-Schema enthält die  **\<Kunden >**,  **\<Reihenfolge >**, und  **\<OrderDetail >** Elemente.  
+ In diesem Beispiel, das mit Anmerkungen versehene XSD-Schema enthält die  **\<Kunden >** ,  **\<Reihenfolge >** , und  **\<OrderDetail >** Elemente.  
   
- Die  **\<Reihenfolge >** Element ist ein untergeordnetes Element von der  **\<Kunden >** Element. **\<SQL: Relationship >** angegeben ist, auf die  **\<Reihenfolge >** untergeordnetes Element Bestellungen eines Kunden als untergeordnete Elemente des daher so scheinen  **\<Kunden >**.  
+ Die  **\<Reihenfolge >** Element ist ein untergeordnetes Element von der  **\<Kunden >** Element. **\<SQL: Relationship >** angegeben ist, auf die  **\<Reihenfolge >** untergeordnetes Element Bestellungen eines Kunden als untergeordnete Elemente des daher so scheinen  **\<Kunden >** .  
   
  Die  **\<Reihenfolge >** -Element enthält die  **\<OrderDetail >** untergeordnetes Element. **\<SQL: Relationship >** angegeben  **\<OrderDetail >** untergeordnetes Element, sodass die Details einer Bestellung als untergeordnete Elemente, die angezeigt **\<Reihenfolge >** Element.  
   
@@ -527,7 +527,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- Im Schema wird sowohl die  **\<Emp1 >** Element und  **\<Emp2 >** Element sind vom Typ **EmpType**. Der Typ **EmpType** beschreibt eine  **\<Reihenfolge >** untergeordnetes Element und dem entsprechenden  **\<SQL: Relationship >**. In diesem Fall gibt es kein einzelnes übergeordnetes Element, die angegeben werden kann, ist  **\<SQL: Relationship >** mithilfe der **übergeordneten** Attribut. In diesem Fall geben Sie nicht die **übergeordneten** -Attribut im  **\<SQL: Relationship >**; die **übergeordneten** Attributinformationen aus einer der Hierarchie im Schema.  
+ Im Schema wird sowohl die  **\<Emp1 >** Element und  **\<Emp2 >** Element sind vom Typ **EmpType**. Der Typ **EmpType** beschreibt eine  **\<Reihenfolge >** untergeordnetes Element und dem entsprechenden  **\<SQL: Relationship >** . In diesem Fall gibt es kein einzelnes übergeordnetes Element, die angegeben werden kann, ist  **\<SQL: Relationship >** mithilfe der **übergeordneten** Attribut. In diesem Fall geben Sie nicht die **übergeordneten** -Attribut im  **\<SQL: Relationship >** ; die **übergeordneten** Attributinformationen aus einer der Hierarchie im Schema.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
   

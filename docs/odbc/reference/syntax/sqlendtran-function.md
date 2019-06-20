@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16b4bcfec2640c0dbd55d43be9df2391ed1f66c0
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538042"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran-Funktion
@@ -91,7 +91,7 @@ SQLRETURN SQLEndTran(
 |IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
   
 ## <a name="comments"></a>Kommentare  
- Für eine ODBC-3. *x* -Treiber verwenden, wenn *HandleType* ist SQL_HANDLE_ENV und *behandeln* ist der Treiber-Manager aufrufen, wird ein Handle gültige Umgebung **SQLEndTran**in einzelnen Treiber, die der Umgebung zugeordnet. Die *behandeln* Argument für den Aufruf eines Treibers werden Umgebungshandle des Treibers. Für eine ODBC-2. *x* -Treiber verwenden, wenn *HandleType* ist SQL_HANDLE_ENV und *behandeln* ist ein Handle gültige Umgebung, und es gibt mehrere Verbindungen in einem verbundenen Zustand in dieser Umgebung der Treiber-Manager aufrufen wird **SQLTransact** im Treiber einmal für jede Verbindung in einem verbundenen Zustand in der Umgebung. Die *behandeln* Argument bei jedem Aufruf werden ein Handle für die Verbindung. In beiden Fällen versucht, einen commit oder Rollback für Transaktionen, abhängig vom Wert der Treiber *' CompletionType '*, für alle Verbindungen, die für diese Umgebung verbunden sind. Verbindungen, die nicht aktiv sind wirken sich nicht auf die Transaktion aus.  
+ Für eine ODBC-3. *x* -Treiber verwenden, wenn *HandleType* ist SQL_HANDLE_ENV und *behandeln* ist der Treiber-Manager aufrufen, wird ein Handle gültige Umgebung **SQLEndTran**in einzelnen Treiber, die der Umgebung zugeordnet. Die *behandeln* Argument für den Aufruf eines Treibers werden Umgebungshandle des Treibers. Für eine ODBC-2. *x* -Treiber verwenden, wenn *HandleType* ist SQL_HANDLE_ENV und *behandeln* ist ein Handle gültige Umgebung, und es gibt mehrere Verbindungen in einem verbundenen Zustand in dieser Umgebung der Treiber-Manager aufrufen wird **SQLTransact** im Treiber einmal für jede Verbindung in einem verbundenen Zustand in der Umgebung. Die *behandeln* Argument bei jedem Aufruf werden ein Handle für die Verbindung. In beiden Fällen versucht, einen commit oder Rollback für Transaktionen, abhängig vom Wert der Treiber *' CompletionType '* , für alle Verbindungen, die für diese Umgebung verbunden sind. Verbindungen, die nicht aktiv sind wirken sich nicht auf die Transaktion aus.  
   
 > [!NOTE]  
 >  **SQLEndTran** kann nicht verwendet werden, um einen commit oder Rollback für Transaktionen aus, auf einer freigegebenen Umgebung. SQLSTATE HY092 (Ungültiger Attribut-/Optionsbezeichner) wird zurückgegeben, wenn **SQLEndTran** aufgerufen wird und *behandeln* legen Sie entweder das Handle einer freigegebenen Umgebung oder das Handle für eine Verbindung auf eine freigegebene Umgebung.  

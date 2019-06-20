@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b784553302bf9df30750f239291ca179ecf6cf74
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701876"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Datenströme
@@ -157,7 +157,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- Der Befehl kann in eine Zeichenfolge angegeben werden, wie zuvor, zugewiesen an gezeigt **CommandText**, oder in Form einer XML-Vorlage Abfrage zugewiesen **' CommandStream '** . Weitere Informationen zu Abfragen von XML-Vorlage finden Sie unter [Befehl Streams](../../../ado/guide/data/command-streams.md) in ADO oder Using-Streams für die Eingabe des Befehls in der SQL Server-Onlinedokumentation.  
+ Der Befehl kann in eine Zeichenfolge angegeben werden, wie zuvor, zugewiesen an gezeigt **CommandText**, oder in Form einer XML-Vorlage Abfrage zugewiesen **' CommandStream '**. Weitere Informationen zu Abfragen von XML-Vorlage finden Sie unter [Befehl Streams](../../../ado/guide/data/command-streams.md) in ADO oder Using-Streams für die Eingabe des Befehls in der SQL Server-Onlinedokumentation.  
   
  Als XML-Vorlage-Abfrage folgt die FOR XML-Abfrage wie:  
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 56fff67f882eceec3c07553e5c465da65a69ce65
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718677"
 ---
 # <a name="provider-errors"></a>Anbieterfehler
@@ -65,7 +65,7 @@ End Function
 ## <a name="the-error-object"></a>Die Error-Objekt  
  Anhand einer **Fehler** -Objekt können Sie bestimmen, welcher Fehler aufgetreten ist, und noch wichtiger ist, welche Anwendung oder welches Objekt den Fehler verursacht hat. Die **Fehler** Objekt hat die folgenden Eigenschaften:  
   
-|Eigenschaftenname|Description|  
+|Eigenschaftenname|Beschreibung|  
 |-------------------|-----------------|  
 |**Beschreibung**|Eine textbeschreibung des Fehlers, der aufgetreten ist.|  
 |**HelpContext, HelpFile**|Bezieht sich auf die Hilfe-Thema und in der Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  
