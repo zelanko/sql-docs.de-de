@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8866b6b8193ec61e08d20868ed88a21211fa2a32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109258"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Geräteinformationseinstellungen für Renderingerweiterungen (Reporting Services)
@@ -22,7 +22,7 @@ ms.locfileid: "66109258"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[ATOM-Geräteinformationseinstellungen](../../2014/reporting-services/atom-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der Atom-kompatiblen Renderingausgabe zugeordnet sind.|  
 |[CSV-Geräteinformationseinstellungen](csv-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der CSV-Renderingausgabe zugeordnet sind.|  

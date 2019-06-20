@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767522"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Schritt 2: Hinzufügen und konfigurieren den Foreach-Schleifen-Container
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
   In dieser Aufgabe fügen Sie die Möglichkeit zum Schleifendurchlauf für einen Ordner von Flatfiles hinzu und wenden die auch in Lektion 1 verwendete Datenflusstransformation auf jede dieser Flatfiles an. Dies geschieht durch das Hinzufügen eines Foreach-Schleifencontainers zur Ablaufsteuerung und dessen Konfigurierung.  
   
  Für den von Ihnen hinzugefügten Foreach-Schleifencontainer muss es möglich sein, eine Verbindung mit jeder Flatfile im Ordner herzustellen. Da alle Dateien im Ordner das gleiche Format aufweisen, kann vom Foreach-Schleifencontainer der gleiche Flatfile-Verbindungs-Manager zum Herstellen einer Verbindung mit jeder dieser Dateien verwendet werden. Der vom Container verwendete Flatfile-Verbindungs-Manager ist der gleiche Flatfile-Verbindungs-Manager, den Sie in Lektion 1 erstellt haben.  
@@ -45,7 +45,7 @@ ms.locfileid: "62767522"
   
 4.  In der **Foreach-Schleifen-Editor** Dialogfeld auf die **allgemeine** Seite für **Namen**, geben Sie `Foreach File in Folder`. Klicken Sie auf **OK**.  
   
-5.  Foreach-Schleifencontainer, klicken Sie auf **Eigenschaften**, und prüfen Sie im Eigenschaftenfenster, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten)**.  
+5.  Foreach-Schleifencontainer, klicken Sie auf **Eigenschaften**, und prüfen Sie im Eigenschaftenfenster, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten)** .  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>So konfigurieren Sie den Enumerator für den Foreach-Schleifencontainer  
   

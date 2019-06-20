@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63131645"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Erstellen eines Visual C# SMO-Projekts in Visual Studio.NET
@@ -30,7 +30,7 @@ ms.locfileid: "63131645"
   
 2.  Klicken Sie im Menü **Datei** auf **Neues Projekt**. Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  In **Projekttypen** wählen Sie im Dialogfeld **Visual C#-**, und wählen Sie dann **Windows**. In der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] installierte Vorlagen wählen Sie im Bereich **Windows-Anwendung**.  
+3.  In **Projekttypen** wählen Sie im Dialogfeld **Visual C#-** , und wählen Sie dann **Windows**. In der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] installierte Vorlagen wählen Sie im Bereich **Windows-Anwendung**.  
   
 4.  (Optional) In der **Namen** Feld, geben Sie den Namen der neuen Anwendung  
   

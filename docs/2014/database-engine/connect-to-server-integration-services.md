@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808701"
 ---
 # <a name="connect-to-server-integration-services"></a>Verbindung mit Server herstellen (Integration Services)
@@ -30,7 +30,7 @@ ms.locfileid: "62808701"
  Wählen Sie den Server für die Verbindungsherstellung aus. Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
 > [!NOTE]  
->  Verwenden Sie keine  *\<Servername >*\\*\<Instancename >*, da [!INCLUDE[ssIS](../includes/ssis-md.md)] unterstützt nicht mehrere Instanzen auf einem Computer.  
+>  Verwenden Sie keine  *\<Servername >* \\ *\<Instancename >* , da [!INCLUDE[ssIS](../includes/ssis-md.md)] unterstützt nicht mehrere Instanzen auf einem Computer.  
   
  **Authentifizierung**  
  Für [!INCLUDE[msCoName](../includes/msconame-md.md)] steht nur die [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows-Authentifizierung zur Verfügung. Der Windows Authentifizierungsmodus ermöglicht Benutzern die Verbindung über ein Windows-Benutzerkonto.  
@@ -44,7 +44,7 @@ ms.locfileid: "62808701"
  **Verbinden**  
  Klicken Sie hier, um eine Verbindung mit dem oben ausgewählten Server herzustellen.  
   
- **Optionen**  
+ **Options**  
  Klicken Sie auf diese Schaltfläche, um zusätzliche Optionen für die Serververbindung anzuzeigen, z. B. zum Registrieren eines Servers oder zum Speichern des Kennworts.  
   
   

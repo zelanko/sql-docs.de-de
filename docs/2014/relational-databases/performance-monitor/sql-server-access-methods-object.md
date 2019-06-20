@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96229c151957cd0b0bf91c248b4d96a294864181
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251112"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Zugriffsmethoden-Objekt
@@ -43,7 +43,7 @@ ms.locfileid: "63251112"
   
  Diese Tabelle enthält eine Beschreibung der Indikatoren für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zugriffsmethoden** -Leistungsindikatoren überwacht.  
   
-|Zugriffsmethoden-Leistungsindikatoren von SQL Server|Description|  
+|Zugriffsmethoden-Leistungsindikatoren von SQL Server|Beschreibung|  
 |----------------------------------------|-----------------|  
 |**Cleanupbatches für AUs/Sekunde**|Anzahl der Batches pro Sekunde, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Zuordnungseinheiten erfolgreich ausgeführt wurden.|  
 |**Cleanups für AUs/Sekunde**|Anzahl der Zuordnungseinheiten pro Sekunde, die durch den Hintergrundtask für den Cleanup zurückgestellter gelöschter Zuordnungseinheiten erfolgreich gelöscht wurden. Für jeden Einheitenlöschvorgang sind mehrere Batches erforderlich.|  

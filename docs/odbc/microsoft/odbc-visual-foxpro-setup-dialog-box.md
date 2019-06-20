@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63233589"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Einrichten von ODBC-Visual FoxPro (Dialogfeld)
@@ -49,7 +49,7 @@ Die **ODBC-Visual FoxPro-Setup** Dialogfeld können Sie zum Hinzufügen oder Än
  **Durchsuchen**  
  Ermöglicht Ihnen die Suche Ihr System und das Netzwerk für die Datenbank oder das Verzeichnis, mit der Datenquelle hergestellt werden soll.  
   
- **Optionen**  
+ **Options**  
  Erweitert das Dialogfeld, sodass Sie Visual FoxPro-ODBC-Treiber festgelegt werden können.  
   
 ## <a name="driver"></a>Treiber  

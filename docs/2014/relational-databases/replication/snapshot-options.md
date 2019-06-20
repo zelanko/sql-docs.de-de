@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270259"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Ändern der Optionen für die Initialisierung von Momentaufnahmen für die SQL-Replikation
@@ -38,11 +38,11 @@ In diesem Artikel wird erläutert, wie so ändern Sie eine Anzahl von Optionen, 
 ### <a name="default-snapshot-location"></a>Standardspeicherort für Momentaufnahmen
 Geben Sie die standardmäßigen Momentaufnahmespeicherorts (SQL Server Management Studio) Geben Sie den Standardspeicherort für Momentaufnahmen auf die **Momentaufnahmeordner** Verteilungskonfigurations-Assistenten auf der Seite. Weitere Informationen zum Verwenden dieses Assistenten finden Sie unter [Konfigurieren der Veröffentlichung und der Verteilung](configure-publishing-and-distribution.md). Wenn Sie eine Veröffentlichung auf einem Server erstellen, der nicht als Verteiler konfiguriert ist, geben Sie im Assistenten für neue Veröffentlichung auf der Seite **Momentaufnahmeordner** einen standardmäßigen Momentaufnahmespeicherort an. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Erstellen einer Veröffentlichung](publish/create-a-publication.md).  
   
- Ändern Sie den standardmäßigen Momentaufnahmespeicherort im Dialogfeld **Verteilereigenschaften - \<Distributor>** auf der Seite **Verleger**. Weitere Informationen finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md). Bestimmen Sie den Momentaufnahmeordner für die einzelnen Veröffentlichungen im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+ Ändern Sie den standardmäßigen Momentaufnahmespeicherort im Dialogfeld **Verteilereigenschaften - \<Distributor>** auf der Seite **Verleger**. Weitere Informationen finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md). Bestimmen Sie den Momentaufnahmeordner für die einzelnen Veröffentlichungen im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** . Weitere Informationen finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
 #### <a name="modify-the-default-snapshot-location"></a>Ändern des Standardspeicherorts für Momentaufnahmen  
   
-1.  Klicken Sie auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften – \<Verteiler>** auf die Schaltfläche mit den Auslassungspunkten (**...**) für den Verleger, dessen standardmäßiger Momentaufnahmespeicherort geändert werden soll.    
+1.  Klicken Sie auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften – \<Verteiler>** auf die Schaltfläche mit den Auslassungspunkten ( **...** ) für den Verleger, dessen standardmäßiger Momentaufnahmespeicherort geändert werden soll.    
 2.  Geben Sie im Dialogfeld **Verlegereigenschaften - \<Publisher>** einen Wert für die Eigenschaft **Standardmomentaufnahmeordner** ein.
 
     > [!NOTE]  

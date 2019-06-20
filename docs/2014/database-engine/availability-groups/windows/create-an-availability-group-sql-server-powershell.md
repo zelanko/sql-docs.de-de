@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790669"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Erstellen einer Verfügbarkeitsgruppe (SQL Server PowerShell)
@@ -45,7 +45,7 @@ ms.locfileid: "62790669"
 ###  <a name="SummaryPSStatements"></a> Zusammenfassung von Tasks und entsprechenden PowerShell-Cmdlets  
  In der folgenden Tabelle sind die grundlegenden Tasks für die Konfiguration einer Verfügbarkeitsgruppe aufgeführt, und es sind die Tasks angegeben, die von PowerShell-Cmdlets unterstützt werden. Die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Tasks müssen in der Reihenfolge ausgeführt werden, in der sie in der Tabelle dargestellt sind.  
   
-|Aufgabe|PowerShell-Cmdlets (falls verfügbar) oder Transact-SQL-Anweisung|Wo der Task auszuführen.**<sup>*</sup>**|  
+|Aufgabe|PowerShell-Cmdlets (falls verfügbar) oder Transact-SQL-Anweisung|Wo der Task auszuführen. **<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
 |Erstellen eines Datenbankspiegelungs-Endpunkts (einmal pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz)|`New-SqlHadrEndPoint`|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der der Datenbankspiegelungs-Endpunkt fehlt.<br /><br /> Hinweis: Verwenden Sie um einen vorhandenen datenbankspiegelungs-Endpunkt zu ändern, `Set-SqlHadrEndpoint`.|  
 |Erstellen der Verfügbarkeitsgruppe|Verwenden Sie zuerst das `New-SqlAvailabilityReplica`-Cmdlet mit dem `-AsTemplate`-Parameter, um ein Verfügbarkeitsreplikatobjekt im Arbeitsspeicher für jedes der beiden Verfügbarkeitsreplikate zu erstellen, die Sie in die Verfügbarkeitsgruppe einschließen möchten.<br /><br /> Erstellen Sie dann die Verfügbarkeitsgruppe mithilfe des `New-SqlAvailabilityGroup`-Cmdlets, und verweisen Sie auf die Verfügbarkeitsreplikatobjekte.|Führen Sie diesen Task auf der Serverinstanz aus, auf der das anfängliche primäre Replikat gehostet werden soll.|  

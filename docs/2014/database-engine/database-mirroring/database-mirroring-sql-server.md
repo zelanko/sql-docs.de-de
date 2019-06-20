@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807918"
 ---
 # <a name="database-mirroring-sql-server"></a>Datenbankspiegelung (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "62807918"
  Entspricht nach dem Start oder Fortsetzen einer Spiegelungssitzung dem Prozess, durch den Protokolldatensätze der Prinzipaldatenbank, die sich auf dem Prinzipalserver angesammelt haben, an den Spiegelserver gesendet werden. Der Spiegelserver schreibt diese Protokolldatensätze so schnell wie möglich auf den Datenträger, um wieder auf den Stand des Prinzipalservers zu kommen.  
   
  Transaktionssicherheit  
- Entspricht einer spiegelungsspezifischen Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron ausgeführt wird. Es gibt zwei Sicherheitsstufen: VOLLSTÄNDIGE aktivieren und deaktivieren.  
+ Entspricht einer spiegelungsspezifischen Datenbankeigenschaft, die bestimmt, ob eine Datenbank-Spiegelungssitzung synchron oder asynchron ausgeführt wird. Es gibt zwei Sicherheitsstufen: FULL und OFF.  
   
  Zeuge  
  Ist nur für den Modus mit hoher Sicherheit bestimmt und entspricht einer optionalen SQL Server-Instanz, durch die der Spiegelserver den Zeitpunkt für die Initiierung eines automatischen Failovers erkennen kann. Im Gegensatz zu den zwei Failoverpartnern bedient der Zeuge nicht die Datenbank. Die Unterstützung des automatischen Failovers ist die einzige Aufgabe des Zeugen.  

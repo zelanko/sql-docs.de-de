@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87aca78d68921b2f90cde68d52eff06df7044a4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832892"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Benutzerdefinierte Eigenschaften des CDC-Steuerungstasks
   In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften des CDC-Steuerungstasks beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |Verbindung|ADO.NET-Verbindung|Eine ADO.NET-Verbindung zur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -CDC-Datenbank für Zugriff auf die Änderungstabellen und den CDC-Status, falls diese Daten in derselben Datenbank gespeichert werden.<br /><br /> Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.|  
 |TaskOperation|Ganze Zahl (Enumeration)|Der ausgewählte Vorgang für den CDC-Steuerungstask. Die möglichen Werte sind **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**und **Reset CDC State**.<br /><br /> Wenn Sie beim Arbeiten mit **CDC (also nicht mit Oracle) die Option**MarkCdcStart **,** MarkInitialLoadStart **oder** MarkInitialLoadEnd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen, muss im Verbindungs-Manager ein Benutzer mit der Berechtigung  **db_owner** oder **sysadmin**angegeben werden.<br /><br /> Weitere Informationen zu diesen Vorgängen finden Sie unter [CDC Control Task Editor](../cdc-control-task-editor.md) und [CDC Control Task](cdc-control-task.md).|  

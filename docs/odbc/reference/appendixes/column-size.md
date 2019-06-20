@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224471"
 ---
 # <a name="column-size"></a>Spaltengröße
@@ -40,8 +40,8 @@ Die Spalte (oder Parameter) die Größe der numerischen Datentypen wird als die 
 |SQL_DOUBLE[c]|15|  
 |Alle binären Typen [a] [b].|Die definiert oder maximale Länge in Bytes der Spalte oder des Parameters. Die Länge einer Spalte, die als Binary(10)-Wert definiert ist z. B. 10.|  
 |SQL_TYPE_DATE[c]|10 (die Anzahl der Zeichen in der *jjjj-mm-tt* Format).|  
-|SQL_TYPE_TIME[c]|8 (die Anzahl der Zeichen in der *Hh-mm-ss* Format), oder 9 + *s* (die Anzahl der Zeichen in der *hh: mm:*[: ss. fff...]-Format, in denen *s*ist die Genauigkeit, Sekunden).|  
-|SQL_TYPE_TIMESTAMP|16 (die Anzahl der Zeichen in der *jjjj-mm-tt hh: mm* Format)<br /><br /> 19 (die Anzahl der Zeichen in der *jjjj-mm-tt* *hh: mm:* Format)<br /><br /> oder<br /><br /> 20 + *s* (die Anzahl der Zeichen in der *jjjj-mm-tt hh: mm:*[: ss. fff...]-Format, in denen *s* ist die Genauigkeit, Sekunden).|  
+|SQL_TYPE_TIME[c]|8 (die Anzahl der Zeichen in der *Hh-mm-ss* Format), oder 9 + *s* (die Anzahl der Zeichen in der *hh: mm:* [: ss. fff...]-Format, in denen *s*ist die Genauigkeit, Sekunden).|  
+|SQL_TYPE_TIMESTAMP|16 (die Anzahl der Zeichen in der *jjjj-mm-tt hh: mm* Format)<br /><br /> 19 (die Anzahl der Zeichen in der *jjjj-mm-tt* *hh: mm:* Format)<br /><br /> oder<br /><br /> 20 + *s* (die Anzahl der Zeichen in der *jjjj-mm-tt hh: mm:* [: ss. fff...]-Format, in denen *s* ist die Genauigkeit, Sekunden).|  
 |SQL_INTERVAL_SECOND|Wo *p* ist die Genauigkeit für anführenden Intervallwert und *s* ist die Genauigkeit, *p* (Wenn *s*= 0) oder *p* + *s*+ 1 (Wenn *s*> 0). [ d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|In denen *p* ist die Genauigkeit für anführenden Intervallwert und *s* ist die Genauigkeit, 9 +*p* (Wenn *s*= 0) oder 10 +*p* + *s* (Wenn *s*> 0). [ d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|In denen *p* ist die Genauigkeit für anführenden Intervallwert und *s* ist die Genauigkeit, 6 +*p* (Wenn *s*= 0) oder 7 +*p* + *s* (Wenn *s*> 0). [ d]|  

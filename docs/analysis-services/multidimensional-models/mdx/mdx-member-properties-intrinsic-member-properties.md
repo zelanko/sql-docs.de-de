@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740250"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX – Elementeigenschaften: systeminternen Elementeigenschaften
@@ -32,7 +32,7 @@ ms.locfileid: "62740250"
 >  Andere Anbieter als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützen möglicherweise weitere systeminterne Elementeigenschaften. Weitere Informationen zu den systeminternen Elementeigenschaften, die von anderen Anbietern unterstützt werden, finden Sie in der Dokumentation des jeweiligen Anbieters.  
   
 ## <a name="types-of-member-properties"></a>Arten von Elementeigenschaften  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt zwei Arten von systeminternen Elementeigenschaften:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt zwei Arten von systeminternen Elementeigenschaften:  
   
  Kontextabhängige Elementeigenschaften  
  Diese Elementeigenschaften müssen im Kontext einer bestimmten Hierarchie oder Ebene verwendet werden und stellen Werte für jedes Element der angegebenen Dimension oder Ebene bereit.  
@@ -87,7 +87,7 @@ ms.locfileid: "62740250"
 > [!NOTE]  
 >  Die Spalten im MEMBERS-Schemarowset unterstützen die systeminternen Elementeigenschaften, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zum **MEMBERS** -Schemarowset finden Sie unter [MDSCHEMA_MEMBERS-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|Der Name des Cubes, zu dem dieses Element gehört.|  
 |**CHILDREN_CARDINALITY**|Die Anzahl der untergeordneten Elemente des Elements. Dies kann eine Schätzung sein, daher sollten Sie sich nicht darauf verlassen, dass es sich um die exakte Anzahl handelt. Anbieter sollten die bestmögliche Schätzung zurückgeben.|  

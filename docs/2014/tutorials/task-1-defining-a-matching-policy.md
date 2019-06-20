@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481315"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Aufgabe 1: Definieren einer Abgleichrichtlinie
-  In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel weist eine erforderliche Komponente: **Lieferanten-ID**, was bedeutet, dass die Lieferanten-IDs vor der Verwendung der anderen Domänen in der Regel übereinstimmen müssen. Die Regel verwendet zwei andere Domänen: **Lieferantenname** mit **Ähnlichkeit** Wert festgelegt wird, um **70 %** und **Contact Email** mit **Ähnlichkeit** Wert festgelegt wird, um **30 %**.  
+  In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel weist eine erforderliche Komponente: **Lieferanten-ID**, was bedeutet, dass die Lieferanten-IDs vor der Verwendung der anderen Domänen in der Regel übereinstimmen müssen. Die Regel verwendet zwei andere Domänen: **Lieferantenname** mit **Ähnlichkeit** Wert festgelegt wird, um **70 %** und **Contact Email** mit **Ähnlichkeit** Wert festgelegt wird, um **30 %** .  
   
 1.  Auf der Hauptseite des **DQS-Client**, klicken Sie auf **nach rechts weisenden Pfeil** neben **Lieferanten** Knowledge base an, und wählen **Abgleichsrichtlinie**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65481315"
   
 12. Wiederholen Sie die vorherigen beiden Schritte hinzufügen **Contact Email** Domäne mit **30** für die **Gewichtung**.  
   
-13. Beachten Sie, dass die **minimale treffergenauigkeit** nastaven NA hodnotu **80 %**, dies ist der Wert in angezeigt werden, die **allgemeine** Registerkarte die **Konfiguration** auf der Seite **DQS-Verwaltung**. Sie können dieses Ergebnis hier nur über diesen Schwellenwert erhöhen.  
+13. Beachten Sie, dass die **minimale treffergenauigkeit** nastaven NA hodnotu **80 %** , dies ist der Wert in angezeigt werden, die **allgemeine** Registerkarte die **Konfiguration** auf der Seite **DQS-Verwaltung**. Sie können dieses Ergebnis hier nur über diesen Schwellenwert erhöhen.  
   
 14. Beachten Sie, dass **überlappende Cluster** ausgewählt ist. Mit dieser Option kann ein Datensatz in mehreren Clustern angezeigt werden. Wenn Sie die Einstellung in "Nicht überlappende Cluster" ändern, werden die Cluster mit gemeinsamen Datensätzen in einem einzigen Cluster kombiniert.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "65481315"
 16. Klicken Sie auf **Weiter** zum Wechseln der **Abgleichsergebnisse** Seite.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Task 2: Testen und Veröffentlichen der Abgleichsrichtlinie](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [Aufgabe 2: Testen und Veröffentlichen der Abgleichsrichtlinie](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

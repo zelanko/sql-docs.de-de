@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad53ba3fa02107d4902c43084beadda7a420e586
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62735301"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption-Zuordnung
-Wenn eine Anwendung ruft **SQLSetStmtOption** über einen ODBC 3.*.x* Treiber, den Aufruf von  
+Wenn eine Anwendung ruft **SQLSetStmtOption** über einen ODBC 3. *.x* Treiber, den Aufruf von  
   
 ```  
 SQLSetStmtOption(StatementHandle, fOption, vParam)  
@@ -52,8 +52,8 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
   
  Da der Treiber-Manager nicht weiß, ob das treiberdefinierten Anweisungsattribut 32-Bit-Ganzzahl-Wert oder eine Zeichenfolge erforderlich, wurde es für die Übergabe in einen gültigen Wert für die *StringLength* Argument **SQLSetStmtAttr**. Wenn der Treiber verfügt über spezielle Semantik für treiberdefinierten Anweisungsattribute definiert und mithilfe von aufgerufen werden muss, **SQLSetStmtOption**, es muss unterstützen **SQLSetStmtOption**.  
   
- Wenn eine Anwendung ruft **SQLSetStmtOption** festzulegende eine treiberspezifische-Anweisungsoption in einer ODBC 3.*.x* Treiber und die Option in einer ODBC 2. definiert wurde. *X* Version des Treibers, neue manifestkonstante sollte definiert werden, für die Option in die ODBC 3.*.x* Treiber. Wenn die alte manifestkonstante, in dem Aufruf von verwendet wird **SQLSetStmtOption**, ruft der Treiber-Manager **SQLSetStmtAttr** mit der *StringLength* Argument auf 0 festgelegt.  
+ Wenn eine Anwendung ruft **SQLSetStmtOption** festzulegende eine treiberspezifische-Anweisungsoption in einer ODBC 3. *.x* Treiber und die Option in einer ODBC 2. definiert wurde. *X* Version des Treibers, neue manifestkonstante sollte definiert werden, für die Option in die ODBC 3. *.x* Treiber. Wenn die alte manifestkonstante, in dem Aufruf von verwendet wird **SQLSetStmtOption**, ruft der Treiber-Manager **SQLSetStmtAttr** mit der *StringLength* Argument auf 0 festgelegt.  
   
- Wenn eine Anwendung ruft **SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS SQL_UB_ON in einer ODBC 3. festzulegende *.x* -Treiber verwenden, das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_FIXED festgelegt ist. SQL_UB_ON ist die gleiche Konstante als SQL_UB_FIXED. Der Treiber-Manager übergibt SQL_UB_FIXED über an den Treiber. SQL_UB_FIXED veraltet in ODBC 3.*.x*, aber eine ODBC 3.*.x* Treiber muss diese für das Arbeiten mit ODBC 2. implementieren. *X* Anwendungen, die Lesezeichen mit fester Länge verwenden.  
+ Wenn eine Anwendung ruft **SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS SQL_UB_ON in einer ODBC 3. festzulegende *.x* -Treiber verwenden, das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_FIXED festgelegt ist. SQL_UB_ON ist die gleiche Konstante als SQL_UB_FIXED. Der Treiber-Manager übergibt SQL_UB_FIXED über an den Treiber. SQL_UB_FIXED veraltet in ODBC 3. *.x*, aber eine ODBC 3. *.x* Treiber muss diese für das Arbeiten mit ODBC 2. implementieren. *X* Anwendungen, die Lesezeichen mit fester Länge verwenden.  
   
- Eine ODBC 3.*.x* -Treiber verwenden, der Treiber-Manager nicht mehr überprüft, ob *Option* zwischen SQL_STMT_OPT_MIN und SQL_STMT_OPT_MAX ist, oder ist größer als SQL_CONNECT_OPT_DRVR_START.
+ Eine ODBC 3. *.x* -Treiber verwenden, der Treiber-Manager nicht mehr überprüft, ob *Option* zwischen SQL_STMT_OPT_MIN und SQL_STMT_OPT_MAX ist, oder ist größer als SQL_CONNECT_OPT_DRVR_START.

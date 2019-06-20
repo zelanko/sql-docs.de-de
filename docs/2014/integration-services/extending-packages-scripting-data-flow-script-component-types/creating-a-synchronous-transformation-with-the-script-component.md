@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e2fc735cd4834fcb6e59550604b831b5d8790fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768581"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Erstellen einer synchronen Transformation mit der Skriptkomponente
@@ -71,7 +71,7 @@ ms.locfileid: "62768581"
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
  Wenn Sie die vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie hinzufügen, sie in der `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftsfeldern für die **Skript** auf der Seite die **Transformations-Editor**.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte (**...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Dialogfeld.  
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte ( **...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Dialogfeld.  
   
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -130,7 +130,7 @@ else
 }  
 ```  
   
- In diesem Beispiel werden von der Skriptkomponente auf Grundlage der von Ihnen konfigurierten Ausgabenamen die **DirectRowTo\<OutputBufferX>**-Methoden für Sie erstellt. Sie können ähnlichen Code verwenden, um Fehlerzeilen an eine simulierte Fehlerausgabe weiterzuleiten.  
+ In diesem Beispiel werden von der Skriptkomponente auf Grundlage der von Ihnen konfigurierten Ausgabenamen die **DirectRowTo\<OutputBufferX>** -Methoden für Sie erstellt. Sie können ähnlichen Code verwenden, um Fehlerzeilen an eine simulierte Fehlerausgabe weiterzuleiten.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird der benutzerdefinierte Code veranschaulicht, der in der `ScriptMain`-Klasse zur Erstellung einer synchronen Transformationskomponente erforderlich ist.  

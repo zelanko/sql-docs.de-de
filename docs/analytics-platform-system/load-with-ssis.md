@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213373"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services in Parallel Data Warehouse
@@ -48,7 +48,7 @@ Verwenden Sie eine der folgenden Methoden an, um ein Integration Services-Paket 
 ### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>Ausführen von SQL Server 2008 R2 Business Intelligence Development Studio (BIDS)  
 Führen Sie das Paket in BIDS mit der rechten Maustaste auf das Paket, und wählen Sie **Paketausführungs**.  
   
-Standardmäßig wird die BIDS-Paketen mithilfe der 64-Bit-Binärdateien ausgeführt. Dies richtet sich nach der **Run64BitRuntime** Paket-Eigenschaft. Um diese Eigenschaft festzulegen, wechseln Sie zu **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften**. Auf der **Integration Services-Eigenschaftenseiten**, wechseln Sie zu **Konfigurationseigenschaften** , und wählen Sie **Debuggen**. Sehen Sie die **Run64BitRuntime** Eigenschaft unter den **Debuggen Optionen**. Um 32-Bit-Laufzeiten zu verwenden, legen Sie diese auf **"false"**. Um 64-Bit-Laufzeiten zu verwenden, legen Sie diese auf **"true"**.  
+Standardmäßig wird die BIDS-Paketen mithilfe der 64-Bit-Binärdateien ausgeführt. Dies richtet sich nach der **Run64BitRuntime** Paket-Eigenschaft. Um diese Eigenschaft festzulegen, wechseln Sie zu **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften**. Auf der **Integration Services-Eigenschaftenseiten**, wechseln Sie zu **Konfigurationseigenschaften** , und wählen Sie **Debuggen**. Sehen Sie die **Run64BitRuntime** Eigenschaft unter den **Debuggen Optionen**. Um 32-Bit-Laufzeiten zu verwenden, legen Sie diese auf **"false"** . Um 64-Bit-Laufzeiten zu verwenden, legen Sie diese auf **"true"** .  
   
 ### <a name="run-from-sql-server-2012-sql-server-data-tools"></a>Ausführen von SQL Server 2012, SQL Server Data Tools  
 Führen Sie das Paket in SQL Server Data Tools, mit der rechten Maustaste auf das Paket, und wählen Sie **Paketausführungs**.  
@@ -222,11 +222,11 @@ Geben Sie das Ziel für den Datenfluss.
   
     Für Ethernet-Verbindungen **Servernamen**: Geben Sie die IP-Adresse des Steuerelement-Knoten-Cluster, Komma, Port 17001 aus. Z. B. 10.192.63.134,17001.  
   
-    **Benutzer:**`user1`  
+    **Benutzer:** `user1`  
   
-    **Kennwort:**`password1`  
+    **Kennwort:** `password1`  
   
-    **Zieldatenbank:**`LoadExampleDB`  
+    **Zieldatenbank:** `LoadExampleDB`  
   
 6.  Wählen Sie die Zieltabelle: `Orders`.  
   

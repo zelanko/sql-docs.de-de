@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63267480"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtern einer geschachtelten Tabelle in einem Miningmodell (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -79,7 +79,7 @@ ms.locfileid: "63267480"
   
 1.  In der **Miningmodelle** Registerkarte der rechten Maustaste auf die `Association Filtered` Modell, und wählen **Eigenschaften**.  
   
-2.  Ändern der **AllowDrillThrough** Eigenschaft **"true"**.  
+2.  Ändern der **AllowDrillThrough** Eigenschaft **"true"** .  
   
 3.  Mit der rechten Maustaste die `Association Filtered` mining-Modell, und wählen Sie **Prozessmodell**.  
   

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175033"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Dwloader Command-Line-Ladeprogramm für Parallel Data Warehouse
@@ -398,7 +398,7 @@ Das Ladeprogramm Zeilen am Ende der vorhandenen Zeilen in der Zieltabelle eingef
 fastappend  
 Das Ladeprogramm Zeilen direkt ohne Verwendung einer temporären Tabelle am Ende der vorhandenen Zeilen in der Zieltabelle eingefügt. Fastappend erfordert die Multi-Transaktion (-m) Option. Eine Stagingdatenbank kann nicht angegeben werden, wenn Fastappend verwenden. Es ist kein Rollback mit Fastappend, was bedeutet, dass die Wiederherstellung nach einer fehlerhaften oder abgebrochenen Last durch Ihre eigenen Load-Prozess verarbeitet werden muss.  
   
-"Upsert" **-K***Merge_column* [,... *n* ]    
+"Upsert" **-K***Merge_column* [,... *n* ]  
 Das Ladeprogramm verwendet die SQL Server-Merge-Anweisung zum Aktualisieren von vorhandener Zeilen aus, und fügen Sie neue Zeilen.  
   
 Die Option ' -K ' gibt an, die Spalte oder Spalten, auf die Zusammenführung basieren. Diese Spalten bilden einen Merge-Schlüssel, der eine eindeutige Zeile darstellen soll. Wenn der Merge-Schlüssel in der Zieltabelle vorhanden ist, wird die Zeile aktualisiert. Wenn der Merge-Schlüssel in der Zieltabelle nicht vorhanden ist, wird die Zeile angefügt.  

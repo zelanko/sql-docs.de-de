@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721682"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Erstellen und Anwenden der Anfangsmomentaufnahme
@@ -33,7 +33,7 @@ ms.locfileid: "62721682"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, wird vom Momentaufnahme-Agent standardmäßig sofort eine Momentaufnahme generiert, nachdem mit dem Assistenten für neue Veröffentlichung eine Veröffentlichung erstellt wurde. Diese Momentaufnahme wird dann standardmäßig vom Verteilungs-Agent (bei der Momentaufnahme- und der Transaktionsreplikation) oder vom Merge-Agent (bei Mergeabonnement) für alle Abonnements angewendet. Eine Momentaufnahme kann auch mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und dem Replikationsmonitor generiert werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-create-a-snapshot-in-management-studio"></a>So erstellen Sie eine Momentaufnahme in Management Studio  
@@ -80,11 +80,11 @@ ms.locfileid: "62721682"
   
 2.  Führen Sie [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) aus. Geben Sie **@publication** und die folgenden Parameter an:  
   
-    -   **Der @job_login**: Gibt die Anmeldeinformationen für die Windows-Authentifizierung an, mit denen der Momentaufnahme-Agent auf dem Verteiler ausgeführt wird.  
+    -   **Der @job_login** : Gibt die Anmeldeinformationen für die Windows-Authentifizierung an, mit denen der Momentaufnahme-Agent auf dem Verteiler ausgeführt wird.  
   
-    -   **Der @job_password**: Kennwort für die angegebenen Windows-Anmeldeinformationen.  
+    -   **Der @job_password** : Kennwort für die angegebenen Windows-Anmeldeinformationen.  
   
-    -   (Optional) Den Wert **0** für **@publisher_security_mode** , wenn der Agent die SQL Server-Authentifizierung zum Herstellen der Verbindung mit dem Verleger verwendet. In diesem Fall müssen Sie auch die Anmeldeinformationen für die SQL Server-Authentifizierung für **@publisher_login** und **@publisher_password**.  
+    -   (Optional) Den Wert **0** für **@publisher_security_mode** , wenn der Agent die SQL Server-Authentifizierung zum Herstellen der Verbindung mit dem Verleger verwendet. In diesem Fall müssen Sie auch die Anmeldeinformationen für die SQL Server-Authentifizierung für **@publisher_login** und **@publisher_password** .  
   
     -   (Optional) Einen Synchronisierungszeitplan für den Momentaufnahme-Agentauftrag. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](specify-synchronization-schedules.md).  
   

@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63145487"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
@@ -72,7 +72,7 @@ ms.locfileid: "63145487"
   
 2.  Wählen Sie **Datenbank-Engine** aus.  
   
-3.  Geben Sie im Feld **Servername** den Namen der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername der *<Computername>***\\***<Instanzname>*, wie z.B. **ACCTG_SRVR\SQLEXPRESS**.  
+3.  Geben Sie im Feld **Servername** den Namen der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername der *<Computername>***\\***<Instanzname>* , wie z.B. **ACCTG_SRVR\SQLEXPRESS**.  
   
 4.  Klicken Sie auf **Verbinden**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63145487"
   
      Das Dialogfeld **Anmeldung – Neu** wird angezeigt.  
   
-2.  Auf der **allgemeine** auf der Seite die **Anmeldename** geben einen Windows-Anmeldenamen im Format  *\<Domäne >\\< Login\>*.  
+2.  Auf der **allgemeine** auf der Seite die **Anmeldename** geben einen Windows-Anmeldenamen im Format  *\<Domäne >\\< Login\>* .  
   
 3.  Wählen Sie (sofern verfügbar) **im Feld** Standarddatenbank [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] aus. Wählen Sie andernfalls **master**aus.  
   
@@ -101,6 +101,6 @@ ms.locfileid: "63145487"
 >  Diese grundlegenden Informationen sollen Ihnen den Einstieg erleichtern. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt eine umfassende Sicherheitsumgebung bereit, da das Thema Sicherheit offensichtlich einen wichtigen Aspekt des Datenbankbetriebs darstellt.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
+ [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64877621"
 ---
 # <a name="create-key-performance-indicators"></a>Erstellen von Leistungskennzahlen
@@ -72,7 +72,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
     InternetCurrentQuarterMarginPerformance :=IF([InternetPreviousQuarterMarginProportionToQTD]<>0,([InternetCurrentQuarterMargin]-[InternetPreviousQuarterMarginProportionToQTD])/[InternetPreviousQuarterMarginProportionToQTD],BLANK())  
     ```
  
-3.  Mit der rechten Maustaste **"internetcurrentquartermarginperformance"** > **KPI erstellen**.  
+3.  Mit der rechten Maustaste **"internetcurrentquartermarginperformance"**  > **KPI erstellen**.  
   
 4.  Klicken Sie im Dialogfeld Key Performance Indicator (KPI) in **Ziel** wählen **Absolutwert**, und geben Sie dann **1,25**.   
   

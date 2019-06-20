@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105845"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66105845"
   
  Die Achsenskala ist an einen Mindest- und einen Höchstwert gebunden, die den Datenbereich definieren, der an der Anchse angezeigt wird. Das Diagramm berechnet den Mindest- und Höchstwert an jeder Achse auf Grundlage der Werte im Resultset. Auf der Wertachse wird die Skala immer von der kleinsten und größten Zahl im Wertfeld bestimmt. Auf der Kategorieachse werden dieMindest- und Höchstwerttypen abhängig vom Typ des Kategoriefelds bestimmt. Jedes Feld in einem Dataset kann einem von drei Kategoriefeldtypen zugeordnet werden. In der folgenden Tabelle werden diese drei Typen von Kategoriefeldern illustriert.  
   
-|Kategoriefeldtyp|Description|Beispiel|  
+|Kategoriefeldtyp|Beschreibung|Beispiel|  
 |-------------------------|-----------------|-------------|  
 |Numerisch|Kategorien werden in numerischer Reihenfolge an der x-Achse dargestellt.|Ein Verkaufsbericht nach Mitarbeiter-ID zeigt die Mitarbeiter-IDs an der x-Achse an.|  
 |Date/Time|Kategorien werden in chronolgischer Reihenfolge an der x-Achse dargestellt.|Bei einem monatlichen Verkaufsbericht werden formatierte Datumsangaben an der x-Achse angezeigt.|  

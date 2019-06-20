@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481129"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Bereinigen von Daten mit (internem) DQS-Wissen
@@ -103,7 +103,7 @@ ms.locfileid: "65481129"
   
  Abhängig vom Vertrauensgrad werden die Werte auf einer der folgenden fünf Registerkarten angezeigt:  
   
-|Registerkarte|Description|  
+|Registerkarte|Beschreibung|  
 |---------|-----------------|  
 |**Vorgeschlagen**|Zeigt die Domänenwerte an, für die DQS die vorgeschlagenen Werte gefunden hat, die einen Vertrauensgrad aufweisen, der höher als der *automatisch vorgeschlagene Schwellenwert* , aber niedriger als der *Schwellenwert für die automatische Korrektur* ist.<br /><br /> Die vorgeschlagenen Werte werden in der Spalte **Korrigieren in** im Vergleich zum ursprünglichen Wert angezeigt. Sie können auf das Optionsfeld in der Spalte **Genehmigen** oder **Ablehnen** für einen Wert im oberen Raster klicken, um den Vorschlag für alle Instanzen des Wertes anzunehmen oder abzulehnen. In diesem Fall wird der angenommene Wert auf die Registerkarte **Korrigiert** verschoben, und der abgelehnte Wert wird auf die Registerkarte **Ungültig** verschoben.|  
 |**Neu**|Zeigt die gültige Domäne an, für die DQS nicht genug Informationen aufweist, und die daher keiner anderen Registerkarte zugeordnet werden kann. Außerdem enthält diese Registerkarte auch Werte, die einen Vertrauensgrad aufweisen, der unterhalb des *automatisch vorgeschlagenen Schwellenwerts* liegt, aber hoch genug ist, um als gültig markiert zu werden.<br /><br /> Wenn Sie glauben, dass der Wert richtig ist, klicken Sie auf das Optionsfeld in der Spalte **Genehmigen** . Klicken Sie andernfalls auf das Optionsfeld in der Spalte **Ablehnen** . Der angenommene Wert wird auf die Registerkarte **Richtig** verschoben, und der abgelehnte Wert wird auf die Registerkarte **Ungültig** verschoben. Sie können den richtigen Wert auch manuell als Ersatz für den ursprünglichen Wert in der Spalte **Korrigieren in** eingeben und dann auf das Optionsfeld in der Spalte **Genehmigen** klicken, um die Änderung anzunehmen. In diesem Fall wird der Wert auf die Registerkarte **Korrigiert** verschoben.|  

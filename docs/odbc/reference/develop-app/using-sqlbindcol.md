@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208475"
 ---
 # <a name="using-sqlbindcol"></a>Verwenden von SQLBindCol
@@ -35,7 +35,7 @@ Die Anwendung bindet Spalten durch den Aufruf **SQLBindCol**. Diese Funktion wir
   
  Der folgende Code bindet beispielsweise Variablen, den Verkäufer und CustID-Spalten. Daten für die Spalten zurückgegeben werden, *Vertriebsmitarbeiter* und *CustID*. Da *Vertriebsmitarbeiter* ein Puffer aus Zeichen, ist die Anwendung gibt die Bytelänge (11), sodass der Treiber zum Abschneiden der das bestimmen, ob kann. Die Bytelänge der zurückgegebenen des Titels oder, ob es NULL ist, werden im zurückgegeben *SalesPersonLenOrInd*.  
   
- Da *CustID* eine ganzzahlige Variable und hat den fester Länge, besteht keine Notwendigkeit, an die Bytelänge; der Treiber geht davon aus, es ist **Sizeof (** SQLUINTEGER **)**. Die Bytelänge der zurückgegebenen Kunden Daten-ID oder, ob es NULL ist, werden im zurückgegeben *CustIDInd*. Beachten Sie, dass nur in der gibt an, ob das Gehalt NULL ist, wird die Anwendung interessiert ist, da die Bytelänge immer **Sizeof (** SQLUINTEGER **)**.  
+ Da *CustID* eine ganzzahlige Variable und hat den fester Länge, besteht keine Notwendigkeit, an die Bytelänge; der Treiber geht davon aus, es ist **Sizeof (** SQLUINTEGER **)** . Die Bytelänge der zurückgegebenen Kunden Daten-ID oder, ob es NULL ist, werden im zurückgegeben *CustIDInd*. Beachten Sie, dass nur in der gibt an, ob das Gehalt NULL ist, wird die Anwendung interessiert ist, da die Bytelänge immer **Sizeof (** SQLUINTEGER **)** .  
   
 ```  
 SQLCHAR       SalesPerson[11];  

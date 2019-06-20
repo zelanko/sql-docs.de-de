@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727174"
 ---
 # <a name="write-enabled-partitions"></a>Partitionen mit aktiviertem Schreibzugriff
   Die Daten in einem Cube sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Partition zu aktivieren. Partitionen mit aktiviertem Schreibzugriff werden verwendet, um Benutzern im geschäftlichen Bereich das Untersuchen von Szenarien zu ermöglichen, indem sie Zellenwerte ändern und die Auswirkungen der Änderungen auf die Cubedaten analysieren. Wenn Sie den Schreibzugriff für eine Partition aktivieren, können Clientanwendungen Änderungen an den Daten in der Partition aufzeichnen. Diese Änderungen, so genannte Rückschreibedaten, werden in einer separaten Tabelle gespeichert und überschreiben keine vorhandenen Daten in einer Measuregruppe. Sie werden jedoch als Teil der Cubedaten in Abfrageergebnisse einbezogen.  
   
- Sie können den Schreibzugriff für einen gesamten Cube oder nur für bestimmte Partitionen im Cube aktivieren. Dimensionen mit aktiviertem Schreibzugriff unterscheiden sich von diesen Partitionen, aber auf ergänzende Weise. Eine Partition mit aktiviertem Schreibzugriff ermöglicht den Benutzern das Update von Partitionszellen, während eine Dimension mit aktiviertem Schreibzugriff den Benutzern das Update von Dimensionselementen ermöglicht. Sie können diese zwei Funktionen auch zusammen verwenden. So muss ein Cube oder eine Partition mit aktiviertem Schreibzugriff keine Dimensionen mit aktiviertem Schreibzugriff enthalten. **Verwandtes Thema:**[Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+ Sie können den Schreibzugriff für einen gesamten Cube oder nur für bestimmte Partitionen im Cube aktivieren. Dimensionen mit aktiviertem Schreibzugriff unterscheiden sich von diesen Partitionen, aber auf ergänzende Weise. Eine Partition mit aktiviertem Schreibzugriff ermöglicht den Benutzern das Update von Partitionszellen, während eine Dimension mit aktiviertem Schreibzugriff den Benutzern das Update von Dimensionselementen ermöglicht. Sie können diese zwei Funktionen auch zusammen verwenden. So muss ein Cube oder eine Partition mit aktiviertem Schreibzugriff keine Dimensionen mit aktiviertem Schreibzugriff enthalten. **Verwandtes Thema:** [Dimensionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
 >  Wenn Sie den Schreibzugriff für einen Cube aktivieren möchten, der eine Microsoft Access-Datenbank als Datenquelle verwendet, sollten Sie in den Datenquellendefinitionen des Cubes, seinen Partitionen oder seinen Dimensionen nicht Microsoft OLE DB-Anbieter für ODBC-Treiber verwenden. Stattdessen können Sie Microsoft Jet 4.0 OLE DB-Anbieter oder eine beliebige Version des Jet Service Pack, die Jet 4.0 OLE beinhaltet, verwenden. Weitere Informationen finden Sie im Microsoft Knowledge Base-Artikel [so erhalten Sie das neueste Servicepack für Microsoft Jet 4.0-Datenbank-Engine](https://support.microsoft.com/?kbid=239114).  

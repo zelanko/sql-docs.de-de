@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779007"
 ---
 # <a name="get-dialog-box-source-control"></a>Abrufen (Dialogfeld der Quellcodeverwaltung)
@@ -46,7 +46,7 @@ ms.locfileid: "62779007"
  **Name**  
  Zeigt die Namen der abzurufenden Elemente an. Die Elemente werden mit einem aktivierten Kontrollkästchen neben dem Namen angezeigt. Wenn ein Element nicht abgerufen werden soll, deaktivieren Sie das entsprechende Kontrollkästchen.  
   
- **Optionen**  
+ **Options**  
  Zeigt die für das Quellcodeverwaltungs-Plug-In spezifischen Abrufoptionen an, wenn Sie auf den Pfeil rechts neben der Schaltfläche klicken.  
   
  **Sort**  

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b13daf2d32cc41d63deea6c612dde247d541e4d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128569"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Laden von Daten mit INSERT in Parallel Data Warehouse
@@ -29,10 +29,10 @@ In der folgende Tabelle definiert, der akzeptierten Literaltypen, Format und Kon
 |Binäres literal|0x*hexidecimal_string*<br /><br />Beispiel: 0x12Ef|Binäre Literale müssen mit ' 0 X vorangestellt werden.<br /><br />Die Länge der Daten-Quelle kann nicht die angegebene Anzahl von Bytes für den Datentyp nicht überschreiten.<br /><br />Kleiner als ist die Datenlänge für die Quelle der **binäre** -Datentyp, die Daten werden aufgefüllt, auf der rechten Seite mit Nullen aufgefüllt, um die Datengröße für den Typ zu erreichen.|  
   
 ## <a name="InsertingLiteralsDateTime"></a>Fügen Sie Literale in Datums- und Uhrzeittypen  
-Datum und Uhrzeit – Literale werden mit Zeichenwerten enthalten, die in bestimmten Formaten, eingeschlossen in einfache Anführungszeichen dargestellt. In den folgenden Tabellen definieren, die zulässige Literaltypen, Format und Konvertierungsregeln für ein Datum oder Uhrzeit-literal in einer SQL Server-PDW-Distribution-Spalte vom Typ eingefügt **"DateTime"**, **Smalldatetime**, **Datum**, **Zeit**, **Datetimeoffset**, oder **datetime2**.  
+Datum und Uhrzeit – Literale werden mit Zeichenwerten enthalten, die in bestimmten Formaten, eingeschlossen in einfache Anführungszeichen dargestellt. In den folgenden Tabellen definieren, die zulässige Literaltypen, Format und Konvertierungsregeln für ein Datum oder Uhrzeit-literal in einer SQL Server-PDW-Distribution-Spalte vom Typ eingefügt **"DateTime"** , **Smalldatetime**, **Datum**, **Zeit**, **Datetimeoffset**, oder **datetime2**.  
   
 ### <a name="datetime-data-type"></a>DateTime-Datentyp  
-Der folgenden Tabelle werden die zulässigen Formate und die Regeln für das Einfügen von literalen Werten in einer verteilungsspalte des Typs **"DateTime"**. Leere Zeichenfolge (") konvertiert wird, auf den Standardwert" 12:00:00.000 von 1900-01-01 ". Zeichenfolgen, die nur Leerzeichen enthalten ("") ein Fehler generiert.  
+Der folgenden Tabelle werden die zulässigen Formate und die Regeln für das Einfügen von literalen Werten in einer verteilungsspalte des Typs **"DateTime"** . Leere Zeichenfolge (") konvertiert wird, auf den Standardwert" 12:00:00.000 von 1900-01-01 ". Zeichenfolgen, die nur Leerzeichen enthalten ("") ein Fehler generiert.  
   
 |Literaltyp|Format|Konvertierungsregeln für|  
 |----------------|----------|--------------------|  

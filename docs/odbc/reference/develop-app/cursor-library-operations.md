@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32e3fcaf9c83c2613a1dc2df499f11c7df2570ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042136"
 ---
 # <a name="cursor-library-operations"></a>Cursorbibliotheksvorgänge
 > [!IMPORTANT]  
 >  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
   
- Wenn eine Anwendung mit einer ODBC 2.*.x* Treiber sendet Aufrufe an die ODBC 3. *X* Cursor-Bibliothek, die Anwendung möglicherweise ODBC 3. *X* Funktionen, die nicht von der ODBC-2 unterstützt werden *.x* Treiber. Anwendungsentwickler Auswahllogik sollten vorsichtig sein, wie diese Features verwendet werden, jedoch wird. Verwenden der ODBC-3. *x* Cursorbibliothek macht nicht zu einer ODBC 2.*.x* Treiber in einer ODBC 3. *X* Treiber.
+ Wenn eine Anwendung mit einer ODBC 2. *.x* Treiber sendet Aufrufe an die ODBC 3.. *X* Cursor-Bibliothek, die Anwendung möglicherweise ODBC 3.. *X* Funktionen, die nicht von der ODBC-2 unterstützt werden *.x* Treiber. Anwendungsentwickler Auswahllogik sollten vorsichtig sein, wie diese Features verwendet werden, jedoch wird. Verwenden der ODBC-3. *x* Cursorbibliothek macht nicht zu einer ODBC 2. *.x* Treiber in einer ODBC 3.. *X* Treiber.

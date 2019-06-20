@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c79d078e8a9e2a8928c98c9d7ca56e220e86051
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099991"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
@@ -92,7 +92,7 @@ ms.locfileid: "66099991"
   
  Verwenden Sie den Eigenschaftenbereich, um Folgendes durchzuführen:  
   
--   Festlegen von Eigenschaften für das aktuell ausgewählte Element auf der Entwurfsoberfläche. Einige Eigenschaften stellen eine Dropdownliste mit Werten bereit. Sie können den Wert auch direkt in die Zelle eingeben. Einige Eigenschaften enthalten eine Sammlung von Werten, die durch den Wert **(Auflistung)** angegeben wird. Die meisten Eigenschaften können einen Ausdruck annehmen. Komplexe Ausdrücke werden durch den Wert **\<Ausdruck>** angezeigt. Klicken Sie auf **\<Ausdruck>**, um das Dialogfeld **Ausdruck** zu öffnen. Weitere Informationen finden Sie unter [Expression Dialog Box](../expression-dialog-box.md).  
+-   Festlegen von Eigenschaften für das aktuell ausgewählte Element auf der Entwurfsoberfläche. Einige Eigenschaften stellen eine Dropdownliste mit Werten bereit. Sie können den Wert auch direkt in die Zelle eingeben. Einige Eigenschaften enthalten eine Sammlung von Werten, die durch den Wert **(Auflistung)** angegeben wird. Die meisten Eigenschaften können einen Ausdruck annehmen. Komplexe Ausdrücke werden durch den Wert **\<Ausdruck>** angezeigt. Klicken Sie auf **\<Ausdruck>** , um das Dialogfeld **Ausdruck** zu öffnen. Weitere Informationen finden Sie unter [Expression Dialog Box](../expression-dialog-box.md).  
   
 -   Verwenden Sie die Schaltflächen in der Symbolleiste des Eigenschaftenbereichs, um das Raster von Kategoriesicht in alphabetische Sicht zu ändern. In der Kategoriesicht müssen Sie möglicherweise eine Kategorie erweitern, um alle Eigenschaften darunter zu sehen. Zum Öffnen des Dialogfelds „Eigenschaften“ für ein Element klicken Sie in der Symbolleiste auf die Schaltfläche **Eigenschaftenseiten** , oder klicken Sie mit der rechten Maustaste auf das Element, und klicken Sie anschließend auf **Eigenschaften**.  
   
@@ -270,7 +270,7 @@ ms.locfileid: "66099991"
   
 -   Steuern von Fenstern und Modi in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]:  
   
-    |Description|Tastenkombination|  
+    |Beschreibung|Tastenkombination|  
     |-----------------|---------------------|  
     |Erstellen des ausgewählten Projekts|CTRL+UMSCHALT+B|  
     |Anzeigen des Eigenschaftenfensters|F4|  
@@ -280,7 +280,7 @@ ms.locfileid: "66099991"
   
 -   Steuern von Elementen auf der Berichtsentwurfsoberfläche:  
   
-    |Description|Tastenkombination|  
+    |Beschreibung|Tastenkombination|  
     |-----------------|---------------------|  
     |Fokus von einem Berichtselement zum nächsten Berichtselement verschieben|TAB|  
     |Ausgewähltes Berichtselement verschieben|Pfeiltasten|  

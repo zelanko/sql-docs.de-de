@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047594"
 ---
 # <a name="atomization-xquery"></a>Atomisierung (XQuery)
@@ -50,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   Bei der Konstruktion des OriginalLaborHours-Attributs wird die Atomisierung implizit auf die von (`$WC/@LaborHours`) zurückgegebene Singleton-Sequenz angewendet. Der typisierte Wert des LaborHours-Attributs wird anschließend dem OriginalLaborHours-Attribut zugewiesen.  
   
--   Bei der Konstruktion des UpdatedLaborHoursV1-Attributs macht der arithmetische Operator atomare Werte erforderlich. Aus diesem Grund **data()** implizit auf das von zurückgegebene LaborHours-Attributs angewendet wird (`$WC/@LaborHours`). Anschließend wird dem Attribut der atomare Wert 1 hinzugefügt. Die Konstruktion des updatedlaborhoursv2 zeigt die explizite Anwendung von **data()**, ist jedoch nicht erforderlich.  
+-   Bei der Konstruktion des UpdatedLaborHoursV1-Attributs macht der arithmetische Operator atomare Werte erforderlich. Aus diesem Grund **data()** implizit auf das von zurückgegebene LaborHours-Attributs angewendet wird (`$WC/@LaborHours`). Anschließend wird dem Attribut der atomare Wert 1 hinzugefügt. Die Konstruktion des updatedlaborhoursv2 zeigt die explizite Anwendung von **data()** , ist jedoch nicht erforderlich.  
   
 ```  
 SELECT Instructions.query('  
