@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109707"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
@@ -70,7 +70,7 @@ ms.locfileid: "66109707"
   
 10. Geben Sie den Vergleichswert ein.  
   
-11. Klicken Sie optional erneut auf die Auslassungspunkte **(...)**.  
+11. Klicken Sie optional erneut auf die Auslassungspunkte **(...)** .  
   
      Die Auslassungspunkte **(...)** werden in der Zeile mit der ersten Klausel angezeigt.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66109707"
   
 12. Klicken Sie optional auf den Pfeil nach unten, wählen Sie **Feldauswahlmodus**und anschließend eine Spalte in der Liste aus.  
   
-     Die Auslassungspunkte **(...)**, auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
+     Die Auslassungspunkte **(...)** , auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.  
   
 13. Klicken Sie optional erneut auf **Regel hinzufügen** , um weitere Regeln hinzuzufügen.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66109707"
   
 20. Aktualisieren Sie optional im Textfeld **Betreff** die Betreffzeile der Warnmeldung.  
   
-     Der Standardbetreff lautet **Datenwarnung für \<Name der Datenwarnung>**.  
+     Der Standardbetreff lautet **Datenwarnung für \<Name der Datenwarnung>** .  
   
 21. Geben Sie optional im Textfeld **Beschreibung** eine Beschreibung der Warnmeldung ein.  
   

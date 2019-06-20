@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198578"
 ---
 # <a name="delete---sql-command"></a>DELETE (SQL-Befehl)
@@ -34,7 +34,7 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>Argumente  
- AUS [ *DatabaseName!*] *TableName*  
+ AUS [ *DatabaseName!* ] *TableName*  
  Gibt die Tabelle, in der Datensätze zum Löschen markiert sind.  
   
  *DatabaseName!* Gibt den Namen einer Datenbank, die in der Tabelle enthält, wenn die enthaltene Datenbank nicht mit der Datenbank, mit der Datenquelle angegeben ist. Sie müssen den Namen einer Datenbank enthalten, die in der Tabelle enthält, wenn die Datenbank nicht mit der Datenbank, mit der Datenquelle angegeben ist. Schließen Sie das Ausrufezeichen (!)-Trennzeichen an, nach dem Datenbanknamen und vor dem Tabellennamen.  

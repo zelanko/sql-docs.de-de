@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067299"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Bereitstellen in SQL Server-Datentools (SSAS – tabellarisch)
@@ -54,7 +54,7 @@ ms.locfileid: "66067299"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>So stellen Sie eine Projektmappe für tabellarische Modelle bereit  
   
--   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf die **erstellen** Menü klicken Sie auf **bereitstellen \<Projektname >**.  
+-   In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf die **erstellen** Menü klicken Sie auf **bereitstellen \<Projektname >** .  
   
      Im Dialogfeld **Bereitstellen** wird der Status der Metadatenbereitstellung und der Verarbeitung jeder im Modell enthaltenen Tabelle angezeigt (es sei denn, die Eigenschaft „Verarbeitungsoption“ wurde auf „Nicht verarbeiten“ festgelegt). Stellen Sie nach Abschluss des Bereitstellungsprozesses mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit der Analysis Services-Instanz her, und überprüfen Sie, ob das neue Modelldatenbankobjekt erstellt wurde, oder verwenden Sie die Clientberichterstellungsanwendung, um eine Verbindung mit dem bereitgestellten Modell herzustellen.  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090061"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Verwenden von sqlcmd mit Skriptvariablen
@@ -79,7 +79,7 @@ ms.locfileid: "66090061"
   
 -   Variablennamen dürfen keine Leerzeichen oder Anführungszeichen enthalten.  
   
--   Variablennamen dürfen nicht die gleiche Form wie Variablenausdrücke (beispielsweise *$(var)*) aufweisen.  
+-   Variablennamen dürfen nicht die gleiche Form wie Variablenausdrücke (beispielsweise *$(var)* ) aufweisen.  
   
 -   Bei Skriptvariablen wird nicht zwischen Groß- und Kleinschreibung unterschieden.  
   
@@ -343,6 +343,6 @@ ms.locfileid: "66090061"
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden des Hilfsprogramms sqlcmd](sqlcmd-use-the-utility.md)   
  [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md)   
- [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083060"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
@@ -67,8 +67,8 @@ ms.locfileid: "66083060"
 |**ModelingFlags**|Legt weitere Parameter fest, die vom Algorithmus verfügbar gemacht werden.|  
 |`Name`|Name der Spalte.|  
 |**NameColumn**|Identifiziert die Spalte, die den Namen des übergeordneten Elements bereitstellt.|  
-|**Quelle**|Zeigt die Quelle der Spalte an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
-|**SourceMeasureGroup**|Zeigt die Quelle der Measuregruppe an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
+|**Quelle**|Zeigt die Quelle der Spalte an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)** .<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
+|**SourceMeasureGroup**|Zeigt die Quelle der Measuregruppe an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)** .<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
 |**Typ**|Der Datentyp für den Inhalt der Spalte.|  
   
  Weitere Informationen zum Festlegen oder Ändern von Eigenschaften finden Sie unter [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md).  

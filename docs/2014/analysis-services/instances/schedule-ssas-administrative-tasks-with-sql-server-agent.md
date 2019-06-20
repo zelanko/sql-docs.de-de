@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079675"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent
@@ -81,7 +81,7 @@ ms.locfileid: "66079675"
   
 6.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen ein.  
   
-7.  Geben Sie in **Server** **localhost** für eine Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und **localhost\\**\<*Instanzname*> für eine benannte Instanz ein.  
+7.  Geben Sie in **Server** **localhost** für eine Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und **localhost\\** \<*Instanzname*> für eine benannte Instanz ein.  
   
      Wenn Sie den Auftrag von einem Remotecomputer ausführen, verwenden Sie den Namen des Servers und der Instanz, wo der Auftrag ausgeführt wird. Verwenden Sie das Format \< *Servernamen*> für eine Standardinstanz und \< *Servernamen*>\\<*Instanz Namen*> für eine benannte Instanz.  
   

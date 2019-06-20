@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014020"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
@@ -106,7 +106,7 @@ ms.locfileid: "66014020"
 #### <a name="deepest-cell-rule"></a>Tiefste-Zelle-Regel  
  Bei der Tiefste-Zelle-Regel wird die Tatsache genutzt, dass jede Zelle einer untergeordneten Ebene zu der ihr übergeordneten Zelle gehört: Eine Zelle auf Ebene 4 gehört zu einer Zelle auf Ebene 3, eine Zelle auf Ebene 3 gehört zu einer Zelle auf Ebene 2, und eine Zelle auf Ebene 2 gehört zu einer Zelle auf Ebene 1. Zum Beispiel gehört ein Objekt, das zu Zelle 1.1.1.1 gehört, auch zu Zelle 1.1.1, Zelle 1.1 und Zelle 1. Die Kenntnis solcher Beziehungen in der Zellenhierarchie wurde in den Abfrageprozessor integriert. Daher müssen nur die Zellen der tiefsten Ebene im Index verzeichnet werden, sodass im Index nur die minimale Menge an Informationen gespeichert werden muss.  
   
- In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Ebene-1 bis Ebene 3 Zellen: 4, 4.4, und 4.4.10 und 4.4.14. Allerdings zählt das Mosaik Verwendung der tiefste-Zelle-Regel nur die 12 Zellen auf Ebene 4: 4.4.10.13-15 und 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
+ In der folgenden Abbildung wird ein relativ kleines rautenförmiges Polygon durch den Mosaikprozess unterteilt. Für den Index wird der vordefinierte Zellen-pro-Objekt-Grenzwert 16 verwendet, die bei diesem kleinen Objekt nicht erreicht wird. Deshalb wird der Mosaikprozess bis zu Ebene 4 fortgesetzt. Das Polygon befindet sich in den folgenden Zellen der Ebene 1 bis Ebene 3: 4, 4.4 und 4.4.10 und 4.4.14. Bei Verwendung der Tiefste-Zelle-Regel zählt das Mosaik jedoch nur die 12 Zellen auf Ebene 4: 4.4.10.13-15 und 4.4.14.1-3, 4.4.14.5-7 und 4.4.14.9-11.  
   
  ![Tiefste-Zelle-Optimierung](../../database-engine/media/spndx-opt-deepest-cell.gif "Deepest-cell optimization")  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66014020"
 >  Dieses Mosaikschema kann mit der USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.  
   
 ##### <a name="the-bounding-box"></a>Das umgebende Feld  
- Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, `(` _X-min_**,**_y-min_ `)` und `(` _X-Max_ **,**_y-Max_`)`, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
+ Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, `(` _X-min_ **,** _y-min_ `)` und `(` _X-Max_ **,** _y-Max_`)`, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
   
 -   *x-min* ist die X-Koordinate der linken unteren Ecke des umgebenden Felds.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "66014020"
 > [!NOTE]  
 >  Diese Koordinaten werden in der BOUNDING_BOX-Klausel der [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung angegeben.  
   
- Die `(` _X-min_**,**_y-min_ `)` und `(` _X-Max_**,** _y-Max_ `)` Koordinaten zu bestimmen, die Position und Größe des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.  
+ Die `(` _X-min_ **,** _y-min_ `)` und `(` _X-Max_ **,** _y-Max_ `)` Koordinaten zu bestimmen, die Position und Größe des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.  
   
  Der räumliche Index zerlegt den Raum im umgebenden Feld. Das Raster der Ebene&nbsp;1 der Rasterhierarchie füllt das umgebende Feld aus. Zur Platzierung eines geometrischen Objekts in der Rasterhierarchie vergleicht der räumliche Index die Koordinaten des Objekts mit den Koordinaten des umgebenden Felds.  
   
- Die folgende Abbildung zeigt die Punkte, die von definiert die `(` _X-min_**,**_y-min_ `)` und `(` _X-Max_  **,**_y-Max_ `)` Koordinaten des umgebenden Felds. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
+ Die folgende Abbildung zeigt die Punkte, die von definiert die `(` _X-min_ **,** _y-min_ `)` und `(` _X-Max_  **,** _y-Max_ `)` Koordinaten des umgebenden Felds. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
   
  ![Umgebendes Feld mit Koordinaten und Zelle 0](../../database-engine/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0")  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66014020"
 ##  <a name="methods"></a> Von räumlichen Indizes unterstützte Methoden  
   
 ###  <a name="geometry"></a> Von räumlichen Indizes unterstützte geometry-Methoden  
- Räumliche Indizes unterstützen unter bestimmten Bedingungen die folgenden mengenorientierten Geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches(), and STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
+ Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() und STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
  *geometrie1*.*Methodenname*(*geometrie2*)*Vergleichsoperator**gültige_Zahl*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66014020"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Von räumlichen Indizes unterstützte geography-Methoden  
- Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten Geography-Methoden: STIntersects(),STEquals() und STDistance(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
+ Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten geography-Methoden: STIntersects(),STEquals() und STDistance(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:  
   
  *geographie1*.*Methodenname*(*geographie2*)*Vergleichsoperator**gültige_Zahl*  
   

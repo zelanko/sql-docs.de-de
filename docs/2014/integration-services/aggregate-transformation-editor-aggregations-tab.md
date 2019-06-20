@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061581"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Aggregationen)
@@ -82,7 +82,7 @@ ms.locfileid: "66061581"
  **Count Distinct Scale**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn beide `CountDistinctScale` und **CountDistinctKeys** angegeben sind, **CountDistinctKeys** hat Vorrang vor.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine Angabe|Die `CountDistinctScale`-Eigenschaft wird nicht verwendet.|  
 |Low|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  

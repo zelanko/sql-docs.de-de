@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815752"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62815752"
 ##  <a name="AlwaysOnPBM"></a> Vordefinierte Richtlinien und Probleme  
  In der folgenden Tabelle sind die vordefinierten Richtlinien zusammengefasst.  
   
-|Richtlinienname|Problem|Kategorie**<sup>*</sup>**|Facet|  
+|Richtlinienname|Problem|Kategorie **<sup>*</sup>**|Facet|  
 |-----------------|-----------|------------------------------|-----------|  
 |WSFC-Clusterstatus|[WSFC-Clusterdienst ist offline](wsfc-cluster-service-is-offline.md).|Kritisch|SQL Server-Instanz|  
 |Onlinezustand der Verfügbarkeitsgruppe|[Verfügbarkeitsgruppe ist offline](availability-group-is-offline.md).|Kritisch|Verfügbarkeitsgruppe|  

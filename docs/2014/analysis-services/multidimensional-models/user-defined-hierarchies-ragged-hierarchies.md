@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072523"
 ---
 # <a name="ragged-hierarchies"></a>Unregelmäßige Hierarchien
@@ -65,7 +65,7 @@ ms.locfileid: "66072523"
 ##  <a name="bkmk_Mdx"></a> Festlegen der MDX-Kompatibilität, um zu bestimmen, wie Platzhalter in Clientanwendungen dargestellt werden  
  Nachdem Sie `HideMemberIf` für eine Hierarchieebene festgelegt haben, sollten Sie auch die `MDX Compatibility`-Eigenschaft in der von der Clientanwendung gesendeten Verbindungszeichenfolge festlegen. Die `MDX Compatibility`-Einstellung bestimmt, ob `HideMemberIf` verwendet wird.  
   
-|Einstellung für die MDX-Kompatibilität|Description|Verwendung|  
+|Einstellung für die MDX-Kompatibilität|Beschreibung|Verwendung|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Zeigt einen Platzhalterwert an.|Dies ist der von Excel, SSDT und SSMS verwendete Standardwert. Er weist den Server an, beim Drilldown auf leere Ebenen einer unregelmäßigen Hierarchie Platzhalterwerte zurückzugeben. Wenn Sie auf den Platzhalterwert klicken, können Sie einen Drilldown bis auf die untergeordneten Knoten (des Blatts) ausführen.<br /><br /> Die Verbindungszeichenfolge zur Verbindung mit Analysis Services ist im Besitz von Excel, und `MDX Compatibility` wird bei jeder neuen Verbindung grundsätzlich auf 1 festgelegt. Bei diesem Verhalten wird die Abwärtskompatibilität beibehalten.|  
 |**2**|Blendet einen Platzhalterwert (entweder ein NULL-Wert oder ein Duplikat der übergeordneten Ebene) aus, wobei andere Ebenen und Knoten mit relevanten Werten jedoch eingeblendet bleiben.|`MDX Compatibility`= 2 ist in der Regel die bevorzugte Einstellung für unregelmäßige Hierarchien. Diese Einstellung kann von einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht und einigen Clientanwendungen von Drittanbietern beibehalten werden.|  

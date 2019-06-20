@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 014fb8344a0b2cf93dc7f375fffc717663f53a46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641841"
 ---
 # <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Erstellen Sie eine gespeicherte pProcedure mithilfe von sqlrutils
@@ -82,13 +82,13 @@ Wenn Sie jede Funktion aufgerufen haben, wird ein R-Objekt erstellt, wenn Sie sp
 
 Wenn Sie alle Eingabe- und Ausgabeparameter vorbereitet sind, stellen Sie einen Aufruf der `StoredProcedure` Konstruktor.
 
-**Usage**
+**Verwendung**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
 Um zu veranschaulichen, wird davon ausgegangen, dass Sie eine gespeicherte Prozedur, die mit dem Namen erstellen möchten **Sp_rsample** mit folgenden Parametern:
 
-- Verwendet eine vorhandene Funktion **Foosql**. Die Funktion wurde auf Grundlage von vorhandenem Code im R-Funktion **"Foo"**, aber Sie mussten die Funktion, um den Anforderungen entsprechen, wie in beschrieben [in diesem Abschnitt](#bkmk_rewrite), und die aktualisierte Funktion als benannte  **Foosql**.
+- Verwendet eine vorhandene Funktion **Foosql**. Die Funktion wurde auf Grundlage von vorhandenem Code im R-Funktion **"Foo"** , aber Sie mussten die Funktion, um den Anforderungen entsprechen, wie in beschrieben [in diesem Abschnitt](#bkmk_rewrite), und die aktualisierte Funktion als benannte  **Foosql**.
 - Verwendet den Datenrahmen **Queryinput** als Eingabe
 - Generiert als Ausgabe einen Datenrahmen mit dem R-Variablennamen **Sqloutput**
 - Den T-SQL-Code als in-Datei erstellen möchten die `C:\Temp` Ordner, damit Sie es später noch Mal mit der SQL Server Management Studio ausführen können

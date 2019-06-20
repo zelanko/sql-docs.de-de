@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076081"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Datenquellen und Bindungen (SSAS – mehrdimensional)
@@ -177,7 +177,7 @@ ms.locfileid: "66076081"
  Alle Elemente, die sich auf Out-of-Line-Bindungen beziehen, sind optional. Für alle nicht angegebenen Elemente verwendet ASSL die im DDL-Code des permanenten Objekts enthaltene Festlegung. Festlegung von `DataSource` oder `DataSourceView` in dem Befehl `Process` ist optional. Wenn `DataSource` oder `DataSourceView` festgelegt wird, werden diese nicht instanziiert und bleiben nicht erhalten, nachdem der `Process`-Befehl ausgeführt wurde.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definition des Out-of-Line-Bindungstyps  
- Innerhalb der Out-of-Line-`Bindings`-Auflistung ermöglicht ASSL eine Auflistung von Bindungen für mehrere Objekte, von denen jedes eine `Binding` ist. Jede `Binding` besitzt einen erweiterten Objektverweis, der dem Objektverweis entspricht, der jedoch auch auf untergeordnete Objekte verweisen kann (beispielsweise Dimensionsattribute und Measuregruppenattribute). Dieses Objekt übernimmt die flatform normalerweise von der `Object` Element im `Process` Befehlen, mit dem Unterschied, der die \< *Objekt*>\<*/Object*> Tags sind nicht vorhanden.  
+ Innerhalb der Out-of-Line-`Bindings`-Auflistung ermöglicht ASSL eine Auflistung von Bindungen für mehrere Objekte, von denen jedes eine `Binding` ist. Jede `Binding` besitzt einen erweiterten Objektverweis, der dem Objektverweis entspricht, der jedoch auch auf untergeordnete Objekte verweisen kann (beispielsweise Dimensionsattribute und Measuregruppenattribute). Dieses Objekt übernimmt die flatform normalerweise von der `Object` Element im `Process` Befehlen, mit dem Unterschied, der die \< *Objekt*>\< */Object*> Tags sind nicht vorhanden.  
   
  Jedes Objekt, das für die die Bindung wird angegeben, wird durch ein XML-Element der Form identifiziert \< *Objekt*> ID (z. B. `DimensionID`). Nachdem Sie, das Objekt identifiziert haben so genau wie möglich mit dem Formular \< *Objekt*>-ID, wird das Element für die die Bindung angegeben wird, in der Regel `Source`. Häufig ist die `Source` eine Eigenschaft auf dem `DataItem`. Dies ist der Fall bei Spaltenbindungen in einem Attribut. In diesem Fall geben Sie nicht das `DataItem`-Tag an, sondern lediglich die `Source`-Eigenschaft, als befände sich diese direkt in der zu bindenden Spalte.  
   

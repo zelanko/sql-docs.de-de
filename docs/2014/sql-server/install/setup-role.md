@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092233"
 ---
 # <a name="setup-role"></a>Setuprolle
@@ -38,7 +38,7 @@ ms.locfileid: "66092233"
  **Alle Funktionen mit Standardwerten**  
  Wählen Sie diese Setuprolle aus, um alle für diese Version verfügbaren Funktionen zu installieren. Beachten Sie, dass PowerPivot für SharePoint von dieser Rolle ausgeschlossen wird. Sie müssen diese Funktion mithilfe der PowerPivot für SharePoint-Setuprolle installieren.  
   
- Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird für den Start unter Verwendung des Kontos **NT-AUTORITÄT\NETZWERKDIENST** konfiguriert. Der aktuelle Benutzer wird als Mitglied der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**-sysadmin**-Rolle bereitgestellt. Durch diese Option festgelegte Werte können durch Angabe zusätzlicher Befehlszeilenparameter überschrieben werden.  
+ Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird für den Start unter Verwendung des Kontos **NT-AUTORITÄT\NETZWERKDIENST** konfiguriert. Der aktuelle Benutzer wird als Mitglied der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-sysadmin**-Rolle bereitgestellt. Durch diese Option festgelegte Werte können durch Angabe zusätzlicher Befehlszeilenparameter überschrieben werden.  
   
  Sofern das Betriebssystem nicht als Domänencontroller fungiert, verwenden die Datenbank-Engine, Reporting Services und Integration Services standardmäßig das Konto NT-AUTORITÄT\NETZWERKDIENST, und das Startprogramm für den SQL-Volltextfilterdaemon verwendet das Konto NT-AUTORITÄT\LOKALER DIENST.  
   

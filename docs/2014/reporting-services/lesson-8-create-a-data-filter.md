@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108391"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
@@ -41,7 +41,7 @@ ms.locfileid: "66108391"
   
 4.  In der **Ausdruck** abgelegt wird, klicken Sie `ProductID` aus der Dropdown-Liste. Dies ist die Spalte, auf die Sie den Filter anwenden.  
   
-5.  Klicken Sie auf den Gleichheitsoperator (**=**)-Operator in der **Operator** Dropdown-Liste.  
+5.  Klicken Sie auf den Gleichheitsoperator ( **=** )-Operator in der **Operator** Dropdown-Liste.  
   
 6.  Klicken Sie auf die Schaltfläche "Ausdruck" neben der **Wert** auf **Parameter** in die **Kategorie** Bereich, und doppelklicken Sie dann auf `productid` in die  **Werte** Bereich. Die **Ausdruck festlegen für: Wert** Feld sollte nun ähnlich wie Ausdruck enthalten **= Parameter! "ProductID". Wert**.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b568790f9a61c01054d4a7225e4a2dbf9a39887
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071504"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Bereitstellen von PowerPivot-Lösungen in SharePoint
@@ -142,7 +142,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Die Webanwendungslösung wird anfänglich in der Zentraladministration bereitgestellt. Es folgen weitere Bereitstellungen für alle zusätzlichen Webanwendungen, die Anfragen für PowerPivot-Daten unterstützen. Um die webanwendungslösung in der Zentraladministration bereitzustellen, müssen Sie das PowerPivot-Konfigurationstool oder PowerShell-Cmdlet verwenden. Für alle anderen Webanwendungen können Sie die Webanwendungslösung manuell bereitstellen, und zwar mithilfe der Zentraladministration oder der PowerShell.  
   
-|Lösung|Description|  
+|Lösung|Beschreibung|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Der globalen Assembly wird Microsoft.AnalysisServices.SharePoint.Integration.dll hinzugefügt.<br /><br /> Der globalen Assembly wird Microsoft.AnalysisServices.ChannelTransport.dll hinzugefügt.<br /><br /> Installiert Funktionen sowie Ressourcendateien und registriert Inhaltstypen.<br /><br /> Fügt Bibliotheksvorlagen für den PowerPivot-Katalog und Datenfeedbibliotheken hinzu.<br /><br /> Anwendungsseiten für die Dienstanwendungskonfiguration, das PowerPivot-Management-Dashboard, die Datenaktualisierung und der PowerPivot-Katalog werden hinzugefügt.|  
 |powerpivotwebapp.wsp|Fügt dem Ordner für Webservererweiterungen auf dem Web-Front-End Microsoft.AnalysisServices.SharePoint.Integration.dll-Ressourcendateien hinzu.<br /><br /> Fügt dem Web-Front-End den PowerPivot-Webdienst hinzu.<br /><br /> Fügt die Miniaturbildgenerierung für den PowerPivot-Katalog hinzu.|  

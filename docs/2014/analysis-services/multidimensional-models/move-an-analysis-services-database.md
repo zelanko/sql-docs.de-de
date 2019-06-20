@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073600"
 ---
 # <a name="move-an-analysis-services-database"></a>Verschieben einer Analysis Services Datenbank
@@ -53,7 +53,7 @@ ms.locfileid: "66073600"
   
 6.  Mit der rechten Maustaste auf die **Datenbanken** Ordner, und wählen **anfügen...**  
   
-7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen (**...** ) nach dem Datenbankordner suchen.  
+7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen ( **...** ) nach dem Datenbankordner suchen.  
   
 8.  Wählen Sie die `ReadWrite` Modus für die Datenbank.  
   

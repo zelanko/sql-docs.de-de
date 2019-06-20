@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 733827ecace64ef86b54831f63fd8c2889203919
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478965"
 ---
 # <a name="model-permissions-master-data-services"></a>Modellberechtigungen (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65478965"
 > [!NOTE]  
 >  Wenn ein Benutzer ein Modelladministrator ist, wird das Modell in allen Funktionsbereichen der Benutzeroberfläche angezeigt. Andernfalls wird das Modell nur im Funktionsbereich **Explorer** angezeigt. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
   
-|Berechtigung|Description|  
+|Berechtigung|Beschreibung|  
 |----------------|-----------------|  
 |**Schreibgeschützt**|In **Explorer**, wird das Modell angezeigt, aber der Benutzer kann nicht hinzugefügt werden oder Entfernen von Mitgliedern und Attributwerte, hierarchiemitgliedschaften oder sammlungszugehörigkeiten kann nicht aktualisiert werden.|  
 |**Update**|In **Explorer**, das Modell angezeigt wird und der Benutzer kann hinzufügen und Entfernen von Mitgliedern, Attributwerte, hierarchiemitgliedschaften und auflistungsmitgliedschaften aktualisieren können.|  

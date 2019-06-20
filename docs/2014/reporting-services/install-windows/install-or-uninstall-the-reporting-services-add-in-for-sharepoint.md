@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0da7d391c5dc564129f1504e2100a6c47dcb000b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108820"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint (SharePoint 2010 und SharePoint 2013)
@@ -80,7 +80,7 @@ ms.locfileid: "66108820"
   
 -   Wenn Sie zuerst die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins installieren, wird bei der Ausführung des Vorbereitungstools für SharePoint-Produkte folgendes Dialogfeld eingeblendet, in dem Sie darauf hingewiesen werden, dass die ältere Add-In-Version vom Vorbereitungstool nicht installiert wurde, weil die neuere Version erkannt wurde. Dieses Verhalten wird erwartet.  
   
-     ![SSRS-add-in ist bereits installiert. ](../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "SSRS-add-in bereits installiert ist.")  
+     ![SSRS-add-in ist bereits installiert. ] (../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "SSRS-add-in bereits installiert ist.")  
   
  **SharePoint 2013**  
   

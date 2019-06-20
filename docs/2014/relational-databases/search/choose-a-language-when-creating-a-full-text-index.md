@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012730"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
@@ -69,7 +69,7 @@ ms.locfileid: "66012730"
  Beim Erstellen eines Volltextindex müssen Sie für jede Spalte einen gültigen Sprachennamen angeben. Wenn ein Sprachenname gültig ist, von der Katalogsicht [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) jedoch nicht zurückgegeben wird, greift die Volltextsuche, falls vorhanden, auf einen ähnlichen Sprachennamen der jeweiligen Sprachengruppe zurück. Andernfalls verwendet die Volltextsuche die neutrale Wörtertrennung. Dieses Verhalten kann sich ggf. auf die Genauigkeit der Rückrufe auswirken. Es ist daher sehr zu empfehlen, dass Sie beim Erstellen eines Volltextindex für jede Spalte einen gültigen und verfügbaren Sprachennamen angeben.  
   
 > [!NOTE]  
->  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z.&amp;nbsp;B. `char` oder `nchar`). Auch wenn die Sortierreihenfolge einer Spalte vom Typ `char`, `varchar` oder `text` auf eine andere Sprache als die von der LCID vorgegebenen festgelegt ist, wird die LCID während der Volltextindizierung und -abfrage dieser Spalten trotzdem verwendet.  
+>  Die LCID wird für alle Datentypen verwendet, die für die Volltextindizierung geeignet sind (z.&nbsp;B. `char` oder `nchar`). Auch wenn die Sortierreihenfolge einer Spalte vom Typ `char`, `varchar` oder `text` auf eine andere Sprache als die von der LCID vorgegebenen festgelegt ist, wird die LCID während der Volltextindizierung und -abfrage dieser Spalten trotzdem verwendet.  
   
 
   
