@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63305800"
 ---
 # <a name="unicode-function-arguments"></a>Unicode-Funktionsargumente
@@ -66,7 +66,7 @@ Der ODBC 3.5 (oder höher)-Treiber-Manager unterstützt die ANSI- und Unicode-Ve
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  Als veraltet markierte Funktionen verfügen über Unterstützung für Unicode-in-ANSI--Zuordnung aus, da die ODBC 3.*.x* -Treiber-Manager unterstützt die erneute Kompilierung ODBC 2. *X* Anwendungen mit der Unicode- **#define**.  
+>  Als veraltet markierte Funktionen verfügen über Unterstützung für Unicode-in-ANSI--Zuordnung aus, da die ODBC 3. *.x* -Treiber-Manager unterstützt die erneute Kompilierung ODBC 2.. *X* Anwendungen mit der Unicode- **#define**.  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

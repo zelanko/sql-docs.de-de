@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 013b7a7a2124788f3f1bcaa6d09b8ef7b10562e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63248110"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -92,7 +92,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Durch Ändern des Wertes des Beschreibungs-Flags können Sie nachfolgende Elemente in der angegebenen Ebene bzw. dem angegebenen Abstand, untergeordnete Elemente vor und nach der angegebenen Ebene bzw. dem angegebenen Abstand (bis zum Blattknoten) sowie die untergeordneten Blattelemente unabhängig von der angegebenen Ebene bzw. dem angegebenen Abstand ein- oder ausschließen. Die folgende Tabelle beschreibt die Flags, die innerhalb der *Desc_Flag* Argument.  
   
-|Flag|Description|  
+|Flag|Beschreibung|  
 |----------|-----------------|  
 |SELF|Gibt nur nachfolgende Elemente auf der angegebenen Ebene oder in dem angegebenen Abstand zurück. Die Funktion schließt das angegebene Element ein, wenn es sich bei der angegebenen Ebene um die Ebene des angegebenen Elements handelt.|  
 |AFTER|Gibt nachfolgende Elemente aus allen Ebenen zurück, die der angegebenen Ebene oder dem angegebenen Abstand untergeordnet sind.|  

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b859c3b9841945241ac0ec9c5238a479a5ba3343
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63302816"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Installieren von SSMA für SAP ASE (SybaseToSQL)
@@ -29,7 +29,7 @@ Wenn Sie ein Projekt von einer früheren Version von SSMA für SAP ASE öffnen, 
   
 ## <a name="contents"></a>Inhalt  
   
-|Artikel|Description|  
+|Artikel|Beschreibung|  
 |---------|---------------|  
 |[Installieren von SSMA für SAP ASE-Client &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Bietet Informationen und Anweisungen zum Installieren von SSMA für SAP ASE-Client.|  
 |[Installieren von SSMA-Komponenten auf SQLServer &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Enthält Informationen und Anweisungen zur Installation der-Erweiterungspaket auf Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

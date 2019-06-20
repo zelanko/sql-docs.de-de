@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 2768449e242b7da66406b9c1a5b95084e0f04949
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072397"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263380"
 ---
 # <a name="calculated-columns"></a>Berechnete Spalten
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072397"
   
 -   Wenn Sie eine berechnete Spalte umbenennen, müssen alle Formeln, die von der Spalte abhängig sind, manuell aktualisiert werden. Außer wenn Sie sich im manuellen Updatemodus befinden, werden die Formelergebnisse automatisch aktualisiert. Dieser Vorgang nimmt möglicherweise etwas Zeit in Anspruch.  
   
--   Einige Zeichen können innerhalb von Spaltennamen nicht verwendet werden. Weitere Informationen finden Sie unter "Benennungsanforderungen" in der [DAX-Syntaxreferenz](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5).  
+-   Einige Zeichen können innerhalb von Spaltennamen nicht verwendet werden. Weitere Informationen finden Sie unter "Benennungsanforderungen" in der [DAX-Syntaxreferenz](/dax/dax-syntax-reference).  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  Die Formel für eine berechnete Spalte kann ressourcenintensiver als die für ein Measure verwendete Formel sein. Ein Grund hierfür ist, dass das Ergebnis für eine berechnete Spalte immer für jede Zeile in einer Tabelle berechnet wird, wohingegen ein Measure nur für die vom Filter definierten Zellen berechnet wird, die in einem Bericht, in der PivotTable oder im PivotChart verwendet werden. Zum Beispiel enthält eine Tabelle mit einer Million Zeilen immer eine berechnete Spalte mit einer Million Ergebnissen, was sich entsprechend auf die Leistung auswirkt. Eine PivotTable filtert Daten jedoch im Allgemeinen, indem eine Zeilen- und Spaltenüberschrift angewendet wird. Daher wird ein Measure nur für die Teilmenge der Daten in jeder Zelle der PivotTable berechnet.  

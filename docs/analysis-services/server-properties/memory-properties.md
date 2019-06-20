@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b33bf47f77d65679bc079b526d480841af71c0c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714437"
 ---
 # <a name="memory-properties"></a>Speichereigenschaften
@@ -60,7 +60,7 @@ Die folgenden Eigenschaften gelten sowohl für tabellarische als auch für mehrd
 **QueryMemoryLimit**   
 Nur für Azure Analysis Services. Eine erweiterte Eigenschaft zu steuern, wie viel Arbeitsspeicher von temporäre Ergebnisse während der Abfrage verwendet werden kann. Gilt nur für DAX-Measures und Abfragen. Es wird nicht für allgemeine speicherbelegungen, die von der Abfrage verwendeten berücksichtigt. In Prozent bis zu 100 angegeben. Darüber hinaus ist es in Byte. Eine Einstellung von 0 bedeutet keine Begrenzung angegeben ist. Für die Azure-Analyse wird der Standardwert durch den Plan bestimmt. 
 
-|Planen  |Standard  |
+|Planen  |Default  |
 |---------|---------|
 |D1     |   80      |
 |Alle anderen Optionen geplant     |    20     | 

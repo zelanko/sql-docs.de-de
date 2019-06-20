@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298268"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField und SQLSetDescRec (Cursorbibliothek)
@@ -55,7 +55,7 @@ ms.locfileid: "63298268"
   
  Die Cursorbibliothek führt Aufrufe **SQLSetDescRec** für eine Lesezeichenspalte.  
   
- Wenn Sie mit einer ODBC 2. arbeiten zu können. *x* -Treiber verwenden, gibt die Cursorbibliothek SQLSTATE HY090 zurück (ungültige Zeichenfolgen- oder Pufferlänge.) Wenn **SQLSetDescField** oder **SQLSetDescRec** wird aufgerufen, um die SQL_DESC_OCTET_ festlegen Die Feldlänge des Lesezeichen-Datensatzes, der eine ARD auf einen Wert, der nicht gleich 4. Bei der Arbeit mit einer ODBC 3.*.x* -Treiber die Cursorbibliothek ermöglicht den Puffer, in eine beliebige Größe aufweisen.  
+ Wenn Sie mit einer ODBC 2. arbeiten zu können. *x* -Treiber verwenden, gibt die Cursorbibliothek SQLSTATE HY090 zurück (ungültige Zeichenfolgen- oder Pufferlänge.) Wenn **SQLSetDescField** oder **SQLSetDescRec** wird aufgerufen, um die SQL_DESC_OCTET_ festlegen Die Feldlänge des Lesezeichen-Datensatzes, der eine ARD auf einen Wert, der nicht gleich 4. Bei der Arbeit mit einer ODBC 3. *.x* -Treiber die Cursorbibliothek ermöglicht den Puffer, in eine beliebige Größe aufweisen.  
   
  Führt die Cursorbibliothek **SQLSetDescField** wenn er aufgerufen wird, um den Wert des Felds SQL_DESC_BIND_OFFSET_PTR SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE oder SQL_DESC_ROW_STATUS_PTR zurückzugeben. Diese Felder können für jede Zeile wird nicht nur die Lesezeichen-Zeile zurückgegeben werden.  
   

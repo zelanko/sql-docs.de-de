@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63238134"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
@@ -71,7 +71,7 @@ ms.locfileid: "63238134"
   
  In der folgenden Tabelle werden die Überwachungsaktionsgruppen auf Serverebene beschrieben. Hier finden Sie auch, sofern vorhanden, die entsprechende Ereignisklasse in SQL Server.  
   
-|Aktionsgruppenname|Description|  
+|Aktionsgruppenname|Beschreibung|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Das Ereignis wird ausgelöst, wenn ein Kennwort für eine Anwendungsrolle geändert wird. Entspricht der [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine Überwachung erstellt, geändert oder gelöscht wird. Das Ereignis wird ausgelöst, wenn eine Überwachungsspezifikation erstellt, geändert oder gelöscht wird. Jede Änderung an einer Überwachung wird in dieser Überwachung überwacht. Entspricht der [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -175,7 +175,7 @@ ms.locfileid: "63238134"
 ## <a name="audit-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Überwachungsebene  
  Sie können auch die Aktionen im Überwachungsprozess überwachen. Dies kann im Serverbereich oder im Datenbankbereich durchgeführt werden. Im Datenbankbereich tritt dies nur bei Datenbank-Überwachungsspezifikationen auf. In der folgenden Tabelle werden Überwachungsaktionsgruppen auf Überwachungsebene beschrieben.  
   
-|Aktionsgruppenname|Description|  
+|Aktionsgruppenname|Beschreibung|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Dieses Ereignis wird immer dann ausgelöst, wenn einer der folgenden Befehle ausgegeben wird:<br /><br /> -CREATE SERVER AUDIT<br />-   ALTER SERVER AUDIT<br />-&AMP; DROP SERVER AUDIT<br />-SERVERÜBERWACHUNGSSPEZIFIKATION ERSTELLEN<br />-ALTER SERVER AUDIT SPECIFICATION<br />-&AMP; DROP SERVER AUDIT SPECIFICATION<br />– ERSTELLEN VON DATENBANK-ÜBERWACHUNGSSPEZIFIKATION<br />-ALTER DATENBANK-ÜBERWACHUNGSSPEZIFIKATION<br />-&AMP; DROP-DATENBANK-ÜBERWACHUNGSSPEZIFIKATION|  
   

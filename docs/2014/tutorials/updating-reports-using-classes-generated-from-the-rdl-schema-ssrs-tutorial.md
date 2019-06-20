@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62746114"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert wurden (SSRS-Lernprogramm)
@@ -63,7 +63,7 @@ ms.locfileid: "62746114"
 ## <a name="tasks"></a>Richtlinienübersicht  
  [Lektion 1: Erstellen Sie die Visual Studio-Projekt die RDL-Schema](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
- [Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des Xsd-Tool](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
+ [Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des Xsd-Tool](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   
  [Lektion 3: Laden Sie eine Berichtsdefinition vom Berichtsserver](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)  
   

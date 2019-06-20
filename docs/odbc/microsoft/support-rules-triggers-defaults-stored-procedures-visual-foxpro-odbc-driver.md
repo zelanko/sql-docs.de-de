@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269866"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren (Visual FoxPro-ODBC-Treiber)
@@ -44,7 +44,7 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
  Wenn Ihre Anwendung mit Daten, deren Regeln, Trigger, Standardwerte interagiert oder gespeicherte Prozeduren, alle anderen Visual FoxPro-Befehle oder Funktionen aufrufen, generiert der Treiber einen Fehler aus. Finden Sie unter [nicht unterstützte Visual FoxPro-Befehle und Funktionen](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) eine Liste von Befehlen und Funktionen, die vom Treiber nicht unterstützt.  
   
 > [!TIP]  
->  Wenn Sie möchten Ihre Regeln, Trigger oder gespeicherte Prozeduren, die bestimmt, die Befehle zum Ausführen, wenn vom Treiber aufgerufen bedingten Code einzufügen, können Sie mithilfe der **VERSION ()** Funktion. Die **VERSION ()** Funktion gibt "Visual FoxPro-ODBC-Treiber  *\<Version >*" beim Aufruf durch den Treiber.  
+>  Wenn Sie möchten Ihre Regeln, Trigger oder gespeicherte Prozeduren, die bestimmt, die Befehle zum Ausführen, wenn vom Treiber aufgerufen bedingten Code einzufügen, können Sie mithilfe der **VERSION ()** Funktion. Die **VERSION ()** Funktion gibt "Visual FoxPro-ODBC-Treiber  *\<Version >* " beim Aufruf durch den Treiber.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro-Befehle und Funktionen, die in Regeln, Trigger, Standardwerte und gespeicherte Prozeduren unterstützt  
   

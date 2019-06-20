@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754295"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "62754295"
   
 -   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Dienste unter unterschiedlichen Domänenkonten ausgeführt werden (in der gleichen oder einer vertrauenswürdigen Domäne), müssen die Anmeldeinformationen jedes Kontos in **master** auf jeder der anderen Serverinstanzen erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden.  
   
--   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Netzwerkdienstkonto ausgeführt werden, muss die Anmeldung bei jedem Hostcomputer-Konto (*Domänenname***\\***Computername$*) in **master** auf jedem der anderen Server erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden. Das liegt daran, dass eine Serverinstanz, die unter dem Netzwerkdienstkonto ausgeführt wird, mit dem Domänenkonto des Hostcomputers authentifiziert wird.  
+-   Wenn die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Netzwerkdienstkonto ausgeführt werden, muss die Anmeldung bei jedem Hostcomputer-Konto (*Domänenname***\\***Computername$* ) in **master** auf jedem der anderen Server erstellt werden. Dieser Anmeldung müssen CONNECT-Berechtigungen für den Endpunkt gewährt werden. Das liegt daran, dass eine Serverinstanz, die unter dem Netzwerkdienstkonto ausgeführt wird, mit dem Domänenkonto des Hostcomputers authentifiziert wird.  
   
 > [!NOTE]  
 >  Ein Beispiel für das Einrichten einer Datenbankspiegelungs-Sitzung mithilfe der Windows-Authentifizierung finden Sie unter [Beispiel: Einrichten der Datenbankspiegelung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  

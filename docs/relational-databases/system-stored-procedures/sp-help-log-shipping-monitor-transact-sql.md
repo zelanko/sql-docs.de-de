@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639219"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
@@ -47,7 +47,7 @@ sp_help_log_shipping_monitor
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|Gemeinsamer Status der Agents für die Protokollversand-Datenbank:<br /><br /> **0** = fehlerfrei und ohne Agent-Fehler.<br /><br /> **1** = sonstiger Status.|  
 |**is_primary**|**bit**|Gibt an, ob diese Zeile für eine primäre Datenbank gilt:<br /><br /> **1** = Die Zeile gilt für eine primäre Datenbank.<br /><br /> **0** = Die Zeile gilt für eine sekundäre Datenbank.|  

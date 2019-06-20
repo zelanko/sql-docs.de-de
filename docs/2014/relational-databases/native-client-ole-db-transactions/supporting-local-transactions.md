@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b75104940cca183005f8a465ea19d0a517247c25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213818"
 ---
 # <a name="supporting-local-transactions"></a>Unterstützen lokaler Transaktionen
@@ -50,7 +50,7 @@ ms.locfileid: "63213818"
   
  Für lokale Transaktionen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert **ITransaction:: Commit** Parameter wie folgt.  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*fRetaining*[in]|Wenn der Wert TRUE lautet, wird eine neue Transaktion implizit für die Sitzung begonnen. Für die Transaktion muss vom Consumer ein Commit ausgeführt werden oder sie muss beendet werden. Bei "FALSE" die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter wird für die Sitzung den Autocommit-Modus zurückgesetzt.|  
 |*grfTC*[in]|Asynchrone Rückkehr und die Rückkehr zu Phase eins werden nicht unterstützt, indem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt xact_e_notsupported zurück, für jeden Wert xact_e_notsupported.|  
