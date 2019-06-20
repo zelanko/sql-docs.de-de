@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f527b192af330f300f37102e00b010f44c82eaab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103346"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services-Konfigurationsdateien
@@ -64,7 +64,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|Gespeichert in:|Description|Speicherort|  
+|Gespeichert in:|Beschreibung|Speicherort|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|Speichert Konfigurationseinstellungen für Funktionsbereiche des berichtsserverdiensts an: Berichts-Manager, Berichtsserver-Webdienst und hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  

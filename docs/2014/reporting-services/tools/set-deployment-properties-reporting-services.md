@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099552"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Festlegen von Bereitstellungseigenschaften (Reporting Services)
@@ -63,7 +63,7 @@ ms.locfileid: "66099552"
     > [!NOTE]  
     >  Für einen Berichtsserver, der im einheitlichen Modus ausgeführt wird, müssen Sie im Zielordner über Berechtigungen zum **Veröffentlichen** verfügen, um Berichte in diesem Ordner zu veröffentlichen. Berechtigungen zum Veröffentlichen werden über eine Rollenzuweisung erteilt, bei der das Benutzerkonto einer Rolle zugeordnet wird, die Veröffentlichungsvorgänge enthalt. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Rollenzuweisungen](../security/create-and-manage-role-assignments.md). Für einen Berichtsserver, der im integrierten SharePoint-Modus ausgeführt wird, müssen Sie auf der SharePoint-Website über Berechtigungen als **Mitglied** oder **Eigentümer** verfügen. Weitere Informationen finden Sie unter [Referenz zu SharePoint Website- und Listenberechtigungen für Berichtsserverelemente](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. Geben Sie im Textfeld **TargetServerURL** die URL des Zielberichtsservers ein. Diese Eigenschaft müssen Sie vor dem Veröffentlichen eines Berichts auf eine gültige URL eines Berichtsservers festlegen. Wenn Sie auf einem Berichtsserver veröffentlichen, der im einheitlichen Modus ausgeführt wird, verwenden Sie die URL des virtuellen Verzeichnisses des Berichtsservers (z.B. http:*//Server/Berichtsserver* oder https:*//Server/Berichtsserver)*. Dies ist das virtuelle Verzeichnis des Berichtsservers, nicht des Berichts-Managers.  
+10. Geben Sie im Textfeld **TargetServerURL** die URL des Zielberichtsservers ein. Diese Eigenschaft müssen Sie vor dem Veröffentlichen eines Berichts auf eine gültige URL eines Berichtsservers festlegen. Wenn Sie auf einem Berichtsserver veröffentlichen, der im einheitlichen Modus ausgeführt wird, verwenden Sie die URL des virtuellen Verzeichnisses des Berichtsservers (z.B. http: *//Server/Berichtsserver* oder https: *//Server/Berichtsserver)* . Dies ist das virtuelle Verzeichnis des Berichtsservers, nicht des Berichts-Managers.  
   
      Verwenden Sie eine URL für eine SharePoint-Stammwebsite oder -Unterwebsite, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im integrierten SharePoint-Modus ausgeführt wird. Wenn Sie keine Website angeben, wird die Standardwebsite der obersten Ebene (z.B. http://*Servername*, http://*Servername*/*Website* oder http://*Servername*/*Website*/*Unterwebsite*) verwendet.  
   

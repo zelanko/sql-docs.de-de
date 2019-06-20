@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036217"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
@@ -50,7 +50,7 @@ ms.locfileid: "63036217"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Überprüfen der Fragmentierung eines Indexes mit:**  
   
@@ -197,7 +197,7 @@ ms.locfileid: "63036217"
   
  Weitere Informationen finden Sie unter [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
-##  <a name="SSMSProcedureReorg"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedureReorg"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>So organisieren oder erstellen Sie einen Index neu  
   
@@ -255,7 +255,7 @@ ms.locfileid: "63036217"
   
 #### <a name="to-reorganize-a-defragmented-index"></a>So organisieren Sie einen defragmentierten Index neu  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "63036217"
   
 #### <a name="to-rebuild-a-defragmented-index"></a>So erstellen Sie einen defragmentierten Index neu  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

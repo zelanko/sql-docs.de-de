@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077412"
 ---
 # <a name="configure-attribute-types"></a>Konfigurieren von Attributtypen
@@ -42,7 +42,7 @@ ms.locfileid: "66077412"
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|Wert des Attributtyps|Description|  
+|Wert des Attributtyps|Beschreibung|  
 |--------------------------|-----------------|  
 |`Address`|Stellt eine Adresse dar.|  
 |`AddressBuilding`|Stellt einen Gebäudebezeichner für eine Adresse dar.|  
@@ -154,7 +154,7 @@ ms.locfileid: "66077412"
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|Wert des Attributtyps|Description|  
+|Wert des Attributtyps|Beschreibung|  
 |--------------------------|-----------------|  
 |`Account`|Stellt das übergeordnete Element eines Kontos dar. Dieser Attributtyp wird in der Regel auf das übergeordnete Attribut einer Kontodimension angewendet.|  
 |`AccountName`|Stellt den Namen eines Kontos dar. Dieser Attributtyp wird in der Regel auf die Schlüsselattribute einer Kontodimension angewendet.|  
@@ -163,7 +163,7 @@ ms.locfileid: "66077412"
   
 ###  <a name="currency_dimension_attribute_types"></a> Attributtypen der Währungsdimension  
   
-|Wert des Attributtyps|Description|  
+|Wert des Attributtyps|Beschreibung|  
 |--------------------------|-----------------|  
 |`CurrencyDestination`|Stellt die Zielwährung einer Währungsumrechnung dar. Dieser Attributtyp wird in der Regel auf das Schlüsselattribut einer Berichtsdimension zum Verwenden bei der Währungsumrechnung angewendet. Weitere Informationen zu Währungsumrechnungen finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencyIsoCode`|Stellt den ISO-Code einer Währung dar. Weitere Informationen zu Währungsumrechnungen finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  

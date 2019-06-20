@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 327b0bdc83588ef988a716ba44e859aa5d3f8659
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487995"
 ---
 # <a name="system-settings-master-data-services"></a>Systemeinstellungen (Master Data Services)
@@ -64,7 +64,7 @@ ms.locfileid: "65487995"
   
 ##  <a name="Versions"></a> Versionsverwaltungseinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Nur Versionen kopieren, für die ein Commit ausgeführt wurde**|**CopyOnlyCommittedVersion**|Gibt in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]an, ob Benutzer nur Modellversionen mit dem Status **Commit wurde ausgeführt**oder Versionen mit einem beliebigen anderen Status kopieren können. Der Standardwert ist **Ja** oder **1**. Er gibt an, dass Benutzer nur Versionen mit dem Status **Commit wurde ausgeführt** kopieren können. Wenn Sie den Wert in **Nein** oder **2** ändern, können Benutzer alle Versionen kopieren.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65487995"
   
 ##  <a name="Staging"></a> Stagingeinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Protokollieren aller Stagingtransaktionen**|**StagingTransactionLogging**|Gilt nur für SQL Server 2008 R2. Legt fest, ob Transaktionen beim Laden von Stagingdatensätzen in die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank protokolliert werden. Der Standardwert ist **Aus** oder **2**. Ändern Sie den Wert in **Ein** oder **1** , um die Protokollierung zu aktivieren.|  
 |**Staging-Batchintervall**|**StagingBatchInterval**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Integration Management** functional area, the number of seconds after you select **Start Batches** that your batch is processed. Der Standardwert ist **60** Sekunden (1 Minute).|  
@@ -81,7 +81,7 @@ ms.locfileid: "65487995"
   
 ##  <a name="Explorer"></a> Explorereinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Die Standardanzahl der Elemente in der Hierarchie.**|**HierarchyChildNodeLimit**|Gibt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-**Explorer** an, wie viele Elemente maximal in den einzelnen Hierarchieknoten angezeigt werden, bevor **...Weitere...** angezeigt wird. Sie können auf **...Weitere...** klicken, um die nächste Gruppe von Elementen anzuzeigen. Der Standardwert lautet **50**.|  
 |**Standardmäßig Namen in Hierarchie anzeigen**|**ShowNamesInHierarchy**|Legt im Funktionsbereich [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> Der Standardwert ist **Yes** oder **1**. Er gibt an, dass Name und Code der einzelnen Elemente angezeigt werden. Ändern Sie den Wert in **No** oder **2** , wenn Sie nur den Code anzeigen möchten.|  
@@ -90,7 +90,7 @@ ms.locfileid: "65487995"
   
 ##  <a name="xls"></a> Einstellungen für Add-In für Excel  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |Anzeigen von Add-In für Excel-Text auf Websitehomepage|ShowAddInText|Zeigt auf der Startseite von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] einen Link an, damit Benutzer das [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]herunterladen können.|  
 |Add-In für Excel-Installationspfad auf Websitehomepage|AddInURL|Dies ist auf der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Homepage, wenn der Link zum [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] angezeigt wird, der Speicherort, zu dem die Benutzer nach Anklicken des Links geführt werden.|  
@@ -107,7 +107,7 @@ ms.locfileid: "65487995"
   
 ##  <a name="Notifications"></a> Benachrichtigungseinstellungen  
   
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Master Data Manager-URL für Benachrichtigungen**|**MDMRootURL**|Gibt die URL für die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung an, die im Link in E-Mail-Benachrichtigungen verwendet wird, z.B. `https://constoso/mds`.|  
 |**Benachrichtigungs-E-Mail-Intervall**|**NotificationInterval**|Die Häufigkeit in Sekunden, in der E-Mail-Benachrichtigungen gesendet werden. Der Standardwert ist **120** Sekunden (2 Minuten).|  
@@ -131,7 +131,7 @@ ms.locfileid: "65487995"
 
 ##  <a name="Performance"></a> Leistungseinstellungen  
 
-|Einstellung des Konfigurations-Managers|Systemeinstellung|Description|  
+|Einstellung des Konfigurations-Managers|Systemeinstellung|Beschreibung|  
 |-----------------------------------|--------------------|-----------------|  
 |**Enable performance improvement setting** (Einstellung zur Leistungsverbesserung aktivieren)|**PerformanceImprovementEnable**|Diese Einstellung ist standardmäßig aktiviert (**auf 1 festgelegt**), damit die Leistung der mit der Ladeberechtigung in Zusammenhang stehenden Seite gut ist. In diesem Fall ist die Leistung beim Erstellen bzw. Ändern von Entitäten, Attributen, Benutzern oder Gruppen allerdings schlecht. Sie können die Einstellung deaktivieren (**auf 0 festgelegt**), um dies zu vermeiden. Wenn Sie diese Einstellung geändert haben, müssen Sie den Befehl **EXEC [mdm].[udpPerformanceToggleSwitch];** ausführen, damit die Ansicht sowie die Daten keine Fehler aufweisen.|  
   

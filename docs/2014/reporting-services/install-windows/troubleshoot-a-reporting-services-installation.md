@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a27cbad6803c2106c0af4cbe4060e72cc8ee970
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108667"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Problembehandlung für eine Reporting Services-Installation
@@ -199,7 +199,7 @@ ms.locfileid: "66108667"
   
 2.  Öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie den folgenden Befehl ein:  
   
-    -   **Führen Sie \<**  *.NET 2.0 Framework-Verzeichnis* **> \InstallUtil.exe \<**  *Berichtsserver-Bin-Verzeichnis* **> \ReportingServicesLibrary.dll**  
+    -   **Führen Sie \< ** *.NET 2.0 Framework-Verzeichnis* **> \InstallUtil.exe \< ** *Berichtsserver-Bin-Verzeichnis* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  Ersetzen Sie dies \< *.NET 2.0 Framework-Verzeichnis*> durch den physischen Pfad der .NET Framework 2.0-Dateien und \< *Berichtsserver-Bin-Verzeichnis*> durch den physischen Pfad von der Berichtsserver-Binärdateien.  

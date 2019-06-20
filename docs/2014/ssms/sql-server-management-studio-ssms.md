@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63154991"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
@@ -25,7 +25,7 @@ ms.locfileid: "63154991"
   
 ## <a name="sql-server-management-studio-components"></a>Komponenten von SQL Server Management Studio  
   
-|Description|Thema|  
+|Beschreibung|Thema|  
 |-----------------|-----------|  
 |Beschreibt mit [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]ausgeführte häufige Aufgaben, z. B. Anpassen von Tastenkombinationen und Anzeigen von Eigenschaftenseiten.|[Verwenden von SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)|  
 |Beschreibt die Verwendung des **Objekt-Explorers** zum Anzeigen und Verwalten aller Objekte in mindestens einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Objekt-Explorers](object/object-explorer.md)|  

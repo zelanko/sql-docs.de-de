@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891578"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Schritt 2: Ausführen des Paketinstallations-Assistenten
@@ -46,7 +46,7 @@ ms.locfileid: "62891578"
   
 9. Klicken Sie auf der Seite Installationsordner auswählen auf **Durchsuchen**.  
   
-10. Erweitern Sie im Dialogfeld **Nach Ordner suchen** die Option **Arbeitsplatz** , und klicken Sie anschließend auf **Lokaler Datenträger (C:)**.  
+10. Erweitern Sie im Dialogfeld **Nach Ordner suchen** die Option **Arbeitsplatz** , und klicken Sie anschließend auf **Lokaler Datenträger (C:)** .  
   
 11. Klicken Sie auf **Neuen Ordner erstellen** , und ersetzen Sie den Standardnamen des neuen Ordners, **Neuer Ordner**, durch **DeploymentTutorialInstall**.  
   

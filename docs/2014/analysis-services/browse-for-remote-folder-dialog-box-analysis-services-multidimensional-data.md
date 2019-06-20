@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064531"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Nach Remoteordner suchen' (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld **Nach Remoteordner suchen** wird eine Liste der verfügbaren Protokoll- und Datenordner angezeigt, die für eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]definiert wurden. Wählen Sie entweder einen Ordner aus der Liste aus, oder geben Sie bei Bedarf einen anderen Ordner an. Zum Anzeigen des Dialogfelds **Nach Remoteordner suchen** führen Sie einen der folgenden Schritte aus:  
   
--   Klicken Sie auf der Seite **Speicherorte zum Verarbeiten und Speichern** des Partitions-Assistenten auf die Schaltfläche mit den Auslassungspunkten (**...**).  
+-   Klicken Sie auf der Seite **Speicherorte zum Verarbeiten und Speichern** des Partitions-Assistenten auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
   
--   Wechseln Sie auf die Seite **Partitionen** des Dialogfelds **Datenbank wiederherstellen** , und klicken Sie in der **Zielordner** -Spalte unter der Option **Andere Speicherorte auswählen** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
+-   Wechseln Sie auf die Seite **Partitionen** des Dialogfelds **Datenbank wiederherstellen** , und klicken Sie in der **Zielordner** -Spalte unter der Option **Andere Speicherorte auswählen** auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
   
--   Öffnen Sie das Dialogfeld **Remotepartitionen – Erweiterte Einstellungen** , und klicken Sie in der **Wiederherstellungsordner** -Spalte unter der Option **Partitionsliste** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
+-   Öffnen Sie das Dialogfeld **Remotepartitionen – Erweiterte Einstellungen** , und klicken Sie in der **Wiederherstellungsordner** -Spalte unter der Option **Partitionsliste** auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
   
--   Wechseln Sie zur Seite **Speicherorte für lokale Partitionen angeben** oder zur Seite **Speicherorte für Remotepartitionen angeben** des Assistenten zum Synchronisieren einer Datenbank, und klicken Sie dort in der **Zielordner** -Spalte unter der Option **Speicherorte** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
+-   Wechseln Sie zur Seite **Speicherorte für lokale Partitionen angeben** oder zur Seite **Speicherorte für Remotepartitionen angeben** des Assistenten zum Synchronisieren einer Datenbank, und klicken Sie dort in der **Zielordner** -Spalte unter der Option **Speicherorte** auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
   
 ## <a name="options"></a>Optionen  
  **Wählen Sie den Ordner**  

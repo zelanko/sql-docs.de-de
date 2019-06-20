@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63280489"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
@@ -25,7 +25,7 @@ ms.locfileid: "63280489"
   
  In der folgenden Tabelle sind die Argumente für externe Tools aufgeführt.  
   
-|Name|Argument|Description|  
+|Name|Argument|Beschreibung|  
 |----------|--------------|-----------------|  
 |**Elementpfad**|$(ItemPath)|Der vollständige Dateiname der aktuellen Quelle (definiert als Laufwerk + Pfad + Dateiname); leer, wenn ein Fenster aktiv ist, das nicht zur Quelle gehört.|  
 |**Elementverzeichnis**|$(ItemDir)|Das Verzeichnis der aktuellen Quelle (definiert als Laufwerk + Pfad); leer, wenn ein Fenster aktiv ist, das nicht zur Quelle gehört.|  

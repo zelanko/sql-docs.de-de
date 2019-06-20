@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076770"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Erstellen von Analysis Services-Projekten (SSDT)
@@ -49,7 +49,7 @@ ms.locfileid: "66076770"
 |*Projectname*.deploymentoptions|Enthält verschiedene während der Bereitstellung verwendete Optionseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. Speicherorte).|  
 |*Assemblyname*/*dllname.* dll|Separate Ordner für jede Assembly, auf die verwiesen wird. In jedem Ordner sind jeweils die DLL für die Assembly, sämtliche Assemblys, auf die verwiesen wird, und sämtliche zugeordneten PDB-Dateien für Ausgabedebuginformationen enthalten.|  
   
-|Dateien (im Ordner obj)|Description|  
+|Dateien (im Ordner obj)|Beschreibung|  
 |-----------------------------|-----------------|  
 |\<Konfigurationsname > \LastBuilt.xml|Enthält den Zeitstempel und den Hashcode, der den Zeitpunkt identifiziert, als das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zum letzten Mal erstellt wurde.|  
   

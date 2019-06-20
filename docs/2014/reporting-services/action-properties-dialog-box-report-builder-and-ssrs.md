@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110083"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Aktionseigenschaften (Dialogfeld) (Berichts-Generator und SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66110083"
   
  Verwenden Sie für einen Bericht, der auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wurde, einen vollständigen oder relativen Pfad ohne die Dateinamenerweiterung. Falls sich der Bericht in demselben Ordner befindet wie der aktuelle Bericht, verwenden Sie nur den Namen des Berichts. Falls sich der Bericht in einem anderen Ordner auf demselben Berichtsserver befindet, verwenden Sie einen relativen oder vollständigen Pfad. Ein relativer Pfad beginnt mit dem aktuellen Ordner und enthält dann weitere übergeordnete Ordner in der Ordnerhierarchie, beispielsweise ../Ordner2/Bericht1. Ein vollständiger Pfad beginnt mit /, dem Basisordner. Beispiel: /Berichte/Bericht1.  
   
- Verwenden Sie für einen Bericht, der auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wurde, eine vollqualifizierte URL einschließlich der Dateinamenerweiterung (.rdl). Beispielsweise http://*\<SharePointservername > /\<Site >*/Dokumente/Bericht1.RDL. Relative Pfade werden nicht unterstützt.  
+ Verwenden Sie für einen Bericht, der auf einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wurde, eine vollqualifizierte URL einschließlich der Dateinamenerweiterung (.rdl). Beispielsweise http:// *\<SharePointservername > /\<Site >* /Dokumente/Bericht1.RDL. Relative Pfade werden nicht unterstützt.  
   
  Weitere Informationen finden Sie unter [Angeben von Pfaden zu externen Elementen &#40;Berichts-Generator und SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) in der [Dokumentation zu Report Builder](https://go.microsoft.com/fwlink/?LinkId=154494) auf msdn.microsoft.com.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66110083"
  Wählen Sie diese Option aus, um einen Link zu einer Webseite zu definieren. Sie können die URL einer Webseite oder einen Ausdruck, der zur URL einer Webseite ausgewertet wird, eingeben oder auswählen. Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um den Ausdruck zu ändern. Der Ausdruck kann ein Feld mit einer URL enthalten. Bei Auswahl von **Gehe zu URL**wird die folgende zusätzliche Option angezeigt.  
   
  **URL auswählen**  
- Geben Sie die URL des Elements ein. Verwenden Sie für ein Element, das auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wurde, einen vollständigen oder relativen Pfad. Beispielsweise http://*\<Servername >*/images/image1.jpg. Verwenden Sie für ein Element in einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL (z. B. http://*\<SharePointservername > /\<Site >*  /Dokumente/Images / Image1.jpg).  
+ Geben Sie die URL des Elements ein. Verwenden Sie für ein Element, das auf einem für den einheitlichen Modus konfigurierten Berichtsserver veröffentlicht wurde, einen vollständigen oder relativen Pfad. Beispielsweise http:// *\<Servername >* /images/image1.jpg. Verwenden Sie für ein Element in einem im integrierten SharePoint-Modus konfigurierten Berichtsserver veröffentlicht wird, eine vollqualifizierte URL (z. B. http:// *\<SharePointservername > /\<Site >*  /Dokumente/Images / Image1.jpg).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

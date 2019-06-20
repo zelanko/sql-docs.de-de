@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019045"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Anwenden von Hotfixes für Analytics Platform System
@@ -32,7 +32,7 @@ Diese Schritte ausführen zu können, benötigen Sie:
   
 -   Eine Analytics Platform System Anmeldenamen mit Berechtigungen für die Verwaltungskonsole zum Überwachen des Status des Geräts zugreifen. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Kenntnisse über die Fabric-Domänenadministratorkonto für die Verbindung der _< Domänenname >_**-HST01** Knoten.  
+-   Kenntnisse über die Fabric-Domänenadministratorkonto für die Verbindung der _< Domänenname >_ **-HST01** Knoten.  
   
 ## <a name="HowToInstallPDW"></a>Zum Installieren eines Hotfixes für Analytics Platform System  
 Im Gegensatz zu den Microsoft-Updates werden die Hotfixes für Analytics Platform System-Software nicht über WSUS behandelt. Ein anderer Workflow, und durch Ausführen eines Hotfixpakets installiert sind.  

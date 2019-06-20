@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fd8e84a443c87846b4c40c45152b1225e2bc7b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62817086"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "62817086"
 
   Die **MSagentparameterlist** Tabelle enthält Parameterinformationen für Replikations-Agent und wird verwendet, um die Parameter angeben, die für einen bestimmten Agenttyp festgelegt werden kann. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**agent_type**|**tinyint**|Der Agenttyp:<br /><br /> **1** = Momentaufnahme-Agent.<br /><br /> **2** = Protokolllese-Agent.<br /><br /> **3** = Verteilungs-Agent.<br /><br /> **4** = Merge-Agent.<br /><br /> **9** = Warteschlangenlese-Agent.|  
 |**parameter_name**|**sysname**|Der Name eines gültigen Agentparameters.|  

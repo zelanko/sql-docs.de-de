@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2fe19165a8b9e0d419a1cba67eeb4ada6a3ce183
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071431"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot-Authentifizierung und -Autorisierung
@@ -100,7 +100,7 @@ ms.locfileid: "66071431"
 > [!NOTE]  
 >  Die meisten sicherheitsbezogenen Einstellungen gelten für vertrauenswürdige Speicherorte. Wenn Sie die Standardwerte beibehalten oder andere Werte für verschiedene Websites verwenden möchten, können Sie einen zusätzlichen vertrauenswürdigen Speicherort für Websites mit PowerPivot-Daten erstellen und dann die folgenden Einstellungen nur für diese Websites konfigurieren. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Bereich|Einstellung|Description|  
+|Bereich|Einstellung|Beschreibung|  
 |----------|-------------|-----------------|  
 |Webanwendung|Windows-Authentifizierungsanbieter|PowerPivot konvertiert ein von Excel Services abgerufenes Forderungstoken in eine Windows-Benutzeridentität. Jede Webanwendung, die Excel Services als Ressource verwendet, muss für die Verwendung des Anbieters der Windows-Authentifizierung konfiguriert sein.|  
 |Vertrauenswürdiger Speicherort|Speicherorttyp|Für diesen Wert muss **Microsoft SharePoint Foundation**festgelegt werden. PowerPivot-Server rufen eine Kopie der XLSX-Datei ab und laden sie auf einen Analysis Services-Server in der Farm hoch. Der Server kann nur XLSX-Dateien aus einer Inhaltsbibliothek abrufen.|  

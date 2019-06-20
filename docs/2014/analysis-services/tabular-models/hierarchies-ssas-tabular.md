@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067081"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Hierarchien (SSAS – tabellarisch)
@@ -52,7 +52,7 @@ ms.locfileid: "66067081"
   
 ##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Aufgabe|Description|  
+|Aufgabe|Beschreibung|  
 |----------|-----------------|  
 |[Erstellen und Verwalten von Hierarchien &#40;SSAS – tabellarisch&#41;](hierarchies-ssas-tabular.md)|Beschreibt, wie Hierarchien mit dem Modell-Designer in der Diagrammsicht erstellt und verwaltet werden.|  
   

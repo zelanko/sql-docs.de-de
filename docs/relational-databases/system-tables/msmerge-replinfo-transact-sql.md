@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62903320"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "62903320"
 
   Die **MSmerge_replinfo** -Tabelle enthält eine Zeile für jedes Abonnement. In dieser Tabelle werden Informationen zu Abonnements nachverfolgt. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**repid**|**uniqueidentifier**|Die eindeutige ID für das Replikat.|  
 |**use_interactive_resolver**|**bit**|Gibt an, ob der interaktive Konfliktlöser während der Abgleichung verwendet wird.<br /><br /> **0** = es wird den interaktiven Konfliktlöser nicht verwendet.<br /><br /> **1** = Verwendung des interaktiven Konfliktlösers.|  

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 3528034b4a87115d704e7cbbc1f9d98a36e11794
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695679"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Gibt an, die verfügbaren Berechtigungen zum Ändern von Daten in eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), öffnen ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), oder Werte für die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) Eigenschaft der  **Datensatz** und [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Gibt schreibgeschützten Zugriff an.|  
 |**adModeReadWrite**|3|Gibt an, Lese-/Schreibberechtigungen verfügen.|  

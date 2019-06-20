@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071860"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Konfigurieren von PowerPivot-Dienstkonten
@@ -108,7 +108,7 @@ ms.locfileid: "66071860"
   
 #### <a name="powerpivot-service-application-pool"></a>PowerPivot-Dienstanwendungspool  
   
-|Anforderung|Description|  
+|Anforderung|Beschreibung|  
 |-----------------|-----------------|  
 |Bereitstellungsanforderung|Beim PowerPivot-Systemdienst handelt es sich um eine in der Farm freigegebene Ressource, die verfügbar wird, wenn Sie eine Dienstanwendung erstellen. Der Dienstanwendungspool muss bei der Erstellung der Dienstanwendung angegeben werden. Er kann auf zwei Arten angegeben werden: mithilfe des PowerPivot-Konfigurationstools oder durch PowerShell-Befehle.<br /><br /> Sie haben die Anwendungspoolidentität möglicherweise so konfiguriert, dass sie unter einem eindeutigen Konto ausgeführt wird. Aber falls nicht, sollten Sie jetzt für die Ausführung unter einem anderen Konto zu ändern.|  
 |Domänenbenutzerkonto-Anforderung|Die Anwendungspoolidentität muss ein Windows-Domänenbenutzerkonto sein. Integrierte Computerkonten (z. B. Netzwerkdienst oder Lokaler Dienst) sind nicht zulässig.|  

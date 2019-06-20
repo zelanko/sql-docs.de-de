@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e38d37eae107c713ced69857898c604a77af297
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187606"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX-Funktionsreferenz (MDX)
@@ -46,7 +46,7 @@ ms.locfileid: "63187606"
   
 ## <a name="logical-functions"></a>Logische Funktionen  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[IsAncestor &#40;MDX&#41;](../mdx/isancestor-mdx.md)|Gibt zurück, ob ein angegebenes Element ein Vorgänger eines anderen angegebenen Elements ist.|  
 |[IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)|Gibt zurück, ob der ausgewertete Ausdruck dem leeren Zellenwert entspricht.|  
@@ -84,7 +84,7 @@ ms.locfileid: "63187606"
   
 ## <a name="numeric-functions"></a>Numerische Funktionen  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)|Gibt einen Skalarwert zurück, der durch Aggregieren von Measures oder eines optional angegebenen numerischen Ausdrucks über den Tupeln einer angegebenen Menge berechnet wird.|  
 |[Avg &#40;MDX&#41;](../mdx/avg-mdx.md)|Gibt den Mittelwert von Measures oder eines optionalen numerischen Ausdrucks, ausgewertet über einer angegebenen Menge, zurück.|  
@@ -216,7 +216,7 @@ ms.locfileid: "63187606"
   
 ## <a name="other-functions"></a>Weitere Funktionen  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[Error &#40;MDX&#41;](../mdx/error-mdx.md)|Löst einen Fehler aus. Optional wird eine angegebene Fehlermeldung ausgegeben.|  
   

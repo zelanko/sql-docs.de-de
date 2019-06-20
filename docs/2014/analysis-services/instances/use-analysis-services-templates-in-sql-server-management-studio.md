@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca2f92441841168916cb3d50b63376634073456b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079548"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
@@ -69,15 +69,15 @@ ms.locfileid: "66079548"
   
 3.  Ziehen Sie mithilfe von **Metadaten-Explorer**die folgenden Felder und Measures in die Abfragevorlage:  
   
-    1.  Ersetzen Sie dies \<Row_axis, Mdx_set > mit **[Product Category]. [ Product Category Name]**.  
+    1.  Ersetzen Sie dies \<Row_axis, Mdx_set > mit **[Product Category]. [ Product Category Name]** .  
   
     2.  Ersetzen Sie dies \<Column_axis, Mdx_set > mit **[Date]. [ Calendar Year]. [Kalenderjahr]** .  
   
-    3.  Ersetzen Sie dies \<From_clause, Mdx_name > mit **[Internet Sales]**.  
+    3.  Ersetzen Sie dies \<From_clause, Mdx_name > mit **[Internet Sales]** .  
   
-    4.  Ersetzen Sie dies \<Where_clause, Mdx_set > mit **[Measures]. [ Internet Total Sales]**.  
+    4.  Ersetzen Sie dies \<Where_clause, Mdx_set > mit **[Measures]. [ Internet Total Sales]** .  
   
-4.  Sie können die Abfrage unverändert ausführen, aber in den meisten Fällen sind ggf. einige Änderungen erforderlich, z. B. das Hinzufügen einer Funktion zum Zurückgeben bestimmter Elemente. Geben Sie z. B. `.members` nach **[Product Category]. [ Product Category Name]**. Weitere Informationen finden Sie unter [Using Member Expressions](/sql/mdx/using-member-expressions).  
+4.  Sie können die Abfrage unverändert ausführen, aber in den meisten Fällen sind ggf. einige Änderungen erforderlich, z. B. das Hinzufügen einer Funktion zum Zurückgeben bestimmter Elemente. Geben Sie z. B. `.members` nach **[Product Category]. [ Product Category Name]** . Weitere Informationen finden Sie unter [Using Member Expressions](/sql/mdx/using-member-expressions).  
   
 ##  <a name="bkmk_backup"></a> Erstellen von XMLA-Skript aus einer Vorlage  
  Die XMLA-Befehlsvorlagen, die im Vorlagen-Explorer bereitgestellt werden, können zum Erstellen von Skripts für die Überwachung und Aktualisierung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekten verwendet werden. Dies gilt unabhängig davon, ob sich die Instanz im mehrdimensionalen und Data Mining-Modus oder im tabellarischen Modus befindet. Die **XMLA** -Vorlagen enthalten Beispiele für die folgenden Arten von Skripts:  
@@ -167,12 +167,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |Kategorie|Elementvorlage|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\Modellinhalt|Content Query|Veranschaulicht, wie Sie mit der DMX SELECT FROM  *\<Modell >*. CONTENT-für-Schritt-Anweisung für den Schema Rowsets Miningmodellinhalt für ein bestimmtes Miningmodell abrufen.|  
+|DMX\Modellinhalt|Content Query|Veranschaulicht, wie Sie mit der DMX SELECT FROM  *\<Modell >* . CONTENT-für-Schritt-Anweisung für den Schema Rowsets Miningmodellinhalt für ein bestimmtes Miningmodell abrufen.|  
 ||Continuous Column Values|Veranschaulicht, wie Sie mit der DMX SELECT DISTINCT FROM  *\<Modell >* -Anweisung mit der DMX `RangeMin` und `RangeMax` Funktionen zum Abrufen der eines Satz von Werten innerhalb eines angegebenen Bereichs aus kontinuierlichen Spalten in einer angegebenen Miningmodell.|  
 ||Discrete Column Values|Veranschaulicht, wie Sie mit der DMX SELECT DISTINCT FROM  *\<Modell >* Anweisung einen vollständigen Satz von Werten aus diskreten Spalten in einem angegebenen Miningmodell abrufen.|  
 ||Drillthrough Query|Zeigt, wie Sie mithilfe der DMX-Anweisung SELECT * FROM Modell.CASES in Verbindung mit der DMX-Funktion IsInNode eine Drillthroughabfrage ausführen können.|  
 ||Modellattribute|Zeigt, wie Sie mithilfe der DMX-Funktion System.GetModelAttributes eine Liste der von einem Modell verwendeten Attribute zurückgeben können.|  
-||PMML Content|Veranschaulicht, wie Sie mit der DMX SELECT \* FROM  *\<Modell >*. PMML-Anweisung, die die Darstellung der Predictive Model Markup Language (PMML) des Miningmodells, für die Algorithmen abzurufen, die diese Funktionalität zu unterstützen.|  
+||PMML Content|Veranschaulicht, wie Sie mit der DMX SELECT \* FROM  *\<Modell >* . PMML-Anweisung, die die Darstellung der Predictive Model Markup Language (PMML) des Miningmodells, für die Algorithmen abzurufen, die diese Funktionalität zu unterstützen.|  
 |DMX\Modellverwaltung|Add Model|Zeigt, wie Sie mithilfe der DMX-Anweisung ALTER MINING MODEL STRUCTURE ein Miningmodell hinzufügen können.|  
 ||Clear Model|Zeigt, wie Sie mithilfe der DMX-Anweisung DELETE * FROM MINING MODEL den Inhalt eines angegebenen Miningmodells löschen können.|  
 ||Clear Structure Cases|Zeigt, wie Sie mithilfe der DMX-Anweisung DELETE FROM MINING STRUCTURE Miningmodell-Strukturfälle löschen können.|  

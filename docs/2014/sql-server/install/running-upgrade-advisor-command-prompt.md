@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092440"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ausführen des Upgrade Advisors (Eingabeaufforderung)
@@ -56,10 +56,10 @@ where <server_info> is any combination of the following:
  **-Instanz** _Instance_name_  
  Gibt den Namen der zu analysierenden Instanz an. Es gibt keinen Standardwert. Wenn Sie diesen Parameter nicht angeben, wird das [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht gescannt. Der Wert für eine Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist MSSQLSERVER. Verwenden Sie für eine benannte Instanz den Namen der Instanz.  
   
- **-ASInstance**_as_instanzname_   
+ **-ASInstance**_as_instanzname_  
  Gibt den Namen der zu analysierenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz an. Es gibt keinen Standardwert. Wenn Sie diesen Wert nicht angeben, wird [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nicht gescannt. Der Wert für eine Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lautet MSSQLServerOLAPService. Verwenden Sie für eine benannte Instanz den Namen der Instanz.  
   
- **-RSInstance**_rs_instanzname_   
+ **-RSInstance**_rs_instanzname_  
  Gibt den Namen der zu analysierenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz an. Es gibt keinen Standardwert. Wenn Sie diesen Wert nicht angeben, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht gescannt. Der Wert für eine Standardinstanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist ReportServer. Verwenden Sie für eine benannte Instanz den Namen der Instanz.  
   
  **-SqlUser** _login_id_  

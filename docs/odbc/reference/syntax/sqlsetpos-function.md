@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536319"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos-Funktion
@@ -60,7 +60,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  Der SQL_ADD-Wert für die *Vorgang* Argument ist veraltet für ODBC 3.*.x*. ODBC 3. *x* Treiber müssen SQL_ADD für die Abwärtskompatibilität zu unterstützen. Diese Funktionalität wurde ersetzt durch einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD. Wenn eine ODBC-3. *x* Anwendung funktioniert mit einer ODBC 2. *X* Treiber, der Treiber-Manager ordnet einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD auf **SQLSetPos** mit einer  *Vorgang* von SQL_ADD.  
+>  Der SQL_ADD-Wert für die *Vorgang* Argument ist veraltet für ODBC 3. *.x*. ODBC 3. *x* Treiber müssen SQL_ADD für die Abwärtskompatibilität zu unterstützen. Diese Funktionalität wurde ersetzt durch einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD. Wenn eine ODBC-3. *x* Anwendung funktioniert mit einer ODBC 2.. *X* Treiber, der Treiber-Manager ordnet einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD auf **SQLSetPos** mit einer  *Vorgang* von SQL_ADD.  
   
  Weitere Informationen finden Sie unter "Kommentare".  
   
@@ -85,7 +85,7 @@ SQLRETURN SQLSetPos(
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01001|Konflikt beim Cursorvorgang|Die *Vorgang* Argument war SQL_DELETE oder SQL_UPDATE auf, und keine Zeilen oder mehr als eine Zeile gelöscht oder aktualisiert wurden. (Weitere Informationen zu Updates für mehr als eine Zeile, finden Sie unter der Beschreibung der SQL_ATTR_SIMULATE_CURSOR *Attribut* in **SQLSetStmtAttr**.) (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Die *Vorgang* Argument war SQL_DELETE oder SQL_UPDATE und der Vorgang ist fehlgeschlagen, da vollständige Parallelität. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgedaten rechts abgeschnitten|Die *Vorgang* Argument war SQL_REFRESH und Zeichenfolgen- oder Binärdaten, die für eine Spalte oder Spalten mit dem Datentyp des Typs SQL_C_CHAR oder sql_c_binary angegeben zurückgegeben, die in das Abschneiden von nicht leeren Zeichen oder binäre Daten ungleich NULL geführt haben.|  
-|01S01|Fehler in Zeile|Die *RowNumber* Argument wurde 0 und Fehler in einer oder mehreren Zeilen beim Ausführen des Vorgangs angegeben, mit der *Vorgang* Argument.<br /><br /> (SQL_SUCCESS_WITH_INFO wird zurückgegeben, wenn bei ein oder mehrere, aber nicht alle Zeilen eines mehrzeiligen-Vorgangs ein Fehler auftritt, und wenn für einen Vorgang für die einzelnen Zeile ein Fehler auftritt, wird SQL_ERROR zurückgegeben.)<br /><br /> (Diese SQLSTATE wird nur zurückgegeben, wenn **SQLSetPos** wird aufgerufen, nachdem **SQLExtendedFetch**, wenn der Treiber einer ODBC 2. *X* Treiber und die Cursorbibliothek wird nicht verwendet.)|  
+|01S01|Fehler in Zeile|Die *RowNumber* Argument wurde 0 und Fehler in einer oder mehreren Zeilen beim Ausführen des Vorgangs angegeben, mit der *Vorgang* Argument.<br /><br /> (SQL_SUCCESS_WITH_INFO wird zurückgegeben, wenn bei ein oder mehrere, aber nicht alle Zeilen eines mehrzeiligen-Vorgangs ein Fehler auftritt, und wenn für einen Vorgang für die einzelnen Zeile ein Fehler auftritt, wird SQL_ERROR zurückgegeben.)<br /><br /> (Diese SQLSTATE wird nur zurückgegeben, wenn **SQLSetPos** wird aufgerufen, nachdem **SQLExtendedFetch**, wenn der Treiber einer ODBC 2.. *X* Treiber und die Cursorbibliothek wird nicht verwendet.)|  
 |01S07|Teilbereiche wurden abgeschnitten|Die *Vorgang* Argument war SQL_REFRESH, der Datentyp des Puffers Anwendung war nicht SQL_C_CHAR oder sql_c_binary angegeben und die Daten an Application-Puffer für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Attributverletzung eingeschränkter Daten|Der Datenwert einer Spalte im Resultset konnte nicht konvertiert werden, um den angegebenen Datentyp *TargetType* im Aufruf von **SQLBindCol**.|  
 |07009|Ungültiger Deskriptorindex|Das Argument *Vorgang* SQL_REFRESH oder SQL_UPDATE war und eine Spaltennummer, die größer als die Anzahl der Spalten im Resultset eine Spalte gebunden war.|  
@@ -123,7 +123,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>Kommentare  
   
 > [!CAUTION]
->  Für Informationen über die Anweisung gibt an, die **SQLSetPos** in aufgerufen werden kann und was sie muss für die Kompatibilität mit ODBC 2.*.x* -Anwendungen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
+>  Für Informationen über die Anweisung gibt an, die **SQLSetPos** in aufgerufen werden kann und was sie muss für die Kompatibilität mit ODBC 2. *.x* -Anwendungen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>RowNumber-Argument  
  Die *RowNumber* Argument gibt die Anzahl der Zeile im Rowset für das Ausführen des Vorgangs gemäß den *Vorgang* Argument. Wenn *RowNumber* gleich 0 ist, der Vorgang gilt für jede Zeile im Rowset. *RowNumber* muss ein Wert zwischen 0 und die Anzahl der Zeilen im Rowset.  

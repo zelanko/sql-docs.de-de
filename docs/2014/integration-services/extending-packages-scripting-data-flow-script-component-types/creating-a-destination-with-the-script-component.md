@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768956"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Erstellen eines Ziels mit der Skriptkomponente
@@ -68,7 +68,7 @@ ms.locfileid: "62768956"
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
  Wenn Sie die vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie hinzufügen, sie in der `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftsfeldern für die **Skript** auf der Seite die **Transformations-Editor**.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte (**...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Dialogfeld.  
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte ( **...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Dialogfeld.  
   
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62768956"
   
 3.  Fügen Sie der Oberfläche des Datenfluss-Designers eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Ziel.  
   
-4.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle direkt mit einem Ziel ohne Transformationen verbinden.) Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit den `AdventureWorks` -Beispieldatenbank, die enthält mindestens die **AddressID** und **City** Spalten.  
+4.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit den `AdventureWorks` -Beispieldatenbank, die enthält mindestens die **AddressID** und **City** Spalten.  
   
 5.  Öffnen Sie den **Transformations-Editor für Skripterstellung**. Wählen Sie auf der Seite **Eingabespalten** die Eingabespalten **AddressID** und **City** aus.  
   
@@ -236,7 +236,7 @@ public class ScriptMain:
   
 2.  Fügen Sie der Oberfläche des Datenfluss-Designers eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Ziel.  
   
-3.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle direkt mit einem Ziel ohne Transformationen verbinden.) Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit der `AdventureWorks` -Beispieldatenbank erstellt und enthalten sollte mindestens die **AddressID** und **City** Spalten.  
+3.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit der `AdventureWorks` -Beispieldatenbank erstellt und enthalten sollte mindestens die **AddressID** und **City** Spalten.  
   
 4.  Öffnen Sie den **Transformations-Editor für Skripterstellung**. Wählen Sie auf der Seite **Eingabespalten** die Spalten **AddressID** und **City** aus.  
   

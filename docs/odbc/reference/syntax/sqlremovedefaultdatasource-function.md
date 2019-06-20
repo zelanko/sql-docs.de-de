@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea540d2ef6747bbe3bfc9ac55f04afe1d63349f7
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537239"
 ---
 # <a name="sqlremovedefaultdatasource-function"></a>SQLRemoveDefaultDataSource-Funktion
@@ -32,7 +32,7 @@ ms.locfileid: "65537239"
  Eingeführt in Version: ODBC 1.0, als veraltet markiert  
   
  **Zusammenfassung**  
- In ODBC 3.0 die **SQLRemoveDefaultDataSource** Funktion wurde durch einen Aufruf von ersetzt [SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md) mit einer *häufigsten* ODBC_REMOVE_DEFAULT_DSN Argument. Wenn eine ODBC 2.*.x* Installationsprogramm ruft diese Funktion, des ODBC-Installationsprogramms ordnen sie die folgenden **SQLConfigDataSource** aufrufen:  
+ In ODBC 3.0 die **SQLRemoveDefaultDataSource** Funktion wurde durch einen Aufruf von ersetzt [SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md) mit einer *häufigsten* ODBC_REMOVE_DEFAULT_DSN Argument. Wenn eine ODBC 2. *.x* Installationsprogramm ruft diese Funktion, des ODBC-Installationsprogramms ordnen sie die folgenden **SQLConfigDataSource** aufrufen:  
   
 ```cpp  
 SQLConfigDataSource (NULL, ODBC_REMOVE_DEFAULT_DSN, NULL, NULL)  

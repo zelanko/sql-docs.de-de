@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e0ca79b64cafcd2ac34c14af120f29781a7ae22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63148924"
 ---
 # <a name="trace-file"></a>Ablaufverfolgungsdatei
@@ -26,4 +26,4 @@ Eine Anwendung gibt der Datei entweder durch Festlegen der **TraceFile** Schlüs
   
  Die Ablaufverfolgungsdatei enthält ein Protokoll der einzelnen ODBC-Funktionsaufruf mit den Datentypen und Werte für alle Argumente. Protokolliert alle Eingabefunktionen und alle zurückgegebene Funktionen mit Rückgabecodes und Fehlerzustände protokolliert.  
   
- In ODBC 3.*.x*, Parameter, Verbindungsfunktionen werden nicht bereitgestellt, um die Ablaufverfolgung-DLL.
+ In ODBC 3. *.x*, Parameter, Verbindungsfunktionen werden nicht bereitgestellt, um die Ablaufverfolgung-DLL.

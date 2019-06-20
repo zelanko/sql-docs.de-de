@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9dbc6e9e78fc08be2bba08d0fbeb897496a2058b
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66694935"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Gibt den Typ der Sperre, die auf Datensätze platziert werden, während der Bearbeitung.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Gibt die vollständige BatchUpdates an. Für den Modus "Batch-Update" erforderlich.|  
 |**adLockOptimistic**|3|Gibt an, optimistische, Datensätze. Der Anbieter verwendet optimistische, Sperren von Datensätzen nur bei Aufruf der [Update](../../../ado/reference/ado-api/update-method.md) Methode.|  

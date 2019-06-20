@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701182"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB-Anbieter für SQL Server – Übersicht
@@ -62,7 +62,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Anbieterspezifische-Verbindungsparameter
  Der Anbieter unterstützt mehrere Anbieter-spezifischen Verbindungsdaten Parameter zusätzlich zu den von ADO definiert. Wie mit den Eigenschaften der ADO-Verbindung diese Anbieter-spezifischen Eigenschaften können, über festgelegt werden die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung von einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) oder als Teil der festgelegt werden kann die **"ConnectionString"** .
 
-|Parameter|Description|
+|Parameter|Beschreibung|
 |---------------|-----------------|
 |Trusted_Connection|Gibt den Authentifizierungsmodus für den Benutzer an. Dies kann so festgelegt werden **Ja** oder **keine**. Der Standardwert ist **keine**. Wenn diese Eigenschaft, um festgelegt wird **Ja**, SQLOLEDB verwendet Microsoft Windows NT-Authentifizierungsmodus zum Autorisieren des Benutzerzugriffs mit der SQL Server-Datenbank, die gemäß der **Speicherort** und [Datasource ](../../../ado/reference/ado-api/datasource-property-ado.md) Eigenschaftswerte. Wenn diese Eigenschaft, um festgelegt wird **keine**, SQLOLEDB verwendet im gemischten Modus zum Autorisieren des Benutzerzugriffs auf SQL Server-Datenbank. Der SQL Server-Anmeldenamen und das Kennwort werden angegeben, der **Benutzer-Id** und **Kennwort** Eigenschaften.|
 |Aktuelle Sprache|Gibt an, ein SQL Server-Sprachenname. Identifiziert die für die Auswahl und Formatierung von Systemnachrichten verwendete Sprache. Die Sprache auf dem SQL-Server installiert werden muss andernfalls öffnen, die die Verbindung fehl.|

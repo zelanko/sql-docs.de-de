@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdf177cedcd73069e73c1ec7b4c7db5cfb497969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62739990"
 ---
 # <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Benannte Mengen – erstellen im Bereich einer Sitzung MDX benannte Mengen

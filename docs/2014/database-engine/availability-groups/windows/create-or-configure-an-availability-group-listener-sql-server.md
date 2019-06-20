@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6665d039587a09bb373179ac6f9675791b45f53b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815554"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)
@@ -77,7 +77,7 @@ ms.locfileid: "62815554"
 |So erstellen Sie einen Verfügbarkeitsgruppenlistener|Erfordert die Mitgliedschaft in der festen **sysadmin** -Serverrolle und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.|  
 |So ändern Sie einen vorhandenen Verfügbarkeitsgruppenlistener|Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.|  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 > [!TIP]  
 >  Der [Assistent für neue Verfügbarkeitsgruppen](use-the-new-availability-group-dialog-box-sql-server-management-studio.md) unterstützt Sie bei der Erstellung eines Listeners für eine neue Verfügbarkeitsgruppe.  

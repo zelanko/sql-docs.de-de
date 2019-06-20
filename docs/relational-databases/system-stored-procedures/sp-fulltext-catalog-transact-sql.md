@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983115"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>Argumente  
 `[ @ftcat = ] 'fulltext_catalog_name'` Ist der Name der Volltext-Katalog. Katalognamen müssen für jede Datenbank eindeutig sein. *Fulltext_catalog_name* ist **Sysname**.  
   
-`[ @action = ] 'action'` Ist die Aktion ausgeführt werden. *action* ist vom Datentyp **varchar(20)**. Die folgenden Werte sind möglich:  
+`[ @action = ] 'action'` Ist die Aktion ausgeführt werden. *action* ist vom Datentyp **varchar(20)** . Die folgenden Werte sind möglich:  
   
 > [!NOTE]  
 >  Volltextkataloge können bei Bedarf erstellt, gelöscht und geändert werden. Vermeiden Sie es jedoch, Schemaänderungen an mehreren Katalogen gleichzeitig auszuführen. Diese Aktionen können ausgeführt werden, mithilfe der **Sp_fulltext_table** gespeicherte Prozedur, die die empfohlene Methode ist.  

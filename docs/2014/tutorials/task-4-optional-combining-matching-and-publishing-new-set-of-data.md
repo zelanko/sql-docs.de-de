@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489273"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Aufgabe 4 (optional): Kombination, Abgleich und Veröffentlichung eines neuen Datensatzes
@@ -111,6 +111,6 @@ ms.locfileid: "65489273"
 34. Schließen Sie jetzt **Mappe1 - Microsoft Excel** Fenster ohne Speichern der Datei.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

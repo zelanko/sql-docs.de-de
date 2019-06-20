@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: c4d4f58161885519767e299683fe32b5197a045f
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66198218"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
@@ -64,7 +64,7 @@ Ist ein Token, die eindeutig einen Abfrageplan für die Ausführung für einen B
 ## <a name="remarks"></a>Hinweise
 Dieser Systemfunktion steht ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-Hierbei handelt es sich um ein optionales Feature, für das das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 aktiviert sein muss. Beginnend mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP-Version 2.5, um dies auf Datenbankebene finden Sie unter der Option LAST_QUERY_PLAN_STATS in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+Hierbei handelt es sich um ein optionales Feature, für das das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 aktiviert sein muss. Informationen dazu, wie Sie dies ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 auf der Datenbankebene erreichen, finden Sie in der LAST_QUERY_PLAN_STATS-Option unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Dieser Systemfunktion funktioniert die **einfache** abfrageausführungsstatistik profilerstellungsinfrastruktur. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).  
 

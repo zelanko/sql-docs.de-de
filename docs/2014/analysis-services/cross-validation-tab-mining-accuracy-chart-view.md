@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086620"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Übergreifende Überprüfung (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
@@ -90,11 +90,11 @@ ms.locfileid: "66086620"
  Weitere Informationen zum Interpretieren der Ergebnisse des Berichts für die übergreifende Überprüfung finden Sie unter [Measures im Kreuzvalidierungsbericht](data-mining/measures-in-the-cross-validation-report.md).  
   
 ## <a name="setting-the-accuracy-threshold"></a>Festlegen des Genauigkeitsschwellenwerts  
- Sie können den Standardwert zum Messen der Vorhersagegenauigkeit steuern, indem Sie einen Wert für **Ziel****schwellenwert** festlegen. Ein Schwellenwert stellt eine Art von Genauigkeitsleiste dar. Jeder Vorhersage wird eine Wahrscheinlichkeit der Richtigkeit des vorhergesagten Werts zugewiesen. Wenn Sie also den **Ziel****schwellenwert** auf einen Wert festlegen, der näher an 1 liegt, muss die Wahrscheinlichkeit für eine bestimmte Vorhersage ziemlich hoch sein, damit diese als gute Vorhersage gewertet wird. Wenn Sie umgekehrt den **Ziel****schwellenwert** auf einen Wert festlegen, der näher an 0 liegt, werden auch Vorhersagen mit niedrigeren Wahrscheinlichkeitswerten als „gute“ Vorhersagen gewertet.  
+ Sie können den Standardwert zum Messen der Vorhersagegenauigkeit steuern, indem Sie einen Wert für **Ziel** **schwellenwert** festlegen. Ein Schwellenwert stellt eine Art von Genauigkeitsleiste dar. Jeder Vorhersage wird eine Wahrscheinlichkeit der Richtigkeit des vorhergesagten Werts zugewiesen. Wenn Sie also den **Ziel** **schwellenwert** auf einen Wert festlegen, der näher an 1 liegt, muss die Wahrscheinlichkeit für eine bestimmte Vorhersage ziemlich hoch sein, damit diese als gute Vorhersage gewertet wird. Wenn Sie umgekehrt den **Ziel** **schwellenwert** auf einen Wert festlegen, der näher an 0 liegt, werden auch Vorhersagen mit niedrigeren Wahrscheinlichkeitswerten als „gute“ Vorhersagen gewertet.  
   
- Es gibt keinen empfohlenen Schwellenwert, da die Wahrscheinlichkeit einer Vorhersage von der Datenmenge und dem Typ der Vorhersage abhängt. Prüfen Sie einige Vorhersagen auf verschiedenen Wahrscheinlichkeitsstufen, um eine geeignete Genauigkeitsleiste für Ihre Daten zu bestimmen. Diese Vorgehensweise ist von Bedeutung, da der Wert, den Sie für **Ziel****schwellenwert** verwenden, Auswirkungen auf die gemessene Genauigkeit des Modells hat.  
+ Es gibt keinen empfohlenen Schwellenwert, da die Wahrscheinlichkeit einer Vorhersage von der Datenmenge und dem Typ der Vorhersage abhängt. Prüfen Sie einige Vorhersagen auf verschiedenen Wahrscheinlichkeitsstufen, um eine geeignete Genauigkeitsleiste für Ihre Daten zu bestimmen. Diese Vorgehensweise ist von Bedeutung, da der Wert, den Sie für **Ziel** **schwellenwert** verwenden, Auswirkungen auf die gemessene Genauigkeit des Modells hat.  
   
- Angenommen, es werden drei Vorhersagen für einen bestimmten Zielstatus erstellt, und die Wahrscheinlichkeiten für die einzelnen Vorhersagen liegen bei 0,05, 0,15 und 0,8. Wenn Sie den Schwellenwert auf 0,5 festgelegt haben, wird nur eine Vorhersage als richtig gewertet. Wenn Sie den **Ziel****schwellenwert** auf 0,10 festgelegt haben, werden zwei der Vorhersagen als richtig gewertet.  
+ Angenommen, es werden drei Vorhersagen für einen bestimmten Zielstatus erstellt, und die Wahrscheinlichkeiten für die einzelnen Vorhersagen liegen bei 0,05, 0,15 und 0,8. Wenn Sie den Schwellenwert auf 0,5 festgelegt haben, wird nur eine Vorhersage als richtig gewertet. Wenn Sie den **Ziel** **schwellenwert** auf 0,10 festgelegt haben, werden zwei der Vorhersagen als richtig gewertet.  
   
  Wenn **Ziel** **Schwellenwert** nastaven NA hodnotu `null`, dies ist der Standardwert, wird die wahrscheinlichste Vorhersage für jeden Fall als richtig gewertet. In dem gerade genannten Beispiel sind 0,05, 0,15 und 0,8 die Wahrscheinlichkeiten für Vorhersagen in drei verschiedenen Fällen. Obwohl die Wahrscheinlichkeiten sehr unterschiedlich sind, würde jede Vorhersage als richtig gewertet, da jeder Fall nur eine Vorhersage generiert und es sich dabei um die besten Vorhersagen für diese Fälle handelt.  
   

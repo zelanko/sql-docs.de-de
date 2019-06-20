@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779663"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Volltextkatalog-Eigenschaften (Seite 'Allgemein')
@@ -64,7 +64,7 @@ ms.locfileid: "62779663"
  Name des Volltextkatalogs.  
   
  **Unterscheidung nach Akzent**  
- Dient zum Anzeigen oder Ändern, ob bei dem Katalog eine Unterscheidung anhand von diakritischen Zeichen wie Tilde (**~**), Akut-Akzentzeichen (**´**) oder Umlaut (**¨**) erfolgt oder nicht. Gültige Werte sind:  
+ Dient zum Anzeigen oder Ändern, ob bei dem Katalog eine Unterscheidung anhand von diakritischen Zeichen wie Tilde ( **~** ), Akut-Akzentzeichen (**´**) oder Umlaut (**¨**) erfolgt oder nicht. Gültige Werte sind:  
   
 -   **Nein**  
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489617"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Erstellen und Veröffentlichen einer Geschäftsregel (Master Data Services)
@@ -103,11 +103,11 @@ ms.locfileid: "65489617"
 ## <a name="grid-columns"></a>Rasterspalten  
  Für jede erstelle Geschäftsregel wird dem Raster eine Zeile mit sechs Spalten hinzugefügt. Das sind die Spalten.  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |Status|Wenn Sie auf **Speichern** klicken, wird das folgende Bild angezeigt, das angibt, dass die Geschäftsregel aktualisiert wird.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Falls beim Erstellen oder Bearbeiten einer Geschäftsregel Fehler auftreten, wird das folgende Bild angezeigt.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Falls der Status „OK“ lautet, wird das folgende Bild angezeigt.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |Name|Der Geschäftsregelname|  
-|Description|Die Beschreibung der Geschäftsregel.|  
+|Beschreibung|Die Beschreibung der Geschäftsregel.|  
 |Geschäftsregelstatus|Einer der folgenden Geschäftsregelstatus: „Keine Regel definiert“, „Aktiv“, „Ausgeschlossen“, „Ausstehende Änderungen“, „Ausstehender Ausschluss“ und „Ausstehende Löschung“.|  
 |Ausgeschlossen|Gibt an, ob die Geschäftsregel ausgeschlossen ist.|  
 |Benachrichtigung|Gibt den Benutzer oder eine Gruppe an, an den bzw. die die E-Mail-Benachrichtigung gesendet werden soll.|  

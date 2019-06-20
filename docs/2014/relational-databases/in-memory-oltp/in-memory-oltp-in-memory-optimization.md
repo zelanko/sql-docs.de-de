@@ -13,14 +13,15 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bcd8c20039b048cf717c24981124ffd61cf51f4
+ms.sourcegitcommit: 6f8f975f7f97cd12fa008b05dc8d52cd1e94577f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158023"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251001"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
+
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]wurde in [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] neu eingeführt und kann die Leistung der OLTP-Datenbank erheblich verbessern. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] ist eine speicheroptimierte Datenbank-Engine, die in die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engine integriert und für OLTP optimiert wurde.  
   
 |||  
@@ -65,7 +66,7 @@ ms.locfileid: "63158023"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In diesem Abschnitt finden Sie Informationen zu den folgenden Konzepten:  
   
-|Thema|Beschreibung|  
+|Thema|Description|  
 |-----------|-----------------|  
 |[Anforderungen für die Verwendung speicheroptimierter Tabellen](memory-optimized-tables.md)|Erläutert Hardware- und Softwareanforderungen und Richtlinien zum Verwenden von speicheroptimierten Tabellen.|  
 |[Verwenden von In-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Erläutert die Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] in einer virtualisierten Umgebung.|  
@@ -90,7 +91,11 @@ ms.locfileid: "63158023"
   
 -   [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Übersicht über die Interna von SQL Server In-Memory-OLTP](https://msdn.microsoft.com/library/dn720242.aspx)  
+-   [Übersicht über die Interna von SQL Server In-Memory-OLTP](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+    <!--
+         (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
+         (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)
+    -->
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbankfunktionen](../database-features.md)  

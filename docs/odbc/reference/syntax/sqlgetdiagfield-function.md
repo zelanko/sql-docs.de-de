@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538121"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
@@ -156,7 +156,7 @@ SQLRETURN SQLGetDiagField(
   
  Treiber können Treiber-spezifische Header und Datensatzfelder in der Struktur Diagnosedaten definieren.  
   
- Eine ODBC 3.*.x* Anwendung mit einer ODBC 2.*.x* Treiber werden in der Lage, rufen Sie **SQLGetDiagField** nur mit einem *DiagIdentifier* ein Argument vom SQL_DIAG_CLASS_ORIGIN SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME oder SQL_DIAG_SQLSTATE. Alle anderen Feldern gibt SQL_ERROR zurück.  
+ Eine ODBC 3. *.x* Anwendung mit einer ODBC 2. *.x* Treiber werden in der Lage, rufen Sie **SQLGetDiagField** nur mit einem *DiagIdentifier* ein Argument vom SQL_DIAG_CLASS_ORIGIN SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME oder SQL_DIAG_SQLSTATE. Alle anderen Feldern gibt SQL_ERROR zurück.  
   
 ## <a name="header-fields"></a>Headerfelder  
  Die Headerfelder, die in der folgenden Tabelle aufgeführten können enthalten sein, der *DiagIdentifier* Argument.  
@@ -259,7 +259,7 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 -   Für alle Datensätze, die bestimmte Zeilen betreffen, werden die Datensätze durch den Wert in das Feld "SQL_DIAG_ROW_NUMBER" sortiert. Alle Fehler und Warnungen der ersten Zeile betroffen sind aufgeführt, und klicken Sie dann alle Fehler und Warnungen der nächsten Zeile betroffenen und so weiter.  
   
 > [!NOTE]
->  Die ODBC 3.*.x* -Treiber-Manager sortiert nicht Statusdatensätze in der Warteschlange diagnostische Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2.*.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird durch ODBC zurückgegeben 3 *.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** aufgerufen wird, auf einen Cursor, der mit positioniert ist **SQLExtendedFetch** .  
+>  Die ODBC 3. *.x* -Treiber-Manager sortiert nicht Statusdatensätze in der Warteschlange diagnostische Wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, von einer ODBC 2. *.x* Treiber oder, wenn SQLSTATE 01 s 01 (Fehler in Zeile) wird durch ODBC zurückgegeben 3 *.x* Treiber beim **SQLExtendedFetch** aufgerufen wird oder **SQLSetPos** aufgerufen wird, auf einen Cursor, der mit positioniert ist **SQLExtendedFetch** .  
   
  Innerhalb jeder Zeile, oder für alle Datensätze, die für die Nummer der Zeile unbekannt ist oder eine Zeile nicht entsprechen, oder für alle Datensätze mit einer Zeilennummer SQL_NO_ROW_NUMBER gleich, wird der erste Datensatz aufgeführten bestimmt mithilfe eines Satzes von Regeln zu sortieren. Nach dem des ersten Datensatzes ist die Reihenfolge von den anderen Datensätzen, die Auswirkungen auf eine Zeile nicht definiert. Eine Anwendung kann nicht davon ausgehen, dass der Fehler, Warnungen nach dem ersten Datensatz vorangestellt sein. Anwendungen sollten die vollständige Diagnosedaten-Struktur, um vollständige Informationen zu einer nicht erfolgreichen Aufruf einer Funktion erhalten überprüfen.  
   

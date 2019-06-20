@@ -22,10 +22,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23895b8321e5f772972821c24b652dd8b85318aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62858824"
 ---
 # <a name="sysedgeconstraintclauses-transact-sql"></a>sys.edge_constraint_clauses (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62858824"
 
 Enthält eine Zeile pro-Klausel mit einer edgeeinschränkung an.
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Object_id des Edge-Einschränkung.|  
 |**from_object_id**|**int**|Object_id des die FROM-Tabelle.|  
