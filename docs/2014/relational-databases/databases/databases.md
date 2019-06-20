@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917082"
 ---
 # <a name="databases"></a>Datenbanken
@@ -31,7 +31,7 @@ ms.locfileid: "62917082"
   
  Wenn Personen Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhalten, werden sie über einen Anmeldenamen identifiziert. Wenn Personen Zugriff auf eine Datenbank erhalten, werden sie als Datenbankbenutzer identifiziert. Ein Datenbankbenutzer kann auf einer Anmeldung basieren. Wenn eigenständige Datenbanken aktiviert werden, kann ein Datenbankbenutzer erstellt werden, der nicht auf einer Anmeldung basiert. Weitere Informationen über Benutzer finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
- Einem Benutzer mit Zugriff auf eine Datenbank kann die Berechtigung zum Zugreifen auf die Objekte in der Datenbank erteilt werden. Obwohl Berechtigungen einzelnen Benutzern erteilt werden können, sollten Datenbankrollen erstellt, den Rollen Datenbankbenutzer hinzugefügt und dann Zugriffsberechtigungen für die Rollen erteilt werden. Indem Berechtigungen für Rollen und nicht für Benutzer erteilt werden, können die Berechtigungen leichter konsistent und verständlich gehalten werden, während die Anzahl der Benutzer wächst und sich laufend ändert. Weitere Informationen zu Rollenberechtigungen finden Sie unter [CREATE ROLE &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-role-transact-sql) und [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../security/authentication-access/principals-database-engine.md).  
+ Einem Benutzer mit Zugriff auf eine Datenbank kann die Berechtigung zum Zugreifen auf die Objekte in der Datenbank erteilt werden. Obwohl Berechtigungen einzelnen Benutzern erteilt werden können, sollten Datenbankrollen erstellt, den Rollen Datenbankbenutzer hinzugefügt und dann Zugriffsberechtigungen für die Rollen erteilt werden. Indem Berechtigungen für Rollen und nicht für Benutzer erteilt werden, können die Berechtigungen leichter konsistent und verständlich gehalten werden, während die Anzahl der Benutzer wächst und sich laufend ändert. Weitere Informationen zu Rollenberechtigungen finden Sie unter [CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql) und [Prinzipale &#40;Datenbank-Engine&#41;](../security/authentication-access/principals-database-engine.md).  
   
 ## <a name="working-with-databases"></a>Arbeiten mit Datenbanken  
  Die meisten Personen, die mit Datenbanken arbeiten, verwenden das Tool [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Das [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Tool besitzt eine grafische Benutzeroberfläche zum Erstellen von Datenbanken und den Objekten in den Datenbanken. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] enthält außerdem einen Abfrage-Editor für die Interaktion mit Datenbanken durch das Schreiben von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] kann vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationsdatenträger installiert oder von MSDN heruntergeladen werden.  
@@ -59,6 +59,6 @@ ms.locfileid: "62917082"
   
  [Sichten](../views/views.md)  
   
- [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   

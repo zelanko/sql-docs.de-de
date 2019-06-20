@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f49c43eeaf6f5b799d60f500c303227f94452503
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151009"
 ---
 # <a name="xtp-transaction-log"></a>XTP-Transaktionsprotokoll
@@ -22,7 +22,7 @@ ms.locfileid: "63151009"
   
  In dieser Tabelle werden die Leistungsindikatoren für das **XTP-Transaktionsprotokoll** beschrieben.  
   
-|Indikator|Description|  
+|Indikator|Beschreibung|  
 |-------------|-----------------|  
 |**Geschriebene Protokollbytes/s**|Die Anzahl von Bytes, die von der XTP-Engine durchschnittlich pro Sekunde in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll geschrieben werden.|  
 |**Geschriebene Protokolleinträge/s**|Die Anzahl von Datensätzen, die von der XTP-Engine durchschnittlich pro Sekunde in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll geschrieben werden.|  

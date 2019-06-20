@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872249"
 ---
 # <a name="attach-a-database"></a>Anfügen einer Datenbank
@@ -33,7 +33,7 @@ ms.locfileid: "62872249"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Zum Anfügen einer Datenbank mit:**  
   
@@ -64,7 +64,7 @@ Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht ve
 ####  <a name="Permissions"></a> Berechtigungen  
 Erfordert die Berechtigung `CREATE DATABASE`, `CREATE ANY DATABASE` oder `ALTER ANY DATABASE`.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 ### <a name="to-attach-a-database"></a>So fügen Sie eine Datenbank an  
   
@@ -100,7 +100,7 @@ Erfordert die Berechtigung `CREATE DATABASE`, `CREATE ANY DATABASE` oder `ALTER 
      **Status**  
      Zeigt den Status der Datenbank an (siehe folgende Tabelle).  
   
-    |Symbol|Statustext|Description|  
+    |Symbol|Statustext|Beschreibung|  
     |----------|-----------------|-----------------|  
     |(Kein Symbol)|(Kein Text)|Das Anfügen hat noch nicht begonnen oder steht für dieses Objekt noch aus. Dies ist der Standardwert bei Öffnen des Dialogfelds.|  
     |Grünes, nach rechts zeigendes Dreieck|Vorgang wird ausgeführt|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  

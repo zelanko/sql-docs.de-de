@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536275"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec-Funktion
@@ -90,7 +90,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetDescRec** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_DESC und *behandeln* von *DescriptorHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetDescRec** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07009|Ungültiger Deskriptorindex|Die *RecNumber* -Argument wurde auf 0 (null) festgelegt und die *DescriptorHandle* bezeichnet ein IPD-Handle.<br /><br /> Die *RecNumber* Argument war kleiner als 0.<br /><br /> Die *RecNumber* Argument war größer als die maximale Anzahl von Spalten oder Parametern, die die Datenquelle unterstützt werden, und die *DescriptorHandle* Argument war ein APD IPD oder ARD.<br /><br /> Die *RecNumber* Argument war gleich 0 (null) und die *DescriptorHandle* Argument ein implizit zugewiesene APD bezeichnet. (Dieser Fehler tritt nicht mit einem explizit zugewiesene Anwendungsdienst-Deskriptor da nicht bekannt ist, ob ein explizit zugewiesene Anwendungsdienst-Deskriptor einer APD oder ARD erst einmal ausführen.)|  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY016|Ein Implementierungszeilendeskriptor kann nicht geändert werden.|Die *DescriptorHandle* Argument wurde ein IRD zugeordnet.|  
 |HY021|Inkonsistente deskriptorinformation|Die *Typ* Feld oder jedes andere Feld, das SQL_DESC_TYPE-Feld in der Deskriptor zugeordnet war nicht gültig oder konsistent.<br /><br /> Informationen der Sicherheitsbeschreibung, die während einer konsistenzprüfung eingecheckt war nicht konsistent. (Siehe "Konsistenzprüfungen," weiter unten in diesem Abschnitt.)|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Treiber wurde von einer ODBC 2.*.x* -Treiber der Deskriptor wurde ein ARD, die *ColumnNumber* -Argument wurde auf 0 und dem Wert des Arguments festgelegt *Pufferlänge* wurde nicht gleich 4.|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Treiber wurde von einer ODBC 2. *.x* -Treiber der Deskriptor wurde ein ARD, die *ColumnNumber* -Argument wurde auf 0 und dem Wert des Arguments festgelegt *Pufferlänge* wurde nicht gleich 4.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *DescriptorHandle* die Funktion nicht unterstützt.|  

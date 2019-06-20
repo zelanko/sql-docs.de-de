@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636162"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
@@ -55,12 +55,12 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |server|**sysname**|Name des Remoteservers, der auf dem lokalen Server definiert ist.|  
 |local_user_name|**sysname**|Anmeldename auf dem lokalen Server, dem Remoteanmeldenamen vom Server zugeordnet werden.|  
 |remote_user_name|**sysname**|Melden Sie sich auf dem Remoteserver, der Local_user_name zugeordnet wird.|  
-|Optionen|**sysname**|Vertrauenswürdig = Der Remoteanmeldename muss beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus kein Kennwort angeben.<br /><br /> Nicht vertrauenswürdig (oder leer) = Der Remoteanmeldename wird beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus zur Eingabe eines Kennworts aufgefordert.|  
+|options|**sysname**|Vertrauenswürdig = Der Remoteanmeldename muss beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus kein Kennwort angeben.<br /><br /> Nicht vertrauenswürdig (oder leer) = Der Remoteanmeldename wird beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus zur Eingabe eines Kennworts aufgefordert.|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie Sp_helpserver, um die Namen der auf dem lokalen Server definierten Remoteserver anzuzeigen.  

@@ -21,10 +21,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9b0e16279615bf102c916793439d440211939839
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025411"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL-Datenbank)
@@ -45,7 +45,7 @@ ms.locfileid: "63025411"
   
 |Spalte|Datentyp|Description|  
 |-------------|---------------|-----------------|  
-|Uhrzeit|**datetime**|Uhrzeit (UTC) in Stundeninkrementen.|  
+|time|**datetime**|Uhrzeit (UTC) in Stundeninkrementen.|  
 |database_name|**nvarchar**|Name der Benutzerdatenbank.|  
 |sku|**nvarchar**|Name der SKU Folgende Werte sind möglich:<br /><br /> Web<br /><br /> Business<br /><br /> Standard<br /><br /> Standard<br /><br /> Premium|  
 |usage_in_seconds|**int**|Summe der in der Stunde verwendeten CPU-Zeit.<br /><br /> Hinweis: Diese Spalte ist für V11 veraltet und gilt nicht für V12. **Wert ist immer auf 0 festgelegt.**|  

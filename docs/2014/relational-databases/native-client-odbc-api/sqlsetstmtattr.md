@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188687"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
@@ -62,7 +62,7 @@ ms.locfileid: "63188687"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  Das SQL_SOPT_SS_DEFER_PREPARE-Attribut bestimmt, ob die Anweisung sofort vorbereitet oder, bis verzögert **SQLExecute**, [SQLDescribeCol](sqldescribecol.md) oder [SQLDescribeParam](sqldescribeparam.md) ausgeführt wird. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 und früheren Versionen wird diese Eigenschaft ignoriert (die Vorbereitung nicht verzögert). Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
   
-|*ValuePtr* Wert|Description|  
+|*ValuePtr* Wert|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_DP_ON|Standard. Nach dem Aufruf [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360), die anweisungsvorbereitung verzögert, bis **SQLExecute** aufgerufen wird oder der metaeigenschaftsvorgang (**SQLDescribeCol** oder **SQLDescribeParam**) ausgeführt wird.|  
 |SQL_DP_OFF|Die Anweisung wird vorbereitet, sobald **SQLPrepare** ausgeführt wird.|  
@@ -72,7 +72,7 @@ ms.locfileid: "63188687"
   
  Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
   
-|*ValuePtr* Wert|Description|  
+|*ValuePtr* Wert|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|Standard. Der Treiber konvertiert Datums-, Uhrzeit- und Währungsdaten nicht gemäß der Gebietsschemaeinstellung des Clients in Zeichenfolgendaten.|  
 |SQL_RE_ON|Der Treiber konvertiert Datums-, Uhrzeit- und Währungsdaten gemäß der Gebietsschemaeinstellung des Clients in Zeichenfolgendaten.|  

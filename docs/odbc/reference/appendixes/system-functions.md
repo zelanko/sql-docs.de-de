@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62735056"
 ---
 # <a name="system-functions"></a>Systemfunktionen
@@ -33,5 +33,5 @@ Die folgende Tabelle enthält die Systemfunktionen, die in der ODBC-Skalarfunkti
 |Funktion|Description|  
 |--------------|-----------------|  
 |**DATENBANK ()** (ODBC 1.0)|Gibt den Namen der Datenbank entspricht dem Verbindungshandle. (Der Name der Datenbank kann auch durch Aufrufen von **SQLGetConnectOption** mit der SQL_CURRENT_QUALIFIER-Verbindungsoption.)|  
-|**IFNULL (** _"exp"_,_Wert_**)** (ODBC-1.0)|Wenn *"exp"* null ist, *Wert* zurückgegeben wird. Wenn *"exp"* ist nicht null, *"exp"* zurückgegeben wird. Die möglichen Datentyp oder die Arten von *Wert* muss mit dem Datentyp kompatibel sein *"exp"*.|  
+|**IFNULL (** _"exp"_ ,_Wert_ **)** (ODBC-1.0)|Wenn *"exp"* null ist, *Wert* zurückgegeben wird. Wenn *"exp"* ist nicht null, *"exp"* zurückgegeben wird. Die möglichen Datentyp oder die Arten von *Wert* muss mit dem Datentyp kompatibel sein *"exp"* .|  
 |**BENUTZER ()** (ODBC 1.0)|Gibt den Benutzernamen in das DBMS zurück. (Der Benutzername ist auch verfügbar, mit **SQLGetInfo** durch den Informationstyp angeben: SQL_USER_NAME.) Dies kann sich der Anmeldename sein.|

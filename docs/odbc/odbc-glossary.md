@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057782"
 ---
 # <a name="odbc-glossary"></a>ODBC-Glossar
@@ -55,7 +55,7 @@ ms.locfileid: "63057782"
   
 ## <a name="b"></a>B  
  **Unterschied im Verhalten**  
- Eine Änderung in bestimmte Funktionen von ODBC 3.*.x* Verhalten ODBC 2. *X* Verhalten oder umgekehrt. Durch Ändern des umgebungsattributs SQL_ATTR_ODBC_VERSION verursacht.  
+ Eine Änderung in bestimmte Funktionen von ODBC 3. *.x* Verhalten ODBC 2.. *X* Verhalten oder umgekehrt. Durch Ändern des umgebungsattributs SQL_ATTR_ODBC_VERSION verursacht.  
   
  **Binary large Object (BLOB)**  
  Beliebige binären Daten über eine bestimmte Anzahl von Bytes, beispielsweise 255. In der Regel viel länger. Diese Daten in der Regel an gesendet und abgerufen werden, aus der Datenquelle in Teilen. Auch bekannt als *long-Daten*.  

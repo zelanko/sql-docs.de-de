@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140676"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Ändern der Zeitplandetails für einen Masterauftrag für den SQL Server-Agent
@@ -26,7 +26,7 @@ ms.locfileid: "63140676"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Ändern der Zeitplandetails für eine Auftragsdefinition mit:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63140676"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie können nur Aufträge ändern, die in Ihrem Besitz sind, es sei denn, Sie sind ein Mitglied der festen Serverrolle **sysadmin** . Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>So ändern Sie die Zeitplandetails für eine Auftragsdefinition  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63140676"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Auftrag, dessen Zeitplan Sie bearbeiten möchten, und wählen Sie **Eigenschaften**aus.  
   
-5.  In der **Auftragseigenschaften -**_Job_name_ Dialogfeld **wählen Sie eine Seite**Option **Zeitpläne**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;plant Seite&#41;](job-properties-new-job-schedules-page.md).  
+5.  In der **Auftragseigenschaften -** _Job_name_ Dialogfeld **wählen Sie eine Seite**Option **Zeitpläne**. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie unter [Auftragseigenschaften: Neuer Auftrag &#40;plant Seite&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

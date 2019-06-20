@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536270"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics-Funktion
@@ -86,7 +86,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE angefordert wird, dass der Treiber unbedingten Abrufen der Statistiken. (Treiber, die nur für die Open Group-Standard entsprechen, und bieten keine Unterstützung für ODBC-Erweiterungen nicht SQL_ENSURE unterstützen werden.)  
   
- SQL_QUICK angefordert wird, dass der Treiber die KARDINALITÄT und Seiten abrufen, nur dann, wenn sie direkt auf dem Server verfügbar sind. In diesem Fall wird vom Treiber nicht sichergestellt, dass die Werte aktuell sind. (Anwendungen, die in den Standard Open Group geschrieben werden rufen immer das SQL_QUICK-Verhalten von ODBC 3.*.x*-kompatibel sind.)  
+ SQL_QUICK angefordert wird, dass der Treiber die KARDINALITÄT und Seiten abrufen, nur dann, wenn sie direkt auf dem Server verfügbar sind. In diesem Fall wird vom Treiber nicht sichergestellt, dass die Werte aktuell sind. (Anwendungen, die in den Standard Open Group geschrieben werden rufen immer das SQL_QUICK-Verhalten von ODBC 3. *.x*-kompatibel sind.)  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
@@ -126,9 +126,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  Weitere Informationen über die allgemeine Verwendung, Argumenten und zurückgegebenen Daten des ODBC-Katalogfunktionen, finden Sie unter [Katalogfunktionen](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- Die folgenden Spalten wurden umbenannt ODBC 3.*.x*. Die Änderungen an wirken Abwärtskompatibilität sich nicht, da Anwendungen durch die Nummer der Spalte binden.  
+ Die folgenden Spalten wurden umbenannt ODBC 3. *.x*. Die Änderungen an wirken Abwärtskompatibilität sich nicht, da Anwendungen durch die Nummer der Spalte binden.  
   
-|ODBC 2.0-Spalte|ODBC 3.*.x* Spalte|  
+|ODBC 2.0-Spalte|ODBC 3. *.x* Spalte|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

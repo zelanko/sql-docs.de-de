@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767607"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Schritt 9: Testen des Lektion 1-Lernprogrammpakets
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Schritt 9: Testen des Tutorialpakets aus Lektion 1
   In dieser Lektion haben Sie die folgenden Aufgaben ausgeführt:  
   
 -   Ein neues [!INCLUDE[ssIS](../includes/ssis-md.md)] -Projekt erstellt.  
@@ -48,7 +48,7 @@ ms.locfileid: "62767607"
 2.  Klicken Sie nach Ausführen des Pakets im Menü **Debuggen** auf **Debuggen beenden**.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Hinzufügen von Schleifen](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [Lektion 2: Hinzufügen von Schleifen](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausführung von Projekten und Paketen](packages/run-integration-services-ssis-packages.md)  

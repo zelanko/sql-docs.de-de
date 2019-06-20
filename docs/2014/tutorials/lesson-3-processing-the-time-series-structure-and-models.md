@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042876"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lektion 3: Verarbeiten der Zeitreihenstruktur und -modelle
@@ -27,7 +27,7 @@ ms.locfileid: "63042876"
  Weitere Informationen zum Verarbeiten von Miningmodellen finden Sie unter [Verarbeitung von Anforderungen und Überlegungen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="insert-into-statement"></a>INSERT INTO-Anweisung  
- Verwenden Sie zum Trainieren der Zeitreihen-Miningstruktur und alle ihr zugeordneten Miningmodelle die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte.   
+ Verwenden Sie zum Trainieren der Zeitreihen-Miningstruktur und alle ihr zugeordneten Miningmodelle die [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) Anweisung. Der in der Anweisung enthaltene Code umfasst folgende Abschnitte.  
   
 -   Identifizieren der Miningstruktur  
   

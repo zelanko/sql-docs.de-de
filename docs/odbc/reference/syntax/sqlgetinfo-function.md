@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af4b2b5546e8b084afbdd769fb93c416964b0c13
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537988"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo-Funktion
@@ -271,7 +271,7 @@ SQLRETURN SQLGetInfo(
 |SQL_CONVERT_INTERVAL_DAY_TIME||  
   
 ## <a name="information-types-added-for-odbc-3x"></a>Informationstypen hinzugefügt für ODBC 3.x  
- Die folgenden Werte aus der *Informationsart* Argument wurde für ODBC 3.*.x*:  
+ Die folgenden Werte aus der *Informationsart* Argument wurde für ODBC 3. *.x*:  
   
 |||  
 |-|-|  
@@ -338,7 +338,7 @@ SQLRETURN SQLGetInfo(
  SQL_CATALOG_USAGE  
   
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Informationstypen, die als veraltet markiert, in ODBC 3.x  
- Die folgenden Werte aus der *Informationsart* Argument sind veraltet in ODBC 3.*.x*. ODBC 3.*.x* Treiber müssen weiterhin unterstützen diese Typen von Informationen zur Abwärtskompatibilität mit ODBC 2.*.x* Anwendungen. (Weitere Informationen zu diesen Projekttypen finden Sie unter [SQLGetInfo-Unterstützung](../../../odbc/reference/appendixes/sqlgetinfo-support.md) in Anhang G: Treiber-Richtlinien für Abwärtskompatibilität.)  
+ Die folgenden Werte aus der *Informationsart* Argument sind veraltet in ODBC 3. *.x*. ODBC 3. *.x* Treiber müssen weiterhin unterstützen diese Typen von Informationen zur Abwärtskompatibilität mit ODBC 2. *.x* Anwendungen. (Weitere Informationen zu diesen Projekttypen finden Sie unter [SQLGetInfo-Unterstützung](../../../odbc/reference/appendixes/sqlgetinfo-support.md) in Anhang G: Treiber-Richtlinien für Abwärtskompatibilität.)  
   
 |||  
 |-|-|  
@@ -726,7 +726,7 @@ SQLRETURN SQLGetInfo(
  Eine Zeichenfolge mit dem Namen der aktuellen Datenbank verwendet werden, wenn die Datenquelle ein benanntes Objekt, das Namen "Database" definiert.  
   
 > [!NOTE]
->  In ODBC 3.*.x*, der zurückgegebene Wert für diesen *Informationsart* kann auch zurückgegeben werden, indem **SQLGetConnectAttr** mit einer *Attribut* ein Argument vom SQL_ATTR_CURRENT_CATALOG.  
+>  In ODBC 3. *.x*, der zurückgegebene Wert für diesen *Informationsart* kann auch zurückgegeben werden, indem **SQLGetConnectAttr** mit einer *Attribut* ein Argument vom SQL_ATTR_CURRENT_CATALOG.  
   
  SQL_DATETIME_LITERALS(ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske Aufzählen der SQL-92-Datetime-Literale, die von der Datenquelle unterstützt. Beachten Sie, dass diese die Datetime-Literale, die in der SQL-92-Spezifikation aufgelistet werden und sind getrennt von der mit "DateTime" literal Escape-Klauseln von ODBC definiert. Weitere Informationen zu Literalen ODBC Datetime-Escape-Klauseln, finden Sie unter [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  

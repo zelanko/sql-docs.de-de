@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6edec1b341855154e6df6ef24abb7da3d93ffc2
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538004"
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr-Funktion
@@ -83,7 +83,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetStmtAttr** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* SQL _HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLGetStmtAttr** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Die Daten im zurückgegebenen  *\*ValuePtr* wurde abgeschnitten, um werden *Pufferlänge* abzüglich der Länge des ein Null-Terminierungszeichen. Die Länge des Werts den ungekürzten Zeichenfolge wird zurückgegeben, **StringLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -105,7 +105,7 @@ SQLRETURN SQLGetStmtAttr(
   
  Ein Aufruf von **SQLGetStmtAttr** gibt  *\*ValuePtr* den Wert des Attributs im angegebenen Anweisung *Attribut*. Dieser Wert kann es sich entweder um einen Wert SQLULEN erstellt wurde oder ein Null-terminierte Zeichenfolge sein. Wenn der Wert einen SQLULEN-Wert ist, einige Treiber können nur die untere 32-Bit-schreiben oder 16-Bit, der einen Puffer und eine verlassen Bits höherer Ordnung unverändert. Anwendungen sollten daher verwendet einen Puffer mit SQLULEN erstellt wurde, und initialisieren den Wert auf 0 vor dem Aufrufen dieser Funktion. Darüber hinaus die *Pufferlänge* und *StringLengthPtr* Argumente werden nicht verwendet. Wenn der Wert ein Null-terminierte Zeichenfolge ist, handelt es sich bei der Anwendung wird die maximale Länge der Zeichenfolge in die *Pufferlänge* Argument und der Treiber gibt die Länge der Zeichenfolge in die  *\* StringLengthPtr* Puffer.  
   
- Damit Anwendungen Aufrufen **SQLGetStmtAttr** zum Arbeiten mit ODBC 2. *X* Treiber, die einen Aufruf von **SQLGetStmtAttr** zugeordnet ist, in der Treiber-Manager **SQLGetStmtOption**.  
+ Damit Anwendungen Aufrufen **SQLGetStmtAttr** zum Arbeiten mit ODBC 2.. *X* Treiber, die einen Aufruf von **SQLGetStmtAttr** zugeordnet ist, in der Treiber-Manager **SQLGetStmtOption**.  
   
  Die folgenden Anweisungsattribute sind schreibgeschützt, sodass abgerufen werden kann **SQLGetStmtAttr**, jedoch nicht von festgelegt **SQLSetStmtAttr**:  
   

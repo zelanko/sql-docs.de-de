@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 129e1d7d07c66de0eaef7dfc693d233770370f2c
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403802"
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Lektion 3-4: Ändern der Date-Dimension
@@ -65,7 +65,7 @@ Nachdem Sie eine benannte Berechnung in der Datenquellensicht erstellt haben, k�
   
 3.  Wenn das Eigenschaftenfenster nicht geöffnet ist, öffnen Sie es, und klicken Sie in der Titelleiste auf die Schaltfläche **Automatisch im Hintergrund** , damit es geöffnet bleibt.  
   
-4.  Klicken Sie auf die **NameColumn** Eigenschaftenfeld nahe dem unteren Rand des Fensters, und klicken Sie dann auf den Auslassungspunkten (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
+4.  Klicken Sie auf die **NameColumn** Eigenschaftenfeld nahe dem unteren Rand des Fensters, und klicken Sie dann auf den Auslassungspunkten ( **...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 5.  Wählen Sie **SimpleDate** weiter unten in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
@@ -189,7 +189,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 2.  Klicken Sie im Bereich **Attribute** auf das **English Month Name** -Attribut.  
   
-3.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+3.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 4.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
   
@@ -197,7 +197,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Um die **NameColumn** -Eigenschaft des **EnglishMonthName** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+7.  Um die **NameColumn** -Eigenschaft des **EnglishMonthName** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 8.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quellspalte** die Option **MonthName**aus, und klicken Sie anschließend auf **OK**.  
   
@@ -207,15 +207,15 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 1.  Klicken Sie im Bereich **Attribute** auf das **Calendar Quarter** -Attribut.  
   
-2.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+2.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
-3.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten** aus, und klicken Sie anschließend auf die Schaltfläche **>**.  
+3.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten** aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
   
     Die Spalten **CalendarQuarter** und **CalendarYear** werden jetzt in der Liste **Schlüsselspalten** angezeigt.  
   
 4.  Klicken Sie auf **OK**.  
   
-5.  Um die **NameColumn** -Eigenschaft des **Calendar Quarter** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+5.  Um die **NameColumn** -Eigenschaft des **Calendar Quarter** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 6.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quellspalte** die Option **CalendarQuarterDesc**aus, und klicken Sie auf **OK**.  
   
@@ -225,7 +225,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 1.  Klicken Sie im Bereich **Attribute** auf das **Calendar Semester** -Attribut.  
   
-2.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+2.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 3.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
   
@@ -233,7 +233,7 @@ Die Eigenschaft **KeyColumns** enthält die Spalte bzw. Spalten, die den Schlüs
   
 4.  Klicken Sie auf **OK**.  
   
-5.  Um die **NameColumn** -Eigenschaft des **Calendar Semester** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
+5.  Um die **NameColumn** -Eigenschaft des **Calendar Semester** -Attributs festzulegen, klicken Sie in das Feld **NameColumn** des Eigenschaftenfensters und anschließend auf die Schaltfläche zum Durchsuchen ( **...** ).  
   
 6.  Wählen Sie im Dialogfeld **Namensspalte** in der Liste **Quellspalte** die Option **CalendarSemesterDesc**aus, und klicken Sie anschließend auf **OK**.  
   
@@ -267,19 +267,19 @@ In dieser Aufgabe ändern Sie die Sortierreihenfolge, indem Sie die Reihenfolge 
   
     Die Elemente der **Calendar Semester** -Attributhierarchie werden nach ihren Schlüsselwerten sortiert. Mit einem zusammengesetzten Schlüssel basiert die Sortierung der Elementschlüssel zuerst auf dem Wert des ersten Elementschlüssels und dann auf dem Wert des zweiten Elementschlüssels. Mit anderen Worten: Die Elemente der **Calendar Semester** -Attributhierarchie werden zuerst nach Semester und dann nach Jahr sortiert.  
   
-3.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche mit den Auslassungspunkten (**...**), um den **KeyColumns** -Eigenschaftswert zu ändern.  
+3.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche mit den Auslassungspunkten ( **...** ), um den **KeyColumns** -Eigenschaftswert zu ändern.  
   
 4.  Überprüfen Sie in der Liste **Schlüsselspalten** des Dialogfelds **Schlüsselspalten** , ob **CalendarSemester** ausgewählt ist. Klicken Sie anschließend auf den Pfeil nach unten, um die Reihenfolge der Elemente dieses zusammengesetzten Schlüssels umzukehren. Klicken Sie auf **OK**.  
   
     Die Elemente der Attributhierarchie sind jetzt zuerst nach Jahr und dann nach Semester sortiert.  
   
-5.  Wählen Sie im Bereich **Attribute** die Option **Calendar Quarter** aus, und klicken Sie anschließend im Eigenschaftenfenster auf die Schaltfläche mit den Auslassungspunkten (**...**) für die **KeyColumns** -Eigenschaft.  
+5.  Wählen Sie im Bereich **Attribute** die Option **Calendar Quarter** aus, und klicken Sie anschließend im Eigenschaftenfenster auf die Schaltfläche mit den Auslassungspunkten ( **...** ) für die **KeyColumns** -Eigenschaft.  
   
 6.  Überprüfen Sie in der Liste **Schlüsselspalten** des Dialogfelds **Schlüsselspalten** , ob **CalendarQuarter** ausgewählt ist. Klicken Sie anschließend auf den Pfeil nach unten, um die Reihenfolge der Elemente dieses zusammengesetzten Schlüssels umzukehren. Klicken Sie auf **OK**.  
   
     Die Elemente der Attributhierarchie sind jetzt zuerst nach Jahr und dann nach Quartal sortiert.  
   
-7.  Wählen Sie im Bereich **Attribute** den Eintrag **English Month Name** aus, und klicken Sie anschließend im Fenster Eigenschaften auf die Schaltfläche mit den drei Auslassungspunkten (**...**) für die **KeyColumns** -Eigenschaft.  
+7.  Wählen Sie im Bereich **Attribute** den Eintrag **English Month Name** aus, und klicken Sie anschließend im Fenster Eigenschaften auf die Schaltfläche mit den drei Auslassungspunkten ( **...** ) für die **KeyColumns** -Eigenschaft.  
   
 8.  Überprüfen Sie in der Liste **Schlüsselspalten** des Dialogfelds **Schlüsselspalten** , ob **EnglishMonthName** ausgewählt ist. Klicken Sie anschließend auf den Pfeil nach unten, um die Reihenfolge der Elemente dieses zusammengesetzten Schlüssels umzukehren. Klicken Sie auf **OK**.  
   

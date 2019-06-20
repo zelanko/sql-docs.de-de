@@ -29,10 +29,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e352c6423230e7a921b019c6b02c40bf61bc538
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025228"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
@@ -266,7 +266,7 @@ ms.locfileid: "63025228"
   
  Die im Updategram angegebenen Elemente und Attribute verweisen auf die Elemente und Attribute im Zuordnungsschema.  
   
- Hat das folgende XSD-Zuordnungsschema  **\<Kunden >**,  **\<Reihenfolge >**, und  **\<OD >** Elemente, die zum Zuordnen der Tabellen Sales.Customer, Sales.SalesOrderHeader und Sales.SalesOrderDetail in der Datenbank.  
+ Hat das folgende XSD-Zuordnungsschema  **\<Kunden >** ,  **\<Reihenfolge >** , und  **\<OD >** Elemente, die zum Zuordnen der Tabellen Sales.Customer, Sales.SalesOrderHeader und Sales.SalesOrderDetail in der Datenbank.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -360,7 +360,7 @@ ms.locfileid: "63025228"
   
  Da ein Student sich in viele Kurse einschreiben kann und an einem Kurs zahlreiche Studenten teilnehmen können, wird die dritte Tabelle, die Enrollment-Tabelle, benötigt, um diese m:n-Beziehung darzustellen.  
   
- Das folgende XSD-Zuordnungsschema stellt eine XML-Sicht der Tabellen mithilfe der  **\<für Schüler und Studenten >**,  **\<Kurs >**, und  **\<Registrierung >** Elemente. Die **IDREFS** Attribute im Zuordnungsschema geben die Beziehung zwischen diesen Elementen. Die **StudentIDList** -Attribut für die  **\<Kurs >** Element ist ein **IDREFS** Type-Attribut, das auf die StudentID-Spalte in der Enrollment-Tabelle verweist. Ebenso die **EnrolledIn** -Attribut für die  **\<für Schüler und Studenten >** Element ist ein **IDREFS** Type-Attribut, das auf die CourseID-Spalte in der Registrierung verweist Tabelle.  
+ Das folgende XSD-Zuordnungsschema stellt eine XML-Sicht der Tabellen mithilfe der  **\<für Schüler und Studenten >** ,  **\<Kurs >** , und  **\<Registrierung >** Elemente. Die **IDREFS** Attribute im Zuordnungsschema geben die Beziehung zwischen diesen Elementen. Die **StudentIDList** -Attribut für die  **\<Kurs >** Element ist ein **IDREFS** Type-Attribut, das auf die StudentID-Spalte in der Enrollment-Tabelle verweist. Ebenso die **EnrolledIn** -Attribut für die  **\<für Schüler und Studenten >** Element ist ein **IDREFS** Type-Attribut, das auf die CourseID-Spalte in der Registrierung verweist Tabelle.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873523"
 ---
 # <a name="write-international-transact-sql-statements"></a>Schreiben internationaler Transact-SQL-Anweisungen
@@ -36,7 +36,7 @@ ms.locfileid: "62873523"
   
     -   ADO-, OLE DB- und ODBC-Anwendungen sollten folgende ODBC-Timestamps und folgende ESCAPE-Klauseln für Datum und Zeit verwenden:  
   
-         **{ts'** JJJJ**-**_mm_**-**_Ddhh_**:**  _mm_**:**_ss_[**.** _fff_] **'}** wie z. B.: **{ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts'** JJJJ**-**_mm_**-**_Ddhh_**:** _ mm_**:**_ss_[**.** _fff_] **'}** wie z. B.: **{ts'** 1998**-** 09** - **24 10 **:** 02 **:** 20 **'}**  
   
          **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** Beispiel: **{ d'** 1998**-** 09**-** 24 **'}**  
   

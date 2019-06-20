@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63280920"
 ---
 # <a name="sql-data-types"></a>SQL-Datentypen
@@ -86,7 +86,7 @@ Jede DBMS definiert eine eigene SQL-Datentypen. Jede ODBC-Treiber stellt nur die
   
  [5] abhängig von der Implementierung, kann die Genauigkeit der SQL_FLOAT 24 oder 53 sein: Wenn es sich um 24 ist, der Datentyp SQL_FLOAT entspricht SQL_REAL; Wenn sie auf "53" ist, ist die SQL_FLOAT-Datentyp SQL_DOUBLE identisch.  
   
- [6] in ODBC 3.*.x*, die SQL-Date, Time und Timestamp-Datentypen sind SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP, in ODBC 2. *X*, sind die Datentypen, SQL_DATE, SQL_TIME und SQL_TIMESTAMP.  
+ [6] in ODBC 3. *.x*, die SQL-Date, Time und Timestamp-Datentypen sind SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP, in ODBC 2.. *X*, sind die Datentypen, SQL_DATE, SQL_TIME und SQL_TIMESTAMP.  
   
  [7] Weitere Informationen zu den Intervall SQL-Datentypen finden Sie unter den [Interval-Datentypen](../../../odbc/reference/appendixes/interval-data-types.md) weiter unten in diesem Anhang.  
   

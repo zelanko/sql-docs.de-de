@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6c42615115ae486d14112a1a1dbd7f05d6328eb
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472133"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263297"
 ---
 # <a name="roles"></a>Rollen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "62472133"
   
  Zeilenfilter können nur für Rollen mit Leseberechtigung sowie mit Lese- und Verarbeitungsberechtigung definiert werden. Wenn ein Zeilenfilter nicht für eine bestimmte Tabelle definiert ist, sind Mitglieder einer Rolle, die über die Leseberechtigung bzw. die Lese- und Verarbeitungsberechtigung verfügt, standardmäßig in der Lage, alle Zeilen in der Tabelle abzufragen, es sei denn, ein Kreuzfilter von einer anderen Tabelle ist aktiv.  
   
- Sobald ein Zeilenfilter für eine bestimmte Tabelle definiert wurde, werden die Zeilen, die von Mitgliedern dieser spezifischen Rolle abgefragt werden können, durch eine DAX-Formel definiert, die den Wert TRUE oder FALSE ergeben muss. Nicht in die DAX-Formel eingeschlossene Zeilen können nicht abgefragt werden. Z. B. für Mitglieder der Rolle "Sales", die Tabelle "Customers" mit dem zeilenfilterausdruck *= Customers [Country] = "USA"* , Mitglieder der Rolle "Sales", zeilenfilterausdruck ausschließlich Kunden in den USA anzeigen.  
+ Sobald ein Zeilenfilter für eine bestimmte Tabelle definiert wurde, werden die Zeilen, die von Mitgliedern dieser spezifischen Rolle abgefragt werden können, durch eine DAX-Formel definiert, die den Wert TRUE oder FALSE ergeben muss. Nicht in die DAX-Formel eingeschlossene Zeilen können nicht abgefragt werden. Z. B. für Mitglieder der Rolle "Sales", die Tabelle "Customers" mit dem zeilenfilterausdruck *= Customers [Country] = "USA"*, Mitglieder der Rolle "Sales", zeilenfilterausdruck ausschließlich Kunden in den USA anzeigen.  
   
  Zeilenfilter gelten für die angegebenen sowie für verknüpfte Zeilen. Wenn eine Tabelle über mehrere Beziehungen verfügt, wird die Sicherheit für die aktive Beziehung mithilfe von Filtern gewährleistet. Für Zeilenfilter und Zeilenfilter, die für verknüpfte Tabellen definiert wurden, wird eine Schnittmenge gebildet. Beispiel:  
   
@@ -84,8 +84,8 @@ ms.locfileid: "62472133"
   
 |Funktion|Description|  
 |--------------|-----------------|  
-|[USERNAME-Funktion (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|Gibt "domäne\benutzernamen" des aktuell angemeldeten Benutzers zurück.|  
-|[CUSTOMDATA-Funktion (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Gibt die CustomData-Eigenschaft in einer Verbindungszeichenfolge zurück.|  
+|[USERNAME-Funktion (DAX)](/dax/username-function-dax)|Gibt "domäne\benutzernamen" des aktuell angemeldeten Benutzers zurück.|  
+|[CUSTOMDATA-Funktion (DAX)](/dax/customdata-function-dax)|Gibt die CustomData-Eigenschaft in einer Verbindungszeichenfolge zurück.|  
   
  Sie können die LOOKUPVALUE-Funktion zur Rückgabe von Werten für eine Spalte verwenden, in der der Windows-Benutzername der Gleiche ist wie derjenige, der von der USERNAME-Funktion zurückgegeben wurde oder einer Zeichenfolge entspricht, die von der CustomData-Funktion zurückgegeben wurde. Abfragen können dann eingeschränkt werden, wenn die von LOOKUPVALUE zurückgegebenen Werte Werten in der gleichen oder einer verknüpften Tabelle entsprechen.  
   
@@ -128,8 +128,8 @@ ms.locfileid: "62472133"
 ## <a name="see-also"></a>Siehe auch  
  [Perspektiven](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [In Excel analysieren](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME-Funktion (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE-Funktion (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [CUSTOMDATA-Funktion (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME-Funktion (DAX)](/dax/username-function-dax)   
+ [LOOKUPVALUE-Funktion (DAX)](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA-Funktion (DAX)](/dax/customdata-function-dax)  
   
   

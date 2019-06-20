@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632478"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE-, DELETE- und INSERT-Anweisungen
@@ -33,15 +33,15 @@ SQL-basierten Anwendungen und nehmen Sie Änderungen an Tabellen durch Ausführe
   
  **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** _Spaltenbezeichner_ **=** {*Ausdruck* &#124; **NULL**}]...  
+ [ **,** _Spaltenbezeichner_ **=** {*Ausdruck* &#124; **NULL**}]...  
   
- [**, In denen** _Suchbedingung_]  
+ [ **, In denen** _Suchbedingung_]  
   
- **DELETE FROM** _Tabellenname_[**, in denen** _Suchbedingung_]  
+ **DELETE FROM** _Tabellenname_[ **, in denen** _Suchbedingung_]  
   
- **INSERT INTO** _Tabellenname_[**(** _Spaltenbezeichner_ [**,** _Spaltenbezeichner-_]... **)**]  
+ **INSERT INTO** _Tabellenname_[ **(** _Spaltenbezeichner_ [ **,** _Spaltenbezeichner-_ ]... **)** ]  
   
- {*-Abfragespezifikation* &#124; **Werte (** _Wert einfügen_ [**,** _Wert einfügen_]... **)**}  
+ { *-Abfragespezifikation* &#124; **Werte (** _Wert einfügen_ [ **,** _Wert einfügen_]... **)** }  
   
  Beachten Sie, dass die *-Abfragespezifikation* Element ist nur in der Core und erweiterte SQL-Grammatik, und dass die *Ausdruck* und *Suchbedingung* Elemente steigern. komplexe, in der Core und erweiterte SQL-Grammatik.  
   

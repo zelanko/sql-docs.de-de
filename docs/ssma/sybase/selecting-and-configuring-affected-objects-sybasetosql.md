@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667507"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (SybaseToSQL)
@@ -40,7 +40,7 @@ Die Registerkarte der Tabelle enthält die Rasteransicht der ausgewählten Tabel
   
 -   Rule  
   
--   Standard  
+-   Default  
   
 -   Identität  
   
@@ -75,20 +75,20 @@ Die Vergleichsregeln für Tabellenspalten herzustellen, auf **Spalte Vergleiche*
 ### <a name="use-during-test-comparisons"></a>Verwendung während der Testvergleiche  
 Bestimmt, ob diese Spalte in der Ergebnisse testüberprüfung einbezogen werden.  
   
--   Auf Wunsch **"true"**, SSMA wird der Inhalt dieses Artikels vergleichen, nach dem Ausführen des Tests auf Sybase mit dem Inhalt der Spalte in SQL Server.
+-   Auf Wunsch **"true"** , SSMA wird der Inhalt dieses Artikels vergleichen, nach dem Ausführen des Tests auf Sybase mit dem Inhalt der Spalte in SQL Server.
   
--   Auf Wunsch **"false"**, von der Überprüfung der Ergebnisse die Spalte ausgeschlossen werden.  
+-   Auf Wunsch **"false"** , von der Überprüfung der Ergebnisse die Spalte ausgeschlossen werden.  
   
 ### <a name="use-custom-scale"></a>Verwenden Sie benutzerdefinierte Skalierung  
 Für Spalten vom numerischen Datentyp aufweisen können Sie festlegen, dass eine benutzerdefinierte Skalierung für den Vergleich.  
   
--   Auf Wunsch **"true"**, numerische Werte entsprechend aufgerundet der **vergleichen Skalierung** Wert, bevor sie verglichen werden.  
+-   Auf Wunsch **"true"** , numerische Werte entsprechend aufgerundet der **vergleichen Skalierung** Wert, bevor sie verglichen werden.  
   
--   Auf Wunsch **"false"**, exakten numerischen Vergleichs werden.  
+-   Auf Wunsch **"false"** , exakten numerischen Vergleichs werden.  
   
 ### <a name="comparing-scale"></a>Vergleichen von Skala  
   
--   Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"**. Dies ist die Genauigkeit für einen numerischen Vergleich.  
+-   Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"** . Dies ist die Genauigkeit für einen numerischen Vergleich.  
   
 ### <a name="date-time-comparing"></a>Datum Uhrzeit vergleichen  
 Definiert, wie die Datum/Uhrzeit-Werte verglichen.  
@@ -106,9 +106,9 @@ Definiert, wie die Datum/Uhrzeit-Werte verglichen.
 ### <a name="ignore-strings-case"></a>Zeichenfolgen Groß-/Kleinschreibung ignorieren  
 Steuert den Vergleich die Groß-/Kleinschreibung beachtet.  
   
--   Auf Wunsch **"true"**, der Vergleich wird Groß-/Kleinschreibung sein.  
+-   Auf Wunsch **"true"** , der Vergleich wird Groß-/Kleinschreibung sein.  
   
--   Auf Wunsch **"false"**, der Vergleich wird Groß-/Kleinschreibung berücksichtigt.  
+-   Auf Wunsch **"false"** , der Vergleich wird Groß-/Kleinschreibung berücksichtigt.  
   
 ## <a name="comparing-sql"></a>Vergleich von SQL  
 Sehen Sie die SELECT-Anweisungen generiert von SSMA-Tester auf die **SQL vergleichen** Seite. Der Tester werden die Resultsets dieser Anweisungen pro Zeile für Zeile verglichen. Jede nächste Zeile eines Resultsets Sybase übereinstimmen sollten auf die nächste Zeile des Resultsets in erstellten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

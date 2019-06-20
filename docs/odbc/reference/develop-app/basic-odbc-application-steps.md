@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb15d3b64496374bed5b16f2661528c7ba1f9aae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63201637"
 ---
 # <a name="basic-odbc-application-steps"></a>Grundlegende Schritte für die ODBC-Anwendung
@@ -40,4 +40,4 @@ Dieser Abschnitt beschreibt den allgemeinen Datenfluss des ODBC-Anwendungen. Es 
   
 -   [Schritt 5: Die Transaktion ein Commit ausgeführt](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   
--   [Schritt 6: Ziehen Sie aus der Datenquelle](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)
+-   [Schritt 6: Ziehen Sie aus der Datenquelle](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)

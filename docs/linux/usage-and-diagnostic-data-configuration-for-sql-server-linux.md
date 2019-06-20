@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 58001c0789151a6bf80fee3b47ae38c0d3ddc872
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712698"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Konfigurieren von Nutzung und Erfassung von Diagnosedaten für SQLServer unter Linux
@@ -43,7 +43,7 @@ Diese Option können Sie die ändern, wenn SQL Server Nutzung und Erfassung von 
 
 ### <a name="on-red-hat-suse-and-ubuntu"></a>Red Hat, SUSE und Ubuntu
 
-1. Führen Sie das Mssql-Conf-Skript als Root-Benutzer mit der **festgelegt** Befehl **telemetry.customerfeedback**. Das folgende Beispiel deaktiviert die Nutzung und Erfassung von Diagnosedaten durch Angabe **"false"** .
+1. Führen Sie das Mssql-Conf-Skript als Root-Benutzer mit der **festgelegt** Befehl **telemetry.customerfeedback**. Das folgende Beispiel deaktiviert die Nutzung und Erfassung von Diagnosedaten durch Angabe **"false"**.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false

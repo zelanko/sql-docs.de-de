@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745661"
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Attributeigenschaften – Konfigurieren von Attributtypen
@@ -135,7 +135,7 @@ ms.locfileid: "62745661"
 |**RelationToParent**|Stellt eine Beziehung zu einem übergeordneten Element dar.|  
 |**Representative**|Stellt einen Vertriebsmitarbeiter dar.|  
 |**Szenario**|Stellt ein Szenario dar.|  
-|**Sequence**|Stellt ein sequenzielles Attribut dar.|  
+|**Sequenz**|Stellt ein sequenzielles Attribut dar.|  
 |**ShortCaption**|Stellt einen Kurztitel dar.|  
 |**StateOrProvince**|Stellt ein Bundesland oder einen Kanton dar.|  
 |**Hilfsprogramm**|Stellt ein Hilfsprogramm dar.|  

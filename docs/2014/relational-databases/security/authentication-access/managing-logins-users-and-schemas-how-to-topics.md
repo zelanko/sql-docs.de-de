@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011500"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen
@@ -35,7 +35,7 @@ ms.locfileid: "63011500"
 -   [Erteilen einer Berechtigung für einen Prinzipal](grant-a-permission-to-a-principal.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](principals-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](principals-database-engine.md)   
  [Sichern von SQL Server](../securing-sql-server.md)  
   
   

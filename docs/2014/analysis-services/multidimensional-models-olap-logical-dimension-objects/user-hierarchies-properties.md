@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727315"
 ---
 # <a name="user-hierarchy-properties"></a>Eigenschaften der Benutzerhierarchie
@@ -28,7 +28,7 @@ ms.locfileid: "62727315"
 |--------------|-----------------|  
 |AllMemberName|Enthält die Beschriftung in der standardmäßigen Sprache für das Alle-Element der Hierarchie.|  
 |AllowDuplicateNames|Bestimmt, ob doppelte Namen in der Hierarchie zulässig sind. Die Werte sind True und False. Der Standardwert ist TRUE.|  
-|Description|Enthält die Beschreibung einer Hierarchie.|  
+|Beschreibung|Enthält die Beschreibung einer Hierarchie.|  
 |DisplayFolder|Gibt den Ordner an, in dem die Hierarchie für Benutzer aufgeführt ist.|  
 |ID|Enthält den eindeutigen Bezeichner (ID) der Hierarchie.|  
 |MemberNamesUnique|Bestimmt, ob Elementnamen in der Hierarchie eindeutig sein müssen. Die Werte sind True und False. Der Standardwert ist False.|  

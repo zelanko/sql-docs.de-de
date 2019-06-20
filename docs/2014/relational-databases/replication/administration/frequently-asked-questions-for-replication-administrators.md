@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63207067"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
@@ -151,7 +151,7 @@ ms.locfileid: "63207067"
   
 -   Geben Sie an, dass Objekte bei einer erneuten Initialisierung des Abonnements nicht gelöscht werden sollen. Führen Sie vor der erneuten Initialisierung einen der folgenden Vorgänge aus:  
   
-    -   Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) oder [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie dabei für den**sp_changearticle**-Parameter den Wert 'pre_creation_cmd' (**sp_changemergearticle**) oder 'pre_creation_command' ( **@property** ) und für den **@value**.  
+    -   Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) oder [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie dabei für den**sp_changearticle**-Parameter den Wert 'pre_creation_cmd' (**sp_changemergearticle**) oder 'pre_creation_command' ( **@property** ) und für den **@value** .  
   
     -   Wählen Sie im Dialogfeld **Artikeleigenschaften – \<Artikel>** im Abschnitt **Zielobjekt** einen Wert von **Vorhandenes Objekt unverändert beibehalten**, **Daten löschen. Wenn ein Artikel einen Zeilenfilter aufweist, nur die dem Filter entsprechenden Daten löschen.** oder **Alle Daten im vorhandenen Objekt abschneiden** für die Option **Action if name is in use** (Aktion, wenn der Name verwendet wird). Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md).  
   

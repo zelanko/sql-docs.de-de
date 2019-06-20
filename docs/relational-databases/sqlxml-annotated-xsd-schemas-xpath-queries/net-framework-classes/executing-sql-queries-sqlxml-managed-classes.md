@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3d08831c8699acb7ef938e8d977801109704943d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719696"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Ausführen von SQL-Abfragen (verwaltete SQLXML-Klassen)
@@ -33,7 +33,7 @@ ms.locfileid: "62719696"
   
 -   Zuweisen von Werten an den Eigenschaften der SqlXmlParameter-Objekte (Name und Wert).  
   
- In diesem Beispiel wird eine einfache SQL-Abfrage ausgeführt, um Vornamen, Nachnamen und Geburtsdatum des Mitarbeiters abzufragen, dessen Nachname als Parameterwert übergeben wird. Angeben des Parameters (*"LastName"*), nur die Value-Eigenschaft festgelegt ist. Die Name-Eigenschaft ist nicht festgelegt, da in dieser Abfrage um einen Positionsparameter handelt und kein Name erforderlich ist.  
+ In diesem Beispiel wird eine einfache SQL-Abfrage ausgeführt, um Vornamen, Nachnamen und Geburtsdatum des Mitarbeiters abzufragen, dessen Nachname als Parameterwert übergeben wird. Angeben des Parameters ( *"LastName"* ), nur die Value-Eigenschaft festgelegt ist. Die Name-Eigenschaft ist nicht festgelegt, da in dieser Abfrage um einen Positionsparameter handelt und kein Name erforderlich ist.  
   
  Die CommandType-Eigenschaft des SqlXmlCommand-Objekt, in der Standardeinstellung ist **Sql**. Deshalb wird die Eigenschaft nicht explizit festgelegt.  
   

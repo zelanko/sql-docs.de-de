@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183415"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Starten Sie den Konfigurations-Manager in Analytics Platform System
@@ -25,7 +25,7 @@ Dieses Thema enthält Anweisungen zum Starten der **Configuration Manager** für
 Das Analytics Platform System**Configuration Manager** kann nur vom Domänenadministrator Appliance ausgeführt werden. Um dieses Tool ausführen zu können, benötigen Sie das Kennwort für den Domänenadministrator Appliance an. Um zusätzliche APS-Administratoren zu erstellen, finden Sie unter [erstellen Sie einen Domänenadministrator APS &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Starten des Konfigurations-Manager  
-Um den Konfigurations-Manager auszuführen, verwenden Sie Remotedesktop für die Verbindung mit dem Steuerungsknoten mit PDW (**_PDW_region_-CTL01**) Knoten, und melden Sie sich als _Appliance_domain_ **\Administrator**. Beim Starten der **Configuration Manager** programmieren, verwenden Sie die **als Administrator ausführen** Option, um sicherzustellen, dass Ihre Administratoranmeldeinformationen verwendet werden.  
+Um den Konfigurations-Manager auszuführen, verwenden Sie Remotedesktop für die Verbindung mit dem Steuerungsknoten mit PDW ( **_PDW_region_-CTL01**) Knoten, und melden Sie sich als _Appliance_domain_ **\Administrator**. Beim Starten der **Configuration Manager** programmieren, verwenden Sie die **als Administrator ausführen** Option, um sicherzustellen, dass Ihre Administratoranmeldeinformationen verwendet werden.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Starten Sie in einem Browserfenster öffnen  
   
