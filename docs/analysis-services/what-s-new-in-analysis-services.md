@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de2ac80a10e66ed7673a65428c4bfa011d31b534
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210189"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263280"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Was ist neu in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -133,9 +133,9 @@ refresh|Verarbeitet das Objekt. Die ASSL-Entsprechung ist PROCESS.
 Durch Updates der Bearbeitungsleiste können Sie Formeln einfacher schreiben, indem Sie Funktionen, Felder und Measures mithilfe von Syntaxfarben unterscheiden. Sie erhalten intelligente Funktions- und Feldvorschläge und werden mit „ *Fehlerwellenlinien*“ darüber informiert, ob Teile des DAX-Ausdrucks falsch sind. Zudem können Sie mehrere Zeilen (Alt + Eingabe) und Einzüge (Tab) verwenden. Die Bearbeitungsleiste können Sie Kommentare als Teil Ihrer Measures schreiben, geben Sie einfach jetzt auch "/ /" und diese Zeichen in der gleichen Zeile als Kommentar gewertet werden.
 
 ### <a name="dax-variables"></a>DAX-Variablen    
-Diese Version bietet jetzt Unterstützung für Variablen in DAX. Variablen können jetzt das Ergebnis eines Ausdrucks als benannte Variable speichern, die dann als Argument für andere Measureausdrücke übergeben werden kann. Sobald die resultierenden Werte für einen Variablenausdruck berechnet wurden, werden diese Werte nicht wieder geändert, auch wenn auf die Variable in einem anderen Ausdruck verwiesen wird. Weitere Informationen finden Sie unter [VAR-Funktion](http://msdn.microsoft.com/library/mt243785.aspx).    
+Diese Version bietet jetzt Unterstützung für Variablen in DAX. Variablen können jetzt das Ergebnis eines Ausdrucks als benannte Variable speichern, die dann als Argument für andere Measureausdrücke übergeben werden kann. Sobald die resultierenden Werte für einen Variablenausdruck berechnet wurden, werden diese Werte nicht wieder geändert, auch wenn auf die Variable in einem anderen Ausdruck verwiesen wird. Weitere Informationen finden Sie unter [VAR-Funktion](/dax/var-dax).    
 ### <a name="new-dax-functions"></a>Neue DAX-Funktionen
-Mit dieser Version stellt DAX über 50 neue Funktionen zur Unterstützung schnellerer Berechnungen und verbesserter Visualisierungen in Power BI bereit. Weitere Informationen finden Sie unter [Neue DAX-Funktionen](http://msdn.microsoft.com/library/mt704075.aspx).
+Mit dieser Version stellt DAX über 50 neue Funktionen zur Unterstützung schnellerer Berechnungen und verbesserter Visualisierungen in Power BI bereit. Weitere Informationen finden Sie unter [Neue DAX-Funktionen](/dax/new-dax-functions).
 ### <a name="save-incomplete-measures"></a>Speichern unvollständiger Measures
 Sie können jetzt unvollständige DAX-Measures direkt in einem Projekt mit einem tabellarischen 1200-Modell speichern und erneut verwenden, wenn Sie fortfahren möchten.
 ### <a name="additional-dax-enhancements"></a>Zusätzliche DAX-Erweiterungen

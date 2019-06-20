@@ -10,12 +10,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2df295b62ca76dfb46e767ed206180a52493255a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66102971"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046741"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   Dieses Thema bietet eine kurze Einführung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Konzepte.  
@@ -76,7 +76,7 @@ ms.locfileid: "66102971"
  **Berichte und Berichtsdefinitionen**  
  **RDL.** Eine Berichtsdefinition ist eine XML-Datei, die einer XML-Grammatik entspricht, der so genannten Berichtsdefinitionssprache (RDL, Report Definition Language). In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]erstellen Sie eine Berichtsdefinition in einem Tool, zum Beispiel im Berichts-Generator oder im Berichts-Designer. Es enthält Elemente, die Datenquellenverbindungen, Abfragen zum Abrufen von Daten, Ausdrücken, Parametern, Bildern, Textfeldern, Tabellen und einem beliebigen anderen Entwurfszeitlayout definieren. Weitere Informationen finden Sie unter [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Eine Berichtsdefinition in RDLX ist eine RDL-Datei mit internen Erweiterungen, die die [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Visualisierungserfahrung ermöglichen. Weitere Informationen finden Sie unter [Power View-Übersicht](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Eine Berichtsdefinition in RDLX ist eine RDL-Datei mit internen Erweiterungen, die die [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Visualisierungserfahrung ermöglichen. Weitere Informationen finden Sie unter [Power View-Übersicht](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684).  
   
  **RDLC.** Der Visual Studio-Berichts-Designer erzeugt Clientberichtsdefinitionsdateien (Dateierweiterung .rdlc) im XML-Format zur Verwendung mit dem ReportViewer-Steuerelement.  
   

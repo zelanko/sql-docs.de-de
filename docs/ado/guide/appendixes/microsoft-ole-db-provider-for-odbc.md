@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701329"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB-Anbieter für ODBC-Übersicht
@@ -65,7 +65,7 @@ MSDASQL
 
  Der Anbieter unterstützt keine bestimmten Verbindungsparameter zusätzlich zu den von ADO definiert. Allerdings wird der Anbieter alle nicht-ADO-Verbindung-Parameter auf dem ODBC-Treiber-Manager übergeben.
 
- Da Sie weglassen können die **Anbieter** -Parameter können aus diesem Grund erstellen Sie eine ADO-Verbindungszeichenfolge, die mit einer ODBC-Verbindungszeichenfolge für die gleiche Datenquelle identisch ist. Verwenden Sie die gleichen Parameternamen (**Treiber =** , **Datenbank =** , **DSN =** und so weiter), Werte und wie Sie die Syntax wie bei der eine ODBC-Verbindungszeichenfolge zu erstellen. Sie können mit oder ohne eine vordefinierte Datenquellenname (DSN) oder die Datei-DSN verbinden.
+ Da Sie weglassen können die **Anbieter** -Parameter können aus diesem Grund erstellen Sie eine ADO-Verbindungszeichenfolge, die mit einer ODBC-Verbindungszeichenfolge für die gleiche Datenquelle identisch ist. Verwenden Sie die gleichen Parameternamen (**Treiber =**, **Datenbank =**, **DSN =** und so weiter), Werte und wie Sie die Syntax wie bei der eine ODBC-Verbindungszeichenfolge zu erstellen. Sie können mit oder ohne eine vordefinierte Datenquellenname (DSN) oder die Datei-DSN verbinden.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Die Syntax mit einem DSN oder Datei-DSN:
 
@@ -84,9 +84,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>Hinweise
  Bei Verwendung einer **DSN** oder **FileDSN**, er muss über die ODBC-Datenquellen-Administrator in der Windows-Systemsteuerung definiert werden. Der ODBC-Administrator befindet sich in Microsoft Windows 2000 unter Verwaltung. In früheren Versionen von Windows, das Symbol "ODBC-Administrator" heißt **32-Bit-ODBC-** oder nur **ODBC**.
 
- Als Alternative zum Festlegen einer **DSN**, können Sie angeben, den ODBC-Treiber (**Treiber =** ), z. B. "SQLServer;" den Namen des Servers (**SERVER =** ); und den Datenbanknamen (**Datenbank =** ).
+ Als Alternative zum Festlegen einer **DSN**, können Sie angeben, den ODBC-Treiber (**Treiber =**), z. B. "SQLServer;" den Namen des Servers (**SERVER =**); und den Datenbanknamen (**Datenbank =**).
 
- Sie können auch einen Benutzernamen für das Konto angeben (**UID =** ), und das Kennwort für das Benutzerkonto (**PWD =** ) in der ODBC-spezifische Parameter oder in der Standard ADO definierten *Benutzer* und *Kennwort* Parameter.
+ Sie können auch einen Benutzernamen für das Konto angeben (**UID =**), und das Kennwort für das Benutzerkonto (**PWD =**) in der ODBC-spezifische Parameter oder in der Standard ADO definierten *Benutzer* und *Kennwort* Parameter.
 
  Obwohl eine **DSN** bereits Definition gibt es sich um eine Datenbank, können Sie angeben, *eine* *Datenbank* Parameter zusätzlich zu einer **DSN** eine Verbindung herstellen mit einer anderen Datenbank. Es ist eine gute Idee, immer *der* *Datenbank* Parameter bei Verwendung einer **DSN**. Dadurch wird sichergestellt, dass Sie eine Verbindung mit der richtigen Datenbank herstellen, wenn ein anderer Benutzer den Standardparameter für die Datenbank geändert, seit Sie zuletzt überprüft die **DSN** Definition.
 
