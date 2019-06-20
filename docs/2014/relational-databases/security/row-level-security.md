@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62985764"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
@@ -33,6 +33,6 @@ ms.locfileid: "62985764"
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [Sys. security_policies &#40;Azure SQL-Datenbank&#41;](/sql/relational-databases/system-catalog-views/sys-security-policies-transact-sql)   
  [Sys. security_predicates &#40;Azure SQL-Datenbank&#41;](/sql/relational-databases/system-catalog-views/sys-security-predicates-transact-sql)   
- [Erstellen benutzerdefinierter Funktionen &a#40;Datenbank-Engine &#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)  
+ [Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   

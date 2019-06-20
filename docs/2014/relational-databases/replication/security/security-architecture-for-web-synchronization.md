@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959750"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Sicherheitsarchitektur für die Websynchronisierung
@@ -63,7 +63,7 @@ ms.locfileid: "62959750"
 |Die Standardauthentifizierung wird verwendet, wenn Folgendes angegeben wird:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **0** für die **@internet_security_mode** Parameter [Sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Merge-Agent-Befehlszeile: der Wert **0** für **- InternetSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die Parameter **@internet_login** und **@internet_password** von [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>.<br /><br /> Merge-Agentbefehlszeile: **-InternetLogin** und **-InternetPassword**.|  
 |Integrierte Authentifizierung\* wird verwendet, wenn Folgendes angegeben wird:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: der Wert **1** für die **@internet_security_mode** Parameter [Sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: der Wert <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Merge-Agent-Befehlszeile: der Wert **1** für **- InternetSecurityMode**.|Der Merge-Agent stellt Verbindungen im Kontext des Windows-Benutzers her, der für den Merge-Agent (A) angegeben ist.|  
   
- * Die integrierte Authentifizierung kann verwendet werden, nur dann, wenn alle Computer in derselben Domäne oder aber mehreren Domänen, die Vertrauensstellungen mit anderen haben.  
+ \* Die integrierte Authentifizierung kann verwendet werden, nur dann, wenn alle Computer in derselben Domäne oder aber mehreren Domänen, die Vertrauensstellungen mit anderen haben.  
   
 > [!NOTE]  
 >  Die Delegierung ist erforderlich, wenn Sie die integrierte Authentifizierung verwenden. Es wird empfohlen, die Standardauthentifizierung und SSL für Verbindungen zwischen Abonnenten und IIS zu verwenden.  
@@ -91,7 +91,7 @@ ms.locfileid: "62959750"
 ## <a name="f-connection-to-the-distributor"></a>F. Verbindung zum Verteiler  
  Die Mergereplikationssynchronisierung, die auf dem Computer mit IIS gehostet wird, stellt auch Verbindungen zum Verteiler her. Die Mergereplikationssynchronisierung stellt die Verbindung zum Verteiler entweder mithilfe der Windows-Authentifizierung oder der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung her. Die Windows-Benutzer- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung, die Sie angeben, muss folgende Kriterien erfüllen:  
   
--   Sie muss in der Veröffentlichungszugriffsliste (Publication Access List oder PAL) enthalten sein. Weitere Informationen finden Sie unter [Schützen des Verteilers](secure-the-publisher.md).  
+-   Sie muss in der Veröffentlichungszugriffsliste (Publication Access List oder PAL) enthalten sein. Weitere Informationen finden Sie unter [Sichern des Verlegers](secure-the-publisher.md).  
   
 -   Sie muss mit einem Datenbankbenutzer in der Verteilungsdatenbank verknüpft sein. Der Benutzer kann der `Guest`-Benutzer sein.  
   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5f2f1aa1dd763675d50ff9ea1961d6036c3ee73f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485419"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Beispiele für Geschäftsregeln (Master Data Services)
@@ -75,7 +75,7 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|Description    
+Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
 ---------|---------|---------|-------------  
 Produkt     |Product         |Erforderliche Felder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
 In der folgenden Geschäftsregel wird unter allen Umständen die `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Die Attributwerte dürfen nicht Null oder leer sein.  
@@ -100,7 +100,7 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|Description    
+Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
 ---------|---------|---------|-----------  
 Produkt     | Produkt        |  Standardkosten| Erfordert, dass die Standardkosten größer als 0 sind.        
 In der folgenden Geschäftsregel wird unter allen Umständen die `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
@@ -116,7 +116,7 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|Description    
+Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
 ---------|---------|---------|------------  
 Produkt     | Produkt        | FG MSRP-Kosten|Gibt an, dass der vom Hersteller empfohlene Preis (MSRP) und die Händlerkosten größer als 0 sein müssen, wenn das Produkt ein Endprodukt ist.           
   

@@ -10,12 +10,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d224572ce81bf260134682d86f6f0f2ce4946f55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66088745"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67131792"
 ---
 # <a name="view-event-session-data"></a>Anzeigen von Ereignissitzungsdaten
   In diesem Thema wird beschrieben, wie Sie mithilfe der Anzeigebenutzeroberfläche erweiterte Ereignisdaten anzeigen und analysieren:  
@@ -44,23 +44,27 @@ ms.locfileid: "66088745"
   
 -   Zeigen Sie für ein event_file-Ziel die Dateizieldaten (XEL-Datei) mithilfe einer der folgenden Methoden an:  
   
-    -   Verwenden Sie eine Datei -> Öffnen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
-    -   Verschieben Sie die Dateien mit Drag &amp; Drop in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
+    -   Verwenden Sie eine Datei -> Öffnen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    
+    -   Ziehen und Ablegen die Datei in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    
     -   Doppelklicken Sie auf die XEL-Datei.  
-  
-    -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf eine aktive Sitzung für erweiterte Ereignisse, und wählen Sie Zieldaten anzeigen aus.  
-  
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
-  
-    -   Sie können mehrere anzeigen. XEL-Datei dazu **Dateien für erweiterte Ereignisse zusammenführen** aus der Datei -> "Menü öffnen".  
-  
+    
+    -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf eine aktive Sitzung für erweiterte Ereignisse, und wählen Sie Zieldaten anzeigen aus. 
+    
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
+    
+    -   Verwenden von Powershell-lesen-SQLXevent in [SQLServer.XEvent Modul](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    
+    -   Programmgesteuert mithilfe von XEvents nutzen die [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    
+    -   Sie können mehrere anzeigen. XEL-Datei dazu **Dateien für erweiterte Ereignisse zusammenführen** aus der Datei -> "Menü öffnen".
+
 ### <a name="watching-live-data"></a>Beobachten von Livedaten  
  Sie können Livedaten während der Erfassung anzeigen.  
   
 -   Erweitern Sie im Objekt-Explorer die Knoten **Verwaltung**, **Erweiterte Ereignisse**und dann **Sitzungen** .  
-  
+
 -   Klicken Sie mit der rechten Maustaste auf den Sitzungsnamen, und klicken Sie dann auf **Livedaten ansehen** , um die Ablaufverfolgungsdaten anzuzeigen.  
   
      Die Standardanzeigespalten sind **Ereignisname** und **TimeStamp**.  
@@ -68,7 +72,9 @@ ms.locfileid: "66088745"
      Um dem Ablaufverfolgungsfenster zusätzliche Spalten hinzuzufügen, klicken Sie auf der Symbolleiste für erweiterte Ereignisse auf die Schaltfläche **Spalten auswählen** . Die Registerkarte **Details** zeigt alle Ereignisdetails für das ausgewählte Ereignis an.  
   
      Ereignisse werden normalerweise in ungefähr 30 Sekunden angezeigt. Um den Latenzzeitraum zu ändern, können Sie den Wert für **Maximale Verteilungslatenzzeit** auf der Seite **Erweitert** des Dialogfelds **Neue Sitzung** ändern.  
-  
+     
+-    Live-Daten können gestreamt werden, indem die [SqlServer.XEvent-PowerShell-Modul](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+     
 ### <a name="to-refresh-target-data"></a>So aktualisieren Sie Zieldaten  
  Das Aktualisieren der Zieldaten wird für event_files-Ziele nicht unterstützt:  
   

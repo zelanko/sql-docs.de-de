@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76c2e4673d9b561aeb5af3e61e1e4dc8532195d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63201599"
 ---
-# <a name="c-to-sql-binary"></a>C in SQL: Binär (Binary)
+# <a name="c-to-sql-binary"></a>C in SQL: Binär
 Der Bezeichner für den binären ODBC C-Datentyp ist:  
   
  SQL_C_BINARY  

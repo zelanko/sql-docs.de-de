@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017181"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Data Mining-Lernprogramm für Fortgeschrittene (Analysis Services - Data Mining)
@@ -47,7 +47,7 @@ ms.locfileid: "63017181"
  [Lektion 1: Erstellen der mittleres Datamining-Lösung &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
  In dieser Lektion erstellen Sie ein neues Projekt auf Basis der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Datenbank zur Unterstützung mehrerer neuer Datenquellensichten und zahlreicher weiterer Miningmodelle.  
   
- [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
  In dieser Lektion erstellen Sie ein Miningmodell, die als Teil eines planungserstellungsszenarios verwendet werden können. Untersuchen Sie außerdem Miningmodelle, die mit basieren die [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus.  
   
  Zunächst erstellen Sie Modelle für einzelne Regionen und anschließend ein allgemeines Modell für Kreuzvorhersagen.  

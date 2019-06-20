@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 8496868bc3b5b6ee42ac4f222724e859797662a4
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776087"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263338"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Ergänzende Lektion: dynamische Sicherheit
 
@@ -25,7 +25,7 @@ In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynami
   
 Um dynamische Sicherheit zu implementieren, fügen Sie eine Tabelle, für das Modell mit den Benutzernamen der Benutzer, die eine Verbindung mit dem Modell herstellen und Modellobjekte und Daten durchsuchen können. Das Modell, die Sie mithilfe dieses Tutorial ist im Kontext der Adventure Works; Um diese Lektion abschließen zu können, müssen Sie jedoch eine Tabelle mit Benutzern aus Ihrer eigenen Domäne hinzufügen. Sie benötigen nicht die Kennwörter für den Benutzernamen, die hinzugefügt werden. Um eine Tabelle "employeesecurity" mit einer kleinen Stichprobe von Benutzern aus Ihrer eigenen Domäne zu erstellen, verwenden Sie die Funktion zum Einfügen, Mitarbeiterdaten aus einem Excel-Arbeitsblatt. In einem realen Szenario wäre die Tabelle mit den Benutzernamen in der Regel eine Tabelle aus einer tatsächlichen Datenbank als Datenquelle; z. B. eine reale DimEmployee-Tabelle.  
   
-Um dynamische Sicherheit zu implementieren, verwenden Sie zwei DAX-Funktionen: [USERNAME-Funktion (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) und [LOOKUPVALUE-Funktion (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Mit der LOOKUPVALUE-Funktion, gibt die Formel einen Wert aus der Tabelle "employeesecurity" an. Die Formel übergibt Sie an, dass der Wert, der die USERNAME-Funktion, die den Namen des angemeldeten Benutzers angibt, die dieser Rolle gehört. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Fall geben Sie an, dass Verkaufsmitarbeiter nur internetumsatzdaten für die Vertriebsgebiete suchen können, in denen sie Mitglied sind.  
+Um dynamische Sicherheit zu implementieren, verwenden Sie zwei DAX-Funktionen: [USERNAME-Funktion (DAX)](/dax/username-function-dax) und [LOOKUPVALUE-Funktion (DAX)](/dax/lookupvalue-function-dax). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Mit der LOOKUPVALUE-Funktion, gibt die Formel einen Wert aus der Tabelle "employeesecurity" an. Die Formel übergibt Sie an, dass der Wert, der die USERNAME-Funktion, die den Namen des angemeldeten Benutzers angibt, die dieser Rolle gehört. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Fall geben Sie an, dass Verkaufsmitarbeiter nur internetumsatzdaten für die Vertriebsgebiete suchen können, in denen sie Mitglied sind.  
   
 Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
@@ -76,7 +76,7 @@ Die Tabelle "dimemployee" in der Beispieldatenbank "AdventureWorksDW" enthält B
 
 3.  Ersetzen Sie den Vornamen, Nachnamen und "Domäne\Benutzername" mit den Namen und Anmelde-Ids von drei Benutzern in Ihrer Organisation an. Geben Sie den gleichen Benutzer in den ersten beiden Zeilen für EmployeeId 1, angezeigt, dass dieser Benutzer mehr als einem Vertriebsgebiet angehört. Lassen Sie die Felder "EmployeeID" und "salesterritoryid" aus, wie sie sind.  
   
-4.  Speichern Sie das Arbeitsblatt als **"sampleemployee"**.  
+4.  Speichern Sie das Arbeitsblatt als **"sampleemployee"** .  
   
 5.  Wählen Sie im Arbeitsblatt alle Zellen mit Mitarbeiterdaten, einschließlich des Headers, und klicken Sie dann mit der rechten Maustaste in der ausgewählten Daten, und klicken Sie dann auf **Kopie**.  
   
@@ -84,7 +84,7 @@ Die Tabelle "dimemployee" in der Beispieldatenbank "AdventureWorksDW" enthält B
   
     Wenn einfügen abgeblendet ist, klicken Sie auf eine Spalte in eine beliebige Tabelle im Modell-Designer-Fenster, und versuchen Sie es erneut.  
   
-7.  In der **Vorschau einfügen** Dialogfeld **Tabellenname**, Typ **"employeesecurity"**.  
+7.  In der **Vorschau einfügen** Dialogfeld **Tabellenname**, Typ **"employeesecurity"** .  
   
 8.  In **einzufügende Daten**, ob die Daten alle Benutzerdaten und Kopfzeilen aus dem Arbeitsblatt "sampleemployee" einschließen.  
   
@@ -188,6 +188,6 @@ In dieser Aufgabe verwenden Sie die analysieren in Excel-Funktion in SSDT um die
   
 ## <a name="see-also"></a>Siehe auch  
 
-[USERNAME-Funktion (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE-Funktion (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[CUSTOMDATA-Funktion (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[USERNAME-Funktion (DAX)](/dax/username-function-dax)  
+[LOOKUPVALUE-Funktion (DAX)](/dax/lookupvalue-function-dax)  
+[CUSTOMDATA-Funktion (DAX)](/dax/customdata-function-dax)  
