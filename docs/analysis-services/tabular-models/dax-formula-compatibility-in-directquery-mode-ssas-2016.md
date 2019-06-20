@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019237"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263329"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DAX-formelkompatibilität im DirectQuery-Modus 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,10 +45,10 @@ Diese Funktionen wurden nicht optimiert, um die Arbeit mit DirectQuery. Diese Fu
 
 Ein Grund, warum eine bestimmte Funktion nicht für DirectQuery optimiert werden kann, ist zum einen, dass die zugrunde liegende Engine keine Berechnungen durchführen kann, die denen durch die xVelocity-Engine entsprechen. Zum anderen ist es möglich, dass die Formel nicht in einen entsprechenden SQL-Ausdruck umgewandelt werden kann. In anderen Fällen sind die Leistung des umgewandelten Ausdrucks und die resultierenden Berechnungen ggf. nicht akzeptabel.
 
-Weitere Informationen zu allen DAX-Funktionen finden Sie unter [DAX-Funktionsreferenz]. (https://msdn.microsoft.com/library/ee634396.aspx)
+Weitere Informationen zu allen DAX-Funktionen finden Sie unter den [DAX-Funktionsreferenz](/dax/dax-function-reference).
 
 ## <a name="dax-operators-in-directquery-mode"></a>DAX-Operatoren im DirectQuery-Modus
-Alle DAX-Vergleichs- und arithmetischen Operatoren werden im DirectQuery-Modus vollständig unterstützt. Weitere Informationen finden Sie unter [DAX-Operator (Referenz)](https://msdn.microsoft.com/library/ee634237.aspx).
+Alle DAX-Vergleichs- und arithmetischen Operatoren werden im DirectQuery-Modus vollständig unterstützt. Weitere Informationen finden Sie unter [DAX-Operator (Referenz)](/dax/dax-operator-reference).
 
 
  
@@ -160,7 +160,7 @@ SQL Server behandelt NULL-Werte und Leerzeichen anders als die xVelocity-Engine.
   
 Die gleichen Einschränkungen gelten für die anderen logarithmischen Funktionen: LOG10 und LN.  
   
-Weitere Informationen zum **blank** -Datentyp in der DAX-Programmiersprache finden Sie in der [DAX-Syntaxspezifikation für PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
+Weitere Informationen zum **blank** -Datentyp in der DAX-Programmiersprache finden Sie in der [DAX-Syntaxspezifikation für PowerPivot](/dax/dax-syntax-reference).  
   
 **Division durch 0 und Division durch Leerzeichen**  
 Im DirectQuery-Modus führt die Division durch null (0) bzw. die Division durch BLANK stets zu einem Fehler. SQL Server unterstützt nicht die Definition der Unendlichkeit, und da das natürliche Ergebnis jeder Division durch 0 die Unendlichkeit ist, entspricht das Ergebnis einem Fehler. SQL Server unterstützt jedoch die Division durch NULL-Werte, und das Ergebnis muss stets einem NULL-Wert entsprechen.  

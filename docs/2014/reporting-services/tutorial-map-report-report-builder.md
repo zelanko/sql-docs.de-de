@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098863"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Kartenbericht (Berichts-Generator)
@@ -191,7 +191,7 @@ ms.locfileid: "66098863"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**).  
+9. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ).  
   
      Das Resultset werden sieben Spalten angezeigt: StoreKey "StoreName", den SellingArea, City, County, Vertrieb und SpatialLocation. Diese Daten stellen einen Satz von Geschäften im Bundesstaat New York dar, in denen Verbrauchsgüter verkauft werden. Jede Zeile im Resultset enthält eine Geschäfts-ID, den Geschäftsnamen, die für die Produkte verfügbare Ausstellfläche, den Ort und das County, in dem sich das Geschäft befindet, den Jahresumsatz und die räumliche Position in Längen- und Breitengrad. Die Ausstellfläche liegt zwischen 455 Quadratfuß und 1125 Quadratfuß.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "66098863"
   
 19. Fügen Sie einen Legendentitel hinzu. Mit der rechten Maustaste des Legendentitels und klicken Sie dann auf **Eigenschaften des Kartenlegendentitels**.  
   
-20. Löschen Sie den Titel, und geben **Display Area (Square Feet)**.  
+20. Löschen Sie den Titel, und geben **Display Area (Square Feet)** .  
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -318,7 +318,7 @@ ms.locfileid: "66098863"
   
 4.  Klicken Sie auf **Sichtbarkeit**.  
   
-5.  In **Transparenz (%)**, Typ **30**.  
+5.  In **Transparenz (%)** , Typ **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -433,7 +433,7 @@ ms.locfileid: "66098863"
   
 6.  Klicken Sie auf **Titel** auf die Legende aus, um den Legendentitel auszuwählen.  
   
-7.  Klicken Sie auf **Titel** erneut aus, um den Einfügemodus für den Text eingeben. Ersetzen Sie dies **Titel** von **Umsätze (Tausender)**, und klicken Sie dann außerhalb des Texts auf.  
+7.  Klicken Sie auf **Titel** erneut aus, um den Einfügemodus für den Text eingeben. Ersetzen Sie dies **Titel** von **Umsätze (Tausender)** , und klicken Sie dann außerhalb des Texts auf.  
   
  Die Legende wird erweitert, um den Titel anzuzeigen.  
   

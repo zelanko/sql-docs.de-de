@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721540"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
@@ -159,7 +159,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 2.  Klicken Sie im Bereich **Aktionen** auf \*:443(https) **durchsuchen**.  
   
-3.  Internet Explorer wird geöffnet und zeigt folgende Meldung an: "Es besteht ein Problem mit dem Sicherheitszertifikat der Website". Diese Warnung besagt, dass das zugeordnete Zertifikat nicht von einer bekannten Zertifizierungsstelle ausgestellt wurde und möglicherweise nicht vertrauenswürdig ist. Dies ist eine erwartete Warnung, klicken Sie deshalb auf **Laden dieser Website fortsetzen (nicht empfohlen)**.  
+3.  Internet Explorer wird geöffnet und zeigt folgende Meldung an: "Es besteht ein Problem mit dem Sicherheitszertifikat der Website". Diese Warnung besagt, dass das zugeordnete Zertifikat nicht von einer bekannten Zertifizierungsstelle ausgestellt wurde und möglicherweise nicht vertrauenswürdig ist. Dies ist eine erwartete Warnung, klicken Sie deshalb auf **Laden dieser Website fortsetzen (nicht empfohlen)** .  
   
 4.  Wenn die Aufforderung **Mit Localhost verbinden**angezeigt wird, geben Sie einen Benutzernamen und ein Kennwort ein, um fortzufahren. Die Standardseite für die Website sollte angezeigt werden.  
   
@@ -280,7 +280,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     4.  Wird ein Proxyserver verwendet, klicken Sie auf **Proxyserver für LAN verwenden** und **Proxyserver für lokale Adressen umgehen**und dann auf **OK**.  
   
-2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Zum Beispiel: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Zum Beispiel: **https://server.domain.com/directory/replisapi.dll?diag** .  
   
     > [!NOTE]  
     >  Im oben aufgeführten Beispiel sollte **server.domain.com** durch den im Abschnitt **Serverzertifikate** in IIS-Manager aufgeführten genauen **Ausgestellt an** -Namen ersetzt werden.  

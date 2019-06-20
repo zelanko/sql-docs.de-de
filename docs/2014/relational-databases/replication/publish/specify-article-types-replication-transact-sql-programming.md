@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b90fb6d2a85d30179e630d292f8fc11250958344
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261771"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Angeben von Artikeltypen (Replikationsprogrammierung mit Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "63261771"
   
     -   **logbased** &ndash; ein protokollbasierter Tabellenartikel, der der Standard für die Transaktions- und Momentaufnahmereplikation ist. Die Replikation generiert automatisch die gespeicherte Prozedur, die für das horizontale Filtern verwendet wird, sowie die Sicht, die einen vertikal gefilterten Artikel definiert.  
   
-    -   **logbased manualfilter** &ndash; ein protokollbasierter, horizontal gefilterter Artikel, in dem die gespeicherte Prozedur für das horizontale Filtern manuell vom Benutzer erstellt und definiert sowie für **@filter**aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** &ndash; ein protokollbasierter, horizontal gefilterter Artikel, in dem die gespeicherte Prozedur für das horizontale Filtern manuell vom Benutzer erstellt und definiert sowie für **@filter** aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-    -   **logbased manualview** &ndash; ein protokollbasierter, vertikal gefilterter Artikel, in dem die Sicht, die den vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@sync_object**aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **logbased manualview** &ndash; ein protokollbasierter, vertikal gefilterter Artikel, in dem die Sicht, die den vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@sync_object** aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **logbased manualboth** &ndash; ein protokollbasierter, horizontal und vertikal gefilterter Artikel, in dem sowohl die gespeicherte Prozedur für das horizontale Filtern als auch die Sicht, die den vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@filter** und **@sync_object**angegeben werden. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **logbased manualboth** &ndash; ein protokollbasierter, horizontal und vertikal gefilterter Artikel, in dem sowohl die gespeicherte Prozedur für das horizontale Filtern als auch die Sicht, die den vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@filter** und **@sync_object** angegeben werden. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
      Damit wird ein neuer Artikel für die Veröffentlichung definiert. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   
@@ -58,11 +58,11 @@ ms.locfileid: "63261771"
   
     -   **indexed view schema only** &ndash; ein Artikel für eine indizierte Sicht vom Typ schema only. Die Basistabelle muss ebenfalls repliziert werden.  
   
-    -   **indexed view logbased manualfilter** &ndash; ein protokollbasierter, horizontal gefilterter Artikel für eine indizierte Sicht, in dem die gespeicherte Prozedur für das horizontale Filtern manuell vom Benutzer erstellt und definiert sowie für **@filter**aus. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter** &ndash; ein protokollbasierter, horizontal gefilterter Artikel für eine indizierte Sicht, in dem die gespeicherte Prozedur für das horizontale Filtern manuell vom Benutzer erstellt und definiert sowie für **@filter** aus. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](define-and-modify-a-static-row-filter.md).  
   
-    -   **indexed view logbased manualview** &ndash; ein protokollbasierter, gefilterter Artikel für eine indizierte Sicht, in dem die Sicht, die einen vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@sync_object**aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualview** &ndash; ein protokollbasierter, gefilterter Artikel für eine indizierte Sicht, in dem die Sicht, die einen vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@sync_object** aus. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **indexed view logbased manualboth** &ndash; ein protokollbasierter, gefilterter Artikel für eine indizierte Sicht, in dem sowohl die gespeicherte Prozedur für das horizontale Filtern als auch die Sicht, die einen vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@filter** und **@sync_object**angegeben werden. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualboth** &ndash; ein protokollbasierter, gefilterter Artikel für eine indizierte Sicht, in dem sowohl die gespeicherte Prozedur für das horizontale Filtern als auch die Sicht, die einen vertikal gefilterten Artikel definiert, vom Benutzer erstellt und definiert sowie für **@filter** und **@sync_object** angegeben werden. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) und [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
      Damit wird ein neuer Artikel für die Veröffentlichung definiert. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   

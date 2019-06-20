@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831525"
 ---
 # <a name="ftp-task"></a>FTP-Task
@@ -48,7 +48,7 @@ ms.locfileid: "62831525"
 ## <a name="predefined-ftp-operations"></a>Vordefinierte FTP-Vorgänge  
  Der FTP-Task schließt vordefinierte Vorgänge ein. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|Description|  
+|Vorgang|Beschreibung|  
 |---------------|-----------------|  
 |Dateien senden|Sendet eine Datei vom lokalen Computer an den FTP-Server.|  
 |Dateien empfangen|Speichert eine Datei vom FTP-Server auf dem lokalen Computer.|  
@@ -62,7 +62,7 @@ ms.locfileid: "62831525"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den FTP-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den FTP-Task aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|Zeigt an, dass mit dem Task eine Verbindung zum FTP-Server initiiert wurde.|  
 |`FTPOperation`|Berichtet den Beginn und Typ des vom Task ausgeführten FTP-Vorgangs.|  

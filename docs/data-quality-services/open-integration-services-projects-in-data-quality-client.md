@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: 0d31536e59004786acf85828ad256c2ed197c2bf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66788013"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Öffnen von Integration Services-Projekten im Data Quality-Client
@@ -51,7 +51,7 @@ ms.locfileid: "66788013"
   
 3.  Im Bildschirm **Projekt öffnen** können Sie ein Integration Services-Projekt auf eine der folgenden Weisen identifizieren:  
   
-    1.  **Projektname:** Die Auflistung von Integration Services-Projekten erfolgt anhand der folgenden Namensterminologie: "Package.DQS Cleansing_ *\<DATUM>\<UHRZEIT>* _{GUID}." Bei jeder erfolgreichen Ausführung des gleichen Pakets in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]wird ein neues Projekt auf dem Bildschirm **Projekt öffnen** aufgelistet.  
+    1.  **Projektname:** Die Auflistung von Integration Services-Projekten erfolgt anhand der folgenden Namensterminologie: "Package.DQS Cleansing_*\<DATUM>\<UHRZEIT>*_{GUID}." Bei jeder erfolgreichen Ausführung des gleichen Pakets in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]wird ein neues Projekt auf dem Bildschirm **Projekt öffnen** aufgelistet.  
   
     2.  **Projekttyp:** Für Integration Services-Projekte wird **SSIS** auf dem Bildschirm **Projekt öffnen** als Projekttyp angezeigt.  
   

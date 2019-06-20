@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126313"
 ---
 # <a name="dbase-data-types"></a>dBASE-Datentypen
@@ -51,7 +51,7 @@ Die folgende Tabelle zeigt, wie die dBASE-Datentypen in ODBC-SQL-Datentypen zuge
   
  Die folgende Tabelle zeigt Einschränkungen auf dBASE-Datentypen.  
   
-|Datentyp|Description|  
+|Datentyp|Beschreibung|  
 |---------------|-----------------|  
 |CHAR|Erstellen eine CHAR-Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 254-Byte-Spalte zurück.|  
 |Verschlüsselte Daten|DBASE-Treiber unterstützt keine verschlüsselten dBASE-Tabellen.|  

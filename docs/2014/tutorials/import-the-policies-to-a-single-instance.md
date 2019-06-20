@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865099"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importieren der Richtlinien auf eine einzelne Instanz
@@ -31,7 +31,7 @@ ms.locfileid: "62865099"
   
 3.  Mit der rechten Maustaste **Richtlinien**, und klicken Sie dann auf **Importrichtlinie**.  
   
-4.  In der **importieren** Dialogfeld neben dem **zu importierende Dateien** klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche.  
+4.  In der **importieren** Dialogfeld neben dem **zu importierende Dateien** klicken Sie auf die Auslassungspunkte ( **...** ) Schaltfläche.  
   
 5.  Wechseln Sie in der Liste **Suchen in** zum folgenden Ordner, in dem die Best Practices-Richtlinien enthalten sind:  
   

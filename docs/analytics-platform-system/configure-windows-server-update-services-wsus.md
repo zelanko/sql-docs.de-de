@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63134952"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Konfigurieren von Windows Server Update Services (WSUS) in Analytics Platform System
@@ -55,7 +55,7 @@ Um WSUS konfigurieren zu können, müssen Sie:
   
     1.  In der **Server-Managers**auf die **Tools** Menü klicken Sie auf **Windows Server Update Services**.  
   
-    2.  Im linken Bereich die **Update Services** klicken, um die Virtual Machine Management-Knoten-Server zu erweitern (**_Appliance_domain_- VMM**), und klicken Sie dann auf **Optionen**.  
+    2.  Im linken Bereich die **Update Services** klicken, um die Virtual Machine Management-Knoten-Server zu erweitern ( **_Appliance_domain_- VMM**), und klicken Sie dann auf **Optionen**.  
   
     3.  In der **Optionen** Bereich, klicken Sie auf **WSUS-Server-Konfigurations-Assistenten** um den Konfigurations-Assistenten zu starten.  
   
@@ -142,7 +142,7 @@ Um WSUS konfigurieren zu können, müssen Sie:
   
     Deaktivieren Sie alle ausgewählten Updates.  
   
-    Wählen Sie **Windows Server 2012 R2**, und **System Center 2012 R2 – Virtual Machine Manager-**, und klicken Sie dann auf **Weiter**.  
+    Wählen Sie **Windows Server 2012 R2**, und **System Center 2012 R2 – Virtual Machine Manager-** , und klicken Sie dann auf **Weiter**.  
   
 9. Auswählen von Klassifizierungen.  
   

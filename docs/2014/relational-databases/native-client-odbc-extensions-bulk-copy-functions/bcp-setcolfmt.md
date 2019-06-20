@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63226242"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
@@ -106,7 +106,7 @@ cbValue
   
 -   Die Länge der optionalen abschließenden Bytesequenz  
   
- Jeder Aufruf von **Bcp_setcolfmt** gibt das Format für eine benutzerdateispalte an. Z. B. um die Standardeinstellungen für drei Spalten in einer Datendatei für die Benutzer mit fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](bcp-columns.md)**(5)**, und rufen dann **Bcp_setcolfmt** fünfmal mit drei dieser Aufrufe Ihr bentuzerdefiniertes Format. Klicken Sie für die verbleibenden zwei Aufrufe BCP_FMT_TYPE auf 0 festgelegt, und legen Sie BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN und *CbValue* auf 0, SQL_VARLEN_DATA und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
+ Jeder Aufruf von **Bcp_setcolfmt** gibt das Format für eine benutzerdateispalte an. Z. B. um die Standardeinstellungen für drei Spalten in einer Datendatei für die Benutzer mit fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](bcp-columns.md) **(5)** , und rufen dann **Bcp_setcolfmt** fünfmal mit drei dieser Aufrufe Ihr bentuzerdefiniertes Format. Klicken Sie für die verbleibenden zwei Aufrufe BCP_FMT_TYPE auf 0 festgelegt, und legen Sie BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN und *CbValue* auf 0, SQL_VARLEN_DATA und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
  Die **Bcp_columns** Funktion aufgerufen werden muss, bevor **Bcp_setcolfmt**.  
   

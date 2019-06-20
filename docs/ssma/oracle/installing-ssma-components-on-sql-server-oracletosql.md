@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63055670"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installieren von SSMA-Komponenten auf SQL Server (OracleToSQL)
@@ -101,7 +101,7 @@ Sie können vor dem Migrieren von Daten auf, das Erweiterungspaket installieren 
 ### <a name="sql-server-database-objects"></a>SQL Server-Datenbankobjekten  
 Nach der Installation der Erweiterung Pack werden Sie eine finden Sie unter einem **ssma_oracle.bcp_migration_packages** Tabelle eine **ssma_oracle.db_storage** Tabelle und ein **ssma_oracle.db_error_list** -Tabelle in der **Sysdb** Datenbank. Sie sehen auch viele gespeicherte Prozeduren und benutzerdefinierten Funktionen in der **Ssma_oracle** Schema.  
   
-Jedes Mal, die Sie zum Migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA erstellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag. Diese Aufträge werden mit dem Namen **Ssma_oracle Migration Datenpaket {GUID}**, und in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Knoten der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Ordner "Aufträge".  
+Jedes Mal, die Sie zum Migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA erstellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag. Diese Aufträge werden mit dem Namen **Ssma_oracle Migration Datenpaket {GUID}** , und in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Knoten der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Ordner "Aufträge".  
   
 ## <a name="see-also"></a>Siehe auch  
 [Installieren von SSMA für Oracle-Client &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488474"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lektion 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank „Suppliers“
@@ -43,6 +43,6 @@ ms.locfileid: "65488474"
 6.  Importieren Sie die Werte aus dem bereinigungsprojekt in Domänen, um die Informationen in der Wissensdatenbank mit neue Regeln, Werte, Korrekturen usw. zu erweitern...  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 1: Erstellen ein Data Quality-Projekt](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+ [Aufgabe 1: Erstellen ein Data Quality-Projekt](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   
