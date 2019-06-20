@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666586"
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>Attributeigenschaften – Definieren von benutzerdefinierten Elementformeln
@@ -39,7 +39,7 @@ ms.locfileid: "62666586"
   
     -   Quartal 3: 100  
   
-    -   4. Quartal: 800  
+    -   4\. Quartal: 800  
   
 -   2004: 1500  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62666586"
   
     -   Quartal 3: 300  
   
-    -   4. Quartal: 400  
+    -   4\. Quartal: 400  
   
  Bei einer benutzerdefinierten Elementformel wird der Wert des Elements stattdessen von der benutzerdefinierten Rollupformel bereitgestellt. Die folgende benutzerdefinierte Elementformel kann z. B. verwendet werden, um den Wert 450 für das untergeordnete Quarter 4-Element des 2004-Elements in der Time-Dimension anzugeben.  
   

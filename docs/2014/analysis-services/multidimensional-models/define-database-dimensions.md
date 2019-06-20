@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075610"
 ---
 # <a name="define-database-dimensions"></a>Definieren von Datenbankdimensionen
@@ -40,7 +40,7 @@ ms.locfileid: "66075610"
   
  Der Dimensions-Designer besitzt drei Registerkarten, die in der folgenden Tabelle beschrieben werden.  
   
-|Registerkarte|Description|  
+|Registerkarte|Beschreibung|  
 |---------|-----------------|  
 |**Dimensionsstruktur**|Verwenden Sie diese Registerkarte, um das Arbeiten mit der Struktur einer Dimension zu überprüfen oder zu erstellen das Schema der Datenquellensicht angezeigt bei einer Dimension, für die Arbeit mit Attributen und Attribute in benutzerdefinierten Hierarchien zu organisieren.|  
 |**Attributbeziehungen**|Verwenden Sie diese Registerkarte, um die Attributbeziehungen einer Dimension zu erstellen, zu ändern oder zu löschen.|  
