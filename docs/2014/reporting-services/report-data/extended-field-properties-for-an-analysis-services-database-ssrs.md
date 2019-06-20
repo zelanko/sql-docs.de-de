@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107290"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66107290"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Gibt den Datenwert des Felds an.|  
 |`IsMissing`|`Boolean`|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  
-|`UniqueName`|`String`|Gibt den vollqualifizierten Namen einer Ebene zurück. Z. B. die `UniqueName` Wert für einen Mitarbeiter kann *[Employee]. [ Employee Department]. [Department]. & [Sales]. & [North American Sales Manager]. & [272]*.|  
+|`UniqueName`|`String`|Gibt den vollqualifizierten Namen einer Ebene zurück. Z. B. die `UniqueName` Wert für einen Mitarbeiter kann *[Employee]. [ Employee Department]. [Department]. & [Sales]. & [North American Sales Manager]. & [272]* .|  
 |`BackgroundColor`|`String`|Gibt die Hintergrundfarbe zurück, die in der Datenbank für das Feld definiert ist.|  
 |`Color`|`String`|Gibt die Vordergrundfarbe zurück, die in der Datenbank für das Element definiert ist.|  
 |`FontFamily`|`String`|Gibt den Namen der Schriftart an, die in der Datenbank für das Element definiert ist.|  

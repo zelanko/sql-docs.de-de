@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067719"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -35,10 +35,10 @@ ms.locfileid: "63067719"
   
  In der folgenden Tabelle werden die vom Resultset zurückgegebenen Spalten aufgeführt:  
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |DATA_TYPE|Gibt SQL_VARCHAR, SQL_VARBINARY oder SQL_WVARCHAR für den **varchar(max)** -Datentypen.|  
-|TYPE_NAME|Gibt "Varchar", "Varbinary" oder "Nvarchar" für die **varchar(max)**, **'varbinary(max)'**, und **nvarchar(max)** -Datentypen.|  
+|TYPE_NAME|Gibt "Varchar", "Varbinary" oder "Nvarchar" für die **varchar(max)** , **'varbinary(max)'** , und **nvarchar(max)** -Datentypen.|  
 |COLUMN_SIZE|Gibt SQL_SS_LENGTH_UNLIMITED für **varchar(max)** -Datentyp zurück, die Größe der Spalte unbegrenzt ist.|  
 |BUFFER_LENGTH|Gibt SQL_SS_LENGTH_UNLIMITED für **varchar(max)** -Datentyp zurück, die Größe des Puffers unbegrenzt ist.|  
 |SQL_DATA_TYPE|Gibt SQL_VARCHAR, SQL_VARBINARY oder SQL_WVARCHAR für den **varchar(max)** -Datentypen.|  

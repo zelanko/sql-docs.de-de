@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086778"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Beziehung erstellen oder bearbeiten (Dialogfeld) (Analysis Services – Mehrdimensionale Daten)
@@ -38,7 +38,7 @@ ms.locfileid: "66086778"
  Wählen Sie die Tabelle oder die benannte Abfrage aus, die den Verweis auf eine oder mehrere Spalten in der Zieltabelle enthält.  
   
  **Tabelle der Zieltabelle (Primärschlüsseltabelle)**  
- Wählen Sie die Tabelle aus, die eine oder mehrere Spalten enthält, auf die die Quelltabelle verweist. Wählen Sie für Selbstverknüpfungen dieselbe Tabelle aus, wie in **Quelltabelle (Fremdschlüsseltabelle)**.  
+ Wählen Sie die Tabelle aus, die eine oder mehrere Spalten enthält, auf die die Quelltabelle verweist. Wählen Sie für Selbstverknüpfungen dieselbe Tabelle aus, wie in **Quelltabelle (Fremdschlüsseltabelle)** .  
   
  **Quellspalten**  
  Wählen Sie die Spalten aus, die auf Spalten in der Zieltabelle verweisen.  

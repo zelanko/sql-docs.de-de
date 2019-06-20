@@ -1,17 +1,17 @@
 ---
 title: srv_pfieldex (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/16/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-apiname:
+api_name:
 - srv_pfieldex
-apilocation:
+api_location:
 - opends60.dll
-apitype: DLLExport
+topic_type:
+- apiref
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,14 +21,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8bacfd4f955f60b17b439c8066a3b1cba2c52392
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126951"
 ---
 # <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API für erweiterte gespeicherte Prozeduren)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
@@ -46,6 +45,7 @@ field
 , int *   
 len  
 );  
+  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -70,6 +70,6 @@ len
 >  Der vom Server zurückgegebene Puffer sollte schreibgeschützt sein. Andernfalls ist der Serverstatus möglicherweise beschädigt.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sicherheitshinweis** Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren gründlich überprüfen. Außerdem sollten Sie die kompilierten DLLs vor der Installation auf einem Produktionsserver testen. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+ **Sicherheitshinweis** Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren gründlich überprüfen. Außerdem sollten Sie die kompilierten DLLs vor der Installation auf einem Produktionsserver testen. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

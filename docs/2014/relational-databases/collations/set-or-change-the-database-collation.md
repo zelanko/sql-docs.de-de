@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874031"
 ---
 # <a name="set-or-change-the-database-collation"></a>Festlegen oder Ändern der Datenbanksortierung
@@ -31,7 +31,7 @@ ms.locfileid: "62874031"
   
      [Empfehlungen](#Recommendations)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **Festlegen oder Ändern der Datenbanksortierung mit:**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62874031"
  ALTER DATABASE  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-set-or-change-the-database-collation"></a>So legen Sie die Datenbanksortierung oder ändern sie  
   

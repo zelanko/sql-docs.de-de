@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070852"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>PowerPivot-Datenaktualisierung mit SharePoint 2010
@@ -43,7 +43,7 @@ ms.locfileid: "66070852"
   
  [Schritt 5: Installieren von Datenanbietern zum Importieren von PowerPivot-Daten](#bkmk_installdp)  
   
- [Schritt 6: Gewähren von Berechtigungen für die Erstellung von Zeitplänen und Zugriff auf externe Datenquellen](#bkmk_accounts)  
+ [Schritt 6: Gewähren von Berechtigungen für die Erstellung von Zeitplänen und Zugriff auf externe Datenquellen](#bkmk_accounts)  
   
  [Schritt 7: Aktivieren von arbeitsmappenaktualisierung für datenaktualisierung](#bkmk_upgradewrkbk)  
   

@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a268e72262f9f8252ea89774876f3d04008fe4c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284942"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Programmgesteuertes Festlegen von Optionen für die dBASE-Treiber
 
-|Option|Description|Methode|  
+|Option|Beschreibung|Methode|  
 |------------|-----------------|------------|  
 |Ungefähre Zeilenzählung|Bestimmt, ob die Größe von Tabellenstatistiken angeglichen werden. Diese Option gilt für alle Datenquellen, die den ODBC-Treiber verwenden.|Um diese Option dynamisch festzulegen, verwenden die **Statistiken** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Sortierreihenfolge|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz sind möglich: ASCII (Standard) und internationale.|Um diese Option dynamisch festzulegen, verwenden die **COLLATINGSEQUENCE** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877875"
 ---
 # <a name="variables-window"></a>Variablen (Fenster)
@@ -72,7 +72,7 @@ ms.locfileid: "62877875"
  **Beschreibung**  
  Anzeigen der Variablenbeschreibung. Sie können die Beschreibung für benutzerdefinierte Variablen ändern. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
- **Ausdruck**  
+ **expression**  
  Anzeigen des der Variable zugewiesenen Ausdrucks. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um einen Ausdruck zuzuweisen.  
   
  Wenn Sie einer Variablen einen Ausdruck zuweisen, wird ein spezieller Symbolmarker neben der Variablen angezeigt. Dieser spezielle Symbolmarker wird auch neben Verbindungs-Managern und Tasks angezeigt, für die Ausdrücke festgelegt wurden.  

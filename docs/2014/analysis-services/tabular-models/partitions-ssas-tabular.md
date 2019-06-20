@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066900"
 ---
 # <a name="partitions-ssas-tabular"></a>Partitionen (SSAS – tabellarisch)
@@ -46,7 +46,7 @@ ms.locfileid: "66066900"
   
 ##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](workspace-database-ssas-tabular.md)|Beschreibt, wie Partitionen in der Arbeitsbereichsdatenbank des Modells mit dem Partitions-Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt und verwaltet werden.|  
 |[Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Beschreibt, wie Partitionen in der Arbeitsbereichsdatenbank des Modells verarbeitet (aktualisiert) werden.|  

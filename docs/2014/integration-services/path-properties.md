@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056660"
 ---
 # <a name="path-properties"></a>Pfadeigenschaften
@@ -32,7 +32,7 @@ ms.locfileid: "66056660"
   
  Die folgende Tabelle beschreibt die konfigurierbaren Eigenschaften der Pfade in einem Datenfluss. Die Datenfluss-Engine weist auch zusätzlichen schreibgeschützten Eigenschaften, die nicht hier aufgelistet sind, Werte zu.  
   
-|Eigenschaftenname|Datentyp|Description|  
+|Eigenschaftenname|Datentyp|Beschreibung|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Ganze Zahl (Enumeration)|Ein Wert, der angibt, ob eine Anmerkung mit dem Pfad auf der Designeroberfläche angezeigt werden soll. Die möglichen Werte sind `AsNeeded`, `SourceName`, `PathName` und `Never`. Der Standardwert ist `AsNeeded`.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|Die dem Pfad zugeordnete Eingabe.|  

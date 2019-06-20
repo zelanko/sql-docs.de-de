@@ -1,6 +1,6 @@
 ---
 title: Berechnungsgruppen in tabellarischen Modellen von Analysis Services | Microsoft-Dokumentation
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822689"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263438"
 ---
 # <a name="calculation-groups-preview"></a>Berechnungsgruppen (Vorschau)
  
@@ -50,7 +50,7 @@ Mit einer Berechnungsgruppe, in diesem Beispiel den Namen **Zeitintelligenz**, w
 ![Berechnungsgruppe, die in Power BI angewendet wird](media/calculation-groups/calc-groups-pbi.gif)
 
 
-Berechnungsgruppen arbeiten mit **explizite** DAX-Measures. In diesem Beispiel **Sales** eines expliziten Measures, die bereits im Modell erstellt wird. Berechnungsgruppen funktionieren nicht mit impliziten DAX-Measures. Beispielsweise werden in Power BI impliziten Measures erstellt, wenn ein Benutzer visuelle Elemente, um aggregierte Werte anzuzeigen, ohne ein explizites Measure erstellen Spalten gezogen. Zu diesem Zeitpunkt generiert Power BI DAX für implizite Measures, die als Inline geschrieben, DAX-Berechnungen – was bedeutet, dass implizite Measures Berechnungsgruppen nicht bearbeiten können. Eine neue Modelleigenschaft sichtbar, in dem Tabular Object Model (TOM) wurde eingeführt, **DiscourageImplicitMeasures**. Derzeit um Berechnungsgruppen erstellen Sie diese Eigenschaft müssen festgelegt werden **"true"** . Bei Festlegung auf "true", "Power BI Desktop in Live Connect deaktiviert Modus die Erstellung impliziter Measures an.
+Berechnungsgruppen arbeiten mit **explizite** DAX-Measures. In diesem Beispiel **Sales** eines expliziten Measures, die bereits im Modell erstellt wird. Berechnungsgruppen funktionieren nicht mit impliziten DAX-Measures. Beispielsweise werden in Power BI impliziten Measures erstellt, wenn ein Benutzer visuelle Elemente, um aggregierte Werte anzuzeigen, ohne ein explizites Measure erstellen Spalten gezogen. Zu diesem Zeitpunkt generiert Power BI DAX für implizite Measures, die als Inline geschrieben, DAX-Berechnungen – was bedeutet, dass implizite Measures Berechnungsgruppen nicht bearbeiten können. Eine neue Modelleigenschaft sichtbar, in dem Tabular Object Model (TOM) wurde eingeführt, **DiscourageImplicitMeasures**. Derzeit um Berechnungsgruppen erstellen Sie diese Eigenschaft müssen festgelegt werden **"true"**. Bei Festlegung auf "true", "Power BI Desktop in Live Connect deaktiviert Modus die Erstellung impliziter Measures an.
 
 ## <a name="how-they-work"></a>Funktionsweise
 
@@ -64,7 +64,7 @@ Bevor wir ins Detail gehen, führen wir einige neuen DAX-Funktionen speziell fü
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) : wird verwendet, die von Ausdrücken für die Berechnung-Elemente, um zu bestimmen, das Measure, das im Kontext vorhanden ist, die in einer Liste von Measures angegeben ist.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) : wird verwendet, die von Ausdrücken für die Berechnung abzurufenden Elemente an die Formatzeichenfolge des Measures, die im Kontext vorhanden ist.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) : wird verwendet, die von Ausdrücken für die Berechnung abzurufenden Elemente an die Formatzeichenfolge des Measures, die im Kontext vorhanden ist.
 
 ### <a name="time-intelligence-example"></a>Beispiel für Time Intelligence
 
@@ -197,9 +197,9 @@ Tabellarische Modelle unterstützen die dynamische Formatierung von Measures mit
 
 Wenn wir das oben gezeigte Beispiel für Zeitintelligenz betrachten, alle Berechnung die Elemente, mit Ausnahme von **% im Jahresvergleich** sollte das Format der das aktuelle Measure im Kontext verwenden. Z. B. **seit Jahresbeginn** berechnet die Basis Sales-Measure ' Currency ' sein sollte. Würde dies eine Berechnungsgruppe für z. B. ein basismeasure Bestellungen, würde das Format ein Zahlenwert angegeben werden. **% Im Jahresvergleich**, sollte jedoch ein Prozentsatz unabhängig vom Format der basismeasure sein.
 
-Für **% im Jahresvergleich**, wir können die Formatzeichenfolge außer Kraft setzen, indem Sie die Format-String-Expression-Eigenschaft auf **0,00 %;-0.00 ";" 0,00 %** . Weitere Informationen zu den Eigenschaften des Ausdrucks Format finden Sie unter [MDX – Zelleigenschaften: FORMAT von Zeichenfolgeninhalten](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
+Für **% im Jahresvergleich**, wir können die Formatzeichenfolge außer Kraft setzen, indem Sie die Format-String-Expression-Eigenschaft auf **0,00 %;-0.00 ";" 0,00 %**. Weitere Informationen zu den Eigenschaften des Ausdrucks Format finden Sie unter [MDX – Zelleigenschaften: FORMAT von Zeichenfolgeninhalten](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
 
-In dieser Matrix visual in Power BI, Sie finden Sie unter **Sales aktuellen/im Jahresvergleich** und **Bestellungen aktuellen/im Jahresvergleich** behalten ihre jeweiligen basismeasure Formatzeichenfolgen. **% Der Umsätze im Jahresvergleich** und **Bestellungen über Jahr in %** , überschreibt jedoch die zu verwendende Formatzeichenfolge *Prozentsatz* Format.
+In dieser Matrix visual in Power BI, Sie finden Sie unter **Sales aktuellen/im Jahresvergleich** und **Bestellungen aktuellen/im Jahresvergleich** behalten ihre jeweiligen basismeasure Formatzeichenfolgen. **% Der Umsätze im Jahresvergleich** und **Bestellungen über Jahr in %**, überschreibt jedoch die zu verwendende Formatzeichenfolge *Prozentsatz* Format.
 
 ![Zeitintelligenz im matrixvisual](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-Der Formatausdruck für die Zeichenfolge muss es sich um eine skalare Zeichenfolge zurückgeben. Er verwendet den neuen [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) Funktion, die mit der Formatzeichenfolge für die Messung zurückgesetzt werden soll, wenn mehrere Währungen in Filterkontext vorhanden sind.
+Der Formatausdruck für die Zeichenfolge muss es sich um eine skalare Zeichenfolge zurückgeben. Er verwendet den neuen [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) Funktion, die mit der Formatzeichenfolge für die Messung zurückgesetzt werden soll, wenn mehrere Währungen in Filterkontext vorhanden sind.
 
 Die folgende Animation zeigt die währungsumrechnung dynamisches Format aufweisen, der die **Sales** Measure in einem Bericht.
 
@@ -407,8 +407,6 @@ Berechnungsgruppen werden noch nicht in SQL Server Data Tools, Visual Studio mit
 [Sicherheit auf Zeilenebene Objekt](object-level-security.md) (OLS) definierte Berechnung der gruppentabellen wird nicht unterstützt. OLS kann jedoch auf andere Tabellen im gleichen Modell definiert werden. Wenn ein Berechnungselement auf eine OLS gesichertes Objekt verweist, wird ein generischer Fehler zurückgegeben.
 
 [Sicherheit auf Zeilenebene](roles-ssas-tabular.md#bkmk_rowfliters) (auf Zeilenebene RLS) wird nicht unterstützt. Sie können RLS für Tabellen in das gleiche Modell, jedoch nicht für Berechnungsgruppen selbst (direkt oder indirekt) definieren.
-
-[Zeilen-Ausdrücke erläutert](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) Berechnungsgruppen werden nicht unterstützt.
 
 ## <a name="see-also"></a>Siehe auch  
 

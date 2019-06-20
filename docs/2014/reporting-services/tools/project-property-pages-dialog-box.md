@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100042"
 ---
 # <a name="project-property-pages-dialog-box"></a>Projekt (Eigenschaftenseiten, Dialogfeld)
-  Mithilfe der Eigenschaftenseiten für Projekte können Sie Bereitstellungseigenschaften für ein Berichtsserverprojekt konfigurieren. Klicken Sie zum Öffnen des Dialogfelds im Menü **Projekt** auf _\<Berichtsprojektname>_**Eigenschaften**.  
+  Mithilfe der Eigenschaftenseiten für Projekte können Sie Bereitstellungseigenschaften für ein Berichtsserverprojekt konfigurieren. Klicken Sie zum Öffnen des Dialogfelds im Menü **Projekt** auf _\<Berichtsprojektname>_ **Eigenschaften**.  
   
  Nachdem Sie Konfigurationseigenschaften definiert haben, können Sie auf der Symbolleiste aus der Dropdownliste **Projektmappenkonfigurationen** eine Konfiguration auswählen.  
   
 ## <a name="options"></a>Optionen  
  **Configuration**  
- Wählen Sie die zu bearbeitende Konfiguration aus. Anfangs sind folgenden Konfigurationen verfügbar: **Debuggen von**, **DebugLocal**, und **Version**. Die aktive Konfiguration wird zuerst angezeigt, z.B. **Aktiv (Debuggen)**.  
+ Wählen Sie die zu bearbeitende Konfiguration aus. Anfangs sind folgenden Konfigurationen verfügbar: **Debuggen von**, **DebugLocal**, und **Version**. Die aktive Konfiguration wird zuerst angezeigt, z.B. **Aktiv (Debuggen)** .  
   
  Um Eigenschaften für mehr als eine Konfiguration gleichzeitig anzuzeigen, wählen Sie **Alle Konfigurationen** oder **Mehrere Konfigurationen**aus.  
   
@@ -60,21 +60,21 @@ ms.locfileid: "66100042"
   
  Wenn Sie auf einem Berichtsserver veröffentlichen, der im einheitlichen Modus ausgeführt wird, geben Sie den vollständigen Pfad der Ordnerhierarchie mit Beginn beim Stamm an. Beispielsweise Folder1/Folder2/Folder3.  
   
- Wenn Sie auf einem Berichtsserver veröffentlichen, der im integrierten SharePoint-Modus ausgeführt wird, verwenden Sie eine URL zur SharePoint-Bibliothek. Beispielsweise http://*\<Servername > /\<Site >*  /Documents/MyFolder.  
+ Wenn Sie auf einem Berichtsserver veröffentlichen, der im integrierten SharePoint-Modus ausgeführt wird, verwenden Sie eine URL zur SharePoint-Bibliothek. Beispielsweise http:// *\<Servername > /\<Site >*  /Documents/MyFolder.  
   
  **TargetReportFolder**  
  Der Name des Ordners, in dem die veröffentlichten Berichte gespeichert werden sollen. Standardmäßig ist dies der Name des Berichtsprojekts. Falls der Ordner nicht auf dem Berichtsserver vorhanden ist, erstellt der Berichts-Designer den Ordner, wenn die Berichte veröffentlicht werden.  
   
  Wenn Sie auf einem Berichtsserver veröffentlichen, der im einheitlichen Modus ausgeführt wird, geben Sie den vollständigen Pfad der Ordnerhierarchie mit Beginn beim Stamm an. Wenn ein Ordner in einem anderen Ordner enthalten ist, geben Sie den Pfad zum Ordner mit Beginn beim Stamm an, wie beispielsweise Folder1/Folder2/Folder3.  
   
- Wenn Sie auf einem Berichtsserver veröffentlichen, der im integrierten SharePoint-Modus ausgeführt wird, verwenden Sie eine URL zur SharePoint-Bibliothek. Beispielsweise http://*\<Servername >*/*\<Site >*  /Documents/MyFolder.  
+ Wenn Sie auf einem Berichtsserver veröffentlichen, der im integrierten SharePoint-Modus ausgeführt wird, verwenden Sie eine URL zur SharePoint-Bibliothek. Beispielsweise http:// *\<Servername >* / *\<Site >*  /Documents/MyFolder.  
   
  **TargetServerURL**  
  Die URL des Zielberichtsservers. Diese Eigenschaft müssen Sie vor dem Veröffentlichen eines Berichts auf eine gültige URL eines Berichtsservers festlegen.  
   
  Verwenden Sie die URL des virtuellen Verzeichnisses des Berichtsservers, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im einheitlichen Modus ausgeführt wird. Beispielsweise http://\<Server > / Reportserver. Dies ist das virtuelle Verzeichnis des Berichtsservers, nicht des Berichts-Managers. Standardmäßig wird der Berichtsserver in dem virtuellen Verzeichnis "reportserver" installiert.  
   
- Verwenden Sie eine URL für eine SharePoint-Stammwebsite oder -Unterwebsite, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im integrierten SharePoint-Modus ausgeführt wird. Wenn Sie keine Website angeben, wird die standardmäßige Stammwebsite verwendet. Beispielsweise http://\<*Servername >*, http://&lt*Servername*/\<*Site >* oder http://\< *Servername >*/\<*Site >*/\<*Unterwebsite >*.  
+ Verwenden Sie eine URL für eine SharePoint-Stammwebsite oder -Unterwebsite, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im integrierten SharePoint-Modus ausgeführt wird. Wenn Sie keine Website angeben, wird die standardmäßige Stammwebsite verwendet. Beispielsweise http://\<*Servername >* , http://&lt*Servername*/\<*Site >* oder http://\< *Servername >* /\<*Site >* /\<*Unterwebsite >* .  
   
 ## <a name="see-also"></a>Siehe auch  
  [Veröffentlichen von Berichten](../publish-reports.md)   

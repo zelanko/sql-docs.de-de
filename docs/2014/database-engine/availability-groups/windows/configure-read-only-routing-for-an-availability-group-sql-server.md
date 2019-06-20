@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a129386b5c88939d68f5d7f23a5fe2b4d8ce7cca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789530"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "62789530"
   
     -   Geben Sie zum Konfigurieren des schreibgeschützten Routings für die sekundäre Rolle in der ADD REPLICA- bzw. MODIFY REPLICA WITH-Klausel die SECONDARY_ROLE-Option wie folgt an:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://*`system-address`*:*`port`*")**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **:// *`system-address`* : *`port`* ")**  
   
          Die URL für das schreibgeschützte Routing verfügt über die folgenden Parameter:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62789530"
   
     -   Geben Sie zum Konfigurieren des schreibgeschützten Routings für die primäre Rolle in der ADD REPLICA- bzw. MODIFY REPLICA WITH-Klausel die PRIMARY_ROLE-Option wie folgt an:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= ("*`server`*"** [ **,**... *n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= (" *`server`* "** [ **,** ... *n* ] **))**  
   
          wobei *server* eine Serverinstanz identifiziert, die ein schreibgeschütztes sekundäres Replikat in der Verfügbarkeitsgruppe hostet.  
   
@@ -154,13 +154,13 @@ GO
   
 2.  Wenn Sie einer Verfügbarkeitsgruppe ein Verfügbarkeitsreplikat hinzufügen, verwenden Sie das `New-SqlAvailabilityReplica`-Cmdlet. Wenn Sie ein vorhandenes Verfügbarkeitsreplikat ändern, verwenden Sie das `Set-SqlAvailabilityReplica`-Cmdlet. Die relevanten Parameter lauten wie folgt:  
   
-    -   Um schreibgeschütztes routing für die sekundäre Rolle zu konfigurieren, geben die **ReadonlyRoutingConnectionUrl "*`url`*"** Parameter.  
+    -   Um schreibgeschütztes routing für die sekundäre Rolle zu konfigurieren, geben die **ReadonlyRoutingConnectionUrl " *`url`* "** Parameter.  
   
          wobei *url* für den vollqualifizierten Domänennamen (FQDN) und Port der Verbindung steht, die beim Routing zum Replikat für schreibgeschützte Verbindungen verwendet werden. Beispiel:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Weitere Informationen finden Sie unter [Berechnen von read_only_routing_url für AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
   
-    -   Um Verbindungszugriff für die primäre Rolle zu konfigurieren, geben **ReadonlyRoutingList "*`server`*"** [ **,**... *n* ], wobei *Server* identifiziert eine Serverinstanz, die ein schreibgeschützten sekundäres Replikat in der verfügbarkeitsgruppe hostet. Beispiel:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Um Verbindungszugriff für die primäre Rolle zu konfigurieren, geben **ReadonlyRoutingList " *`server`* "** [ **,** ... *n* ], wobei *Server* identifiziert eine Serverinstanz, die ein schreibgeschützten sekundäres Replikat in der verfügbarkeitsgruppe hostet. Beispiel:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Sie müssen die URL für das schreibgeschützte Routing für ein Replikat festlegen, bevor Sie dessen schreibgeschützte Routingliste festlegen.  

@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462525"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "66462525"
 
 Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, zurück.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID der Sitzung, auf die sich diese Anforderung bezieht. Lässt keine NULL-Werte zu.|  
 |request_id|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig. Lässt keine NULL-Werte zu.|  
@@ -101,7 +101,7 @@ Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion
 ## <a name="remarks"></a>Hinweise 
 Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.
 
-Beim Ausführen von paralleler Anforderungen in [Zeilenmodus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeitsthread zum Koordinieren der Arbeitsthreads, die zum Abschließen der Aufgaben, die ihnen zugewiesene verantwortlich. In dieser DMV ist nur der koordinatorthread für die Anforderung angezeigt. Die Spalten **liest**, **schreibt**, **Logical_reads**, und **Row_count** sind **nicht aktualisiert** für die koordinatorthread. Die Spalten **"wait_type"** , **"wait_time"** , **Last_wait_type**, **Wait_resource**, und **Granted_query_memory** sind **nur dann aktualisiert,** für den koordinatorthread. Weitere Informationen finden Sie unter den [Handbuch zur Architektur und Thread](../../relational-databases/thread-and-task-architecture-guide.md).
+Beim Ausführen von paralleler Anforderungen in [Zeilenmodus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeitsthread zum Koordinieren der Arbeitsthreads, die zum Abschließen der Aufgaben, die ihnen zugewiesene verantwortlich. In dieser DMV ist nur der koordinatorthread für die Anforderung angezeigt. Die Spalten **liest**, **schreibt**, **Logical_reads**, und **Row_count** sind **nicht aktualisiert** für die koordinatorthread. Die Spalten **"wait_type"**, **"wait_time"**, **Last_wait_type**, **Wait_resource**, und **Granted_query_memory** sind **nur dann aktualisiert,** für den koordinatorthread. Weitere Informationen finden Sie unter den [Handbuch zur Architektur und Thread](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Berechtigungen
 Wenn der Benutzer hat `VIEW SERVER STATE` -Berechtigung auf dem Server, sieht der Benutzer alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, andernfalls sieht der Benutzer nur die aktuelle Sitzung. `VIEW SERVER STATE` kann nicht gewährt werden, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] damit `sys.dm_exec_requests` ist immer auf die aktuelle Verbindung beschränkt.

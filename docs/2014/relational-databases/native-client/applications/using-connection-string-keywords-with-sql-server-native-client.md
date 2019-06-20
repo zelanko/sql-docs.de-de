@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6135c1d2cbf1291465e1346f71010b8befe6f7b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046395"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client
@@ -48,7 +48,7 @@ ms.locfileid: "63046395"
   
  In der folgenden Tabelle werden die Schlüsselwörter beschrieben, die in einer ODBC-Verbindungszeichenfolge verwendet werden können.  
   
-|Schlüsselwort|Description|  
+|Schlüsselwort|Beschreibung|  
 |-------------|-----------------|  
 |`Addr`|Synonym für "Address".|  
 |`Address`|Die Netzwerkadresse des Servers, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. `Address` ist normalerweise der Netzwerkname des Servers. Es können jedoch auch andere Namen sein, beispielsweise eine Pipe, eine IP-Adresse oder ein TCP/IP-Port und eine Socketadresse.<br /><br /> Wenn Sie eine IP-Adresse angeben, stellen Sie im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager sicher, dass die Protokolle für TCP/IP oder Named Pipes aktiviert sind.<br /><br /> Bei der Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client hat in ODBC-Verbindungszeichenfolgen der Wert von `Address` Vorrang vor dem Wert, der an `Server` übergeben wird. Zudem ist zu beachten, dass mit der Angabe `Address=;` eine Verbindung mit dem im `Server`-Schlüsselwort angegebenen Server hergestellt wird. Die Angaben `Address= ;, Address=.;`, `Address=localhost;` und `Address=(local);` führen dagegen zu einer Verbindungsherstellung mit dem lokalen Server.<br /><br /> Die vollständige Syntax für das `Address`-Schlüsselwort ist folgendermaßen:<br /><br /> [*protocol*`:`]*Address*[`,`*port &#124;\pipe\pipename*]<br /><br /> *Protokoll* kann `tcp` (TCP/IP), `lpc` (shared Memory) oder `np` (named Pipes). Weitere Informationen zu Protokollen finden Sie unter [Konfigurieren von Clientprotokollen](../../../database-engine/configure-windows/configure-client-protocols.md).<br /><br /> Wenn weder *Protokoll* noch die `Network` Schlüsselwort angegeben ist, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet die Protokollreihenfolge im angegebenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Konfigurations-Manager.<br /><br /> *port* gibt den Port auf dem angegebenen Server an, zu dem eine Verbindung hergestellt werden soll. In der Standardeinstellung verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Port 1433.|  
@@ -67,7 +67,7 @@ ms.locfileid: "63046395"
 |`FileDSN`|Der Name einer vorhandenen ODBC-Dateidatenquelle.|  
 |`Language`|Name der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Sprache (optional). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann Nachrichten für mehrere Sprachen in speichern **Sysmessages**. Wenn in mehreren Sprachen Verbindungen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellt werden, dann wird mit `Language` festgelegt, welcher Satz an Meldungen für die Verbindung verwendet werden soll.|  
 |`MARS_Connection`|Ermöglicht oder unterbindet die Verwendung von mehreren aktiven Resultsets (MARS) bei einer Verbindung. Gültige Werte sind "yes" und "no". Der Standardwert ist "no".|  
-|`MultiSubnetFailover`|Geben Sie immer `multiSubnetFailover=Yes` an, wenn Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verfügbarkeitsgruppenlistener oder einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failovercluster-Verfügbarkeitsgruppenlistener herstellen. `multiSubnetFailover=Yes` konfiguriert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den systemeigenen Client, um eine schnellere Erkennung sowie die Verbindung zum (derzeit) aktiven Server zu gewährleisten. Mögliche Werte sind `Yes` und `No`. Zum Beispiel:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Die Standardeinstellung ist `No`. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
+|`MultiSubnetFailover`|Geben Sie immer `multiSubnetFailover=Yes` an, wenn Sie eine Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verfügbarkeitsgruppenlistener oder einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failovercluster-Verfügbarkeitsgruppenlistener herstellen. `multiSubnetFailover=Yes` konfiguriert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den systemeigenen Client, um eine schnellere Erkennung sowie die Verbindung zum (derzeit) aktiven Server zu gewährleisten. Mögliche Werte sind `Yes` und `No`. Zum Beispiel:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Der Standardwert ist `No`. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |`Net`|Synonym für "Network".|  
 |`Network`|Gültige Werte sind **Dbnmpntw** (named Pipes) und **Dbmssocn** (TCP/IP).<br /><br /> Es führt zu einem Fehler, sowohl einen Wert für das Schlüsselwort `Network` als auch einen Protokollpräfix im Schlüsselwort `Server` anzugeben.|  
 |`PWD`|Das Kennwort für das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldekonto, das im UID-Parameter angegeben ist. `PWD` muss nicht angegeben werden, wenn die Anmeldung ein Kennwort vom Typ NULL aufweist oder wenn die Windows-Authentifizierung (`Trusted_Connection = yes`) verwendet wird.|  
@@ -135,7 +135,7 @@ ms.locfileid: "63046395"
 |`Addr`|SSPROP_INIT_NETWORKADDRESS|Synonym für "Address".|  
 |`Address`|SSPROP_INIT_NETWORKADDRESS|Die Netzwerkadresse einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Organisation.<br /><br /> Weitere Informationen zur Syntax einer gültigen Adresse finden Sie weiter unten in diesem Thema in der Beschreibung des ODBC-Schlüsselworts `Address`.|  
 |`APP`|SSPROP_INIT_APPNAME|Die Zeichenfolge, die die Anwendung identifiziert.|  
-|`ApplicationIntent`|SSPROP_INIT_APPLICATIONINTENT|Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind `ReadOnly` und `ReadWrite`.<br /><br /> Der Standardwert ist `ReadWrite`. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
+|`ApplicationIntent`|SSPROP_INIT_APPLICATIONINTENT|Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind `ReadOnly` und `ReadWrite`.<br /><br /> Die Standardeinstellung ist `ReadWrite`. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |`AttachDBFileName`|SSPROP_INIT_FILENAME|Der Name der Primärdatenbank (einschließlich des vollständigen Pfadnamens) einer anfügbaren Datenbank. Um `AttachDBFileName` verwenden zu können, muss auch der Datenbankname mit dem Schlüsselwort Database für die Anbieterzeichenfolge angegeben werden. Wenn die Datenbank zuvor angefügt worden war, fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sie nicht erneut an (die angefügte Datenbank wird standardmäßig für die Verbindung verwendet).|  
 |`Auto Translate`|SSPROP_INIT_AUTOTRANSLATE|Synonym für "AutoTranslate".|  
 |`AutoTranslate`|SSPROP_INIT_AUTOTRANSLATE|Konfiguriert die OEM-/ANSI-Zeichenübersetzung. Gültige Werte sind "yes" und "no".|  
@@ -185,7 +185,7 @@ ms.locfileid: "63046395"
   
  In der folgenden Tabelle werden die Schlüsselwörter beschrieben, die mit **IDataInitialize::GetDataSource** verwendet werden können:  
   
-|Schlüsselwort|Initialisierungseigenschaft|Description|  
+|Schlüsselwort|Initialisierungseigenschaft|Beschreibung|  
 |-------------|-----------------------------|-----------------|  
 |`Application Name`|SSPROP_INIT_APPNAME|Die Zeichenfolge, die die Anwendung identifiziert.|  
 |`Application Intent`|SSPROP_INIT_APPLICATIONINTENT|Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind `ReadOnly` und `ReadWrite`.<br /><br /> Die Standardeinstellung ist `ReadWrite`. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
@@ -236,9 +236,9 @@ ms.locfileid: "63046395"
   
  In der folgenden Tabelle werden die Schlüsselwörter beschrieben, die in einer ADO-Verbindungszeichenfolge verwendet werden können.  
   
-|Schlüsselwort|Initialisierungseigenschaft|Description|  
+|Schlüsselwort|Initialisierungseigenschaft|Beschreibung|  
 |-------------|-----------------------------|-----------------|  
-|`Application Intent`|SSPROP_INIT_APPLICATIONINTENT|Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind `ReadOnly` und `ReadWrite`.<br /><br /> Der Standardwert ist `ReadWrite`. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
+|`Application Intent`|SSPROP_INIT_APPLICATIONINTENT|Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind `ReadOnly` und `ReadWrite`.<br /><br /> Die Standardeinstellung ist `ReadWrite`. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [SQL Server Native Client-Support für hohe Verfügbarkeit, Wiederherstellung im Notfall](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |`Application Name`|SSPROP_INIT_APPNAME|Die Zeichenfolge, die die Anwendung identifiziert.|  
 |`Auto Translate`|SSPROP_INIT_AUTOTRANSLATE|Synonym für "AutoTranslate".|  
 |`AutoTranslate`|SSPROP_INIT_AUTOTRANSLATE|Konfiguriert die OEM-/ANSI-Zeichenübersetzung. Zulässig sind die Werte "true" und "false".|  

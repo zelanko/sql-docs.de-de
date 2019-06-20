@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109226"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Aktivieren und Deaktivieren von RDL-Sandkasten
@@ -28,7 +28,7 @@ ms.locfileid: "66109226"
   
  Bei Aktivierung des RDL-Sandboxing werden die folgenden Funktionen deaktiviert:  
   
--   Benutzerdefinierter Code im **\<Code>**-Element einer Berichtsdefinition.  
+-   Benutzerdefinierter Code im **\<Code>** -Element einer Berichtsdefinition.  
   
 -   RDL-Abwärtskompatibilitätsmodus für benutzerdefinierte Berichtselemente von [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66109226"
 ## <a name="configuration-settings"></a>Konfigurationseinstellungen  
  Die folgende Tabelle enthält Informationen zu Konfigurationseinstellungen. Diese Einstellungen werden in der Reihenfolge aufgeführt, in der sie in der Konfigurationsdatei angezeigt werden.  
   
-|Einstellung|Description|  
+|Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
 |**MaxResourceSize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  
@@ -68,9 +68,9 @@ ms.locfileid: "66109226"
 |**Typen**|Die Liste der Elemente, die innerhalb von RDL-Ausdrücken zugelassen sind.|  
 |**Allow**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
 |**Namespace**|Attribut für **Erlauben** , das den Namespace darstellt, der mindestens einen gültigen Typ für Value enthält. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|`AllowNew`|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL-**\<Class>**-Element erstellt werden dürfen.<br /><br /> Hinweis: Wenn `RDLSandboxing` aktiviert ist, können keine neuen Arrays erstellt werden, in RDL-Ausdrücken verwendet werden, unabhängig von der Einstellung der `AllowNew`.|  
+|`AllowNew`|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL- **\<Class>** -Element erstellt werden dürfen.<br /><br /> Hinweis: Wenn `RDLSandboxing` aktiviert ist, können keine neuen Arrays erstellt werden, in RDL-Ausdrücken verwendet werden, unabhängig von der Einstellung der `AllowNew`.|  
 |**Wert**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|**Elemente**|Für die Liste der Typen, die im **\<Types>**-Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
+|**Elemente**|Für die Liste der Typen, die im **\<Types>** -Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
 |**Verweigern**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Hinweis: Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für keinen Typ zugelassen.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Arbeiten mit Ausdrücken bei aktiviertem RDL-Sandboxing  
@@ -98,7 +98,7 @@ ms.locfileid: "66109226"
   
 -   Die [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New` Methode.  
   
--   Das **\<Classes>**-Element in der Berichtsdefinition  
+-   Das **\<Classes>** -Element in der Berichtsdefinition  
   
 -   Elemente, die Sie der Sperrliste für einen Typ in der Zulassungsliste hinzugefügt haben.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66109226"
   
  Um ein Element eines Typs zu aktivieren, aber ein Element mit dem gleichen Namen für einen anderen Typ zu verweigern, gehen Sie wie folgt vor:  
   
--   Fügen Sie ein **\<Deny>**-Element für den Elementnamen hinzu.  
+-   Fügen Sie ein **\<Deny>** -Element für den Elementnamen hinzu.  
   
 -   Erstellen Sie ein Proxyelement mit einem anderen Namen für eine Klasse in einer benutzerdefinierten Assembly für das Element, das Sie aktivieren möchten.  
   

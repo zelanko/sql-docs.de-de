@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdee6968bc4760688c6497db6d59ad04a33fa033
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107027"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure-Verbindungstyp (SSRS)
@@ -78,7 +78,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
  Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)](relational-query-designer-user-interface-report-builder.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](text-based-query-designer-user-interface-report-builder.md).  
   
- Der in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und für Aggregate, sodass Sie Abfragen schreiben können, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprachfunktionen sind die GROUP BY-Klausel, das DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprache, einschließlich Gruppieren und Aggregate. Weitere Informationen zu [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &amp;#40;Datenbank-Engine&amp;#41;](/sql/t-sql/language-reference) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
+ Der in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] verwendete grafische Abfrage-Designer bietet integrierte Unterstützung für das Gruppieren und für Aggregate, sodass Sie Abfragen schreiben können, durch die nur Zusammenfassungsdaten abgerufen werden. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprachfunktionen sind die GROUP BY-Klausel, das DISTINCT-Schlüsselwort und Aggregate wie SUM und COUNT. Der textbasierte Abfrage-Designer bietet vollständige Unterstützung für die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Sprache, einschließlich Gruppieren und Aggregate. Weitere Informationen zu [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
   
 ###  <a name="QueryText"></a> Verwenden des Abfragetyps "Text"  
  Im textbasierten Abfrage-Designer geben Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle ein, um die Daten in einem Dataset zu definieren. Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage werden z. B. die Namen aller Mitarbeiter ausgewählt, die Marketingassistenten sind:  

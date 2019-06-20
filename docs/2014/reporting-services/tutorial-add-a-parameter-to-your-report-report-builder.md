@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099092"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
@@ -118,7 +118,7 @@ ms.locfileid: "66099092"
   
      Diese Abfrage enthält keine Abfrageparameter. Abfrageparameter werden später in diesem Lernprogramm hinzugefügt.  
   
-11. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset enthält 11 Datenzeilen, die die Menge verkaufter Artikel in jeder Unterkategorie für vier Geschäfte angezeigt, und enthält die folgenden Spalten: StoreID, Unterkategorie und Menge.  
+11. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Resultset enthält 11 Datenzeilen, die die Menge verkaufter Artikel in jeder Unterkategorie für vier Geschäfte angezeigt, und enthält die folgenden Spalten: StoreID, Unterkategorie und Menge.  
   
 12. Klicken Sie auf **Weiter**.  
   
@@ -172,9 +172,9 @@ ms.locfileid: "66099092"
     WHERE StoreID = (@StoreID)  
     ```  
   
-     Die `WHERE` -Klausel beschränkt die abgerufenen Daten auf die Geschäfts-ID, die vom Abfrageparameter angegeben wird *@StoreID*.  
+     Die `WHERE` -Klausel beschränkt die abgerufenen Daten auf die Geschäfts-ID, die vom Abfrageparameter angegeben wird *@StoreID* .  
   
-4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Dialogfeld **Abfrageparameter definieren** wird geöffnet, und Sie werden aufgefordert, einen Wert für den Abfrageparameter *@StoreID*.  
+4.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Dialogfeld **Abfrageparameter definieren** wird geöffnet, und Sie werden aufgefordert, einen Wert für den Abfrageparameter *@StoreID* .  
   
 5.  Geben Sie im Feld **Parameterwert**die Zahl **200**ein.  
   
@@ -186,14 +186,14 @@ ms.locfileid: "66099092"
   
 8.  Erweitern Sie im Berichtsdatenbereich den Ordner **Parameter** .  
   
- Beachten Sie, dass es nun ein Berichtsparameter namens *@StoreID*. Standardmäßig weist der Parameter den Datentyp **Text**. Da es sich bei der Geschäfts-ID um eine ganze Zahl handelt, ändern Sie den Datentyp im nächsten Verfahren in "Integer".  
+ Beachten Sie, dass es nun ein Berichtsparameter namens *@StoreID* . Standardmäßig weist der Parameter den Datentyp **Text**. Da es sich bei der Geschäfts-ID um eine ganze Zahl handelt, ändern Sie den Datentyp im nächsten Verfahren in "Integer".  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Ändern des Standarddatentyps und anderer Eigenschaften für einen Berichtsparameter  
  Nachdem Sie einen Berichtsparameter erstellt haben, können Sie die Standardwerte für Eigenschaften anpassen.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>So ändern Sie den Standarddatentyp für einen Berichtsparameter  
   
-1.  Im berichtsdatenbereich unter dem **Parameter** Knoten mit der rechten Maustaste *@StoreID*, und klicken Sie dann auf **Parametereigenschaften**.  
+1.  Im berichtsdatenbereich unter dem **Parameter** Knoten mit der rechten Maustaste *@StoreID* , und klicken Sie dann auf **Parametereigenschaften**.  
   
 2.  Geben Sie in der Eingabeaufforderung **Store Identifier?** Dieser Text wird auf der Berichts-Viewer-Symbolleiste angezeigt, wenn Sie den Bericht ausführen.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "66099092"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Zeigen Sie eine Vorschau des Berichts an. Der Berichts-Viewer zeigt die Eingabeaufforderung für *@StoreID*.  
+6.  Zeigen Sie eine Vorschau des Berichts an. Der Berichts-Viewer zeigt die Eingabeaufforderung für *@StoreID* .  
   
 7.  Geben Sie auf der Berichts-Viewer-Symbolleiste neben Geschäfts-ID die Zahl **200**ein, und klicken anschließend auf **Bericht anzeigen**.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "66099092"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>So stellen Sie verfügbare Werte für einen Parameter aus einem Dataset bereit  
   
-1.  Der berichtsdatenbereich mit der Maustaste Parameters *@StoreID*, und klicken Sie dann auf **Parametereigenschaften**.  
+1.  Der berichtsdatenbereich mit der Maustaste Parameters *@StoreID* , und klicken Sie dann auf **Parametereigenschaften**.  
   
 2.  Klicken Sie auf **Verfügbare Werte**und anschließend auf **Werte aus Abfrage abrufen**.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "66099092"
   
 9. Zeigen Sie eine Vorschau des Berichts an.  
   
-     In der Berichts-Viewer-Symbolleiste ist das Parametertextfeld jetzt als Dropdownliste angezeigt, enthält  **\<wählen Sie einen Wert >**.  
+     In der Berichts-Viewer-Symbolleiste ist das Parametertextfeld jetzt als Dropdownliste angezeigt, enthält  **\<wählen Sie einen Wert >** .  
   
 10. Die Dropdownliste, wählen Sie Contoso Catalog Store, und klicken Sie dann auf **View-Bericht**.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "66099092"
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 3.  Klicken Sie auf **Standardwerte**, und klicken Sie dann auf **Werte aus Abfrage abrufen**.  
   
@@ -287,13 +287,13 @@ ms.locfileid: "66099092"
   
 7.  Zeigen Sie eine Vorschau des Berichts an.  
   
- Für *@StoreID*, im Berichts-Viewer zeigt den Wert "Contoso North America Online Store". Dies ist der erste Wert aus dem Resultset für das Dataset **speichert**. Im Bericht wird die verkaufte Menge von Digitalkameras für die Geschäfts-ID **199**angezeigt.  
+ Für *@StoreID* , im Berichts-Viewer zeigt den Wert "Contoso North America Online Store". Dies ist der erste Wert aus dem Resultset für das Dataset **speichert**. Im Bericht wird die verkaufte Menge von Digitalkameras für die Geschäfts-ID **199**angezeigt.  
   
 #### <a name="to-specify-a-custom-default-value"></a>So geben Sie einen benutzerdefinierten Standardwert an  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 3.  Klicken Sie auf **Standardwerte**, und klicken Sie auf **Geben Sie Werte**, und klicken Sie dann auf **hinzufügen**. Eine neue Wertzeile wird hinzugefügt.  
   
@@ -303,7 +303,7 @@ ms.locfileid: "66099092"
   
 6.  Zeigen Sie eine Vorschau des Berichts an.  
   
- Für *@StoreID*, im Berichts-Viewer zeigt den Wert "Contoso Catalog Store". Dies ist der Anzeigename für Geschäfts-ID **200**. Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
+ Für *@StoreID* , im Berichts-Viewer zeigt den Wert "Contoso Catalog Store". Dies ist der Anzeigename für Geschäfts-ID **200**. Im Bericht werden die verkauften Mengen für Zubehör, Camcorder und digitale SLR-Kameras für die Geschäfts-ID **200**angezeigt.  
   
 ##  <a name="NameValue"></a> 4d. Suchen nach Werten in einem Dataset mit Name-Wert-Paaren  
  Ein Dataset kann sowohl den Bezeichner als auch das entsprechende Namensfeld enthalten. Wenn Sie nur einen Bezeichner haben, können Sie in einem von Ihnen erstellten Dataset, das Name-Wert-Paare enthält, nach dem entsprechenden Namen suchen.  
@@ -326,7 +326,7 @@ ms.locfileid: "66099092"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Der Spaltenheader für das Geschäft enthält den Anzeigetext für einen komplexen Ausdruck: **<\<Expr>>**.  
+     Der Spaltenheader für das Geschäft enthält den Anzeigetext für einen komplexen Ausdruck: **<\<Expr>>** .  
   
 8.  Zeigen Sie eine Vorschau des Berichts an.  
   
@@ -387,7 +387,7 @@ ms.locfileid: "66099092"
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID*, und klicken Sie anschließend auf **Parametereigenschaften**.  
+2.  Klicken Sie im Berichtsdatenbereich mit der rechten Maustaste auf *@StoreID* , und klicken Sie anschließend auf **Parametereigenschaften**.  
   
 3.  Aktivieren Sie **Mehrere Werte zulassen**.  
   

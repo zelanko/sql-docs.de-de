@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080270"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
@@ -232,7 +232,7 @@ ms.locfileid: "66080270"
  Wenn Sie SharePoint 2010 verwenden, müssen Sie keine Ports in der Windows-Firewall öffnen. SharePoint öffnet die Ports nach Bedarf selbst, und Add-Ins wie PowerPivot für SharePoint werden innerhalb der SharePoint-Umgebung ausgeführt. Bei einer Installation von PowerPivot für SharePoint 2010 verwendet der PowerPivot-Systemdienst exklusiv die lokale Instanz des Diensts SQL Server Analysis Services (PowerPivot), die mit ihm auf dem gleichen Computer installiert ist. Dabei werden lokale Verbindungen und keine Netzwerkverbindungen verwendet, um auf den lokalen Analysis Services-Engine-Dienst zuzugreifen, der PowerPivot-Daten auf den SharePoint-Server lädt und sie abfragt und verarbeitet. Zum Anfordern von PowerPivot-Daten von Clientanwendungen werden Anforderungen über Ports, die von SharePoint-Setup geöffnet werden weitergeleitet (insbesondere eingehende Regeln definiert, für den Zugriff auf SharePoint - 80, SharePoint-Zentraladministration v4, SharePoint-Webdienste und SPUserCodeV4). Da PowerPivot-Webdienste in einer SharePoint-Farm ausgeführt werden, reichen die SharePoint-Firewallregeln für den Remotezugriff auf PowerPivot-Daten in einer SharePoint-Farm aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Browserdienst &amp;amp;#40;Datenbank-Engine und SSAS&amp;amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   

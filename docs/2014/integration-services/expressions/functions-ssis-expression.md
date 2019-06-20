@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769126"
 ---
 # <a name="functions-ssis-expression"></a>Funktionen (SSIS-Ausdruck)
@@ -74,7 +74,7 @@ ms.locfileid: "62769126"
   
  Die Ausdrucksauswertung stellt die folgenden Datums- und Zeitfunktionen bereit.  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS-Ausdruck&#41;](dateadd-ssis-expression.md)|Gibt einen neuen DT_DBTIMESTAMP-Wert zurück, indem ein Datums- oder Zeitintervall einem angegebenen Datum hinzugefügt wird.|  
 |[DATEDIFF &#40;SSIS-Ausdruck&#41;](datediff-ssis-expression.md)|Gibt die Anzahl von Datums- und Zeiteinheiten zurück, die zwischen zwei angegebenen Daten überschritten wurden.|  
@@ -87,7 +87,7 @@ ms.locfileid: "62769126"
   
  Die Ausdrucksauswertung stellt die folgenden NULL-Funktionen bereit.  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[ISNULL &#40;SSIS-Ausdruck&#41;](null-ssis-expression.md)|Gibt abhängig davon, ob ein Ausdruck NULL ist, ein boolesches Ergebnis zurück.|  
 |[NULL &#40;SSIS-Ausdruck&#41;](null-ssis-expression.md)|Gibt einen NULL-Wert eines angeforderten Datentyps zurück.|  

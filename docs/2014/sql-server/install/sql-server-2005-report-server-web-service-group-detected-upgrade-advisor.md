@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4f379675a4d7b37b9eab69598f7c04bc57306d46
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092110"
 ---
 # <a name="sql-server-2005-report-server-web-service-group-detected-upgrade-advisor"></a>Berichtsserver-Webdienstgruppe von SQL Server 2005 erkannt (Upgrade Advisor)
@@ -29,7 +29,7 @@ ms.locfileid: "66092110"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Beschreibung  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet nicht die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Berichtsserver-webdienstgruppe. Beim Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird diese Dienstgruppe gelöscht, und benutzerdefinierte Zugriffssteuerungslisten (Access Control Lists, ACLs) für diese Gruppe oder für Benutzer in dieser Gruppe werden nicht beibehalten.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  

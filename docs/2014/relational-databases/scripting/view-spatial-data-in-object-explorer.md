@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c791c0c00681fcc28cfb025c8108443bbb9e12a2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063207"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Anzeigen räumlicher Daten im Objekt-Explorer
@@ -40,7 +40,7 @@ ms.locfileid: "66063207"
   
 ## <a name="see-also"></a>Siehe auch  
  [Fenster "Räumliche Ergebnisse"](spatial-results-window.md)   
- [Abfrage-Editor der Datenbank-Engine &amp;amp;#40;SQL Server Management Studio&amp;amp;#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
  [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62911249"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "62911249"
 
   Die **MSmerge_partition_groups** -Tabelle speichert eine Zeile für jede Partition in einer bestimmten Datenbank berechnet. Neben den aufgelisteten Spalten wird dieser Tabelle eine Spalte für jede Funktion hinzugefügt, die in einem parametrisierten Zeilenfilter verwendet wird. Z. B. eine Spalte, die mit dem Namen **HOST_NAME_FN** zur Tabelle hinzugefügt wird, wenn ein Filter verwendet das [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Funktion. Eine Zeile wird für jeden eindeutigen Funktionswertesatz gespeichert, der mit diesem Verleger synchronisiert wurde. Mindestens zwei Abonnenten mit genau den gleichen Wert für alle diese Funktionen synchronisiert werden nutzen Sie gemeinsam dieselbe Zeile in dieser Tabelle und wird daher die gleiche Partitions-Id. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|Die Identitätsspalte, die eine eindeutige ID für die vorausberechnete Partition bereitstellt.|  
 |**publication_number**|**smallint**|Die veröffentlichungsnummer, die in gespeichert ist **Sysmergepublications**.|  

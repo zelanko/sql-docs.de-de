@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63030b34e4b607b850f25a67357d62a7184467c8
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537175"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch-Funktion
@@ -35,7 +35,7 @@ ms.locfileid: "65537175"
  **SQLExtendedFetch** angegebene Rowset von Daten aus dem Resultset abruft, und gibt Daten für alle gebundenen Spalten zurück. Rowsets können an eine absolute oder relative Position oder durch Lesezeichen angegeben werden.  
   
 > [!NOTE]
->  In ODBC 3.*.x*, **SQLExtendedFetch** wurde ersetzt durch **SQLFetchScroll**. ODBC 3.*.x* Anwendungen sollten nicht aufrufen **SQLExtendedFetch**; sie sollten stattdessen Aufrufen **SQLFetchScroll**. Der Treiber-Manager zugeordnet **SQLFetchScroll** zu **SQLExtendedFetch** bei der Arbeit mit einer ODBC 2.*.x* Treiber. ODBC 3.*.x* Treiber unterstützen sollten **SQLExtendedFetch** bei Bedarf zum Arbeiten mit ODBC 2.*.x* Anwendungen, die sie aufrufen. Weitere Informationen finden Sie unter "Kommentare" und [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
+>  In ODBC 3. *.x*, **SQLExtendedFetch** wurde ersetzt durch **SQLFetchScroll**. ODBC 3. *.x* Anwendungen sollten nicht aufrufen **SQLExtendedFetch**; sie sollten stattdessen Aufrufen **SQLFetchScroll**. Der Treiber-Manager zugeordnet **SQLFetchScroll** zu **SQLExtendedFetch** bei der Arbeit mit einer ODBC 2. *.x* Treiber. ODBC 3. *.x* Treiber unterstützen sollten **SQLExtendedFetch** bei Bedarf zum Arbeiten mit ODBC 2. *.x* Anwendungen, die sie aufrufen. Weitere Informationen finden Sie unter "Kommentare" und [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -123,9 +123,9 @@ SQLRETURN SQLExtendedFetch(
   
 -   Aufrufe von **SQLExtendedFetch** können nicht kombiniert werden, mit Aufrufen von **SQLFetch** oder **SQLFetchScroll**, und wenn **SQLBulkOperations** aufgerufen wird vor jede Fetch-Funktion aufgerufen wird, **SQLExtendedFetch** kann nicht aufgerufen werden, bis der Cursor geschlossen und erneut geöffnet wird. D. h. **SQLExtendedFetch** können nur auf Anweisung Zustand S7 aufgerufen werden. Weitere Informationen finden Sie unter [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md) in Anhang B: ODBC-Übergang Statustabellen.  
   
- Wenn eine Anwendung ruft **SQLFetchScroll** bei der Verwendung von einer ODBC 2.*.x* -Treiber verwenden, der Treiber-Manager zugeordnet wird dieser Aufruf **SQLExtendedFetch**. Weitere Informationen finden Sie unter "SQLFetchScroll und ODBC 2 *.x* Treiber" im [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
+ Wenn eine Anwendung ruft **SQLFetchScroll** bei der Verwendung von einer ODBC 2. *.x* -Treiber verwenden, der Treiber-Manager zugeordnet wird dieser Aufruf **SQLExtendedFetch**. Weitere Informationen finden Sie unter "SQLFetchScroll und ODBC 2 *.x* Treiber" im [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
- In ODBC 2.*.x*, **SQLExtendedFetch** war aufgerufen, um mehrere Zeilen abzurufen und **SQLFetch** war aufgerufen, um eine einzelne Zeile abrufen. In ODBC 3.*.x*, auf der anderen Seite **SQLFetch** aufgerufen werden, um mehrere Zeilen abzurufen.  
+ In ODBC 2. *.x*, **SQLExtendedFetch** war aufgerufen, um mehrere Zeilen abzurufen und **SQLFetch** war aufgerufen, um eine einzelne Zeile abrufen. In ODBC 3. *.x*, auf der anderen Seite **SQLFetch** aufgerufen werden, um mehrere Zeilen abzurufen.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   

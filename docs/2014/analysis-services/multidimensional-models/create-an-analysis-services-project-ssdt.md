@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076243"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Erstellen eines Analysis Services-Projekts (SSDT)
@@ -113,7 +113,7 @@ ms.locfileid: "66076243"
 ##  <a name="bkmk_ProjectFolders"></a> Analysis Services-Projektordner  
  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt enthält die folgenden Ordner, in denen die im Projekt enthaltenen Elemente organisiert werden.  
   
-|Ordner|Description|  
+|Ordner|Beschreibung|  
 |------------|-----------------|  
 |Projektmappen-Explorer|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
 |Datenquellensichten|Enthält Datenquellensichten für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellensicht-Assistenten und bearbeiten Sie sie im Datenquellensicht-Designer.|  
@@ -132,7 +132,7 @@ ms.locfileid: "66076243"
   
  Der Projektordner für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt kann die in der folgenden Tabelle aufgelisteten Dateitypen enthalten.  
   
-|Dateityp|Description|  
+|Dateityp|Beschreibung|  
 |---------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projektdefinitionsdatei (DWPROJ)|Enthält Metadaten zu den Elementen, Konfigurationen und Assemblyverweisen, die im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt definiert und enthalten sind.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Benutzereinstellungen für das Projekt (DWPROJ.USER)|Enthält Konfigurationsinformationen für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt für einen bestimmten Benutzer.|  

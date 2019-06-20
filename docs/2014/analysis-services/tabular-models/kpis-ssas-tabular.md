@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067003"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS – tabellarisch)
@@ -81,7 +81,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen und Verwalten von KPIs &#40;SSAS – tabellarisch&#41;](kpis-ssas-tabular.md)|Beschreibt das Erstellen eines KPIs mit einem Basismeasure, einem Zielmeasure und Statusschwellenwerten.|  
   

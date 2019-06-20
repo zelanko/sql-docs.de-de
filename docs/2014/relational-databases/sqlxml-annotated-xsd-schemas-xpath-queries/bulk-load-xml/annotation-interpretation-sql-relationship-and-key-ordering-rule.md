@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013511"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship und die Schlüsselsortierregel (SQLXML 4.0)
@@ -58,7 +58,7 @@ ms.locfileid: "66013511"
 </xsd:schema>  
 ```  
   
- Als die  **\<Kunden >** Elementknoten in den Bereich gelangt, generiert das XML-Massenladen einen Kundendatensatz. Dieser Datensatz bleibt, bis der XML-Massenladen liest  **\</Customer >**. Bei der Verarbeitung der  **\<Reihenfolge >** Elementknoten, XML-Massenladen verwendet `<sql:relationship>` zum Abrufen des Werts für die CustomerID Fremdschlüsselspalte der CustOrder-Tabelle aus der **\<Kunden >** übergeordnete Element aus, da die  **\<Reihenfolge >** Element gibt nicht an die **"CustomerID"** Attribut. Dies bedeutet, Sie beim Definieren der  **\<Kunden >** -Element, Sie müssen angeben, die **"CustomerID"** -Attribut im Schema, bevor Sie angeben, `<sql:relationship>`. Andernfalls gilt bei einer  **\<Reihenfolge >** Element in den Bereich gelangt, XML-Massenladen wird ein Datensatz für die CustOrder-Tabelle generiert und wenn das XML-Massenladen erreicht die  **\</Order >** Endtag, sendet es den Datensatz zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ohne den Wert für die CustomerID-Fremdschlüsselspalte.  
+ Als die  **\<Kunden >** Elementknoten in den Bereich gelangt, generiert das XML-Massenladen einen Kundendatensatz. Dieser Datensatz bleibt, bis der XML-Massenladen liest  **\</Customer >** . Bei der Verarbeitung der  **\<Reihenfolge >** Elementknoten, XML-Massenladen verwendet `<sql:relationship>` zum Abrufen des Werts für die CustomerID Fremdschlüsselspalte der CustOrder-Tabelle aus der **\<Kunden >** übergeordnete Element aus, da die  **\<Reihenfolge >** Element gibt nicht an die **"CustomerID"** Attribut. Dies bedeutet, Sie beim Definieren der  **\<Kunden >** -Element, Sie müssen angeben, die **"CustomerID"** -Attribut im Schema, bevor Sie angeben, `<sql:relationship>`. Andernfalls gilt bei einer  **\<Reihenfolge >** Element in den Bereich gelangt, XML-Massenladen wird ein Datensatz für die CustOrder-Tabelle generiert und wenn das XML-Massenladen erreicht die  **\</Order >** Endtag, sendet es den Datensatz zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ohne den Wert für die CustomerID-Fremdschlüsselspalte.  
   
  Speichern Sie das in diesem Beispiel bereitgestellte Schema unter dem Dateinamen SampleSchema.xml.  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488387"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>Aufgabe 2: Manuelles Hinzufügen von Domänenwerten
@@ -33,6 +33,6 @@ ms.locfileid: "65488387"
      ![USA als Domänenwert](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "USA als Domänenwert")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 3: Importieren von Domänenwerten aus einer Excel-Datei](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
+ [Aufgabe 3: Importieren von Domänenwerten aus einer Excel-Datei](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bff66ca0f644f862b7cdcfb534b55c4e8ebdd888
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104091"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
@@ -33,7 +33,7 @@ ms.locfileid: "66104091"
 ## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>Schritte zur Berichtsserverbereitstellung in einem NLB-Cluster  
  Beachten Sie beim Installieren und Konfigurieren der Bereitstellung die folgenden Richtlinien:  
   
-|Schritt|Description|Weitere Informationen|  
+|Schritt|Beschreibung|Weitere Informationen|  
 |----------|-----------------|----------------------|  
 |1|Überprüfen Sie vor der Installation von Reporting Services auf Serverknoten in einem NLB-Cluster die Anforderungen für die Bereitstellung für horizontales Skalieren.|[Konfigurieren der Bereitstellung im einheitlichen Modus Bericht Berichtsserver horizontaler &#40;SSRS-Konfigurations-Manager&#41; ](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation|  
 |2|Konfigurieren Sie den NLB-Cluster, und überprüfen Sie, ob er ordnungsgemäß arbeitet.<br /><br /> Ordnen Sie unbedingt der virtuellen Server-IP-Adresse des NLB-Clusters einen Hostheadernamen zu. Der Hostheadername wird in der Berichtsserver-URL verwendet, und er ist leichter zu behalten als eine IP-Adresse.|Weitere Informationen finden Sie in der Windows Server-Produktdokumentation für die Version des verwendeten Windows-Betriebssystems.|  

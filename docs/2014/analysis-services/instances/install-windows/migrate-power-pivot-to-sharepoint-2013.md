@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6cbbe9f2ba24773ef2b55444e65ce946b0763a41
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079844"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrieren von PowerPivot zu SharePoint 2013
@@ -69,7 +69,7 @@ ms.locfileid: "66079844"
   
 4.  **Wiederherstellung:** Stellen Sie die Datenbanken auf dem Ziel- [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Dieser Schritt kann mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]ausgeführt werden.  
   
-5.  **Legen Sie die Datenbank mit Lese-/ Schreibzugriff:** Legen Sie die **Datenbank schreibgeschützt** zu **"false"**.  
+5.  **Legen Sie die Datenbank mit Lese-/ Schreibzugriff:** Legen Sie die **Datenbank schreibgeschützt** zu **"false"** .  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) Vorbereiten von Webanwendungen und Einbinden von Inhaltsdatenbanken  
  Eine ausführlichere Erläuterung der folgenden Verfahren werden soll, finden Sie unter [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  

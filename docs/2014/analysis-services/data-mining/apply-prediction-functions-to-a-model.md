@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086141"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Anwenden von Vorhersagefunktionen auf ein Modell
@@ -46,7 +46,7 @@ ms.locfileid: "66086141"
   
 1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf das Modell, und wählen Sie **Vorhersageabfrage erstellen**aus.  
   
-     - oder -  
+     \- oder -  
   
      Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf die Registerkarte **Miningmodellvorhersage**und anschließend auf **Modell auswählen** in der Tabelle  **Miningmodell** .  
   

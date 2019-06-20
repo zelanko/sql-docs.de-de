@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 269f90b796a6c7ead0e7801235645b897df70e66
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66413318"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Verbindungszeichenfolgen-Eigenschaften (Analysis Services)
@@ -45,7 +45,7 @@ ms.locfileid: "66413318"
   
  Die Eigenschaften sind in alphabetischer Reihenfolge aufgeführt.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**EffectiveUserName**|Wird verwendet, wenn auf dem Server die Identität eines Endbenutzers angenommen werden muss. Geben Sie das Konto im Format "Domäne\Benutzer" an. Zur Verwendung dieser Eigenschaft muss der Aufrufer über Administratorberechtigungen in Analysis Services verfügen. Weitere Informationen zur Verwendung dieser Eigenschaft in einer Excel-Arbeitsmappe in SharePoint finden Sie unter [Verwenden von "EffectiveUserName" der Analysis Services in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkId=311905).<br /><br /> **EffectiveUserName** wird in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation verwendet, um Informationen zur Verwendung zu erfassen. Die Benutzeridentität wird für den Server bereitgestellt, damit Ereignisse oder Fehler in Zusammenhang mit der Benutzeridentität in den Protokolldateien aufgezeichnet werden können. Bei [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]wird sie nicht zu Autorisierungszwecken verwendet.|  
 |**Encrypt Password**|Gibt an, ob ein lokales Kennwort zur Verschlüsselung lokaler Cubes verwendet werden soll. Gültige Werte sind True oder False. Der Standardwert ist False.|  

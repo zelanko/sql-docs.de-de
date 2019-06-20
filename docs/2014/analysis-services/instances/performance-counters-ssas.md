@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079712"
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
@@ -49,7 +49,7 @@ ms.locfileid: "66079712"
 ###  <a name="bkmk_Cache"></a> Cache  
  Statistik zum Microsoft Analysis Services-Aggregationscache.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |KB aktuell|Aktueller vom Aggregationscache verwendeter Arbeitsspeicher (in KB).|  
 |Pro Sekunde hinzugefügte KB|Menge des Arbeitsspeichers, die dem Cache hinzugefügt wird (in KB/s).|  
@@ -71,7 +71,7 @@ ms.locfileid: "66079712"
 ###  <a name="bkmk_Connection"></a> Verbindung  
  Statistik zu Microsoft Analysis Services-Verbindungen.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Verbindungen|Aktuelle Anzahl von eingerichteten Clientverbindungen.|  
 |Anforderungen/s|Rate der Verbindungsanforderungen.  Dabei handelt es sich um erhaltene Anforderungen.|  
@@ -155,7 +155,7 @@ ms.locfileid: "66079712"
 ###  <a name="bkmk_Memory"></a> Speicher  
  Statistik zu internem Microsoft Analysis Services-Serverspeicher.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Seitenpool 64 KB zugeordnet|Von System geliehener Arbeitsspeicher in KB.  Dieser Speicher wird anderen Teilen des Servers zugewiesen.|  
 |Seitenpool 64 KB Lookaside|Aktueller Speicher in 64 KB-Lookaside-Liste (in KB).  (Zur Verwendung bereite Speicherseiten.)|  
@@ -256,7 +256,7 @@ ms.locfileid: "66079712"
 ###  <a name="bkmk_ProcIndexes"></a> Verarbeiten von Indizes  
  Statistik zur Verarbeitung von Indizes für MOLAP-Datendateien in Microsoft Analysis Services.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Partitionen|Aktuelle Anzahl der Partitionen, die verarbeitet werden.|  
 |Gesamte Partitionen|Gesamtanzahl der verarbeiteten Partitionen (unabhängig vom Erfolg).|  
@@ -266,7 +266,7 @@ ms.locfileid: "66079712"
 ###  <a name="bkmk_Processing"></a> Verarbeitung  
  Statistiken zur Microsoft Analysis Services-Datenverarbeitung.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Zeilen lasen/s|Rate der aus allen relationalen Datenbanken gelesenen Zeilen.|  
 |Gelesene Zeilen gesamt|Anzahl der aus allen relationalen Datenbanken gelesenen Zeilen.|  

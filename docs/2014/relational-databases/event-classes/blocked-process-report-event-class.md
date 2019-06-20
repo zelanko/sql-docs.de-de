@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664266"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report-Ereignisklasse
@@ -30,7 +30,7 @@ ms.locfileid: "62664266"
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Blocked Process Report (Ereignisklassen-Datenspalten)  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Die ID der Datenbank, in der die Sperre eingerichtet wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die **ServerName** -Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |**Dauer**|**bigint**|Die Zeitdauer (in Millisekunden), für die der Prozess blockiert wurde.|13|Ja|  

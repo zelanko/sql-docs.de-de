@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014270"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
@@ -62,7 +62,7 @@ ms.locfileid: "66014270"
   
 11. Geben Sie auf der Seite **räumlich** die Werte ein, die Sie für die räumlichen Eigenschaften des Index verwenden möchten.  
   
-     Beim Erstellen eines Index für eine `geometry` Typspalte, Sie müssen angeben, die **(*`X-min`*,*`Y-min`*)** und **(*`X-max`*,*`Y-max`*)** Koordinaten des umgebenden Felds. Bei einem Index für eine `geography` Typspalte, die umgebenden Felder schreibgeschützt nach dem Angeben der **Geografieraster** Mosaikschema, da geografierastermosaik kein umgebendes Feld verwendet wird.  
+     Beim Erstellen eines Index für eine `geometry` Typspalte, Sie müssen angeben, die **( *`X-min`* , *`Y-min`* )** und **( *`X-max`* , *`Y-max`* )** Koordinaten des umgebenden Felds. Bei einem Index für eine `geography` Typspalte, die umgebenden Felder schreibgeschützt nach dem Angeben der **Geografieraster** Mosaikschema, da geografierastermosaik kein umgebendes Feld verwendet wird.  
   
      Optional können Sie benutzerdefinierte Werte für das Feld **Zellen pro Objekt** und für die Rasterdichte auf jeder Ebene des Mosaikschemas angeben. Die Standardanzahl von Zellen pro Objekt ist 16 für [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] oder 8 für [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] oder höher, und die Standardrasterdichte ist **Mittel** für [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078840"
 ---
 # <a name="modifying-the-product-dimension"></a>Ändern der Product-Dimension
@@ -57,19 +57,19 @@ ms.locfileid: "66078840"
   
 2.  Wählen Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** die Option **Product Line**aus.  
   
-3.  Klicken Sie im Eigenschaftenfenster auf der rechten Seite des Bildschirms auf die **NameColumn** Eigenschaftenfeld am unteren Rand des Fensters, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld. (Sie müssen ggf. auf die Registerkarte **Eigenschaften** auf der rechten Seite vom Bildschirm klicken, um das Eigenschaftenfenster zu öffnen).  
+3.  Klicken Sie im Eigenschaftenfenster auf der rechten Seite des Bildschirms auf die **NameColumn** Eigenschaftenfeld am unteren Rand des Fensters, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld. (Sie müssen ggf. auf die Registerkarte **Eigenschaften** auf der rechten Seite vom Bildschirm klicken, um das Eigenschaftenfenster zu öffnen).  
   
 4.  Wählen Sie `ProductLineName` am unteren Rand der **Quellspalte** aus, und klicken Sie dann auf **OK**.  
   
-     Das Feld „NameColumn“ enthält jetzt den Text **Product.ProductLineName (WChar)**. Die Elemente der Attributhierarchie **Product Line** zeigen nun den vollständigen Namen der Produktlinie anstelle eines abgekürzten Produktliniennamens an.  
+     Das Feld „NameColumn“ enthält jetzt den Text **Product.ProductLineName (WChar)** . Die Elemente der Attributhierarchie **Product Line** zeigen nun den vollständigen Namen der Produktlinie anstelle eines abgekürzten Produktliniennamens an.  
   
 5.  Wählen Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** die Option **Product Key**aus.  
   
-6.  Klicken Sie im Eigenschaftenfenster auf die **NameColumn** Eigenschaft ein, und klicken Sie dann auf den Auslassungspunkten (**...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
+6.  Klicken Sie im Eigenschaftenfenster auf die **NameColumn** Eigenschaft ein, und klicken Sie dann auf den Auslassungspunkten ( **...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
   
 7.  Wählen Sie **EnglishProductName** in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
-     Das Feld "NameColumn" enthält jetzt den Text **Product.EnglishProductName (WChar)**.  
+     Das Feld "NameColumn" enthält jetzt den Text **Product.EnglishProductName (WChar)** .  
   
 8.  Klicken Sie im Eigenschaftenfenster einen Bildlauf nach oben, klicken Sie auf die **Namen** Eigenschaftenfeld, und geben Sie dann `Product Name`.  
   
