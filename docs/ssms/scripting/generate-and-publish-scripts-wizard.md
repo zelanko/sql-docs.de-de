@@ -45,10 +45,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d6226b6b5c21f1c233c41157ac85b8cfb48c690
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66454767"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
@@ -193,7 +193,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **Skripterstellung für USE DATABASE** – Fügt dem Skript die **USE DATABASE**-Anweisung hinzu. Die **USE DATABASE** -Anweisung muss enthalten sein, um sicherzustellen, dass Datenbankobjekte in der richtigen Datenbank erstellt werden. Wenn das Skript in einer anderen Datenbank verwendet werden soll, wählen Sie **False** aus, um die **USE DATABASE** -Anweisung auszulassen. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
   
--   **Datentypen, für die ein Skript erstellt wird** – Wählt aus, wofür ein Skript erstellt werden soll:  **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Nur Schema**.  
+-   **Datentypen für Skripts**: Wählt aus, was geskriptet werden soll: **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Nur Schema**.  
   
  **Tabellen-/Sichtoptionen** – Die folgenden Optionen gelten nur für Skripts für Tabellen oder Sichten.  
   
@@ -263,7 +263,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 11. **Skriptbindung** – Schließt die Bindung für Standard- und Regelobjekte im Skript ein, das zum Veröffentlichen an den Anbieter gesendet wird. Der Standardwert ist **True**. Weitere Informationen finden Sie unter [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) und [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
-12. **Zu veröffentliche Datentypen** – Wählt aus, wofür ein Skript erstellt werden soll:  **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Schema und Daten**.  
+12. **Datentypen für Skripts**: Wählt aus, was geskriptet werden soll: **Nur Daten**, **Nur Schema** oder beides. Der Standard ist **Schema und Daten**.  
   
  **Veröffentlichungsoptionen**: Gibt an, ob beim Veröffentlichen auf dem Webhostinganbieter Transaktionen verwendet werden sollen.  
   

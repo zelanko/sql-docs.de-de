@@ -12,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067233"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284872"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery-Modus (SSAS – tabellarisch)
   Analysis Services können Sie die Daten abrufen und Erstellen von Berichten aus einem tabellarischen Modell durch das Abrufen von Daten und Aggregate direkt aus einem relationalen Datenbanksystem mithilfe *DirectQuery-Modus*. In diesem Thema werden die Unterschiede zwischen standardmäßigen Tabellenmodellen erläutert, die sich nur in Arbeitsspeicher- und Tabellenmodellen befinden, die eine relationale Datenquelle abfragen können. Zudem wird erklärt, wie Sie Modelle für die Verwendung im DirectQuery-Modus entwerfen und bereitstellen können.  
@@ -82,7 +82,7 @@ ms.locfileid: "66067233"
   
 -   **Clienteinschränkungen:** Wenn Sie ein Modell im DirectQuery-Modus befindet, kann es nur mit DAX abgefragt werden. Mit MDX können keine Abfragen erstellt werden. Dies bedeutet, dass Sie den Pivot Client in Excel nicht verwenden können, da Excel MDX verwendet.  
   
-     Sie können jedoch Abfragen für ein DirectQuery-Modell in erstellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bei Verwendung von einer DAX-Tabellenabfrage als Teil einer XMLA Execute-Anweisung für Weitere Informationen finden Sie unter [Syntaxreferenz für DAX-Abfrage](https://msdn.microsoft.com/library/ee634217.aspx).  
+     Sie können jedoch Abfragen für ein DirectQuery-Modell in erstellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bei Verwendung von einer DAX-Tabellenabfrage als Teil einer XMLA Execute-Anweisung für Weitere Informationen finden Sie unter [DAX-Abfrage-Syntaxverweis] (/ / Dax--syntaxreferenz für Dax
   
  Wenn Sie alle Entwurfsprobleme behoben und das Modell getestet haben, kann die Bereitstellung beginnen. Nun können Sie die bevorzugte Methode zur Beantwortung von Abfragen des Modells festlegen. Möchten Sie, dass Benutzer Zugriff auf den Cache erhalten oder immer nur die relationale Datenquelle verwenden?  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66067233"
   
 ##  <a name="bkmk_related_tasks"></a> Verwandte Themen und Tasks  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Partitionen und DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](define-partitions-in-directquery-models-ssas-tabular.md)|Beschreibt, wie Partitionen in Modellen verwendet werden, die für den DirectQuery-Modus konfiguriert wurden.|  
 |[DAX-Formelkompatibilität im DirectQuery-Modus](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Beschreibt Einschränkungen und Kompatibilitätsanforderungen für die Formeln, die Sie in Modellen verwenden können, die für den DirectQuery-Modus konfiguriert wurden.|  

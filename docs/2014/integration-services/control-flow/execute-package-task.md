@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831909"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284952"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
   Der Task Paket ausführen erweitert die Unternehmensfunktionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , indem Paketen das Ausführen anderer Pakete als Teil eines Workflows ermöglicht wird.  
@@ -112,12 +112,8 @@ ms.locfileid: "62831909"
   
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
-  
 ## <a name="related-content"></a>Verwandte Inhalte  
-  
--   Blogeintrag, [SSIS: Untergeordnete Pakete prozessintern oder Out-of-Process ausgeführt werden soll? ](https://go.microsoft.com/fwlink/?LinkId=220819), auf consultingblogs.emc.com.  
-  
--   Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), auf andyleonard.blog. 
+
+Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), auf andyleonard.blog. 
   
   

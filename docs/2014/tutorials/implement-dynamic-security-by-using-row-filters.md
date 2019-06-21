@@ -10,19 +10,19 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ce4f0a9735c14aed6289527b47f76995e1c10d2
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740380"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285022"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
   In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynamische Sicherheit implementiert. Dynamische Sicherheit bietet Sicherheit auf Zeilenebene basierend auf dem Benutzernamen oder der Anmelde-ID des angemeldeten Benutzers. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
   
  Um dynamische Sicherheit zu implementieren, müssen Sie dem Modell eine Tabelle hinzufügen, die die Windows-Benutzernamen der Benutzer enthält, die eine Verbindung mit dem Modell als Datenquelle erstellen und Modellobjekte und Daten durchsuchen dürfen. In diesem Lernprogramm erstellen Sie ein Modell im Kontext der Adventure Works Corp. Sie müssen jedoch eine Tabelle mit Benutzern Ihrer Domäne hinzufügen, um diese Lektion abzuschließen. Die Kennwörter für die hinzuzufügenden Benutzernamen sind nicht erforderlich. Um die Tabelle Employee Security mit einem kleinen Teil der Benutzer Ihrer Domäne zu erstellen, verwenden Sie die Funktion Einfügen, und fügen Sie die Mitarbeiterdaten aus einem Excel-Arbeitsblatt ein. In der wirklichen Welt verwendet die Tabelle mit den Benutzernamen, die Sie einem Modell hinzugefügt haben, in der Regel eine Tabelle aus einer tatsächlichen Datenbank als Datenquelle, z. B. eine reale dimEmployee-Tabelle.  
   
- Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktionen: [USERNAME-Funktion &#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx) und [LOOKUPVALUE-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Die Formel gibt mit der LOOKUPVALUE-Funktion einen Wert aus der Tabelle Employee Security an und übergibt diesen Wert anschließend an die USERNAME-Funktion, die den Benutzernamen des angemeldeten Benutzers angibt, der ein Mitglied dieser Rolle ist. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Szenario legen Sie fest, dass Verkaufsmitarbeiter nur nach Internetumsatzdaten für die Vertriebsgebiete, denen sie angehören, suchen können.  
+ Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktionen: [USERNAME-Funktion &#40;DAX&#41; ](/dax/username-function-dax) und [LOOKUPVALUE-Funktion &#40;DAX&#41;](/dax/lookupvalue-function-dax). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Die Formel gibt mit der LOOKUPVALUE-Funktion einen Wert aus der Tabelle Employee Security an und übergibt diesen Wert anschließend an die USERNAME-Funktion, die den Benutzernamen des angemeldeten Benutzers angibt, der ein Mitglied dieser Rolle ist. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Szenario legen Sie fest, dass Verkaufsmitarbeiter nur nach Internetumsatzdaten für die Vertriebsgebiete, denen sie angehören, suchen können.  
   
  In dieser ergänzenden Lektion führen Sie eine Reihe von Aufgaben durch. Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
@@ -198,8 +198,8 @@ ms.locfileid: "62740380"
      Dieser Benutzer kann nur Internetumsatzdaten des Gebiets, dem er zugeordnet ist, durchsuchen oder abfragen, da der für die Tabelle Sales Territory in der Benutzerrolle Sales Employees by Territory definierte Zeilenfilter eine effektive Sicherung der Daten in Bezug auf andere Vertriebsgebiete bedeutet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [USERNAME-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME-Funktion &#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE-Funktion &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA-Funktion &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

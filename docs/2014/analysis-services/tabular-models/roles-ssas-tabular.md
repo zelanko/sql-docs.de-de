@@ -10,12 +10,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066626"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284855"
 ---
 # <a name="roles-ssas-tabular"></a>Rollen (SSAS – tabellarisch)
   Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Jede Rolle enthält Mitglieder in Form von Windows-Benutzernamen oder Windows-Gruppen sowie Berechtigungen (Lese-, Verarbeitungs- und Administratorberechtigungen). Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden.  
@@ -75,7 +75,7 @@ ms.locfileid: "66066626"
   
  Zeilenfilter können nur für Rollen mit Leseberechtigung sowie mit Lese- und Verarbeitungsberechtigung definiert werden. Wenn ein Zeilenfilter nicht für eine bestimmte Tabelle definiert ist, sind Mitglieder einer Rolle, die über die Leseberechtigung bzw. die Lese- und Verarbeitungsberechtigung verfügt, standardmäßig in der Lage, alle Zeilen in der Tabelle abzufragen, es sei denn, ein Kreuzfilter von einer anderen Tabelle ist aktiv.  
   
- Sobald ein Zeilenfilter für eine bestimmte Tabelle definiert wurde, werden die Zeilen, die von Mitgliedern dieser spezifischen Rolle abgefragt werden können, durch eine DAX-Formel definiert, die den Wert TRUE oder FALSE ergeben muss. Nicht in die DAX-Formel eingeschlossene Zeilen können nicht abgefragt werden. Z. B. für Mitglieder der Rolle "Sales", die Tabelle "Customers" mit dem zeilenfilterausdruck *= Customers [Country] = "USA"* , Mitglieder der Rolle "Sales", zeilenfilterausdruck ausschließlich Kunden in den USA anzeigen.  
+ Sobald ein Zeilenfilter für eine bestimmte Tabelle definiert wurde, werden die Zeilen, die von Mitgliedern dieser spezifischen Rolle abgefragt werden können, durch eine DAX-Formel definiert, die den Wert TRUE oder FALSE ergeben muss. Nicht in die DAX-Formel eingeschlossene Zeilen können nicht abgefragt werden. Z. B. für Mitglieder der Rolle "Sales", die Tabelle "Customers" mit dem zeilenfilterausdruck *= Customers [Country] = "USA"*, Mitglieder der Rolle "Sales", zeilenfilterausdruck ausschließlich Kunden in den USA anzeigen.  
   
  Zeilenfilter gelten für die angegebenen sowie für verknüpfte Zeilen. Wenn eine Tabelle über mehrere Beziehungen verfügt, wird die Sicherheit für die aktive Beziehung mithilfe von Filtern gewährleistet. Für Zeilenfilter und Zeilenfilter, die für verknüpfte Tabellen definiert wurden, wird eine Schnittmenge gebildet. Beispiel:  
   
@@ -96,8 +96,8 @@ ms.locfileid: "66066626"
   
 |Funktion|Description|  
 |--------------|-----------------|  
-|[USERNAME-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Gibt "domäne\benutzernamen" des aktuell angemeldeten Benutzers zurück.|  
-|[CUSTOMDATA-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Gibt die CustomData-Eigenschaft in einer Verbindungszeichenfolge zurück.|  
+|[USERNAME-Funktion &#40;DAX&#41;](/dax/username-function-dax)|Gibt "domäne\benutzernamen" des aktuell angemeldeten Benutzers zurück.|  
+|[CUSTOMDATA-Funktion &#40;DAX&#41;](/dax/customdata-function-dax)|Gibt die CustomData-Eigenschaft in einer Verbindungszeichenfolge zurück.|  
   
  Sie können die LOOKUPVALUE-Funktion zur Rückgabe von Werten für eine Spalte verwenden, in der der Windows-Benutzername der Gleiche ist wie derjenige, der von der USERNAME-Funktion zurückgegeben wurde oder einer Zeichenfolge entspricht, die von der CustomData-Funktion zurückgegeben wurde. Abfragen können dann eingeschränkt werden, wenn die von LOOKUPVALUE zurückgegebenen Werte Werten in der gleichen oder einer verknüpften Tabelle entsprechen.  
   
@@ -140,8 +140,8 @@ ms.locfileid: "66066626"
 ## <a name="see-also"></a>Siehe auch  
  [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md)   
  [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA-Funktion &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME-Funktion &#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE-Funktion &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA-Funktion &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

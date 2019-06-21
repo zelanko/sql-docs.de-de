@@ -14,12 +14,12 @@ ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea1514b8b4e029537958e74fcdf20497b1e22d00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d6070f32cd8990a2be58db4c900da61681304cb
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070834"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284945"
 ---
 # <a name="technical-reference-ssas"></a>Technische Referenz (SSAS)
   Die Tools, Sprachen und PowerShell-Referenzdokumentation zum Verwenden oder Verwalten von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] finden Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "66070834"
  ![Kleines Dateiordnersymbol](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Abfrage- und Expression-Sprachreferenz**  
  [Mehrdimensionale Ausdrücke &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
- [Data Analysis Expressions &#40;DAX&#41; Verweis](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)  
+ [Data Analysis Expressions &#40;DAX&#41; Verweis](/dax/data-analysis-expressions-dax-reference)  
   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   

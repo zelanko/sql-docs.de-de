@@ -10,17 +10,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107877"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285032"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportieren nach Microsoft Word (Berichts-Generator und SSRS)
   Die Word-Renderingerweiterung rendert Berichte im systemeigenen Format von [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Das Format ist Office Open XML.  
   
- Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 sowie [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, wenn das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack für Word, Excel und PowerPoint installiert ist. Weitere Informationen zum Compatibility Pack finden Sie unter [Microsoft Office Compatibility Pack für Word, Excel und PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
+ Der Word-Renderer ist kompatibel mit [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 sowie [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, wenn das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Compatibility Pack für Word, Excel und PowerPoint installiert ist. 
   
  Der Inhaltstyp von Dateien, die von diesem Renderer generiert werden, ist **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , und die Dateierweiterung der Dateien lautet ".docx".  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66107877"
 ##  <a name="DocumentProperties"></a> Dokumenteigenschaften  
  Der Word-Renderer schreibt die folgenden Metadaten in die DOCX-Datei.  
   
-|Berichtselementeigenschaften|Description|  
+|Berichtselementeigenschaften|Beschreibung|  
 |-------------------------------|-----------------|  
 |Berichtstitel (Berichtstitel)|Titel|  
 |Autor des Berichts|Author|  

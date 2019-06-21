@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066459"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284860"
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
   Auf tabellarische Modelldatenbanken in Analysis Services kann mit den meisten Clients, Schnittstellen und Sprachen zugegriffen werden, mit denen Sie auch Daten oder Metadaten aus einem mehrdimensionalen Modell abrufen. Weitere Informationen finden Sie unter [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "66066459"
   
  Sie können darüberhinaus Abfragen mithilfe von DAX-Ausdrücken innerhalb des Kontexts einer XMLA EXECUTE-Befehlsanweisung an ein tabellarisches Modell senden, das im DirectQuery-Modus bereitgestellt wurde.  
   
- Beispiele für Abfragen auf einem tabellarischen Modell mithilfe von DAX finden Sie in der [Syntaxreferenz für DAX-Abfragen](https://msdn.microsoft.com/library/ee634217.aspx).  
+ Beispiele für Abfragen auf einem tabellarischen Modell mithilfe von DAX finden Sie unter [DAX-Abfrage-Syntaxverweis] (/ / Dax--syntaxreferenz für Dax
   
 ### <a name="mdx"></a>MDX  
  Sie können Abfragen für tabellarische Modelle, die den speicherinternen Cache als bevorzugte Abfragemethode verwenden (Modelle, die nicht im DirectQuery-Modus bereitgestellt wurden), mithilfe von MDX erstellen. Obwohl Clients wie [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] DAX sowohl zum Erstellen von Aggregationen als auch zum Abfragen des Modells als Datenquelle verwenden, kann DAX, wenn Sie mit MDX vertraut sind, auch als Verknüpfung zum Erstellen von Beispielabfragen in MDX dienen (siehe [Erstellen von Measures in MDX](../multidimensional-models/mdx/mdx-building-measures.md)).  

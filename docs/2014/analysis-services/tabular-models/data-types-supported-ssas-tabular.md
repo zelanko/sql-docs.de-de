@@ -10,12 +10,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067275"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284928"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Unterstützte Datentypen (SSAS – tabellarisch)
   In diesem Artikel werden die Datentypen erläutert, die in tabellarischen Modellen verwendet werden können, und die implizite Konvertierung von Datentypen bei der Berechnung oder Verwendung von Daten in einer Data Analysis Expressions (DAX)-Formel beschrieben.  
@@ -68,7 +68,7 @@ ms.locfileid: "66067275"
 >  Sie können keine Elemente aus einer **varchar(max)** -Spalte importieren, die eine Zeichenfolgenlänge von mehr als 131.072 Zeichen enthält.  
   
 ### <a name="table-data-type"></a>Table-Datentyp  
- Außerdem verwendet DAX einen *table* -Datentyp. Dieser Datentyp wird von DAX in vielen Funktionen verwendet, z. B. in Aggregationen und Zeitintelligenzberechnungen. Einige Funktionen erfordern einen Verweis auf eine Tabelle, während andere Funktionen eine Tabelle zurückgeben, die als Eingabe für andere Funktionen verwendet werden kann. In einigen Funktionen, die eine Tabelle als Eingabe erfordern, können Sie einen Ausdruck angeben, der eine Tabelle ergibt. Bei einigen Funktionen ist ein Verweis auf eine Basistabelle erforderlich. Informationen zu den Anforderungen bestimmter Funktionen finden Sie in der [DAX-Funktionsreferenz](https://msdn.microsoft.com/library/ee634396.aspx).  
+ Außerdem verwendet DAX einen *table* -Datentyp. Dieser Datentyp wird von DAX in vielen Funktionen verwendet, z. B. in Aggregationen und Zeitintelligenzberechnungen. Einige Funktionen erfordern einen Verweis auf eine Tabelle, während andere Funktionen eine Tabelle zurückgeben, die als Eingabe für andere Funktionen verwendet werden kann. In einigen Funktionen, die eine Tabelle als Eingabe erfordern, können Sie einen Ausdruck angeben, der eine Tabelle ergibt. Bei einigen Funktionen ist ein Verweis auf eine Basistabelle erforderlich. Informationen zu den Anforderungen bestimmter Funktionen finden Sie in der [DAX-Funktionsreferenz](/dax/dax-function-reference).  
   
 ##  <a name="bkmk_implicit"></a> Implizite und explizite Datentypkonvertierungen in DAX-Formeln  
  Jede DAX-Funktion verfügt über bestimmte Anforderungen im Hinblick auf die Datentypen, die als Eingaben und Ausgaben verwendet werden. Einige Funktionen erfordern z. B. ganze Zahlen für einige Argumente und Daten für andere, während für andere Funktionen Text oder Tabellen erforderlich sind.  
@@ -188,7 +188,7 @@ ms.locfileid: "66067275"
 |BLANK OR BLANK|BLANK|Fehler|  
 |BLANK AND BLANK|BLANK|Fehler|  
   
- Informationen zur Behandlung von Leerzeichen durch eine bestimmte Funktion oder einen Operator finden Sie in den einzelnen Themen zu den verschiedenen DAX-Funktionen im Abschnitt [DAX-Funktionsreferenz](https://msdn.microsoft.com/library/ee634396.aspx).  
+ Informationen zur Behandlung von Leerzeichen durch eine bestimmte Funktion oder einen Operator finden Sie in den einzelnen Themen zu den verschiedenen DAX-Funktionen im Abschnitt [DAX-Funktionsreferenz](/dax/dax-function-reference).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellen &#40;SSAS – tabellarisch&#41;](../data-sources-ssas-tabular.md)   
