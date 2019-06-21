@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: fae8d782dfcc4fd5e3c653cf5ac37f1323ebf59e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5e4ba32dd96186a05df55ac57cadb31fa522ebe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510329"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Konfigurieren eines Listeners für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,51 +30,9 @@ ms.locfileid: "53213589"
 > [!IMPORTANT]  
 >  Für die Erstellung des ersten Verfügbarkeitsgruppenlisteners einer Verfügbarkeitsgruppe empfehlen wir dringend die Verwendung von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Vermeiden Sie, einen Listener direkt im WSFC-Cluster zu erstellen, sofern dies nicht unbedingt notwendig ist (z. B. bei der Erstellung eines zusätzlichen Listeners).  
   
--   **Vorbereitungen:**  
-  
-     [Ist bereits ein Listener für diese Verfügbarkeitsgruppe vorhanden?](#DoesListenerExist)  
-  
-     [Einschränkungen](#Restrictions)  
-  
-     [Empfehlungen](#Recommendations)  
-  
-     [Voraussetzungen](#Prerequisites)  
-  
-     [Anforderungen für den DNS-Namen eines Verfügbarkeitsgruppenlisteners](#DNSnameReqs)  
-  
-     [Windows-Berechtigungen](#WinPermissions)  
-  
-     [SQL Server-Berechtigungen](#SqlPermissions)  
-  
--   **Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Problembehandlung**  
-  
-     [Fehler beim Erstellen eines Verfügbarkeitsgruppenlisteners wegen Active Directory-Kontingenten](#ADQuotas)  
-  
--   **Nächster Schritt: Nach dem Erstellen eines Verfügbarkeitsgruppenlisteners**  
-  
-     [MultiSubnetFailover-Schlüsselwort und zugehörige Funktionen](#MultiSubnetFailover)  
-  
-     [Einstellung RegisterAllProvidersIP](#RegisterAllProvidersIP)  
-  
-     [Einstellung HostRecordTTL](#HostRecordTTL)  
-  
-     [Beispiel-PowerShell-Skript zur Deaktivierung von RegisterAllProvidersIP und zur Reduzierung der Gültigkeitsdauer (TTL)](#SampleScript)  
-  
-     [Empfehlungen für anschließende Aufgaben](#FollowUpRecommendations)  
-  
-     [Erstellen eines zusätzlichen Listeners für eine Verfügbarkeitsgruppe (optional)](#CreateAdditionalListener)  
-  
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
-  
-###  <a name="DoesListenerExist"></a> Ist bereits ein Listener für diese Verfügbarkeitsgruppe vorhanden?  
+ 
+##  <a name="DoesListenerExist"></a> Ist bereits ein Listener für diese Verfügbarkeitsgruppe vorhanden?  
+
  **So ermitteln Sie, ob bereits ein Listener für die Verfügbarkeitsgruppe vorhanden ist**  
   
 -   [Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
@@ -82,14 +40,14 @@ ms.locfileid: "53213589"
 > [!NOTE]  
 >  Wenn ein Listener bereits vorhanden ist und Sie einen zusätzlichen Listener erstellen möchten, siehe [So erstellen Sie einen zusätzlichen Listener für eine Verfügbarkeitsgruppe (Optional)](#CreateAdditionalListener)weiter unten in diesem Thema.  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+##  <a name="Restrictions"></a> Einschränkungen  
   
 -   Sie können anhand von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nur einen Listener pro Verfügbarkeitsgruppe erstellen. In der Regel erfordert jede Verfügbarkeitsgruppe nur einen Listener. Einige Kundenszenarien erfordern jedoch mehrere Listener für eine Verfügbarkeitsgruppe.   Nachdem Sie mit SQL Server einen Listener erstellt haben, können Sie Windows PowerShell für Failovercluster oder den WSFC Failovercluster-Manager verwenden, um zusätzliche Listener zu erstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [So erstellen Sie einen zusätzlichen Listener für eine Verfügbarkeitsgruppe (optional)](#CreateAdditionalListener).  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="Recommendations"></a> Empfehlungen  
  Die Verwendung einer statischen IP-Adresse wird zwar empfohlen, ist für Multisubnetz-Konfigurationen jedoch nicht unbedingt erforderlich.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, die das primäre Replikat hostet.  
   
@@ -106,7 +64,7 @@ ms.locfileid: "53213589"
 > [!IMPORTANT]  
 >  NetBIOS erkennt nur die ersten 15 Zeichen im dns_name. Wenn Sie zwei WSFC-Cluster verwenden, die vom gleichen Active Directory gesteuert werden, und Sie versuchen, Verfügbarkeitsgruppenlistener in beiden Clustern mit Namen mit mehr als 15 Zeichen und einem identischen 15-Zeichen-Präfix zu erstellen, erhalten Sie eine Fehlermeldung mit dem Hinweis, dass die VNN-Ressource nicht online geschaltet werden konnte. Informationen zu Präfix-Benennungsregeln für DNS-Namen finden Sie unter [Zuweisen von Domänennamen](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-###  <a name="WinPermissions"></a> Windows-Berechtigungen  
+##  <a name="WinPermissions"></a> Windows-Berechtigungen  
   
 |Berechtigungen|Link|  
 |-----------------|----------|  
@@ -116,14 +74,14 @@ ms.locfileid: "53213589"
 > [!TIP]  
 >  Im Allgemeinen ist es am einfachsten, das Computerkonto für den Namen eines virtuellen Listenernetzwerks nicht vorab bereitzustellen. Lassen Sie bei der Ausführung des Assistenten für die hohe WSFC-Verfügbarkeit nach Möglichkeit die automatische Erstellung und Konfiguration des Kontos zu.  
   
-###  <a name="SqlPermissions"></a> SQL Server-Berechtigungen  
+##  <a name="SqlPermissions"></a> SQL Server-Berechtigungen  
   
 |Task|Berechtigungen|  
 |----------|-----------------|  
 |So erstellen Sie einen Verfügbarkeitsgruppenlistener|Erfordert die Mitgliedschaft in der festen **sysadmin** -Serverrolle und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.|  
 |So ändern Sie einen vorhandenen Verfügbarkeitsgruppenlistener|Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.|  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 > [!TIP]  
 >  Der [Assistent für neue Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) unterstützt Sie bei der Erstellung eines Listeners für eine neue Verfügbarkeitsgruppe.  
@@ -270,7 +228,7 @@ ms.locfileid: "53213589"
   
  **"MultiSubnetFailover=True" wird von NET Framework 3.5 oder OLE DB nicht unterstützt.**  
   
- **Problem:** Wenn die Verfügbarkeitsgruppe oder Failoverclusterinstanz über einen Listenernamen (wird im WSFC-Cluster-Manager als Netzwerkname oder Clientzugriffspunkt bezeichnet) verfügt, der von mehreren IP-Adressen aus unterschiedlichen Subnetzen abhängig ist, und Sie entweder ADO.NET mit .NET Framework 3.5 SP1 oder SQL Native Client 11.0 OLE DB verwenden, tritt bei bis zu 50 % der Clientverbindungsanforderungen an den Listener der Verfügbarkeitsgruppe ein Verbindungstimeout auf.  
+ **Problem:** Wenn die Verfügbarkeitsgruppe oder Failoverclusterinstanz über einen Listenernamen (wird im WSFC-Cluster-Manager als Netzwerkname oder Clientzugriffspunkt bezeichnet) verfügt, der von mehreren IP-Adressen aus unterschiedlichen Subnetzen abhängig ist, und Sie entweder ADO.NET mit .NET Framework 3.5 SP1 oder SQL Native Client 11.0 OLE DB verwenden, tritt bei bis zu 50 % der Clientverbindungsanforderungen an den Listener der Verfügbarkeitsgruppe ein Verbindungstimeout auf.  
   
  **Problemumgehungen:** Eine der folgenden Lösungen wird empfohlen.  
   
@@ -278,7 +236,7 @@ ms.locfileid: "53213589"
   
      **Vorteile:** Beim Eintreten eines subnetzübergreifenden Failovers ist die Clientwiederherstellungszeit nur kurz.  
   
-     **Nachteile:** Für die Hälfte der Clientverbindungen sind mehr als 20 Sekunden erforderlich.  
+     **Nachteile:** Für die Hälfte der Clientverbindungen sind mehr als 20 Sekunden erforderlich.  
   
 -   Wenn Sie über die notwendigen Berechtigungen zum Bearbeiten der Clusterressourcen verfügen, sollten Sie den Netzwerknamen des Verfügbarkeitsgruppenlisteners auf `RegisterAllProvidersIP=0`festlegen. Weitere Informationen finden Sie weiter unten in diesem Abschnitt unter „Einstellung RegisterAllProvidersIP“.  
   

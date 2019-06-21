@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034981"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Überlegungen und Einschränkungen zu temporalen Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52410087"
   
 -   Temporale Tabellen und Verlaufstabellen können nicht **FILETABLE** sein und können Spalten aller unterstützten Datentypen außer **FILESTREAM** enthalten, da **FILETABLE** und **FILESTREAM** die Datenbearbeitung außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglichen. Daher kann die Systemversionsverwaltung nicht garantiert werden.  
   
--   Temporale Tabellen unterstützen zwar Blobdatentypen wie **(n)varchar(max)**, **varbinary(max)**, **(n)text** und **image**, ziehen jedoch signifikante Speicherkosten auf sich und wirken sich aufgrund ihrer Größe auf die Leistung aus. Daher sollten Sie beim Entwerfen Ihres Systems vorsichtig sein, wenn Sie diese Datentypen verwenden.  
+-   Temporale Tabellen unterstützen zwar Blobdatentypen wie **(n)varchar(max)** , **varbinary(max)** , **(n)text** und **image**, ziehen jedoch signifikante Speicherkosten auf sich und wirken sich aufgrund ihrer Größe auf die Leistung aus. Daher sollten Sie beim Entwerfen Ihres Systems vorsichtig sein, wenn Sie diese Datentypen verwenden.  
   
 -   Die Verlaufstabelle muss in der gleichen Datenbank wie die aktuelle Tabelle erstellt werden. Temporale Abfragen über **Linked Server** werden nicht unterstützt.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "52410087"
   
 -   Die Verwendung der Replikationstechniken ist eingeschränkt.  
   
-    -   **Always On:** wird voll unterstützt  
+    -   **Always On:** Vollständig unterstützt.  
   
-    -   **Change Data Capture und Change Data Tracking:** werden nur für die aktuelle Tabelle unterstützt  
+    -   **Change Data Capture und Änderungsnachverfolgung:** Nur für die aktuelle Tabelle unterstützt.  
   
-    -   **Momentaufnahme und Transaktionsreplikation**: unterstützt nur einen Verleger mit deaktivierten temporalen Tabellen und einen Abonnenten mit aktivierten temporalen Tabellen. In diesem Fall wird der Verleger für eine OLTP-Arbeitsauslastung verwendet, während der Abonnent zum Verlagern der Berichtserstellung dient (einschließlich „AS OF“-Abfragen).    
+    -   **Momentaufnahme- und Transaktionsreplikation**: Nur unterstützt für einen Verleger mit deaktivierten temporalen Tabellen und einen Abonnenten mit aktivierten temporalen Tabellen. In diesem Fall wird der Verleger für eine OLTP-Arbeitsauslastung verwendet, während der Abonnent zum Verlagern der Berichtserstellung dient (einschließlich „AS OF“-Abfragen).    
         Die Verwendung von mehreren Abonnenten wird nicht unterstützt, da dieses Szenario zu inkonsistenten temporalen Daten führen könnte, da jeder von ihnen von der lokalen Systemuhr abhängig wäre.  
   
-    -   **Mergereplikation:** wird für temporale Tabellen nicht unterstützt  
+    -   **Mergereplikation:** Für temporale Tabellen nicht unterstützt.  
   
 -   Reguläre Abfragen betreffen nur Daten in der aktuellen Tabelle. Zum Abfragen von Daten in der Verlaufstabelle müssen Sie zeitliche Abfragen verwenden. Diese werden weiter unten in diesem Thema im Abschnitt „Abfragen temporaler Daten“ behandelt.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52410087"
 -   Eine Verlaufstabelle kann nicht als aktuelle Tabelle in einer Kette von Verlaufstabellen konfiguriert werden.  
   
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

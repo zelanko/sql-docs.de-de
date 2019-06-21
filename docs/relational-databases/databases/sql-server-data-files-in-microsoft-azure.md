@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62706727"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ON
   
 -   In der aktuellen Version dieser Funktion wird das Speichern von **FileStream** -Daten im Azure-Speicher nicht unterstützt. Sie können **FileStream**-Daten in einer Datenbank speichern, die auch in Azure Storage gespeicherte Datendateien enthält. Allerdings müssen alle FileStream-Datendateien im lokalen Speicher gespeichert werden.  Da sich FileStream-Daten im lokalen Speicher befinden müssen, können sie nicht mit Azure Storage zwischen Computern verschoben werden. Aus diesem Grund empfehlen wir, weiterhin [herkömmliche Techniken](../../relational-databases/blob/move-a-filestream-enabled-database.md) zum Verschieben von FileStream-Daten zwischen verschiedenen Computern zu verwenden.  
   
--   Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode **5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“**.  
+-   Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode **5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“** .  
   
 -   Im Azure-Speicher können ausschließlich MDF-, LDF- und NDF-Dateien mithilfe des Features „SQL Server-Datendateien in Azure“ gespeichert werden.  
   
@@ -147,13 +147,13 @@ ON
   
  **Authentifizierungsfehler**  
   
--   *Die %.\*ls-Anmeldeinformationen können nicht gelöscht werden, weil sie von einer aktiven Datenbankdatei verwendet werden.*   
+-   *Die %.\*ls-Anmeldeinformationen können nicht gelöscht werden, weil sie von einer aktiven Datenbankdatei verwendet werden.*    
     Lösung: Dieser Fehler kann angezeigt werden, wenn Sie versuchen, Anmeldeinformationen zu löschen, die noch von einer aktiven Datenbankdatei im Azure-Speicher verwendet werden. Um die Anmeldeinformationen zu löschen, müssen Sie zuerst das zugeordnete BLOB löschen, das diese Datenbankdatei enthält. Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
   
--   *Für den Container wurde nicht ordnungsgemäß eine SAS (Shared Access Signature) erstellt.*   
+-   *Für den Container wurde nicht ordnungsgemäß eine SAS (Shared Access Signature) erstellt.*    
      Lösung: Stellen Sie sicher, dass eine SAS ordnungsgemäß für den Container erstellt wurde. Lesen Sie die Hinweise in Lektion 2 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
   
--   *SQL Server-Anmeldeinformationen wurden nicht ordnungsgemäß erstellt.*   
+-   *SQL Server-Anmeldeinformationen wurden nicht ordnungsgemäß erstellt.*    
     Lösung: Vergewissern Sie sich, dass Sie für das Feld **Identität** die Option „Shared Access Signature“ verwendet und ordnungsgemäß einen geheimen Schlüssel erstellt haben. Lesen Sie die Hinweise in Lektion 3 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../lesson-3-database-backup-to-url.md).  
   
  **Fehler bei BLOB-Leasedauer:**  
@@ -168,8 +168,8 @@ ON
 2.  *Fehler beim Ausführen der ALTER-Anweisung*   
     Lösung: Stellen Sie sicher, dass die ALTER DATABASE-Anweisung ausgeführt wird, während die Datenbank online ist. Wenn Sie die Datendateien in den Azure-Speicher kopieren, erstellen Sie immer ein Seitenblob und kein Blockblob. Andernfalls erzeugt ALTER DATABASE einen Fehler. Lesen Sie die Hinweise in Lektion 7 im [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Fehlercode 5120: Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*   
-    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode *5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*.  
+3.  *Fehlercode 5120: Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“*    
+    Lösung: Bei Verwendung der neuen Erweiterung kann derzeit nur eine SQL Server-Instanz (nicht mehrere) auf dieselben Datenbankdateien im Azure-Speicher zugreifen. Wenn ServerA mit einer aktiven Datenbankdatei online ist und ServerB versehentlich gestartet wird und auch über eine Datenbank verfügt, die auf dieselbe Datendatei verweist, kann die Datenbank des zweiten Servers nicht gestartet werden und verursacht den Fehlercode *5120 Die physische Datei „%.\*ls“ kann nicht geöffnet werden. Betriebssystemfehler %d: „%ls“* .  
   
      Um dieses Problem zu beheben, stellen Sie zuerst fest, ob „ServerA“ auf die Datenbankdatei im Azure-Speicher zugreifen muss oder nicht. Wenn nicht, entfernen Sie einfach jegliche Verbindungen zwischen „ServerA“ und den Datenbankdateien im Azure-Speicher. Führen Sie hierzu folgende Schritte aus:  
   

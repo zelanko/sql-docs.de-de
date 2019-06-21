@@ -16,12 +16,12 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 80c63fa27f1ba85882b18f47910f38c06dd09f51
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db9c48686a6292f4a2fcd6ef85501fb1b715241d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800141"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140649"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Hinzufügen einer Datenbank zu einer Always On-Verfügbarkeitsgruppe mit dem Assistenten für Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,10 @@ ms.locfileid: "66800141"
      Wenn die Datenbank einen Datenbank-Hauptschlüssel enthält, geben Sie das Kennwort für den Datenbank-Hauptschlüssel in die Spalte **Kennwort** ein.  
   
 5.  Wählen Sie auf der Seite **Anfängliche Datensynchronisierung auswählen** aus, wie die neuen sekundären Datenbanken erstellt und mit der Verfügbarkeitsgruppe verknüpft werden sollen. Wählen Sie eine der folgenden Optionen aus:  
+
+    - **Automatisches Seeding**
+      
+      Wählen Sie diese Option aus, um das automatische Seeding zu verwenden. Das automatische Seeding verwendet die Übermittlung durch Protokollstream, um die Sicherung mit VDI für jede Datenbank der Verfügbarkeitsgruppe mit konfigurierten Endpunkten an das sekundäre Replikat zu streamen. Damit wird die Sicherung der Datenbank auf dem sekundären Replikat wiederhergestellt, ohne dass dafür manuelle Schritte erforderlich sind. Weitere Informationen zum automatischen Seeding finden Sie unter [Automatisches Seeding](automatic-seeding-secondary-replicas.md).
   
     -   **Full**  
   

@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751619"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "51658076"
 ## <a name="the-internal-memory-optimized-staging-table"></a>Die interne speicheroptimierte Stagingtabelle  
  Die interne speicheroptimierte Stagingtabelle ist ein internes Objekt, das vom System erstellt wird, um DML-Vorgänge zu optimieren.  
   
--   Der Tabellenname wird im folgenden Format generiert: **Memory_Optimized_History_Table_<object_id>**, wobei *<object_id>* der Bezeichner der aktuellen temporalen Tabelle ist.  
+-   Der Tabellenname wird im folgenden Format generiert: **Memory_Optimized_History_Table_<object_id>** , wobei *<object_id>* der Bezeichner der aktuellen temporalen Tabelle ist.  
   
 -   Die Tabelle repliziert das Schema der aktuellen temporalen Tabelle inklusive einer BIGINT-Spalte. Diese zusätzliche Spalte gewährleistet die Eindeutigkeit der in den internen Verlaufspuffer verschobenen Zeilen.  
   
--   Die zusätzliche Spalte weist das folgende Namensformat auf: **Change_ID[_<suffix>]**, wobei *_\<suffix>* optional hinzugefügt wird, falls die Tabelle bereits über eine *Change_ID*-Spalte verfügt.  
+-   Die zusätzliche Spalte weist das folgende Namensformat auf: **Change_ID[_<suffix>]** , wobei *_\<suffix>* optional hinzugefügt wird, falls die Tabelle bereits über eine *Change_ID*-Spalte verfügt.  
   
 -   Die maximale Zeilengröße für eine speicheroptimierte Tabelle mit Systemversionsverwaltung wird aufgrund der zusätzlichen BIGINT-Spalte in der Stagingtabelle um 8 Bytes reduziert. Der neue Höchstwert ist jetzt 8052 Bytes.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "51658076"
  Bei der Datenleerung werden alle Datensätze aus dem In-Memory-Puffer gelöscht, die älter als die älteste, aktuell ausgeführte Transaktion sind, um diese Datensätze in die datenträgerbasierte Verlaufstabelle zu verschieben.  
   
  Sie können eine Datenleerung erzwingen, indem Sie [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) aufrufen und das Schema sowie den Tabellennamen angeben:   
-**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**. Mit diesem vom Benutzer ausgeführten Befehl wird derselbe Datenverschiebungsvorgang aufgerufen wie durch das Aufrufen des Datenleerungstasks durch das System gemäß internem Zeitplan.  
+**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name** . Mit diesem vom Benutzer ausgeführten Befehl wird derselbe Datenverschiebungsvorgang aufgerufen wie durch das Aufrufen des Datenleerungstasks durch das System gemäß internem Zeitplan.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verwendungsszenarien für temporale Tabellen](../../relational-databases/tables/temporal-table-usage-scenarios.md)   

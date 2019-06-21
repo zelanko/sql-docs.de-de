@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419911"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047743"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52419911"
   
  Wenn eine Zeile gelöscht oder aktualisiert wird, wird die Zeile in der Datendatei nicht entfernt oder direkt geändert. Stattdessen werden die gelöschten Zeilen in einem anderen Typ von Datei, der Änderungsdatei, nachverfolgt. Updatevorgänge werden für jede einzelne Zeile als Tupel von Lösch- und Einfügevorgängen verarbeitet. Dadurch werden zufällige E/A-Vorgänge für die Datendatei verhindert.  
  
-   Größe: Auf Computern mit einer Arbeitsspeicherkapazität über 16 GB beträgt die Größe jeder Datendatei ungefähr 128 MB, und auf Computern mit einer Arbeitsspeicherkapazität bis 16 GB beträgt die Größe 16 MB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann der Modus für große Prüfpunkte verwendet werden, wenn SQL Server das Speichersubsystem für ausreichend schnell hält. Im Modus für große Prüfpunkte haben die Datendateien eine Größe von 1 GB. So wird für Arbeitsauslastungen mit hohem Durchsatz eine höhere Effizienz im Speichersubsystem möglich.  
+   Größe: Auf Computern mit einer Arbeitsspeicherkapazität über 16 GB beträgt die Größe jeder Datendatei ungefähr 128 MB, und auf Computern mit einer Arbeitsspeicherkapazität bis 16 GB beträgt die Größe 16 MB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann der Modus für große Prüfpunkte verwendet werden, wenn SQL Server das Speichersubsystem für ausreichend schnell hält. Im Modus für große Prüfpunkte haben die Datendateien eine Größe von 1 GB. So wird für Arbeitsauslastungen mit hohem Durchsatz eine höhere Effizienz im Speichersubsystem möglich.  
    
 ### <a name="the-delta-file"></a>Die Änderungsdatei  
  Jeder Datendatei ist eine entsprechende Änderungsdatei zugeordnet, die den gleichen Transaktionsbereich besitzt und die gelöschten Zeilen nachverfolgt, die von Transaktionen im Transaktionsbereich eingefügt wurden. Die Daten- und Änderungsdatei wird als Prüfpunktdateipaar (CFP, Checkpoint File Pair) bezeichnet. Sie stellt die Zuordnungs- und die Zuordnungsaufhebungseinheit sowie die Einheit für Zusammenführungsvorgänge dar. Beispielsweise werden in einer Änderungsdatei, die dem Transaktionsbereich (100, 200) entspricht, gelöschte Zeilen gespeichert, die von Transaktionen im Bereich (100, 200) eingefügt wurden. Genau wie bei Datendateien wird auf Änderungsdateien sequenziell zugegriffen.  
@@ -98,7 +98,7 @@ ms.locfileid: "52419911"
   
 |Angrenzende CFP-Quelldateien (% voll)|Zusammenführungsauswahl|  
 |-------------------------------------------|---------------------|  
-|CFP0 (30 %), CFP1 (50 %), CFP2 (50 %), CFP3 (90 %)|(CFP0, CFP1)<br /><br /> CFP2 wird nicht ausgewählt, da andernfalls die resultierende Datendatei größer als 100 % der idealen Größe wird.|  
+|CFP0 (30 %), CFP1 (50 %), CFP2 (50 %), CFP3 (90 %)|(CFP0, CFP1)<br /><br /> CFP2 wird nicht ausgewählt, da andernfalls die resultierende Datendatei größer als 100 % der idealen Größe wird.|  
 |CFP0 (30 %), CFP1 (20 %), CFP2 (50 %), CFP3 (10 %)|(CFP0, CFP1, CFP2). Dateien werden von links nach rechts ausgewählt.<br /><br /> CTP3 wird nicht ausgewählt, da andernfalls die resultierende Datendatei größer als 100 % der idealen Größe wird.|  
 |CFP0 (80 %), CFP1 (30 %), CFP2 (10 %), CFP3 (40 %)|(CFP1, CFP2, CFP3). Dateien werden von links nach rechts ausgewählt.<br /><br /> CFP0 wird übersprungen, da die resultierende Datendatei bei Kombination mit CFP1 größer als 100 % der idealen Größe wird.|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52419911"
   
  Sie können manuell erzwingen, dass ein Prüfpunkt mit anschließender Protokollsicherung die Garbage Collection beschleunigt. In Produktionsszenarien durchlaufen CFPs aufgrund der automatischen Prüfpunkte und Protokollsicherungen, die im Rahmen der Sicherungsstrategie ausgeführt werden, diese Phasen nahtlos, ohne dass ein manueller Eingriff erforderlich ist. Als Folge des Garbage Collection-Vorgangs weisen Datenbanken mit speicheroptimierten Tabellen gegenüber ihrer Größe im Arbeitsspeicher möglicherweise eine höhere Größe im Speicher auf. Wenn Prüfpunkte und Protokollsicherungen nicht ausgeführt werden, wächst der Speicherplatzbedarf für die Prüfpunktdateien auf dem Datenträger weiter an.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

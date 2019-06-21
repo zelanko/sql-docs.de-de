@@ -13,11 +13,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661127"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Entwickeln von Always Encrypted mit .NET Framework-Datenanbieter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulic
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Konfigurieren Sie Always Encrypted in Ihrer Datenbank. Dies umfasst die Bereitstellung von Always Encrypted-Schlüsseln und die Einrichtung der Verschlüsselung für ausgewählte Datenbankspalten. Wenn Sie nicht bereits über eine Datenbank verfügen, für die Always Encrypted konfiguriert ist, befolgen Sie die Anweisungen in [Erste Schritte mit Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5).
-- Stellen Sie sicher, dass .NET Framework, Version 4.6 oder höher, auf dem Entwicklungscomputer installiert ist. Weitere Informationen finden Sie unter [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Sie müssen auch sicherstellen, dass .NET Framework, Version 4.6 oder höher, als .NET Framework-Zielversion in der Entwicklungsumgebung konfiguriert ist. Wenn Sie Visual Studio verwenden, finden Sie weitere Informationen unter [Gewusst wie: Ausrichten auf eine .NET Framework-Version](https://msdn.microsoft.com/library/bb398202.aspx). 
+- Stellen Sie sicher, dass .NET Framework, Version 4.6 oder höher, auf dem Entwicklungscomputer installiert ist. Weitere Informationen finden Sie unter [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). Sie müssen auch sicherstellen, dass .NET Framework, Version 4.6 oder höher, als .NET Framework-Zielversion in der Entwicklungsumgebung konfiguriert ist. Wenn Sie Visual Studio verwenden, lesenSie [Vorgehensweise: .NET Framework-Version als Ziel](https://msdn.microsoft.com/library/bb398202.aspx). 
 
 > [!NOTE]
 > Der Grad der Unterstützung für Always Encrypted in bestimmten Versionen von .NET Framework variiert. Weitere Informationen finden Sie unten im Referenzabschnitt zur Always Encrypted-API. 
@@ -279,10 +279,10 @@ Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:
 Der .NET Framework-Datenanbieter für SQL Server enthält die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter, die mit den bestimmten Anbieternamen vorab registriert wurden (um den Anbieter zu suchen).
 
 
-| Class | Beschreibung | Anbietername (Suche) |
+| Class | und Beschreibung | Anbietername (Suche) |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider-Klasse| Ein Anbieter für den Windows-Zertifikatspeicher. | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Hinweis:** Dieser Anbieter ist in .NET Framework 4.6.1 und höheren Versionen verfügbar. |Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)unterstützt. Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt.  | MSSQL_CNG_STORE|
+|[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Hinweis:** Dieser Anbieter ist in .NET Framework 4.6.1 und höheren Versionen verfügbar. |Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API unterstützt: Next Generation (CNG) API](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt.  | MSSQL_CNG_STORE|
 | [SqlColumnEncryptionCspProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**Hinweis:** Dieser Anbieter ist in .NET Framework 4.6.1 oder höheren Versionen verfügbar.| Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API (CAPI)](https://msdn.microsoft.com/library/aa266944.aspx)unterstützt. Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt.| MSSQL_CSP_PROVIDER |
   
 Sie müssen keine Änderungen am Anwendungscode vornehmen, um diese Anbieter zu verwenden, aber beachten Sie Folgendes:
@@ -378,7 +378,7 @@ Wenn Always Encrypted für eine Verbindung aktiviert ist, ruft der .NET Framewor
 
 In .NET Framework 4.6.2 und höher speichert der .NET Framework-Datenanbieter für SQL Server die Ergebnisse von **sys.sp_describe_parameter_encryption** für jede Abfrageanweisung zwischen. Wenn die gleiche Abfrageanweisung mehrfach ausgeführt wird, ruft der Treiber daher **sys.sp_describe_parameter_encryption** nur einmal auf. Die Zwischenspeicherung von Verschlüsselungsmetadaten für Abfrageanweisungen verringert die Leistungskosten beim Abrufen von Metadaten bei der Datenbank erheblich. Die Zwischenspeicherung ist standardmäßig aktiviert. Sie können die Zwischenspeicherung von Parametermetadaten deaktivieren, indem Sie die  [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) -Eigenschaft auf FALSCH festlegen, das wird jedoch mit Ausnahme sehr seltener Fälle, wie dem unten beschriebenen, nicht empfohlen:
 
-Betrachten Sie eine Datenbank mit zwei verschiedenen Schemas: s1 und s2. Jedes Schema enthält eine Tabelle mit dem gleichen Namen: t. Die Definitionen der Tabellen s1.t und s2.t sind identisch, mit Ausnahme ihrer verschlüsselungsbezogenen Eigenschaften: Eine Spalte mit dem Namen c ist in s1.t nicht verschlüsselt, wohl aber in s2.t. Die Datenbank weist zwei Benutzer auf, u1 und u2. Das Standardschema für u1-Benutzer ist s1. Das Standardschema für u2 ist s2. Eine .NET-Anwendung öffnet zwei Verbindungen mit der Datenbank, mit der Identität des u1-Benutzers in der einen Verbindung und der des u2-Benutzers in der anderen Verbindung. Die Anwendung sendet eine Abfrage mit einem Parameter, der auf die Spalte c gerichtet ist, über die Verbindung für Benutzer u1 (das Schema wird von der Abfrage nicht angegeben, sodass vom Standardbenutzerschema ausgegangen wird). Anschließend sendet die Anwendung die gleiche Abfrage über die Verbindung für den u2-Benutzer. Wenn die Zwischenspeicherung von Metadaten aktiviert ist, ist der Cache nach der ersten Abfrage mit Metadaten aufgefüllt, die angeben, dass die Spalte c, auf die die Abfrageparameter verweisen, nicht verschlüsselt ist. Da die zweite Abfrage die gleiche Abfrageanweisung aufweist, werden die im Cache gespeicherten Informationen verwendet. Daher sendet der Treiber die Abfrage, ohne den Parameter zu verschlüsseln (was falsch ist, da die Zielspalte s2.t.c verschlüsselt ist), und legt so den Klartextwert des Parameters dem Server gegenüber offen. Der Server wird diese Inkompatibilität erkennen und den Treiber anweisen, den Cache zu aktualisieren, sodass die Anwendung die Abfrage transparent mit ordnungsgemäß verschlüsseltem Parameterwert erneut sendet. In einem solchen Fall sollte die Zwischenspeicherung deaktiviert werden, um die Offenlegung vertraulicher Werte gegenüber dem Server zu verhindern. 
+Betrachten Sie eine Datenbank mit zwei verschiedenen Schemas: s1 und s2. Jedes Schema enthält eine Tabelle mit dem gleichen Namen: t. Die Definitionen der s1.t- und s2.t-Tabellen sind mit Ausnahme der verschlüsselungsbezogenen Eigenschaften identisch: Eine Spalte mit dem Namen c ist in s1.t nicht verschlüsselt, in s2.t hingegen schon. Die Datenbank weist zwei Benutzer auf, u1 und u2. Das Standardschema für u1-Benutzer ist s1. Das Standardschema für u2 ist s2. Eine .NET-Anwendung öffnet zwei Verbindungen mit der Datenbank, mit der Identität des u1-Benutzers in der einen Verbindung und der des u2-Benutzers in der anderen Verbindung. Die Anwendung sendet eine Abfrage mit einem Parameter, der auf die Spalte c gerichtet ist, über die Verbindung für Benutzer u1 (das Schema wird von der Abfrage nicht angegeben, sodass vom Standardbenutzerschema ausgegangen wird). Anschließend sendet die Anwendung die gleiche Abfrage über die Verbindung für den u2-Benutzer. Wenn die Zwischenspeicherung von Metadaten aktiviert ist, ist der Cache nach der ersten Abfrage mit Metadaten aufgefüllt, die angeben, dass die Spalte c, auf die die Abfrageparameter verweisen, nicht verschlüsselt ist. Da die zweite Abfrage die gleiche Abfrageanweisung aufweist, werden die im Cache gespeicherten Informationen verwendet. Daher sendet der Treiber die Abfrage, ohne den Parameter zu verschlüsseln (was falsch ist, da die Zielspalte s2.t.c verschlüsselt ist), und legt so den Klartextwert des Parameters dem Server gegenüber offen. Der Server wird diese Inkompatibilität erkennen und den Treiber anweisen, den Cache zu aktualisieren, sodass die Anwendung die Abfrage transparent mit ordnungsgemäß verschlüsseltem Parameterwert erneut sendet. In einem solchen Fall sollte die Zwischenspeicherung deaktiviert werden, um die Offenlegung vertraulicher Werte gegenüber dem Server zu verhindern. 
 
 
 
@@ -544,12 +544,12 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 **Namespace:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
 
-**Assembly:** System.Data (in System.Data.dll)
+**Assembly:** System.Data (in „System.Data.dll“)
 
 
 
 
-|Name|Beschreibung|In .NET Version eingeführt
+|Name|und Beschreibung|In .NET Version eingeführt
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Ein Schlüsselspeicheranbieter für den Windows-Zertifikatspeicher.|  4.6
 |[SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Eine Schlüsselspeicheranbieter für Microsoft Cryptography API: Next Generation (CNG).|  4.6.1
@@ -567,11 +567,11 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |Neues [Verbindungszeichenfolgen](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) -Schlüsselwort: `Column Encryption Setting=enabled`|Aktiviert oder deaktiviert die „Always Encrypted“-Funktionalität für die Verbindung.| 4.6 
   
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 - [„Immer verschlüsselt“ (Datenbank-Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted-Blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-- [Tutorial zur SQL-Datenbank: Schützen vertraulicher Daten mit Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+- [Tutorial zu SQL-Datenbank: Schützen vertraulicher Daten mit Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 
 

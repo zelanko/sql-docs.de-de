@@ -13,17 +13,17 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 63c772e9957a180b76949ecc95a95661a4632aff
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820878"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt zwei Mechanismen zum Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts bereit. Verwenden Sie zum Erstellen von Skripts für mehrere Objekte den **Assistenten zum Generieren und Veröffentlichen von Skripts**. Sie können ein Skript für einzelne Objekte oder mehrere Objekte auch über das Menü **Skript für** im **Objekt-Explorer**generieren.  
 
-Ein ausführliches Tutorial zur Skripterstellung für verschiedene Objekte mithilfe von SQL Server Management Studio finden Sie unter [Tutorial:  Scripting in SSMS (Tutorial: Skripterstellung in SSMS)](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Ein ausführliches Tutorial zur Skripterstellung für verschiedene Objekte mithilfe von SQL Server Management Studio finden Sie unter [Tutorial: Scripting in SSMS (Skripterstellung in SSMS)](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
 
   
 ## <a name="before-you-begin"></a>Vorbereitungen  

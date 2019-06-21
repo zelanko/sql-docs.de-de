@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1a3642d349fd9d6df39651e38b8b1789dd935c49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761216"
 ---
 # <a name="select-backup-destination"></a>Sicherungsziel auswählen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47840378"
   
 -   [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  Die Optionen in diesem Dialogfeld sind davon abhängig, ob Sie ein Ziel auf einem Datenträger oder einem Band auswählen.  
   
  **Ziele auf dem Datenträger**  
@@ -54,7 +54,7 @@ ms.locfileid: "47840378"
 |**Bandlaufwerk**|Wählen Sie diese Option aus, um ein Bandlaufwerk als Sicherungsziel aus der Liste der Bandlaufwerke auszuwählen, die physisch mit dem Computer verbunden sind, auf dem die Serverinstanz ausgeführt wird.<br /><br /> Hinweis: Bandsicherungsmedien auf Remotecomputern sind keine gültigen Sicherungsziele.|  
 |**Sicherungsmedium**|Wählen Sie diese Option aus, um ein vorhandenes logisches Sicherungsmedium auszuwählen. Diese logischen Sicherungsmedien entsprechen Bandgeräten, die physisch mit dem Computer verbunden sind, auf dem die Serverinstanz ausgeführt wird.<br /><br /> Hinweis: Informationen zum Erstellen eines Bandsicherungsmediums finden Sie unter [Definieren eines logischen Sicherungsmediums für ein Bandlaufwerk &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

@@ -15,23 +15,23 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c80985d6c69cc1f62e82ae26cbf4bc841501e9d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4aa32fb8859df9fdc7c6d85cb43e93425dfa895b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145472"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes()-Methode (xml-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Die **nodes()**-Methode ist nützlich, wenn Sie eine Instanz des **XML**-Datentyps in relationale Daten aufteilen möchten. Damit können Sie Knoten identifizieren, die einer neuen Zeile zugeordnet werden.  
+Die **nodes()** -Methode ist nützlich, wenn Sie eine Instanz des **XML**-Datentyps in relationale Daten aufteilen möchten. Damit können Sie Knoten identifizieren, die einer neuen Zeile zugeordnet werden.  
   
 Jede Instanz des **XML**-Datentyps verfügt über einen implizit bereitgestellten Kontextknoten. Für die in einer Spalte oder Variablen gespeicherte XML-Instanz ist dieser Knoten der Dokumentknoten. Der Dokumentknoten ist der implizite Knoten auf der obersten Ebene jeder Instanz des **XML**-Datentyps.  
   
-Das Ergebnis der **nodes()**-Methode ist ein Rowset, das logische Kopien der ursprünglichen XML-Instanzen enthält. In diesen logischen Kopien ist der Kontextknoten jeder Zeileninstanz auf einen der Knoten festgelegt, der mit dem Abfrageausdruck identifiziert wird, sodass nachfolgende Abfragen relativ zu diesen Kontextknoten navigieren können. This way, later queries can navigate relative to these context nodes.  
+Das Ergebnis der **nodes()** -Methode ist ein Rowset, das logische Kopien der ursprünglichen XML-Instanzen enthält. In diesen logischen Kopien ist der Kontextknoten jeder Zeileninstanz auf einen der Knoten festgelegt, der mit dem Abfrageausdruck identifiziert wird. Auf diese Weise können nachfolgende Abfragen relativ zu diesen Kontextknoten navigieren.  
   
-Sie können mehrere Werte aus dem Rowset abrufen. Sie können die **value()**-Methode beispielsweise auf das Rowset anwenden, das von **nodes()** zurückgegeben wurde, und mehrere Werte aus der ursprünglichen XML-Instanz abrufen. Die **value()**-Methode gibt nur einen Wert zurück, wenn sie auf die XML-Instanz angewendet wird.  
+Sie können mehrere Werte aus dem Rowset abrufen. Sie können die **value()** -Methode beispielsweise auf das Rowset anwenden, das von **nodes()** zurückgegeben wurde, und mehrere Werte aus der ursprünglichen XML-Instanz abrufen. Die **value()** -Methode gibt nur einen Wert zurück, wenn sie auf die XML-Instanz angewendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -78,15 +78,15 @@ Ein Aufruf der `nodes()`-Methode mit dem Abfrageausdruck `/root/Location` würde
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 Anschließend können Sie dieses Rowset mithilfe von **XML**-Datentypmethoden abfragen. Die folgende Abfrage extrahiert die Teilstruktur des Kontextelements für jede generierte Zeile:  
@@ -107,15 +107,15 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-Das zurückgegebene Rowset hat die Typinformationen beibehalten. Sie können **XML**-Datentypmethoden wie z.B. **query()**, **value()**, **exist()** und **nodes()** auf das Ergebnis einer **nodes()**-Methode anwenden. Allerdings ist es nicht möglich, die **modify()**-Methode zum Ändern der XML-Instanz anzuwenden.  
+Das zurückgegebene Rowset hat die Typinformationen beibehalten. Sie können **XML**-Datentypmethoden wie z.B. **query()** , **value()** , **exist()** und **nodes()** auf das Ergebnis einer **nodes()** -Methode anwenden. Allerdings ist es nicht möglich, die **modify()** -Methode zum Ändern der XML-Instanz anzuwenden.  
   
 Außerdem kann der Kontextknoten im Rowset nicht materialisiert werden. Das bedeutet, dass Sie ihn nicht in einer SELECT-Anweisung verwenden können. Allerdings können Sie ihn in IS NULL und COUNT(*) verwenden.  
   
-Die Szenarien für die Verwendung der **nodes()**-Methode sind die gleichen wie für die Verwendung von [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md), womit eine Rowsetsicht der XML bereitgestellt wird. Allerdings müssen Sie keine Cursor verwenden, wenn Sie die **nodes()**-Methode für eine Tabelle verwenden, die mehrere Zeilen mit XML-Dokumenten enthält.  
+Die Szenarien für die Verwendung der **nodes()** -Methode sind die gleichen wie für die Verwendung von [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md), womit eine Rowsetsicht der XML bereitgestellt wird. Allerdings müssen Sie keine Cursor verwenden, wenn Sie die **nodes()** -Methode für eine Tabelle verwenden, die mehrere Zeilen mit XML-Dokumenten enthält.  
   
-Das von der **nodes()**-Methode zurückgegebene Rowset ist unbenannt. Deshalb muss es per Alias explizit benannt werden.  
+Das von der **nodes()** -Methode zurückgegebene Rowset ist unbenannt. Deshalb muss es per Alias explizit benannt werden.  
   
-Die **nodes()**-Funktion kann nicht direkt auf die Ergebnisse einer benutzerdefinierten Funktion angewendet werden. Zum Verwenden der **nodes()**-Funktion mit dem Ergebnis einer skalaren benutzerdefinierten Funktion haben Sie folgende Möglichkeiten:
+Die **nodes()** -Funktion kann nicht direkt auf die Ergebnisse einer benutzerdefinierten Funktion angewendet werden. Zum Verwenden der **nodes()** -Funktion mit dem Ergebnis einer skalaren benutzerdefinierten Funktion haben Sie folgende Möglichkeiten:
  
 - Zuweisen des Ergebnisses der benutzerdefinierten Funktion zu einer Variablen
 - Verwenden Sie eine abgeleitete Tabelle, um dem Rückgabewert der benutzerdefinierten Funktion einen Spaltenalias zuzuweisen, und verwenden Sie dann `CROSS APPLY`, um im Alias eine Wahl zu treffen.  

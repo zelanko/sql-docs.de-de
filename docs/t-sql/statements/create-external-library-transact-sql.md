@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140797"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -127,6 +127,8 @@ Wenn der Benutzer **RUser1** ein externes Skript ausführt, kann der Wert von `l
 Gibt den Inhalt des Pakets für eine bestimmte Plattform an. Nur ein Dateiartefakt pro Plattform wird unterstützt.
 
 Die Datei kann in Form eines lokalen Pfads oder eines Netzwerkpfads angegeben werden.
+
+Beim Versuch, auf die in **<client_library_specifier>** angegebene Datei zuzugreifen, nimmt SQL Server den Sicherheitskontext des aktuellen Windows-Anmeldenamens an. Falls **<client_library_specifier>** einen Netzwerkspeicherort (UNC-Pfad) angibt, wird der Identitätswechsel des aktuellen Anmeldenamens aufgrund von Delegierungsbeschränkungen nicht auf den neuen Netzwerkspeicherort übertragen. In diesem Fall erfolgt der Zugriff mithilfe des Sicherheitskontexts des SQL Server-Dienstkontos. Weitere Informationen finden Sie unter [Anmeldeinformationen (Datenbank-Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
 Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder Runtime ist nur ein Darteiartefakt oder Inhalt erlaubt.
 

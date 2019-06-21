@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62857320"
 ---
 # <a name="value-method-xml-data-type"></a>value()-Methode (xml-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ value (XQuery, SQLType)
  *SQLType*  
  Ist der bevorzugte SQL-Typ (ein Zeichenfolgenliteral), der zurückgegeben werden soll. Der Rückgabetyp dieser Methode entspricht dem *SQLType* -Parameter. *SQLType* kann kein **xml** -Datentyp, benutzerdefinierter CLR-Typ (Common Language Runtime) sowie kein **image**-, **text**-, **ntext**- oder **sql_variant** -Datentyp sein. *SQLType* kann ein benutzerdefinierter SQL-Datentyp sein.  
   
- Die **value()**-Methode verwendet implizit den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Operator CONVERT und versucht, das Ergebnis des XQuery-Ausdrucks (die serialisierte Zeichenfolgendarstellung) vom XSD-Typ in den entsprechenden SQL-Typ zu konvertieren, der durch die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konvertierung angegeben wird. Weitere Informationen zu Regeln für die Typumwandlung für CONVERT finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ Die **value()** -Methode verwendet implizit den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Operator CONVERT und versucht, das Ergebnis des XQuery-Ausdrucks (die serialisierte Zeichenfolgendarstellung) vom XSD-Typ in den entsprechenden SQL-Typ zu konvertieren, der durch die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Konvertierung angegeben wird. Weitere Informationen zu Regeln für die Typumwandlung für CONVERT finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
->  Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die **exist()** -Methode mit **sql:column()** verwenden und nicht die **value()**-Methode in einem Prädikat. Dies wird im folgenden Beispiel D gezeigt.  
+>  Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die **exist()** -Methode mit **sql:column()** verwenden und nicht die **value()** -Methode in einem Prädikat. Dies wird im folgenden Beispiel D gezeigt.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -121,7 +121,7 @@ WHERE CatalogDescription.exist('
   
 -   Die `CatalogDescription` -Spalte ist eine typisierte XML-Spalte. Das bedeutet, dass ihr eine Schemaauflistung zugeordnet ist. Im [XQuery-Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) wird die Namespacedeklaration für die Definition des Präfix verwendet, das später im Abfragetext verwendet wird.  
   
--   Wenn die `exist()`-Methode `1` (True) zurückgibt, bedeutet dies, dass die XML-Instanz das untergeordnete <`Warranty`>-Element als eine der Funktionen enthält.  
+-   Wenn die `exist()`-Methode `1` (TRUE) zurückgibt, bedeutet dies, dass die XML-Instanz das untergeordnete <`Warranty`>-Element als eine der Funktionen enthält.  
   
 -   Die `value()` -Methode in der `SELECT` -Klausel ruft dann die `ProductModelID` -Attributwerte als ganze Zahlen ab.  
   
@@ -136,7 +136,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. Verwenden der exist()-Methode anstelle der value()-Methode  
- Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Zum Beispiel:  
+ Aus Leistungsgründen sollten Sie zum Vergleichen mit einem relationalen Wert die `value()` -Methode mit `exist()` verwenden und nicht die `sql:column()`-Methode in einem Prädikat. Beispiel:  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  

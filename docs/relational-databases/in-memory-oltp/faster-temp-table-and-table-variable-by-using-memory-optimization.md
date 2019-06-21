@@ -13,11 +13,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 96c8f204f1be7775dbf77490e3fd3749c40e6a3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531631"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047714"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ CREATE TABLE #tempSessionC
   
   
   
-Erstellen Sie zunächst die folgende Tabellenwertfunktion zum Filtern nach **@@spid**. Die Funktion kann von allen SCHEMA_ONLY-Tabellen verwendet werden, die Sie aus temporären Sitzungstabellen konvertieren.  
+Erstellen Sie zunächst die folgende Tabellenwertfunktion zum Filtern nach **@@spid** . Die Funktion kann von allen SCHEMA_ONLY-Tabellen verwendet werden, die Sie aus temporären Sitzungstabellen konvertieren.  
   
   
   
@@ -191,7 +191,7 @@ Drittens: Im allgemeinen T-SQL-Code:
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Szenario: Eine Tabellenvariable kann die WITH-Klausel MEMORY_OPTIMIZED=ON enthalten.  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Szenario: Eine Tabellenvariable kann MEMORY_OPTIMIZED=ON sein  
   
   
 Eine herkömmliche Tabellenvariable stellt eine Tabelle in der tempdb-Datenbank dar. Für eine schnellere Leistung können Sie den Speicher Ihrer Tabellenvariable optimieren.  
@@ -421,7 +421,7 @@ Batch execution completed 5001 times.
 Sie können lernen, wie sie die Bedürfnisse des aktiven Arbeitsspeichers für Ihre speicheroptimierten Tabellen mit den folgenden Ressourcen vorhersagen können:  
   
 - [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [Tabellen- und Zeilengröße in speicheroptimierten Tabellen: Beispielrechnung](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [Tabellen- und Zeilengröße in speicheroptimierten Tabellen: Beispielberechnung](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 Nicht gruppierte Indizes nutzen für größere Tabellenvariablen mehr Arbeitsspeicher als für speicheroptimierte *Tabellen*. Je größer die Anzahl der Zeilen und der Indexschlüssel, desto größer wird der Unterschied.  
   

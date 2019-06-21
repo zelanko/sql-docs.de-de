@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c59f9b04ad4552280c586941e43e91aa25fd935
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558275"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686880"
 ---
 # <a name="modified-features-contained-database"></a>Geänderte Funktionen (Enthaltene Datenbank)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "51558275"
  Temporäre Tabellen dürfen nicht auf benutzerdefinierte Typen, XML-Schemaauflistungen und benutzerdefinierte Funktionen verweisen.  
   
 ## <a name="collation"></a>Sortierung  
- Im abhängigen Datenbankmodell sind drei separate Sortierungstypen vorhanden: Datenbanksortierung, Instanzsortierung und tempdb-Sortierung. In enthaltenen Datenbanken hingegen werden nur zwei Sortierungen verwendet: die Datenbanksortierung und die neue Katalogsortierung. Weitere Details zur Sortierung in eigenständigen Datenbanken finden Sie unter [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) .  
+ Im Modell der nicht enthaltenen Datenbank sind drei separate Sortierungstypen vorhanden: Datenbanksortierung, Instanzsortierung und TempDB-Sortierung. In enthaltenen Datenbanken hingegen werden nur zwei Sortierungen verwendet: die Datenbanksortierung und die neue Katalogsortierung. Weitere Details zur Sortierung in eigenständigen Datenbanken finden Sie unter [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) .  
   
 ## <a name="user-options"></a>user options  
  Beim Aktivieren eigenständiger Datenbanken muss die [Benutzeroptionen-Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auf 0 (null) festgelegt sein.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Contained Databases](../../relational-databases/databases/contained-databases.md)  
   

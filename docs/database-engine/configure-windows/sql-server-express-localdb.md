@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4375d7b0ce19c5bb0f44a0be3b55e7b105b5a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145420"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -127,7 +127,7 @@ REM Gather information about the instance of LocalDB
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>Herstellen einer Verbindung mit einer freigegebenen Instanz von LocalDB
 
-Fügen Sie zum Herstellen einer Verbindung mit einer freigegebenen Instanz von LocalDB der Verbindungszeichenfolge `.\` (Punkt + umgekehrter Schrägstrich) hinzu, auf den für die freigegebenen Instanzen reservierten Namespace zu verweisen. Verwenden Sie beispielsweise eine Verbindungszeichenfolge wie `AppData` als Teil der Verbindungszeichenfolge, um eine Verbindung mit einer freigegeben Instanz von LocalDB namens `(localdb).AppData` herzustellen. Benutzer, die eine Verbindung mit einer freigegebenen Instanz von LocalDB herstellen, die sie nicht besitzen, müssen über eine Windows-Authentifizierung oder über einen Anmeldenamen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verfügen.
+Fügen Sie zum Herstellen einer Verbindung mit einer freigegebenen Instanz von LocalDB der Verbindungszeichenfolge `\.\` (umgekehrter Schrägstrich + Punkt + umgekehrter Schrägstrich) hinzu, auf den für die freigegebenen Instanzen reservierten Namespace zu verweisen. Verwenden Sie beispielsweise eine Verbindungszeichenfolge wie `AppData` als Teil der Verbindungszeichenfolge, um eine Verbindung mit einer freigegeben Instanz von LocalDB namens `(localdb)\.\AppData` herzustellen. Benutzer, die eine Verbindung mit einer freigegebenen Instanz von LocalDB herstellen, die sie nicht besitzen, müssen über eine Windows-Authentifizierung oder über einen Anmeldenamen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verfügen.
 
 ## <a name="troubleshooting"></a>Problembehandlung
 

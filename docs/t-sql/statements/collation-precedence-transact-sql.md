@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051569"
 ---
 # <a name="collation-precedence"></a>Rangfolge von Sortierungen
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -146,7 +146,7 @@ Msg 448, Level 16, State 9, Line 2
 Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_AS' in equal to operation.  
 ```  
   
-#### <a name="explicit-label-vs-implicit-label"></a>Bezeichnung "Explicit" und Bezeichnung "Implicit"  
+#### <a name="explicit-label-vs-implicit-label"></a>Bezeichnung „Explicit“ im Vergleich zu Bezeichnung „Implicit“  
  Das Prädikat in der folgenden Abfrage wird zu `greek_ci_as` ausgewertet, da der rechte Ausdruck die Bezeichnung Explicit aufweist. Diese hat Vorrang vor der Bezeichnung Implicit des linken Ausdrucks.  
   
 ```sql  
@@ -239,7 +239,7 @@ Die Funktionen CAST, CONVERT und COLLATE sind sortierungsabhängig für die Date
 |LOWER|SUBSTRING|  
 |PATINDEX|GROSSBUCHSTABEN|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

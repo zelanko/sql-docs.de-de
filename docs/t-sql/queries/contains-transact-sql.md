@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334807"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467002"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -226,7 +226,7 @@ Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an.
  INFLECTIONAL  
  Gibt an, dass die sprachenabhängige Wortstammerkennung für den angegebenen einfachen Ausdruck verwendet werden soll. Das Verhalten der Wortstammerkennung wird auf der Grundlage von Wortstammerkennungsregeln für jede Sprache einzeln definiert. Der neutralen Sprache ist keine Wortstammerkennung zugeordnet. Auf die gewünschte Wortstammerkennung wird anhand der Spaltensprache der abgefragten Spalten verwiesen. Falls *language_term* angegeben ist, wird die dieser Sprache entsprechende Wortstammerkennung verwendet.  
   
- Ein angegebener *\<simple_term>*-Wert innerhalb von *\<generation_term>* kann nicht sowohl mit Substantiven als auch mit Verben übereinstimmen.  
+ Ein angegebener *\<simple_term>* -Wert innerhalb von *\<generation_term>* kann nicht sowohl mit Substantiven als auch mit Verben übereinstimmen.  
   
  THESAURUS  
  Gibt an, dass der Thesaurus verwendet wird, der der Volltext-Spaltensprache oder der in der Abfrage angegebenen Sprache entspricht. Die längsten Muster aus *\<simple_term>* werden mit dem Thesaurus verglichen, und weitere Ausdrücke werden generiert, um das ursprüngliche Muster zu erweitern oder zu ersetzen. Wird für den ganzen Ausdruck oder für Teile von *\<simple_term>* keine Übereinstimmung gefunden, wird der nicht übereinstimmende Teil als *simple_term* behandelt. Weitere Informationen zum Thesaurus der Volltextsuche finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
@@ -321,14 +321,14 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 > [!NOTE]  
 >  Das Dezimaltrennzeichen ist immer ein Punkt, unabhängig vom Betriebssystemgebietsschema.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }   
+ { AND | & } | { AND NOT | &! } | { OR | | }  
  Gibt einen logischen Vorgang zwischen zwei CONTAINS-Suchbedingungen an.  
   
  { AND | & }  
- Gibt an, dass die beiden CONTAINS-Suchbedingungen für eine Übereinstimmung erfüllt sein müssen. Das kaufmännische Und-Zeichen (&) kann an Stelle des AND-Schlüsselworts zur Darstellung des AND-Operators verwendet werden.  
+ Gibt an, dass die beiden CONTAINS-Suchbedingungen für eine Übereinstimmung erfüllt sein müssen. Das kaufmännische Und-Zeichen (&) kann anstelle des AND-Schlüsselworts zur Darstellung des AND-Operators verwendet werden.  
   
  { AND NOT | &! }  
- Gibt an, dass die zweite CONTAINS-Suchbedingung für eine Übereinstimmung nicht erfüllt sein darf. Das kaufmännische Und-Zeichen gefolgt von einem Ausrufezeichen (&!) kann an Stelle des AND NOT-Schlüsselworts zur Darstellung des AND NOT-Operators verwendet werden.  
+ Gibt an, dass die zweite CONTAINS-Suchbedingung für eine Übereinstimmung nicht erfüllt sein darf. Das kaufmännische Und-Zeichen gefolgt von einem Ausrufezeichen (&!) kann anstelle des AND NOT-Schlüsselworts zur Darstellung des AND NOT-Operators verwendet werden.  
   
  { OR | | }  
  Gibt an, dass eine der beiden CONTAINS-Suchbedingungen für eine Übereinstimmung erfüllt sein muss. Der senkrechte Strich (|) kann an Stelle des OR-Schlüsselsorts zur Darstellung des OR-Operators verwendet werden.  

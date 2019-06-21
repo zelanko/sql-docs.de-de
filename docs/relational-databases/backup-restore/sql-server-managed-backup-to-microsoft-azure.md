@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397053"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008559"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup für Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52397053"
 ##  <a name="Prereqs"></a> Voraussetzungen  
  Microsoft Azure Storage wird von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum Speichern der Sicherungsdateien verwendet. Die folgenden Voraussetzungen gelten:  
   
-|Voraussetzung|Beschreibung|  
+|Voraussetzung|und Beschreibung|  
 |------------------|-----------------|  
 |**Microsoft Azure-Konto**|Für erste Schritte mit Azure können Sie die [kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/) verwenden, bevor Sie sich mit den [Kaufoptionen](https://azure.microsoft.com/pricing/purchase-options/)beschäftigen.|  
 |**Azure-Speicherkonto**|Die Sicherungen werden in einem Azure Blob Storage zugeordneten Azure-Speicherkonto gespeichert. Eine Schritt-für-Schritt-Anleitung zum Erstellen eines Speicherkontos finden Sie unter [Informationen zu Azure-Speicherkonten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
@@ -53,7 +53,7 @@ ms.locfileid: "52397053"
   
 |||  
 |-|-|  
-|Systemobjekt|Beschreibung|  
+|Systemobjekt|und Beschreibung|  
 |**MSDB**|Speichert die Metadaten und den Sicherungsverlauf für alle von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]erstellten Sicherungen.|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Aktiviert [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Konfiguriert die erweiterten Einstellungen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], wie z.B. die Verschlüsselung.|  
@@ -75,7 +75,7 @@ ms.locfileid: "52397053"
  Sie können mithilfe der gespeicherten Systemprozedur [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Falls Sie keinen benutzerdefinierten Zeitplan angeben, werden der Typ der geplanten Sicherungen und die Sicherungshäufigkeit basierend auf der Arbeitsauslastung der Datenbank bestimmt. Anhand der Beibehaltungsdauereinstellungen wird ermittelt, wie lange eine Sicherungsdatei im Speicher gehalten werden soll. Außerdem wird die Wiederherstellbarkeit der Datenbank zu einem bestimmten Zeitpunkt innerhalb der Beibehaltungsdauer geprüft.  
   
 ### <a name="backup-file-naming-conventions"></a>Benennungskonventionen für Sicherungsdateien  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwendet den Container, den Sie angeben, damit Sie die Kontrolle über den Containernamen haben. Für Sicherungsdateien werden Nicht-Verfügbarkeitsdatenbanken mithilfe der folgenden Konvention benannt: Der Name wird mit den ersten 40 Zeichen des Datenbanknamens, der Datenbank-GUID ohne „-“ und dem Zeitstempel erstellt. Der Unterstrich wird zwischen Segmenten als Trennzeichen eingefügt. Als Dateierweiterung wird **.bak** bei einer vollständigen Sicherung und **.log** für Protokollsicherungen verwendet. Bei Datenbanken in Verfügbarkeitsgruppen gilt neben der oben beschriebenen Dateinamenskonvention, dass nach den 40 Zeichen des Datenbanknamens die GUID der Verfügbarkeitsgruppen-Datenbank angehängt wird. Der Wert für die GUID der Verfügbarkeitsgruppen-Datenbank entspricht dem group_database_id-Wert in sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verwendet den Container, den Sie angeben, damit Sie die Kontrolle über den Containernamen haben. Für die Sicherungsdatei werden Nicht-Verfügbarkeitsdatenbanken anhand der folgenden Konvention benannt: Der Name wird mit den ersten 40 Zeichen des Datenbanknamens, der Datenbank-GUID ohne das Zeichen „-“ und dem Zeitstempel erstellt. Der Unterstrich wird zwischen Segmenten als Trennzeichen eingefügt. Als Dateierweiterung wird **.bak** bei einer vollständigen Sicherung und **.log** für Protokollsicherungen verwendet. Bei Datenbanken in Verfügbarkeitsgruppen gilt neben der oben beschriebenen Dateinamenskonvention, dass nach den 40 Zeichen des Datenbanknamens die GUID der Verfügbarkeitsgruppen-Datenbank angehängt wird. Der Wert für die GUID der Verfügbarkeitsgruppen-Datenbank entspricht dem group_database_id-Wert in sys.databases.  
   
 ### <a name="full-database-backup"></a>Vollständige Datenbanksicherung  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] -Agent plant eine vollständige Datenbanksicherung, wenn eine der folgenden Bedingungen wahr ist:  
@@ -128,7 +128,7 @@ ms.locfileid: "52397053"
   
 -   Für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] gelten ggf. bestimmte Einschränkungen, wenn eine Konfiguration in Kombination mit anderen Technologien erfolgt, die Sicherungen, Hochverfügbarkeit und eine Wiederherstellung im Notfall unterstützen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 - [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Deaktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)

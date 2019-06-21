@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047876"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Eine umfassendere Darstellung der potenziellen Leistungssteigerungen von In-Memo
   
 1.  Verwenden Sie SQL Server Management Studio (SSMS.exe), um eine Verbindung mit Ihrem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen. Alternativ können Sie jedes Tool nehmen, das wie „SSMS.exe“ funktioniert.  
   
-2.  Erstellen Sie manuell ein Verzeichnis namens **C:\data\\**. In dem Transact-SQL-Beispielcode wird davon ausgegangen, dass das Verzeichnis bereits vorhanden ist.  
+2.  Erstellen Sie manuell ein Verzeichnis namens **C:\data\\** . In dem Transact-SQL-Beispielcode wird davon ausgegangen, dass das Verzeichnis bereits vorhanden ist.  
   
 3.  Führen Sie das kurze T-SQL aus, um die Datenbank und die speicheroptimierte Dateigruppe zu erstellen.  
   
@@ -118,7 +118,7 @@ END;
 go  
 ```  
   
-### <a name="step-3-run-the-code"></a>Schritt 3: Ausführen des Codes  
+### <a name="step-3-run-the-code"></a>Schritt 3: Ausführen des Codes  
  Sie können nun die Abfragen ausführen, die die Leistung von speicheroptimierten Tabellen veranschaulichen. Gehen Sie folgendermaßen vor:  
   
 1.  Verwenden Sie „SSMS.exe“, um die folgende T-SQL-Anweisung in der Datenbank auszuführen,  
@@ -196,7 +196,7 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

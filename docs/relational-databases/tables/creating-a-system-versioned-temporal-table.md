@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515987"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   Eine anonyme Verlaufstabelle wird automatisch im gleichen Schema wie die aktuelle oder temporale Tabelle erstellt.  
   
--   Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<Objekt-ID_der_aktuellen_temporalen_Tabelle>_[Suffix]*. Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.  
+-   Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.  
   
 -   Die Verlaufstabelle wird als eine Rowstore-Tabelle erstellt. PAGE-Komprimierung wird angewendet, wenn möglich, andernfalls wird die Verlaufstabelle nicht komprimiert. Einige Tabellenkonfigurationen, z. B. SPARSE-Spalten, lassen beispielsweise keine Komprimierung zu.  
   
@@ -211,7 +211,7 @@ ALTER TABLE ProjectTaskCurrent
 -   Es wird dringend empfohlen, **SYSTEM_VERSIONING** mit **DATA_CONSISTENCY_CHECK = ON** festzulegen, um Datenkonsistenzprüfungen für die vorhandenen Daten zu erzwingen.  
   
  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668920"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "51665739"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Replikationsprogrammierung [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Vorgehensweise: Konfigurieren eines Abonnements für die Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   Replikationsprogrammierung ([!INCLUDE[tsql](../../includes/tsql-md.md)]): [Vorgehensweise: Konfigurieren eines Abonnements zur Verwendung der Websynchronisierung (Replikationsprogrammierung mit Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
 -   RMO: [Vorgehensweise: Konfigurieren eines Abonnements für die Websynchronisierung (RMO-Programmierung)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Die Websynchronisierung verwendet einen Computer mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS (Internet Information Services), um Pullabonnements mit Mergeveröffentlichungen zu synchronisieren. Die IIS-Versionen 5.0, 6.0 und 7.0 werden unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt.  
   
 > [!IMPORTANT]  
->  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen. Dazu zählen folgende Fehler: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
+>  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen. Dabei handelt es sich z. B. um: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
   
 > [!CAUTION]  
 >  Verwenden Sie WebSync und alternative Ordnerspeicherorte für Momentaufnahmen nicht gleichzeitig.  
@@ -159,7 +159,7 @@ ms.locfileid: "51665739"
   
     2.  Geben Sie im Feld **Pfad** einen Pfad für das virtuelle Verzeichnis ein. Wenn Sie beispielsweise **websync1** in das Feld **Alias** eingegeben haben, geben Sie **C:\Inetpub\wwwroot\websync1** in das Feld **Pfad** ein. Klicken Sie auf **Weiter**.  
   
-    3.  Klicken Sie in beiden Dialogfeldern auf **Ja**. Damit geben Sie an, dass Sie einen neuen Ordner erstellen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ISAPI-DLL-Datei kopieren möchten. zugreifen.  
+    3.  Klicken Sie in beiden Dialogfeldern auf **Ja**. Damit geben Sie an, dass Sie einen neuen Ordner erstellen und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ISAPI-DLL-Datei kopieren möchten. erforderlich.  
   
 7.  Gehen Sie auf der Seite **Authentifizierter Zugriff** wie folgt vor:  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51665739"
   
 8.  Gehen Sie auf der Seite **Verzeichniszugriff** wie folgt vor:  
   
-    1.  Klicken Sie auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Konten hinzu, über die die Abonnenten die Verbindungen zu IIS herstellen werden. Es handelt sich dabei um die Konten, die Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements oder als Wert für den [-Parameter von](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* eingeben.  
+    1.  Klicken Sie auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Konten hinzu, über die die Abonnenten die Verbindungen zu IIS herstellen werden. Es handelt sich dabei um die Konten, die Sie auf der Seite **Webserverinformationen** des Assistenten für neue Abonnements oder als Wert für den [-Parameter von](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) *@internet_login* eingeben.  
   
 9. Geben Sie auf der Seite **Zugriff auf Momentaufnahmefreigabe** die Momentaufnahmefreigabe ein. Die entsprechenden Berechtigungen für diese Freigabe werden so erteilt, dass die Abonnenten auf die Momentaufnahmedateien zugreifen können. Weitere Informationen zu den Berechtigungen für die Freigabe finden Sie unter [Sichern des Momentaufnahmeordners](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -219,7 +219,7 @@ ms.locfileid: "51665739"
   
 #### <a name="to-configure-iis-authentication"></a>So konfigurieren Sie die IIS-Authentifizierung  
   
--   Wenn Abonnenten eine Verbindung mit IIS herstellen, muss IIS die Abonnenten authentifizieren, damit sie auf Ressourcen und Prozesse zugreifen können. IIS bietet drei Authentifizierungsarten: Anonym, Standard und Integriert. Die Authentifizierung kann sowohl auf die gesamte Website als auch nur auf das von Ihnen erstellte virtuelle Verzeichnis angewendet werden.  
+-   Wenn Abonnenten eine Verbindung mit IIS herstellen, muss IIS die Abonnenten authentifizieren, damit sie auf Ressourcen und Prozesse zugreifen können. IIS bietet drei Arten der Authentifizierung: Anonym, Standard und integriert. Die Authentifizierung kann sowohl auf die gesamte Website als auch nur auf das von Ihnen erstellte virtuelle Verzeichnis angewendet werden.  
   
      Sie sollten die Standardauthentifizierung mit SSL verwenden. SSL ist in jedem Fall und unabhängig vom verwendeten Authentifizierungstyp erforderlich. Weitere Informationen zum Konfigurieren der Authentifizierung finden Sie in der IIS-Dokumentation.  
   
@@ -359,7 +359,7 @@ ms.locfileid: "51665739"
   
     2.  Stellen Sie eine Verbindung mit dem Server im Diagnosemodus her. Wenn das Zertifikat ordnungsgemäß installiert ist, wird das Dialogfeld **Sicherheitshinweis** nicht angezeigt. Wenn das Dialogfeld angezeigt wird, ist der Merge-Agent nicht in der Lage, eine Verbindung mit dem Computer mit IIS herzustellen. Sie müssen daher sicherstellen, dass das Zertifikat für den Server, auf den Sie zugreifen, dem Zertifikatsspeicher auf dem Abonnenten als vertrauenswürdiges Zertifikat hinzugefügt wurde. Weitere Informationen zum Exportieren von Zertifikaten finden Sie in der IIS-Dokumentation.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Websynchronisierung konfigurieren](../../relational-databases/replication/configure-web-synchronization.md)  
   
   

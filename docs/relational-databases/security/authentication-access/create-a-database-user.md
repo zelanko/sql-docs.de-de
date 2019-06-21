@@ -26,11 +26,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715852"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "52516656"
   
 2.  Erweitern Sie die Datenbank, in der der neue Datenbankbenutzer erstellt werden soll.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Benutzer...**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und klicken Sie anschließend auf **Benutzer...** .  
   
 4.  Wählen Sie im Dialogfeld **Datenbankbenutzer – Neu** auf der Seite **Allgemein** einen der folgenden Benutzertypen aus der Liste **Benutzertyp** aus:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52516656"
      Geben Sie einen Namen für den Benutzer ein. Wenn Sie **Windows-Benutzer** aus der Liste **Benutzertyp** ausgewählt haben, können Sie zudem auf die Auslassungspunkte **(…)** klicken, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
      **Anmeldename**  
-     Geben Sie den Anmeldenamen des Benutzers ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Anmeldenamen auswählen** zu öffnen. **Anmeldename** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename** oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
+     Geben Sie den Anmeldenamen des Benutzers ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Anmeldenamen auswählen** zu öffnen. **Anmeldename** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename** oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
   
      **Kennwort** und **Kennwort bestätigen**  
      Geben Sie für Benutzer, die sich an der Datenbank authentifizieren, ein Kennwort ein.  
@@ -105,18 +105,18 @@ ms.locfileid: "52516656"
      Geben Sie die Standardsprache des Benutzers ein.  
   
      **Standardschema**  
-     Geben Sie das Schema ein, das die Objekte besitzen wird, die von diesem Benutzer erstellt werden. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Schema auswählen** zu öffnen. **Standardschema** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename**, **SQL-Benutzer ohne Anmeldename**oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
+     Geben Sie das Schema ein, das die Objekte besitzen wird, die von diesem Benutzer erstellt werden. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Schema auswählen** zu öffnen. **Standardschema** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename**, **SQL-Benutzer ohne Anmeldename**oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
   
      **Zertifikatsname**  
-     Geben Sie das Zertifikat ein, das für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Zertifikat auswählen** zu öffnen. **Zertifikatname** ist verfügbar, wenn Sie die Option **Benutzer, der einem Zertifikat zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
+     Geben Sie das Zertifikat ein, das für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Zertifikat auswählen** zu öffnen. **Zertifikatname** ist verfügbar, wenn Sie die Option **Benutzer, der einem Zertifikat zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
   
      **Name des asymmetrischen Schlüssels**  
-     Geben Sie den Schlüssel ein, der für den Datenbankbenutzer benutzt werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Asymmetrischen Schlüssel auswählen** zu öffnen. Die Option für den **asymmetrischen Schlüsselnamen** ist verfügbar, wenn Sie die Option **Benutzer, der einem asymmetrischen Schlüssel zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
+     Geben Sie den Schlüssel ein, der für den Datenbankbenutzer benutzt werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)** , um das Dialogfeld **Asymmetrischen Schlüssel auswählen** zu öffnen. Die Option für den **asymmetrischen Schlüsselnamen** ist verfügbar, wenn Sie die Option **Benutzer, der einem asymmetrischen Schlüssel zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Im Dialogfeld **Datenbankbenutzer – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Schemas im Besitz**, **Mitgliedschaft**, **Sicherungsfähige Elemente**und **Erweiterte Eigenschaften**.  
+ Im Dialogfeld **Datenbankbenutzer – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Schemas im Besitz**, **Mitgliedschaft**, **Sicherungsfähige Elemente** und **Erweiterte Eigenschaften**.  
   
 -   Auf der Seite **Schemas im Besitz** werden alle möglichen Schemas aufgelistet, die dem neuen Datenbankbenutzer gehören können. Aktivieren oder deaktivieren Sie unter **Schemas im Besitz dieses Benutzers**die Kontrollkästchen, die sich neben den Schemas befinden, um einem Datenbankbenutzer Schemas hinzuzufügen oder diese von diesem zu entfernen.  
   
@@ -162,8 +162,8 @@ ms.locfileid: "52516656"
   
  Weitere Informationen finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) Dort finden Sie weitere [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Beispiele.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Erstellen eines Anmeldenamens](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   

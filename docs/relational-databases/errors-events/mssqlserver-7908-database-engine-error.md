@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 422718b3a398f297c458810ce1241e12280ce4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694604"
 ---
 # <a name="mssqlserver7908"></a>MSSQLSERVER_7908
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47723818"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7908|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Meldungstext|Tabellenfehler: Die Datei 'FILE' in Partitions-ID PN_ID ist keine gültige FileStream-Datei.|  
+|Meldungstext|Tabellenfehler: Die Datei 'FILE' in Partitions-ID PN_ID ist keine gültige Filestream-Datei.|  
   
 ## <a name="explanation"></a>Erklärung  
 Beim Namen einer FILESTREAM-Datei in einem Spaltenverzeichnis handelt es sich um eine ROWGUID. Wenn ein Dateiname in einem Spaltenverzeichnis nicht in eine ROWGUID konvertiert werden kann, ist die Datei keine gültige Datei.  

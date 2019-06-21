@@ -28,10 +28,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 211d229c767d2c4dbf21d9d813f4a825316efa34
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948545"
 ---
 # <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
@@ -55,7 +55,7 @@ SYSTEM_USER
   
  Unterscheiden sich Benutzer- und Anmeldename, gibt SYSTEM_USER den Anmeldenamen zurück.  
   
- Wenn der aktuelle Benutzer über die Windows-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet ist, gibt SYSTEM_USER den Windows-Anmeldenamen im Format *DOMAIN*\\*user_login_name* zurück. Wenn der aktuelle Benutzer jedoch über die SQL Server-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet ist, gibt SYSTEM_USER den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zurück, z. B. `WillisJo` für einen als `WillisJo` angemeldeten Benutzer.  
+ Wenn der aktuelle Benutzer über die Windows-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet ist, gibt SYSTEM_USER den Windows-Anmeldenamen im folgenden Format zurück: *DOMAIN*\\*user_login_name*. Wenn der aktuelle Benutzer jedoch über die SQL Server-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet ist, gibt SYSTEM_USER den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zurück, z. B. `WillisJo` für einen als `WillisJo` angemeldeten Benutzer.  
   
  SYSTEM_USER gibt den Namen des zurzeit ausgeführten Kontexts zurück. Wenn der Kontext mithilfe der EXECUTE AS-Anweisung gewechselt wurde, gibt SYSTEM_USER den Namen des Kontexts zurück, dessen Identität angenommen wurde.  
   

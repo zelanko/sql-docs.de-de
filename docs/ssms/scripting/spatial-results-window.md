@@ -12,10 +12,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3dc51511120b05c8f4a720a911da6c2b6480fb9d
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821940"
 ---
 # <a name="spatial-results-window"></a>Fenster "Räumliche Ergebnisse"
@@ -35,7 +35,7 @@ ms.locfileid: "65821940"
  Diese Option ist nicht verfügbar, wenn in einer Abfrage nur Instanzen zurückgegeben werden.  
   
  **Projektion auswählen**  
- Sie können Geografiedaten in einer von vier Projektionen anzeigen:  Equirectangular, Mercator, Robinson oder Bonne.  
+ Geografiedaten in einer von vier Projektionen anzeigen: Equirektangular, Mercator, Robinson oder Bonne.  
   
  Diese Option ist für Geometriedaten nicht verfügbar.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65821940"
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen räumlicher Daten im Objekt-Explorer](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)   
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
- [Abfrage-Editor der Datenbank-Engine &amp;amp;#40;SQL Server Management Studio&amp;amp;#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
+ [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
  [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

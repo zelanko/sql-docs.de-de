@@ -21,11 +21,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506377"
 ---
 # <a name="restore-pages-sql-server"></a>Wiederherstellung von Seiten (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "54242263"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Wiederherstellen von Seiten mit:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54242263"
   
     -   Transaktionsprotokoll  
   
-    -   Zuordnungsseiten: GAM (Global Allocation Map)-Seiten, SGAM (Shared Global Allocation Map)-Seiten und PFS (Page Free Space)-Seiten.  
+    -   Zuordnungsseiten: GAM-Seiten (Global Allocation Map), SGAM-Seiten (Shared Global Allocation Map) und PFS-Seiten (Page Free Space).  
   
     -   Seite 0 von allen Datendateien (die Startseite der Datei)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54242263"
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Ab [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Seitenwiederherstellungen.  
   
 #### <a name="to-restore-pages"></a>So stellen Sie Seiten wieder her  

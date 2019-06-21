@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0dc7ab298607964f4b9a6d7c1c7fa74a53c6bc83
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047479"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ Auf speicheroptimierte Tabellen kann am effizientesten mit systemintern kompilie
   
 |Funktion|Zugriff mithilfe einer systemintern kompilierten gespeicherten Prozedur|Interpretierter [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff|CLR-Zugriff|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|Speicheroptimierte Tabelle|Benutzerkontensteuerung|Benutzerkontensteuerung|Nein*|  
-|Speicheroptimierter Tabellentyp|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|Systemintern kompilierte gespeicherte Prozedur|Das Schachteln von systemintern kompilierten gespeicherten Prozeduren wird jetzt unterstützt. Sie können in gespeicherten Prozeduren die EXECUTE-Syntax verwenden, solange die Prozedur, auf die verwiesen wird, ebenfalls systemintern kompiliert wird.|Benutzerkontensteuerung|Nein*|  
+|Speicheroptimierte Tabelle|Ja|Ja|Nein*|  
+|Speicheroptimierter Tabellentyp|Ja|Ja|Nein|  
+|Systemintern kompilierte gespeicherte Prozedur|Das Schachteln von systemintern kompilierten gespeicherten Prozeduren wird jetzt unterstützt. Sie können in gespeicherten Prozeduren die EXECUTE-Syntax verwenden, solange die Prozedur, auf die verwiesen wird, ebenfalls systemintern kompiliert wird.|Ja|Nein*|  
   
  *Sie können auf eine speicheroptimierte Tabelle oder eine systemintern kompilierte gespeicherte Prozedur nicht über die Kontextverbindung (die Verbindung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wenn ein CLR-Modul ausgeführt wird) zugreifen. Sie können jedoch eine andere Verbindung erstellen und öffnen, über die Sie auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen können.  
   
@@ -70,11 +70,11 @@ Auf speicheroptimierte Tabellen kann am effizientesten mit systemintern kompilie
 
 Die folgenden Faktoren beeinflussen die Leistungsvorteile, die mit In-Memory OLTP erreicht werden können:  
   
-*Kommunikation:* Eine Anwendung mit vielen Aufrufen kurzer gespeicherter Prozeduren erzielt möglicherweise einen kleineren Leistungszuwachs als eine Anwendung, bei der weniger Aufrufe und zusätzliche Funktionen in jeder gespeicherten Prozedur implementiert sind.  
+*Kommunikation:* Eine Anwendung mit vielen Aufrufen kurzer gespeicherter Prozeduren erzielt möglicherweise einen kleineren Leistungszuwachs als eine Anwendung, bei der weniger Aufrufe und zusätzliche Funktionen in jede gespeicherte Prozedur implementiert sind.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausführung:* In-Memory OLTP gewährleistet die beste Leistung bei systemintern kompilierten gespeicherten Prozeduren im Gegensatz zu interpretierten gespeicherten Prozeduren oder Abfrageausführungen. Dies kann einen Vorteil gegenüber dem Zugriff auf speicheroptimierte Tabellen aus solchen gespeicherten Prozeduren bieten.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] Ausführung:* In-Memory OLTP gewährleistet die beste Leistung bei systemintern kompilierten gespeicherten Prozeduren im Gegensatz zu interpretierten gespeicherten Prozeduren oder Abfrageausführungen. Dies kann einen Vorteil gegenüber dem Zugriff auf speicheroptimierte Tabellen aus solchen gespeicherten Prozeduren bieten.  
   
-*Bereichsscan im Vergleich zu Punktsuche:* Speicheroptimierte, nicht gruppierte Indizes unterstützen Bereichsscans und sortierte Scans. Bei Punktsuchen erzielen Sie mit speicheroptimierten Hashindizes eine bessere Leistung als mit speicheroptimierten, nicht gruppierten Indizes. Speicheroptimierte, nicht gruppierte Indizes weisen eine bessere Leistung auf als datenträgerbasierte Indizes.
+*Bereichsscan im Vergleich zur Punktsuche* Speicheroptimierte, nicht gruppierte Indizes unterstützen Bereichsscans und sortierte Scans. Bei Punktsuchen erzielen Sie mit speicheroptimierten Hashindizes eine bessere Leistung als mit speicheroptimierten, nicht gruppierten Indizes. Speicheroptimierte, nicht gruppierte Indizes weisen eine bessere Leistung auf als datenträgerbasierte Indizes.
 
 - Ab SQL Server 2016 kann der Abfrageplan für eine speicheroptimierte Tabelle die Tabelle parallel scannen. Dies verbessert die Leistung von Analyseabfragen.
   - Hashindizes können seit SQL Server 2016 auch parallel gescannt werden.
@@ -83,7 +83,7 @@ Die folgenden Faktoren beeinflussen die Leistungsvorteile, die mit In-Memory OLT
   
 *Indexvorgänge:* Indexvorgänge werden nicht protokolliert und sind nur im Arbeitsspeicher vorhanden.  
   
-*Parallelität:* Anwendungen, deren Leistung durch Parallelität auf Engine-Ebene wie Latchkonflikte oder Blockierungen beeinträchtigt wird, verzeichnen eine erhebliche Leistungssteigerung, wenn die Anwendung auf In-Memory-OLTP umgestellt wird.  
+*Parallelität:* Anwendungen, deren Leistung durch Parallelität auf Engine-Ebene wie Latchkonflikte oder Blockierungen beeinträchtigt wird, verzeichnen eine erhebliche Leistungssteigerung, wenn die Anwendung auf In-Memory OLTP umgestellt wird.  
   
 In der folgenden Tabelle werden die Leistungs- und Skalierbarkeitsprobleme, die häufig in relationalen Datenbanken auftreten, zusammen mit einer möglichen Leistungssteigerung durch In-Memory OLTP aufgeführt.  
   
@@ -105,7 +105,7 @@ EXECUTE AS CALLER ist mit einer geringen Leistungseinbuße (ungefähr 10 %) verb
 
 Eine kurze Erläuterung typischer Szenarien, in denen die Leistung mit [!INCLUDE[hek_1](../../includes/hek-1-md.md)] verbessert werden kann, finden Sie unter [In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

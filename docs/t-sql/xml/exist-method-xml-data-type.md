@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927685"
 ---
 # <a name="exist-method-xml-data-type"></a>exist()-Methode (XML-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ select @x.exist('true()');
  In den folgenden Beispielen wird veranschaulicht, wie die **exist()** -Methode angegeben wird.  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Beispiel: Angeben der exist()-Methode für eine Variable vom Typ xml  
- Im folgenden Beispiel stellt @x eine Variable vom Typ **XML** dar (nicht typisiertes XML) und @f eine Variable vom Typ „Integer“, die den von der **exist()**-Methode zurückgegebenen Wert speichert. Die **exist()** -Methode gibt True zurück (1), wenn der in der XML-Instanz gespeicherte Datumswert `2002-01-01`ist.  
+ Im folgenden Beispiel stellt @x eine Variable vom Typ **XML** dar (nicht typisiertes XML) und @f eine Variable vom Typ „Integer“, die den von der **exist()** -Methode zurückgegebenen Wert speichert. Die **exist()** -Methode gibt True zurück (1), wenn der in der XML-Instanz gespeicherte Datumswert `2002-01-01`ist.  
   
 ```  
 declare @x xml;  
@@ -94,9 +94,9 @@ SELECT @f;
 ### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>Beispiel: Angeben der exist()-Methode für eine typisierte xml-Variable  
  Das folgende Beispiel veranschaulicht die Verwendung der **exist()** -Methode für eine Variable vom Typ **xml** . Es handelt sich hier um eine typisierte XML-Variable, da sie den Namen des Namespace der Schemaauflistung angibt: `ManuInstructionsSchemaCollection`.  
   
- Im Beispiel wird dieser Variablen zunächst ein Dokument mit Produktionsanweisungen zugewiesen und dann die **exist()**-Methode aufgerufen, um zu ermitteln, ob das Dokument ein <`Location`>-Element enthält, dessen Attributwert für die **LocationID** 50 beträgt.  
+ Im Beispiel wird dieser Variablen zunächst ein Dokument mit Produktionsanweisungen zugewiesen und dann die **exist()** -Methode aufgerufen, um zu ermitteln, ob das Dokument ein <`Location`>-Element enthält, dessen Attributwert für die **LocationID** 50 beträgt.  
   
- Die für die @x-Variable angegebene **exist()**-Methode gibt 1 (TRUE) zurück, wenn das Dokument mit den Produktionsanweisungen ein <`Location`>-Element mit `LocationID=50` enthält. Anderenfalls gibt sie 0 (False) zurück.  
+ Die für die @x-Variable angegebene **exist()** -Methode gibt 1 (TRUE) zurück, wenn das Dokument mit den Produktionsanweisungen ein <`Location`>-Element mit `LocationID=50` enthält. Anderenfalls gibt sie 0 (False) zurück.  
   
 ```  
 DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
@@ -132,7 +132,7 @@ WHERE CatalogDescription.exist('
   
 -   Die WHERE-Klausel wählt nur diejenigen Zeilen aus der **ProductDescription** -Tabelle aus, die die für die **CatalogDescription** -Spalte vom Typ XML angegebene Bedingung erfüllen.  
   
--   Die **exist()**-Methode in der WHERE-Klausel gibt 1 (TRUE) zurück, wenn das XML kein <`Specifications`>-Element enthält. Beachten Sie die Verwendung der [not()-Funktion (XQuery)](../../xquery/functions-on-boolean-values-not-function.md).  
+-   Die **exist()** -Methode in der WHERE-Klausel gibt 1 (TRUE) zurück, wenn das XML kein <`Specifications`>-Element enthält. Beachten Sie die Verwendung der [not()-Funktion (XQuery)](../../xquery/functions-on-boolean-values-not-function.md).  
   
 -   Die [sql:column()-Funktion (XQuery)](../../xquery/xquery-extension-functions-sql-column.md) wird zum Einbinden eines Werts aus einer Spalte verwendet, die nicht vom Typ XML ist.  
   

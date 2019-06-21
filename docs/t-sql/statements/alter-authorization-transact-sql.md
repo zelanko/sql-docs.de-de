@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026112"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a> ALTER AUTHORIZATION für Datenbanken  
 **GILT FÜR:** [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 ### <a name="for-sql-server"></a>Für SQL Server:  
-**Anforderungen für den neuen Besitzer:**   
+**Anforderungen für den neuen Besitzer:**    
 Der neue Besitzerprinzipal muss einer der folgenden sein:  
 
 -   Ein Anmeldename für die SQL Server-Authentifizierung  
@@ -206,7 +206,7 @@ Der neue Besitzerprinzipal muss einer der folgenden sein:
 Wenn Sie kein Mitglied der festen Serverrolle **sysadmin** sind, benötigen Sie mindestens die Berechtigung TAKE OWNERSHIP für die Datenbank und die Berechtigung IMPERSONATE für den neuen Besitzeranmeldenamen.   
 
 ### <a name="for-azure-sql-database"></a>Für Azure SQL-Datenbank:  
-**Anforderungen für den neuen Besitzer:**   
+**Anforderungen für den neuen Besitzer:**    
 Der neue Besitzerprinzipal muss einer der folgenden sein:  
 
 -   Ein Anmeldename für die SQL Server-Authentifizierung  
@@ -261,11 +261,11 @@ Statt Azure AD-Benutzer als einzelne Datenbankbesitzer zu verwenden, verwenden S
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  Erstellen Sie eine Azure AD-Gruppe, die Datenbankbesitzer werden soll, und fügen Sie sie als Benutzer zur Benutzerdatenbank hinzu. Zum Beispiel:  
+2.  Erstellen Sie eine Azure AD-Gruppe, die Datenbankbesitzer werden soll, und fügen Sie sie als Benutzer zur Benutzerdatenbank hinzu. Beispiel:  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  Fügen Sie den Benutzer, der die Azure AD-Gruppe darstellt, in der Benutzerdatenbank zur festen Datenbankrolle **db_owner** hinzu. Zum Beispiel:  
+3.  Fügen Sie den Benutzer, der die Azure AD-Gruppe darstellt, in der Benutzerdatenbank zur festen Datenbankrolle **db_owner** hinzu. Beispiel:  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -303,7 +303,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- Wenn das Objektschema kein Bestandteil der Anweisung ist, sucht die [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Objekt im Standardschema des Benutzers. Zum Beispiel:    
+ Wenn das Objektschema kein Bestandteil der Anweisung ist, sucht die [!INCLUDE[ssDE](../../includes/ssde-md.md)] das Objekt im Standardschema des Benutzers. Beispiel:    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    

@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466746"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,24 +45,24 @@ ms.locfileid: "52417941"
 
  Bei jedem dieser Ansätze basiert die Logik für die Migration oder Bereinigung von Verlaufsdaten auf der Spalte, die dem Ende der Dauer in der aktuellen Tabelle entspricht. Der Wert für das Ende der Dauer für jede Zeile bestimmt den Moment, an dem die Zeilenversion „geschlossen“ wird, an dem sie also in die Verlaufstabelle aufgenommen wird. Beispielsweise gibt die Bedingung `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` an, dass Verlaufsdaten, die älter als einen Monat sind, aus der Verlaufstabelle entfernt oder verschoben werden müssen.  
   
-> **HINWEIS:**  In den Beispielen in diesem Thema wird dieses [Beispiel für eine temporale Tabelle](creating-a-system-versioned-temporal-table.md)verwendet.  
+> **HINWEIS:**  In den Beispielen in diesem Thema wird dieses [Beispiel für eine temporale Tabelle](creating-a-system-versioned-temporal-table.md) verwendet.  
   
-## <a name="using-stretch-database-approach"></a>Verwenden des Ansatzes mit Stretch-Datenbank  
+## <a name="using-stretch-database-approach"></a>Verwenden des Ansatzes mit Stretch Database  
   
-> **HINWEIS:**  Der Ansatz mit Stretch-Datenbank kann nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+> **HINWEIS:**  Der Ansatz mit Stretch Database kann nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- [Stretch-Datenbank](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch-Datenbank verwenden.  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch-Datenbank verwenden.  
   
  Mit Stretch Database können Sie für einige oder alle Ihrer temporalen Verlaufstabellen ein Stretching auf Azure durchführen, und SQL Server verschiebt Verlaufsdaten im Hintergrund nach Azure. Durch die Aktivierung von Stretch für eine Verlaufstabelle ändert sich die Interaktion mit der temporalen Tabelle im Hinblick auf Datenänderungen und temporale Abfragen nicht.  
   
--   **Strecken der gesamten Verlaufstabelle:** Konfigurieren Sie Stretch-Datenbank für die gesamte Verlaufstabelle, wenn das wichtigste Szenario die Datenüberwachung in einer Umgebung mit häufigen Datenänderungen und relativ seltenen Abfragen von Verlaufsdaten ist.  Verwenden Sie diesen Ansatz also, wenn die Leistung temporaler Abfragen nicht entscheidend ist. In diesem Fall kann die von Azure bereitgestellte Kosteneffizienz interessant sein.   
+-   **Stretching der gesamten Verlaufstabelle:** Konfigurieren Sie Stretch Database für die gesamte Verlaufstabelle, wenn das wichtigste Szenario die Datenüberwachung in einer Umgebung mit häufigen Datenänderungen und relativ seltenen Abfragen von Verlaufsdaten ist.  Verwenden Sie diesen Ansatz also, wenn die Leistung temporaler Abfragen nicht entscheidend ist. In diesem Fall kann die von Azure bereitgestellte Kosteneffizienz interessant sein.   
     Beim Stretching der gesamten Verlaufstabelle können Sie den Stretch-Assistenten oder Transact-SQL verwenden. Beispiele für beides sind weiter unten aufgeführt.  
   
--   **Strecken eines Teils der Verlaufstabelle:** Konfigurieren Sie Stretch-Datenbank nur für einen Teil der Verlaufstabelle, um die Leistung zu verbessern, wenn Ihr wichtigstes Szenario in erster Linie das Abfragen aktueller Verlaufsdaten beinhaltet, Sie aber die Option zum Abfragen älterer Verlaufsdaten bei Bedarf beibehalten möchten, solange diese Daten remote zu geringeren Kosten gespeichert werden. Mit Transact-SQL erreichen Sie dies, indem Sie eine Prädikatfunktion angeben, um die Zeilen auszuwählen, die aus der Verlaufstabelle migriert werden, statt alle Zeilen zu migrieren.  Wenn Sie mit temporalen Tabellen arbeiten, ist es in der Regel sinnvoll, Daten basierend auf einer Zeitbedingung zu verschieben (d. h. basierend auf dem Alter der Zeilenversion in der Verlaufstabelle).    
+-   **Stretching für einen Teil der Verlaufstabelle:** Konfigurieren Sie Stretch Database nur für einen Teil der Verlaufstabelle, um die Leistung zu verbessern, wenn Ihr wichtigstes Szenario in erster Linie das Abfragen aktueller Verlaufsdaten beinhaltet, Sie aber die Option zum Abfragen älterer Verlaufsdaten bei Bedarf beibehalten möchten, solange diese Daten remote zu geringeren Kosten gespeichert werden. Mit Transact-SQL erreichen Sie dies, indem Sie eine Prädikatfunktion angeben, um die Zeilen auszuwählen, die aus der Verlaufstabelle migriert werden, statt alle Zeilen zu migrieren.  Wenn Sie mit temporalen Tabellen arbeiten, ist es in der Regel sinnvoll, Daten basierend auf einer Zeitbedingung zu verschieben (d. h. basierend auf dem Alter der Zeilenversion in der Verlaufstabelle).    
     Wenn Sie eine deterministische Prädikatfunktion verwenden, können Sie einen Teil des Verlaufs in derselben Datenbank zusammen mit den aktuellen Daten behalten, während der Rest zu Azure migriert wird.    
     Beispiele und Informationen zu Einschränkungen finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md) Da nicht deterministische Funktionen nicht gültig sind, wenn Sie Verlaufsdaten in der Form eines gleitendes Fensters übertragen möchten, müssten Sie die Definition der Inlineprädikatfunktion regelmäßig ändern, damit das Fenster von Zeilen, das Sie lokal speichern, im Hinblick auf das Alter konstant ist. Mit einem gleitenden Fenster können Sie Verlaufsdaten, die älter als ein Monat sind, kontinuierlich nach Azure verschieben. Ein Beispiel dieses Ansatzes ist weiter unten dargestellt.  
   
-> **HINWEIS:** Stretch-Datenbank migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Um ein kostenloses Azure-Testkonto zu erhalten, melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/)an.  
+> **HINWEIS:** Stretch Database migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Um ein kostenloses Azure-Testkonto zu erhalten, melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/)an.  
   
  Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assistenten oder Transact-SQL konfigurieren, und Sie können eine temporale Verlaufstabelle für Stretch aktivieren, wenn die Systemversionsverwaltung auf **ON**festgelegt ist. Ein Stretching der aktuellen Tabelle ist nicht zulässig, da es nicht sinnvoll ist, für die aktuelle Tabelle ein Stretching durchzuführen.  
   
@@ -193,7 +193,7 @@ Im Laufe der Zeit werden neue Zeilen in der Verlaufstabelle in höhere Partition
   
  Die genauen Schritte für die Aufgabe für die wiederholte Partitionswartung:  
   
-1.  SWITCH OUT: Erstellen Sie eine Stagingtabelle, und wechseln Sie dann eine Partition zwischen der Verlaufstabelle und der Stagingtabelle. Verwenden Sie dazu die Anweisung [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) mit dem Argument SWITCH PARTITION (siehe Beispiel „C. Wechseln von Partitionen zwischen Tabellen“).  
+1.  SWITCH OUT: Erstellen Sie eine Stagingtabelle, und wechseln Sie dann eine Partition zwischen der Verlaufstabelle und der Stagingtabelle. Verwenden Sie dazu die Anweisung [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) mit dem Argument SWITCH PARTITION (siehe Beispiel C: „Wechseln von Partitionen zwischen Tabellen“).  
   
     ```  
     ALTER TABLE <history table> SWITCH PARTITION 1 TO <staging table>  
@@ -432,8 +432,8 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>Verwenden eines Ansatzes für temporale Verlaufsbeibehaltungsrichtlinien
-> **HINWEIS:** Der Ansatz mit der Richtlinie zur Beibehaltung temporaler Verlaufsdaten kann bei [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server 2017 ab Version CTP 1.3 verwendet werden.  
+## <a name="using-temporal-history-retention-policy-approach"></a>Verwenden eines Ansatzes für die Richtlinie zur Beibehaltung temporaler Verlaufsdaten
+> **HINWEIS:**  Der Ansatz mit der Richtlinie zur Beibehaltung temporaler Verlaufsdaten kann bei [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server 2017 ab Version CTP 1.3 verwendet werden.  
 
 Die Beibehaltung temporaler Verlaufsdaten kann auf den einzelnen Tabellenebenen konfiguriert werden, sodass Benutzer flexible Ablaufrichtlinien erstellen können. Das Anwenden der temporalen Beibehaltung ist einfach: Sie erfordert nur einen Parameter, der bei der Tabellenerstellung oder einer Schemaänderung festgelegt werden muss.
 
@@ -473,7 +473,7 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-Sie können den Beibehaltungszeitraum mithilfe verschiedener Zeiteinheiten angeben: DAYS, WEEKS, MONTHS, und YEARS. Wenn HISTORY_RETENTION_PERIOD weggelassen wird, wird von einer unbegrenzten (INFINITE) Beibehaltung ausgegangen. Sie können das Schlüsselwort INFINITE auch explizit verwenden.
+Sie können den Beibehaltungszeitraum mithilfe verschiedener Zeiteinheiten angeben: DAYS, WEEKS, MONTHS und YEARS. Wenn HISTORY_RETENTION_PERIOD weggelassen wird, wird von einer unbegrenzten (INFINITE) Beibehaltung ausgegangen. Sie können das Schlüsselwort INFINITE auch explizit verwenden.
 In manchen Szenarios sollten Sie die Beibehaltung erst nach der Tabellenerstellung konfigurieren oder den zuvor konfigurierten Wert ändern. Verwenden Sie für diesen Fall die Anweisung ALTER TABLE:
 ```
 ALTER TABLE dbo.WebsiteUserInfo
@@ -503,7 +503,7 @@ Die hervorragende Datenkompression und die effiziente Beibehaltungsbereinigung m
 
 Weitere Details finden Sie unter: [Verwalten von Verlaufsdaten in temporalen Tabellen mit Beibehaltungsrichtlinien](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

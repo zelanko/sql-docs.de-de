@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4c436c6c9b0c20d99e5de168aa375f66f2e76999
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665498"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +92,14 @@ distrib [-?]
  **-?**  
  Druckt alle verfügbaren Parameter.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-PublisherDB** _publisher_database_  
  Der Name der Verlegerdatenbank.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-SubscriberDB** _subscriber_database_  
  Der Name der Abonnentendatenbank.  
@@ -111,10 +111,10 @@ distrib [-?]
  Die Anzahl von Zeilen, die in einem Massenkopiervorgang gesendet werden sollen. Bei Ausführung eines **bcp in** -Vorgangs entspricht die Batchgröße der Anzahl von Zeilen, die als eine Transaktion an den Server gesendet werden sollen, und ebenso der Anzahl von Zeilen, die gesendet werden müssen, bevor der Verteilungs-Agent eine **bcp** -Statusmeldung protokolliert. Bei Ausführung eines **bcp out** -Vorgangs wird eine feste Batchgröße von **1000** verwendet.  
   
  **-CommitBatchSize** _commit_batch_size_  
- Die Anzahl von Transaktionen, die an den Abonnenten ausgegeben werden sollen, bevor eine COMMIT-Anweisung ausgegeben wird. Der Standardwert ist 100.  
+ Die Anzahl von Transaktionen, die an den Abonnenten ausgegeben werden sollen, bevor eine COMMIT-Anweisung ausgegeben wird. Der Standardwert ist 100, der maximale Wert beträgt 10.000.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- Die Anzahl von Replikationsbefehlen, die an den Abonnenten ausgegeben werden sollen, bevor eine COMMIT-Anweisung ausgegeben wird. Der Standardwert lautet 1000.  
+ Die Anzahl von Replikationsbefehlen, die an den Abonnenten ausgegeben werden sollen, bevor eine COMMIT-Anweisung ausgegeben wird. Der Standardwert ist 1.000, der maximale Wert beträgt 10.000. 
   
  **-Continuous**  
  Gibt an, ob der Agent fortlaufend versucht, replizierte Transaktionen abzurufen. Wenn dieses Argument angegeben ist, ruft der Agent replizierte Transaktionen in festgelegten Abrufintervallen aus der Quelle ab, selbst wenn keine ausstehenden Transaktionen vorhanden sind.  
@@ -137,7 +137,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Verteilungs-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|Beschreibung|  
+|Wert von EncryptionLevel|und Beschreibung|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -172,7 +172,7 @@ distrib [-?]
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Gibt den Umfang des Verlaufs an, der während eines Verteilungsvorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|und Beschreibung|  
 |-------------------------------|-----------------|  
 |**0**|Statusmeldungen werden entweder an der Konsole ausgegeben oder in eine Ausgabedatei geschrieben. Verlaufsdatensätze werden nicht in der Verteilungsdatenbank protokolliert.|  
 |**1**|Standard. Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
@@ -233,7 +233,7 @@ distrib [-?]
  **-QuotedIdentifier** _quoted_identifier_  
  Gibt den zu verwendenden Bezeichner in Anführungszeichenzeichen an. Das erste Zeichen des Werts gibt den Wert an, den der Verteilungs-Agent verwendet. Wenn **QuotedIdentifier** ohne Wert verwendet wird, verwendet der Verteilungs-Agent ein Leerzeichen. Wenn **QuotedIdentifier** nicht verwendet wird, verwendet der Verteilungs-Agent einen vom Abonnenten unterstützten Bezeichner in Anführungszeichen.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  Eine durch Doppelpunkte getrennte Liste, die die Fehlernummern angibt, die von diesem Agent übersprungen werden sollen.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
@@ -251,7 +251,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  Gibt den Typ der vom Verteilungs-Agent verwendeten Abonnentenverbindung an.  
   
-|Wert von SubscriberType|Beschreibung|  
+|Wert von SubscriberType|und Beschreibung|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC-Datenquelle (ODBC data source)|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c42f4c43245e8a39251d765f29c378d8cf9d19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788008"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046345"
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47788008"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2579|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -34,7 +34,7 @@ ms.locfileid: "47788008"
 |Meldungstext|Tabellenfehler: Block P_ID in Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) liegt außerhalb des gültigen Bereichs für diese Datenbank.|  
   
 ## <a name="explanation"></a>Erklärung  
-*P_ID* ist eine Seiten-ID im Format *(filenum:pageinfile)*. Die *pageinfile* dieses Blocks ist größer als die physische Größe der Datei (*filenum)* der Datenbank. Der Block wird als in einer IAM-Seite für die angegebene Zuordnungseinheits-ID zugeordnet markiert.  
+*P_ID* ist eine Seiten-ID im Format *(filenum:pageinfile)* . Die *pageinfile* dieses Blocks ist größer als die physische Größe der Datei (*filenum)* der Datenbank. Der Block wird als in einer IAM-Seite für die angegebene Zuordnungseinheits-ID zugeordnet markiert.  
   
 ## <a name="user-action"></a>Benutzeraktion  
   

@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eda7c83e982bbf6c006ac9a6c470b116009420ea
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821552"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML-Editor (SQL Server Management Studio)
@@ -83,10 +83,10 @@ ms.locfileid: "65821552"
 ## <a name="data-view"></a>Datensicht  
  Die Datensicht bietet einen Datenraster, der zum Ändern von XML-Dateien verwendet werden kann. In der Datensicht kann nur der Inhalt (nicht jedoch die Struktur und die Tags) einer XML-Datei bearbeitet werden.  
   
- Es gibt zwei separate Bereiche in der Datensicht:  **Datentabellen** und **Daten**. Der Bereich **Datentabellen** stellt eine Liste der in der XML-Datei definierten Beziehungen in der Reihenfolge ihrer Verschachtelung (von außen nach innen) dar. Der Bereich **Daten** ist ein Datenraster, das Daten basierend auf der Auswahl im Bereich Datentabellen anzeigt.  
+ Es gibt zwei separate Bereiche in der Datensicht: **Datentabellen** und **Daten**. Der Bereich **Datentabellen** stellt eine Liste der in der XML-Datei definierten Beziehungen in der Reihenfolge ihrer Verschachtelung (von außen nach innen) dar. Der Bereich **Daten** ist ein Datenraster, das Daten basierend auf der Auswahl im Bereich Datentabellen anzeigt.  
   
 > [!NOTE]  
->  Neu erstellte XML-Dateien enthalten keine Daten und können daher in der Datensicht nicht angezeigt werden. Es gibt auch einige Instanzen von XML-Dokumenten, bei denen die Datensicht nicht aufgerufen werden kann. Auch wenn das XML-Dokument ordnungsgemäß aufgebaut ist, können strukturierte Daten, die versuchen, in die Datensicht zu wechseln, die folgende Meldung generieren:  "Das XML-Dokument ist richtig formatiert, enthält jedoch eine Struktur, die nicht in der Datenansicht angezeigt werden kann."  
+>  Neu erstellte XML-Dateien enthalten keine Daten und können daher in der Datensicht nicht angezeigt werden. Es gibt auch einige Instanzen von XML-Dokumenten, bei denen die Datensicht nicht aufgerufen werden kann. Auch wenn das XML-Dokument ordnungsgemäß aufgebaut ist, können strukturierte Daten, die versuchen, in die Datensicht zu wechseln, die folgende Meldung generieren: „Das XML-Dokument ist richtig formatiert, enthält jedoch eine Struktur, die nicht in der Datenansicht angezeigt werden kann.“  
   
  In der Datensicht können Sie folgende Aktionen ausführen:  
   

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 67866652e7c010a00018c394677c9d1e7e1cb8d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728898"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508443"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47728898"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47728898"
 -   Joinfilter für Tabellen können sowohl manuell als auch automatisch per Replikation erstellt werden. Die automatische Erstellung erfolgt auf der Basis der für die Tabellen definierten Beziehungen zwischen Fremdschlüsseln und Primärschlüsseln. Weitere Informationen zum automatischen Generieren einer Reihe von Verknüpfungsfiltern finden Sie unter [Automatically Generate a Set of Join Filters Between Merge Articles &#40;SQL Server Management Studio&#41; (Automatischses Generieren einer Reihe von Verküpfungsfiltern zwischen Mergeartikeln &#40;SQL Server Management Studio&#41;)](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Definieren, ändern und löschen Sie Verknüpfungsfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Definieren, ändern und löschen Sie Verknüpfungsfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Filterzeilen** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** . Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>So definieren Sie einen Joinfilter  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47728898"
   
     -   Wenn Sie auswählen, dass der Generator verwendet werden soll, verwenden Sie die Spalten im Raster (**Konjunktion**, **Gefilterte Tabellenspalte**, **Operator**und **Verknüpfte Tabellenspalte**), um eine Joinanweisung zu erstellen.  
   
-         Die Spalten in der Tabelle enthalten jeweils ein Dropdown-Kombinationsfeld, in dem Sie zwei Spalten und einen Operator (**=**, **<>**, **<=**, **\<**, **>=**, **>** und **like**) auswählen können. Die Ergebnisse werden im Textbereich **Vorschau** angezeigt. Wenn sich der Join auf mehr als ein Spaltenpaar bezieht, wählen Sie in der **Konjunktion** -Spalte eine Konjunktion aus (AND oder OR), und geben Sie dann zwei weitere Spalten und einen Operator ein.  
+         Die Spalten in der Tabelle enthalten jeweils ein Dropdown-Kombinationsfeld, in dem Sie zwei Spalten und einen Operator ( **=** , **<>** , **<=** , **\<** , **>=** , **>** und **like**) auswählen können. Die Ergebnisse werden im Textbereich **Vorschau** angezeigt. Wenn sich der Join auf mehr als ein Spaltenpaar bezieht, wählen Sie in der **Konjunktion** -Spalte eine Konjunktion aus (AND oder OR), und geben Sie dann zwei weitere Spalten und einen Operator ein.  
   
     -   Wenn Sie ausgewählt haben, dass die Anweisung manuell geschrieben wird, schreiben Sie die Joinanweisung im Textbereich **Joinanweisung** . Ziehen Sie die gewünschten Spalten aus den Listenfeldern **Spalten der gefilterten Tabelle** und **Spalten der verknüpften Tabelle** in den Textbereich **Joinanweisung** .  
   
@@ -114,9 +114,9 @@ ms.locfileid: "47728898"
   
     -   Informationen zu einem Artikel, der mit einem statischen Zeilenfilter gefiltert wurde, finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus um einen oder mehrere ähnliche Artikel, auch bekannt als untergeordnete Artikel, für die Veröffentlichung zu definieren. Weitere Informationen finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus um einen oder mehrere ähnliche Artikel, auch bekannt als untergeordnete Artikel, für die Veröffentlichung zu definieren. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)aus. Geben Sie **@publication**, einen eindeutigen Namen für diesen Filter für **@filtername**, den Namen des in Schritt 2 erstellten untergeordneten Artikels für **@article**, den Namen des übergeordneten Artikels, mit dem ein Join hergestellt wird, für **@join_articlename**und einen der folgenden Werte für **@join_unique_key**an:  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)aus. Geben Sie **@publication** , einen eindeutigen Namen für diesen Filter für **@filtername** , den Namen des in Schritt 2 erstellten untergeordneten Artikels für **@article** , den Namen des übergeordneten Artikels, mit dem ein Join hergestellt wird, für **@join_articlename** und einen der folgenden Werte für **@join_unique_key** an:  
   
     -   **0** &ndash; gibt einen n:1- oder einen n:n-Join zwischen den übergeordneten und den untergeordneten Artikeln an.  
   
@@ -128,21 +128,21 @@ ms.locfileid: "47728898"
     >  Legen Sie **@join_unique_key** nur dann auf **1** fest, wenn eine Einschränkung für die verknüpfte Spalte in der zugrunde liegenden Tabelle für den übergeordneten Artikel vorliegt, die die Eindeutigkeit sicherstellt. Wird **@join_unique_key** fälschlicherweise auf **1** festgelegt, kann dies zu mangelnder Konvergenz der Daten führen.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
- In diesem Beispiel wird ein Artikel für eine Mergeveröffentlichung definiert, bei der der `SalesOrderDetail` -Tabellenartikel anhand der `SalesOrderHeader` -Tabelle gefiltert wird, dies selbst mithilfe eines statischen Zeilenfilters gefiltert wird. Weitere Informationen finden Sie unter [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+ In diesem Beispiel wird ein Artikel für eine Mergeveröffentlichung definiert, bei der der `SalesOrderDetail` -Tabellenartikel anhand der `SalesOrderHeader` -Tabelle gefiltert wird, dies selbst mithilfe eines statischen Zeilenfilters gefiltert wird. Weitere Informationen finden Sie unter [Definieren oder Ändern eines statischen Zeilenfilters](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  
   
- In diesem Beispiel wird eine Gruppe von Artikeln in einer Mergeveröffentlichung definiert, bei der die Artikel mit einer Reihe von Verknüpfungsfiltern anhand der `Employee` -Tabelle gefiltert werden, die selbst mithilfe eines parametrisierten Zeilenfilters für den Wert [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) in der **LoginID** -Spalte gefiltert wird. Weitere Informationen finden Sie unter [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ In diesem Beispiel wird eine Gruppe von Artikeln in einer Mergeveröffentlichung definiert, bei der die Artikel mit einer Reihe von Verknüpfungsfiltern anhand der `Employee` -Tabelle gefiltert werden, die selbst mithilfe eines parametrisierten Zeilenfilters für den Wert [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) in der **LoginID** -Spalte gefiltert wird. Weitere Informationen finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verknüpfungsfilter](../../../relational-databases/replication/merge/join-filters.md)   
  [Parametrisierte Zeilenfilter](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Filtern von veröffentlichten Daten für die Mergereplikation](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [So wird`s gemacht: definieren und ändern Sie einen Verknüpfungsfilter zwischen Mergeartikeln (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Konzepte für gespeicherte Systemprozeduren für die Replikation](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Vorgehensweise: Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln (SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
