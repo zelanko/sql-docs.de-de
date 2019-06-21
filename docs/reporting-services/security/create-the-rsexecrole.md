@@ -1,6 +1,6 @@
 ---
 title: Erstellen der Rolle „RSExecRole“ | Microsoft-Dokumentation
-ms.date: 05/30/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8596cf62ddf4212023841db003ec7936a2cb70c7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140473"
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
 
@@ -28,7 +28,7 @@ ms.locfileid: "65577906"
 -   Erstellen Sie die Rolle **RSExecRole** , und stellen Sie sie in der Systemdatenbank MSDB bereit.  
   
 > [!NOTE]  
->  Die Anweisungen in diesem Thema sind für Benutzer vorgesehen, die zur Bereitstellung der Berichtsserver-Datenbank kein Skript ausführen oder WMI-Code schreiben möchten. Wenn Sie eine umfangreiche Bereitstellung verwalten und regelmäßig Datenbanken verschieben, sollten Sie ein Skript zur Automatisierung dieser Schritte schreiben. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+> Die Anweisungen in diesem Thema sind für Benutzer vorgesehen, die zur Bereitstellung der Berichtsserver-Datenbank kein Skript ausführen oder WMI-Code schreiben möchten. Wenn Sie eine umfangreiche Bereitstellung verwalten und regelmäßig Datenbanken verschieben, sollten Sie ein Skript zur Automatisierung dieser Schritte schreiben. Weitere Informationen finden Sie unter [Zugreifen auf den Reporting Services-WMI-Anbieter](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="before-you-start"></a>Vorbereitungen  
   
@@ -38,14 +38,14 @@ ms.locfileid: "65577906"
   
 -   Überprüfen Sie, ob der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst installiert wurde und auf der Instanz der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz ausgeführt wird, die Sie verwenden möchten.  
   
--   Fügen Sie die Datenbanken reportservertempdb und reportserver an. Zum Erstellen der Rolle ist das Anfügen der Datenbanken nicht erforderlich. Die Datenbanken müssen jedoch angefügt werden, damit Sie Ihre Implementierung testen können.  
+-   Fügen Sie die Datenbanken ReportServerTempDB und ReportServer an. Zum Erstellen der Rolle ist das Anfügen der Datenbanken nicht erforderlich. Die Datenbanken müssen jedoch angefügt werden, damit Sie Ihre Implementierung testen können.  
   
  Die Anweisungen zum manuellen Erstellen der Rolle **RSExecRole** sollen im Kontext einer Migration der Berichtsserver-Installation verwendet werden. In diesem Thema wird auf wichtige Aufgaben, wie z. B. das Sichern und Verschieben der Berichtsserver-Datenbank, nicht eingegangen. Diese Aufgaben werden aber in der Dokumentation zur Datenbank-Engine beschrieben.  
   
-## <a name="create-rsexecrole-in-master"></a>Erstellen der Rolle 'RSExecRole' in 'Master'  
+## <a name="create-rsexecrole-in-master"></a>Erstellen der Rolle RSExecRole in „master“  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird durch den Einsatz von erweiterten gespeicherten Prozeduren sichergestellt, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst geplante Vorgänge unterstützt. Die folgenden Schritte erklären, wie der Rolle **RSExecRole** Berechtigungen zum Ausführen der Prozeduren gewährt werden.  
   
-#### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>So erstellen Sie die Rolle 'RSExecRole' mit Management Studio in der Systemdatenbank 'Master'  
+### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>So erstellen Sie die Rolle RSExecRole mit Management Studio in der Systemdatenbank „master“  
   
 1.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , und stellen Sie eine Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz her, die als Host für die Berichtsserver-Datenbank fungiert.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "65577906"
   
 6.  Öffnen Sie **Rollen**.  
   
-7.  Klicken Sie mit der rechten Maustaste auf **Datenbankrollen**, und wählen Sie **Neue Datenbankrolle**aus. Die Seite Allgemein wird angezeigt.  
+7.  Klicken Sie mit der rechten Maustaste auf **Datenbankrollen**, und wählen Sie **Neue Datenbankrolle**aus. Die **Datenbankrolle - neue** Seite wird angezeigt.  
   
 8.  Geben Sie im Feld **Rollennamen**den Namen **RSExecRole**ein.  
   
-9. Geben Sie im Feld **Besitzer**die Zeichenfolge **DBO**ein.  
+9. Geben Sie im Feld **Besitzer**die Zeichenfolge **dbo** ein.  
   
-10. Klicken Sie auf **Sicherungsfähige Elemente**.  
+10. Seite "Select" **sicherungsfähige Elemente**.  
   
 11. Klicken Sie auf **Suchen**. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Bestimmte Objekte** aktiviert.  
   
@@ -89,16 +89,18 @@ ms.locfileid: "65577906"
   
 18. Klicken Sie auf **OK**, und klicken Sie dann nochmals auf **OK** .  
   
-19. Klicken Sie in der Zeile **Ausführen** auf das Kontrollkästchen in der Spalte **Erteilen** und dann auf **OK**.  
+19. In der **Execute** -Zeile in der **Grant** Spalte das Kontrollkästchen.  
   
 20. Wiederholen Sie diesen Schritt für alle übrigen gespeicherten Prozeduren. Der Rolle**RSExecRole** müssen Berechtigungen zum Ausführen aller drei gespeicherten Prozeduren gewährt werden.  
+
+21. Klicken Sie auf **OK**, um den Vorgang abzuschließen.  
   
  ![Eigenschaftenseite der Datenbankrolle](../../reporting-services/security/media/rsexecroledbproperties.gif "Database Role Properties page")  
   
 ## <a name="create-rsexecrole-in-msdb"></a>Erstellen der Rolle 'RSExecRole' in 'MSDB'  
  Reporting Services verwendet gespeicherte Prozeduren für den SQL Server-Agent-Dienst und ruft zur Unterstützung geplanter Vorgänge Auftragsinformationen ab. Die folgenden Schritte erklären, wie der Rolle RSExecRole Berechtigungen zum Ausführen der Prozeduren und zum Auswählen der Tabellen gewährt werden.  
   
-#### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>So erstellen Sie die Rolle 'RSExecRole' in der Systemdatenbank 'MSDB'  
+### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>So erstellen Sie die Rolle 'RSExecRole' in der Systemdatenbank 'MSDB'  
   
 1.  Wiederholen Sie ähnliche Schritte, um Berechtigungen für gespeicherte Prozeduren und Tabellen in MSDB zu erteilen. Um die Schritte zu vereinfachen, stellen Sie die gespeicherten Prozeduren und die Tabellen getrennt bereit.  
   
@@ -112,11 +114,11 @@ ms.locfileid: "65577906"
   
 6.  Geben Sie im Feld **Rollennamen**den Namen RSExecRole ein.  
   
-7.  Geben Sie im Feld **Besitzer**die Zeichenfolge DBO ein.  
+7.  Geben Sie im Feld „Besitzer“ die Zeichenfolge **dbo** ein.  
   
-8.  Klicken Sie auf **Sicherungsfähige Elemente**.  
+8.  Wählen Sie die **sicherungsfähige Elemente** Seite.  
   
-9. Klicken Sie auf **Hinzufügen**. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Objekte angeben** aktiviert.  
+9.  Klicken Sie auf **Suchen**. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Objekte angeben** aktiviert.  
   
 10. Klicken Sie auf **OK**.  
   
@@ -150,15 +152,15 @@ ms.locfileid: "65577906"
   
     10. sp_verify_job_identifiers  
   
-16. Klicken Sie auf **OK**, und klicken Sie dann nochmals auf **OK** .  
+16. Klicken Sie auf **OK** und dann nochmals auf **OK**.  
   
 17. Wählen Sie die erste gespeicherte Prozedur aus: sp_add_category.  
   
-18. Klicken Sie in der Zeile **Ausführen** auf das Kontrollkästchen in der Spalte **Erteilen** und dann auf **OK**.  
+18. Klicken Sie in der Zeile **Ausführen** in der Spalte **Erteilen** auf das Kontrollkästchen.  
   
 19. Wiederholen Sie diesen Schritt für alle übrigen gespeicherten Prozeduren. Der Rolle RSExecRole müssen Berechtigungen zum Ausführen aller zehn gespeicherten Prozeduren gewährt werden.  
   
-20. Klicken Sie auf der Registerkarte **Sicherungsfähige Elemente** auf Hinzufügen. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Objekte angeben** aktiviert.  
+20. Fügen Sie auf die **sicherungsfähige Elemente** auf **Suche** erneut aus. Das Dialogfeld **Objekte hinzufügen** wird angezeigt. Standardmäßig ist die Option **Objekte angeben** aktiviert.  
   
 21. Klicken Sie auf **OK**.  
   
@@ -180,21 +182,23 @@ ms.locfileid: "65577906"
   
 28. Wählen Sie die erste Tabelle aus: syscategories.  
   
-29. Klicken Sie in der Zeile **Auswählen** auf das Kontrollkästchen in der Spalte **Erteilen** und dann auf **OK**.  
+29. Klicken Sie in der Zeile **Auswählen** in der Spalte **Erteilen** auf das Kontrollkästchen.  
   
 30. Wiederholen Sie diesen Schritt für die Tabelle sysjobs. Die Rolle RSExecRole muss Berechtigungen zum Auswählen beider Tabellen erhalten.  
   
-## <a name="move-the-report-server-database"></a>Verlagern der Berichtsserver-Datenbank  
+31. Klicken Sie auf **OK**, um den Vorgang abzuschließen.  
+  
+## <a name="move-the-report-server-database"></a>Verschieben der Berichtsserver-Datenbank  
  Nachdem Sie die Rollen erstellt haben, können Sie die Berichtsserver-Datenbank auf eine andere SQL Server-Instanz verschieben. Weitere Informationen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf andere Computer](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- Das Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf SQL Server 2016 können Sie vor oder nach dem Verschieben der Datenbank durchführen.  
+ Das Upgrade von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf SQL Server 2016 und höher können Sie vor oder nach dem Verschieben der Datenbank durchführen.  
   
  Die Berichtsserver-Datenbank wird automatisch upgegradet, wenn der Berichtsserver eine Verbindung mit der Datenbank herstellt. Zum Aktualisieren der Datenbank müssen keine bestimmten Schritte ausgeführt werden.  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>Wiederherstellen von Verschlüsselungsschlüsseln und Überprüfen der Arbeit  
  Nachdem die Berichtsserver-Datenbanken angefügt wurden, sollten Sie die folgenden Schritte ausführen können, um Ihre Implementierung zu überprüfen.  
   
-#### <a name="to-verify-report-server-operability-after-a-database-move"></a>So überprüfen Sie nach einer Datenbankverschiebung die Funktionsfähigkeit des Berichtsservers  
+### <a name="to-verify-report-server-operability-after-a-database-move"></a>So überprüfen Sie nach einer Datenbankverschiebung die Funktionsfähigkeit des Berichtsservers  
   
 1.  Starten Sie das Reporting Services-Konfigurationstool, und stellen Sie eine Verbindung mit dem Berichtsserver her.  
   
@@ -206,13 +210,13 @@ ms.locfileid: "65577906"
   
 5.  Geben Sie den Servernamen der Datenbank-Engine ein. Wenn Sie die Berichtsserver-Datenbanken an eine benannte Instanz angefügt haben, müssen Sie den Instanznamen im folgenden Format eingeben: \<Servername>\\<Instanzname\>.  
   
-6.  Klicken Sie auf **Verbindung testen**.  
+6.  Klicken Sie auf **Verbindung testen**. Daraufhin sollte ein Dialogfeld an, der angibt, "Test-Verbindung erfolgreich."
   
-7.  Klicken Sie auf **Weiter**.  
+7.  Wählen Sie **Ok** , um das Dialogfeld schließen, und wählen Sie dann **Weiter**.  
   
 8.  Wählen Sie die Berichtsserver-Datenbank aus.  
   
-9. Klicken Sie auf **Weiter** , und beenden Sie den Assistenten.  
+9.  Klicken Sie auf **Weiter** , und beenden Sie den Assistenten.  
   
 10. Klicken Sie auf **Verschlüsselungsschlüssel**.  
   
@@ -222,9 +226,9 @@ ms.locfileid: "65577906"
   
 13. Geben Sie das Kennwort ein, und klicken Sie auf **OK**.  
   
-14. Klicken Sie auf **Berichts-Manager-URL**.  
+14. Klicken Sie auf **Webportal-URL**.  
   
-15. Klicken Sie auf den Link zum Öffnen des Berichts-Managers. Daraufhin sollten die Berichtsserver-Elemente aus der Berichtsserver-Datenbank angezeigt werden.  
+15. Klicken Sie auf den Link, um das Webportal öffnen. Daraufhin sollten die Berichtsserver-Elemente aus der Berichtsserver-Datenbank angezeigt werden.  
 
 ## <a name="creating-the-rsexecrole-role-and-permissions-using-t-sql"></a>Erstellen der Rolle „RSExecRole“ und der Berechtigungen mit T-SQL
 Mit dem folgenden T-SQL-Skript in Systemdatenbanken können Sie auch die Rolle erstellen und die entsprechenden Berechtigungen gewähren:

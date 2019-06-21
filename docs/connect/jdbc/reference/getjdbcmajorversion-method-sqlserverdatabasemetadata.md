@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 4233b011af9df0b646f19965d636f7384887cd95
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66781102"
 ---
 # <a name="getjdbcmajorversion-method-sqlserverdatabasemetadata"></a>getJDBCMajorVersion-Methode (SQLServerDatabaseMetaData)
@@ -36,7 +36,7 @@ public int getJDBCMajorVersion()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Wert vom Typ **int**, durch den die Nebenversion des JDBC-Treibers angegeben wird.  
+ Ein Wert des Typs **int**, die die Nebenversion des JDBC-Treibers angibt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

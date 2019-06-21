@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78c7857744af4e7d1dd72e5323d48e8eb3bb0dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: eb7ef24869bb07374426b50f5a99f8220f104564
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812268"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804016"
 ---
 # <a name="getbytes-method-javalangstring"></a>getBytes-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public byte[] getBytes(java.lang.String sCol)
   
  Diese getBytes-Methode wird von der getBytes-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getBytes-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement-Elemente](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement-Klasse](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

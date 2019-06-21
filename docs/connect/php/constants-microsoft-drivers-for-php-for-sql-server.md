@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66796225"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Konstanten (Microsoft-Treiber für PHP für SQL Server)
@@ -68,11 +68,11 @@ Sie können die Ausführung von direkten Abfragen oder die vorbereitete Ausführ
 ### <a name="handling-numeric-fetches"></a>Behandeln von numerischen abruft
 Das PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE-Attribut kann verwendet werden, numerischen Abrufe aus Spalten mit numerischen SQL-Typen (Bit, Integer, Smallint, Tinyint, Float und Real) behandelt. Wenn PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE festgelegt ist, auf "true", die Ergebnisse aus einer Spalte mit ganzen Zahlen dargestellt als int-Typen, während SQL gleitet und versendeten als Gleitkommawerte dargestellt werden. Dieses Attribut kann festgelegt werden, mit [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
-Sie können die Dezimalstellen formatieren Standardverhalten mit den Attributen PDO::SQLSRV_ATTR_FORMAT_DECIMALS und PDO::SQLSRV_ATTR_DECIMAL_PLACES ändern. Das Verhalten dieser Attribute ist identisch mit den entsprechenden Optionen auf der Seite SQLSRV (**FormatDecimals** und **DecimalPlaces**), außer dass die Ausgabe-Parameter für das Formatieren nicht unterstützt werden. Diese Attribute festgelegt werden können, auf die Verbindung oder -Anweisung mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) oder [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), jedoch wird Anweisungsattribut überschreiben Sie die entsprechenden -Verbindungsattribut. Weitere Informationen finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+Sie können die Dezimalstellen formatieren Standardverhalten mit den Attributen PDO::SQLSRV_ATTR_FORMAT_DECIMALS und PDO::SQLSRV_ATTR_DECIMAL_PLACES ändern. Das Verhalten dieser Attribute ist identisch mit den entsprechenden Optionen auf der Seite SQLSRV (**FormatDecimals** und **DecimalPlaces**), außer dass die Ausgabe-Parameter für das Formatieren nicht unterstützt werden. Diese Attribute festgelegt werden können, auf die Verbindung oder -Anweisung mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) oder [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), jedoch wird Anweisungsattribut überschreiben Sie die entsprechenden -Verbindungsattribut. Weitere Details finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
 
 ### <a name="handling-date-and-time-fetches"></a>Handhabung von Fetches für Datum und Uhrzeit
 
-Die PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE gibt an, ob zum Abrufen von Datums- und Uhrzeittypen als [PHP-DateTime](http://php.net/manual/en/class.datetime.php) Objekte. Bei FALSE erfolgt die Standardrückgabe als Zeichenfolgen. Dieses Attribut kann festgelegt werden, auf die Verbindung oder -Anweisung mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) oder [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), jedoch wird das Anweisungsattribut überschreiben Sie die entsprechenden -Verbindungsattribut. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+Die PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE gibt an, ob zum Abrufen von Datums- und Uhrzeittypen als [PHP-DateTime](http://php.net/manual/en/class.datetime.php) Objekte. Bei FALSE werden standardmäßig Zeichenfolgen zurückgegeben. Dieses Attribut kann festgelegt werden, auf die Verbindung oder -Anweisung mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) oder [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), jedoch wird das Anweisungsattribut überschreiben Sie die entsprechenden -Verbindungsattribut. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV-Treiberkonstanten  
 Die folgenden Abschnitte listen die Konstanten auf, die der SQLSRV-Treiber verwendet.  

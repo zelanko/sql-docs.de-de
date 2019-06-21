@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f50325b245a821b114e7f8d9ca3898f195eae7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 72a2ed57b9b86db50c7d0c1f824181c4a5623026
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810658"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802005"
 ---
 # <a name="getfloat-method-int-sqlserverresultset"></a>getFloat-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,12 +47,12 @@ public float getFloat(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetFloat-Methode wird von der GetFloat-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getFloat-Methode wird von der getFloat-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Von dieser Methode werden alle zahlenbasierten Typen mit der Java-Genauigkeit vom Typ **float** zurückgegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [GetFloat-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [getFloat Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

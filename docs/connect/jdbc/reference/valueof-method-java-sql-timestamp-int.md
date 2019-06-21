@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ced75c886fcc0bf58d1671e50a213d5a6003a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b3d2eb2934474b51aacddebc72230330c86bfeb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797858"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf-Methode (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
 ## <a name="return-value"></a>Rückgabewert  
  Gibt ein DateTimeOffset-Objekt, das den Zeitpunkt gegebenen Zeitpunkt vom java.sql.Timestamp-Objekt mit dem angegebenen Offset in Minuten von GMT darstellt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset-Elemente](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

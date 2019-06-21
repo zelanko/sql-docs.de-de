@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf42996fac6ac5f48a41311aa072866ebd79f8b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4ae744a27156a59c926f2181ca9aec1146e8cd7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801658"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute-Methode (java.lang.String, int[])
 
@@ -51,9 +51,9 @@ Ein Array von Werten vom Typ **int** zum Angeben der Spaltenindizes der automati
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Remarks
-Diese Execute-Methode wird von der Execute-Methode in der java.sql.Statement-Schnittstelle angegeben.
+Diese execute-Methode wird von der execute-Methode in der java.sql.Statement-Schnittstelle angegeben.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [Execute-Methode &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 

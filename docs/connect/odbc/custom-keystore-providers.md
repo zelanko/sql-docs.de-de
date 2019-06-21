@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: HT
+ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55047214"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800490"
 ---
 # <a name="custom-keystore-providers"></a>Benutzerdefinierte Keystore-Anbieter
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -81,9 +81,9 @@ typedef struct CEKeystoreProvider {
 } CEKEYSTOREPROVIDER;
 ```
 
-|Feldname|Beschreibung|
+|Feldname|und Beschreibung|
 |:--|:--|
-|`Name`|Der Name des Keystore-Anbieters. Sie müssen nicht identisch mit anderen Keystore-Anbieter, zuvor geladen wird, vom Treiber oder in dieser Bibliothek vorhanden sein. Null-terminiert, Breite-Zeichen * Zeichenfolge.|
+|`Name`|Der Name des Keystore-Anbieters. Sie müssen nicht identisch mit anderen Keystore-Anbieter, zuvor geladen wird, vom Treiber oder in dieser Bibliothek vorhanden sein. Auf NULL endende Zeichenfolge für breite* Zeichen.|
 |`Init`|Die Initialisierungsfunktion. Wenn Sie keine Initialisierungsfunktion nicht erforderlich ist, kann dieses Feld null sein.|
 |`Read`|Anbieter read-Funktion. Möglicherweise null, wenn nicht erforderlich.|
 |`Write`|Anbieter "Write"-Funktion. Erforderlich, wenn das Lesen nicht null ist. Möglicherweise null, wenn nicht erforderlich.|
@@ -98,7 +98,7 @@ int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
 Platzhaltername für eine Anbieter definierte Initialisierungsfunktion. Der Treiber ruft diese Funktion einmal ein, nachdem ein Anbieter geladen wurde, aber vor dem ersten Zeit, die sie zum Ausführen von ECEK-Entschlüsselung oder Read()/Write() benötigt anfordert. Verwenden Sie diese Funktion Initialisierungen, die es benötigt. 
 
-|Argument|Beschreibung|
+|Argument|und Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
@@ -110,7 +110,7 @@ int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len)
 
 Platzhaltername für eine Kommunikation Anbieter definierte Funktion. Der Treiber ruft diese Funktion auf, wenn die Anwendung, die zum Lesen von Daten von einem (zuvor geschriebenen-in) Anbieter mit dem Attribut SQL_COPT_SS_CEKEYSTOREDATA Verbindung, die Anwendung zum Lesen beliebiger Daten vom Anbieter anfordert. Finden Sie unter [Kommunikation mit einer Keystore-Anbieter](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) für Weitere Informationen.
 
-|Argument|Beschreibung|
+|Argument|und Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
@@ -123,7 +123,7 @@ int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len)
 ```
 Platzhaltername für eine Kommunikation Anbieter definierte Funktion. Der Treiber ruft diese Funktion auf, wenn die Anwendung, zum Schreiben von Daten an einen Anbieter mit dem Attribut SQL_COPT_SS_CEKEYSTOREDATA Verbindung anfordert, die Anwendung, der beliebige Daten an den Anbieter zu schreiben. Finden Sie unter [Kommunikation mit einer Keystore-Anbieter](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) für Weitere Informationen.
 
-|Argument|Beschreibung|
+|Argument|und Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
@@ -136,12 +136,12 @@ int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 ```
 Platzhaltername für eine Funktion der Anbieter definierte ECEK-Entschlüsselung. Der Treiber ruft diese Funktion zum Entschlüsseln einer ECEK durch einen CMK, die diesem Anbieter zugeordnet sind, in einen CEK verschlüsselt.
 
-|Argument|Beschreibung|
+|Argument|und Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
-|`keyPath`|[Eingabe] Der Wert des der [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) Metadatenattribut für den CMK auf die angegebenen ECEK verweist. NULL-terminierte wide-Zeichen * Zeichenfolge. Dies dient zum Identifizieren eines CMK von diesem Anbieter verarbeitet.|
-|`alg`|[Eingabe] Der Wert des der [Algorithmus](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Metadatenattribut für den angegebenen ECEK. NULL-terminierte wide-Zeichen * Zeichenfolge. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des angegebenen ECEK.|
+|`keyPath`|[Eingabe] Der Wert des der [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) Metadatenattribut für den CMK auf die angegebenen ECEK verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zum Identifizieren eines CMK von diesem Anbieter verarbeitet.|
+|`alg`|[Eingabe] Der Wert des der [Algorithmus](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Metadatenattribut für den angegebenen ECEK. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des angegebenen ECEK.|
 |`ecek`|[Eingabe] Zeiger auf die ECEK entschlüsselt werden.|
 |`ecekLen`|[Eingabe] Die Länge von ECEK.|
 |`cekOut`|[Ausgabe] Der Anbieter sollte entschlüsselter ECEK Arbeitsspeicher zuweisen und die Adresse in der Zeiger verweist CekOut schreiben. Es muss möglich sein, diesen Block der using-Arbeitsspeicher freigeben der [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder (Linux/Mac)-Funktion freigeben. Der Anbieter sollte festlegen, war nicht genügend Arbeitsspeicher zugeordneten aufgrund eines Fehlers oder auf andere, * CekOut auf einen null-Zeiger.|
@@ -153,12 +153,12 @@ int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 ```
 Platzhaltername für eine Funktion der Anbieter definierte CEK-Verschlüsselung. Der Treiber nicht mit dieser Funktion wird noch seine Funktionalität über die ODBC-Schnittstelle verfügbar zu machen, aber sie wird von schlüsselverwaltungstools ermöglichen den programmgesteuerten Zugriff auf die Erstellung von ECEK bereitgestellt.
 
-|Argument|Beschreibung|
+|Argument|und Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Vorgangskontext.|
 |`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
-|`keyPath`|[Eingabe] Der Wert des der [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) Metadatenattribut für den CMK auf die angegebenen ECEK verweist. NULL-terminierte wide-Zeichen * Zeichenfolge. Dies dient zum Identifizieren eines CMK von diesem Anbieter verarbeitet.|
-|`alg`|[Eingabe] Der Wert des der [Algorithmus](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Metadatenattribut für den angegebenen ECEK. NULL-terminierte wide-Zeichen * Zeichenfolge. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des angegebenen ECEK.|
+|`keyPath`|[Eingabe] Der Wert des der [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) Metadatenattribut für den CMK auf die angegebenen ECEK verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zum Identifizieren eines CMK von diesem Anbieter verarbeitet.|
+|`alg`|[Eingabe] Der Wert des der [Algorithmus](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Metadatenattribut für den angegebenen ECEK. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des angegebenen ECEK.|
 |`cek`|[Eingabe] Zeiger auf den CEK verschlüsselt werden.|
 |`cekLen`|[Eingabe] Die Länge des CEK.|
 |`ecekOut`|[Ausgabe] Der Anbieter muss von Arbeitsspeicher für den verschlüsselten CEK und seine Adresse in der Zeiger verweist EcekOut schreiben. Es muss möglich sein, diesen Block der using-Arbeitsspeicher freigeben der [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder (Linux/Mac)-Funktion freigeben. Der Anbieter sollte festlegen, war nicht genügend Arbeitsspeicher zugeordneten aufgrund eines Fehlers oder auf andere, * EcekOut auf einen null-Zeiger.|
@@ -184,13 +184,13 @@ Die **OnError** Parameter verweist auf eine fehlerberichterstattungs-Funktion, m
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
-|Argument|Beschreibung|
+|Argument|und Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Kontext, der auf den Fehler zu melden.|
-|`msg`|[Eingabe] Der zu meldende Fehlermeldung. NULL-terminierte Breitzeichen-Zeichenfolge. Damit parametrisierte Informationen vorhanden sein kann, darf diese Zeichenfolge einfügen Formatieren von Sequenzen des Formulars von akzeptiert die [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Funktion. Erweiterte Funktionalität kann durch diesen Parameter angegeben werden, wie unten beschrieben.|
+|`msg`|[Eingabe] Der zu meldende Fehlermeldung. Auf NULL endende Zeichenfolge für breite* Zeichen. Damit parametrisierte Informationen vorhanden sein kann, darf diese Zeichenfolge einfügen Formatieren von Sequenzen des Formulars von akzeptiert die [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Funktion. Erweiterte Funktionalität kann durch diesen Parameter angegeben werden, wie unten beschrieben.|
 |...|[Eingabe] Zusätzliche Variadic-Parameter, die Formatbezeichner in der Meldung, nach Bedarf anpassen.|
 
-Um zu melden, wenn ein Fehler aufgetreten ist, wird vom Treiber und eine Fehlermeldung mit optionalen zusätzlichen Parametern, die es formatiert werden der Anbieter ruft OnError, Angeben des Context-Parameters an die anbieterfunktion übergeben. Der Anbieter kann diese Funktion mehrmals aufrufen, mehrere Fehler innerhalb einer Anbieter-Funktionsaufruf fortlaufend zu übermitteln. Zum Beispiel:
+Um zu melden, wenn ein Fehler aufgetreten ist, wird vom Treiber und eine Fehlermeldung mit optionalen zusätzlichen Parametern, die es formatiert werden der Anbieter ruft OnError, Angeben des Context-Parameters an die anbieterfunktion übergeben. Der Anbieter kann diese Funktion mehrmals aufrufen, mehrere Fehler innerhalb einer Anbieter-Funktionsaufruf fortlaufend zu übermitteln. Beispiel:
 
 ```
     if (!doSomething(...))
@@ -224,7 +224,7 @@ void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
 
-|Feld|Beschreibung|
+|Feld|und Beschreibung|
 |:--|:--|
 |`envCtx`|Umgebungskontext.|
 |`dbcCtx`|Der Verbindungskontext.|

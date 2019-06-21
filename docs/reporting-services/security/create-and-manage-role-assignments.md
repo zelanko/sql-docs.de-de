@@ -15,19 +15,19 @@ ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619602"
 ---
 # <a name="create-and-manage-role-assignments"></a>Erstellen und Verwalten von Rollenzuweisungen
 
-Bei einer *Rollenzuweisung* handelt es sich um eine Sicherheitsrichtlinie, über die die Berechtigungen eines Benutzers oder einer Gruppe festgelegt werden. Anhand von Berechtigungen wird entschieden, ob der Benutzer oder die Gruppe auf ein bestimmtes Berichtsserverelement zugreifen oder eine Aufgabe durchführen kann. Eine Rollenzuweisung besteht aus einem einzelnen Benutzer- oder Gruppenkontonamen und mindestens einer Rollendefinition.
+Bei einer *Rollenzuweisung* handelt es sich um eine Sicherheitsrichtlinie, über die die Berechtigungen eines Benutzers oder einer Gruppe festgelegt werden. Anhand von Berechtigungen wird entschieden, ob der Benutzer oder die Gruppe auf ein bestimmtes Berichtsserverelement zugreifen, es ändern oder eine Aufgabe durchführen kann. Eine Rollenzuweisung besteht aus einem einzelnen Benutzer- oder Gruppenkontonamen und mindestens einer Rollendefinition.
 
 Rollenzuweisungen gelten auf *Elementebene* oder *Systemebene*.
 
-- Rollenzuweisungen auf Elementebene werden im Kontext eines bestimmten Elements oder Branches in der Ordnerhierarchie des Berichtsservers erstellt. Sie navigieren zu einem bestimmten Ordner oder Element, um eine Rollenzuweisung dafür zu erstellen.
+- Rollenzuweisungen auf Elementebene werden für ein bestimmtes Element oder Verzweigungen in der Ordnerhierarchie des Berichtsservers erstellt. Sie navigieren zu einem bestimmten Ordner oder Element, um eine Rollenzuweisung dafür zu erstellen.
 
 - Mit Rollenzuweisungen auf Systemebene können ausgewählte Benutzer Aufgaben ausführen, die den gesamten Berichtsserverstandort betreffen. Zu diesen Aufgaben zählt Folgendes:
   - Erstellen von freigegebenen Zeitplänen
@@ -39,7 +39,7 @@ Die Sicherheit auf Systemebene betrifft den Zugriff auf Elemente in der Ordnerhi
 
 ## <a name="creating-an-item-level-role-assignment"></a>So erstellen Sie eine Rollenzuweisung auf Elementebene
 
-Sie können für jedes Benutzer- oder Gruppenkonto, das auf den Berichtsserver zugreifen können muss, eine eigene Rollenzuweisung erstellen. Befindet sich das Konto nicht in der Domäne, in der der Berichtsserver enthalten ist, geben Sie den Domänennamen an. Nachdem Sie ein Konto angegeben haben, können Sie eine oder mehrere Rollendefinitionen auswählen. Die Rollendefinitionen sind kumulativ. Die kombinierten Aufgaben aus allen Definitionen werden in der Zuweisung für einen bestimmten Benutzer oder eine bestimmte Gruppe unterstützt.
+Sie können hier für jedes Benutzer- oder Gruppenkonto, das auf den Berichtsserver zugreifen können muss, eine eigene Rollenzuweisung erstellen. Befindet sich das Konto nicht in der Domäne, in der der Berichtsserver enthalten ist, geben Sie den Domänennamen an. Nachdem Sie ein Konto angegeben haben, können Sie eine oder mehrere Rollendefinitionen auswählen. Die Rollendefinitionen sind kumulativ. Die kombinierten Aufgaben aus allen Definitionen werden in der Zuweisung für einen bestimmten Benutzer oder eine bestimmte Gruppe unterstützt.
 
 Wählen Sie ein Element aus, das weit oben in der Ordnerhierarchie angeordnet ist (z. B. den Stammknoten „Stamm“). Anschließend können Sie Rollenzuweisungen erstellen, um bestimmte Bereiche der Ordnerhierarchie zu sperren.
 
@@ -49,7 +49,7 @@ Zum Erstellen oder Verwalten von rollenzuweisungen oder Weitere Informationen fi
   
 ## <a name="creating-a-system-level-role-assignment"></a>Erstellen einer Rollenzuweisung auf Systemebene
 
-Rollenzuweisungen auf System- und Elementebene ergänzen sich. Sie müssen allen Benutzern oder Gruppen, die über eine Rollenzuweisung auf Elementebene verfügen, auch eine Rolle auf Systemebene zuweisen.
+Rollenzuweisungen auf System- und Elementebene ergänzen sich. Sie weisen allen Benutzern oder Gruppen, die über eine Rollenzuweisung auf Elementebene verfügen, auch eine Rolle auf Systemebene zu.
 
 Rollenzuweisungen auf Systemebene umfassen eine Vielzahl von Berechtigungen, jedoch keine Berechtigungen, die Teil einer Rollenzuweisung auf Elementebene sind.
 

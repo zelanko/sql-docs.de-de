@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd171495bb8dde28a30299b0107d91cce9dd472e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e78a745e908399efa25e6f72faff9daec2cbd8ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757168"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799790"
 ---
 # <a name="getbinarystream-method-long-long"></a>getBinaryStream-Methode (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *POS*  
+ *pos*  
   
  Das Offset zum ersten Byte des abzurufenden Teilwerts.  
   
@@ -48,7 +48,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ## <a name="remarks"></a>Remarks  
  Diese GetBinaryStream-Methode wird von der GetBinaryStream-Methode in der java.sql.Blob-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerBlob-Methoden](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob-Elemente](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  

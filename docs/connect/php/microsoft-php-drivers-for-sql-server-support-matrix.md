@@ -11,11 +11,11 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180272"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP-Treiber für SQL Server-Supportmatrix
 
@@ -31,24 +31,24 @@ Erweiterte und benutzerdefinierte Support-Optionen sind für die Microsoft PHP-T
 
 Die folgenden Microsoft PHP-Treiber werden bis zum angegebenen Supportende unterstützt.
 
-|Treibername|Version des Treiberpakets|Ende des Mainstream-Support|
+|Treibername|Version des Treiberpakets|Ende des grundlegenden Supports|
 |-|:-:|-|
-|Microsoft PHP-Treiber 5.6 für SQLServer|5.6|21. Februar 2024|
-|Microsoft PHP-Treiber 5.3 für SQLServer|5.3|20 Juli 2023|
-|Microsoft PHP-Treiber 5.2 für SQLServer|5.2|9 Februar 2023|
-|Microsoft PHP-Treiber 4.3 für SQLServer|4.3|6. Juli 2022|
-|Microsoft PHP-Treiber 4.0 für SQLServer|4.0|11 Juli 2021|
-|Microsoft PHP Drivers 3.2 for SQLServer|3.2|9 März 2020|
-|Microsoft PHP Drivers 3.1 for SQLServer|3.1|12. Dezember 2019|
+|Microsoft PHP-Treiber 5.6 für SQL Server|5.6|21. Februar 2024|
+|Microsoft PHP-Treiber 5.3 für SQL Server|5.3|20. Juli 2023|
+|Microsoft PHP-Treiber 5.2 für SQL Server|5.2|9\. Februar 2023|
+|Microsoft PHP-Treiber 4.3 für SQL Server|4.3|6\. Juli 2022|
+|Microsoft PHP-Treiber 4.0 für SQL Server|4.0|11. Juli 2021|
+|Microsoft PHP-Treiber 3.2 für SQL Server|3.2|9 März 2020|
+|Microsoft PHP-Treiber 3.1 für SQL Server|3.1|12. Dezember 2019|
 | &nbsp; | &nbsp; | &nbsp; |
 
 Die folgenden Microsoft PHP-Treiber werden nicht mehr unterstützt.
 
-|Treibername|Version des Treiberpakets|Ende des Mainstream-Support|
+|Treibername|Version des Treiberpakets|Ende des grundlegenden Supports|
 |-|:-:|-|
-|Microsoft PHP Drivers 3.0 for SQLServer|3.0|6. März 2017|
-|Microsoft PHP Drivers 2.0 for SQLServer|2.0|Am 10. August 2015|
-|Microsoft PHP-Treiber 1.0 für SQLServer|1,0|28. August 2014|
+|Microsoft PHP-Treiber 3.0 für SQL Server|3.0|6\. März 2017|
+|Microsoft PHP-Treiber 2.0 für SQL Server|2.0|Am 10. August 2015|
+|Microsoft PHP-Treiber 1.0 für SQL Server|1,0|28. August 2014|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>SQL Server-Version, die Zertifizierung der Kompatibilität
@@ -56,7 +56,7 @@ Die folgenden Microsoft PHP-Treiber werden nicht mehr unterstützt.
 
 |PHP für SQL Server-Treiberversion&#8594;<br />&#8595; SQL Server-Version|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Verwaltete Azure SQL-Instanz<br/> (Erweiterte Private Vorschau)|J|J|J|J| | | | | |
+|Verwaltete Azure SQL-Instanz<br/> (Die private Vorschau wurde verlängert)|J|J|J|J| | | | | |
 |Azure SQL Data Warehouse|J|J|J|J| | | | | |
 |SQL Server 2017         |J|J|J|J| | | | | |
 |SQL Server 2016         |J|J|J|J|J| | | | |

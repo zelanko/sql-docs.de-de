@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95c3f823e230a51ada0f966c68a71b189eb482d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0cfbcf94a1211738b0cf0abb8e2657257edd09eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796711"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>prepareStatement-Methode (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *SQL*  
+ *sSql*  
   
  Eine **Zeichenfolge**, die eine SQL-Anweisung enthält.  
   
@@ -59,7 +59,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
 ## <a name="remarks"></a>Remarks  
  Diese PrepareStatement-Methode wird von der PrepareStatement-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Methoden](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

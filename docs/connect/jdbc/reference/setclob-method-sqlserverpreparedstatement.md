@@ -12,22 +12,22 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5fd95488f82b6d38bcdfd30e0875228c7ea868e6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66793992"
 ---
 # <a name="setclob-method-sqlserverpreparedstatement"></a>setClob-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Legt den angegebenen Parameter auf das angegebene java.sql.Clob-Objekt fest.  
+  Legt den angegebenen Parameter auf ein java.sql.Clob-Objekt fest.  
   
 ## <a name="overload-list"></a>Überladungsliste  
   
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|[setClob-Methode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Legt den angegebenen Parameter auf das angegebene java.sql.Clob-Objekt fest.|  
+|[setClob-Methode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Legt den angegebenen Parameter auf ein java.sql.Clob-Objekt fest.|  
 |[setClob-Methode &#40;int, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Legt den angegebenen Parameter auf das angegebene java.sql.Clob-Objekt fest.|  
 |[setClob-Methode &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|Legt den angegebenen Parameter auf ein java.sql.Clob-Objekt fest, dessen Länge der angegebenen Zeichenanzahl entspricht.|  
   

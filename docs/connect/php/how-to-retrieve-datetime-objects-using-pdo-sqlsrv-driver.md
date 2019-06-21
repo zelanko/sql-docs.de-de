@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem Treiber PDO_SQLSRV | Microsoft-Dokumentation'
+title: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem SQLSRV-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,20 +12,20 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 54e5b5c9c1ba59ed64db740fbbb1a643e7cb1b2c
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63210438"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber
+# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Hinzugefügt in Version 5.6.0, dieses Feature ist nur gültig, bei den PDO_SQLSRV-Treiber für die Verwendung der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
 ### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Zum Abrufen von Datums- und Uhrzeittypen als DateTime-Objekte
 
-Bei Verwendung des PDO_SQLSRV, Datums- und Uhrzeittypen (**Smalldatetime**, **"DateTime"**, **Datum**, **Zeit**, **datetime2**, und **Datetimeoffset**) werden standardmäßig als Zeichenfolgen zurückgegeben. Weder das PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE-Attribut als auch die PDO::ATTR_STRINGIFY_FETCHES hat keinerlei Auswirkungen. Zum Abrufen von Datums- und Uhrzeittypen als [PHP-DateTime](http://php.net/manual/en/class.datetime.php) Objekte, legen Sie das Attribut Verbindung oder Anweisung `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` zu **"true"** (es ist **"false"** standardmäßig).
+Bei Verwendung des PDO_SQLSRV, Datums- und Uhrzeittypen (**Smalldatetime**, **"DateTime"** , **Datum**, **Zeit**, **datetime2**, und **Datetimeoffset**) werden standardmäßig als Zeichenfolgen zurückgegeben. Weder das PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE-Attribut als auch die PDO::ATTR_STRINGIFY_FETCHES hat keinerlei Auswirkungen. Zum Abrufen von Datums- und Uhrzeittypen als [PHP-DateTime](http://php.net/manual/en/class.datetime.php) Objekte, legen Sie das Attribut Verbindung oder Anweisung `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` zu **"true"** (es ist **"false"** standardmäßig).
 
 > [!NOTE]
 > Dieses Programm oder -Anweisungsattribut gilt nur, um reguläre Abrufen von Datums- und Uhrzeittypen, da DateTime-Objekte können nicht als Output-Parameter angegeben werden.

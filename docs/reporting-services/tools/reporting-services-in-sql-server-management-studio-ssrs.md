@@ -1,6 +1,6 @@
 ---
 title: Reporting Services in SQL Server Management Studio (SSRS) | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 06/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -10,29 +10,25 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de602e47f7c68c06fee042265b3f84d3d6d385f9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 27fe190bfa73414158d05353c4aa8f244b65b4f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140359"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services in SQL Server Management Studio (SSRS)
   Berichtsserveradministratoren können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] für folgende Aufgaben verwenden:  
   
 -   Aktivieren Sie Funktionen, legen Sie Serverstandards fest, und verwalten Sie ausgeführte Aufträge.  
   
--   Zeigen Sie benutzerdefinierte Berichte an, oder erstellen Sie diese. im Objekt-Explorer wird für viele Knoten ein Satz von Standardberichten angezeigt, die mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]installiert werden. Sie benötigen Administratorberechtigungen. Das Schema eines benutzerdefinierten Berichts muss mit dem Schema der installierten Berichte übereinstimmen. Weitere Informationen finden Sie unter [Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md) und [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Anzeigen benutzerdefinierter Berichte. Im Objekt-Explorer zeigen die meisten Knoten eine Option für benutzerdefinierte Berichte. Sie benötigen Administratorberechtigungen. Das Schema eines benutzerdefinierten Berichts muss mit dem Schema der installierten Berichte übereinstimmen. Weitere Informationen finden Sie unter [Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md) und [Suchen der Berichtsdefinitions-Schemaversion (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
- Berichtsautoren können [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] für folgende Aufgaben verwenden:  
-  
--   Stellen Sie räumliche Daten aus einem Abfrageresultset für einen Kartenbericht visuell dar. Verwenden Sie nach dem Ausführen der Abfrage die Registerkarte **Räumliche Ergebnisse** im Resultsetbereich. Weitere Informationen finden Sie unter [View Spatial Data in Object Explorer](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md).  
-  
- Dieser Abschnitt enthält ausführliche Anweisungen zum Ausführen verschiedener berichtsspezifischer Aufgaben in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Die Erstellung und Verwaltung freigegebener Zeitpläne kann auch mit dem Berichts-Manager erfolgen.  
+ Der nächste Abschnitt enthält Links zu Artikeln, die schrittweise Anleitungen zum Ausführen verschiedener Berichtsspezifischer Aufgaben enthalten [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Sie können auch erstellen und Verwalten von freigegebenen Zeitplänen im Webportal.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+-   [Connect to a Report Server in Management Studio (Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio)](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
 -   [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)  
   
@@ -40,8 +36,7 @@ ms.locfileid: "65581316"
   
 -   [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Berichtsserver im Management Studio (F1-Hilfe)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Einführung in SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-  
+ [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)  
   

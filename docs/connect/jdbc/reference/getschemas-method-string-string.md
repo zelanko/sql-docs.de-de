@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76c5831547178b33854465d38cfe97dc87684d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: b4129ebee2be0ca043be349dc57ca8612ab7d0b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66792185"
 ---
 # <a name="getschemas-method-string-string"></a>getSchemas-Methode (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,14 +51,14 @@ public ResultSet getSchemas(java.lang.String catalog,
   
  Durch die GetSchemas-Methode zurückgegebene Resultset enthält die folgenden Informationen an:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Der Name des Schemas.|  
 |TABLE_CATALOG|**String**|Der Katalogname für das Schema.|  
   
  Die Ergebnisse werden nach „TABLE_CATALOG“ und anschließend nach „TABLE_SCHEM“ sortiert. In jeder Zeile bildet "TABLE_SCHEM" die erste Spalte und "TABLE_CATALOG" die zweite Spalte.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

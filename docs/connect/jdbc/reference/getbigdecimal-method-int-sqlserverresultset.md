@@ -1,5 +1,5 @@
 ---
-title: GetBigDecimal-Methode (Int) (SQLServerResultSet) | Microsoft-Dokumentation
+title: getBigDecimal Method (int) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 49872b95-a11c-472e-a0d2-a794e8f32f52
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6faff811b75d51387292de969b72d12470f121f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 486b90baa66446eb1a9fd8bf32efcf2efad79a92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799908"
 ---
 # <a name="getbigdecimal-method-int-sqlserverresultset"></a>getBigDecimal-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public java.math.BigDecimal getBigDecimal(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Diese GetBigDecimal-Methode wird von der GetBigDecimal-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [getBigDecimal-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -10,11 +10,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522034"
 ---
 # <a name="idle-connection-resiliency"></a>Resilienz von Verbindungen im Leerlauf
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -23,10 +23,10 @@ ms.locfileid: "58305918"
 
 Verbindungsresilienz wird implementiert, mit zwei Verbindungsschlüsselwörter, die Verbindungszeichenfolgen hinzugefügt werden können: **ConnectRetryCount** und **ConnectRetryInterval**.
 
-|Schlüsselwort|Werte|Default|Beschreibung|
+|Schlüsselwort|Werte|Default|und Beschreibung|
 |-|-|-|-|
-|**ConnectRetryCount**| Ganze Zahl zwischen 0 und 255 (inklusiv)|1|Die maximale Anzahl von versuchen, eine unterbrochene Verbindung, bevor aufgegeben wird wiederherzustellen. Standardmäßig wird eine einzelne versucht, eine Verbindung, wenn in einem wiederherzustellen. Ein Wert von 0 bedeutet, dass keine erneute Verbindung versucht wird.|
-|**ConnectRetryInterval**| Ganze Zahl zwischen 1 und 60 (inklusiv)|1| Die Zeit in Sekunden zwischen den versuchen, eine Verbindung wiederherzustellen. Die Anwendung versucht, sofort nach der Erkennung einer fehlerhaften Verbindungs erneut eine Verbindung herzustellen, und klicken Sie dann wartet **ConnectRetryInterval** Sekunden, bevor Sie es erneut zu versuchen. Dieses Schlüsselwort wird ignoriert, wenn **ConnectRetryCount** ist gleich 0.
+|**ConnectRetryCount**| Ganze Zahl von 0 bis 255|1|Die maximale Anzahl von versuchen, eine unterbrochene Verbindung, bevor aufgegeben wird wiederherzustellen. Standardmäßig wird eine einzelne versucht, eine Verbindung, wenn in einem wiederherzustellen. Ein Wert von 0 bedeutet, dass keine erneute Verbindung versucht wird.|
+|**ConnectRetryInterval**| Ganze Zahl von 1 bis 60|1| Die Zeit in Sekunden zwischen den versuchen, eine Verbindung wiederherzustellen. Die Anwendung versucht, sofort nach der Erkennung einer fehlerhaften Verbindungs erneut eine Verbindung herzustellen, und klicken Sie dann wartet **ConnectRetryInterval** Sekunden, bevor Sie es erneut zu versuchen. Dieses Schlüsselwort wird ignoriert, wenn **ConnectRetryCount** ist gleich 0.
 
 Wenn das Produkt der **ConnectRetryCount** multipliziert **ConnectRetryInterval** ist größer als **LoginTimeout**, und klicken Sie dann der Client nicht versuchen mehr, sobald eine Verbindung  **LoginTimeout** erreicht wird; andernfalls wird es weiterhin, bis eine Verbindung zu testen **ConnectRetryCount** erreicht ist.
 
@@ -34,7 +34,7 @@ Wenn das Produkt der **ConnectRetryCount** multipliziert **ConnectRetryInterval*
 
 Verbindungsresilienz gilt, wenn die Verbindung im Leerlauf befindet. Fehler auftreten, während der Ausführung einer Transaktion, z. B. Versuche der verbindungswiederherstellung – nicht ausgelöst wird schlägt sie fehl, da sonst zu erwarten wäre. Die folgenden Situationen, bekannt als Sitzungsstatus nicht behoben werden kann, löst keine erneute Verbindung Versuche:
 
-* Temporäre Tabellen 
+* Temporäre Tabellen
 * Globale und lokale Cursor
 * Kontext und der angegebenen Sitzung Transaktion Transaktionssperren
 * Anwendungssperren

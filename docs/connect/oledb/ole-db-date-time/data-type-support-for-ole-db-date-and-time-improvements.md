@@ -15,10 +15,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769403"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
@@ -36,8 +36,8 @@ ms.locfileid: "66769403"
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|msoledbsql.h|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|msoledbsql.h|  
+|time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>Datenformate: Zeichenfolgen und Literale  
@@ -161,7 +161,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Anwendungen, die auf OLE DB-Treiber für SQL Server migrieren, verwenden **Sql_variant** und basieren auf der eingeschränkten Genauigkeit von **"DateTime"** müssen aktualisiert werden, wenn das zugrunde liegende Schema aktualisiert wird, um verwenden**datetime2** statt **"DateTime"** .  
+ Anwendungen, die auf OLE DB-Treiber für SQL Server migrieren, verwenden **Sql_variant** und basieren auf der eingeschränkten Genauigkeit von **"DateTime"** müssen aktualisiert werden, wenn das zugrunde liegende Schema aktualisiert wird, um verwenden**datetime2** statt **"DateTime"**.  
   
  Die Zugriffsmakros für SSVARIANT wurden durch Hinzufügen von Folgendem ebenfalls erweitert:  
   

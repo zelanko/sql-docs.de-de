@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 809e16fce7cac83b6ba09fcef676c8da920b0dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c63c526aed7bfae6027f3a9aa028bc2a2e20fbef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799648"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public void setPoolable(boolean poolable) throws SQLException
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *dem Pool hinzugefügt werden*  
+ *poolable*  
   
  Wenn der Wert **true** ist, wird angefordert, dass dem Pool die Anweisung hinzugefügt werden soll. Wenn der Wert **false** ist, wird angefordert, dass dem Pool die Anweisung nicht hinzugefügt werden soll.  
   
@@ -49,7 +49,7 @@ public void setPoolable(boolean poolable) throws SQLException
   
  Von [isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md) wird ein Wert zurückgegeben, der anzeigt, ob das Objekt dem Pool hinzugefügt werden kann.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: prepareCall-Methode (java.lang.String, int, int) | Microsoft-Dokumentation
+title: setNull Method (java.lang.String, int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fefddb1f1e412c411be1156ac5b7e188a03b6244
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800313"
 ---
 # <a name="setnull-method-javalangstring-int"></a>setNull-Methode (java.lang.String, int)

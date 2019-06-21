@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499564"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
@@ -505,7 +505,7 @@ Weitere Informationen zu Listen finden Sie unter:
 * [Create Invoices and Forms with Lists (Erstellen von Rechnungen und Formularen mit Listen)](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer (Berichts-Generator)](report-data/query-design-tools-ssrs.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrageentwurfstools (SSRS)](report-data/query-design-tools-ssrs.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Lernprogramme für den Berichts-Generator](../reporting-services/report-builder-tutorials.md) 

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4c1a7853925cfe6dbc97ab8f6c4c5b4f9147ac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0e54dedff95332d5ea62dc4dd2a79d9d8e1bec15
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66777196"
 ---
 # <a name="connect-method-sqlserverdriver"></a>connect-Methode (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ public java.sql.Connection connect(java.lang.String Url,
 ## <a name="remarks"></a>Remarks  
  Diese Verbindungsmethode wird von der Methode "Connect" in der java.sql.Driver-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDriver-Methoden](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver-Elemente](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [SQLServerDriver-Klasse](../../../connect/jdbc/reference/sqlserverdriver-class.md)  

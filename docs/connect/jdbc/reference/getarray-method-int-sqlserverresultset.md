@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 377746c7-8c9c-41f5-8490-ca0dd56fd57a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f993406e24265689f852e1e70515ca24eda6d536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0fdbfbc095f76925377e8e5111d9eb28a1ee7805
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798957"
 ---
 # <a name="getarray-method-int-sqlserverresultset"></a>getArray-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,10 +47,10 @@ public java.sql.Array getArray(int i)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetArray-Methode wird von der GetArray-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getArray-Methode wird von der getArray-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [GetArray-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [getArray Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

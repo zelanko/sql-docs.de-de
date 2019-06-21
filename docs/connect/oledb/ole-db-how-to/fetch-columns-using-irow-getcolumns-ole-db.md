@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66791562"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
@@ -53,7 +53,7 @@ ms.locfileid: "66791562"
   
 -   Wie auf eine Spalte zweimal zugegriffen wird. Das erste Mal wird die Spaltenbreite abgerufen, und später erfolgt der Zugriff auf die eigentlichen Daten.  
   
- Wenn in der DBCOLUMNACCESS-Struktur pData NULL und cbMaxLen 0 ist, wird beim Aufruf von IRowGetColumns() nur die Spaltenlänge zurückgegeben. In diesem Fall kann IRow->GetColumns() wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
+ Wenn in der DBCOLUMNACCESS-Struktur pData NULL und cbMaxLen 0 ist, wird beim Aufruf von IRow->GetColumns nur die tatsächliche Spaltenlänge zurückgegeben. In diesem Fall kann IRow->GetColumns wieder für die gleiche Spalte aufgerufen werden, um die tatsächlichen Daten abzurufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   

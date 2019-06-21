@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 3380b26cb0401e35c59b50b349c279566612c50f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771646"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean-Methode (int) (SQLServerResultSet)
@@ -47,12 +47,12 @@ public boolean getBoolean(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese getBoolean-Methode wird von der getBoolean-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+ Diese getBoolean-Methode wird von der getBoolean-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Diese Methode wird nur für Zahlen- und Zeichendatentypen unterstützt. Konvertiert Werte "1", 1, und " **" true "** " zum **"true"** , und die Werte "0", 0 (null) und " **" false "** " um **"false"** . Für alle anderen Werte bleibt das Verhalten nicht definiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [updateBoolean-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
+ [getBoolean Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

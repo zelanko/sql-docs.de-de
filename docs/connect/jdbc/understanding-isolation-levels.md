@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800167"
 ---
 # <a name="understanding-isolation-levels"></a>Grundlegendes zu Isolationsstufen
@@ -68,7 +68,7 @@ Zum Verwenden der neuen Snapshotisolationsstufe von [!INCLUDE[ssNoVersion](../..
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
 ```
 
-Sie können  für Folgendes verwenden:  
+oder Sie können Folgendes verwenden:  
 
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  

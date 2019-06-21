@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber | Microsoft-Dokumentation'
+title: 'Gewusst wie: Abrufen von E/A-Parametern mit dem SQLSRV-Treiber | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799319"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber

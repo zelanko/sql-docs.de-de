@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182173"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Homepage für den Client für Microsoft SQL Server-Programmierung
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Startseite für die Clientprogrammierung in Microsoft SQL Server
 
 
 Willkommen Sie auf unserer Homepage zur Clientprogrammierung für die Interaktion mit Microsoft SQL Server, und klicken Sie mit Azure SQL-Datenbank in der Cloud. Dieser Artikel enthält die folgende Informationen an:
@@ -54,7 +54,7 @@ In der folgenden Tabelle wird jedes Bild Sprache einen Link zu Informationen zur
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![C#-logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM-Entitätsframework von .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java-Logo][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js-logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![Cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP-logo][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Node.js-logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP-logo][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Python-Logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby-logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -181,7 +181,7 @@ Die Node.js-Verbindung-Treiber für SQL Server wird in JavaScript implementiert.
 
 ## <a name="odbc-for-c"></a>ODBC für C++ 
 
-![ODBC-logo][image-ref-350-odbc] ![Cpp-big-plus][image-ref-322-cpp]
+![ODBC-logo][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
 Open Database Connectivity (ODBC) in den 1990er Jahren entwickelt wurde, und es empfiehlt es sich um .NET Framework. ODBC ist unabhängig von jedem System bestimmten Datenbank und unabhängig vom Betriebssystem werden soll.
 
@@ -191,14 +191,14 @@ Einige andere Connectivity-Treiber verwenden intern von ODBC.
 
 #### <a name="code-example"></a>Codebeispiel
 
-- [C++-Codebeispiel, mithilfe von ODBC](../odbc/reference/sample-odbc-program.md)
+- [C++-Codebeispiel unter Verwendung von ODBC](../odbc/reference/sample-odbc-program.md)
 
 #### <a name="documentation-outline"></a>Übersicht über die Dokumentation
 
 Der ODBC-Inhalt in diesem Abschnitt konzentriert sich auf den Zugriff auf SQL Server oder Azure SQL-Datenbank von C++. Die folgende Tabelle enthält die ungefähren Überblick über die wesentliche Dokumentation für ODBC.
 
 
-| Bereich | Unterbereichs | Beschreibung |
+| Bereich | Unterbereich | und Beschreibung |
 | :--- | :------ | :---------- |
 | [ODBC für C++](./odbc/index.md) | Der Stamm der Dokumentation. |
 | [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informationen zur Verwendung von ODBC unter den Betriebssystemen Linux oder MacOS. |
@@ -208,7 +208,7 @@ Der ODBC-Inhalt in diesem Abschnitt konzentriert sich auf den Zugriff auf SQL Se
 | [Konzept- und](../odbc/reference/index.md) | &nbsp; | Grundlegende Informationen über die ODBC-Schnittstelle, zusätzlich zu der herkömmlichen Verweis. |
 | &nbsp; " | [Anhänge](../odbc/reference/appendixes/index.md)    | Zustandsübergang Tabellen, ODBC-Cursorbibliothek und vieles mehr. |
 | &nbsp; " | [Entwickeln der app](../odbc/reference/develop-app/index.md)  | Funktionen, Handles und vieles mehr. |
-| &nbsp; " | [Entwickeln Sie Treiber](../odbc/reference/develop-driver/index.md) | Wie Sie eigene ODBC-Treiber zu entwickeln, wenn Sie eine speziellen Datenquelle verfügen. |
+| &nbsp; " | [Entwickeln von Treibern](../odbc/reference/develop-driver/index.md) | Wie Sie eigene ODBC-Treiber zu entwickeln, wenn Sie eine speziellen Datenquelle verfügen. |
 | &nbsp; " | [Installieren](../odbc/reference/install/index.md) | ODBC-Installation, Unterschlüssel und vieles mehr. |
 | &nbsp; " | [Syntax](../odbc/reference/syntax/index.md)   | APIs für Setup, Installer, Übersetzung und Daten zugreifen. |
 | &nbsp; | &nbsp; | <br /> |
@@ -251,7 +251,7 @@ Sie können Python verwenden, um die Interaktion mit SQL Server.
 
 #### <a name="documentation"></a>Dokumentation
 
-| Bereich | Beschreibung |
+| Bereich | und Beschreibung |
 | :--- | :---------- |
 | [Python mit SQLServer](./python/index.md) | Der Stamm der Dokumentation. |
 | [Pymssql-Treiber](./python/pymssql/index.md) | Microsoft nicht beibehält oder testen Sie den Pymssql-Treiber.<br /><br />Der Pymssql-Treiber-Verbindung ist eine einfache Schnittstelle für die SQL-Datenbanken, für die Verwendung in Python-Programmen. Pymssql baut auf FreeTDS zum Bereitstellen einer Python (PEP-249) für die DB-API-Oberfläche für Microsoft SQL Server. |

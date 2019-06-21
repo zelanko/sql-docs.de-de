@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499617"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
@@ -168,7 +168,7 @@ Erstellen Sie einen Parameter manuell aus dem Berichtsdatenbereich. Sie können 
   
 -   Im Falle von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen unterstützen verschiedene Datenquellen eine unterschiedliche Parametersyntax. Unterstützt werden Parameter, die in der Abfrage anhand der Position oder des Namens identifiziert werden. Weitere Informationen finden Sie in den Themen zu spezifischen externen Datenquellentypen unter [Berichtsdatasets (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md). Im relationalen Abfrage-Designer müssen Sie die Parameteroption für einen Filter auswählen, um eine parametrisierte Abfrage zu erstellen. Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   Für Abfragen, die auf einer mehrdimensionalen Datenquelle wie Microsoft SQL Server Analysis Services, SAP NetWeaver BI oder Hyperion Essbase basieren, können Sie angeben, ob ein Parameter auf Basis eines Filters erstellt werden soll, den Sie im Abfrage-Designer angeben. Weitere Informationen finden Sie unter [Abfrage-Designer &#40;Berichts-Generator&#41;](../report-data/query-design-tools-ssrs.md) im Thema über den entsprechenden Abfrage-Designer für die Datenerweiterung.  
+-   Für Abfragen, die auf einer mehrdimensionalen Datenquelle wie Microsoft SQL Server Analysis Services, SAP NetWeaver BI oder Hyperion Essbase basieren, können Sie angeben, ob ein Parameter auf Basis eines Filters erstellt werden soll, den Sie im Abfrage-Designer angeben. Weitere Informationen finden Sie unter [Abfrageentwurfstools (SSRS)](../report-data/query-design-tools-ssrs.md) im Thema über den entsprechenden Abfrage-Designer für die Datenerweiterung.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Parameterverwaltung für einen veröffentlichten Bericht  
  Wenn Sie einen Bericht entwerfen, werden Berichtsparameter in der Berichtsdefinition gespeichert. Wenn Sie einen Bericht veröffentlichen, werden Berichtsparameter getrennt von der Berichtsdefinition gespeichert und verwaltet.  

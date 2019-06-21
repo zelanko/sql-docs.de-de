@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769247"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadata – Parameter and Rowset
@@ -69,7 +69,7 @@ ms.locfileid: "66769247"
   
  Die *bPrecision* Parameter wird ignoriert.  
   
- Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen **datetime** und **smalldatetime** erzwingen. Bei einer Verbindung mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]-Servern (oder späteren Versionen) wird das Format **datetime2** verwendet, und eine implizite Serverkonvertierung wird durchgeführt, sofern erforderlich, wenn der Typname **datetime2** oder DBTYPE_DBTIMESTAMP lautet. *bScale* wird ignoriert, wenn der anbieterspezifische Typname " **" DateTime "** "oder"**Smalldatetime**" verwendet werden. Andernfalls Anwendungen müssen sicherstellen, dass *bScale* korrekt festgelegt ist. Anwendungen, die von MDAC und OLE DB-Treiber für SQL Server Upgrade [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] verwenden "DBTYPE_DBTIMESTAMP" fehl schlägt, wenn sie nicht festlegen *bScale* ordnungsgemäß. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
+ Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen **datetime** und **smalldatetime** erzwingen. Bei einer Verbindung mit [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]-Servern (oder späteren Versionen) wird das Format **datetime2** verwendet, und eine implizite Serverkonvertierung wird durchgeführt, sofern erforderlich, wenn der Typname **datetime2** oder DBTYPE_DBTIMESTAMP lautet. *bScale* wird ignoriert, wenn der anbieterspezifische Typname "**" DateTime "**"oder"**Smalldatetime**" verwendet werden. Andernfalls Anwendungen müssen sicherstellen, dass *bScale* korrekt festgelegt ist. Anwendungen, die von MDAC und OLE DB-Treiber für SQL Server Upgrade [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] verwenden "DBTYPE_DBTIMESTAMP" fehl schlägt, wenn sie nicht festlegen *bScale* ordnungsgemäß. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
   
  Wenn ICommandWithParameters:: SetParameterInfo nicht aufgerufen wird, impliziert der Anbieter den Servertyp vom Bindungstyp gemäß IAccessor:: CreateAccessor wie folgt aus:  
   

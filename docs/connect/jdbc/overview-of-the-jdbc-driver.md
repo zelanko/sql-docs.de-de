@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e90dc3c4996fc9dc412a28849df2283ec9495ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801797"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Übersicht über den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47597138"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Herunterladen des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)|Links zum Herunterladen des Microsoft JDBC-Treibers für SQL Server|  
 |[Release Notes for the JDBC Driver (Versionshinweise für den JDBC-Treiber)](../../connect/jdbc/release-notes-for-the-jdbc-driver.md)|Beschreibt die neuen Funktionen in der aktuellen Version des Microsoft JDBC-Treibers|  
@@ -41,8 +41,8 @@ ms.locfileid: "47597138"
 |[Häufig gestellte Fragen &#40;– häufig gestellte Fragen&#41; für JDBC-Treiber](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Häufig gestellte Fragen zu Microsofts JDBC-Treiber|  
 |[Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server|
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [JDBC-Treiber-GitHub-Repository](https://github.com/microsoft/mssql-jdbc)  
+## <a name="see-also"></a>Weitere Informationen  
+ [JDBC Driver GitHub repository (GitHub-Repository für den JDBC-Treiber)](https://github.com/microsoft/mssql-jdbc)  
  [API-Referenz für den JDBC-Treiber](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: bd66bf9996ce01435c8243a13c86c65d11072fee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66791876"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort-Methode (int) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public short getShort(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese getInt-Methode wird von der getInt-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getShort-Methode wird von der getShort-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Die Methode wird nur unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen unterstützt, die einen ganzzahligen Wert wie „smallint“, „tinyint“ und „bit“ sicher zurückgeben. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801481"
 ---
 # <a name="default-php-data-types"></a>PHP-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |bit|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |char|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |Datum<sup>4</sup>|DATETIME|Nicht verfügbar|  
-|"DateTime"<sup>4</sup>|DATETIME|Nicht verfügbar|  
+|datetime<sup>4</sup>|DATETIME|Nicht verfügbar|  
 |datetime2<sup>4</sup>|DATETIME|Nicht verfügbar|  
 |datetimeoffset<sup>4</sup>|DATETIME|Nicht verfügbar|  
 |Decimal|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
@@ -52,19 +52,19 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |NCHAR|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |NUMERIC|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |NVARCHAR|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|nvarchar(MAX)|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
-|Ntext<sup>6</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
+|nvarchar(Max)|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
+|ntext<sup>6</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |REAL|float|8-Bit-Zeichen<sup>1</sup>|  
 |smalldatetime|DATETIME|8-Bit-Zeichen<sup>1</sup>|  
 |SMALLINT|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |SMALLMONEY|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|Sql_variant<sup>7</sup>|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
-|Text<sup>8</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
+|sql_variant<sup>7</sup>|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
+|text<sup>8</sup>|Datenstrom<sup>2</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |time<sup>4</sup>|DATETIME|Nicht verfügbar|  
 |timestamp|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |TINYINT|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |UDT|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
-|UNIQUEIDENTIFIER|Zeichenfolge<sup>9</sup>|8-Bit-Zeichen<sup>1</sup>|  
+|UNIQUEIDENTIFIER|String<sup>9</sup>|8-Bit-Zeichen<sup>1</sup>|  
 |varbinary|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |varbinary(MAX)|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
 |varchar|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
@@ -90,7 +90,7 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
   
 9.  Als „UNIQUEIDENTIFIER“ werden GUIDs bezeichnet, die den folgenden regulären Ausdruck aufweisen.  
   
-    [0-9a-fA-F] {8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
+    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Weitere neue Datentypen und Funktionen in SQL Server 2008  
@@ -98,17 +98,17 @@ Datentypen, die in SQL Server 2008 neu sind und die außerhalb von Spalten (z.B.
   
 |Funktion|PHP-Unterstützung|  
 |-----------|---------------|  
-|Tabellenwertparameter|nein|  
+|Tabellenwertparameter|Nein|  
 |Spalten mit geringer Dichte|Teilweise|  
-|NULL-Bit-Komprimierung|Benutzerkontensteuerung|  
-|Große benutzerdefinierte CLR-Typen (UDTs)|Benutzerkontensteuerung|  
-|Dienstprinzipalname|nein|  
-|MERGE|Benutzerkontensteuerung|  
+|NULL-Bit-Komprimierung|Ja|  
+|Große benutzerdefinierte CLR-Typen (UDTs)|Ja|  
+|Dienstprinzipalname|Nein|  
+|MERGE|Ja|  
 |FILESTREAM|Teilweise|  
   
 Teilweise Unterstützung besagt, dass Sie den Spaltentyp nicht programmgesteuert abfragen können.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

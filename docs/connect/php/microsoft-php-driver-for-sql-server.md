@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800248"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft-Treiber für PHP für SQL Server
@@ -43,7 +43,7 @@ Microsoft Drivers for PHP for SQL Server ermöglichen die Integration in SQL Ser
 * ![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[zum Herunterladen der Treiber für PHP für SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Beispiele  
-* [Anmerkungen zu dieser Version für die Microsoft-Treiber für PHP für SQL Server](code-samples-for-php-sql-driver.md)
+* [Codebeispiele für die Microsoft-Treiber für PHP für SQL Server](code-samples-for-php-sql-driver.md)
 * [Erste Schritte mit PHP unter Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [Erste Schritte mit PHP unter macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Erste Schritte mit PHP unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

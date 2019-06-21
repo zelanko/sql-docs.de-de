@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40ca58f33dec39a1ec6d39979c7f6f0103acf8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66788624"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,15 +42,15 @@ public java.sql.ResultSet getTypeInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetTypeInfo-Methode wird von der GetTypeInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getTypeInfo-Methode wird von der getTypeInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getTypeInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
-|Name|Typ|Beschreibung|  
+|Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
 |DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  
-|PRECISION|**int**|Die Gesamtanzahl von signifikanten Stellen.|  
+|PRECISION|**ssNoversion**|Die Gesamtanzahl von signifikanten Stellen.|  
 |LITERAL_PREFIX|**String**|Die Zeichen, die einer Konstante vorangestellt werden.|  
 |LITERAL_SUFFIX|**String**|Die Zeichen, die eine Konstante beenden.|  
 |CREATE_PARAMS|**String**|Die Beschreibung der Erstellungsparameter für den Datentyp.|  
@@ -63,9 +63,9 @@ public java.sql.ResultSet getTypeInfo()
 |LOCAL_TYPE_NAME|**String**|Der lokalisierte Name des Datentyps.|  
 |MINIMUM_SCALE|**short**|Die maximale Anzahl von Stellen rechts des Dezimalzeichens.|  
 |MAXIMUM_SCALE|**short**|Die Mindestanzahl von Stellen rechts des Dezimalzeichens.|  
-|SQL_DATA_TYPE|**int**|Wird vom JDBC-Treiber nicht unterstützt.|  
-|SQL_DATETIME_SUB|**int**|Wird vom JDBC-Treiber nicht unterstützt.|  
-|NUM_PREC_RADIX|**int**|Die Anzahl von Bits oder Stellen zum Berechnen der höchsten Zahl, die eine Spalte enthalten kann.|  
+|SQL_DATA_TYPE|**ssNoversion**|Wird vom JDBC-Treiber nicht unterstützt.|  
+|SQL_DATETIME_SUB|**ssNoversion**|Wird vom JDBC-Treiber nicht unterstützt.|  
+|NUM_PREC_RADIX|**ssNoversion**|Die Anzahl von Bits oder Stellen zum Berechnen der höchsten Zahl, die eine Spalte enthalten kann.|  
 |INTERVAL_PRECISION|**smallint**|Die Genauigkeit für anführenden Intervallwert.|  
 |USERTYPE|**smallint**|Der **usertype**-Wert aus der Tabelle **systypes**. Weitere Informationen finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation.|  
   
@@ -98,7 +98,7 @@ public static void executeGetTypeInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData-Elemente](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData-Klasse](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

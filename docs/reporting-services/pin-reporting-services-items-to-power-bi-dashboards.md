@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500030"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Anheften von paginierten Reporting Services-Berichtselementen an Dashboards in Power BI
@@ -96,7 +96,7 @@ Im [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard verhält sich d
   
 ##  <a name="bkmk-troubleshoot"></a> Problembehandlung  
   
--   **Keine [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]-Schaltfläche auf der Symbolleiste des Berichts-Viewers:** Dies deutet darauf hin, dass der Berichtsserver nicht in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] integriert wurde. Weitere Informationen finden Sie unter [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)integrieren.  
+-   **Keine [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]-Schaltfläche auf der Symbolleiste des Berichts-Viewers:** Diese Meldung deutet darauf hin, dass der Berichtsserver nicht in [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] integriert wurde. Weitere Informationen finden Sie unter [Berichtsserverintegration für Power BI &#40;Configuration Manager&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)integrieren.  
   
 - **Anheften nicht möglich**: Wenn Sie versuchen, ein Element anzuheften, wird die folgende Fehlermeldung angezeigt: Siehe Abschnitt [Elemente, die angeheftet werden können](#bkmk_supported_items).  
   

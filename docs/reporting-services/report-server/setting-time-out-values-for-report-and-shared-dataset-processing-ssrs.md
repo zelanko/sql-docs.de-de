@@ -14,10 +14,10 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506437"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66506437"
  Abfragetimeoutwerte werden auf dem Berichtsserver in Sekunden angegeben, wenn Sie ein freigegebenes Dataset erstellen oder verwalten. Standardmäßig wird dieser Wert auf 0 Sekunden festgelegt, was bedeutet, dass kein Timeoutwert vorhanden ist. Weitere Informationen finden Sie unter [Verwalten von freigegebenen Datasets](../../reporting-services/report-data/manage-shared-datasets.md).  
   
 ## <a name="setting-a-report-execution-time-out"></a>Festlegen eines Timeoutwerts für die Berichtsausführung  
- Sie können einen Timeoutwert für die Berichtsausführung festlegen, um die Verarbeitungszeit des Berichtsservers für einen Bericht zu begrenzen. Timeoutwerte für die Berichtsausführung können im Berichts-Manager angegeben werden. Sie können auf der Seite Siteeinstellungen für alle Berichte einen Standardwert festlegen und diesen Wert später auf der Eigenschaftenseite Ausführung für einen speziellen Bericht überschreiben. Standardmäßig ist der Wert auf 1800 Sekunden festgelegt. Weitere Informationen finden Sie unter [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md).  
+ Sie können einen Timeoutwert für die Berichtsausführung festlegen, um die Verarbeitungszeit des Berichtsservers für einen Bericht zu begrenzen. Timeoutwerte für die Berichtsausführung können im Webportal angegeben werden. Sie können auf der Seite Siteeinstellungen für alle Berichte einen Standardwert festlegen und diesen Wert später auf der Eigenschaftenseite Ausführung für einen speziellen Bericht überschreiben. Standardmäßig ist der Wert auf 1800 Sekunden festgelegt. Weitere Informationen finden Sie unter [Festlegen von Berichtsverarbeitungseigenschaften](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 ## <a name="how-report-execution-time-out-values-are-evaluated"></a>Auswerten von Timeoutwerten für die Berichtsausführung  
  Der Berichtsserver wertet Aufträge, die ausgeführt werden,  in Zeitabständen von 60 Sekunden aus. Alle 60  Sekunden vergleicht der Berichtsserver die tatsächliche Verarbeitungszeit mit dem Timeoutwert für die Berichtsausführung. Falls die Verarbeitungszeit für einen Bericht den Timeoutwert für die Berichtsausführung übersteigt, wird die Berichtsverarbeitung angehalten.  

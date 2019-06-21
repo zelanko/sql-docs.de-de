@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66772971"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement-Elemente
@@ -40,7 +40,7 @@ ms.locfileid: "66772971"
   
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Fügt dem Befehlsbatch für dieses Statement-Objekt einen Parametersatz hinzu.|  
+|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Fügt dem Befehlsbatch für dieses CallableStatement-Objekt einen Parametersatz hinzu.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Geerbt von [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Bricht die SQL-Anweisung ab, die derzeit von diesem CallableStatement-Objekt ausgeführt wird.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Leert die aktuelle Liste mit SQL-Befehlen für dieses CallableStatement-Objekt.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Löscht umgehend die aktuellen Parameterwerte.|  
@@ -101,7 +101,7 @@ ms.locfileid: "66772971"
 |[registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)|Registriert den OUT-Parameter.|  
 |[setArray](../../../connect/jdbc/reference/setarray-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Legt die angegebene Parameternummer auf das angegebene Array-Objekt fest.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)|Legt den angegebenen Parameter auf den angegebenen Eingabedatenstrom fest.|  
-|[setBigDecimal](../../../connect/jdbc/reference/setbigdecimal-method-sqlservercallablestatement.md)|Legt die angegebene Parameternummer auf das angegebene Array-Objekt fest.|  
+|[setBigDecimal](../../../connect/jdbc/reference/setbigdecimal-method-sqlservercallablestatement.md)|Legt die angegebene Parameternummer auf das angegebene BigDecimal-Objekt fest.|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)|Legt die angegebenen Parameter auf den angegebenen Eingabedatenstrom fest.|  
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|(Geerbt von [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Legt den angegebenen Parameter auf das angegebene Blobobjekt fest.|  
 |[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlservercallablestatement.md)|Legt den angegebenen Parameter auf den angegebenen Wert vom Typ **Boolean** fest.|  

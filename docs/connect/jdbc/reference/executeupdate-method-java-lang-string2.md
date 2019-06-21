@@ -1,5 +1,5 @@
 ---
-title: ExecuteUpdate-Methode (java.lang.String) | Microsoft-Dokumentation
+title: executeUpdate-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3a976f9e953729be7b9f993139a7603fe8444cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c408098ebe1e9e732b171390eb1901f01014292
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804147"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate-Methode (java.lang.String)
 
@@ -45,11 +45,11 @@ Ein **int**-Wert, der die Anzahl der betroffenen Zeilen angibt, oder „0“ bei
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Remarks
-Diese ExecuteUpdate-Methode wird von der ExecuteUpdate-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.
+Diese executeUpdate-Methode wird von der executeUpdate-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.
 
 Durch den Aufruf dieser Methode wird eine Ausnahme ausgelöst, da die SQL-Anweisung für das SQLServerPreparedStatement-Objekt bei der Erstellung des Objekts angegeben wird.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 
 [executeUpdate-Methode &#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
 

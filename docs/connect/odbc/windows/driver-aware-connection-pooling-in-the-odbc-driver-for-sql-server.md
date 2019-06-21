@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56cb2a6a28e60aa34a2bb74d9d7c506f7d3b9523
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403175"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797797"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Treiberfähiges Verbindungspooling im ODBC-Treiber für SQL Server.
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52403175"
 -   Treiberfähiges Verbindungspooling erkennt treiberspezifische Verbindungsattribute. Wenn Sie eine Verbindung verwendet `SQL_COPT_SS_APPLICATION_INTENT` auf schreibgeschützt festgelegt ist, ruft diese Verbindung ihren eigenen Verbindungspool.
 -   Festlegen der `SQL_COPT_SS_ACCESS_TOKEN` Attribut bewirkt, dass eine Verbindung getrennt gepoolt werden sollen 
   
-Wenn eine der folgenden Verbindungsattribut-IDs oder eines der Schlüsselwörter für Verbindungszeichenfolgen zwischen Ihrer Verbindungszeichenfolge und der in einem Pool zusammengefassten Verbindungszeichenfolge abweicht, verwendet der Treiber eine gepoolte Verbindung. Allerdings ist die Leistung besser, wenn alle Verbindungsattribut-IDs oder Schlüsselwörter für Verbindungszeichenfolgen übereinstimmen. (Um eine Übereinstimmung einer Verbindung im Pool herzustellen, setzt der Treiber das Attribut zurück. Die Leistung wird beeinträchtigt, da ein zusätzlicher Netzwerkaufruf notwendig ist, um die folgenden Parameter zurückzusetzen.)  
+Wenn eine der folgenden Verbindungsattribut-IDs oder eines der Schlüsselwörter für Verbindungszeichenfolgen zwischen Ihrer Verbindungszeichenfolge und der in einem Pool zusammengefassten Verbindungszeichenfolge abweicht, verwendet der Treiber eine gepoolte Verbindung. Allerdings ist die Leistung besser, wenn alle Verbindungsattribut-IDs oder Schlüsselwörter für Verbindungszeichenfolgen übereinstimmen. (Um eine Übereinstimmung einer Verbindung im Pool herzustellen, setzt der Treiber das Attribut zurück. Die Leistung wird beeinträchtigt, da ein zusätzlicher Netzwerkaufruf notwendig ist, um die folgenden Parameter zurückzusetzen.  
   
 -    Wenn sich zwei oder mehr der folgenden Verbindungsattribute oder Verbindungsschlüsselwörter unterscheiden, wird keine gepoolte Verbindung verwendet.  
   
@@ -45,89 +45,89 @@ Wenn eine der folgenden Verbindungsattribut-IDs oder eines der Schlüsselwörter
   
     |Schlüsselwort|ODBC-Treiber 13|ODBC-Treiber 11|
     |-|-|-|
-    |`Address`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`AnsiNPW`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`App`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`ApplicationIntent`|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-    |`Authentication`|Benutzerkontensteuerung|nein|
-    |`ColumnEncryption`|Benutzerkontensteuerung|nein|
-    |`Database`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`Encrypt`|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-    |`Failover_Partner`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`FailoverPartnerSPN`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`MARS_Connection`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`Network`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`PWD`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`Server`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`ServerSPN`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`TransparentNetworkIPResolution`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`Trusted_Connection`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`TrustServerCertificate`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`UID`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`WSID`|Benutzerkontensteuerung|Benutzerkontensteuerung|
+    |`Address`|Ja|Ja|
+    |`AnsiNPW`|Ja|Ja|
+    |`App`|Ja|Ja|
+    |`ApplicationIntent`|Ja|Ja|  
+    |`Authentication`|Ja|Nein|
+    |`ColumnEncryption`|Ja|Nein|
+    |`Database`|Ja|Ja|
+    |`Encrypt`|Ja|Ja|  
+    |`Failover_Partner`|Ja|Ja|
+    |`FailoverPartnerSPN`|Ja|Ja|
+    |`MARS_Connection`|Ja|Ja|
+    |`Network`|Ja|Ja|
+    |`PWD`|Ja|Ja|
+    |`Server`|Ja|Ja|
+    |`ServerSPN`|Ja|Ja|
+    |`TransparentNetworkIPResolution`|Ja|Ja|
+    |`Trusted_Connection`|Ja|Ja|
+    |`TrustServerCertificate`|Ja|Ja|
+    |`UID`|Ja|Ja|
+    |`WSID`|Ja|Ja|
     
 - Gibt es einen Unterschied in einem der folgenden Verbindungsattribute zwischen Ihrer Verbindungszeichenfolge und einer gepoolten Verbindungszeichenfolge, wird keine gepoolte Verbindung verwendet.  
   
     |attribute|ODBC-Treiber 13|ODBC-Treiber 11|  
     |-|-|-|  
-    |`SQL_ATTR_CURRENT_CATALOG`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_ATTR_PACKET_SIZE`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_ANSI_NPW`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|Benutzerkontensteuerung|nein|
-    |`SQL_COPT_SS_AUTHENTICATION`|Benutzerkontensteuerung|nein|
-    |`SQL_COPT_SS_ATTACHDBFILENAME`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_BCP`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Benutzerkontensteuerung|nein|
-    |`SQL_COPT_SS_CONCAT_NULL`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_ENCRYPT`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_FAILOVER_PARTNER`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_FAILOVER_PARTNER_SPN`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_INTEGRATED_SECURITY`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_MARS_ENABLED`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_OLDPWD`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_SERVER_SPN`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SSPROP_AUTH_REPL_SERVER_NAME`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_TNIR`|Benutzerkontensteuerung|nein|
+    |`SQL_ATTR_CURRENT_CATALOG`|Ja|Ja|
+    |`SQL_ATTR_PACKET_SIZE`|Ja|Ja|
+    |`SQL_COPT_SS_ANSI_NPW`|Ja|Ja|
+    |`SQL_COPT_SS_ACCESS_TOKEN`|Ja|Nein|
+    |`SQL_COPT_SS_AUTHENTICATION`|Ja|Nein|
+    |`SQL_COPT_SS_ATTACHDBFILENAME`|Ja|Ja|
+    |`SQL_COPT_SS_BCP`|Ja|Ja|
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Ja|Nein|
+    |`SQL_COPT_SS_CONCAT_NULL`|Ja|Ja|
+    |`SQL_COPT_SS_ENCRYPT`|Ja|Ja|
+    |`SQL_COPT_SS_FAILOVER_PARTNER`|Ja|Ja|
+    |`SQL_COPT_SS_FAILOVER_PARTNER_SPN`|Ja|Ja|
+    |`SQL_COPT_SS_INTEGRATED_SECURITY`|Ja|Ja|
+    |`SQL_COPT_SS_MARS_ENABLED`|Ja|Ja|
+    |`SQL_COPT_SS_OLDPWD`|Ja|Ja|
+    |`SQL_COPT_SS_SERVER_SPN`|Ja|Ja|
+    |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Ja|Ja|
+    |`SSPROP_AUTH_REPL_SERVER_NAME`|Ja|Ja|
+    |`SQL_COPT_SS_TNIR`|Ja|Nein|
  
 -   Der Treiber kann die folgenden Verbindungsschlüsselwörter und Attribute zurücksetzen und anpassen, ohne einen zusätzlichen Netzwerkaufruf durchzuführen. Der Treiber setzt diese Parameter zurück, um sicherzustellen, dass die Verbindung keine falschen Informationen enthält.  
   
-     Diese Schlüsselwörter werden nicht berücksichtigt, wenn der Treiber-Manager versucht, eine Übereinstimmung zwischen Ihrer Verbindung und einer Verbindung im Pool zu erzielen. (Auch wenn Sie einen dieser Parameter ändern, kann eine vorhandene Verbindung wiederverwendet werden. Der Treiber wird je nach Bedarf die Optionen zurücksetzen.) Diese Attribute können clientseitig ohne einen zusätzliche Netzwerkaufruf zurückgesetzt werden.  
+     Diese Schlüsselwörter werden nicht berücksichtigt, wenn der Treiber-Manager versucht, eine Übereinstimmung zwischen Ihrer Verbindung und einer Verbindung im Pool zu erzielen. (Auch wenn Sie einen dieser Parameter ändern, kann eine vorhandene Verbindung wiederverwendet werden. Der Treiber setzt die Optionen nach Bedarf zurück.) Diese Attribute können clientseitig ohne einen zusätzliche Netzwerkaufruf zurückgesetzt werden.  
   
     |Schlüsselwort|ODBC-Treiber 13|ODBC-Treiber 11|  
     |-|-|-|  
-    |`AutoTranslate`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`Description`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`MultisubnetFailover`|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-    |`QueryLog_On`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`QueryLogFile`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`QueryLogTime`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`Regional`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`StatsLog_On`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`StatsLogFile`|  Benutzerkontensteuerung|Benutzerkontensteuerung|
+    |`AutoTranslate`|Ja|Ja|
+    |`Description`|Ja|Ja|
+    |`MultisubnetFailover`|Ja|Ja|  
+    |`QueryLog_On`|Ja|Ja|
+    |`QueryLogFile`|Ja|Ja|
+    |`QueryLogTime`|Ja|Ja|
+    |`Regional`|Ja|Ja|
+    |`StatsLog_On`|Ja|Ja|
+    |`StatsLogFile`|  Ja|Ja|
   
      Wenn Sie eine der folgenden Verbindungsattribute ändern, kann eine vorhandene Verbindung wiederverwendet werden.  Der Treiber wird je nach Bedarf den Wert zurücksetzen. Der Treiber kann diese Attribute clientseitig ohne einen zusätzliche Netzwerkaufruf zurücksetzen  
   
     |attribute|ODBC-Treiber 13|ODBC-Treiber 11|  
     |-|-|-|  
-    |Alle Anweisungsattribute|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_ATTR_AUTOCOMMIT`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_ATTR_CONNECTION_TIMEOUT`|  Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_ATTR_LOGIN_TIMEOUT`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_ATTR_ODBC_CURSORS`|  Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_PERF_DATA`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_PERF_DATA_LOG`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_PERF_DATA_LOG_NOW`| Benutzerkontensteuerung|Benutzerkontensteuerung| 
-    |`SQL_COPT_SS_PERF_QUERY`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_PERF_QUERY_INTERVAL`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_PERF_QUERY_LOG`|  Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_PRESERVE_CURSORS`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_TRANSLATE`|Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_USER_DATA`|  Benutzerkontensteuerung|Benutzerkontensteuerung|
-    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|Benutzerkontensteuerung|Benutzerkontensteuerung|  
+    |Alle Anweisungsattribute|Ja|Ja|
+    |`SQL_ATTR_AUTOCOMMIT`|Ja|Ja|
+    |`SQL_ATTR_CONNECTION_TIMEOUT`|  Ja|Ja|
+    |`SQL_ATTR_DISCONNECT_BEHAVIOR SQL_ATTR_CONNECTION_TIMEOUT`|Ja|Ja|
+    |`SQL_ATTR_LOGIN_TIMEOUT`|Ja|Ja|
+    |`SQL_ATTR_ODBC_CURSORS`|  Ja|Ja|
+    |`SQL_COPT_SS_PERF_DATA`|Ja|Ja|
+    |`SQL_COPT_SS_PERF_DATA_LOG`|Ja|Ja|
+    |`SQL_COPT_SS_PERF_DATA_LOG_NOW`| Ja|Ja| 
+    |`SQL_COPT_SS_PERF_QUERY`|Ja|Ja|
+    |`SQL_COPT_SS_PERF_QUERY_INTERVAL`|Ja|Ja|
+    |`SQL_COPT_SS_PERF_QUERY_LOG`|  Ja|Ja|
+    |`SQL_COPT_SS_PRESERVE_CURSORS`|Ja|Ja|
+    |`SQL_COPT_SS_TRANSLATE`|Ja|Ja|
+    |`SQL_COPT_SS_USER_DATA`|  Ja|Ja|
+    |`SQL_COPT_SS_WARN_ON_CP_ERROR`|Ja|Ja|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

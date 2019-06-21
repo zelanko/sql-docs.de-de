@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b83978f35dadff86e231b93b836c7ffdd1e0f08
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797726"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Bei Verwendung des SQLSRV-Treibers für die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], Sie können Datums- und Uhrzeittypen abrufen (**Smalldatetime**, **"DateTime"**, **Datum**, **Zeit**, **datetime2**, und **Datetimeoffset**) als Zeichenfolgen, indem Sie die folgende Option in der Verbindungszeichenfolge oder auf der Anweisungsebene angeben:
+Bei Verwendung des SQLSRV-Treibers für die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], Sie können Datums- und Uhrzeittypen abrufen (**Smalldatetime**, **"DateTime"** , **Datum**, **Zeit**, **datetime2**, und **Datetimeoffset**) als Zeichenfolgen, indem Sie die folgende Option in der Verbindungszeichenfolge oder auf der Anweisungsebene angeben:
 
 ```
 'ReturnDatesAsStrings'=>true
@@ -195,4 +195,4 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>Weitere Informationen
 [Abrufen von Daten](../../connect/php/retrieving-data.md)
 
-[Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-Datetime-Objekte mit dem PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+[Abrufen von Datums- und Uhrzeittypen als PHP-datetime-Objekte mit dem PDO_SSQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

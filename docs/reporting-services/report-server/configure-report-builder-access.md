@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.date: 03/14/2017
-ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 06/06/2019
+ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580375"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826906"
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
 Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver zusammen installiert wird.  
@@ -28,29 +28,29 @@ Der Zugriff auf den Berichts-Generator ist von den folgenden Faktoren abhängig:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Der Berichts-Generator ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Unterstützte Funktionen von SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+Der Berichts-Generator ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Unterstützte Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-Auf dem Clientcomputer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 installiert sein. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
+Die Clientcomputer müssen die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 oder 4.6.1, installiert jeweils für SSRS 2016 und 2017. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
 
-Sie müssen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 oder höher verwenden.  
+Verwenden Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] InternetExplorer 11 oder höher oder einem anderen modernen Browser.  
 
 Der Berichts-Generator wird immer im Modus für volle Vertrauenswürdigkeit ausgeführt; Sie können ihn nicht so konfigurieren, dass er im Modus für teilweise Vertrauenswürdigkeit ausgeführt wird. In früheren Versionen war es möglich, den Berichts-Generator im Modus für partielle Vertrauenswürdigkeit auszuführen, aber diese Option wird in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen nicht unterstützt.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Aktivieren und Deaktivieren des Berichts-Generators  
 
-Der Berichts-Generator ist in der Standardeinstellung aktiviert. Die Berichtsserveradministratoren können den Berichts-Generator deaktivieren, indem sie die Berichtsserver-Systemeigenschaft **EnableReportDesignClientDownload** auf **false**festlegen. Durch Festlegen dieser Eigenschaft werden Downloads des Berichts-Generators für diesen Berichtsserver deaktiviert.  
+Der Berichts-Generator ist in der Standardeinstellung aktiviert. Berichtsserveradministratoren können den Berichts-Generator deaktivieren, indem sie die Berichtsserver-Systemeigenschaft **ShowDownloadMenu** auf **FALSE** festlegen. Durch Festlegen dieser Eigenschaft wird der Berichts-Generator, Publisher für Mobile Berichte deaktiviert, und Power BI Mobile-downloads für diesen Berichtsserver.  
 
-Zum Festlegen der Berichtsserver-Systemeigenschaften können Sie Management Studio oder ein Skript verwenden:  
+ Zum Festlegen der Berichtsserver-Systemeigenschaften können Sie Management Studio oder ein Skript verwenden:   
 
-- Wenn Sie Management Studio verwenden möchten, stellen Sie eine Verbindung mit dem Berichtsserver her und legen auf der Seite mit den erweiterten Servereigenschaften die Eigenschaft **EnableReportDesignClientDownload** auf **false**fest. Weitere Informationen zum Öffnen dieser Seite finden Sie unter [Festlegen von Berichtsservereigenschaften (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+ - Wenn Sie Management Studio verwenden möchten, stellen Sie eine Verbindung mit dem Berichtsserver her und legen auf der Seite mit den erweiterten Servereigenschaften **ShowDownloadMenu** auf **FALSE** fest. Weitere Informationen zum Öffnen dieser Seite finden Sie unter [Festlegen von Berichtsservereigenschaften (Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md).      
 
-- Ein Beispielskript, das eine Berichtsservereigenschaft festlegt, finden Sie unter [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
+ - Ein Beispielskript, das eine Berichtsservereigenschaft festlegt, finden Sie unter [Skripts für Bereitstellungs- und Verwaltungsaufgaben](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
 
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Rollenzuweisungen, die auf einem Berichtsserver im einheitlichen Modus Zugriff auf den Berichts-Generator gewähren  
 
 Erstellen Sie auf einem Berichtsserver im einheitlichen Modus Benutzerrollenzuweisungen, die Tasks zum Verwenden des Berichts-Generators einschließen. Sie müssen Inhalts-Manager und Systemadministrator sein, um Rollendefinitionen und Rollenzuweisungen auf der Element- und Websiteebene erstellen oder ändern zu können.  
 
-Die folgenden Anweisungen gehen davon aus, dass Sie vordefinierte Rollen verwenden. Wenn Sie die Rollendefinitionen abgeändert oder von SQL Server 2000 aktualisiert haben, überprüfen Sie die Rollen, um sicherzustellen, dass sie die erforderlichen Tasks enthalten. Weitere Informationen zum Erstellen von Rollenzuweisungen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver (Berichts-Manager)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+Die folgenden Anweisungen gehen davon aus, dass Sie vordefinierte Rollen verwenden. Wenn Sie die Rollendefinitionen abgeändert oder von SQL Server 2000 aktualisiert haben, überprüfen Sie die Rollen, um sicherzustellen, dass sie die erforderlichen Tasks enthalten. Weitere Informationen zum Erstellen von Rollenzuweisungen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
 Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem berechtigt:  
 
@@ -100,7 +100,7 @@ Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem
 
     3. Geben Sie im Feld Name den Namen **Berichts-Generator**ein.  
 
-    4. Geben Sie im Feld Beschreibung eine Rollenbeschreibung ein, damit die Benutzer im Berichts-Manager wissen, wozu ihre Rolle dient.  
+    4. Geben Sie im Feld Beschreibung eine Rollenbeschreibung ein, damit die Benutzer im Webportal wissen, wozu ihre Rolle dient.  
 
     5. Fügen Sie die folgenden Aufgaben hinzu: **Berichte lesen**, **Berichte anzeigen**, **Modelle anzeigen**, **Ressourcen anzeigen**, **Ordner anzeigen**und **Einzelne Abonnements verwalten**.  
 
@@ -108,9 +108,10 @@ Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>So erstellen Sie Rollenzuweisungen, die Zugriff auf den Berichts-Generator gewähren  
 
-1. Starten Sie den Berichts-Manager.  
+1. Starten Sie das Webportal.  
 
-2. Klicken Sie auf **Siteeinstellungen**.  
+2. Klicken Sie auf das Zahnradsymbol oben rechts der Startseite der Web-Portals, und wählen **Standorteinstellungen** aus der Dropdown-Menü.  
+![die Web-Portal Zahnrad-Symbol und das Menü](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Klicken Sie auf **Sicherheit**.  
 
@@ -150,5 +151,6 @@ In der folgenden Tabelle werden die vom Berichtsserver unterstützten Authentifi
 - [Authentication with the Report Server (Authentifizierung mit dem Berichtsserver)](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Browser Support for Reporting Services and Power View (Browserunterstützung für Reporting Services und Power View)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [Start Report Builder (Starten des Berichts-Generators.)](../../reporting-services/report-builder/start-report-builder.md)
-- [Berichts-Manager &#40;Einheitlicher SSRS-Modus&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Das Webportal eines Berichtsservers (einheitlicher SSRS-Modus)](../web-portal-ssrs-native-mode.md)
+- [Connect to a Report Server in Management Studio (Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio)](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [Berichtsserver-Systemeigenschaften](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

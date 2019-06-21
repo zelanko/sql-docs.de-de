@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a99157558ef3a4728e122a90021ff98640c28d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ced4d6df2e557a844a7d4dd69627a2c7f39c480
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802425"
 ---
 # <a name="position-method-javasqlclob-long"></a>position-Methode (java.sql.Clob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ public long position(java.sql.Clob searchstr,
 ## <a name="remarks"></a>Remarks  
  Diese Position-Methode wird von der Position-Methode in der java.sql.Clob-Schnittstelle angegeben.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Position-Methode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [SQLServerClob-Methoden](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)   

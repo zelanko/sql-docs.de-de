@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57fa8d097b2a6cedc5bf96dc4ee75471c7d27266
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: a5d2db7479e3a8cdce00dca62f04bf2c64989b48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737021"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798502"
 ---
 # <a name="using-table-valued-parameters"></a>Verwenden von Tabellenwertparametern
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer Datenzeilen aus einer Clientanwendung nach SQL Server, ohne dass mehrere Roundtrips oder eine spezielle serverseitige Logik für die Verarbeitung der Daten erforderlich sind. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und die Daten in einem einzigen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die dann verarbeitet werden können mithilfe von Transact-SQL.  
+Tabellenwertparameter bieten eine einfache Möglichkeit zum Marshallen mehrerer Datenzeilen aus einer Clientanwendung nach SQL Server, ohne dass mehrere Roundtrips oder eine spezielle serverseitige Logik für die Verarbeitung der Daten erforderlich sind. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und die Daten in einem einzigen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die Sie dann mithilfe von Transact-SQL bearbeiten können.  
   
 Spaltenwerte in Tabellenwertparametern können unter Verwendung von Transact-SQL SELECT-standardanweisungen zugegriffen werden. Tabellenwertparameter sind stark typisiert, und deren Struktur wird automatisch überprüft. Die Größe der Tabellenwertparameter wird nur vom Serverarbeitsspeicher beschränkt.  
   
@@ -33,7 +33,7 @@ Spaltenwerte in Tabellenwertparametern können unter Verwendung von Transact-SQL
   
  Weitere Informationen zu Tabellenwertparametern finden Sie unter den folgenden Ressourcen.  
   
-| Ressource                                                                                                             | Beschreibung                                                                         |
+| Ressource                                                                                                             | und Beschreibung                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server-Onlinedokumentation | Beschreibt, wie zum Erstellen und Verwenden von Tabellenwertparametern                             |
 | [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server-Onlinedokumentation                  | Beschreibt benutzerdefinierte Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden |
@@ -238,7 +238,7 @@ pStmt.execute();
 
 Diese Klasse stellt die Metadaten für eine Spalte dar. Es wird in der ISQLServerDataRecord-Schnittstelle zum Spaltenmetadaten an den Table-valued Parameter zu übergeben. Die Methoden in dieser Klasse sind:  
 
-| Name                                                                                                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Name                                                                                                                                                                             | und Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Öffentliche SQLServerMetaData (Zeichenfolge ColumnName, Int SqlType, Int mit einfacher Genauigkeit, Int Skalierung, booleschen UseServerDefault, booleschen IsUniqueKey, SQLServerSortOrder SortOrder, Int SortOrdinal) | Initialisiert eine neue Instanz der SQLServerMetaData mit der angegebenen Spaltennamen, Sql-Typ, Genauigkeit, Skalierung und der Server standardmäßig. Diese Form des Konstruktors unterstützt Tabellenwertparameter, können Sie angeben, ob die Spalte in der Table-valued Parameter, die Sortierreihenfolge für die Spalte, und die Ordnungszahl der Sortierspalte eindeutig ist. <br/><br/>UseServerDefault – gibt an, ob diese Spalte den Standardserverwert verwenden soll; Standardwert ist "false".<br>IsUniqueKey – gibt an, ob die Spalte in der Tabellenwertparameter eindeutig ist; Standardwert ist "false".<br>SortOrder - gibt die Sortierreihenfolge für eine Spalte an. Standardwert ist SQLServerSortOrder.Unspecified.<br>SortOrdinal - gibt die Ordnungszahl der Sortierspalte an. SortOrdinal beginnt bei 0; Standardwert ist-1. |
 | Öffentliche SQLServerMetaData (Zeichenfolge ColumnName, Int SqlType)                                                                                                                        | Initialisiert eine neue Instanz der SQLServerMetaData, die den Namen der Spalte mit der Sql-Typ.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -262,7 +262,7 @@ Eine Enumeration, die die Sortierreihenfolge definiert. Mögliche Werte sind auf
 
 Diese Klasse stellt eine Tabelle in-Memory-Daten mit Tabellenwertparametern verwendet werden. Die Methoden in dieser Klasse sind:  
 
-| Name                                                          | Beschreibung                                          |
+| Name                                                          | und Beschreibung                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Öffentliche SQLServerDataTable()                                   | Initialisiert eine neue Instanz der "sqlserverdatatable".    |
 | public Iterator<Entry\<Integer, Object[]>> getIterator()      | Ruft einen Iterator für die Zeilen der Datentabelle ab. |
@@ -276,17 +276,17 @@ Diese Klasse stellt eine Tabelle in-Memory-Daten mit Tabellenwertparametern verw
 
 Diese Klasse stellt eine Spalte mit der in-Memory-Daten-Tabelle, die durch "sqlserverdatatable" dargestellt wird. Die Methoden in dieser Klasse sind:  
 
-| Name                                                       | Beschreibung                                                                      |
+| Name                                                       | und Beschreibung                                                                      |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | Öffentliche SQLServerDataColumn (Zeichenfolge ColumnName, Int SqlType) | Initialisiert eine neue Instanz der SQLServerDataColumn mit dem Spaltennamen und Typ. |
-| Öffentliche Zeichenfolge getColumnName()                              | Ruft den Namen der Spalte ab.                                                       |
+| public String getColumnName()                              | Ruft den Namen der Spalte ab.                                                       |
 | öffentliches Int getColumnType()                                 | Ruft den Spaltentyp ab.                                                       |
 
 ### <a name="isqlserverdatarecord"></a>ISQLServerDataRecord
 
 Diese Klasse stellt eine Schnittstelle, die Benutzer zum Streamen von Daten auf einen Tabellenwertparameter implementieren können. Die Methoden in dieser Schnittstelle sind:  
   
-| Name                                                    | Beschreibung                                                                                             |
+| Name                                                    | und Beschreibung                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | Öffentliche SQLServerMetaData GetColumnMetaData (Int-Spalte); | Ruft ab die Spaltenmetadaten des angegebenen Spaltenindexes.                                               |
 | public int getColumnCount();                            | Ruft die Gesamtanzahl der Spalten ab.                                                                  |
@@ -297,9 +297,9 @@ Diese Klasse stellt eine Schnittstelle, die Benutzer zum Streamen von Daten auf 
 
 Die folgenden Methoden wurden für diese Klasse zur Übergabe von Tabellenwertparameter-Unterstützung hinzugefügt.  
 
-| Name                                                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                |
+| Name                                                                                                    | und Beschreibung                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Öffentliche endgültige "void" SetStructured (Int ParameterIndex, Zeichenfolge TvpName "sqlserverdatatable" TvpDataTable)    | Füllt einen Tabellenwertparameter mit einer Datentabelle. ParameterIndex ist des parameterindexes und TvpDataTable ist die Tabelle das Quelldatenobjekt TvpName ist der Name des Tabellenwertparameter-Parameters.                                                                                                          |
+| public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | Füllt einen Tabellenwertparameter mit einer Datentabelle. ParameterIndex ist des parameterindexes und TvpDataTable ist die Tabelle das Quelldatenobjekt TvpName ist der Name des Tabellenwertparameter-Parameters.                                                                                                          |
 | Öffentliche endgültige "void" SetStructured (Int ParameterIndex, Zeichenfolge TvpName ResultSet TvpResultSet)             | Füllt einen Tabellenwertparameter mit einem ResultSet aus einer anderen Tabelle abgerufen. ParameterIndex ist das Angeben des Parameterindex TvpName ist der Name des Tabellenwertparameter-Parameters und TvpResultSet ist das Ergebnis Set-Quellobjekt.                                                                               |
 | public final void setStructured(int parameterIndex, String tvpName, ISQLServerDataRecord tvpDataRecord) | Füllt einen Tabellenwertparameter mit einem ISQLServerDataRecord-Objekt. ISQLServerDataRecord wird zum Streamen von Daten verwendet, und der Benutzer entscheidet, wie Sie es verwenden. ParameterIndex ist das Angeben des Parameterindex TvpName ist der Name des Tabellenwertparameter-Parameters und TvpDataRecord ist ein ISQLServerDataRecord-Objekt. |
   
@@ -307,7 +307,7 @@ Die folgenden Methoden wurden für diese Klasse zur Übergabe von Tabellenwertpa
 
 Die folgenden Methoden wurden für diese Klasse zur Übergabe von Tabellenwertparameter-Unterstützung hinzugefügt.  
   
-| Name                                                                                                        | Beschreibung                                                                                                                                                                                                                                                                                                                      |
+| Name                                                                                                        | und Beschreibung                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Öffentliche endgültige "void" SetStructured (ParatemeterName der Zeichenfolge, Zeichenfolge TvpName "sqlserverdatatable" TvpDataTable)    | Füllt ein Tabellenwertparameter an eine gespeicherte Prozedur mit einer Datentabelle übergeben. ParatemeterName ist der Name des Parameters, TvpName ist der Name des Tabellenwertparameter-Typs und TvpDataTable ist das Table-Objekt.                                                                                                                 |
 | Öffentliche endgültige "void" SetStructured (ParatemeterName der Zeichenfolge, Zeichenfolge TvpName ResultSet TvpResultSet)             | Füllt ein Tabellenwertparameter an eine gespeicherte Prozedur übergeben werden, mit der ein ResultSet aus einer anderen Tabelle abgerufen. ParatemeterName ist der Name des Parameters, TvpName ist der Name des Tabellenwertparameter-Typs und TvpResultSet ist das Ergebnis Set-Quellobjekt.                                                                              |

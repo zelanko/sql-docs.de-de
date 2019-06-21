@@ -11,17 +11,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
 ms.openlocfilehash: 37c3c8b874534f3a8a649d438b26b0ee133cb371
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993861"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Erfahren Sie, was in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] geändert wurde. Dies umfasst die wesentlichen Features und wird aktualisiert, wenn neue Elemente veröffentlicht werden.
+Erfahren Sie, was in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] geändert wurde. Dieser Artikel behandelt die wesentlichen Features und wird aktualisiert, sobald neue Elemente veröffentlicht wurden.
 
 Die aktuellen Versionsanmerkungen finden Sie in den [Anmerkungen zu SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
 
@@ -29,7 +29,7 @@ Weitere Informationen zu Power BI-Berichtsserver finden Sie unter [Was ist der P
 
 **Herunterladen** ![download](../analysis-services/media/download.png "download")
 
-Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center herunter](https://www.microsoft.com/download/details.aspx?id=55252)** .
+Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center herunter](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
@@ -52,7 +52,7 @@ Weitere Informationen finden Sie unter [Hinzufügen von Kommentaren zu einem Ber
 
 ### <a name="dax-queries-in-reporting-tools"></a>DAX-Abfragen in Berichtstools
 
-Mit dem Berichts-Generator und SQL Server Data Tools können Sie jetzt native DAX-Abfragen für unterstützte Tabellendatenmodelle von SQL Server Analysis Services erstellen. Sie können Felder ziehen und Ablegen in der Abfrage-Designern. Weitere Informationen finden Sie unter [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+In den neuesten Versionen von Berichts-Generator und SQL Server Data Tools können Sie native DAX-Abfragen für Tabellendatenmodelle von SQL Server Analysis Services erstellen. Sie können Felder ziehen und Ablegen in der Abfrage-Designern. Weitere Informationen finden Sie unter [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 ### <a name="rest-api-support"></a>REST-API-Unterstützung
 
@@ -97,7 +97,7 @@ Weitere Informationen zum benutzerdefinierten Branding finden Sie unter [Brandin
 
 #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Key Performance Indicators (KPI) im [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
-Sie erstellen KPIs direkt in die [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , im Kontext mit dem aktuellen Ordner enthalten sind. Wenn Sie KPIs erstellen, können Sie Datasetfelder wählen und diese Werte zusammenfassen. Sie können auch verwandte Inhalte auswählen, um per Drillthrough zu weiteren Details zu gelangen.
+Sie erstellen KPIs direkt in die [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , im Kontext mit dem aktuellen Ordner enthalten sind. Wenn Sie KPIs erstellen, können Sie Datasetfelder wählen und deren Werte zusammenfassen. Sie können auch verwandte Inhalte auswählen, um per Drillthrough zu weiteren Details zu gelangen.
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
@@ -105,7 +105,7 @@ Weitere Informationen finden Sie unter [Arbeiten mit KPIs im Webportal](https://
 
 ### <a name="mobile-reports"></a>Mobile Berichte
 
-Mobile Reporting Services-Berichte sind dedizierte Berichte, die für eine Vielzahl von Formfaktoren optimiert sind und eine optimale Erfahrung für Benutzer bieten, die auf mobilen Geräten auf Berichte zugreifen. Mobile Berichte stellen eine Reihe von Visualisierungen zur Verfügung, von Zeit-, Kategorie- und Vergleichsdiagrammen über Treemap-Diagramme bis hin zu benutzerdefinierten Karten. Verbinden Sie Ihre mobilen Berichte mit einer Reihe von Datenquellen, einschließlich lokalen mehrdimensionalen und tabellarischen SQL Server Analysis Services-Daten. Sie können Felder für mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rasterzeilen platzieren. Die flexiblen Elementen zentral automatisch jede Bildschirmgröße anpassen. Sie können speichern Sie die mobilen Berichte auf einem Reporting Services-Server, und anzeigen und interagieren mit ihnen in einem Browser oder mobile Power BI-app. Unterstützte Geräte enthalten:
+Mobile Reporting Services-Berichte sind dedizierte Berichte, die für eine Vielzahl von Formfaktoren optimiert sind und eine optimale Erfahrung für Benutzer bieten, die auf mobilen Geräten auf Berichte zugreifen. Mobile Berichte stellen eine Reihe von Visualisierungen zur Verfügung – von Zeit-, Kategorie- und Vergleichsdiagrammen über Strukturkarten bis zu benutzerdefinierten Karten. Verbinden Sie Ihre mobilen Berichte mit einer Reihe von Datenquellen, einschließlich lokalen mehrdimensionalen und tabellarischen SQL Server Analysis Services-Daten. Sie können Felder für mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rasterzeilen platzieren. Die flexiblen Elementen zentral automatisch jede Bildschirmgröße anpassen. Sie können speichern Sie die mobilen Berichte auf einem Reporting Services-Server, und anzeigen und interagieren mit ihnen in einem Browser oder mobile Power BI-app. Unterstützte Geräte enthalten:
 
 - iPad
 - iPhones
@@ -142,7 +142,7 @@ Weitere Informationen finden Sie in den folgenden Themen:
 
 ### <a name="microsoft-net-framework-4-support"></a>Microsoft .NET Framework 4-Unterstützung  
 
-[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] unterstützt die aktuellen Versionen von Microsoft .NET Framework 4, einschließlich Version 4.0 und 4.5.1. Wenn keine Version von .NET Framework 4.x installiert ist, installiert [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] Setup .NET 4.0 während der Installation von Features.  
+[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] unterstützt die aktuellen Versionen von Microsoft .NET Framework 4, einschließlich Version 4.0 und 4.5.1. Wenn keine Version von .NET Framework 4.x bereits installiert ist, wird .NET 4.0 vom Setup von [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] während der Installation von Features installiert.  
 
 ### <a name="report-improvements"></a>Verbesserungen an Berichten
 
@@ -193,7 +193,7 @@ Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren des clientse
 |**Aktivieren und Deaktivieren von Abonnements**. Neue Optionen der Benutzeroberfläche ermöglichen ein schnelles Deaktivieren und Aktivieren von Abonnements. Die deaktivierten Abonnements behalten ihre anderen Konfigurationseigenschaften, z. B. den Zeitplan, bei und können leicht aktiviert werden.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Weitere Informationen finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Einheitlicher Modus|  
 |**Abonnementbeschreibung**. Wenn Sie ein neues Abonnement erstellen, können Sie jetzt eine Beschreibung des Berichts als Teil der Abonnementeigenschaften einbeziehen. Die Beschreibung ist auf der Seite zur Abonnementzusammenfassung enthalten.|SharePoint- und einheitlicher Modus|  
 |**Ändern des Abonnementbesitzers**. Verbesserte Benutzeroberfläche zum schnellen Ändern des Besitzers eines Abonnements. Bei früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] konnten Administratoren die Abonnementbesitzer mithilfe eines Skripts ändern. Ab Version [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] können Sie Abonnementbesitzer über die Benutzeroberfläche oder ein Skript ändern. Das Ändern des Abonnementbesitzers ist eine häufige Verwaltungsaufgabe, wenn Benutzer Ihr Unternehmen verlassen oder eine andere Funktion übernehmen.|SharePoint- und einheitlicher Modus|  
-|**Freigegebene Anmeldeinformationen für Dateifreigabeabonnements**. Es gibt jetzt zwei Workflows mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dateifreigabeabonnements:<br /><br /> In diesem Release kann Ihr [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Administrator neuerdings eine einzelne Dateifreigabe konfigurieren, die für ein oder mehrere Abonnements verwendet wird. Das dateifreigabekonto wird konfiguriert, der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Konfigurations-Manager im einheitlichen Modus **ein dateifreigabekonto angeben**. Klicken Sie auf der abonnementkonfigurationsseite wählen Benutzer dann **dateifreigabekonto verwenden**.<br /><br /> Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.<br /><br /> Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.|Einheitlicher Modus|
+|**Freigegebene Anmeldeinformationen für Dateifreigabeabonnements**. Es gibt jetzt zwei Workflows mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dateifreigabeabonnements:<br /><br /> In diesem Release kann Ihr [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Administrator nun ein einzelnes Dateifreigabekonto konfigurieren, das für mehrere Abonnements verwendet wird. Das dateifreigabekonto wird konfiguriert, der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Konfigurations-Manager im einheitlichen Modus **ein dateifreigabekonto angeben**. Klicken Sie auf der abonnementkonfigurationsseite wählen Benutzer dann **dateifreigabekonto verwenden**.<br /><br /> Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.<br /><br /> Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.|Einheitlicher Modus|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 

@@ -1,5 +1,5 @@
 ---
-title: Formatieren von Dezimalzeichenfolgen und Währungswerte (SQLSRV-Treiber) | Microsoft-Dokumentation
+title: Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,13 +12,13 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 76b6d27acedcfe2ec462a764559237a1a2218f78
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669602"
 ---
-# <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Währungswerte (SQLSRV-Treiber)
+# <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Beibehalten der Genauigkeit der [Datentypen decimal und numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) immer als Zeichenfolgen mit genauen genauigkeiten und Skalierungen abgerufen werden. Wenn Sie einen beliebigen Wert kleiner als 1 ist, ist die führende 0 (null) nicht vorhanden. Es ist identisch mit Money- und Smallmoney-Feldern wie Dezimalfelder mit festen gleich 4 Dezimalstellen.
@@ -84,6 +84,6 @@ if (sqlsrv_execute($stmt)) {
 ```
 
 ## <a name="see-also"></a>Weitere Informationen
-[Formatieren von Dezimalzeichenfolgen und Währungswerte (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)
+[Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)
 
 [Abrufen von Daten](../../connect/php/retrieving-data.md)

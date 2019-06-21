@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797076"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Versionshinweise für die Microsoft-Treiber für PHP für SQL Server
@@ -74,7 +74,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - Version 17 wird nun als Standard für alle Plattformen
 - Unterstützung für die Ubuntu 17.10, Debian 9 und Suse Enterprise Linux 12
 - Keine Unterstützung mehr für Ubuntu 15.10
-- Unterstützung für Always Encrypted mit CRUD-Funktionen in Windows. Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver for SQL Server (Verwenden von Always Encrypted mit dem ODBC Driver for SQL Server)](../../connect/php/using-always-encrypted-php-drivers.md).
+- Unterstützung für Always Encrypted mit CRUD-Funktionen in Windows. Weitere Informationen finden Sie unter [Verwenden von Always Encrypted mit den PHP-Treibern für SQL Server](../../connect/php/using-always-encrypted-php-drivers.md).
   - Unterstützung für Windows Certificate Store
   - Immer verschlüsselt nur mit Microsoft ODBC Driver 17 und höher unterstützt
 - Unterstützung für nicht-UTF8-Sprachversionen unter Linux und macOS

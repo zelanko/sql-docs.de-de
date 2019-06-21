@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9030898e71ec13a75da9b91e41f9792d31cce82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dab78e0f48f2bb7debcf5d993dfb128388a42506
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798021"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796519"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +42,11 @@ public boolean isLast()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese IsLast-Methode wird von der IsLast-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese isLast-Methode wird von der isLast-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Wird diese Methode mit Vorwärtscursors und dynamischen Cursors verwendet, wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

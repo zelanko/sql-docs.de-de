@@ -12,10 +12,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 9819a16a60cc453b8f4277c0fe49053aeca59f48
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769299"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB-API-Unterstützung für Datums- und Uhrzeit-Erweiterungen
@@ -27,7 +27,7 @@ ms.locfileid: "66769299"
   
 |Funktion|und Beschreibung|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|Ein Flag wurde in der DBBINDING-Struktur zum Aktivieren von Anwendungen zur Unterscheidung zwischen **"DateTime"** , **datetime2**, und **Smalldatetime** Werte. Weitere Informationen finden Sie unter [Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
+|IAccessor::CreateAccessor|Ein Flag wurde in der DBBINDING-Struktur zum Aktivieren von Anwendungen zur Unterscheidung zwischen **"DateTime"**, **datetime2**, und **Smalldatetime** Werte. Weitere Informationen finden Sie unter [Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |IBCPSession::BCPColFmt|Weitere Informationen finden Sie unter [Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen &#40;OLE DB&#41;](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md).|  
 |ICommandWithParameters::GetParameterInfo|Weitere Informationen finden Sie unter[Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
 |ICommandWithParameters::SetParameterinfo|Weitere Informationen finden Sie unter[Parameter und Rowsets Metadata](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md).|  
