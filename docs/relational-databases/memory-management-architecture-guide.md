@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662924"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015477"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 
@@ -76,8 +76,8 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an der Verwaltung des Arbeitsspeichers ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) erfolgte die Speicherbelegung mithilfe von fünf verschiedenen Mechanismen:
--  **Einzelseitenbelegung (Single-page Allocator, SPA)**, die im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess nur Speicherbelegungen umfasst, die kleiner als oder gleich 8 KB waren. Die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* bestimmten die Grenzen des vom SPA verbrauchten physischen Arbeitsspeichers. Der Pufferpool bildete zugleich den Mechanismus für SPA und den größten Verbraucher für Einzelseitenbelegungen.
--  **Mehrseitenbelegung (Multi-Page Allocator, MPA)**, für Speicherbelegungen, die mehr als 8 KB erfordern.
+-  **Einzelseitenbelegung (Single-page Allocator, SPA)** , die im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess nur Speicherbelegungen umfasst, die kleiner als oder gleich 8 KB waren. Die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* bestimmten die Grenzen des vom SPA verbrauchten physischen Arbeitsspeichers. Der Pufferpool bildete zugleich den Mechanismus für SPA und den größten Verbraucher für Einzelseitenbelegungen.
+-  **Mehrseitenbelegung (Multi-Page Allocator, MPA)** , für Speicherbelegungen, die mehr als 8 KB erfordern.
 -  **CLR-Belegung**, einschließlich des SQL CLR-Heaps und dessen globaler Belegungen, die während der CLR-Initialisierung erstellt werden.
 -  Speicherbelegungen für **[Threadstapel](../relational-databases/memory-management-architecture-guide.md#stacksizes)** im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess.
 -  **Direkte Windows-Belegungen (Direct Windows allocations, DWA)** für Speicherbelegungsanforderungen, die direkt an Windows gerichtet sind. Dazu gehören die Windows-Heapnutzung und direkte virtuelle Belegungen von Modulen, die in den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess geladen werden. Beispiele für solche Speicherbelegungsanforderungen beinhalten Belegungen von DLLs erweiterter gespeicherter Prozeduren, Objekte, die mithilfe von Automatisierungsprozeduren (sp_OA-Aufrufen) erstellt werden, und Belegungen von verknüpften Serveranbietern.
@@ -97,9 +97,9 @@ In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbele
 |Threadstapel-Arbeitsspeicher|Nein|Nein|
 |Direkte Belegungen von Windows|Nein|Nein|
 
-Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann auftreten, wenn der Wert für **_Serverspeicher gesamt (KB)_** bereits die Einstellung **_Zielserverspeicher (KB)_** erreicht hat, die als maximaler Serverarbeitsspeicher angegeben ist. Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
+Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann auftreten, wenn der Wert für **_Serverspeicher gesamt (KB)_ ** bereits die Einstellung **_Zielserverspeicher (KB)_ ** erreicht hat, die als maximaler Serverarbeitsspeicher angegeben ist. Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
 
-Sobald diese Belegung vorgenommen wird, startet die Hintergrundaufgabe *Ressourcenmonitor*, um alle Arbeitsspeicherverbraucher aufzufordern, den belegten Arbeitsspeicher freizugeben, und versucht, den Wert von *Serverspeicher gesamt (KB)* unter die Angabe für *Zielserverspeicher (KB)* zu bringen. Aus diesem Grund kann die Arbeitsspeicherbelegung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kurzzeitig den Wert der Einstellung „Max. Serverarbeitsspeicher“ übersteigen. In dieser Situation überschreitet der gemeldete Wert des Leistungsindikators *Serverspeicher gesamt (KB)* die Einstellungen für „Max. Serverarbeitsspeicher“ und *Zielserverspeicher (KB)*.
+Sobald diese Belegung vorgenommen wird, startet die Hintergrundaufgabe *Ressourcenmonitor*, um alle Arbeitsspeicherverbraucher aufzufordern, den belegten Arbeitsspeicher freizugeben, und versucht, den Wert von *Serverspeicher gesamt (KB)* unter die Angabe für *Zielserverspeicher (KB)* zu bringen. Aus diesem Grund kann die Arbeitsspeicherbelegung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kurzzeitig den Wert der Einstellung „Max. Serverarbeitsspeicher“ übersteigen. In dieser Situation überschreitet der gemeldete Wert des Leistungsindikators *Serverspeicher gesamt (KB)* die Einstellungen für „Max. Serverarbeitsspeicher“ und *Zielserverspeicher (KB)* .
 
 Dieses Verhalten wird normalerweise während folgender Vorgänge beobachtet: 
 -  Umfangreiche Columnstore-Indexabfragen.
@@ -109,7 +109,7 @@ Dieses Verhalten wird normalerweise während folgender Vorgänge beobachtet:
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an "memory_to_reserve" ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (Multi-Page Allocation, MPA)**, **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (Direct Windows Allocations, DWA)**. Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
+In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (Multi-Page Allocation, MPA)** , **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (Direct Windows Allocations, DWA)** . Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
 
 Der virtuelle Adressbereich, der für diese Zuteilungen reserviert ist, wird durch die Konfigurationsoption _**memory\_to\_reserve**_ festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Um diesen Standardwert außer Kraft zu setzen, verwenden Sie den Startparameter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
 
@@ -130,7 +130,7 @@ Die Arbeitsspeicherverwaltung von [!INCLUDE[ssDEnoversion](../includes/ssdenover
 
 Bei dynamischer Verwendung des Arbeitsspeichers von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird der im System verfügbare Arbeitsspeicher in regelmäßigen Abständen abgefragt. Bei Beibehaltung dieses freien Arbeitsspeichers werden Auslagerungsvorgänge durch das Betriebssystem verhindert. Wenn weniger freier Arbeitsspeicher vorhanden ist, gibt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Arbeitsspeicher für das Betriebssystem frei. Wenn mehr Arbeitsspeicher frei ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auch mehr Speicher reservieren. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fügt Arbeitsspeicher nur dann hinzu, wenn durch die Arbeitsauslastung mehr Arbeitsspeicher erforderlich ist. Bei einem ruhenden Server wird die Größe seines virtuellen Adressraums nicht vergrößert.  
   
-**[Max. Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)** steuert die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicherbelegung, die Arbeitsspeicherkompilierung, alle Caches (einschließlich des Pufferpools), [Arbeitsspeicherzuweisungen für die Abfrageausführung](#effects-of-min-memory-per-query), den [Arbeitsspeicher für den Sperren-Manager](#memory-used-by-sql-server-objects-specifications) und den CLR-Arbeitsspeicher <sup>1</sup> (im Wesentlichen alle Arbeitsspeicherclerks in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+**[Max. Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md)** steuert die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Speicherbelegung, die Arbeitsspeicherkompilierung, alle Caches (einschließlich des Pufferpools), [Arbeitsspeicherzuweisungen für die Abfrageausführung](#effects-of-min-memory-per-query), den [Arbeitsspeicher für den Sperren-Manager](#memory-used-by-sql-server-objects-specifications) und den CLR-Arbeitsspeicher <sup>1</sup> (im Wesentlichen alle Arbeitsspeicherclerks in **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** ). 
 
 <sup>1</sup>-CLR-Speicher wird seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unter max_server-memory-Belegungen verwaltet.
 
@@ -236,7 +236,7 @@ Ein Großteil seines Arbeitsspeichers verwendet der Puffer-Manager im [!INCLUDE[
 ### <a name="supported-features"></a>Unterstützte Funktionen
 Der Puffer-Manager unterstützt die folgenden Funktionen:
 
-* Der Puffer-Manager ist NUMA-fähig **(Non-Uniform Memory Access)**. Außerdem werden Puffercacheseiten auf NUMA-Hardwareknoten verteilt, sodass ein Thread auf eine Pufferseite zugreifen kann, die dem lokalen NUMA-Knoten zugewiesen ist, statt den Zugriff über einen fremden Speicher vorzunehmen. 
+* Der Puffer-Manager ist NUMA-fähig **(Non-Uniform Memory Access)** . Außerdem werden Puffercacheseiten auf NUMA-Hardwareknoten verteilt, sodass ein Thread auf eine Pufferseite zugreifen kann, die dem lokalen NUMA-Knoten zugewiesen ist, statt den Zugriff über einen fremden Speicher vorzunehmen. 
 * Der Puffer-Manager unterstützt das **Hinzufügen von Arbeitsspeicher im laufenden Systembetrieb** (Hot Add Memory), das dem Benutzer ermöglicht, physischen Arbeitsspeicher hinzuzufügen, ohne den Server neu starten zu müssen. 
 * Es werden auch **große Seiten** auf 64-Bit-Plattformen vom Puffer-Manager unterstützt. Die Seitengröße ist spezifisch für die Version von Windows.
 
