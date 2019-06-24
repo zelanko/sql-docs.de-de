@@ -2,7 +2,7 @@
 title: Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten (SQL Server) | Microsoft-Dokumentation
 description: Erfahren Sie, wie Sie mit DMA ein Unternehmens zu bewerten und Konsolidieren von assessmentberichten vor dem Upgrade von SQL Server oder die Migration zu Azure SQL-Datenbank.
 ms.custom: ''
-ms.date: 03/19/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: f9ca00c2390ef0a03369ac21cfe02fcf7ed01392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0021e5851627e156addb86fa1c136d78d3be2228
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794377"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313839"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
@@ -30,22 +30,24 @@ Die folgenden schrittweisen Anweisungen helfen Ihnen die im Data Migration Assis
 
 - Geben Sie einen Tools-Computer in Ihrem Netzwerk aus dem DMA initiiert wird. Stellen Sie sicher, dass es sich bei diesem Computer Verbindungen mit Ihrem SQL Server-Ziele vorhanden sind.
 - Herunterladen und installieren:
-    - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) Version 3.6 oder höher.
-    - [PowerShell](https://aka.ms/wmf5download) V5. 0 oder höher.
-    - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v4. 5 oder höher.
-    - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 oder höher.
-    - [Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
-    - [Azure PowerShell-Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) Version 3.6 oder höher.
+  - [PowerShell](https://aka.ms/wmf5download) V5. 0 oder höher.
+  - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v4. 5 oder höher.
+  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 oder höher.
+  - [Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+  - [Azure PowerShell-Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Herunterladen und extrahieren:
-    - Die [DMA Berichte Power BI-Vorlage](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
-    - Die [LoadWarehouse Skript](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
+  - Die [DMA Berichte Power BI-Vorlage](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
+  - Die [LoadWarehouse Skript](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Laden die PowerShell-Module
+
 Die PowerShell-Module in der PowerShell-Module-Verzeichnis zu speichern, können Sie rufen die Module, ohne dass sie vor der Verwendung explizit zu laden.
 
 Führen Sie die folgenden Schritte aus, um die Module zu laden:
+
 1. Navigieren Sie zu c:\Programme\Microsoft Files\WindowsPowerShell\Modules, und erstellen Sie einen Ordner mit dem Namen **DataMigrationAssistant**.
-2. Öffnen der [PowerShell-Module](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
+2. Öffnen der [PowerShell-Module](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip), und speichern Sie sie in den Ordner, die Sie erstellt haben.
 
       ![PowerShell-Module](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -64,9 +66,11 @@ Führen Sie die folgenden Schritte aus, um die Module zu laden:
     PowerShell sollte diese Module jetzt automatisch geladen, wenn eine neue PowerShell-Sitzung gestartet wird.
 
 ## <a name="create-inventory"></a> Erstellen Sie eine Inventur der SQL-Server
+
 Vor dem Ausführen des PowerShell-Skripts, um Ihre SQL Server zu bewerten, müssen Sie eine Inventur der SQL Server zu erstellen, die Sie bewerten möchten.
 
 Diese Inventur kann eine von zwei Formen aufweisen:
+
 - Excel-CSV-Datei
 - SQL Server-Tabelle
 
@@ -79,7 +83,7 @@ Diese Inventur kann eine von zwei Formen aufweisen:
 
 
 Verwendung von Csv-Datei zum Importieren der Daten sicherzustellen, dass nur zwei Spalten mit Daten per Push – **Instanzname** und **Datenbanknamen**, und dass die Spalten keine Kopfzeilen enthalten.
- 
+
  ![Inhalt der CSV-Datei](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
 ### <a name="if-using-a-sql-server-table"></a>Wenn mithilfe einer SQL Server-Tabelle
@@ -88,6 +92,7 @@ Verwendung von Csv-Datei zum Importieren der Daten sicherzustellen, dass nur zwe
 > Für Standardinstanzen müssen Sie den Namen der Instanz auf MSSQLServer festgelegt.
 
 Erstellen Sie eine Datenbank namens **EstateInventory** und eine Tabelle namens **DatabaseInventory**. Die Tabelle mit den Inventurdaten kann eine beliebige Anzahl von Spalten aufweisen, solange die folgende vier Spalten vorhanden sind:
+
 - ServerName
 - InstanceName
 - DatabaseName
@@ -102,13 +107,14 @@ Der Vorteil der Verwendung einer SQL Server-Tabelle über eine CSV-Datei ist, da
 Bedenken Sie, dass abhängig von der Anzahl von Objekten und ihrer Komplexität, eine Bewertung kann ein außergewöhnlich lange (Stunden +), dauern daher ist es ratsam, um die Bewertung in verwaltbare Teile zu trennen.
 
 ## <a name="running-a-scaled-assessment"></a>Eine skalierte Bewertung wird ausgeführt
+
 Nach dem Laden die PowerShell-Module in das Modulverzeichnis, und erstellen eine Inventur, müssen Sie eine skalierte Bewertung ausgeführt wird, öffnen PowerShell, und die DmaDataCollector-Funktion ausführt.
  
   ![Angebote für DmaDataCollector-Funktion](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Beschreibung |
+|Parameter  |Description |
 |---------|---------|
 |**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellung eines Inventars aus SQL Server-Instanzen](#create-inventory). |
 |**csvPath** | Der Pfad in Ihrem Inventar CSV-Datei.  Verwendet nur, wenn **GetServerListFrom** nastaven NA hodnotu **CSV**. |
@@ -131,7 +137,7 @@ Nach Abschluss der Bewertung können Sie sich nun um die Daten in SQL Server fü
 
 Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Beschreibung |
+|Parameter  |Description |
 |---------|---------|
 |**processTo** | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"** . |
 |**serverName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (nicht enthalten. database.windows.net). Sie werden für zwei Anmeldungen aufgefordert werden, bei der Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
@@ -144,6 +150,7 @@ Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabel
 Die Funktion DmaProcessor dauert nur einige Sekunden, um eine einzelne Datei zu verarbeiten.
 
 ## <a name="loading-the-data-warehouse"></a>Laden das Datawarehouse
+
 Nachdem die DmaProcessor Abschluss der Verarbeitung der Assessment-Dateien hat, werden die Daten in die Datenbank DMAReporting in der Tabelle ReportData geladen werden. An diesem Punkt müssen Sie das Datawarehouse zu laden.
 
 1. Verwenden Sie das Skript LoadWarehouse, alle fehlenden Werte in den Dimensionen aufgefüllt.
@@ -155,6 +162,7 @@ Nachdem die DmaProcessor Abschluss der Verarbeitung der Assessment-Dateien hat, 
       ![LoadWarehouse Inhalt geladen](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>Legen Sie Ihre Besitzer von Datenbanken
+
 Während es nicht erforderlich ist, um den größtmöglichen Nutzen, die von Berichten, es wird empfohlen, Sie die Datenbankbesitzer, in legen der **DimDBOwner** dimension, und aktualisieren Sie dann **DBOwnerKey** in die  **FactAssessment** Tabelle.  Durch dieses Verfahren ermöglicht die Aufteilen in Slices und Filtern des Power BI-Berichts basierend auf bestimmten Datenbankbesitzer.
 
 Sie können auch das LoadWarehouse-Skript verwenden, um die grundlegenden TSQL-Anweisungen für die Sie festlegen, die Datenbankbesitzer bereitzustellen.
@@ -176,7 +184,9 @@ Sie können auch das LoadWarehouse-Skript verwenden, um die grundlegenden TSQL-A
    > Wenn Sie die Daten, die Sie erwartet, nicht angezeigt werden, versuchen Sie, die aktive Lesezeichen zu ändern.  Weitere Informationen finden Sie unter der die Details im folgenden Abschnitt.
 
 ## <a name="working-with-dma-reports"></a>Arbeiten mit DMA-Berichten
+
 Um mit DMA-Berichten zu arbeiten, verwenden Sie Lesezeichen und Slicer zum Filtern nach:
+
 - Assessment-Typen (Azure SQL-Datenbank, Azure SQL-MI, SQL lokal) 
 - Der Instanzname.
 - Datenbankname
@@ -186,11 +196,12 @@ Wählen Sie das Blatt "Lesezeichen" und "Filter" für den Zugriff auf das Filter
 
 ![DMA Bericht Lesezeichen und Filter](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
 
-Dadurch kann das folgende Blatt:
+Wählen das Lesezeichen Filter können das folgende Blatt:
 
 ![Berichtsansichten DMA-Blatt](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
 
 Sie können Lesezeichen verwenden, den reporting Kontext zwischen wechseln:
+
 - Azure SQL-Datenbank-Cloud-Bewertungen
 - Azure SQL-MI-Cloud-Bewertungen
 - Lokale Bewertungen
@@ -201,10 +212,11 @@ So blenden Sie das Blatt "Filter", STRG-Taste auf die Schaltfläche "zurück" au
 
 ![Schaltfläche "zurück" DMA-Berichtsansichten](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
 
-Es gibt eine Eingabeaufforderung auf der unteren linken Ecke des der Berichtsseite angezeigt, ob auf eine der folgenden aktuell ein Filter angewendet wird:
-* FactAssessment – InstanceName
-* FactAssessment – DatabaseName
-* dimDBOwner - DBOwner
+Es gibt eine Eingabeaufforderung auf der unteren linken Ecke der Berichtsseite angezeigt, ob aktuell ein Filter auf eine der folgenden Elemente angewendet wird:
+
+- FactAssessment – InstanceName
+- FactAssessment – DatabaseName
+- dimDBOwner - DBOwner
 
 ![Angewendete Filter-Eingabeaufforderung](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
@@ -212,6 +224,7 @@ Es gibt eine Eingabeaufforderung auf der unteren linken Ecke des der Berichtssei
 > Wenn Sie nur eine Bewertung der Azure SQL-Datenbank ausführen, werden nur Cloud Berichte gefüllt. Wenn Sie nur eine lokale Bewertung durchführen, werden dagegen nur für lokale Berichte aufgefüllt. Aber wenn Sie sowohl Azure als auch eine lokale Bewertung führen und dann beide Bewertungen in das Warehouse laden, können Sie zwischen Cloud und lokale Berichte gedrückter STRG-Taste das entsprechende Symbol wechseln.
 
 ## <a name="reports-visuals"></a>Visualisierungen für Berichte
+
 Die Details in den Power BI-Berichten angezeigt wird in den folgenden Abschnitten angezeigt.
 
 ### <a name="readiness-"></a>Bereitschaft %
@@ -231,6 +244,7 @@ Dieses visuelle Element zeigt die Anzahl der Datenbanken, die sind bereit, die A
   ![DMA-Bereitschaft bucket](../dma/media//dma-consolidatereports/dma-readiness-bucket.png)
 
 Dieses visuelle Element zeigt eine Aufschlüsselung der Datenbanken, indem die folgenden Bereitschaft Buckets:
+
 - 100 % BEREIT
 - 75 BIS 99 % BEREIT
 - 50 – 75 % BEREIT
@@ -240,13 +254,14 @@ Dieses visuelle Element zeigt eine Aufschlüsselung der Datenbanken, indem die f
  
   ![DMA-Probleme WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-Dieses visuelle Element zeigt die Probleme, die derzeit in auftreten, in den Auswahlkontext (alles, Instanz, die Datenbank [ein Vielfaches von]). Je größer wird das Wort auf dem Bildschirm größer die Anzahl der Probleme in dieser Kategorie. Wenn der Mauszeiger über ein Wort bewegen, zeigt die Anzahl der Probleme in dieser Kategorie.
+Dieses visuelle Element zeigt die Probleme, die derzeit in auftreten, in den Auswahlkontext (alles, Instanz, die Datenbank [ein Vielfaches von]). Je größer wird das Wort auf dem Bildschirm, je größer die Anzahl der Probleme in dieser Kategorie. Wenn der Mauszeiger über ein Wort bewegen, zeigt die Anzahl der Probleme in dieser Kategorie.
 
 ### <a name="database-readiness"></a>Datenbank-Bereitschaft
 
   ![Bereitschaftsbericht für die DMA-Datenbank](../dma/media//dma-consolidatereports/dma-database-readiness-report.png)
 
 Dieser Abschnitt ist der primäre Teil des Berichts, der die Bereitschaft einer Datenbank-Instanz angezeigt wird. Dieser Bericht enthält eine Hierarchie Drilldown von:
+
 - InstanceDatabase
 - ChangeCategory
 - Titel
@@ -270,4 +285,5 @@ Sie können auch den Aktionsplans-Bericht auf einem eigenen, erstellen Sie eine 
   ![Bericht-Filteroptionen DMA Wartung planen](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>Haftungsausschluss für Skripts
+
 *In diesem Artikel angegebenen Beispielskripts werden nicht unter keinem Microsoft-standardsupportprogramm oder-Dienst unterstützt. Alle Skripts werden wie besehen und ohne Garantien jeglicher Art bereitgestellt. Microsoft schließt darüber hinaus aller konkludente GEWÄHRLEISTUNGEN, einschließlich, aber nicht beschränkt auf konkludente GEWÄHRLEISTUNGEN der Handelsüblichkeit oder Eignung für einen bestimmten Zweck. Das gesamte Risiko aus der Verwendung oder Leistung der Beispielskripts und Dokumentationen, liegt bei Ihnen. In keinem Fall sollte Microsoft, seinen Autoren oder Benutzer, die andernfalls in die Erstellung, Produktion oder Bereitstellung der Skripts für Schäden haftbar gemacht werden keinerlei (einschließlich, aber nicht beschränkt auf Schäden durch Datenverlust Gewinn, Unterbrechung des Geschäftsbetriebs, Verlust von Geschäftsdaten, Folge- oder) aus aus der Verwendung von oder keine der Beispielskripts oder der Dokumentation verwendet werden können, auch wenn Microsoft die Möglichkeit solcher Schäden hingewiesen wurde.  Suchen Sie die Berechtigung, bevor Sie diese Skripts auf anderen Websites/Repositories/Blogs Berichtsdaten.*

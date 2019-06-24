@@ -23,12 +23,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7756482734dac8d4d5982b0ab6d5d58942065697
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620512"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263529"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutorials zu SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ Folgende Themen werden behandelt:
 
     In diesem Tutorial erfahren Sie, wie Sie Skripts für verschiedene Objekte wie Datenbanken und Abfragen in SSMS erstellen. 
 
-- [Tutorial: Verwenden von Vorlagen in SQL Server Management Studio](templates-ssms.md)
+- [Tutorial: Verwenden von Vorlagen in SQL Server Management Studio](../template/templates-ssms.md)
    
     In diesem Tutorial erfahren Sie, wie Sie mit bereits vorhandenen Vorlagen in SSMS arbeiten können. Vorlagen sind ein wenig bekanntes Feature, das eine Reihe von Transact-SQL-Codeausschnitten für unterschiedliche Datenbankadministrationsaufgaben speichert. 
 

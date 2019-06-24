@@ -15,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060086"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316664"
 ---
 # <a name="custom-messages-for-logging"></a>Benutzerdefinierte Meldungen für die Protokollierung
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt einen umfangreichen Satz an benutzerdefinierten Ereignissen zum Schreiben von Protokolleinträgen für Pakete und für mehrere Tasks bereit. Sie können diese Einträge verwenden, um detaillierte Informationen zum Fortschritt sowie über die Ergebnisse und Probleme der Ausführung zu speichern, indem Sie vordefinierte Ereignisse bzw. benutzerdefinierte Meldungen für die spätere Analyse erfassen. Sie können beispielsweise Beginn und Ende eines Masseneinfügungsvorgangs erfassen, um Leistungsprobleme beim Ausführen des Pakets zu identifizieren.  
@@ -78,7 +78,7 @@ ms.locfileid: "66060086"
 ###  <a name="Package"></a> Paket  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für Pakete aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|Description|  
 |---------------|-----------------|  
 |`PackageStart`|Zeigt den Beginn der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |`PackageEnd`|Zeigt den Abschluss der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
@@ -122,7 +122,7 @@ ms.locfileid: "66060086"
 ###  <a name="ExecuteProcess"></a> Prozess ausführen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Prozess ausführen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`ExecuteProcessExecutingProcess`|Enthält Informationen zum Ausführprozess der zur Ausführung konfigurierten ausführbaren Datei.<br /><br /> Es werden zwei Protokolleinträge geschrieben. Der eine Protokolleintrag enthält Informationen über den Namen und Speicherort der vom Task ausgeführten ausführbaren Datei, im anderen Eintrag wird das Beenden der ausführbaren Datei erfasst.|  
 |`ExecuteProcessVariableRouting`|Enthält Informationen darüber, welche Variablen an die Eingabe und an die Ausgaben der ausführbaren Datei geleitet werden. Es werden Protokolleinträge für stdin (für die Eingabe), für stdout (für die Ausgabe) und für stderr (für die Fehlerausgabe) geschrieben.|  
@@ -190,7 +190,7 @@ ms.locfileid: "66060086"
 ###  <a name="TransferErrorMessages"></a> Fehlermeldungen übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Fehlermeldungen übertragen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|Description|  
 |---------------|-----------------|  
 |`TransferErrorMessagesTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von Fehlermeldungen beendet wurde.|  
 |`TransferErrorMessagesTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von Fehlermeldungen gestartet wurde.|  
@@ -198,7 +198,7 @@ ms.locfileid: "66060086"
 ###  <a name="TransferJobs"></a> Aufträge übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Aufträge übertragen aufgelistet.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|Description|  
 |---------------|-----------------|  
 |`TransferJobsTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Aufträgen beendet wurde.|  
 |`TransferJobsTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agent-Aufträgen gestartet wurde.|  
@@ -214,7 +214,7 @@ ms.locfileid: "66060086"
 ###  <a name="TransferMasterStoredProcedures"></a> In master gespeicherte Prozeduren übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task In master gespeicherte Prozeduren übertragen aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`TransferStoredProceduresTaskFinishedTransferringObjects`|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master** -Datenbank gespeichert sind, beendet wurde.|  
 |`TransferStoredProceduresTaskStartTransferringObjects`|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master** -Datenbank gespeichert sind, gestartet wurde.|  
@@ -230,7 +230,7 @@ ms.locfileid: "66060086"
 ###  <a name="WebServices"></a> Webdienste (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge aufgelistet, die für den Task Webdienste aktiviert werden können.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`WSTaskBegin`|Der Zugriff auf einen Webdienst wurde begonnen.|  
 |`WSTaskEnd`|Eine Webdienstmethode wurde beendet.|  
@@ -247,7 +247,7 @@ ms.locfileid: "66060086"
 ###  <a name="WMIEventWatcher"></a> WMI-Ereignisüberwachung (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task WMI-Ereignisüberwachung aufgelistet.  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`WMIEventWatcherEventOccurred`|Zeigt an, dass das vom Task überwachte Ereignis aufgetreten ist.|  
 |`WMIEventWatcherTimedout`|Zeigt an, dass beim Task ein Timeout eingetreten ist.|  
@@ -256,14 +256,10 @@ ms.locfileid: "66060086"
 ###  <a name="XML"></a> XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben.  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|Description|  
 |---------------|-----------------|  
-|`XMLOperation`|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
-  
-## <a name="related-content"></a>Verwandte Inhalte  
- Blog-Artikel, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580)(Protokollieren von benutzerdefinierten Ereignissen für Integration Services-Tasks), auf dougbert.com  
+|`XMLOperation`|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|   
   
 ## <a name="see-also"></a>Siehe auch  
  [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
-  
   

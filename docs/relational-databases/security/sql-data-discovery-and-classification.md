@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539120"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316690"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,6 @@ Die Klassifizierung umfasst zwei Metadatenattribute:
 * Bezeichnungen: Die wichtigsten Klassifizierungsattribute zum Definieren der Vertraulichkeitsstufe der in der Spalte gespeicherten Daten.  
 * Informationstypen: Sie bieten zusätzliche Granularität für den Typ der in der Spalte gespeicherten Daten.
 
-<br>
 **Klassifizieren Ihrer SQL Server-Datenbank:**
 
 1. Stellen Sie in SSMS (SQL Server Management Studio) eine Verbindung zu SQL Server her.
