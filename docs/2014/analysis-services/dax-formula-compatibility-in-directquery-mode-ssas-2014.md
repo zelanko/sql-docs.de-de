@@ -10,12 +10,12 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2136c162846b31c4d221d7aaad6476ba70508287
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284961"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343895"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014)
 Die Programmiersprache Data Analysis Expression (DAX) dienen zum Erstellen von Measures und andere benutzerdefinierten Formeln für die Verwendung in Analysis Services-tabellenmodellen, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodellen in Excel-Arbeitsmappen und Datenmodellen für Power BI Desktop. In den meisten Punkten, die Modelle, die Sie in diesen Umgebungen erstellen, identisch sind und können Sie die gleichen Measures, Beziehungen und KPIs usw. Wenn Sie ein tabellarisches Analysis Services-Modell erstellen und es im DirectQuery-Modus bereitstellen, gibt es jedoch einige Einschränkungen für die Formeln, die Sie verwenden können. Dieses Thema bietet einen Überblick über diese Unterschiede, listet die Funktionen, die nicht in SQL Server 2014 Analysis Services-Tabulars-Modell mit Kompatibilitätsgrad 1100 oder 1103 und im DirectQuery-Modus unterstützt werden und listet die Funktionen, die unterstützt werden aber möglicherweise andere Ergebnisse zurückgeben.  
@@ -85,7 +85,7 @@ Umwandlungen anderer Zeichenfolgen in den booleschen Datentyp führen zu einem F
 **Umwandeln einer Zeichenfolge in ein Datum/eine Uhrzeit**  
 Umwandlungen von Zeichenfolgendarstellungen für Daten und Uhrzeiten in tatsächliche **datetime** -Werte verhalten sich im DirectQuery-Modus auf die gleiche Weise wie bei SQL Server.  
   
-Informationen zu den Regeln für Umwandlungen von Zeichenfolgen in **"DateTime"** Datentypen in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Modellen finden Sie unter [DAX-Syntaxreferenz] (/ / Dax--syntaxreferenz für Dax
+Informationen zu den Regeln für Umwandlungen von Zeichenfolgen in **"DateTime"** Datentypen in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Modellen finden Sie unter den [Syntaxreferenz für DAX](/dax/dax-syntax-reference).
   
 Modelle, die den speicherinternen Datenspeicher verwenden, unterstützen weniger Textformate für Datumsangaben als die entsprechenden von SQL Server unterstützten Zeichenfolgenformate. Die DAX-Programmiersprache unterstützt jedoch benutzerdefinierte Datums- und Uhrzeitformate.  
   
@@ -133,7 +133,7 @@ SQL Server behandelt NULL-Werte und Leerzeichen anders als die xVelocity-Engine.
   
 Die gleichen Einschränkungen gelten für die anderen logarithmischen Funktionen: LOG10 und LN.  
   
-Weitere Informationen zu den **leere** -Datentyp in DAX, finden Sie unter [DAX-Syntaxreferenz] (/ / Dax--syntaxreferenz für Dax
+Weitere Informationen zum **blank** -Datentyp in der DAX-Programmiersprache finden Sie in der [DAX-Syntaxspezifikation für PowerPivot](/dax/dax-syntax-reference).
   
 **Division durch 0 und Division durch Leerzeichen**  
 Im DirectQuery-Modus führt die Division durch null (0) bzw. die Division durch BLANK stets zu einem Fehler. SQL Server unterstützt nicht die Definition der Unendlichkeit, und da das natürliche Ergebnis jeder Division durch 0 die Unendlichkeit ist, entspricht das Ergebnis einem Fehler. SQL Server unterstützt jedoch die Division durch NULL-Werte, und das Ergebnis muss stets einem NULL-Wert entsprechen.  
