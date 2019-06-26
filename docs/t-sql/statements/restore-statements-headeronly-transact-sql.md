@@ -102,7 +102,7 @@ FROM <backup_device>
 |**UserName**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang ausgeführt hat.|  
 |**ServerName**|**nvarchar(128)**|Name des Servers, der den Sicherungssatz geschrieben hat.|  
 |**DatabaseName**|**nvarchar(128)**|Name der Datenbank, die gesichert wurde.|  
-|**DatabaseVersion**|**ssNoversion**|Version der Datenbank, von der die Sicherung erstellt wurde.|  
+|**DatabaseVersion**|**int**|Version der Datenbank, von der die Sicherung erstellt wurde.|  
 |**DatabaseCreationDate**|**datetime**|Datum und Uhrzeit der Erstellung der Datenbank.|  
 |**BackupSize**|**numeric(20,0)**|Größe der Sicherung in Bytes.|  
 |**FirstLSN**|**numeric(25,0)**|Protokollfolgenummer des ersten Protokolldatensatzes im Sicherungssatz.|  
@@ -113,15 +113,15 @@ FROM <backup_device>
 |**BackupFinishDate**|**datetime**|Datum und Uhrzeit des Endes des Sicherungsvorgangs.|  
 |**SortOrder**|**smallint**|Sortierreihenfolge für den Server. Diese Spalte gilt nur für Datenbanksicherungen. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**CodePage**|**smallint**|Servercodepage; das ist der vom Server verwendete Zeichensatz.|  
-|**UnicodeLocaleId**|**ssNoversion**|Serverseitige Konfigurationsoptionen für die Unicode-Gebietsschema-ID, die für die Sortierung von Unicode-Zeichendaten verwendet wird. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
-|**UnicodeComparisonStyle**|**ssNoversion**|Serverseitige Konfigurationsoption für die Unicode-Vergleichsart, die zusätzliche Steuerungsmöglichkeiten im Vergleich zur Sortierung von Unicode-Daten bereitstellt. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**UnicodeLocaleId**|**int**|Serverseitige Konfigurationsoptionen für die Unicode-Gebietsschema-ID, die für die Sortierung von Unicode-Zeichendaten verwendet wird. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**UnicodeComparisonStyle**|**int**|Serverseitige Konfigurationsoption für die Unicode-Vergleichsart, die zusätzliche Steuerungsmöglichkeiten im Vergleich zur Sortierung von Unicode-Daten bereitstellt. Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**CompatibilityLevel**|**tinyint**|Einstellung des Kompatibilitätsgrades der Datenbank, von der aus die Sicherung erstellt wurde.|  
-|**SoftwareVendorId**|**ssNoversion**|ID des Softwareanbieters. Für SQL Server lautet diese Nummer **4608** (oder im Hexadezimalformat **0x1200**).|  
-|**SoftwareVersionMajor**|**ssNoversion**|Wichtigste Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
-|**SoftwareVersionMinor**|**ssNoversion**|Untergeordnete Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
-|**SoftwareVersionBuild**|**ssNoversion**|Buildnummer des Servers, der den Sicherungssatz erstellt hat.|  
+|**SoftwareVendorId**|**int**|ID des Softwareanbieters. Für SQL Server lautet diese Nummer **4608** (oder im Hexadezimalformat **0x1200**).|  
+|**SoftwareVersionMajor**|**int**|Wichtigste Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
+|**SoftwareVersionMinor**|**int**|Untergeordnete Versionsnummer des Servers, der den Sicherungssatz erstellt hat.|  
+|**SoftwareVersionBuild**|**int**|Buildnummer des Servers, der den Sicherungssatz erstellt hat.|  
 |**MachineName**|**nvarchar(128)**|Name des Computers, der den Sicherungsvorgang ausgeführt hat.|  
-|**Flags**|**ssNoversion**|Die Bedeutungen der einzelnen Flagbits, wenn diese auf **1** festgelegt sind, lauten folgendermaßen:<br /><br /> **1** = Protokollsicherung enthält massenprotokollierte Vorgänge.<br /><br /> **2** = Momentaufnahmesicherung<br /><br /> **4** = Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br /><br /> **8** = Datenbank war zum Zeitpunkt der Sicherung im Einzelbenutzermodus.<br /><br /> **16** = Sicherung enthält Sicherungsprüfsummen.<br /><br /> **32** = Datenbank war zum Zeitpunkt der Sicherung beschädigt; trotz der Fehler wurde die Fortsetzung des Sicherungsvorgangs angefordert.<br /><br /> **64** = Sicherung des Protokollfragments.<br /><br /> **128** = Sicherung des Protokollfragments mit unvollständigen Metadaten.<br /><br /> **256** = Sicherung des Protokollfragments mithilfe von NORECOVERY.<br /><br /> **Wichtig:** Anstelle von **Flags** sollten die einzelnen booleschen Spalten (weiter unten von **HasBulkLoggedData** bis **IsCopyOnly** aufgeführt) verwendet werden.|  
+|**Flags**|**int**|Die Bedeutungen der einzelnen Flagbits, wenn diese auf **1** festgelegt sind, lauten folgendermaßen:<br /><br /> **1** = Protokollsicherung enthält massenprotokollierte Vorgänge.<br /><br /> **2** = Momentaufnahmesicherung<br /><br /> **4** = Datenbank war zum Zeitpunkt der Sicherung schreibgeschützt.<br /><br /> **8** = Datenbank war zum Zeitpunkt der Sicherung im Einzelbenutzermodus.<br /><br /> **16** = Sicherung enthält Sicherungsprüfsummen.<br /><br /> **32** = Datenbank war zum Zeitpunkt der Sicherung beschädigt; trotz der Fehler wurde die Fortsetzung des Sicherungsvorgangs angefordert.<br /><br /> **64** = Sicherung des Protokollfragments.<br /><br /> **128** = Sicherung des Protokollfragments mit unvollständigen Metadaten.<br /><br /> **256** = Sicherung des Protokollfragments mithilfe von NORECOVERY.<br /><br /> **Wichtig:** Anstelle von **Flags** sollten die einzelnen booleschen Spalten (weiter unten von **HasBulkLoggedData** bis **IsCopyOnly** aufgeführt) verwendet werden.|  
 |**BindingID**|**uniqueidentifier**|Bindungs-ID für die Datenbank. Sie entspricht dem Wert von **sys.database_recovery_status database_guid**. Wenn eine Datenbank wiederhergestellt wird, wird ein neuer Wert zugewiesen. Weitere Informationen finden Sie unter **FamilyGUID** (weiter unten).|  
 |**RecoveryForkID**|**uniqueidentifier**|ID für den letzten Wiederherstellungs-Verzweigungspunkt. Diese Spalte entspricht dem Wert von **last_recovery_fork_guid** in der [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)-Tabelle.<br /><br /> Bei Datensicherungen ist **RecoveryForkID** mit **FirstRecoveryForkID** identisch.|  
 |**Sortierung**|**nvarchar(128)**|Die von der Datenbank verwendete Sortierung.|  
