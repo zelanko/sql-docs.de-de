@@ -5,17 +5,17 @@ description: Erfahren Sie mehr über die Funktionsweise der Dauerhaftigkeit von 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24c90bfb8c99178e8ffa7822fba4bea709c536e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfba93aaca23ca3303b6d9bd9752c1d458a9a81a
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800718"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388011"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Dauerhaftigkeit von Daten mit SQL Server-big Data-Cluster in Kubernetes
 
@@ -49,7 +49,7 @@ Die Möglichkeit, eine SQL Server-big Data-Cluster diese persistenten Volumes ve
 Bereitstellung von big Data-Cluster verwendet permanenten Speicher zum Speichern von Daten, Metadaten und Protokolle für die verschiedenen Komponenten. Sie können anpassen, dass die Größe der persistentes Volume Ansprüche als Teil der Bereitstellung erstellt. Als bewährte Methode, wir empfehlen die Verwendung von Storage-Klassen mit einer *beibehalten* [freigeben Richtlinie](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!NOTE]
-> In CTP 3.0 können Sie Storage-Konfiguration die Einstellung nach der Bereitstellung nicht ändern. Darüber hinaus nur `ReadWriteOnce` den Zugriffsmodus für das gesamte Cluster wird unterstützt.
+> In CTP 3.1 können Sie Storage-Konfiguration die Einstellung nach der Bereitstellung nicht ändern. Darüber hinaus nur `ReadWriteOnce` den Zugriffsmodus für das gesamte Cluster wird unterstützt.
 
 > [!WARNING]
 > Ausgeführt wird, ohne den beständigen Speicher benötigen, kann in einer testumgebung arbeiten, aber in einem nicht funktionierenden Cluster resultieren. Bei Pod neu gestartet wird verloren Metadaten und/oder Clusterdaten dauerhaft. Wir empfehlen nicht in dieser Konfiguration ausgeführt. 
@@ -58,7 +58,7 @@ Bereitstellung von big Data-Cluster verwendet permanenten Speicher zum Speichern
 
 ## <a name="aks-storage-classes"></a>AKS-Speicherklassen
 
-Im Lieferumfang von AKS [zwei integrierte Speicherklassen](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **Standard** und **verwaltete Premium-** zusammen mit der dynamischen Bereitstellung für sie. Sie können geben einen der beiden oder erstellen eigene Speicherklasse für die Bereitstellung von big Data-Cluster mit permanenten Speicher mit Lesezugriff aktiviert. Standardmäßig die integrierte in der Clusterkonfigurationsdatei für Aks *Aks-Dev-test.json* im Lieferumfang von permanenten Speicher Empfohlene Konfigurationen, **Standard** Speicherklasse.
+Im Lieferumfang von AKS [zwei integrierte Speicherklassen](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **Standard** und **verwaltete Premium-** zusammen mit der dynamischen Bereitstellung für sie. Sie können geben einen der beiden oder erstellen eigene Speicherklasse für die Bereitstellung von big Data-Cluster mit permanenten Speicher mit Lesezugriff aktiviert. Standardmäßig die integrierte in der Clusterkonfigurationsdatei für Aks *Aks-Dev-Test* im Lieferumfang von permanenten Speicher Empfohlene Konfigurationen, **Standard** Speicherklasse.
 
 > [!WARNING]
 > Persistente Volumes mit den integrierten Speicherklassen erstellt **Standard** und **verwaltete Premium-** verfügen über eine Richtlinie bei der Rückgewinnung von *löschen*. Daher zur Zeit die Sie löschen die SQL Server-big Data-Cluster, erhalten persistentes Volume Ansprüche auch gelöscht, und klicken Sie dann persistenten Volumes. Sie können benutzerdefinierte Speicherklassen mit erstellen **Azure-Datenträger** Privioner mit eine *beibehalten* Richtlinie freizugeben, siehe [dies](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) Artikel.
@@ -66,25 +66,25 @@ Im Lieferumfang von AKS [zwei integrierte Speicherklassen](https://docs.microsof
 
 ## <a name="minikube-storage-class"></a>Minikube-Speicherklasse
 
-Minikube ist über eine integrierte-Klasse namens **standard** zusammen mit einer dynamischen Provisioner für sie. Die integrierten Konfigurationsdatei für Minikube *Minikube-Dev-test.json* verfügt über die speichereinstellungen für die Konfiguration in der Spezifikation der Steuerelement-Ebene. Die gleichen Einstellungen werden auf alle Daten des Pools angewendet werden. Sie können auch eine Kopie dieser Datei anpassen und es für Ihre big Data-Cluster-Bereitstellung auf Minikube. Sie können manuell bearbeiten Sie die benutzerdefinierte Datei, und ändern Sie die Größe der persistenten Volumes Ansprüche für bestimmte Pools, um die arbeitsauslastungen zu berücksichtigen, dass Sie ausführen möchten. Alternativ finden Sie unter [Konfigurieren des Speichers](#config-samples) im Abschnitt Beispiele dazu, wie Sie bearbeitet, mithilfe von *Mssqlctl* Befehle.
+Minikube ist über eine integrierte-Klasse namens **standard** zusammen mit einer dynamischen Provisioner für sie. Die integrierten Konfigurationsdatei für Minikube *Minikube-Dev-Test* verfügt über die speichereinstellungen für die Konfiguration in der Spezifikation der Steuerelement-Ebene. Die gleichen Einstellungen werden auf alle Daten des Pools angewendet werden. Sie können auch eine Kopie dieser Datei anpassen und es für Ihre big Data-Cluster-Bereitstellung auf Minikube. Sie können manuell bearbeiten Sie die benutzerdefinierte Datei, und ändern Sie die Größe der persistenten Volumes Ansprüche für bestimmte Pools, um die arbeitsauslastungen zu berücksichtigen, dass Sie ausführen möchten. Alternativ finden Sie unter [Konfigurieren des Speichers](#config-samples) im Abschnitt Beispiele dazu, wie Sie bearbeitet, mithilfe von *Mssqlctl* Befehle.
 
 ## <a name="kubeadm-storage-classes"></a>Kubeadm Speicherklassen
 
 Kubeadm kommt nicht mit einer integrierten Speicherklasse. Sie müssen eigene Speicherklassen und persistente Volumes mit lokalen Speicher oder Ihre bevorzugte-Bereitstellung wie erstellen [Turm](https://github.com/rook/rook). In diesem Fall legen Sie die **ClassName** der Speicherklasse, die Sie konfiguriert haben. 
 
 > [!NOTE]
->  In den integrierten in Bereitstellungskonfigurationsdatei für *Kubeadm Kubeadm-Dev-test.json* es ist keine Speicher-Klassenname, die für die Speicherung von Daten- und Protokolldateien festgelegt. Sie müssen vor der Bereitstellung Anpassen der Konfigurationsdatei und legen Sie den Wert für ClassName andernfalls die Überprüfungen vor der Bereitstellung fehl. Bereitstellung verfügt auch über Schritt zur Überprüfung, der das Vorhandensein der Speicherklasse, aber nicht die erforderlichen persistente Volumes überprüft. Sie müssen sicherstellen, dass Sie genügend Volumes abhängig vom Umfang des Clusters erstellen. In CTP 3.0 müssen Sie für die Standardgröße für den Cluster mindestens 23 Volumes erstellen. [Hier](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) ist ein Beispiel zum Erstellen von persistenten Volumes mit der lokalen Bereitstellung.
+>  In den integrierten in Bereitstellungskonfigurationsdatei für *Kubeadm Kubeadm-Dev-Test* es ist keine Speicher-Klassenname, die für die Speicherung von Daten- und Protokolldateien festgelegt. Sie müssen vor der Bereitstellung Anpassen der Konfigurationsdatei und legen Sie den Wert für ClassName andernfalls die Überprüfungen vor der Bereitstellung fehl. Bereitstellung verfügt auch über Schritt zur Überprüfung, der das Vorhandensein der Speicherklasse, aber nicht die erforderlichen persistente Volumes überprüft. Sie müssen sicherstellen, dass Sie genügend Volumes abhängig vom Umfang des Clusters erstellen. In CTP 3.1 müssen Sie für die Standardgröße für den Cluster mindestens 23 Volumes erstellen. [Hier](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) ist ein Beispiel zum Erstellen von persistenten Volumes mit der lokalen Bereitstellung.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>Speicherkonfigurationen für jeden Pool anpassen
 
-Für alle Anpassungen müssen Sie zunächst eine Kopie der integrierten erstellen in der Konfigurationsdatei, die Sie verwenden möchten. Der folgende Befehl erstellt z. B. eine Kopie der *Aks-Dev-test.json* Bereitstellungskonfigurationsdatei im aktuellen Verzeichnis:
+Für alle Anpassungen müssen Sie zunächst eine Kopie der integrierten erstellen in der Konfigurationsdatei, die Sie verwenden möchten. Beispielsweise der folgende Befehl erstellt eine Kopie der *Aks-Dev-Test* Bereitstellungskonfigurationsdatei in ein Unterverzeichnis namens `custom`:
 
 ```bash
-mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+mssqlctl bdc config init --source aks-dev-test --target custom
 ```
 
-Klicken Sie dann, Sie können der Konfigurationsdatei anpassen, entweder indem Sie ihn manuell bearbeiten, oder Sie können *Mssqlctl Clustersatz Config Abschnitt* Befehl. Diese Set-Befehl verwendet eine Kombination von Jsonpath und Jsonpatch-Bibliotheken zum Bearbeiten der Konfigurationsdatei zu bieten.
+Klicken Sie dann, Sie können der Konfigurationsdatei anpassen, entweder indem Sie ihn manuell bearbeiten, oder Sie können **Mssqlctl BDC-Config Abschnitt Satz** Befehl. Diese Set-Befehl verwendet eine Kombination von Jsonpath und Jsonpatch-Bibliotheken zum Bearbeiten der Konfigurationsdatei zu bieten.
 
 ### <a name="configure-size"></a>Konfigurieren der Größe
 
@@ -93,13 +93,13 @@ Standardmäßig beträgt die Größe der einzelnen die Pods im Cluster bereitges
 Das folgende Beispiel aktualisiert nur die Größe der Ansprüche, die persistenten Volumes im Speicherpool auf 100Gi gespeicherten Daten. Beachten Sie, dass Speicherabschnitt vorhanden in der Konfigurationsdatei für den Speicherpool sein muss, bevor Sie diesen Befehl ausführen:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
 ```
 
 Das folgende Beispiel aktualisiert die Größe des persistenten Volumes Ansprüche für alle Pools auf 32Gi:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
 ```
 
 ### <a id="config-samples"></a> Konfigurieren von Speicherklasse
@@ -107,7 +107,7 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.
 Folgende Beispiel zeigt, wie die Speicherklasse für die Steuerungsebene geändert wird:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
 ```
 
 Eine weitere Möglichkeit ist die benutzerdefinierte Konfigurationsdatei manuell bearbeiten oder Jsonpatch wie im folgenden Beispiel zu verwenden, die Storage-Klasse für den Speicherpool ändert. Erstellen Sie eine *patch.json* Datei mit diesem Inhalt:
@@ -135,10 +135,10 @@ Eine weitere Möglichkeit ist die benutzerdefinierte Konfigurationsdatei manuell
 }
 ```
 
-Wenden Sie die Patchdatei. Verwendung *Mssqlctl Clustersatz Config Abschnitt* Befehl aus, um die Änderungen in der JSON Patch-Datei zu übernehmen. Im folgende Beispiel wird ein Ziel Deployment Configuration Datei custom.json patch.json Datei gilt.
+Wenden Sie die Patchdatei. Verwendung **Mssqlctl BDC-Config Abschnitt Satz** Befehl aus, um die Änderungen in der JSON Patch-Datei zu übernehmen. Im folgende Beispiel wird ein Ziel Deployment Configuration Datei custom.json patch.json Datei gilt.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

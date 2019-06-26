@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 504559fab3078b03ea3b8aea923035654f60ce47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782138"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388794"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount ADLS Gen2 für HDFS-Staffelung in einem big Data-cluster
 
@@ -112,10 +112,10 @@ Nun, da Sie eine Datei mit Zugriffstasten oder mithilfe von OAuth vorbereitet ha
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Bereitstellen der remote-HDFS-Speicher in Azure mithilfe **Mssqlctl Cluster Speicher-Pool einbinden erstellen**. Ersetzen Sie die Platzhalter-Werte, bevor Sie den folgenden Befehl ausführen:
+1. Bereitstellen der remote-HDFS-Speicher in Azure mithilfe **Mssqlctl BDC-Speicherpool Bereitstellung erstellen**. Ersetzen Sie die Platzhalter-Werte, bevor Sie den folgenden Befehl ausführen:
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ Wenn erfolgreich bereitgestellt wurde, sollten Sie möglicherweise die HDFS-Date
 Um den Status aller Bereitstellungen in Ihrer big Data-Cluster aufzulisten, verwenden Sie den folgenden Befehl aus:
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 Um den Status einer Bereitstellung in einem bestimmten Pfad in HDFS aufzulisten, verwenden Sie den folgenden Befehl aus:
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Löschen Sie die Bereitstellung
 
-Verwenden Sie zum Löschen der Bereitstellung der **Mssqlctl Cluster Speicher-Pool einbinden löschen** Befehl aus, und geben Sie den Bereitstellungspfad in HDFS:
+Verwenden Sie zum Löschen der Bereitstellung der **Mssqlctl BDC-Speicherpool Bereitstellung löschen** Befehl aus, und geben Sie den Bereitstellungspfad in HDFS:
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -5,17 +5,17 @@ description: Informationen Sie zu SQL Server-2019 big Data-Clustern (Vorschau), 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801892"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388728"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Was sind SQL Server-Big Data-Cluster?
 
@@ -57,11 +57,9 @@ SQL Server-big Data-Cluster aktivieren, künstliche Intelligenz und Machine lear
 
 ### <a name="management-and-monitoring"></a>Verwaltung und Überwachung
 
-Verwaltung und Überwachung werden durch eine Kombination von Befehlszeilentools, APIs, ein Administratorportal und dynamische Verwaltungssichten bereitgestellt.
+Verwaltung und Überwachung werden durch eine Kombination von Befehlszeilentools, APIs, Portale und dynamischen Verwaltungssichten bereitgestellt.
 
-Die [Cluster-Administratorportal](cluster-admin-portal.md) ist eine Weboberfläche, in dem Status und Integrität der Pods im Cluster angezeigt. Darüber hinaus Links zu anderen Dashboards für Log Analytics und Dashboards für die netzwerküberwachung.
-
-Azure Data Studio können eine Vielzahl von Aufgaben für die big Data-Cluster ausführen. Dies erfolgt durch die neue **2019-Erweiterung für SQL Server (Vorschau)**. Diese Erweiterung bietet:
+Azure Data Studio können eine Vielzahl von Aufgaben für die big Data-Cluster ausführen. Dies erfolgt durch die neue **2019-Erweiterung für SQL Server (Vorschau)** . Diese Erweiterung bietet:
 
 - Integrierten Codeausschnitte für allgemeine Verwaltungsaufgaben.
 - Möglichkeit zum Durchsuchen von HDFS, Hochladen von Dateien, Dateien und Verzeichnisse erstellen.

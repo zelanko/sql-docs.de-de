@@ -5,17 +5,17 @@ description: Dieser Artikel beschreibt die neuesten Updates und bekannte Problem
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d3967da74969556cd96483d4a9c3afa3135fa342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779218"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388636"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
 
@@ -24,6 +24,95 @@ ms.locfileid: "66779218"
 Dieser Artikel führt die Updates und bekannte Probleme für die neuesten Versionen von SQL Server-big Data-Cluster.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp31"></a> CTP 3.1 (Juni)
+
+Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme für big Data-Cluster in SQL Server 2019 CTP 3.1.
+
+### <a name="whats-new"></a>Neues
+
+| Neue Funktion oder Update | Details |
+|:---|:---|
+| `mssqlctl` Änderungen | `mssqlctl cluster` Befehle wurden umbenannt `mssqlctl bdc`. Weitere Informationen finden Sie unter den [ `mssqlctl` Verweis](reference-mssqlctl.md). |
+| Neue `mssqlctl` statusbefehlen und Entfernen von das Cluster-Verwaltungsportal. | Das Verwaltungsportal für den Cluster wird in dieser Version entfernt. Neue Befehle hinzugefügt wurden `mssqlctl` , dass Ergänzung für vorhandene Überwachungsbefehle. |
+| Spark-computepools | Erstellen Sie zusätzliche Knoten, um die Spark-rechenleistung zu erhöhen, ohne auf die horizontale Skalierung von Speicher. Darüber hinaus können Sie Storage-Pool-Knoten starten, die nicht für Spark verwendet. Spark und Speicherressourcen werden entkoppelt. Weitere Informationen finden Sie unter [Konfigurieren des Speichers, ohne Spark](deployment-custom-configuration.md#sparkstorage). |
+| MSSQL-Spark-connector | Unterstützung für Lese-/Schreibzugriff auf Daten Pool externe Tabellen. Vorherigen Releases unterstützt Lese-/Schreibzugriff auf die MASTER-Instanz nur Tabellen. |
+| Machine Learning mit MLeap | [Ein MLeap Machine Learning-Modells in Spark trainieren und bewerten Sie es in SQL Server mithilfe der Java-spracherweiterung](spark-create-machine-learning-model.md). |
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen im Zusammenhang mit dieser Version beschrieben.
+
+#### <a name="hdfs"></a>HDFS
+
+- Wenn Sie mit der rechten Maustaste auf eine Datei in HDFS diesen in der Vorschau, können Sie die folgende Fehlermeldung angezeigt:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Zurzeit besteht keine Möglichkeit, Dateien, die größer als 30 MB in Azure Data Studio Vorschau anzeigen.
+
+- Änderungen an der Konfiguration in HDFS, bei denen Änderungen an "Hdfs-Site.xml" werden nicht unterstützt.
+
+#### <a name="deployment"></a>Bereitstellung
+
+- Upgrade von eines big Data-Clusters für Daten aus einer früheren Version wird nicht unterstützt.
+
+   > [!IMPORTANT]
+   > Müssen Sie Ihre Daten sichern und löschen Sie Ihre vorhandenen big Data-Cluster (mit der früheren Version von **Mssqlctl**) vor der Bereitstellung der neuesten Version. Weitere Informationen finden Sie unter [ein Upgrade auf ein neues Release](deployment-upgrade.md).
+
+- Nach dem Bereitstellen in AKS können Sie die folgenden zwei Warning-Ereignisse aus der Bereitstellung möglicherweise. Diese beiden Ereignisse finden Sie bekannte Probleme, aber sie verhindern nicht, dass Sie erfolgreiche Bereitstellung von big Data-Cluster in AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Wenn es sich bei eine Clusterbereitstellung mit big Data ein Fehler auftritt, wird der zugeordnete Namespace nicht entfernt werden. Dies kann in einem verwaiste-Namespace im Cluster führen. Eine problemumgehung besteht darin, den Namespace manuell zu löschen, bevor die Bereitstellung eines Clusters mit dem gleichen Namen.
+
+#### <a name="external-tables"></a>Externe Tabellen
+
+- Bereitstellung von Big Data-Cluster werden nicht mehr erstellt die **SqlDataPool** und **SqlStoragePool** Daten aus externen Quellen. Sie können diese Datenquellen manuell, um Daten bei den Daten-Pools und den Speicherpool Virtualisierungsunterstützung erstellen.
+
+   > [!NOTE]
+   > Der URI für diese externen Datenquellen zu erstellen, unterscheidet sich zwischen CTPs. Informieren Sie sich die zu deren Erstellung finden Sie unter folgenden Transact-SQL-Befehle 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+   ```
+
+- Es ist möglich, eine externen Pool Datentabelle für eine Tabelle zu erstellen, die Spaltentypen nicht unterstützt wird. Wenn Sie auf die externe Tabelle Abfragen, erhalten Sie eine Meldung ähnlich der folgenden:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Wenn Sie eine externe Speicher-Pool-Tabelle Abfragen, können Sie eine Fehlermeldung, wenn gleichzeitig die zugrunde liegende Datei in HDFS kopiert wird.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Bei der Erstellung einer externen Tabelle, Oracle, die Zeichen-Datentypen zu verwenden, interpretiert der Studio für Azure Data Virtualization-Assistent diese Spalten als VARCHAR in der Definition der externen Tabelle an. Dies bewirkt einen Fehler in der DDL für externe Tabellen. Ändern Sie entweder das Oracle-Schema, um verwenden Sie den Typ NVARCHAR2 oder EXTERNAL TABLE-Anweisungen manuell erstellen, und geben NVARCHAR, statt mit dem Assistenten.
+
+#### <a name="application-deployment"></a>Anwendungsbereitstellung
+
+- Bei eine Anwendung von R, Python oder MLeap von RESTful-API aufrufen, tritt ein Timeout für der Aufruf innerhalb von 5 Minuten.
+
+#### <a name="spark-and-notebooks"></a>Spark und notebooks
+
+- In der Kubernetes-Umgebung können als PODs Neustarts POD-IP-Adressen ändern. In dem Szenario, in dem für die Master-Pod neu gestartet wird, kann die Spark-Sitzung mit fehlschlagen `NoRoteToHostException`. Dies wird verursacht durch JVM-Caches, die mit der neuen IP-Adresse aktualisiert nicht behandelt.
+
+- Wenn Sie Jupyter, die bereits installiert haben, und ein separaten Python für Windows, Spark-Notebooks schlägt möglicherweise fehl. Um dieses Problem zu umgehen, aktualisieren Sie Jupyter, auf die neueste Version.
+
+- In einem Notizbuch, wenn Sie auf die **Text hinzufügen** Befehl, die Textzelle im Bearbeitungsmodus befindet, anstatt im Vorschaumodus hinzugefügt wird. Klicken Sie auf das vorschausymbol klicken zum umschalten, um den Bearbeitungsmodus, und Bearbeiten der Zelle.
+
+#### <a name="security"></a>Sicherheit
+
+- Die SA_PASSWORD ist Teil der Umgebung "und" ermittelt (z. B. in einer Dumpdatei "Cord"). Sie müssen die SA_PASSWORD für die master-Instanz nach der Bereitstellung zurücksetzen. Dies ist nicht auf, einen Fehler, aber eine Sicherheitsschritt. Weitere Informationen zum Ändern der SA_PASSWORD in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- AKS-Protokolle können das SA-Kennwort für big Data-Cluster-Bereitstellungen enthalten.
 
 ## <a id="ctp30"></a> CTP-Version 3.0 (Mai)
 
@@ -89,11 +178,11 @@ In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen 
    -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
        CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+       WITH (LOCATION = 'sqldatapool://controller-svc/default');
  
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    ```
 
 - Es ist möglich, eine externen Pool Datentabelle für eine Tabelle zu erstellen, die Spaltentypen nicht unterstützt wird. Wenn Sie auf die externe Tabelle Abfragen, erhalten Sie eine Meldung ähnlich der folgenden:

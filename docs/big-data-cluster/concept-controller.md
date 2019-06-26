@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783164"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387948"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Was ist der Controller auf einem SQL Server-big Data-Cluster?
 
@@ -44,17 +44,13 @@ Der war-Workflow wird Layout auf Kubernetes eine voll funktionsfähige SQL Serve
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>Verwaltung des Clusters über den Controller-Dienst
 
-Sie können den Cluster ausschließlich über den Controller-Dienst entweder verwalten `mssqlctl` -APIs oder das Verwaltungsportal für Cluster, die innerhalb des Clusters gehostet werden. Wenn Sie zusätzliche Kubernetes-Objekte, wie die Pods im gleichen Namespace bereitstellen, sind sie nicht verwaltet werden oder durch den Controller-Dienst überwacht.
+Sie können den Cluster über den Controller-Dienst entweder verwalten **Mssqlctl** Befehle. Wenn Sie zusätzliche Kubernetes-Objekte, wie die Pods im gleichen Namespace bereitstellen, sind sie nicht verwaltet werden oder durch den Controller-Dienst überwacht. Sie können auch **"kubectl"** Befehle zum Verwalten des Clusters auf die Kubernetes-Ebene. Weitere Informationen finden Sie unter [Überwachung und Problembehandlung für SQL Server-big Data-Cluster](cluster-troubleshooting-commands.md).
 
-Befinden sich in einem dedizierten Kubernetes-Namespace, der Controller und die Kubernetes-Objekte (zustandsbehaftete legt, Pods, Geheimnisse, usw.) für einen big Data-Cluster erstellt wurde. Der Controller-Dienst wird vom Administrator Kubernetes-Cluster zum Verwalten aller Ressourcen innerhalb dieses Namespace Berechtigung erteilt werden.  Die RBAC-Richtlinie für dieses Szenario wird automatisch als Teil der ersten Bereitstellung mithilfe konfiguriert `mssqlctl`. 
+Befinden sich in einem dedizierten Kubernetes-Namespace, der Controller und die Kubernetes-Objekte (zustandsbehaftete legt, Pods, Geheimnisse, usw.) für einen big Data-Cluster erstellt wurde. Der Controller-Dienst wird vom Administrator Kubernetes-Cluster zum Verwalten aller Ressourcen innerhalb dieses Namespace Berechtigung erteilt werden.  Die RBAC-Richtlinie für dieses Szenario wird automatisch als Teil der ersten Bereitstellung mithilfe konfiguriert **Mssqlctl**.
 
 ### <a name="mssqlctl"></a>mssqlctl
 
-`mssqlctl` ein Befehlszeilen-Hilfsprogramm ist in Python geschrieben werden, mit dem können Clusteradministratoren für das Bootstrapping und Verwalten von big Data-Clustern über die REST-APIs, die von den Controller-Dienst verfügbar gemacht werden.
-
-### <a name="cluster-administration-portal"></a>Cluster-Verwaltungsportal
-
-Nach der Controllerdienst ausgeführt wird, kann die Clusterverwaltung verwenden die [Cluster-Verwaltungsportal](cluster-admin-portal.md) um den Fortschritt der Bereitstellung zu überwachen, erkennen und beheben Sie Probleme mit Diensten innerhalb des Clusters.
+**Mssqlctl** ist ein Befehlszeilenprogramm, das in Python geschrieben wurde, ermöglicht das Clustern von Administratoren zum Starten und Verwalten von big Data-Clustern über die REST-APIs, die von den Controller-Dienst verfügbar gemacht werden.
 
 ## <a name="controller-service-security"></a>Sicherheit des Domänencontrollers
 

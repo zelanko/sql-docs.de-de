@@ -5,31 +5,31 @@ description: Erfahren Sie, wie Sie eine big Data-Clusterbereitstellung mit Konfi
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 61e6d50de66ca7fe4a9b5f3e1c5511fc19b8cffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782254"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388800"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Konfigurieren von bereitstellungseinstellungen für big Data-Cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Informationen zum Anpassen der Konfigurationsdatei des Cluster-Bereitstellung können Sie einem beliebigen Json-Format-Editor wie VSCode verwenden. Für die Skripterstellung diese Änderungen zur Automatisierung verwenden, wir bieten eine **Mssqlctl Cluster-Abschnitt "Config"** Befehl. In diesem Artikel wird erläutert, wie Sie big Data-Cluster-Bereitstellungen zu konfigurieren, durch das Ändern von Konfigurationsdateien für die Bereitstellung. Es bietet Beispiele für die Konfiguration für verschiedene Szenarien zu ändern. Weitere Informationen zur Verwendung von Konfigurationsdateien in Bereitstellungen finden Sie unter den [bereitstellungsanleitung](deployment-guidance.md#configfile).
+Informationen zum Anpassen der Konfigurationsdatei des Cluster-Bereitstellung können Sie alle mit JSON-Format-Editor, z. B. VSCode verwenden. Verwenden Sie für die Skripterstellung diese Änderungen zur Automatisierung verwenden, die **Mssqlctl Bdc-Abschnitt "Config"** Befehl. In diesem Artikel wird erläutert, wie Sie big Data-Cluster-Bereitstellungen zu konfigurieren, durch das Ändern von Konfigurationsdateien für die Bereitstellung. Es bietet Beispiele für die Konfiguration für verschiedene Szenarien zu ändern. Weitere Informationen zur Verwendung von Konfigurationsdateien in Bereitstellungen finden Sie unter den [bereitstellungsanleitung](deployment-guidance.md#configfile).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Installieren Sie Mssqlctl](deploy-install-mssqlctl.md).
 
-- Jedes der Beispiele in diesem Abschnitt wird davon ausgegangen, dass Sie eine Kopie der standard-Konfigurationsdateien erstellt haben. Weitere Informationen finden Sie unter [erstellen Sie eine benutzerdefinierte Konfigurationsdatei](deployment-guidance.md#customconfig). Beispielsweise der folgende Befehl erstellt eine **custom.json** Datei basierend auf dem standardmäßigen **Aks-Dev-test.json** Konfiguration:
+- Jedes der Beispiele in diesem Abschnitt wird davon ausgegangen, dass Sie eine Kopie der standard-Konfigurationsdateien erstellt haben. Weitere Informationen finden Sie unter [erstellen Sie eine benutzerdefinierte Konfigurationsdatei](deployment-guidance.md#customconfig). Der folgende Befehl erstellt z. B. ein Verzeichnis namens `custom` , enthält eine JSON-Bereitstellungskonfigurationsdatei basierend auf dem standardmäßigen **Aks-Dev-Test** Konfiguration:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
 ## <a id="clustername"></a> Clusternamen ändern
@@ -46,7 +46,7 @@ Den Namen des Clusters ist, den Namen des big Data-Cluster und der Kubernetes-Na
 Der folgende Befehl sendet ein Schlüssel / Wert-Paar der **--Json-Werte** Parameter so ändern Sie den Clusternamen big Data **Test-Cluster**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
+mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -67,16 +67,6 @@ Endpunkte werden für die Steuerungsebene sowie für die einzelnen Pools definie
         "name": "ServiceProxy",
         "serviceType": "LoadBalancer",
         "port": 30777
-    },
-    {
-        "name": "AppServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30778
-    },
-    {
-        "name": "Knox",
-        "serviceType": "LoadBalancer",
-        "port": 30443
     }
 ]
 ```
@@ -84,7 +74,7 @@ Endpunkte werden für die Steuerungsebene sowie für die einzelnen Pools definie
 Im folgenden Beispiel wird Inline JSON so ändern Sie den Port für die **Controller** Endpunkt:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> Konfigurieren Sie Pool-Replikate
@@ -121,23 +111,35 @@ Die Merkmale jeder Pool wie z. B. der Speicherpool ist in der Konfigurationsdate
 Sie können die Anzahl der Instanzen in einem Pool konfigurieren, durch Ändern der **Replikate** Wert für jeden Pool. Im folgenden Beispiel wird Inline JSON so ändern Sie diese Werte für die datenspeicherung und dem Pools `10` und `4` bzw.:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
 ## <a id="storage"></a> Konfigurieren des Speichers
 
-Sie können auch ändern, die Speicherklasse und die Eigenschaften, die für jeden Pool verwendet werden. Im folgenden Beispiel weist eine benutzerdefinierten Speicher-Klasse für den Speicherpool und die Größe der Anspruch auf das persistente Volume zum Speichern von Daten zu 100Gb aktualisiert. Benötigen Sie in diesem Abschnitt in der Konfigurationsdatei zum Aktualisieren der Einstellungen mithilfe der *Mssqlctl Config Clustersatz* Befehl, finden Sie unter folgenden wird eine Patch-Datei zu verwenden, um diesen Abschnitt hinzufügen:
+Sie können auch ändern, die Speicherklasse und die Eigenschaften, die für jeden Pool verwendet werden. Im folgenden Beispiel weist eine benutzerdefinierten Speicher-Klasse für den Speicherpool und die Größe der Anspruch auf das persistente Volume zum Speichern von Daten zu 100Gb aktualisiert. Benötigen Sie in diesem Abschnitt in der Konfigurationsdatei zum Aktualisieren der Einstellungen mithilfe der *Mssqlctl BDC-Config Set* Befehl, finden Sie unter folgenden wird eine Patch-Datei zu verwenden, um diesen Abschnitt hinzufügen:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
-> Eine Konfigurationsdatei basierend auf **Kubeadm-Dev-test.json** keine Speicher-Definition für jeden Pool, aber dies manuell hinzugefügt werden, wenn erforderlich.
+> Eine Konfigurationsdatei basierend auf **Kubeadm-Dev-Test** keine Speicher-Definition für jeden Pool, aber dies manuell hinzugefügt werden, wenn erforderlich.
 
 Weitere Informationen zur Speicherkonfiguration finden Sie unter [Dauerhaftigkeit von Daten mit SQL Server, die big Data-in Kubernetes Cluster](concept-data-persistence.md).
+
+## <a id="sparkstorage"></a> Konfigurieren des Speichers, ohne spark
+
+Sie können auch die Speicherpools, ohne Spark ausführen, und erstellen Sie einen separaten Spark-Pool konfigurieren. Dadurch können Sie zum Skalieren Spark Compute-Power-unabhängigen Speicher. Gewusst wie: Konfigurieren des Spark-Pools finden Sie unter den [JSON Patch-DateiBeispiel](#jsonpatch) am Ende dieses Artikels.
+
+Sie benötigen in diesem Abschnitt, in der Konfigurationsdatei zum Aktualisieren der Einstellungen, die mit der `mssqlctl cluster config set command`. Die folgende JSON-Patch-Datei veranschaulicht, wie diese hinzufügen.
+
+In der Standardeinstellung die **IncludeSpark** Einstellung für der Speicherpool auf true ist, festgelegt deshalb müssen Sie die **IncludeSpark** in der Speicherkonfiguration, um Änderungen vorzunehmen:
+
+```bash
+mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].includeSpark=false"
+```
 
 ## <a id="podplacement"></a> Konfigurieren von Pod-Platzierung mit Kubernetes-Bezeichnungen
 
@@ -162,7 +164,7 @@ Erstellen Sie eine Datei mit dem Namen **patch.json** in Ihrem aktuellen Verzeic
 ```
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> JSON-Patch-Dateien
@@ -177,6 +179,7 @@ Die folgenden **patch.json** -Datei führt die folgenden Änderungen:
 - Aktualisiert den Klassennamen "Storage" im Speicher der Steuerelement-Ebene.
 - Aktualisiert die Pool-Einstellungen für den Speicherpool.
 - Aktualisiert die Spark-Einstellungen für den Speicherpool.
+- Erstellt einen Spark-Pool mit 2 Replikate für den cluster
 
 ```json
 {
@@ -199,16 +202,6 @@ Die folgenden **patch.json** -Datei führt die folgenden Änderungen:
             "serviceType": "LoadBalancer",
             "port": 30778,
             "name": "ServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30778,
-            "name": "AppServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30443,
-            "name": "Knox"
         }
       ]
     },
@@ -248,7 +241,6 @@ Die folgenden **patch.json** -Datei führt die folgenden Änderungen:
             "size": "32Gi"
           }
         }
-      }
     },
     {
       "op": "replace",
@@ -260,7 +252,44 @@ Die folgenden **patch.json** -Datei führt die folgenden Änderungen:
         "executorCores": 1,
         "executorMemory": "1536m"
       }
-    }
+    },
+    {
+      "op": "add",
+      "path": "spec.pools/-",
+      "value":
+      {
+        "metadata": {
+          "kind": "Pool",
+          "name": "default"
+        },
+        "spec": {
+          "type": "Spark",
+          "replicas": 2
+        },
+        "hadoop": {
+          "yarn": {
+            "nodeManager": {
+              "memory": 12288,
+              "vcores": 6
+            },
+            "schedulerMax": {
+              "memory": 12288,
+              "vcores": 6
+            },
+            "capacityScheduler": {
+              "maxAmPercent": 0.3
+            }
+          },
+          "spark": {
+            "driverMemory": "2g",
+            "driverCores": 1,
+            "executorInstances": 2,
+            "executorMemory": "2g",
+            "executorCores": 1
+          }
+        }
+      }
+    }   
   ]
 }
 ```
@@ -268,10 +297,10 @@ Die folgenden **patch.json** -Datei führt die folgenden Änderungen:
 > [!TIP]
 > Weitere Informationen zur Struktur und Optionen zum Ändern einer Bereitstellungskonfigurationsdatei finden Sie unter [Bereitstellung-konfigurationsdateireferenz für big Data-Cluster](reference-deployment-config.md).
 
-Verwendung **Mssqlctl Clustersatz Config Abschnitt** zum Anwenden der Änderungen in der JSON Patch-Datei. Im folgenden Beispiel wird die **patch.json** Datei in eine Ziel-Bereitstellungskonfigurationsdatei **custom.json**.
+Verwendung **Mssqlctl BDC-Config Abschnitt Satz** zum Anwenden der Änderungen in der JSON Patch-Datei. Im folgenden Beispiel wird die **patch.json** Datei in eine Ziel-Bereitstellungskonfigurationsdatei **custom.json**.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

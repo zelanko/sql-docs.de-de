@@ -5,16 +5,16 @@ description: Erfahren Sie die Schritte und Ressourcen zum Bereitstellen von SQL 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797904"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388831"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Erste Schritte mit SQL Server-big Data-Cluster
 
@@ -26,7 +26,7 @@ Dieser Artikel bietet einen Überblick über die Bereitstellung einer [SQL Serve
 
 Big Data-Cluster erfordern einen bestimmten Satz von Client-Tools. Bevor Sie einen big Data-Cluster für Kubernetes bereitstellen, sollten Sie die folgenden Tools installieren:
 
-| Tool | Description |
+| Tool | Beschreibung |
 |---|---|
 | **mssqlctl** | Wird bereitgestellt und verwaltet big Data-Cluster. |
 | **kubectl** | Erstellt und verwaltet die zugrunde liegende Kubernetes-Cluster. |
@@ -47,7 +47,7 @@ Big Data-Cluster werden bereitgestellt, als eine Reihe von zusammenhängenden Co
 
 ## <a name="deploy-a-big-data-cluster"></a>Bereitstellen von Big Data-Clustern
 
-Nach dem Konfigurieren von Kubernetes wird, die Sie Bereitstellen eines big Data-Clusters mit der `mssqlctl cluster create` Befehl. Bei der Bereitstellung können Sie verschiedene Ansätze nutzen.
+Nach dem Konfigurieren von Kubernetes wird, die Sie Bereitstellen eines big Data-Clusters mit der `mssqlctl bdc create` Befehl. Bei der Bereitstellung können Sie verschiedene Ansätze nutzen.
 
 - Wenn Sie in einer Dev / Test-Umgebung bereitstellen, können Sie eine der verwenden die [Standardkonfigurationen](deployment-guidance.md#deploy) gebotenen **Mssqlctl**.
 

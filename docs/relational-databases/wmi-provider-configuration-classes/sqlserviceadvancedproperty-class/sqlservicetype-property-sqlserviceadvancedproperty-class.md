@@ -18,12 +18,12 @@ ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 47e4ed225ec9617e7dc24971121bd55597aded40
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 440d7a0d90887d6a1bbeb9553306c5453c514d02
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666219"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351577"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>SqlServiceType-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,11 @@ object.SetBoolValue(NumValue)
 |*5*|MSSQLServerOLAPService ist der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Dienst.|  
 |*6*|ReportServer ist der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienst.|  
 |*7*|SQLBrowser ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Browser-Dienst.|  
+|*8*|NsService ist die [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Benachrichtigungsdienst.|  
+|*9*|MSSQLFDLauncher ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Volltext-Volltextfilterdaemon-Startprogrammdienst.|  
+|*10*|SQLPBENGINE ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase-Engine-Dienst.|  
+|*11*|SQLPBDMS ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase-datenverschiebung.|  
+|*12*|MSSQLLaunchpad ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Launchpad-Dienst.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

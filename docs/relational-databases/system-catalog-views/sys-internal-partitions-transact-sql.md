@@ -1,7 +1,7 @@
 ---
 title: Sys.internal_partitions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,14 +14,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537888"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388339"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>Sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jedes Rowset, das interne Daten für columnstore-Indizes für datenträgerbasierte Tabellen nachverfolgt. Diese Rowsets sind intern für columnstore-Indizes und nachverfolgen, die gelöschte Zeilen, Zeilengruppen Zuordnungen und Delta-Zeilengruppen zu speichern. Sie verfolgen die Daten für die einzelnen für jede Tabellenpartition; Jede Tabelle weist mindestens eine Partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Rowsets wird neu erstellt jedes Mal, die sie den columnstore-Index neu erstellt.   
@@ -39,6 +39,7 @@ ms.locfileid: "52537888"
 |rows|**bigint**|Die ungefähre Anzahl der Zeilen in dieser Partition.|  
 |data_compression|**tinyint**|Der Status der Komprimierung für das Rowset:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|Der Status der Komprimierung für jede Partition. Mögliche Werte für rowstore-Tabellen sind NONE, ROW und PAGE. Mögliche Werte für columnstore-Tabellen sind COLUMNSTORE und COLUMNSTORE_ARCHIVE.|  
+|optimize_for_sequential_key|**bit**|1 = Partition hat die letzte Seite-Insert-Optimierung aktiviert.<br><br>0 = Standardwert. Partition weist die letzte Seite-Insert-Optimierung deaktiviert.|
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

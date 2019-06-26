@@ -5,17 +5,17 @@ description: Erfahren Sie, wie Sie SQL Server-2019 big Data-Clustern (Vorschau) 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782250"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388780"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -82,14 +82,14 @@ Big Data-Clusterbereitstellung, die Optionen in der JSON-Konfigurationsdateien d
 
 | Bereitstellungsprofil | Kubernetes-Umgebung |
 |---|---|
-| **aks-dev-test.json** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test.json** | Mehrere Computer (Kubeadm) |
-| **minikube-dev-test.json** | minikube |
+| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test** | Mehrere Computer (Kubeadm) |
+| **minikube-dev-test** | minikube |
 
-Sie können einen big Data-Cluster bereitstellen, mit **Mssqlctl Clustererstellung**. Dies fordert Sie auf eine der Standardkonfigurationen und führt Sie durch die Bereitstellung.
+Sie können einen big Data-Cluster bereitstellen, mit **Mssqlctl Bdc erstellen**. Dies fordert Sie auf eine der Standardkonfigurationen und führt Sie durch die Bereitstellung.
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 In diesem Szenario werden Sie alle Einstellungen aufgefordert, die nicht Teil der Standardkonfiguration, wie z. B. Kennwörter sind. Beachten Sie, die die Docker-Informationen von Microsoft als Teil der SQL Server-2019 bereitgestellt ist [Early Adoption Program](https://aka.ms/eapsignup).
@@ -99,35 +99,38 @@ In diesem Szenario werden Sie alle Einstellungen aufgefordert, die nicht Teil de
 
 ## <a id="customconfig"></a> Benutzerdefinierte Konfigurationen
 
-Es ist auch möglich, eine eigene Bereitstellungskonfigurationsdatei anzupassen. Sie hierzu die folgenden Schritte aus:
+Es ist auch möglich, Ihre eigenen bereitstellungsprofils anzupassen. Sie hierzu die folgenden Schritte aus:
 
-1. Beginnen Sie mit einem der standardbereitstellung Profile, die die Kubernetes-Umgebung zu entsprechen. Können Sie die **Mssqlctl Config Clusterliste** Befehl, um diese aufzulisten:
+1. Beginnen Sie mit einem der standardbereitstellung Profile, die die Kubernetes-Umgebung zu entsprechen. Können Sie die **Mssqlctl BDC-Config-Liste** Befehl, um diese aufzulisten:
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. Wenn Ihre Bereitstellung anpassen möchten, erstellen Sie eine Kopie des bereitstellungsprofils mit der **Mssqlctl Cluster Config Init** Befehl. Der folgende Befehl erstellt z. B. eine Kopie der **Aks-Dev-test.json** Bereitstellungskonfigurationsdatei im aktuellen Verzeichnis:
+1. Wenn Ihre Bereitstellung anpassen möchten, erstellen Sie eine Kopie des bereitstellungsprofils mit der **Mssqlctl BDC-Config Init** Befehl. Beispielsweise der folgende Befehl erstellt eine Kopie der **Aks-Dev-Test** Bereitstellungskonfigurationsdatei in ein Zielverzeichnis an, mit dem Namen `custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. Zum Anpassen der Einstellungen in der Konfigurationsdatei der Bereitstellung können Sie es in einem Tool bearbeiten, die gut für die Bearbeitung der Json-Dokumentation, wie Visual Studio Code ist. Für Skript-Automatisierung, können Sie bearbeiten, die benutzerdefinierte Konfigurationsdatei mit **Mssqlctl Clustersatz Config Abschnitt** Befehl. Der folgende Befehl ändert z. B. eine benutzerdefinierte Konfigurationsdatei aus, um den Namen des bereitgestellten Clusters von der Standardeinstellung zu ändern (**Mssql-Cluster**) zu **Test-Cluster**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > Ist ein nützliches Tool für die Suche nach JSON-Pfaden der [JSONPath-Online-Ausdrucksauswertung](https://jsonpath.com/).
+   > Die `--target` gibt ein Verzeichnis, das die Konfigurationsdatei enthält basierend auf den `--source` Parameter.
+
+1. Zum Anpassen der Einstellungen in Ihrem Bereitstellungsprofil für die Konfiguration können Sie die Konfigurationsdatei der Bereitstellung in einem Tool bearbeiten, die gut für die Bearbeitung der JSON-Dateien, z. B. Visual Studio Code ist. Für Skript-Automatisierung, Sie können auch bearbeiten das Profil mit benutzerdefiniertem **Mssqlctl BDC-Config Abschnitt Satz** Befehl. Der folgende Befehl ändert z. B. eine benutzerdefinierte Bereitstellung-Profil, um den Namen des bereitgestellten Clusters von der Standardeinstellung zu ändern (**Mssql-Cluster**) zu **Test-Cluster**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > Die `--config-profile` gibt einen Verzeichnisnamen für Ihr Profil für die benutzerdefinierte Bereitstellung, aber die tatsächlichen Änderungen erfolgen für die Bereitstellung JSON-Konfigurationsdatei in das Verzeichnis an. Ist ein nützliches Tool für die Suche nach JSON-Pfaden der [JSONPath-Online-Ausdrucksauswertung](https://jsonpath.com/).
 
    Zusätzlich zum Übergeben von Schlüssel-Wert-Paare können auch Inline bereitstellen, JSON-Werte oder übergeben die JSON-Patch-Dateien. Weitere Informationen finden Sie unter [Konfigurieren von bereitstellungseinstellungen für big Data-Cluster](deployment-custom-configuration.md).
 
-1. Klicken Sie dann die benutzerdefinierte Konfigurationsdatei zu übergeben **Mssqlctl Clustererstellung**. Beachten Sie, dass Sie die erforderlichen festlegen müssen [Umgebungsvariablen](#env), andernfalls werden Sie für die Werte aufgefordert werden:
+1. Klicken Sie dann die benutzerdefinierte Konfigurationsdatei zu übergeben **Mssqlctl Bdc erstellen**. Beachten Sie, dass Sie die erforderlichen festlegen müssen [Umgebungsvariablen](#env), andernfalls werden Sie für die Werte aufgefordert werden:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -137,7 +140,7 @@ Es ist auch möglich, eine eigene Bereitstellungskonfigurationsdatei anzupassen.
 
 Die folgenden Umgebungsvariablen werden für die Sicherheitseinstellungen verwendet, die nicht in einer Konfigurationsdatei für die Bereitstellung gespeichert werden. Beachten Sie, dass Docker-Einstellungen, mit Ausnahme von Anmeldeinformationen in der Konfigurationsdatei festgelegt werden können.
 
-| Umgebungsvariable | Description |
+| Umgebungsvariable | Beschreibung |
 |---|---|---|---|
 | **DOCKER_USERNAME** | Der Benutzername für die containerimages zugreifen, falls sie in einem privaten Repository gespeichert sind. |
 | **DOCKER_PASSWORD** | Das Kennwort für den Zugriff auf das obige privaten Repository. |
@@ -146,7 +149,7 @@ Die folgenden Umgebungsvariablen werden für die Sicherheitseinstellungen verwen
 | **KNOX_PASSWORD** | Das Kennwort für Knox-Benutzer. |
 | **MSSQL_SA_PASSWORD** | Das Kennwort des SA-Benutzers für die master-SQL-Instanz. |
 
-Diese Umgebungsvariablen festgelegt werden müssen, vor dem Aufruf **Mssqlctl Clustererstellung**. Wenn eine beliebige Variable nicht festgelegt ist, werden Sie dafür aufgefordert.
+Diese Umgebungsvariablen festgelegt werden müssen, vor dem Aufruf **Mssqlctl Bdc erstellen**. Wenn eine beliebige Variable nicht festgelegt ist, werden Sie dafür aufgefordert.
 
 Das folgende Beispiel zeigt, wie Sie die Umgebungsvariablen für Linux (Bash) und Windows (PowerShell) festgelegt wird:
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-Sie müssen beim Festlegen der Umgebungsvariablen, ausführen `mssqlctl cluster create` um die Bereitstellung auszulösen. Dieses Beispiel verwendet die oben erstellte Cluster-Konfigurationsdatei:
+Nach dem Festlegen der Umgebungsvariablen, müssen Sie ausführen `mssqlctl bdc create` um die Bereitstellung auszulösen. Dieses Beispiel verwendet das Cluster-Konfigurationsprofil oben erstellt haben:
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 Beachten Sie die folgenden Richtlinien:
@@ -182,7 +185,7 @@ Beachten Sie die folgenden Richtlinien:
 
 ## <a id="unattended"></a> Unbeaufsichtigte Installation
 
-Für eine unbeaufsichtigte Bereitstellung, müssen Sie festlegen, alle erforderlichen Umgebungsvariablen, die Verwendung einer Konfigurationsdatei und Aufruf `mssqlctl cluster create` -Befehl mit der `--accept-eula yes` Parameter. Die Beispiele im vorherigen Abschnitt veranschaulicht die Syntax für die unbeaufsichtigte Installation.
+Für eine unbeaufsichtigte Bereitstellung, müssen Sie festlegen, alle erforderlichen Umgebungsvariablen, die Verwendung einer Konfigurationsdatei und Aufruf `mssqlctl bdc create` -Befehl mit der `--accept-eula yes` Parameter. Die Beispiele im vorherigen Abschnitt veranschaulicht die Syntax für die unbeaufsichtigte Installation.
 
 ## <a id="monitor"></a> Überwachen der Bereitstellung
 
@@ -195,7 +198,7 @@ Während der Cluster-Bootstrap gibt der Client-Befehlsfenster den Bereitstellung
 In weniger als 15 bis 30 Minuten sollten Sie eine Benachrichtigung über der Pod Controller ausgeführt wird:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ In weniger als 15 bis 30 Minuten sollten Sie eine Benachrichtigung über der Pod
 Wenn die Bereitstellung abgeschlossen ist, benachrichtigt die Ausgabe Sie Erfolg:
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-Beachten Sie die URL von der **Portal Endpunkt** in der vorherigen Ausgabe für die Verwendung im nächsten Abschnitt.
 
 > [!TIP]
 > Der Standardname für den Cluster bereitgestellte big Data ist `mssql-cluster` , wenn durch eine benutzerdefinierte Konfiguration geändert.
@@ -236,10 +236,10 @@ Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, können Sie d
 
    Geben Sie Benutzername und Kennwort, die Sie für den Controller (CONTROLLER_USERNAME und CONTROLLER_PASSWORD) konfiguriert, während der Bereitstellung.
 
-1. Führen Sie **Mssqlctl Endpunkt Clusterliste** um eine Liste mit einer Beschreibung der einzelnen Endpunkten und ihre entsprechenden Werte für IP-Adresse und den Port abzurufen. 
+1. Führen Sie **Mssqlctl Bdc-Endpunktliste** um eine Liste mit einer Beschreibung der einzelnen Endpunkten und ihre entsprechenden Werte für IP-Adresse und den Port abzurufen. 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    Die folgende Liste enthält Beispiel für die Ausgabe dieses Befehls:
@@ -252,7 +252,6 @@ Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, können Sie d
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

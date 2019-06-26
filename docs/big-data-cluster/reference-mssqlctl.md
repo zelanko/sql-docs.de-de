@@ -5,16 +5,16 @@ description: Der Referenzartikel für die Mssqlctl Befehle.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779236"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388667"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,9 +26,11 @@ Der folgende Artikel bietet Referenz für die **Mssqlctl** tool für [SQL Server
 |     |     |
 | --- | --- |
 |[Mssqlctl-app](reference-mssqlctl-app.md) | Erstellen, löschen, ausführen und Verwalten von Anwendungen. |
-|[Mssqlctl-cluster](reference-mssqlctl-cluster.md) | Wählen Sie, verwalten Sie und betreiben Sie Cluster. |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | Wählen Sie, verwalten und betreiben von SQL Server-Cluster für Big Data. |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | Das HDFS-Modul bietet, dass die Befehle auf einem HDFS-Dateisystem. |
 [mssqlctl login](#mssqlctl-login) | Melden Sie sich die Endpunkte des Clusters Controller.
 [mssqlctl logout](#mssqlctl-logout) | Melden Sie sich der Cluster.
+|[mssqlctl sql](reference-mssqlctl-sql.md) | Die SQL-DB-CLI ermöglicht den Benutzer für die Interaktion mit SQL Server über T-SQL. |
 ## <a name="mssqlctl-login"></a>Mssqlctl-Anmeldung
 Wenn Ihr Cluster bereitgestellt wird, listet es den controllerendpunkt während der Bereitstellung, die Sie verwenden sollten, die Anmeldung.  Wenn Sie den controllerendpunkt nicht kennen, können Sie Anmeldung, dass Ihres Clusters Kube-Konfigurationsdatei auf Ihrem System in den Standardspeicherort der <user home>/.kube/config oder verwenden Sie die KUBECONFIG Env Var, d. h. KUBECONFIG=path/to/.kube/config zu exportieren.
 ```bash

@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783064"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387943"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Schlüsselbegriffe der Sicherheit für SQL Server-big Data-Cluster
 
@@ -34,7 +34,7 @@ Es gibt drei Einstiegspunkte für die big Data-cluster
 
 * HDFS/Spark (Knox)-Gateway – Dies ist eine HTTPS-basierte-Endpunkt. Andere Endpunkte werden über diesen Proxy. HDFS/Spark-Gateway wird verwendet, für den Zugriff auf Dienste wie WebHDFS und Livy. Wenn Sie Verweise auf Knox sehen, ist dies der Endpunkt an.
 
-* Controllerendpunkt - big Data-Cluster Management-Dienst, der REST-APIs, die für die Verwaltung des Clusters verfügbar macht. Einige Tools, z.B. das Admin-Portal, über diesen Endpunkt auch zugegriffen werden.
+* Controllerendpunkt - big Data-Cluster Management-Dienst, der REST-APIs, die für die Verwaltung des Clusters verfügbar macht. Einige Tools sind auch über diesen Endpunkt zugegriffen werden.
 
 * Masterinstanz - TDS-Endpunkts für die Datenbanktools und Anwendungen im Cluster eine Verbindung mit Master für SQL Server-Instanz.
 
