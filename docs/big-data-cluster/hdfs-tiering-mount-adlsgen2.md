@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388794"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400015"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount ADLS Gen2 für HDFS-Staffelung in einem big Data-cluster
 
@@ -64,17 +64,15 @@ Um OAuth-Anmeldeinformationen verwenden, um die bereitstellen, müssen Sie führ
 
 Warten Sie 5 bis 10 Minuten, bevor Sie mit den Anmeldeinformationen für Bereitstellung
 
-### <a name="create-credential-file"></a>Erstellen Sie die Datei
+### <a name="set-environment-variable-for-oauth-credentials"></a>Legen Sie die Umgebungsvariable für die OAuth-Anmeldeinformationen
 
-Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können.
-
-Erstellen Sie eine lokale Datei mit dem Namen **filename.creds** , enthält die Anmeldeinformationen Ihres Azure Data Lake-Speicher Gen2-Kontos mithilfe des folgenden Formats:
+Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können. Legen Sie eine Umgebungsvariable, die im folgenden Format ein: Beachten Sie, dass die Anmeldeinformationen für die sich in einer durch Trennzeichen getrennte Liste. Der Befehl "set" wird unter Windows verwendet. Wenn Sie Linux verwenden, klicken Sie dann stattdessen Sie "Export".
 
    ```text
-    fs.azure.account.auth.type=OAuth
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -85,20 +83,20 @@ Sie können auch bereitstellen, mithilfe von Zugriffsschlüsseln, die Sie für I
  > [!TIP]
    > Weitere Informationen dazu, wie den Zugriffsschlüssel finden (`<storage-account-access-key>`) finden Sie in Ihrem Storage-Konto [anzeigen und kopieren Sie den Zugriffsschlüssel](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
 
-### <a name="create-credential-file"></a>Erstellen Sie die Datei
+### <a name="set-environment-variable-for-access-key-credentials"></a>Legen Sie die Umgebungsvariable für den Zugriff von schlüsselanmeldeinformationen
 
 1. Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können.
 
-1. Erstellen Sie eine lokale Datei mit dem Namen **filename.creds** , enthält die Anmeldeinformationen Ihres Azure Data Lake-Speicher Gen2-Kontos mithilfe des folgenden Formats:
+1. Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können. Legen Sie eine Umgebungsvariable, die im folgenden Format an. Beachten Sie, dass die Anmeldeinformationen für die sich in einer durch Trennzeichen getrennte Liste. Der Befehl "set" wird unter Windows verwendet. Wenn Sie Linux verwenden, klicken Sie dann stattdessen Sie "Export".
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> Bereitstellen der HDFS-Remotespeicher
 
-Nun, da Sie eine Datei mit Zugriffstasten oder mithilfe von OAuth vorbereitet haben, können Sie die Einbindung beginnen. Die folgenden Schritte stellen remote HDFS-Speicher in Azure Data Lake im lokalen HDFS-Speicher, der Ihre big Data-Cluster bereit.
+Nun, da Sie die MOUNT_CREDENTIALS-Umgebungsvariable für Zugriffsschlüssel oder mithilfe von OAuth festgelegt haben, können Sie die Einbindung beginnen. Die folgenden Schritte stellen remote HDFS-Speicher in Azure Data Lake im lokalen HDFS-Speicher, der Ihre big Data-Cluster bereit.
 
 1. Verwendung **"kubectl"** finden Sie die IP-Adresse für den Endpunkt **Controller-svc-External** -Dienst in Ihre big Data-Cluster. Suchen Sie nach der **externe IP-** .
 
@@ -111,11 +109,12 @@ Nun, da Sie eine Datei mit Zugriffstasten oder mithilfe von OAuth vorbereitet ha
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. Umgebungsvariable MOUNT_CREDENTIALS (über Bildlauf für Anweisungen)
 
 1. Bereitstellen der remote-HDFS-Speicher in Azure mithilfe **Mssqlctl BDC-Speicherpool Bereitstellung erstellen**. Ersetzen Sie die Platzhalter-Werte, bevor Sie den folgenden Befehl ausführen:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

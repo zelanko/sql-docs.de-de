@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a64addb1d9267aadc7e7eb2828e032d67db5d540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705095"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399951"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installieren von SQL Server 2019 Machine Learning-Dienste (R, Python) unter Linux
 
@@ -28,7 +28,7 @@ Machine Learning-Dienste wird auch auf Linux-Container unterstützt. Mit Machine
 
 ## <a name="uninstall-previous-ctp"></a>Deinstallieren der vorherigen CTP-Version
 
-Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.x So entfernen Sie alle früheren Pakete vor der Installation der CTP-Version 3.0. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
+Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.x So entfernen Sie alle früheren Pakete vor der Installation von CTP 3.1. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
 
 ### <a name="1-confirm-package-installation"></a>1. Paketinstallation bestätigen
 
@@ -61,7 +61,7 @@ Befehle zum Löschen von Paketen, die in der folgenden Tabelle angezeigt werden.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-30-install"></a>3. CTP 3.0-Installation nicht fortsetzen
+### <a name="3-proceed-with-ctp-31-install"></a>3. CTP 3.1-Installation nicht fortsetzen
 
 Auf der höchsten Paketebene, die mithilfe der Anweisungen in diesem Artikel für Ihr Betriebssystem installieren.
 
@@ -158,7 +158,7 @@ zypper update
 
 Pakete sind auf einem Gerät Internetverbindung heruntergeladen und installiert, unabhängig von der Datenbank-Engine, die mit dem Paketinstaller für jedes Betriebssystem. Die folgende Tabelle beschreibt alle verfügbaren Pakete, aber für R und Python, geben Sie Pakete, die entweder die vollständige Funktion-Installation oder die minimale funktionsinstallation bereitstellen.
 
-| Paketname | Applies-to | Description |
+| Paketname | Applies-to | Beschreibung |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | Das Erweiterungsframework zum Ausführen von R und Python-Code verwendet. |
 | microsoft-openmpi  | Python, R | Nachrichtenübergabe, die Schnittstelle, die von den Revo *-Bibliotheken für die Parallelisierung unter Linux verwendet. |

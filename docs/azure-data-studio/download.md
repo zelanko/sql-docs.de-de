@@ -9,14 +9,14 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seodec18
-ms.date: 06/06/2019
+ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: b8de39cd3039c24420325dbff5ffb3f1db4efd40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3954e9dbe1159608cb0141e908ae65b7cde7fa81
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801853"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400117"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -124,7 +124,8 @@ Die *Installationsprogramm Benutzer* wird empfohlen, da es keine Administratorre
 
    sudo apt-get install libunwind8
    ```
-
+## <a name="download-insiders-build-of-azure-data-studio"></a>Herunterladen Sie Insiders-Build von Azure Data Studio
+Im Allgemeinen sollten Benutzern die stabile Version von Azure Data Studio höher herunterladen. Allerdings sollten Sie unsere Funktionen der Betaversion ausprobieren und uns Feedback, Sie können eine [Insiders-build von Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 
 ## <a name="uninstall-azure-data-studio"></a>Deinstallieren Sie Azure Data Studio
 

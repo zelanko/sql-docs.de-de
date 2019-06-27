@@ -4,17 +4,17 @@ description: Erfahren Sie, wie zum Installieren von SQL Server-Spracherweiterung
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c796d8f445f4cc1b02a0f49d12cde55e0a7ab4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719377"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399938"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installieren von SQL Server 2019-Spracherweiterungen (Java) unter Linux
 
@@ -28,7 +28,7 @@ Spracherweiterungen wird auch auf Linux-Container unterstützt. Wir bieten keine
 
 ## <a name="uninstall-previous-ctp"></a>Deinstallieren der vorherigen CTP-Version
 
-Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.x So entfernen Sie alle früheren Pakete vor der Installation der CTP-Version 3.0. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
+Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.x So entfernen Sie alle früheren Pakete vor der Installation von CTP 3.1. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
 
 ### <a name="1-confirm-package-installation"></a>1. Paketinstallation bestätigen
 
@@ -52,7 +52,7 @@ Befehle zum Löschen von Paketen, die in der folgenden Tabelle angezeigt werden.
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-30-install"></a>3. CTP 3.0-Installation nicht fortsetzen
+### <a name="3-proceed-with-ctp-31-install"></a>3. CTP 3.1-Installation nicht fortsetzen
 
 Auf der höchsten Paketebene, die mithilfe der Anweisungen in diesem Artikel für Ihr Betriebssystem installieren.
 
@@ -80,7 +80,7 @@ Für jeden Satz betriebssystemspezifischen Anweisungen zur Installation *höchst
 
 Pakete sind auf einem Gerät Internetverbindung heruntergeladen und installiert, unabhängig von der Datenbank-Engine, die mit dem Paketinstaller für jedes Betriebssystem. Die folgende Tabelle beschreibt alle verfügbaren Pakete.
 
-| Paketname | Applies-to | Beschreibung |
+| Paketname | Applies-to | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | Alle Sprachen | Das Erweiterungsframework zum Ausführen der Java-Code verwendet. |
 |mssql-server-extensibility-java | Java | Java-Erweiterung für das Laden einer Java-ausführungsumgebung. Es gibt keine zusätzliche Bibliotheken oder Pakete für Java. |
@@ -185,6 +185,20 @@ sudo zypper install mssql-server-extensibility-java
 6. Neustart der `mssql-launchpadd` -Dienst erneut.
 
 7. Für jede Datenbank in-spracherweiterungen verwenden möchten, müssen Sie die externe Sprache mit registrieren [Erstellen externer Sprachen](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+## <a name="register-external-language"></a>Registrieren Sie externe Sprache
+
+Für jede Datenbank in-spracherweiterungen verwenden möchten, müssen Sie die externe Sprache mit registrieren [Erstellen externer Sprachen](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+Im folgenden Beispiel wird eine externe Sprache namens Java in eine Datenbank auf SQL Server unter Linux.
+
+```SQL
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
+GO
+```
+
+Weitere Informationen finden Sie unter [Erstellen externer Sprachen](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
 ## <a name="verify-installation"></a>Überprüfen der Installation
 

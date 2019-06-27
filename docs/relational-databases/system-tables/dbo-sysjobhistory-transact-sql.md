@@ -1,7 +1,7 @@
 ---
 title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,19 +20,22 @@ ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 809e8c80ec1734c24f6930b4042b5e1a84356597
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470848"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400103"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält Informationen zur Ausführung geplanter Aufträge durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
+Enthält Informationen zur Ausführung geplanter Aufträge durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent.
   
-> **HINWEIS:** Daten werden aktualisiert, nur, nachdem der Jobstep abgeschlossen wurde.  
+> [!NOTE]
+> Die Daten werden in den meisten Fällen aktualisiert, nur nach Abschluss des Auftragsschritts aus, und die Tabelle in der Regel enthält keine Einträge für Auftragsschritte, die gerade ausgeführt werden, aber in einigen zugrunde liegenden Prozesse Fällen *führen* enthalten Informationen zu Bearbeitung von Auftragsschritten.
+
+Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +46,7 @@ ms.locfileid: "62470848"
 |**sql_message_id**|**int**|ID einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlermeldung, die beim Fehlschlagen des Auftrags zurückgegeben wird.|  
 |**sql_severity**|**int**|Schweregrad eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlers.|  
 |**Nachricht**|**nvarchar(4000)**|Text (falls vorhanden) eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlers.|  
-|**run_status**|**int**|Status der Auftragsausführung:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **2** = wiederholen<br /><br /> **3** = abgebrochen<br /><br /> **4** = wird ausgeführt|  
+|**run_status**|**int**|Status der Auftragsausführung:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **2** = wiederholen<br /><br /> **3** = abgebrochen<br /><br />**4** = wird ausgeführt|  
 |**run_date**|**int**|Datum, an dem die Ausführung des Auftrags oder Schrittes gestartet wurde. Bei einem In-Progress-Verlauf ist dies das Datum/die Uhrzeit, an dem bzw. zu der der Verlauf geschrieben wurde.|  
 |**run_time**|**int**|Uhrzeit, zu der der Auftrag oder Schritt gestartet wurde.|  
 |**run_duration**|**int**|Verstrichene Zeit bei der Ausführung des Auftrags oder Schritts im **HHMMSS** Format.|  
