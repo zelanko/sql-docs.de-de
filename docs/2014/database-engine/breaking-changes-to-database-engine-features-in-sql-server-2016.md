@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62813223"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419034"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014
   In diesem Thema werden wichtige Änderungen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] und den früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "62813223"
   
 ### <a name="dynamic-management-views"></a>Dynamische Verwaltungssichten  
   
-|Sicht|Description|  
+|Sicht|Beschreibung|  
 |----------|-----------------|  
 |sys.dm_exec_requests|Die Befehlsspalte wird von `nvarchar(16)` in `nvarchar(32)` geändert.|  
 |sys.dm_os_memory_cache_counters|Die folgenden Spalten wurden umbenannt:<br /><br /> Single_pages_kb lautet nun: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           ist jetzt: Pages_in_use_kb|  
@@ -197,7 +197,7 @@ ms.locfileid: "62813223"
   
 ### <a name="collations"></a>Sortierungen  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |Neue Sortierungen|In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] werden neue Sortierungen eingeführt, die vollständig an die Sortierungen von Windows Server 2008 angepasst sind. Durch die 80 neuen Sortierungen wurde die linguistische Genauigkeit verbessert; sie sind mit dem Versionshinweis "* _100" gekennzeichnet. Beachten Sie, dass eine neue Sortierung für den Server oder die Datenbank möglicherweise von Clients mit älteren Treibern nicht erkannt wird. Unbekannte Sortierungen können zu Anwendungsfehlern führen. Ziehen Sie die folgenden Lösungen in Betracht:<br /><br /> Aktualisieren Sie das Clientbetriebssystem, um die zugrunde liegenden Systemsortierungen zu aktualisieren.<br /><br /> Wenn auf dem Client Datenbankclient-Software installiert ist, sollten Sie ein Dienstupdate der Datenbankclient-Software in Erwägung ziehen.<br /><br /> Wählen Sie eine vorhandene Sortierung aus, die einer Codepage auf dem Client zugeordnet wird.|  
   
@@ -218,7 +218,7 @@ ms.locfileid: "62813223"
   
 ### <a name="errors-and-events"></a>Fehler und Ereignisse  
   
-|Funktion|Beschreibung|  
+|Funktion|Description|  
 |-------------|-----------------|  
 |Fehler beim Anmelden|In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] wird der Fehler 18452 zurückgegeben, wenn versucht wird, mit einem SQL-Anmeldenamen eine Verbindung zu einem Server herzustellen, der nur die Windows-Authentifizierung verwendet. In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] wird stattdessen der Fehler 18456 zurückgegeben.|  
   
@@ -265,9 +265,9 @@ ms.locfileid: "62813223"
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## <a name="see-also"></a>Siehe auch  
- [Veraltete Datenbankmodulfeatures in SQLServer 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
- [Verhaltensänderungen an Funktionen der Datenbank-Engine in SQLServer 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
- [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQLServer 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Veraltete Datenbankmodulfeatures in SQLServer 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)   
+ [Verhaltensänderungen an Funktionen der Datenbank-Engine in SQLServer 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md?view=sql-server-2014)   
+ [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQLServer 2014](discontinued-database-engine-functionality-in-sql-server-2016.md?view=sql-server-2014)   
  [Abwärtskompatibilität der SQL Server-Datenbank-Engine](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
  [Breaking Changes von Features der Verwaltungstools in SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  

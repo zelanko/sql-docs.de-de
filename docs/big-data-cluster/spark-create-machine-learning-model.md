@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863fd1a396f7bdb0679f2f20372db13db29b60b6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 709d74ef33ab6b54ac688763b006d66e4210006d
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394182"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412884"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Erstellen, exportieren und Bewerten von Machine Learning-Modelle in SQL Server-big Data-Clustern für Spark
 
@@ -36,8 +36,7 @@ Um das Beispiel auszuführen, müssen Sie auch die folgenden Voraussetzungen:
 - [Big Data-tools](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
-
-- [Azure Data Studio](../azure-data-studio/download.md)
+   - **Azure Data Studio**
 
 ## <a name="model-training-with-spark-ml"></a>Das Trainieren des Modells mit Spark ML
 

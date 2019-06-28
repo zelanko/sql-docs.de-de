@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400015"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419047"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount ADLS Gen2 für HDFS-Staffelung in einem big Data-cluster
 
@@ -81,7 +81,7 @@ Warten Sie 5 bis 10 Minuten, bevor Sie mit den Anmeldeinformationen für Bereits
 Sie können auch bereitstellen, mithilfe von Zugriffsschlüsseln, die Sie für Ihre ADLS-Konto im Azure-Portal abrufen können.
 
  > [!TIP]
-   > Weitere Informationen dazu, wie den Zugriffsschlüssel finden (`<storage-account-access-key>`) finden Sie in Ihrem Storage-Konto [anzeigen und kopieren Sie den Zugriffsschlüssel](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
+   > Weitere Informationen dazu, wie den Zugriffsschlüssel finden (`<storage-account-access-key>`) finden Sie in Ihrem Storage-Konto [kontoschlüssel und Verbindungszeichenfolge anzeigen](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Legen Sie die Umgebungsvariable für den Zugriff von schlüsselanmeldeinformationen
 

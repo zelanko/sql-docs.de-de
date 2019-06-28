@@ -1,7 +1,7 @@
 ---
 title: Ausdrücke (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.prod: reporting-services
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: bc104680f8acad6f54a8a0625257332971f38742
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3660ecee1271d4fd2673b0dfe9107a8fb5c52e88
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775728"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413017"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Ausdrücke (Berichts-Generator und SSRS)
 
@@ -94,7 +94,7 @@ Ausdrücke können Verweise auf Funktionen, Operatoren, Konstanten, Felder, Para
 
 In der folgenden Tabelle sind die Verweistypen aufgeführt, die Sie in einen Ausdruck aufnehmen können:  
 
-|Verweise|Description|Beispiel|  
+|Verweise|Beschreibung|Beispiel|  
 |----------------|-----------------|-------------|  
 |[Konstanten](expressions-report-builder-and-ssrs.md)|Beschreibt die Konstanten, auf die Sie für Eigenschaften, die konstante Werte erfordern, z. B. Schriftfarben, interaktiv zugreifen können.|`="Blue"`|  
 |[Operatoren](operators-in-expressions-report-builder-and-ssrs.md)|Beschreibt die Operatoren, mit denen Sie Verweise in einem Ausdruck kombinieren können. Der `&`-Operator wird z. B. zum Verketten von Zeichenfolgen verwendet.|`="The report ran at: " & Globals!ExecutionTime & "."`|  

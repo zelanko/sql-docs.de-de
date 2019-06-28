@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797921"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412964"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installieren von SQL Server-2019 big datatools
 
@@ -33,7 +33,7 @@ Die folgende Tabelle enthält allgemeine big Data-Cluster-Tools und deren Instal
 |---|---|---|---|
 | **mssqlctl** | Ja | Befehlszeilenprogramm zum Installieren und Verwalten von big Data-Cluster. | [Installieren](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | Ja | Befehlszeilentool für die Überwachung der zugrunde liegenden Clusters Kuberentes ([Informationen](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | Ja | Plattformübergreifende grafisches Tool zum Abfragen von SQL Server ([Informationen](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installieren](../azure-data-studio/download.md) |
+| **Azure Data Studio (Insider)** | Ja | Plattformübergreifende grafisches Tool zum Abfragen von SQL Server ([Informationen](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installieren](https://aka.ms/azdata-insiders) |
 | **SQL Server-2019-Erweiterung** | Ja | Erweiterung für Azure Data Studio, das die Verbindung mit dem big Data-Cluster unterstützt. Stellt auch einen Assistenten Datenvirtualisierung bereit. | [Installieren](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure-Befehlszeilenschnittstelle**<sup>2</sup> | Für AKS | Moderne Befehlszeilenschnittstelle zum Verwalten von Azure-Dienste. Mit AKS big Data-Cluster-Bereitstellungen verwendet ([Informationen](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installieren](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Optional | Moderne Befehlszeilenschnittstelle zum Abfragen von SQL Server ([Informationen](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

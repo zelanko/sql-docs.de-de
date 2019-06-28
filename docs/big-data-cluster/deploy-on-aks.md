@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51c7dbf8e50f6c3537a2a4171720c160c444471d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad42063b2c4959429bdc54e3772aa755bc32e2f2
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797873"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412952"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für SQL Server-big Data-Cluster-Bereitstellungen
 
@@ -70,28 +70,44 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
    az account set --subscription <subscription id>
    ```
 
-1. Erstellen Sie eine Ressourcengruppe mit dem **az-Gruppe erstellen** Befehl. Das folgende Beispiel erstellt eine Ressourcengruppe namens `sqlbigdatagroup` in die `westus2` Speicherort.
+1. Erstellen Sie eine Ressourcengruppe mit dem **az-Gruppe erstellen** Befehl. Das folgende Beispiel erstellt eine Ressourcengruppe namens `sqlbdcgroup` in die `westus2` Speicherort.
 
    ```azurecli
-   az group create --name sqlbigdatagroup --location westus2
+   az group create --name sqlbdcgroup --location westus2
    ```
 
 ## <a name="create-a-kubernetes-cluster"></a>Erstellen Sie einen Kubernetes-cluster
 
 1. Erstellen Sie einen Kubernetes-Cluster in AKS mit den [az Aks erstellen](https://docs.microsoft.com/cli/azure/aks) Befehl. Das folgende Beispiel erstellt einen Kubernetes-Cluster mit dem Namen *Kubcluster* mit einem Linux-Agent-Knoten der Größe **Standard_L8s**. Stellen Sie sicher, dass den AKS-Cluster in der gleichen Ressourcengruppe zu erstellen, die Sie in den vorherigen Abschnitten verwendet.
 
-    ```azurecli
+   **bash:**
+
+   ```bash
    az aks create --name kubcluster \
-    --resource-group sqlbigdatagroup \
-    --generate-ssh-keys \
-    --node-vm-size Standard_L8s \
-    --node-count 1 \
-    --kubernetes-version 1.12.8
-    ```
+   --resource-group sqlbdcgroup \
+   --generate-ssh-keys \
+   --node-vm-size Standard_L8s \
+   --node-count 1 \
+   --kubernetes-version 1.12.8
+   ```
+
+   **PowerShell:**
+
+   ```powershell
+   az aks create --name kubcluster `
+   --resource-group sqlbdcgroup `
+   --generate-ssh-keys `
+   --node-vm-size Standard_L8s `
+   --node-count 1 `
+   --kubernetes-version 1.12.8
+   ```
 
    Sie können erhöhen oder verringern Sie die Anzahl von Kubernetes-Agent-Knoten durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie verwenden möchten. Dies schließt nicht den Hauptschlüssel Kubernetes-Knoten, der hinter den Kulissen von AKS verwaltet wird. Im vorherige Beispiel verwendet einen einzelnen Knoten nur für Evaluierungszwecke.
 
    Nach einigen Minuten ist der Befehl abgeschlossen ist, und gibt Informationen zum Cluster im JSON-Format.
+
+   > [!TIP]
+   > Wenn Sie alle Fehler, die Erstellung des Clusters in AKS erhalten, finden Sie unter den [Abschnitt zur Problembehandlung](#troubleshoot) dieses Artikels.
 
 1. Speichern Sie die JSON-Ausgabe aus dem vorherigen Befehl für die spätere Verwendung.
 
@@ -100,17 +116,24 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
 1. Um "kubectl" für die Verbindung mit Ihrem Kubernetes-Cluster zu konfigurieren, führen Sie die [az Aks Get-Credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) Befehl. Dieser Schritt lädt der Anmeldeinformationen und der Kubectl-CLI für deren Verwendung konfiguriert.
 
    ```azurecli
-   az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
+   az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
 1. Verwenden Sie zum Überprüfen der Verbindung mit Ihrem Cluster den [Kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) Befehl, um eine Liste der Clusterknoten.  Das folgende Beispiel zeigt die Ausgabe würden Sie 1 Master und Agent-Knoten 3.
 
-   ```
+   ```bash
    kubectl get nodes
    ```
 
+## <a id="troubleshoot"></a> Problembehandlung
+
+Wenn Sie Probleme beim Erstellen von Azure Kubernetes Service mit den vorherigen Befehlen haben, probieren Sie die folgenden Lösungen:
+
+- Stellen Sie sicher, dass es sich bei der Installation der [neueste Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Versuchen Sie es die gleichen Schritte, die über einen anderen Ressourcennamen und den Clusternamen.
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-Die Schritte in diesem Artikel konfiguriert einen Kubernetes-Cluster in AKS. Der nächste Schritt ist SQL Server-2019 big Data in den Cluster bereitstellen. Weitere Informationen dazu, wie Sie big Data-Cluster bereitstellen finden Sie im folgenden Artikel:
+Die Schritte in diesem Artikel konfiguriert einen Kubernetes-Cluster in AKS. Der nächste Schritt ist einen SQL Server-2019 big Data-Cluster auf dem ACS-Kubernetes-Cluster bereitstellen. Weitere Informationen dazu, wie Sie big Data-Cluster bereitstellen finden Sie im folgenden Artikel:
 
 [Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen](deployment-guidance.md)

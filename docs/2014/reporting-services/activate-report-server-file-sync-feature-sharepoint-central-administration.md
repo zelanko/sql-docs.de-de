@@ -1,7 +1,7 @@
 ---
 title: Aktivieren der Synchronisierung Berichtsserverdateien in der SharePoint-Zentraladministration | Microsoft-Dokumentation
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.openlocfilehash: b56960b23370de3803f475c02aaee3b98ae491e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 762cf7e67a9983c345b58d2afd1c47da93306bd0
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232919"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413149"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in der SharePoint-Zentraladministration
 
