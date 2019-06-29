@@ -3,7 +3,7 @@ title: Verwendung von SQL Notebooks in Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Erfahren Sie, wie SQL-Notebooks in Azure Data Studio verwenden.
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798042"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469083"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Verwendung von Notebooks in Azure Data Studio
 
@@ -83,7 +83,7 @@ Wenn die Installation erfolgreich war, finden Sie eine Benachrichtigung in der G
 
 ![Image22](media/sql-notebooks/jupyter-backend.png)
 
-|Kernel|Beschreibung
+|Kernel|Description
 |:-----|:-----
 | SQL Kernel | Schreiben Sie SQL-Code an Ihre relationale Datenbank gerichtet sind.
 |PySpark3 und PySpark-Kernel| Schreiben Sie Python-Code, die mit Spark Compute aus dem Cluster.
@@ -163,14 +163,13 @@ import <package-name>
 
 Wenn Sie diesen Befehl ausführen `Module not found` zurückgegeben wird. Wenn Ihr Paket vorhanden ist, erhalten Sie nicht den Fehler.
 
-Wenn zurückgegeben wird ein `Module not Found` Fehler, klicken Sie auf **-Pakete verwalten** Terminal zu starten. Sie können jetzt Pakete lokal installieren. Verwenden Sie die folgenden Befehle aus, um die Pakete zu installieren:
+Wenn zurückgegeben wird ein `Module not Found` Fehler, klicken Sie auf **-Pakete verwalten** um den Assistenten zu starten. 
 
-```bash
-./pip install <package-name>
-```
+![Image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > Befolgen Sie die Anweisungen zum Installieren von Paketen im Terminalfenster ein, auf Mac. 
+In diesem Assistenten werden Sie sehen die **installiert** Pakete. Sie können über die Liste und die zugehörige Version von jedes dieser Pakete suchen. Bei Bedarf **Deinstallieren** diese Pakete können Sie klicken Sie auf eines der Pakete, und klicken Sie dann auf die **deinstallieren Sie die ausgewählten Pakete** Option.
+
+Sie werden auch in der Lage, klicken auf **neu hinzufügen** Pakete **Suche** für ein bestimmtes Paket, wählen Sie die entsprechende Version, und klicken Sie auf **installieren**. In der Standardeinstellung wählen wir die neueste Version des gesuchten-Pakets. 
 
 Nach der Installation des Pakets sollten Sie in der Lage, wechseln in den Zellen des Notebooks, und geben Sie in den folgenden Befehl aus:
 
@@ -178,11 +177,7 @@ Nach der Installation des Pakets sollten Sie in der Lage, wechseln in den Zellen
 import <package-name>
 ```
 
-Verwenden Sie zum Deinstallieren eines Pakets in Ihr Terminal den folgenden Befehl ein:
-
-```bash
-./pip uninstall <package-name>
-```
+Bei Bedarf **Deinstallieren** diese Pakete können Sie klicken Sie auf eine oder mehrere Pakete, und klicken Sie dann auf die **deinstallieren Sie die ausgewählten Pakete** Option.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
