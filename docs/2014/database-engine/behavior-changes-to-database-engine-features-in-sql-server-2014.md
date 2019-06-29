@@ -14,20 +14,20 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e7b629b93e0c79a003019a2e024388d54b12b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be2957778e30af73abfafa210dee4746ffd869c9
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065213"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463451"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Verhaltensänderungen von Datenbank-Engine-Funktionen in SQL Server 2014
   In diesem Thema werden Verhaltensänderungen in [!INCLUDE[ssDE](../includes/ssde-md.md)] beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>Verändertes Programmverhalten in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Verändertes Programmverhalten in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] geben Abfragen, die für XML-Dokumente mit Zeichenfolgen ausgeführt werden, die eine bestimmte Länge überschreiten (mehr als 4020 Zeichen), möglicherweise falsche Ergebnisse zurück. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] geben solche Abfragen die korrekten Ergebnisse zurück.  
   
-## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>Verändertes Programmverhalten in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Verändertes Programmverhalten in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Metadatenermittlung  
  Verbesserungen bei der [!INCLUDE[ssDE](../includes/ssde-md.md)] ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ermöglichen SQLDescribeCol abrufen genauere Beschreibungen der erwarteten Ergebnisse als die von SQLDescribeCol zurückgegeben werden, in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Metadatenermittlung](../relational-databases/native-client/features/metadata-discovery.md).  

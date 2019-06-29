@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed931a8b1918961b69cc0600f94aff6e4d68b9e1
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413987"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463545"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,12 +39,12 @@ Der SHORTEST_PATH-Funktion können Sie die finden:
 * Kürzeste keine(n) für einzelne Quelle.
 * Kürzesten Pfad aus mehreren Datenquellen-Knoten auf mehrere Knoten.
 
-Er ein beliebiger Länge Muster als Eingabe akzeptiert und gibt einen kürzesten Pfad, der vorhanden ist, zwischen zwei Knoten. Diese Funktion kann nur in MATCH verwendet werden. Akzeptiert eine beliebige Länge Muster und findet einen kürzesten Pfad im Diagramm, das dieses Muster entspricht. Die Funktion gibt nur einen kürzesten Pfad zwischen zwei beliebigen angegebenen Knoten. Wenn es vorhanden ist, zwei oder mehr kürzesten derselben Länge zwischen einem Quell- und Ziel-Knoten, die Funktion nur einen Pfad an, die zuerst, während des Durchlaufs gefunden wurde zurück. Beachten Sie, dass eine beliebiger Länge-Muster kann nur innerhalb einer SHORTEST_PATH-Funktion angegeben werden. 
+Er ein beliebiger Länge Muster als Eingabe akzeptiert und gibt einen kürzesten Pfad, der vorhanden ist, zwischen zwei Knoten. Diese Funktion kann nur in MATCH verwendet werden. Die Funktion gibt nur einen kürzesten Pfad zwischen zwei beliebigen angegebenen Knoten. Wenn es vorhanden ist, zwei oder mehr kürzesten derselben Länge zwischen einem Quell- und Ziel-Knoten, die nur eine Funktion gibt den Pfad, der während des Durchlaufs zuerst gefunden wurde. Beachten Sie, dass eine beliebiger Länge-Muster kann nur innerhalb einer SHORTEST_PATH-Funktion angegeben werden. 
 
 Finden Sie in der [MATCH (SQL-Graph)](../../t-sql/queries/match-sql-graph.md) Syntax. 
 
 ## <a name="for-path"></a>FÜR DEN PFAD
-FÜR Pfad mit alle Knoten- oder edgetabelle Tabellennamen in der FROM-Klausel verwendet werden muss, in eine beliebige Länge Muster einbezogen werden. FÜR den Pfad weist der Engine an, dass die Knoten- oder edgetabelle-Tabelle eine geordnete Auflistung, die die Liste von Knoten oder Kanten, die entlang des Pfads vom Startknoten zum Endknoten durchlaufen zurückgegeben wird. Die Attribute aus diesen Tabellen können nicht direkt in der SELECT-Klausel projiziert werden. Zum projizieren von Attributen aus diesen Tabellen graph-Pfad-Aggregatfunktionen muss verwendet werden.  
+FÜR Pfad mit alle Knoten- oder edgetabelle Tabellennamen in der FROM-Klausel verwendet werden muss, in eine beliebige Länge Muster einbezogen werden. FÜR den Pfad weist der Engine an, dass die Knoten- oder edgetabelle-Tabelle eine geordnete Auflistung, die die Liste von Knoten oder Kanten, die entlang des Pfads durchlaufen gefunden zurückgibt. Die Attribute aus diesen Tabellen können nicht direkt in der SELECT-Klausel projiziert werden. Zum projizieren von Attributen aus diesen Tabellen graph-Pfad-Aggregatfunktionen muss verwendet werden.  
 
 ## <a name="arbitrary-length-pattern"></a>Beliebiger Länge-Muster
 Dieses Muster enthält, die Knoten und Kanten, die wiederholt durchlaufen werden müssen, bis Sie der gewünschte Knoten erreicht wird, oder bis die maximale Anzahl von Iterationen gemäß dem Muster erfüllt ist. Jedes Mal, wenn die Abfrage ausgeführt wird, wird das Ergebnis der Ausführung dieses Muster eine geordnete Auflistung von Knoten und Kanten, die entlang des Pfads vom Startknoten zum Endknoten durchlaufen werden. Dies ist die Syntax-Muster eines regulären Ausdrucks-Stil und die folgenden zwei Muster Quantifizierer werden unterstützt:

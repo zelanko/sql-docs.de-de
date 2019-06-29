@@ -33,24 +33,24 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779872"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463469"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014
   In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]nicht mehr verfügbar sind.  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  In der folgenden Tabelle sind Funktionen aufgeführt, die nicht mehr in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] enthalten sind.  
   
 |Kategorie|Nicht mehr unterstützte Funktion|Ersatz|  
 |--------------|--------------------------|-----------------|  
 |Kompatibilitätsgrad|Kompatibilitätsgrad 90|Der Kompatibilitätsgrad der Datenbanken muss mindestens auf 100 festgelegt sein. Wird eine Datenbank mit einem Kompatibilitätsgrad unter 100 auf [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] aktualisiert, wird der Kompatibilitätsgrad der Datenbank während des Upgradevorgangs auf 100 festgelegt.|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  In der folgenden Tabelle sind Funktionen aufgeführt, die nicht mehr in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] enthalten sind.  
   
 |Kategorie|Nicht mehr unterstützte Funktion|Ersatz|  
@@ -93,6 +93,6 @@ ms.locfileid: "62779872"
 -   Hinzugefügte Felder: target_kb, pages_kb  
   
 ## <a name="see-also"></a>Siehe auch  
- [Als veraltet markierte Features der Datenbank-Engine in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Als veraltet markierte Features der Datenbank-Engine in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   
