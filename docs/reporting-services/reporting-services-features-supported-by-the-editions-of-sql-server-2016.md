@@ -6,13 +6,13 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/01/2018
-ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 06/20/2019
+ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936554"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343882"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Von den SQL Server-Editionen unterstützte SQL Server Reporting Services-Features
 
@@ -53,7 +53,7 @@ Informationen über Funktionen, die von den Evaluation- und Developer-Editionen 
 |Bibliothek freigegebener Komponenten|Ja|Ja|||Ja|  
 |Abonnements und Zeitplanung für E-Mail und Dateifreigabe|Ja|Ja|||Ja|  
 |Berichtsverlauf, Ausführungs-Momentaufnahmen und Zwischenspeichern|Ja|Ja|||Ja|  
-|SharePoint-Integration|Ja|Ja|||Ja|  
+|SharePoint-Integration<sup>2</sup>|Ja|Ja|||Ja|  
 |Unterstützung von Remotedatenquellen und Nicht-SQL-Datenquellen<sup>1</sup>|Ja|Ja|||Ja|  
 |Erweiterbarkeit von Datenquellen, Übermittlung, Rendering und RDCE|Ja|Ja|||Ja|  
 |Benutzerdefiniertes Branding|Ja||||Ja|  

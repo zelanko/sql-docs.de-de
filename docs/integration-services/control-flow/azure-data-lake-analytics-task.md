@@ -2,7 +2,7 @@
 title: Azure Data Lake Analytics-Task | Microsoft-Dokumentation
 description: Mithilfe der Data Lake Analytics-Tasks können Sie U-SQL-Aufträge an den Azure Data Lake Analytics-Dienst übermitteln.
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: maghan
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014916"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419170"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics-Task
 
@@ -37,7 +37,7 @@ Ziehen Sie den Task von der SSIS-Toolbox in die Designercanvas, um diesen zu ein
 
 ## <a name="general-page-configuration"></a>Konfiguration auf der Seite „Allgemein“
 
-Über die Seite **Allgemein** können Sie den Task konfigurieren und das U-SQL-Skript bereitstellen, dass den Task übermittelt. Weitere Informationen zur U-SQL-Sprache finden Sie in der [U-SQL-Sprachreferenz](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
+Über die Seite **Allgemein** können Sie den Task konfigurieren und das U-SQL-Skript bereitstellen, dass den Task übermittelt. Weitere Informationen zur U-SQL-Sprache finden Sie in der [U-SQL-Sprachreferenz](/u-sql/).
 
 ### <a name="basic-configuration"></a>Basiskonfiguration
 

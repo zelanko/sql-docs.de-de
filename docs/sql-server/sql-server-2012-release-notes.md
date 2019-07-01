@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad92bfee285b8a64b704e0636ce2421a80da4fed
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002377"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351551"
 ---
 # <a name="sql-server-2012-release-notes"></a>Versionsanmerkungen zu SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -464,10 +464,12 @@ Dies wird an einem Beispiel deutlich. Im Beispiel wird der Benutzer "Domain\user
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 Beim Navigieren im Assistenten zum Generieren von Skripts kann ein Fehler auftreten  
 **Problem:** Nachdem Sie im Assistenten zum Generieren von Skripts ein Skript erstellt haben, indem Sie auf **Skripts speichern oder veröffentlichen** geklickt haben, und dann weiter navigieren, indem Sie auf **Optionen auswählen** oder **Skripterstellungsoptionen festlegen** und dann erneut auf **Skripts speichern oder veröffentlichen** klicken, kann folgender Fehler auftreten:  
   
-<a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+<pre>
+An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
-ZUSÄTZLICHE INFORMATIONEN:  
-Ungültiger Objektname 'sys.federations'. (Microsoft SQL Server, Fehler: 208)</pre>  
+ADDITIONAL INFORMATION:  
+Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
+</pre>  
   
 **Problemumgehung:** Schließen Sie den Assistenten zum Generieren von Skripts, und öffnen Sie ihn erneut.  
   
