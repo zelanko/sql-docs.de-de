@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4da49802b5f1d6aa6dbaa082c3d9a10e6273f3b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65572070"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67220585"
 ---
 # <a name="manage-shared-datasets"></a>Verwalten von freigegebenen Datasets
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden mit freigegebenen Datasets Daten aus freigegebenen Datenquellen abgerufen, die mit externen Datenquellen verbunden werden. Ein freigegebenes Dataset bietet die Möglichkeit, eine Abfrage freizugeben und so konsistente Daten für mehrere Berichte bereitzustellen. Die Datasetabfrage kann Datasetparameter enthalten. Sie können ein freigegebenes Dataset so konfigurieren, dass Abfrageergebnisse für bestimmte Parameterkombinationen bei der erstmaligen Verwendung oder nach einem angegebenen Zeitplan zwischengespeichert werden. Sie können das Zwischenspeichern freigegebener Datasets mit dem Zwischenspeichern von Berichten sowie mit Berichtsdatenfeeds kombinieren, um den Zugriff auf eine Datenquelle einfacher zu verwalten.  
@@ -25,16 +25,16 @@ ms.locfileid: "65572070"
   
 -   Berichts-Generator   Verwenden Sie den Entwurfsmodus für freigegebene Datasets, und speichern Sie das freigegebene Dataset auf einem Berichtsserver oder auf einer SharePoint-Website.  
   
--   Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Erstellen Sie freigegebene Datasets im Projektmappen-Explorer unter dem Ordner Freigegebenes Dataset. Um ein freigegebenes Dataset zu veröffentlichen, stellen Sie es auf einem Berichtsserver oder auf einer SharePoint-Website bereit.  
+-   Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio zum Erstellen von freigegebene Datasets im Ordner "Datasets" im Projektmappen-Explorer. Um ein freigegebenes Dataset zu veröffentlichen, stellen Sie es auf einem Berichtsserver oder auf einer SharePoint-Website bereit.  
   
 -   Hochladen einer Definitionsdatei für freigegebene Datasets (.rsd) Sie können eine Datei auf den Berichtsserver oder auf eine SharePoint-Website hochladen. Auf einer SharePoint-Website. Eine hochgeladene Datei wird erst anhand des Schemas überprüft, wenn das freigegebene Dataset zwischengespeichert oder in einem Bericht verwendet wird.  
   
  Die Definition für freigegebene Datasets enthält eine Abfrage, Datasetparameter einschließlich Standardwerten, Datenoptionen wie die Berücksichtigung der Groß-/Kleinschreibung und Datasetfilter. Die in der Definition festgelegten Werte werden angewendet, sobald das freigegebene Dataset in einem Bericht verwendet wird.  
   
- Öffnen Sie zur Verwendung eines freigegebenen Datasets in einem Bericht eine Anwendung wie den Berichts-Generator, wechseln Sie zum Berichtsserver oder zur SharePoint-Website, und wählen Sie das freigegebene Dataset aus. Dadurch wird dem Bericht eine Instanz des freigegebenen Datasets hinzugefügt. Die Abfrage oder die freigegebene Datenquelle für das freigegebene Dataset kann im Bericht weder angezeigt noch geändert werden. Sie können zusätzliche Dataseteigenschaftswerte angeben, die auf die Instanz im Bericht angewendet werden. Sie können z. B. einen Filter hinzufügen oder Datenoptionen wie die Berücksichtigung der Groß-/Kleinschreibung ändern. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets (Berichts-Generator und SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in der [Berichts-Generator-Dokumentation](https://go.microsoft.com/fwlink/?LinkId=154494) unter „msdn.microsoft.com“.  
+ Öffnen Sie zur Verwendung eines freigegebenen Datasets in einem Bericht eine Anwendung wie den Berichts-Generator, wechseln Sie zum Berichtsserver oder zur SharePoint-Website, und wählen Sie das freigegebene Dataset aus. Dadurch wird dem Bericht eine Instanz des freigegebenen Datasets hinzugefügt. Die Abfrage oder die freigegebene Datenquelle für das freigegebene Dataset kann im Bericht weder angezeigt noch geändert werden. Sie können zusätzliche Dataseteigenschaftswerte angeben, die auf die Instanz im Bericht angewendet werden. Sie können z. B. einen Filter hinzufügen oder Datenoptionen wie die Berücksichtigung der Groß-/Kleinschreibung ändern. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="managing-shared-datasets"></a>Verwalten freigegebener Datasets  
- Zum Verwalten der Eigenschaften eines veröffentlichten freigegebenen Datasets verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder Anwendungsseiten auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus bereitgestellt wird Welche Tasks für ein freigegebenes Dataset ausgeführt werden können, hängt von Ihren Rollenzuweisungen und den Berechtigungen auf Website- und auf Elementebene ab, einschließlich der Berechtigungen für den Ordner, wenn die Vererbung von Berechtigungen aktiviert ist. Bei der Sicherheit auf Elementebene für freigegebene Datasets gilt das gleiche Modell wie bei der Sicherheit auf Elementebene für Berichte. Weitere Informationen finden Sie unter [Sichern von freigegebenen Datasetelementen](../../reporting-services/security/secure-shared-dataset-items.md).  
+ Zum Verwalten der Eigenschaften eines veröffentlichten freigegebenen Datasets verwenden Sie das Webportal, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder Anwendungsseiten auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus bereitgestellt wird. Welche Tasks für ein freigegebenes Dataset ausgeführt werden können, hängt von Ihren Rollenzuweisungen und den Berechtigungen auf Website- und auf Elementebene ab, einschließlich der Berechtigungen für den Ordner, wenn die Vererbung von Berechtigungen aktiviert ist. Bei der Sicherheit auf Elementebene für freigegebene Datasets gilt das gleiche Modell wie bei der Sicherheit auf Elementebene für Berichte. Weitere Informationen finden Sie unter [Sichern von freigegebenen Datasetelementen](../../reporting-services/security/secure-shared-dataset-items.md).  
   
  Sie können die Eigenschaften freigegebener Datasetelemente, einschließlich der zu verwendenden freigegebenen Datenquelle, unabhängig von dem Bericht verwalten, der das freigegebene Dataset oder die freigegebene Datenquelle verwendet, von dem bzw. der er abhängig ist. Um die Abfrage oder andere Dataseteigenschaften zu ändern, die Teil der Definition des freigegebenen Datasets sind, müssen Sie die Definition bearbeiten.  
   
@@ -60,11 +60,7 @@ ms.locfileid: "65572070"
   
  Zum Anzeigen oder Ändern der Definition des freigegebenen Datasets bearbeiten Sie das freigegebene Dataset in einer Anwendung wie dem Berichts-Generator im Entwurfsmodus für freigegebene Datasets. Nachdem Sie Änderungen vorgenommen haben, speichern Sie die Definition des freigegebenen Datasets wieder auf dem Server oder der Website.  
   
- Eine weitere Möglichkeit, die Definition des freigegebenen Datasets in XML anzuzeigen, besteht darin, die URL-Zugriffssyntax im Berichts-Manager zu verwenden. Zum Anzeigen der Standardwerte für die einzelnen Datasetparameter können Sie z. B. den folgenden URL-Zugriffsbefehl verwenden, um eine Definition für ein freigegebenes Dataset mit dem Namen DataSet1 vom Berichtsserver anzuzeigen:  
-  
-```  
-https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
-```  
+ Eine weitere Möglichkeit, die Definition des freigegebenen Datasets in XML anzuzeigen, besteht darin, die URL-Zugriffssyntax im Webportal zu verwenden. Zum Anzeigen der Standardwerte für die einzelnen Datasetparameter können Sie z. B. den folgenden URL-Zugriffsbefehl verwenden, um eine Definition für ein freigegebenes Dataset mit dem Namen DataSet1 vom Berichtsserver anzuzeigen:  
   
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>Steuern des Zugriffs auf die Definition für freigegebene Datasets  
  Die folgenden Tasks beziehen sich standardmäßig auf Vorgänge für freigegebene Datasets.  
@@ -84,19 +80,18 @@ https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 ## <a name="how-to-work-with-shared-dataset-properties-on-a-report-server"></a>Arbeiten mit Eigenschaften freigegebener Datasets auf Berichtsservern  
  Es stehen zahlreiche Tools für die Arbeit mit freigegebenen Datasets zur Verfügung. In der folgenden Tabelle sind die verschiedenen Methoden und Tools zusammengefasst. Ein Link führt zu weiteren Anweisungen.  
   
-|Task|Tool|Link|  
+|Task      |Tool      |Link      |  
 |----------|----------|----------|  
-|Hinzufügen eines freigegebenen Datasets oder Ändern der Eigenschaften der Definition eines freigegebenen Datasets.|Speichern im Berichts-Generator.<br /><br /> Bereitstellen im Berichts-Designer.<br /><br /> Hochladen einer RSD-Datei im Berichts-Manager|[Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in der [Berichts-Generator-Dokumentation](https://go.microsoft.com/fwlink/?LinkId=154494) unter „msdn.microsoft.com“<br /><br /> [Datei hochladen (Seite) &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> Wenn Sie ein freigegebenes Dataset hochladen, bevor die freigegebene Datenquelle, von der das Dataset abhängig ist, veröffentlicht wird, müssen Sie das freigegebene Dataset manuell an die freigegebene Datenquelle binden. Weitere Informationen finden Sie unter [Allgemeine Eigenschaften (Seite), Freigegebene Datasets &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958).|  
-|Ändern der Eigenschaften freigegebener Datasetelemente|Berichts-Manager|[Allgemeine Eigenschaften (Seite), Freigegebene Datasets &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
-|Angeben zusätzlicher Eigenschaften für freigegebene Datasets für die Instanz eines freigegebenen Datasets in einem Bericht.|Berichts-Generator, Berichts-Designer|[Dataseteigenschaften (Dialogfeld), Abfrage](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
-|Binden an eine andere freigegebene Datenquelle für ein freigegebenes Dataset.|Berichts-Manager|[Seite zur Datenquellenauswahl &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|Überprüfen der Standardwerte für Datasetparameter.|Öffnen im Berichts-Generator oder Verwenden von URL-Zugriffssyntax.|Beispiel:<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|Aktivieren der Zwischenspeicherung|Berichts-Manager|[Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Zwischenspeichern (Seite), Freigegebene Datasets &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
-|Erstellen oder Bearbeiten eines Cacheaktualisierungsplans|Berichts-Manager|[Optionen zur Cacheaktualisierung &#40;Berichts-Manager&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
-|Anzeigen des Definitionsschemas des freigegebenen Datasets.|Berichts-Manager|`https://<reportserver>/shareddatasetdefinition.xsd`|  
+|Hinzufügen eines freigegebenen Datasets oder Ändern der Eigenschaften der Definition eines freigegebenen Datasets.|Speichern im Berichts-Generator.<br /><br /> Bereitstellen im Berichts-Designer.<br /><br /> Hochladen einer RSD-Datei im Webportal|[Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Hochladen einer Datei oder eines Berichts auf den Berichtsserver](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Wenn Sie ein freigegebenes Dataset hochladen, bevor die freigegebene Datenquelle, von der das Dataset abhängig ist, veröffentlicht wird, müssen Sie das freigegebene Dataset manuell an die freigegebene Datenquelle binden. Weitere Informationen finden Sie unter [... /.. /Reporting-Services/Work mit freigegebenen Datasets – Webportal](../work-with-shared-datasets-web-portal.md).|  
+|Ändern der Eigenschaften freigegebener Datasetelemente|Webportal|[Arbeiten mit freigegebenen Datasets – Webportal](../../reporting-services/work-with-shared-datasets-web-portal.md)|  
+|Angeben zusätzlicher Eigenschaften für freigegebene Datasets für die Instanz eines freigegebenen Datasets in einem Bericht.|Berichts-Generator, Berichts-Designer|[Dataseteigenschaften (Dialogfeld), Abfrage (Berichts-Generator)](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)|  
+|Binden an eine andere freigegebene Datenquelle für ein freigegebenes Dataset.|Webportal|[Konfigurieren von Datenquelleneigenschaften für einen paginierten Bericht – SSRS](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
+|Überprüfen der Standardwerte für Datasetparameter.|Öffnen im Berichts-Generator oder Verwenden von URL-Zugriffssyntax.|Beispiel:<br /><br /> `https://localhost/reportserver/?/Datasets/Dataset1&rs:command=GetShareddatasetDefinition`
+|Aktivieren der Zwischenspeicherung|Webportal|[Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)|  
+|Erstellen oder Bearbeiten eines Cacheaktualisierungsplans|Webportal|[Cache a Shared Dataset (Zwischenspeichern eines freigegebenen Datasets)](../../reporting-services/report-server/cache-a-shared-dataset.md)|  
 |Synchronisieren der Definition eines freigegebenen Datasets zwischen dem Berichtsserver und der SharePoint-Website im integrierten SharePoint-Modus|SharePoint-Anwendungsseiten|Ändern der Eigenschaften freigegebener Datasetelemente<br /><br /> Ändern von Cacheoptionen<br /><br /> Ändern der freigegebenen Datenquelle|  
   
-## <a name="comparing-shared-datasets-with-other-report-server-items"></a>Vergleich zwischen freigegebenen Datasets und anderen Berichtsserverelementen  
+## <a name="comparing-shared-datasets-with-other-report-server-items"></a>Vergleichen von freigegebenen Datasets und anderen Berichtsserverelementen  
  Wenn Sie mehrere Elementtypen auf einem Berichtsserver verwalten, ist es hilfreich, zu verstehen, in welcher Weise sich Elemente ähneln und wie sie sich von anderen Berichtsserverelementen unterscheiden.  
   
  Freigegebene Datasets und freigegebene Datenquellen und Berichte sind in folgenden Punkten vergleichbar:  
@@ -117,8 +112,7 @@ https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   Für freigegebene Datasets gelten die gleichen Regeln zum Angeben von Parameterwerten wie für Abonnements.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
-  
   
