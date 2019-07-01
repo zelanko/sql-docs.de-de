@@ -1,6 +1,6 @@
 ---
 title: Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus) | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ea88e6ee9194a6cdc92693326bd156ecc7cec590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581412"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67228750"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)
-  In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inhaltsverwaltung auf die Verwaltung von Berichtsserverelementen. Alle Elemente lassen sich durch Eigenschaften und Sicherheitseinstellungen unabhängig verwalten. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden. Mit [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2 ist erstmals das  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal verfügbar. In diesem Artikel werden der Berichts-Manager und das neue Web-Portal besprochen.  
+In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inhaltsverwaltung auf die Verwaltung von Berichtsserverelementen. Alle Elemente lassen sich durch Eigenschaften und Sicherheitseinstellungen unabhängig verwalten. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden. Ab SQL Server 2016 Reporting Services oder höher (SSRS) CTP 3.2 den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web-Portal verfügbar ist. In diesem Artikel werden das Webportal und das neue Webportal erläutert.  
   
 > [!NOTE]  
->  Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Reporting Services-Berichtsserver (einheitlicher Modus)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+> Die Inhaltsverwaltung unterscheidet sich von der Berichtsserververwaltung. Weitere Informationen zum Verwalten einer Umgebung, in der ein Berichtsserver ausgeführt wird, finden Sie unter [Reporting Services-Berichtsserver (einheitlicher Modus)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  Die Inhaltsverwaltung umfasst die folgenden Aufgaben:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65581412"
   
 -   Gewähren Sie anhand von vordefinierten Rollen die Berechtigung zum Ausführen von Verwaltungsaufgaben: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
   
- Tools zum Verwalten von Berichtsserverinhalt sind u.a. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], der Berichts-Manager oder das Webportal. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Der Berichts-Manager wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden. Das Web-Portal ist eine aktualisierte Website, die einen Großteil der Funktionalität des Berichts-Managers bietet. Weitere Informationen finden Sie unter [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md).  
+Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und das Webportal. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Das Webportal wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden. Das Webportal ist eine aktualisierte Website, die einen Großteil der Funktionalität des veralteten Berichts-Managers bietet. Weitere Informationen finden Sie unter [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md).  
   
 ##  <a name="bkmk_ReportServerItems"></a> Berichtsserverelemente  
  Zu Berichtsserverelementen gehören Berichte, freigegebene Datenquellen, freigegebene Datasets, Berichtsteile, Ressourcen (Elemente, die auf einem Berichtsserver gespeichert, jedoch nicht von diesem verarbeitet werden) und Ordner. Elemente können von anderen Elementen abhängen. Beispielsweise kann ein Bericht von den freigegebenen Datenquellen abhängen, auf die er verweist. Wenn Sie ein abhängiges Element verschieben, aktualisiert der Berichtsserver die Verweisinformationen automatisch.  
@@ -52,27 +52,20 @@ ms.locfileid: "65581412"
  Sie können Berichtsserverelemente an andere Speicherorte in der Ordnerhierarchie des Berichtsservers verschieben. Beim Verschieben eines Elements werden auch alle zugehörigen Eigenschaften (einschließlich Sicherheitseinstellungen) an den neuen Speicherort verschoben. Wenn Sie einen Ordner verschieben, werden gleichzeitig alle in diesem Ordner enthaltenen Elemente verschoben.  
   
 > [!NOTE]  
->  Wenn Sie in CTP 3.2 den Speicherort eines Elements verschieben möchten, müssen Sie diese Aktion im Berichts-Manager durchführen. Im Webportal können Elemente nicht verschoben werden.  
+>  Wenn Sie in CTP 3.2 den Speicherort eines Elements verschieben möchten, müssen Sie diese Aktion im Webportal durchführen.  
   
- Im Berichts-Manager werden die verschiebbaren Elemente in der Ordnerhierarchie angezeigt. In der folgenden Tabelle sind die Symbole für die verschiedenen verschiebbaren Elemente dargestellt.  
+ Im Webportal werden die verschiebbaren Elemente in der Ordnerhierarchie angezeigt. In der folgenden Abbildung sind die Symbole für die verschiedenen verschiebbaren Elemente dargestellt.  
   
-|Symbol|Verschiebbares Element|  
-|----------|-------------------|  
-|![Berichtsymbol](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")|Bericht|  
-|![Symbol verknüpfte Berichte](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")|Verknüpfter Bericht|  
-|![Ordnersymbol](../../reporting-services/report-server/media/hlp-16folder.gif "Folder icon")|Ordner|  
-|![Symbol allgemeine Ressource](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")|Allgemeine Ressource|  
-|![Symbol freigegebene Datenquelle](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")|Freigegebene Datenquelle|  
-||Freigegebenes Dataset|  
-  
- Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: "Berichte verwalten", "Modelle verwalten", "Ordner verwalten" und "Datenquellen verwalten".  
+  ![Report Server-Symbole für bewegliche Elemente](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
+
+ Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: „Berichte verwalten“, „Ordner verwalten“ und „Datenquellen verwalten“.  
   
 ##  <a name="bkmk_Folders"></a> Ordner  
  Eine Ordnerhierarchie wird für die Adressierung von Elementen verwendet, die von einem Berichtsserver gespeichert und verwaltet werden.  Standardmäßig besteht die Ordnerstruktur aus einem Stammknoten (Home) und reservierten Ordnern, die die optionale Funktion "Meine Berichte" unterstützen. Zusätzliche Ordner sind benutzerdefiniert. Berichtsserverordner sind hilfreich, falls Sie dieselbe Ebene des Zugriffs auf mehrere Elemente gewähren möchten. Berechtigungen, die Sie für den Ordner festlegen, können von Elementen im Ordner sowie von zusätzlichen verzweigten Ordnern geerbt werden. Sie können beispielsweise einen Ordnersatz unter dem Ordner "Home" erstellen, Teamberechtigungen für jeden Ordner zuweisen und dann Teammitgliedern ermöglichen, Ordner unter dem Teamordner je nach Bedarf anzupassen.  
   
  Bei Verwendung eines Browsers für die direkte Verbindung mit einem Berichtsserver entspricht der Stammknoten der Ordnerstruktur dem Namen des virtuellen Berichtsserververzeichnisses. Über den Stammknoten können Sie Ordner je nach Bedarf erstellen, ändern und löschen, um den Berichtsserverinhalt zu organisieren. Sie können Inhalt zu einem Ordner hinzufügen, Elemente zwischen Ordnern verschieben, Ordnernamen oder Speicherorte ändern sowie nicht mehr benötigte Ordner löschen.  
   
- Ordner sind virtuelle Container für veröffentlichte Elemente, auf die Sie über den Berichts-Manager oder eine Browserverbindung mit dem Berichtsserver zugreifen. Weder die Ordner noch ihr Inhalt sind tatsächlich in einem Dateisystem vorhanden. Stattdessen werden sie in der Berichtsserver-Datenbank gespeichert, und es wird über den Webdienst-Endpunkt des Berichtsservers darauf zugegriffen. Der Ordnernamespace des Berichtsservers stellt eine Hierarchie aus einem Stammknoten, aus vordefinierten und benutzerdefinierten Ordnern dar. Durch den Namespace werden die auf einem Berichtsserver gespeicherten Elemente eindeutig identifiziert. Er stellt ein Adressierungsschema zum Angeben von Elementen in einer URL bereit. Wenn Sie einen Bericht auswählen oder danach suchen, wird der Ordnerpfad für diesen Bericht Teil der URL.  
+ Ordner sind virtuelle Container für veröffentlichte Elemente, auf die Sie über das Webportal oder eine Browserverbindung mit dem Berichtsserver zugreifen. Weder die Ordner noch ihr Inhalt sind tatsächlich in einem Dateisystem vorhanden. Stattdessen werden sie in der Berichtsserver-Datenbank gespeichert, und es wird über den Webdienst-Endpunkt des Berichtsservers darauf zugegriffen. Der Ordnernamespace des Berichtsservers stellt eine Hierarchie aus einem Stammknoten, aus vordefinierten und benutzerdefinierten Ordnern dar. Durch den Namespace werden die auf einem Berichtsserver gespeicherten Elemente eindeutig identifiziert. Er stellt ein Adressierungsschema zum Angeben von Elementen in einer URL bereit. Wenn Sie einen Bericht auswählen oder danach suchen, wird der Ordnerpfad für diesen Bericht Teil der URL.  
   
  Ihre Arbeitsweise mit Ordnern hängt von den Aufgaben ab, die Bestandteil Ihrer Rollenzuweisung sind. Falls Sie die Standardsicherheit verwenden, können Inhalts-Manager und Verleger Ordner erstellen und verwalten. Wenn Sie benutzerdefinierte Rollenzuweisungen verwenden, muss die Rollenzuweisung Aufgaben für die Ordnerverwaltung enthalten. Weitere Informationen zu Rollenzuweisungen und Tasks finden Sie unter [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) und [Aufgaben und Berechtigungen](../../reporting-services/security/tasks-and-permissions.md).  
   
@@ -120,7 +113,7 @@ ms.locfileid: "65581412"
   
  Überlegen Sie vor dem Löschen eines Ordners, ob der Berichtsverlauf eines Berichts, den Sie löschen möchten, oder eine berichtsspezifische Struktur (z. B. ein datengesteuertes Abonnement), das Bestandteil eines Berichts ist, erhalten bleiben muss. Falls Sie solche Informationen benötigen, verschieben Sie das Element in einen anderen Ordner, bevor Sie den Ordner löschen.  
   
- Die Sichtbarkeit eines Elements in einem Ordner hängt sowohl von den Rollenzuweisungen (d. h. Berechtigung zum Anzeigen eines Elements) als auch von den Anzeigeoptionen für den jeweiligen Ordner ab. Im Berichts-Manager können Sie die Seite Inhalt auf Listenansicht oder Detailansicht festlegen. In einigen Fällen kann ein Bericht oder ein Element in der Listenansicht ausgeblendet sein. Zeigen Sie einen Ordner unbedingt in der Detailansicht an, bevor Sie seinen Inhalt löschen.  
+ Die Sichtbarkeit eines Elements in einem Ordner hängt sowohl von den Rollenzuweisungen (d. h. Berechtigung zum Anzeigen eines Elements) als auch von den Anzeigeoptionen für den jeweiligen Ordner ab. Im Webportal können Sie die Seite Inhalt auf Listenansicht oder Detailansicht festlegen. In einigen Fällen kann ein Bericht oder ein Element in der Listenansicht ausgeblendet sein. Zeigen Sie einen Ordner unbedingt in der Detailansicht an, bevor Sie seinen Inhalt löschen.  
   
 ##  <a name="bkmk_Resources"></a> Ressourcen  
  Eine Ressource ist ein verwaltetes Element, das auf einem Berichtsserver gespeichert wird, jedoch nicht vom Berichtsserver verarbeitet wird. In der Regel stellt eine Ressource externen Inhalt für die Benutzerberichterstattung bereit. Beispiele beinhalten ein Bild als JPG-Datei, eine ESRI-Shape-Datei mit räumlichen Daten oder eine HTML-Datei mit einer Beschreibung der in einem Bericht verwendeten Geschäftsregeln. Die JPG-, SHP- oder HTML-Datei wird auf dem Berichtsserver gespeichert, wobei der Berichtsserver die Datei jedoch direkt an den Browser weiterleitet, ohne sie zuerst zu verarbeiten. Weitere Informationen finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) und im Abschnitt „Hinzufügen von Daten zu einer Karte“ im [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
@@ -130,17 +123,17 @@ ms.locfileid: "65581412"
   
 |Vorgang|Dateityp|  
 |---------------|---------------|  
-|Upload|Zum Hochladen einer Ressource verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder eine Anwendungsseite auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus ausgeführt wird. Weitere Informationen finden Sie unter [Hochladen einer Datei oder eines Berichts (Berichts-Manager)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) oder [Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Upload|Zum Hochladen einer Ressource verwenden Sie das Webportal, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder eine Anwendungsseite auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus ausgeführt wird. Weitere Informationen finden Sie unter [Hochladen einer Datei oder eines Berichts im Berichtsserver](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) oder [Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Veröffentlichen|Alle Dateien in einem Projekt, die keine Berichte, Berichtsteile, Datenquellen oder Datasets darstellen, werden als Ressourcen hochgeladen. Fügen Sie zum Veröffentlichen einer Ressource einem Projekt im Berichts-Designer ein vorhandenes Objekt hinzu, und veröffentlichen Sie das Projekt dann auf einem Berichtsserver.|  
   
  Alle Ressourcen stehen als Dateien, die anschließend auf einen Berichtsserver hochgeladen werden, in einem Dateisystem bereit. Außer der standardmäßigen Größenbeschränkung von 4 MB in ASP.NET gibt es keine Einschränkungen bezüglich der hochzuladenden Dateien. Zum Veröffentlichen als Ressource auf einem Berichtsserver sind jedoch einige Dateitypen, die über entsprechende MIME-Typen verfügen, besser geeignet als andere. Ressourcen, die auf HTML- und JPG-Dateien basieren, werden z.B. in einem Browserfenster geöffnet, wenn der Benutzer auf die Ressource klickt. Die HTML-Datei wird als Webseite und die JPG-Datei als Bild gerendert. Andererseits können Ressourcen ohne entsprechende MIME-Typen, die auf Desktopanwendungsdateien basieren, beispielsweise im Browserfenster möglicherweise nicht gerendert werden.  
   
  Ob eine Ressource von den Benutzern eines Berichts angezeigt werden kann, hängt von den Anzeigemöglichkeiten des Browsers ab. Da Ressourcen nicht vom Berichtsserver verarbeitet werden, muss der Browser die Ansichtsfunktionen zum Rendern eines bestimmten MIME-Typs bereitstellen. Falls der Browser den Inhalt nicht rendern kann, können Benutzer, die die Ressource anzeigen, nur die allgemeinen Eigenschaften der Ressource sehen.  
   
-### <a name="securing-and-managing-a-resource"></a>Sichern und verwalten von Ressourcen  
+### <a name="securing-and-managing-a-resource"></a>Schützen und Verwalten einer Ressource  
  Ressourcen sind neben Berichten, freigegebenen Datenquellen, freigegebenen Zeitplänen und Ordnern als benannte Objekte in der Ordnerhierarchie des Berichtservers vorhanden. Sie können nach Ressourcen suchen, sie anzeigen, sichern und Einstellungen festlegen, wie es für jedes andere auf einem Berichtsserver gespeicherte Objekt möglich ist. Zum Anzeigen oder Verwalten einer Ressource muss Ihre Rollenzuweisung die Aufgaben zum Anzeigen und Verwalten von Ressourcen umfassen.  
   
-### <a name="referencing-an-image-resource-from-a-report"></a>Verweisen auf eine Bildressource von einem Bericht  
+### <a name="referencing-an-image-resource-from-a-report"></a>Verweisen auf eine Bildressource aus einem Bericht  
  Ressourcen können ein Bild enthalten, auf das Sie in einem Bericht verweisen. Wenn die Berichtsanforderungen die Verwendung von externen Bildern umfassen, ziehen Sie die folgenden Vorteile beim Speichern des Bilds als Ressource in Betracht:  
   
 -   Zentrale Speicherung in der Berichtsserver-Datenbank: Wenn Sie die Berichtsserver-Datenbank und ihren Inhalt auf einen anderen Computer übertragen, wird das externe Bild im Bericht beibehalten. Sie müssen keine Bilddateien nachverfolgen, die auf einem Datenträger auf unterschiedlichen Computern gespeichert sind.  
@@ -149,14 +142,14 @@ ms.locfileid: "65581412"
   
  Sie können eine Bildressource in einem Bericht verwenden, indem Sie die Bilddatei dem Projekt hinzufügen und es mit dem Bericht veröffentlichen. Nach dem Veröffentlichen des Bilds können Sie den Bildverweis im Bericht aktualisieren, sodass er auf die Ressource auf dem Berichtsserver verweist, und dann nur den Bericht erneut veröffentlichen, um die Änderungen zu speichern. Sie können anschließend das Bild unabhängig vom Bericht aktualisieren, indem Sie die Ressource erneut veröffentlichen. Der Bericht verwendet die aktuelle Version des Bilds, die auf dem Berichtsserver verfügbar ist.  
   
- Weitere Informationen finden Sie unter [Aktualisieren einer Ressource &#40;Berichts-Manager&#41;](../../reporting-services/report-server/update-a-resource-report-manager.md).  
+ Weitere Informationen finden Sie unter [Aktualisieren einer Ressource (Webportal)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
   
 ##  <a name="bkmk_MyReports"></a> Meine Berichte  
  Der Ordner Meine Berichte ist ein persönlicher Arbeitsbereich für jeden Benutzer, der sich bei einem Berichtsserver mit einem gültigen Domänenkonto anmeldet. Dieser spezielle Ordner bietet Speicherplatz für derzeit bearbeitete Berichte, für Berichte, die nicht für die allgemeine Weitergabe gedacht sind, oder für Berichte, die für einen speziellen Zweck geändert wurden. Es ist nicht möglich, die Anzahl oder die Größe der im Ordner Meine Berichte gespeicherten Elemente einzuschränken oder einen Ordner Meine Berichte für Benutzer freizugeben.  
   
  Meine Berichte ordnet den Namen eines virtuellen Ordners, der für jeden Benutzer sichtbar ist (Meine Berichte) einem Masterordner Benutzerordner und einem eindeutigen Unterordner basierend auf dem Benutzernamen zu. Wenn ein Benutzer auf seinen Ordner Meine Berichte zugreift, wird der Benutzer in Wirklichkeit an seinen Unterordner unter Benutzerordner weitergeleitet. Jeder Unterordner enthält Speicherplatz für die Berichte und Elemente, die ein Benutzer zu seinem Ordner "Meine Berichte" hinzufügt. Im Webportal werden „Meine Berichte“ auf der Stammebene nicht angezeigt. Sie müssen dazu in den Ordner „Benutzer“ wechseln.  
   
- Der Ordner "Benutzerordner" wird beim Installieren des Berichtsservers erstellt. Nachfolgende benutzerbasierte Unterordner werden erstellt, wenn ein Benutzer Meine Berichte zum ersten Mal öffnet (z. B. durch Klicken auf Meine Berichte im Berichts-Manager). Ordnernamen weisen folgendes Format auf:  
+ Der Ordner "Benutzerordner" wird beim Installieren des Berichtsservers erstellt. Nachfolgende benutzerbasierte Unterordner werden erstellt, wenn ein Benutzer Meine Berichte zum ersten Mal öffnet (z. B. durch Klicken auf Meine Berichte im Webportal). Ordnernamen weisen folgendes Format auf:  
   
 ```  
 /Users Folders/<username>/My Reports  
@@ -176,16 +169,12 @@ ms.locfileid: "65581412"
   
 ## <a name="tasks"></a>Aufgaben  
  [Hochladen von Dateien in einen Ordner](../../reporting-services/report-server/upload-files-to-a-folder.md)  
-  
- [Erstellen, Löschen oder Ändern eines Ordners &#40;Berichts-Manager&#41;](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
-  
- [Aktualisieren einer Ressource &#40;Berichts-Manager&#41;](../../reporting-services/report-server/update-a-resource-report-manager.md)  
-  
+ [Create, Delete, or Modify a Folder (web portal) (Erstellen, Löschen oder Ändern eines Ordners (Webportal))](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
+ [Aktualisieren einer Ressource (Webportal)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [Hochladen von Dateien in einen Ordner](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md)   
  [Rollen und Berechtigungen (Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services-Berichte &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  
-  
   

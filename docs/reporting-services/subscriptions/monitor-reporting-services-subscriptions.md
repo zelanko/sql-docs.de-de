@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140533"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285043"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements über die Benutzeroberfläche, Windows PowerShell oder Protokolldateien überwachen. Die für die Überwachung verfügbaren Optionen hängen davon ab, welchen Modus des Berichtsservers Sie ausführen.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** : [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
   
  **In diesem Artikel:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67140533"
 |Status|und Beschreibung|  
 |------------|-----------------|  
 |Neues Abonnement|Wird beim Erstellen des Abonnements angezeigt.|  
-|Inaktiv|Wird angezeigt, wenn ein Abonnement nicht verarbeitet werden kann. Weitere Informationen finden Sie weiter in diesem Artikel unter „Verwalten inaktiver Abonnements“.|  
+|Inaktiv|Wird angezeigt, wenn ein Abonnement kann nicht verarbeitet werden. Weitere Informationen finden Sie weiter in diesem Artikel unter „Verwalten inaktiver Abonnements“.|  
 |Fertig: \<*Anzahl*> von insgesamt \<*Anzahl*> verarbeitet; \<*Anzahl*> Fehler.|Zeigt den Status der Ausführung eines datengesteuerten Abonnements an. Diese Meldung stammt vom Prozessor für Zeitplanung und Übermittlung.|  
 |\<*Anzahl*> verarbeitet|Die Anzahl von Benachrichtigungen, die der Prozessor für Zeitplanung und Übermittlung erfolgreich übermittelt hat oder nicht mehr zu übermitteln versucht. Beim Abschluss einer datengesteuerten Übermittlung sollte die Anzahl von verarbeiteten Benachrichtigungen den insgesamt generierten Benachrichtigungen entsprechen.|  
 |\<*Anzahl*> insgesamt|Die Gesamtzahl der Benachrichtigungen, die für die letzte Übermittlung für das Abonnement generiert wurden.|  
@@ -66,7 +66,7 @@ ms.locfileid: "67140533"
 ### <a name="native-mode-log-files"></a>Protokolldateien im einheitlichen Modus  
  Beim Auftreten eines Fehlers während der Übermittlung erfolgt ein Eintrag im Ablaufverfolgungsprotokoll des Berichtsservers.  
   
- Berichtsserveradministratoren können den Abonnementübermittlungsstatus in den Dateien „**reportserverservice_**.log“ überprüfen. Für die E-Mail-Übermittlung schließen Protokolldateien des Berichtsservers eine Aufzeichnung der Verarbeitungs- und Übermittlungsvorgänge für bestimmte E-Mail-Konten ein. Der Standardspeicherort der Protokolldateien lautet:  
+ Berichtsserveradministratoren können den Abonnementübermittlungsstatus in den Dateien „**reportserverservice_** .log“ überprüfen. Für die E-Mail-Übermittlung schließen Protokolldateien des Berichtsservers eine Aufzeichnung der Verarbeitungs- und Übermittlungsvorgänge für bestimmte E-Mail-Konten ein. Der Standardspeicherort der Protokolldateien lautet:  
   
  `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`  
   
@@ -76,7 +76,7 @@ ms.locfileid: "67140533"
   
  Es folgt eine Beispielfehlermeldung einer Ablaufverfolgungsprotokolldatei im Zusammenhang mit Abonnements:  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36:: i INFO: Initialisieren von EnableExecutionLogging auf TRUE gemäß Serversystemeigenschaften properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e ERROR: **E-Mail-Sendefehler**. Ausnahme: System.Net.Mail.SmtpException: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort war: 5.7.1 Client wurde nicht auf System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) authentifiziert.  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging auf TRUE gemäß Serversystemeigenschaften properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **E-Mail-Sendefehler**. Ausnahme: System.Net.Mail.SmtpException: Für den SMTP-Server ist eine sichere Verbindung erforderlich, oder der Client wurde nicht authentifiziert. Die Serverantwort war: 5.7.1 Client wurde nicht auf System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) authentifiziert.  
   
  Die Protokolldatei enthält keine Informationen, ob der Bericht geöffnet wurde oder ob die Übermittlung tatsächlich erfolgreich war. Eine erfolgreiche Übermittlung bedeutet, dass der Prozessor für Zeitplanung und Übermittlung keine Fehler generiert und der Berichtsserver eine Verbindung zum Mailserver hergestellt hat. Falls für die E-Mail im Postfach des Benutzers eine Fehlermeldung wegen Unzustellbarkeit generiert wird, werden diese Informationen nicht in die Protokolldatei aufgenommen. Weitere Informationen zu Protokolldateien finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -85,9 +85,9 @@ ms.locfileid: "67140533"
   
 1.  Navigieren Sie zu der Dokumentbibliothek, die den Bericht enthält.  
   
-2.  Öffnen Sie das Kontextmenü des Berichts (**...**).  
+2.  Öffnen Sie das Kontextmenü des Berichts ( **...** ).  
   
-3.  Wählen Sie die erweiterte Menüoption (**...**) aus.  
+3.  Wählen Sie die erweiterte Menüoption ( **...** ) aus.  
   
 4.  Wählen Sie **Abonnements verwalten**aus.  
   
