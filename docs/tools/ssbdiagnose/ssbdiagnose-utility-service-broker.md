@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836322"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469145"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose-Hilfsprogramm (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Ein eindeutiger Bezeichner, der einen Konversationsendpunkt in einer Anwendung identifiziert. Konversationshandles sind für einen Endpunkt einer Konversation eindeutig, d. h., die Endpunkte für den Initiator und das Ziel weisen unterschiedliche Konversationshandles auf.  
   
- Konversationshandles werden durch den *@dialog_handle* -Parameter der **BEGIN DIALOG** -Anweisung und die Spalte **conversation_handle** im Resultset einer **RECEIVE** -Anweisung an Anwendungen zurückgegeben.  
+ Konversationshandles werden durch den *\@dialog_handle*-Parameter der **BEGIN DIALOG**-Anweisung und die Spalte **conversation_handle** im Resultset einer **RECEIVE**-Anweisung an Anwendungen zurückgegeben.  
   
  Konversationshandles werden in der Spalte **conversation_handle** der Katalogsichten **sys.transmission_queue** und **sys.conversation_endpoints** gemeldet.  
   
  *conversation_group_id*  
  Der eindeutige Bezeichner, der eine Konversationsgruppe identifiziert.  
   
- Konversationsgruppen-IDs werden durch den *@conversation_group_id* -Parameter der **GET CONVERSATION GROUP** -Anweisung und die Spalte **conversation_group_id** im Resultset einer **RECEIVE** -Anweisung an Anwendungen zurückgegeben.  
+ Konversationsgruppen-IDs werden durch den *\@conversation_group_id*-Parameter der **GET CONVERSATION GROUP**-Anweisung und die Spalte **conversation_group_id** im Resultset einer **RECEIVE**-Anweisung an Anwendungen zurückgegeben.  
   
  Konversationsgruppen-IDs werden in der Spalte **conversation_group_id** der Katalogsichten **sys.conversation_groups** und **sys.conversation_endpoints** gemeldet.  
   
