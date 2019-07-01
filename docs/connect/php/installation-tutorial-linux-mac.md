@@ -1,6 +1,6 @@
 ---
 title: Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
-ms.date: 05/09/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 2e1e6e6773644b12b6259349c522113ec66a0d43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d2b5850010d49e881ea0169566fe8e7d046f0d
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502768"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343913"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server
 Die folgenden Anweisungen gehen von einer sauberen Umgebung aus und zeigen, wie PHP 7.x, der Microsoft ODBC-Treiber, Apache und die Microsoft-Treiber für PHP für SQL Server unter Ubuntu 16.04, 18.04 und 18.10, Red Hat 7, Debian 8 und 9, Suse 12 und 15 sowie macOS 10.12, 10.13 und 10.14 installiert werden. In dieser Anleitung wird empfohlen, die Treiber mit PECL zu installieren, aber Sie können die vorab erstellten Binärdateien auch von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen und gemäß den Anweisungen unter [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Laden der Microsoft-Treiber für PHP für SQL Server) installieren. Eine Beschreibung des Ladevorgangs von Erweiterungen und die Gründe, warum die Erweiterungen nicht zur php.ini-Datei hinzugefügt werden, finden Sie im Abschnitt zum [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -49,10 +49,14 @@ Installieren Sie den ODBC-Treiber für Ubuntu, indem Sie den Anweisungen auf der
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.3/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.3/mods-available/pdo_sqlsrv.ini
 exit
+sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
+
+Wenn es nur eine PHP-Version im System ist, und klicken Sie dann im letzte Schritt vereinfacht werden kann, sodass Sie `phpenmod sqlsrv pdo_sqlsrv`.
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Schritt 4. Installieren von Apache und Konfigurieren des Treiberladevorgangs
 ```
 sudo su
@@ -60,8 +64,6 @@ apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.3
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
-echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 exit
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Schritt 5. Neustarten von Apache und Testen des Beispielskripts
@@ -91,31 +93,16 @@ yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ### <a name="step-2-install-prerequisites"></a>Schritt 2: Installieren der erforderlichen Komponenten
 Installieren Sie den ODBC-Treiber für Red Hat 7, indem Sie den Anweisungen auf der [Seite zur Installation von Linux und macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) folgen.
 
-Die Kompilierung der PHP-Treiber mit PECL mit PHP 7.2 oder 7.3 erfordert eine neuere GCC als die Standardversion:
-```
-sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
-sudo yum install devtoolset-7
-scl enable devtoolset-7 bash
-```
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Schritt 3: Installieren der PHP-Treiber für Microsoft SQL Server
 ```
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/pdo_sqlsrv.ini
+echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
 exit
 ```
-Ein Problem in PECL kann die korrekte Installation der neuesten Version der Treiber verhindern, selbst wenn Sie ein GCC-Upgrade ausgeführt haben. Zur Installation laden Sie die Pakete herunter und kompilieren sie manuell (ähnliche Schritte für pdo_sqlsrv):
-```
-pecl download sqlsrv
-tar xvzf sqlsrv-5.6.1.tgz
-cd sqlsrv-5.6.1/
-phpize
-./configure --with-php-config=/usr/bin/php-config
-make
-sudo make install
-```
+
 Alternativ können Sie die vorab erstellten Binärdateien von der [GitHub-Projektseite](https://github.com/Microsoft/msphpsql/releases) herunterladen oder aus dem Remi-Repository installieren:
 ```
 sudo yum install php-sqlsrv
@@ -163,10 +150,14 @@ locale-gen
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.3/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.3/mods-available/pdo_sqlsrv.ini
 exit
+sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
+
+Wenn es nur eine PHP-Version im System ist, und klicken Sie dann im letzte Schritt vereinfacht werden kann, sodass Sie `phpenmod sqlsrv pdo_sqlsrv`.
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Schritt 4. Installieren von Apache und Konfigurieren des Treiberladevorgangs
 ```
 sudo su
@@ -174,8 +165,6 @@ apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.3
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
-echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Schritt 5. Neustarten von Apache und Testen des Beispielskripts
 ```

@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269921"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400048"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -602,4 +602,10 @@ Durch eine **SqlPackage.exe**-Skriptaktion wird ein inkrementelles Transact-SQL-
 |**/p:**|UnmodifiableObjectWarnings = (BOOLESCHE "True")|Gibt an, ob Warnungen generiert werden sollen, wenn Unterschiede in Objekten gefunden werden, die nicht änderbar sind (z. B. wenn die Dateigröße oder Dateipfade für eine Datei unterschiedlich sind).|
 |**/p:**|VerifyCollationCompatibility = (BOOLESCHE "True")|Gibt an, ob die Kompatibilität von Sortierungen überprüft wird.
 |**/p:**|VerifyDeployment = (BOOLESCHE "True")|Gibt an, ob vor der Veröffentlichung Überprüfungen ausgeführt werden sollen, durch die die Veröffentlichungsaktion beendet wird, wenn Probleme vorliegen, die eine erfolgreiche Veröffentlichung blockieren könnten. Die Veröffentlichungsaktion könnte beispielsweise beendet werden, wenn in der Zieldatenbank Fremdschlüssel enthalten sind, die im Datenbankprojekt nicht vorhanden sind. Dies verursacht Fehler bei der Veröffentlichung.|
-  
+
+## <a name="exit-codes"></a>Exitcodes
+
+Befehle, die die folgenden Exitcodes zurückgeben:
+
+- 0 = Erfolg
+- ungleich 0 = Fehler

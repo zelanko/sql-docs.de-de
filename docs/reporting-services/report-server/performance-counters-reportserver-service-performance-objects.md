@@ -1,6 +1,6 @@
 ---
 title: 'Leistungsindikatoren: ReportServer-Dienst, Leistungsobjekte | Microsoft-Dokumentation'
-ms.date: 03/07/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -10,12 +10,13 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7e87b285eccbd35c6c90cffa2f32e276aaefe0ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: aac7ce5685f4f70b98028d481f2da2bf630e3cb0
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581055"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412646"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Leistungsindikatoren: ReportServer-Dienst, Leistungsobjekte
   Unter diesem Thema werden Leistungsindikatoren für die Leistungsobjekte **ReportServer:Service** und **ReportServerSharePoint:Service** beschrieben, die Teil einer [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Bereitstellung sind.  
