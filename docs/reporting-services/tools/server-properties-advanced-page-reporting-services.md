@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571346"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463581"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Servereigenschaften (Seite Erweitert) – Reporting Services
 
@@ -93,8 +93,9 @@ Gibt an, ob die Antwort auf die Client-Anforderung verfügbar gemacht werden kan
 
 **AccessControlMaxAge** Gibt die Anzahl der Sekunden an, für die Ergebnisse einer Preflightanforderung im Cache gespeichert werden können. Der Standardwert ist 600 (10 Minuten).
 
-**AllowedResourceExtensionsForUpload** ***(nur Power BI-Berichtsserver)*** Legt Erweiterungen von Ressourcen fest, die auf den Berichtsserver hochgeladen werden können. Erweiterungen für integrierte Dateitypen wie &ast;.rdl und &ast;.pbix müssen nicht einbezogen werden. Der Standardwert lautet „&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx“. 
+**AllowedResourceExtensionsForUpload** Satz von Erweiterungen von Ressourcen, die auf den Berichtsserver hochgeladen werden können. Erweiterungen für integrierte Dateitypen wie &ast;.rdl und &ast;.pbix müssen nicht einbezogen werden. Der Standardwert lautet „&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx“.
 
+**RestrictedResourceMimeTypeForUpload** Gruppe von MIME-Typen-Benutzer sind nicht zum Hochladen von Inhalten mit zulässig. Alle Ressourcen, die bereits mit einem eingeschränkten MIME-Typ gespeichert sind, können nur als eine Anwendung/Oktettstrom statt, geöffnet/ausgeführt wird vom Browser heruntergeladen werden.  Standardmäßig sind keine eingeschränkte Elemente in dieser Liste, aber es wird empfohlen, dass Organisationen füllen Sie diese Option, um die sicherste zu ermöglichen.
 
 **EditSessionCacheLimit**  
 Gibt die Anzahl von Datencacheeinträgen an, die in einer Berichtsbearbeitungssitzung aktiv sein können. Die Standardanzahl ist 5.  
