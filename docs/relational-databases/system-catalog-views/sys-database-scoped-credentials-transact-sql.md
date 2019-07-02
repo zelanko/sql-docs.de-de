@@ -19,22 +19,23 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d3718357b68aa47bbc32e4d975a546f3e86cb73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1deb05541e46ec1007d234dc622b14ea1e20eb3f
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814838"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492580"
 ---
-# <a name="sysdatabasescopedcredentials-transact-sql"></a>database_scoped_credentials (Transact-SQL)
+# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Gibt eine Zeile für jede Datenbank von datenbankweit gültigen Anmeldeinformationen in der Datenbank.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|Description|  
 |-----------------|---------------|-----------------|  
-|credential_id|**int**|ID der datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  
 |NAME|**sysname**|Name der Datenbank von datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  
+|credential_id|**int**|ID der datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  
+|principal_id|**int**|ID des Datenbankprinzipals, der der Besitzer des Schlüssels ist.|  
 |credential_identity|**nvarchar(4000)**|Name der zu verwendenden Identität. In der Regel ist dies ein Windows-Benutzer. Er muss nicht eindeutig sein.|  
 |create_date|**datetime**|Zeitpunkt, zu dem die datenbankweit gültige Anmeldeinformationen erstellt wurde.|  
 |modify_date|**datetime**|Zeitpunkt, an der datenbankweit gültigen Anmeldeinformationen zuletzt geändert wurde.|  
