@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251550"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500046"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>VBA-Funktionen in MDX und DAX
 
@@ -53,10 +53,10 @@ ms.locfileid: "63251550"
 |CVErr|Nicht unterstützt||  
 |date|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die Funktion DATE (Year, Month, Day) verwendet, um aus den angegebenen Argumenten einen datumstypwert zu generieren|  
 |DateAdd|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit dem gleichen Namen; die DATEADD (\<Datumsangaben >, < Number_of_intervals >,\<Interval >)-Funktion wird verwendet, um bestimmten Datumsangaben verschoben um eine Anzahl von Intervallen|  
-|DateDiff]|Nur MDX||  
+|DateDiff|Nur MDX||  
 |DatTeil|Nur MDX||  
 |DatSeriell|Nur MDX||  
-|DateValue]|DAX, MDX||  
+|DatWert|DAX, MDX||  
 |Day|DAX, MDX||  
 |GDA|Nur MDX||  
 |Dir|Nicht unterstützt||  
@@ -118,7 +118,7 @@ ms.locfileid: "63251550"
 |MonthName|Nicht unterstützt||  
 |Meldung|Nicht unterstützt||  
 |jetzt|DAX, MDX||  
-|NPer]|Nur MDX||  
+|ZZR|Nur MDX||  
 |NBW|Nur MDX||  
 |Oktober|Nur MDX||  
 |Partition|Nur MDX||  
@@ -146,7 +146,7 @@ ms.locfileid: "63251550"
 |Str|Nur MDX||  
 |StrVgl|Nur MDX||  
 |StrKonv|Nur MDX||  
-|String]|Nur MDX||  
+|Zeichenfolge|Nur MDX||  
 |StrReverse|Nicht unterstützt||  
 |Schalter|Nur MDX||  
 |DIA|Nur MDX||  
@@ -156,7 +156,7 @@ ms.locfileid: "63251550"
 |Zeitgeber|Nur MDX||  
 |ZeitSeriell|Nur MDX||  
 |ZeitSeriellStr|DAX, MDX||  
-|Trim]|DAX, MDX||  
+|Glätten|DAX, MDX||  
 |TypName|Nur MDX||  
 |UBound|Nicht unterstützt||  
 |Großbst|Nur MDX||  
