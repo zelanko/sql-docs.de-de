@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96a48d60cc0c127f41e6e1b79b9faf29ea4392cf
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280418"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533824"
 ---
 # <a name="driver-manager-connection-pooling"></a>Verbindungspooling des Treiber-Managers
 Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool von Verbindungen verwendet werden, die nicht für jede Verwendung neu eingerichtet werden müssen. Sobald eine Verbindung erstellt und in einen Pool aufgenommen wurde, kann eine Anwendung diese Verbindung wiederverwenden, ohne den Prozess für die Verbindung abgeschlossen.  
@@ -31,7 +31,7 @@ Verbindungspooling ermöglicht einer Anwendung eine Verbindung aus einem Pool vo
  Neben der Leistung verbessert wurde können der Verbindungspooling-Architektur, eine Umgebung und die zugeordneten Verbindungen von mehreren Komponenten in einem einzigen Prozess verwendet werden. Dies bedeutet, dass eigenständige Komponenten im selben Prozess miteinander interagieren können, ohne die Sensibilisierung für einander. Eine Verbindung in einem Verbindungspool kann wiederholt von mehreren Komponenten verwendet werden.  
   
 > [!NOTE]
->  Verbindungspooling kann von einer ODBC-Anwendung, die mit ODBC 2. verwendet werden. *x* Verhalten, solange die Anwendung aufrufen kann *SQLSetEnvAttr*. Verwendung von Verbindungspooling die Anwendung muss nicht ausführen, SQL-Anweisungen, die ändern, die Datenbank oder im Kontext der Datenbank, z. B. das Ändern der \< *Datenbank ** Name*>, geändert wird, die den Katalog ein, die eine die Datenquelle.  
+>  Verbindungspooling kann von einer ODBC-Anwendung, die mit ODBC 2. verwendet werden. *x* Verhalten, solange die Anwendung aufrufen kann *SQLSetEnvAttr*. Beim Verwenden von Verbindungspools, die Anwendung muss nicht ausführen, SQL-Anweisungen, die die Datenbank oder im Kontext der Datenbank, z. B. das ändern, Ändern der \< *Datenbanknamen*>, welche Änderungen es sich um den Katalog verwendet, die von einem Quelle.  
 
 
  Ein ODBC-Treiber muss vollständig threadsicher sein, und Verbindungen darf keinen Thread-Affinität, um Verbindungspooling zu unterstützen. Dies bedeutet, dass der Treiber ist einen Aufruf für einen Thread zu einem beliebigen Zeitpunkt zu verarbeiten und in einem Thread, um die Verbindung in einem anderen Thread verwendet werden, und klicken Sie auf ein dritter Thread getrennt eine Verbindung herstellen kann.  
