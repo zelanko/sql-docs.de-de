@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 Release Notes | Microsoft-Dokumentation
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 82fc1e58ffd329a74849986b858aa25cf733dc84
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: e8f54884f7f4338ce7cea4556fc59b4778b4c978
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166367"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400098"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Release Notes zu SQL Server 2019 (Vorschauversion)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "67166367"
 Dieser Artikel beschreibt Einschränkungen und bekannte Probleme bei der [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) Releases. Verwandte Informationen finden Sie unter:
 - [Neues in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## <a name="ctp-30"></a>CTP 3.0
+## <a name="ctp-31"></a>CTP 3.1
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 ist das neueste öffentliche Release von [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP  3.1 ist das neueste öffentliche Release von [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 steht nur als Evaluation Edition zur Verfügung. Es sind keine anderen Editionen verfügbar. 
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 steht nur als Evaluation Edition zur Verfügung. Es sind keine anderen Editionen verfügbar.
 
 Ausführliche Informationen zu Support und Lizenzen für CTP-Releases sind in `license_Eval.rtf` in den Installationsmedien enthalten.
 
@@ -68,11 +68,11 @@ Ausführliche Informationen zu Support und Lizenzen für CTP-Releases sind in `l
 
 ## <a name="updated-compiler"></a>Aktualisierter Compiler
 
-- **Problem und Kundenbeeinträchtigung:** [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] beinhaltet nun einen aktualisierten Compiler. Bei CTP 2.1 gab es das bekannte Problem, dass die Ergebnisse für eine Gleitkommazahl oder andere Konvertierungsszenarios aufgrund des aktualisierten Compilers möglicherweise einen anderen Wert zurückgegeben haben als in früheren Versionen. In CTP 2.2 wird nun dafür gesorgt, dass die betroffenen Szenarios dieselben Ergebnisse zurückgeben wie frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ab CTP 3.0 sind keine bestehenden Probleme bekannt. Bitte melden Sie alle Anomalien bei Ergebnissen im Vergleich zu [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] sofort an das [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Team](http://aka.ms/sqlfeedback).
+- **Problem und Kundenbeeinträchtigung:** [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] beinhaltet nun einen aktualisierten Compiler. Bei CTP 2.1 gab es das bekannte Problem, dass die Ergebnisse für eine Gleitkommazahl oder andere Konvertierungsszenarios aufgrund des aktualisierten Compilers möglicherweise einen anderen Wert zurückgegeben haben als in früheren Versionen. In CTP 2.2 wird nun dafür gesorgt, dass die betroffenen Szenarios dieselben Ergebnisse zurückgeben wie frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ab CTP 3.1 sind keine bestehenden Probleme bekannt. Bitte melden Sie alle Anomalien bei Ergebnissen im Vergleich zu [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] sofort an das [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Team](http://aka.ms/sqlfeedback).
 
 - **Problemumgehung**: –
 
-- **Gilt für**: SQL Server 2019 CTP 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **Gilt für**: SQL Server 2019 CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>Der Installations-Assistent pausiert möglicherweise zwischen den Seiten mit Lizenzbedingungen
 
@@ -95,25 +95,30 @@ Ausführliche Informationen zu Support und Lizenzen für CTP-Releases sind in `l
  
 - **Problemumgehung**: Dieses Problem kann für [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs nicht behoben werden.
 
-- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 
-### <a name="loading-enclave-fails"></a>Laden von Enclave schlägt fehl
+- **Problem und Kundenbeeinträchtigung:** Für umfangreiche Berechnungen stehen Leistungsoptimierungen und Verbesserungen für die Fehlerbehandlung aus. Zudem sind diese Berechnungen derzeit standardmäßig deaktiviert.
 
-- **Problem und Kundenbeeinträchtigung:** Das Laden von Enclave für Always Encrypted schlägt fehl, und im Fehlerprotokoll wird folgende Nachricht angezeigt: `Internal enclave error: Cannot initialize the 1 enclave`.
+- **Problemumgehung**: Zum Aktiveren von umfangreichen Berechnungen führen Sie `DBCC traceon(127,-1)` aus. Weitere Informationen finden Sie unter [Konfigurieren von Always Encrypted mit Secure Enclaves](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Problemumgehung**: Keine. Für CTP 3.1 ist eine Lösung geplant.
+- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1
 
-- **Gilt für**: CTP 3.0
+## <a name="sql-server-configuration-manager-may-not-start"></a>Der SQL Server-Konfigurations-Manager kann möglicherweise nicht gestartet werden.
 
-### <a name="rich-computations-performance"></a>Leistung bei umfangreichen Berechnungen
+- **Problem und Kundenbeeinträchtigung:** Der SQL Server-Konfigurations-Manager startet möglicherweise nicht auf einem Computer, wenn die Datei „VCRUNTIME140.dll“ nicht vorhanden ist. Beim Starten des SQL Server-Konfigurations-Managers wird dem Benutzer u. U. folgendes Dialogfeld angezeigt: 
 
-- **Problem und Kundenbeeinträchtigung:** Für umfangreiche Berechnungen stehen noch einige Leistungsoptimierungen aus. Zudem weisen solche Berechnungen eine eingeschränkte Funktionalität auf (z. B. keine Indizierung) und sind derzeit standardmäßig deaktiviert.
+  `
+  MMC could not create the snap-in. The snap-in might not have been installed correctly.
+  `
 
-- **Problemumgehung**: Zum Aktiveren von umfangreichen Berechnungen führen Sie `DBCC traceon(127,-1)` aus. Weitere Informationen finden Sie unter [Aktivieren umfangreicher Berechnungen](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+- **Problemumgehung**:  Installieren Sie die neueste Version der Visual C++ 2013-Runtime (x86):
 
-- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
+  - [Ausführlich](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+  - [Direkt](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+
+- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -1,6 +1,6 @@
 ---
 title: Neuigkeiten zu SQL Server 2019 | Microsoft-Dokumentation
-ms.date: 05/28/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
-ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
+ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298225"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469103"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -28,15 +28,46 @@ Weitere Informationen und bekannte Probleme finden Sie unter [Release Notes zu [
 
 **Nutzen Sie die [neuesten Tools](#tools) für die optimale Verwendung von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## <a name="ctp-30-may-2019"></a>CTP 3.0 (Mai 2019)
+## <a name="ctp-31-june-2019"></a>CTP 3.1, Juni 2019
 
-Community Technology Preview (CTP) 3.0 ist das neueste öffentliche Release von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dieses Release beinhaltet Verbesserungen im Vergleich zu vorherigen CTP-Releases zum Beheben von Fehlern, zur Verbesserung der Sicherheit und zur Optimierung der Leistung.
+CTP 3.1 (Community Technology Preview) ist das neueste öffentliche Release von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dieses Release beinhaltet Verbesserungen im Vergleich zu vorherigen CTP-Releases zum Beheben von Fehlern, zur Verbesserung der Sicherheit und zur Optimierung der Leistung.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
 Informationen zu bestimmten Funktionen, die vom Support ausgeschlossen sind, finden Sie in den [Release Notes](sql-server-ver15-release-notes.md).
 
-Außerdem wurden die folgenden Funktionen für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 hinzugefügt oder verbessert.
+Außerdem wurden die folgenden Funktionen für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1 hinzugefügt oder verbessert.
+
+### <a name="big-data-clusters"></a>Big Data-Cluster
+
+| Neue Funktion oder Update | Details |
+|:---|:---|
+| Änderungen am Befehl `mssqlctl` | Die `mssqlctl cluster`-Befehle wurden in `mssqlctl bdc` umbenannt. Weitere Informationen finden Sie in der [Referenz zu `mssqlctl`](../big-data-cluster/reference-mssqlctl.md). |
+|Neue Statusbefehle für `mssqlsctl`|`mssqlctl` fügt neue Befehle zur Ergänzung der vorhandenen Überwachungsbefehle hinzu. Diese ersetzen das Clusterverwaltungsportal, das mit diesem Release entfernt wird.|
+| Spark-Computepools | Erstellen Sie zusätzliche Knoten, um die Spark-Rechenleistung zu erhöhen, ohne den Speicher zentral hochskalieren zu müssen. Zudem können Sie Speicherpoolknoten starten, die nicht für Spark verwendet werden. Spark wird vom Speicher entkoppelt. Weitere Informationen finden Sie unter [Configure storage without spark (Konfigurieren des Speichers ohne Spark)](../big-data-cluster/deployment-custom-configuration.md#sparkstorage). |
+| MSSQL-Spark-Connector | Ab jetzt werden Lese- und Schreibvorgänge in externen Datenpooltabellen unterstützt. In vorherigen Releases wurden Lese- und Schreibvorgänge nur für Tabellen der MASTER-Instanz unterstützt. Weitere Informationen finden Sie unter [How to read and write to SQL Server from Spark using the MSSQL Spark Connector (Lesen und Schreiben in SQL Server über Spark mithilfe des MSSQL-Spark-Connectors)](../big-data-cluster/spark-mssql-connector.md). |
+| Machine Learning mit MLeap | [Trainieren Sie ein MLeap-Machine-Learning-Modell in Spark, und bewerten Sie es mit der Java-Spracherweiterung in SQL Server.](../big-data-cluster/spark-create-machine-learning-model.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>Datenbank-Engine
+
+| Neue Funktion oder Update | Details |
+|:---|:---|
+|Indizieren verschlüsselter Spalten|Erstellen Sie Indizes für Spalten, die mit einer zufälligen Verschlüsselung und Enclave-fähigen Schlüsseln verschlüsselt wurden, um die Leistung umfangreicher Abfragen (mit `LIKE` und Vergleichsoperatoren) zu verbessern. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Festlegen der Serverarbeitsspeicherwerte `MIN` und `MAX` beim Setup |Während des Setups können Sie die Serverarbeitsspeicherwerte festlegen. Verwenden Sie die Standardwerte, die berechneten empfohlenen Werte, oder geben Sie manuell eigene Werte an, wenn Sie die **empfohlene** Option [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) ausgewählt haben.
+|Neue Graphfunktion: `SHORTEST_PATH` | Verwenden Sie `SHORTEST_PATH` in `MATCH`, um den kürzesten Pfad zwischen zwei Knoten in einem Graph zu ermitteln oder beliebige Längentraversierungen durchzuführen.|
+|Partitionstabellen und Indizes für Graphdatenbanken|Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Graphdatenbank verteilt sein können. |
+|Neue Option für Indizes: `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Diese Option aktiviert eine Optimierung in der Datenbank-Engine, die den Durchsatz für Einfügevorgänge mit hoher Parallelität in den Index verbessert. Diese Option ist für Indizes vorgesehen, die anfällig für Konflikte durch Einfügevorgänge auf der letzten Seite sind. Dieser Fall tritt häufig bei Indizes mit fortlaufendem Schlüssel auf. Dazu zählen beispielsweise Identitätsspalten, Sequenzspalten oder Spalten für Datum und Uhrzeit. Weitere Informationen finden Sie unter [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
+| &nbsp; | &nbsp; |
+
+### <a name="sql-server-on-linux"></a>SQL Server unter Linux
+
+| Neue Funktion oder Update | Details |
+|:-----|:-----|
+| Tempdb-Verbesserungen | Standardmäßig erstellt eine neue Installation von SQL Server für Linux mehrere tempdb-Datendateien, deren Anzahl sich nach der Anzahl der logischen Kerne richtet (bis zu acht Datendateien). Das gilt nicht für direkte Upgrades der Neben- oder Hauptversion. Jede tempdb-Datei ist 8 MB groß und wird automatisch um 64 MB vergrößert. Dieses Verhalten ähnelt dem der SQL Server-Standardinstallation unter Windows. |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-30-may-2019"></a>CTP 3.0 (Mai 2019)
 
 ### <a name="big-data-clusters"></a>Big Data-Cluster
 
@@ -82,6 +113,7 @@ Außerdem wurden die folgenden Funktionen für [!INCLUDE[sql-server-2019](../inc
 |:---|:---|
 |Unterstützung von MDX-Abfragen für tabellarische Modelle mit Berechnungsgruppen |In dieser Version wird die frühere Beschränkung in [Berechnungsgruppen](#calc-ctp24) aufgehoben. |
 |Dynamische Formatierung von Measures mithilfe von Berechnungsgruppen |Mit dieser Funktion können Sie Formatzeichenfolgen für Measures mit [Berechnungsgruppen](#calc-ctp24) bedingt ändern. Beispielsweise kann mit der Währungsumrechnung ein Measure in verschiedenen Fremdwährungsformaten angezeigt werden.|
+| &nbsp; | &nbsp; |
 
 ## <a name="ctp-25-april-2019"></a>CTP 2.5 (April 2019)
 
