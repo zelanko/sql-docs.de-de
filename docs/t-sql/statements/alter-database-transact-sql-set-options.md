@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785118"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313989"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -54,7 +54,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |** _\* SQL Server \*_ ** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -395,7 +395,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_auto_
 
 Weitere Informationen dazu, wann synchrone bzw. asynchrone Statistikupdates verwendet werden sollten, finden Sie im Abschnitt „Verwenden der datenbankweiten Statistikoptionen“ unter [Statistiken](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)])
 
 Aktiviert bzw. deaktiviert die Option `FORCE_LAST_GOOD_PLAN`automatische Optimierung[ für ](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -409,8 +409,8 @@ Wenn die Leistung verbessert wurde, verwendet die [!INCLUDE[ssde_md](../../inclu
 OFF         
 Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] meldet potentielle Einbußen im Hinblick auf die Abfrageleistung, die von Änderungen des SQL-Plans in der [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)-Sicht hervorgerufen werden könnten. Diese Empfehlungen werden allerdings nicht automatisch angewendet. Der Benutzer kann aktive Empfehlungen überwachen und ermittelte Probleme beheben, indem er die in der Sicht aufgeführten [!INCLUDE[tsql-md](../../includes/tsql-md.md)]-Skripts anwendet. Dies ist der Standardwert.
 
-**\<change_tracking_option> ::=**         
-**Gilt für **: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
+**\<change_tracking_option> ::=**          
+**Gilt für** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
 Steuert Änderungsnachverfolgungsoptionen. Sie können die Änderungsnachverfolgung aktivieren, Optionen festlegen, Optionen ändern und die Änderungsnachverfolgung deaktivieren. Beispiele hierzu finden Sie im Abschnitt „Beispiele“ weiter unten in diesem Artikel.
 
@@ -435,7 +435,7 @@ Die Standardbeibehaltungsdauer beträgt 2 Tage. Die Mindestbeibehaltungsdauer i
 OFF         
 Deaktiviert die Änderungsnachverfolgung für die Datenbank. Deaktivieren Sie erst die Änderungsnachverfolgung für alle Tabellen, bevor Sie sie für die Datenbank deaktivieren.
 
-**\<containment_option> ::=**         
+**\<containment_option> ::=**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Steuert die Einschlussoptionen für Datenbanken.
@@ -479,12 +479,12 @@ Die Zuordnung des Cursors wird implizit nur aufgehoben, wenn die Verbindung getr
 
 Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_local_cursor_default“ in der „sys.databases“-Katalogsicht untersuchen. Sie können den Status auch durch Untersuchen der Eigenschaft „IsLocalCursorsDefault“ der DATABASEPROPERTYEX-Funktion bestimmen.
 
-**\<database_mirroring>**         
+**\<database_mirroring>**          
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Die Argumentbeschreibungen finden Sie unter [ALTER DATABASE-Datenbankspiegelung](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
 
-**\<date_correlation_optimization_option> ::=**        
+**\<date_correlation_optimization_option> ::=**         
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Steuert die Option DATE_CORRELATION_OPTIMIZATION.
@@ -525,7 +525,7 @@ Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigr
 
 Sie können den sowohl den Verschlüsselungsstatus der Datenbank als auch den Status des Verschlüsselungsscans mithilfe der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) anzeigen.
 
-**\<db_state_option> ::=**         
+**\<db_state_option> ::=**          
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Steuert den Status der Datenbank.
@@ -591,7 +591,7 @@ Alle Benutzer, die über die entsprechenden Berechtigungen für die Verbindung m
 
 Sie können den Status dieser Option ermitteln, indem Sie die Spalte „user_access“ in der „sys.databases“-Katalogsicht untersuchen. Sie können den Status auch durch Untersuchen der Eigenschaft „UserAccess“ der DATABASEPROPERTYEX-Funktion bestimmen.
 
-**\<delayed_durability_option> ::=**         
+**\<delayed_durability_option> ::=**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Steuert, ob für Transaktionen ein Commit mit vollständiger oder verzögerter Dauerhaftigkeit ausgeführt wird.
@@ -605,7 +605,7 @@ Alle Transaktionen, die auf SET ALLOWED folgen, sind abhängig von der im Atomic
 FORCED         
 Alle Transaktionen, die auf SET FORCED folgen, sind verzögert dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
 
-**\<external_access_option> ::=**         
+**\<external_access_option> ::=**          
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Steuert, ob externe Ressourcen, z. B. Objekte aus einer anderen Datenbank, auf die Datenbank zugreifen können.
@@ -669,7 +669,7 @@ TWO_DIGIT_YEAR_CUTOFF
 
 Gibt eine ganze Zahl zwischen 1753 und 9999 an, die das Umstellungsjahr für das Interpretieren zweistelliger Jahre als vierstellige Jahre darstellt. Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
 
-**\<FILESTREAM_option> ::=**         
+**\<FILESTREAM_option> ::=**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Steuert die Einstellungen für FileTables.
@@ -684,15 +684,15 @@ FILESTREAM-Daten in FileTables in dieser Datenbank können von nicht transaktion
 FULL         
 Aktiviert vollständigen, nicht transaktionalen Zugriff auf FILESTREAM-Daten in FileTables.
 
-DIRECTORY_NAME = *\<directory_name>*         
+DIRECTORY_NAME = *\<directory_name>*          
 Ein Windows-kompatibler Verzeichnisname. Dieser Name sollte für alle Verzeichnisnamen auf Datenbankebene in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eindeutig sein. Bei Eindeutigkeitsvergleichen wird unabhängig von den Sortiereinstellungen die Groß-/Kleinschreibung nicht beachtet. Diese Option muss vor dem Erstellen einer FileTable in dieser Datenbank festgelegt werden.
 
-**\<HADR_options> ::=**         
+**\<HADR_options> ::=**          
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Siehe [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
-**\<mixed_page_allocation_option> ::=**         
+**\<mixed_page_allocation_option> ::=**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Steuert, ob die Datenbank die ersten Seiten mit einem gemischten Block für die ersten acht Seiten einer Tabelle oder eines Index erstellen kann.
@@ -719,7 +719,7 @@ FORCED
 
 Die aktuelle Einstellung der Option kann mithilfe der Spalte is_parameterization_forced in der sys.databases-Katalogsicht ermittelt werden.
 
-**\<query_store_options> ::=**         
+**\<query_store_options> ::=**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 ON | OFF | CLEAR [ ALL ]         
@@ -791,7 +791,7 @@ QUERY_CAPTURE_MODE ist vom Typ **nvarchar**.
 max_plans_per_query         
 Definiert die maximale Anzahl von Plänen, die für jede Abfrage beibehalten werden. Der Standardwert ist 200. MAX_PLANS_PER_QUERY ist vom Typ **int**.
 
-**\<query_capture_policy_option_list> :: =**         
+**\<query_capture_policy_option_list> :: =**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
 
 Steuert die Optionen für die Erfassungsrichtlinie des Abfragespeichers. Mit Ausnahme von STALE_CAPTURE_POLICY_THRESHOLD definieren diese Optionen die OR-Bedingungen, die auftreten müssen, damit Abfragen im definierten STALE_CAPTURE_POLICY_THRESHOLD-Wert erfasst werden.
@@ -808,7 +808,7 @@ Definiert die gesamte verstrichene Kompilierungs-CPU-Zeit, die eine Abfrage übe
 TOTAL_EXECUTION_CPU_TIME_MS         
 Definiert die gesamte verstrichene Ausführungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 100, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens 100 ms CPU-Zeit während der Ausführung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_EXECUTION_CPU_TIME_MS ist vom Typ **int**.
 
-**\<recovery_option> ::=**         
+**\<recovery_option> ::=**          
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Steuert Datenbankwiederherstellungsoptionen und Datenträger-E/A-Fehlerprüfung.
@@ -877,7 +877,7 @@ Weitere Informationen zu den Fehlermeldungen 823, 824 und 825 finden Sie unter:
 
 Die aktuelle Einstellung dieser Option kann mithilfe der *page_verify_option*-Spalte in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht oder der *IsTornPageDetectionEnabled*-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion ermittelt werden.
 
-**\<remote_data_archive_option> ::=**         
+**\<remote_data_archive_option> ::=**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Aktiviert bzw. Deaktiviert Stretch Database für die Datenbank. Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
@@ -911,7 +911,7 @@ Sie können Stretch Database für eine Datenbank erst deaktivieren, wenn diese k
 
 Auch wenn Stretch deaktiviert wird, wird die Remotedatenbank nicht entfernt. Wenn Sie die Remotedatenbank löschen möchten, müssen Sie sie mithilfe des Azure-Portals löschen.
  
-**\<service_broker_option> ::=**         
+**\<service_broker_option> ::=**          
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Steuert die folgenden [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Optionen: Aktivieren oder Deaktivieren der Nachrichtenübermittlung, Festlegen eines neuen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Bezeichners oder Festlegen der Konversationsprioritäten auf ON oder OFF.
@@ -1045,7 +1045,7 @@ Ist OFF festgelegt, wirkt sich diese Einstellung nur auf die Definition neuer Sp
 > [!IMPORTANT]
 > In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.
 
-**char(_n_)**- und **binary(_n_)**-Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)**- und **binary(_n_)**-Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
+**char(_n_)** - und **binary(_n_)** -Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)** - und **binary(_n_)** -Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
 
 Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für ANSI_PADDING. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die ANSI_PADDING für die Sitzung auf ON festgelegt wird. Die Clients führen die Anweisung aus, wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -1135,7 +1135,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_recur
 
 Der Status dieser Option kann mithilfe der Spalte „is_recursive_triggers_on“ in der Katalogsicht „sys.databases“ oder der „IsRecursiveTriggersEnabled“-Eigenschaft der DATABASEPROPERTYEX-Funktion ermittelt werden.
 
-**\<target_recovery_time_option> ::=**         
+**\<target_recovery_time_option> ::=**          
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.
@@ -1396,7 +1396,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken \*_ ** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1623,7 +1623,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_auto_
 
 Weitere Informationen dazu, wann synchrone bzw. asynchrone Statistikupdates verwendet werden sollten, finden Sie im Abschnitt „Verwenden der datenbankweiten Statistikoptionen“ unter [Statistiken](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Steuert automatische Optionen [für die automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -1937,7 +1937,7 @@ Ist OFF festgelegt, wirkt sich diese Einstellung nur auf die Definition neuer Sp
 > [!IMPORTANT]
 > In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.
 
-**char(_n_)**- und **binary(_n_)**-Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)**- und **binary(_n_)**-Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
+**char(_n_)** - und **binary(_n_)** -Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)** - und **binary(_n_)** -Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
 
   Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für ANSI_PADDING. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die ANSI_PADDING für die Sitzung auf ON festgelegt wird. Die Clients führen die Anweisung aus, wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2030,7 +2030,7 @@ Der Status dieser Option kann mithilfe der Spalte „is_recursive_triggers_on“
 
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.
 
-TARGET_RECOVERY_TIME **=**_Zielwiederherstellungszeit_ {SECONDS | MINUTES}         
+TARGET_RECOVERY_TIME **=** _Zielwiederherstellungszeit_ {SECONDS | MINUTES}         
 *target_recovery_time*         
 Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.
 
@@ -2187,7 +2187,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _\* SQL-Datenbank<br />verwaltete Instanz \*_ ** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2397,7 +2397,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_auto_
 
 Weitere Informationen dazu, wann synchrone bzw. asynchrone Statistikupdates verwendet werden sollten, finden Sie im Abschnitt „Verwenden der datenbankweiten Statistikoptionen“ unter [Statistiken](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **Gilt für**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Aktiviert bzw. deaktiviert die Option `FORCE_LAST_GOOD_PLAN`automatische Optimierung[ für ](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -2670,7 +2670,7 @@ Ist OFF festgelegt, wirkt sich diese Einstellung nur auf die Definition neuer Sp
 > [!IMPORTANT]
 > In einer späteren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ANSI_PADDING immer auf ON festgelegt, und jede Anwendung, für die die Option explizit auf OFF festgelegt ist, löst einen Fehler aus. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Es wird empfohlen, für ANSI_PADDING stets den Wert ON festzulegen. ANSI_PADDING muss beim Erstellen oder Bearbeiten von Indizes für berechnete Spalten oder indizierte Sichten auf ON festgelegt sein.
 
-**char(_n_)**- und **binary(_n_)**-Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)**- und **binary(_n_)**-Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
+**char(_n_)** - und **binary(_n_)** -Spalten, die NULL-Werte zulassen, werden bis zur Spaltenlänge aufgefüllt, wenn ANSI_PADDING auf ON festgelegt ist. Ist ANSI_PADDING hingegen auf OFF festgelegt, werden nachfolgende Leerzeichen und Nullen abgeschnitten. **char(_n_)** - und **binary(_n_)** -Spalten, die keine NULL-Werte zulassen, werden immer bis zur Spaltenlänge aufgefüllt.
 
   Einstellungen auf Verbindungsebene, die mithilfe der SET-Anweisung festgelegt werden, überschreiben die Standardeinstellung der Datenbank für ANSI_PADDING. ODBC- und OLE DB-Clients geben standardmäßig eine SET-Anweisung aus, durch die ANSI_PADDING für die Sitzung auf ON festgelegt wird. Die Clients führen die Anweisung aus, wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Weitere Informationen finden Sie unter [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md).
 
@@ -2763,7 +2763,7 @@ Der Status dieser Option kann mithilfe der Spalte „is_recursive_triggers_on“
 
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, eine Minute. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.
 
-TARGET_RECOVERY_TIME **=**_Zielwiederherstellungszeit_ {SECONDS | MINUTES}         
+TARGET_RECOVERY_TIME **=** _Zielwiederherstellungszeit_ {SECONDS | MINUTES}         
 *target_recovery_time*         
 Gibt die maximale Grenze für die Zeit an, die für die Wiederherstellung der angegebenen Datenbank im Fall eines Fehlers aufgewendet wird.
 
@@ -2891,55 +2891,51 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ ** &nbsp;||||
 
 &nbsp;
 
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
 
-> [!NOTE]
-> Viele DATABASE SET-Optionen können mithilfe von [SET-Anweisungen](../../t-sql/statements/set-statements-transact-sql.md) konfiguriert werden; häufig werden sie bei der Verbindung von Anwendungen konfiguriert. Die **ALTER DATABASE SET**-Werte werden durch SET-Optionen auf Sitzungsebene überschrieben. Die unten beschriebenen Datenbankoptionen entsprechen Werten, die für Sitzungen festgelegt werden können, von denen explizit keine weiteren Werte für SET-Optionen bereitgestellt werden.
-
 ## <a name="syntax"></a>Syntax
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## <a name="arguments"></a>Argumente
 
-*database_name* Der Name der Datenbank, die geändert werden soll.
+*database_name*
 
-**\<auto_option> ::=**
+Der Name der Datenbank, die geändert werden soll.
 
-Steuert automatische Optionen.
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+Gilt für Azure SQL Data Warehouse (Vorschauversion)
 
-**Berechtigungen** Folgende Berechtigungen sind erforderlich:
+Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. Eine neue Spalte namens „is_result_set_caching_on“ wurde in `sys.databases` eingeführt, um die Einstellung für die Zwischenspeicherung von Ergebnissen für eine Datenbank anzuzeigen.  
 
-- Der Prinzipalanmeldename auf Serverebene (der während des Bereitstellungsprozesses erstellt wurde) oder
-- Mitgliedschaft in der `dbmanager`-Datenbankrolle
+ON   
+Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets im Azure SQL Data Warehouse-Speicher zwischengespeichert werden.
 
-Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle „dbmanager“ ist.
-
-> [!Note]
-> Während der schrittweisen Einführung dieser Funktion in allen Regionen überprüfen Sie die in Ihrer Instanz bereitgestellte Version und die neuesten [Versionshinweise für Azure SQL Data Warehouse](/azure/sql-data-warehouse/release-notes-10-0-10106-0) auf Funktionsverfügbarkeit.
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } (Vorschau für Azure SQL Data Warehouse Gen2) Sie müssen während der Ausführung dieses Befehls mit der Masterdatenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. Eine neue Spalte namens „is_result_set_caching_on“ wurde in sys.databases eingeführt, um die Einstellung für die Zwischenspeicherung von Ergebnissen für eine Datenbank anzuzeigen.  
-
-„ON“ (EIN) gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets im Azure SQL Data Warehouse-Speicher zwischengespeichert werden.
-
-„OFF“ (AUS) gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets nicht im Azure SQL Data Warehouse-Speicher zwischengespeichert werden.
-Benutzer können feststellen, ob eine Abfrage mit einem Ergebniscachetreffer oder -fehler ausgeführt wurde, indem sie sys.pdw_request_steps mit einer bestimmten request_id abfragen.   Liegt ein Cachetreffer vor, enthält das Abfrageergebnis einen einzigen Schritt mit den folgenden Details:
+OFF   
+Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets nicht im Azure SQL Data Warehouse-Speicher zwischengespeichert werden. Benutzer können feststellen, ob eine Abfrage mit einem Ergebniscachetreffer oder -fehler ausgeführt wurde, indem sie sys.pdw_request_steps mit einer bestimmten request_id abfragen.   Liegt ein Cachetreffer vor, enthält das Abfrageergebnis einen einzigen Schritt mit den folgenden Details:
 
 |**Spaltenname** |**Ist gleich** |**ReplTest1** |
 |----|----|----|
@@ -2948,6 +2944,25 @@ Benutzer können feststellen, ob eine Abfrage mit einem Ergebniscachetreffer ode
 |location_type|=|Control|
 Befehl|Wie|%DWResultCacheDb%|
 | | |
+
+## <a name="remarks"></a>Remarks
+
+Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn die folgenden Anforderungen erfüllt sind:
+
+1. Der Benutzer, der die Abfrage ausführt, hat Zugriff auf alle in der Abfrage verwiesenen Tabellen.
+1. Die neue und die vorherige Abfrage, die die Zwischenspeicherung des Resultsets generierte, stimmen genau überein.
+1. In der Tabelle, aus der das zwischengespeicherte Resultset generiert wurde, wurden keine Daten oder Schemata verändert.  
+
+Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (ON), werden Ergebnisse für alle Abfragen zwischengespeichert, bis der Cache voll ist. Ausgenommen sind Abfragen mit nicht deterministischen Funktionen wie „DateTime.Now()“.   Abfragen mit umfangreichen Resultsets (z. B. > 1 Million Zeilen) werden bei der ersten Ausführung möglicherweise langsamer ausgeführt, wenn der Ergebniscache erstellt wird.
+
+## <a name="permissions"></a>Berechtigungen
+
+Folgende Berechtigungen sind erforderlich:
+
+- Der Prinzipalanmeldename auf Serverebene (der während des Bereitstellungsprozesses erstellt wurde) oder
+- Mitgliedschaft in der `dbmanager`-Datenbankrolle
+
+Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle „dbmanager“ ist.
 
 ## <a name="examples"></a>Beispiele
 

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 330ea355feb3d200173a727c8308ac66cddb6591
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729328"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797210"
 ---
 # <a name="mssqlserver7931"></a>MSSQLSERVER_7931
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47729328"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7931|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Meldungstext|Datenbankfehler: Die FILESTREAM-Verzeichnis-ID F_ID für eine Partition wurde zweimal erkannt.|  
+|Meldungstext|Datenbankfehler: The FileStream directory ID F_ID for a partition was seen twice. (Die FileStream-Verzeichnis-ID „F_ID“ für eine Partition wurde zweimal erkannt.)|  
   
 ## <a name="explanation"></a>Erklärung  
 Dieselbe Partitions-ID für ein Filestream-Verzeichnis wurde in den Metadaten gefunden.  

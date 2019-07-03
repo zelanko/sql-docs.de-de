@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0df401128a5aa8de1dd885780b3a36a2438afd41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613598"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797165"
 ---
 # <a name="mssqlserver7934"></a>MSSQLSERVER_7934
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47613598"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7934|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Die Filestream-Verzeichnis-ID F_ID für Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID wurde nicht gefunden.|  
+|Meldungstext|Tabellenfehler: Die Filestream-Verzeichnis-ID „F_ID“ für Objekt-ID „O_ID“, Index-ID „I_ID“, und Partitions-ID „PN_ID“ wurde nicht gefunden.|  
   
 ## <a name="explanation"></a>Erklärung  
 Während DBCC CHECKDB wurde eine Partition gefunden; das entsprechende FILESTREAM-Rowsetverzeichnis im FILESTREAM-Datenspeicher wurde nicht gefunden.  
@@ -51,6 +51,6 @@ Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht h
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
 Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

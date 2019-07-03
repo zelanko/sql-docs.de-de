@@ -12,11 +12,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62465706"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ EXPLAIN SQL_statement
  Erfordert die **SHOWPLAN**-Berechtigung und die Berechtigung zum Ausführen von *SQL_statement*. Weitere Informationen finden Sie unter [Berechtigungen: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert des Befehls **EXPLAIN** ist ein XML-Dokument mit der unten gezeigten Struktur. Dieses XML-Dokument listet alle Vorgänge im Abfrageplan für die angegebene Abfrage auf, die alle durch den Tag `<dsql_operation>` eingeschlossen werden. Der Typ des Rückgabewerts ist **nvarchar(max)**.  
+ Der Rückgabewert des Befehls **EXPLAIN** ist ein XML-Dokument mit der unten gezeigten Struktur. Dieses XML-Dokument listet alle Vorgänge im Abfrageplan für die angegebene Abfrage auf, die alle durch den Tag `<dsql_operation>` eingeschlossen werden. Der Typ des Rückgabewerts ist **nvarchar(max)** .  
   
  Der zurückgegebene Abfrageplan zeigt sequenzielle SQL-Anweisungen. Das Ausführen der Abfrage kann parallelisierte Vorgänge erfordern, weshalb einige der angezeigten sequenziellen Anweisungen möglicherweise zur gleichen Zeit ausgeführt werden.  
   

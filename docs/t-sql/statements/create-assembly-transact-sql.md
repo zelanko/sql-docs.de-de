@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051504"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -129,7 +129,7 @@ Beim Versuch, auf die in \<client_assembly_specifier> angegebene Assembly zuzugr
   
 -   Die Assemblybinärdatei ist wohlgeformt und enthält gültige Metadaten und Codesegmente, und die Codesegmente weisen gültige MSIL-Anweisungen (Microsoft Intermediate Language) auf.  
   
--   Der Satz an Systemassemblys, auf den sie verweist, ist eine der folgenden unterstützten Assemblys in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll und System.Xml.Linq.dll. Auf andere Systemassemblys kann verwiesen werden, aber sie müssen explizit in der Datenbank registriert sein.  
+-   Die Systemassemblys, auf die verwiesen wird, entsprechen einer der folgenden unterstützten Assemblys in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll und System.Xml.Linq.dll. Auf andere Systemassemblys kann verwiesen werden, aber sie müssen explizit in der Datenbank registriert sein.  
   
 -   Für Assemblys, die mit den SAFE- oder EXTERNAL ACCESS-Berechtigungssätzen erstellt werden:  
   
@@ -168,7 +168,7 @@ Die folgenden Berechtigungen werden zum Erstellen einer CLR-Assembly benötigt, 
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Beispiel A: Erstellen einer Assembly aus einer dll  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Beispiel A: Erstellen einer Assembly aus einer DLL  
   
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

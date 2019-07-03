@@ -1,7 +1,7 @@
 ---
 title: In-Memory OLTP (Arbeitsspeicheroptimierung) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/22/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506881"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351656"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (Arbeitsspeicheroptimierung)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] kann die Leistung beim Verarbeiten von Transaktionen, Erfassen und Laden von Daten sowie in vorübergehenden Datenszenarien erheblich verbessern.  Informationen zum grundlegenden Code und Wissen, den bzw. das Sie für einen schnellen Test Ihrer eigenen speicheroptimierten Tabelle und nativ kompilierten gespeicherten Prozedur benötigen, finden Sie unter
@@ -42,7 +43,7 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
  
  Beachten Sie, dass [!INCLUDE[hek_2](../../includes/hek-2-md.md)] die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Technologie zur Verbesserung der Leistung der Transaktionsverarbeitung ist. Zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Technologie, die die Leistung von Berichts- und Analyseabfragen verbessert, siehe [Beschreibung von Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
- Mehrere Verbesserungen wurden an In-Memory-OLTP sowohl in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] als auch in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vorgenommen. Die Transact-SQL-Oberfläche wurde verbessert, um das Migrieren von Datenbanken zu vereinfachen. Unterstützung für die Ausführung von ALTER-Vorgängen für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren wurde hinzugefügt, um Anwendungen einfacher zu verwalten. Informationen zu den neuen Funktionen in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] finden Sie unter [Neuigkeiten im Datenbankmodul](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
+ Mehrere Verbesserungen wurden an In-Memory-OLTP sowohl in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] als auch in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vorgenommen. Die Transact-SQL-Oberfläche wurde verbessert, um das Migrieren von Datenbanken zu vereinfachen. Unterstützung für die Ausführung von ALTER-Vorgängen für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren wurde hinzugefügt, um Anwendungen einfacher zu verwalten.
   
 > [!NOTE]  
 >  **Probieren Sie es aus**  
@@ -53,7 +54,7 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Dieser Abschnitt enthält die folgenden Themen:  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Tauchen Sie direkt in In-Memory-OLTP ein.|
 |[Übersicht und Verwendungsszenarien](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Übersicht über die Aufgaben von In-Memory-OLTP und die Szenarien, die hinsichtlich Leistung davon profitieren.|
@@ -87,7 +88,7 @@ Eine detailliertere Übersicht über In-Memory-OLTP und die Szenarien, in denen 
   
 -   [In-Memory-OLTP-Blog](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankfunktionen](../../relational-databases/database-features.md)  
   
   

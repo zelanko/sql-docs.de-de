@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: afe254580b59dbfea6d486b2999f97642c145d7f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62735118"
 ---
 # <a name="mssqlserver605"></a>MSSQLSERVER_605
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51667449"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|605|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -46,7 +46,7 @@ Mit dem Schweregrad 12 wird ein potenzieller vorübergehender Fehler angegeben, 
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird vorzeitig vom Betriebssystem benachrichtigt, dass ein E/A-Vorgang abgeschlossen wurde; die Fehlermeldung wird angezeigt, obwohl keine tatsächliche Datenbeschädigung vorliegt.  
   
-Durch das Ausführen einer Abfrage mit dem Optimiererhinweis NOLOCK oder durch das Festlegen der Isolationsstufe für Transaktionen auf READ UNCOMMITTED. Wenn eine Abfrage mit NOLOCK oder READ UNCOMMITTED versucht, Daten zu lesen, die von einem anderen Benutzer verschoben oder geändert werden, tritt der Fehler 605 auf. Wenn Sie sicherstellen möchten, dass es sich um einen vorübergehenden 605-Fehler handelt, führen Sie die Abfrage später erneut aus. Weitere Informationen finden Sie in diesem KB-Artikel [235880](https://support.microsoft.com/kb/235880/en-us): „Fehlermeldung „Fehler 605“ beim Ausführen einer Abfrage mit dem NOLOCK-Optimiererhinweis oder Festlegen der Isolationsstufe für Transaktionen auf READ UNCOMMITTED in SQL Server“.  
+Durch das Ausführen einer Abfrage mit dem Optimiererhinweis NOLOCK oder durch das Festlegen der Isolationsstufe für Transaktionen auf READ UNCOMMITTED. Wenn eine Abfrage mit NOLOCK oder READ UNCOMMITTED versucht, Daten zu lesen, die von einem anderen Benutzer verschoben oder geändert werden, tritt der Fehler 605 auf. Wenn Sie sicherstellen möchten, dass es sich um einen vorübergehenden 605-Fehler handelt, führen Sie die Abfrage später erneut aus. Weitere Informationen finden Sie im KB-Artikel [235880](https://support.microsoft.com/kb/235880/en-us): „You receive an "Error 605" error message when you run a query with the optimizer hint NOLOCK or you set the transaction isolation level to READ UNCOMMITTED in SQL Server.“ (Fehlermeldung "Fehler 605" beim Ausführen einer Abfrage mit dem NOLOCK-Optimierungshinweis oder Festlegen der Isolationsstufe für Transaktionen auf READ UNCOMMITTED in SQL Server).  
   
 Im Allgemeinen war der Fehler 605 wahrscheinlich vorübergehend, wenn der Fehler während des Datenzugriffs auftritt, nachfolgende DBCC CHECKDB-Vorgänge jedoch ohne Fehler abgeschlossen werden.  
   
@@ -90,6 +90,6 @@ Wenn das Problem nicht hardwarebedingt ist, führen Sie eine der folgenden Aufga
     > [!CAUTION]  
     > Wenden Sie sich an Ihren primären Unterstützungsanbieter, bevor Sie diese Anweisung ausführen, wenn Sie nicht sicher sind, inwiefern sich die Verwendung von DBCC CHECKDB mit einer REPAIR-Klausel auf Ihre Daten auswirkt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
   

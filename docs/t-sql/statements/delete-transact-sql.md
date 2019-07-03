@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644365"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Allgemeine Tabellenausdrücke können außerdem mit SELECT-, INSERT-, UPDATE- und CREATE VIEW-Anweisungen verwendet werden. Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  Gibt die Anzahl oder den Prozentsatz willkürlicher Zeilen an, die gelöscht werden. *expression* kann eine Anzahl oder ein Prozentsatz der Zeilen sein. Die Zeilen, auf die im TOP-Ausdruck für die Anweisung INSERT, UPDATE oder DELETE verwiesen wird, sind nicht auf bestimmte Weise angeordnet. Weitere Informationen finden Sie unter [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  Der Name einer Cursorvariablen. Die Cursorvariable muss auf einen Cursor verweisen, der Updates zulässt.  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Schlüsselwörter, die angeben, dass Hinweise für den Optimierer verwendet werden, um die Verarbeitung der Anweisung durch [!INCLUDE[ssDE](../../includes/ssde-md.md)] anzupassen. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
@@ -249,7 +249,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Im Beispiel wird auch der Wert der **@@ROWCOUNT**-Funktion ausgegeben, um die Anzahl der gelöschten Zeilen zurückzugeben.  
+ Im folgenden Beispiel wird eine komplexere WHERE-Klausel veranschaulicht. Die WHERE-Klausel definiert zwei Bedingungen, die erfüllt werden müssen, um die zu löschenden Zeilen zu bestimmen. Der Wert in der `StandardCost` -Spalte muss zwischen `12.00` und `14.00` liegen, und der Wert in der `SellEndDate` -Spalte muss NULL sein. Im Beispiel wird auch der Wert der **@@ROWCOUNT** -Funktion ausgegeben, um die Anzahl der gelöschten Zeilen zurückzugeben.  
   
 ```sql
 DELETE Production.ProductCostHistory  

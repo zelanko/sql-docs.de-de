@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503241"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232554"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,42 +153,42 @@ CREATE QUEUE <object>
 |conversation_handle|**uniqueidentifier**|Handle der Konversation, von der diese Nachricht ein Teil ist.|  
 |message_sequence_number|**bigint**|Sequenznummer der Nachricht in der Konversation.|  
 |service_name|**nvarchar(512)**|Name des Diensts, an den die Konversation gerichtet ist.|  
-|service_id|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Diensts, an den die Konversation gerichtet ist.|  
+|service_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Diensts, an den die Konversation gerichtet ist.|  
 |service_contract_name|**nvarchar(256)**|Name des Vertrags, dem die Konversation entspricht.|  
-|service_contract_id|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
+|service_contract_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Vertrags, dem die Konversation entspricht.|  
 |message_type_name|**nvarchar(256)**|Name des Nachrichtentyps, der die Nachricht beschreibt.|  
-|message_type_id|**ssNoversion**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
+|message_type_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objektbezeichner des Nachrichtentyps, der die Nachricht beschreibt.|  
 |validation|**nchar(2)**|Für die Nachricht verwendete Überprüfung.<br /><br /> E=Leer<br /><br /> N = Keine<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|Inhalt der Nachricht.|  
 |message_id|**uniqueidentifier**|Eindeutiger Bezeichner für die Nachricht.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Berechtigung zum Erstellen einer Warteschlange liegt bei Mitgliedern der festen Datenbankrollen db_ddladmin und db_owner  sowie der festen Serverrolle sysadmin.  
+ Die Berechtigung zum Erstellen einer Warteschlange liegt bei Mitgliedern der festen Datenbankrollen `db_ddladmin` oder `db_owner` bzw. der festen Serverrolle `sysadmin`.  
   
- Die REFERENCES-Berechtigung für eine Warteschlange liegt standardmäßig beim Besitzer der Warteschlange, bei Mitgliedern der festen Datenbankrollen db_ddladmin und db_owner  sowie bei Mitgliedern der festen Serverrolle sysadmin.  
+ Die `REFERENCES`-Berechtigung für eine Warteschlange wird standardmäßig dem Besitzer der Warteschlange, den Mitgliedern der festen Datenbankrolle `db_ddladmin` oder `db_owner` bzw. den Mitgliedern der festen Serverrolle `sysadmin` zugewiesen.  
   
- RECEIVE-Berechtigungen für eine Warteschlange liegen standardmäßig beim Besitzer der Warteschlange, bei Mitgliedern der festen Datenbankrolle db_owner und bei Mitgliedern der festen Serverrolle sysadmin.  
+ `RECEIVE`-Berechtigungen für eine Warteschlange liegen standardmäßig beim Besitzer der Warteschlange, bei Mitgliedern der festen Datenbankrolle `db_owner` oder bei Mitgliedern der festen Serverrolle `sysadmin`.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. Erstellen einer Warteschlange ohne Parameter  
  Im folgenden Beispiel wird eine Warteschlange erstellt, die für den Empfang von Nachrichten verfügbar ist. Für die Warteschlange wird keine gespeicherte Aktivierungsprozedur angegeben.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>B. Erstellen einer nicht verfügbaren Warteschlange  
  Im folgenden Beispiel wird eine Warteschlange erstellt, die nicht für den Empfang von Nachrichten verfügbar ist. Für die Warteschlange wird keine gespeicherte Aktivierungsprozedur angegeben.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. Erstellen einer Warteschlange und Angeben von internen Aktivierungsinformationen  
  Im folgenden Beispiel wird eine Warteschlange erstellt, die für den Empfang von Nachrichten verfügbar ist. Die Warteschlange startet die gespeicherte Prozedur `expense_procedure`, wenn eine Nachricht in der Warteschlange angeordnet wird. Die gespeicherte Prozedur wird als der Benutzer `ExpenseUser` ausgeführt. Die Warteschlange startet ein Maximum von `5` Instanzen der gespeicherten Prozedur.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. Erstellen einer Warteschlange in einer bestimmten Dateigruppe  
  Im folgenden Beispiel wird eine Warteschlange in der `ExpenseWorkFileGroup`-Dateigruppe erstellt.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Erstellen einer Warteschlange mit mehreren Parametern  
  Im folgenden Beispiel wird eine Warteschlange in der `DEFAULT`-Dateigruppe erstellt. Die Warteschlange ist nicht verfügbar. Nachrichten werden in der Warteschlange beibehalten, bis die Konversation endet, zu der sie gehören. Wenn die Warteschlange über ALTER QUEUE zur Verfügung gestellt wird, startet die Warteschlange die gespeicherte Prozedur `2008R2.dbo.expense_procedure` für die Verarbeitung von Nachrichten. Die gespeicherte Prozedur wird als der Benutzer ausgeführt, der die `CREATE QUEUE`-Anweisung ausgeführt hat. Die Warteschlange startet ein Maximum von `10` Instanzen der gespeicherten Prozedur.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

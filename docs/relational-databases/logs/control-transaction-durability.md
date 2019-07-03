@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513747"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62707123"
 ---
 # <a name="control-transaction-durability"></a>Steuern der Transaktionsdauerhaftigkeit
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52513747"
     
  In folgenden Situationen ist die verzögerte Transaktionsdauerhaftigkeit u. U. von Vorteil:    
     
- **Datenverluste sind in gewissem Umfang vertretbar.**    
+ **Datenverluste sind in gewissem Umfang vertretbar.**     
  Sofern Datenverluste vertretbar sind, also einzelne Datensätze z. B. nicht ins Gewicht fallen, solange der Großteil der Daten erhalten bleibt, könnten verzögert dauerhafte Transaktionen für Sie in Betracht kommen. Falls kein Datenverlust hinnehmbar ist, sollten Sie auf die verzögerte Transaktionsdauerhaftigkeit verzichten.    
     
- **Bei Schreibvorgängen in das Transaktionsprotokoll treten Engpässe auf.**    
+ **Bei Schreibvorgängen in das Transaktionsprotokoll treten Engpässe auf.**     
  Wenn die Leistungsprobleme auf Latenzen beim Schreiben in das Transaktionsprotokoll zurückzuführen sind, wird Ihre Anwendung u. U. von der Verwendung verzögerter Transaktionsdauerhaftigkeit profitieren.    
     
- **Arbeitsauslastungen weisen eine hohe Konfliktrate auf.**    
+ **Arbeitsauslastungen weisen eine hohe Konfliktrate auf.**     
  Wenn Ihr System Arbeitsauslastungen mit einer hohen Konfliktrate aufweist, wird viel Zeit mit dem Warten auf die Freigabe von Sperren vergeudet. Da die Commitzeit durch die verzögerte Transaktionsdauerhaftigkeit verkürzt wird, können Sperren schneller freigegeben und der Durchsatz erhöht werden.    
     
  ### <a name="delayed-transaction-durability-guarantees"></a>Zusicherungen bei verzögerter Transaktionsdauerhaftigkeit   
@@ -135,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabelle 1: Dauerhaftigkeit in Atomic-Blöcken    
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabelle 1: Dauerhaftigkeit in Atomic-Blöcken    
     
 |Dauerhaftigkeitsoption für Atomic-Block|Keine Transaktion vorhanden|Transaktion wird ausgeführt (vollständig oder verzögert dauerhaft)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    
@@ -207,7 +207,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herunterfahren und Neustart    
  Für die verzögerte Dauerhaftigkeit macht es keinen Unterschied, ob das Herunterfahren unerwartet erfolgt oder das Herunterfahren/Neustarten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geplant ist. Wie bei Notfällen sollten Sie mit Datenverlusten rechnen. Beim geplanten Herunterfahren/Neustarten werden möglicherweise einige Transaktionen, die noch nicht auf dem Datenträger festgeschrieben wurden, zuerst auf dem Datenträger gespeichert, aber dies lässt sich nicht planen. Planen Sie so, als ob beim Herunterfahren/Neustarten (ob geplant oder ungeplant) die Daten genauso wie bei unvorhersehbaren Notfällen verloren gehen.    
     
-## <a name="see-also"></a>Weitere Informationen finden Sie unter    
+## <a name="see-also"></a>Weitere Informationen    
  [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   

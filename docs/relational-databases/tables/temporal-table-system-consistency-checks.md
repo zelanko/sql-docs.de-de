@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 187a333da1f38cc89f8783b48e0c171630339c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034837"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Systemkonsistenzprüfungen von temporalen Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47766179"
 10. Die Verlaufstabelle wurde nicht für die Änderungsnachverfolgung oder Change Data Capture konfiguriert.  
   
 ### <a name="data-consistency-check"></a>Datenkonsistenzprüfung  
- Bevor **SYSTEM_VERSIONING** auf **ON** festgelegt wird, führt das System die folgende Überprüfung durch: **SysEndTime** ≥**SysStartTime**. Sie wird auch im Rahmen jedes DML-Vorgangs durchgeführt.  
+ Bevor **SYSTEM_VERSIONING** auf **ON** festgelegt wird, führt das System die folgende Überprüfung durch, die auch im Rahmen jedes DML-Vorgangs durchgeführt wird: **SysEndTime** ≥**SysStartTime**  
   
  Wenn Sie einen Link zu einer vorhandenen Verlaufstabelle erstellen, können Sie eine Datenkonsistenzprüfung durchführen. Diese Datenkonsistenzprüfung stellt sicher, dass vorhandene Einträge sich nicht überlappen, und dass temporale Anforderungen für jeden einzelnen Eintrag erfüllt werden. Die Datenkonsistenzprüfung ist standardmäßig aktiviert. Die Verwendung der Datenkonsistenzprüfung wird generell immer dann empfohlen, wenn Daten zwischen der aktuellen und der Verlaufstabelle möglicherweise nicht mehr synchronisiert sind. Dies geschieht z.B., wenn eine vorhandene Verlaufstabelle mit Verlaufsdaten aufgefüllt wird.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47766179"
 ## <a name="dbcc-checkconstraints"></a>DBCC CHECKCONSTRAINTS  
  Der Befehl **DBCC CHECKCONSTRAINTS** enthält Konsistenzprüfungen temporaler Daten. Weitere Informationen finden Sie unter [DBCC CHECKCONSTRAINTS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Partitionierung mit temporären Tabellen](../../relational-databases/tables/partitioning-with-temporal-tables.md)   

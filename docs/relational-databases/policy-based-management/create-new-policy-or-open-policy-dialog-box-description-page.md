@@ -12,17 +12,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6315784a4092f73f9243c49902eb40ea905edcf4
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009085"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Beschreibung'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie einer richtlinienbasierten Verwaltungsrichtlinie eine Beschreibung und zusätzliche Informationen hinzufügen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Kategorie**  
  Wenn Sie eine neue Richtlinie erstellen, wählen Sie eine Richtlinienkategorie aus.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "51512615"
  **Zusätzlicher Hilfelink: Adresse**  
  Geben Sie den Link einer Webseite ein, die geöffnet werden soll, wenn Benutzer auf den Linktext klicken, der auf der Seite **Ergebnisse, Detailansicht** angezeigt wird.  
   
- **Zusätzlicher Hilfelink: Testlink**  
+ **Zusätzlicher Hilfelink: Link testen**  
  Klicken Sie, um den Link zu öffnen und die Gültigkeit des Links zu testen.  
   
  **Erstellt am**  
@@ -50,7 +50,7 @@ ms.locfileid: "51512615"
  **Geändert von**  
  Der Anmeldename, der die letzte Änderung an der Richtlinie vorgenommen hat.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

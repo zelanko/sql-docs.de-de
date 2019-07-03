@@ -27,18 +27,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df2683d7a0c580624dd56aa8d35e183ab7ac6bbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942800"
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt an, wie viele Millisekunden eine Anweisung auf die Aufhebung einer Sperre wartet.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,7 +66,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: Festlegen des Sperrtimeout auf 1800 Millisekunden  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: Festlegen des Sperrtimeouts auf 1800 Millisekunden  
  Im folgenden Beispiel wird der Sperrtimeout auf `1800` Millisekunden festgelegt.  
   
 ```sql  
@@ -89,7 +89,7 @@ SET LOCK_TIMEOUT -1;
 SET LOCK_TIMEOUT 1800;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [SET-Anweisungen &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

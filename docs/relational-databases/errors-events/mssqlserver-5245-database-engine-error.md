@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a5a1c3882a310a5fb0debb52ccfc7c0e7cdd35de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825541"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63456593"
 ---
 # <a name="mssqlserver5245"></a>MSSQLSERVER_5245
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47825541"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|5245|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC4_TABLE_LOCK_TIMEOUT_EXCEEDED|  
-|Meldungstext|Objekt-ID O_ID ('NAME'-Objekt): DBCC konnte keine Sperre für dieses Objekt erhalten, da das Timeout für die Sperranforderung überschritten wurde. Das Objekt wurde ausgelassen und wird nicht verarbeitet.|  
+|Meldungstext|Objekt-ID „O_ID“ (Objekt „NAME“): DBCC konnte keine Sperre für das Objekt erhalten, da das Timeout für die Sperranforderung überschritten wurde. Das Objekt wurde ausgelassen und wird nicht verarbeitet.|  
   
 ## <a name="explanation"></a>Erklärung  
 Ein Sperrtimeout ist aufgetreten, während DBCC auf eine Tabellensperre für das angegebene Objekt gewartet hat.  

@@ -15,18 +15,20 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7e2c9ee878b49065a040865bc32d62837e8b8e25
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f9750cdc2dea7049bde77d31c275789691abf1b0
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781021"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313817"
 ---
-# <a name="set-result-set-caching-transact-sql-preview-for-azure-sql-data-warehouse-gen2"></a>SET RESULT SET CACHING (Transact-SQL) (Vorschau für Azure SQL Data Warehouse Gen2)
+# <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Bewirkt, dass Azure SQL Data Warehouse Abfrageresultsets zwischenspeichert.
+Steuert das Verhalten für das Zwischenspeichern von Resultsets für die aktuelle Clientsitzung.  
+
+Gilt für Azure SQL Data Warehouse (Vorschauversion) 
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,98 +40,15 @@ SET RESULT_SET_CACHING { ON | OFF };
   
 ## <a name="remarks"></a>Remarks  
 
-> [!Note]
-> Während der schrittweisen Einführung dieser Funktion in allen Regionen überprüfen Sie die in Ihrer Instanz bereitgestellte Version und die neuesten [Versionshinweise für Azure SQL Data Warehouse](/azure/sql-data-warehouse/release-notes-10-0-10106-0) auf Funktionsverfügbarkeit.
-  
-Sie müssen während der Ausführung dieses Befehls mit der Masterdatenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. Eine neue Spalte namens „is_result_set_caching_on“ wurde in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) eingeführt, um die Einstellung für die Zwischenspeicherung von Ergebnissen für eine Datenbank anzuzeigen.  
+**ON**   
+Aktiviert das Zwischenspeichern von Resultsets für die aktuelle Sitzung.  Das Zwischenspeichern eines Resultsets kann für eine Sitzung nicht aktiviert werden (ON), wenn es auf Datenbankebene deaktiviert (OFF) ist.
 
-**ON** (EIN) Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets im Azure SQL Data Warehouse-Speicher zwischengespeichert werden.
+**OFF**   
+Deaktivieren Sie das Zwischenspeichern von Resultsets für die aktuelle Sitzung.
 
-**OFF** (AUS) Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets nicht im Azure SQL Data Warehouse-Speicher zwischengespeichert werden.
-
-Benutzer können feststellen, ob eine Abfrage mit einem Ergebniscachetreffer oder -fehler ausgeführt wurde, indem sie [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) mit einer bestimmten request_id abfragen. Liegt ein Cachetreffer vor, enthält das Abfrageergebnis einen einzigen Schritt mit den folgenden Details:
-
-|**Spaltenname**|**Ist gleich**|**ReplTest1**|
-|----|----|----|
-|operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-|Befehl|Wie|%DWResultCacheDb%|
-||||
-  
 ## <a name="permissions"></a>Berechtigungen
 
-Folgende Berechtigungen sind erforderlich:
-
-- Der Prinzipalanmeldename auf Serverebene (der während des Bereitstellungsprozesses erstellt wurde) oder
-- Mitgliedschaft in der dbmanager-Datenbankrolle.
-
-Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle „dbmanager“ ist.
-  
-## <a name="examples"></a>Beispiele
-
-### <a name="enable-result-set-caching-for-a-database"></a>Aktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
-
-```sql
-ALTER DATABASE myTestDW  
-SET RESULT_SET_CACHING ON;
-```
-
-### <a name="disable-result-set-caching-for-a-database"></a>Deaktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
-
-```sql
-ALTER DATABASE myTestDW  
-SET RESULT_SET_CACHING OFF;
-```
-
-### <a name="check-result-set-caching-setting-for-a-database"></a>Überprüfen der Einstellung für die Zwischenspeicherung von Resultsets für eine Datenbank
-
-```sql
-SELECT name, is_result_set_caching_on  
-FROM sys.databases
-```
-
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Überprüfen der Anzahl von Abfragen mit Resultset-Cachetreffern oder -fehlern
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses,
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A
-```
-
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Überprüfen auf Resultsetcachetreffer oder -fehler für eine Abfrage
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286'
-      and operation_type = 'ReturnOperation'
-      and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit
-```
-
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Überprüfen auf alle Abfragen mit Resultset-Cachetreffern
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0
-```
+Erfordert die Mitgliedschaft in der „public“-Rolle.
 
 ## <a name="see-also"></a>Siehe auch
 

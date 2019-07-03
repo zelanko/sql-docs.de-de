@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d7344df7b16bdef8bb6d49ac5ee313916a1c0a49
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131920"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232498"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "54131920"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  
@@ -52,12 +51,12 @@ CREATE SERVICE service_name
  Der Name des zu erstellenden Diensts. Ein neuer Dienst wird in der aktuellen Datenbank erstellt. Der Besitzer dieses neuen Diensts ist der in der AUTHORIZATION-Klausel angegebene Prinzipal. Server-, Datenbank- und Schemaname können nicht angegeben werden. Bei *service_name* muss es sich um einen gültigen **sysname**-Wert handeln.  
   
 > [!NOTE]  
->  Erstellen Sie keinen Dienst, der das Schlüsselwort ANY für *service_name* verwendet. Wenn Sie in CREATE BROKER PRIORITY für einen Dienstnamen ANY angeben, wird die Priorität für alle Dienste berücksichtigt. ANY steht nicht für einen Dienst mit dem Namen ANY.  
+> Erstellen Sie keinen Dienst, der das Schlüsselwort ANY für *service_name* verwendet. Wenn Sie `ANY` für einen Dienstnamen in `CREATE BROKER PRIORITY` festlegen, wird die Priorität für alle Dienste berücksichtigt. ANY steht nicht für einen Dienst mit dem Namen ANY.  
   
  AUTHORIZATION *owner_name*  
  Legt den Besitzer des Diensts auf den angegebenen Datenbankbenutzer bzw. die angegebene Rolle fest. Ist der aktuelle Benutzer **dbo** oder **sa**, kann *owner_name* der Name eines beliebigen gültigen Benutzers bzw. einer beliebigen gültigen Rolle sein. Andernfalls muss *owner_name* der Name des aktuellen Benutzers, der Name eines Benutzers, für den der aktuelle Benutzer IMPERSONATE-Berechtigungen besitzt, oder der Name einer Rolle sein, der der aktuelle Benutzer angehört.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  Gibt den Namen der Warteschlange an, die Nachrichten für den Dienst empfängt. Die Warteschlange muss in der gleichen Datenbank vorhanden sein wie der Dienst. Wird *schema_name* nicht bereitgestellt, handelt es sich bei dem Schema um das Standardschema für den Benutzer, der die Anweisung ausführt.  
   
  *contract_name*  
@@ -67,16 +66,16 @@ CREATE SERVICE service_name
  Gibt an, dass der Dienst das Ziel von Konversationen sein kann, die dem DEFAULT-Vertrag entsprechen. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Der DEFAULT-Vertrag ermöglicht es beiden Seiten der Konversation, Nachrichten vom Nachrichtentyp DEFAULT zu senden. Der Nachrichtentyp DEFAULT verwendet für die Überprüfung NONE.  
   
 ## <a name="remarks"></a>Remarks  
- Ein Dienst macht die Funktionalität verfügbar, die von den Verträgen bereitgestellt wird, denen er zugeordnet ist, sodass sie von anderen Diensten verwendet werden können. Die CREATE SERVICE-Anweisung gibt die Verträge an, deren Ziel dieser Dienst ist. Ein Dienst kann nur ein Ziel für Konversationen sein, die die von dem Dienst angegebenen Verträge verwenden. Ein Dienst, der keine Verträge angibt, macht keine Funktionalität für andere Dienste verfügbar.  
+ Ein Dienst macht die Funktionalität verfügbar, die von den Verträgen bereitgestellt wird, denen er zugeordnet ist, sodass sie von anderen Diensten verwendet werden können. Die `CREATE SERVICE`-Anweisung gibt die Verträge an, deren Ziel dieser Dienst ist. Ein Dienst kann nur ein Ziel für Konversationen sein, die die von dem Dienst angegebenen Verträge verwenden. Ein Dienst, der keine Verträge angibt, macht keine Funktionalität für andere Dienste verfügbar.  
   
  Konversationen, die von diesem Dienst initiiert werden, können einen beliebigen Vertrag verwenden. Sie erstellen einen Dienst ohne Angabe von Verträgen, wenn der Dienst nur Konversationen initiiert.  
   
  Wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine neue Konversation von einem Remotedienst annimmt, bestimmt der Name des Zieldiensts die Warteschlange, in der der Broker Nachrichten in der Konversation anordnet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Berechtigung zum Erstellen eines Diensts liegt standardmäßig bei Mitgliedern der festen Datenbankrollen **db_ddladmin** und **db_owner** sowie der festen Serverrolle **sysadmin**. Der Benutzer, der die CREATE SERVICE-Anweisung ausführt, muss über die REFERENCES-Berechtigung für die Warteschlange und alle angegebenen Verträge verfügen.  
+ Die Berechtigung zum Erstellen eines Diensts liegt standardmäßig bei Mitgliedern der festen Datenbankrollen `db_ddladmin` oder `db_owner` bzw. der festen Serverrolle `sysadmin`. Der Benutzer, der die `CREATE SERVICE`-Anweisung ausführt, muss über die `REFERENCES`-Berechtigung für die Warteschlange und alle angegebenen Verträge verfügen.  
   
- Die REFERENCES-Berechtigung für einen Dienst liegt standardmäßig beim Besitzer des Diensts, bei Mitgliedern der festen Datenbankrollen **db_ddladmin** und **db_owner** sowie bei Mitgliedern der festen Serverrolle **sysadmin**. SEND-Berechtigungen für einen Dienst liegen standardmäßig beim Besitzer dieses Diensts, bei Mitgliedern der festen Datenbankrolle **db_owner** und bei Mitgliedern der festen Serverrolle **sysadmin**.  
+ Standardmäßig verfügen der Besitzer des Diensts, Mitglieder der festen Datenbankrollen `db_ddladmin` oder `db_owner` bzw. Mitglieder der festen Serverrolle `sysadmin` über die `REFERENCES`-Berechtigung für einen Dienst. `SEND`-Berechtigungen für einen Dienst liegen standardmäßig beim Besitzer des Diensts, bei Mitgliedern der festen Datenbankrolle `db_owner` oder bei Mitgliedern der festen Serverrolle `sysadmin`.  
   
  Ein Dienst kann kein temporäres Objekt sein. Dienstnamen, die mit **#** beginnen, sind zulässig. Hierbei handelt es sich jedoch um dauerhafte Objekte.  
   
@@ -85,7 +84,7 @@ CREATE SERVICE service_name
 ### <a name="a-creating-a-service-with-one-contract"></a>A. Erstellen eines Diensts mit einem Vertrag  
  Im folgenden Beispiel wird der Dienst `//Adventure-Works.com/Expenses` in der `ExpenseQueue`-Warteschlange im `dbo`-Schema erstellt. Dialoge, die diesen Dienst zum Ziel haben, müssen dem Vertrag `//Adventure-Works.com/Expenses/ExpenseSubmission` entsprechen.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE [dbo].[ExpenseQueue]  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
@@ -94,7 +93,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses]
 ### <a name="b-creating-a-service-with-multiple-contracts"></a>B. Erstellen eines Diensts mit mehreren Verträgen  
  Im folgenden Beispiel wird der Dienst `//Adventure-Works.com/Expenses` für die `ExpenseQueue`-Warteschlange erstellt. Dialoge, die diesen Dienst zum Ziel haben, müssen entweder dem Vertrag `//Adventure-Works.com/Expenses/ExpenseSubmission` oder dem Vertrag `//Adventure-Works.com/Expenses/ExpenseProcessing` entsprechen.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission],  
      [//Adventure-Works.com/Expenses/ExpenseProcessing]) ;  
@@ -103,7 +102,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 ### <a name="c-creating-a-service-with-no-contracts"></a>C. Erstellen eines Diensts ohne Verträge  
  Im folgenden Beispiel wird die Dienstwarteschlange `//Adventure-Works.com/Expenses on the ExpenseQueue` erstellt. Dieser Dienst verfügt über keine Vertragsinformationen. Daher kann der Dienst nur der Initiator eines Dialogs sein.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   

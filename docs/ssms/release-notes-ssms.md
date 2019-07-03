@@ -1,7 +1,5 @@
 ---
 title: Versionshinweise zu SQL Server Management Studio (SSMS) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 04/25/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +9,14 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3139f841d1ef7c75decbc5a3dbab34fb333d289c
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.custom: ''
+ms.date: 06/12/2019
+ms.openlocfilehash: 74ec0cd11e1c13363905c71a64096f6c4eb8b053
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66428999"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263541"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -28,7 +28,7 @@ Dieser Artikel enthält Details zu Updates, Verbesserungen und Fehlerbehebungen 
 The latest ## H2 section of this Release Notes article has been reformatted to match the new standard.
 The new standard replaces the use of bullet lists with the 2-column markdown table format.
 Please use the new 2-column table format going forward.
-And please do include the final blank row of "| &nbsp; | &nbsp; |".
+And please do include the final blank row of "| &nbsp;| &nbsp;|".
 
 The ## H2 titles are also being shortened, by the removal of unnecessary repetitive strings.
 In this case, "## SSMS 17.9" is being shortened to "## 17.9" (as one standard actual example).
@@ -42,18 +42,82 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="180-ga-april-2019"></a>Version 18.0 (allgemein verfügbar), April 2019
+## <a name="ssms-181"></a>SSMS 18.1
 
-Herunterladen: &nbsp; &nbsp; [SSMS 18.0 (allgemein verfügbare Version) herunterladen](download-sql-server-management-studio-ssms.md)<br/>
-Buildnummer: &nbsp; &nbsp; 15.0.18118.0<br/>
-Releasedatum: &nbsp; &nbsp; 24. April 2019
+Herunterladen: &nbsp; &nbsp; [SSMS 18.1 herunterladen](download-sql-server-management-studio-ssms.md)<br/>
+Buildnummer: &nbsp; &nbsp; 15.0.18131.0<br/>
+Releasedatum: &nbsp; &nbsp; 11. Juni 2019
 
-Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Versionen von SSMS finden Sie weiter unten im Abschnitt [Vorgängerversionen von SSMS](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.1 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA). Frühere Versionen von SSMS finden Sie weiter unten im Abschnitt [Vorgängerversionen von SSMS](release-notes-ssms.md#previous-ssms-releases).
 
-## <a name="whats-new-in-180-ga"></a>Neuerungen in der allgemein verfügbaren Version 18.0
+Im Vergleich zu Version 18.0 ist Version 18.1 ein kleines Update mit den folgenden neuen Elementen und Fehlerbehebungen:
 
-| Neues Element | Details |
-| :------- | :------ |
+## <a name="whats-new-in-181"></a>Neues in Version 18.1
+
+| Neues Element| Details|
+| :-------| :------|
+| Datenbankdiagramme | In SSMS wurden wieder Datenbankdiagramme hinzugefügt. Weitere Informationen finden Sie unter [Datenbankdiagramme](https://feedback.azure.com/forums/908035/suggestions/37507828). |
+| SSBDIAGNOSE.EXE |Dem SSMS-Paket wurde wieder die SQL Server-Diagnose (Befehlszeilentool) hinzugefügt.|
+| Integration Services (SSIS) | Unterstützung für die Zeitplanung des SSIS-Pakets in Azure, das sich entweder im SSIS-Katalog in Azure oder im Dateisystem befindet. Es gibt drei Einträge für das Starten des Dialogfelds „Neuer Zeitplan“: Das Menüelement *Neuer Zeitplan...* wird angezeigt, wenn Sie mit der rechten Maustaste auf das SSIS-Paket im SSIS-Katalog in Azure klicken. Die zweite Option erreichen Sie über das Menüelement *Schedule SSIS Package in Azure* (Zeitplan für das SSIS-Paket in Azure) unter dem Menüelement *Migrate to Azure* (Migrieren zu Azure) unter *Tools*. Die dritte Option „Schedule SSIS“ (SSIS-Zeitplan in Azure) wird angezeigt, wenn Sie mit der rechten Maustaste auf den Auftragsordner unter dem SQL Server-Agent der verwalteten Azure SQL-Datenbank-Instanz klicken.|
+
+## <a name="bug-fixes-in-181"></a>Fehlerkorrekturen in Version 18.1
+
+| Neues Element | Detail: |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Barrierefreiheit | Verbesserte Barrierefreiheit der Benutzeroberfläche des Agent-Auftrags. |
+| Barrierefreiheit | Verbesserte Barrierefreiheit auf der Seite „Stretch Datenbank-Monitor“ durch Hinzufügen eines barrierefreien Namens für die Schaltfläche *Automatisch aktualisieren* und eines Namens zur Verwendung von Screenreader-Software, der Benutzer darüber informiert, um welche Schaltfläche es sich handelt und welche Auswirkungen es hat, wenn diese gedrückt wird. |
+| ADS-Integration| Es wurde ein Problem behoben, bei dem es bei der Verwendung von ADS-registrierten Servern zu Abstürzen kam.|
+| Datenbank-Designer | Unterstützung für die „Latin1_General_100_BIN2_UTF8“-Sortierung (verfügbar in SQL Server 2019 CTP 3.0). |
+| Datenklassifizierung | Es wird verhindert, dass Spalten in Verlaufstabellen Vertraulichkeitsbezeichnungen hinzugefügt werden, was nicht unterstützt wird. |
+| Datenklassifizierung | Es wurde ein Problem behoben, bei dem der Kompatibilitätsgrad falsch behandelt wurde (Server im Vergleich zur Datenbank). |
+| Datenbank-Designer | Unterstützung für die „Latin1_General_100_BIN2_UTF8“-Sortierung (verfügbar in SQL 2019 CTP 3.0). |
+| SSMS allgemein | Es wurde ein Problem behoben, bei dem die Skripterstellung von Pseudospalten in einem Index fehlerhaft war. |
+| SSMS allgemein | Es wurde ein Problem auf der Seite „Anmeldungseigenschaften“ behoben, bei dem das Klicken auf die Schaltfläche *Anmeldeinformationen hinzufügen* eine Nullverweisausnahme zur Folge hatte. |
+| SSMS allgemein | Es wurde ein Problem hinsichtlich der Größenanzeige der Spalte „money“ auf der Seite „Indexeigenschaften“ behoben. |
+| SSMS allgemein | Es wurde ein Problem behoben, bei dem SSMS die IntelliSense-Einstellung von *Tools/Extras* im SQL-Editor-Fenster nicht berücksichtigt hat. |
+| SSMS allgemein | Es wurde ein Problem behoben, bei dem SSMS die Hilfeeinstellungen nicht berücksichtigt hat (online im Vergleich zu offline). |
+| Hohe DPI-Werte | Das Layout von Steuerelementen in Fehlerdialogen für nicht unterstützte Abfrageoptionen wurde korrigiert. |
+| Hohe DPI-Werte | Das Layout von Steuerelementen auf der Seite *Neue Verfügbarkeitsgruppe* wurde korrigiert, |
+| Hohe DPI-Werte | Das Layout der Seite *Neuer Auftragszeitplan* wurde korrigiert. Weitere Details finden Sie im [Feedbackforum](https://feedback.azure.com/forums/908035/suggestions/37632094). |
+| Importieren von Flatfiles | Es wurde ein Problem behoben, bei dem Zeilen beim Import verloren gingen.|
+| IntelliSense/Editor | Der SMO-basierte Datenverkehr von Abfragen zu Azure SQL-Datenbanken für IntelliSense wurde reduziert. |
+| IntelliSense/Editor | Es wurden grammatikalische Fehler in der QuickInfo behoben, die beim Eingeben von T-SQL zum Erstellen eines Benutzers angezeigt wurden. Außerdem wurde die Fehlermeldung zum Unterscheiden zwischen Benutzern und Anmeldungen behoben. |
+| Protokollanzeige | Es wurde ein Problem behoben, bei dem SSMS selbst nach einem Doppelklick auf ein älteres Archivzeichen im Objekt-Explorer immer das aktuelle Server- oder Agent-Protokoll öffnete. Weitere Details finden Sie im [Feedbackforum](https://feedback.azure.com/forums/908035/suggestions/37633648). |
+| SSMS-Setup | Es wurde ein Problem behoben, bei dem das SSMS-Setup fehlschlug, wenn im Setup des Protokollpfads Leerzeichen enthalten waren. Weitere Details finden Sie im [Feedbackforum](https://feedback.azure.com/forums/908035/suggestions/37496110). |
+| SSMS-Setup | Ein Problem wurde behoben, bei dem SSMS nach Anzeigen des Begrüßungsbildschirms sofort beendet wurde. </br> Auf den folgenden Websites erhalten Sie weitere Informationen: [Feedback](https://feedback.azure.com/forums/908035/suggestions/37502512), [SSMS startet nicht](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start) und [Datenbankadministratoren](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up). |
+| Objekt-Explorer | Es wurden Einschränkungen bei der Aktivierung von *PowerShell starten* beseitigt, die bei einer Verbindung mit SQL unter Linux auftraten. |
+| Objekt-Explorer | Es wurde ein Problem behoben, bei dem SSMS beim Erweitern des Knotens „PolyBase/Erweiterungsgruppe“ abstürzte (bei einer Verbindung mit einem Computeknoten). |
+| Objekt-Explorer | Es wurde ein Problem behoben, bei dem das Menüelement *Deaktiviert* auch nach dem Deaktivieren eines bestimmten Indexes weiterhin aktiviert war. Weitere Details finden Sie im [Feedbackforum](https://feedback.azure.com/forums/908035/suggestions/37735375). |
+| Berichte | Korrigieren des Berichts, um tatsächlich „GrantedQueryMemory“ in KB anzuzeigen (Bericht „SQL Performance Dashboard“). Weitere Details finden Sie im [Feedbackforum](https://feedback.azure.com/forums/908035/suggestions/37167289). |
+| Berichte | Verbesserte Ablaufverfolgung des Protokollblocks in Always On-Szenarios. |
+| Showplan | Das neue Showplanelement *SpillOccurred* wurde zum Showplanschema hinzugefügt. |
+| Showplan | Es wurden Remotelesevorgänge (*ActualPageServerReads*, *ActualPageServerReadAheads*, *ActualLobPageServerReads* und *ActualLobPageServerReadAheads*) zum Showplanschema hinzugefügt. |
+| SMO/Skripterstellung | Das Abfragen von Edgeeinschränkungen während der Skripterstellung wird für nicht graphische Tabellen vermieden. |
+| SMO/Skripterstellung | Einschränkungen hinsichtlich der Vertraulichkeitsklassifizierung bei der Skripterstellung von Spalten mit der *Datenklassifizierung* wurden aufgehoben. |
+| SMO/Skripterstellung | Es wurde ein Problem behoben, bei dem „Skript generieren“ in einer Graphtabelle fehlschlägt, wenn Daten generiert werden. Weitere Details finden Sie im [Feedbackforum](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898466). |
+| SMO/Skripterstellung | Es wurde ein Problem behoben, bei dem die „EnumObjects()“-Methode keine Schemanamen für ein Synonym abgerufen haben. |
+| SMO/Skripterstellung | Es wurde ein Problem in „UIConnectionInfo.LoadFromStream()“ behoben, bei dem der Abschnitt *AdvancedOptions* nicht gelesen werden konnte (wenn kein Kennwort angegeben wurde). |
+| SQL-Agent | Es wurde ein Problem behoben, bei dem SSMS bei der Arbeit mit dem Fenster „Auftragseigenschaften“ fehlschlug. Weitere Details finden Sie im [Feedbackforum](https://feedback.azure.com/forums/908035/suggestions/37164244). |
+| SQL-Agent | Es wurde ein Problem behoben, bei dem die Schaltfläche „Anzeigen“ in den *Auftragsschritt-Eigenschaften* nicht immer aktiviert war und somit das Anzeigen der Ausgabe eines bestimmten Auftragsschritts verhindert wurde. |
+| XEvent-Benutzeroberfläche | Die Spalte „Paket“ wurde zu XEvents-Listen hinzugefügt, um Ereignisse mit identischem Namen zu unterscheiden. |
+| XEvent-Benutzeroberfläche | Der fehlende Klassentyp „EXTERNAL LIBRARY“ wurde hinzugefügt, der „XEventUI“ zugeordnet ist. |
+
+## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
+
+Laden Sie die Vorgängerversionen von SSMS herunter, indem Sie die Titellinks in den folgenden Abschnitten anklicken:
+
+## <a name="downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649"></a>![Download](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+
+- Releasenummer: 18.0<br>
+- Buildnummer: 15.0.18118.0<br>
+- Releasedatum: 24. April 2019
+
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
+
+### <a name="whats-new-in-180"></a>Neues in 18.0
+
+| Neues Element| Details|
+| :-------| :------|
 |Unterstützung für SQL Server 2019|SSMS 18.0 ist das erste Release, bei dem SQL Server 2019 (CompatLevel 150) vollständig *berücksichtigt* wird.|
 |Unterstützung für SQL Server 2019|Unterstützung für „BATCH_STARTED_GROUP“ und „BATCH_COMPLETED_GROUP“ in SQL Server 2019 und der verwalteten SQL-Instanz.|
 |Unterstützung für SQL Server 2019|SMO: Unterstützung für Inlining benutzerdefinierter Funktionen wurde hinzugefügt.|
@@ -61,15 +125,15 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Unterstützung für SQL Server 2019|Always Encrypted: Unterstützung für AEv2/Enclave wurde hinzugefügt.|
 |Unterstützung für SQL Server 2019|Always Encrypted: Das Verbindungsdialogfeld verfügt über eine neue Registerkarte „Always Encrypted“, wenn der Benutzer auf die Schaltfläche „Optionen“ klickt, um Enclave-Unterstützung zu aktivieren/konfigurieren.|
 |Geringere Downloadgröße in SSMS| Die aktuelle Downloadgröße beträgt ca. 500 MB, was ungefähr der Hälfte des SSMS-Bündels 17.x entspricht.
-|SSMS basiert auf Visual Studio 2017 Isolated Shell |Die neue Shell (SSMS basiert auf Visual Studio 2017, Version 15.9.11) enthält die neuesten Sicherheitspatches, und mit ihr werden alle Fehlerkorrekturen bei Barrierefreiheitsproblemen entsperrt.|
-|Verbesserungen für die Barrierefreiheit in SSMS | Ein Schwerpunkt lag in der Behebung von Problemen mit der Barrierefreiheit in allen Tools (SSMS, DTA und Profiler).|
-|SSMS kann jetzt in einem benutzerdefinierten Ordner installiert werden | Diese Option ist über die Befehlszeile (nützlich bei einer unbeaufsichtigten Installation) und die Setup-Benutzeroberfläche verfügbar. Übergeben Sie über die Befehlszeile dieses zusätzliche Argument an die Datei „SSMS-Setup-ENU.exe“:<br>   SSMSInstallRoot=C:\MySSMS18<br>   Der neue Standardspeicherort für die Installation von SSMS lautet: „%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe“.<br>Das bedeutet nicht, dass SSMS mehrere Instanzen besitzt.|
+|SSMS basiert auf Visual Studio 2017 Isolated Shell|Die neue Shell (SSMS basiert auf Visual Studio 2017, Version 15.9.11) enthält die neuesten Sicherheitspatches, und mit ihr werden alle Fehlerkorrekturen bei Barrierefreiheitsproblemen entsperrt.|
+|Verbesserungen für die Barrierefreiheit in SSMS| Ein Schwerpunkt lag in der Behebung von Problemen mit der Barrierefreiheit in allen Tools (SSMS, DTA und Profiler).|
+|SSMS kann jetzt in einem benutzerdefinierten Ordner installiert werden| Diese Option ist über die Befehlszeile (nützlich bei einer unbeaufsichtigten Installation) und die Setup-Benutzeroberfläche verfügbar. Übergeben Sie über die Befehlszeile dieses zusätzliche Argument an die Datei „SSMS-Setup-ENU.exe“:<br> SSMSInstallRoot=C:\MySSMS18<br> Der neue Standardspeicherort für die Installation von SSMS lautet: „%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe“.<br>Das bedeutet nicht, dass SSMS mehrere Instanzen besitzt.|
 |SSMS kann in einer anderen Sprache als der Betriebssystemsprache installiert werden|Das Einrichten gemischter Sprachen wird nicht mehr blockiert. Sie können z. B. die deutsche Version von SSMS unter der französischen Windows-Version installieren. Stimmt die Sprache des Betriebssystems nicht mit der Sprache von SSMS überein, muss der Benutzer die Sprache folgendermaßen ändern: **Extras** > **Optionen** > **Internationale Einstellungen**. Andernfalls wird in SSMS die englische Benutzeroberfläche angezeigt.|
-|SSMS verwendet keine gemeinsamen Komponenten mehr mit SQL Engine |Ein Schwerpunkt lag in der Vermeidung von gemeinsamen Komponenten mit SQL Engine, da dies häufig zu Wartungsproblemen (durch unbeabsichtigtes gegenseitiges Überschreiben der installierten Dateien) führte.|
+|SSMS verwendet keine gemeinsamen Komponenten mehr mit SQL Engine|Ein Schwerpunkt lag in der Vermeidung von gemeinsamen Komponenten mit SQL Engine, da dies häufig zu Wartungsproblemen (durch unbeabsichtigtes gegenseitiges Überschreiben der installierten Dateien) führte.|
 |SSMS erfordert NetFx 4.7.2 oder höher.|Wir haben die Mindestanforderung von NetFx 4.6.1 auf NetFx 4.7.2 erhöht, damit die neuen Funktionen genutzt werden können, die vom neuen Framework bereitgestellt werden.|
 |Möglichkeit zum Migrieren von SSMS-Einstellungen| Beim ersten Starten von SSMS 18 wird der Benutzer dazu aufgefordert, die Einstellungen aus 17.x zu migrieren. Die Dateien für Benutzereinstellungen werden jetzt als XML-Textdatei gespeichert, wodurch die Portabilität verbessert und eine Bearbeitung ermöglicht werden.|
 |Unterstützung für hohe DPI-Werte| Hohe DPI-Werte sind nun standardmäßig aktiviert.|
-|SSMS wird mit dem Microsoft OLE DB-Treiber geliefert | Informationen hierzu finden Sie unter [Herunterladen des Microsoft OLE DB-Treibers für SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server).|
+|SSMS wird mit dem Microsoft OLE DB-Treiber geliefert| Informationen hierzu finden Sie unter [Herunterladen des Microsoft OLE DB-Treibers für SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server).|
 |SSMS wird unter Windows 8 nicht unterstützt. Windows 10 und Windows Server 2016 erfordern Version 1607 (10.0.14393) oder höher|Aufgrund der neuen Abhängigkeit von NetFx 4.7.2 wird SSMS 18.0 nicht unter Windows 8 und älteren Versionen von Windows 10 und Windows Server 2016 installiert. Das SSMS-Setup wird bei diesen Systemen blockiert. Windows 8.1 wird weiterhin unterstützt.|
 |SSMS wird nicht mehr der PATH-Umgebungsvariable hinzugefügt|Der Pfad zu SSMS.EXE (und Tools im Allgemeinen) wird nicht mehr zum Pfad hinzugefügt. Benutzer können diesen entweder manuell hinzufügen oder bei einem modernen Windows-Computer das Startmenü verwenden.|
 |Paket-IDs sind zum Entwickeln von SSMS-Erweiterungen nicht mehr erforderlich| In der Vergangenheit wurden in SSMS nur bekannte Pakete selektiv geladen, sodass Entwickler ihr eigenes Paket registrieren mussten. Das ist nicht mehr der Fall.|
@@ -81,9 +145,9 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |SSMS allgemein|Unterstützung für UTF-8 wurde im Dialogfeld für die Sortierung auf der SSMS-Benutzeroberfläche hinzugefügt.|
 |SSMS allgemein|Es wurde für MRU-Kennwörter des Verbindungsdialogfelds zur „Windows-Anmeldeinformationsverwaltung“ gewechselt. Dadurch wird das lange bestehende Problem der nicht immer zuverlässigen Persistenz von Kennwörtern behoben.|
 |SSMS allgemein|Verbesserte Unterstützung für Systeme mit mehreren Monitoren, indem sichergestellt wird, dass immer mehr Dialogfelder und Fenster auf dem erwarteten Monitor eingeblendet werden.|
-|SSMS allgemein|Die Serverkonfiguration „Standardeinstellung der Sicherungsprüfsumme“ wurde auf der neuen Seite „Datenbankeinstellungen“ im Dialogfeld „Servereigenschaften“ bereitgestellt. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974. |
-|SSMS allgemein|Die Einstellung „maximum size for error log files“ (Maximale Größe von Fehlerprotokolldateien) wurde unter „SQL Server-Fehlerprotokolle konfigurieren“ zur Verfügung gestellt. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/33624115. |
-|SSMS allgemein|„Zu Azure migrieren“ wurde im Menü „Extras“ hinzugefügt: Für einen schnellen und einfachen Zugriff und schnellere Migrationen zu Azure wurden der Datenmigrations-Assistent sowie Azure Database Migration Service integriert. |
+|SSMS allgemein|Die Serverkonfiguration „Standardeinstellung der Sicherungsprüfsumme“ wurde auf der neuen Seite „Datenbankeinstellungen“ im Dialogfeld „Servereigenschaften“ bereitgestellt. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974](https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974).|
+|SSMS allgemein|Die Einstellung „maximum size for error log files“ (Maximale Größe von Fehlerprotokolldateien) wurde unter „SQL Server-Fehlerprotokolle konfigurieren“ zur Verfügung gestellt. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/33624115](https://feedback.azure.com/forums/908035/suggestions/33624115).|
+|SSMS allgemein|„Zu Azure migrieren“ wurde im Menü „Extras“ hinzugefügt: Für einen schnellen und einfachen Zugriff und schnellere Migrationen zu Azure wurden der Datenmigrations-Assistent sowie Azure Database Migration Service integriert.|
 |SSMS allgemein|Logik wurde hinzugefügt, um den Benutzer dazu aufzufordern, für offene Transaktionen einen Commit auszuführen, wenn „Change connection“ (Verbindung ändern) verwendet wird.|
 |Integration in Azure Data Studio|Ein Menüelement zum Starten/Downloaden von Azure Data Studio wurde hinzugefügt.|
 |Integration in Azure Data Studio|Das Menüelement „Start Azure Data Studio (Azure Data Studio starten)“ wurde im Objekt-Explorer hinzugefügt.|
@@ -91,13 +155,13 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Unterstützung für Azure SQL| Die Datenbankeigenschaften „SLO“, „Edition“ und „MaxSize“ akzeptieren jetzt benutzerdefinierte Namen und vereinfachen dadurch die Unterstützung zukünftiger Editionen von Azure SQL-Datenbanken.|
 |Unterstützung für Azure SQL| Unterstützung für kürzlich hinzugefügte V-Kern-SKUs (universell und unternehmenskritisch) wurde hinzugefügt: Gen4_24 und alle Gen5.|
 |Verwaltete Azure SQL-Instanz|„Anmeldungen mit AAD“ wurde als neue Anmeldemethode in SMO und SSMS hinzugefügt, wenn eine Verbindung zu einer verwalteten Azure SQL-Instanz besteht.|
-|Always On|RTO (geschätzte Wiederherstellungszeit) und RPO (geschätzter Datenverlust) wurden im Always on-Dashboard von SSMS mit einem neuen Hashwert versehen. Die aktualisierte Dokumentation finden Sie unter https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups. |
+|Always On|RTO (geschätzte Wiederherstellungszeit) und RPO (geschätzter Datenverlust) wurden im Always on-Dashboard von SSMS mit einem neuen Hashwert versehen. Die aktualisierte Dokumentation finden Sie unter [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| Im Dialogfeld „Mit Server verbinden“ bietet das Kontrollkästchen „Always Encrypted aktivieren“ in der Registerkarte „Always Encrypted“ jetzt eine einfache Möglichkeit zum Aktivieren/Deaktivieren von Always Encrypted für eine Datenbankverbindung.|
 |Always Encrypted mit Secure Enclaves| Die folgenden Verbesserungen zur Unterstützung von Always Encrypted mit Secure Enclaves wurden in der Vorschauversion von SQL Server 2019 vorgenommen:<br>Ein Textfeld zum Angeben der Enclave-Nachweis-URL im Dialogfeld „Mit Server verbinden“ (die neue Registerkarte „Always Encrypted“).<br>Das neue Kontrollkästchen im Dialogfeld „Neuer Spaltenhauptschlüssel“, um zu steuern, ob ein neuer Spaltenhauptschlüssel Enclave-Berechnungen zulässt.<br>Weitere Dialogfelder für die Always Encrypted-Schlüsselverwaltung stellen nun Informationen dazu bereit, welche Spaltenhauptschlüssel Enclave-Berechnungen zulassen.|
 |Überwachungsdateien|Die Authentifizierungsmethode wurde von der Authentifizierung auf Basis des Speicherkontoschlüssel in die Azure AD-basierte Authentifizierung geändert.|
 |Überwachungsdateien|Die Liste bekannter Überwachungsaktionen wurde aktualisiert, sodass diese nun FEATURE RESTRICTION ADD/CHANGE GROUP/DROP enthält.|
 |Datenklassifizierung| Das Aufgabenmenü für die Datenklassifizierung wurde neu organisiert: Dem Datenbankaufgabenmenü wurde ein Untermenü hinzugefügt sowie eine Option zum Öffnen des Berichts aus dem Menü, ohne zuerst das Fenster „Daten klassifizieren“ öffnen zu müssen.|
-|Datenklassifizierung|In SMO wurde die neue Funktion „Datenklassifizierung“ hinzugefügt. Spaltenobjekt macht neue Eigenschaften verfügbar: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId und IsClassified (schreibgeschützt). Weitere Informationen finden Sie unter [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql). |
+|Datenklassifizierung|In SMO wurde die neue Funktion „Datenklassifizierung“ hinzugefügt. Spaltenobjekt macht neue Eigenschaften verfügbar: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId und IsClassified (schreibgeschützt). Weitere Informationen finden Sie unter [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql).|
 |Datenklassifizierung|Das neue Menüelement „Klassifizierungsbericht“ wurde dem Flyout „Datenklassifizierung“ hinzugefügt.|
 |Datenklassifizierung| Empfehlungen wurden aktualisiert.|
 |Upgrade des Datenbank-Kompatibilitätsgrads|Eine neue Option wurde unter **<Database name>**  > **Tasks** > **Datenbankupgrade** hinzugefügt. Mit ihr wird der neue **Abfrageoptimierungs-Assistent** gestartet, der den Benutzer durch folgende Prozesse führt:<br>Sammeln einer Leistungsbaseline, bevor ein Upgrade des Datenbank-Kompatibilitätsgrads durchgeführt wird<br>Durchführen eines Upgrades auf den gewünschten Datenbank-Kompatibilitätsgrad<br>Sammeln eines zweiten Durchlaufs von Leistungsdaten der gesamten Arbeitsauslastung<br>Ermitteln von Regressionen der Arbeitsauslastung und Bereitstellen getesteter Empfehlungen zur Verbesserung der Arbeitsauslastungsleistung<br>Dies ähnelt dem unter [Verwendungsszenarios für den Abfragespeicher](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade) beschriebenen Datenbankupgrade mit Ausnahme des letzten Schritts, bei dem der Abfrageoptimierungs-Assistent sich nicht auf den letzten als funktionierend bekannten Zustand beruft, um Empfehlungen zu generieren.|
@@ -115,17 +179,17 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Abfragespeicher|Ein neuer Bericht mit einer Statistik der Abfragewartezeit wurde hinzugefügt.|
 |Abfragespeicher|Die Metrik „Execution Count (Anzahl der Ausführungen)“ wurde der Ansicht „Tracked Query (Nachverfolgte Abfrage)“ hinzugefügt.|
 |Replikationstools|Unterstützung für die nicht standardmäßige Funktion der Portspezifikation im Replikationsmonitor und in SSMS wurde hinzugefügt.|
-|Showplan |Tatsächlich verstrichene Zeit und tatsächliche Zeilen gegenüber geschätzten Zeilen wurden bei Verfügbarkeit unter dem Knoten „Showplanoperator“ hinzugefügt. Dadurch weist der tatsächliche Plan ein konsistenteres Aussehen mit dem Plan der Live-Abfragestatistik auf.|
-|Showplan |Die QuickInfo beim Klicken auf die Schaltfläche „Abfrage bearbeiten“ für einen Showplan wurde geändert und ein Kommentar hinzugefügt, um dem Benutzer anzugeben, dass der Showplan möglicherweise von der SQL Engine abgeschnitten wurde, wenn die Abfrage mehr als 4000 Zeichen umfasst.|
-|Showplan |Eine Logik zum Anzeigen von „Materializer-Operator (externer SELECT)“ wurde hinzugefügt.|
-|Showplan |Ein neues Showplan-Attribut „BatchModeOnRowStoreUsed“ wurde hinzugefügt, um Abfragen leicht erkennen zu können, bei denen die Funktion zur Überprüfung von Zeilenspeichern im Batchmodus verwendet wird. Jedes Mal, wenn eine Abfrage die Überprüfung von Zeilenspeichern im Batchmodus ausführt, wird ein neues Attribut (BatchModeOnRowStoreUsed="true") zum StmtSimple-Element hinzugefügt.|
-|Showplan |Showplan-Unterstützung für das RelOp-Element in „LocalCube“ für ROLLUP und CUBE wurde hinzugefügt.|
+|Showplan|Tatsächlich verstrichene Zeit und tatsächliche Zeilen gegenüber geschätzten Zeilen wurden bei Verfügbarkeit unter dem Knoten „Showplanoperator“ hinzugefügt. Dadurch weist der tatsächliche Plan ein konsistenteres Aussehen mit dem Plan der Live-Abfragestatistik auf.|
+|Showplan|Die QuickInfo beim Klicken auf die Schaltfläche „Abfrage bearbeiten“ für einen Showplan wurde geändert und ein Kommentar hinzugefügt, um dem Benutzer anzugeben, dass der Showplan möglicherweise von der SQL Engine abgeschnitten wurde, wenn die Abfrage mehr als 4000 Zeichen umfasst.|
+|Showplan|Eine Logik zum Anzeigen von „Materializer-Operator (externer SELECT)“ wurde hinzugefügt.|
+|Showplan|Ein neues Showplan-Attribut „BatchModeOnRowStoreUsed“ wurde hinzugefügt, um Abfragen leicht erkennen zu können, bei denen die Funktion zur Überprüfung von Zeilenspeichern im Batchmodus verwendet wird. Jedes Mal, wenn eine Abfrage die Überprüfung von Zeilenspeichern im Batchmodus ausführt, wird ein neues Attribut (BatchModeOnRowStoreUsed="true") zum StmtSimple-Element hinzugefügt.|
+|Showplan|Showplan-Unterstützung für das RelOp-Element in „LocalCube“ für ROLLUP und CUBE wurde hinzugefügt.|
 |Showplan|Der neue Operator „LocalCube“ für die neuen Aggregationsfunktionen ROLLUP und CUBE wurde in Azure SQL Data Warehouse hinzugefügt.|
 |SMO| Die SMO-Unterstützung für die Erstellung eines fortsetzbaren Index wurde erweitert.|
 |SMO| Ein neues Ereignis für SMO-Objekte (PropertyMissing) wurde hinzugefügt, damit Anwendungsautoren SMO-Leistungsprobleme früher erkennen können.|
 |SMO| Die neue Eigenschaft „DefaultBackupChecksum“ für das Konfigurationsobjekt wurde bereitgestellt, die der Serverkonfiguration „Standardeinstellung der Sicherungsprüfsumme“ zugeordnet ist.|
 |SMO| Die neue Eigenschaft „ProductUpdateLevel“ wurde für das Serverobjekt bereitgestellt, die der Wartungsebene für die verwendete SQL-Version zugeordnet ist (z. B. CU12, RTM).|
-|SMO| Die neue LastGoodCheckDbTime-Eigenschaft wurde für das Datenbankobjekt zur Verfügung gestellt. Diese Eigenschaft wird der Datenbankeigenschaft „lastgoodcheckdbtime“ zugeordnet. Wenn diese Eigenschaft nicht verfügbar ist, wird der Standardwert 1.1.1900 12:00:00 Uhr zurückgegeben.|
+|SMO| Die neue LastGoodCheckDbTime-Eigenschaft wurde für das Datenbankobjekt zur Verfügung gestellt. Diese Eigenschaft wird der Datenbankeigenschaft „lastgoodcheckdbtime“ zugeordnet. Wenn diese Eigenschaft nicht verfügbar ist, wird der Standardwert 1.1.1900 12:00:00 Uhr zurückgegeben.|
 |SMO|Der Speicherort für die Datei „RegSrvr.xml“ (Konfigurationsdatei für den registrierten Server) wurde in „%AppData%\Microsoft\SQL Server Management Studio“ verschoben (ohne Version, sodass eine gemeinsame Nutzung in allen SSMS-Versionen möglich ist).|
 |SMO|„Cloudzeugen“ wurde als neuer Quorumtyp und als neuer Ressourcentyp hinzugefügt.|
 |SMO|Unterstützung für „Edgeeinschränkungen“ wurde in SMO und SSMS hinzugefügt.|
@@ -137,24 +201,23 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Sicherheitsrisikobewertung|Eine neue Funktion zum Exportieren von Überprüfungsergebnissen der Sicherheitsrisikobewertung nach Excel wurde hinzugefügt.|
 |XEvent-Viewer|In XEvent-Viewer wurde das Showplan-Fenster aktiviert, um mehr XEvents anzuzeigen.|
 
+### <a name="bug-fixes-in-180"></a>Fehlerkorrekturen in 18.0
 
-## <a name="bug-fixes-in-180-ga"></a>Fehlerkorrekturen in 18.0 (allgemein verfügbare Version)
-
-| Neues Element | Details |
-| :------- | :------ |
+| Neues Element| Details|
+| :-------| :------|
 |Abstürze und Einfrieren|Eine Ursache häufiger SSMS-Abstürze im Zusammenhang mit GDI-Objekten wurde behoben.|
 |Abstürze und Einfrieren|Eine häufige Ursache für das Hängenbleiben und eine schlechte Leistung beim Auswählen eines Skripts zum Erstellen/Aktualisieren/Löschen wurde behoben (unnötige Abrufe von SMO-Objekten wurden entfernt).|
 |Abstürze und Einfrieren|Ein Hängenbleiben beim Herstellen einer Verbindung mit einer Azure SQL-Datenbank mithilfe von MFA bei aktivierten ADAL-Ablaufverfolgungen wurde behoben.|
 |Abstürze und Einfrieren|Ein Hängen (bzw. empfundenes Hängen) in der Live-Abfragestatistik beim Aufrufen über den Aktivitätsmonitor wurde behoben (das Problem trat bei Verwendung der SQL Server-Authentifizierung ohne Festlegung von „Sicherheitsinformationen permanent speichern“ auf).|
 |Abstürze und Einfrieren|Ein Hängen bei Auswahl von „Berichte“ im Objekt-Explorer wurde behoben, das bei Verbindungen mit hoher Latenzzeit oder temporär nicht vorhandenem Zugriff der Ressourcen auftreten konnte.|
-|Abstürze und Einfrieren|Ein Absturz bei der Verwendung des zentralen Verwaltungsservers und von Azure SQL-Servern in SSMS wurde behoben. Weitere Informationen finden Sie unter [SMSS 17.5 application error and crash when using Central Management Server (Anwendungsfehler in SMSS 17.5 und Absturz bei Verwendung eines zentralen Verwaltungsservers)](https://feedback.azure.com/forums/908035/suggestions/33374884). |
+|Abstürze und Einfrieren|Ein Absturz bei der Verwendung des zentralen Verwaltungsservers und von Azure SQL-Servern in SSMS wurde behoben. Weitere Informationen finden Sie unter [SMSS 17.5 application error and crash when using Central Management Server (Anwendungsfehler in SMSS 17.5 und Absturz bei Verwendung eines zentralen Verwaltungsservers)](https://feedback.azure.com/forums/908035/suggestions/33374884).|
 |Abstürze und Einfrieren|Eine Verzögerung im Objekt-Explorer wurde behoben, indem die Methode zum Abrufen der IsFullTextEnabled-Eigenschaft optimiert wurde.|
 |Abstürze und Einfrieren|Ein Hängenbleiben beim „Assistenten zum Kopieren von Datenbanken“ wurde behoben, indem keine überflüssigen Abfragen zum Abrufen von Datenbankeigenschaften erstellt werden.|
 |Abstürze und Einfrieren|Ein Problem wurde behoben, durch das SSMS beim Bearbeiten von T-SQL nicht mehr reagiert hat/abgestürzt ist.|
 |Abstürze und Einfrieren|Ein Problem wurde behoben, durch das SSMS beim Bearbeiten großer T-SQL-Skripts nicht mehr reagiert hat.|
 |Abstürze und Einfrieren|Ein Problem wurde behoben, durch das SSMS beim Verarbeiten großer Datasets, die von Abfragen zurückgegeben wurden, nicht genügend Arbeitsspeicher zur Verfügung hatte.|
 |SSMS allgemein|Ein Problem wurde behoben, bei dem „ApplicationIntent“ in Verbindungen in „Registrierte Server“ nicht übergeben wurde.|
-|SSMS allgemein|Ein Problem wurde behoben, bei dem das Formular „New XEvent Session Wizard UI (Neue Benutzeroberfläche für XEvent-Sitzungs-Assistent)“ auf Monitoren mit hohem DPI-Wert nicht richtig gerendert wurde.|
+|SSMS allgemein|Ein Problem wurde behoben, bei dem das Formular „New XEvent Session Wizard UI“ (Neue Benutzeroberfläche für XEvent-Sitzungs-Assistent) auf Monitoren mit hohem DPI-Wert nicht richtig gerendert wurde.|
 |SSMS allgemein|Ein Problem beim Importieren einer BACPAC-Datei wurde behoben.|
 |SSMS allgemein|Ein Problem beim Anzeigen der Eigenschaften einer Datenbank (mit FILEGROWTH > 2048 GB), das zu einem Fehler mit arithmetischem Überlauf geführt hat, wurde behoben.|
 |SSMS allgemein|Ein Fehler wurde behoben, durch den der Bericht für das Leistungsdashboard PAGELATCH- und PAGEIOLATCH-Wartevorgänge gemeldet hat, die nicht in Unterberichten enthalten waren.|
@@ -185,28 +248,28 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Unterstützung verwalteter Azure SQL-Datenbank-Instanzen|Ein Problem wurde behoben, bei dem durch das Klicken mit der rechten Maustaste auf „TempDB“ Fehler aufgetreten sind.|
 |Unterstützung verwalteter Azure SQL-Datenbank-Instanzen|Ein Problem wurde behoben, bei dem bei der Skripterstellung der Anweisung „ALTER DB ADD FILE“ in SMO ein leeres T-SQL-Skript generiert wurde.|
 |Unterstützung verwalteter Azure SQL-Datenbank-Instanzen|Die Anzeige von Eigenschaften spezifisch für Server mit verwalteten Instanzen wurde verbessert (Hardwaregeneration, Dienstebene, verwendeter und reservierter Speicher).|
-|Unterstützung verwalteter Azure SQL-Datenbank-Instanzen|Ein Problem wurde behoben, bei dem bei der Skripterstellung einer Datenbank keine Skripterstellung zusätzlicher Dateigruppen und Dateien ausgeführt wurde. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/37326799. |
+|Unterstützung verwalteter Azure SQL-Datenbank-Instanzen|Ein Problem wurde behoben, bei dem bei der Skripterstellung einer Datenbank keine Skripterstellung zusätzlicher Dateigruppen und Dateien ausgeführt wurde. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799). |
 |Sichern/Wiederherstellen/Anfügen/Trennen einer Datenbank|Ein Problem wurde behoben, bei dem der Benutzer eine Datenbank nicht anfügen konnte, wenn der physische Dateiname der MDF-Datei nicht dem ursprünglichen Dateinamen entsprach.|
-|Sichern/Wiederherstellen/Anfügen/Trennen einer Datenbank|Ein Problem wurde behoben, bei dem SSMS keinen gültigen Wiederherstellungsplan oder einen nicht optimalen Plan finden konnte. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752. |
-|Sichern/Wiederherstellen/Anfügen/Trennen einer Datenbank|Ein Fehler wurde behoben, bei dem der Assistent zum Anfügen von Datenbanken sekundäre Dateien, die umbenannt wurden, nicht angezeigt hat. Jetzt wird die Datei, einschließlich eines Kommentars, angezeigt (z. B. „nicht gefunden“). Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/32897434. |
+|Sichern/Wiederherstellen/Anfügen/Trennen einer Datenbank|Ein Problem wurde behoben, bei dem SSMS keinen gültigen Wiederherstellungsplan oder einen nicht optimalen Plan finden konnte. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752). |
+|Sichern/Wiederherstellen/Anfügen/Trennen einer Datenbank|Ein Fehler wurde behoben, bei dem der Assistent zum Anfügen von Datenbanken sekundäre Dateien, die umbenannt wurden, nicht angezeigt hat. Jetzt wird die Datei, einschließlich eines Kommentars, angezeigt (z. B. „nicht gefunden“). Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434). |
 |Assistent zum Kopieren von Datenbanken|Der Versuch des Assistenten zum Generieren von Skripts/Übertragen/Kopieren von Datenbanken, eine Tabelle mit einer In-Memory-Tabelle zu erstellen, erzwingt nicht die Einstellung ON für ANSI_PADDINGTON.|
 |Assistent zum Kopieren von Datenbanken|Übertragung von Datenbankaufgabe/Assistent zum Kopieren von Datenbanken unterbrochen auf SQL Server 2017 und SQL Server 2019.|
 |Assistent zum Kopieren von Datenbanken|Der Assistent zum Generieren von Skripts/Übertragen/Kopieren von Datenbanken erstellt ein Skript für die Tabellenerstellung vor der Erstellung von zugeordneten externen Datenquellen.|
 |Verbindungsdialogfeld|Das Entfernen von Benutzernamen aus der vorherigen Benutzernamenliste durch Drücken der ENTF-Taste wurde aktiviert. Weitere Informationen finden Sie unter [Allow deletion of users from SSMS login window (Löschen von Benutzern aus dem SSMS-Anmeldefenster zulassen)](https://feedback.azure.com/forums/908035/suggestions/32897632).|
 |DAC-Import-Assistent|Ein Fehler wurde behoben, bei dem der DAC-Import-Assistent bei einer Verbindung über AAD nicht funktioniert hat.|
 |Datenklassifizierung|Ein Problem wurde behoben, das beim Speichern von Klassifizierungen im Datenklassifizierungbereich aufgetreten ist, während gleichzeitig andere Datenklassifizierungsbereiche in anderen Datenbanken geöffnet waren.|
-|Datenschichtanwendungs-Assistent|Ein Fehler wurde behoben, durch den Benutzer aufgrund des eingeschränkten Zugriffs auf den Server (z. B. fehlender Zugriff auf alle Datenbanken auf einem Server) keine Datenebenenanwendungen (.dacpac) importieren konnten.|
+|Datenschichtanwendungs-Assistent|Ein Fehler wurde behoben, durch den Benutzer aufgrund des eingeschränkten Zugriffs auf den Server (z. B. fehlender Zugriff auf alle Datenbanken auf einem Server) keine Datenschichtanwendung (.dacpac) importieren konnten.|
 |Datenschichtanwendungs-Assistent|Ein Fehler wurde behoben, durch den der Importvorgang sehr langsam war, wenn viele Datenbanken auf der gleichen Azure SQL Server-Instanz gehostet wurden.|
 |Externe Tabellen|Unterstützung für „Rejected_Row_Location“ in der Vorlage, in SMO, IntelliSense, und im Eigenschaftenraster wurde hinzugefügt.|
-|Assistent zum Importieren von Flatfiles|Ein Problem wurde behoben, bei dem der Assistent zum Importieren von Flatfiles doppelte Anführungszeichen nicht ordnungsgemäß verarbeitete (mit Escapezeichen versah). Siehe https://feedback.azure.com/forums/908035/suggestions/32897998. |
+|Assistent zum Importieren von Flatfiles|Ein Problem wurde behoben, bei dem der Assistent zum Importieren von Flatfiles doppelte Anführungszeichen nicht ordnungsgemäß verarbeitete (mit Escapezeichen versah). Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/32897998](https://feedback.azure.com/forums/908035/suggestions/32897998). |
 |Assistent zum Importieren von Flatfiles|Ein Problem in Bezug auf die fehlerhafte Handhabung von Gleitkommatypen (bei Gebietsschemas, die ein anderes Trennzeichen für Gleitkommawerte verwenden) wurde behoben.|
-|Assistent zum Importieren von Flatfiles|Ein Problem im Zusammenhang mit dem Importieren von Bits, wenn Werte 0 oder 1 sind, wurde behoben. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535. |
+|Assistent zum Importieren von Flatfiles|Ein Problem im Zusammenhang mit dem Importieren von Bits, wenn Werte 0 oder 1 sind, wurde behoben. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535). |
 |Assistent zum Importieren von Flatfiles|Ein Problem wurde behoben, bei dem float-Elemente als NULL-Werte eingegeben wurden.|
-|Assistent zum Importieren von Flatfiles|Behoben: Ein Problem, bei dem der Import-Assistent keine negativen Dezimalwerte verarbeiten konnte.|
-|Assistent zum Importieren von Flatfiles|Behoben: Ein Problem, bei dem der Assistent keine Importvorgänge aus CSV-Dateien mit einer Spalte durchführen konnte.|
-|Assistent zum Importieren von Flatfiles|[Gilt für SSMS 17.9] Ein Problem wurde behoben, bei dem der Import von Flatfiles die Änderung der Zieltabelle nicht erlaubte, wenn die Tabelle bereits vorhanden war. Siehe https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186. |
+|Assistent zum Importieren von Flatfiles|Es wurde ein Problem behoben, bei dem der Import-Assistent keine negativen Dezimalwerte verarbeiten konnte.|
+|Assistent zum Importieren von Flatfiles|Es wurde ein Problem behoben, bei dem der Assistent keine Importvorgänge aus CSV-Dateien mit einer Spalte durchführen konnte.|
+|Assistent zum Importieren von Flatfiles|[Gilt für SSMS 17.9] Ein Problem wurde behoben, bei dem der Import von Flatfiles die Änderung der Zieltabelle nicht erlaubte, wenn die Tabelle bereits vorhanden war. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). |
 |Help Viewer|Logik zur Berücksichtigung der Online-/Offlinemodi wurde verbessert (möglicherweise müssen noch weitere Probleme behoben werden).|
-|Help Viewer|Es wurde eine Korrektur für „Hilfe anzeigen“ zur Berücksichtigung der Online/Offline-Einstellung vorgenommen. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791. |
+|Help Viewer|Es wurde eine Korrektur für „Hilfe anzeigen“ zur Berücksichtigung der Online/Offline-Einstellung vorgenommen. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791). |
 |Hochverfügbarkeit und Notfallwiederherstellung (HADR)<BR> Verfügbarkeitsgruppen (AG)|Ein Fehler wurde behoben, bei dem im Assistenten für „Failover für Verfügbarkeitsgruppen“ für Rollen immer der Status „Wird aufgelöst“ angezeigt wurde.|
 |Hochverfügbarkeit und Notfallwiederherstellung (HADR)<BR> Verfügbarkeitsgruppen (AG)|Ein Fehler wurde behoben, durch den SSMS abgeschnittene Warnungen im „Dashboard für Verfügbarkeitsgruppen“ angezeigt hat.|
 |Integration Services (IS)|Ein SxS-Problem wurde behoben, bei dem der Bereitstellungs-Assistent keine Verbindung mit SQL Server herstellen konnte, wenn SQL Server 2019 und SSMS 18.0 auf demselben Computer installiert waren.|
@@ -216,25 +279,25 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Integration Services (IS)|Ein Problem wurde behoben, bei dem der Assistent zum Erstellen einer SSIS Integration Runtime nicht mehr reagierte, wenn das Kundenkonto mehr als einem Mandanten gehörte.|
 |Auftragsaktivitätsmonitor|Der Absturz beim Verwenden des Auftragsaktivitätsmonitors (mit Filtern) wurde behoben.|
 |Objekt-Explorer|Ein Problem wurde behoben, bei dem SSMS die Ausnahme „Ein Objekt kann nicht von DBNull in andere Typen umgewandelt werden“ auslöste, wenn der Knoten „Verwaltung“ im Objekt-Explorer (falsch konfigurierter DataCollector) erweitert wurde.|
-|Objekt-Explorer|Ein Problem wurde behoben, bei dem der Objekt-Explorer vor dem Aufrufen von „Oberste n bearbeiten...“ keine Escapezeichen für Anführungszeichen einfügte, was den Designer verwirrte.|
+|Objekt-Explorer|Ein Problem wurde behoben, bei dem Objekt-Explorer vor dem Aufrufen von „Die ersten n bearbeiten...“ keine Escapezeichen für Anführungszeichen einfügte, wodurch der Entwurf verfälscht wurde.|
 |Objekt-Explorer|Ein Problem wurde behoben, bei dem der Assistent zum Importieren der Datenebenenanwendung nicht aus der Azure Storage-Struktur gestartet wurde.|
-|Objekt-Explorer|Ein Problem in der Konfiguration von Datenbank-E-Mail wurde behoben, bei dem der Status des Kontrollkästchens „SSL“ nicht beibehalten wurde. Siehe https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541. |
+|Objekt-Explorer|Ein Problem in der Konfiguration von Datenbank-E-Mail wurde behoben, bei dem der Status des Kontrollkästchens „SSL“ nicht beibehalten wurde. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
 |Objekt-Explorer|Ein Problem wurde behoben, bei dem für SSMS die Option zum Schließen vorhandener Verbindungen beim Wiederherstellen der Datenbank mit „is_auto_update_stats_async_on“ ausgeblendet war.|
-|Objekt-Explorer|Ein Problem wurde behoben, durch das beim Rechtsklick auf Knoten im Objekt-Explorer, z. B. „Tabellen“ beim Ausführen einer Aktion wie dem Filtern von Tabellen über Filter > Filtereinstellungen, das Formular für Filtereinstellungen auf einem anderen Bildschirm angezeigt werden kann, als dem, auf dem SSMS derzeit aktiv ist. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106. |
-|Objekt-Explorer|Ein lange bestehendes Problem wurde behoben, bei dem die ENTF-Taste im Objekt-Explorer beim Umbenennen eines Objekts nicht funktionierte. Weitere Informationen finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510, https://feedback.azure.com/forums/908035/suggestions/32910247 und bei anderen Duplikaten. |
-|Objekt-Explorer|Beim Anzeigen der Eigenschaften vorhandener Datenbankdateien wird die Größe in einer Spalte „Größe (MB)“ anstelle von „Anfangsgröße (MB)“ angezeigt, was der Anzeige beim Erstellen einer neuen Datenbank entspricht. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024. |
+|Objekt-Explorer|Ein Problem wurde behoben, durch das beim Rechtsklick auf Knoten im Objekt-Explorer, z. B. „Tabellen“ beim Ausführen einer Aktion wie dem Filtern von Tabellen über Filter > Filtereinstellungen, das Formular für Filtereinstellungen auf einem anderen Bildschirm angezeigt werden kann, als dem, auf dem SSMS derzeit aktiv ist. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106). |
+|Objekt-Explorer|Ein lange bestehendes Problem wurde behoben, bei dem die ENTF-TASTE im Objekt-Explorer beim Umbenennen eines Objekts nicht funktionierte. Weitere Informationen finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510), [https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) und bei anderen Duplikaten.|
+|Objekt-Explorer|Beim Anzeigen der Eigenschaften vorhandener Datenbankdateien wird die Größe in einer Spalte „Größe (MB)“ anstelle von „Anfangsgröße (MB)“ angezeigt, was der Anzeige beim Erstellen einer neuen Datenbank entspricht. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024](https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024). |
 |Objekt-Explorer|Der Kontextmenüeintrag „Entwurf“ für „Graph-Tabellen“ wurde deaktiviert, da in der aktuellen Version von SSMS keine Unterstützung für diese Art von Tabelle besteht.|
-|Objekt-Explorer|Ein Problem wurde behoben, bei dem das Dialogfeld „Neuer Auftragszeitplan“ auf Monitoren mit hohem DPI-Wert nicht ordnungsgemäß angezeigt wurde. Einzelheiten dazu finden Sie unter https://feedback.azure.com/admin/v3/suggestions/35541262. |
-|Objekt-Explorer|Ein Problem wurde behoben bzw. verbessert, bei dem eine Datenbankgröße („Größe (MB)“) in den Details zum Objekt-Explorer angezeigt wurde: Es wurden nur zwei Dezimalstellen angezeigt, und der Wert wurde mithilfe von Tausendertrennzeichen formatiert. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/34379308. |
+|Objekt-Explorer|Ein Problem wurde behoben, bei dem das Dialogfeld „Neuer Auftragszeitplan“ auf Monitoren mit hohem DPI-Wert nicht ordnungsgemäß angezeigt wurde. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/admin/v3/suggestions/35541262](https://feedback.azure.com/admin/v3/suggestions/35541262). |
+|Objekt-Explorer|Ein Problem wurde behoben bzw. verbessert, bei dem eine Datenbankgröße („Größe (MB)“) in den Details zum Objekt-Explorer angezeigt wurde: Es wurden nur zwei Dezimalstellen angezeigt, und der Wert wurde mithilfe von Tausendertrennzeichen formatiert. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/34379308](https://feedback.azure.com/forums/908035/suggestions/34379308).|
 |Objekt-Explorer|Ein Problem wurde behoben, bei dem die Erstellung von „räumlichen Indizes“ zu einem Fehler wie „To accomplish this action, set property PartitionScheme (Legen Sie die Eigenschaft „PartitionScheme“ fest, um diese Aktion auszuführen)“ führte.|
 |Objekt-Explorer|Kleine Leistungsverbesserungen wurden am Objekt-Explorer vorgenommen, um weitere Abfragen nach Möglichkeit zu vermeiden.|
 |Objekt-Explorer|Logik zum Anfordern einer Bestätigung beim Umbenennen einer Datenbank für alle Schemaobjekte wurde erweitert (die Einstellung kann konfiguriert werden).|
-|Objekt-Explorer|Die richtigen Escapezeichen wurden in die Filterung des Objekt-Explorers hinzugefügt. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/36678803. |
-|Objekt-Explorer|Die Ansicht in den Details zum Objekt-Explorer wurde verbessert bzw. Fehler wurden behoben, um Zahlen mit geeigneten Trennzeichen anzuzeigen. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/32900944. |
-|Objekt-Explorer|Ein Problem innerhalb des Kontextmenüs im Knoten „Tabellen“ bei einer Verbindung mit SQL Express wurde behoben, bei dem das Flyoutmenü „Neu“ fehlte, Graph-Tabellen fehlerhaft aufgelistet wurden und die Tabelle mit Systemversionsverwaltung fehlte. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/37245529. |
+|Objekt-Explorer|Die richtigen Escapezeichen wurden in die Filterung des Objekt-Explorers hinzugefügt. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/36678803](https://feedback.azure.com/forums/908035/suggestions/36678803). |
+|Objekt-Explorer|Die Ansicht in den Details zum Objekt-Explorer wurde verbessert bzw. Fehler wurden behoben, um Zahlen mit geeigneten Trennzeichen anzuzeigen. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/32900944](https://feedback.azure.com/forums/908035/suggestions/32900944). |
+|Objekt-Explorer|Ein Problem innerhalb des Kontextmenüs im Knoten „Tabellen“ bei einer Verbindung mit SQL Express wurde behoben, bei dem das Flyoutmenü „Neu“ fehlte, Graph-Tabellen fehlerhaft aufgelistet wurden und die Tabelle mit Systemversionsverwaltung fehlte. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/37245529](https://feedback.azure.com/forums/908035/suggestions/37245529). |
 |Skripterstellung für Objekte|Allgemeine Leistungsverbesserungen: Das Generieren von Skripts von „WideWorldImporters“ dauert nur die Hälfte die Zeit im Vergleich zu SSMS 17.7.|
-|Skripterstellung für Objekte|Bei der Skripterstellung für Objekte werden die datenbankbezogenen Konfigurationen mit Standardwerten weggelassen.|
-|Skripterstellung für Objekte|Generieren Sie bei der Skripterstellung kein dynamisches T-SQL. Siehe https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391. |
+|Skripterstellung für Objekte|Bei der Skripterstellung für Objekte wird die datenbankbezogene Konfiguration, die Standardwerte aufweist, ausgelassen.|
+|Skripterstellung für Objekte|Generieren Sie bei der Skripterstellung kein dynamisches T-SQL. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391). |
 |Skripterstellung für Objekte|Lassen Sie die Graph-Syntax „as edge“ und „as node“ bei der Skripterstellung für eine Tabelle unter SQL Server 2016 und früheren Versionen aus.|
 |Skripterstellung für Objekte|Ein Problem wurde behoben, bei dem die Skripterstellung von Datenbankobjekten beim Verbinden mit einer Azure SQL-Datenbank über AAD mit MFA fehlschlug.|
 |Skripterstellung für Objekte|Ein Problem wurde behoben, bei dem bei der Skripterstellung eines räumlichen Index mit „GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID“ in einer Azure SQL-Datenbank ein Fehler ausgelöst wurde.|
@@ -243,7 +306,7 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Skripterstellung für Objekte|Ein Problem bei der Skripterstellung einer Tabelle in einer Azure SQL Data Warehouse-Datenbank mit gruppierten Columnstore-Indizes und gruppierten Indizes wurde behoben, das zu fehlerhaften T-SQL-Anweisungen geführt hat (doppelte Anweisungen).|
 |Skripterstellung für Objekte|Ein Problem bei der Skripterstellung von Partitionstabellen ohne Bereichswerte (Azure SQL Data Warehouse-Datenbanken) wurde behoben.|
 |Skripterstellung für Objekte|Ein Problem wurde behoben, bei dem der Benutzer kein Skript für die Überwachung/Überwachungsspezifikation „SERVER_PERMISSION_CHANGE_GROUP“ erstellen konnte.|
-|Skripterstellung für Objekte|Ein Problem wurde behoben, bei dem der Benutzer kein Skript für Statistiken aus Azure SQL Data Warehouse erstellen konnte. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296. |
+|Skripterstellung für Objekte|Ein Problem wurde behoben, bei dem der Benutzer kein Skript für Statistiken aus Azure SQL Data Warehouse erstellen konnte. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296). |
 |Skripterstellung für Objekte|Ein Problem wurde behoben, bei dem der Assistent zum Generieren von Skripts eine fehlerhafte Tabelle mit Skriptfehlern anzeigte, wenn „Skripterstellung bei einem Fehler fortsetzen“ auf FALSE festgelegt war.|
 |Skripterstellung für Objekte|Die Skriptgenerierung in SQL Server 2019 wurde verbessert.|
 |Profiler|Das Ereignis „Aggregate Table Rewrite Query“ (Abfrage zum erneuten Generieren von Aggregattabellen) wurde den Profiler-Ereignissen hinzugefügt.|
@@ -251,11 +314,11 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |Abfragedatenspeicher|Ein Problem wurde behoben, das bei dem Versuch aufgetreten ist, ein benutzerdefiniertes Zeitintervall in dem integrierten Abfragespeicher festzulegen, und bei dem der Benutzer AM oder PM für das Start/Ende-Intervall nicht auswählen konnte.|
 |Ergebnisraster|Ein Problem wurde behoben, durch das der Modus für hohen Kontrast ausgelöst wurde (ausgewählte Zeilennummern nicht sichtbar).|
 |Ergebnisraster|Ein Fehler wurde behoben, durch den die Ausnahme „Der Index liegt außerhalb des Bereichs“ ausgelöst wurde, wenn auf das Raster geklickt wurde.|
-|Ergebnisraster|Ein Fehler wurde behoben, durch den die Hintergrundfarbe des Ergebnisrasters ignoriert wurde. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/32895916. |
+|Ergebnisraster|Ein Fehler wurde behoben, durch den die Hintergrundfarbe des Ergebnisrasters ignoriert wurde. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/32895916](https://feedback.azure.com/forums/908035/suggestions/32895916). |
 |Showplan|Neue Operatoreigenschaften für die Speicherzuweisung werden nicht korrekt angezeigt, wenn es mehr als einen Thread gibt.|
 |Showplan|Fügen Sie die folgenden 4 Attribute im RunTimeCountersPerThread-Element eines tatsächlichen XML-Ausführungsplans hinzu: HpcRowCount (Anzahl der vom HPC-Gerät verarbeiteten Zeilen), HpcKernelElapsedUs (verstrichene Wartezeit für die aktive Kernelausführung), HpcHostToDeviceBytes (Bytes die vom Host an das Gerät übertragen werden) und HpcDeviceToHostBytes (Bytes die vom Gerät an den Host übertragen werden).|
 |Showplan|Ein Problem wurde behoben, bei dem die Knoten für ähnliche Pläne an der falschen Stelle markiert wurden.|
-|SMO|Ein Problem wurde behoben, bei dem SMO/ServerConnection SqlCredential-basierte Verbindungen nicht richtig verarbeitete. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941. |
+|SMO|Ein Problem wurde behoben, bei dem SMO/ServerConnection SqlCredential-basierte Verbindungen nicht richtig verarbeitete. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941](https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941). |
 |SMO|Ein Problem wurde behoben, bei dem in einer mit SMO geschriebenen Anwendung ein Fehler auftrat bei dem Versuch, Datenbanken vom gleichen Server in mehreren Threads aufzulisten, obwohl sie separate SqlConnection-Instanzen in jedem Thread verwendet.|
 |SMO|Der Leistungsverlust beim Übertragen aus externen Tabellen wurde behoben.|
 |SMO|Ein Problem mit ServerConnection bei der Threadsicherheit wurde behoben, das dazu geführt hat, dass SMO SqlConnection-Instanzen freigegeben hat, wenn Azure als Ziel verwendet wurde.|
@@ -264,16 +327,16 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |SSMS-Editor|Ein Problem in „SQL-Systemtabelle“ wurde behoben, bei dem beim Wiederherstellen der Standardfarben die Farbe in Limonengrün anstelle von Standardgrün geändert wurde, wodurch Text auf weißen Hintergrund nur schwer lesbar war. Weitere Informationen finden Sie unter [Restoring wrong default color for SQL System Table (Wiederherstellen der falschen Standardfarbe in SQL-Systemtabellen)](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906). Das Problem besteht weiterhin in nicht englischsprachigen SSMS-Versionen.|
 |SSMS-Editor|Es wurde ein Problem behoben, durch das IntelliSense während der Verbindung mit Azure SQL Data Warehouse mithilfe der AAD-Authentifizierung nicht funktioniert hat.|
 |SSMS-Editor|Ein Problem für IntelliSense in Azure wurde behoben, wenn der Benutzer keinen Zugriff auf die **Masterdatenbank** besitzt.|
-|SSMS-Editor|Es wurde eine Fehlerbehebung für Codeausschnitte zum Erstellen „temporaler Tabellen“ vorgenommen, die fehlerhaft waren, wenn bei der Sortierung der Zieldatenbank die Groß-/Kleinschreibung beachtet wurde.|
-|SSMS-Editor|Die neue TRANSLATE-Funktion wird nun von IntelliSense erkannt. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430. |
-|SSMS-Editor|IntelliSense wurde für die integrierte FORMAT-Funktion verbessert. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676. |
-|SSMS-Editor|LAG und LEAD werden nun als integrierte Funktionen erkannt. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757. |
+|SSMS-Editor|Codeausschnitte zum Erstellen „temporaler Tabellen“ wurden behoben, die fehlerhaft waren, wenn die Groß-/Kleinschreibung bei der Sortierung der Zieldatenbank beachtet wurde.|
+|SSMS-Editor|Die neue TRANSLATE-Funktion wird nun von IntelliSense erkannt. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430). |
+|SSMS-Editor|IntelliSense wurde für die integrierte FORMAT-Funktion verbessert. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676). |
+|SSMS-Editor|LAG und LEAD werden nun als integrierte Funktionen erkannt. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757). |
 |SSMS-Editor|Ein Problem wurde behoben, bei dem IntelliSense bei der Verwendung von „ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)“ eine Warnung ausgab.|
 |SSMS-Editor|Ein Fehler wurde behoben, durch den mehrere Systemsichten und Tabellenwertfunktionen nicht ordnungsgemäß farbig hervorgehoben wurden.|
-|SSMS-Editor|Ein Problem wurde behoben, bei dem durch Klicken auf Editor-Registerkarten die Registerkarte geschlossen wurde anstatt den Fokus zu erhalten. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/37291114. |
+|SSMS-Editor|Ein Problem wurde behoben, bei dem durch Klicken auf Editor-Registerkarten die Registerkarte geschlossen wurde anstatt den Fokus zu erhalten. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/37291114](https://feedback.azure.com/forums/908035/suggestions/37291114). |
 |SSMS-Optionen|Ein Problem wurde behoben, bei dem die Größe der Seite **Extras** > **Optionen** > **SQL Server-Objekt-Explorer** > **Befehle** nicht ordnungsgemäß geändert wurde.|
-|SSMS-Optionen|SSMS deaktiviert nun standardmäßig das automatische Herunterladen von Dokumenttypdefinitionen (DTD) im XMLA-Editor: Der XMLA-Skript-Editor (der den XML-Sprachdienst verwendet) verhindert nun standardmäßig das automatische Herunterladen von DTD für potenziell schädliche XMLA-Dateien. Dies wird gesteuert durch Deaktivieren der Einstellung „DTDs und Schemas automatisch herunterladen“, die unter **Extras** > **Optionen** > **Umgebung** > **Text-Editor** > **XML** > **Sonstiges** festgelegt wird. |
-|SSMS-Optionen|Die Funktion der Tastenkombination **STRG+D** aus früheren Versionen von SSMS wurde wiederhergestellt. Einzelheiten dazu finden Sie unter https://feedback.azure.com/forums/908035/suggestions/35544754. |
+|SSMS-Optionen|SSMS deaktiviert nun standardmäßig das automatische Herunterladen von Dokumenttypdefinitionen (DTD) im XMLA-Editor: Der XMLA-Skript-Editor (der den XML-Sprachdienst verwendet) verhindert nun standardmäßig das automatische Herunterladen von DTD für potenziell schädliche XMLA-Dateien. Dies wird gesteuert durch Deaktivieren der Einstellung „DTDs und Schemas automatisch herunterladen“, die unter **Extras** > **Optionen** > **Umgebung** > **Text-Editor** > **XML** > **Sonstiges** festgelegt wird.|
+|SSMS-Optionen|Die Funktion der Tastenkombination **STRG+D** aus früheren Versionen von SSMS wurde wiederhergestellt. Einzelheiten dazu finden Sie unter [https://feedback.azure.com/forums/908035/suggestions/35544754](https://feedback.azure.com/forums/908035/suggestions/35544754). |
 |Tabellen-Designer|Ein Absturz bei „200 Zeilen bearbeiten“wurde behoben.|
 |Tabellen-Designer|Ein Problem wurde behoben, bei dem der Designer es zuließ, dass eine Tabelle während der Verbindung mit einer Azure SQL-Datenbank hinzugefügt wurde.|
 |Sicherheitsrisikobewertung|Ein Problem wurde behoben, bei dem die Überprüfungsergebnisse nicht ordnungsgemäß geladen wurden.|
@@ -282,7 +345,7 @@ Das allgemein verfügbare Release von SSMS 18.0 ist nun verfügbar. Frühere Ve
 |XEvent-Profiler|Ein Problem wurde behoben, bei dem der XEvent-Profiler während der Verbindung mit einem 96-Kern-SQL-Server nicht starten konnte.|
 |XEvent-Viewer|Ein Problem wurde behoben, bei dem XEvent-Viewer abgestürzt ist, wenn die Ereignisse mit den „erweiterten Symbolleistenoptionen für Ereignisse“ gruppiert wurden.|
 
-## <a name="deprecated-and-removed-features-in-180-ga"></a>Veraltete und entfernte Funktionen in 18.0 (allgemein verfügbare Version)
+### <a name="deprecated-and-removed-features-in-180"></a>Veraltete und entfernte Funktionen in Version 18.0
 
 Veraltete/entfernte Funktionen
 - T-SQL-Debugger
@@ -298,18 +361,16 @@ Veraltete/entfernte Funktionen
   - Sowohl SQL Server-Konfigurations-Manager als auch Reporting Server-Konfigurations-Manager sind nicht mehr Teil des SSMS-Setups.
 - DMF-Standardrichtlinien
   - Die Richtlinien werden nicht mehr mit SSMS installiert. Sie werden in Git verschoben. Benutzer können auf Wunsch daran mitwirken und sie herunterladen/installieren.
-- SSMS-Befehlszeilenoption „-P“ wurde entfernt.
+- Die SSMS-Befehlszeilenoption „-P“ wurde entfernt.
   - Aus Sicherheitsgründen wurde die Option zum Angeben von Klartextkennwörtern in der Befehlszeile entfernt.
 - Die Funktion „Skripts generieren“ > „In Webdienst veröffentlichen“ wurde entfernt.
   - Diese veraltete Funktion wurde von der SSMS-Benutzeroberfläche entfernt.
 - Der Knoten „Wartung“ > „Legacy“ im Objekt-Explorer wurde entfernt.
   - Auf die alten Knoten „Datenbank-Wartungsplan“ und „SQL Mail“ kann nicht mehr zugegriffen werden. Die zeitgemäßen Knoten „Datenbank-E-Mail“ und „Wartungspläne“ funktionieren weiterhin wie gewohnt.
 
+### <a name="known-issues"></a>Bekannte Probleme
 
-
-## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
-
-Laden Sie die Vorgängerversionen von SSMS herunter, indem Sie die Titellinks in den folgenden Abschnitten anklicken:
+Bei der Installation von Version 18.0 tritt möglicherweise ein Probleme auf, durch das Sie SQL Server Management Studio nicht ausführen können. Führen Sie die im Artikel [SSMS2018 – Installed, but will not run (SSMS 2018 – Installiert, kann aber nicht ausgeführt werden)](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) beschriebenen Schritte aus, wenn dieses Problem auftritt.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![Herunterladen von](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -323,13 +384,10 @@ Laden Sie die Vorgängerversionen von SSMS herunter, indem Sie die Titellinks in
 - Ein seit langem bestehendes Problem wurde behoben, bei dem der Wiederherstellungsplan keinen Wiederherstellungsplan finden konnte oder unter bestimmten Bedingungen einen ineffizienten Wiederherstellungsplan generieren konnte.
 - Ein Problem im Assistenten „Datenschichtanwendung importieren“ wurde behoben, das bei der Verbindung mit einer Azure SQL-Datenbank einen Fehler verursachen konnte.
 
-
-
 > [!NOTE]
 > In andere Sprachen als Englisch lokalisierte Releases von SSMS 17.x benötigen das [KB 2862966-Sicherheitsupdatepaket](https://support.microsoft.com/kb/2862966) für die Installation unter den folgenden Windows-Systemen: Windows 8, Windows 7, Windows Server 2012 und Windows Server 2008 R2.
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
-
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
 ## <a name="downloadssdtmediadownloadpng-ssms-179httpsgomicrosoftcomfwlinklinkid2014306clcid0x409"></a>![Download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
@@ -339,8 +397,7 @@ Releasedatum: 4. September 2018
 > [!NOTE]
 > In andere Sprachen als Englisch lokalisierte Releases von SSMS 17.x benötigen das [KB 2862966-Sicherheitsupdatepaket](https://support.microsoft.com/kb/2862966) für die Installation unter den folgenden Windows-Systemen: Windows 8, Windows 7, Windows Server 2012 und Windows Server 2008 R2.
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
-
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x40a)
 
 ### <a name="whats-new"></a>Neues
 
@@ -350,7 +407,7 @@ Showplan:
 
 - Der grafische Showplan zeigt jetzt die Attribute des Feedbacks zur Speicherzuweisung im Zeilenmodus an, wenn die Funktion für einen bestimmten Plan aktiviert ist: Dem Abfrageplan-XML-Element „MemoryGrantInfo“ wurde „IsMemoryGrantFeedbackAdjusted“ und „LastRequestedMemory“ hinzugefügt. Weitere Informationen zum Feedback zur Speicherzuweisung im Zeilenmodus finden Sie unter [Adaptive Abfrageverarbeitung in SQL-Datenbanken](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
 
-Azure SQL: 
+Azure SQL:
 
 - Unterstützung für V-Kern-SKUs bei der Erstellung von Azure-Datenbanken hinzugefügt. Weitere Informationen finden Sie unter [Auf virtuellen Kernen basierendes Erwerbsmodell](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
  
@@ -358,7 +415,7 @@ Azure SQL:
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
 
 **SSMS Allgemein**
-    
+
 Replikationsmonitor:
 
 - Ein Fehler, der den Start des Replikationsmonitors (SqlMonitor.exe) verhindert hat, wurde behoben (Zugehöriges Benutzerfeedback: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079).
@@ -370,7 +427,7 @@ Assistent zum Importieren von Flatfiles:
 
 Importieren/Exportieren einer Datenebenenanwendung:
 
-- Ein Problem (in DacFx), das zu einem Fehler beim Import einer BACPAC-Datei mit der folgenden Meldung geführt hat, wurde behoben: „Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental.“ (Fehler SQL72014: .NET SqlClient-Datenanbieter: Meldung 9108, Ebene 16, Zustand 10, Zeile 1: Dieser Statistiktyp wird nicht als inkrementell unterstützt.) Das Problem trat bei Tabellen auf, für die Partitionen definiert waren, aber die keine Indizes für die Tabelle umfassten.
+- Ein Problem (in DacFx), das zu einem Fehler beim Import einer BACPAC-Datei mit der folgenden Meldung geführt hat, wurde behoben: „Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental.“ (Fehler SQL72014: .NET SqlClient-Datenanbieter: Meldung 9108, Ebene 16, Zustand 10, Zeile 1: Dieser Statistiktyp wird nicht als inkrementell unterstützt. Das Problem trat bei Tabellen auf, für die Partitionen definiert waren, aber die keine Indizes für die Tabelle umfassten.
 
 IntelliSense:
 
@@ -384,11 +441,11 @@ Azure SQL:
 
 - Ein Problem in Bezug auf die Auflistung von Datenbanken in „Verfügbare Datenbanken“, durch das „master“ während der Verbindung mit einer bestimmten Datenbank nicht in der Dropdownliste angezeigt wurde, wurde behoben.
 - Ein Problem, durch das ein Skript („Daten“ oder „Schema und Daten“) während der Verbindung mit der Azure SQL-Datenbank über AAD mit MFA nicht generiert werden konnte, wurde behoben.
-- Ein Problem im Ansicht-Designer (Ansichten), durch das während der Verbindung mit einer Azure SQL-Datenbank eine Auswahl von „Tabellen hinzufügen“ aus der Benutzeroberfläche nicht möglich war, wurde behoben.
+- Ein Problem im Sicht-Designer (Ansichten), durch das während der Verbindung mit einer Azure SQL-Datenbank eine Auswahl von „Tabellen hinzufügen“ aus der Benutzeroberfläche nicht möglich war, wurde behoben.
 - Ein Problem, durch das der SSMS-Abfrage-Editor Verbindungen während der MFA-Tokenerneuerung automatisch schloss und wieder öffnete, wurde behoben. Dadurch werden Nebeneffekte vermieden, die vom Benutzer unbemerkt auftreten (z.B. das Schließen einer Transaktion, ohne sie erneut zu öffnen). Mit der Änderung wird die Tokenablaufzeit zum Eigenschaftenfenster hinzugefügt. 
 - Ein Problem, durch das SSMS keine Kennwortaufforderungen für importierte MSA-Konten für AAD mit MFA-Anmeldung erzwang, wurde behoben. 
 
-Aktivitätsmonitor: 
+Aktivitätsmonitor:
 
 - Ein Problem, durch das die „Live-Abfragestatistik“ einfror, wenn sie über den Aktivitätsmonitor gestartet und mit der SQL-Authentifizierung verwendet wurde, wurde behoben. 
 
@@ -409,11 +466,8 @@ Help:
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
-
 > [!IMPORTANT]
 > Bei Verwendung des Authentifizierungstyps *Active Directory: Universell mit MFA-Unterstützung* für den SQL-Abfrage-Editor stellen Benutzer möglicherweise fest, dass die Verbindung bei jedem Aufruf der Abfrage geschlossen und erneut geöffnet wird. Nebeneffekte eines solchen Schließens sind unter anderem, dass globale temporäre Tabellen unerwartet gelöscht werden und manchmal der Verbindung eine neue SPID gegeben wird. Ein solches Schließen tritt nicht auf, wenn die Verbindung eine offene Transaktion aufweist. Um dieses Problem zu umgehen, können Benutzer `persist security info=true` in den Verbindungsparametern festlegen.
-
-
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![Herunterladen von](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *In der Version 17.8 wurde im Zusammenhang mit der Bereitstellung von SQL-Datenbanken ein Fehler festgestellt. Daher wird die Version 17.8 durch SSMS 17.8.1 ersetzt.*
@@ -421,8 +475,7 @@ Help:
 Buildnummer: 14.0.17277.0<br>
 Releasedatum: 26. Juni 2018
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
-
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 ### <a name="whats-new"></a>Neues
 
@@ -431,7 +484,7 @@ Releasedatum: 26. Juni 2018
 Datenbankeigenschaften:
 
 - Durch diese Verbesserung wird die Konfigurationsoption **AUTOGROW_ALL_FILES** für Dateigruppen verfügbar gemacht. Diese neue Konfigurationsoption wurde unter „Datenbankeigenschaften“ > Fenster „Dateigruppen“ hinzugefügt und zwar in Form einer neuen Spalte („Autogrow All Files“) mit Kontrollkästchen für jede verfügbare Dateigruppe (mit Ausnahme der Dateigruppen „Filestream“ und „Speicheroptimiert“). Der Benutzer kann AUTOGROW_ALL_FILES für eine bestimmte Dateigruppe über das entsprechende Kontrollkästchen unter „Autogrow_All_Files“ aktivieren oder deaktivieren. Dementsprechend wird für die Option **AUTOGROW_ALL_FILES** ordnungsgemäß ein Skript erstellt, wenn Skripts für die Datenbank für CREATE erstellt oder Skripts für die Datenbank (SQL 2016 und höher) generiert werden.
-    
+
 SQL-Editor:
 
 - Die Benutzeroberfläche wurde durch IntelliSense-Funktionen in Azure SQL-Datenbank verbessert, wenn der Benutzer keinen Masterzugriff besitzt.
@@ -439,17 +492,15 @@ SQL-Editor:
 Skripterstellung:
 
 - Es wurden allgemeine Leistungsverbesserungen vorgenommen, insbesondere über Verbindungen mit hoher Latenz.
-    
+
 **Analysis Services (AS)**
 
 - Analysis Services-Clientbibliotheken und -Datenanbieter wurden auf die neuste Version aktualisiert, die um Unterstützung für die neue Azure Government-AAD-Autorität (login.microsoftonline.us) erweitert wurden.
 
-
-
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
 
 **SSMS Allgemein**
-    
+
 Wartungspläne:
 
 - Das Problem, dass beim Task „Operator benachrichtigen“ mit SQL-Authentifizierung ein Fehler auftrat, wenn Wartungspläne mit SQL-Authentifizierung bearbeitet wurden, wurde behoben.
@@ -487,7 +538,7 @@ Always Encrypted:
 Buildnummer: 14.0.17254.0<br>
 Releasedatum: 09. Mai 2018
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>Neues
@@ -513,17 +564,17 @@ Wartungsplan:
 - Beheben eines Problems, bei dem bei dem Versuch, den Zeitplan für einen vorhandenen Wartungsplan zu ändern, eine Ausnahme ausgelöst wurde. Ausführlichere Informationen finden Sie unter [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
 
 Always On: 
-- Beheben eines Problems, bei dem das Always On-Dashboard für Latenzzeit nicht mit SQL Server 2012 funktioniert hat.
+- Es wurde ein Problem behoben, bei dem das Always On-Dashboard für Latenzzeit nicht mit SQL Server 2012 funktioniert hat.
  
 Skripterstellung: 
 - Beheben eines Problems, bei dem ein Nicht-Administratorbenutzer gespeicherte Prozeduren für Azure SQL Data Warehouse nicht als Skripts erstellen konnte.
-- Beheben eines Problems, bei dem bei einer Skripterstellung für Azure SQL-Datenbank die *SCOPED CONFIGURATION*-Eigenschaften nicht einbezogen wurden.
+- Es wurde ein Fehler behoben, bei dem bei der Skripterstellung einer Datenbank für Azure SQL-Datenbank die *SCOPED CONFIGURATION*-Eigenschaften nicht einbezogen wurden.
  
 Telemetrie: 
 - Beheben eines Problems, bei dem SSMS abstürzt, wenn das Herstellen einer Verbindung mit einem Server versucht wird, nachdem das Abonnement für Senden von Telemetriedaten gekündigt wurde.
  
 Azure SQL-Datenbank: 
-- Beheben eines Problems, bei dem der Benutzer den Kompatibilitätsgrad weder festlegen noch oder ändern konnte (die Dropdownliste war leer). Der Benutzer muss weiterhin die Schaltfläche *Skript* verwenden und das Skript manuell bearbeiten, um den Kompatibilitätsgrad auf 150 festzulegen. 
+- Es wurde ein Problem behoben, bei dem der Benutzer den Kompatibilitätsgrad weder festlegen noch oder ändern konnte (die Dropdownliste war leer). Der Benutzer muss weiterhin die Schaltfläche *Skript* verwenden und das Skript manuell bearbeiten, um den Kompatibilitätsgrad auf 150 festzulegen. 
  
 SMO: 
 - Verfügbar gemachte Einstellung für Fehlerprotokollgröße in SMO. Ausführliche Informationen finden Sie unter [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
@@ -534,7 +585,7 @@ IntelliSense:
 - Leistungsverbesserung: Verringerte Menge von IntelliSense-Abfragen für Spaltendaten. Dies ist besonders nützlich, wenn mit Tabellen gearbeitet wird, die eine sehr große Anzahl von Spalten haben. 
 
 SSMS-Benutzereinstellungen:
-- Beheben eines Problems, bei dem die Größenänderung der Seite für Optionen nicht ordnungsgemäß funktionierte.
+- Es wurde ein Problem behoben, bei dem die Größenänderung der Seite für Optionen nicht ordnungsgemäß funktionierte.
 
 Verschiedenes:  
 - Verbesserung der Art und Weise, wie Text auf Seite für *Statistikdetails* angezeigt wird. 
@@ -557,7 +608,7 @@ In einigen Dialogfeldern wird ein Fehler wegen ungültiger Edition angezeigt, we
 Buildnummer: 14.0.17230.0<br>
 Releasedatum: 20. März 2018
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>Neues
 
@@ -640,7 +691,7 @@ Datenbank-E-Mail:
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![Herunterladen](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Allgemein verfügbar | Buildnummer: 14.0.17224.0
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 ### <a name="whats-new"></a>Neues
 
@@ -670,19 +721,19 @@ Showplan:
 Showplan:
 
 - Die verstrichene Zeit der Live-Abfragestatistik wurde behoben, sodass sie die Ausführungszeit der Engine anstelle der verstrichenen Zeit der LQS-Verbindung anzeigt.
-- Ein Problem wurde behoben, bei dem Showplan „Logische Operatoren anwenden“, wie z.B. GbApply und InnerApply, nicht erkennen konnte.
+- Ein Problem wurde behoben, bei dem Showplan „Apply logical operators“ (Logische Operatoren anwenden), wie z. B. GbApply und InnerApply, nicht erkennen konnte.
 - Ein Problem im Zusammenhang mit ExchangeSpill wurde behoben.
 
 Abfrage-Editor:
 
-- Ein Problem im Zusammenhang mit SPIDs wurde behoben, bei dem SSMS einen Fehler wie „Die Eingabezeichenfolge hat das falsche Format. (mscorlib)“ beim Ausführen einer einfachen Abfrage mit vorangestellten „SET SHOWPLAN_ALL ON“ auslöst. 
+- Ein Problem im Zusammenhang mit SPIDs wurde behoben, bei dem SSMS einen Fehler wie "Input string wasn't in a correct format. (mscorlib)" (mscorlib)“ beim Ausführen einer einfachen Abfrage mit vorangestellten „SET SHOWPLAN_ALL ON“ auslöst. 
 
 
 SMO:
 
-- Ein Problem wurde behoben, bei dem SMO AvailabilityReplica-Eigenschaften nicht abrufen konnte, wenn die Serversortierung die Groß-/Kleinschreibung beachtet hat (daher konnte SSMS eine Fehlernachricht wie „Der mehrteilige Bezeichner "a.delimited" konnte nicht gebunden werden.“ anzeigen).
-- Ein Problem in der Klasse „DatabaseScopedConfigurationCollection“ wurde behoben, bei dem Sortierungen nicht ordnungsgemäß behandelt wurden (daher konnte SSMS auf Computern mit dem Gebietsschema Türkisch Fehler wie „legacy cardinality estimation is not valid scoped configuration“ (Legacy-Kardinalitätsschätzung ist keine gültige Konfiguration) anzeigen, wenn ein Rechtsklick auf eine Datenbank ausgeführt wird, die auf einem Server mit einer Groß-/Kleinschreibung beachtenden Sortierung ausgeführt wird).
-- Ein Problem in der Klasse „JobServer“ wurde behoben, bei dem SMO SQL Agent-Eigenschaften nicht von einem SQL 2005 Server abrufen konnte (daher hat SSMS einen Fehler wie „Einer lokalen Variable kann kein Standardwert zugewiesen werden. Die \@ServiceStartMode-Skalarvariable muss deklariert werden“ ausgelöst und den SQL Agent-Knoten im Objekt-Explorer letztlich nicht angezeigt).
+- Ein Problem wurde behoben, bei dem SMO AvailabilityReplica-Eigenschaften nicht abrufen konnte, wenn die Serversortierung die Groß-/Kleinschreibung beachtet hat (daher konnte SSMS eine Fehlernachricht wie "The multi-part identifier ‚a.delimited‘ could not be bound." (Der mehrteilige Bezeichner ‚a.delimited‘ konnte nicht gebunden werden.) anzeigen).
+- Ein Problem in der Klasse „DatabaseScopedConfigurationCollection“ wurde behoben, bei dem Sortierungen nicht ordnungsgemäß behandelt wurden (daher konnte SSMS auf Computern mit dem Gebietsschema Türkisch Fehler wie "legacy cardinality estimation isn't valid scoped configuration" (Legacy-Kardinalitätsschätzung ist keine gültige Konfiguration) anzeigen, wenn ein Rechtsklick auf eine Datenbank ausgeführt wird, die auf einem Server mit einer Groß-/Kleinschreibung beachtenden Sortierung ausgeführt wird).
+- Ein Problem in der Klasse „JobServer“ wurde behoben, bei dem SMO SQL Agent-Eigenschaften nicht von einem SQL 2005-Server abrufen konnte (daher hat SSMS einen Fehler wie "Einer lokalen Variable kann kein Standardwert zugewiesen werden. Die \@ServiceStartMode-Skalarvariable muss deklariert werden" ausgelöst und den SQL Agent-Knoten im Objekt-Explorer letztlich nicht angezeigt).
 
 Vorlagen: 
 
@@ -705,7 +756,7 @@ Datenklassifizierung:
 ## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![Herunterladen](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 Allgemein verfügbar | Buildnummer: 14.0.17213.0
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>Neues
@@ -752,7 +803,7 @@ Abfragespeicher:
 
 **SSMS Allgemein**
 
-- Objekt-Explorer: Ein Problem wurde behoben, bei dem der Tabellenwertfunktions-Knoten in Datenbankmomentaufnahmen nicht angezeigt wurde – [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161).
+- Objekt-Explorer: Ein Problem wurde behoben, bei dem der Tabellenwertfunktionsknoten in Datenbankmomentaufnahmen nicht angezeigt wurde – [Connect 3140161](https://connect.microsoft.com/SQLServer/feedback/details/3140161).
 Verbesserte Leistung beim Erweitern der Knotens *Datenbanken*, wenn der Server über AUTOCLOSE-Datenbanken verfügt.
 - Abfrage-Editor: Ein Problem wurde behoben, bei dem IntelliSense für Benutzer nicht verfügbar war, die keinen Zugriff auf die Masterdatenbank besitzen.
 Es wurde ein Problem behoben, das in manchen Fällen zu Abstürzen von SSMS führte, wenn die Verbindung mit einem Remotecomputer geschlossen wurde – [Connect 3142557](https://connect.microsoft.com/SQLServer/feedback/details/3142557).
@@ -791,7 +842,7 @@ Es wurde ein Problem behoben, bei dem Skripts für eine Stretchingdatenbank fäl
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Allgemein verfügbar | Buildnummer: 14.0.17199.0
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
 
 ### <a name="enhancements"></a>Erweiterungen
@@ -817,7 +868,7 @@ Allgemein verfügbar | Buildnummer: 14.0.17199.0
 
 - XEvent: 
    - Problem wurde behoben, bei dem SSMS nur einen Teil der Ereignisse in der XEL-Datei öffnet.
-   - Verbesserte „Anzeigen von Livedaten“-Erfahrung, wenn die Standarddatenbank nicht die Bezeichnung „Master“ hat – [Connect-Artikel 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
+   - Verbesserte Option „Anzeigen von Livedaten“, wenn die Standarddatenbank nicht die Bezeichnung „Master“ hat – [Connect-Artikel 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
 - Always On: Problem wurde behoben, bei dem „Wiederherstellen von Protokollsicherungen“ möglicherweise mit folgendem Fehler fehlschlägt: „The log in this backup set terminates at LSN x, which is too early to apply to the database“ (Das Protokoll in diesem Sicherungssatz endet bei LSN x. Dies ist zu früh für die Anwendung des Sicherungssatzes auf die Datenbank).
 - Auftragsaktivitätsmonitor: inkonsistente Symbole wurden berichtigt – [Connect-Artikel 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
 - Abfragespeicher: Ein Problem wurde behoben, bei dem der Benutzer den Datumsbereich „benutzerdefiniert“ für Abfragespeicherberichte nicht auswählen konnte. Weitere Informationen finden Sie in den folgenden Artikeln.
@@ -825,9 +876,9 @@ Allgemein verfügbar | Buildnummer: 14.0.17199.0
    - [Connect-Artikel 3139399](https://connect.microsoft.com/SQLServer/feedback/details/3139399)
 - Problem wurde behoben, bei dem das Verbindungsdialogfeld die kürzlich verwendete Datenbank nicht „löscht“, wenn gespeicherte Informationen eine benannte Datenbank besitzt, und der Benutzer „Standard“ auswählt.
 - Skripterstellung für Objekte: Problem wurde behoben, bei dem „Datenbankskript generieren“ nicht funktioniert und ein Fehler ausgelöst wird, wenn der Benutzer eine angehaltene DW-Datenbank auf dem Server hat, jedoch eine andere Nicht-DW-Datenbank ausgewählt hat und versucht hat, für diese ein Skript zu erstellen.
-Problem wurde behoben, bei dem der Header für skriptbasierte gespeicherte Prozeduren nicht mit den Skripteinstellungen übereingestimmt hat, was zu einem irreführenden Skript geführt hat – [Connect-Artikel 3139784](https://connect.microsoft.com/SQLServer/feedback/details/3139784).
+Es wurde ein Problem behoben, bei dem der Header für skriptbasierte gespeicherte Prozeduren nicht mit den Skripteinstellungen übereingestimmt hat, was zu einem irreführenden Skript geführt hat – [Connect-Artikel 3139784](https://connect.microsoft.com/SQLServer/feedback/details/3139784).
 Die Schaltfläche „Skript“ wurde für Azure SQL-Objekte erneut aktiviert.
-  Problem wurde behoben, bei dem SSMS die Skripterstellung für „Alter“ oder „Execute“ für einige Objekte (UDF, View, SP, Trigger) beim Herstellen einer Verbindung zu einer Azure SQL-Datenbank nicht zugelassen hat – [Connect-Artikel 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386).
+  Es wurde ein Problem behoben, bei dem SSMS die Skripterstellung für „Alter“ oder „Execute“ für einige Objekte (UDF, View, SP, Trigger) beim Herstellen einer Verbindung mit einer Azure SQL-Datenbank nicht zugelassen hat – [Connect-Artikel 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386).
 - Abfrage-Editor:
   - Verbesserte IntelliSense-Funktion beim Nutzen von Azure SQL-Datenbanken.
   - Problem wurde behoben, bei dem Abfragen aufgrund eines abgelaufenen Authentifizierungstokens (Universelle Authentifizierung) fehlgeschlagen sind.
@@ -835,18 +886,18 @@ Die Schaltfläche „Skript“ wurde für Azure SQL-Objekte erneut aktiviert.
   - Problem wurde behoben, bei dem das Öffnen eines Abfragefensters mit einer Verbindung zu einer Nicht-DataWarehouse-Datenbank auf einem Server veranlassen würde, dass alle nachfolgenden Abfragefenster für diesen Server für DataWarehouse-Datenbanken mehrere Fehler zu nicht unterstützen Typen/Optionen ausgeben würden.
 - Always On:
    - Spalte im Seedingmodus wurde dem Always On-Dashboard und den AG-Eigenschaftenseiten hinzugefügt.
-   - Problem wurde behoben, bei dem es nicht möglich war, eine Linux-AG zu erstellen, wenn sich das primäre Element unter Windows befindet – [Connect-Artikel 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856).
+   - Es wurde ein Problem behoben, bei dem es nicht möglich war, eine Linux-AG zu erstellen, wenn sich das primäre Element unter Windows befindet – [Connect-Artikel 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856).
 - Mehrere Probleme mit „Nicht genügend Arbeitsspeicher.“ wurden in SSMS beim Ausführen von Abfragen behoben – [Connect-Artikel 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190), [Connect-Artikel 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864).
 - Profiler: 
-   - Problem wurde behoben, bei dem der Profiler nicht funktioniert hat, als er für SQL 2005 benutzt wurde.
-   - Problem wurde behoben, bei dem der Profiler die Verbindungsoption „Dem Serverzertifikat vertrauen“ nicht berücksichtigt hat.
+   - Es wurde ein Problem behoben, bei dem der Profiler nicht funktioniert hat, als er für SQL 2005 benutzt wurde.
+   - Es wurde ein Problem behoben, bei dem der Profiler die Verbindungsoption „Serverzertifikat vertrauen“ nicht berücksichtigt hat.
 - Aktivitätsmonitor: Problem wurde behoben, bei dem der Aktivitätsmonitor nicht funktioniert, wenn er auf einen Server von SQL Server unter Linux gezeigt wird.
 - Problem mit der SMO-Übertragungsklasse wurde behoben, bei dem External Data Source- oder externe File Format-Objekte nicht übertragen wurden. Diese Art Objekte sollten nun ordnungsgemäß in der Übertragung enthalten sein.
 - Registrierte Server:
    - Aktivierte Multiserverabfrage für UA-Server (es wird versucht, das gleiche Token für jeden UA-Server in der Gruppe zu verwenden).
 - Universelle AD-Authentifizierung:
-   - Problem wurde behoben, bei dem die Azure AD-Authentifizierung nicht unterstützt wurde.
-   - Problem wurde behoben, bei dem der Tabellen/Sicht-Designer nicht funktioniert hat.
+   - Es wurde ein Problem behoben, bei dem die Azure AD-Authentifizierung nicht unterstützt wurde.
+   - Es wurde ein Problem behoben, bei dem der Tabellen/Sicht-Designer nicht funktioniert hat.
    - Problem wurde behoben, bei dem „Die ersten 1000 Zeilen auswählen“ und „Die ersten 200 Zeilen bearbeiten“ nicht funktioniert haben.
 - Datenbankwiederherstellung: Problem wurde behoben, bei dem die Wiederherstellung den letzten Ordner im Pfad bei der Verschiebung von Dateien zu einem anderen Speicherort ausgelassen hat.
 - Assistent für die Komprimierung:
@@ -870,8 +921,8 @@ Die Schaltfläche „Skript“ wurde für Azure SQL-Objekte erneut aktiviert.
 
 **SSMS Allgemein**
 
-- Die folgenden SSMS-Funktionen werden für die Azure AD-Authentifizierung nicht unterstützt, wenn die universelle Authentifizierung mit MFA verwendet wird:
-   - Der Datenbankoptimierungsratgeber wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, bei dem dem Benutzer die eher unverständliche Fehlermeldung „Die Datei oder Assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory' konnte nicht geladen werden,…“ angezeigt wird statt der erwarteten Fehlermeldung „Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt. (DTAClient)“ (Die Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt).
+- Die folgende SSMS-Funktion wird für die Azure AD-Authentifizierung nicht unterstützt, wenn die universelle Authentifizierung mit MFA verwendet wird:
+   - Der Datenbankoptimierungsratgeber wird für die Azure AD-Authentifizierung nicht unterstützt. Es liegt ein bekanntes Problem vor, für das dem Benutzer die eher unverständliche Fehlermeldung „Die Datei oder Assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory' konnte nicht geladen werden,…“ angezeigt wird statt der erwarteten Fehlermeldung "Die Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt. (DTAClient)“ (Die Microsoft Azure SQL-Datenbank wird vom Datenbankoptimierungsratgeber nicht unterstützt).
 - Bei dem Versuch, eine Abfrage in DTA zu analysieren entsteht folgender Fehler: "Object must implement IConvertible. (mscorlib)“ (Objekt muss IConvertible implementieren).
 - *Rückläufige Abfragen* fehlen in der Liste der Berichte im Abfragespeicher im Objekt-Explorer.
    - Problemumgehung: Klicken Sie mit der rechten Maustaste auf den Knoten **Abfragespeicher**, und wählen Sie **View Regressed Queries (Rückläufige Abfragen anzeigen)** aus.
@@ -884,7 +935,7 @@ Die Schaltfläche „Skript“ wurde für Azure SQL-Objekte erneut aktiviert.
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Allgemein verfügbar | Buildnummer: 14.0.17177.0
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 ### <a name="enhancements"></a>Erweiterungen
 
@@ -946,7 +997,7 @@ Zusätzlich wurden alle Skripterstellungsoptionen in ihren eigenen Abschnitt ver
 - Bei Abfragefenstern, die die universelle Active Directory-Authentifizierung mit MFA-Unterstützung verwenden, kann ein Fehler ähnlich dem Folgenden auftreten, wenn versucht wird, eine Abfrage durchzuführen, nachdem das Fenster für eine Stunde geöffnet war:
 
    `Msg 0, Level 11, State 0, Line 0
-The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts.`
+The connection is broken and recovery isn't possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts.`
 
    Ein erneutes Ausführen der Abfrage sollte den Fehler überwinden und erfolgreich sein.
 
@@ -965,7 +1016,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Ein Problem behoben, das beim Versuch auftrat, die Ergebnisse einer Abfrage als Text zu drucken.  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - Ein Problem wurde behoben, bei dem SSMS Tabellen und andere Objekte falsch gelöscht hat, wenn ein Skript für die Löschung dieser Objekte in einer Azure SQL-Datenbank erstellt wurde.
 - Es wurde ein Problem behoben, bei dem SSMS gelegentlich den Start verweigert hat mit einem Fehler wie: „Eine oder mehrere Komponenten können nicht gefunden werden. Bitte installieren Sie die Anwendung neu“
-- Ein Problem wurde behoben, durch das die SPID auf der SSMS-Benutzeroberfläche nicht aktualisiert und nicht mehr synchron angezeigt werden konnte (https://connect.microsoft.com/SQLServer/feedback/details/1898875).
+- Ein Problem wurde behoben, durch das die SPID auf der SSMS-Benutzeroberfläche nicht aktualisiert und nicht mehr synchron angezeigt werden konnte (https://connect.microsoft.com/SQLServer/feedback/details/1898875 ).
 - Es wurde ein Problem bei der automatischen Installation von SSMS behoben, bei dem das Argument /passive als /quiet behandelt wurde.
 - Es wurde ein Problem behoben, bei dem SSMS beim Start gelegentlich den Fehler „Objektverweis ist nicht auf eine Instanz des Objekts festgelegt“ ausgegeben hat. https://connect.microsoft.com/SQLServer/feedback/details/3134698
 - Es wurde ein Problem mit dem „Datenkomprimierungs-Assistenten“ behoben, das einen Absturz von SSMS verursacht hat, wenn auf der Graph-Tabelle ‚Berechnen‘ angeklickt wurde
@@ -973,8 +1024,8 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Es wurde ein Problem behoben, bei dem es SSMS nicht möglich war, Sicherungsdateien auf Servern mit einer Sammlung, bei der nach Groß- und Kleinschreibung unterschieden wird, aufzulisten. https://connect.microsoft.com/SQLServer/feedback/details/3134787 und https://connect.microsoft.com/SQLServer/feedback/details/3137000
 - Showplan und Showplan vergleichen verschiedene Problembehebungen
 - Es wurde ein Problem behoben, bei dem das Verbindungsdialogfeld dem Benutzer nicht gestattet hat, das „Netzwerkprotokoll“ anzugeben, das für die Verbindung verwendet werden soll, falls SQL Server nicht auf dem Computer installiert ist, auf dem SSMS ausgeführt wird. https://connect.microsoft.com/SQLServer/feedback/details/3134997
-- Verbesserte Unterstützung für die Konfigurationen für mehrere Monitore, bei denen manche SSMS-Dialogfelder an zufälligen Orten angezeigt wurden. Die neue Option „Aufgabendialogfeld“ wurde unter den Benutzereinstellungen von „SQL Server-Objekt-Explorer | Befehle“ hinzugefügt, durch die es ermöglicht wird, die Position eines Aufgabendialogfelds oder Eigenschaftsblatts zu speichern, wenn es geschlossen wird. https://connect.microsoft.com/SQLServer/feedback/details/889169, https://connect.microsoft.com/SQLServer/feedback/details/1158271, https://connect.microsoft.com/SQLServer/feedback/details/3135260 
-- Es wurde ein Problem behoben, bei dem SSMS keine Datenbankeigenschaften für verschlüsselte Azure SQL-Datenbanken ändern konnte
+- Verbesserte Unterstützung für die Konfigurationen für mehrere Monitore, bei denen manche SSMS-Dialogfelder an zufälligen Orten angezeigt wurden. Die neue Option „Aufgabendialogfelder“ wurde unter den Benutzereinstellungen von „SQL Server-Objekt-Explorer | Befehle“ hinzugefügt, durch die es ermöglicht wird, die Position eines Aufgabendialogfelds oder Eigenschaftsblatts zu speichern, wenn es geschlossen wird. https://connect.microsoft.com/SQLServer/feedback/details/889169 , https://connect.microsoft.com/SQLServer/feedback/details/1158271, https://connect.microsoft.com/SQLServer/feedback/details/3135260 
+- Es wurde ein Problem behoben, bei dem SSMS keine Datenbankeigenschaften für verschlüsselte Azure SQL-Datenbanken ändern konnte.
 - Die Option „Ergebnisse nach der Ausführung verwerfen“ wurde verbessert. https://connect.microsoft.com/SQLServer/feedback/details/1196581
 - Es wurde ein Problem behoben bzw. verbessert, bei dem es Benutzern nicht möglich war, auf Azure-Abonnements zuzugreifen, für die sie keine Administratorrechte besitzen.
 - Der Assistent für die Datenbankwiederherstellung wurde verbessert, damit die Zieldatenbank in OE unabhängig von der Auswahl der Quelldatenbank ausgewählt bleibt. https://connect.microsoft.com/SQLServer/feedback/details/3118581
@@ -986,10 +1037,10 @@ The connection is broken and recovery is not possible. The client driver attempt
 - Ein Problem wurde behoben, bei dem SSMS inkorrekte Skripts für Azure SQL generiert hat (Tabellen und Indizes mit der Option „DATA_COMPRESSIONS“). https://connect.microsoft.com/SQLServer/feedback/details/3133148
 - Ein Problem wurde behoben, bei dem es dem Benutzer nicht möglich war, die Tastenkombination **STRG+Q** zu verwenden, um den Schnellstart auszuführen. Die neuen Tastenkombinationen zum Umschalten der Option „IntelliSense aktiviert“ im Abfrage-Editor lauten nun **STRG+B** und **STRG+I**. https://connect.microsoft.com/SQLServer/feedback/details/3131968
 - Es wurde ein Problem in „Datenbank wiederherstellen“ behoben, bei dem SSMS eine Ausnahme beim Versuch ausgelöst hat, ein Speicherkonto aus einem Abonnement auszuwählen, in dem sich Konten mit benutzerdefinierten Domänen befinden
-- Es wurde ein Problem in „Datenbankdiagramm“ behoben, bei dem SSMS den Fehler „Der Index war außerhalb des Arraybereichs.“ ausgelöst hat. Außerdem war es dem Benutzer nicht möglich, die „Tabellenansicht“ in eine andere Einstellung als „Standard“ zu ändern. https://connect.microsoft.com/SQLServer/feedback/details/3133792 und https://connect.microsoft.com/SQLServer/feedback/details/3135326
+- Es wurde ein Problem in „Datenbankdiagramm“ behoben, bei dem SSMS den Fehler "Der Index war außerhalb des Arraybereichs." ausgelöst hat. Außerdem war es dem Benutzer nicht möglich, die „Tabellenansicht“ in eine andere Einstellung als „Standard“ zu ändern. https://connect.microsoft.com/SQLServer/feedback/details/3133792 und https://connect.microsoft.com/SQLServer/feedback/details/3135326
 - Es wurde ein Problem in „Sicherung/Wiederherstellung in die URL“ behoben, bei dem SSMS keine klassischen Speicherkonten aufgelistet hat.
 - Es wurde ein Problem behoben, bei dem eine Ausnahme bei dem Versuch ausgelöst wurde, schemagebundene sicherungsfähige Elemente zu den Datenbankrollen hinzuzufügen. https://connect.microsoft.com/SQLServer/feedback/details/3118143
-- Es wurde ein Problem behoben, bei dem SSMS gelegentlich folgenden Fehler angezeigt hat: „‘Data‘ ist NULL. Diese Methode oder Eigenschaft kann nicht für NULL-Werte aufgerufen werden.“ wenn ein Tabellenknoten erweitert wird (https://connect.microsoft.com/SQLServer/feedback/details/3136283).
+- Es wurde ein Problem behoben, bei dem SSMS gelegentlich folgenden Fehler angezeigt hat: „‘Data‘ ist NULL. Diese Methode oder Eigenschaft kann nicht für NULL-Werte aufgerufen werden.“ wenn ein Tabellenknoten erweitert wird (https://connect.microsoft.com/SQLServer/feedback/details/3136283 ).
 - DTA: Es wurde ein Problem behoben, bei dem „DTAEngine.exe“ mit Heapbeschädigung beendet wurde, wenn die Partitionsfunktion mit bestimmten Begrenzungswerten ausgewertet wurde.
 
 
@@ -1010,7 +1061,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Allgemein verfügbar | Buildnummer: 14.0.17119.0
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
 
 ### <a name="enhancements"></a>Erweiterungen
 
@@ -1030,14 +1081,14 @@ Allgemein verfügbar | Buildnummer: 14.0.17119.0
 - ShowPlan: Ein Problem wurde behoben, bei dem auf der Benutzeroberfläche immer das tatsächliche Jointyp-Attribut für nichtadaptive Verknüpfungsoperatoren angezeigt wurde.
 - Setup:
   - Ein Problem wurde behoben, bei dem SSMS 17.0 SSDT auf Visual Studio 2013 unterbrach [Microsoft Connect-Artikel 3133479]
-  - Ein Problem wurde behoben, bei dem das Klicken auf „Neustart“ am Ende des Setups nicht zu einem Neustart des Computers führte
+  - Ein Problem wurde behoben, bei dem das Klicken auf „Neustart“ am Ende des Setups nicht zu einem Neustart des Computers führte.
 - Skripterstellung: Es wird vorübergehend verhindert, dass SSMS versehentlich Azure-Datenbankobjekte löscht, wenn versucht wird, ein Skript für den Löschvorgang zu erstellen, indem diese Option deaktiviert wird.  Dies wird in einer zukünftigen Version von SSMS behoben.
 - Objekt-Explorer: Ein Problem wurde behoben, bei dem der Knoten „Datenbanken“ nicht erweitert wurde, wenn er mit einer Azure-Datenbank verbunden wurde, die mit „AS COPY“ erstellt wurde.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-170httpsgomicrosoftcomfwlinklinkid847722"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 17.0](https://go.microsoft.com/fwlink/?LinkID=847722)
 Allgemein verfügbar | Buildnummer: 14.0.17099.0
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
 
 ### <a name="enhancements"></a>Erweiterungen 
 
@@ -1107,7 +1158,7 @@ RestoreDefaultFonts – Auf Standardeinstellungen zurücksetzen. Der Befehl „P
 - Ein Problem wurde behoben, bei dem der Knoten „Always Encrypted Keys“ (Always Encrypted-Schlüssel) beim Adressieren von SQL 2016 SP1 Standard Edition fehlte.
 - Always Encrypted: Das Menü „Always Encrypted“ wurde beim Adressieren von SQL 2016 RTM Standard Edition oder eines beliebigen SQL 2014-Servers (und früherer Versionen) falsch aktiviert. Ein Problem wurde behoben, bei dem IntelliSense einen Fehler meldet, wenn die Syntax CREATE OR ALTER verwendet wird. Ein Problem wurde behoben, bei dem die Verschlüsselung versagt, falls CMK/CEK Zeichen enthalten, die mit Escapezeichen versehen (d. h. in Klammern eingeschlossen) werden sollten. Tritt eine Ausnahme in SSMS auf, dass nicht genügend Arbeitsspeicher vorhanden ist, wird dem Benutzer ein Fehler angezeigt, der stattdessen die Verwendung der nativen (64 Bit) PowerShell vorschlägt.
 Ein Problem wurde behoben, bei dem der AE-Assistent einen Fehler verursacht hat, wenn der Benutzer Resource Group Manager-Abonnements anstelle von klassischen Azure-Abonnements verwendete - Ein Problem wurde behoben, bei dem der AE-Assistent einen falschen Fehler anzeigte, wenn der Benutzer keine Berechtigungen in Abonnements hatte oder in diesen nicht über Azure Key Vault verfügte.
-Ein Problem im AE-Assistent wurde behoben, bei dem im Fall von mehreren AADs die Azure-Abonnements nicht auf der Azure Key Vault-Anmeldeseite angezeigt wurden - Ein Problem im AE-Assistent wurde behoben, bei dem die Azure-Abonnements, für die der Benutzer über eine Leseberechtigung verfügt, nicht auf der Azure Key Vault-Anmeldeseite angezeigt wurden
+Ein Problem im AE-Assistenten wurde behoben, bei dem im Fall von mehreren AADs die Azure-Abonnements nicht auf der Azure Key Vault-Anmeldeseite angezeigt wurden – Ein Problem im AE-Assistent wurde behoben, bei dem die Azure-Abonnements, für die der Benutzer über eine Leseberechtigung verfügt, nicht auf der Azure Key Vault-Anmeldeseite angezeigt wurden
   - Ein Problem wurde behoben, bei dem Ressourcendateien nicht ordnungsgemäß geladen werden, was zu ungenauen Fehlermeldungen führte
 - Verbesserter Kontrast von Hyperlinks auf SSMS-Setup-Seite
 - Problem der Nichtanzeige von PolyBase-Knoten beim Verbinden mit SQL Server Express (2016 SP1) behoben
@@ -1164,7 +1215,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 - Beheben eines DMF-Problems, die Benutzeroberfläche aktualisiert Ausdrücke inkorrekt, die konstante Zeichenfolgewerte mit Anführungszeichen enthalten
 - Das Problem wurde behoben, das zum Absturz von SSMS beim Ausführen von benutzerdefinierten Berichten geführt hat
 - Menüelement „Execution in Scale Out...“ (Ausführung in horizontaler Hochskalierung) in den Ordnerknoten einfügen
-- Ein Problem mit der Funktion zum Erstellen von IP-Adressen-Whitelists für die Firewall einer Azure SQL-Datenbank wurde behoben
+- Ein Problem mit der Funktion zum Erstellen einer Liste zugelassener IP-Adressen für die Firewall einer Azure SQL-Datenbank wurde behoben.
 - Ein Problem in SSMS wurde behoben, bei dem beim Bearbeiten der Source einer multidimensionalen AS-Partition die Ausnahme ausgelöst wurde, dass der Objektverweis nicht festgelegt ist
 - Ein Problem in SSMS wurde behoben, bei dem beim Löschen einer Kundenassembly von einem multidimensionalen AS-Server die Ausnahme ausgelöst wurde, dass der Objektverweis nicht festgelegt ist
 - Ein Problem wurde behoben, bei dem das Umbenennen einer tabellarischen AS-Datenbank 1400 fehlschlug
@@ -1176,7 +1227,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-mana
 ## <a name="downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946"></a>![download (Herunterladen von)](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 Allgemein verfügbar | Buildnummer: 13.0.16106.4
 
-[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+[Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [Französisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [Deutsch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [Italienisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [Japanisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [Koreanisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [Russisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [Spanisch](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 In dieser Version wurden folgende Probleme behoben:
 
@@ -1195,7 +1246,7 @@ In dieser Version wurden folgende Probleme behoben:
 * Das Menü *Zuletzt verwendete öffnen* zeigt keine zuletzt gespeicherten Dateien an. [Connect-ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
 
 * SSMS ist sehr langsam, wenn mit der rechten Maustaste auf den Tabellenindex geklickt wurde (über eine Remote(internet)verbindung). [Connect-ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
- 
+
 * Ein Problem mit der Bildlaufleiste von SQL Designer wurde behoben. [Connect-ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
 
 * Das Tabellenkontextmenü hängt vorübergehend 
@@ -1209,28 +1260,28 @@ In dieser Version wurden folgende Probleme behoben:
 
 Wenn Sie Probleme bei der SSMS-Installation haben und die Standarddeinstallation und erneute Installation diese nicht lösen können, können Sie zunächst versuchen, Visual Studio 2015 IsoShell zu [reparieren](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs). Falls die Reparatur von Visual Studio 2015 IsoShell das Problem nicht behebt, können womöglich die folgenden bewährten Lösungen helfen:
 
-1.  Deinstallieren Sie SSMS so, wie Sie auch jede andere Anwendung deinstallieren würden (je nach Windows-Version über *Apps & Features* oder *Programme und Funktionen*).
+1. Deinstallieren Sie SSMS so, wie Sie auch jede andere Anwendung deinstallieren würden (je nach Windows-Version über *Apps & Features* oder *Programme und Funktionen*).
 
-2.  Deinstallieren Sie Visual Studio 2015 IsoShell **über eine erweiterte CMD-Aufforderung**:
-   
+2. Deinstallieren Sie Visual Studio 2015 IsoShell **über eine erweiterte CMD-Aufforderung**:
+
     ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
 
     ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
 
-3.  Deinstallieren Sie Microsoft Visual C++ 2015 Redistributable genau so, wie Sie auch jede andere Anwendung deinstallieren würden. Deinstallieren Sie jeweils x86 und x64, falls sich diese Versionen auf Ihrem Computer befinden.
+3. Deinstallieren Sie Microsoft Visual C++ 2015 Redistributable genau so, wie Sie auch jede andere Anwendung deinstallieren würden. Deinstallieren Sie jeweils x86 und x64, falls sich diese Versionen auf Ihrem Computer befinden.
 
-4.  Installieren Sie Visual Studio 2015 IsoShell erneut **über eine erweiterte CMD-Aufforderung**:  
+4. Installieren Sie Visual Studio 2015 IsoShell erneut **über eine erweiterte CMD-Aufforderung**:  
 
     ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
- 
+
     ```vs_isoshell.exe /PromptRestart```
 
-5.  Installieren Sie SSMS erneut.
+5. Installieren Sie SSMS erneut.
 
-6.  Führen Sie ein Upgrade auf die [neueste Version von Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) aus, wenn Sie diese noch nicht besitzen.
+6. Führen Sie ein Upgrade auf die [neueste Version von Visual C++ 2015 Redistributable](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads) aus, wenn Sie diese noch nicht besitzen.
 
+## <a name="additional-downloads"></a>Weitere Downloads
 
-## <a name="additional-downloads"></a>Weitere Downloads  
 Eine Liste aller SQL Server Management Studio-Downloads finden Sie im [Microsoft Download Center](https://www.microsoft.com/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   
 Das aktuelle Release von SQL Server Management Studio finden Sie unter [Herunterladen von SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  

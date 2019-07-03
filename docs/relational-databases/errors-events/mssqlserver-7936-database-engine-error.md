@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ea3c26affaac50e791a9d18d68911850a1ac53f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797144"
 ---
 # <a name="mssqlserver7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +26,12 @@ ms.locfileid: "47688618"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|7936|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Das FileStream-Verzeichnis ist für die Spalten-ID C_ID der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID vorhanden, aber diese Spalte ist keine FileStream-Spalte.|  
+|Meldungstext|Tabellenfehler: Das Filestream-Verzeichnis ist für die Spalten-ID „C_ID“ der Objekt-ID „O_ID“, Index-ID „I_ID“ und Partitions-ID „PN_ID“ vorhanden. Hierbei handelt es sich allerdings um keine Filestream-Spalte.|  
   
 ## <a name="explanation"></a>Erklärung  
 Während DBCC CHECKDB wurde ein FILESTREAM-Verzeichnis für die angegebene Spalte gefunden; bei der Spalte handelt es sich jedoch nicht um eine Spalte vom Typ **FILESTREAM**.  

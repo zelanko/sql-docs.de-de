@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428647"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316680"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Wenn beispielsweise die Cachegröße 50 ausgewählt wird, werden in [!INCLUDE[ss
 Bei Erstellung mit der **CACHE**-Option kann ein unerwartetes Herunterfahren (z.B. durch einen Stromausfall) möglicherweise zum Verlust der im Cache verbleibenden Sequenznummern führen.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Sequenznummern werden außerhalb des Bereichs der aktuellen Transaktion generiert. Sie werden unabhängig davon genutzt, ob ein Commit oder ein Rollback für die Transaktion ausgeführt wird, die die Sequenznummer verwendet.  
+ Sequenznummern werden außerhalb des Bereichs der aktuellen Transaktion generiert. Sie werden unabhängig davon genutzt, ob ein Commit oder ein Rollback für die Transaktion ausgeführt wird, die die Sequenznummer verwendet. Die doppelte Überprüfung tritt nur auf, wenn ein Datensatz vollständig gefüllt ist. Dies kann in manchen Fällen dazu führen, dass die gleiche Nummer bei der Erstellung für mehr als einen Datensatz verwendet, dann aber als Duplikat identifiziert wird. Wenn dies auftritt und andere automatisch nummerierten Werte auf nachfolgende Datensätze angewendet wurden, kann dies möglicherweise zu einer Lücke zwischen automatisch nummerierten Werten und dem erwarteten Verhalten führen.
   
 ### <a name="cache-management"></a>Cacheverwaltung  
  Um die Leistung zu verbessern, ordnet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anzahl der durch das **CACHE**-Argument angegebenen Sequenznummern zu.  

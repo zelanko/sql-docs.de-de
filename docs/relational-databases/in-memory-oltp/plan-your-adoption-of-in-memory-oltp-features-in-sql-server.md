@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462505"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planen der Übernahme von In-Memory-OLTP-Funktionen in SQL Server
@@ -205,7 +205,7 @@ Alle Indizes für eine speicheroptimierte Tabelle werden von den tabellenbezogen
 
 Der herkömmliche nicht gruppierte Index in B-Struktur ist häufig die sinnvolle und einfache Wahl, wenn Sie zum ersten Mal eine speicheroptimierte Tabelle implementieren. Später, nachdem Sie gesehen haben, wie Ihre Anwendung ausgeführt wird, können Sie in Betracht ziehen, zu einem anderen Indextyp zu wechseln.
 
-Zwei besondere Indextypen erfordern im Kontext einer speicheroptimierten Tabelle eine Erläuterung:  Hashindizes und Columnstore-Indizes.
+Zwei besondere Indextypen erfordern im Kontext einer speicheroptimierten Tabelle eine Erläuterung: Hashindizes und Columnstore-Indizes.
 
 Eine Übersicht über Indizes bei speicheroptimierten Tabellen finden Sie unter:
 
@@ -214,9 +214,9 @@ Eine Übersicht über Indizes bei speicheroptimierten Tabellen finden Sie unter:
 
 #### <a name="hash-indexes"></a>Hashindizes
 
-Hashindizes können das schnellste Format darstellen, um auf eine bestimmte Zeile mit ihrem exakten Primärschlüssel zuzugreifen, indem der „**=**“-Operator verwendet wird.
+Hashindizes können das schnellste Format darstellen, um auf eine bestimmte Zeile mit ihrem exakten Primärschlüssel zuzugreifen, indem der „ **=** “-Operator verwendet wird.
 
-- Ungenaue Operatoren, z.B. „**!=**“, „**>**“ oder „**BETWEEN**“ würden die Leistung beeinträchtigen, wenn Sie mit einem Hashindex verwendet werden.
+- Ungenaue Operatoren, z.B. „ **!=** “, „ **>** “ oder „**BETWEEN**“ würden die Leistung beeinträchtigen, wenn Sie mit einem Hashindex verwendet werden.
 
 - Ein Hashindex stellt möglicherweise nicht die beste Wahl dar, wenn die Rate der Schlüsselwertduplizierung zu hoch wird.
 
