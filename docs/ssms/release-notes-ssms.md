@@ -11,12 +11,12 @@ ms.author: maghan
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 74ec0cd11e1c13363905c71a64096f6c4eb8b053
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: 0be9bae60c46aa43c6f0acb5de5204d33a318450
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263541"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399668"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -56,7 +56,7 @@ Im Vergleich zu Version 18.0 ist Version 18.1 ein kleines Update mit den folge
 
 | Neues Element| Details|
 | :-------| :------|
-| Datenbankdiagramme | In SSMS wurden wieder Datenbankdiagramme hinzugefügt. Weitere Informationen finden Sie unter [Datenbankdiagramme](https://feedback.azure.com/forums/908035/suggestions/37507828). |
+| Datenbankdiagramme | [In SSMS wurden wieder Datenbankdiagramme hinzugefügt.](https://feedback.azure.com/forums/908035/suggestions/37507828)
 | SSBDIAGNOSE.EXE |Dem SSMS-Paket wurde wieder die SQL Server-Diagnose (Befehlszeilentool) hinzugefügt.|
 | Integration Services (SSIS) | Unterstützung für die Zeitplanung des SSIS-Pakets in Azure, das sich entweder im SSIS-Katalog in Azure oder im Dateisystem befindet. Es gibt drei Einträge für das Starten des Dialogfelds „Neuer Zeitplan“: Das Menüelement *Neuer Zeitplan...* wird angezeigt, wenn Sie mit der rechten Maustaste auf das SSIS-Paket im SSIS-Katalog in Azure klicken. Die zweite Option erreichen Sie über das Menüelement *Schedule SSIS Package in Azure* (Zeitplan für das SSIS-Paket in Azure) unter dem Menüelement *Migrate to Azure* (Migrieren zu Azure) unter *Tools*. Die dritte Option „Schedule SSIS“ (SSIS-Zeitplan in Azure) wird angezeigt, wenn Sie mit der rechten Maustaste auf den Auftragsordner unter dem SQL Server-Agent der verwalteten Azure SQL-Datenbank-Instanz klicken.|
 
@@ -101,6 +101,12 @@ Im Vergleich zu Version 18.0 ist Version 18.1 ein kleines Update mit den folge
 | SQL-Agent | Es wurde ein Problem behoben, bei dem die Schaltfläche „Anzeigen“ in den *Auftragsschritt-Eigenschaften* nicht immer aktiviert war und somit das Anzeigen der Ausgabe eines bestimmten Auftragsschritts verhindert wurde. |
 | XEvent-Benutzeroberfläche | Die Spalte „Paket“ wurde zu XEvents-Listen hinzugefügt, um Ereignisse mit identischem Namen zu unterscheiden. |
 | XEvent-Benutzeroberfläche | Der fehlende Klassentyp „EXTERNAL LIBRARY“ wurde hinzugefügt, der „XEventUI“ zugeordnet ist. |
+
+### <a name="known-issues-181"></a>Bekannte Probleme (18.1)
+
+- Benutzern kann ein Fehler angezeigt werden, wenn ein Tabellenobjekt aus dem Objekt-Explorer in den Abfrage-Editor gezogen wird. Dieser Fehler ist bekannt, und der Fix ist für das nächste Release geplant.
+
+- Die Farboptionen für *Verbindungen gruppieren* und *Einzelne Serververbindungen* unter „Optionen > Text-Editor > Registerkarte „Editor“ und Statusleiste > Layout und Farben der Statusleiste“ werden nach Schließen von SSMS 18.1 nicht beibehalten. Sobald Sie SSMS wieder öffnen, wird die Option „Layout und Farben der Statusleiste“ auf die Standardeinstellung zurückgesetzt.
 
 ## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
 
@@ -368,9 +374,9 @@ Veraltete/entfernte Funktionen
 - Der Knoten „Wartung“ > „Legacy“ im Objekt-Explorer wurde entfernt.
   - Auf die alten Knoten „Datenbank-Wartungsplan“ und „SQL Mail“ kann nicht mehr zugegriffen werden. Die zeitgemäßen Knoten „Datenbank-E-Mail“ und „Wartungspläne“ funktionieren weiterhin wie gewohnt.
 
-### <a name="known-issues"></a>Bekannte Probleme
+### <a name="known-issues-180"></a>Bekannte Probleme (18.0)
 
-Bei der Installation von Version 18.0 tritt möglicherweise ein Probleme auf, durch das Sie SQL Server Management Studio nicht ausführen können. Führen Sie die im Artikel [SSMS2018 – Installed, but will not run (SSMS 2018 – Installiert, kann aber nicht ausgeführt werden)](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) beschriebenen Schritte aus, wenn dieses Problem auftritt.
+- Bei der Installation von Version 18.0 tritt möglicherweise ein Probleme auf, durch das Sie SQL Server Management Studio nicht ausführen können. Führen Sie die im Artikel [SSMS2018 – Installed, but will not run (SSMS 2018 – Installiert, kann aber nicht ausgeführt werden)](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) beschriebenen Schritte aus, wenn dieses Problem auftritt.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![Herunterladen von](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -454,7 +460,7 @@ Microsoft Azure-Integration:
 - Ein Problem wurde behoben, bei dem SSMS nur die ersten fünfzig Abonnements anzeigte (Always Encrypted-Dialogfelder, Dialogfelder zur Sicherung/Wiederherstellung aus einer URL und weitere Dialogfelder).
 - Ein Problem wurde behoben, das (im Dialogfeld zur Sicherung/Wiederherstellung aus einer URL) beim Versuch der Anmeldung mit einem Microsoft Azure-Konto ohne Speicherkonto zu einer SSMS-Ausnahme („Index außerhalb des gültigen Bereichs“) führte. 
 
-Skripterstellung für Objekte: 
+Skripterstellung für Objekte:
 
 - Bei der Skripterstellung mit DROP und CREATE vermeidet SSMS jetzt das Generieren von dynamischem T-SQL.
 - Bei der Skripterstellung für ein Datenbankobjekt generiert SSMS ab sofort kein Skript zum Festlegen von datenbankweiten Konfigurationen, wenn die Standardwerte verwendet werden.
