@@ -187,7 +187,7 @@ Die **OnError** Parameter verweist auf eine fehlerberichterstattungs-Funktion, m
 |Argument|und Beschreibung|
 |:--|:--|
 |`ctx`|[Eingabe] Der Kontext, der auf den Fehler zu melden.|
-|`msg`|[Eingabe] Der zu meldende Fehlermeldung. Auf NULL endende Zeichenfolge für breite* Zeichen. Damit parametrisierte Informationen vorhanden sein kann, darf diese Zeichenfolge einfügen Formatieren von Sequenzen des Formulars von akzeptiert die [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Funktion. Erweiterte Funktionalität kann durch diesen Parameter angegeben werden, wie unten beschrieben.|
+|`msg`|[Eingabe] Der zu meldende Fehlermeldung. Auf NULL endende Zeichenfolge für breite Zeichen. Damit parametrisierte Informationen vorhanden sein kann, darf diese Zeichenfolge einfügen Formatieren von Sequenzen des Formulars von akzeptiert die [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Funktion. Erweiterte Funktionalität kann durch diesen Parameter angegeben werden, wie unten beschrieben.|
 |...|[Eingabe] Zusätzliche Variadic-Parameter, die Formatbezeichner in der Meldung, nach Bedarf anpassen.|
 
 Um zu melden, wenn ein Fehler aufgetreten ist, wird vom Treiber und eine Fehlermeldung mit optionalen zusätzlichen Parametern, die es formatiert werden der Anbieter ruft OnError, Angeben des Context-Parameters an die anbieterfunktion übergeben. Der Anbieter kann diese Funktion mehrmals aufrufen, mehrere Fehler innerhalb einer Anbieter-Funktionsaufruf fortlaufend zu übermitteln. Beispiel:
