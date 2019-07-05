@@ -1,7 +1,7 @@
 ---
 title: dm_pdw_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -9,16 +9,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-author: ronortloff
-ms.author: rortloff
+author: XiaoyuL-Preview
+ms.author: xiaoyul
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836183"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564176"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65836183"
 
   Enthält Informationen zu Anforderungen, die alle zurzeit oder zuletzt im aktiven [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Sie enthält eine Zeile für jede Anforderung bzw. die Abfrage.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Der Schlüssel für diese Sicht. Eindeutige numerische ID der Anforderung zugeordnet ist.|Für alle Anforderungen im System eindeutig.|  
 |session_id|**nvarchar(32)**|Eindeutige numerische ID in Zusammenhang mit der Sitzung, in der diese Abfrage ausgeführt wurde. Finden Sie unter [dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
@@ -44,6 +44,8 @@ ms.locfileid: "65836183"
 |importance|**nvarchar(32)**|Die Bedeutung die Anforderung festlegen eingereicht wurde. Anforderungen mit einer niedrigeren Wichtigkeit werden in der Warteschlange unterbrochenen Zustand verbleiben, wenn höhere Wichtigkeit-Anforderungen gesendet werden.  Anforderungen und einer höheren Priorität werden vor niedriger Wichtigkeit Anforderungen ausgeführt werden, die zuvor gesendet wurden.  Weitere Informationen zu Wichtigkeit, finden Sie unter [Workload Wichtigkeit](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
 |group_name| |Für die interne Verwendung vorgesehen.</br>Betrifft: Azure SQL Data Warehouse|
 |resource_allocation_percentage| |Für die interne Verwendung vorgesehen.</br>Betrifft: Azure SQL Data Warehouse|
+|result_set_cache|**bit**|Beschreibt, ob eine abgeschlossene Abfrage ein Cachetreffer Ergebnis (1) oder nicht war (0).|0,1|
+||||
   
  Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "Metadaten" in der [Kapazitätsgrenzen](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) Thema.   
   

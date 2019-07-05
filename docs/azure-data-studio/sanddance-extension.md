@@ -3,7 +3,7 @@ title: SandDance für Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Verwenden von SandDance in Azure Data Studio
 ms.custom: seodec18
-ms.date: 04/18/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798080"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563988"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance für Azure Data Studio (Vorschau)
 Azure Data Studio bietet nun eine Möglichkeit, schnelle Visualisierungen für die CSV und TSV-Dateien zu erstellen, an dem Sie arbeiten. Dies schließt lokale Dateien oder Dateien in HDFS in den SQL Server 2019 Big Data-Cluster an. Diese Erweiterung ist hilfreich, wenn Sie versuchen, Sie haben eine kurze, sehen Sie sich die Daten und zu verstehen, was vor sich geht. Wir verwenden eine Technologie namens SandDance von Microsoft Research, die für ein direktes Visualisierungen der Daten generieren können.
@@ -36,7 +36,7 @@ Mit der rechten Maustaste auf eine CSV- oder TSV-Datei in HDFS an, wenn Sie mit 
 
 ## <a name="known-issues"></a>Bekannte Probleme
 
-Aktuell müssen Ihre Daten die erste Spalte als eindeutiger Bezeichner.
+Derzeit müssen die Daten die erste Spalte als eindeutiger Bezeichner.
 
 Wir sind derzeit nicht die Anzahl der Zeilen begrenzen, die sichtbar gemacht wird. Jedoch steigt Arbeitsspeicherverbrauch proportional auf die Anzahl der Zeilen, daher wird empfohlen, dass das Dataset oder die Sicht auf ungefähr 100 k Zeilen beschränkt ist.
 
