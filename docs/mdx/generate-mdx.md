@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224883"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597442"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -46,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  Ein gültiges Trennzeichen, ausgedrückt als Zeichenfolgenausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie ein zweiter Satz angegeben wird, die **generieren** Funktionsergebnis ist eine Gruppe, die durch Anwenden der Tupel in der zweiten Menge auf jedes Tupel in der ersten Menge generiert *,* und dann wird die resultierende verknüpft Mengen durch vereinigungsmengenbildung. Wenn **alle** angegeben ist, wird die Funktion behält Duplikate in der sich ergebenden Menge.  
+ Wenn Sie ein zweiter Satz angegeben wird, die **generieren** Funktionsergebnis ist eine Gruppe, die durch Anwenden der Tupel in der zweiten Menge auf jedes Tupel in der ersten Menge generiert wird, und dann wird die resultierende verknüpft Mengen durch vereinigungsmengenbildung. Wenn **alle** angegeben ist, wird die Funktion behält Duplikate in der sich ergebenden Menge.  
   
- Wenn ein Zeichenfolgenausdruck angegeben wird, die **generieren** Funktion gibt eine Zeichenfolge, die durch die Auswertung der im angegebenen Zeichenfolgenausdruck für jedes Tupel in der ersten Menge generiert *,* und verkettet Sie dann die Ergebnisse. Optional kann die Zeichenfolge begrenzt werden, sodass die einzelnen Ergebnisse in der verketteten Ergebniszeichenfolge voneinander getrennt sind.  
+ Wenn ein Zeichenfolgenausdruck angegeben wird, die **generieren** Funktion gibt eine Zeichenfolge, die durch Auswerten des im angegebenen Zeichenfolgenausdruck für jedes Tupel in der ersten Menge, und klicken Sie dann die Ergebnisse verkettet generiert. Optional kann die Zeichenfolge begrenzt werden, sodass die einzelnen Ergebnisse in der verketteten Ergebniszeichenfolge voneinander getrennt sind.  
   
 ## <a name="examples"></a>Beispiele  
   

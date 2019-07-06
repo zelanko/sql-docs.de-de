@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfb90f9e0d1e3910f45a5b283161e9c36da49a71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661560"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579791"
 ---
 # <a name="creating-user-defined-types---coding"></a>Erstellen benutzerdefinierter Typen: Codieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ using Microsoft.SqlServer.Server;
  Die **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** ist erforderlich. Die **Serializable** -Attribut ist optional. Sie können auch angeben, die **Microsoft.SqlServer.Server.SqlFacetAttribute** , Informationen über den Rückgabetyp eines UDTs bereitzustellen. Weitere Informationen finden Sie unter [Benutzerdefinierte Attribute für CLR-Routinen](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Attribute des Point-UDT  
- Die **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** legt das Speicherformat für die **Punkt** UDT **Native**. **IsByteOrdered** nastaven NA hodnotu **"true"**, dies garantiert, dass die Ergebnisse der Vergleiche in SQL Server identisch sind, als ob Sie denselben Vergleich in verwaltetem Code stattgefunden haben. Der UDT implementiert die **System.Data.SqlTypes.INullable** Schnittstelle, damit den UDT Null erkennt.  
+ Die **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** legt das Speicherformat für die **Punkt** UDT **Native**. **IsByteOrdered** nastaven NA hodnotu **"true"** , dies garantiert, dass die Ergebnisse der Vergleiche in SQL Server identisch sind, als ob Sie denselben Vergleich in verwaltetem Code stattgefunden haben. Der UDT implementiert die **System.Data.SqlTypes.INullable** Schnittstelle, damit den UDT Null erkennt.  
   
  Das folgende Codefragment zeigt die Attribute für die **Punkt** UDT.  
   
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Die **Microsoft.SqlServer.Server.SqlMethodAttribute** -Klasse stellt benutzerdefinierte Attribute, die Methodendefinitionen verwendet werden können, um den Determinismus, auf null Aufrufverhalten angeben und angeben, ob eine Methode eine Mutatormethode ist. Bei diesen Eigenschaften werden die Standardwerte vorausgesetzt, und das benutzerdefinierte Attribut wird nur verwendet, wenn ein anderer Wert als der Standardwert erforderlich ist.  
   
 > [!NOTE]  
->  Die **SqlMethodAttribute** Klasse erbt von der **mit ' SqlFunctionAttribute '** Klasse, daher **SqlMethodAttribute** erbt die **FillRowMethodName** und **TableDefinition** Felder aus **mit ' SqlFunctionAttribute '**. Dies impliziert, dass es möglich ist, eine Tabellenwertmethode zu schreiben. Dies ist jedoch nicht der Fall. Die Methode kompiliert, und die Assembly wird bereitgestellt, aber ein Fehler über die **"IEnumerable"** zurück zur Laufzeit mit der folgenden Meldung ausgelöst: "Methoden-, Eigenschafts- oder Feldinformationen"\<Name > "in Klasse\<Klasse >' in Assembly '\<Assembly >' hat ungültigen Rückgabetyp. "  
+>  Die **SqlMethodAttribute** Klasse erbt von der **mit ' SqlFunctionAttribute '** Klasse, daher **SqlMethodAttribute** erbt die **FillRowMethodName** und **TableDefinition** Felder aus **mit ' SqlFunctionAttribute '** . Dies impliziert, dass es möglich ist, eine Tabellenwertmethode zu schreiben. Dies ist jedoch nicht der Fall. Die Methode kompiliert, und die Assembly wird bereitgestellt, aber ein Fehler über die **"IEnumerable"** zurück zur Laufzeit mit der folgenden Meldung ausgelöst: "Methoden-, Eigenschafts- oder Feldinformationen"\<Name >' in der Klasse\<Klasse > "in der Assembly"\<Assembly >' hat ungültigen Rückgabetyp. "  
   
  Die folgende Tabelle beschreibt einige der relevanten **Microsoft.SqlServer.Server.SqlMethodAttribute** Eigenschaften, die in UDT-Methoden verwendet werden können, und die zugehörigen Standardwerte aufgeführt.  
   
@@ -552,16 +552,16 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Gibt an, ob die Funktion auf die in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherten Benutzerdaten zugreift. Der Standardwert ist **DataAccessKind**. **Keine**.  
   
  IsDeterministic  
- Gibt an, ob die Funktion bei denselben Eingabewerten und demselben Datenbankzustand auch immer dieselben Ausgabewerte erzeugt. Der Standardwert ist **"false"**.  
+ Gibt an, ob die Funktion bei denselben Eingabewerten und demselben Datenbankzustand auch immer dieselben Ausgabewerte erzeugt. Der Standardwert ist **"false"** .  
   
  IsMutator  
- Gibt an, ob die Methode eine Statusänderung in der UDT-Instanz verursacht. Der Standardwert ist **"false"**.  
+ Gibt an, ob die Methode eine Statusänderung in der UDT-Instanz verursacht. Der Standardwert ist **"false"** .  
   
  IsPrecise  
- Gibt an, ob die Funktion ungenaue Berechnungen beinhaltet, z. B. Gleitkommaoperationen. Der Standardwert ist **"false"**.  
+ Gibt an, ob die Funktion ungenaue Berechnungen beinhaltet, z. B. Gleitkommaoperationen. Der Standardwert ist **"false"** .  
   
  OnNullCall  
- Gibt an, ob die Methode aufgerufen wird, wenn als Eingabeargumente NULL-Verweise angegeben werden. Der Standardwert ist **"true"**.  
+ Gibt an, ob die Methode aufgerufen wird, wenn als Eingabeargumente NULL-Verweise angegeben werden. Der Standardwert ist **"true"** .  
   
 ### <a name="example"></a>Beispiel  
  Die **Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator** Eigenschaft können Sie eine Methode markieren, die eine Änderung in den Zustand einer Instanz eines UDTs ermöglicht. Mit [!INCLUDE[tsql](../../includes/tsql-md.md)] ist es nicht möglich, zwei UDT-Eigenschaften in der SET-Klausel einer UPDATE-Anweisung festzulegen. Sie können jedoch eine Methode als Mutator markieren, die zwei Elemente ändert.  
@@ -575,7 +575,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
 UPDATE Triangles SET t.RotateY(0.6) WHERE id=5  
 ```  
   
- Die **Drehen** Methode ergänzt wird, mit der **SqlMethod** attributeinstellung **IsMutator** zu **"true"** , damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markieren die Methode als Mutatormethode. Der Code legt auch fest **OnNullCall** zu **"false"**, die an den Server angibt, dass die Methode einen null-Verweis zurückgibt (**nichts** in Visual Basic) Wenn die Eingabe Parameter sind null-Verweise.  
+ Die **Drehen** Methode ergänzt wird, mit der **SqlMethod** attributeinstellung **IsMutator** zu **"true"** , damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markieren die Methode als Mutatormethode. Der Code legt auch fest **OnNullCall** zu **"false"** , die an den Server angibt, dass die Methode einen null-Verweis zurückgibt (**nichts** in Visual Basic) Wenn die Eingabe Parameter sind null-Verweise.  
   
 ```vb  
 <SqlMethod(IsMutator:=True, OnNullCall:=False)> _  
@@ -614,7 +614,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Verwenden der **schreiben** -Methode für die **Währung** UDT, um zu bestimmen, wie der UDT beibehalten wird auf dem Datenträger und aus diesem Grund wie UDT-Werte werden verglichen und sortiert zur [!INCLUDE[tsql](../../includes/tsql-md.md)] Vorgänge.  
   
 3.  Speichern Sie die **Währung** UDT mit der folgenden binären Format:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Speichern Sie die Länderangabe als UTF-16-codierte Zeichenfolge für die Bytes 0 bis 19, wobei die Zeichenfolge rechts mit NULL-Zeichen aufgefüllt werden soll.  
   
     2.  Verwenden Sie Bytes 20 und nachfolgende Bytes zum Speichern des Dezimalwerts der Währungsbetrags.  

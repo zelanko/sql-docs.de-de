@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701862"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597455"
 ---
 # <a name="operation-of-parameterized-commands"></a>Verarbeitung parametrisierter Befehle
 Bei Verwendung mit einem großen untergeordneten **Recordset**, insbesondere auf die Größe des übergeordneten Elements verglichene **Recordset**, müssen nur wenige untergeordnete Kapitel zugreifen, aber Sie finden es möglicherweise effizienter, verwenden eine parametrisierte Befehle.  
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Die über- und untergeordneten Tabellen haben einen Spaltennamen im Allgemeinen, Cust_id *.* Die *untergeordneten Befehl* verfügt über ein "?" Platzhalter, die auf den die RELATE-Klausel verweist (d. h. "... PARAMETER 0").  
+ Die über- und untergeordneten Tabellen haben gemeinsam, die einen Spaltennamen *Cust_id*. Die *untergeordneten Befehl* verfügt über ein "?" Platzhalter, die auf den die RELATE-Klausel verweist (d. h. "... PARAMETER 0").  
   
 > [!NOTE]
 >  Die PARAMETER-Klausel bezieht sich ausschließlich auf die Befehlssyntax Form. Es ist nicht verknüpft mit entweder dem ADO [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt oder die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung.  

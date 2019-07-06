@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bfd021414ab9e8078ec0df9c23c33828e36d0f9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088506"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584611"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>Resultsets  
  **Sp_describe_undeclared_parameters** gibt das folgende Resultset zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**Int nicht NULL**|Enthält die Ordnungsposition des Parameters im Resultset. Die Position des ersten Parameters wird mit 1 angegeben.|  
 |**name**|**Sysname nicht NULL**|Enthält den Namen des Parameters.|  
@@ -236,7 +236,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 3.  Wenn zwei ähnliche Datentypen unter Regel 1, z. B. Verknüpfen **varchar(8000)** und **varchar(max)** , wird der kleinere Datentyp (**varchar(8000)** ) ausgewählt ist. Das gleiche Prinzip gilt für **Nvarchar** und **Varbinary** -Datentypen.  
   
 4.  Für die Zwecke der Regel 1 bevorzugt der Typableitungsalgorithmus bestimmte Konvertierungen gegenüber anderen. Die Konvertierungen werden in der folgenden Reihenfolge bevorzugt (beste bis schlechteste):  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Konvertierung zwischen gleichem Basisdatentyp mit unterschiedlicher Länge.  
   
     2.  Konvertierung zwischen fester und variabler Länge, die Version der gleichen Datentypen (z. B. **Char** zu **Varchar**).  

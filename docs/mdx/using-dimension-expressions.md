@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e492498ee6e15866e7fe6fd96588480c914b0622
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125532"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597525"
 ---
 # <a name="using-dimension-expressions"></a>Verwenden von Dimensionsausdrücken
 
@@ -59,7 +59,7 @@ ms.locfileid: "63125532"
   
  `FROM [Adventure Works]`  
   
- Ein hierarchiebezeichner wird als *Dimension_Name **.** Hierarchiename* in der BNF-Schreibweise zur Beschreibung von MDX-Anweisungen verwendet.  
+ Ein hierarchiebezeichner wird als *Dimension_Name.Hierarchy_Name* in der BNF-Schreibweise zur Beschreibung von MDX-Anweisungen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;MDX&#41;](../mdx/expressions-mdx.md)  

@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3605365fcee0a351d7638fb20f3633f03b976a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2d90f9ec9a396333715f6285ed300bc2436eed2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656619"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580973"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Profilerstellung von ODBC-Treiberleistungsdaten: Protokollieren von lang ausgeführten Abfragen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51656619"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>So protokollieren Sie Abfragen mit langer Ausführungszeit mithilfe des ODBC-Administrators  
   
-1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)**. (Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen.)  
+1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)** . (Stattdessen können Sie auch odbcad32.exe über die Eingabeaufforderung ausführen.)  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** .  
   
@@ -45,7 +45,9 @@ ms.locfileid: "51656619"
 6.  Wählen Sie **Abfragen mit langer Ausführungszeit in der Protokolldatei speichern**aus. Platzieren Sie im Feld den Namen der Datei, in der die Abfragen mit langer Ausführungszeit protokolliert werden sollen. Klicken Sie optional auf **Durchsuchen** , um im Dateisystem nach dem Abfrageprotokoll zu suchen.  
   
 7.  Legen Sie im Feld **Lange Abfragezeit (Millisekunden)** ein Abfragetimeoutintervall in Millisekunden fest.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-log-long-running-queries-data-programmatically"></a>So protokollieren Sie Abfragen mit langer Ausführungszeit programmgesteuert  
   
 1.  Rufen Sie [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY_LOG und dem vollständigen Pfad und dem Dateinamen der Protokolldatei für Abfragen mit langer Ausführungszeit auf. Zum Beispiel:  

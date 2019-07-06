@@ -21,12 +21,12 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19fb2cb2fc3b70bb8389a85d661992a5f7a7cb4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700700"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583292"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sys.sp_cdc_cleanup_change_table
   
  *Capture_instance* müssen den Namen einer Aufzeichnungsinstanz, die in der aktuellen Datenbank vorhanden ist.  
   
- [ @low_water_mark =] *Low_water_mark*  
+ [ @low_water_mark = ] *low_water_mark*  
  Wird von eine protokollfolgenummer (LSN), die als neue untergrenzenmarkierung für die zu verwendende der *Aufzeichnungsinstanz*. *Low_water_mark* ist **Binary(10)-Wert**, hat keinen Standardwert.  
   
  Wenn der Wert ungleich NULL ist, muss es angezeigt werden als Start_lsn-Wert eines aktuellen Eintrags in der [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) Tabelle. Wenn andere Einträge in CDC. lsn_time_mapping als neue untergrenzenmarkierung identifizierte Eintrag die dieselbe Commitzeit verwenden, wird die kleinste LSN, die dieser Gruppe von Einträgen zugeordnet wie die untergrenzenmarkierung ausgewählt.  
@@ -76,7 +76,9 @@ sys.sp_cdc_cleanup_change_table
     >  Bei der neuen Untergrenzenmarkierung muss es sich nicht zwingend um die im Aufruf der gespeicherten Prozedur angegebene Untergrenzenmarkierung handeln. Wenn andere Einträge in der CDC. lsn_time_mapping-Tabelle, die dieselbe Commitzeit verwenden, wird der kleinste Start_lsn dargestellt, in der Gruppe von Einträgen als angepasste untergrenzenmarkierung ausgewählt. Wenn die @low_water_mark Parameter NULL ist oder die aktuelle untergrenzenmarkierung größer als die neue Lowwatermark, der Start_lsn-Wert für die Aufzeichnungsinstanz unverändert.  
   
 2.  Änderungstabelleneinträge mit __ $Start_lsn-Werte kleiner als der untergrenzenmarkierung werden dann gelöscht. Der Schwellenwert zum Löschen wird verwendet, um die Anzahl gelöschter Zeilen in einer einzigen Transaktion zu begrenzen. Ein Fehler bezüglich des erfolgreichen Löschens von Einträgen wird gemeldet. Etwaige Änderungen an der Untergrenzenmarkierung der Aufzeichnungsinstanz, die aufgrund des Aufrufs vorgenommen wurden, werden davon jedoch nicht beeinflusst.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Verwenden Sie sp_cdc_cleanup_change_table in den folgenden Situationen:  
   
 -   Der Auftrag des Cleanup-Agents meldet Löschfehler.  

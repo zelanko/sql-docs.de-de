@@ -1,6 +1,6 @@
 ---
 title: In tabellarischen 1400-Modellen von SQL Server Analysis Services unterstützte Datenquellen | Microsoft-Dokumentation
-ms.date: 02/12/2019
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 246375015786cf67685c89f368f83662539da36b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159755"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597351"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Unterstützten Datenquellen in SQL Server Analysis Services tabellarischen 1400-Modellen
 
@@ -31,18 +31,20 @@ Azure Analysis Services finden Sie unter [in Azure Analysis Services unterstütz
 
 |DataSource  |In-memory  |DirectQuery  |
 |---------|---------|---------|
-|Azure SQL-Datenbank     |   Ja      |    Ja      |
+|Azure SQL-Datenbank <sup> [1](#ae)</sup>    |   Ja      |    Ja      |
 |Azure SQL Data Warehouse     |   Ja      |   Ja       |
 |Azure Blob Storage     |   Ja       |    Nein      |
 |Azure-Tabellenspeicher    |   Ja       |    Nein      |
 |Azure Cosmos DB     |  Ja        |  Nein        |
-|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   Ja       |    Nein      |
+|Azure Data Lake Store (Gen1)<sup>[2](#gen2)</sup>      |   Ja       |    Nein      |
 |Azure HDInsight HDFS    |     Ja     |   Nein       |
-|Azure HDInsight Spark <sup>[2](#databricks)</sup>     |   Ja       |   Nein       |
+|Azure HDInsight Spark <sup>[3](#databricks)</sup>     |   Ja       |   Nein       |
 ||||
 
-<a name="gen2">1</a> -ADLS-Gen2 wird derzeit nicht unterstützt.   
-<a name="databricks">2</a> – Azure Databricks unter Verwendung der Spark-Connector wird derzeit nicht unterstützt.   
+<a name="ae">1</a> – Azure SQL-Datenbank Always Encrypted wird nicht unterstützt.   
+<a name="gen2">2</a> -ADLS-Gen2 wird derzeit nicht unterstützt.   
+<a name="databricks">3</a> – Azure Databricks unter Verwendung der Spark-Connector wird derzeit nicht unterstützt.   
+
 
 
 
@@ -55,11 +57,13 @@ In-Memory und DirectQuery-Modelle, die eine Verbindung mit Azure-Datenquellen ve
 
 |DataSource | In-Memory-Anbieter | DirectQuery-Anbieter |
 |  --- | --- | --- |
-| SQL Server |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
+| SQL Server <sup>[4](#aeop)</sup> |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
 | SQL Server Data Warehouse |SQL Server Native Client 11.0, Microsoft OLE DB-Anbieter für SQLServer, .NET Framework-Datenanbieter für SQLServer | .NET Framework-Datenanbieter für SQL Server |
 | Oracle |Microsoft OLE DB-Anbieter von Oracle, Oracle-Datenanbieter für .NET |Oracle-Datenanbieter für .NET | |
 | Teradata |OLE DB-Anbieter für Teradata, Teradata-Datenanbieter für .NET |Teradata-Datenanbieter für .NET | |
 | | | |
+
+<a name="aeop">4</a> – Azure SQL-Datenbank und SQL Server-Datenbank, die Always Encrypted wird als ein DirectQuery unterstützt [Client Datasource](data-sources-supported-ssas-tabular.md#bkmk_supported_ds_dq) in SQL Server Analysis Services-Tabellenmodelle mit Kompatibilitätsgrad 1200 nur. Azure SQL-Datenbank und SQL Server-Datenbank, die Always Encrypted ist in Azure Analysis Services nicht unterstützt.       
 
 > [!NOTE]
 > Bei speicherinternen Modellen können OLE DB-Anbieter eine bessere Leistung für umfangreiche Daten bereitstellen. Bei der Auswahl zwischen unterschiedlichen Anbietern für die gleiche Datenquelle müssen Sie zuerst den OLE DB-Anbieter versucht.  

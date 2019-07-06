@@ -17,12 +17,12 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697955"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597556"
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
 Sucht eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Zeile, die die angegebenen Kriterien erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilenposition auf den gefundenen Datensatz festgelegt. Andernfalls wird die Position festgelegt, oder zum Ende (Start) von der **Recordset**.  
@@ -39,10 +39,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Ein **Zeichenfolge** -Wert, der eine Anweisung, die der Name der Spalte, einen Vergleichsoperator und einen Wert mit angeben, in die Suche enthält.  
   
  *SkipRows*  
- Optional *.* Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, den Zeilenoffset aus der aktuellen Zeile oder *starten* Lesezeichen aus, um die Suche zu starten. Standardmäßig beginnt die Suche in der aktuellen Zeile.  
+ Optional. Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, den Zeilenoffset aus der aktuellen Zeile oder *starten* Lesezeichen aus, um die Suche zu starten. Standardmäßig beginnt die Suche in der aktuellen Zeile.  
   
  *SearchDirection*  
- Optional *.* Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf die aktuelle Zeile oder die nächste verfügbare Zeile in die Richtung für die Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** lautet der Wert **AdSearchForward**. Bei einer nicht erfolgreiche Suche wird am Anfang der **Recordset** lautet der Wert **AdSearchBackward**.  
+ Optional. Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf die aktuelle Zeile oder die nächste verfügbare Zeile in die Richtung für die Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** lautet der Wert **AdSearchForward**. Bei einer nicht erfolgreiche Suche wird am Anfang der **Recordset** lautet der Wert **AdSearchBackward**.  
   
  *Start*  
  Optional. Ein **Variant** Lesezeichen, das als Anfangsposition für die Suche funktioniert.  

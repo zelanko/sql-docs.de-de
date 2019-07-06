@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe80d94be42a9ea953a5829de43bcab3cb30955f
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653460"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597382"
 ---
 # <a name="union--mdx"></a>Union  (MDX)
 
@@ -43,7 +43,7 @@ Alternate syntax 2
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion gibt die Gesamtmenge von zwei oder mehr angegebenen Mengen *.* Bei Verwendung der Standardsyntax und alternativen Syntax 1 werden Duplikate standardmäßig entfernt. Bei Verwendung der Standardsyntax mit der **alle** Flags bleiben bei der Duplikate in der Vereinigten Menge. Doppelte Werte werden vom Ende her gelöscht. Bei Verwendung der alternativen Syntax 2 werden doppelte Elemente immer beibehalten.  
+ Diese Funktion gibt die Gesamtmenge von zwei oder mehr angegebenen Mengen. Bei Verwendung der Standardsyntax und alternativen Syntax 1 werden Duplikate standardmäßig entfernt. Bei Verwendung der Standardsyntax mit der **alle** Flags bleiben bei der Duplikate in der Vereinigten Menge. Doppelte Werte werden vom Ende her gelöscht. Bei Verwendung der alternativen Syntax 2 werden doppelte Elemente immer beibehalten.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele veranschaulichen das Verhalten der **Union** funktionieren die verschiedenen Syntaxvarianten.  

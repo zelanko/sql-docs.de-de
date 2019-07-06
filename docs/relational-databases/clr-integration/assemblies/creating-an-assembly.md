@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656759"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584047"
 ---
 # <a name="creating-an-assembly"></a>Erstellen von Assemblys
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   Die Assembly, die aufgerufen wird oder auf die verwiesen wird, wurde in derselben Datenbank erstellt.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Festlegen der Sicherheit beim Erstellen von Assemblys  
- Wenn Sie eine Assembly in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank erstellenerstellt wird, erstellt können Sie eine von drei verschiedenen Sicherheitsstufen festlegenerstellt wird, erstellt mit der der Code ausgeführt werden soll: **SAFE**erstellt wird, erstellt **EXTERNAL_ACCESS**erstellt wird, erstellt or **UNSAFE**. Beim Ausführen der **CREATE ASSEMBLY** -Anweisung werden bestimmte Überprüfungen für die Code-Assembly durchgeführt, aufgrund derer die Assembly möglicherweise nicht beim Server registriert werden kann. Weitere Informationen finden Sie unter dem Beispiel für den Identitätswechsel auf [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ Beim Erstellen einer Assembly in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank können Sie eine Festlegen von drei verschiedenen Sicherheitsstufen in der Ihr Code ausgeführt: **Sichere**, **EXTERNAL_ACCESS**, oder **UNSAFE**. Beim Ausführen der **CREATE ASSEMBLY** -Anweisung werden bestimmte Überprüfungen für die Code-Assembly durchgeführt, aufgrund derer die Assembly möglicherweise nicht beim Server registriert werden kann. Weitere Informationen finden Sie unter dem Beispiel für den Identitätswechsel auf [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** ist der Standardberechtigungssatz und funktioniert für die meisten Szenarien. Um eine bestimmte Sicherheitsstufe anzugeben, ändern Sie die Syntax der CREATE ASSEMBLY-Anweisung wie folgt:  
   
@@ -80,7 +80,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  Die Assembly wurde mit einem starken Namen oder Authenticode mit Zertifikat signiert. Der starke Name (oder das Zertifikat) wird in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als asymmetrischer Schlüssel (oder Zertifikat) erstellt und verfügt über eine zugehörige Anmeldung mit **EXTERNAL ACCESS ASSEMBLY** -Berechtigung (für Assemblys mit externem Zugriff) oder **UNSAFE ASSEMBLY** -Berechtigung (für unsichere Assemblys).  
   
 2.  Der Datenbankbesitzer (DBO) hat die Berechtigung **EXTERNAL ACCESS ASSEMBLY** (für **EXTERNAL ACCESS** -Assemblys) oder **UNSAFE ASSEMBLY** (für **UNSAFE** -Assemblys), und für die Datenbank ist [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) auf **ON**eingestellt.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Die beiden oben aufgeführten Bedingungen werden auch zur Assemblyladezeit (dazu gehört auch die Ausführung) überprüft. Mindestens eine der Bedingungen muss erfüllt sein, um die Assembly zu laden.  
   
  Die Eigenschaft [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) für die Datenbank sollte nicht auf **ON** gesetzt werden, um lediglich CLR-Code im Serverprozess auszuführen. Stattdessen empfiehlt es sich, dass ein asymmetrischer Schlüssel aus der Assemblydatei in der Masterdatenbank erstellt wird. Anschließend muss eine Anmeldung für diesen asymmetrischen Schlüssel erstellt werden, und die Anmeldung muss eine **EXTERNAL ACCESS ASSEMBLY** - oder **UNSAFE ASSEMBLY** -Berechtigung erhalten.  

@@ -1,6 +1,6 @@
 ---
 title: In tabellarischen 1200-Modellen von SQL Server Analysis Services unterstützte Datenquellen | Microsoft-Dokumentation
-ms.date: 11/07/2018
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: a1ef7ae48e3d1500d08c9adba5e39db6214125c5
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269683"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597362"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Unterstützten Datenquellen in SQL Server Analysis Services tabular 1200-Modelle
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,7 +46,7 @@ Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstud
 |Datenfeeds<br /><br /> (wird verwendet, um Daten aus Reporting Services-Berichten, Atom-Dienstdokumenten, Microsoft Azure Marketplace DataMarket und einem einzelnen Datenfeed zu importieren)|Atom 1.0-Format<br /><br /> Sämtliche Datenbanken oder Dokumente, die als Windows Communication Foundation (WCF) Data Service (früher ADO.NET Data Services) verfügbar gemacht werden.|`.atomsvc` für ein dienstdokument definiert, die einen oder mehrere feeds<br /><br /> ".atom" für ein Atom-Webfeeddokument|Microsoft-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office Database Connection-Dateien||ODC||  
  
-<a name="dnu">[1] </a> Using **ACE 14 OLE DB-Anbieter** zur Verbindung mit Daten Dateitypen **wird nicht empfohlen,**. Wenn Sie die Kompatibilität für tabellarische 1200 und niedriger Ebene Modelle beibehalten müssen, exportieren Sie Ihre Daten in eine Csv-Dateiformat mit SQL-Datenbank importieren Sie und Herstellen einer Verbindung mit und anschließend aus der Datenbank zu importieren. Allerdings empfohlen, dass Sie ein upgrade auf tabellarischen Kompatibilitätsgrad 1400 (SQLServer 2017 und höher), und verwenden Sie **Datenabruf** in SSDT auswählen und importieren Ihre Datei als Datenquelle. Verwendet strukturierte Daten datenquellenverbindungen bereitgestellt werden, indem Sie die Power Query-Engine, die stabiler als ACE 14 OLE DB-Anbieter Verbindungen zu erhalten.  
+<a name="dnu">[1] </a> Using **ACE 14 OLE DB-Anbieter** zur Verbindung mit Daten Dateitypen **wird nicht empfohlen,** . Wenn Sie die Kompatibilität für tabellarische 1200 und niedriger Ebene Modelle beibehalten müssen, exportieren Sie Ihre Daten in eine Csv-Dateiformat mit SQL-Datenbank importieren Sie und Herstellen einer Verbindung mit und anschließend aus der Datenbank zu importieren. Allerdings empfohlen, dass Sie ein upgrade auf tabellarischen Kompatibilitätsgrad 1400 (SQLServer 2017 und höher), und verwenden Sie **Datenabruf** in SSDT auswählen und importieren Ihre Datei als Datenquelle. Verwendet strukturierte Daten datenquellenverbindungen bereitgestellt werden, indem Sie die Power Query-Engine, die stabiler als ACE 14 OLE DB-Anbieter Verbindungen zu erhalten.  
 
 
 ##  <a name="bkmk_supported_ds_dq"></a> Unterstützte Datenquellen für DirectQuery-Modelle  
@@ -58,9 +58,20 @@ Microsoft SQL Server    |  2008 und höher      |       OLE DB-Anbieter für SQL
 Microsoft Azure SQL-Datenbank    |   All      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client            
 Microsoft Azure SQL Data Warehouse     |   All     |  OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client       
 Microsoft SQL Analytics Platform System (APS)     |   All      |  OLE DB-Anbieter für SQL Server, OLE DB-Anbieter für SQL Server Native Client, .NET Framework-Datenanbieter für SQL Client       
+|Microsoft SQL Server Always Encrypted <sup> [2](#ae)</sup> | 2016 und höher. 2014 und früher nur Enterprise Edition. | .NET Framework-Datenanbieter für SQL Client
+|Azure SQL-Datenbank, die Always Encrypted <sup> [2](#ae)</sup>| All | .NET Framework-Datenanbieter für SQL Client
 Relationale Oracle-Datenbanken     |  Oracle 9i und höher       |  OLE DB-Anbieter für Oracle       
 Relationale Teradata-Datenbanken    |  Teradata V2R6 und höher     | .NET-Datenanbieter für Teradata    
 
+
+### <a name="using-sql-server-analysis-services-with-always-encrypted"></a>Mithilfe von SQL Server Analysis Services mit Always Encrypted
+
+<a name="ae">[2] </a> SQL Server Analysis Services kann ein Client mit einer Datenbank als [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) in SQL Server oder Azure SQL-Datenbank in den folgenden Situationen: 
+
+*  Spaltenhauptschlüssel, den Schutz der verschlüsselten Spalten müssen Zertifikate, die im Windows-Zertifikatspeicher gespeichert werden. In Azure Key Vault gespeicherten spaltenhauptschlüssel werden nicht unterstützt.   
+*  Der Windows-Computer, auf dem Analysis Services installiert ist, hat der erforderlichen Spalte Master Key-Zertifikate installiert. Weitere Informationen finden Sie unter [Erstellen von Spaltenhauptschlüsseln im Windows Certificate Store](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store).
+*  Die Datenquelle, die Analysis Services verwendet wird, um die Verbindung mit SQL basiert auf .net Framework-Anbieter und den Column Encryption Setting-Eigenschaft für die Datenquelle muss aktiviert sein. .NET Framework 4.6.1 oder höher auf dem Analysis Services-Server vorhanden sein muss.
+*  Die SQL Server oder SQL-Datenbank-Datenquelle muss eine *Anbieter* Datasource-Datentyp, die von dem Kompatibilitätsgrad 1200 unterstützt. Es funktioniert nicht mit Power Query *strukturierte* Datenquellen, in dem Kompatibilitätsgrad 1400 eingeführt.
   
 ##  <a name="bkmk_tips"></a> Tipps zum Auswählen von Datenquellen  
   

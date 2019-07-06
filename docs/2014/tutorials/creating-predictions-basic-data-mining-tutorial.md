@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285687"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597533"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Erstellen von Vorhersagen (Lernprogramm zu Data Mining-Grundlagen)
   Nachdem Sie entschieden, dass Sie mit den Ergebnissen zufrieden sind und die Genauigkeit Ihrer Miningmodelle getestet haben, können Sie Sie vorhersagen erzeugen, mit dem Generator für Vorhersageabfragen auf die **Miningmodellvorhersage** Registerkarte im Data Mining Designer.  
@@ -96,7 +96,7 @@ ms.locfileid: "63285687"
   
      Hierdurch wird die Zielspalte für die `PredictProbability`-Funktion angegeben. Weitere Informationen zu Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; Funktionsverweis](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Klicken Sie auf die nächste leere Zeile in der **Quelle** Spalte und wählen Sie dann TM_Decision_Tree Miningmodell **.**  
+5.  Klicken Sie auf die nächste leere Zeile in der **Quelle** Spalte, und wählen Sie dann **TM_Decision_Tree** Mining-Modell.  
   
 6.  In der `TM_Decision_Tree` -Zeile in der **Feld** Spalte `Bike Buyer`.  
   

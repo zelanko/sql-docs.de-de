@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017752"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586249"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 1.  Wenn **Sp_help** erfolgt keine Argumente, zusammenfassende Informationen zu aller Objekttypen, die in der aktuellen Datenbank vorhanden sind zurückgegeben wird.  
   
-    |Spaltenname|Datentyp|Description|  
+    |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar(** 128 **)**|Objektname|  
     |**Besitzer**|**nvarchar(** 128 **)**|Objektbesitzer (Dies ist der Datenbankprinzipal, der das Objekt besitzt. Wird standardmäßig auf den Besitzer des Schemas festgelegt, das das Objekt enthält.)|  
@@ -61,7 +61,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 2.  Wenn *Namen* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp oder den benutzerdefinierten Datentyp **Sp_help** gibt dieses Resultset zurück.  
   
-    |Spaltenname|Datentyp|Description|  
+    |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar(** 128 **)**|Name des Datentyps.|  
     |**Storage_type**|**nvarchar(** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
@@ -74,17 +74,19 @@ sp_help [ [ @objname = ] 'name' ]
     |**Sortierung**|**sysname**|Sortierung des Datentyps. NULL für Nicht-Zeichen-Datentypen|  
   
 3.  Wenn *Namen* beliebiges Datenbankobjekt außer einem Datentyp **Sp_help** dieses Ergebnis und zusätzliche Resultsets, basierend auf dem Typ des angegebenen Objekts zurück.  
-  
-    |Spaltenname|Datentyp|Description|  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar(** 128 **)**|Tabellenname|  
     |**Besitzer**|**nvarchar(** 128 **)**|Tabellenbesitzer|  
     |**Typ**|**nvarchar(** 31 **)**|Tabellentyp|  
     |**Created_datetime**|**datetime**|Erstellungsdatum der Tabelle|  
   
-     Je nach der angegebenen Datenbankobjekt **Sp_help** zusätzliche Resultsets zurück.  
+     Depending on the database object specified, **sp_help** returns additional result sets.  
   
-     Wenn *Namen* ist eine Systemtabelle, Benutzertabelle oder Sicht **Sp_help** gibt die folgenden Resultsets zurück. Das Resultset, das beschreibt, wo sich die Datendateien in einer Dateigruppe befinden, wird jedoch nicht für eine Sicht zurückgegeben.  
+     If *name* is a system table, user table, or view, **sp_help** returns the following result sets. However, the result set that describes where the data file is located on a file group is not returned for a view.  
   
     -   Zusätzliches Resultset, das für Spaltenobjekte zurückgegeben wird:  
   
@@ -103,7 +105,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Identitätsspalten zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Identität**|**nvarchar(** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
         |**Startwert**|**numeric**|Startwert für die Identitätsspalte|  
@@ -118,13 +120,13 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Dateigruppen zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Dateigruppe, in dem die Daten gespeichert sind: Primär, sekundär oder Transaktionsprotokoll.|  
   
     -   Zusätzliches Resultset, das für Indizes zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Name des Indexes.|  
         |**Index_description**|**Varchar (** 210 **)**|Beschreibung des Index.|  
@@ -132,7 +134,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für Einschränkungen zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|Einschränkungstyp|  
         |**constraint_name**|**nvarchar(** 128 **)**|Der Name der Einschränkung.|  
@@ -144,13 +146,13 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Zusätzliches Resultset, das für verweisende Objekte zurückgegeben wird:  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Die Tabelle wird durch verwiesen.**|**nvarchar(** 516 **)**|Identifiziert andere Datenbankobjekte, die auf die Tabelle verweisen.|  
   
     -   Zusätzliches Resultset, das für gespeicherte Prozeduren, Funktionen oder erweiterte gespeicherte Prozeduren zurückgegeben wird.  
   
-        |Spaltenname|Datentyp|Description|  
+        |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar(** 128 **)**|Name des Parameters der gespeicherten Prozedur|  
         |**Typ**|**nvarchar(** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  

@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d58edcfae92c94cfc635d3539f81faf834e382c7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704132"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597569"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
 Jeder Überschrift des Abschnitts in der Anpassungsdatei besteht aus eckige Klammern ( **[]** ), die einen Typ und die Parameter enthält. Die vier Abschnitt sind gekennzeichnet durch die Literalzeichenfolgen **verbinden**, **Sql**, **Userlist**, oder **Protokolle**. Der Parameter ist der literalen Zeichenfolge, die Standardeinstellung, eine vom Benutzer angegebenen Bezeichner oder "nothing".  
@@ -55,7 +55,7 @@ identifier
   
  Ein bestimmter Abschnitt wird in den folgenden Situationen verwendet:  
   
--   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients verbunden sind, Schlüsselwort "**Datenquelle =** _Wert_", entspricht einer **verbinden** Abschnitts-ID *.*  
+-   Ein **verbinden** Abschnitt wird verwendet, wenn der Wertteil des Clients verbunden sind, Schlüsselwort "**Datenquelle =** _Wert_", entspricht einer **verbinden** Abschnitt-Bezeichner. 
   
 -   Ein **Sql** Abschnitt wird verwendet, wenn die Client-Befehlszeichenfolge eine Zeichenfolge enthält, die entspricht einer **Sql** Abschnitt Bezeichner.  
   

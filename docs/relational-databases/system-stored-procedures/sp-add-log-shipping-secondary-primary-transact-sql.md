@@ -18,12 +18,12 @@ ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dcd5257aa80ca431faf3725fe20a444f1339004
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e907f1dd39164a4273ae994fe510de59d16c499d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494332"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583609"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,9 @@ sp_add_log_shipping_secondary_primary
 1.  Generiert eine sekundäre ID für den angegebenen primären Server und die primäre Datenbank.  
   
 2.  Führt Folgendes aus:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Fügt einen Eintrag für die sekundäre ID in **Log_shipping_secondary** unter Verwendung der angegebenen Argumente.  
   
     2.  Erstellt einen Kopierauftrag für die sekundäre ID, die deaktiviert ist.  

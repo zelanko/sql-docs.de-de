@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702655"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597499"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
-Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann sein, eine Datei, Verzeichnis, HTML-Seite, Image, Programm usw. *.*  
+Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im Netzwerk gespeichert. Das Ziel kann es sich um eine Datei, Verzeichnis, HTML-Seite, Image, Programm usw. sein.  
   
  Ein *absolute URL* enthält alle Informationen, die erforderlich sind, um eine Ressource zu suchen.  
   
@@ -53,7 +53,7 @@ Eine URL gibt den Speicherort eines Ziels, das auf einem Computer lokal oder im 
   
  Bei ADO 2.7 oder höher kann eine absolute URL auch einen Kontext definieren. Z. B., wenn eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) Objekt wird geöffnet, mit einer absoluten URL, eine **Verbindung** -Objekt implizit erstellt, um die durch die URL angegebene Ressource darstellen.  
   
- Eine absolute URL, die einen Kontext definiert kann angegeben werden, der *ActiveConnection* Parameter, der die **Datensatz** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Eine absolute URL kann auch angegeben werden, als Wert für die "URL **=** "-Schlüsselwort in der **Verbindung** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode  *"ConnectionString"* Parameter, und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode *ActiveConnection* Parameter.  
+ Eine absolute URL, die einen Kontext definiert kann angegeben werden, der *ActiveConnection* Parameter, der die **Datensatz** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-record.md) Methode. Eine absolute URL kann auch angegeben werden, als Wert für die "URL ="-Schlüsselwort in der **Verbindung** Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode *"ConnectionString"* -Parameter und die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode *ActiveConnection* Parameter.  
   
  Kontext kann auch definiert werden, indem Sie öffnen ein **Datensatz** oder **Recordset** -Objekt, ein Verzeichnis darstellt, da diese Objekte bereits über einen implizit oder explizit deklarierten verfügen **Verbindung**  -Objekt, das Kontext gibt.  
   
