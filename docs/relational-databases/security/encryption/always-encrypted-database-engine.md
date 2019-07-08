@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185026"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419167"
 ---
 # <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,11 +181,11 @@ Die folgenden Klauseln dürfen in verschlüsselten Spalten nicht verwendet werde
 Die folgenden Funktionen funktionieren nicht bei verschlüsselten Spalten:
 
 - Transaktions- oder Mergereplikation
-- Verteilte Abfragen (Verbindungsserver)
+- Verteile Abfragen (Verbindungsserver, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
 
 Anforderungen an Tools
 
-- SQL Server Management Studio kann die von verschlüsselten Spalten abgerufenen Ergebnisse entschlüsseln, wenn sie eine Verbindung mit der *column encryption setting=enabled* auf der Registerkarte **Weitere Eigenschaften** des Dialogfelds **Verbindung mit Server herstellen** herstellen. Erfordert mindestens SQL Server Management Studio-Version 17, um verschlüsselte Spalten einzufügen, zu aktualisieren oder zu filtern.
+- SQL Server Management Studio kann die von verschlüsselten Spalten abgerufenen Ergebnisse entschlüsseln, wenn sie eine Verbindung mit der *column encryption setting=enabled* auf der Registerkarte **Weitere Eigenschaften** des Dialogfelds **Verbindung mit Server herstellen** herstellen. Erfordert mindestens SQL Server Management Studio-Version 17, um verschlüsselte Spalten einzufügen, zu aktualisieren oder zu filtern. Die in Clientanwendungen zu verwendenden Verbindungszeichenfolgen finden Sie unter [Always Encrypted (Cliententwicklung)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
 - Für verschlüsselte Verbindungen von `sqlcmd` ist mindestens Version 13.1 erforderlich, die im [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643)verfügbar ist.
 

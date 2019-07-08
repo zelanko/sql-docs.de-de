@@ -1,7 +1,7 @@
 ---
 title: INDEXPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3d0cf76dfc6225b23551ccb2ee4e55d09fb88c4
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944469"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388347"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,10 +69,11 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsRowLockDisallowed**|Der Wert für Zeilensperren wird von der Option ALLOW_ROW_LOCKS von ALTER INDEX festgelegt.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Zeilensperren sind nicht zulässig.<br /><br /> 0 = Zeilensperren sind zulässig.<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**IsStatistics**|*index_or_statistics_name* stellt Statistiken dar, die durch die CREATE STATISTICS-Anweisung oder die AUTO_CREATE_STATISTICS-Option von ALTER DATABASE erstellt werden.|1 = True<br /><br /> 0 = False oder XML-Index.|  
 |**IsUnique**|Der Index ist eindeutig.|1 = True<br /><br /> 0 = False oder XML-Index.|  
-|**IsColumnstore**|Index ist ein speicheroptimierter xVelocity-columnstore-Index.|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**IsColumnstore**|Index ist ein speicheroptimierter xVelocity-columnstore-Index.|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsOptimizedForSequentialKey**|Für den Index wurde die Optimierung der Einfügevorgängen für die letzte Seite aktiviert.|**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher. <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.  

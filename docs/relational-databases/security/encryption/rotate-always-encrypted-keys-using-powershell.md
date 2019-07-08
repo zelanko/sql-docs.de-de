@@ -1,7 +1,7 @@
 ---
 title: Rotation von Always Encrypted-Schlüsseln mithilfe von PowerShell | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b74fd823b513114e84c5ac22c5d8f8404d352e68
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413474"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387917"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Rotation von Always Encrypted-Schlüsseln mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ Always Encrypted verwendet zwei Schlüsseltypen, es gibt also zwei allgemeine Sc
 * **Rotieren des Spaltenverschlüsselungsschlüssels** – umfasst das Entschlüsseln von Daten, die mit dem vorhandenen Schlüssel verschlüsselt sind und das erneute Verschlüsseln der Daten mit einem neuen Spaltenverschlüsselungsschlüssel. Da ein Spaltenverschlüsselungsschlüssel sowohl Zugriff auf den Schlüssel als auch die Datenbank benötigt, kann die Rotation von Spaltenverschlüsselungsschlüsseln nur ohne Rollentrennung ausgeführt werden.
 * **Rotation des Spaltenhauptschlüssels** – umfasst das Entschlüsseln von Spaltenverschlüsselungsschlüsseln, die mit dem aktuellen Spaltenhauptschlüssel verschlüsselt sind, das erneute Verschlüsseln mit dem neuen Spaltenhauptschlüssel sowie das Aktualisieren der Metadaten für beide Schlüsseltypen. Die Rotation des Spaltenhauptschlüssels kann mit oder ohne Rollentrennung abgeschlossen werden (bei Verwendung des SqlServer PowerShell-Moduls).
 
-
 ## <a name="column-master-key-rotation-without-role-separation"></a>Rotation eines Spaltenhauptschlüssels ohne Rollentrennung
-Die in diesem Abschnitt beschriebene Methode zum Rotieren eines Spaltenhauptschlüssels unterstützt Rollentrennung zwischen einem Sicherheitsadministrator und einem Datenbankadministrator (DBA) nicht. Einige der nachfolgenden Schritte kombinieren Operationen an physischen Schlüsseln mit Operationen an Schlüsselmetadaten. Dieser Workflow ist also für Organisationen empfohlen, die das DevOps-Modell verwenden, oder für Fälle, in denen die Datenbank in der Cloud gehostet wird und das primäre Ziel ist, Cloudadministratoren (nicht jedoch lokalen DBAs) den Zugriff auf sensible Daten zu verweigern. Die Methode wird nicht empfohlen, wenn DBAs zu potenziellen Angreifer gehören, oder wenn DBAs einfach nicht über Zugriff auf sensible Daten verfügen sollen.  
+
+Die in diesem Abschnitt beschriebene Methode zum Rotieren eines Spaltenhauptschlüssels unterstützt Rollentrennung zwischen einem Sicherheitsadministrator und einem Datenbankadministrator (DBA) nicht. Einige der nachfolgenden Schritte kombinieren Operationen an physischen Schlüsseln mit Operationen an Schlüsselmetadaten. Dieser Workflow ist also für Organisationen empfohlen, die das DevOps-Modell verwenden, oder für Fälle, in denen die Datenbank in der Cloud gehostet wird und das primäre Ziel ist, Cloudadministratoren (nicht jedoch lokalen DBAs) den Zugriff auf sensible Daten zu verweigern. Die Methode wird nicht empfohlen, wenn DBAs zu potenziellen Angreifer gehören, oder wenn DBAs nicht über Zugriff auf sensible Daten verfügen sollen.  
 
 
 | Task | Artikel | Greift auf Klartextschlüssel/Schlüsselspeicher zu| Greift auf Datenbank zu
@@ -96,8 +96,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 Der in diesem Abschnitt beschriebene Workflow der Rotation eines Spaltenhauptschlüssels stellt die Trennung zwischen einem Sicherheitsadministrator und einem DBA sicher.
 
 > [!IMPORTANT]
-> Stellen Sie vor der Ausführung der Schritte, für die in der nachfolgenden Tabelle *Greift auf Klartextschlüssel/Schlüsselspeicher zu*=**Ja** (Schritte, die auf Nur-Text-Schlüssel oder Schlüsselspeicher zugreifen) gilt, sicher, dass die PowerShell-Umgebung auf einem sicheren Computer ausgeführt wird, der nicht der Computer ist, auf dem Ihre Datenbank gehostet wird. Weitere Informationen finden Sie im Abschnitt [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Überlegungen zur Sicherheit für die Schlüsselverwaltung).
-
+> Stellen Sie vor der Ausführung der Schritte, für die in der nachfolgenden Tabelle *Greift auf Klartextschlüssel/Schlüsselspeicher zu*=**Ja** (Schritte, die auf Nur-Text-Schlüssel oder Schlüsselspeicher zugreifen) gilt, sicher, dass die PowerShell-Umgebung auf einem sicheren Computer ausgeführt wird, der nicht der Computer ist, auf dem Ihre Datenbank gehostet wird. Weitere Informationen finden Sie im Abschnitt [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Überlegungen zur Sicherheit für die Schlüsselverwaltung).
 
 ### <a name="part-1-dba"></a>Teil 1: DBA
 
@@ -129,7 +128,6 @@ Der Sicherheitsadministrator generiert einen neuen Spaltenhauptschlüssel, versc
 
 > [!NOTE]
 > Es wird dringend empfohlen, dass Sie den alten Spaltenhauptschlüssel nach der Rotation nicht dauerhaft löschen. Stattdessen sollten Sie den alten Spaltenhauptschlüssel im aktuellen Schlüsselspeicher oder an einem anderen sicheren Ort archivieren. Wenn Sie die Datenbank aus einer Sicherungsdatei auf einen Zeitpunkt *vor* der Konfiguration des neuen Spaltenhauptschlüssels wiederherstellen, benötigen Sie den alten Schlüssel für den Datenzugriff.
-
 
 ### <a name="part-3-dba"></a>Teil 3: DBA
 
@@ -296,12 +294,11 @@ Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName  -Inp
 Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 ```
 
-
 ## <a name="rotating-a-column-encryption-key"></a>Rotieren eines Spaltenverschlüsselungsschlüssels
 
-Die Rotation eines Spaltenverschlüsselungsschlüssels umfasst das Entschlüsseln der Daten in allen Spalten, die mit dem zu rotierenden Schlüssel verschlüsselt wurden, und die Neuverschlüsselung der Daten mithilfe des neuen Spaltenverschlüsselungsschlüssels. Dieser Workflow für die Rotation benötigt Zugriff auf die Schlüssel und die Datenbank und kann deshalb nicht mit Rollentrennung ausgeführt werden. Beachten Sie, dass die Rotation eines Spaltenverschlüsselungsschlüssels sehr viel Zeit in Anspruch nehmen kann, wenn die Tabellen mit den Spalten, die mit dem zu rotierenden Schlüssel verschlüsselt wurden, groß ist. Daher muss Ihre Organisation eine Rotation der Spaltenverschlüsselungsschlüssel sehr sorgfältig planen.
+Die Rotation eines Spaltenverschlüsselungsschlüssels umfasst das Entschlüsseln der Daten in allen Spalten, die mit dem zu rotierenden Schlüssel verschlüsselt wurden, und die Neuverschlüsselung der Daten mithilfe des neuen Spaltenverschlüsselungsschlüssels. Dieser Workflow für die Rotation benötigt Zugriff auf die Schlüssel und die Datenbank und kann deshalb nicht mit Rollentrennung ausgeführt werden. Die Rotation eines Spaltenverschlüsselungsschlüssels kann viel Zeit in Anspruch nehmen, wenn die Tabellen mit den Spalten, die mit dem zu rotierenden Schlüssel verschlüsselt wurden, groß ist. Daher muss Ihre Organisation eine Rotation der Spaltenverschlüsselungsschlüssel sorgfältig planen.
 
-Sie können einen Spaltenverschlüsselungsschlüssel offline oder online rotieren. Die erste Methode ist wahrscheinlich schneller, aber Ihre Anwendungen können nicht in die betroffenen Tabellen schreiben. Der zweite Ansatz dauert wahrscheinlich länger, aber Sie können den Zeitraum einschränken, in dem die betroffenen Tabellen für Anwendungen nicht verfügbar sind. Weitere Details finden Sie unter [Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) und [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) .
+Sie können einen Spaltenverschlüsselungsschlüssel offline oder online rotieren. Die erste Methode ist wahrscheinlich schneller, aber Ihre Anwendungen können nicht in die betroffenen Tabellen schreiben. Der zweite Ansatz dauert wahrscheinlich länger, aber Sie können den Zeitraum einschränken, in dem die betroffenen Tabellen für Anwendungen nicht verfügbar sind. Weitere Details finden Sie unter [Konfigurieren der Spaltenverschlüsselung mithilfe von PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) und [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/).
 
 | Task | Artikel | Greift auf Klartextschlüssel/Schlüsselspeicher zu| Greift auf Datenbank zu
 |:---|:---|:---|:---
@@ -311,7 +308,7 @@ Sie können einen Spaltenverschlüsselungsschlüssel offline oder online rotiere
 |Schritt 4. Generieren Sie einen neuen Spaltenverschlüsselungsschlüssel, verschlüsseln Sie ihn mit dem Spaltenhauptschlüssel, und erstellen Sie Spaltenverschlüsselungsschlüssel-Metadaten in der Datenbank.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Hinweis:** Verwenden Sie eine Variation des Cmdlets, in der intern ein Spaltenverschlüsselungsschlüssel generiert und verschlüsselt wird.<br>Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) heraus, um die Schlüsselmetadaten zu erstellen. | Ja | Ja
 |Schritt 5. Suchen Sie alle Spalten, die mit dem alten Spaltenverschlüsselungsschlüssel verschlüsselt sind. | [Programmierungshandbuch für SQL Server Management Objects (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Nein | Ja
 |Schritt 6. Erstellen Sie ein *SqlColumnEncryptionSettings* -Objekt für jede betroffene Spalte.  SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Es gibt das Zielverschlüsselungsschema für eine Spalte an. In diesem Fall sollte das Objekt angeben, dass die betroffene Spalte mit dem neuen Spaltenverschlüsselungsschlüssel verschlüsselt werden soll. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Nein | Nein
-|Schritt 7. Verschlüsseln Sie die Spalten, die in Schritt 5 angegeben sind, erneut mit dem neuen Verschlüsselungsschlüssel. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Hinweis:** Dieser Schritt kann lange dauern. Je nach gewähltem Ansatz (online oder offline) können Ihre Anwendungen während des gesamten Vorgangs nicht auf die Tabellen oder Teile davon zugreifen. | Ja | Ja
+|Schritt 7. Verschlüsseln Sie die Spalten, die in Schritt 5 angegeben sind, erneut mit dem neuen Verschlüsselungsschlüssel. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Hinweis:** Dieser Schritt kann lange dauern. Je nach gewähltem Ansatz (online oder offline) können Ihre Anwendungen während des gesamten Vorgangs oder nur teilweise nicht auf die Tabellen zugreifen. | Ja | Ja
 |Schritt 8. Entfernen Sie die Metadaten für den alten Spaltenverschlüsselungsschlüssel. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | Nein | Ja
 
 ### <a name="example---rotating-a-column-encryption-key"></a>Beispiel – Rotieren eines Spaltenverschlüsselungsschlüssels

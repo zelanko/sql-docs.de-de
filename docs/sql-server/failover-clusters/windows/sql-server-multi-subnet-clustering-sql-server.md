@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b3ebbbcefcd3477af997cea4680ba5ce51621555
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516586"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388026"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server-Multisubnetzclustering (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "59516586"
 ##  <a name="ComponentsAndConcepts"></a> Überlegungen zu IP-Adressressourcen  
  Die IP-Adressen in einer Multisubnetz-Failoverclusterkonfiguration sind nicht im Besitz aller Knoten im Failovercluster und beim Start von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] möglicherweise nicht alle online. Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]können Sie die IP-Adressabhängigkeit auf **OR**festlegen. Dadurch kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] online sein, wenn mindestens eine gültige IP-Adresse vorhanden ist, mit der eine Bindung hergestellt werden kann.  
   
-> **HINWEIS:** In den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurde eine Stretch-V-LAN-Technologie in Clusterkonfigurationen mit mehreren Standorten verwendet, um eine einzelne IP-Adresse für standortübergreifende Failover verfügbar zu machen. Durch die neue Möglichkeit zur Gruppierung von Knoten in unterschiedlichen Subnetzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie jetzt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster an mehreren Standorten ohne Stretch-V-LAN-Technologie konfigurieren.  
+  > [!NOTE] 
+  > - In den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]wurde eine Stretch-V-LAN-Technologie in Clusterkonfigurationen mit mehreren Standorten verwendet, um eine einzelne IP-Adresse für standortübergreifende Failover verfügbar zu machen. Durch die neue Möglichkeit zur Gruppierung von Knoten in unterschiedlichen Subnetzen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie jetzt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster an mehreren Standorten ohne Stretch-V-LAN-Technologie konfigurieren.  
+
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Überlegungen zur IP-Adressabhängigkeit OR  
  Wenn Sie die IP-Adressabhängigkeit auf **OR**festlegen, können Sie das folgende Failoververhalten in Betracht ziehen:  
@@ -68,6 +70,9 @@ ms.locfileid: "59516586"
  Bei Legacyclientbibliotheken oder Drittanbieterdatenanbietern können Sie den **MultiSubnetFailover** -Parameter in der Verbindungszeichenfolge nicht verwenden. Versuchen Sie, den Verbindungstimeout in der Clientverbindungszeichenfolge um 21 Sekunden für jede zusätzliche IP-Adresse anzupassen, damit sichergestellt wird, dass Ihre Clientanwendung optimal mit dem Multisubnetz-FCI in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]interagiert. Dadurch wird sichergestellt, dass der Wiederverbindungsversuch des Clients nicht zu einem Timeout führt, bevor es in der Lage ist, alle IP-Adressen in der Multisubnetz-FCI durchzugehen.  
   
  Der standardmäßige Timeoutzeitraum für Clientverbindungen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio und **sqlcmd** ist 15 Sekunden.  
+ 
+ > [!NOTE]
+ > - Wenn Sie mehrere Subnetze verwenden und über ein statisches DNS verfügen, benötigen Sie einen Prozess, um den dem Listener zugeordneten DNS-Eintrag zu aktualisieren, bevor Sie einen Failover durchführen, da sonst der Netzwerkname nicht online geht.
   
    
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  

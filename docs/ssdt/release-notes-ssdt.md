@@ -12,20 +12,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101910"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400084"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Versionshinweise für SQL Server Data Tools (SSDT)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Diese Versionshinweise gelten für [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) für Visual Studio (VS).
-
-Ausführliche Beiträge zu den Neuerungen und Änderungen finden Sie im [SSDT Team blog (dem SSDT-Team-Blog)](https://blogs.msdn.microsoft.com/ssdt/).
 
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
@@ -72,6 +70,7 @@ _SSDT für Visual Studio 2017._
 | :---------- | :------ |
 | Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. | Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt. |
 | SSDT für Visual Studio 2017 (ab Version 15.8) unterstützt das Erstellen von Paketen nicht, die Teradata als Quelle oder Ziel verwenden. | Verwenden Sie SSDT für Visual Studio 2017 (15.8). |
+| Datenquellen in Paketbereitstellungsmodell können nicht erstellt oder bearbeitet werden. | Datenquellen-Assistenten wird nicht geöffnet. |
 | Die Power Query-Quelle unterstützt möglicherweise kein OData v4, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
 | Die Power Query-Quelle unterstützt möglicherweise kein ODBC für die Verbindung mit Oracle, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
 | Die Power Query-Quelle ist nicht lokalisiert. | &nbsp; |

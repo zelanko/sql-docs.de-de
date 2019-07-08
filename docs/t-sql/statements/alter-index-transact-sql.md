@@ -1,7 +1,7 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413641"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388852"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,6 +127,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -467,7 +468,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 > [!NOTE]
 >  Ein Index kann nicht neu organisiert werden, wenn ALLOW_PAGE_LOCKS auf OFF festgelegt ist.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.
+
+Gibt an, ob der Speicherkonflikt bei Einfügevorgängen für die letzte Seite optimiert werden soll. Der Standardwert ist OFF. Weitere Informationen finden Sie im Abschnitt [Sequenzielle Schlüssel](./create-index-transact-sql.md#sequential-keys) auf der CREATE INDEX-Seite.
+
  MAXDOP **=** max_degree_of_parallelism  
  
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -686,7 +693,7 @@ Befindet sich eine Tabelle in einer Transaktionsreplikationsveröffentlichung, k
 Verwenden Sie die ALTER INDEX REBUILD-Anweisung oder die CREATE INDEX WITH DROP_EXISTING-Anweisung, um den Index zu aktivieren. Das Neuerstellen eines deaktivierten gruppierten Indexes kann nicht durchgeführt werden, wenn die ONLINE-Option auf ON festgelegt ist. Weitere Informationen finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Festlegen von Optionen  
-Sie können die Optionen ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY und STATISTICS_NORECOMPUTE für einen angegebenen Index festlegen, ohne den Index neu zu erstellen oder zu organisieren. Die geänderten Werte werden sofort auf den Index angewendet. Verwenden Sie zum Anzeigen dieser Einstellungen **sys.indexes**. Weitere Informationen finden Sie unter [Festlegen von Indexoptionen](../../relational-databases/indexes/set-index-options.md).  
+Sie können die Optionen ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY und STATISTICS_NORECOMPUTE für einen angegebenen Index festlegen, ohne den Index neu zu erstellen oder zu organisieren. Die geänderten Werte werden sofort auf den Index angewendet. Verwenden Sie zum Anzeigen dieser Einstellungen **sys.indexes**. Weitere Informationen finden Sie unter [Festlegen von Indexoptionen](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Zeilen- und Seitensperren (Optionen)  
 Wenn ALLOW_ROW_LOCKS und ALLOW_PAGE_LOCK auf ON festgelegt sind, sind Sperren auf Zeilen-, Seiten- und Tabellenebene beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt die geeignete Sperre aus und kann die Sperre von einer Zeilen- oder Seitensperre auf eine Tabellensperre ausweiten.  

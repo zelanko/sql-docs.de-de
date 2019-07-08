@@ -1,7 +1,7 @@
 ---
 title: 'Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 04/05/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241538"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388131"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -51,8 +51,8 @@ Für die ersten Schritte mit Always Encrypted mit Secure Enclaves benötigen Sie
 
 Alternativ können Sie SSMS auf einem anderen Computer installieren.
 
->[!WARNING] 
->In Produktionsumgebungen sollten Sie niemals SSMS oder andere Tools zum Verwalten von Always Encrypted-Schlüsseln oder Ausführen von Abfragen für verschlüsselte Daten auf dem SQL Server-Computer verwenden, da dies den Zweck der Verwendung von Always Encrypted mindern oder vollständig zunichte machen kann.
+> [!WARNING]
+> In Produktionsumgebungen sollten Sie niemals SSMS oder andere Tools zum Verwalten von Always Encrypted-Schlüsseln oder Ausführen von Abfragen für verschlüsselte Daten auf dem SQL Server-Computer verwenden, da dies den Zweck der Verwendung von Always Encrypted mindern oder vollständig zunichte machen kann. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für die Schlüsselverwaltung](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 ### <a name="hgs-computer-requirements"></a>HGS-Computeranforderungen
 
@@ -61,8 +61,8 @@ Alternativ können Sie SSMS auf einem anderen Computer installieren.
 - 8 GB RAM
 - 100 GB Speicher
 
->[!NOTE]
->Der HGS-Computer sollte nicht mit einer Domäne verknüpft werden, bevor Sie beginnen.
+> [!NOTE]
+> Der HGS-Computer sollte nicht mit einer Domäne verknüpft werden, bevor Sie beginnen.
 
 ## <a name="step-1-configure-the-hgs-computer"></a>Schritt 1: Konfigurieren des HGS-Computers
 
@@ -93,13 +93,14 @@ In diesem Schritt konfigurieren Sie den HGS-Computer zum Ausführen des Host-Üb
    Get-NetIPAddress  
    ```
 
->[!NOTE]
->Wenn Sie auf Ihren HGS-Computer mit einem DNS-Namen verweisen möchten, können Sie eine Weiterleitung von den DNS-Servern Ihres Unternehmens an den neuen HGS-Domänencontroller einrichten.  
+> [!NOTE]
+> Wenn Sie auf Ihren HGS-Computer mit einem DNS-Namen verweisen möchten, können Sie eine Weiterleitung von den DNS-Servern Ihres Unternehmens an den neuen HGS-Domänencontroller einrichten.  
 
 ## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>Schritt 2: Konfigurieren des SQL Server-Computers als überwachter Host
 In diesem Schritt konfigurieren Sie den SQL Server-Computer als überwachten Host, der beim Host-Überwachungsdienst mit Hostschlüsselnachweis registriert ist.
->[!NOTE]
->Der Hostschlüsselnachweis wird nur zur Verwendung in Testumgebungen empfohlen. Für Produktionsumgebungen sollten Sie den TPM-Nachweis verwenden.
+
+> [!WARNING]
+> Der Hostschlüsselnachweis wird nur zur Verwendung in Testumgebungen empfohlen. Für Produktionsumgebungen sollten Sie den TPM-Nachweis verwenden.
 
 1. Melden Sie sich beim SQL Server-Computer als Administrator an. Öffnen Sie eine Windows PowerShell-Konsole mit erhöhten Rechten, und rufen Sie den Namen Ihres Computers durch Zugreifen auf die Variable „computername“ ab.
 
@@ -128,24 +129,22 @@ In diesem Schritt konfigurieren Sie den SQL Server-Computer als überwachten Hos
        Restart-Computer
        ```
 
-
-
-4. Melden Sie sich erneut beim SQL Server-Computer als Administrator an, öffnen Sie eine Windows PowerShell-Konsole mit erhöhten Rechten, generieren Sie einen eindeutigen Hostschlüssel, und exportieren Sie den resultierenden öffentlichen Schlüssel in eine Datei.
+5. Melden Sie sich erneut beim SQL Server-Computer als Administrator an, öffnen Sie eine Windows PowerShell-Konsole mit erhöhten Rechten, generieren Sie einen eindeutigen Hostschlüssel, und exportieren Sie den resultierenden öffentlichen Schlüssel in eine Datei.
 
    ```powershell
    Set-HgsClientHostKey 
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. Kopieren Sie manuell die Hostschlüsseldatei, die im vorherigen Schritt generiert wurde, auf den HGS-Computer. Bei den folgenden Anweisungen wird davon ausgegangen, dass der Dateiname „hostkey.cer“ lautet und Sie diese Datei auf Ihren Desktop auf dem HGS-Computer kopieren.
+6. Kopieren Sie manuell die Hostschlüsseldatei, die im vorherigen Schritt generiert wurde, auf den HGS-Computer. Bei den folgenden Anweisungen wird davon ausgegangen, dass der Dateiname „hostkey.cer“ lautet und Sie diese Datei auf Ihren Desktop auf dem HGS-Computer kopieren.
 
-6. Öffnen Sie auf dem HGS-Computer eine Windows PowerShell-Konsole mit erhöhten Rechten, und registrieren Sie den Hostschlüssel Ihres SQL Server-Computers beim Host-Überwachungsdienst:
+7. Öffnen Sie auf dem HGS-Computer eine Windows PowerShell-Konsole mit erhöhten Rechten, und registrieren Sie den Hostschlüssel Ihres SQL Server-Computers beim Host-Überwachungsdienst:
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. Führen Sie auf dem SQL Server-Computer den folgenden Befehl in einer Windows PowerShell-Konsole mit erhöhten Rechten aus, um dem SQL Server-Computer den Ort für den Nachweis anzugeben. Vergewissern Sie sich, dass Sie die IP-Adresse oder den DNS-Namen des HSG-Computers an beiden Adressstellen angeben. 
+8. Führen Sie auf dem SQL Server-Computer den folgenden Befehl in einer Windows PowerShell-Konsole mit erhöhten Rechten aus, um dem SQL Server-Computer den Ort für den Nachweis anzugeben. Vergewissern Sie sich, dass Sie die IP-Adresse oder den DNS-Namen des HSG-Computers an beiden Adressstellen angeben. 
 
    ```powershell
    # use http, and not https
@@ -164,8 +163,14 @@ Wenn andere Fehler auftreten, führen Sie „Clear-HgsClientHostKey“ aus, und 
 
 In diesem Schritt aktivieren Sie die Funktionen von Always Encrypted mithilfe von Enclaves in Ihrer SQL Server-Instanz.
 
-1. Öffnen Sie SSMS, stellen Sie als „sysadmin“ eine Verbindung mit Ihrer SQL Server-Instanz her, und öffnen Sie ein neues Abfragefenster.
-2. Wählen Sie Secure Enclave als Typ für virtualisierungsbasierte Sicherheit (Virtualization Based Security, VBS) aus.
+1. Verbinden Sie sich per SSMS als „sysadmin“ mit Ihrer SQL Server-Instanz, **ohne** dass Always Encrypted für die Datenverbindung aktiviert ist.
+    1. Starten Sie SSMS.
+    1. Geben Sie im Dialogfeld **Mit Server verbinden** Ihren Servernamen, eine Authentifizierungsmethode und Ihre Anmeldeinformationen an.
+    1. Klicken Sie auf **Optionen >>** , und wählen Sie die Registerkarte **Always Encrypted** aus.
+    1. Stellen Sie sicher, dass das Kontrollkästchen **Always Encrypted aktivieren (Spaltenverschlüsselung)** **nicht** ausgewählt ist.
+    1. Wählen Sie **Verbinden**.
+
+2. Öffnen Sie ein neues Abfragefenster, und führen Sie die folgende Anweisung, um den Typ der Secure Enclave auf virtualisierungsbasierte Sicherheit (VBS) festzulegen.
 
    ```sql
    EXEC sys.sp_configure 'column encryption enclave type', 1;
@@ -199,19 +204,18 @@ In diesem Schritt aktivieren Sie die Funktionen von Always Encrypted mithilfe vo
 ## <a name="step-4-create-a-sample-database"></a>Schritt 4: Erstellen einer Beispieldatenbank
 In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Sie später verschlüsseln.
 
-1. Stellen Sie eine Verbindung mit Ihrer SQL Server-Instanz über SSMS her.
-2. Erstellen Sie eine neue Datenbank mit dem Namen „ContosoHR“.
+1. Führen Sie unter Verwendung der SSMS-Instanz aus dem vorherigen Schritt die folgende Anweisung in einem Abfragefenster aus, um eine neue Datenbank mit dem Namen **ContosoHR** zu erstellen.
 
     ```sql
     CREATE DATABASE [ContosoHR];
     ```
 
-3. Vergewissern Sie sich, dass Sie mit der neu erstellten Datenbank verbunden sind. Erstellen Sie eine neue Tabelle mit dem Namen „Employees“.
+1. Erstellen Sie eine neue Tabelle mit dem Namen **Employees**.
 
     ```sql
     USE [ContosoHR];
     GO
-    
+
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -222,9 +226,12 @@ In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Si
     ) ON [PRIMARY];
     ```
 
-4. Fügen Sie der Tabelle „Employees“ einige Mitarbeiterdatensätze hinzu.
+1. Fügen Sie der Tabelle **Employees** einige Mitarbeiterdatensätze hinzu.
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -235,7 +242,7 @@ In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Si
             , N'Catherine'
             , N'Abel'
             , $31692);
- 
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -252,11 +259,10 @@ In diesem Schritt erstellen Sie eine Datenbank mit einigen Beispieldaten, die Si
 
 In diesem Schritt erstellen Sie einen Spaltenhauptschlüssel und einen Spaltenverschlüsselungsschlüssel, die Enclave-Berechnungen zulassen.
 
-1. Stellen Sie mit SSMS eine Datenbankverbindung her.
-2. Erweitern Sie Ihre Datenbank im **Objekt-Explorer**, und navigieren Sie zu **Sicherheit** > **Always Encrypted-Schlüssel**.
-3. Stellen Sie einen neuen Enclave-fähigen Spaltenhauptschlüssel bereit:
+1. Erweitern Sie Ihre Datenbank im **Objekt-Explorer** mit der SSMS-Instanz aus dem vorherigen Schritt, und navigieren Sie zu **Sicherheit** > **Always Encrypted-Schlüssel**.
+1. Stellen Sie einen neuen Enclave-fähigen Spaltenhauptschlüssel bereit:
     1. Klicken Sie mit der rechten Maustaste auf **Always Encrypted-Schlüssel**, und wählen Sie **Neuer Spaltenhauptschlüssel** aus.
-    2. Wählen Sie den Namen des Spaltenhauptschlüssels aus: CMK1.
+    2. Wählen Sie den Namen des Spaltenhauptschlüssels aus: **CMK1**.
     3. Stellen Sie sicher, dass Sie entweder **Windows-Zertifikatspeicher (Aktueller Benutzer oder lokaler Computer)** oder **Azure Key Vault** auswählen.
     4. Wählen Sie **Enclave-Berechnungen zulassen**.
     5. Wenn Sie Azure Key Vault ausgewählt haben, melden Sie sich bei Azure an, und wählen Sie Ihren Schlüsseltresor. Weitere Informationen zum Erstellen eines Schlüsseltresors für Always Encrypted finden Sie unter [Verwalten Ihrer Schlüsseltresore im Azure-Portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
@@ -264,53 +270,51 @@ In diesem Schritt erstellen Sie einen Spaltenhauptschlüssel und einen Spaltenve
     7. Wählen Sie **OK**.
 
         ![Enclave-Berechnungen zulassen](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-    
-4. Erstellen Sie einen neuen Enclave-fähigen Spaltenverschlüsselungsschlüssel:
+
+1. Erstellen Sie einen neuen Enclave-fähigen Spaltenverschlüsselungsschlüssel:
 
     1. Klicken Sie mit der rechten Maustaste auf **Always Encrypted-Schlüssel**, und wählen Sie **Neuer Spaltenverschlüsselungsschlüssel**.
-    2. Geben Sie einen Namen für den neuen Spaltenverschlüsselungsschlüssel ein: CEK1.
+    2. Geben Sie einen Namen für den neuen Spaltenverschlüsselungsschlüssel ein: **CEK1**.
     3. Wählen Sie in der Dropdownliste **Spaltenhauptschlüssel** den in den vorherigen Schritten erstellten Spaltenhauptschlüssel.
     4. Wählen Sie **OK**.
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>Schritt 6: Direktes Verschlüsseln einiger Spalten
 
-In diesem Schritt verschlüsseln Sie die in den Spalten „SSN“ und „Salary“ gespeicherten Daten in der serverseitigen Enclave und testen dann eine SELECT-Abfrage der Daten.
+In diesem Schritt verschlüsseln Sie die in den Spalten **SSN** und **Salary** gespeicherten Daten in der serverseitigen Enclave und testen dann eine SELECT-Abfrage der Daten.
 
-1. Konfigurieren Sie in SSMS ein neues Abfragefenster mit aktiviertem Always Encrypted für die Datenbankverbindung.
-    1. Öffnen Sie in SSMS ein neues Abfragefenster.
-    2. Klicken Sie im neuen Abfragefenster mit der rechten Maustaste auf eine beliebige Stelle.
-    3. Wählen Sie „Verbindung“ \> „Verbindung ändern“ aus.
-    4. Wählen Sie **Optionen** aus. Navigieren Sie zur Registerkarte **Always Encrypted**, wählen Sie **Enable Always Encrypted** (Always Encrypted aktivieren) aus, und geben Sie die Enclave-Nachweis-URL an, z. B. ht<span>tp://</span>hgs.bastion.local/Attestation.
-    5. Wählen Sie **Verbinden**.
-    6. Wenn Sie aufgefordert werden, die Parametrisierung für Always Encrypted zu aktivieren, klicken Sie auf **Aktivieren**.
-2. Konfigurieren Sie in SSMS ein weiteres Abfragefenster mit deaktiviertem Always Encrypted für die Datenbankverbindung.
-    1. Öffnen Sie in SSMS ein neues Abfragefenster.
-    2. Klicken Sie im neuen Abfragefenster mit der rechten Maustaste auf eine beliebige Stelle.
-    3. Wählen Sie „Verbindung“ \> „Verbindung ändern“ aus.
-    4. Wählen Sie **Optionen** aus. Navigieren Sie zur Registerkarte **Always Encrypted**, und vergewissern Sie sich, dass **Always Encrypted aktivieren** nicht ausgewählt ist.
-    5. Wählen Sie **Verbinden**.
-    6. Stellen Sie den Datenbankkontext auf die ContosoHR-Datenbank um.
-1. Verschlüsseln Sie die Spalten „SSN“ und „Salary“. Fügen Sie im Abfragefenster mit aktiviertem Always Encrypted das folgende Skript ein, und führen Sie es aus:
+1. Öffnen Sie eine neue SSMS-Instanz, und verbinden Sie sich mit Ihrer SQL Server-Instanz, wenn Always Encrypted für die Datenverbindung aktiviert **ist**.
+    1. Starten Sie eine neue SSMS-Instanz.
+    1. Geben Sie im Dialogfeld **Mit Server verbinden** Ihren Servernamen, eine Authentifizierungsmethode und Ihre Anmeldeinformationen an.
+    1. Klicken Sie auf **Optionen >>** , und wählen Sie die Registerkarte **Always Encrypted** aus.
+    1. Aktivieren Sie das Kontrollkästchen **Always Encrypted aktivieren (Spaltenverschlüsselung)** und geben Sie Ihre Enclave-Nachweis-URL an (z.B. ht<span>tp://</span>hgs.bastion.local/Attestation).
+    1. Wählen Sie **Verbinden**.
+    1. Wenn Sie aufgefordert werden, die Parametrisierung für Always Encrypted zu aktivieren, klicken Sie auf **Aktivieren**.
+
+1. Öffnen Sie mit derselben SSMS-Instanz (Always Encrypted ist aktiviert) ein neues Abfragefenster, und verschlüsseln Sie die Spalten **SSN** und **Salary**, indem Sie die folgenden Abfragen ausführen.
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
-     
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
- 
+
     ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+
     > [!NOTE]
     > Achten Sie auf die ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE-Anweisung, die den Abfrageplancache für die Datenbank im obigen Skript löscht. Nachdem Sie die Tabelle bearbeitet haben, müssen Sie die Pläne für alle Batches und gespeicherten Prozeduren leeren, die Zugriff auf die Tabelle haben, um die Informationen für die Parameterverschlüsselung zu aktualisieren. 
 
-4. Um zu überprüfen, ob die Spalten „SSN“ und „Salary“ jetzt verschlüsselt sind, fügen Sie die folgende Anweisung im Abfragefenster mit deaktiviertem Always Encrypted ein, und führen Sie die Anweisung aus. Das Abfragefenster sollte verschlüsselte Werte in den Spalten „SSN“ und „Salary“ zurückgeben. Testen Sie im Abfragefenster mit aktiviertem Always Encrypted die gleiche Abfrage, um die Daten entschlüsselt anzuzeigen.
+1. Um zu überprüfen, ob die Spalten **SSN** und **Salary** nun verschlüsselt sind, öffnen Sie ein neues Abfragefenster in der SSMS-Instanz, **ohne** dass Always Encrypted für die Datenbankverbindung aktiviert ist, und führen Sie die folgende Anweisung aus. Das Abfragefenster sollte verschlüsselte Werte in den Spalten **SSN** und **Salary** zurückgeben. Wenn Sie die gleiche Abfrage mit der SSMS-Instanz ausführen, bei der Always Encrypted aktiviert ist, sollten die Daten entschlüsselt angezeigt werden.
 
     ```sql
     SELECT * FROM [dbo].[Employees];
@@ -320,13 +324,13 @@ In diesem Schritt verschlüsseln Sie die in den Spalten „SSN“ und „Salary�
 
 Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. Ein Teil der Abfrageverarbeitung wird in der serverseitigen Enclave ausgeführt. 
 
-1. Stellen Sie sicher, dass die Parametrisierung für Always Encrypted aktiviert ist.
-    1. Wählen Sie im Hauptmenü von SSMS die Option **Abfrage** aus.
-    2. Wählen Sie **Abfrageoptionen...** aus.
-    3. Navigieren Sie zu **Ausführung** > **Erweitert**.
-    4. Stellen Sie sicher, dass „Parametrisierung für Always Encrypted aktivieren“ aktiviert ist.
-    5. Wählen Sie „OK“ aus.
-2. Fügen Sie im Abfragefenster mit aktiviertem Always Encrypted die folgende Abfrage ein, und führen Sie sie aus. Die Abfrage sollte Klartextwerte und Zeilen zurückgeben, die den angegebenen Suchkriterien entsprechen.
+1. Stellen Sie in der SSMS-Instanz **mit** aktiviertem Always Encrypted sicher, dass auch die Parametrisierung für Always Encrypted aktiviert ist.
+    1. Wählen Sie im Hauptmenü von SSMS **Tools** aus.
+    2. Wählen Sie **Optionen...** aus.
+    3. Navigieren Sie zu **Abfrageausführung** > **SQL Server** > **Erweitert**.
+    4. Stellen Sie sicher, dass **Parametrisierung für Always Encrypted aktivieren** aktiviert ist.
+    5. Wählen Sie **OK**.
+2. Öffnen Sie ein neues Abfragefenster, fügen Sie die folgenden Abfrage ein, und führen Sie sie anschließend aus. Die Abfrage sollte Klartextwerte und Zeilen zurückgeben, die den angegebenen Suchkriterien entsprechen.
 
     ```sql
     DECLARE @SSNPattern [char](11) = '%6818';
@@ -334,10 +338,13 @@ Sie können nun umfangreiche Abfragen für verschlüsselte Spalten ausführen. E
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
-3. Versuchen Sie dieselbe Abfrage erneut im Abfragefenster, in dem Always Encrypted nicht aktiviert ist, und notieren Sie den auftretenden Fehler.
+
+3. Versuchen Sie dieselbe Abfrage erneut in der SSMS-Instanz, in der Always Encrypted nicht aktiviert ist, und notieren Sie den auftretenden Fehler.
 
 ## <a name="next-steps"></a>Next Steps
-Informationen zu weiteren Anwendungsfällen finden Sie unter [Konfigurieren von Always Encrypted mit Secure Enclaves](encryption/configure-always-encrypted-enclaves.md). Sie können auch Folgendes ausprobieren:
+Lesen Sie das [Tutorial: Erstellen und Verwenden von Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), das die Fortsetzung dieses Tutorials ist.
+
+Informationen zu anderen Anwendungsfällen für Always Encrypted mit Secure Enclaves finden Sie in [Konfigurieren von Always Encrypted mit Secure Enclaves](encryption/configure-always-encrypted-enclaves.md). Beispiel:
 
 - [Konfigurieren des TPM-Nachweises](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
 - [Konfigurieren von HTTPS für die HGS-Instanz](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)

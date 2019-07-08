@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626688"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469194"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Legt für bestimmte Verhalten der Datenbank fest, dass sie mit der angegebenen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel sein müssen. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Legt für [!INCLUDE[tsql](../../includes/tsql-md.md)] und Verhalten bei der Abfrageverarbeitung fest, dass sie mit der angegebenen Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kompatibel sein müssen. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
 Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -49,16 +49,18 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>Argumente
 
-*database_name* Der Name der Datenbank, die geändert werden soll.
+*database_name*      
+Der Name der Datenbank, die geändert werden soll.
 
-COMPATIBILITY_LEVEL {150 | 140 | 130 | 120 | 110 | 100 | 90 | 80} Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der die Datenbank kompatibel gemacht werden soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden (nicht alle Versionen unterstützen alle oben genannten Kompatibilitätsgrade):
+COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
+Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der die Datenbank kompatibel sein soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden (nicht alle Versionen unterstützen alle oben genannten Kompatibilitätsgrade):
 
-|Product|Version der Datenbank-Engine|Bestimmung des Kompatibilitätsgrads|Unterstützte Kompatibilitätsgradwerte|
+|Product|Version der Datenbank-Engine|Bestimmung des Kompatibilitätsgrads mit Standards|Unterstützte Kompatibilitätsgradwerte|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton/Pool für elastische Datenbanken|12|130|150, 140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verwaltete Instanz|12|130|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singleton/Pool für elastische Datenbanken|12|140|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verwaltete Instanz|12|140|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -66,28 +68,6 @@ COMPATIBILITY_LEVEL {150 | 140 | 130 | 120 | 110 | 100 | 90 | 80} Die Version vo
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|10|100|100, 90, 80|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |SQL Server 2000|8|80|80|
-
-> [!NOTE]
-> Seit **Januar 2018** ist der Standardkompatibilitätsgrad für neu erstellte Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gleich „140“. Für vorhandene Datenbanken wird der Datenbank-Kompatibilitätsgrad nicht angepasst. Kunden können diesen nach Ihren eigenen Bedürfnissen anpassen. Dennoch wird dringend empfohlen, zum aktuellen Kompatibilitätsgrad zu wechseln, um von den neuesten Verbesserungen profitieren zu können.
->
-> Wenn Sie den Datenbank-Kompatibilitätsgrad „140“ für Ihre gesamte Datenbank nutzen möchten, aber aus irgendeinem Grund das **Kardinalitätsschätzung**smodell von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bevorzugen, sodass eine Zuordnung zum Datenbank-Kompatibilitätsgrad „110“ erfolgt, sollten Sie die Dokumentation zur Anweisung [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere den Abschnitt zu deren Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` lesen.
->
-> Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad „130“ und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu „140“ für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-
-Führen Sie die folgende Abfrage aus, um die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version zu bestimmen, mit der Sie verbunden sind.
-
-```sql
-SELECT SERVERPROPERTY('ProductVersion');
-```
-
-> [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt nicht alle Features, die nach Kompatibilitätsgrad variieren.
-
-Führen Sie eine Abfrage für die Spalte **compatibility_level** von [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) aus, um die aktuellen Kompatibilitätsgrad zu ermitteln.
-
-```sql
-SELECT name, compatibility_level FROM sys.databases;
-```
 
 ## <a name="remarks"></a>Remarks
 
@@ -106,6 +86,26 @@ Fragen Sie die Spalte **compatibility_level** in der Katalogsicht [sys.databases
 > [!NOTE]
 > Eine [Verteilungsdatenbank](../../relational-databases/replication/distribution-database.md), die in einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde und auf [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM oder Service Pack 1 aktualisiert wurde, verfügt über einen Kompatibilitätsgrad von „90“, was für andere Datenbanken nicht unterstützt wird. Dies wirkt sich nicht auf die Funktionstüchtigkeit der Replikation aus. Ein Upgrade auf ein späteres Service Pack oder eine spätere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt dazu, dass der Kompatibilitätsgrad der Verteilungsdatenbank auf denjenigen der **Master**datenbank erhöht wird.
 
+Seit **Januar 2018** ist der Standardkompatibilitätsgrad für neu erstellte Datenbanken in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gleich „140“. Für vorhandene Datenbanken wird der Datenbank-Kompatibilitätsgrad nicht angepasst. Kunden können diesen nach Ihren eigenen Bedürfnissen anpassen. Microsoft empfiehlt Kunden dringend, zum aktuellen Kompatibilitätsgrad zu wechseln, um von den neuesten Verbesserungen bei der Abfrageoptimierung profitieren zu können.
+Um den Datenbank-Kompatibilitätsgrad „140“ für Ihre gesamte Datenbank zu nutzen, aber das [**Kardinalitätsschätzungsmodell**](../../relational-databases/performance/cardinality-estimation-sql-server.md) von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bevorzugen, sodass eine Zuordnung zum Datenbank-Kompatibilitätsgrad „110“ erfolgt, sollten Sie die Dokumentation zur Anweisung [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) und insbesondere den Abschnitt zu deren Schlüsselwort `LEGACY_CARDINALITY_ESTIMATION = ON` lesen.
+
+Weitere Einzelheiten zur Bewertung der Leistungsunterschiede bei Ihren wichtigsten Abfragen zwischen zwei Kompatibilitätsgraden in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] finden Sie unter [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/) (Verbesserte Abfrageleistung bei Kompatibilitätsgrad 130 in Azure SQL-Datenbank). Beachten Sie, dass dieser Artikel sich auf den Kompatibilitätsgrad „130“ und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht. Es gelten jedoch die gleichen Vorgehensweisen für den Wechsel zu „140“ für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Führen Sie die folgende Abfrage aus, um die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version zu bestimmen, mit der Sie verbunden sind.
+
+```sql
+SELECT SERVERPROPERTY('ProductVersion');
+```
+
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt nicht alle Features, die nach Kompatibilitätsgrad variieren.
+
+Führen Sie eine Abfrage für die Spalte **compatibility_level** von [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) aus, um die aktuellen Kompatibilitätsgrad zu ermitteln.
+
+```sql
+SELECT name, compatibility_level FROM sys.databases;
+```
+
 ## <a name="compatibility-levels-and-sql-server-upgrades"></a>Kompatibilitätsgrade und SQL Server-Upgrades
 
 Datenbank-Kompatibilitätsgrad ist ein wichtiges Tool zur Unterstützung von Datenbankmodernisierung, denn damit können Upgrades für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] durchgeführt werden, während der funktionale Status von anbindenden Anwendungen erhalten bleibt, indem der vor einem Upgrade wirksame Kompatibilitätsgrad beibehalten wird.
@@ -120,12 +120,14 @@ Für Neuentwicklungen oder für den Fall, dass eine vorhandene Anwendung die Nut
 >
 > Weitere Informationen zu Unterschieden zwischen den Kompatibilitätsgraden finden Sie in den entsprechenden Abschnitten weiter unten in diesem Artikel.
 
-Um für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Upgrade auf die neueste Version durchzuführen, dabei aber den Datenbank-Kompatibilitätsgrad, der vor dem Upgrade vorhanden war, und dessen Unterstützbarkeitsstatus beizubehalten, empfiehlt es sich, mit dem [Microsoft-Datenmigrations-Assistent](https://www.microsoft.com/download/details.aspx?id=53595) (DMA) eine statische Funktionsprüfung des Oberflächenbereichs des Anwendungscodes in der Datenbank auszuführen. Gibt es in der Ausgabe von DMA keine Fehler hinsichtlich fehlender oder inkompatibler Funktionalität, ist zu erwarten, dass es keine funktionalen Rückschritte für die Anwendung in der neuen Zielversion gibt. Weitere Informationen zum DMA finden Sie [hier](https://blogs.msdn.microsoft.com/datamigration/dma).
+Um für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Upgrade auf die neueste Version durchzuführen, dabei aber den Datenbank-Kompatibilitätsgrad, der vor dem Upgrade vorhanden war, und dessen Unterstützbarkeitsstatus beizubehalten, empfiehlt es sich, mit dem [Microsoft-Datenmigrations-Assistent](https://www.microsoft.com/download/details.aspx?id=53595) (DMA) eine statische Funktionsprüfung des Oberflächenbereichs des Anwendungscodes in der Datenbank (Programmierbarkeitsobjekte wie z.B. gespeicherte Prozeduren, Funktionen, Trigger) und in der Anwendung (mithilfe einer Workloadablaufverfolgung, die den von der Anwendung gesendeten Code erfasst) auszuführen. Gibt es in der Ausgabe von DMA keine Fehler hinsichtlich fehlender oder inkompatibler Funktionalität, ist zu erwarten, dass es keine funktionalen Rückschritte für die Anwendung in der neuen Zielversion gibt. Weitere Informationen zum DMA finden Sie [hier](https://blogs.msdn.microsoft.com/datamigration/dma).
 
 > [!NOTE]
-> DMA unterstützt Datenbank-Kompatibilitätsgrad 100 und höher. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ist als Quellversion ausgeschlossen.
+> DMA unterstützt Datenbank-Kompatibilitätsgrad 100 und höher. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ist als Quellversion ausgeschlossen.   
+
 > [!IMPORTANT]
-> Microsoft empfiehlt, dass einige minimale Tests ausgeführt werden, um den Erfolg eines Upgrades zu überprüfen, wenn der frühere Datenbank-Kompatibilitätsgrad beibehalten wird. Sie sollten bestimmen, was „minimale Tests“ im Zusammenhang Ihrer Anwendung und Ihres Szenarios bedeutet.
+> Microsoft empfiehlt, dass einige minimale Tests ausgeführt werden, um den Erfolg eines Upgrades zu überprüfen, wenn der frühere Datenbank-Kompatibilitätsgrad beibehalten wird. Sie sollten bestimmen, was „minimale Tests“ im Zusammenhang Ihrer Anwendung und Ihres Szenarios bedeutet.   
+
 > [!NOTE]
 > Microsoft bietet Schutz für eine Abfrageplanform, wenn Folgendes zutrifft:
 >
@@ -136,20 +138,23 @@ Um für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ein Up
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Verwenden des Kompatibilitätsgrads für die Abwärtskompatibilität
 
-Die Einstellung für *Datenbank-Kompatibilitätsgrad* wirkt sich nicht auf den gesamten Server, sondern nur auf das Verhalten der angegebenen Datenbank aus. Der Datenbank-Kompatibilitätsgrad bietet nur partielle Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Die Einstellung für *Datenbank-Kompatibilitätsgrad* wirkt sich nicht auf den gesamten Server, sondern nur auf das Verhalten der angegebenen Datenbank aus. Datenbank-Kompatibilitätsgrad bietet Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bezug auf das Verhalten von [!INCLUDE[tsql](../../includes/tsql-md.md)] und der Abfrageoptimierung. 
 
 > [!TIP]
 > Da *Datenbank-Kompatibilitätsgrad* eine Einstellung auf Datenbankebene ist, kann eine Anwendung, die auf einer neueren [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz ausgeführt wird und einen älteren Datenbank-Kompatibilitätsgrad verwendet, immer noch Verbesserungen auf Serverebene nutzen, ohne dass Änderungen an der Anwendung erforderlich sind.
 >
 > Dazu gehören umfassende Verbesserungen bei der Überwachung und Problembehandlung mit neuen [dynamischen Systemverwaltungssichten](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) und [erweiterten Ereignissen](../../relational-databases/extended-events/extended-events.md). Zudem wurde die Skalierbarkeit z.B. mit [automatischer Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa) verbessert.
 
-Beginnend mit dem Kompatibilitätsmodus 130 wurden sämtliche neue Features, die Auswirkungen auf einen Abfrageplan haben, ausdrücklich nur zum neuen Kompatibilitätsmodus hinzugefügt. Dadurch sollte das Risiko während der Upgrades minimiert werden, die durch Leistungseinbußen aufgrund von Abfrageplanänderungen entstanden sind. Aus Sicht einer Anwendung sollte das Ziel weiterhin darin bestehen, zu irgendeinem Zeitpunkt auf den neuesten Kompatibilitätsgrad zu aktualisieren, damit einige der neuen Features übernommen werden können und im Bereich des Abfrageoptimierers auf kontrollierte Weise Leistungssteigerungen erzielt werden können. Verwenden Sie den niedrigeren Kompatibilitätsgrad als sichere Migrationshilfe, um versionsbedingte Unterschiede in den Verhaltensweisen zu umgehen, die über die jeweilige Einstellung für den Kompatibilitätsgrad gesteuert werden.
+Beginnend mit dem Kompatibilitätsmodus 130 wurden sämtliche neue Features, die Auswirkungen auf einen Abfrageplan haben, ausdrücklich nur zum neuen Kompatibilitätsmodus hinzugefügt. Dadurch sollte das Risiko während der Upgrades minimiert werden, die durch Leistungseinbußen aufgrund von Abfrageplanänderungen entstanden sind, die möglicherweise auf neue Verhaltensweisen der Abfrageoptimierung zurückgeführt werden können.      
+Aus Sicht einer Anwendung sollte das Ziel weiterhin darin bestehen, zu irgendeinem Zeitpunkt auf den neuesten Kompatibilitätsgrad zu aktualisieren, damit einige der neuen Features, wie die [Intelligente Abfrageverarbeitung](../../relational-databases/performance/intelligent-query-processing.md) auf kontrollierte Weise übernommen werden können. Verwenden Sie den niedrigeren Kompatibilitätsgrad als sichere Migrationshilfe, um versionsbedingte Unterschiede in den Verhaltensweisen zu umgehen, die über die jeweilige Einstellung für den Kompatibilitätsgrad gesteuert werden.
 Ausführlichere Informationen, samt dem empfohlenen Workflow zum Aktualisieren des Datenbank-Kompatibilitätsgrads, finden Sie unter [Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads](#best-practices-for-upgrading-database-compatibility-level) weiter unten in diesem Artikel.
 
 > [!IMPORTANT]
 > Nicht mehr unterstützte Funktionalitäten, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden durch den Kompatibilitätsgrad nicht geschützt. Dies bezieht sich auf Funktionalität, die aus der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] entfernt wurde.
-> Der `FASTFIRSTROW`-Hinweis wurde beispielweise in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht mehr unterstützt und durch den `OPTION (FAST n )`-Hinweis ersetzt. Wenn der Kompatibilitätsgrad der Datenbank auf 110 festgelegt wird, wird der nicht mehr unterstützte Hinweis nicht wiederhergestellt.
-> Weitere Informationen zu nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) und unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2008](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).
+> Der `FASTFIRSTROW`-Hinweis wurde beispielweise in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht mehr unterstützt und durch den `OPTION (FAST n )`-Hinweis ersetzt. Wenn der Kompatibilitätsgrad der Datenbank auf 110 festgelegt wird, wird der nicht mehr unterstützte Hinweis nicht wiederhergestellt.  
+>  
+> Weitere Informationen zu nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) und [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
+
 > [!IMPORTANT]
 > Wichtige Änderungen, die in einer bestimmten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführt wurden, werden möglicherweise **nicht** durch den Kompatibilitätsgrad geschützt. Dies bezieht sich auf Verhaltensänderungen zwischen Versionen der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Das Verhalten von [!INCLUDE[tsql](../../includes/tsql-md.md)] wird normalerweise durch den Kompatibilitätsgrad geschützt. Geänderte oder entfernte Systemobjekte werden jedoch **nicht** durch den Kompatibilitätsgrad geschützt.
 >
@@ -158,13 +163,13 @@ Ausführlichere Informationen, samt dem empfohlenen Workflow zum Aktualisieren d
 > Zu Beispielen für wichtige Änderungen, die **nicht** durch den Kompatibilitätsgrad geschützt sind, zählen die folgenden:
 >
 > - Geänderte Spaltennamen in Systemobjekten. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde die Spalte *single_pages_kb* in sys.dm_os_sys_info in *pages_kb* umbenannt. Unabhängig vom Kompatibilitätsgrad erzeugt die Abfrage `SELECT single_pages_kb FROM sys.dm_os_sys_info` den Fehler 207 (ungültiger Spaltenname).
-> - Entfernte Systemobjekte. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde `sp_dboption` entfernt. Unabhängig vom Kompatibilitätsgrad erzeugt die Anweisung `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` den Fehler 2812 (gespeicherte Prozedur „sp_dboption“ konnte nicht gefunden werden).
+> - Entfernte Systemobjekte. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde `sp_dboption` entfernt. Unabhängig vom Kompatibilitätsgrad erzeugt die Anweisung `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` den Fehler 2812 (gespeicherte Prozedur „sp_dboption“ konnte nicht gefunden werden).
 >
-> Weitere Informationen zu wichtigen Änderungen finden Sie unter [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2014](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2012](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) und [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2008](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).
+> Weitere Informationen zu wichtigen Änderungen finden Sie unter [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) und [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2008](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai).
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads
 
-Den empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden Sie unter [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) (Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers).
+Den empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden Sie unter [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) (Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers). Unterstützung beim Upgrade des Datenbank-Kompatibilitätsgrads finden Sie außerdem unter [Aktualisieren von Datenbanken mit dem Abfrageoptimierung-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>Kompatibilitätsgrade und gespeicherte Prozeduren
 
@@ -178,13 +183,13 @@ Der Datenbank-Kompatibilitätsgrad 150 befindet sich derzeit in der öffentliche
 
 |Kompatibilitätsgradeinstellung 140 oder niedriger|Kompatibilitätsgradeinstellung 150|
 |--------------------------------------------------|-----------------------------------------|
-|Relationale Data Warehouse- und Analyseworkloads können Columnstore-Indizes möglicherweise aufgrund des Mehraufwands für OLTP, fehlender Unterstützung durch den Hersteller oder anderer Einschränkungen nicht unten.  Ohne Columnstore-Indizes können diese Workloads nicht vom Batchausführungsmodus profitieren.|Der Batchausführungsmodus ist nun für Analyseworkloads verfügbar, ohne dass Columnstore-Indizes erforderlich sind. Weitere Informationen finden Sie unter [Batchmodus bei Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore).|
-|Abfragen im Zeilenmodus, die nicht genügend Speicherzuweisungen anfordern, was zu einem Überlauf auf Datenträger führt, haben möglicherweise weiterhin Probleme mit aufeinanderfolgenden Ausführungen.|Abfragen im Zeilenmodus, die nicht genügend Arbeitsspeicherzuweisungen anfordern, was zu einem Überlauf auf Datenträger führt, weisen bei aufeinanderfolgenden Ausführungen möglicherweise eine Leistungssteigerung auf. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
-|Abfragen im Zeilenmodus, die eine übermäßige Speicherzuweisung anfordern, was zu Parallelitätsproblemen führt, haben möglicherweise weiterhin Probleme mit aufeinanderfolgenden Ausführungen.|Abfragen im Batchmodus, die eine übermäßige Speicherzuweisung anfordern, was zu Parallelitätsproblemen führt, weisen bei aufeinanderfolgenden Ausführungen möglicherweise eine verbesserte Parallelität auf. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
-|Abfragen, die auf TSQL_SCALAR_UDFs verweisen, verwenden einen iterativen Aufruf, verursachen keine Kosten und erzwingen die serielle Ausführung. |TSQL_SCALAR_UDFs werden in äquivalente relationale Ausdrücke transformiert, die per „Inlining“ durch die aufrufende Abfrage ersetzt werden, was oft zu erheblichen Leistungssteigerungen führt. Weitere Informationen finden Sie unter [TSQL_SCALAR_UDF_INLINING](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining).|
-|Tabellenvariablen nutzen für die Kardinalitätsschätzung eine festgelegte Schätzung.  Wenn die tatsächliche Anzahl der Zeilen sehr viel höher als der geschätzter Wert ist, kann die Leistung nachgelagerter Vorgänge beeinträchtigt werden. |Neue Pläne verwenden anstelle einer festgelegten Schätzung die tatsächliche Kardinalität der Tabellenvariablen, die bei der ersten Kompilierung vorgefunden wird. Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation).|
+|Relationale Data Warehouse- und Analyseworkloads können Columnstore-Indizes möglicherweise aufgrund des Mehraufwands für OLTP, fehlender Unterstützung durch den Hersteller oder anderer Einschränkungen nicht unten.  Ohne Columnstore-Indizes können diese Workloads nicht vom Batchausführungsmodus profitieren.|Der Batchausführungsmodus ist nun für Analyseworkloads verfügbar, ohne dass Columnstore-Indizes erforderlich sind. Weitere Informationen finden Sie unter [Batchmodus bei Rowstore](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).|
+|Abfragen im Zeilenmodus, die nicht genügend Speicherzuweisungen anfordern, was zu einem Überlauf auf Datenträger führt, haben möglicherweise weiterhin Probleme mit aufeinanderfolgenden Ausführungen.|Abfragen im Zeilenmodus, die nicht genügend Arbeitsspeicherzuweisungen anfordern, was zu einem Überlauf auf Datenträger führt, weisen bei aufeinanderfolgenden Ausführungen möglicherweise eine Leistungssteigerung auf. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).|
+|Abfragen im Zeilenmodus, die eine übermäßige Speicherzuweisung anfordern, was zu Parallelitätsproblemen führt, haben möglicherweise weiterhin Probleme mit aufeinanderfolgenden Ausführungen.|Abfragen im Batchmodus, die eine übermäßige Speicherzuweisung anfordern, was zu Parallelitätsproblemen führt, weisen bei aufeinanderfolgenden Ausführungen möglicherweise eine verbesserte Parallelität auf. Weitere Informationen finden Sie unter [Feedback zur Speicherzuweisung im Zeilenmodus](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).|
+|Abfragen, die auf TSQL_SCALAR_UDFs verweisen, verwenden einen iterativen Aufruf, verursachen keine Kosten und erzwingen die serielle Ausführung. |TSQL_SCALAR_UDFs werden in äquivalente relationale Ausdrücke transformiert, die per „Inlining“ durch die aufrufende Abfrage ersetzt werden, was oft zu erheblichen Leistungssteigerungen führt. Weitere Informationen finden Sie unter [TSQL_SCALAR_UDF_INLINING](../../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Tabellenvariablen nutzen für die Kardinalitätsschätzung eine festgelegte Schätzung.  Wenn die tatsächliche Anzahl der Zeilen sehr viel höher als der geschätzter Wert ist, kann die Leistung nachgelagerter Vorgänge beeinträchtigt werden. |Neue Pläne verwenden anstelle einer festgelegten Schätzung die tatsächliche Kardinalität der Tabellenvariablen, die bei der ersten Kompilierung vorgefunden wird. Weitere Informationen finden Sie unter [Verzögerte Kompilierung von Tabellenvariablen](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).|
 
-Weitere Informationen zu Abfrageverarbeitungsfeatures, die im Datenbank-Kompatibilitätsgrad 150 aktiviert sind, finden Sie unter [Neuigkeiten zu SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) und [Intelligente Abfrageverarbeitung in SQL-Datenbanken](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
+Weitere Informationen zu Abfrageverarbeitungsfeatures, die im Datenbank-Kompatibilitätsgrad 150 aktiviert sind, finden Sie unter [Neuigkeiten zu SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) und [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../../relational-databases/performance/intelligent-query-processing.md).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Unterschiede zwischen Kompatibilitätsgrad 130 und Kompatibilitätsgrad 140
 
@@ -295,7 +300,7 @@ Bei einem bestimmten Kompatibilitätsgrad schließen die reservierten Schlüssel
 
 Nach der Einführung bleibt ein Schlüsselwort reserviert. So stellt z. B. das reservierte Schlüsselwort PIVOT, das mit dem Kompatibilitätsgrad 90 eingeführt wurde, auch bei Grad 100, 110 und 120 ein reserviertes Schlüsselwort dar.
 
-Wenn eine Anwendung einen Bezeichner verwendet, der für den Kompatibilitätsgrad der Anwendung als Schlüsselwort reserviert ist, erzeugt die Anwendung einen Fehler. Sie können dies umgehen, indem Sie den Bezeichner in eckige Klammern (**[]**) oder Anführungszeichen(**„“**) einschließen. Wenn Sie z.B. eine Anwendung, die den Bezeichner **EXTERNAL** verwendet, auf den Kompatibilitätsgrad 90 aktualisieren möchten, könnten Sie den Bezeichner ändern, sodass er anschließend entweder **[EXTERNAL]** oder **„EXTERNAL“** lautet.
+Wenn eine Anwendung einen Bezeichner verwendet, der für den Kompatibilitätsgrad der Anwendung als Schlüsselwort reserviert ist, erzeugt die Anwendung einen Fehler. Sie können dies umgehen, indem Sie den Bezeichner in eckige Klammern ( **[]** ) oder Anführungszeichen( **„“** ) einschließen. Wenn Sie z.B. eine Anwendung, die den Bezeichner **EXTERNAL** verwendet, auf den Kompatibilitätsgrad 90 aktualisieren möchten, könnten Sie den Bezeichner ändern, sodass er anschließend entweder **[EXTERNAL]** oder **„EXTERNAL“** lautet.
 
 Weitere Informationen finden Sie unter [Reservierte Schlüsselwörter](../../t-sql/language-elements/reserved-keywords-transact-sql.md).
 

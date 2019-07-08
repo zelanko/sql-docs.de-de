@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5665e97e09d8bdaad57a328aae31113f42f15b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b5198b8919fb41c754d5d94ac45c895dda852e2e
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571139"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343852"
 ---
 # <a name="sequence-numbers"></a>Sequenznummern
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,8 @@ ms.locfileid: "51571139"
  Das Sequenzobjekt generiert Nummern entsprechend seiner Definition, es steuert jedoch nicht die Verwendung dieser Nummern. In eine Tabelle eingefügte Sequenznummern können Lücken aufweisen, wenn ein Rollback für eine Transaktion ausgeführt wird, wenn ein Sequenzobjekt von mehreren Tabellen gemeinsam verwendet wird oder wenn Sequenznummern zugeordnet sind, ohne dass sie in Tabellen verwendet werden. Bei Erstellung mit der CACHE-Option können die Sequenznummern im Cache durch unerwartetes Herunterfahren, z. B. bei einem Stromausfall, verloren gehen.  
   
  Wenn mehrere Instanzen der **NEXT VALUE FOR** -Funktion denselben Sequenz-Generator in einer einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung angeben, geben all diese Instanzen den gleichen Wert für eine bestimmte Zeile zurück, die von dieser [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung erstellt. Dieses Verhalten ist mit dem ANSI-Standard konsistent.  
+ 
+ Sequenznummern werden außerhalb des Bereichs der aktuellen Transaktion generiert. Sie werden unabhängig davon genutzt, ob ein Commit oder ein Rollback für die Transaktion ausgeführt wird, die die Sequenznummer verwendet. Die doppelte Überprüfung tritt nur auf, wenn ein Datensatz vollständig gefüllt ist. Dies kann in manchen Fällen dazu führen, dass die gleiche Nummer bei der Erstellung für mehr als einen Datensatz verwendet, dann aber als Duplikat identifiziert wird. Wenn dies auftritt und andere automatisch nummerierten Werte auf nachfolgende Datensätze angewendet wurden, kann dies möglicherweise zu einer Lücke zwischen automatisch nummerierten Werten führen.
   
 ## <a name="typical-use"></a>Typische Verwendung  
  Verwenden Sie die folgende Anweisung, um eine ganzzahlige Sequenznummer zu erstellen, die von -2.147.483.648 bis 2.147.483.647 um jeweils 1 inkrementiert wird.  

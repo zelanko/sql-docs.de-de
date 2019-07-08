@@ -1,7 +1,7 @@
 ---
 title: MATCH (SQL-Graph) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -9,21 +9,23 @@ ms.topic: language-reference
 f1_keywords:
 - MATCH
 - MATCH_TSQL
+- SHORTEST_PATH
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
+- Shortest Path, shortest_path
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0296f915e0731bac9e7a714fa1e307bd2cda86b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d24d4f9e206fb6bd0b57cfcbbae6d1cf724ffa5e
+ms.sourcegitcommit: 60009734e0ce9d9ac655e83b3b04e340b73095f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62504627"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67409994"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +40,78 @@ ms.locfileid: "62504627"
 MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
-    {<node_alias> { 
-                     { <-( <edge_alias> )- } 
-                   | { -( <edge_alias> )-> }
-                 <node_alias> 
-                 } 
-     }
-     [ { AND } { ( <graph_search_pattern> ) } ]
-     [ ,...n ]
-  
+  {  
+      <simple_match_pattern> 
+    | <arbitrary_length_match_pattern>  
+    | <arbitrary_length_match_last_node_predicate> 
+  }
+
+<simple_match_pattern>::=
+  {
+      LAST_NODE(<node_alias>) | <node_alias>   { 
+          { <-( <edge_alias> )- } 
+        | { -( <edge_alias> )-> }
+        <node_alias> | LAST(<node_alias>)
+        } 
+  }
+  [ { AND } { ( <simple_match_pattern> ) } ]
+  [ ,...n ]
+
 <node_alias> ::=
-    node_table_name | node_alias 
+  node_table_name | node_table_alias 
 
 <edge_alias> ::=
-    edge_table_name | edge_alias
+  edge_table_name | edge_table_alias
+
+
+<arbitrary_length_match_pattern>  ::=
+  { 
+    SHORTEST_PATH( 
+      <arbitrary_length_pattern> 
+      [ { AND } { <arbitrary_length_pattern> } ] 
+      [ ,…n] 
+    )
+  } 
+
+<arbitrary_length_match_last_node_predicate> ::=
+  {  LAST_NODE( <node_alias> ) = LAST_NODE( <node_alias> ) }
+
+
+<arbitrary_length_pattern> ::=
+    {  LAST_NODE( <node_alias> )   | <node_alias>
+     ( <edge_first_al_pattern> [<edge_first_al_pattern>…,n] )
+     <al_pattern_quantifier> 
+  }
+    |  ( {<node_first_al_pattern> [<node_first_al_pattern> …,n] )
+        <al_pattern_quantifier> 
+        LAST_NODE( <node_alias> ) | <node_alias> 
+ }
+    
+<edge_first_al_pattern> ::=
+  { (  
+        { -( <edge_alias> )->   } 
+      | { <-( <edge_alias> )- } 
+      <node_alias>
+      ) 
+  } 
+
+<node_first_al_pattern> ::=
+  { ( 
+      <node_alias> 
+        { <-( <edge_alias> )- } 
+      | { -( <edge_alias> )-> }
+      ) 
+  } 
+
+
+<al_pattern_quantifier> ::=
+  {
+        +
+      | { 1 , n }
+  }
+
+n -  positive integer only.
+ 
 ```
 
 ## <a name="arguments"></a>Argumente  
@@ -64,6 +124,16 @@ Name oder Alias einer Knotentabelle, die in der FROM-Klausel angegeben ist.
 *edge_alias*  
 Name oder Alias einer Edgetabelle, die in der FROM-Klausel angegeben ist.
 
+*SHORTEST_PATH*   
+Die Funktion wird verwendet, um den kürzesten Weg zwischen zwei gegebenen Knoten in einem Graph oder zwischen einem bestimmten Knoten und allen anderen Knoten in einem Graph zu finden. Als Eingabe dient ein beliebiges Längenmuster, das in einem Graph wiederholt durchsucht wird. 
+
+*arbitrary_length_match_pattern*  
+Gibt die Knoten und Edges an, die wiederholt durchlaufen werden müssen, bis der gewünschte Knoten erreicht ist oder bis die im Muster angegebene maximale Anzahl von Iterationen erreicht ist. 
+
+*al_pattern_quantifier*   
+Das beliebige Längenmuster verwendet Quantifizierer für reguläre Ausdrücke, um die Anzahl der Wiederholungen eines bestimmten Suchmusters festzulegen. Die unterstützten Suchmusterquantifizierer sind:   
+* **+** : Das Muster 1 oder mehrmals wiederholen. Beenden, sobald ein kürzester Pfad gefunden wird.    
+* **{1,n}** : Das Muster 1 bis „n“ Male wiederholen. Beenden, sobald der kürzeste Pfad gefunden wird.     
 
 ## <a name="remarks"></a>Remarks  
 Die Knotennamen können in MATCH wiederholt werden.  D.h., ein Knoten kann beliebig oft in der gleichen Abfrage durchlaufen werden.  

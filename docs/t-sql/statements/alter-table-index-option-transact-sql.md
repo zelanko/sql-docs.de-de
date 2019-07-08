@@ -1,7 +1,7 @@
 ---
-title: index_option (Transact-SQL) | Microsoft-Dokumentation
+title: " | Microsoft-Dokumentation"
 ms.custom: ''
-ms.date: 09/08/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 176ab35da4eacd55062fcfb1e452e19c6b733649
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 01ecbe3af3aea9453306deea9408541012fe254b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591294"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412817"
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,8 @@ ms.locfileid: "53591294"
   | IGNORE_DUP_KEY = { ON | OFF }  
   | STATISTICS_NORECOMPUTE = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF }  
-  | ALLOW_PAGE_LOCKS = { ON | OFF }  
+  | ALLOW_PAGE_LOCKS = { ON | OFF } 
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } 
   | SORT_IN_TEMPDB = { ON | OFF }   
   | ONLINE = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -78,10 +79,10 @@ ms.locfileid: "53591294"
  OFF oder *fillfactor* ist nicht angegeben  
  Die Zwischenebenenseiten werden nahezu vollständig aufgefüllt, wobei jedoch ausreichend freier Speicherplatz verfügbar bleibt, um mindestens eine Zeile in der maximal für diesen Index gültigen Größe aufzunehmen, die sich aus der Schlüsselmenge auf den Zwischenseiten ergibt.  
   
- FILLFACTOR **=**_fillfactor_  
+ FILLFACTOR **=** _fillfactor_  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt einen Prozentsatz an, der anzeigt, wie weit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung füllen soll. Der angegebene Wert muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0.  
+ Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll. Der angegebene Wert muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0.  
   
 > [!NOTE]  
 >  Die Füllfaktorwerte 0 und 100 sind in jeglicher Hinsicht identisch.  
@@ -131,7 +132,13 @@ ms.locfileid: "53591294"
   
  OFF  
  Seitensperren werden nicht verwendet.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.
+
+Gibt an, ob der Speicherkonflikt bei Einfügevorgängen für die letzte Seite optimiert werden soll. Der Standardwert ist OFF. Weitere Informationen finden Sie im Abschnitt [Sequenzielle Schlüssel](./create-index-transact-sql.md#sequential-keys) auf der CREATE INDEX-Seite.
+ 
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -165,7 +172,7 @@ ms.locfileid: "53591294"
 > [!NOTE]
 >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MAXDOP **=**_max_degree_of_parallelism_  
+ MAXDOP **=** _max_degree_of_parallelism_  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
@@ -207,14 +214,14 @@ ms.locfileid: "53591294"
   
  Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)** **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn die Tabelle nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler. Wenn die ON PARTITIONS-Klausel nicht angegeben ist, gilt die DATA_COMPRESSION-Option für alle Partitionen einer partitionierten Tabelle.  
   
 \<partition_number_expression> kann auf die folgenden Weisen angegeben werden:  
   
 -   Geben Sie die Nummer der Partition an, beispielsweise: ON PARTITIONS (2).  
--   Geben Sie die Partitionsnummern mehrerer einzelner Partitionen durch Trennzeichen getrennt an, beispielsweise: ON PARTITIONS (1, 5).  
+-   Geben Sie die Partitionsnummern mehrerer einzelner Partitionen durch Kommas getrennt an, beispielsweise: ON PARTITIONS (1, 5).  
 -   Geben Sie sowohl Bereiche als auch einzelne Partitionen an, beispielsweise: ON PARTITIONS (2, 4, 6 TO 8).  
   
 Für \<range> können durch das Wort TO getrennte Partitionsnummern angegeben werden, beispielsweise: ON PARTITIONS (6 TO 8).  

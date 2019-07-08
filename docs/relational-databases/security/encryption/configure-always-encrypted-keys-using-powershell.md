@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5e8f0eb293390e88f0c7d8f982c0525b5a62f871
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327471"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388003"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Konfigurieren von Always Encrypted-Schlüsseln mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Informationen darüber, wie Sie die Arbeit mit dem SQL Server-PowerShell-Modul b
 
 ## <a name="KeyProvisionWithoutRoles"></a> Schlüsselbereitstellung ohne Rollentrennung
 
-Die in diesem Abschnitt beschriebene Schlüsselbereitstellungsmethode unterstützt die Rollentrennung zwischen Sicherheitsadministratoren und Datenbankadministratoren (DBAs) nicht. Einige der unten aufgeführten Schritten kombinieren Vorgänge auf physischen Schlüsseln mit Vorgängen mit Schlüsselmetadaten. Deshalb wird diese Bereitstellungsmethode für Organisationen empfohlen, die das DevOps-Modell verwenden, oder für Fälle, in denen die Datenbank in der Cloud gehostet wird und das primäre Ziel ist, Cloudadministratoren (nicht jedoch lokalen DBAs) den Zugriff auf sensible Daten zu verweigern. Die Methode wird nicht empfohlen, wenn DBAs zu potenziellen Angreifer gehören, oder wenn DBAs einfach nicht über Zugriff auf sensible Daten verfügen sollen.
+Die in diesem Abschnitt beschriebene Schlüsselbereitstellungsmethode unterstützt die Rollentrennung zwischen Sicherheitsadministratoren und Datenbankadministratoren (DBAs) nicht. Einige der unten aufgeführten Schritten kombinieren Vorgänge auf physischen Schlüsseln mit Vorgängen mit Schlüsselmetadaten. Deshalb wird diese Bereitstellungsmethode für Organisationen empfohlen, die das DevOps-Modell verwenden, oder für Fälle, in denen die Datenbank in der Cloud gehostet wird und das primäre Ziel ist, Cloudadministratoren (nicht jedoch lokalen DBAs) den Zugriff auf sensible Daten zu verweigern. Die Methode wird nicht empfohlen, wenn DBAs zu potenziellen Angreifer gehören, oder wenn DBAs nicht über Zugriff auf sensible Daten verfügen sollen.
 
 Stellen Sie vor der Ausführung der Schritte, die Zugriff auf Nur-Text-Schlüssel oder dem Schlüsselspeicher erfordern (in der Spalte **Greift auf Klartextschlüssel/-schlüsselspeicher zu** unten in der Tabelle angegeben), sicher, dass die PowerShell-Umgebung auf einem sicheren Computer ausgeführt wird, der nicht der Computer ist, auf dem Ihre Datenbank gehostet wird. Weitere Informationen finden Sie im Abschnitt ***Security Considerations for Key Management***(Überlegungen zur Sicherheit für die Schlüsselverwaltung).
 
@@ -186,7 +186,7 @@ Bevor Sie Schritte ausführen, für die Sie Zugriff auf Nur-Text-Schlüssel oder
 1.  Die PowerShell-Umgebung wird auf einem sicheren Computer ausgeführt, der nicht der Computer ist, auf dem Ihre Datenbank gehostet wird.
 2.  Datenbankadministratoren in Ihrer Organisation nicht über Zugriff auf den Computer verfügen (die den Zweck der Rollentrennung zunichte machen würden).
 
-Weitere Informationen finden Sie im Abschnitt [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Überlegungen zur Sicherheit für die Schlüsselverwaltung).
+Weitere Informationen finden Sie im Abschnitt [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Überlegungen zur Sicherheit für die Schlüsselverwaltung).
 
 
 Task  |Artikel  |Greift auf Klartextschlüssel/-schlüsselspeicher zu  |Greift auf Datenbank zu  

@@ -1,7 +1,7 @@
 ---
 title: Festlegen von Indexoptionen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -19,18 +19,19 @@ helpviewer_keywords:
 - MAXDOP index option
 - IGNORE_DUP_KEY option
 - ALLOW_PAGE_LOCKS option
+- OPTIMIZE_FOR_SEQUENTIAL_KEY option
 - ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9df2387d36f68692a38b71d9bd995997b47f34f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62687107"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579387"
 ---
 # <a name="set-index-options"></a>Festlegen von Indexoptionen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "62687107"
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Die folgenden Optionen werden sofort auf den Index angewendet, indem die SET-Klausel in der ALTER INDEX-Anweisung verwendet wird: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY und STATISTICS_NORECOMPUTE.  
+-   Die folgenden Optionen werden sofort auf den Index angewendet, indem die SET-Klausel in der ALTER INDEX-Anweisung verwendet wird: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY und STATISTICS_NORECOMPUTE.  
   
 -   Die folgenden Optionen können beim Neuerstellen eines Indexes mithilfe von ALTER INDEX REBUILD oder CREATE INDEX WITH DROP_EXISTING festgelegt werden: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP und DROP_EXISTING (nur CREATE INDEX).  
   
@@ -83,7 +84,9 @@ ms.locfileid: "62687107"
 7.  Klicken Sie auf **Schließen**.  
   
 8.  Klicken Sie im Menü **Datei** auf **Speichern**_table_name_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>So ändern Sie die Eigenschaften eines Indexes in Objekt-Explorer  
   
 1.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um die Datenbank mit der Tabelle zu erweitern, in der Sie die Eigenschaften eines Indexes ändern möchten.  

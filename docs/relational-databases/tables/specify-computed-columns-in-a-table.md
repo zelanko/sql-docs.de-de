@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a50efc25142a78a3363959c238d87efd84de90
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 0b8cef2656c1d06e7f03f122ab96600cc5b8fea0
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072154"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351702"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, es sei denn, die Spalte wurde (mit PERSISTED) als persistente Spalte markiert. Der Ausdruck für eine berechnete Spalte kann aus Daten anderer Spalten einen Wert für die Spalte berechnen, der er zuwiesen ist. Sie können mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] einen Ausdruck für eine berechnete Spalte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angeben.  
   
@@ -90,14 +90,14 @@ ms.locfileid: "49072154"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Im Beispiel wird eine Tabelle mit einer berechneten Spalte erstellt, die den Wert in der Spalte `QtyAvailable` mit dem Wert in der Spalte `UnitPrice` multipliziert.  
   
-    ```  
+    ```sql
     CREATE TABLE dbo.Products   
     (  
         ProductID int IDENTITY (1,1) NOT NULL  
       , QtyAvailable smallint  
       , UnitPrice money  
       , InventoryValue AS QtyAvailable * UnitPrice  
-    );  
+    );
   
     -- Insert values into the table.  
     INSERT INTO dbo.Products (QtyAvailable, UnitPrice)  
@@ -117,11 +117,17 @@ ms.locfileid: "49072154"
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Im folgenden Beispiel wird der im vorangehenden Beispiel erstellten Tabelle eine neue Spalte hinzugefügt.  
   
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
     ```  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
+
+    Fügen Sie optional das PERSISTED-Argument hinzu, um die berechneten Werte physisch in der Tabelle zu speichern:
   
-    ```  
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5) PERSISTED;
+    ```
   
+
 #### <a name="to-change-an-existing-column-to-a-computed-column"></a>So ändern Sie eine vorhandene Spalte in eine berechnete Spalte  
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
@@ -130,13 +136,12 @@ ms.locfileid: "49072154"
   
 3.  Um eine vorhandene Spalte in eine berechnete Spalte zu ändern, müssen Sie die berechnete Spalte entfernen und neu erstellen. Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie dann auf **Ausführen**. Im folgenden Beispiel wird die im vorangehenden Beispiel hinzugefügte Spalte geändert.  
   
-    ```  
+    ```sql
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
     GO  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);  
-  
-    ```  
-  
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
+    ```
+
      Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  

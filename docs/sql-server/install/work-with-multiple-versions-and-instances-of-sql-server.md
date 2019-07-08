@@ -20,12 +20,12 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae19cf74753b07dba1e6c274f1a102e1fe745f1c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 209f11341fa8825e7c67281a8a58ccb338a1376b
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325523"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463574"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Verwenden mehrerer Versionen und Instanzen von SQL Server
 
@@ -39,7 +39,7 @@ Die folgenden SQL Server-bezogenen Elemente sind bei Installation mehrerer Insta
 
 - Analysis Services
 
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - Reporting Services
 ::: moniker-end
 

@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted mit Secure Enclaves (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,17 +11,17 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 377c2d95564e7348bdfb5de9480c7c7f5004c7f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac0ce5511f8bad17d9732abbc17fbea36c92b347
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938159"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419210"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-
+ 
 Always Encrypted mit Secure Enclaves bietet zusätzliche Funktionalität für das Feature [Always Encrypted](always-encrypted-database-engine.md).
 
 Always Encrypted wurde in SQL Server 2016 eingeführt und schützt vertrauliche Daten vor Schadsoftware und dem Zugriff *nicht autorisierter* SQL Server-Benutzer mit hohen Berechtigungen. Nicht autorisierte Benutzer mit hohen Berechtigungen sind Datenbankadministratoren, Computeradministratoren, Cloudadministratoren sowie alle anderen Benutzer, die legitim auf Serverinstanzen, Hardware und ähnliches zugreifen, aber keine Zugriff auf einige oder alle der tatsächlichen Daten haben sollten. 
@@ -53,7 +53,7 @@ Mit Secure Enclaves schützt Always Encrypted die Vertraulichkeit von Daten und 
 - **Umfangreiche Berechnungen (Vorschau)** : Vorgänge in verschlüsselten Spalten, wie z.B. Musterabgleich (das LIKE-Prädikat) und Bereichsvergleiche, werden innerhalb der Secure Enclave unterstützt. Damit lässt sich Always Encrypted für eine Vielzahl von Anwendungen und Szenarien verwenden, bei denen solche Berechnungen innerhalb des Datenbanksystems ausgeführt werden müssen.
 
 > [!IMPORTANT]
-> In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] stehen für umfangreiche Berechnungen noch einige Leistungsoptimierungen aus. Zudem weisen solche Berechnungen eine eingeschränkte Funktionalität auf (z.B. keine Indizierung) und sind derzeit standardmäßig deaktiviert. Informationen zum Aktivieren umfangreicher Berechnungen finden Sie unter [Aktivieren von umfangreichen Berechnungen](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+> In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] stehen für umfangreiche Berechnungen verschiedene Leistungsoptimierungen und Verbesserungen für die Fehlerbehandlung aus. Zudem sind diese Berechnungen derzeit standardmäßig deaktiviert. Informationen zum Aktivieren umfangreicher Berechnungen finden Sie unter [Aktivieren von umfangreichen Berechnungen](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
 In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] verwendet Always Encrypted über [Virtualisierungsbasierte Sicherheit (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) abgesicherte Secure Enclaves (auch als VSM-Enclaves bezeichnet) im Windows-Arbeitsspeicher.
 
@@ -61,7 +61,7 @@ In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] verwendet Alway
 
 Die Secure Enclave in der SQL Server-Engine kann im Klartextformat auf vertrauliche Daten, die in verschlüsselten Datenbankspalten gespeichert sind, sowie auf die entsprechenden Spaltenverschlüsselungsschlüssel zugreifen. Bevor eine Abfrage mit Enclave-Berechnungen an SQL Server übermittelt wird, muss der Clienttreiber innerhalb der Anwendung überprüfen, ob es sich bei der Secure Enclave um eine echte Enclave handelt, die auf einer bestimmten Technologie basiert (z.B. VBS). Darüber hinaus muss der Treiber überprüfen, ob der Code, der in der Enclave ausgeführt wird, für die Ausführung in der Enclave signiert wurde. 
 
-Der Prozess der Überprüfung der Enclave wird als **Enclave-Nachweis** bezeichnet und erfordert in der Regel, dass ein Clienttreiber innerhalb der Anwendung (und manchmal auch SQL Server) einen externen Nachweisdienst kontaktiert. Die genauen Merkmale des Nachweisprozesses richten sich nach der Enclave-Technologie und dem Nachweisdienst.
+Der Prozess der Überprüfung der Enclave wird als **Enclave-Nachweis** bezeichnet und erfordert in der Regel, dass sowohl ein Clienttreiber innerhalb der Anwendung als auch SQL Server einen externen Nachweisdienst kontaktiert. Die genauen Merkmale des Nachweisprozesses richten sich nach der Enclave-Technologie und dem Nachweisdienst.
 
 Der Nachweisprozess, den SQL Server für Secure Enclaves für VBS in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] unterstützt, ist der Windows Defender System Guard-Runtimenachweis, bei dem Host Guardian Service (HGS) als Nachweisdienst verwendet wird. Sie müssen HGS in Ihrer Umgebung konfigurieren und den Computer, auf dem Ihre SQL Server-Instanz gehostet wird, in HGS registrieren. Sie müssen auch Ihre Clientanwendungen oder -tools (z.B. SQL Server Management Studio) mit einem HGS-Nachweis konfigurieren.
 
@@ -82,8 +82,8 @@ Wenn die SQL Server-Engine feststellt, dass die in einer Abfrage angegebenen Vor
 
 Eine Enclave-fähige Spalte ist eine Datenbankspalte, die mit einem Enclave-fähigen Spaltenverschlüsselungsschlüssel verschlüsselt ist. Welche Funktionalität für eine Enclave-fähige Spalte verfügbar ist, richtet sich nach dem von der Spalte verwendeten Verschlüsselungstyp.
 
-- **Deterministische Verschlüsselung**: Enclave-fähige Spalten, die die deterministische Verschlüsselung verwenden, unterstützen die direkte Verschlüsselung, aber keine anderen Vorgänge innerhalb der Secure Enclave. Gleichheitsvergleiche werden unterstützt, aber außerhalb der Enclave ausgeführt, indem der Chiffretext (außerhalb der Enclave) verglichen wird.  
-- **Verschlüsselung nach dem Zufallsprinzip**: Enclave-fähige Spalten, die die Verschlüsselung nach dem Zufallsprinzip verwenden, unterstützen die direkte Verschlüsselung sowie umfangreiche Berechnungen innerhalb der Secure Enclave. Zu den unterstützten umfangreichen Berechnungen zählen Musterabgleich und [Vergleichsoperatoren](https://docs.microsoft.com/sql/t-sql/language-elements/comparison-operators-transact-sql), einschließlich Gleichheitsvergleich.
+- **Deterministische Verschlüsselung**: Enclave-fähige Spalten, die die deterministische Verschlüsselung verwenden, unterstützen die direkte Verschlüsselung, aber keine anderen Vorgänge innerhalb der Secure Enclave. Gleichheitsvergleiche werden unterstützt. Dafür wird jedoch außerhalb der Enclave der Chiffretext verglichen.  
+- **Verschlüsselung nach dem Zufallsprinzip**: Enclave-fähige Spalten, die die Verschlüsselung nach dem Zufallsprinzip verwenden, unterstützen die direkte Verschlüsselung sowie umfangreiche Berechnungen innerhalb der Secure Enclave. Zu den unterstützten umfangreichen Berechnungen zählen Musterabgleich und [Vergleichsoperatoren](../../../t-sql/language-elements/comparison-operators-transact-sql.md), einschließlich Gleichheitsvergleich.
 
 Weitere Informationen zu Verschlüsselungstypen finden Sie unter [Always Encrypted-Kryptografie](always-encrypted-cryptography.md).
 
@@ -113,34 +113,89 @@ Um die direkte Verschlüsselung zu ermöglichen, müssen die Spaltenverschlüsse
 - Erneute Verschlüsselung: Sowohl der aktuelle als auch der neue Spaltenverschlüsselungsschlüssel (sofern Letzterer sich vom aktuellen Schlüssel unterscheidet) müssen Enclave-fähig sein.
 - Entschlüsselung: Der aktuelle Spaltenverschlüsselungsschlüssel der Spalte muss Enclave-fähig sein.
 
+### <a name="indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Indizes für Enclave-fähige Spalten mit zufälliger Verschlüsselung
+Sie können nicht gruppierte Indizes auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung erstellen, um umfangreiche Abfragen schneller ausführen zu können. Um sicherzustellen, dass ein mit zufälliger Verschlüsselung verschlüsselter Index in einer Spalte keine sensiblen Daten offenlegt und gleichzeitig für die Verarbeitung von Abfragen innerhalb der Enclave geeignet ist, werden die Schlüsselwerte in der Indexdatenstruktur (B-Struktur) nach ihren Klartextwerten verschlüsselt und sortiert. Wenn der Abfrageexecutor in der SQL Server-Engine einen Index auf einer verschlüsselten Spalte für Berechnungen innerhalb der Enclave verwendet, durchsucht er den Index nach bestimmten, in der Spalte gespeicherten Werten. Bei jeder Suche werden möglicherweise mehrere Vergleiche ausgeführt. Der Abfrageexecutor delegiert jeden Vergleich an die Enclave, die einen in der Spalte gespeicherten Wert und den zu vergleichenden verschlüsselten Indexschlüsselwert entschlüsselt, den Vergleich im Klartext durchführt und das Ergebnis des Vergleichs an den Executor zurückgibt. Allgemeine Informationen zur Funktionsweise der Indizierung in SQL Server, die nicht speziell für Always Encrypted gelten, finden Sie unter [Beschreibung von gruppierten und nicht gruppierten Indizes](../../indexes/clustered-and-nonclustered-indexes-described.md).
+
+Da ein Index in einer Enclave-fähigen Spalte mit zufälliger Verschlüsselung die verschlüsselten Indexschlüsselwerte speichert und die Werte nach Klartext sortiert werden, muss die SQL Server-Engine die Enclave für jeden Vorgang verwenden, bei dem ein Index erstellt oder aktualisiert wird, einschließlich:
+- Erstellen oder Neuerstellen eines Index.
+- Einfügen, Aktualisieren oder Löschen einer Zeile in der Tabelle (die eine indizierte/verschlüsselte Spalte enthält), wodurch das Einfügen oder/und Entfernen eines Indexschlüssels in den/aus dem Index ausgelöst wird.
+- Ausführen von DBCC-Befehle, bei denen eine Integritätsprüfung der Indizes durchgeführt wird, z.B. [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) oder [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+- Datenbankwiederherstellung (z.B. nach einem Ausfall von SQL Server und Neustarts), wenn SQL Server Änderungen am Index rückgängig machen muss (siehe weitere Details unten).
+
+Bei allen oben genannten Vorgängen benötigt die Enclave den Spaltenverschlüsselungsschlüssel für die indizierte Spalte, damit sie die Indexschlüssel entschlüsseln kann. Im Allgemeinen kann die Enclave einen Spaltenverschlüsselungsschlüssel auf zwei Arten abrufen:
+
+- **Direkt aus der Clientanwendung**, die den Vorgang auf dem Index aufgerufen hat, wie in der obigen Einführung beschrieben. Für diese Methode benötigt die Anwendung oder der Benutzer Zugriff auf den Spaltenhauptschlüssel und den Spaltenverschlüsselungsschlüssel, der die indizierte Spalte schützt. Die Anwendung muss eine Verbindung zur Datenbank herstellen, wobei für die Verbindung Always Encrypted aktiviert ist.
+- **Aus dem Cache des Spaltenverschlüsselungsschlüssels.** Die Enclave speichert die in früheren Abfragen verwendeten Schlüssel im Cache, der sich innerhalb der Enclave befindet und daher von außen nicht zugänglich ist. Wenn eine Anwendung einen Vorgang auf einem Index auslöst, ohne den erforderlichen Spaltenverschlüsselungsschlüssel direkt anzugeben, sucht die Enclave den Schlüssel im Cache. Wenn die Enclave den Schlüssel im Cache findet, wird er für den Vorgang verwendet. Mit dieser Methode können DBAs Indizes verwalten und bestimmte Datenbereinigungsvorgänge durchführen (z.B. eine Zeile aus einer Tabelle entfernen, die einen Index auf einer verschlüsselten Spalte enthält), ohne Zugriff auf die kryptografischen Schlüssel oder die Daten im Klartext zu haben. Bei dieser Methode muss die Anwendung eine Verbindung zur Datenbank herstellen, wobei für die Verbindung Always Encrypted aktiviert ist.
+
+Das Erstellen von Indizes auf Spalten, die zufällige Verschlüsselung verwenden und nicht Enclave-fähig sind, wird weiterhin nicht unterstützt.
+
+#### <a name="database-recovery"></a>Datenbankwiederherstellung
+
+Wenn eine SQL Server-Instanz ausfällt, können ihre Datenbanken in einem Zustand verbleiben, in dem die Datendateien einige Änderungen durch unvollständige Transaktionen enthalten können. Wenn die Instanz gestartet wird, führt sie einen Prozess namens [Datenbankwiederherstellung](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started) aus, bei dem jede im Transaktionsprotokoll gefundene unvollständige Transaktion zurückgesetzt wird, um sicherzustellen, dass die Integrität der Datenbank erhalten bleibt. Wenn eine unvollständige Transaktion Änderungen an einem Index vorgenommen hat, müssen diese ebenfalls rückgängig gemacht werden. Beispielsweise müssen einige Schlüsselwerte im Index entfernt oder neu eingefügt werden.
+
+> [!IMPORTANT]
+> Microsoft empfiehlt dringend, die [Schnellere Datenbankwiederherstellung (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) für Ihre Datenbank zu aktivieren, **bevor** Sie den ersten Index auf einer Enclave-fähigen Spalte verwenden, die mit zufälliger Verschlüsselung verschlüsselt wurde.
+
+Beim herkömmlichen [Datenbankwiederherstellungsprozess](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (gemäß dem [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)-Wiederherstellungsmodell) muss SQL Server zum Rückgängigmachen einer Änderung an einem Index warten, bis eine Anwendung den Spaltenverschlüsselungsschlüssel für die Spalte an die Enclave übermittelt. Dies kann sehr lange dauern. ADR reduziert die Anzahl der Vorgänge zum Rückgängigmachen von Änderungen, die verschoben werden müssen, da ein Spaltenverschlüsselungsschlüssel im Cache innerhalb der Enclave nicht verfügbar ist. Infolgedessen wird die Verfügbarkeit der Datenbank erheblich erhöht, indem die Wahrscheinlichkeit, dass eine neue Transaktion blockiert wird, minimiert wird. Wenn ADR aktiviert ist, benötigt SQL Server möglicherweise immer noch einen Spaltenverschlüsselungsschlüssel, um die Bereinigung alter Datenversionen abzuschließen, aber er erledigt dies als Hintergrundaufgabe, die sich nicht auf die Verfügbarkeit der Datenbank oder Benutzertransaktionen auswirkt. Es kann jedoch vorkommen, dass Fehlermeldungen im Fehlerprotokoll angezeigt werden, die auf fehlgeschlagene Bereinigungsvorgänge aufgrund eines fehlenden Spaltenverschlüsselungsschlüssels hinweisen.
+
+### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>Indizes auf Enclave-fähige Spalten mit deterministischer Verschlüsselung
+
+Ein Index auf einer Spalte mit deterministischer Verschlüsselung wird basierend auf Chiffretext (nicht Klartext) sortiert, unabhängig davon, ob die Spalte Enclave-fähig ist oder nicht.
+
+## <a name="security-considerations"></a>Überlegungen zur Sicherheit
+
+Die folgenden Sicherheitsaspekte sind für Always Encrypted mit Secure Enclaves zu beachten.
+
+- Die Sicherheit Ihrer Daten innerhalb der Enclave hängt von einem Nachweisprotokoll und einem Nachweisdienst ab. Daher müssen Sie sicherstellen, dass der Nachweisdienst und die Nachweisrichtlinien, die der Dienst durchsetzt, von einem vertrauenswürdigen Administrator verwaltet werden. Darüber hinaus unterstützen die Nachweisdienste in der Regel verschiedene Richtlinien und Nachweisprotokolle, von denen einige eine minimale Überprüfung der Enclave und ihrer Umgebung durchführen und für Test- und Entwicklungszwecke konzipiert sind. Halten Sie sich genau an die für Ihren Nachweisdienst spezifischen Richtlinien, um sicherzustellen, dass Sie die empfohlenen Konfigurationen und Richtlinien für Ihre Produktionsumgebungen verwenden. 
+- Die Verschlüsselung einer Spalte mit zufälliger Verschlüsselung mit einem Enclave-fähigen CEK kann dazu führen, dass die Reihenfolge der in der Spalte gespeicherten Daten verloren geht, da solche Spalten Bereichsvergleiche unterstützen. Wenn beispielsweise eine verschlüsselte Spalte, die Gehälter von Mitarbeitern enthält, einen Index verwendet, könnte ein böswilliger DBA den Index scannen, um den maximalen verschlüsselten Wert für das Gehalt zu finden und eine Person mit dem maximalen Gehalt zu identifizieren (vorausgesetzt, der Name der Person ist nicht verschlüsselt). 
+- Wenn Sie Always Encrypted verwenden, um sensible Daten vor unbefugtem Zugriff durch DBAs zu schützen, sollten Sie die Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel nicht an die DBAs weitergeben. Ein DBA kann Indizes auf verschlüsselten Spalten verwalten, ohne direkten Zugriff auf die Schlüssel zu haben, indem er den Cache der Spaltenverschlüsselungsschlüssel innerhalb der Enclave nutzt.
+
+## <a name="considerations-for-alwayson-and-database-migration"></a>Überlegungen zu AlwaysOn und Datenmigration
+
+Bei der Konfiguration einer AlwaysOn-Verfügbarkeitsgruppe, die für die Unterstützung von Abfragen mit Enclaves erforderlich ist, müssen Sie sicherstellen, dass alle SQL Server-Instanzen, die die Datenbanken in der Verfügbarkeitsgruppe hosten, Always Encrypted mit Secure Enclaves unterstützen und eine Enclave konfiguriert ist. Wenn die primäre Datenbank Enclaves unterstützt, eine sekundäre Replik jedoch nicht, schlägt jede Abfrage fehl, die versucht, die Funktionalität von Always Encrypted mit Secure Enclaves zu nutzen.
+
+Wenn Sie eine Sicherungsdatei einer Datenbank wiederherstellen, die die Funktionalität von Always Encrypted mit Secure Enclaves auf einer SQL Server-Instanz verwendet, für die die Enclave nicht konfiguriert ist, wird der Wiederherstellungsvorgang erfolgreich durchgeführt, und alle Funktionen, die nicht auf die Enclave angewiesen sind, sind verfügbar. Alle nachfolgenden Abfragen, die die Enclave-Funktionalität verwenden, schlagen jedoch fehl, und Indizes auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung werden ungültig.  Dasselbe gilt, wenn Sie eine Datenbank mit Always Encrypted mit Secure Enclaves an die Instanz anfügen, für die die Enclave nicht konfiguriert ist.
+
+Wenn Ihre Datenbank Indizes auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung enthält, stellen Sie sicher, dass Sie die [Schnellere Datenbankwiederherstellung (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) in der Datenbank aktivieren, bevor Sie eine Datenbanksicherung erstellen. Mit ADR wird sichergestellt, dass die Datenbank, einschließlich der Indizes, sofort nach der Wiederherstellung der Datenbank verfügbar ist. Weitere Informationen finden Sie unter [Datenbankwiederherstellung](#database-recovery).
+
+Wenn Sie Ihre Datenbank mit einer BBACPAC-Datei migrieren, müssen Sie sicherstellen, dass Sie alle Indizes auf Enclave-fähige Spalten mit randomisierter Verschlüsselung löschen, bevor Sie die BACPAC-Datei erstellen.
+
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-Allgemeine Einschränkungen: 
+Secure Enclaves erweitern die Funktionalität von Always Encrypted. Die folgenden Funktionen **werden jetzt für Enclave-fähige Spalten unterstützt**:
 
-- Alle Einschränkungen, die unter [Details zur Funktion](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine#feature-details) für die aktuelle Version von Always Encrypted aufgeführt sind, gelten auch für Always Encrypted mit Secure Enclaves (für Spalten, die mit Enclave-fähigen Schlüsseln verschlüsselt sind). Ausgenommen sind die Einschränkungen, die durch Hinzufügen der Unterstützung für direkte Verschlüsselung und umfangreiche Berechnungen aufgehoben werden.
+- Direkte kryptografische Vorgänge.
+- Musterabgleich (LIKE) und Vergleichsoperatoren für Spalten, die mithilfe der zufälligen Verschlüsselung verschlüsselt wurden.
+    > [!NOTE]
+    > Die obigen Vorgänge werden für Zeichenfolgenspalten unterstützt, die Sortierungen mit einer binary2-Sortierreihenfolge (BIN2-Sortierungen) verwenden. Zeichenfolgenspalten mit Nicht-BIN2-Sortierung können mit zufälliger Verschlüsselung und Enclave-fähigen Spaltenverschlüsselungsschlüsseln verschlüsselt werden. Die einzige neue Funktionalität, die für solche Spalten aktiviert ist, ist jedoch die direkte Verschlüsselung.
+- Erstellen von nicht gruppierten Indizes für Spalten mit zufälliger Verschlüsselung.
+- Berechnete Spalten unter Verwendung von Ausdrücken, die das LIKE-Prädikat enthalten, und Vergleichsoperatoren auf Spalten mit zufälliger Verschlüsselung.
 
-- Der Gleichheitsvergleich bleibt der einzige Transact-SQL-Vorgang, der mit deterministischer Verschlüsselung unterstützt wird. Gleichheitsvergleiche erfolgen durch Vergleichen von Chiffretextwerten außerhalb der Enclave, unabhängig davon, ob die Verschlüsselungsschlüssel der Spalten Enclave-fähig sind oder nicht. Die einzige neue Funktionalität, die durch Enclave-fähige Spaltenverschlüsselungsschlüssel für die deterministische Verschlüsselung aktiviert wird, sind direkte kryptografische Vorgänge. Wenn Sie über eine Spalte verfügen, die mit deterministischer Verschlüsselung verschlüsselt ist (und über einen Schlüssel, der nicht Enclave-fähig ist), müssen Sie die Spalte mit der Verschlüsselung nach dem Zufallsprinzip neu verschlüsseln, um umfangreiche Berechnungen (Musterabgleich, Vergleichsoperationen) zu ermöglichen.
+Alle anderen Einschränkungen (die durch die oben genannten Verbesserungen nicht berücksichtigt werden), die für Always Encrypted (ohne Secure Enclaves) unter [Details zur Funktion](always-encrypted-database-engine.md#feature-details) aufgeführt sind, gelten auch für Always Encrypted mit Secure Enclaves.
 
-- Die vorhandenen Einschränkungen in Bezug auf Sortierungen gelten auch für Spalten, die mit Enclave-fähigen Spaltenverschlüsselungsschlüsseln verschlüsselt sind: Mit deterministischer Verschlüsselung verschlüsselte Zeichenfolgenspalten (char, nchar, varchar, nvarchar) müssen Sortierungen mit einer binary2-Sortierreihenfolge (BIN2-Sortierungen) verwenden. Zeichenfolgenspalten, die Nicht-BIN2-Sortierungen verwenden, können mit der Verschlüsselung nach dem Zufallsprinzip verschlüsselt werden. Die einzige neue Funktionalität, die für solche Spalten aktiviert wird (wenn sie mit Enclave-fähigen Spaltenverschlüsselungsschlüsseln verschlüsselt sind), ist die direkte Verschlüsselung. **Um umfangreiche Berechnungen (Musterabgleich, Vergleichsoperationen) zu unterstützen, muss eine Spalte eine BIN2-Sortierung verwenden** (und die Spalte muss mit Verschlüsselung nach dem Zufallsprinzip und einem Enclave-fähigen Spaltenverschlüsselungsschlüssel verschlüsselt sein).
+Die folgenden Einschränkungen sind für Always Encrypted mit Secure Enclaves zu beachten:
 
+- Gruppierte Indizes können nicht auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung erstellt werden.
+- Enclave-fähige Spalten mit zufälliger Verschlüsselung können keine Primärschlüsselspalten sein und können nicht durch Fremdschlüsselbeschränkungen oder eindeutige Schlüsselbeschränkungen referenziert werden.
+- Hashjoins und zusammengeführte Joins auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung werden nicht unterstützt. Es werden nur Joins geschachtelter Schleifen (mit Indizes, falls verfügbar) unterstützt.
+- Abfragen mit dem LIKE-Operator oder einem Vergleichsoperator, der einen Abfrageparameter mit einem der folgenden Datentypen hat (die nach der Verschlüsselung zu großen Objekten werden), ignorieren Indizes und führen Tabellenscans durch.
+    - nchar[n] und nvarchar[n], wenn „n“ größer als 3967 ist.
+    - char[n], varchar[n], binary[n], varbinary[n], wenn „n“ größer als 7935 ist.
+- Direkte Verschlüsselungsvorgänge können nicht mit anderen Änderungen an Spaltenmetadaten kombiniert werden. Ausgenommen hiervon sind Änderungen einer Sortierung innerhalb derselben Codeseite und der NULL-Zulässigkeit. Beispiel: Sie können nicht in einer einzigen ALTER TABLE- oder ALTER COLUMN-Transact-SQL-Anweisung eine Spalte verschlüsseln, erneut verschlüsseln oder entschlüsseln UND den Datentyp der Spalte ändern. Sie müssen zwei separate Anweisungen verwenden.
 - Die Verwendung von Enclave-fähigen Schlüsseln für Spalten in In-Memory-Tabellen wird nicht unterstützt.
-
-- Direkte Verschlüsselungsvorgänge können nicht mit anderen Änderungen an Spaltenmetadaten kombiniert werden. Ausgenommen hiervon sind Änderungen der Sortierung und der NULL-Zulässigkeit. Beispiel: Sie können nicht in einer einzigen ALTER TABLE- oder ALTER COLUMN-Transact-SQL-Anweisung eine Spalte verschlüsseln, erneut verschlüsseln oder entschlüsseln UND den Datentyp der Spalte ändern. Sie müssen zwei separate Anweisungen verwenden.
-
-Die folgenden Einschränkungen gelten für die aktuelle Vorschau, eine Lösung ist jedoch geplant:
-
-- Enclave-fähige Spalten mit Verschlüsselung nach dem Zufallsprinzip können nicht indiziert werden. Das bedeutet, dass für Vergleichs- oder LIKE-Vorgänge Tabellenscans erforderlich sind.
-
-- Der einzige Clienttreiber, der Always Encrypted mit Secure Enclaves unterstützt, ist der .NET Framework-Datenanbieter für SQL Server (ADO.NET) in .NET Framework 4.7.2. Es gibt keine Unterstützung für ODBC/JDBC.
-
 - Die einzigen unterstützten Schlüsselspeicher für Enclave-fähige Spaltenhauptschlüssel sind Windows Certificate Store und Azure Key Vault.
 
-- Die Toolunterstützung für Always Encrypted mit Secure Enclaves ist zurzeit unvollständig. Um einen direkten kryptografischen Vorgang über eine ALTER TABLE-Transact-SQL-Anweisung auszulösen, müssen Sie die Anweisung über ein Abfragefenster in SSMS ausgeben. Alternativ dazu können Sie selbst ein Programm schreiben, das die Anweisung ausgibt. Das Cmdlet „Set-SqlColumnEncryption“ im SQL Server-PowerShell-Modul und der Always Encrypted-Assistent in SQL Server Management Studio unterstützen die direkte Verschlüsselung noch nicht. Beide Tools verschieben derzeit die Daten aus der Datenbank, um kryptografische Vorgänge auszuführen – auch dann, wenn die für die Vorgänge verwendeten Spaltenverschlüsselungsschlüssel Enclave-fähig sind. 
+Die folgenden Einschränkungen gelten für [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], eine Lösung ist jedoch geplant:
 
-## <a name="known-issues"></a>Bekannte Probleme
+- Das Erstellen von Statistiken für Enclave-fähige Spalten mit zufälliger Verschlüsselung wird nicht unterstützt.
+- Der einzige Clienttreiber, der Always Encrypted mit Secure Enclaves unterstützt, ist der .NET Framework-Datenanbieter für SQL Server (ADO.NET) in .NET Framework 4.7.2. ODBC/JDBC wird nicht unterstützt.
+- Die Toolunterstützung für Always Encrypted mit Secure Enclaves ist zurzeit unvollständig. Dies gilt insbesondere für:
+  - Importieren/Exportieren von Datenbanken mit Enclave-fähigen Schlüssels wird nicht unterstützt.
+  - Um einen direkten kryptografischen Vorgang über eine ALTER TABLE-Transact-SQL-Anweisung auszulösen, müssen Sie die Anweisung über ein Abfragefenster in SSMS ausgeben. Alternativ dazu können Sie selbst ein Programm schreiben, das die Anweisung ausgibt. Das Cmdlet „Set-SqlColumnEncryption“ im SQL Server-PowerShell-Modul und der Always Encrypted-Assistent in SQL Server Management Studio unterstützen die direkte Verschlüsselung noch nicht. Beide Tools verschieben derzeit die Daten aus der Datenbank, um kryptografische Vorgänge auszuführen – auch dann, wenn die für die Vorgänge verwendeten Spaltenverschlüsselungsschlüssel Enclave-fähig sind.
+- DBCC-Befehle, die die Integrität von Indizes überprüfen oder Indizes aktualisieren, werden nicht unterstützt.
+- Erstellen von Indizes für verschlüsselte Spalten zum Zeitpunkt der Erstellung der Tabelle (über CREATE TABLE). Sie müssen einen Index für eine verschlüsselte Spalte separat über CREATE INDEX erstellen.
 
-- Für umfangreiche Berechnungen für Nicht-Unicode-Zeichenfolgenspalten (char, varchar) muss eine BIN2-Sortierung auf Datenbankebene festgelegt werden. Weitere Informationen finden Sie bei den besonderen Überlegungen für Nicht-Unicode-Zeichenfolgenspalten unter [Verwalten von Sortierungen](configure-always-encrypted-enclaves.md#manage-collations).
-
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Nächste Schritte
 
 - Informationen zum Einrichten Ihrer Testumgebung mit anschließendem Testen der Funktionalität von Always Encrypted mit Secure Enclaves in SSMS finden Sie unter [Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Weitere Informationen zur Verwendung von Always Encrypted mit Secure Enclaves finden Sie in [Konfigurieren von Always Encrypted mit Secure Enclaves](configure-always-encrypted-enclaves.md).

@@ -1,7 +1,7 @@
 ---
 title: Sortierung und Unicode-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -22,18 +22,20 @@ helpviewer_keywords:
 - locales [SQL Server]
 - code pages [SQL Server]
 - SQL Server collations
+- UTF-8
+- UTF-16
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836378"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419201"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,57 +119,54 @@ Ein Gebietsschema ist ein Satz von Informationen, die einem Ort oder einer Kultu
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  Eine Codepage ist ein geordneter Satz von Zeichen in einem vorgegebenen Skript, in dem ein numerischer Index, oder Codepunktwert, mit jedem Zeichen verbunden ist. Eine Codepage in Windows wird in der Regal als *Zeichensatz* oder *charset*bezeichnet. Codepages werden zur Unterstützung der Zeichensätze und Tastaturlayouts verschiedener Windows-Systemgebietsschemas verwendet.     
+ 
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  Die Sortierreihenfolge gibt an, wie Datenwerte sortiert werden. Dies wirkt sich auf die Ergebnisse des Datenvergleichs aus. Daten werden mithilfe von Sortierungen sortiert, die mit Indizes optimiert werden können.    
     
 ##  <a name="Unicode_Defn"></a> Unicode-Unterstützung    
-Unicode ist ein Standard zum Zuordnen von Codepunkten zu Zeichen. Da dieser Standard entwickelt wurde, um alle Zeichen aus allen Sprachen der Welt zu unterstützen, besteht keine Notwendigkeit für unterschiedliche Codepages zur Handhabung der verschiedenen Zeichensätze. Wenn Sie Zeichendaten speichern, die mehrere Sprachen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]widerspiegeln ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), verwenden Sie Unicode-UTF-16-Datentypen (**nchar**, **nvarchar** und **ntext**) anstelle von Nicht-Unicode-Datentypen (**char**, **varchar** und **text**). Alternativ dazu gilt ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Folgendes: Wenn eine für UTF-8 aktivierte Sortierung (\_UTF8) verwendet wird, werden Datentypen, die zuvor kein Unicode waren (**char** und **varchar**) zu Unicode-Datentypen (UTF-8). 
-
-> [!NOTE]
-> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ändert das Verhalten der bereits vorhandenen Unicode-UTF-16-Datentypen (**nchar**, **nvarchar** und **ntext**) nicht.   
-    
-Nicht-Unicode-Datentypen verfügen über umfassende Einschränkungen. Das liegt daran, dass ein Nicht-Unicode-Computer auf die Verwendung einer einzelnen Codepage beschränkt ist. Es kann sein, dass Sie mit Unicode eine bessere Systemleistung erzielen, da weniger Codepagekonvertierungen erforderlich sind. Unicode-Sortierungen müssen auf der Datenbank-, Spalten- oder Ausdrucksebene einzeln ausgewählt werden, weil sie auf Serverebene nicht unterstützt werden.    
-    
+Unicode ist ein Standard zum Zuordnen von Codepunkten zu Zeichen. Da dieser Standard entwickelt wurde, um alle Zeichen aus allen Sprachen der Welt zu unterstützen, besteht keine Notwendigkeit für unterschiedliche Codepages zur Handhabung der verschiedenen Zeichensätze. 
+   
 Die Codepages, die ein Client verwendet, werden durch die Einstellungen des Betriebssystems bestimmt. Verwenden Sie zum Festlegen von Clientcodepages unter Windows die Option **Ländereinstellungen** in der Systemsteuerung.    
-    
+
+Nicht-Unicode-Datentypen verfügen über umfassende Einschränkungen. Das liegt daran, dass ein Nicht-Unicode-Computer auf die Verwendung einer einzelnen Codepage beschränkt ist. Es kann sein, dass Sie mit Unicode eine bessere Systemleistung erzielen, da weniger Codepagekonvertierungen erforderlich sind. Unicode-Sortierungen müssen auf der Datenbank-, Spalten- oder Ausdrucksebene einzeln ausgewählt werden, weil sie auf Serverebene nicht unterstützt werden.    
+   
 Wenn Sie Daten von einem Server auf einen Client verschieben, wird die Serversortierung von älteren Clienttreibern möglicherweise nicht erkannt. Dies kann passieren, wenn Sie Daten von einem Unicode-Server auf einen Nicht-Unicode-Client verschieben. Die beste Möglichkeit, dieses Problem zu beheben, besteht in einem Update des Clientbetriebssystems, wobei die zugrunde liegenden Systemsortierungen aktualisiert werden. Wenn auf dem Client Datenbankclient-Software installiert ist, sollten Sie ein Serviceupdate der Datenbankclient-Software in Erwägung ziehen.    
     
-Sie können auch versuchen, eine andere Sortierung für die Daten auf dem Server zu verwenden. Wählen Sie eine Sortierung aus, die einer Codepage auf dem Client zugeordnet werden kann.    
-    
-Um die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbaren UTF-16-Sortierungen zum Verbessern der Suche nach und Sortierung von einigen Unicode-Zeichen (nur Windows-Sortierungen) zu verwenden, können Sie eine der Sortierungen mit ergänzenden Zeichen (\_SC, Supplementary Characters) oder eine der Version 140-Sortierungen auswählen.    
+> [!TIP]
+> Sie können auch versuchen, eine andere Sortierung für die Daten auf dem Server zu verwenden. Wählen Sie eine Sortierung aus, die einer Codepage auf dem Client zugeordnet werden kann.    
+
+Wenn Sie Zeichendaten speichern, die mehrere Sprachen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]widerspiegeln ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), verwenden Sie Unicode-Datentypen (**nchar**, **nvarchar** und **ntext**) anstelle von Nicht-Unicode-Datentypen (**char**, **varchar** und **text**). 
+
+> [!NOTE]
+> Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] kann bei Unicode-Datentypen bis zu 65.535 Zeichen mit UCS-2 oder den gesamten Unicode-Bereich (1.114.111 Zeichen) darstellen, wenn ergänzende Zeichen verwendet werden. Weitere Informationen zum Aktivieren der ergänzenden Zeichen finden Sie unter [Ergänzende Zeichen](#Supplementary_Characters).
+
+Alternativ dazu gilt ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Folgendes: Wenn eine für UTF-8 aktivierte Sortierung (\_UTF8) verwendet wird, werden Datentypen, die zuvor kein Unicode waren (**char** und **varchar**) zu Unicode-Datentypen (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ändert das Verhalten der bereits vorhandenen Unicode-UTF-16-Datentypen (**nchar**, **nvarchar** und **ntext**) nicht. Weitere Informationen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](#storage_differences).
+       
+Um die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) verfügbaren UTF-16-Sortierungen zum Verbessern der Suche nach und Sortierung von einigen Unicode-Zeichen (nur Windows-Sortierungen) zu verwenden, können Sie eine der Sortierungen mit ergänzenden Zeichen (\_SC) oder eine der Version 140-Sortierungen auswählen.    
  
 Um die in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] verfügbaren UTF-8-Sortierungen zum Verbessern der Suche nach und Sortieren von einigen Unicode-Zeichen (nur Windows-Sortierungen) zu verwenden, müssen Sie für die UTF-8-Codierung aktivierte Sammlungen (\_UTF8) auswählen.
  
 -   Das UTF8-Flag kann auf folgende Sortierungen angewendet werden:    
-   
     -   Sortierungen von Version 90 
-    
         > [!NOTE]
         > Nur wenn in dieser Version bereits Sortierungen mit ergänzenden Zeichen (\_SC) oder Variierungsauswahlzeichen (\_VSS) vorhanden sind.
-    
     -   Sortierungen von Version 100    
-    
     -   Sortierungen der Version 140   
-    
     -   Die binäre Sortierung BIN2<sup>1</sup>
     
 -   Das UTF8-Flag kann auf folgende Sortierungen nicht angewendet werden:    
-    
     -   Sortierungen der Version 90, die keine ergänzenden Zeichen (\_SC) oder Variierungsauswahlzeichen (\_VSS) unterstützen    
-    
     -   Die binären Sortierungen BIN und BIN2<sup>2</sup>    
-    
     -   Die SQL\*-Sortierungen  
     
-<sup>1</sup> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
-<sup>2</sup> Bis [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
+<sup>1</sup> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 hat die Sortierung UTF8_BIN2 durch Latin1_General_100_BIN2_UTF8 ersetzt.     
+<sup>2</sup> Bis [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. 
     
 Zum Abwägen der Vor- und Nachteile von Unicode- und Nicht-Unicode-Datentypen müssen Sie das Szenario testen und die Leistungsunterschiede in Ihrer Umgebung messen. Es ist ratsam, die Sortierung zu standardisieren, die für die Systeme in Ihrem Unternehmen verwendet wird, und so weit wie möglich Unicode-Server und -Clients bereitzustellen.    
     
 In vielen Fällen interagiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit anderen Servern oder Clients, und Ihr Unternehmen verwendet möglicherweise mehrere Standards für den Datenzugriff zwischen Anwendungen und Serverinstanzen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients stellen einen der beiden Haupttypen dar:    
     
 -   **Unicode-Clients** , die OLE DB und Open Database Connectivity (ODBC) Version 3.7 oder höher verwenden.    
-    
 -   **Nicht-Unicode-Clients** , die DB Library und ODBC Version 3.6 oder früher verwenden.    
     
 Die folgende Tabelle enthält Informationen zur Verwendung mehrsprachiger Daten mit verschiedenen Kombinationen von Unicode- und Nicht-Unicode-Servern.    
@@ -180,38 +179,34 @@ Die folgende Tabelle enthält Informationen zur Verwendung mehrsprachiger Daten 
 |Nicht-Unicode|Nicht-Unicode|Dieses Szenario ist bei mehrsprachigen Daten mit zahlreichen Beschränkungen verbunden. Sie können nur eine Codepage verwenden.|    
     
 ##  <a name="Supplementary_Characters"></a> Ergänzende Zeichen    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt verschiedene Datentypen bereit: Mit **nchar** und **nvarchar** können Unicode-Daten (UTF-16) in jeder Sortierung gespeichert werden. Datentypen wie **char** und **varchar** dienen zum Speichern von Unicode-Daten (UTF-8) in für UTF-8 aktivierten Sortierungen (\_UTF8). Diese Datentypen codieren Text im Format *UTF-16* bzw. *UTF-8*. Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich 0x0000 bis 0x10FFFF entspricht. Die am häufigsten verwendeten Zeichen weisen Codepunktwerte auf, die im Arbeitsspeicher und auf dem Datenträger in ein 8-Bit- oder ein 16-Bit-Wort passen. Zeichen mit Codepunktwerten, die größer als 0xFFFF sind, erfordern jedoch vier aufeinanderfolgende 8-Bit-Wörter (UTF-8) oder zwei aufeinanderfolgende 16-Bit-Wörter (UTF-16). Diese Zeichen werden als *ergänzende Zeichen*bezeichnet, und die zusätzlichen aufeinanderfolgenden 8-Bit- oder 16-Bit-Wörter werden als *Ersatzpaare*bezeichnet.    
-    
-Für die Datentypen **nchar**, **nvarchar** und **sql_variant** kann jetzt eine neue Familie von Sortierungen mit ergänzenden Zeichen (\_SC, Supplementary Characters) verwendet werden, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurde. Beispiel: `Latin1_General_100_CI_AS_SC`, oder bei Verwenden einer japanischen Sortierung `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
- 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] erweitert die Unterstützung für ergänzende Zeichen mit den neuen UTF-8-aktivierten Sortierungen (\_UTF8) auf die Datentypen **char** und **varchar**.   
+Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich 000000 bis 10FFFF entspricht. Die am häufigsten verwendeten Zeichen haben Codepunktwerte im Bereich von 000000 bis 00FFFFFF (65.535 Zeichen), die in ein 8-Bit- oder 16-Bit-Wort im Arbeitsspeicher und auf dem Datenträger passen. Dieser Bereich wird in der Regel als der Basic Multilingual Plane (BMP) festgelegt. 
 
-Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützen alle neuen Sortierungen automatisch ergänzende Zeichen.
+Aber das Unicode Consortium hat 16 zusätzliche „Ebenen“ von Zeichen eingerichtet, die jeweils genauso groß sind wie die BMP. Diese Definition ermöglicht es Unicode, das Potential für 1.114.112 Zeichen (d.h. 2<sup>16</sup> * 17 Zeichen) innerhalb des Codepunktbereichs 000000 bis 10FFFFFF darzustellen. Zeichen mit Codepunktwerten größer als 00FFFFFF erfordern zwei bis vier aufeinanderfolgende 8-Bit-Wörter (UTF-8) oder zwei aufeinanderfolgende 16-Bit-Wörter (UTF-16). Diese Zeichen, die sich außerhalb der BMP befinden, werden als *ergänzende Zeichen*bezeichnet, und die zusätzlichen aufeinanderfolgenden 8-Bit- oder 16-Bit-Wörter werden als *Ersatzzeichenpaare*bezeichnet. Weitere Informationen zur ergänzende Zeichen, Ersatzzeichen und Ersatzzeichenpaaren finden Sie im [Unicode-Standard](http://www.unicode.org/standard/standard.html).    
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Datentypen wie **nchar** und **nvarchar** bereit, um Unicode-Daten im BMP-Bereich (000000 bis 00FFFF) zu speichern, die die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] mit UCS-2 kodiert. 
+
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat eine neue Familie von Sortierungen mit ergänzenden Zeichen (\_SC) eingeführt, die mit den Datentypen **nchar**, **nvarchar** und **sql_variant** verwendet werden können, um den gesamten Unicode-Zeichenbereich (000000 bis 10FFFF) darzustellen. Beispiel: `Latin1_General_100_CI_AS_SC`, oder bei Verwenden einer japanischen Sortierung `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
+ 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] erweitert die Unterstützung für ergänzende Zeichen mit den neuen UTF-8-aktivierten Sortierungen ([\_UTF8](#utf8)) auf die Datentypen **char** und **varchar**. Diese können auch den vollständigen Unicode-Zeichenbereich darstellen.   
+
+> [!NOTE]
+> Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützen alle neuen **\_140**-Sortierungen automatisch ergänzende Zeichen.
 
 Bei Verwendung ergänzender Zeichen:    
     
 -   Ergänzende Zeichen können bei Sortier- und Vergleichsvorgängen für Sortierungsversionen ab 90 verwendet werden.    
-    
 -   Alle Sortierungen von Version 100 unterstützen die linguistische Sortierung mit ergänzenden Zeichen.    
-    
 -   Ergänzende Zeichen werden für die Verwendung in Metadaten, beispielsweise in Namen von Datenbankobjekten, nicht unterstützt.    
-    
 -   Datenbanken, die Sammlungen mit zusätzlichen Zeichen (\_SC) enthalten, können nicht für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation verwendet werden. Das liegt daran, dass manche der Systemtabellen und gespeicherten Prozeduren, die für die Replikation erstellt wurden, den Legacydatentyp **ntext** verwenden, der keine zusätzlichen Zeichen unterstützt.  
-    
+
 -   Das SC-Flag kann in folgenden Versionen angewendet werden:    
-    
     -   Sortierungen von Version 90    
-    
     -   Sortierungen von Version 100    
     
 -   Das SC-Flag kann nicht auf folgende Versionen angewendet werden:    
-    
     -   Nicht versionierte Windows-Sortierungen der Version 80    
-    
     -   Die binären Sortierungen BIN und BIN2    
-    
     -   Die SQL\*-Sortierungen    
-    
     -   Sortierungen von Version 140 (diese benötigen kein SC-Flag, da sie ergänzende Zeichen bereits unterstützen)    
     
 In der folgenden Tabelle wird das Verhalten einiger Zeichenfolgenfunktionen und Zeichenfolgenoperatoren verglichen, wenn diese ergänzende Zeichen mit und ohne SCA-Sortierung (supplementary character-aware) verwenden:    
@@ -224,11 +219,11 @@ In der folgenden Tabelle wird das Verhalten einiger Zeichenfolgenfunktionen und 
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Gibt einen UTF-16-Codepunkt im Bereich 0 bis 0x10FFFF zurück.|Gibt einen UCS-2-Codepunkt im Bereich 0 bis 0xFFFF zurück.|    
 |[Einzelnes zu suchendes Zeichen](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Platzhalterzeichen - nicht zu suchende(s) Zeichen](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Ergänzende Zeichen werden für alle Platzhaltervorgänge unterstützt.|Ergänzende Zeichen werden für diese Platzhaltervorgänge nicht unterstützt. Andere Platzhalteroperatoren werden unterstützt.|    
     
-##  <a name="GB18030"></a> GB18030-Unterstützung    
- GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Unterstützung für GB18030-codierte Zeichen, indem diese erkannt werden, wenn Sie den Server von einer clientseitigen Anwendung erreichen, und in systemeigene Unicode-Zeichen konvertiert und als solche gespeichert werden. Nach ihrer Speicherung im Server werden diese Zeichen in allen nachfolgenden Operationen als Unicode-Zeichen behandelt. Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die aktuelle Version 100. Alle _100-Ebenen-Sortierungen unterstützen die linguistische Sortierung mit GB18030-Zeichen. Wenn die Daten ergänzende Zeichen (Ersatzpaare) enthalten, können Sie Such- und Sortiervorgänge mithilfe der in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbaren SC-Sortierungen optimieren.    
+## <a name="GB18030"></a> GB18030-Unterstützung    
+GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Unterstützung für GB18030-codierte Zeichen, indem diese erkannt werden, wenn Sie den Server von einer clientseitigen Anwendung erreichen, und in systemeigene Unicode-Zeichen konvertiert und als solche gespeichert werden. Nach ihrer Speicherung im Server werden diese Zeichen in allen nachfolgenden Operationen als Unicode-Zeichen behandelt. Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die aktuelle Version 100. Alle _100-Ebenen-Sortierungen unterstützen die linguistische Sortierung mit GB18030-Zeichen. Wenn die Daten ergänzende Zeichen (Ersatzpaare) enthalten, können Sie Such- und Sortiervorgänge mithilfe der in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbaren SC-Sortierungen optimieren.    
     
-##  <a name="Complex_script"></a> Unterstützung komplexer Skripts    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann das Eingeben, Speichern, Ändern und Anzeigen komplexer Skripts unterstützen. Zu komplexen Skripts gehören folgende Typen:    
+## <a name="Complex_script"></a> Unterstützung komplexer Skripts    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann das Eingeben, Speichern, Ändern und Anzeigen komplexer Skripts unterstützen. Zu komplexen Skripts gehören folgende Typen:    
     
 -   Skripts, die sowohl die Kombination von Text von rechts nach links und Text von links nach rechts enthalten, als auch die Kombination von arabischem und englischem Text.    
 -   Skripts, deren Zeichen die Form abhängig von ihrer Position ändern, oder abhängig davon, ob sie mit anderen Zeichen kombiniert werden, wie beispielsweise arabische, indische und thailändische Zeichen.    
@@ -236,7 +231,7 @@ In der folgenden Tabelle wird das Verhalten einiger Zeichenfolgenfunktionen und 
     
 Datenbankanwendungen, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interagieren, müssen über Steuerelemente verfügen, die komplexe Skripts unterstützen. Standardmäßige Windows-Formularsteuerelemente, die in verwaltetem Code erstellt werden, sind für komplexe Skripts aktiviert.    
 
-##  <a name="Japanese_Collations"></a> Japanische Sortierungen, die in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="Japanese_Collations"></a> Japanische Sortierungen, die in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden neue japanische Sortierungsfamilien unterstützt, bei denen es sich um Permutationen verschiedener Optionen (\_CS, \_AS, \_KS, \_WS, \_VSS) handelt. 
 
@@ -247,19 +242,44 @@ SELECT Name, Description FROM fn_helpcollations()
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-Alle neuen Sortierungen verfügen über integrierte Unterstützung für ergänzende Zeichen, sodass keine der neuen Sortierungen das SC-Flag besitzt (oder benötigt).
+Alle neuen Sortierungen verfügen über integrierte Unterstützung für ergänzende Zeichen, sodass keine der neuen **\_140**-Sortierungen das SC-Flag besitzt (oder benötigt).
 
-Diese Sortierungen werden in Indizes der Datenbank-Engine, in für den Arbeitsspeicher optimierten Tabellen, in Columnstore-Indizes und in nativ kompilierten Modulen unterstützt.
+Diese Sortierungen werden in Indizes der [!INCLUDE[ssde_md](../../includes/ssde_md.md)], in für den Arbeitsspeicher optimierten Tabellen, in Columnstore-Indizes und in nativ kompilierten Modulen unterstützt.
 
 <a name="ctp23"></a>
 
-## <a name="utf-8-support"></a>Unterstützung für UTF-8
+## <a name="utf8"></a> Unterstützung für UTF-8
+Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird die vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 als Import- oder Exportcodierung oder als Sortierung für Zeichenfolgedaten auf Datenbank- und Spaltenebene eingeführt. UTF-8 ist für die Datentypen **char** and **varchar** zulässig und ist bei der Erstellung oder Änderung einer Objektsortierung in eine Sortierung mit dem Suffix `UTF8` aktiviert. Beispiel: `LATIN1_GENERAL_100_CI_AS_SC` in `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
 
-Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird die vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 als Import- oder Exportcodierung oder als Sortierung für Textdaten auf Datenbank- oder Spaltenebene eingeführt. UTF-8 ist für die Datentypen `CHAR` und `VARCHAR` zulässig und ist bei der Erstellung oder Änderung einer Objektsortierung in eine Sortierung mit dem Suffix `UTF8` aktiviert. 
+Die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführte UTF-8-Codierung ist nur für Windows-Sortierungen verfügbar, die Sonderzeichen unterstützen. **nchar** und **nvarchar** ermöglichen nur die UCS-2- oder UTF-16-Codierung und bleiben unverändert.
 
-Beispiel: `LATIN1_GENERAL_100_CI_AS_SC` in `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. Die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführte UTF-8-Codierung ist nur für Windows-Sortierungen verfügbar, die Sonderzeichen unterstützen. `NCHAR` und `NVARCHAR` lassen nur die UTF-16-Codierung zu und bleiben unverändert.
+### <a name="storage_differences"></a> Speicherunterschiede zwischen UTF-8 und UTF-16
+Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich 000000 bis 10FFFF entspricht. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] stehen sowohl UTF-8- als auch UTF-16-Codierungen zur Darstellung des gesamten Bereichs zur Verfügung:    
+-  Bei der UTF-8-Codierung benötigen Zeichen im ASCII-Bereich (000000 - 00007F) 1 Bytes, die Codepunkte 000080 bis 0007FF 2 Byte, die Codepunkte 000800 bis 00FFFF 3 Bytes und die Codepunkte 0010000 bis 0010FFFFFF 4 Bytes. 
+-  Bei der UTF-16-Codierung benötigen die Codepunkte 000000 bis 00FFFFFF 2 Bytes und die Codepunkte 0010000 bis 0010FFFF 4 Bytes. 
 
-Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Speichereinsparungen ermöglichen. Die Änderung eines vorhandenen Spaltendatentyps mit ASCII-Zeichen (lateinisch) von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die gleiche Unicode-Zeichenfolge erfordert.
+Die folgende Tabelle zeigt die Codierungsspeicherplatz in Bytes für jeden Zeichenbereich und jeden Codierungstyp:
+
+|Codebereich (hexadezimal)|Codebereich (dezimal)|Speicherplatz in Bytes <sup>1</sup> mit UTF-8|Speicherplatz in Bytes <sup>1</sup> mit UTF-16|    
+|---------------------------------|---------------------------------|--------------------------|-----------------------------|   
+|000000 – 00007F|0 - 127|1|2|
+|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|128 – 159<br />160 – 1.023<br />1\.024 – 2.047|2|2|
+|000800 – 003FFF<br />004000 – 00FFFF|2\.048 - 16.383<br />16.384 – 65.535|3|2|
+|010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|65.536 – 262.143 <sup>2</sup><br /><br />262.144 – 1.114.111 <sup>2</sup>|4|4|
+
+<sup>1</sup> Die Speicherbytes beziehen sich auf die codierte Bytelänge, nicht auf die jeweilige Datentypgröße beim Speichern auf dem Datenträger. Weitere Informationen zu den Speichergrößen auf dem Datenträger finden Sie unter [nchar und nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) und [char und varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+
+<sup>2</sup> Codepunktbereich für [ergänzende Zeichen](#Supplementary_Characters).
+
+Wie bereits erwähnt, kann die Wahl der geeigneten Unicode-Codierung und des Datentyps je nach verwendetem Zeichensatz zu erheblichen Einsparungen beim Speicherplatz führen. Die Änderung eines vorhandenen Spaltendatentyps mit ASCII-Zeichen von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die Darstellung der gleichen Unicode-Zeichenfolge erfordert.
+
+Bevor Sie entscheiden, ob Sie die UTF-8- oder UTF-16-Codierung für eine Datenbank oder Spalte verwenden möchten, sollten Sie die Verteilung der gespeicherten Zeichenfolgendaten berücksichtigen:
+-  Wenn es sich hauptsächlich im ASCII-Bereich befindet (z.B. Englisch), dann benötigt jedes Zeichen 1 Byte mit UTF-8 und 2 Byte mit UTF-16. Die Verwendung von UTF-8 hat Speichervorteile. 
+-  Oberhalb des ASCII-Bereichs benötigen fast alle lateinischen Schriftzeichen sowie Griechisch, Kyrillisch, Koptisch, Armenisch, Hebräisch, Arabisch, Syrisch, Tāna und N'Ko jeweils 2 Byte pro Zeichen in UTF-8 und UTF-16. In diesen Fällen gibt es für vergleichbare Datentypen keine signifikanten Speicherunterschiede (z.B. zwischen der Verwendung von **char** oder **nchar**).
+-  Wenn es sich hauptsächlich um ostasiatische Schriftzeichen handelt (z.B. Koreanisch, Chinesisch und Japanisch), dann benötigt jedes Zeichen 3 Byte mit UTF-8 und 2 Byte mit UTF-16. Die Verwendung von UTF-16 hat Speichervorteile. 
+-  Zeichen im Bereich von 010000 bis 10FFFFFF benötigen jeweils 4 Byte in UTF-8 und UTF-16. In diesen Fällen gibt es keine Speicherunterschiede für vergleichbare Datentypen (z.B. zwischen der Verwendung von **char** oder **nchar**).
+
+Weitere Überlegungen zur finden Sie unter [Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
 ##  <a name="Related_Tasks"></a> Verwandte Aufgaben    
     
@@ -277,9 +297,10 @@ Dieses Feature kann abhängig von dem verwendeten Zeichensatz beträchtliche Spe
 [Verwenden des Unicode-Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
 [Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [Bewährte Methode in SQL Server für die Migration zu Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) – wird nicht mehr angeboten   
-[Website des Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)    
+[Website des Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)   
+[Unicode Standard](http://www.unicode.org/standard/standard.html)      
     
-## <a name="see-also"></a>Weitere Informationen enthält auch die    
+## <a name="see-also"></a>Weitere Informationen    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     
 [Auswählen einer Sprache beim Erstellen eines Volltextindex](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    

@@ -32,12 +32,12 @@ author: juliemsft
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e26632a80efce073df66f3d4fd564d513e4b28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0987f9efdf3e19f3a79d9d39c0ce2661a97fdbe
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62758703"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343963"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,20 +119,20 @@ GO
 EXEC FindEmployee @EmpLName = 'Barb';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+FirstName      LastName            City
+----------     -------------------- --------------- 
+Angela         Barbariol            Snohomish
+David          Barber               Snohomish
+(2 row(s) affected)  
+```
+
+## <a name="pattern-matching-by-using-like"></a>Mustervergleich mithilfe von LIKE  
+ LIKE unterstützt Mustervergleiche im ASCII- und Unicode-Format. Sind alle Argumente (*match_expression*, *pattern* und ggf. *escape_character*) ASCII-Zeichen, wird ein ASCII-Mustervergleich durchgeführt. Wenn eines der Argumente von einem Unicode-Datentyp ist, werden alle Argumente in Unicode konvertiert und ein Unicode-Mustervergleich durchgeführt. Wenn Sie beim LIKE-Operator Unicode-Daten (**nchar**- oder **nvarchar**-Datentypen) verwenden, werden nachfolgende Leerzeichen berücksichtigt. Bei Daten, die nicht vom Typ Unicode sind, werden nachfolgende Leerzeichen ignoriert. Der Unicode-LIKE-Operator ist mit dem ISO-Standard kompatibel. Der ASCII-LIKE-Operator ist mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel.  
   
- ```
- FirstName      LastName            City
- ----------     -------------------- --------------- 
- Angela         Barbariol            Snohomish
- David          Barber               Snohomish
- (2 row(s) affected)  
- ``` 
- 
-## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
+ Die folgenden Beispiele verdeutlichen die Unterschiede der zurückgegebenen Zeilen beim Durchführen von Mustervergleichen mit ASCII- und Unicode-LIKE-Operatoren.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -155,7 +155,7 @@ INSERT INTO t VALUES ('Robert King');
 SELECT *   
 FROM t   
 WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row  
-```  
+```
   
 > [!NOTE]  
 >  LIKE-Vergleiche werden von der Sortierung beeinflusst. Weitere Informationen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
@@ -197,7 +197,7 @@ GO
   
  Wenn im LIKE-Muster auf ein Escapezeichen kein Zeichen folgt, ist das Muster nicht gültig, und das LIKE-Muster gibt FALSE zurück. Wenn es sich beim Zeichen nach einem Escapezeichen nicht um ein Platzhalterzeichen handelt, wird das Escapezeichen verworfen und das folgende Zeichen als reguläres Zeichen im Muster behandelt. Zu diesen Platzhalterzeichen gehören das Prozentzeichen (%), der Unterstrich (_) und die linke eckige Klammer ([), wenn sie in doppelte eckige Klammern ([ ]) eingeschlossen sind. Innerhalb doppelter eckiger Klammern ([ ]) können Escapezeichen verwendet werden; dem Caretzeichen (^), dem Bindestrich (-) sowie der rechten eckigen Klammer (]) kann ein Escapezeichen vorangestellt werden.  
   
- 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
+ 0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
   

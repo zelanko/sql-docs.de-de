@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1498a7d78e88055052499027a8255743ca3da6dc
+ms.sourcegitcommit: fb9114df7224446696e7772024f64735c3e46c8f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772625"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345142"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Konfigurieren von verteilten Transaktionen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,6 +89,15 @@ ALTER AVAILABILITY GROUP MyaAG
 
 >[!NOTE]
 >Ab [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 können Sie Verfügbarkeitsgruppen für verteilte Transaktionen ändern. Für [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)]-Versionen vor Service Pack 2 müssen Sie die Verfügbarkeitsgruppe löschen und dann mit der Einstellung `DTC_SUPPORT = PER_DB` erneut erstellen. 
+
+Um verteilte Transaktionen zu deaktivieren, verwenden Sie den folgenden Transact-SQL-Befehl:
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Verteilte Transaktionen – Technisches Prinzip
 

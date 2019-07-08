@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81fd6e4a9be7b27190491c6a36ef536e3c1ba669
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1d9b9d9ac9c5b1a0eeb7d40640db83ce688ae7e5
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212489"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67396527"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
 
@@ -27,24 +27,12 @@ ms.locfileid: "53212489"
   
  Das Verarbeiten und Abfragen sind schreibgeschützte Arbeitsauslastungen. Sie können die Leistung verbessern, indem Sie diese Arbeitsauslastungen in ein lesbares sekundäres Replikat auslagern. Dieses Szenario erfordert zusätzliche Konfiguration. Stellen Sie mithilfe der Prüfliste in diesem Thema sicher, dass Sie alle Schritte ausführen.  
   
- [Erforderliche Komponenten](#bkmk_prereq)  
-  
- [Prüfliste: Verwenden eines sekundären Replikats für schreibgeschützte Vorgänge](#bkmk_UseSecondary)  
-  
- [Erstellen einer Analysis Services-Datenquelle mithilfe einer Always On-Verfügbarkeitsdatenbank](#bkmk_ssasAODB)  
-  
- [Testen der Konfiguration](#bkmk_test)  
-  
- [Vorgänge nach einem Failover](#bkmk_whathappens)  
-  
- [Rückschreiben mithilfe einer Always On-Verfügbarkeitsdatenbank](#bkmk_writeback)  
-  
 ##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
  Sie benötigen auf allen Replikaten eine SQL Server-Anmeldung. Verfügbarkeitsgruppen, Listener und Datenbanken müssen von einem Mitglied der **sysadmin** -Rolle konfiguriert werden. Benutzer benötigen jedoch für den Zugriff auf die Datenbank von einem Analysis Services-Client aus lediglich **db_datareader** -Berechtigungen.  
   
  Verwenden Sie einen Datenanbieter, der das TDS (Tabular Data Stream)-Protokoll, Version 7.4 oder höher, unterstützt, z. B. SQL Server Native Client 11.0 oder den Datenanbieter für SQL Server in .NET Framework 4.02.  
   
- **(Für schreibgeschützte Arbeitsauslastungen)**. Die sekundäre Replikatrolle muss für schreibgeschützte Verbindungen konfiguriert sein, die Verfügbarkeitsgruppe muss über eine Routingliste verfügen, und die Verbindung in der Analysis Services-Datenquelle muss den Verfügbarkeitsgruppenlistener angeben. In diesem Thema finden Sie Anweisungen.  
+ **(Für schreibgeschützte Arbeitsauslastungen)** . Die sekundäre Replikatrolle muss für schreibgeschützte Verbindungen konfiguriert sein, die Verfügbarkeitsgruppe muss über eine Routingliste verfügen, und die Verbindung in der Analysis Services-Datenquelle muss den Verfügbarkeitsgruppenlistener angeben. In diesem Thema finden Sie Anweisungen.  
   
 ##  <a name="bkmk_UseSecondary"></a> Prüfliste: Verwenden eines sekundären Replikats für schreibgeschützte Vorgänge  
  Wenn die Analysis Services-Lösung kein Rückschreiben umfasst, können Sie eine Datenquellenverbindung zum Verwenden eines lesbaren sekundären Replikats konfigurieren. Wenn Sie über eine schnelle Netzwerkverbindung verfügen, weist das sekundäre Replikat eine sehr geringe Datenlatenz auf und stellt nahezu die gleichen Daten wie das primäre Replikat bereit. Mit dem sekundären Replikat für Analysis Services-Vorgänge können Sie Lese-/Schreibkonflikte auf dem primären Replikat reduzieren und eine bessere Auslastung sekundärer Replikate in der Verfügbarkeitsgruppe erzielen.  
@@ -54,7 +42,7 @@ ms.locfileid: "53212489"
 > [!NOTE]  
 >  Für die folgenden Schritte werden eine vorhandene Always On-Verfügbarkeitsgruppe und vorhandene Datenbanken vorausgesetzt. Wenn Sie eine neue Gruppe konfigurieren, verwenden Sie den Assistenten für neue Verfügbarkeitsgruppen, um die Gruppe zu erstellen und die Datenbanken zu verknüpfen. Der Assistent überprüft, ob die Voraussetzungen erfüllt sind, bietet Anleitungen für die einzelnen Schritte und führt die Erstsynchronisierung aus. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
-#### <a name="step-1-configure-access-on-an-availability-replica"></a>Schritt 1: Konfigurieren des Zugriffs auf ein Verfügbarkeitsreplikat  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>Schritt 1: Konfigurieren des Zugriffs auf ein Verfügbarkeitsreplikat  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Verfügbarkeitsreplikat hostet, und erweitern Sie die Serverstruktur.  
   
@@ -165,7 +153,7 @@ ms.locfileid: "53212489"
 ##  <a name="bkmk_test"></a> Testen der Konfiguration  
  Nachdem Sie das sekundäre Replikat konfiguriert und in Analysis Services eine Datenquellenverbindung erstellt haben, können Sie überprüfen, ob Verarbeitungs- und Abfragebefehle an das sekundäre Replikat umgeleitet werden. Sie können auch ein geplantes manuelles Failover ausführen, um den Wiederherstellungsplan für dieses Szenario zu überprüfen.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Schritt 1: Überprüfen, ob die Datenquellenverbindung auf das sekundäre Replikat umgeleitet wird  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Schritt 1: Überprüfen, ob die Datenquellenverbindung auf das sekundäre Replikat umgeleitet wird  
   
 1.  Starten Sie SQL Server Profiler, und stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das sekundäre Replikat hostet.  
   
@@ -215,7 +203,7 @@ ms.locfileid: "53212489"
 ##  <a name="bkmk_whathappens"></a> Vorgänge nach einem Failover  
  Während eines Failovers geht ein sekundäres Zielreplikat in die primäre Rolle über, und das frühere primäre Replikat geht in die sekundäre Rolle über. Alle Clientverbindungen werden beendet, der Besitz am Verfügbarkeitsgruppenlistener wechselt mit der primären Replikatrolle zu einer neuen SQL Server-Instanz, und der Listenerendpunkt wird an die virtuellen IP-Adressen und TCP-Ports der neuen Instanz gebunden. Weitere Informationen finden Sie unter [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Wenn es bei der Verarbeitung zu einem Failover kommen sollte, wird die folgende Fehlermeldung in der Protokolldatei oder im Ausgabefenster in Analysis Services zurückgegeben: "OLE DB error: OLE DB or ODBC error: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01." (OLE DB-Fehler: OLE DB-Fehler oder ODBC-Fehler: Kommunikationsverbindungsfehler; 08S01; TPC-Anbieter: Eine vorhandene Verbindung wurde vom Remotehost geschlossen.)  
+ Wenn es bei der Verarbeitung zu einem Failover kommen sollte, wird die folgende Fehlermeldung in der Protokolldatei oder im Ausgabefenster in Analysis Services zurückgegeben: "OLE DB error: OLE DB or ODBC error: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01.“  
   
  Dieser Fehler sollte behoben sein, wenn Sie eine Minute lang warten und es dann erneut versuchen. Sofern die Verfügbarkeitsgruppe ordnungsgemäß für ein lesbares sekundäres Replikat konfiguriert ist, wird die Verarbeitung auf dem neuen sekundären Replikat fortgesetzt, wenn Sie die Verarbeitung erneut starten.  
   

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 078761fcaf017cfe483926283ea06bf93a40e272
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515987"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343930"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -209,6 +209,8 @@ ALTER TABLE ProjectTaskCurrent
 -   Durch das Hinzufügen von **PERIOD** wird für die aktuelle Tabelle eine Datenkonsistenzprüfung durchgeführt, um sicherzustellen, dass die vorhandenen Werte für Zeitraumspalten gültig sind.  
   
 -   Es wird dringend empfohlen, **SYSTEM_VERSIONING** mit **DATA_CONSISTENCY_CHECK = ON** festzulegen, um Datenkonsistenzprüfungen für die vorhandenen Daten zu erzwingen.  
+
+-   Wenn ausgeblendete Spalten bevorzugt werden, verwenden Sie den Befehl `ALTER TABLE [tableName] ALTER COLUMN [columnName] ADD HIDDEN;`.
   
  
 ## <a name="see-also"></a>Weitere Informationen  

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67131c083966244db252c047b200c2a6d979aadb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511541"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388135"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Columnstore-Index-Defragmentierung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,6 +55,9 @@ Verwenden Sie das Beispiel in [sys.dm_db_column_store_row_group_physical_stats &
     CREATE DATABASE [columnstore];  
     GO  
   
+    USE columnstore;
+    GO
+
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'staging'  
         AND object_id = OBJECT_ID (N'staging'))  
@@ -208,7 +211,7 @@ Verwenden Sie das Beispiel in [sys.dm_db_column_store_row_group_physical_stats &
 
 Nutzen Sie Lösungen wie [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), um die Indexdefragmentierung und das Aktualisieren der Statistiken für eine oder mehrere Datenbanken automatisch zu verwalten. Dieser Vorgang entscheidet unter anderem anhand des Fragmentierungsgrads automatisch, ob ein Index neu organisiert oder neu erstellt wird und aktualisiert Statistiken mit einem linearen Schwellenwert.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter        
+## <a name="see-also"></a>Weitere Informationen        
 [Columnstore indexes - what's new (Columnstore-Indizes: Neuigkeiten)](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)    
 [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
 [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   

@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428961"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351695"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current) | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_** &nbsp;| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current) | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_ ** | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_** | [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -949,8 +949,6 @@ EDITION
 Gibt die Dienstebene der Datenbank an.
 
 Einzelne und in einem Pool zusammengefasste Datenbanken auf einem Singleton/Pool für elastische Datenbanken. Die verfügbaren Werte sind „basic“, „standard“, „premium“, „GeneralPurpose“, „BusinessCritical“ und „Hyperscale“.
-
-Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird MAXSIZE auf die restriktivste, von der Edition unterstützte Größe festgelegt.
 
 MAXSIZE     
 Gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angegebene EDITION (Dienstebene) gültig sein. Im Folgenden sind die unterstützten MAXSIZE-Werte und die Standardwerte (S) für die Dienstebenen aufgeführt.
@@ -1042,8 +1040,8 @@ Wenn kein `MAXSIZE`-Wert bei Verwendung des vCore-Modells festgelegt ist, beträ
 
 Die folgenden Regeln gelten für das MAXSIZE-Argument und das EDITION-Argument:
 
-- Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird der Standardwert für die Edition verwendet. Wenn EDITION beispielsweise auf die Standard Edition festgelegt und MAXSIZE nicht angegeben ist, wird MAXSIZE automatisch auf 250 MB festgelegt.
-- Wenn weder MAXSIZE noch EDITION angegeben sind, wird EDITION auf „Standard“ (S0) und MAXSIZE auf 250 GB festgelegt.
+- Wenn EDITION angegeben ist, MAXSIZE jedoch nicht, wird der Standardwert für die Edition verwendet. Wenn EDITION beispielsweise auf „Standard“ festgelegt und MAXSIZE nicht angegeben ist, wird MAXSIZE automatisch auf 250 MB festgelegt.
+- Wenn weder MAXSIZE noch EDITION angegeben sind, wird EDITION auf „Universell“ (S0) und MAXSIZE auf 32 GB festgelegt.
 
 SERVICE_OBJECTIVE     
 - **Bei einzelnen und in einem Pool zusammengefassten Datenbanken**
@@ -1122,7 +1120,7 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>Einfaches Beispiel mit „Edition“
-Ein einfaches Beispiel für das Erstellen einer Standarddatenbank.
+Ein einfaches Beispiel zum Erstellen einer universellen Datenbank.
 
 ```sql
 CREATE DATABASE TestDB2
@@ -1194,7 +1192,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* SQL-Datenbank<br />verwaltete Instanz \*_ ** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* SQL-Datenbank<br />verwaltete Instanz \*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1259,7 @@ Siehe [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_ **| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1371,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)| [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 

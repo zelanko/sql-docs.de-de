@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626703"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388360"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -134,6 +134,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -476,6 +477,11 @@ ON Seitensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](
 
 OFF Seitensperren werden nicht verwendet.
 
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Gilt für** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.
+
+Gibt an, ob der Konflikt beim Einfügen der letzten Seite optimiert werden soll. Der Standardwert ist OFF. Weitere Informationen finden Sie im Abschnitt [Sequenzielle Schlüssel](#sequential-keys).
+
 MAXDOP = _max_degree_of_parallelism_
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -732,6 +738,13 @@ Die folgenden Funktionen sind für Vorgänge zur Erstellung fortsetzbarer Indize
 Wenn ALLOW_ROW_LOCKS = ON und ALLOW_PAGE_LOCK = ON ist, sind beim Zugreifen auf den Index Sperren auf Zeilen-, Seiten- und Tabellenebene zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt die geeignete Sperre aus und kann die Sperre von einer Zeilen- oder Seitensperre auf eine Tabellensperre ausweiten.
 
 Wenn ALLOW_ROW_LOCKS = OFF und ALLOW_PAGE_LOCK = OFF ist, ist beim Zugreifen auf den Index nur eine Sperre auf Tabellenebene zulässig.
+
+## <a name="sequential-keys"></a>Sequenzielle Schlüssel
+**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.
+
+Das Leistungsproblem von Speicherkonflikten bei Einfügevorgängen für die letzte Seite tritt häufig auf, wenn eine große Anzahl von gleichzeitigen Threads versucht, Zeilen in einen Index mit einem sequentiellen Schlüssel einzufügen. Ein Index wird als sequentiell betrachtet, wenn die führende Schlüsselspalte Werte enthält, die immer größer (oder kleiner) werden, wie beispielsweise eine Identitätsspalte oder ein Datum, das auf das aktuelle Datum/Uhrzeit voreingestellt ist. Da die einzufügenden Schlüssel sequentiell sind, werden alle neuen Zeilen am Ende der Indexstruktur eingefügt – also auf der gleichen Seite. Dies führt zu Konflikten für die Seite im Speicher, die als mehrere Threads betrachtet werden kann, die auf PAGELATCH_EX für die betreffende Seite warten.
+
+Diese Indexoption OPTIMIZE_FOR_SEQUENTIAL_KEY aktiviert eine Optimierung in der Datenbank-Engine, die den Durchsatz für Einfügevorgänge mit hoher Parallelität in den Index verbessert. Dies ist für Indizes vorgesehen, die einen sequenziellen Schlüssel enthalten und bei denen es daher verstärkt zu Speicherkonflikten bei Einfügevorgängen für die letzte Seite kommen kann, kann aber auch für Indizes verwendet werden, die Hotspots in anderen Bereichen des B-Strukturindex aufweisen.
 
 ## <a name="viewing-index-information"></a>Anzeigen von Indexinformationen
 

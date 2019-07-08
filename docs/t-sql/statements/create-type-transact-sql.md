@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 02a84386929f2e62200cc67946be3567c6e02a51
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266001"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463600"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,15 @@ ms.locfileid: "53266001"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -181,7 +183,7 @@ column_name <data_type>
 |**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
 |**nvarchar(** *n* | **max)**|**real**|**smalldatetime**|**smallint**|  
-|**smallmoney**|**sql_variant**|**text**|**Uhrzeit**|  
+|**smallmoney**|**sql_variant**|**text**|**time**|  
 |**tinyint**|**uniqueidentifier**|**varbinary(** *n* | **max)**|**varchar(** *n* | **max)**|  
   
  *base_type* kann außerdem jedes Synonym für Datentypen sein, das einem dieser Systemdatentypen zugeordnet wird.  
@@ -206,7 +208,7 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die Klasse innerhalb der Assembly an, die den benutzerdefinierten Typ implementiert. *class_name* muss ein gültiger Bezeichner sein und als Klasse mit Assemblysichtbarkeit in der Assembly vorhanden sein. Bei *class_name* muss unabhängig von der Datenbanksortierung die Groß-/Kleinschreibung beachtet werden, und der Wert muss genau dem Klassennamen in der entsprechenden Assembly entsprechen. Der Klassenname kann ein mit einem Namespace qualifizierter Name sein, der in eckigen Klammern (**[ ]**) steht, wenn die Programmiersprache, die zum Schreiben der Klasse verwendet wird, das Konzept von Namespaces verwendet, wie z.B. C#. Wenn *class_name* nicht angegeben ist, geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon aus, dass der Wert mit *type_name* identisch ist.  
+ Gibt die Klasse innerhalb der Assembly an, die den benutzerdefinierten Typ implementiert. *class_name* muss ein gültiger Bezeichner sein und als Klasse mit Assemblysichtbarkeit in der Assembly vorhanden sein. Bei *class_name* muss unabhängig von der Datenbanksortierung die Groß-/Kleinschreibung beachtet werden, und der Wert muss genau dem Klassennamen in der entsprechenden Assembly entsprechen. Der Klassenname kann ein mit einem Namespace qualifizierter Name sein, der in eckigen Klammern ( **[ ]** ) steht, wenn die Programmiersprache, die zum Schreiben der Klasse verwendet wird, das Konzept von Namespaces verwendet, wie z.B. C#. Wenn *class_name* nicht angegeben ist, geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon aus, dass der Wert mit *type_name* identisch ist.  
   
  \<column_definition>  
  Definiert die Spalten für einen benutzerdefinierten Tabellentyp.  
@@ -317,6 +319,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. Erstellen eines benutzerdefinierten Tabellentyp mit Primärschlüssel und Index
+Das folgende Beispiel erstellt einen benutzerdefinierten Tabellentyp mit drei Spalten, von denen eine (`Name`) der Primärschlüssel und eine andere (`Price`) ein nicht gruppierter Index ist.  Weitere Informationen zum Erstellen und Verwenden von Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   

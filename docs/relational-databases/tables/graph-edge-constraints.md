@@ -1,7 +1,7 @@
 ---
 title: Graph-Edgeeinschränkungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774654"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343886"
 ---
 # <a name="edge-constraints"></a>Edgeeinschränkungen
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  Edgeeinschränkungen können verwendet werden, um die Datenintegrität und eine spezifische Semantik in den Edgetabellen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Graph-Datenbank zu erzwingen. 
-  
-Dieser Artikel enthält folgende Abschnitte.  
-  
-[Edgeeinschränkungen](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[Edgeeinschränkungen](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[Verwandte Aufgaben](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+Edgeeinschränkungen können verwendet werden, um die Datenintegrität und eine spezifische Semantik in den Edgetabellen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Graph-Datenbank zu erzwingen.
+
 ##  <a name="Connection"></a> Edgeeinschränkungen
  Im ersten Release der Graph-Features wurde für die Endpunkt des Edge durch die Edgetabellen nichts erzwungen. Anders gesagt: Ein Edge in einer Graph-Datenbank konnte unabhängig vom Knotentyp eine Verbindung von jedem Knoten mit jedem Knoten herstellen. 
 
@@ -66,3 +57,5 @@ Dieser Artikel enthält folgende Abschnitte.
 |Beschreibt, wie eine Edgeeinschränkung gelöscht wird.|[Löschen einer Edgeeinschränkung](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Beschreibt, wie eine Edgeeinschränkung geändert wird.|[Ändern einer Edgeeinschränkung](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Beschreibt, wie die Eigenschaften von Edgeeinschränkungen angezeigt werden.|[Anzeigen der Eigenschaften von Edgeeinschränkungen](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| Übersicht über die Graph-Technologie in SQL Server | [Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

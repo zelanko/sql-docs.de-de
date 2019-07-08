@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted-Kryptografie | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/29/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,26 +13,26 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 6e0ec7ce1a9c3a171ea44b23c5fa4a5897ad7de8
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007583"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388368"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted-Kryptografie
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Dieses Dokument beschreibt Verschlüsselungsalgorithmen und -mechanismen zum Ableiten von kryptografischem Material, das in der Funktion [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]verwendet wird.  
   
-## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Schlüssel, Schlüsselspeicher und Algorithmen für die Schlüsselverschlüsselung  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Schlüssel, Schlüsselspeicher und Algorithmen für die Schlüsselverschlüsselung
  Always Encrypted nutzt zwei Arten von Schlüsseln: Spaltenhauptschlüssel und Spaltenverschlüsselungsschlüssel.  
   
  Ein Spaltenhauptschlüssel (column master key; CMK) ist ein Schlüsselverschlüsselungsschlüssel (d.h. ein Schlüssel zum Verschlüsseln anderer Schlüssel), der immer vom Client gesteuert wird und in einem externen Schlüsselspeicher gespeichert ist. Ein Clienttreiber, der für Always Encrypted aktiviert ist, interagiert mit dem Schlüsselspeicher über einen CMK-Speicheranbieter, der entweder Teil der Treiberbibliothek (ein [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-/Systemanbieter) oder Teil der Clientanwendung (ein benutzerdefinierter Anbieter) ist. Clienttreiberbibliotheken umfassen derzeit [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Schlüsselspeicheranbieter für [Windows-Zertifikatspeicher](/windows/desktop/SecCrypto/using-certificate-stores) und Hardwaresicherheitsmodule (HSMs).  Eine aktuelle Liste der Anbieter finden Sie unter [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Ein Anwendungsentwickler kann einen benutzerdefinierten Anbieter für einen beliebigen Speicher angeben.  
   
  Ein Spaltenverschlüsselungsschlüssel (column encryption key; CEK) ist ein Inhaltsverschlüsselungsschlüssel (d.h. ein Schlüssel zum Schützen von Daten), der durch einen CMK geschützt ist.  
   
- Alle [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-CMK-Speicheranbieter verschlüsseln CEKs, indem sie RSA-OAEP (RSA mit optimalem asymmetrischen Verschlüsselungspadding) mit den durch RFC 8017 in Abschnitt A.2.1 angegebenen Standardparametern verwenden. Diese Standardparameter verwenden eine Hash-Funktion von SHA-1 und eine Maskengenerierungsfunktion von MGF1 mit SHA-1.  
+ Alle [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-CMK-Speicheranbieter verschlüsseln CEKs, indem sie RSA-OAEP (RSA mit optimalem asymmetrischen Verschlüsselungspadding) verwenden. Der Schlüsselspeicheranbieter, der die Microsoft Cryptography API unterstützt: Next Generation (CNG) in .NET Framework ([SqlColumnEncryptionCngProvider-Klasse](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) verwendet dich von RFC 8017 in Abschnitt A.2.1 angegeben Standardparameter Diese Standardparameter verwenden eine Hash-Funktion von SHA-1 und eine Maskengenerierungsfunktion von MGF1 mit SHA-1. Alle anderen Schlüsselspeicheranbieter verwenden SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Datenverschlüsselungsalgorithmus  
  Always Encrypted verwendet den Algorithmus **AEAD_AES_256_CBC_HMAC_SHA_256** zum Verschlüsseln von Daten in der Datenbank.  
@@ -43,7 +43,7 @@ ms.locfileid: "57007583"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** berechnet einen Chiffretextwert für einen angegebenen Klartextwert mithilfe der folgenden Schritte.  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>Schritt 1: Generieren des Initialisierungsvektors (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>Schritt 1: Generieren des Initialisierungsvektors (IV)  
  Always Encrypted unterstützt zwei Variationen von **AEAD_AES_256_CBC_HMAC_SHA_256**:  
   
 -   Zufällig  
@@ -68,7 +68,7 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- Das Abschneiden des HMAC-Werts wird ausgeführt, um einen Block von Daten wie für den IV benötigt anzupassen.    
+ Das Abschneiden des HMAC-Werts wird ausgeführt, um einen Block von Daten wie für den IV benötigt anzupassen.
 Daher erzeugt die deterministische Verschlüsselung immer den gleichen Chiffretext für einen angegebenen Klartextwert. Dadurch kann aus einem Vergleich der entsprechenden Chiffretextwerte abgeleitet werden, ob zwei Klartexte identisch sind. Diese eingeschränkte Offenlegung von Informationen ermöglicht dem Datenbanksystem das Unterstützen der Gleichheitsüberprüfung von verschlüsselten Datenwerten.  
   
  Die deterministische Verschlüsselung ist im Vergleich zu Alternativen, wie der Verwendung von vordefinierten IV-Werten, effektiver im Verdecken von Mustern.  
@@ -96,12 +96,12 @@ MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)
  Erläuterungen:  
   
 ```  
-versionbyte = 0x01 and versionbyte_length = 1   
+versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
 ### <a name="step-4-concatenation"></a>Schritt 4: Concatenation  
- Schließlich wird der verschlüsselte Wert erzeugt, indem einfach das Algorithmusversionsbyte, der MAC, der IV und der Chiffretext „AES_256_CBC“ verkettet werden:  
+ Schließlich wird der verschlüsselte Wert erzeugt, indem das Algorithmusversionsbyte, der MAC, der IV und der Chiffretext „AES_256_CBC“ verkettet werden:  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  
@@ -130,7 +130,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- Zum Beispiel:  
+ Beispiel:  
   
 -   Ein 4 Bytes langer **int** -Klartextwert wird nach der Verschlüsselung zu einem 65 Bytes langen Binärwert.  
   
@@ -167,7 +167,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**sql_variant**|N/V (nicht unterstützt)|  
 |**sysname**|N/V (nicht unterstützt)|  
 |**text**|N/V (nicht unterstützt)|  
-|**Uhrzeit**|65|  
+|**time**|65|  
 |**timestamp**<br /><br /> (**rowversion**)|N/V (nicht unterstützt)|  
 |**tinyint**|65|  
 |**uniqueidentifier**|81|  
@@ -179,7 +179,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
  Weitere Informationen zu den in diesem Dokument beschriebenen Algorithmen finden Sie in den Dateien **SqlAeadAes256CbcHmac256Algorithm.cs** und **SqlColumnEncryptionCertificateStoreProvider.cs** in der [.NET-Referenz](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Always Encrypted &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted &#40;Cliententwicklung&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) – SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: t-sql
@@ -10,20 +10,20 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 223388d4a3c61dfb90ac9fa5434e9149bc25fae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994978"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399968"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Registriert externe Spracherweiterungen aus dem angegebenen Dateipfad oder Bytedatenstrom in der Datenbank. Diese Anweisung dient als generischer Mechanismus, mit dem der Datenbankadministrator neue externe Spracherweiterungen auf jeder von SQL Server unterstützten Betriebssystemplattform registrieren kann.
+Registriert externe Spracherweiterungen aus dem angegebenen Dateipfad oder Bytedatenstrom in der Datenbank. Diese Anweisung dient als generischer Mechanismus, mit dem der Datenbankadministrator neue externe Spracherweiterungen auf jeder von SQL Server unterstützten Betriebssystemplattform registrieren kann. Weitere Informationen finden Sie unter [Spracherweiterungen](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden.
+> Derzeit wird nur **Java** als externe Sprache unterstützt. **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden. Weitere Informationen zur Verwendung von **R** und **Python** finden Sie unter [SQL Server-Machine Learning-Services](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
 
 ## <a name="syntax"></a>Syntax
 

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765718"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388107"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Ein allgemeines DNS-Suffix ist für den Workgroupcluster einer domänenunabhäng
 10. Sie werden zu einem Neustart aufgefordert. Wenn Sie nicht sofort neu starten möchten, klicken Sie auf „Später neu starten“. Klicken Sie andernfalls auf „Jetzt neu starten“.
 11. Nachdem der Server neu gestartet wurde, stellen Sie sicher, dass das allgemeine DNS-Suffix konfiguriert ist, indem Sie erneut einen Blick auf das System werfen.
 
-
 ![Erfolgreiche Konfiguration des DNS-Suffix][4]
+
+  > [!NOTE]
+  > Wenn Sie mehrere Subnetze verwenden und über ein statisches DNS verfügen, benötigen Sie einen Prozess, um den dem Listener zugeordneten DNS-Eintrag zu aktualisieren, bevor Sie einen Failover durchführen, da sonst der Netzwerkname nicht online geht.
 
 ## <a name="create-a-domain-independent-availability-group"></a>Erstellen einer domänenunabhängigen Verfügbarkeitsgruppe
 

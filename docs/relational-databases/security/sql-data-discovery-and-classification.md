@@ -2,22 +2,22 @@
 title: SQL-Datenermittlung und -klassifizierung | Microsoft-Dokumentation
 description: SQL-Datenermittlung und -klassifizierung
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
+ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316690"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351732"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Die Ermittlung und Klassifizierung Ihrer sensibelsten Daten (geschäftliche, fin
 * Steuern des Zugriffs auf und Verstärken der Sicherheit von Datenbanken oder Spalten, die hochsensible Daten enthalten.
 
 > [!NOTE]
-> Die Datenermittlung und -klassifizierung werden **in SQL Server 2008 und höher unterstützt**. Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://go.microsoft.com/fwlink/?linkid=866265).
+> Die Datenermittlung und -klassifizierung werden **in SQL Server 2008 und höher unterstützt und können mit SSMS 17.5 oder höher verwendet werden**. Weitere Informationen zur Datenermittlung und -klassifizierung in Azure SQL-Datenbanken finden Sie unter [Azure SQL-Datenbank – Datenermittlung und -klassifizierung](https://go.microsoft.com/fwlink/?linkid=866265).
 
 ## <a id="subheading-1"></a>Übersicht
 Die Datenermittlung und -klassifizierung führen eine Reihe von erweiterten Diensten ein, und sie bilden ein neues SQL Information Protection-Paradigma für den Schutz von Daten, nicht nur von der Datenbank:

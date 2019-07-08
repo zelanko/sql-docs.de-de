@@ -21,18 +21,37 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e366d686bc71d9b4ee391013fedb25e93494c45
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822961"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413159"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – Ablaufverfolgungsflags
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Ablaufverfolgungsflags werden zum Festlegen bestimmter Servereigenschaften oder zum Ändern eines bestimmten Verhaltens verwendet. Das Ablaufverfolgungsflag 3226 ist beispielsweise ein häufig verwendetes Startablaufverfolgungsflag, das erfolgreiche Sicherungsmeldungen im Fehlerprotokoll unterdrückt. Ablaufverfolgungsflags werden häufig verwendet, um Leistungsprobleme oder komplexe Computersysteme zu diagnostizieren. Sie werden jedoch auch vom Microsoft-Support empfohlen, um gegen Verhalten vorzugehen, das eine Arbeitsauslastung negativ beeinträchtigt.  Alle dokumentierten Ablaufverfolgungsflags und die, die vom Microsoft-Support empfohlen werden, werden in Produktionsumgebungen vollständig unterstützt, wenn sie gemäß der Anweisungen verwendet werden.  Beachten Sie, dass für die Verwendung der jeweiligen Ablaufverfolgungsflags in dieser Liste möglicherweise zusätzliche Informationen erforderlich sind. Sie sollten die Empfehlungen, die hier oder von Ihrem Supporttechniker genannt werden, sorgfältig überprüfen. Wie bei jeder Konfigurationsänderung in SQL Server wird immer empfohlen, das Flag gründlich in einer Umgebung zu testen, die keine Produktionsumgebung ist, bevor Sie es bereitstellen.
+
+## <a name="remarks"></a>Remarks  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es drei Typen von Ablaufverfolgungsflags: für Abfragen, für Sitzungen und globale. Ablaufverfolgungsflags des Typs „Abfrage“ sind im Kontext einer bestimmten Abfrage aktiv. Ablaufverfolgungsflags vom Typ Sitzung sind für die Dauer einer Verbindung aktiv und nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar. Einige Flags können nur als globale Flags aktiviert werden, einige können entweder mit globalem Bereich oder mit Sitzungsbereich aktiviert werden.  
+  
+ Dabei gelten die folgenden Regeln:  
+-   Ein globales Ablaufverfolgungsflag muss global aktiviert werden. Andernfalls hat das Ablaufverfolgungsflag keine Wirkung. Es wird empfohlen, globale Ablaufverfolgungsflags beim Start mithilfe der Befehlszeilenoption **-T** zu aktivieren. Dadurch wird sichergestellt, dass das Ablaufverfolgungsflag nach dem Neustart eines Servers aktiv bleibt. Starten Sie SQL Server neu, damit das Ablaufverfolgungsflag wirksam wird. 
+-   Entspricht ein Ablaufverfolgungsflag dem Typ „global“, „Sitzung“ oder „Abfrage“, kann es für den jeweils entsprechenden Bereich aktiviert werden. Ein auf Sitzungsebene aktiviertes Ablaufverfolgungsflag wirkt sich nie auf andere Sitzungen aus, und die Wirkung des Ablaufverfolgungsflags endet mit der Abmeldung der SPID, die die Sitzung geöffnet hat.  
+  
+Ablaufverfolgungsflags werden mithilfe einer der folgenden Methoden auf on oder off festgelegt:
+-   Mithilfe der Befehle DBCC TRACEON und DBCC TRACEOFF.  
+     Um das Ablaufverfolgungsflag 2528 global zu aktivieren, verwenden Sie [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) mit dem Argument -1: `DBCC TRACEON (2528, -1)`. Die Auswirkungen der Aktivierung eines globalen Ablaufverfolgungsflags mit DBCC TRACEON gehen beim Serverneustart verloren. Um das globale Ablaufverfolgungsflag zu deaktivieren, verwenden Sie [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) mit dem Argument -1.  
+-   Mithilfe der Startoption **-T** können Sie angeben, dass das Ablaufverfolgungsflag beim Start aktiviert werden soll.  
+     Durch die Startoption **-T** wird ein Ablaufverfolgungsflag global aktiviert. Ablaufverfolgungsflags auf Sitzungsebene können nicht mit einer Startoption aktiviert werden. Dadurch wird sichergestellt, dass das Ablaufverfolgungsflag nach dem Neustart eines Servers aktiv bleibt. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+-   Auf Abfrageebene mithilfe des [Abfragehinweises](https://support.microsoft.com/kb/2801413) QUERYTRACEON. Die Option „QUERYTRACEON“ wird nur für Ablaufverfolgungsflags der in der obigen Tabelle erläuterten Abfrageoptimierer unterstützt.
+  
+Mithilfe des Befehls `DBCC TRACESTATUS` lässt sich bestimmen, welche Ablaufverfolgungsflags zurzeit aktiv sind.
+
+## <a name="trace-flags"></a>Ablaufverfolgungsflags
+
   
 In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Ablaufverfolgungsflags aufgelistet und beschrieben.
  
@@ -156,21 +175,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**11023**|Deaktiviert die Verwendung der letzten permanenten Samplingrate für alle nachfolgenden Statistikupdates, in denen keine Samplingrate explizit als Teil der [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)-Anweisung angegeben wurde. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4039284).<br /><br />**Bereich:** global oder Sitzung|    
 |**11024**|Aktiviert das Auslösen des automatischen Updates von Statistiken, wenn die Änderungsanzahl einer Partition den lokalen [Schwellenwert](../../relational-databases/statistics/statistics.md#AutoUpdateStats) überschreitet. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/4041811).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und höheren Builds verfügbar.<br /><br />**Bereich:** global oder Sitzung| 
   
-## <a name="remarks"></a>Remarks  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es drei Typen von Ablaufverfolgungsflags: für Abfragen, für Sitzungen und globale. Ablaufverfolgungsflags des Typs „Abfrage“ sind im Kontext einer bestimmten Abfrage aktiv. Ablaufverfolgungsflags vom Typ Sitzung sind für die Dauer einer Verbindung aktiv und nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar. Einige Flags können nur als globale Flags aktiviert werden, einige können entweder mit globalem Bereich oder mit Sitzungsbereich aktiviert werden.  
-  
- Dabei gelten die folgenden Regeln:  
--   Ein globales Ablaufverfolgungsflag muss global aktiviert werden. Andernfalls hat das Ablaufverfolgungsflag keine Wirkung. Es wird empfohlen, globale Ablaufverfolgungsflags beim Start mithilfe der Befehlszeilenoption **-T** zu aktivieren. Dadurch wird sichergestellt, dass das Ablaufverfolgungsflag nach dem Neustart eines Servers aktiv bleibt.  
--   Entspricht ein Ablaufverfolgungsflag dem Typ „global“, „Sitzung“ oder „Abfrage“, kann es für den jeweils entsprechenden Bereich aktiviert werden. Ein auf Sitzungsebene aktiviertes Ablaufverfolgungsflag wirkt sich nie auf andere Sitzungen aus, und die Wirkung des Ablaufverfolgungsflags endet mit der Abmeldung der SPID, die die Sitzung geöffnet hat.  
-  
-Ablaufverfolgungsflags werden mithilfe einer der folgenden Methoden auf on oder off festgelegt:
--   Mithilfe der Befehle DBCC TRACEON und DBCC TRACEOFF.  
-     Um das Ablaufverfolgungsflag 2528 global zu aktivieren, verwenden Sie [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) mit dem Argument -1: `DBCC TRACEON (2528, -1)`. Die Auswirkungen der Aktivierung eines globalen Ablaufverfolgungsflags mit DBCC TRACEON gehen beim Serverneustart verloren. Um das globale Ablaufverfolgungsflag zu deaktivieren, verwenden Sie [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) mit dem Argument -1.  
--   Mithilfe der Startoption **-T** können Sie angeben, dass das Ablaufverfolgungsflag beim Start aktiviert werden soll.  
-     Durch die Startoption **-T** wird ein Ablaufverfolgungsflag global aktiviert. Ablaufverfolgungsflags auf Sitzungsebene können nicht mit einer Startoption aktiviert werden. Dadurch wird sichergestellt, dass das Ablaufverfolgungsflag nach dem Neustart eines Servers aktiv bleibt. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   Auf Abfrageebene mithilfe des [Abfragehinweises](https://support.microsoft.com/kb/2801413) QUERYTRACEON. Die Option „QUERYTRACEON“ wird nur für Ablaufverfolgungsflags der in der obigen Tabelle erläuterten Abfrageoptimierer unterstützt.
-  
-Mithilfe des Befehls `DBCC TRACESTATUS` lässt sich bestimmen, welche Ablaufverfolgungsflags zurzeit aktiv sind.
+
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird das Ablaufverfolgungsflag 3205 für alle Sitzungen auf Serverebene mithilfe von DBCC TRACEON festgelegt.  

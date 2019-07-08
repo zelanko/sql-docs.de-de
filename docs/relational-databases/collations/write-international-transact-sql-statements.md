@@ -19,22 +19,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20e587aeb7c0ed34762bf1f90488a06cafc0ec93
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776115"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412996"
 ---
 # <a name="write-international-transact-sql-statements"></a>Schreiben internationaler Transact-SQL-Anweisungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Datenbanken und Datenbankanwendungen, die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwenden, können leichter von einer Sprache in eine andere übertragen werden bzw. unterstützen mehrere Sprachen, wenn die folgenden Richtlinien eingehalten werden:  
 
 -   Wenn Sie mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] beginnen, verwenden Sie eher Folgendes:
-    -   Die Datentypen **char**,**varchar** und **varchar(max)** mit [UTF-8-fähiger Sortierung](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support).
-    -   Die Datentypen **nchar**, **nvarchar** und **nvarchar(max)** mit beliebiger Sortierung.      
+    -   Die Datentypen **char**,**varchar** und **varchar(max)** mit [UTF-8-fähiger Sortierung](../../relational-databases/collations/collation-and-unicode-support.md#utf8).
+    -   Die Datentypen **nchar**,**nvarchar** und **nvarchar(max)** mit [Sortierung ergänzender Zeichen](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters).      
 
-    Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+    Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Überlegungen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
 -   Ersetzen Sie bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] die Datentypen **char**, **varchar** und **varchar(max)** durch **nchar**, **nvarchar** und **nvarchar(max)** . Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
     > [!IMPORTANT]
