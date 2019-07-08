@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 206749c851423dd7a3b0ea06e1f443732d86b8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669293"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583850"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse
 
@@ -37,7 +37,9 @@ ms.locfileid: "62669293"
 3.  Verwenden Sie die Funktion „fn_trace_getfilterinfo“, um die zu verwendenden Filter und die entsprechenden Aktionen für „Erweiterte Ereignisse“ aufzulisten.  
   
 4.  Erstellen Sie mithilfe der entsprechenden Ereignisse, Aktionen und Prädikate (Filter) für erweiterte Ereignisse manuell eine Sitzung für erweiterte Ereignisse.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="to-obtain-the-trace-id"></a>So rufen Sie die Ablaufverfolgungs-ID ab  
   
 1.  Öffnen Sie das SQL-Ablaufverfolgungsskript im Abfrage-Editor, und führen Sie dann das Skript aus, um die Ablaufverfolgungssitzung zu erstellen. Die Ablaufverfolgungssitzung muss nicht ausgeführt werden, um diese Vorgehensweise auszuführen.  

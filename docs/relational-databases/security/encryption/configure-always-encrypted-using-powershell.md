@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a65a662ad178eaf5e6ae620c7b66a64fd63e75ae
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ec7d60a0e7b89720b28c20b3e50cfa8354aea77b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387974"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585470"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Konfigurieren von Always Encrypted mithilfe von PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,6 +53,8 @@ Import-Module "SqlServer"
 Einige der Always Encrypted-Cmdlets arbeiten mit Daten oder Metadaten in der Datenbank und erfordern, dass Sie zuerst eine Verbindung mit der Datenbank herstellen. Es werden zwei Methoden empfohlen, um bei der Konfiguration von Always Encrypted mithilfe des SqlServer-Moduls eine Verbindung mit einer Datenbank herzustellen: 
 1. Verbinden mithilfe von SQL Server PowerShell
 2. Verbinden mithilfe von SQL Server Management Objects (SMO)
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="using-sql-server-powershell"></a>SQL Server PowerShell
 

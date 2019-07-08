@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b0b31cb616e5e7d8c2b5c83386f247729a115cbe
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591054"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583550"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53591054"
   
      [Erforderliche Komponenten](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme mit:**  [Transact-SQL](#TsqlProcedure)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "53591054"
   
      Für einen Wiederherstellungsvorgang sind RESTORE DATABASE-Berechtigungen für die Quelldatenbank erforderlich. Verwenden Sie zum Wiederherstellen der Datenbank die folgende Transact-SQL-Anweisung:  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      Dabei ist *database_name* die Quelldatenbank und *database_snapshot_name* der Name der Momentaufnahmen, aus dem die Datenbank wiederhergestellt werden soll. Beachten Sie, dass Sie in dieser Anweisung einen Momentaufnahmenamen statt eines Sicherungsmediums angeben müssen.  
   
@@ -118,7 +118,9 @@ ms.locfileid: "53591054"
 5.  Starten Sie die Datenbank.  
   
 6.  Sie haben die Option, die wiederhergestellte Datenbank zu sichern; dies empfiehlt sich besonders, wenn das vollständige (oder das massenprotokollierte) Wiederherstellungsmodell für die Datenbank verwendet wird. Weitere Informationen zum Sichern einer Datenbank finden Sie unter [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Dieser Abschnitt enthält die folgenden Beispiele für das Wiederherstellen einer Datenbank aus einer Datenbank-Momentaufnahme:  
   

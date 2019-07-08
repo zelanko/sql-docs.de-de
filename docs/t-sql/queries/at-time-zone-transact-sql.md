@@ -16,16 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions
-ms.openlocfilehash: f366514d23a2de7180eb84d12997434f9414c427
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: c38cff3036b3c00897d28a1ff12e576f61bf4cfd
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836360"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564012"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Konvertiert einen *inputdate*-Wert in den entsprechenden *datetimeoffset*-Wert in der Zielzeitzone. Wenn *inputdate* ohne Offsetinformationen bereitgestellt wird, wendet die Funktion den Zeitzonenoffset an und setzt dabei voraus, dass der Wert von *inputdate* sich in der Zielzeitzone befindet. Wenn *inputdate* als *datetimeoffset*-Wert bereitgestellt wird, konvertiert die **AT TIME ZONE**-Klausel den Wert mithilfe der Umrechnungsregeln der Zielzeitzone in die Zielzeitzone.  
   

@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8346c4f7a5b324c8fb05a46e74aae3bbdd5dab49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f794901dd73fd8a6d49a000ebdcccd2e92184
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715817"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581092"
 ---
 # <a name="application-roles"></a>Anwendungsrollen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "62715817"
 4.  Wenn der Name und das Kennwort der Anwendung gültig sind, wird die Anwendungsrolle aktiviert.  
   
 5.  An diesem Punkt verliert die Verbindung die Berechtigungen des Benutzers und nimmt die Berechtigungen der Anwendungsrolle an.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Die über die Anwendungsrolle erhaltenen Berechtigungen bleiben für die Dauer der Verbindung wirksam.  
   
  In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bestand die einzige Möglichkeit für einen Benutzer, seinen ursprünglichen Sicherheitskontext nach dem Starten einer Anwendungsrolle zurückzuerhalten, darin, die Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu trennen und erneut eine Verbindung herzustellen. Seit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]besitzt **sp_setapprole** eine Option, die ein Cookie erstellt. Das Cookie enthält die vor der Aktivierung der Anwendungsrolle gültigen Kontextinformationen. Das Cookie kann von **sp_unsetapprole** zum Wiederherstellen des ursprünglichen Kontexts der Sitzung verwendet werden. Weitere Informationen über diese neue Option sowie ein Beispiel finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)erteilt wurden.  

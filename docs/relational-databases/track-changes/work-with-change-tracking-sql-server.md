@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 333e4f7eb3177529f55a9be18aa1e042b10737c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514147"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584676"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,9 @@ ON
 3.  Rufen Sie die Änderungen für die Tabelle Sales mit CHANGETABLE(CHANGES ...) ab.  
   
 4.  Rufen Sie die Änderungen für die Tabelle SalesOrders mit CHANGETABLE(CHANGES ...) ab.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  In der Datenbank werden zwei Prozesse ausgeführt, die sich auf die von den oben genannten Schritten zurückgegebenen Ergebnisse auswirken können:  
   
 -   Der im Hintergrund ausgeführte Cleanupprozess entfernt Änderungsnachverfolgungsinformationen, die älter sind als die angegebene Beibehaltungsdauer.  
@@ -434,7 +436,7 @@ COMMIT TRAN
   
 -   Zeichnen Sie die Versionsnummer der letzten Synchronisierung auf dem Server auf, wenn ein Client Änderungen abfragt. Wenn ein Problem mit den Daten vorliegt, stimmen die Versionsnummern der letzten Synchronisierung nicht überein. Dies weist darauf hin, dass eine Neuinitialisierung erforderlich ist.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   

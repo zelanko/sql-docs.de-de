@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d32ec82d15e8d66295a715fe62f98960fd7ad26
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2763cd39d1be3318bfa297539f56720838cde6d9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510707"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584421"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -236,7 +236,9 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   Knoten `b`, da ein Prädikat auf den Knoten`b` im XQuery-Ausdruck angewendet wird.  
   
 2.  **Prinzip 2:** Indizieren Sie alle Knoten, die zum Auswerten eines bestimmten XQuery-Ausdrucks erforderlich sind, um die optimale Leistung zu erzielen. Wenn Sie nur einige der Knoten indizieren, dann verbessert der selektive XML-Index die Auswertung der Teilausdrücke, die nur indizierte Knoten umfassen.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Um die Leistung der oben aufgeführten SELECT-Anweisung zu verbessern, können Sie den folgenden selektiven XML-Index erstellen:  
   
 ```sql  

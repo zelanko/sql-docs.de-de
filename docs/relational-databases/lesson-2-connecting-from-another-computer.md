@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 740a5e5843966a6f4891f195453ffd01ec6ea048
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589234"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517847"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Wenn Sie planen, die Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] von
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  Erweitern Sie im **SQL Server-Konfigurations-Manager**den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie anschließend auf **Protokolle für** _<InstanceName>_.  
+2.  Erweitern Sie im **SQL Server-Konfigurations-Manager**den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie anschließend auf **Protokolle für** _<InstanceName>_ .  
   
     Die Standardinstanz (eine unbenannte Instanz) wird als **MSSQLSERVER**aufgelistet. Wenn Sie eine benannte Instanz installiert haben, wird der von Ihnen angegebene Name aufgeführt. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] wird als **SQLEXPRESS**installiert, es sei denn, der Name wurde während des Setups geändert.  
   
@@ -64,7 +64,9 @@ Wenn Sie planen, die Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] von
   
     > [!NOTE]  
     > Wenn Sie Änderungen an Netzwerkprotokollen vorgenommen haben, müssen Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dienst neu starten. Dieser Schritt wird in der nächsten Aufgabe ausgeführt.  
-  
+
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="port"></a>Konfigurieren eines festen Ports  
 Zum Erhöhen der Sicherheit wird die Windows-Firewall von Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]und Windows 7 aktiviert. Um von einem anderen Computer eine Verbindung mit dieser Instanz herzustellen, müssen Sie einen Kommunikationsport in der Firewall öffnen. Die Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] lauscht an Port 1433; aus diesem Grund ist es nicht erforderlich, einen festen Port zu konfigurieren. Benannte Instanzen, einschließlich [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , lauschen jedoch an dynamischen Ports. Bevor Sie einen Port in der Firewall öffnen können, müssen Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] so konfigurieren, dass an einem bestimmten Port gelauscht wird, der als fester oder statischer Port bezeichnet wird. Andernfalls wird von [!INCLUDE[ssDE](../includes/ssde-md.md)] bei jedem Start möglicherweise ein anderer Port überwacht. Weitere Informationen zu Firewalls, den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -124,7 +126,7 @@ Wenn der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Browser-Dienst 
   
 2.  Bestätigen Sie im Dialogfeld **Verbindung mit Server herstellen** in der Liste **Servertyp** die Option **Datenbank-Engine** .  
   
-3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher **tcp:**_<Computername>_ ein. Geben Sie in unserem Beispiel für eine benannte Instanz **tcp:**_<Computername>_**,49172** ein.  
+3.  Geben Sie im Feld **Servername** für das Protokoll **tcp:** ein, gefolgt vom Namen des Computers, einem Komma und der Portnummer. Beim Herstellen einer Verbindung mit der Standardinstanz wird automatisch Port 1433 angenommen und muss nicht angegeben werden. Geben Sie daher **tcp:** _<Computername>_ ein. Geben Sie in unserem Beispiel für eine benannte Instanz **tcp:** _<Computername>_ **,49172** ein.  
   
     > [!NOTE]  
     > Wenn Sie **tcp:** nicht im Feld **Servername** eingeben, testet der Client alle aktivierten Protokolle in der Reihenfolge, die in der Clientkonfiguration festgelegt ist.  

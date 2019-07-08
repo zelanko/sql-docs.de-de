@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be115f4a0dad8cd7cfacca89a5ff117734087b28
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a5fb78f4d7ab510f9b7dde3eb8f9d4d43ca157aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134910"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586437"
 ---
 # <a name="sort-columns"></a>Spalten sortieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,8 +27,10 @@ ms.locfileid: "54134910"
 1.  Wählen Sie in der ersten Zeile des Rasters in der Spalte **Spaltenname** den Eintrag **Status** und dann einen Wert in der Spalte **Sortierreihenfolge** aus.  
   
 2.  Wählen Sie in der zweiten Zeile des Rasters in der Spalte **Spaltenname** den Eintrag **Verbindungstyp** und dann einen Wert in der Spalte **Sortierreihenfolge** aus.  
-  
-## <a name="options"></a>Optionen  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+## <a name="options"></a>enthalten  
  **Status**  
  Der Name der Spalte, nach Sie sortieren möchten. Sie können nach einer oder mehreren Spalten sortieren. Nach den Spalten **Aktuelle Durchschnittsleistung** oder **Die derzeit schlechteste Leistung** auf der Registerkarte **Veröffentlichungen** können Sie aufgrund der Art und Weise, in der die Werte in diesen Spalten berechnet werden, nicht sortieren.  
   

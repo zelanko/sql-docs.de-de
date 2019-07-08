@@ -1,7 +1,7 @@
 ---
 title: Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0234a6806e63a7eec6a13d30ceeda55c0ee27a29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205579"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579591"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Der geschätzte Ausführungsplan wird von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wie folgt angezeigt  
   
- ![Abfrageplan für einen Join datenträgerbasierter Tabellen.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![Abfrageplan für einen Join datenträgerbasierter Tabellen.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "Query plan for join of disk-based tables.")  
 Abfrageplan für einen Join datenträgerbasierter Tabellen.  
   
  Informationen zu diesem Abfrageplan:  
@@ -93,7 +93,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Der geschätzte Plan für diese Abfrage ist:  
   
- ![Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for join of disk-based tables.")  
+ ![Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Query plan for join of disk-based tables.")  
 Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.  
   
  In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Der physische Operator **Hash Match** wird jetzt für **Inner Join**verwendet. Der gruppierte Index für Order wird nicht nach CustomerID sortiert. Deshalb würde **Merge Join** einen Sortieroperator erfordern, der sich auf die Leistung auswirkt. Beachten Sie die relativen Kosten des **Hash Match** -Operators (75%), verglichen mit den Kosten des **Merge Join** -Operators im vorherigen Beispiel (46%). Der Optimierer hätte den **Hash Match** -Operator auch im vorherigen Beispiel in Betracht gezogen, hat aber festgestellt, dass der **Merge Join** -Operator eine bessere Leistung bietet.  
@@ -101,7 +101,7 @@ Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
  Das folgende Diagramm zeigt den Abfrageverarbeitungsfluss in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Ad-hoc-Abfragen:  
   
- ![Abfrageverarbeitungspipeline in SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![Abfrageverarbeitungspipeline in SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server query processing pipeline.")  
 Abfrageverarbeitungspipeline in SQL Server.  
   
  In diesem Szenario:  
@@ -117,7 +117,9 @@ Abfrageverarbeitungspipeline in SQL Server.
 5.  Für jeden Index Seek-, Index Scan- und Table Scan-Operator fordert die Ausführungs-Engine Zeilen aus den entsprechenden Index- und Tabellenstrukturen von Zugriffsmethoden an.  
   
 6.  Über Zugriffsmethoden werden die Zeilen aus den Index- und Datenseiten im Pufferpool abgerufen und Seiten nach Bedarf vom Datenträger in den Pufferpool geladen.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Für die erste Beispielabfrage fordert die Ausführungs-Engine von Zugriffsmethoden Zeilen im gruppierten Index für Customer und im nicht gruppierten Index für Order an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Interpretierter [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen  
@@ -125,7 +127,7 @@ Abfrageverarbeitungspipeline in SQL Server.
   
  Interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] kann verwendet werden, um auf speicheroptimierte und datenträgerbasierte Tabellen zuzugreifen. Die folgende Abbildung veranschaulicht die Abfrageverarbeitung für den interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen:  
   
- ![Abfrageverarbeitungspipeline für interpretierte TSQL.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
+ ![Abfrageverarbeitungspipeline für interpretierte TSQL.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Query processing pipeline for interpreted tsql.")  
 Abfrageverarbeitungspipeline für interpretierten Transact-SQL-Zugriff auf speicheroptimierte Tabellen.  
   
  Wie in der Abbildung veranschaulicht, bleibt die Abfrageverarbeitungspipeline größtenteils unverändert:  
@@ -163,7 +165,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Der geschätzte Plan lautet wie folgt:  
   
- ![Abfrageplan für den Join arbeitsspeicheroptimierter Tabellen.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
+ ![Abfrageplan für den Join arbeitsspeicheroptimierter Tabellen.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Query plan for join of memory optimized tables.")  
 Abfrageplan für den Join speicheroptimierter Tabellen.  
   
  Beachten Sie die folgenden Unterschiede beim Plan für die gleiche Abfrage mit datenträgerbasierten Tabellen (Abbildung 1):  
@@ -204,7 +206,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Kompilierung und Abfrageverarbeitung  
  Das folgende Diagramm veranschaulicht den Kompilierungsprozess systemintern kompilierte gespeicherte Prozeduren:  
   
- ![Native Kompilierung gespeicherter Prozeduren](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![Native Kompilierung gespeicherter Prozeduren](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "Native compilation of stored procedures.")  
 Systeminterne Kompilierung gespeicherter Prozeduren.  
   
  Der Prozess lässt sich folgendermaßen beschreiben:  
@@ -221,7 +223,7 @@ Systeminterne Kompilierung gespeicherter Prozeduren.
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur wird in einen Funktionsaufruf in der DLL übersetzt.  
   
- ![Ausführung nativ kompilierter gespeicherter Prozeduren.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![Ausführung nativ kompilierter gespeicherter Prozeduren.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Execution of natively compiled stored procedures.")  
 Ausführung systemintern kompilierter gespeicherten Prozeduren.  
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur lässt sich folgendermaßen beschreiben:  
@@ -243,7 +245,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
  Die Parameterermittlung wird nicht zum Kompilieren von systemintern kompilierten gespeicherten Prozeduren verwendet. Es wird angenommen, dass alle Parameter für die gespeicherte Prozedur UNBEKANNTE Werte haben. Systemintern kompilierte gespeicherte Prozeduren unterstützen genauso wie interpretierte gespeicherte Prozeduren den **OPTIMIZE FOR** -Hinweis. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Abrufen eines Abfrageausführungsplans für systemintern kompilierte gespeicherte Prozeduren  
- Der Abfrageausführungsplan für eine nativ kompilierte gespeicherte Prozedur kann mithilfe des **geschätzten Ausführungsplans** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oder mithilfe der Option SHOWPLAN_XML in [!INCLUDE[tsql](../../includes/tsql-md.md)]abgerufen werden. Zum Beispiel:  
+ Der Abfrageausführungsplan für eine nativ kompilierte gespeicherte Prozedur kann mithilfe des **geschätzten Ausführungsplans** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oder mithilfe der Option SHOWPLAN_XML in [!INCLUDE[tsql](../../includes/tsql-md.md)]abgerufen werden. Beispiel:  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -295,7 +297,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Nachdem alle Zeilen bis auf eine in der Customer-Tabelle gelöscht wurden:  
   
- ![Spaltenstatistiken und Joins.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.gif "Column statistics and joins.")  
+ ![Spaltenstatistiken und Joins.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Column statistics and joins.")  
   
  Bei diesem Abfrageplan:  
   

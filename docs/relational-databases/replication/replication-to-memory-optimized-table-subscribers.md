@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d0b215dbc61be9d7a710300301ec63f8796a915
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f2b2a7a957bd964b52f4dcda847de84cdef3cbc0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129510"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581272"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replikation mit Abonnenten von speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54129510"
   
 -   **Konfigurieren der Abonnentendatenbank für die Unterstützung der Replikation in speicheroptimierte Tabellen**  
   
-     Legen Sie die **@memory_optimized**-Eigenschaft auf **true** fest, indem Sie [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) oder [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) verwenden.  
+     Legen Sie die **@memory_optimized** -Eigenschaft auf **true** fest, indem Sie [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) oder [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) verwenden.  
   
 -   **Konfigurieren des Artikels für die Unterstützung der Replikation in speicheroptimierte Tabellen**  
   
@@ -47,7 +47,9 @@ ms.locfileid: "54129510"
 4.  Starten Sie den Auftrag des Momentaufnahme-Agents, um die Anfangsmomentaufnahme für diese Veröffentlichung zu generieren. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 5.  Erstellen Sie dann ein neues Abonnement. Legen Sie im **Assistenten für neue Abonnements** **Memory Optimized Subscription** auf **true**fest.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Speicheroptimierte Tabellen empfangen nun Updates vom Verleger.  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>Neukonfiguration einer vorhandenen Transaktionsreplikation  

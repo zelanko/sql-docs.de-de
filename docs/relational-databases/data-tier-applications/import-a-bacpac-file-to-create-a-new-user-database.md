@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5343d744d5b8be25a51ad48ec5ad797208a2643c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590684"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580184"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53590684"
 1.  Beim Import wird mithilfe der in der Exportdatei gespeicherten DAC-Definition eine neue DAC und eine zugeordnete Datenbank erstellt. Dieser Vorgang entspricht dem Erstellen einer neuen DAC aus der Definition in einer DAC-Paketdatei bei einer DAC-Bereitstellung.  
   
 2.  Beim Import werden die Daten per Massenkopieren in die Exportdatei kopiert.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-utility"></a>SQL Server-Hilfsprogramm  
  Beim Importieren einer DAC in eine Instanz der Datenbank-Engine wird die importierte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Sammlungssatz des Hilfsprogramms das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Die DAC ist dann unter dem Knoten **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Bereitgestellte Datenschichtanwendungen** details page.  
   
@@ -99,7 +101,7 @@ ms.locfileid: "53590684"
 ###  <a name="Import_settings"></a> Importeinstellungen (Seite)  
  Verwenden Sie diese Seite, um den Speicherort der zu importierenden BACPAC-Datei anzugeben.  
   
--   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
+-   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
   
 -   **Aus Azure importieren**: Importiert eine BACPAC-Datei aus einem Microsoft Azure-Container. Sie müssen eine Verbindung mit einem Microsoft Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option für den Import aus Azure auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
   
@@ -114,9 +116,9 @@ ms.locfileid: "53590684"
   
 -   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **Datendateipfad**: Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
+-   **Datendateipfad**: Stellen Sie ein lokales Verzeichnis für Datendateien bereit. Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
--   **Protokolldateipfad**: Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
+-   **Protokolldateipfad**: Geben Sie ein lokales Verzeichnis für Protokolldateien an. Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   

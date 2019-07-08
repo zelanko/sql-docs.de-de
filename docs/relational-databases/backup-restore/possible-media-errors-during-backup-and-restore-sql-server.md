@@ -24,12 +24,12 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9878aaa62eedf9a2468aa02031e3dcf20e6d7df6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6875a490a2ebb4228321cbf9d9076af892c9471
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025499"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580216"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,9 @@ ms.locfileid: "63025499"
 2.  Unabhängig davon, ob Seitenprüfsummen vorhanden sind, generiert BACKUP eine separate Sicherungsprüfsumme für den Sicherungsdatenstrom. Bei den Wiederherstellungsvorgängen kann optional die Sicherungsprüfsumme verwendet werden, um zu überprüfen, ob die Sicherung beschädigt ist. Die Sicherungsprüfsumme wird auf den Sicherungsmedien gespeichert, nicht in den Datenbankseiten. Die Sicherungsprüfsumme kann bei der Wiederherstellung optional verwendet werden.  
   
 3.  Der Sicherungssatz erhält die Markierung, dass er Sicherungsprüfsummen enthält (in der **has_backup_checksums** -Spalte von **msdb..backupset**). Weitere Informationen finden Sie unter [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Wenn bei einem Sicherungsvorgang auf dem Sicherungsmedium Sicherungsprüfsummen vorhanden sind, werden standardmäßig die Sicherungsprüfsummen und Seitenprüfsummen von RESTORE- und RESTORE VERIFYONLY-Anweisungen überprüft. Wenn keine Sicherungsprüfsummen vorhanden sind, werden beide Wiederherstellungsvorgänge ohne Überprüfung fortgesetzt, weil ohne Sicherungsprüfsumme vom Wiederherstellungsvorgang keine Seitenprüfsummen verlässlich überprüft werden können.  
   
 ## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>Antwort auf Fehler bei der Seitenprüfsumme während einer Sicherung oder eines Wiederherstellungsvorgangs  

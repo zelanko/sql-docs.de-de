@@ -16,12 +16,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d87ebe37c4dcf669243262c97422337b1669be6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6043372a62776b4f7417b3a666417be9a811bfce
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973710"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585494"
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ Bei SQL Server-Datenbanken werden die Volltexte standardmäßig aktiviert. Bevor
 Es gibt zwei grundlegende Schritte zum Einrichten der Volltextsuche:  
 1.  Erstellen eines Volltextkatalogs.  
 2.  Erstellen eines Volltextindex für Tabellen oder eine indizierte Sicht, die Sie durchsuchen möchten. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Jeder Volltextindex muss einem Volltextkatalog angehören. Sie können einen separaten Textkatalog für jeden Volltextindex erstellen oder einem Katalog mehrere Volltextindizes zuordnen. Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an. Der Katalog ist ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist.
 

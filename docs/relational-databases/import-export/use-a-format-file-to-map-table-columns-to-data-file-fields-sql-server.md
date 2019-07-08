@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2858b789c9c6925c093812dc0818ac9f6604cb0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98b0c3beba33688943bdd767d29b0e9f7f0cefc4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946212"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579615"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,6 +79,8 @@ Informationen zur Terminologie finden Sie unter [Struktur von Nicht-XML-Formatda
 1.  Ändern Sie die Reihenfolge der Zeilen in der Formatdatei, sodass die Zeilen in derselben Reihenfolge vorliegen wie die Daten in `myRemap.bcp`.
 2.  Stellen Sie sicher, dass die Werte für die Reihenfolge der Hostfelder sequenziell sind.
 3.  Stellen Sie sicher, dass nach der letzten Zeile der Formatdatei ein Zeilenumbruch eingefügt wird.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Vergleichen Sie die Änderungen:     
 **vor**

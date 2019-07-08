@@ -19,12 +19,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71b50aa6c27b2328833685051bcc31917f584cb3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 51bdd4d5a368bbf5b5991c57c37a2aa95a89fb97
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558897"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583396"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,14 @@ ms.locfileid: "51558897"
 ## <a name="verify-that-a-database-file-is-a-sparse-file"></a>Überprüfen, ob eine Datenbankdatei eine Datei mit geringer Dichte ist  
   
 1.  Auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
   
-     Wählen Sie entweder in der Datenbank-Momentaufnahme unter **sys.database_files** oder in **sys.master_files** die Spalte **is_sparse**aus. Der Wert gibt wie folgt an, ob die Datei eine Sparsedatei ist:  
+     1 = File is a sparse file.  
   
-     1 = Die Datei ist eine Sparsedatei.  
-  
-     0 = Die Datei ist keine Sparsedatei.  
+     0 = File is not a sparse file.  
   
 ## <a name="find-out-the-actual-size-of-a-sparse-file"></a>Ermitteln der tatsächlichen Größe einer Datei mit geringer Dichte  
   
@@ -88,7 +90,7 @@ AND mf2.is_sparse = 0
 ORDER BY 1;
 ```
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 81ab0d79b985ee6814de82d1c9c18499ed99761c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317810"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580388"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
     
     -   **Sicherungsmedium**    
     
-         Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. 
+         Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. 
          
-        -   Dialogfeld**Sicherungsmedien auswählen**   
+        -   Dialogfeld**Sicherungsmedien auswählen**  
         
             **Sicherungsmedientyp**  
          Wählen Sie einen Medientyp aus der Dropdownliste **Sicherungsmedientyp** aus.  Hinweis: Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.
@@ -76,7 +76,7 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
             **Hinzufügen**  
             Abhängig vom Medientyp, den Sie in der Dropdownliste **Sicherungsmedientyp** ausgewählt haben, wird durch das Klicken auf **Hinzufügen** eines der folgenden Dialogfelder geöffnet. (Ist die Liste im Listenfeld **Sicherungsmedien** voll, ist die Schaltfläche **Hinzufügen** nicht verfügbar.)
 
-            |Medientyp|Dialogfeld|Beschreibung|    
+            |Medientyp|Dialogfeld|und Beschreibung|    
             |----------------|----------------|-----------------|    
             |**File**|**Sicherungsdatei suchen**|In diesem Dialogfeld können Sie eine lokale Datei aus der Struktur auswählen oder eine Remotedatei mithilfe des vollqualifizierten UNC-Namens (Universal Naming Convention) angeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|    
             |**Sicherungsmedium**|**Sicherungsmedium auswählen**|In diesem Dialogfeld können Sie aus einer Liste logischer Sicherungsmedien auswählen, die auf der Serverinstanz definiert sind.|    
@@ -108,7 +108,9 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
 7.  Klicken Sie optional im Bereich **Seite auswählen** auf **Dateien** , um auf das Dialogfeld **Dateien** zuzugreifen. Hier können Sie die Datenbank an einem neuen Ort wiederherstellen, indem Sie für die einzelnen Dateien im Raster **Datenbankdateien wiederherstellen als** ein neues Wiederherstellungsziel angeben. Weitere Informationen zu diesem Raster finden Sie unter [Datenbank wiederherstellen &#40;Seite „Dateien“&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).    
     
 8. Zum Anzeigen oder Auswählen der erweiterten Optionen können Sie auf der Seite **Optionen** im Bereich **Wiederherstellungsoptionen** die folgenden für Ihre Situation zutreffenden Optionen auswählen:    
-    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  **WITH** -Optionen (nicht erforderlich):    
     
         -   **Vorhandene Datenbank überschreiben (WITH REPLACE)**    
@@ -139,10 +141,10 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 6.  Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
-7.  Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**.
+7.  Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)** .
 
     > [!NOTE]
     > Wird diese Option nicht aktiviert, wird möglicherweise die folgende Fehlermeldung angezeigt: „System.Data.SqlClient.SqlError: Der Sicherungssatz enthält die Sicherung einer anderen Datenbank als der vorhandenen '`Sales`'-Datenbank. (Microsoft.SqlServer.SmoExtended)“
@@ -167,7 +169,7 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 6.  Im Abschnitt **Ziel** wird das Feld **Datenbank** automatisch mit dem Namen der Datenbank aufgefüllt, die wiederhergestellt werden soll. Geben Sie zum Ändern des Datenbanknamens den neuen Namen ins Feld **Datenbank** ein.
 7.  Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
@@ -189,7 +191,7 @@ Im folgenden Beispiel wird eine Datenbank in den am `1:23:17 PM` um `May 30, 201
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie zu der vollständigen Sicherung und allen relevanten Transaktionsprotokollsicherungen.  Nachdem Sie Ihre Datenträgersicherungsdateien ausgewählt haben, klicken Sie auf **OK** .
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie zu der vollständigen Sicherung und allen relevanten Transaktionsprotokollsicherungen.  Nachdem Sie Ihre Datenträgersicherungsdateien ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 6.  Klicken Sie im Abschnitt **Ziel** auf **Zeitachse** , um auf das Dialogfeld **Sicherungszeitachse** zuzugreifen und darin manuell einen Zeitpunkt zum Beenden des Wiederherstellungsvorgangs auszuwählen.
 7.  Wählen Sie **Bestimmtes Datum und bestimmte Uhrzeit**aus.  
@@ -220,7 +222,7 @@ Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Aufl
 12. Klicken Sie auf **OK**.
 13. Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 14. Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
-15. Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**.
+15. Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)** .
 16. Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern**.
 17. Aktivieren Sie im Abschnitt **Serververbindungen** das Kontrollkästchen **Bestehende Verbindungen mit der Zieldatenbank schließen**.
 18. Klicken Sie auf **OK**.

@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046689"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582760"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Beim Sichern mit Blockblobs, können Sie eine maximale Blockgröße von 4 MB ang
 |RESTORE HEADERONLY|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
 |RESTORE LABELONLY|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
 |RESTORE VERIFYONLY|J||Erfordert die Definition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen sowie die Angabe des Arguments WITH CREDENTIAL, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen mithilfe des Speicherkontoschlüssels als geheimem Schlüssel definiert werden.|  
-|RESTORE REWINDONLY|−|||  
+|RESTORE REWINDONLY|?|||  
   
  Allgemeine und Syntaxinformationen zu BACKUP-Anweisungen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -151,9 +151,9 @@ Beim Sichern mit Blockblobs, können Sie eine maximale Blockgröße von 4 MB ang
 |COMPRESSION&#124;NO_COMPRESSION|J|Wird für Dateimomentaufnahme-Sicherungen nicht unterstützt||  
 |DESCRIPTION|J|||  
 |NAME|J|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||Das Anfügen an BLOBs ist nicht möglich. Verwenden Sie zum Überschreiben einer Sicherung das Argument **WITH FORMAT** . Allerdings ist das Argument **WITH FORMAT** bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben.|  
-|NOSKIP &#124; SKIP|−|||  
+|EXPIREDATE &#124; RETAINDAYS|?|||  
+|NOINIT &#124; INIT|?||Das Anfügen an BLOBs ist nicht möglich. Verwenden Sie zum Überschreiben einer Sicherung das Argument **WITH FORMAT** . Allerdings ist das Argument **WITH FORMAT** bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben.|  
+|NOSKIP &#124; SKIP|?|||  
 |NOFORMAT &#124; FORMAT|J||Eine Sicherung, die auf ein vorhandenes BLOB geschrieben wird, ist nur erfolgreich, wenn **WITH FORMAT** angegeben wird. Das vorhandene BLOB wird bei Angabe von **WITH FORMAT** überschrieben. Allerdings ist das Argument FORMAT bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben. Allerdings ist das Argument **WITH FORMAT** bei Verwendung von Dateimomentaufnahme-Sicherungen (mit dem Argument **WITH FILE_SNAPSHOT** ) nicht zulässig, um zu vermeiden, dass Dateimomentaufnahmen, die mit der ursprünglichen Dateimomentaufnahme-Sicherung erstellt wurden, verwaist zurückbleiben.|  
 |MEDIADESCRIPTION|J|||  
 |MEDIANAME|J|||  
@@ -163,8 +163,8 @@ Beim Sichern mit Blockblobs, können Sie eine maximale Blockgröße von 4 MB ang
 |NO_CHECKSUM &#124; CHECKSUM|J|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|J|||  
 |STATS|J|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|?|||  
+|UNLOAD &#124; NOUNLOAD|?|||  
 |NORECOVERY &#124; STANDBY|J|||  
 |NO_TRUNCATE|J|||  
   
@@ -186,19 +186,19 @@ Beim Sichern mit Blockblobs, können Sie eine maximale Blockgröße von 4 MB ang
 |REPLACE|J|||  
 |RESTART|J|||  
 |RESTRICTED_USER|J|||  
-|FILE|−|||  
+|FILE|?|||  
 |PASSWORD|J|||  
 |MEDIANAME|J|||  
 |MEDIAPASSWORD|J|||  
 |BLOCKSIZE|J|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
+|BUFFERCOUNT|?|||  
+|MAXTRANSFERSIZE|?|||  
 |CHECKSUM &#124; NO_CHECKSUM|J|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|J|||  
 |FILESTREAM|J|Wird für Momentaufnahmesicherungen nicht unterstützt||  
 |STATS|J|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|?|||  
+|UNLOAD &#124; NOUNLOAD|?|||  
 |KEEP_REPLICATION|J|||  
 |KEEP_CDC|J|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|J|||  
@@ -219,7 +219,9 @@ Sie können eine Datenbank über URL mit dem Sicherungstask in SQL Server Manage
 2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Back Up...** (Sichern).
   
 3.  Die Option **URL** ist in der Dropdownliste **Back up to:** (Sichern auf:) auf der Seite **Allgemein** im Abschnitt **Ziel** verfügbar.  Die Option **URL** wird verwendet, um eine Sicherung im Windows Azure-Speicher zu erstellen. Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Sicherungsziel auswählen** wird geöffnet:
-   
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  **Azure-Speichercontainer:** Der Name des Microsoft Azure-Speichercontainers, um die Sicherungsdateien zu speichern.  Wählen Sie einen vorhandenen Container aus der Dropdown Liste aus, oder geben Sie ihn manuell ein. 
   
     2.  **Richtlinie für den gemeinsamen Zugriff:** Geben Sie die SAS (Shared Access Signature) für einen manuell eingegebenen Container an.  Dieses Feld ist nicht verfügbar, wenn ein vorhandener Container ausgewählt wurde. 

@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6169d09cd048c9883836c3d34ff8912e9101ba07
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542040"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586321"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,7 +67,9 @@ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet 
 4.  Überprüfen Sie, ob die von der Abfrage verwendeten Indizes defragmentiert sind.  
   
 5.  Ziehen Sie bei aufwändigen Abfragen eine Neuerstellung in Erwägung. Nutzen Sie beispielsweise die Vorteile der Abfrageparametrisierung, und verringern Sie den Einsatz von dynamischem SQL. Implementieren Sie nach dem Lesen der Daten die optimale Logik (führen Sie Datenfilterung auf der Datenbankseite statt auf der Anwendungsseite aus).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ab-testing"></a>A/B-Tests  
  Verwenden Sie den Abfragespeicher, um die Arbeitsleistung vor und nach der beabsichtigten Änderung der Anwendung zu vergleichen. Die folgende Liste enthält eine Reihe von Beispielen, für die der Abfragespeicher eingesetzt werden kann, um den Einfluss der Umgebungs- oder Anwendungsänderung auf die Arbeitsleistung zu beurteilen:  
   
@@ -199,7 +201,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 Nach dem Ausführen eines dieser Schritte zeichnet **Abfragen mit höchstem Ressourcenverbrauch** ein anderes Bild Ihrer Arbeitsauslastung.  
   
-![Abfrage-Store-Nutzung – 8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
+![Abfrage-Store-Verwendung – 8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 In manchen Fällen generiert Ihre Anwendung möglicherweise viele verschiedene Abfragen, die keine geeigneten Kandidaten für automatische Parametrisierung darstellen. In diesem Fall findet sich eine große Anzahl Abfragen im System, das Verhältnis zwischen eindeutigen Abfragen und eindeutigem Abfragehash (`query_hash`) liegt aber wahrscheinlich nahe bei 1.  
   

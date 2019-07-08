@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478135"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583387"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 
@@ -521,6 +521,7 @@ Zum Testen der Ereignissitzung haben wir absichtlich die Freigabe von erworbenen
 3. Absichtlich wird COMMIT TRANSACTION erst nach dem Untersuchen der Ziele ausgegeben.
 4. Später, nach den Tests, haben wir ein COMMIT TRANSACTION ausgegeben.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Das einfache **event_counter** -Ziel hat die folgenden Ausgabezeilen bereitgestellt. Da 52-50=2, erfahren wir aus der Ausgabe, dass wir 2 nicht gepaarte lock_acquired-Ereignisse sehen sollten, wenn wir die Ausgabe aus dem pair-matching-Ziel untersuchen.
 

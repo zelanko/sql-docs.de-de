@@ -20,12 +20,12 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 0d063f60a959c047385b50b150359c063bfa668c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242121"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579421"
 ---
 # <a name="file-restores-full-recovery-model"></a>Dateiwiederherstellungen (vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,9 @@ ms.locfileid: "54242121"
      Um eine Datenbank in einen konsistenten Status zu versetzen, müssen Sie die Transaktionsprotokollsicherungen wiederherstellen, die nach den Dateisicherungen erstellt wurden. Für die Transaktionsprotokollsicherungen kann schnell ein Rollforward ausgeführt werden, weil nur die Änderungen, die die wiederhergestellten Dateien betreffen, angewendet werden. Die Wiederherstellung einzelner Dateien ist der Wiederherstellung der gesamten Datenbank vorzuziehen, da nicht beschädigte Dateien dann nicht kopiert werden müssen und für diese Dateien auch kein Rollforward ausgeführt werden muss. Es muss jedoch trotzdem die gesamte Kette der Protokollsicherungen gelesen werden.  
   
 5.  Stellen Sie die Datenbank wieder her.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  Mit Dateisicherungen kann der Status der Datenbank zu einem früheren Zeitpunkt wiederhergestellt werden. Dazu müssen Sie einen vollständigen Dateisicherungssatz wiederherstellen und anschließend die Transaktionsprotokollsicherungen in der chronologischen Reihenfolge wiederherstellen, um einen Zielpunkt zu erreichen, der nach dem Ende der letzten wiederhergestellten Dateisicherung liegt. Weitere Informationen zum Wiederherstellen eines zu einem bestimmten Zeitpunkt bestehenden Datenbankzustands finden Sie unter [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   

@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994239"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583440"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 
@@ -244,6 +244,8 @@ Bei dieser Implementierung sind einige Einschränkungen zu beachten:
     ```
 3. Abfragen für speicheroptimierte Tabellen unterstützen keine Sperr- und Isolationshinweise, sodass bei Abfragen für speicheroptimierte TempDB-Katalogsichten Sperr- und Isolationshinweise nicht berücksichtigt werden. Wie bei anderen Systemkatalogsichten in SQL Server erfolgen alle Transaktionen für Systemsichten in READ COMMITTED-Isolation (oder in diesem Fall in READ COMMITTED SNAPSHOT-Isolation).
 4. Wenn speicheroptimierte tempdb-Metadaten aktiviert sind, können möglicherweise Probleme mit Columnstore-Indizes für temporäre Tabellen auftreten. Bei dieser Vorschauversion empfiehlt es sich, Columnstore-Indizes für temporäre Tabellen bei Verwendung speicheroptimierter tempdb-Metadaten zu vermeiden.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > Diese Einschränkungen gelten nur beim Verweisen auf TempDB-Systemsichten, und Sie können beim Zugriff auf eine speicheroptimierte Tabelle in einer Benutzerdatenbank bei Bedarf eine temporäre Tabelle in derselben Transaktion erstellen.

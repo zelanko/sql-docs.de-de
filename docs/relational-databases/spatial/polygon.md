@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761444"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581701"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -43,7 +43,9 @@ Folgendes wird dargestellt:
 2.  Abbildung 2 zeigt eine **Polygon** -Instanz, deren Begrenzung von einem äußeren Ring und zwei inneren Ringen definiert wird. Der Bereich zwischen den inneren Ringen ist Teil des äußeren Rings der **Polygon** -Instanz.  
   
 3.  Abbildung 3 ist eine gültige **Polygon** -Instanz, da sich seine inneren Ringe an einem einzelnen Tangentialpunkt schneiden.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>Akzeptierte Instanzen  
  Akzeptierte **Polygon** -Instanzen sind Instanzen, die in einer **geometry** -Variablen oder einer **geography** -Variablen gespeichert werden können, ohne dass eine Ausnahme ausgelöst wird. Bei den folgenden **Polygon** -Instanzen handelt es sich um akzeptierte Instanzen:  
   

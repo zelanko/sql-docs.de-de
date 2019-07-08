@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 41906481891908c85daf22c223e77826baa27766
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683600"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581991"
 ---
 # <a name="database-file-initialization"></a>Datenbankdatei-Initialisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,6 +63,8 @@ So erteilen Sie einem Konto die Berechtigung `Perform volume maintenance tasks` 
 5.  Klicken Sie auf **Übernehmen**, und schließen Sie dann alle Dialogfelder von **Lokale Sicherheitsrichtlinie** .  
 
 1. Starten Sie den SQL Server-Dienst neu.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann diese Berechtigung dem Dienstkonto beim Setup im Rahmen einer Installation erteilt werden. Wenn Sie eine [Installation über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) durchführen, fügen Sie das Argument /SQLSVCINSTANTFILEINIT hinzu oder aktivieren im [Installationsassistenten](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) das Kontrollkästchen *SQL Server-Datenbank-Engine-Dienst Berechtigung zum Ausführen von Volumewartungstasks gewähren*.

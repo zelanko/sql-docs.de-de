@@ -13,12 +13,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 542fd8c891a0efcaf216d9a5d00de69921ae0dd7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939214"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585822"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,9 @@ ms.locfileid: "65939214"
 2.  Die beiden Pyramiden werden auf eine Ebene reduziert.  
   
 3.  Die vereinfachten Pyramiden werden verbunden, sodass sie eine nicht-euklidische Ebene bilden.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  In der folgenden Illustration wird dieser dreistufige Zerlegungsprozess schematisch dargestellt. In den Pyramiden stellen die gepunkteten Linien die Begrenzungen der vier Facetten jeder Pyramide dar. Die Schritte 1&nbsp;und&nbsp;2 veranschaulichen das geodätische Ellipsoid, wobei eine grüne waagrechte Linie den Längengrad am Äquator und eine Reihe von grünen senkrechten Linien verschiedene Breitengrade darstellt. Schritt&nbsp;1 zeigt die Pyramiden, die über die zwei Hemisphären projiziert werden. Schritt&nbsp;2 zeigt, wie die Pyramiden auf eine Ebene reduziert werden. Schritt&nbsp;3 veranschaulicht die reduzierten Pyramiden, nachdem diese zu einer Ebene kombiniert wurden, und zeigt einige projizierte Längengrade. Beachten Sie, dass diese projizierten Linien geglättet sind und eine unterschiedliche Länge haben, die davon abhängt, wo sie auf die Pyramiden auftreffen.  
   
  ![Projektion des Ellipsoids auf eine Ebene](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projection of the ellipsoid onto a plane")  

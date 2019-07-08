@@ -17,12 +17,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571230"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579843"
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51571230"
 2.  Bestimmen Sie die Daten und Datenspalten, die die benötigten Informationen enthalten.  
   
 3.  Bestimmen Sie eine Untergruppe der benötigten Daten, und definieren Sie auf der Grundlage dieser Datenuntergruppe Filter.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Beispielsweise möchten Sie nur Ereignisse verfolgen, die länger als eine bestimmte Zeit dauern. In diesem Fall können Sie eine Ablaufverfolgung erstellen, die Ereignisse umfasst, bei denen die Datenspalte **Duration** größer ist als 300 Millisekunden. Ereignisse, deren Ausführung weniger als 300 Millisekunden dauert, werden bei der Ablaufverfolgung nicht berücksichtigt.  
   
  Zur Erstellung von Filtern können Sie gespeicherte Prozeduren aus SQL Server Profiler oder Transact-SQL verwenden.  
@@ -62,7 +64,7 @@ ms.locfileid: "51571230"
   
  Ob Filter verfügbar sind, ist von der Datenspalte abhängig. Einige Datenspalten können nicht gefiltert werden. Filterbare Datenspalten können nur durch bestimmte relationale Operatoren gefiltert werden, wie Sie der folgenden Tabelle entnehmen können.  
   
-|Relationaler Operator|Operatorsymbol|Beschreibung|  
+|Relationaler Operator|Operatorsymbol|und Beschreibung|  
 |-------------------------|---------------------|-----------------|  
 |Wie|Wie|Die Ereignisablaufverfolgungsdaten müssen dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  
 |Nicht wie|Nicht wie|Die Ereignisablaufverfolgungsdaten dürfen nicht dem eingegebenen Text entsprechen. Mehrere Werte sind zulässig.|  

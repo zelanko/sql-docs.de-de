@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 597b0e7d39d178eb2ed6f8ede8db5a1852117dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e299541e48de590474b9f1e13996ab921b9246d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018655"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580502"
 ---
 # <a name="modify-a-stored-procedure"></a>Ändern einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "63018655"
 6.  Um die Änderungen an der Prozedurdefinition zu speichern, klicken Sie im Menü **Abfrage** auf **Ausführen**.  
   
 7.  Um die aktualisierte Prozedurdefinition als [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript zu speichern, klicken Sie im Menü **Datei** auf **Speichern unter**. Nehmen Sie den Dateinamen an oder ersetzen Sie ihn durch einen neuen Namen, und klicken Sie dann auf **Speichern**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!IMPORTANT]  
 >  Überprüfen Sie alle Benutzereingaben. Verketten Sie keine Benutzereingaben, bevor Sie sie überprüft haben. Führen Sie niemals Befehle aus, die sich aus nicht überprüften Benutzereingaben zusammensetzen.  
   

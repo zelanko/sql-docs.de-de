@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 4d7b86e88d576d44869dd3a54ddfd6af05770971
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 647630106046345dbe2b3008df020fa1d790d2aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369292"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582551"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,9 @@ ms.locfileid: "53369292"
 5.  Deaktivieren Sie **Vorhandene Objekte anzeigen** unten auf der Seite **Empfehlungen** im Registerkartenformat. Dadurch werden im Raster nur die Datenbankobjekte angezeigt, auf die in der Empfehlung verwiesen wird. Verwenden Sie die untere Bildlaufleiste, um die Spalte ganz rechts im Empfehlungsraster anzuzeigen, und klicken Sie auf ein Element in der Spalte **Definition** , um das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript anzuzeigen oder zu kopieren, das dieses Objekt in der Datenbank erstellt.  
   
 6.  Wenn Sie alle [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, die alle Datenbankobjekte in dieser Empfehlung erstellen oder löschen, in einer Skriptdatei speichern möchten, klicken Sie auf **Empfehlungen speichern** im Menü **Aktion** .  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>So zeigen Sie die Optimierungszusammenfassungen und -berichte mithilfe der GUI des Datenbankoptimierungsratgebers an  
   
 1.  Optimieren Sie eine Datenbank mithilfe der GUI des Datenbankoptimierungsratgebers oder des Befehlszeilen-Hilfsprogramms **dta** . Weitere Informationen finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Wenn Sie eine vorhandene Optimierungssitzung verwenden möchten, lassen Sie diesen Schritt aus, und fahren Sie mit Schritt 2 fort.  
@@ -152,7 +154,7 @@ ms.locfileid: "53369292"
   
 3.  Öffnen Sie die in Schritt 2 erstellte XML-Datei in dem von Ihnen bevorzugten XML-Editor, Text-Editor oder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scrollen Sie zum **Configuration** -Element. Kopieren Sie den **Configuration** -Elementabschnitt und fügen Sie ihn in eine XML-Eingabedateivorlage hinter dem **TuningOptions** -Element ein. Speichern Sie diese XML-Eingabedatei.  
   
-4.  Geben Sie in der neuen XML-Eingabedatei, die Sie in Schritt 3 erstellt haben, Optimierungsoptionen für das **TuningOptions**-Element an. Bearbeiten Sie den **Configuration**-Elementabschnitt (fügen Sie die physischen Entwurfsstrukturen hinzu oder löschen Sie sie, je nachdem, wie Sie Ihre Analyse ausführen möchten). Speichern Sie die Datei, und überprüfen Sie sie mithilfe des XML-Schemas des Datenbankoptimierungsratgebers. Informationen zum Bearbeiten dieser XML-Datei finden Sie unter [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+4.  Geben Sie in der neuen XML-Eingabedatei, die Sie in Schritt 3 erstellt haben, Optimierungsoptionen für das **TuningOptions**-Element an. Bearbeiten Sie den **Configuration**-Elementabschnitt (fügen Sie die physischen Entwurfsstrukturen hinzu oder löschen Sie sie, je nachdem, wie Sie Ihre Analyse ausführen möchten). Speichern Sie die Datei, und überprüfen Sie sie mithilfe des XML-Schemas des Datenbankoptimierungsratgebers. Informationen zum Bearbeiten dieser XML-Datei finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 5.  Verwenden Sie die in Schritt 4 erstellte XML-Datei als Eingabewert für das Befehlszeilen-Hilfsprogramm **dta** . Informationen zur Verwendung von XML-Eingabedateien mit diesem Tool finden Sie im Abschnitt "Optimieren einer Datenbank mithilfe des dta-Hilfsprogramms" in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
@@ -165,7 +167,7 @@ ms.locfileid: "53369292"
   
 2.  Kopieren Sie das [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md), und fügen Sie es in Ihren XML-Editor oder einen Text-Editor ein. Verwenden Sie dieses Beispiel zum Erstellen einer XML-Eingabedatei für Ihre Optimierungssitzung. Informationen zum Ausführen dieses Tasks finden Sie im Abschnitt "Erstellen von XML-Eingabedateien" in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen **TuningOptions** - und **Configuration** -Elemente. Geben Sie im **TuningOptions** -Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im **Configuration** -Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Weitere Informationen darüber, welche Attribute und untergeordneten Elemente Sie mit den übergeordneten Elementen **TuningOptions** und **Configuration** verwenden können, finden Sie unter [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen **TuningOptions** - und **Configuration** -Elemente. Geben Sie im **TuningOptions** -Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im **Configuration** -Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Weitere Informationen darüber, welche Attribute und untergeordneten Elemente Sie mit den übergeordneten Elementen **TuningOptions** und **Configuration** verwenden können, finden Sie unter [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML**.  
   

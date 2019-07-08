@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0959480c6c9b90f1a212d77ce3b4684b2e72e05b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 2bc6e0c8a517ce78a36c776f692a16d406e7aae5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305498"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586125"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Erstellen und Verwalten von Volltextkatalogen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.
 ##  <a name="creating"></a> Erstellen eines Volltextkatalogs  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Erstellen eines Volltextkatalogs mit Transact-SQL
-Verwenden Sie [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Zum Beispiel:
+Verwenden Sie [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Beispiel:
 
 ```sql 
 USE AdventureWorks;  
@@ -52,7 +52,9 @@ GO
     >  Volltextkatalog-IDs beginnen bei 00005 und werden mit jedem neu erstellten Katalog um eins erhöht.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="props"></a> Abrufen der Eigenschaften eines Volltextkatalogs  
 Verwenden Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion **FULLTEXTCATALOGPROPERTY**, um den Wert verschiedener Eigenschaften des Volltextkatalogs abzurufen. Weitere Informationen finden Sie unter [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
@@ -67,7 +69,7 @@ GO
   
 In der folgenden Tabelle sind die Eigenschaften aufgeführt, die sich auf Volltextkataloge beziehen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche möglicherweise hilfreich. 
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|und Beschreibung|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Einstellung für die Unterscheidung nach Akzent.|
 |**ImportStatus**|Gibt an, ob der Volltextkatalog importiert wird.|  

@@ -15,12 +15,12 @@ ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 992b010e583a8c40032021f91f26f0a13569b2ee
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b16e030be8afa6caa0de6cb42ed82a3b396801c3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583143"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579449"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen (Vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,17 +72,19 @@ ms.locfileid: "59583143"
      Die primäre Dateigruppe und die Dateigruppen `A` und `C` sind zu diesem Zeitpunkt online. Für die Dateien in der Dateigruppe `B` steht weiterhin die Wiederherstellung aus; die Dateigruppe ist offline.  
   
 4.  Onlinewiederherstellung der Dateigruppe `B`.  
-  
-     Die Dateien in der Dateigruppe `B` werden zu einem beliebigen späteren Zeitpunkt wiederhergestellt.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Files in filegroup `B` are restored any time thereafter.  
   
     > [!NOTE]  
-    >  Die Sicherung von Dateigruppe `B` wurde erstellt, nachdem die Dateigruppe als schreibgeschützt gekennzeichnet wurde. Deshalb muss für diese Dateien kein Rollforward ausgeführt werden.  
+    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
     ```  
   
-     Alle Dateigruppen sind nun online.  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>Zusätzliche Beispiele  
   

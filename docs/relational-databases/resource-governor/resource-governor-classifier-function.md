@@ -15,12 +15,12 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0a17a0708621a01c101cb29786d61ceda192b5b8
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 2bbe90a155ee0bf995d0b5f7f21cf0c686275a9f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689793"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584751"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ ms.locfileid: "55689793"
 2.  Ausführung von LOGON-Triggern  
   
 3.  Klassifizierung  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Wenn die Klassifizierung gestartet wird, führt die Ressourcenkontrolle die Klassifizierungsfunktion aus und verwendet den von der Funktion zurückgegebenen Wert, um Anforderungen an die entsprechende Arbeitsauslastungsgruppe zu senden.  
   
 > [!NOTE]  

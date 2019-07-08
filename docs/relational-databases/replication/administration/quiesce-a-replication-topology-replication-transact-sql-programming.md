@@ -17,12 +17,12 @@ ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98507fe8e98cf8c12abb7423d995a2e3be34f201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97831aaa655baf2d13c27c1e7e08233ff6c61cd2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846808"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581522"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Versetzen einer Replikationstopologie in einen inaktiven Status (Replikationsprogrammierung mit Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "47846808"
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helptracertokenhistory](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)aus.  
   
 4.  Stellen Sie sicher, dass jeder Abonnent das Überwachungstoken erhalten hat.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-quiesce-a-transactional-replication-topology-with-updatable-subscriptions"></a>So versetzen Sie eine Transaktionsreplikationstopologie mit aktualisierbaren Abonnements in einen inaktiven Status  
   
 1.  Beenden Sie die Aktivitäten an allen veröffentlichten Tabellen auf dem Verleger und auf allen Abonnenten.  
@@ -81,7 +83,7 @@ ms.locfileid: "47846808"
     > [!NOTE]  
     >  Wenn während der Synchronisierung Konflikte auftreten, werden durch die Konfliktlösung angeforderte Änderungen möglicherweise nicht an alle Knoten weitergegeben, nachdem der Merge-Agent zweimal ausgeführt wurde.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

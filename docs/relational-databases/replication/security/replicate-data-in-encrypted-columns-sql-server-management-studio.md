@@ -15,12 +15,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a692cb2d5862699abb68d5a0814b948a25158fa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 02aefc777283f98964c54e6845452bdbc739a489
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129550"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581249"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replizieren von Daten in verschlüsselten Spalten (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "54129550"
 6.  Erstellen Sie den symmetrischen Schlüssel auf dem Abonnenten neu, indem Sie für ALGORITHM, KEY_SOURCE und IDENTITY_VALUE dieselben Werte wie in Schritt 1 verwenden.  
   
 7.  Greifen Sie auf die verschlüsselten Spaltendaten zu.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  Verwenden Sie zum Verschlüsseln von Spaltendaten einen symmetrischen Schlüssel. Der symmetrische Schlüssel kann auf unterschiedliche Weise auf dem Verleger und dem Abonnenten gesichert werden.  
   

@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099969"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584354"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
 
@@ -175,7 +175,9 @@ Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datensam
 3. Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die Option **Verwaltung**und dann die Option **Datensammlung**. Klicken Sie mit der rechten Maustaste auf **CDC Performance Data Collector**, und klicken Sie dann auf **Datensammlungssatz starten**.  
   
 4. Greifen Sie in dem Data Warehouse, das Sie in Schritt 1 konfiguriert haben, auf die Tabelle custom_snapshots.cdc_log_scan_data zu. Diese Tabelle stellt eine Verlaufs-Momentaufnahme der Daten von Protokollscansitzungen bereit. Sie können diese Daten verwenden, um die Latenzzeit, den Durchsatz und andere Leistungskennzahlen in Abhängigkeit der Zeit zu analysieren.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> Skriptupgrademodus
 
 Wenn Sie kumulative Updates oder Service Packs auf eine Instanz anwenden, kann die Instanz beim erneuten Starten im Skriptupgrademodus gestartet werden. In diesem Modus führt SQL Server einen Schritt zum Analysieren und Aktualisieren von internen CDC-Tabellen aus, wodurch Objekte wie Indizes in Capture-Tabellen gegebenenfalls neu erstellt werden. Abhängig von der Menge der enthaltenen Daten kann dieser Schritt einige Zeit in Anspruch nehmen oder hohen Transaktionsprotokollverbrauch für aktivierte CDC-Datenbanken verursachen.

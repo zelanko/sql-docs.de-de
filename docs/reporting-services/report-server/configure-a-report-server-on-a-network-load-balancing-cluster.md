@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937236"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563996"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
 
@@ -62,16 +62,16 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
     Das folgende Beispiel zeigt den Wert, den Sie benötigen. Kopieren Sie das Beispiel nicht in Ihre Konfigurationsdateien, da die Schlüsselwerte ungültig sind.  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Öffnen Sie die Datei „Web.config“ für den Berichtsserver, und fügen Sie im Abschnitt <`system.web`> das <`machineKey`>-Element ein, das Sie generiert haben. Standardmäßig befindet sich die Datei Web.config für den Berichts-Manager unter \Programme\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Öffnen Sie die Datei „Web.config“ für den Berichtsserver, und fügen Sie im Abschnitt <`system.web`> das <`MachineKey`>-Element ein, das Sie generiert haben. Standardmäßig befindet sich die Datei Web.config für den Berichts-Manager unter \Programme\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Speichern Sie die Datei.  
   
 4. Wiederholen Sie den vorherigen Schritt für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
   
-5. Überprüfen Sie, ob alle „Web.Config“-Dateien in den \Reporting Services\Reportserver-Ordnern identische <`machineKey`>-Elemente im Abschnitt <`system.web`> enthalten.  
+5. Überprüfen Sie, ob alle „Web.Config“-Dateien in den \Reporting Services\Reportserver-Ordnern identische <`MachineKey`>-Elemente im Abschnitt <`system.web`> enthalten.  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
     Das folgende Beispiel zeigt den Wert, den Sie benötigen. Kopieren Sie das Beispiel nicht in die Konfigurationsdateien, denn die Schlüsselwerte sind ungültig. Der Berichtsserver erfordert korrekte Groß- und Kleinschreibung.
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. Speichern Sie die Datei.

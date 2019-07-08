@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8df41184356f29e3037f36d519c9957f2f3e5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23b0b3156d97670832ba040693a2ea0dc20540f2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936442"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584070"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,9 @@ Damit eine **MultiLineString** -Instanz gültig ist, muss sie die folgenden Krit
 1.  Alle Instanzen, die die **MultiLineString** -Instanz beinhalten, müssen gültige **LineString** -Instanzen sein.  
   
 2.  Zwei **LineString** -Instanzen, die die **MultiLineString** -Instanz beinhalten, dürfen sich nicht  im Verlauf eines Intervalls überlappen. Die **LineString** -Instanzen können sich nur mit einer endlichen Anzahl von Punkten überschneiden oder sich selbst oder andere **LineString** -Instanzen berühren.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Im folgenden Beispiel werden drei gültige **MultiLineString** -Instanzen und eine nicht gültige **MultiLineString** -Instanz gezeigt.  
   
 ```sql  

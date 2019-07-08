@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3e437acd6aead42cea4e44f632f40cd69f7ac44
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.openlocfilehash: f98eb14dc6187bf26522234aa79704df1e0dc444
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506898"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585559"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Allgemeine Schritte zur Problembehandlung für Datenbank-E-Mail 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,6 +56,8 @@ Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um Probleme mit
     ```
 
 1. Führen Sie den folgenden Code aus, um den Standardzustand der Prozedur „sp_configure“ wiederherzustellen, in dem keine erweiterten Optionen angezeigt werden:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

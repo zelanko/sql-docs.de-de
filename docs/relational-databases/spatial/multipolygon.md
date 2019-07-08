@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a66491bb68469ecaa8f9cde47f77566e6c31236a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c806c91beb14d2a50988b95e0ab09ee7f678dc3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936429"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584699"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,9 @@ Die zweite Instanz im MultiPolygon ist eine LineString-Instanz und keine akzepti
 1.  Alle Instanzen, aus denen die **MultiPolygon** -Instanz besteht, sind gültige **Polygon** -Instanzen. Informationen über gültige **Polygon** -Instanzen finden Sie unter [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  Die **Polygon** -Instanzen, aus denen die **MultiPolygon** -Instanz besteht, überschneiden sich nicht.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Im folgende Beispiel werden zwei gültige **MultiPolygon** -Instanzen und eine ungültige **MultiPolygon** -Instanz veranschaulicht.  
   
 ```sql  

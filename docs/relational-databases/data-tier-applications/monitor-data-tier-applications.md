@@ -13,12 +13,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0bea639ebb7ec36cc1784db829fc98db8d2c0ba
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714327"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580195"
 ---
 # <a name="monitor-data-tier-applications"></a>Überwachen von Datenebenenanwendungen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "62714327"
 3.  Wählen Sie das Menü **Ansicht/Details zum Hilfsprogramm-Explorer** aus.  
   
 4.  Wählen Sie im **Hilfsprogramm-Explorer** den Knoten **Bereitgestellte Datenebenenanwendungen**aus.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Die Informationen auf der Detailseite **Bereitgestellte Datenebenenanwendungen** stammen aus den Daten des UMDWs (Utility Management Data Warehouse), in dem die Daten standardmäßig alle 15 Minuten erfasst werden. Das Intervall kann ebenfalls auf der Detailseite **Hilfsprogrammverwaltung** angepasst werden.  
   
 ## <a name="using-object-explorer"></a>Verwenden des Objekt-Explorers  

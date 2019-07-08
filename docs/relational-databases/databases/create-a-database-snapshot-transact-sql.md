@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddb53c690023a0d0abdb95a9ca054f611990a4ee
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025447"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584309"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Erstellen einer Datenbankmomentaufnahme (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,27 +99,29 @@ AdventureWorks_snapshot_evening
 1.  Prüfen Sie die aktuelle Größe der Quelldatenbank, um sicherzustellen, dass der verfügbare Festplattenspeicher zum Speichern der Datenbankmomentaufnahme ausreicht. Die maximale Größe einer Datenbankmomentaufnahme beläuft sich auf die Größe der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung. Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
 2.  Geben Sie eine CREATE DATABASE-Anweisung für die Dateien aus, und verwenden Sie dabei die AS SNAPSHOT OF-Klausel. Bei der Erstellung einer Momentaufnahme müssen die logischen Namen aller in der Quelldatenbank enthaltenen Datenbankdateien angegeben werden. Die Syntax lautet wie folgt:  
-  
-     CREATE DATABASE *Name der Datenbank-Momentaufnahme*  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     CREATE DATABASE *database_snapshot_name*  
   
      ON  
   
      (  
   
-     NAME =*logischer Dateiname*,  
+     NAME =*logical_file_name*,  
   
-     FILENAME = '*physischer Dateiname*'  
+     FILENAME ='*os_file_name*'  
   
      ) [ ,...*n* ]  
   
-     ALS SNAPSHOT OF *Name der Quelldatenbank*  
+     AS SNAPSHOT OF *source_database_name*  
   
      [;]  
   
-     Dabei ist *Name der Quelldatenbank* die Quelldatenbank, *logischer Dateiname* der in SQL Server beim Verweis auf die Datei verwendete logische Name, *physischer Dateiname* der vom Betriebssystem beim Erstellen der Datei verwendete Pfad- und Dateiname und *Name der Datenbank-Momentaufnahme* der Name der Momentaufnahme, aus der die Datenbank wiederhergestellt werden soll. Eine vollständige Beschreibung dieser Syntax finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
-    >  Wenn Sie eine Datenbankmomentaufnahme erstellen, darf die CREATE DATABASE-Anweisung weder Protokolldateien noch Offlinedateien, Wiederherstellungsdateien oder außer Kraft gesetzte Dateien enthalten.  
+    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
   

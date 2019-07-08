@@ -26,12 +26,12 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad284fdb121900e3c6eff89f38213c09cf0331b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760694"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582317"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  Alle Werte des Typs **xs:date** oder **xs:dateTime** , die kleiner sind als der 1. Januar im Jahr 1, führen zu einem Laufzeitfehler, wenn der Index erneut erstellt wird oder wenn eine XQuery-Anweisung oder eine XML-DML-Anweisung für den XML-Datentyp ausgeführt wird, der diesen Wert enthält.  
   
 2.  Alle negativen Jahresangaben in **xs:date** - oder **xs:dateTime** -Facets oder in Standardwerten einer XML-Schemaauflistung werden automatisch durch den kleinsten für den Basistyp **xs:date** oder **xs:dateTime** zulässigen Wert ersetzt (beispielsweise 0001-01-01T00:00:00.0000000Z für **xs:dateTime**).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Beachten Sie, dass Sie den gesamten XML-Datentyp weiterhin mit einer einfachen SQL-SELECT-Anweisung abrufen können, selbst wenn er negative Jahresangaben enthält. Es wird empfohlen, dass Sie die negativen Jahresangaben durch eine Jahresangabe ersetzen, die im neuen unterstützten Bereich liegt, oder den Typ des Elements oder Attributs in **xs:string**ändern.  
   
 ## <a name="see-also"></a>Weitere Informationen  

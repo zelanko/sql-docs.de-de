@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668920"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585802"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Konfigurieren von IIS für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668920"
 4.  Legen Sie die entsprechenden Berechtigungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung fest.  
   
 5.  Führen Sie die Websynchronisierung im Diagnosemodus aus, um die Verbindung mit dem Computer mit IIS zu testen und um sicherzustellen, dass das SSL-Zertifikat ordnungsgemäß installiert ist.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>Konfigurieren von SSL (Secure Sockets Layer)  
  Geben Sie zum Konfigurieren von SSL ein Zertifikat an, das der Computer mit IIS verwenden soll. Die Websynchronisierung für die Mergereplikation unterstützt lediglich Serverzertifikate, nicht aber Clientzertifikate. Zum Konfigurieren von IIS für die Bereitstellung müssen Sie zunächst ein Zertifikat von einer Zertifizierungsstelle erwerben. Zertifizierungsstellen sind Einrichtungen, die für das Erstellen öffentlicher Verschlüsselungsschlüssel für Benutzer, Computer oder andere Zertifizierungsstellen zuständig sind und deren Echtheit sicherstellen. Weitere Informationen zu Zertifikaten finden Sie in der IIS-Dokumentation. Nach dem Installieren des Zertifikats müssen Sie dieses Zertifikat der für die Websynchronisierung verwendeten Website zuordnen.  
   

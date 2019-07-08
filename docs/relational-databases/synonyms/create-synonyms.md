@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbe7f38f6132e79f1938936c0914bae236ea5a03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d65e6941d6db291130b1b0e991c5626277ce38b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639247"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581619"
 ---
 # <a name="create-synonyms"></a>Erstellen von Synonymen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,27 +54,29 @@ ms.locfileid: "62639247"
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Synonyme**, und klicken Sie dann auf **Neues Synonym…** .  
   
 3.  Geben Sie im Dialogfeld **Synonym hinzufügen** die folgenden Informationen ein.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     **Synonym name**  
+     Type the new name you will use for this object.  
   
-     **Synonymname**  
-     Geben Sie den neuen Namen ein, den Sie für dieses Objekt verwenden werden.  
+     **Synonym schema**  
+     Type the schema of the new name you will use for this object.  
   
-     **Synonymschema**  
-     Geben Sie das Schema des neuen Namens ein, das Sie für dieses Objekt verwenden werden.  
+     **Server name**  
+     Type the server instance to connect to.  
   
-     **Servername**  
-     Geben Sie die Serverinstanz ein, zu der eine Verbindung hergestellt werden soll.  
-  
-     **Datenbankname**  
-     Geben Sie die Datenbank ein, die das Objekt enthält, bzw. wählen Sie sie aus.  
+     **Database name**  
+     Type or select the database containing the object.  
   
      **Schema**  
-     Geben Sie das Schema ein, das das Objekt besitzt, bzw. wählen Sie es aus.  
+     Type or select the schema that owns the object.  
   
-     **Objekttyp**  
-     Wählen Sie den Objekttyp aus.  
+     **Object type**  
+     Select the type of object.  
   
-     **Objektname**  
-     Geben Sie den Namen des Objekts ein, auf das das Synonym verweist.  
+     **Object name**  
+     Type the name of the object to which the synonym refers.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cf3921cae772b278b66a39fa8241895d2e582c3
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.openlocfilehash: 95e4e365ed1ec89050ceb8c3765e6a217f819cd3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506928"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585269"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Senden einer Test-E-Mail mit Datenbank-E-Mail  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um das Dialogfe
     In der „sent_status“-Spalte wird angegeben, ob die Test-E-Mail-Nachricht gesendet wurde.
 
 1. Wenn Fehler aufgetreten sind, führen Sie die folgende Anweisung aus, um die Fehlermeldung anzuzeigen:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

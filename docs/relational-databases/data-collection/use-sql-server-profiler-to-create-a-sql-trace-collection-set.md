@@ -12,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37f635820ea402c28cf35338d4575a6e8a2e7376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90c8629ce6e06b0d2b0c3e4be5f893038dd63a22
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012978"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582242"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,9 @@ ms.locfileid: "63012978"
 1.  Sie erstellen und exportieren eine [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgung.  
   
 2.  Sie schreiben einen neuen Sammlungssatz auf der Grundlage einer exportierten Ablaufverfolgung.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Das Szenario für die folgenden Verfahren umfasst das Sammeln von Daten zu einer gespeicherten Prozedur, deren Ausführung 80 Millisekunden oder länger dauert. Um diese Verfahren durchzuführen, sollten Sie folgende Aufgaben ausführen können:  
   
 -   Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum Erstellen und Konfigurieren einer Ablaufverfolgung  

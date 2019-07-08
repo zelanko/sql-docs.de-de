@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454592"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579894"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Erste Schritte mit Berechtigungen für die Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "66454592"
 ## <a name="security-principals"></a>Sicherheitsprinzipale  
  Sicherheitsprinzipal ist der offizielle Name der Identitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nutzen und denen Berechtigungen für die Ausführung von Aktionen zugewiesen werden können. Dies sind in der Regel Personen oder Personengruppen, doch es kann sich auch um andere Entitäten handeln, die vorgeben, Personen zu sein. Die Sicherheitsprinzipale können mithilfe der aufgelisteten [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]erstellt und verwaltet werden.  
   
- Anmeldungen  
+##### <a name="logins"></a>Anmeldungen  
  Anmeldungen sind einzelne Benutzerkonten für die Anmeldung beim [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] unterstützen Anmeldungen auf Grundlage der Windows- und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung. Informationen zu den beiden Anmeldungstypen finden Sie unter [Auswählen eines Authentifizierungsmodus](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Feste Serverrollen  
+##### <a name="fixed-server-roles"></a>Feste Serverrollen  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sind feste Serverrollen eine Gruppe vorkonfigurierter Rollen, die das Erteilen von Berechtigungen für eine Gruppe von Servern erleichtern. Anmeldungen können Rollen mit der `ALTER SERVER ROLE ... ADD MEMBER`-Anweisung hinzugefügt werden. Weitere Informationen finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] unterstützt nicht die festen Serverrollen, bietet jedoch zwei Rollen in der „master“-Datenbank (`dbmanager` und `loginmanager`), die wie Serverrollen fungieren.  
   
- Benutzerdefinierte Serverrollen  
+##### <a name="user-defined-server-roles"></a>Benutzerdefinierte Serverrollen  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]können Sie eigene Serverrollen erstellen und ihnen Berechtigungen auf Serverebene zuweisen. Anmeldungen können Serverrollen mit der `ALTER SERVER ROLE ... ADD MEMBER`-Anweisung hinzugefügt werden. Weitere Informationen finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] unterstützt die benutzerdefinierten Serverrollen nicht.  
   
- Datenbankbenutzer  
+##### <a name="database-users"></a>Datenbankbenutzer  
  Anmeldungen wird Zugriff auf eine Datenbank gewährt, indem in einer Datenbank ein Datenbankbenutzer erstellt und dieser Datenbankbenutzer einer Anmeldung zugeordnet wird. Der Datenbank-Benutzername ist in der Regel identisch mit dem Anmeldenamen, obwohl dies nicht so sein muss. Jeder Datenbankbenutzer ist einer einzelnen Anmeldung zugeordnet. Eine Anmeldung kann nur einem Benutzer in einer Datenbank zugeordnet werden, kann aber als Datenbankbenutzer in mehreren unterschiedlichen Datenbanken zugeordnet werden.  
   
  Es können auch Datenbankbenutzer erstellt werden, die keine entsprechende Anmeldung haben. Diese werden als *eigenständige Datenbankbenutzer*bezeichnet. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] empfiehlt die Verwendung eigenständiger Datenbankbenutzer, da dadurch das Verschieben Ihrer Datenbank auf einen anderen Server erleichtert wird. Wie eine Anmeldung kann ein eigenständiger Datenbankbenutzer entweder die Windows- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwenden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Es gibt 12 Typen von Benutzern mit geringfügigen Unterschieden dahingehend, wie sie sich authentifizieren und wen sie darstellen. Eine Liste von Benutzern finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
- Feste Datenbankrollen  
+##### <a name="fixed-database-roles"></a>Feste Datenbankrollen  
  Feste Datenbankrollen sind eine Gruppe vorkonfigurierter Rollen, die das Erteilen von Berechtigungen für eine Gruppe von Datenbanken erleichtern. Datenbankbenutzer und benutzerdefinierte Datenbankrollen können festen Datenbankrollen mithilfe der `ALTER ROLE ... ADD MEMBER`-Anweisung hinzugefügt werden. Weitere Informationen finden Sie unter [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Benutzerdefinierte Datenbankrollen  
+##### <a name="user-defined-database-roles"></a>Benutzerdefinierte Datenbankrollen  
  Benutzer mit der Berechtigung `CREATE ROLE` können neue benutzerdefinierte Datenbankrollen erstellen, um Gruppen von Benutzern mit gemeinsamen Berechtigungen abzubilden. In der Regel werden Berechtigungen der gesamten Rolle erteilt oder verweigert, was die Verwaltung und Überwachung von Berechtigungen vereinfacht. Mithilfe der `ALTER ROLE ... ADD MEMBER`-Anweisung können Datenbankbenutzer den Datenbankrollen hinzugefügt werden. Weitere Informationen finden Sie unter [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Andere Prinzipale  
+##### <a name="other-principals"></a>Andere Prinzipale  
  Weitere Sicherheitsprinzipale, die hier nicht behandelt werden, sind u. a. Anwendungsrollen sowie Anmeldungen und Benutzer auf Grundlage von Zertifikaten oder asymmetrischen Schlüsseln.  
   
  Eine Grafik mit den Beziehungen zwischen Windows-Benutzern, Windows-Gruppen, Anmeldungen und Datenbankbenutzern finden Sie unter [Erstellen eines Datenbankbenutzers](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
@@ -66,7 +66,9 @@ ms.locfileid: "66454592"
 2.  Erstellen Sie Windows-Gruppen, die die Arbeitseinheiten und Arbeitsfunktionen darstellen.  
   
 3.  Fügen Sie Windows-Benutzer den Windows-Gruppen hinzu.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Wenn die Person eine Verbindung mit mehreren Datenbanken herstellen möchte  
   
 1.  Erstellen Sie für die Windows-Gruppen eine Anmeldung. (Wenn Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, überspringen Sie die Schritte für Active Directory, und erstellen Sie hier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierungsanmeldungen.)  

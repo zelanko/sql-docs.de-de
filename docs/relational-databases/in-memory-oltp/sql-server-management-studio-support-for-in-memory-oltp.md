@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3053f1415332ee26017126322ab5cd029f668e32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6e8472678a0d25c134f99317a2588e329c468e8d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665119"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579426"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,8 +36,10 @@ ms.locfileid: "51665119"
 3.  Klicken Sie zum Hinzufügen einer neuen speicheroptimierten Datendateigruppe auf die Seite **Dateigruppen** . Klicken Sie unter **MEMORY OPTIMIZED DATA**auf **Dateigruppe hinzufügen** , und geben Sie dann den Namen der speicheroptimierten Datendateigruppe ein.  Die Spalte mit der Bezeichnung **FILESTREAM-Dateien** stellt die Anzahl der Container in der Dateigruppe dar. Container werden auf der Seite **Allgemein** hinzugefügt.  
   
 4.  Um der Dateigruppe eine Datei (Container) hinzuzufügen, klicken Sie auf die Seite **Allgemein** . Klicken Sie unter **Datenbankdateien**auf **Hinzufügen**. Wählen Sie als **Dateityp** **FILESTREAM-Daten**aus, geben Sie den logischen Namen des Containers an, wählen Sie die speicheroptimierte Dateigruppe aus, und stellen Sie sicher, dass **Automatische Vergrößerung/Maximale Größe** auf **Unbegrenzt**festgelegt ist.  
-  
-     Weitere Informationen zum Erstellen einer neuen Datenbank mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]finden Sie unter [Erstellen einer Datenbank](../../relational-databases/databases/create-a-database.md).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>So erstellen Sie eine speicheroptimierte Tabelle  
   
@@ -158,7 +160,7 @@ ms.locfileid: "51665119"
   
  Weitere Informationen zu nicht unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen finden Sie unter [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Unterstützung für In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

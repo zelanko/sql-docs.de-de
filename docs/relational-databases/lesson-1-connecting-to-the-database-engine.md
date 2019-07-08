@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7f95a4ebc0227a4bb16f256073a3408ae15a1c2
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801684"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517771"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,6 +60,8 @@ Die Beispieldatenbanken und Beispiele werden nicht standardmäßig mit [!INCLUDE
 3.  Wenn Registrierte Server nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Registrierte Server**.
 4.  Wählen Sie in der Symbolleiste „Registrierte Server“ die Option **Datenbank-Engine** aus, erweitern Sie **Datenbank-Engine**, klicken Sie mit der rechten Maustaste auf **Lokale Servergruppen**, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Lokale Server registrieren**. Es werden alle auf dem Computer installierten Instanzen von [!INCLUDE[ssDE](../includes/ssde-md.md)] angezeigt. Die Standardinstanz hat keinen Namen und wird mit dem Computernamen angezeigt. Eine benannte Instanz wird als der Computername, gefolgt von einem umgekehrten Schrägstrich (\\) und dem Namen der Instanz, angezeigt. Für [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] hat die Instanz den Namen *<Computername>* \sqlexpress, es sei denn, der Name wurde während des Setups geändert.  
 
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>So überprüfen Sie, ob die Datenbank-Engine ausgeführt wird
 
 1.  Wenn in Registrierte Server neben dem Namen Ihrer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein grüner Punkt mit einem weißen Pfeil angezeigt wird, bedeutet dies, dass [!INCLUDE[ssDE](../includes/ssde-md.md)] ausgeführt wird und keine weiteren Aktionen erforderlich sind.  
@@ -77,7 +79,7 @@ Mindestens ein Administratorkonto wurde ausgewählt, als [!INCLUDE[ssNoVersion_m
 
 ![Objekt-Explorer](../relational-databases/media/object-explorer.png)
 
-3.  Geben Sie im Feld **Servername** den Namen der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername der _\<Computername\>_**\\**_\<Instanzname\>_, wie z.B. **ACCTG_SRVR\SQLEXPRESS**. Der folgende Screenshot zeigt das Herstellen einer Verbindung mit der (unbenannten) Standardinstanz von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] auf einem Computer namens „PracticeComputer“. Der Benutzer, der bei Windows angemeldet ist, ist Mary aus der Domain „Contoso“. Bei Verwendung der Windows-Authentifizierung können Sie den Benutzernamen nicht ändern. 
+3.  Geben Sie im Feld **Servername** den Namen der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername der _\<Computername\>_ **\\** _\<Instanzname\>_ , wie z.B. **ACCTG_SRVR\SQLEXPRESS**. Der folgende Screenshot zeigt das Herstellen einer Verbindung mit der (unbenannten) Standardinstanz von [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] auf einem Computer namens „PracticeComputer“. Der Benutzer, der bei Windows angemeldet ist, ist Mary aus der Domain „Contoso“. Bei Verwendung der Windows-Authentifizierung können Sie den Benutzernamen nicht ändern. 
 
 ![Verbindung-mit-Server-herstellen](../relational-databases/media/connect-to-server.png)
 
@@ -110,5 +112,5 @@ Nachdem Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
 > Diese grundlegenden Informationen sollen Ihnen den Einstieg erleichtern. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt eine umfassende Sicherheitsumgebung bereit, da das Thema Sicherheit offensichtlich einen wichtigen Aspekt des Datenbankbetriebs darstellt.  
 
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lektion 2: Herstellen einer Verbindung von einem anderen Computer](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[Lektion 2: Herstellen einer Verbindung von einem anderen Computer](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

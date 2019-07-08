@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256025"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581422"
 ---
 # <a name="view-user-defined-functions"></a>Anzeigen benutzerdefinierter Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "54256025"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Abrufen von Informationen zu einer Funktion mit:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54256025"
 ####  <a name="Permissions"></a> Berechtigungen  
  Das Anzeigen aller Abhängigkeiten einer Funktion mithilfe von **sys.sql_expression_dependencies** erfordert die VIEW DEFINITION-Berechtigung für die Datenbank und die SELECT-Berechtigung für **sys.sql_expression_dependencies** für die Datenbank. Systemobjektdefinitionen, wie die in OBJECT_DEFINITION zurückgegebenen Definitionen, sind öffentlich sichtbar.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>So zeigen Sie die Eigenschaften einer benutzerdefinierten Funktion an  
   
@@ -70,47 +70,49 @@ ms.locfileid: "54256025"
     -   Aggregatfunktion  
   
 4.  Klicken Sie mit der rechten Maustaste auf die Funktion, deren Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
-     Die folgenden Eigenschaften werden im Dialogfeld **Funktionseigenschaften >** _Funktionsname_ angezeigt.  
-  
-     **Datenbank**  
-     Name der Datenbank, die diese Funktion enthält.  
+     **Database**  
+     The name of the database containing this function.  
   
      **Server**  
-     Name der aktuellen Serverinstanz.  
+     The name of the current server instance.  
   
-     **Benutzer**  
-     Name des Benutzers dieser Verbindung.  
+     **User**  
+     The name of the user of this connection.  
   
-     **Erstellt am**  
-     Zeigt das Datum an, an dem die Funktion erstellt wurde.  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **Ausführen als**  
-     Ausführungskontext für die Funktion.  
+     **Execute As**  
+     Execution context for the function.  
   
      **Name**  
-     Name der aktuellen Funktion.  
+     The name of the current function.  
   
      **Schema**  
-     Zeigt das Schema an, zu dem die Funktion gehört.  
+     Displays the schema that owns the function.  
   
-     **Systemobjekt**  
-     Gibt an, ob es sich bei der Funktion um ein Systemobjekt handelt. Die Werte sind True und False.  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
-     **ANSI NULLS**  
-     Gibt an, ob das Objekt mit der Option ANSI NULLS erstellt wurde.  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **Verschlüsselt**  
-     Gibt an, ob die Funktion verschlüsselt ist. Die Werte sind True und False.  
+     **Encrypted**  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **Funktionstyp**  
-     Typ der benutzerdefinierten Funktion.  
+     **Function Type**  
+     The type of user defined function.  
   
-     **Bezeichner in Anführungszeichen**  
-     Gibt an, ob das Objekt mit der Option Bezeichner in Anführungszeichen erstellt wurde.  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **Schema-gebunden**  
-     Gibt an, ob die Funktion Schema-gebunden ist. Die Werte sind True und False. Informationen zu schemagebundenen Funktionen finden Sie im Abschnitt SCHEMABINDING von [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

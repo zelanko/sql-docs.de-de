@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfe7ea1c88a6d7118be63314824a479bd108f070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 510da94cb6eb83a208c6135441b5705fdacaa760
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094356"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586343"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,9 @@ ms.locfileid: "65094356"
     2.  Wenn Sie keinen Wert für **FILETABLE_COLLATE_FILENAME**oder **database_default**angeben, erbt die Spalte die Sortierung der aktuellen Datenbank. Wenn bei der aktuellen Datenbanksortierung die Groß-/Kleinschreibung beachtet wird, wird ein Fehler ausgelöst, und der **CREATE TABLE** -Vorgang schlägt fehl.  
   
 3.  Sie können auch die Namen angeben, die für die 3 automatisch erstellten PRIMARY KEY- und UNIQUE-Einschränkungen verwendet werden sollen. Wenn Sie keine Namen angeben, dann werden diese vom System generiert, wie weiter unten in diesem Thema beschrieben.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  
