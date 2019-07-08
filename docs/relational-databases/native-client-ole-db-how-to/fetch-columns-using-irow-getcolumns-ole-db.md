@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14d152adb1d2b24b70e64a0924935416cdcf09af
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00edc71fdec53ac7606f11d913a2c1089ecf0216
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675109"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586221"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51675109"
 3.  Führen Sie IRow::GetColumns () aus, um eine oder mehrere Spalten in der resultierenden Zeile abzurufen. Wenn Sie die Spaltengröße vor dem Abrufen der Daten feststellen möchten, setzen Sie pData in DBCOLUMNACCESS auf NULL. Der Aufruf von IRow::GetColumns() gibt nur die Spaltenbreite zurück. Ein erneuter Aufruf von IRow::GetColumns() ruft die Daten ab.  
   
 4.  Führen Sie IRow::GetColumns() aus, bis auf alle benötigten Spalten zugegriffen wurde. Auf die Spalten muss nacheinander zugegriffen werden.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie mithilfe der IRow-Schnittstelle den direkten Zugriff auf Spalten einer einzelnen Zeile im Resultset zulassen. Im Beispiel wird Folgendes gezeigt:  
   
@@ -53,7 +55,7 @@ ms.locfileid: "51675109"
   
 -   Wie auf eine Spalte zweimal zugegriffen wird. Das erste Mal wird die Spaltenbreite abgerufen, und später erfolgt der Zugriff auf die eigentlichen Daten.  
   
- Wenn in der DBCOLUMNACCESS-Struktur pData NULL ist und cbMaxLen 0 ist, wird beim Aufruf von IRow->GetColumns nur die Spaltenlänge zurückgegeben. In diesem Fall kann IRow->GetColumns wieder in der gleichen Spalte aufgerufen werden, um die eigentlichen Daten abzurufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
+ Wenn in der DBCOLUMNACCESS-Struktur pData NULL und cbMaxLen 0 ist, wird beim Aufruf von IRow->GetColumns nur die tatsächliche Spaltenlänge zurückgegeben. In diesem Fall kann IRow->GetColumns wieder für die gleiche Spalte aufgerufen werden, um die tatsächlichen Daten abzurufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   

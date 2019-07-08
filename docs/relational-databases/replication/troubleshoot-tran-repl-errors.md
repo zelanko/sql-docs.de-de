@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7547ce03478e810eac4725b8b543afd9862f9ca2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057462"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581350"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen 
 Die Problembehandlung von Replikationsfehlern kann ohne grundlegende Kenntnisse der Transaktionsreplikation frustrierend sein. Der erste Schritt beim Erstellen einer Veröffentlichung besteht darin, den Momentaufnahmen-Agent eine Momentaufnahme erstellen zu lassen und diese im Ordner für Momentaufnahmen zu speichern. Anschließend wendet der Verteilungs-Agent die Momentaufnahme auf den Abonnenten an. 
@@ -25,6 +25,8 @@ Bei diesem Vorgang wird die Veröffentlichung erstellt und in den Zustand *Wird 
 1. Transaktionen treten bei Objekten auf, die repliziert werden. Diese werden im Transaktionsprotokoll als „Für Replikation“ gekennzeichnet. 
 2. Der Protokolllese-Agent durchsucht das Transaktionsprotokoll nach Transaktionen, die als „Für Replikation“ gekennzeichnet sind. Anschließend werden diese Transaktionen in der Verteilungsdatenbank gespeichert. 
 3. Der Verteilungs-Agent durchsucht die Verteilungsdatenbank mithilfe des Leserthreads. Anschließend stellt dieser Agent mithilfe des Schreibthreads eine Verbindung zum Abonnenten her, um die Änderung auf diesen anzuwenden.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 In jedem Schritt dieses Vorgangs können Fehler auftreten. Diese zu finden kann der schwierigste Aspekt bei der Behandlung von Synchronisierungsproblemen sein. Dieser Vorgang wird durch die Verwendung des Replikationsmonitors jedoch vereinfacht. 
 
