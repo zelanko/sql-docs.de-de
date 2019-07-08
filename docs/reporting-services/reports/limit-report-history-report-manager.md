@@ -1,6 +1,6 @@
 ---
-title: Einschränken des Berichtsverlaufs (Berichts-Manager) | Microsoft-Dokumentation
-ms.date: 03/01/2017
+title: Einschränken des Berichtsverlaufs - Reporting Services | Microsoft-Dokumentation
+ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -14,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f02fcb7da55dd1f50667dcb6ffbb7925710bbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576288"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492591"
 ---
-# <a name="limit-report-history-report-manager"></a>Einschränken des Berichtsverlaufs (Berichts-Manager)
+# <a name="limit-report-history---reporting-services"></a>Einschränken des Berichtsverlaufs – Reporting Services
   Der Berichtsverlauf stellt eine Auflistung von Berichtsmomentaufnahmen dar, die Sie im Laufe der Zeit erstellen. Sie können den Berichtsverlauf nach Bedarf erstellen oder aber anhand eines Zeitplans festlegen, wie oft eine Momentaufnahme erstellt und dem Berichtsverlauf hinzugefügt wird.  
   
  Der Berichtsverlauf wird in der Berichtsserverdatenbank gespeichert. Wenn Berichtsmomentaufnahmen eine große Datenmenge enthalten, können Sie den Berichtsverlauf einschränken, um die Auswirkungen der Beibehaltung der Momentaufnahmen auf die Datenbankgröße zu minimieren.  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-### <a name="to-configure-report-history-for-a-report-server"></a>So konfigurieren Sie den Berichtsverlauf für einen Berichtsserver  
+## <a name="to-configure-report-history-for-a-report-server"></a>So konfigurieren Sie den Berichtsverlauf für einen Berichtsserver  
   
 1.  Klicken Sie im Berichts-Manager auf der globalen Symbolleiste auf **Siteeinstellungen** .  
   
@@ -34,7 +36,7 @@ ms.locfileid: "65576288"
   
 3.  Klicken Sie auf **Anwenden**.  
   
-### <a name="to-configure-report-history-for-a-specific-report"></a>So konfigurieren Sie den Berichtsverlauf für einen bestimmten Bericht  
+## <a name="to-configure-report-history-for-a-specific-report"></a>So konfigurieren Sie den Berichtsverlauf für einen bestimmten Bericht  
   
 1.  Navigieren Sie im Berichts-Manager zu dem Bericht, dessen Verlauf Sie konfigurieren möchten, und öffnen Sie ihn, indem Sie auf ihn klicken.  
   
@@ -47,5 +49,31 @@ ms.locfileid: "65576288"
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Berichts-Manager (einheitlicher SSRS-Modus)](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+## <a name="to-configure-report-history-for-a-report-server"></a>So konfigurieren Sie den Berichtsverlauf für einen Berichtsserver  
   
+1.  Klicken Sie im Webportal auf der globalen Symbolleiste auf **Siteeinstellungen**.  
+  
+2.  Wählen Sie **Beliebig viele Momentaufnahmen im Berichtsverlauf speichern** aus, wenn Sie alle Berichtsverläufe unbegrenzt lange aufbewahren möchten. Wählen Sie andernfalls **Max. Anzahl von Kopien des Berichtsverlaufs** aus, um die maximale Anzahl von Momentaufnahmen anzugeben, die für einen bestimmten Bericht aufbewahrt werden können.  
+  
+3.  Klicken Sie auf **Anwenden**.  
+  
+## <a name="to-configure-report-history-for-a-specific-report"></a>So konfigurieren Sie den Berichtsverlauf für einen bestimmten Bericht  
+  
+1.  Navigieren Sie im Webportal zu dem Bericht, dessen Verlauf Sie konfigurieren möchten, und öffnen Sie ihn, indem Sie auf diesen klicken.  
+  
+2.  Klicken Sie auf die Registerkarte **Eigenschaften** .  
+  
+3.  Klicken Sie auf die Registerkarte **Verlauf** .  
+  
+4.  Wählen Sie die Optionen für Ihren Bericht aus, und klicken Sie auf **Anwenden**. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Snapshot Options Properties Page (Momentaufnahmeoptionen (Eigenschaftenseite))](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).  
+  
+## <a name="see-also"></a>Weitere Informationen  
+ [Add a Snapshot to Report History (Hinzufügen einer Momentaufnahme zum Berichtsverlauf)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+
+::: moniker-end
   

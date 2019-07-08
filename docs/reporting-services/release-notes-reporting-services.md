@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037853"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533833"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Versionshinweise für SQL Server Reporting Services (SSRS) 2017 und höher
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>14.0.600.1274, 1.7.2019
+
+| Problem wurde behoben | Details |
+| :---------- | :------ |
+| Sicherheitsupdates | &nbsp; |
+| Keine Wochentage auswählen beim Erstellen eines freigegebenen Zeitplans für wöchentlichen | &nbsp; |
+| Bericht zeigt keine Wagenrückläufe ordnungsgemäß im Word-Format an | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 wird nicht mehr funktioniert mit aktuellen SSRS 2017 aktualisiert. | &nbsp; |
+| Fehler beim Aufrufen von autorisierungserweiterungen für freigegebenes Dataset | &nbsp; |
+| Logik, die geändert werden, auf die gespeicherte Prozedur GetAllProperties in SSRS 2017 und PBIRS, wodurch die Webdienst-Endpunkt kann nicht abgerufen werden keine Daten für verknüpften Bericht ReportingService2010.GetProperties-Methode | &nbsp; |
+| Einfaches Raster Zeilenheader im mobilen Bericht nicht mehr angezeigt wird, wenn ein Element innerhalb des Rasters geklickt wird | &nbsp; |
+| Keine Date-Felds im Parameter für datengesteuertes Abonnement verwenden | &nbsp; |
+| Geschachtelte Tablix Zeigt kleine oder Schriftart teilweise in SSRS 2016 und höher | &nbsp; |
+| Abonnements mit DateTime-Parameter Fehler nach Benutzer mit verschiedenen Gebietsschemas Änderungen das Abonnement | &nbsp; |
+| Erstellen ein datengesteuertes Abonnement mit Null-Übermittlungserweiterung kann nicht mit "verfügt über eine Bereitstellung Fehler" | &nbsp; |
+| URL-Codierung ist falsch, beim Festlegen des Werts im Excel\Word-format | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 12. Februar 2019
 
