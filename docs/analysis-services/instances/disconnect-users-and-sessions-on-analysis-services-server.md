@@ -1,6 +1,6 @@
 ---
 title: Trennen von Benutzern und Sitzungen auf Analysis Services-Server | Microsoft-Dokumentation
-ms.date: 05/02/2018
+ms.date: 07/05/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 696c6548dadda2412566acf7fae1e2cff2b28095
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144771"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624399"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Trennen von Benutzern und Sitzungen auf Analysis Services-Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Ein Administrator von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann die Benutzeraktivität als Teil der Arbeitsauslastungsverwaltung beenden. Hierzu werden Sitzungen und Verbindungen abgebrochen. Sitzungen können automatisch (implizit) erstellt werden, wenn eine Abfrage ausgeführt wird, oder sie können (explizit) durch den Administrator erstellt und dabei benannt werden. Bei Verbindungen handelt es sich um flexible Datenleitungen, über die Abfragen ausgeführt werden können. Sowohl Sitzungen als auch Verbindungen können beendet werden, während sie aktiv sind. Ein Administrator möchte z. B. die Verarbeitung einer Sitzung beenden, wenn diese zu lange dauert, oder wenn Zweifel bestehen, dass der ausgeführte Befehl richtig geschrieben wurde.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+  Als Administrator sollten Sie auf die Benutzeraktivität als Teil der arbeitsauslastungsverwaltung beenden. Hierzu werden Sitzungen und Verbindungen abgebrochen. Sitzungen können automatisch (implizit) erstellt werden, wenn eine Abfrage ausgeführt wird, oder sie können (explizit) durch den Administrator erstellt und dabei benannt werden. Bei Verbindungen handelt es sich um flexible Datenleitungen, über die Abfragen ausgeführt werden können. Sowohl Sitzungen als auch Verbindungen können beendet werden, während sie aktiv sind. Beispielsweise empfiehlt es sich zum Beenden einer Sitzung verarbeitet werden, wenn es sich bei die Verarbeitung zu lange dauert oder wenn Zweifel bestehen, gibt an, ob der ausgeführte Befehl richtig geschrieben wurde.  
   
 ## <a name="ending-sessions-and-connections"></a>Beenden von Sitzungen und Verbindungen  
- Sitzungen und Verbindungen können mithilfe von dynamischen Verwaltungssichten (DMVs) und XMLA verwaltet werden:  
+ Verwenden Sie zum Verwalten von Sitzungen und Verbindungen, Dynamic Management Views (DMVs) und XMLA ein:  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Analysis Services-Instanz her.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "50144771"
   
      `Select * from $System.Discover_Sessions`  
   
-     `Select * from $System.Discover_Connections`  
+     `Select * from $System.Discover_Connections`  (Diese Abfrage gilt nicht für Azure Analysis Services)
   
      `Select * from $System.Discover_Commands`  
   
@@ -56,16 +56,10 @@ ms.locfileid: "50144771"
     ```  
   
 2.  Drücken Sie F5, um den cancel-Befehl auszuführen.  
+
+SPID/SessionID Abbrechen, wird aktive Befehle, die unter der Sitzung, die für die SPID/SessionID abgebrochen. Abbrechen einer Verbindungs identifiziert die Sitzung, die der Verbindung zugeordnet, und aktive Befehle, die unter dieser Sitzung abbrechen. In seltenen Fällen wird eine Verbindung nicht geschlossen, wenn die Engine alle Sitzungen und SPIDs, die der Verbindung zugeordnete nachverfolgt werden kann; beispielsweise, wenn mehrere Sitzungen in einem HTTP-Szenario geöffnet sind.   
   
- Beim Beenden einer Verbindung werden alle Sitzungen und SPIDs abgebrochen und somit die Hostsitzung geschlossen.  
-  
- Beim Beenden einer Sitzung werden alle Befehle (SPIDs), die als Teil dieser Sitzung ausgeführt werden, beendet.  
-  
- Beim Beenden einer SPID wird ein bestimmter Befehl abgebrochen.  
-  
- In seltenen Fällen wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung nicht geschlossen, wenn nicht alle mit der Verbindung verknüpften Sitzungen und SPIDs nachverfolgt werden können, z.B. wenn mehrere Sitzungen in einem HTTP-Szenario geöffnet sind.  
-  
- Weitere Informationen zu XMLA, auf die in diesem Thema verwiesen wird, finden Sie unter [Execute-Methode &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) und [Cancel-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
+Weitere Informationen zu XMLA, die in diesem Thema verwiesen wird, finden Sie unter [Execute-Methode &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) und [Cancel-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verwalten von Verbindungen und Sitzungen &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064685"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624371"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation-Cmdlet
   **Invoke_PolicyEvaluation** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Cmdlet, das meldet, ob ein Zielsatz von SQL Server-Objekten den Bedingungen entspricht, die in ein oder mehreren richtlinienbasierten Verwaltungsrichtlinien angegeben sind.  
@@ -88,7 +88,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** nimmt ein Objekt oder ein Array von Objekten entgegen, das die SQL Server-Objekte im Zielsatz darstellt. Beispielsweise könnten Sie ein Array von <xref:Microsoft.SqlServer.Management.Smo.Database> -Klassenobjekten erstellen, um es an **-TargetObjects**genutzt.  
   
--   **-TargetExpressions** nimmt eine Zeichenfolge mit einem Abfrageausdruck entgegen, der die Objekte im Zielsatz angibt. Der Abfrageausdruck liegt in Form von Knoten vor, die durch das Zeichen '/' getrennt sind. Jeder Knoten hat das Format ObjectType [Filter]. ObjectType ist eines der Objekte in einer SMO-Objekthierarchie (SQL Server Management Object). "Filter" ist ein Ausdruck, der bei diesem Knoten nach Objekten filtert. Weitere Informationen finden Sie unter [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** nimmt eine Zeichenfolge mit einem Abfrageausdruck entgegen, der die Objekte im Zielsatz angibt. Der Abfrageausdruck liegt in Form von Knoten vor, die durch das Zeichen '/' getrennt sind. Jeder Knoten hat das Format ObjectType [Filter]. ObjectType ist eines der Objekte in einer SQL Server Management Object (SMO)-Objekthierarchie. "Filter" ist ein Ausdruck, der bei diesem Knoten nach Objekten filtert. Weitere Informationen finden Sie unter [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Geben Sie entweder **-TargetObjects** oder **-TargetExpression**, aber nicht beides an.  
   

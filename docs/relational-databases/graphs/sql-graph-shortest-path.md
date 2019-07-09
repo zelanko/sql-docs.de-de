@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463545"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652847"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ FÜR Pfad mit alle Knoten- oder edgetabelle Tabellennamen in der FROM-Klausel ve
 ## <a name="arbitrary-length-pattern"></a>Beliebiger Länge-Muster
 Dieses Muster enthält, die Knoten und Kanten, die wiederholt durchlaufen werden müssen, bis Sie der gewünschte Knoten erreicht wird, oder bis die maximale Anzahl von Iterationen gemäß dem Muster erfüllt ist. Jedes Mal, wenn die Abfrage ausgeführt wird, wird das Ergebnis der Ausführung dieses Muster eine geordnete Auflistung von Knoten und Kanten, die entlang des Pfads vom Startknoten zum Endknoten durchlaufen werden. Dies ist die Syntax-Muster eines regulären Ausdrucks-Stil und die folgenden zwei Muster Quantifizierer werden unterstützt:
 
-* **‘+’** : Wiederholen Sie die Muster 1 oder mehr Vorkommen. Beenden Sie als ein kürzester Pfad gefunden wird.
-* **{1,n}** : Wiederholen Sie das Muster "1", "n" Zeiten. Beenden Sie als einen kürzesten gefunden wird.
+* **‘+’** : Das Muster 1 oder mehrmals wiederholen. Beenden, sobald ein kürzester Pfad gefunden wird.
+* **{1,n}** : Das Muster 1 bis „n“ Male wiederholen. Beenden Sie als einen kürzesten gefunden wird.
 
 ## <a name="lastnode"></a>LAST_NODE
 LAST_NODE()-Funktion ermöglicht das Verketten von zwei beliebiger Länge Traversal-Muster. Es kann in Szenarien verwendet werden, in denen:    
@@ -94,7 +94,7 @@ Während der letzten Knoten der letzte n-ten Knoten im Diagramm Ausgabepfad für
 Diese Funktion gibt die Summe der Attributwerte für die angegebenen Knoten/Microsoft Edge oder einen Ausdruck, die angezeigt wurden, in die entsprechende Pfad.
 
 ### <a name="count"></a>COUNT
-Diese Funktion gibt die Anzahl der Werte ungleich Null des gewünschten Knoten/Edge-Attributs im Pfad. Die COUNT-Funktion unterstützt die ' *'-Operator mit Tabellenalias Knoten- oder edgetabelle. Ohne Knoten- oder edgetabelle Tabellenalias, die Verwendung von * ist mehrdeutig und führt zu einem Fehler.
+Diese Funktion gibt die Anzahl der Werte ungleich Null des gewünschten Knoten/Edge-Attributs im Pfad. Die COUNT-Funktion unterstützt die '\*'-Operator mit Tabellenalias Knoten- oder edgetabelle. Ohne Knoten- oder edgetabelle Tabellenalias, die Verwendung von \* ist mehrdeutig und führt zu einem Fehler.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
