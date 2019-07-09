@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419167"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580713"
 ---
 # <a name="always-encrypted-database-engine"></a>Immer verschlüsselt (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +83,8 @@ Führen Sie folgende Schritte durch, um die Spalte erfolgreich zu aktualisieren:
 
 1. Wählen Sie über die Anweisung SELECT die Datei aus der SSN-Spalte aus, und speichern Sie diese in einem Resultset in der Anwendung. Dadurch kann die Anwendung (*Clienttreiber*) die Spalte entschlüsseln.
 2. Fügen Sie über INSERT die Daten aus dem Resultset in SQL Server ein. 
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > In diesem Szenario werden die Daten entschlüsselt, sobald sie zurück an den Server gesendet werden, da die Zielspalte einen regulären Varchar-Typ darstellt, der verschlüsselte Daten nicht akzeptiert. 

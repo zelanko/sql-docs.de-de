@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351721"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500160"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -566,10 +566,7 @@ Sie können Katalogsichten, Systemfunktionen und gespeicherte Systemprozeduren v
 
 ## <a name="permissions"></a>Berechtigungen
 
-Datenbanken können nur durch den Prinzipalanmeldenamen auf Serverebene (vom Bereitstellungsprozess erstellt) oder Mitglieder der Datenbankrolle `dbmanager` geändert werden.
-
-> [!IMPORTANT]
-> Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle `dbmanager` ist.
+Zum Ändern der Datenbank muss ein Anmeldename entweder der Prinzipalanmeldename auf Serverebene sein (vom Bereitstellungsprozess erstellt), ein Mitglied der `dbmanager`-Datenbankrolle in der Masterdatenbank, ein Mitglied der `db_owner`-Datenbankrolle in der aktuellen Datenbank oder `dbo` der Datenbank.
 
 ## <a name="examples"></a>Beispiele
 

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343915"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583221"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
 
@@ -57,7 +57,7 @@ ms.locfileid: "67343915"
     
 -   Columnstore-Indizes lesen komprimierte Daten vom Datenträger, was bedeutet, dass weniger Datenbytes in den Arbeitsspeicher gelesen werden müssen.    
     
--   Columnstore-Indizes speichern Daten in komprimierter Form im Arbeitsspeicher, wodurch E/A-Vorgänge reduziert werden, da die Häufigkeit der Lesevorgänge der gleichen Daten in den Arbeitsspeicher reduziert wird. Beispielsweise können Columnstore-Indizes bei zehnfacher Komprimierung zehnmal mehr Daten im Arbeitsspeicher aufbewahren als bei der Speicherung der Daten in unkomprimierter Form. Wenn sich mehr Daten im Arbeitsspeicher befinden, ist es wahrscheinlicher, dass der Columnstore-Index die benötigten Daten im Arbeitsspeicher findet, wobei zusätzliche Lesevorgänge vom Datenträger anfallen.    
+-   Columnstore-Indizes speichern Daten in komprimierter Form im Arbeitsspeicher, wodurch E/A-Vorgänge reduziert werden, da die Häufigkeit der Lesevorgänge der gleichen Daten in den Arbeitsspeicher reduziert wird. Beispielsweise können Columnstore-Indizes bei zehnfacher Komprimierung zehnmal mehr Daten im Arbeitsspeicher aufbewahren als bei der Speicherung der Daten in unkomprimierter Form. Wenn sich mehr Daten im Arbeitsspeicher befinden, ist es wahrscheinlicher, dass der Columnstore-Index die benötigten Daten im Arbeitsspeicher findet, ohne dass zusätzliche Lesevorgänge vom Datenträger anfallen.    
     
 -   Columnstore-Indizes komprimieren Daten nach Spalten anstatt nach Zeilen, wodurch hohe Komprimierungsraten erzielt und die Größe der auf dem Datenträger gespeicherten Daten reduziert werden. Jede Spalte wird separat komprimiert und gespeichert.  Daten in einer Spalte haben immer den gleichen Datentyp und tendenziell auch ähnliche Werte. Die Datenkomprimierungstechniken sind sehr gut, um höhere Komprimierungsraten zu erreichen, wenn die Werte ähnlich sind.    
     
@@ -92,7 +92,7 @@ ms.locfileid: "67343915"
     
  Nicht alle Abfrageausführungsoperatoren können im Batchmodus ausgeführt werden. DML-Vorgänge, wie z. B. Einfügen, Löschen oder Aktualisieren, werden z. B. Zeile für Zeile ausgeführt. Batchmodusoperatoren richten sich an Operatoren, um die Abfrageleistung wie Scan, Join, Aggregate, Sort und so weiter zu beschleunigen. Da der Columnstore-Index in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurde, gibt es eine nachhaltige Initiative, um die Operatoren zu erweitern, die im Batchmodus ausgeführt werden können. Die folgende Tabelle führt die Operatoren auf, die im Batchmodus gemäß der Produktversion ausgeführt werden.    
     
-|Batchmodusoperatoren|Einsatz|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|Kommentare|    
+|Batchmodusoperatoren|Einsatz|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|Kommentare|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML-Vorgänge (Insert, Delete, Update, Merge)||nein|nein|nein|DML ist kein Batchmodusvorgang, da es nicht parallel ist. Auch wenn die serielle Batchmodusverarbeitung aktiviert wird, kommt es zu keiner maßgeblichen Leistungssteigerung, wenn DML im Batchmodus verarbeitet wird.|    
 |Columnstore Index Scan|SCAN|NA|ja|ja|Bei Columnstore-Indizes kann das Prädikat mittels Push an den SCAN-Knoten übertragen werden.|    
@@ -146,7 +146,7 @@ Beim Entwurf eines Data Warehouse-Schemas besteht die empfohlene Schemamodellier
     
 Bei einem Fakt kann es sich beispielsweise um einen Datensatz für den Verkauf eines bestimmten Produkts in einer bestimmten Region handeln, während die Dimension eine Reihe von Regionen, Produkten usw. darstellt. Die Fakten- und Dimensionstabellen sind über eine Primär-/Fremdschlüsselbeziehung miteinander verbunden. Die am häufigsten verwendeten Abfragen verbinden eine oder mehrere Dimensionstabellen mit der Faktentabelle.    
     
-Betrachten Sie z.B. eine Dimensionstabelle namens `Products`. Ein typischer Primärschlüssel wäre `ProductCode`, der in der Regel als Zeichenfolgendatentyp dargestellt wird. Für die Abfrageleistung hat es sich bewährt, einen Ersatzschlüssel zu erstellen (in der Regel eine Spalte mit ganzen Zahlen), um aus der Faktentabelle auf die Zeile in der Dimensionstabelle zu verweisen.    
+Betrachten Sie z.B. eine Dimensionstabelle namens `Products`. Ein typischer Primärschlüssel wäre `ProductCode`, der in der Regel als Zeichenfolgendatentyp dargestellt wird. Für die Abfrageleistung hat es sich bewährt, einen Ersatzschlüssel zu erstellen (in der Regel eine Spalte mit ganzen Zahlen), um aus der Faktentabelle auf die Zeile in der Dimensionstabelle zu verweisen. ? ?
     
 Der Columnstore-Index führt die Analyseabfragen mit Joins/Prädikaten mit Schlüsseln auf numerischer Basis bzw. Ganzzahlbasis sehr effizient aus. Bei vielen Kundenworkloads wurden jedoch zeichenfolgenbasierte Spalten verwendet, die Fakt-/Dimensionstabellen verknüpfen. Dies führte dazu, dass die Abfrageleistung mit Columnstore-Indizes nicht gut war. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verbessert die Leistung von Analyseabfragen mit zeichenfolgenbasierten Spalten erheblich, indem die Prädikate mit Zeichenfolgenspalten an den SCAN-Knoten weitergegeben werden.    
     
@@ -155,6 +155,9 @@ Die Weitergabe von Zeichenfolgenprädikaten nutzt zur Verbesserung der Abfragele
 Bei der Zeichenfolgenprädikatweitergabe berechnet die Abfrageausführung das Prädikat anhand der Werte im Wörterbuch. Wenn sich dies qualifiziert, werden alle Zeilen mit Bezug auf den Wörterbuchwert automatisch qualifiziert. Dies verbessert die Leistung auf zwei Arten:
 1.  Es wird nur die qualifizierte Zeile zurückgegeben, wodurch die Anzahl der Zeilen reduziert wird, die aus dem SCAN-Knoten übertragen werden müssen. 
 2.  Die Anzahl von Zeichenfolgenvergleichen wird maßgeblich verringert. In diesem Beispiel sind nur 100 Zeichenfolgenvergleiche gegenüber einer Millionen Vergleiche erforderlich. Wie im Folgenden beschrieben gibt es einige Einschränkungen:    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Keine Zeichenfolgenprädikatweitergabe für Deltazeilengruppen. Es gibt kein Wörterbuch für Spalten in Deltazeilengruppen.    
     -   Keine Weitergabe von Zeichenfolgenprädikaten, wenn die Einträge im Wörterbuch eine Größe von 64 KB überschreiten.    
     -   Ausdrücke, die als NULL-Werte ausgewertet werden, werden nicht unterstützt.    
