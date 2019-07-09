@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175312"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419064"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -931,7 +931,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL-Datenbank<br />verwaltete Instanz \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -980,7 +980,7 @@ DATABASE Gibt eine vollständige Datenbanksicherung an. Während einer Datenbank
 > [!IMPORTANT]
 > Eine Datenbanksicherung, die auf einer verwalteten Instanz erstellt wird, kann nur auf einer anderen verwalteten Instanz wiederhergestellt werden. Sie kann nicht auf einer lokalen SQL Server-Instanz wiederhergestellt werden (genauso wenig, wie eine Sicherung einer SQL Server 2016-Datenbank auf einer SQL Server 2012-Instanz wiederhergestellt werden kann).
 
-Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zur Wiederherstellung automatischer Sicherungen der verwalteten Azure SQL-Datenbank-Instanz finden Sie unter [SQL Database Restore (SQL-Datenbank-Wiederherstellung)](https://docs.microsoft.com/azure/sql-database/sql-database-restore).
+Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zur Wiederherstellung automatischer Sicherungen der verwalteten Azure SQL-Datenbank-Instanz finden Sie unter [Wiederherstellen einer Datenbank in eine verwaltete Instanz](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* |  **@** _database\_name\_var_ } ist die Datenbank, aus der die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen ( **@** _database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante ( **@** _database\_name\_var_ **=** _database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
 
@@ -1116,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 
