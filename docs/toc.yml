@@ -1,5 +1,5 @@
 - name: Willkommen bei SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=toc.json
+  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: "Vorgängerversionen von 2005\_bis\_2014"
   href: toc/previous-versions-sql-server.md
 - name: Übersicht
@@ -30,7 +30,7 @@
         - name: SQL Server 2019
           href: sql-server/sql-server-ver15-release-notes.md
         - name: SQL Server 2017
-          href: sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+          href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: SQL Server 2016
           href: sql-server/sql-server-2016-release-notes.md
         - name: SQLServer 2014
@@ -8763,14 +8763,10 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: Schnellstarts
+        - name: Lernprogramme
           items:
             - name: Herstellen einer Verbindung mit und Abfragen von SQL Server
               href: ssms/tutorials/connect-query-sql-server.md
-        - name: Lernprogramme
-          items:
-            - name: Entwerfen einer relationalen Datenbank in einer einzelnen Datenbank
-              href: 'https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017'
         - name: Konzepte
           items:
             - name: Toolfenster in SSMS
@@ -8907,12 +8903,11 @@
                   href: ssms/register-servers/register-servers.md
                 - name: Registrierte Server (F1-Hilfe)
                   href: ssms/register-servers/registered-servers-f1-help.md
-            - name: Skripterstellung
+            - name: Skripterstellung mit SSMS
               items:
                 - name: Abfragen und Text-Editoren
+                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: Abfragen und Text-Editoren
-                      href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                     - name: Abfrage-Editor der Datenbank-Engine
                       href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML-Editor
@@ -9339,10 +9334,9 @@
                   href: ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
                 - name: Importieren von Informationen zum registrierten Server
                   href: ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-            - name: Skripterstellung
+            - name: Skripterstellung mit der Datenbank-Engine
+              href: ssms/scripting/database-engine-scripting.md
               items:
-                - name: Skripterstellung
-                  href: ssms/scripting/database-engine-scripting.md
                 - name: Abfragen und Text-Editoren
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                 - name: Abfrage-Editor der Datenbank-Engine
