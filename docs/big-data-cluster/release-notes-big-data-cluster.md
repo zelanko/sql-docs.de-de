@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469131"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681556"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
 
@@ -33,11 +33,11 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 
 | Neue Funktion oder Update | Details |
 |:---|:---|
-| `mssqlctl` Änderungen | `mssqlctl cluster` Befehle wurden umbenannt `mssqlctl bdc`. Weitere Informationen finden Sie unter den [ `mssqlctl` Verweis](reference-mssqlctl.md). |
+| Änderungen am Befehl `mssqlctl` | Die `mssqlctl cluster`-Befehle wurden in `mssqlctl bdc` umbenannt. Weitere Informationen finden Sie in der [Referenz zu `mssqlctl`](reference-mssqlctl.md). |
 | Neue `mssqlctl` statusbefehlen und Entfernen von das Cluster-Verwaltungsportal. | Das Verwaltungsportal für den Cluster wird in dieser Version entfernt. Neue Befehle hinzugefügt wurden `mssqlctl` , dass Ergänzung für vorhandene Überwachungsbefehle. |
-| Spark-computepools | Erstellen Sie zusätzliche Knoten, um die Spark-rechenleistung zu erhöhen, ohne auf die horizontale Skalierung von Speicher. Darüber hinaus können Sie Storage-Pool-Knoten starten, die nicht für Spark verwendet. Spark und Speicherressourcen werden entkoppelt. Weitere Informationen finden Sie unter [Konfigurieren des Speichers, ohne Spark](deployment-custom-configuration.md#sparkstorage). |
-| MSSQL-Spark-connector | Unterstützung für Lese-/Schreibzugriff auf Daten Pool externe Tabellen. Vorherigen Releases unterstützt Lese-/Schreibzugriff auf die MASTER-Instanz nur Tabellen. Weitere Informationen finden Sie unter [lesen und Schreiben in SQL Server aus Spark mithilfe von der MSSQL-Spark-Connector](spark-mssql-connector.md). |
-| Machine Learning mit MLeap | [Ein MLeap Machine Learning-Modells in Spark trainieren und bewerten Sie es in SQL Server mithilfe der Java-spracherweiterung](spark-create-machine-learning-model.md). |
+| Spark-Computepools | Erstellen Sie zusätzliche Knoten, um die Spark-Rechenleistung zu erhöhen, ohne den Speicher zentral hochskalieren zu müssen. Zudem können Sie Speicherpoolknoten starten, die nicht für Spark verwendet werden. Spark wird vom Speicher entkoppelt. Weitere Informationen finden Sie unter [Configure storage without spark (Konfigurieren des Speichers ohne Spark)](deployment-custom-configuration.md#sparkstorage). |
+| MSSQL-Spark-Connector | Ab jetzt werden Lese- und Schreibvorgänge in externen Datenpooltabellen unterstützt. In vorherigen Releases wurden Lese- und Schreibvorgänge nur für Tabellen der MASTER-Instanz unterstützt. Weitere Informationen finden Sie unter [How to read and write to SQL Server from Spark using the MSSQL Spark Connector (Lesen und Schreiben in SQL Server über Spark mithilfe des MSSQL-Spark-Connectors)](spark-mssql-connector.md). |
+| Machine Learning mit MLeap | [Trainieren Sie ein MLeap-Machine-Learning-Modell in Spark, und bewerten Sie es mit der Java-Spracherweiterung in SQL Server.](spark-create-machine-learning-model.md) |
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
@@ -125,7 +125,7 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 | **mssqlctl**-Updates | Mehrere [Updates für den Befehl **mssqlctl** und seine Parameter](../big-data-cluster/reference-mssqlctl.md). Dies umfasst ein Update für den Befehl **mssqlctl login**, der nun den Controllerbenutzernamen und -endpunkt zum Ziel hat. |
 | Speichererweiterungen | Unterstützung für verschiedene Speicherkonfigurationen für Protokolle und Daten. Darüber hinaus wurde die Anzahl der Ansprüche von persistentem Volume für einen Big Data-Cluster gesenkt. |
 | Mehrere Computepoolinstanzen | Unterstützung für mehrere Computepoolinstanzen. |
-| Neues Poolverhalten und neue Poolfunktionen | Der Computepool wird jetzt standardmäßig für Speicherpool- und Datenpoolvorgänge ausschließlich in einer **ROUND_ROBIN**-Verteilung verwendet. Der Datenpool kann nun einen neuen Verteilungstyp **REPLICATED** verwenden, was bedeutet, dass dieselben Daten in allen Datenpoolinstanzen vorhanden sind. |
+| Neues Poolverhalten und neue Poolfunktionen | Der Computepool wird jetzt standardmäßig für Speicherpool- und Datenpoolvorgänge ausschließlich in einer **ROUND_ROBIN**-Verteilung verwendet. Der Datenpool können Sie jetzt ein neues **REPLIZIERTE** Verteilungstyp, was bedeutet, dass die gleichen Daten für alle Instanzen der Daten-Pool vorhanden ist. |
 | Verbesserungen externer Tabellen | Externe Tabellen des HADOOP-Datenquellentyps unterstützen nun das Lesen von Zeilen mit einer Größe von bis zu 1 MB. Externe Tabellen (ODBC, Speicherpool, Datenpool) unterstützen jetzt Zeilen mit der Breite einer SQL Server-Tabelle. |
 
 ### <a name="known-issues"></a>Bekannte Probleme

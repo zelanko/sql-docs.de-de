@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645549"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681625"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mit dynamischen Verwaltungssichten (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -196,7 +196,7 @@ Die Abfrage gibt die folgenden Spalten zurück:
 |--------|-------------|
 | physical_memory_kb | Die Gesamtmenge des Arbeitsspeichers auf dem Computer. |
 | committed_kb | Den verwendeten zugesicherten Speicher in Kilobyte (KB) im Speicher-Manager. Reservierter Arbeitsspeicher im Speicher-Manager ist nicht eingeschlossen. |
-| external_pool_peak_memory_kb | Die Summe aus der die maximale Arbeitsspeichermenge in Kilobyte, der für alle externen Ressourcenpools verwendet. |
+| external_pool_peak_memory_kb | Die Summe der maximalen Menge an Arbeitsspeicher verwendet, in Kilobyte, für alle externen Ressourcenpools. |
 
 ## <a name="memory-configuration"></a>Konfiguration des Arbeitsspeichers
 

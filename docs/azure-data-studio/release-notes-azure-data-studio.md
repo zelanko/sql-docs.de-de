@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798095"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681613"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
@@ -367,7 +367,7 @@ Die *Public Preview von Juli* konzentriert sich auf die folgenden Elemente:
 ### <a name="github-issues-fixes-june-2018"></a>GitHub-Problemen, behebt, Juni 2018
 
 - Die Anforderung zur ([ausgeben 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Stellen Sie die Ergebnisse Breite des Rasters AutoAnpassen-Spalte auf Daten, und beachten Sie die manuelle Änderungen, wenn dieselbe Abfrage erneut ausgeführt wird.
-- Beheben Sie [ausgeben 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Sollte anzeigen Nachricht hinzufügen, und fügen Sie der Schaltfläche "Konto-Konto" hinzu, wenn verknüpftes Konto leer ist.
+- Beheben Sie [ausgeben 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Sollte anzeigen Nachricht hinzufügen, und fügen die Schaltfläche "Konto" hinzu, wenn verknüpftes Konto leer ist.
 - Beheben Sie [ausgeben 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Registerkarte "verknüpfte Konto" ist unterbrochen, wenn die Ansicht reduziert wird.
 - Beheben Sie [ausgeben 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL Tools-Dienst stürzt ab, wenn Sie SQL-Datei vom Datenträger zu öffnen.
 - Beheben Sie [ausgeben 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): SQL-Schlüsselwort "BETWEEN" fehlt.

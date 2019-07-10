@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388749"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681593"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-big Data-Cluster (Vorschau)
 
@@ -107,7 +107,7 @@ Der folgende Befehl zeigt ein Beispiel für diesen Befehl könnte folgendermaße
 mssqlctl app create --spec ./addpy
 ```
 
-Dabei wird davon ausgegangen, dass Sie Ihre Anwendung gespeichert, der `addpy` Ordner. Dieser Ordner enthält auch eine Spezifikationsdatei für die Anwendung namens aufgerufene `spec.yaml`. Finden Sie unter [der Anwendungsbereitstellung Seite](concept-application-deployment.md) für Weitere Informationen zu den `spec.yaml` Datei.
+Dabei wird davon ausgegangen, dass Sie Ihre Anwendung gespeichert, der `addpy` Ordner. Dieser Ordner enthält auch eine Spezifikationsdatei für die Anwendung namens `spec.yaml`. Finden Sie unter [der Anwendungsbereitstellung Seite](concept-application-deployment.md) für Weitere Informationen zu den `spec.yaml` Datei.
 
 Um diese app-Beispiel-app bereitzustellen, erstellen Sie die folgenden Dateien in einem Verzeichnis namens `addpy`:
 
