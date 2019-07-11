@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518609"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582751"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "52518609"
   
 |Thema|Übersicht|  
 |-----------|--------------|  
-|[Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#bkmk_resolveRecoveryFailures)|Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank „*\<Datenbankname>*“ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „*\<Ressourcenpoolname>*“ vorgehen.|  
+|[Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#bkmk_resolveRecoveryFailures)|Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank „ *\<Datenbankname>* “ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „ *\<Ressourcenpoolname>* “ vorgehen.|  
 |[Beheben von Beeinträchtigungen der Arbeitsauslastung durch wenig oder unzureichenden Arbeitsspeicher](#bkmk_recoverFromOOM)|Erläutert, wie Sie vorgehen, wenn die Leistung durch unzureichenden Arbeitsspeicher beeinträchtigt wird.|  
-|[Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#bkmk_PageAllocFailure)|Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „*\<Datenbankname>*“ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „*\<Ressourcenpoolname>*“ nicht zulässig“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|
+|[Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#bkmk_PageAllocFailure)|Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „ *\<Datenbankname>* “ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „ *\<Ressourcenpoolname>* “ nicht zulässig“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|
 |[Bewährte Methoden zum Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](#bkmk_VMs)|Zu berücksichtigende Punkte beim Verwenden von In-Memory-OLTP in einer virtualisierten Umgebung.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung  
- Wenn Sie versuchen, eine Datenbank wiederherzustellen, erhalten Sie möglicherweise folgende Fehlermeldung: „Fehler beim Wiederherstellungsvorgang für Datenbank „*\<Datenbankname>*“ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „*\<Ressourcenpoolname>*“. Dies gibt an, dass der Server nicht genügend verfügbaren Arbeitsspeicher zum Wiederherstellen der Datenbank hat. 
+ Beim Versuch der Wiederherstellung einer Datenbank erhalten Sie möglicherweise die folgende Fehlermeldung: „Fehler beim Wiederherstellen der Datenbank *\<Datenbankname* aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool *Ressourcenpoolname\<* .“ Dies gibt an, dass der Server nicht genügend verfügbaren Arbeitsspeicher zum Wiederherstellen der Datenbank hat. 
    
 Der Server, auf dem Sie eine Datenbank wiederherstellen, muss genügend verfügbaren Arbeitsspeicher für die speicheroptimierten Tabellen in der Datenbanksicherung besitzen. Andernfalls wird die Datenbank nicht online geschaltet und als fehlerverdächtig markiert.  
   
@@ -77,7 +77,9 @@ Hat der Server genügend physischen Arbeitsspeicher, aber dieser Fehler tritt we
 1.  [Öffnen einer DAC (dedizierte Administratorverbindung)](#bkmk_openDAC)  
   
 2.  [Korrekturmaßnahme](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> Öffnen einer DAC (dedizierte Administratorverbindung)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC) zur Verfügung. Mit der DAC können Administratoren auf eine ausgeführte Instanz der SQL Server-Datenbank-Engine zugreifen, um Probleme auf dem Server zu beheben, selbst wenn der Server auf andere Clientverbindungen nicht reagiert. Die DAC wird mithilfe des Hilfsprogramms `sqlcmd` und [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgerufen.  
   
@@ -158,7 +160,7 @@ Wenn Sie für eine Datenbank mit speicheroptimierten Tabellen die oben genannten
 ### <a name="resolution"></a>Lösung
 Um dieses Risiko abzuschwächen, ordnen Sie der Datenbank vorab genügend Arbeitsspeicher zu, um die Datenbank wiederherzustellen oder neu zu starten. Verwenden Sie hierfür nicht den Minimalwert auf Basis des dynamischen Speichers, um den zusätzlichen Arbeitsspeicher bei Bedarf bereitzustellen.
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten des Arbeitsspeichers für In-Memory OLTP](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Überwachung und Problembehebung bei der Arbeitsspeichernutzung](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   

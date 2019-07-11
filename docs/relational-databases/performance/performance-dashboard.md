@@ -14,19 +14,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 99ff37b3c974f6ba63515b3b51e87719a1912521
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242397"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559481"
 ---
 # <a name="performance-dashboard"></a>Leistungsdashboard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Version 17.2 und höher enthält das Leistungsdashboard. Dieses Dashboard wurde entworfen, um schnelle visuelle Einblicke in den Leistungszustand von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) bereitzustellen. 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Version 17.2 und höher enthält das Leistungsdashboard. Dieses Dashboard wurde entworfen, um schnelle visuelle Einblicke in den Leistungszustand von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] bereitzustellen. 
 
-Das Leistungsdashboard hilft dabei, schnell herauszufinden, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Leistungsengpass hat. Wenn ein Engpass entdeckt wird, können ganz einfach zusätzliche Diagnosedaten erfasst werden, die für das Beheben des Problems erforderlich sein können. Zu den allgemeinen Leistungsproblemen, bei deren Identifizierung das Leistungsdashboard helfen kann, gehören:
+Mit dem Leistungsdashboard können Sie schnell herauszufinden, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] einen Leistungsengpass aufweisen. Wenn ein Engpass entdeckt wird, können ganz einfach zusätzliche Diagnosedaten erfasst werden, die für das Beheben des Problems erforderlich sein können. Zu den allgemeinen Leistungsproblemen, bei deren Identifizierung das Leistungsdashboard helfen kann, gehören:
 -  CPU-Engpässe (bzw. welche Abfragen die meiste CPU-Leistung beanspruchen)
 -  E/A-Engpässe (bzw. welche Abfragen die meisten E/A-Vorgänge ausführen)
 -  Vom Abfrageoptimierer erzeugte Indexempfehlungen (fehlende Indizes)
@@ -81,7 +81,7 @@ Die Berichte **Ressourcenintensive Abfragen** werden zurückgesetzt, wenn [!INCL
 > Das Leistungsdashboard wurde für [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) erstmals als eigenständiger Download freigegeben und später für [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063) aktualisiert.
 
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert die Berechtigungen `VIEW SERVER STATE` und `ALTER TRACE`. 
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Berechtigungen `VIEW SERVER STATE` und `ALTER TRACE` benötigt. In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

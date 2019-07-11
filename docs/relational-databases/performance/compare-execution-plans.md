@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b1bd2ab7d1ab17ef9d0bc4671054f02808ed230f
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439842"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584491"
 ---
 # <a name="compare-execution-plans"></a>Vergleichen von Ausführungsplänen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,13 @@ Wenn zwei Ausführungspläne verglichen werden, werden Bereiche des Plans, die *
      > [!TIP]
      > Alle für Ausführungspläne verfügbaren Zoom- und Navigationsoptionen funktionieren im Planvergleichsmodus. Weitere Einzelheiten finden Sie unter [Anzeigen eines tatsächlichen Ausführungsplans](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Auf der rechten Seite öffnet sich ebenfalls ein Fenster mit zwei Eigenschaften im Rahmen der Standardauswahl. Eigenschaften, die in beiden verglichenen Operatoren vorhanden sind, aber Unterschiede aufweisen, wird zur leichteren Identifizierung das Zeichen *ungleich* (≠) vorangestellt.
+5.  Auf der rechten Seite öffnet sich ebenfalls ein Fenster mit zwei Eigenschaften im Rahmen der Standardauswahl. Eigenschaften, die in beiden verglichenen Operatoren vorhanden sind, aber Unterschiede aufweisen, wird zur leichteren Identifizierung das *Ungleichheitszeichen* (?) vorangestellt.
 
     ![Duales Eigenschaftenfenster](../../relational-databases/performance/media/plancomparison-properties.png "Duales Eigenschaftenfenster")  
 
 6.  Das Vergleichsnavigationsfenster **Showplananalyse** wird ebenfalls im unteren Bereich geöffnet. Es stehen drei Registerkarten zur Verfügung:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Auf der Registerkarte **Anweisungsoptionen** ist die Standardauswahl *Ähnliche Vorgänge hervorheben*, und der gleiche hervorgehobene Operator bzw. Knoten in verglichenen Plänen weist die gleiche Farbe und dasselbe Linienmuster auf. Navigieren Sie zwischen ähnlichen Bereichen in verglichenen Plänen, indem Sie auf ein Linienmuster klicken. Sie können auch Unterschiede in den Plänen anstelle von Ähnlichkeiten hervorheben, indem Sie *Vorgänge hervorheben, die nicht mit ähnlichen Segmenten übereinstimmen* auswählen. 
     

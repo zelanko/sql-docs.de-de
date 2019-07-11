@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744171"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556952"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Editionen und unterstützten Funktionen von SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Die neuesten Versionsanmerkungen und Informationen zu Neuerungen finden Sie übe
 
 ### <a name="try-sql-server"></a>Testen Sie SQL Server!    
     
-> [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**[Download SQL Server 2017 aus dem Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
+> [![Download aus dem Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/) **[Download SQL Server 2017 aus dem Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**    
 
 <!---    
 > ![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)**   
@@ -167,7 +167,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |Datenbankwiederherstellungsberater|Ja|Ja|Ja|Ja|Ja|
 |Verschlüsselte Sicherung|Ja|Ja|Nein|Nein|Nein|
 |Hybridsicherung in Windows Azure (Sicherung über URL)|Ja|Ja|Nein|Nein|Nein|
-|Verfügbarkeitsgruppe ohne Cluster|Ja|Ja|Nein|Nein|Nein|Nein|
+|Schreibgeschützte Verfügbarkeitsgruppe|Ja|Ja|Nein|Nein|Nein|Nein|
 |Mindestreplikate für Commitverfügbarkeitsgruppen|Ja|Ja|Ja|Nein|Nein|Nein|
   
 

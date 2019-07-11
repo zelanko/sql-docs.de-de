@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85db3bb859a84ed9821f81186b311baf591583e0
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 433f0bac60d3643c56b37cdd6d2750952d9836b2
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802674"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492785"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56802674"
 
 Führt Einfüge-, Aktualisierungs- oder Löschvorgänge in einer Zieltabelle anhand der Ergebnisse eines Joins mit einer Quelltabelle aus. Synchronisieren Sie z.B. zwei Tabellen, indem Sie Zeilen in einer Tabelle anhand von Unterschieden, die in der anderen Tabelle gefunden wurden, einfügen, aktualisieren oder löschen.  
   
-**Leistungstipp:** Das für die MERGE-Anweisung beschriebene bedingte Verhalten funktioniert am besten, wenn die beiden Tabellen eine komplexe Mischung von übereinstimmenden Eigenschaften haben. Beispielsweise das Einfügen einer Zeile, wenn sie nicht vorhanden ist, oder das Aktualisieren der Zeile, wenn sie übereinstimmt. Wenn Sie eine Tabelle einfach nur basierend auf den Zeilen einer anderen Tabelle aktualisieren, verbessern Sie mit den grundlegenden INSERT-, UPDATE- und DELETE-Anweisungen Leistung und Skalierbarkeit. Zum Beispiel:  
+**Leistungstipp:** Das für die MERGE-Anweisung beschriebene bedingte Verhalten funktioniert am besten, wenn die beiden Tabellen eine komplexe Mischung aus übereinstimmenden Eigenschaften aufweisen. Beispielsweise das Einfügen einer Zeile, wenn sie nicht vorhanden ist, oder das Aktualisieren der Zeile, wenn sie übereinstimmt. Wenn Sie eine Tabelle einfach nur basierend auf den Zeilen einer anderen Tabelle aktualisieren, verbessern Sie mit den grundlegenden INSERT-, UPDATE- und DELETE-Anweisungen Leistung und Skalierbarkeit. Beispiel:  
   
 ```  
 INSERT tbl_A (col, col2)  
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 Gibt den Namen oder die ID eines oder mehrerer Indizes in der Zieltabelle zum Ausführen eines impliziten Joins mit der Quelltabelle an. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 \<OUTPUT_Clause>  
-Gibt ohne bestimmte Reihenfolge eine Zeile für jede Zeile in *target_table* zurück, die aktualisiert, eingefügt oder gelöscht wird. **$action** kann in der OUTPUT-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)**, die für jede Zeile einen von drei Werten zurückgibt: „INSERT“, „UPDATE“ oder „DELETE“, je nach der für diese Zeile ausgeführten Aktion. Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+Gibt ohne bestimmte Reihenfolge eine Zeile für jede Zeile in *target_table* zurück, die aktualisiert, eingefügt oder gelöscht wird. **$action** kann in der OUTPUT-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)** , die für jede Zeile einen von drei Werten zurückgibt: „INSERT“, „UPDATE“ oder „DELETE“, je nach der für diese Zeile ausgeführten Aktion. Weitere Informationen zu den Argumenten dieser Klausel finden Sie unter [OUTPUT-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Gibt an, dass zum Anpassen der Art und Weise, wie die Anweisung durch die Datenbank-Engine verarbeitet wird, Hinweise des Abfrageoptimierers verwendet werden. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
@@ -366,9 +366,9 @@ BEGIN
     ON (target.UnitMeasureCode = source.UnitMeasureCode)  
     WHEN MATCHED THEN   
         UPDATE SET Name = source.Name  
-WHEN NOT MATCHED THEN  
-    INSERT (UnitMeasureCode, Name)  
-    VALUES (source.UnitMeasureCode, source.Name)  
+    WHEN NOT MATCHED THEN  
+        INSERT (UnitMeasureCode, Name)  
+        VALUES (source.UnitMeasureCode, source.Name)  
     OUTPUT deleted.*, $action, inserted.* INTO #MyTempTable;  
 END;  
 GO  

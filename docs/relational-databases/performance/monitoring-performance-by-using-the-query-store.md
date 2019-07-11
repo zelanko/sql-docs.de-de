@@ -1,7 +1,7 @@
 ---
 title: Überwachen der Leistung mit dem Abfragespeicher | Microsoft -Dokumentation
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: e407b4ae2a9be3b4a2d3c2671c59548db94916de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356473"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581403"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,12 @@ ms.locfileid: "58356473"
 2.  Wählen Sie im Dialogfeld **Datenbankeigenschaften** die Seite **Abfragespeicher** aus.  
   
 3.  Wählen Sie im Feld **Betriebsmodus (angefordert)** die Option **Lesen und schreiben** aus.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="use-transact-sql-statements"></a>Verwenden von Transact-SQL-Anweisungen  
   
-Mit der **ALTER DATABASE** -Anweisung können Sie den Abfragespeicher aktivieren. Zum Beispiel:  
+Mit der **ALTER DATABASE** -Anweisung können Sie den Abfragespeicher aktivieren. Beispiel:  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
@@ -571,7 +573,7 @@ Für mehrfach ausgeführte Abfragen werden Sie möglicherweise feststellen, dass
   
 Sie können auch abweichende Abfrageleistungen für eine Abfrage mit Parametern ermitteln (entweder automatisch oder manuell parametrisiert). Sie können unter den verschiedenen Plänen den Plan identifizieren, der schnell und ausreichend geeignet für alle oder die meisten Parameterwerte ist, und diesen anschließend erzwingen. So erhalten Sie eine vorhersagbare Leistung für eine größere Anzahl von Benutzerszenarien.  
   
- ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Erzwingen eines Plans für eine Abfrage (Anwenden einer Durchsetzungsrichtlinie)
+### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Erzwingen eines Plans für eine Abfrage (Anwenden einer Durchsetzungsrichtlinie)
 
 Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], den Plan im Optimierer zu erzwingen. Wenn das Erzwingen des Plans fehlschlägt, wird ein XEvent ausgelöst, und der Optimierer wird angewiesen, die Optimierung auf die übliche Weise durchzuführen.
 
@@ -580,7 +582,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```  
   
 Durch die Verwendung von **sp_query_store_force_plan** können Sie ausschließlich solche Pläne erzwingen, die vom Abfragespeicher als Plan für diese Abfrage aufgezeichnet wurden. Es stehen für eine Abfrage also nur Pläne zur Verfügung, die bereits zum Ausführen dieser Abfrage verwendet wurden, während der Abfragespeicher aktiv war.  
+
+#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Erzwingen eines Plans für schnelle Vorwärts- und statische Cursor
   
+Mit dem CTP 2.3-Abfragespeicher in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können Sie Abfrageausführungspläne für schnelle Vorwärtscursor und statische Cursor (T-SQL und API) erzwingen. Das Erzwingen kann über `sp_query_store_force_plan` oder über SQL Server Management Studio-Abfragespeicherberichte erfolgen.
+
 ### <a name="remove-plan-forcing-for-a-query"></a>Aufheben der Erzwingung eines Plans für eine Abfrage
 
 Wenn Sie wieder den Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden möchten, um den optimalen Abfrageplan zu berechnen, heben Sie mit **sp_query_store_unforce_plan** das Erzwingen des für die Abfrage ausgewählten Plans auf.  
@@ -588,7 +594,9 @@ Wenn Sie wieder den Abfrageoptimierer von [!INCLUDE[ssNoVersion](../../includes/
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-  
+
+
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Best Practices für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Verwenden des Abfragespeichers mit In-Memory-OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b2e412e2ef25e9eb48a8068cbe6e75b2c1ec8797
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124343"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579826"
 ---
 # <a name="replicate-identity-columns"></a>Replizieren von Identitätsspalten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,16 +74,16 @@ ms.locfileid: "54124343"
 ### <a name="merge-replication"></a>Mergereplikation  
  Identitätsbereiche werden vom Verleger verwaltet und vom Merge-Agent an die Abonnenten weitergegeben (in einer Wiederveröffentlichungshierarchie werden die Bereiche vom Stammverleger und den Neuverlegern verwaltet). Die Identitätswerte werden auf dem Verleger aus einem Pool zugewiesen. Wenn Sie einen Artikel mit einer Identitätsspalte einer Veröffentlichung im Assistenten für neue Veröffentlichung oder mithilfe von [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) hinzufügen, können Sie Werte für die folgenden Parameter angeben:  
   
--   Mit dem **@identity_range**-Parameter steuern Sie die Größe des Identitätsbereichs, der dem Verleger und den Abonnenten mit Clientabonnements anfänglich zugeordnet wird.  
+-   Mit dem **@identity_range** -Parameter steuern Sie die Größe des Identitätsbereichs, der dem Verleger und den Abonnenten mit Clientabonnements anfänglich zugeordnet wird.  
   
     > [!NOTE]  
     >  Bei Abonnenten, die eine ältere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version ausführen, steuert dieser Parameter darüber hinaus die Größe des Identitätsbereichs auf den Wiederveröffentlichungsabonnenten (und tritt damit an die Stelle des **@pub_identity_range** -Parameters).  
   
--   Mit dem **@pub_identity_range**-Parameter steuern Sie die Größe des Identitätsbereichs für die Wiederveröffentlichung, der den Abonnenten mit Serverabonnements zugeordnet ist (erforderlich für die Wiederveröffentlichung von Daten). Alle Abonnenten mit Serverabonnenten erhalten einen Bereich zur Wiederveröffentlichung, auch wenn sie gar keine Daten erneut veröffentlichen.  
+-   Mit dem **@pub_identity_range** -Parameter steuern Sie die Größe des Identitätsbereichs für die Wiederveröffentlichung, der den Abonnenten mit Serverabonnements zugeordnet ist (erforderlich für die Wiederveröffentlichung von Daten). Alle Abonnenten mit Serverabonnenten erhalten einen Bereich zur Wiederveröffentlichung, auch wenn sie gar keine Daten erneut veröffentlichen.  
   
--   Mit dem **@threshold**-Parameter bestimmen Sie, wann ein neuer Identitätsbereich für ein Abonnement von [!INCLUDE[ssEW](../../../includes/ssew-md.md)] oder eine frühere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version erforderlich ist.  
+-   Mit dem **@threshold** -Parameter bestimmen Sie, wann ein neuer Identitätsbereich für ein Abonnement von [!INCLUDE[ssEW](../../../includes/ssew-md.md)] oder eine frühere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version erforderlich ist.  
   
- So könnten Sie z. B. für **@identity_range** 10.000 und für **@pub_identity_range**. Dem Verleger und allen Abonnenten, die [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder eine höhere Version ausführen, einschließlich des Abonnenten mit dem Serverabonnement, wird der Primärbereich 10.000 zugewiesen. Dem Abonnenten mit dem Serverabonnement wird zudem der Primärbereich 500.000 zugewiesen, der von den Abonnenten verwendet werden kann, die eine Synchronisierung mit dem Wiederveröffentlichungsabonnenten ausführen (für die Artikel in der Veröffentlichung auf dem Wiederveröffentlichungsabonnenten müssen Sie ebenfalls einen Wert für **@identity_range**, **@pub_identity_range**und **@threshold** angeben).  
+ So könnten Sie z. B. für **@identity_range** 10.000 und für **@pub_identity_range** . Dem Verleger und allen Abonnenten, die [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder eine höhere Version ausführen, einschließlich des Abonnenten mit dem Serverabonnement, wird der Primärbereich 10.000 zugewiesen. Dem Abonnenten mit dem Serverabonnement wird zudem der Primärbereich 500.000 zugewiesen, der von den Abonnenten verwendet werden kann, die eine Synchronisierung mit dem Wiederveröffentlichungsabonnenten ausführen (für die Artikel in der Veröffentlichung auf dem Wiederveröffentlichungsabonnenten müssen Sie ebenfalls einen Wert für **@identity_range** , **@pub_identity_range** und **@threshold** angeben).  
   
  Jeder Abonnent, auf dem [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder eine höhere Version ausgeführt wird, erhält darüber hinaus einen sekundären Identitätsbereich. Der sekundäre Bereich entspricht in seiner Größe der Größe des Primärbereichs. Wenn der Primärbereich ausgeschöpft ist, wird der sekundäre Bereich verwendet, und der Merge-Agent weist dem Abonnenten einen neuen Bereich zu. Der neue Bereich wird zum sekundären Bereich, und der Prozess wird fortgesetzt.  
   
@@ -91,16 +91,16 @@ ms.locfileid: "54124343"
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>Transaktionsreplikation mit Abonnements mit verzögertem Update über eine Warteschlange  
  Die Identitätsbereiche werden vom Verteilungs-Agent auf dem Verteiler verwaltet und an die Abonnenten weitergegeben. Die Identitätswerte werden auf dem Verteiler aus einem Pool zugewiesen. Die Größe des Pools richtet sich nach der Größe des Datentyps und des für die Identitätsspalte verwendeten Inkrements. Wenn Sie einen Artikel mit einer Identitätsspalte einer Veröffentlichung im Assistenten für neue Veröffentlichung oder mithilfe von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) hinzufügen, können Sie Werte für die folgenden Parameter angeben:  
   
--   Mit dem **@identity_range**-Parameter steuern Sie die Größe des Identitätsbereichs, der allen Abonnenten anfänglich zugeordnet wird.  
+-   Mit dem **@identity_range** -Parameter steuern Sie die Größe des Identitätsbereichs, der allen Abonnenten anfänglich zugeordnet wird.  
   
--   Mit dem **@pub_identity_range**-Parameter steuern Sie die Größe des Identitätsbereichs, der dem Verleger zugeordnet wird.  
+-   Mit dem **@pub_identity_range** -Parameter steuern Sie die Größe des Identitätsbereichs, der dem Verleger zugeordnet wird.  
   
--   Mit dem **@threshold**-Parameter bestimmen Sie, wann ein neuer Bereich für ein Abonnement erforderlich ist.  
+-   Mit dem **@threshold** -Parameter bestimmen Sie, wann ein neuer Bereich für ein Abonnement erforderlich ist.  
   
- So könnten Sie z. B. für **@pub_identity_range**10.000, für **@identity_range** 1.000 (unter der Annahme einer geringeren Anzahl von Updates auf dem Abonnenten) und für **@threshold**. Nach 800 Einfügungen auf einem Abonnenten (80 Prozent von 1.000) wird einem Abonnenten ein neuer Bereich zugewiesen. Nach 8.000 Einfügungen auf dem Verleger wird dem Verleger ein neuer Bereich zugewiesen. Beim Zuweisen eines neuen Bereichs ergibt sich jedoch eine Lücke in den Identitätsbereichswerten in der Tabelle. Durch Angabe eines höheren Schwellenwerts fallen diese Lücken zwar kleiner aus, das System ist dann aber auch weniger fehlertolerant, d. h., wenn der Verteilungs-Agent aus irgendeinem Grund nicht ausgeführt werden kann, gehen einem Abonnenten möglicherweise schneller die Identitäten aus.  
+ So könnten Sie z. B. für **@pub_identity_range** 10.000, für **@identity_range** 1.000 (unter der Annahme einer geringeren Anzahl von Updates auf dem Abonnenten) und für **@threshold** . Nach 800 Einfügungen auf einem Abonnenten (80 Prozent von 1.000) wird einem Abonnenten ein neuer Bereich zugewiesen. Nach 8.000 Einfügungen auf dem Verleger wird dem Verleger ein neuer Bereich zugewiesen. Beim Zuweisen eines neuen Bereichs ergibt sich jedoch eine Lücke in den Identitätsbereichswerten in der Tabelle. Durch Angabe eines höheren Schwellenwerts fallen diese Lücken zwar kleiner aus, das System ist dann aber auch weniger fehlertolerant, d. h., wenn der Verteilungs-Agent aus irgendeinem Grund nicht ausgeführt werden kann, gehen einem Abonnenten möglicherweise schneller die Identitäten aus.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Zuweisen von Bereichen für die manuelle Identitätsbereichsverwaltung  
- Wenn Sie die manuelle Identitätsbereichsverwaltung angeben, müssen Sie sicherstellen, dass der Verleger und alle Abonnenten verschiedene Identitätsbereiche verwenden. Stellen Sie sich z. B. eine Tabelle auf dem Verleger mit einer als `IDENTITY(1,1)`definierten Identitätsspalte vor: Die Identitätsspalte beginnt mit 1 und erhöht sich bei jeder neu eingefügten Zeile um 1. Wenn die Tabelle auf dem Verleger 5.000 Zeilen besitzt und Sie für den weiteren Entwicklungsverlauf der Anwendung eine gewisse Vergrößerung der Tabelle erwarten, könnte der Verleger den Bereich 1-10.000 verwenden. Bei Vorhandensein von zwei Abonnenten könnte der Abonnent A den Bereich 10.001-20.000 und der Abonnent B den Bereich 20.001-30.000 verwenden.  
+ Wenn Sie die manuelle Identitätsbereichsverwaltung angeben, müssen Sie sicherstellen, dass der Verleger und alle Abonnenten verschiedene Identitätsbereiche verwenden. Stellen Sie sich z. B. eine Tabelle auf dem Verleger mit einer als `IDENTITY(1,1)`definierten Identitätsspalte vor: Die Identitätsspalte beginnt mit 1 und erhöht sich bei jeder neu eingefügten Zeile um 1. Wenn die Tabelle auf dem Verleger 5.000 Zeilen besitzt und Sie für den weiteren Entwicklungsverlauf der Anwendung eine gewisse Vergrößerung der Tabelle erwarten, könnte der Verleger den Bereich 1-10.000 verwenden. Bei zwei Abonnenten könnte der Abonnent A den Bereich 10.001 bis 20.000 und der Abonnent B den Bereich 20.001 bis 30.000 verwenden.  
   
  Nachdem ein Abonnent mit einer Momentaufnahme oder auf andere Weise initialisiert wurde, führen Sie DBCC CHECKIDENT aus, um dem Abonnenten einen Anfangspunkt für dessen Identitätsbereich zuzuweisen. Auf Abonnent A würden Sie dazu z. B. `DBCC CHECKIDENT('<TableName>','reseed',10001)`ausführen. Auf Abonnent B ist dann `CHECKIDENT('<TableName>','reseed',20001)`auszuführen.  
   
@@ -112,7 +112,9 @@ ms.locfileid: "54124343"
 1.  Beenden Sie alle Aktivitäten auf allen Abonnenten.  
   
 2.  Gehen Sie für jede veröffentlichte Tabelle, die eine Identitätsspalte enthält, wie folgt vor:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Führen Sie in der Abonnementdatenbank auf jedem Abonnenten `IDENT_CURRENT('<TableName>')`aus.  
   
     2.  Notieren Sie sich den höchsten Wert, den Sie bei den Abonnenten gefunden haben.  

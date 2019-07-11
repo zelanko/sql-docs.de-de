@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206366"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581229"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 
@@ -53,7 +53,7 @@ Weitere Informationen zu diesem Thema finden Sie unter [Aufrechterhalten einer s
 **Gilt für:** die Migration von Drittanbieterplattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand. 
+> Wenn bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] das Problem bereits in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Quellinstanz vorlag, wird es durch eine Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht behoben. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kompiliert Abfragepläne in gespeicherten Prozeduren, indem die Eingabeparameter bei der ersten Kompilierung ermittelt werden. Anschließend wird ein parametrisierter und wiederverwendeter Plan generiert, der für diese Verteilung von Eingabedaten optimiert ist. Die meisten Anweisungen, die triviale Pläne generieren, werden parametrisiert, wenn auch nicht in gespeicherten Prozeduren. Nachdem Sie ein Plan zuerst zwischengespeichert wird, wird jede spätere Ausführung einem zuvor zwischengespeicherten Plan zugeordnet.
 Ein mögliches Problem tritt auf, wenn diese erste Kompilierung möglicherweise nicht die am häufigsten verwendeten Parametersätze für die übliche Arbeitsauslastung verwendet hat. Bei anderen Parametern wird derselbe Ausführungsplans ineffizient. Weitere Informationen zu diesem Thema finden Sie unter [Parameterermittlung](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -108,6 +108,9 @@ Einige Beispiele für nicht SARGable-Prädikate sind:
   -   Dazu kann das Vergleichen aller benutzerdefinierten Codekonstrukte gehören, die in der Datenbank gespeichert sind (z.B. gespeicherte Prozeduren, benutzerdefinierte Funktionen oder Sichten), mit Systemtabellen, die Informationen zu Datentypen beinhalten, die in den zugrunde liegenden Tabellen verwendet werden (z.B. [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Wenn der gesamte Code nicht bis zum vorherigen Punkt durchsucht werden kann, ändern Sie zum gleichen Zweck den Datentyp für die Tabelle entsprechend einer Variablen-/Parameterdeklaration.
 3. Gründe für die Nützlichkeit der folgenden Konstrukte:
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
   -   Funktionen werden als Prädikate verwendet
   -   Platzhaltersuchen
   -   Komplexe Ausdrücke auf Grundlage von spaltenbasierten Daten. Bewerten Sie die Notwendigkeit, stattdessen persistente berechnete Spalten zu erstellen, die indiziert werden können

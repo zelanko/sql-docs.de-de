@@ -14,12 +14,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e12b5746d99635b773e3b61a6db10485f2e60765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667838"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582205"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47667838"
   
 -   „Die Oracle-Serverinstanz '\<*OracleVerlegerName*>' wurde zum Verwenden von '\<*SQLServerDistributorName*>' als Verteiler konfiguriert. Um mit dem Verwenden von '\<*NewSQLServerDistributorName*>' als Verteiler zu beginnen, müssen Sie die aktuelle Replikationskonfiguration auf der Oracle-Serverinstanz entfernen. Hierbei werden alle Veröffentlichungen auf dieser Serverinstanz gelöscht.“  
   
--   „Der Oracle-Server '\<*OracleServerName*>' ist bereits als Verleger '\<*OracleVerlegerName*>' auf dem Verteiler '\<*SQLServerDistributorName*>.*\<VerteilungsdatenbankName>*' definiert. Löschen Sie die Zuordnung des Verlegers, oder löschen Sie das öffentliche Synonym '*\<SynonymName>*' zur erneuten Erstellung.“  
+-   „Der Oracle-Server '\<*OracleServerName*>' ist bereits als Verleger '\<*OracleVerlegerName*>' auf dem Verteiler '\<*SQLServerDistributorName*>. *\<VerteilungsdatenbankName>* ' definiert. Löschen Sie die Zuordnung des Verlegers, oder löschen Sie das öffentliche Synonym ' *\<SynonymName>* ' zur erneuten Erstellung.“  
   
  Wenn die Zuordnung eines Oracle-Verlegers gelöscht wird, werden die Replikationsobjekte in der Oracle-Datenbank automatisch bereinigt. In einigen Fällen ist jedoch auch eine manuelle Bereinigung der Oracle-Replikationsobjekte erforderlich. So bereinigen Sie die durch die Replikation erstellten Oracle-Replikationsobjekte manuell:  
   
@@ -79,7 +79,9 @@ ms.locfileid: "47667838"
 2.  Führen Sie den SQL-Befehl `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`aus.  
   
 3.  Führen Sie den SQL-Befehl `DROP USER <replication_administrative_user_schema>``CASCADE;`aus.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>SQL Server-Fehler 21663 (Fehlen des Primärschlüssels) wurde ausgelöst  
  Artikel in Transaktionsveröffentlichungen müssen über einen gültigen Primärschlüssel verfügen. Fehlt dieser Primärschlüssel, finden Sie beim Versuch, den Artikel hinzuzufügen, die folgende Fehlermeldung:  
   
@@ -90,7 +92,7 @@ ms.locfileid: "47667838"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>SQL Server-Fehler 21642 (Verbindungsserver bereits vorhanden) wurde ausgelöst  
  Wenn ein Oracle-Verleger zum ersten Mal konfiguriert wird, wird für die Verbindung zwischen dem Verleger und dem Verteiler ein Verbindungsservereintrag erstellt. Der Verbindungsserver hat denselben Namen wie der Oracle-TNS-Dienst. Wenn Sie versuchen, einen Verbindungsserver mit demselben Namen zu erstellen, wird die folgende Fehlermeldung angezeigt:  
   
- "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen '*\<LinkedServerName>*' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
+ "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen ' *\<LinkedServerName>* ' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
   
  Dieser Fehler kann auftreten, wenn Sie versuchen, den Verbindungsserver direkt zu erstellen, oder die Beziehung zwischen dem Oracle-Verleger und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler zuvor gelöscht haben und jetzt versuchen, diese Beziehung neu zu konfigurieren. Wenn Sie beim Neukonfigurieren des Verlegers diese Fehlermeldung erhalten, löschen Sie den Verbindungsserver mit [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
   
@@ -157,7 +159,7 @@ ms.locfileid: "47667838"
   
 2.  Geben Sie **regedit** im Dialogfeld **Ausführen**ein, und klicken Sie dann auf **OK**.  
   
-3.  Navigieren Sie zu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers.  
+3.  Navigieren Sie zu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers.  
   
      Unter Providers sollte sich ein Ordner mit dem Namen OraOLEDB.Oracle befinden. In diesem Ordner sollte sich der DWORD-Wert mit dem Namen **AllowInProcess**und dem Wert **1**befinden.  
   
@@ -207,7 +209,7 @@ ms.locfileid: "47667838"
 ## <a name="oracle-error-ora-01555"></a>Oracle-Fehler ORA-01555  
  Die folgende Oracle-Datenbankfehlermeldung bezieht sich nicht auf die Snapshotreplikation, sondern darauf, wie Oracle lesekonsistente Datensichten konstruiert:  
   
- "ORA-01555: Snapshot too old"  
+ „ORA-01555: Snapshot too old“  
   
  Oracle verwendet so genannte Rollbacksegmente, um lesekonsistente Datensichten zu erstellen, die den Stand zum Zeitpunkt der Ausführung einer SQL-Anweisung wiedergeben. Die Fehlermeldung "snapshot too old" (Snapshot zu alt) kann angezeigt werden, wenn die Rollbackinformationen von anderen gleichzeitigen Sitzungen überschrieben werden. Vor Oracle 9i wurde empfohlen, die Häufigkeit dieser Fehlermeldung durch Erhöhen der Größe und/oder Anzahl der Rollbacksegmente und Zuweisen großer Transaktionen zu einem bestimmten Rollbacksegment zu reduzieren.  
   
@@ -247,7 +249,7 @@ ms.locfileid: "47667838"
   
 -   Führen Sie **sp_dropdistpublisher**aus. Weitere Informationen finden Sie unter [Sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Veröffentlichungen mit Oracle (Übersicht)](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

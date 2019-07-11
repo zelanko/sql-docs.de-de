@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 945573e16582ba2778ff29e7396a2fb6ea3dedce
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015477"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556941"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 
@@ -76,13 +76,13 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an der Verwaltung des Arbeitsspeichers ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) erfolgte die Speicherbelegung mithilfe von fünf verschiedenen Mechanismen:
--  **Einzelseitenbelegung (Single-page Allocator, SPA)** , die im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess nur Speicherbelegungen umfasst, die kleiner als oder gleich 8 KB waren. Die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* bestimmten die Grenzen des vom SPA verbrauchten physischen Arbeitsspeichers. Der Pufferpool bildete zugleich den Mechanismus für SPA und den größten Verbraucher für Einzelseitenbelegungen.
+-  **Einzelseitenbelegung (Single-Page Allocator, SPA)** , die im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess nur Speicherbelegungen umfasst, die kleiner als oder gleich 8 KB waren. Die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* bestimmten die Grenzen des vom SPA verbrauchten physischen Arbeitsspeichers. Der Pufferpool bildete zugleich den Mechanismus für SPA und den größten Verbraucher für Einzelseitenbelegungen.
 -  **Mehrseitenbelegung (Multi-Page Allocator, MPA)** , für Speicherbelegungen, die mehr als 8 KB erfordern.
 -  **CLR-Belegung**, einschließlich des SQL CLR-Heaps und dessen globaler Belegungen, die während der CLR-Initialisierung erstellt werden.
 -  Speicherbelegungen für **[Threadstapel](../relational-databases/memory-management-architecture-guide.md#stacksizes)** im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess.
 -  **Direkte Windows-Belegungen (Direct Windows allocations, DWA)** für Speicherbelegungsanforderungen, die direkt an Windows gerichtet sind. Dazu gehören die Windows-Heapnutzung und direkte virtuelle Belegungen von Modulen, die in den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Prozess geladen werden. Beispiele für solche Speicherbelegungsanforderungen beinhalten Belegungen von DLLs erweiterter gespeicherter Prozeduren, Objekte, die mithilfe von Automatisierungsprozeduren (sp_OA-Aufrufen) erstellt werden, und Belegungen von verknüpften Serveranbietern.
 
-Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sind alle Einzelseitenbelegungen, Mehrseitenbelegungen und CLR-Belegungen in einer **Seitenbelegung beliebiger Größe** konsolidiert, die in den Speichergrenzwerten enthalten ist, die durch die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* gesteuert werden. Diese Änderung ermöglichte eine genauere Dimensionierung für alle Arbeitsspeicheranforderungen, die von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung verarbeitet werden. 
+Seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] sind alle Einzelseitenbelegungen, Mehrseitenbelegungen und CLR-Belegungen in einer **Seitenbelegung beliebiger Größe** konsolidiert. Diese ist in den Speichergrenzwerten enthalten, die durch die Konfigurationsoptionen *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* gesteuert werden. Diese Änderung ermöglichte eine genauere Dimensionierung für alle Arbeitsspeicheranforderungen, die von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung verarbeitet werden. 
 
 > [!IMPORTANT]
 > Überprüfen Sie Ihre aktuellen Konfigurationen von *Max. Serverarbeitsspeicher (MB)* und *Min. Serverarbeitsspeicher (MB)* nach dem Upgrade auf [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Das hat den Grund, dass diese Konfigurationen seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] im Vergleich zu früheren Versionen jetzt mehr Arbeitsspeicherbelegungen umfassen. Diese Änderungen betreffen sowohl 32-Bit- als auch 64-Bit-Versionen von [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] sowie 64-Bit-Versionen von [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -97,7 +97,7 @@ In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbele
 |Threadstapel-Arbeitsspeicher|Nein|Nein|
 |Direkte Belegungen von Windows|Nein|Nein|
 
-Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann auftreten, wenn der Wert für **_Serverspeicher gesamt (KB)_ ** bereits die Einstellung **_Zielserverspeicher (KB)_ ** erreicht hat, die als maximaler Serverarbeitsspeicher angegeben ist. Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
+Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann auftreten, wenn der Wert für **_Serverspeicher gesamt (KB)_** bereits die Einstellung **_Zielserverspeicher (KB)_** erreicht hat, die als maximaler Serverarbeitsspeicher angegeben ist. Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 
 
 Sobald diese Belegung vorgenommen wird, startet die Hintergrundaufgabe *Ressourcenmonitor*, um alle Arbeitsspeicherverbraucher aufzufordern, den belegten Arbeitsspeicher freizugeben, und versucht, den Wert von *Serverspeicher gesamt (KB)* unter die Angabe für *Zielserverspeicher (KB)* zu bringen. Aus diesem Grund kann die Arbeitsspeicherbelegung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kurzzeitig den Wert der Einstellung „Max. Serverarbeitsspeicher“ übersteigen. In dieser Situation überschreitet der gemeldete Wert des Leistungsindikators *Serverspeicher gesamt (KB)* die Einstellungen für „Max. Serverarbeitsspeicher“ und *Zielserverspeicher (KB)* .
 
@@ -280,7 +280,7 @@ Die hohe Arbeitsspeicherauslastung ist ein Zustand, der sich aus einem Speichere
 - Länger ausgeführte Abfragen (wenn Wartevorgänge für die Arbeitsspeicherzuweisung vorhanden sind)
 - Zusätzliche CPU-Zyklen
 
-Diese Situation kann durch externe oder interne Ursachen hervorgerufen werden. Folgende externe Ursachen sind möglich:
+Diese Situation kann durch externe oder interne Ursachen ausgelöst werden. Folgende externe Ursachen sind möglich:
 - Wenig physischer Speicher (RAM) ist verfügbar. Dadurch kürzt das System die Workingsets der derzeit ausgeführten Prozesse, wodurch das gesamte System verlangsamt werden kann. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann das Commit-Ziel des Pufferpools verringern und interne Caches häufiger kürzen. 
 - Es ist insgesamt wenig Systemspeicher (einschließlich der Auslagerungsdatei des Betriebssystems) verfügbar. Dadurch schlagen Speicherbelegungen durch das System möglicherweise fehl, da der derzeit zugewiesene Arbeitsspeicher nicht ausgelagert werden kann.
 Folgende interne Ursachen sind möglich:

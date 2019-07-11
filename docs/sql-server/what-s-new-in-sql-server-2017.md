@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263497"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556932"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server-2017 umfasst viele neue Datenbank-Engine-Funktionen, Verbesserungen u
 - Die Spalte **modified_extent_page_count** in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) verfolgt differenzielle Änderungen in jeder Datenbankdatei und aktiviert dabei intelligente Sicherungslösungen, die eine differenzielle Sicherung oder eine vollständige Sicherung basierend auf dem Prozentsatz der geänderten Seiten in der Datenbank ausführen. (CTP 2.0)
 - Die T-SQL-Syntax [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) unterstützt jetzt das Laden einer Tabelle in eine andere Dateigruppe als die Standarddateigruppe des Benutzers mithilfe des **ON**-Schlüsselworts. (CTP 2.0)
 - Nun werden datenbankübergreifende Transaktionen zwischen Datenbanken unterstützt, die Teil der **Always On-Verfügbarkeitsgruppe** sind, einschließlich Datenbanken, die Teil derselben Instanz sind. Weitere Informationen finden Sie unter [Transactions - Always On Availability Groups and Database Mirroring (Transaktionen – Always On-Verfügbarkeitsgruppen und Datenbankspiegelung)](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
-- Die neue Funktionalität der **Verfügbarkeitsgruppen** umfasst die Unterstützung ohne Cluster, die Einstellung der Mindestreplikate für Commitverfügbarkeitsgruppen und betriebssystemübergreifende Migrationen von Windows zu Linux und Tests. (CTP 1.3)
+- Die neue Funktionalität der **Verfügbarkeitsgruppen** umfasst Unterstützung für Leseskalierung ohne Cluster, die Einstellung der Mindestreplikate für Commitverfügbarkeitsgruppen, betriebssystemübergreifende Migrationen von Windows zu Linux und Tests. (CTP 1.3)
 - Neue dynamische Verwaltungssichten:
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) macht zusammenfassende Ebenenattribute und Informationen zu den Transaktionsprotokolldateien verfügbar. Dies ist hilfreich für die Überwachung der Integrität des Transaktionsprotokolls. (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) verfolgt die Versionsspeichernutzung pro Datenbank, was für die proaktive Planung der tempdb-Größenanpassung basierend auf der Versionspeichernutzung pro Datenbank hilfreich ist. (CTP 2.0)

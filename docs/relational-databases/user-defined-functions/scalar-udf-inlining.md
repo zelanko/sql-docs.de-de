@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775145"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581425"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -124,7 +124,7 @@ Der Ausführungsplan für diese Abfrage in SQL Server 2017 (Kompatibilitätsgrad
 
 ![Abfrageplan ohne Inlining](./media/query-plan-without-udf-inlining.png)
 
-Der Plan zeigt, dass SQL Server in diesem Fall eine einfache Strategie übernimmt: Für jedes Tupel in der `CUSTOMER`-Tabelle werden die benutzerdefinierte Funktion aufgerufen und die Ergebnisse ausgegeben. Diese Strategie nicht effizient. Durch Inlining werden solche benutzerdefinierten Funktionen in gleichwertige skalare Unterabfragen transformiert, die die benutzerdefinierte Funktion in der aufrufenden Abfrage ersetzen.
+Der Plan zeigt, dass SQL Server in diesem Fall eine einfache Strategie übernimmt: Für jedes Tupel in der `CUSTOMER`-Tabelle werden die benutzerdefinierte Funktion aufgerufen und die Ergebnisse ausgegeben. Diese Strategie ist nicht effizient. Durch Inlining werden solche benutzerdefinierten Funktionen in gleichwertige skalare Unterabfragen transformiert, die die benutzerdefinierte Funktion in der aufrufenden Abfrage ersetzen.
 
 Der Plan mit Inlining der benutzerdefinierten Funktion sieht für die gleiche Abfrage folgendermaßen aus.
 
@@ -135,6 +135,8 @@ Wie zuvor erwähnt enthält der Abfrageplan keinen UDF-Operator mehr. Seine Ausw
 1. SQL Server hat den impliziten Join zwischen `CUSTOMER` und `ORDERS` abgeleitet und diesen über einen Joinoperator in einen expliziten transformiert.
 2. SQL Server hat außerdem die implizite `GROUP BY O_CUSTKEY on ORDERS`-Anweisung abgeleitet und „IndexSpool + StreamAggregate“ verwendet, um diese zu implementieren.
 3. SQL Server verwendet nun einen Parallelismus für alle Operatoren.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resultierende Abfrageplan größer und komplexer werden. Wie Sie sehen können, handelt es sich bei den Vorgängen innerhalb der benutzerdefinierten Funktion nicht mehr um eine Blackbox. Deshalb kann der Abfrageoptimierer diese Vorgänge optimieren und deren Kosten berücksichtigen. Da die benutzerdefinierte Funktion sich nicht mehr im Plan befindet, wird der iterative Aufruf derselben durch einen Plan ersetzt, der den Aufwand, der durch Funktionsaufrufe entsteht, vollständig vermeidet.
 
@@ -182,7 +184,7 @@ Wenn alle Bedingungen erfüllt sind und SQL Server ein Inlining durchführt, wir
 
 ## <a name="enabling-scalar-udf-inlining"></a>Aktivieren des Inlinings benutzerdefinierter Skalarfunktionen
 
-Sie können Workloads automatisch für das Inlining benutzerdefinierter Skalarfunktionen zulassen, indem Sie den Kompatibilitätsgrad 150 für die Datenbank aktivieren.  Diesen können Sie mit Transact-SQL festlegen. Beispiel:  
+Sie können Workloads automatisch für das Inlining benutzerdefinierter Skalarfunktionen zulassen, indem Sie den Kompatibilitätsgrad 150 für die Datenbank aktivieren. Diesen können Sie mit Transact-SQL festlegen. Beispiel:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

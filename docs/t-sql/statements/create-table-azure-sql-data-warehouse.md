@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 07/03/2019
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a137ff26240b23e99f2faeadb367b1379b8c0f8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413330"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564019"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -164,21 +164,21 @@ Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizonta
 
  Informationen hierzu finden Sie unter [Erstellen einer partitionierten Tabelle](#PartitionedTable) im Abschnitt mit den Beispielen.
 
-### <a name="ordered-clustered-columnstore-index-option-preview"></a>Option für sortierten gruppierten Columnstore-Index (Vorschau)
+### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Option für sortierten gruppierten Columnstore-Index (Vorschau für Azure SQL Data Warehouse)
 
 „Sortierter Columnstore-Index“ ist der Standard für das Erstellen von Tabellen in Azure SQL Data Warehouse.  Die Angabe „ORDER“ wird standardmäßig mit „COMPOUND“-Schlüsseln umgesetzt.  Die Sortierung erfolgt immer in aufsteigender Reihenfolge. Wenn keine ORDER-Klausel angegeben ist, wird der Columnstore nicht sortiert. Aufgrund des Sortiervorgangs kann es bei einer Tabelle mit sortiertem geclustertem Columnstore-Index zu längeren Datenladezeiten kommen als bei nicht sortierten geclusterten Columnstore-Indizes. Wenn Sie beim Laden von Daten mehr tempdb-Speicherplatz benötigen, können Sie die Datenmenge pro Einfügung verringern.
 
-Während der Vorschauphase können Sie diese Abfrage ausführen, um die Spalten mit aktivierter ORDER zu überprüfen.  Später wird eine Katalogansicht bereitgestellt, um diese Informationen und die Spaltenordnungszahl anzugeben, wenn mehrere Spalten in ORDER angegeben sind.
+Während der Vorschauphase können Sie diese Abfrage ausführen, um die Spalten mit aktivierter ORDER zu überprüfen.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
+SELECT i.name AS index_name  
+    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
+    ,ic.index_column_id  
+    ,ic.key_ordinal  
+,ic.is_included_column  
+FROM sys.indexes AS i  
+INNER JOIN sys.index_columns AS ic
+    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 ```
 
 ### <a name="DataTypes"></a> Datentyp
@@ -594,7 +594,8 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>Siehe auch
  
- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

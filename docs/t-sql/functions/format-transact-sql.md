@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 732ca10f49982c7e2de190cffd50d9780a986a8c
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 7b53865a753cb538ebeb42573e473281057d4201
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499516"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556904"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -78,7 +78,7 @@ FORMAT ( value, format [, culture ] )
 |Kategorie|Typ|.NET-Typ|  
 |--------------|----------|---------------|  
 |Numerisch|BIGINT|Int64|  
-|Numerisch|ssNoversion|Int32|  
+|Numerisch|INT|Int32|  
 |Numerisch|SMALLINT|Int16|  
 |Numerisch|TINYINT|Byte|  
 |Numerisch|Decimal|SqlDecimal|  
@@ -235,6 +235,12 @@ Format gibt die angegebene Uhrzeit mit der Angabe PM zurück.
 ```sql
 select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm tt') -- returns 02:00 PM
 select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm t') -- returns 02:00 P
+```
+  
+Format gibt die angegebene Uhrzeit im 24-Stunden-Format zurück.
+
+```sql
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
 ```
   
 ## <a name="see-also"></a>Weitere Informationen

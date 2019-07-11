@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 94531ed04a4265a5fa1a9293e191faeb37feab9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973939"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586177"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Ein Thesaurus der Volltextsuche ist eine XML-Textdatei.
 
 -   Einstellung für diakritische Zeichen  
   
-     Bei einem Thesaurus werden bei allen Suchmustern diakritische Zeichen, beispielsweise Tilde (**~**), Akut-Akzentzeichen (**´**) oder Umlaut (**¨**), entweder berücksichtigt oder nicht berücksichtigt (d.h., es erfolgt eine *Unterscheidung nach Akzent* , oder es erfolgt *keine Unterscheidung nach Akzent*). Angenommen, Sie haben in einer Volltextsuchabfrage angegeben, dass das Suchmuster "café" durch ein anderes Muster ersetzt werden soll. Wenn im Thesaurus nicht nach Akzent unterschieden wird, ersetzt die Volltextsuche die Muster "café" und "cafe". Wenn im Thesaurus nach Akzent unterschieden wird, ersetzt die Volltextsuche nur das Muster "café". Standardmäßig wird bei einem Thesaurus nicht nach Akzent unterschieden.  
+     Bei einem Thesaurus werden bei allen Suchmustern diakritische Zeichen – beispielsweise Tilde ( **~** ), Akut-Akzentzeichen ( **?** ) oder Umlaut ( **?** ) – entweder berücksichtigt oder nicht berücksichtigt (d.h., es erfolgt eine *Unterscheidung nach Akzent*, oder es erfolgt *keine Unterscheidung nach Akzent*). Angenommen, Sie geben das Muster „caf?“ an, das in einer Volltextabfrage durch andere Muster ersetzt werden soll. Wenn im Thesaurus nicht nach Akzent unterschieden wird, ersetzt die Volltextsuche die Muster „caf?“ und „cafe“. Wenn im Thesaurus nach Akzent unterschieden wird, ersetzt die Volltextsuche nur das Muster „caf?“. Standardmäßig wird bei einem Thesaurus nicht nach Akzent unterschieden.  
   
 ##  <a name="initial_thesaurus_files"></a> Thesaurus-Standarddateien
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von XML-Thesaurusdateien bereit, und zwar eine für jede unterstützte Sprache. Diese Dateien sind im Wesentlichen leer. Sie enthalten nur die XML-Hauptstruktur, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Thesaurusdateien aufweisen, sowie einen auskommentierten Beispielthesaurus.  
@@ -83,6 +83,8 @@ Sie können den Speicherort und den Namen einer Thesaurusdatei ändern, indem Si
 Für jede Thesaurusabfrage wird zuerst ein sprachspezifischer Thesaurus und dann der globale Thesaurus verwendet.
 1.  Zuerst wird die sprachspezifische Datei gesucht und (falls erforderlich) zur Verarbeitung geladen. Die Abfrage wird um die durch die Erweiterungssatz- und Ersetzungssatz-Regeln in der Thesaurusdatei angegebenen Synonyme erweitert. 
 2.  Anschließend werden diese Schritte für den globalen Thesaurus wiederholt. Wenn für einen Begriff in der sprachspezifischen Thesaurusdatei bereits eine Übereinstimmung gefunden wurde, werden die globalen Synonyme des Begriffs ignoriert.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> Struktur einer Thesaurusdatei  
  Jede Thesaurusdatei definiert einen XML-Container, dessen ID `Microsoft Search Thesaurus` lautet, sowie einen Kommentar, `<!--` … `-->`, der einen Beispielthesaurus enthält. Der Thesaurus wird in einem `<thesaurus>`-Element definiert, das Beispiele für die untergeordneten Elemente enthält, in denen die Einstellung für diakritische Zeichen, Erweiterungssätze und Ersetzungssätze definiert werden.
@@ -156,7 +158,7 @@ Wenn zwei Ersetzungssätze mit ähnlichen Mustern für die Übereinstimmung verw
 </replacement>  
 ```  
   
-- und  
+\- und  
   
 ```xml  
 <replacement>  
@@ -170,7 +172,7 @@ Wenn zwei Ersetzungssätze mit ähnlichen Mustern für die Übereinstimmung verw
   
 Die Einstellung eines Thesaurus für diakritische Zeichen wird in einem einzelnen `<diacritics_sensitive>`-Element angegeben. Dieses Element enthält einen ganzzahligen Wert, der die Unterscheidung nach Akzent folgendermaßen steuert:  
   
-|Einstellung für diakritische Zeichen|Wert|XML|  
+|Einstellung für diakritische Zeichen|value|XML|  
 |------------------------|-----------|---------|  
 |keine Unterscheidung nach Akzent|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |Unterscheidung nach Akzent|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

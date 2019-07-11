@@ -1,9 +1,9 @@
 ---
 title: Sicherheit auf Zeilenebene | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de58a5d37bae0f589cae0c56dba21370923aa850
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140599"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559449"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
@@ -38,8 +38,8 @@ Eine zeilenbasierte Sicherheit vereinfacht den Entwurf und die Sicherheitscodier
 Die Datenbeschränkungszugriffslogik befindet sich auf der Datenbankebene, statt fern der Daten auf einer anderen Anwendungsebene. Das Datenbanksystem wendet die Zugriffsbeschränkungen bei jedem Zugriffsversuch auf Daten aus einer beliebigen Ebene an. Dadurch wird Ihr Sicherheitssystem zuverlässiger und robuster, indem die Oberfläche Ihres Sicherheitssystems verringert wird.  
   
 Implementieren Sie RLS, indem Sie die [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung und Prädikate verwenden, die als [Inline-Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md) erstellt werden.  
-  
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([hier herunterladen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([hier herunterladen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Azure SQL Data Warehouse unterstützt nur Filterprädikate. Blockprädikate werden in Azure SQL Data Warehouse derzeit nicht unterstützt.
@@ -422,7 +422,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. Szenario für Benutzer, die sich über eine Middle-Tier Application mit der Datenbank verbinden
 
 > [!NOTE]
-> Dieses Beispiel gilt nicht für Azure SQL Data Warehouse, da sowohl SESSION_CONTEXT als auch Blockprädikate derzeit nicht unterstützt werden.
+> In diesem Beispiel wird die Funktionalität zum Blockieren von Prädikaten für Azure SQL Data Warehouse momentan nicht unterstützt, sodass das Einfügen von Zeilen für die falsche Benutzer-ID bei Azure SQL Data Warehouse nicht blockiert wird.
 
 Dieses Beispiel zeigt, wie eine Anwendung der mittleren Schicht eine Verbindungsfilterung implementieren kann, bei der Anwendungsbenutzer (oder Mandanten) den gleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer (die Anwendung) gemeinsam verwenden. Die Anwendung legt nach dem Verbinden mit der Datenbank die aktuelle Anwendungsbenutzer-ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) fest. Dann sorgen Sicherheitsrichtlinien dafür, dass Zeilen transparent herausgefiltert werden, die für diese ID nicht sichtbar sein sollen. Außerdem wird der Benutzer am Einfügen von Zeilen für die falsche Benutzer-ID gehindert. Es sind keine weiteren App-Änderungen erforderlich.  
   

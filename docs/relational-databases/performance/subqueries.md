@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579390"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500229"
 ---
 # <a name="subqueries-sql-server"></a>Unterabfragen (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ Eine Unterabfrage unterliegt den folgenden Beschränkungen:
 -   Die Auswahlliste einer mit `EXISTS` eingeleiteten Unterabfrage besitzt laut Vereinbarung ein Sternchen (\*) statt eines einzelnen Spaltennamens. Die Regeln für eine mit `EXISTS` eingeleitete Unterabfrage entsprechen den Regeln für eine standardmäßige Auswahlliste, da eine mit `EXISTS` eingeleitete Unterabfrage einen Test auf das Vorhandensein bestimmter Daten erstellt und keine Daten, sondern TRUE oder FALSE zurückgibt.   
 
 ## <a name="qualifying"></a> Qualifizieren von Spaltennamen in Unterabfragen
-Im folgenden Beispiel wird die *CustomerID*-Spalte in der `WHERE`-Klausel der äußeren Abfrage implizit durch den Tabellennamen *Sales-Store* in der `FROM`-Klausel der äußeren Abfrage qualifiziert. Der Verweis auf *CustomerID* in der Auswahlliste der Unterabfrage wird durch die `FROM`-Klausel der Unterabfrage qualifiziert, also durch die *Sales.Customer*-Tabelle.
+Im folgenden Beispiel wird die *BusinessEntityID*-Spalte in der `WHERE`-Klausel der äußeren Abfrage implizit durch den Tabellennamen in der `FROM`-Klausel der äußeren Abfrage (*Sales.Store*) qualifiziert. Der Verweis auf *CustomerID* in der Auswahlliste der Unterabfrage wird durch die `FROM`-Klausel der Unterabfrage qualifiziert, also durch die *Sales.Customer*-Tabelle.
 
 ```sql
 USE AdventureWorks2016;

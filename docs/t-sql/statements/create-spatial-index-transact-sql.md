@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9d7e9938c8132489bb18538aec6b8256dd2115fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a1b2725d65f9eea468ac70ce2d99285c0a85252
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503225"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500038"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "65503225"
   
 ## <a name="syntax"></a>Syntax  
   
-```sql
+```
 CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  
@@ -146,20 +146,19 @@ CREATE SPATIAL INDEX index_name
   | MAXDOP = max_degree_of_parallelism  
     | DATA_COMPRESSION = { NONE | ROW | PAGE }  
 }  
-  
 ```  
   
 ## <a name="arguments"></a>Argumente  
 
- *index_name*  
+ *index_name*     
  Der Name des Indexes. Indexnamen müssen für eine Tabelle eindeutig sein, können aber innerhalb einer Datenbank mehrfach vorkommen. Indexnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
- ON \<object> ( *spatial_column_name* )  
+ ON \<object> ( *spatial_column_name* )     
  Gibt das Objekt (Datenbank, Schema oder Tabelle), für das der Index erstellt werden soll, sowie den Namen der räumlichen Spalte an.  
   
  *spatial_column_name* gibt die räumliche Spalte an, auf der der Index basiert. Für die Definition eines einzelnen räumlichen Indexes kann nur eine räumliche Spalte angegeben werden. Allerdings können für eine **geometry**- oder **geography**-Spalte mehrere räumliche Indizes erstellt werden.  
   
- USING  
+ USING      
  Gibt das Mosaikschema für den räumlichen Index an. Dieser Parameter verwendet den typspezifischen, in der folgenden Tabelle angezeigten Wert:  
   
 |Datentyp der Spalte|Mosaikschema|  
@@ -173,78 +172,77 @@ CREATE SPATIAL INDEX index_name
   
  Informationen darüber, wie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Mosaik implementiert wird, finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ON *filegroup_name*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ ON *filegroup_name*      
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Erstellt den angegebenen Index für die angegebene Dateigruppe. Wenn kein Speicherort angegeben und die Tabelle nicht partitioniert ist, verwendet der Index die gleiche Dateigruppe wie die zugrunde liegende Tabelle. Die Dateigruppe muss bereits vorhanden sein.  
   
- ON "default"  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ ON "default"     
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Erstellt den angegebenen Index für die Standarddateigruppe.  
   
  Die Benennung default ist in diesem Kontext kein Schlüsselwort. Es handelt sich dabei um einen Bezeichner für die Standarddateigruppe, der begrenzt sein muss, wie in ON "default" oder ON [default]. Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- **\<object>::=**
-  
+ **\<object>::=**     
  Gibt das vollqualifizierte oder nicht vollqualifizierte Objekt an, das indiziert werden soll.  
   
- *database_name*  
+ *database_name*      
  Der Name der Datenbank.  
   
- *schema_name*  
+ *schema_name*     
  Der Name des Schemas, zu dem die Tabelle gehört.  
   
- *table_name*  
+ *table_name*      
  Der Name der Tabelle, die indiziert werden soll.  
   
- Die Windows Azure SQL-Datenbank unterstützt das aus drei Teilen bestehende Format database_name.[schema_name].object_name, wenn database_name die aktuelle Datenbank bzw. database_name tempdb ist und object_name mit # beginnt.  
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt das aus drei Teilen bestehende Namensformat database_name.[schema_name].object_name, wenn database_name die aktuelle Datenbank angibt oder database_name tempdb ist und object_name mit # beginnt.  
   
 ### <a name="using-options"></a>USING-Optionen
 
- GEOMETRY_GRID  
+ GEOMETRY_GRID      
  Gibt das verwendete Mosaikschema für das **Geometrie**-Raster an. GEOMETRY_GRID kann nur für eine Spalte vom Datentyp **geometry** angegeben werden.  GEOMETRY_GRID ermöglicht manuelle Anpassungen des Mosaikschemas.  
   
- GEOMETRY_AUTO_GRID  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ GEOMETRY_AUTO_GRID      
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Kann nur für eine Spalte des geometry-Datentyps angegeben werden. Dies ist der Standardwert für diesen Datentyp; eine Angabe ist nicht erforderlich.  
   
- GEOGRAPHY_GRID  
+ GEOGRAPHY_GRID      
  Gibt das Mosaikschema für das Geografieraster an. GEOGRAPHY_GRID kann nur für eine Spalte mit dem Datentyp **geography** angegeben werden.  
   
- GEOGRAPHY_AUTO_GRID  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ GEOGRAPHY_AUTO_GRID      
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Kann nur für eine Spalte mit dem Datentyp geography angegeben werden.  Dies ist der Standardwert für diesen Datentyp; eine Angabe ist nicht erforderlich.  
   
 ### <a name="with-options"></a>WITH-Optionen
 
-BOUNDING_BOX  
+BOUNDING_BOX      
 Gibt einen aus vier Werten bestehenden numerischen Tupel zurück, der die vier Koordinaten des Begrenzungsrahmens definiert: die minimale X- und die minimale Y-Koordinate der unteren linken Ecke und die maximale X- und die maximale Y-Koordinate der oberen rechten Ecke.  
   
- *xmin*  
+ *xmin*      
  Gibt die X-Koordinate der unteren linken Ecke des umgebenden Felds an.  
   
- *ymin*  
+ *ymin*      
  Gibt die Y-Koordinate der unteren linken Ecke des umgebenden Felds an.  
   
- *xmax*  
+ *xmax*     
  Gibt die X-Koordinate der oberen rechten Ecke des Begrenzungsrahmens an.  
   
- *ymax*  
+ *ymax*     
  Gibt die Y-Koordinate der oberen rechten Ecke des Begrenzungsrahmens an.  
   
- XMIN = *xmin*  
+ XMIN = *xmin*     
  Gibt den Eigenschaftsnamen und -wert für die X-Koordinate der unteren linken Ecke des Begrenzungsrahmens an.  
   
- YMIN =*ymin*  
+ YMIN =*ymin*      
  Gibt den Eigenschaftsnamen und -wert für die Y-Koordinate der unteren linken Ecke des umgebenden Felds an.  
   
- XMAX =*xmax*  
+ XMAX =*xmax*      
  Gibt den Eigenschaftsnamen und -wert für die X-Koordinate der oberen rechten Ecke des umgebenden Felds an.  
   
- YMAX =*ymax*  
+ YMAX =*ymax*     
  Gibt den Eigenschaftsnamen und -wert für die Y-Koordinate der oberen rechten Ecke des umgebenden Felds an.  
   
  > [!NOTE]
@@ -262,32 +260,32 @@ Gibt einen aus vier Werten bestehenden numerischen Tupel zurück, der die vier K
   
 - BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
-GRIDS  
+GRIDS      
 Definiert die Dichte des Rasters auf jeder Ebene eines Mosaikschemas. Wenn GEOMETRY_AUTO_GRID und GEOGRAPHY_AUTO_GRID ausgewählt werden, wird diese Option deaktiviert.  
   
  Informationen zu Mosaiken finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  Die GRIDS-Parameter lauten wie folgt:  
   
- LEVEL_1  
+ LEVEL_1     
  Gibt das Raster der obersten (höchsten) Ebene an.  
   
- LEVEL_2  
+ LEVEL_2    
  Gibt das Raster der zweiten Ebene an.  
   
- LEVEL_3  
+ LEVEL_3    
  Gibt das Raster der dritten Ebene an.  
   
- LEVEL_4  
+ LEVEL_4    
  Gibt das Raster der vierten Ebene an.  
   
- LOW  
+ LOW    
  Gibt die niedrigste mögliche Dichte für das Raster auf einer bestimmten Ebene an. LOW entspricht 16 Zellen (4 x 4-Raster).  
   
- **MEDIUM**  
+ **MEDIUM**     
  Gibt die mittlere Dichte für das Raster auf einer bestimmten Ebene an. MEDIUM entspricht 64 Zellen (8 x 8-Raster).  
   
- HIGH  
+ HIGH     
  Gibt die höchste mögliche Dichte für das Raster auf einer bestimmten Ebene an. HIGH entspricht 256 Zellen (16 x 16-Raster).  
   
 > [!NOTE]
@@ -296,7 +294,7 @@ Definiert die Dichte des Rasters auf jeder Ebene eines Mosaikschemas. Wenn GEOME
 > [!WARNING]
 > Bei Angabe einer ungültigen Dichte wird ein Fehler ausgelöst.  
   
-CELLS_PER_OBJECT =*n*  
+CELLS_PER_OBJECT =*n*     
 Gibt die Anzahl von Zellen pro Objekt für das Mosaik an, die vom Mosaikprozess für ein einzelnes räumliches Objekt im Index verwendet werden können. *m* kann jeder ganzen Zahl von 1 bis 8192 entsprechen. Wenn bei einem bestimmten Mosaik eine ungültige Anzahl übergeben wird oder die Anzahl die maximal zulässige Anzahl von Zellen überschreitet, wird ein Fehler ausgelöst.  
   
  CELLS_PER_OBJECT hat die folgenden Standardwerte:  
@@ -308,25 +306,25 @@ Gibt die Anzahl von Zellen pro Objekt für das Mosaik an, die vom Mosaikprozess 
 |GEOGRAPHY_GRID|**16**|  
 |GEOGRAPHY_AUTO_GRID|**12**|  
   
- Auf höchster Ebene verwendet die Indizierung die Anzahl von Zellen, die zum Bereitstellen eines vollständigen Mosaiks der höchsten Ebene erforderlich sind, wenn ein Objekt mehr Zellen abdeckt, als durch *n*angegeben sind. In solchen Fällen ist es möglich, dass ein Objekt mehr als die angegebene Anzahl von Zellen erhält. Die maximale Anzahl ist dann die Anzahl von Zellen, die von dem Raster der höchsten Ebene generiert wird, welche von der Dichte abhängt.  
+Auf höchster Ebene verwendet die Indizierung die Anzahl von Zellen, die zum Bereitstellen eines vollständigen Mosaiks der höchsten Ebene erforderlich sind, wenn ein Objekt mehr Zellen abdeckt, als durch *n*angegeben sind. In solchen Fällen ist es möglich, dass ein Objekt mehr als die angegebene Anzahl von Zellen erhält. Die maximale Anzahl ist dann die Anzahl von Zellen, die von dem Raster der höchsten Ebene generiert wird, welche von der Dichte abhängt.  
   
- Der CELLS_PER_OBJECT-Wert wird von der Zellen-pro-Objekt-Mosaikregel verwendet. Informationen zu Mosaikregeln finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
+Der CELLS_PER_OBJECT-Wert wird von der Zellen-pro-Objekt-Mosaikregel verwendet. Informationen zu Mosaikregeln finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-PAD_INDEX = { ON | **OFF** }  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+PAD_INDEX = { ON | **OFF** }     
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
- Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
+Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
   
- ON  
- Gibt an, dass der Prozentsatz des mit *fillfactor* angegebenen freien Speicherplatzes für die Zwischenebenenseiten des Indexes verwendet wird.  
+ON     
+Gibt an, dass der Prozentsatz des mit *fillfactor* angegebenen freien Speicherplatzes für die Zwischenebenenseiten des Indexes verwendet wird.  
   
- OFF oder *fillfactor* ist nicht angegeben  
- Gibt an, dass die Zwischenebenenseiten nahezu vollständig aufgefüllt sind. Allerdings ist ausreichend Speicherplatz vorhanden, um mindestens eine Zeile in der maximal für den Index möglichen Größe aufzunehmen, wenn der Schlüsselsatz auf den Zwischenseiten berücksichtigt wird.  
+OFF oder *fillfactor* ist nicht angegeben     
+Gibt an, dass die Zwischenebenenseiten nahezu vollständig aufgefüllt sind. Allerdings ist ausreichend Speicherplatz vorhanden, um mindestens eine Zeile in der maximal für den Index möglichen Größe aufzunehmen, wenn der Schlüsselsatz auf den Zwischenseiten berücksichtigt wird.  
   
- Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da PAD_INDEX den durch FILLFACTOR angegebenen Prozentsatz verwendet. Wenn der für FILLFACTOR angegebene Prozentsatz nicht groß genug ist, um eine Zeile aufzunehmen, überschreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] diesen Prozentsatz intern, um das Minimum zuzulassen. Auf jeder Zwischenindexseite befinden sich unabhängig vom angegebenen *fillfactor*-Wert nie weniger als zwei Zeilen.  
+Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da PAD_INDEX den durch FILLFACTOR angegebenen Prozentsatz verwendet. Wenn der für FILLFACTOR angegebene Prozentsatz nicht groß genug ist, um eine Zeile aufzunehmen, überschreibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] diesen Prozentsatz intern, um das Minimum zuzulassen. Auf jeder Zwischenindexseite befinden sich unabhängig vom angegebenen *fillfactor*-Wert nie weniger als zwei Zeilen.  
   
-FILLFACTOR =*fillfactor*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+FILLFACTOR =*fillfactor*     
+ **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Gibt einen Prozentsatz an, der angibt, wie weit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -neuerstellung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Wenn *fillfactor* 100 oder 0 entspricht, werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] Indizes mit vollständig aufgefüllten Blattseiten erstellt.  
   
@@ -340,29 +338,29 @@ FILLFACTOR =*fillfactor*
   
  Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
-SORT_IN_TEMPDB = { ON | **OFF** }  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+SORT_IN_TEMPDB = { ON | **OFF** }       
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Gibt an, ob temporäre Ergebnisse des Sortierens in tempdb gespeichert werden sollen. Der Standardwert ist OFF.  
   
- ON  
+ ON     
  Die Zwischenergebnisse von Sortierungen, mit denen der Index erstellt wird, werden in tempdb gespeichert. Diese Option verringert u. U. den Zeitaufwand, der mit der Erstellung eines Indexes verbunden ist, wenn sich tempdb auf einem anderen Datenträgersatz befindet als die Benutzerdatenbank. Sie erhöht jedoch den Betrag an Speicherplatz, der während der Indexerstellung verwendet wird.  
   
- OFF  
+ OFF     
  Die Zwischenergebnisse der Sortierung werden in derselben Datenbank gespeichert wie der Index.  
   
  Zusätzlich zu dem Speicherplatz, der in der Benutzerdatenbank zum Erstellen des Indexes erforderlich ist, muss tempdb ungefähr die gleiche Menge an zusätzlichem Speicherplatz aufweisen, um die Zwischenergebnisse des Sortierens zu speichern. Weitere Informationen finden Sie unter [SORT_IN_TEMPDB-Option für Indizes](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
-IGNORE_DUP_KEY =**OFF**  
+IGNORE_DUP_KEY =**OFF**     
 Hat keine Auswirkungen für räumliche Indizes, da der Indextyp nie eindeutig ist. Legen Sie diese Option nicht auf ON fest, oder es wird ein Fehler ausgelöst.  
   
-STATISTICS_NORECOMPUTE = { ON | **OFF**}  
+STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 Gibt an, ob Verteilungsstatistiken neu berechnet werden. Der Standardwert ist OFF.  
   
- ON  
+ ON    
  Veraltete Indexstatistiken werden nicht automatisch neu berechnet.  
   
- OFF  
+ OFF    
  Die automatischen Updates der Statistiken sind aktiviert.  
   
  Um das automatische Aktualisieren von Statistiken wiederherzustellen, müssen Sie STATISTICS_NORECOMPUTE auf OFF festlegen oder die UPDATE STATISTICS-Anweisung ohne die NORECOMPUTE-Klausel ausführen.  
@@ -370,20 +368,20 @@ Gibt an, ob Verteilungsstatistiken neu berechnet werden. Der Standardwert ist OF
 > [!IMPORTANT]  
 > Wenn Sie die automatische Neuberechnung von Verteilungsstatistiken deaktivieren, wählt der Abfrageoptimierer möglicherweise nicht die optimalen Ausführungspläne für Abfragen, an denen die Tabelle beteiligt ist.  
   
-DROP_EXISTING = { ON | **OFF** }  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DROP_EXISTING = { ON | **OFF** }     
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Gibt an, dass der benannte, bereits vorhandene räumliche Index gelöscht und neu erstellt wird. Der Standardwert ist OFF.  
   
- ON  
+ ON     
  Der vorhandene Index wird gelöscht und neu erstellt. Der angegebene Indexname muss mit dem Namen eines derzeit vorhandenen Index übereinstimmen. Die Indexdefinition kann jedoch geändert werden. Sie können beispielsweise andere Spalten, eine andere Sortierreihenfolge, ein anderes Partitionsschema oder andere Indexoptionen angeben.  
   
- OFF  
+ OFF     
  Es wird ein Fehler angezeigt, wenn der angegebene Indexname bereits vorhanden ist.  
   
  Der Indextyp kann nicht mithilfe von DROP_EXISTING geändert werden.  
   
-ONLINE =**OFF**  
+ONLINE =**OFF**      
 Gibt an, dass zugrunde liegende Tabellen oder zugehörige Indizes für Abfragen und Datenänderungen während des Indexvorgangs nicht zur Verfügung stehen. In dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Onlineindexerstellungen für räumliche Indizes nicht unterstützt. Wenn diese Option für einen räumlichen Index auf ON festgelegt ist, wird ein Fehler ausgelöst. Lassen Sie die ONLINE-Option weg, oder legen Sie ONLINE auf OFF fest.  
   
  Ein Offlineindexvorgang, der einen räumlichen Index erstellt, neu erstellt oder löscht, aktiviert eine Schemaänderungssperre (Sch-M) für die Tabelle. Dadurch wird verhindert, dass Benutzer für die Dauer des Vorgangs auf die zugrunde liegende Tabelle zugreifen können.  
@@ -391,30 +389,30 @@ Gibt an, dass zugrunde liegende Tabellen oder zugehörige Indizes für Abfragen 
 > [!NOTE]  
 > Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-ALLOW_ROW_LOCKS = { **ON** | OFF }  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_ROW_LOCKS = { **ON** | OFF }     
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.  
   
- ON  
+ ON     
  Zeilensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden.  
   
- OFF  
+ OFF     
  Zeilensperren werden nicht verwendet.  
   
-ALLOW_PAGE_LOCKS = { **ON** | OFF }  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_PAGE_LOCKS = { **ON** | OFF }     
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
- ON  
+ ON    
  Seitensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden.  
   
- OFF  
+ OFF     
  Seitensperren werden nicht verwendet.  
   
-MAXDOP =*max_degree_of_parallelism*  
-**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+MAXDOP =*max_degree_of_parallelism*      
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Überschreibt die Konfigurationsoption `max degree of parallelism` für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
@@ -423,13 +421,13 @@ MAXDOP =*max_degree_of_parallelism*
   
  *max_degree_of_parallelism* kann folgende Werte haben:  
   
- 1  
+ 1     
  Unterdrückt das Generieren paralleler Pläne.  
   
- \>1  
+ \>1    
  Beschränkt die maximale Anzahl der Prozessoren, die bei einem parallelen Indexvorgang verwendet werden, je nach aktueller Systemauslastung auf die angegebene Zahl oder einen niedrigeren Wert.  
   
- 0 (Standard)  
+ 0 (Standard)    
  Verwendet abhängig von der aktuellen Systemarbeitsauslastung die tatsächliche Anzahl von Prozessoren oder weniger Prozessoren.  
   
  Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
@@ -437,48 +435,43 @@ MAXDOP =*max_degree_of_parallelism*
 > [!NOTE]
 > Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-DATA_COMPRESSION = {NONE | ROW | PAGE}  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DATA_COMPRESSION = {NONE | ROW | PAGE}     
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
  Bestimmt die Ebene der vom Index verwendeten Datenkomprimierung.  
   
- Keine  
+ Keine     
  Die Daten werden im Index nicht komprimiert.  
   
- ROW  
+ ROW    
  Die Daten werden im Index zeilenweise komprimiert.  
   
- PAGE  
+ PAGE    
  Die Daten werden im Index seitenweise komprimiert.  
   
 ## <a name="remarks"></a>Remarks
-
- Jede Option kann pro CREATE SPATIAL INDEX-Anweisung nur einmal angegeben werden. Beim Angeben einer Option, die es schon einmal gibt, wird ein Fehler ausgelöst.  
+Jede Option kann pro CREATE SPATIAL INDEX-Anweisung nur einmal angegeben werden. Beim Angeben einer Option, die es schon einmal gibt, wird ein Fehler ausgelöst.  
   
- Sie können bis zu 249 räumliche Indizes für jede räumliche Spalte in einer Tabelle erstellen. Es kann sich als nützlich erweisen, mehrere räumliche Indizes für bestimmte räumliche Spalten zu erstellen, z. B. zum Indizieren verschiedener Mosaikparameter in einer Spalte.  
+Sie können bis zu 249 räumliche Indizes für jede räumliche Spalte in einer Tabelle erstellen. Es kann sich als nützlich erweisen, mehrere räumliche Indizes für bestimmte räumliche Spalten zu erstellen, z. B. zum Indizieren verschiedener Mosaikparameter in einer Spalte.  
   
 > [!IMPORTANT]  
 > Die Erstellung von räumlichen Indizes unterliegt einigen weiteren Einschränkungen. Weitere Informationen finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- Bei der Indexerstellung kann eine verfügbare Prozessparallelität nicht genutzt werden.  
+Bei der Indexerstellung kann eine verfügbare Prozessparallelität nicht genutzt werden.  
   
 ## <a name="methods-supported-on-spatial-indexes"></a>Von räumlichen Indizes unterstützte Methoden
-
- Unter bestimmten Bedingungen unterstützen räumliche Indizes eine Reihe von mengenorientierten Geometriemethoden. Weitere Informationen finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
+Unter bestimmten Bedingungen unterstützen räumliche Indizes eine Reihe von mengenorientierten Geometriemethoden. Weitere Informationen finden Sie unter [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## <a name="spatial-indexes-and-partitioning"></a>Räumliche Indizes und Partitionierung
-
- Standardmäßig wird beim Erstellen eines räumlichen Indexes für eine partitionierte Tabelle der Index in Übereinstimmung mit dem Partitionsschema der Tabelle partitioniert. So kann sichergestellt werden, dass Indexdaten und die zugehörige Zeile in der gleichen Partition gespeichert werden.  
+Standardmäßig wird beim Erstellen eines räumlichen Indexes für eine partitionierte Tabelle der Index in Übereinstimmung mit dem Partitionsschema der Tabelle partitioniert. So kann sichergestellt werden, dass Indexdaten und die zugehörige Zeile in der gleichen Partition gespeichert werden.  
   
- In diesem Fall müssen Sie, um das Partitionsschema der Basistabelle zu ändern, den räumlichen Index löschen, bevor Sie die Basistabelle neu partitionieren können. Diese Einschränkung kann umgangen werden, indem Sie beim Erstellen eines räumlichen Indexes die "ON filegroup"-Option angeben. Weitere Informationen finden Sie nachfolgend unter "Räumliche Indizes und Dateigruppen".  
+In diesem Fall müssen Sie, um das Partitionsschema der Basistabelle zu ändern, den räumlichen Index löschen, bevor Sie die Basistabelle neu partitionieren können. Diese Einschränkung kann umgangen werden, indem Sie beim Erstellen eines räumlichen Indexes die "ON filegroup"-Option angeben. Weitere Informationen finden Sie nachfolgend unter "Räumliche Indizes und Dateigruppen".  
   
 ## <a name="spatial-indexes-and-filegroups"></a>Räumliche Indizes und Dateigruppen
-
- Standardmäßig werden räumliche Indizes in die gleichen Dateigruppen wie die Tabelle partitioniert, für die der Index angegeben wird. Dies kann durch Angabe der Dateigruppe überschrieben werden:  
+Standardmäßig werden räumliche Indizes in die gleichen Dateigruppen wie die Tabelle partitioniert, für die der Index angegeben wird. Dies kann durch Angabe der Dateigruppe überschrieben werden:  
   
- [ ON { *filegroup_name* | "default" } ]  
-  
- Wenn Sie eine Dateigruppe für einen räumlichen Index angeben, wird der Index unabhängig vom Partitionierungsschema der Tabelle in dieser Dateigruppe platziert.  
+[ ON { *filegroup_name* | "default" } ]     
+Wenn Sie eine Dateigruppe für einen räumlichen Index angeben, wird der Index unabhängig vom Partitionierungsschema der Tabelle in dieser Dateigruppe platziert.  
   
 ## <a name="catalog-views-for-spatial-indexes"></a>Katalogsichten für räumliche Indizes
 
@@ -495,14 +488,12 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  Weitere Informationen zum Erstellen von Indizes finden Sie in den Hinweisen unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen
-
- Der Benutzer muss über die ALTER-Berechtigung für die Tabelle oder Sicht verfügen oder ein Mitglied der festen Serverrolle sysadmin oder der festen Datenbankrollen db_owner oder db_ddladmin sein.  
+Der Benutzer muss über die `ALTER`-Berechtigung für die Tabelle oder Sicht verfügen, oder Mitglied der festen sysadmin-Serverrolle oder der festen Datenbankrollen `db_ddladmin` und `db_owner` sein.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Erstellen eines räumlichen Indexes für eine geometry-Spalte
-
- Im folgenden Beispiel wird eine Tabelle namens `SpatialTable` erstellt, die eine Spalte vom Typ **geometry** aufweist, nämlich `geometry_col`. Dann wird ein räumlicher Index, `SIndx_SpatialTable_geometry_col1`, für `geometry_col` erstellt. Im Beispiel wird das Standardmosaikschema verwendet und das umgebende Feld angegeben.  
+Im folgenden Beispiel wird eine Tabelle namens `SpatialTable` erstellt, die eine Spalte vom Typ **geometry** aufweist, nämlich `geometry_col`. Dann wird ein räumlicher Index, `SIndx_SpatialTable_geometry_col1`, für `geometry_col` erstellt. Im Beispiel wird das Standardmosaikschema verwendet und das umgebende Feld angegeben.  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
@@ -512,8 +503,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ```  
   
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. Erstellen eines räumlichen Indexes für eine geometry-Spalte
-
- Im folgenden Beispiel wird ein zweiter räumlicher Index, `SIndx_SpatialTable_geometry_col2`, für `geometry_col` in der Tabelle `SpatialTable` erstellt. Im Beispiel wird `GEOMETRY_GRID` als Mosaikschema angegeben. Im Beispiel werden auch das umgebende Feld, unterschiedliche Dichten auf verschiedenen Ebenen und 64 Zellen pro Objekt angegeben. Zudem wird die Auffüllung von Indizes auf `ON` festgelegt.  
+Im folgenden Beispiel wird ein zweiter räumlicher Index, `SIndx_SpatialTable_geometry_col2`, für `geometry_col` in der Tabelle `SpatialTable` erstellt. Im Beispiel wird `GEOMETRY_GRID` als Mosaikschema angegeben. Im Beispiel werden auch das umgebende Feld, unterschiedliche Dichten auf verschiedenen Ebenen und 64 Zellen pro Objekt angegeben. Zudem wird die Auffüllung von Indizes auf `ON` festgelegt.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
@@ -527,8 +517,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ```  
   
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. Erstellen eines räumlichen Indexes für eine geometry-Spalte
-
- Im folgenden Beispiel wird ein dritter räumlicher Index, `SIndx_SpatialTable_geometry_col3`, für `geometry_col` in der Tabelle `SpatialTable` erstellt. Im Beispiel wird das Standardmosaikschema verwendet. Im Beispiel wird das umgebende Feld angegeben, und es werden unterschiedliche Zelldichten auf der dritten und vierten Ebene, aber die vorgegebene Anzahl von Zellen pro Objekt verwendet.  
+Im folgenden Beispiel wird ein dritter räumlicher Index, `SIndx_SpatialTable_geometry_col3`, für `geometry_col` in der Tabelle `SpatialTable` erstellt. Im Beispiel wird das Standardmosaikschema verwendet. Im Beispiel wird das umgebende Feld angegeben, und es werden unterschiedliche Zelldichten auf der dritten und vierten Ebene, aber die vorgegebene Anzahl von Zellen pro Objekt verwendet.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
@@ -539,8 +528,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
 ```  
   
 ### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. Ändern einer für räumliche Indizes spezifischen Option
-
- Im folgenden Beispiel wird der räumliche Index neu erstellt, der im vorherigen Beispiel erstellt wurde, nämlich `SIndx_SpatialTable_geography_col3`. Zu diesem Zweck wird eine neue Dichte für `LEVEL_3` mit DROP_EXISTING = ON angegeben.  
+Im folgenden Beispiel wird der räumliche Index neu erstellt, der im vorherigen Beispiel erstellt wurde, nämlich `SIndx_SpatialTable_geography_col3`. Zu diesem Zweck wird eine neue Dichte für `LEVEL_3` mit DROP_EXISTING = ON angegeben.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
@@ -551,8 +539,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. Erstellen eines räumlichen Indexes für eine geography-Spalte
-
- Im folgenden Beispiel wird eine Tabelle namens `SpatialTable2` erstellt, die eine Spalte vom Typ **geography** aufweist, nämlich `geography_col`. Dann wird ein räumlicher Index, `SIndx_SpatialTable_geography_col1`, für `geography_col` erstellt. Im Beispiel werden die Standardparameterwerte des Mosaikschemas GEOGRAPHY_AUTO_GRID verwendet.  
+Im folgenden Beispiel wird eine Tabelle namens `SpatialTable2` erstellt, die eine Spalte vom Typ **geography** aufweist, nämlich `geography_col`. Dann wird ein räumlicher Index, `SIndx_SpatialTable_geography_col1`, für `geography_col` erstellt. Im Beispiel werden die Standardparameterwerte des Mosaikschemas GEOGRAPHY_AUTO_GRID verwendet.  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
@@ -564,8 +551,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 > Für Geografierasterindizes kann kein Begrenzungsrahmen angegeben werden.
   
 ### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. Erstellen eines räumlichen Indexes für eine geography-Spalte
-
- Im folgenden Beispiel wird ein zweiter räumlicher Index, `SIndx_SpatialTable_geography_col2`, für `geography_col` in der Tabelle `SpatialTable2` erstellt. Im Beispiel wird `GEOGRAPHY_GRID` als Mosaikschema angegeben. Im Beispiel werden auch unterschiedliche Rasterdichten auf verschiedenen Ebenen und 64 Zellen pro Objekt angegeben. Zudem wird die Auffüllung von Indizes auf `ON` festgelegt.  
+Im folgenden Beispiel wird ein zweiter räumlicher Index, `SIndx_SpatialTable_geography_col2`, für `geography_col` in der Tabelle `SpatialTable2` erstellt. Im Beispiel wird `GEOGRAPHY_GRID` als Mosaikschema angegeben. Im Beispiel werden auch unterschiedliche Rasterdichten auf verschiedenen Ebenen und 64 Zellen pro Objekt angegeben. Zudem wird die Auffüllung von Indizes auf `ON` festgelegt.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
@@ -578,8 +564,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
 ```  
   
 ### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. Erstellen eines räumlichen Indexes für eine geography-Spalte
-
- Im folgenden Beispiel wird dann ein dritter räumlicher Index, `SIndx_SpatialTable_geography_col3`, für `geography_col` in der Tabelle `SpatialTable2` erstellt. Im Beispiel werden das Standardmosaikschema GEOGRAPHY_GRID und der Standardwert für CELLS_PER_OBJECT (16) verwendet.  
+Im folgenden Beispiel wird dann ein dritter räumlicher Index, `SIndx_SpatialTable_geography_col3`, für `geography_col` in der Tabelle `SpatialTable2` erstellt. Im Beispiel werden das Standardmosaikschema GEOGRAPHY_GRID und der Standardwert für CELLS_PER_OBJECT (16) verwendet.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
@@ -588,19 +573,18 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-
-- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
-- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)
-- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)
-- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
-- [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
-- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
-- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
-- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
-- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
-- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)
-- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)
-- [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)  
+[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)       
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)       
+[CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)       
+[CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)       
+[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)       
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)       
+[Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)       
+[DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)       
+[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)       
+[EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)       
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)       
+[sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)       
+[sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)       
+[sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)       
+[Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)       

@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128350"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581324"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Lernprogramm: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ In diesem Abschnitt erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../
   
 10. Deaktivieren Sie auf der Seite **Agentsicherheit** das Kontrollkästchen neben **Use the security settings from the Snapshot Agent** (Sicherheitseinstellungen des Momentaufnahme-Agents verwenden).   
   
-    Legen Sie für den Momentaufnahmen-Agent die **Sicherheitseinstellungen** fest, indem Sie auf die entsprechende Schaltfläche klicken. Geben Sie zuerst <*Name_des_Verlegercomputers*>**\repl_snapshot** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie anschließend auf **OK**.  
+    Legen Sie für den Momentaufnahmen-Agent die **Sicherheitseinstellungen** fest, indem Sie auf die entsprechende Schaltfläche klicken. Geben Sie zuerst <*Name_des_Verlegercomputers*> **\repl_snapshot** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie anschließend auf **OK**.  
 
     ![Seite „Agentsicherheit“ und Dialogfeld „Sicherheit für den Momentaufnahme-Agent“](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. Wiederholen Sie den vorherigen Schritt, um <*Name_des_Verlegercomputers*>**\repl_logreader** als Prozesskonto für den Protokolllese-Agent festzulegen. Klicken Sie anschließend auf **OK**.  
+12. Wiederholen Sie den vorherigen Schritt, um <*Name_des_Verlegercomputers*> **\repl_logreader** als Prozesskonto für den Protokolllese-Agent festzulegen. Klicken Sie anschließend auf **OK**.  
 
     ![Dialogfeld „Sicherheit für den Protokolllese-Agent“ und Seite „Agentsicherheit“](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -116,6 +116,8 @@ In diesem Abschnitt erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../
     ![Seite „Assistenten abschließen“ mit dem Veröffentlichungsnamen](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. Klicken Sie nach Erstellung der Veröffentlichung auf **Schließen**, um den Assistenten zu beenden. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Wenn Ihr SQL Server-Agent bei dem Versuch, die Veröffentlichung zu erstellen, nicht ausgeführt wird, wird möglicherweise die unten abgebildete Fehlermeldung angezeigt. Sie weist darauf hin, dass Ihre Veröffentlichung erfolgreich erstellt wurde, Ihr Momentaufnahmen-Agent jedoch nicht gestartet werden konnte. In diesem Fall müssen Sie den SQL Server-Agent starten und den Momentaufnahmen-Agent anschließend manuell starten. Die Anweisungen für diesen Vorgang finden Sie im folgenden Abschnitt. 
 
@@ -146,7 +148,7 @@ Wenn Ihnen hier ein Fehler angezeigt wird, finden Sie unter [Troubleshooting Sna
 2. Klicken Sie im Ordner **Lokale Veröffentlichungen** mit der rechten Maustaste auf **AdvWorksProductTrans**, und wählen Sie anschließend **Eigenschaften** aus.  Das Dialogfeld **Veröffentlichungseigenschaften** wird angezeigt.    
   
    A. Wählen Sie die Seite **Veröffentlichungszugriffsliste** und anschließend **Hinzufügen** aus.  
-   B. Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** zuerst auf <*Name_des_Verlegercomputers*>**\repl_distribution** und anschließend auf **OK**.
+   B. Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** zuerst auf <*Name_des_Verlegercomputers*> **\repl_distribution** und anschließend auf **OK**.
    
    ![Optionsauswahl zum Hinzufügen einer Anmeldung zur Veröffentlichungszugriffsliste](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -182,7 +184,7 @@ In diesem Abschnitt fügen Sie der zuvor erstellten Veröffentlichung einen Abon
   
    ![Eingeben eines Namens für die Abonnementdatenbank](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. Klicken Sie auf der Seite **Sicherheit für den Verteilungs-Agent** auf die Schaltfläche mit den Auslassungspunkten (**…**). Geben Sie <*Publisher_Machine_Name*>**\repl_distribution** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie erst auf **OK** und anschließend auf **Weiter**.
+8. Klicken Sie auf der Seite **Sicherheit für den Verteilungs-Agent** auf die Schaltfläche mit den Auslassungspunkten ( **?** ). Geben Sie <*Publisher_Machine_Name*> **\repl_distribution** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie erst auf **OK** und anschließend auf **Weiter**.
 
    ![Informationen zum Verteilungskonto im Dialogfeld „Sicherheit für den Verteilungs-Agent“](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -192,7 +194,7 @@ In diesem Abschnitt fügen Sie der zuvor erstellten Veröffentlichung einen Abon
   
 1. Stellen Sie eine Verbindung mit dem Abonnenten in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] her. Erweitern Sie den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und klicken Sie anschließend auf **Neue Anmeldung**.     
   
-   A. Klicken Sie auf der Seite **Allgemein** unter **Anmeldename** auf **Suche**, und fügen Sie <*Subscriber_Machine_Name>*>**\repl_distribution** die Anmeldung hinzu.
+   A. Klicken Sie auf der Seite **Allgemein** unter **Anmeldename** auf **Suche**, und fügen Sie <*Subscriber_Machine_Name>* > **\repl_distribution** die Anmeldung hinzu.
 
    B. Weisen Sie auf der Seite **Benutzerzuordnungen** die **db_owner**-Anmeldungsmitgliedschaft der Datenbank **ProductReplica** zu. 
 
