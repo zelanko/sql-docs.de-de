@@ -1,6 +1,6 @@
 ---
-title: Analysis Services-Funktionen, die von den Editionen von SQLServer unterstützte | Microsoft-Dokumentation
-ms.date: 06/25/2019
+title: Von den Editionen von SQL Server unterstützte Analysis Services-Funktionen | Microsoft-Dokumentation
+ms.date: 07/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,21 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 6d4f0cc16638963dbbbb091bc19cade36e45fe3b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388208"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792552"
 ---
 # <a name="analysis-services-features-supported-by-sql-server-edition"></a>Analysis Services-Funktionen von SQL Server-Edition unterstützt werden
+
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Dieser Artikel beschreibt Funktionen, die von den verschiedenen Editionen von SQL Server 2016, 2017 2019 Analysis Services unterstützt werden. Evaluation-Edition unterstützt die Funktionen der Enterprise Edition.
 
 ## <a name="analysis-services-servers"></a>Analysis Services (Server)
   
-|Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
+|Feature|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Skalierbare, freigegebene Datenbanken|Ja||||||Ja|  
 |Sichern/Wiederherstellen und Anfügen/Trennen von Datenbanken|Ja|Ja|||||Ja|  
@@ -33,7 +34,7 @@ Dieser Artikel beschreibt Funktionen, die von den verschiedenen Editionen von SQ
   
 ## <a name="tabular-models"></a>Tabellarische Modelle 
   
-|Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
+|Feature|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Hierarchien|Ja|Ja|||||Ja|  
 |KPIs (Key Performance Indicators)|Ja|Ja|||||Ja|  
@@ -48,9 +49,9 @@ Dieser Artikel beschreibt Funktionen, die von den verschiedenen Editionen von SQ
 
 ## <a name="multidimensional-models"></a>Mehrdimensionale Modelle 
   
-|Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
+|Feature|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Semiadditive Measures|Ja|Nein <sup>1</sup>|||||Ja|  
+|Semiadditive Measures|Ja|Keine <sup> [1](#sameas)</sup>|||||Ja|  
 |Hierarchien|Ja|Ja|||||Ja|  
 |KPIs (Key Performance Indicators)|Ja|Ja|||||Ja|  
 |Perspektiven|Ja||||||Ja|  
@@ -59,12 +60,12 @@ Dieser Artikel beschreibt Funktionen, die von den verschiedenen Editionen von SQ
 |Zeitintelligenz|Ja|Ja|||||Ja|  
 |Benutzerdefinierte Rollups|Ja|Ja|||||Ja|  
 |Cube-Rückschreiben|Ja|Ja|||||Ja|  
-|Rückschreiben von Dimensionen|Ja||||||Ja|  
+|Rückschreiben von Dimensionen|Ja <sup>[2](#wb)</sup>||||||Ja <sup>[2](#wb)</sup>|  
 |Rückschreibezellen|Ja|Ja|||||Ja|  
 |Drillthrough ausführen|Ja|Ja|||||Ja|  
 |Erweiterte Hierarchietypen (Übergeordnet-Untergeordnet- und unregelmäßige Hierarchien)|Ja|Ja|||||Ja|  
 |Erweiterte Dimensionen (Bezugsdimensionen, m:n-Dimensionen)|Ja|Ja|||||Ja|  
-|Verknüpfte Measures und Dimensionen|Ja|Ja  <sup>2</sup> |||||Ja|  
+|Verknüpfte Measures und Dimensionen|Ja|Ja <sup> [3](#linkmd)</sup> |||||Ja|  
 |Translations|Ja|Ja|||||Ja|  
 |Aggregations|Ja|Ja|||||Ja|  
 |Mehrere Partitionen|Ja|Ja, bis zu 3|||||Ja|  
@@ -80,12 +81,16 @@ Dieser Artikel beschreibt Funktionen, die von den verschiedenen Editionen von SQ
 |Pushmodus-Verarbeitung|Ja||||||Ja|  
 |Measureausdrücke|Ja||||||Ja|  
   
- <sup>1</sup> Das semiadditive LastChild-Measure wird in der Standard Edition unterstützt, während andere semiadditive Measures, z. B. None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren und ByAccount, nicht unterstützt werden. Additive Measures, z. B. Sum, Count, Min, Max und nicht additive Measures (DistinctCount) werden in allen Editionen unterstützt.  
-  <sup>2</sup> Die Standard Edition unterstützt Verknüpfen von Measures und Dimensionen innerhalb derselben Datenbank, jedoch nicht aus anderen Datenbanken oder Instanzen.
+<a name="sameas">[1] </a> Semiadditives der LastChild-Measure wird in der Standard Edition unterstützt, aber andere semiadditive Measures, z. B. None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren und ByAccount, nicht sind. Additive Measures, z. B. Sum, Count, Min, Max und nicht additive Measures (DistinctCount) werden in allen Editionen unterstützt. 
+
+<a name="wb">[2] </a> Rückschreiben von Dimensionen werden in SQL Server Analysis Services 2019 und höher eingestellt.
+ 
+<a name="linkmd">[3] </a> Standard Edition unterstützt Verknüpfen von Measures und Dimensionen innerhalb derselben Datenbank, jedoch nicht von anderen Datenbanken oder Instanzen.
+  
   
 ## <a name="power-pivot-for-sharepoint"></a>PowerPivot für SharePoint  
   
-|Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
+|Feature|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |SharePoint-Farmintegration auf Grundlage der Shared Services-Architektur|Ja||||||Ja|  
 |Verwendungsberichte|Ja||||||Ja|  
@@ -95,6 +100,9 @@ Dieser Artikel beschreibt Funktionen, die von den verschiedenen Editionen von SQ
 |Power Pivot-Datenfeeds|Ja||||||Ja|  
   
 ## <a name="data-mining"></a>Data Mining  
+
+> [!NOTE]
+> Datamining ist [veraltet](analysis-services-backward-compatibility-sql2017.md#deprecated-features) in SQL Server Analysis Services 2017.
   
 |Funktionsname|Enterprise|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|Entwickler|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
