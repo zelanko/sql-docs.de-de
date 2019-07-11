@@ -16,12 +16,12 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08c1c9b4338502f20e5f99885d371d713971aa38
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306205"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792703"
 ---
 # <a name="types-of-drivers"></a>Treibertypen
 ODBC-Treiber können wie folgt klassifiziert werden:  
@@ -29,9 +29,9 @@ ODBC-Treiber können wie folgt klassifiziert werden:
 -   **32-Bit-ODBC-2.**  
      **_X_ Treiber** ein 32-Bit-Treiber, die:  
   
-    -   Exportiert nur die ODBC 2.*.x* Funktionen.  
+    -   Exportiert nur ODBC *2.x* Funktionen.  
   
-    -   Zeigt die ODBC-2.*x* Verhalten bei Änderungen am Verhalten.  
+    -   ODBC weist *2.x* Verhalten bei Änderungen am Verhalten.  
   
 -   **ISO- und Open Group-kompatiblen Treiber** ein 32-Bit-Treiber, die:  
   
@@ -45,13 +45,13 @@ ODBC-Treiber können wie folgt klassifiziert werden:
   
     -   Exportiert nur Funktionen, die in ODBC 3.0 minus sind veraltete Funktionen.  
   
-    -   Mit der ODBC 2. kann.*x* Verhalten oder die ODBC 3.0-Verhalten in Bezug auf Änderungen am Systemverhalten auf Grundlage des SQL_ATTR_APP_ODBC_VERSION umgebungsattributs.  
+    -   Kann mit ODBC *2.x* Verhalten oder die ODBC 3.0-Verhalten in Bezug auf Änderungen am Systemverhalten auf Grundlage des SQL_ATTR_APP_ODBC_VERSION umgebungsattributs.  
   
 -   **ODBC-Treiber mit dem ANSI 3.5 (oder höher)** ein 32-Bit-Treiber, die:  
   
     -   Exportiert nur Funktionen, die in ODBC 3.5 minus sind veraltete Funktionen.  
   
-    -   Mit der ODBC 2. kann. *x* Verhalten oder ODBC 3.0 Verhalten oder ODBC 3.5-Verhalten in Bezug auf Änderungen am Systemverhalten auf umgebungsattributs SQL_ATTR_APP_ODBC_VERSION basiert.  
+    -   Kann mit ODBC *2.x* Verhalten oder ODBC 3.0 Verhalten oder ODBC 3.5-Verhalten in Bezug auf Änderungen am Systemverhalten auf umgebungsattributs SQL_ATTR_APP_ODBC_VERSION basiert.  
   
 -   **ODBC-Treiber mit dem Unicode-Version 3.5 (oder höher)** ein 32-Bit-Treiber, die:  
   
@@ -62,4 +62,4 @@ ODBC-Treiber können wie folgt klassifiziert werden:
     -   Speichern und Verarbeiten von Unicode-Daten in der Datenquelle.  
   
 > [!NOTE]  
->  16-Bit-ODBC-Treiber funktioniert nicht direkt mit der ODBC-3. *x* -Treiber-Manager. Allerdings ist es möglich, für die 16-Bit-Treiber, arbeiten mit der 2.0-ODBC-Treiber-Manager, die anschließend bis zu 3 Thunks. *x* -Treiber-Manager.
+>  16-Bit-ODBC-Treiber funktioniert nicht direkt mit der ODBC *3.x* -Treiber-Manager. Es ist jedoch möglich, dass 16-Bit-Treiber mit der 2.0-ODBC-Treiber-Manager arbeiten, die anschließend bis zu Thunks der *3.x* -Treiber-Manager.

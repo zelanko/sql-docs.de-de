@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc778a34a513c2aca12da0dd0e1245e50dc5d6a
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716278"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Ein Job-Objekt ist ein Windows-Konstrukt, die CPU, Arbeitsspeicher und e/a-Resso
 |peak_job_memory_used_mb|**bigint**|Die maximale Arbeitsspeichermenge in MB, die alle Prozesse des Auftragsobjekts kumulativ, da das Auftragsobjekt verwendet haben wurde erstellt.|
   
 ## <a name="permissions"></a>Berechtigungen  
-Für verwaltete SQL-Datenbankinstanz, erfordert `VIEW SERVER STATE` Berechtigung. Für SQL-Datenbank erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.  
+Für verwaltete SQL-Datenbankinstanz, erfordert `VIEW SERVER STATE` Berechtigung. In der SQL-Datenbank ist die `VIEW DATABASE STATE`-Berechtigung für die Datenbank erforderlich.  
  
 ## <a name="see-also"></a>Siehe auch  
 

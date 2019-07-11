@@ -2,20 +2,20 @@
 title: Installieren von Big Data-Tools
 titleSuffix: SQL Server big data clusters
 description: Informationen Sie zum Installieren von Tools, die mit SQL Server-2019 big Data-Clustern (Vorschau) verwendet.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 1862c6c16aaecca7888f00cb6ca5deeb7138ea03
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412964"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728971"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installieren von SQL Server-2019 big datatools
 
@@ -29,7 +29,7 @@ In diesem Artikel wird beschrieben, die Clienttools, die zum Erstellen, verwalte
 
 Die folgende Tabelle enthält allgemeine big Data-Cluster-Tools und deren Installation:
 
-| Tool | Required | Description | Installation |
+| Tool | Erforderlich | Beschreibung | Installation |
 |---|---|---|---|
 | **mssqlctl** | Ja | Befehlszeilenprogramm zum Installieren und Verwalten von big Data-Cluster. | [Installieren](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | Ja | Befehlszeilentool für die Überwachung der zugrunde liegenden Clusters Kuberentes ([Informationen](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |

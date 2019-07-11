@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc6e973b71b16817f3e3533544102bfeba3caeb4
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63472152"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793056"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  Wenn der Prinzipalname für die Zuordnung auf **public** festgelegt ist oder die Prinzipal-ID für die Zuordnung den Wert **0**hat, wird das öffentliche Profil von dieser gespeicherten Prozedur geändert. Es kann nur ein öffentliches Standardprofil vorhanden sein.  
   
- Wenn **@is_default** ist "**1**" und der Prinzipal mehreren Profilen zugeordnet ist, wird das angegebene Profil als Standardprofil für den Prinzipal. Das zuvor als Standardprofil verwendete Profil ist dem Prinzipal weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
+ Wenn  **\@Is_default** ist "**1**" und der Prinzipal mehreren Profilen zugeordnet ist, wird das angegebene Profil als Standardprofil für den Prinzipal. Das zuvor als Standardprofil verwendete Profil ist dem Prinzipal weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
   
  Die gespeicherte Prozedur **sysmail_update_principalprofile_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   

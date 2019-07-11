@@ -1,20 +1,21 @@
 ---
-title: Anzeigen des Clusterstatus
+title: Clusterstatus anzeigen
 titleSuffix: SQL Server big data clusters
 description: In diesem Artikel erläutert das Anzeigen des Status einer big Data-Cluster mithilfe von Azure Data Studio, Notebooks und Mssqlctl Befehle.
 author: yualan
 ms.author: alayu
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2edd49c37655d420cf8022677c0d0287028a0b93
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: b3cc78e36fe427966c7730533104c63aa3ed9332
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413967"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727331"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Gewusst wie: Anzeigen des Status einer big Data-cluster
 
@@ -135,7 +136,7 @@ Sie können die IP-Adressen der externen Endpunkte für die big Data-Cluster mit
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-### <a name="view-cluster-status"></a>Anzeigen des Clusterstatus
+### <a name="view-cluster-status"></a>Clusterstatus anzeigen
 
 Sie können den Status des Clusters mit dem Anzeigen der [Mssqlctl BDC-Status anzeigen](reference-mssqlctl-bdc-status.md) Befehl.
 

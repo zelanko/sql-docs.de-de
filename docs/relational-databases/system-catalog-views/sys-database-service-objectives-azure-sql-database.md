@@ -12,16 +12,16 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 889d8d618cf017d27e3b92ce845c8ebfee179048
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: 1bd16b4ac7fb0b27296fb2cc7e47ec683d761ed4
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342920"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716647"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys. database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ Gibt die Edition (Dienstebene), das dienstziel (Tarif) und die Namen des Pools f
   
  Die Sicht Sys. database_service_objectives enthält die folgenden Spalten.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|Die ID der Datenbank, eindeutig innerhalb einer Instanz von SQL-Datenbankserver. Mit beigetreten [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |-Edition|sysname|Die Dienstebene für die Datenbank oder vorhandenem Data Warehouse: **Grundlegende**, **Standard**, **Premium** oder **-Datawarehouse**.|  

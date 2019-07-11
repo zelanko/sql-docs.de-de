@@ -10,12 +10,12 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090615"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792911"
 ---
 # <a name="create-the-finance-name-policy"></a>Erstellen der Richtlinie Finance Name
   In diesem Task erstellen Sie eine Datenbank mit dem Namen Finanzen. Anschließend erstellen Sie eine Bedingung, die vorschreibt, dass alle Tabellen mit den Buchstaben **fintbl** anfangen. Dann erstellen Sie eine Richtlinie und eine Richtlinienkategorie, um einen Namensstandard für Tabellen in der Datenbank Finanzen zu erzwingen.  
@@ -39,7 +39,7 @@ ms.locfileid: "66090615"
   
 3.  Wählen Sie in der Liste **Facet** die Option **Mehrteiliger Name**aus.  
   
-4.  Geben Sie im Dialogfeld **Ausdruck** im Feld **Feld** die Option **@Name** aus, wählen Sie im Feld **Operator** die Option **Like**aus, und geben Sie in das Feld **Wert** den Namen **'fintbl%'** ein, um zu erzwingen, dass alle Namen mit den Buchstaben **fintbl**anfangen.  
+4.  In der **Ausdruck** Bereich, in der **Feld** wählen Sie im  **\@Namen**, in der **Operator** wählen Sie im  **Wie**, und klicken Sie in der **Wert** geben **"Fintbl %"** zu erzwingen, dass alle Tabellennamen mit dem Buchstaben **Fintbl**.  
   
 5.  Geben Sie auf der Seite **Beschreibung** die Beschreibung **Finanz_Tabellen-Namen müssen mit fintbl beginnen**ein, und klicken Sie anschließend auf **OK** , um die Bedingung zu erstellen.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66090615"
   
 6.  Geben Sie im Dialogfeld **Neue Bedingung erstellen** im Feld **Name** den Namen **Finanz_Datenbank**ein.  
   
-7.  Vervollständigen Sie im Feld **Ausdruck** den Ausdruck so, dass er **@Name = 'Finance'** umfasst, und klicken Sie anschließend auf **OK**, um die Bedingungsseite zu schließen.  
+7.  In der **Ausdruck** führen Sie den Ausdruck, sodass  **\@Name = 'Finanzen'** , und klicken Sie dann auf **OK** um die bedingungsseite zu schließen.  
   
     > [!NOTE]  
     >  Sie müssen möglicherweise mit dem Cursor aus dem Feld **Wert** wechseln, um die Schaltfläche **OK** zu aktivieren.  

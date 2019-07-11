@@ -18,21 +18,21 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181314"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793184"
 ---
 # <a name="mapping-deprecated-functions"></a>Zuordnen veralteter Funktionen
-In diesem Abschnitt wird beschrieben, wie als veraltet markierte Funktionen zugeordnet sind, indem Sie die ODBC 3. *.x* Treiber-Manager zum Gewährleisten der Abwärtskompatibilität von ODBC 3. *.x* Treiber, die mit ODBC 2. verwendet werden. *X* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jede der ODBC-2. *x* Funktionen in der folgenden Liste wird zugeordnet, auf die entsprechenden ODBC 3. *.x* Funktion bei Aufruf in einer ODBC 3. *.x* -Treiber verwenden, die ODBC 3. *.x*Treiber muss nicht die ODBC 2. zu implementieren. *x* Funktionen.  
+In diesem Abschnitt wird beschrieben, wie als veraltet markierte Funktionen zugeordnet sind, indem Sie die ODBC *3.x* gewährleisten der Abwärtskompatibilität von ODBC-Treiber-Manager *3.x* Treiber, die verwendet werden, mit dem ODBC- *2.x* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jede der ODBC- *2.x* Funktionen in der folgenden Liste wird an die entsprechenden ODBC zugeordnet *3.x* bei Aufruf in einer ODBC-Funktion *3.x* ODBC-Treiber*3.x* Treiber keine Implementierung die ODBC *2.x* Funktionen.  
   
- Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber einen ODBC 3. *.x* und den Treiber unterstützt nicht die Funktion, die zugeordnet wird.  
+ Die Zuordnung in der Liste wird ausgelöst, wenn der Treiber ODBC *3.x* und den Treiber unterstützt nicht die Funktion, die zugeordnet wird.  
   
- Die folgende Tabelle enthält alle doppelt vorhandenen Funktionen, die in ODBC 3. eingeführte *.x*.  
+ Die folgende Tabelle enthält alle doppelt vorhandenen Funktionen, die in ODBC eingeführte *3.x*.  
   
-|ODBC-2. *x* Funktion|ODBC 3. *.x* Funktion|  
+|ODBC *2.x* Funktion|ODBC *3.x* Funktion|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -52,7 +52,7 @@ In diesem Abschnitt wird beschrieben, wie als veraltet markierte Funktionen zuge
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1], obwohl diese Funktion nicht, in ODBC 2. vorhanden war *.x*, es ist in den Open Group und ISO-Standards.  
+ [1], obwohl diese Funktion nicht, in ODBC vorhanden war *2.x*, es ist in den Open Group und ISO-Standards.  
   
  [2] Dies ist ein ODBC-1.0-Funktion.  
   

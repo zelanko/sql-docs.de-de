@@ -2,20 +2,20 @@
 title: Generieren von Code für die Data wrangling-Aufgaben
 titleSuffix: Azure Data Studio
 description: Dieser Artikel beschreibt, wie Sie den Code-Accelerator PROSE in Studio für Azure Data zu verwenden, zum automatischen Generieren von Code für common Data wrangling-Aufgaben.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770774"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728312"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Daten-Wrangling mit PROSE Code Accelerator
 
@@ -117,7 +117,7 @@ Ein weiteres gängiges Szenario ist zum Erkennen von Mustern in einer Zeichenfol
 |   |Name                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
-| 1 |Naiara Moravcikova        |Unknown        |
+| 1 |Naiara Moravcikova        |Unbekannt        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-Apr-67      |
 | 4 |Maya de Villiers          |19-Mar-60      |

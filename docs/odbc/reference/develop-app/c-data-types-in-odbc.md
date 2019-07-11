@@ -15,19 +15,19 @@ ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3817b33aa294d6081b9fa2ee240e67ac38dd2a25
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199212"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793982"
 ---
 # <a name="c-data-types-in-odbc"></a>C-Datentypen in ODBC
 ODBC definiert die C-Datentypen, die von Anwendungsvariablen und ihren entsprechenden Typ-IDs verwendet werden. Diese werden von den Puffern verwendet, die Resultset-Spalten und Parameter gebunden sind. Nehmen wir beispielsweise an, dass eine Anwendung Daten zum Abrufen von Daten aus einer Resultsetspalte im Zeichenformat vorliegen. Deklariert eine Variable mit der SQLCHAR *-Datentyp, und diese Variable an die Resultsetspalte mit einem Typbezeichner SQL_C_CHAR gebunden. Eine vollständige Liste der C-Datentypen und Typ-IDs, finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  ODBC definiert auch eine standardzuordnung von jeder SQL-Datentyp in einen C-Datentyp. Beispielsweise wird eine 2-Byte-Ganzzahl in der Datenquelle eine 2-Byte-Ganzzahl in der Anwendung zugeordnet. Um die standardzuordnung zu verwenden, gibt eine Anwendung die SQL_C_DEFAULT-Typ-ID an. Mit dieser Bezeichner wird jedoch aus Gründen der Interoperabilität abgeraten.  
   
- Alle ganzzahligen C-Datentypen in ODBC 1 definierten *.x* signiert wurden. Nicht signierte C-Datentypen und ihre entsprechenden Typ-IDs wurden in ODBC 2.0 hinzugefügt. Aus diesem Grund Anwendungen und Treiber müssen insbesondere darauf achten, beim Umgang mit 1 *.x* Versionen.  
+ Alle ganzzahligen C-Datentypen in ODBC definiert *1.x* signiert wurden. Nicht signierte C-Datentypen und ihre entsprechenden Typ-IDs wurden in ODBC 2.0 hinzugefügt. Aus diesem Grund Anwendungen und Treiber müssen insbesondere darauf achten, beim Umgang mit *1.x* Versionen.  
   
 ## <a name="c-data-type-extensibility"></a>C-Daten-Typ-Erweiterbarkeit  
  In ODBC 3.8 können Sie die Treiber-spezifischen C-Datentypen angeben. Dadurch können Sie einen SQL-Typ als einen Treiber-spezifischen C-Typ in ODBC-Anwendungen zu binden, beim Aufrufen [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), oder [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). Dies kann nützlich für die Unterstützung der neuen Server-Typen sein, da vorhandene C-Datentypen die neuen Server-Datentypen nicht ordnungsgemäß darstellen können. Mit Treiber-spezifischen C-Typen kann die Anzahl der Konvertierungen erhöhen, die Treiber ausführen können.  

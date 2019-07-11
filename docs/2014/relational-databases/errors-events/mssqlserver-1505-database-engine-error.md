@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869688"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727743"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -30,7 +30,7 @@ ms.locfileid: "62869688"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DUP_KEY|  
-|Meldungstext|Die CREATE UNIQUE INDEX-Anweisung wurde beendet, weil ein doppelter Schlüssel für den Objektnamen '%.*ls' und den Indexnamen '%.\*ls' gefunden wurde.  Der doppelte Schlüsselwert ist %ls.|  
+|Meldungstext|Die CREATE UNIQUE INDEX-Anweisung wurde beendet, weil ein doppelter Schlüssel für den Objektnamen „%.\*ls“ und den Indexnamen „%.\*ls“ gefunden wurde.  Der doppelte Schlüsselwert ist %ls.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dieser Fehler tritt auf, wenn Sie versuchen, einen eindeutigen Index zu erstellen, und der angegebene doppelte Wert in mehreren Zeilen in der Tabelle enthalten ist. Ein eindeutiger Index wird erstellt, wenn Sie einen Index erstellen und das UNIQUE-Schlüsselwort angeben oder wenn Sie eine UNIQUE-Einschränkung erstellen. Die Tabelle darf keine Zeilen mit doppelten Werten in den Spalten enthalten, die im Index oder in der Einschränkung definiert sind.  
@@ -50,7 +50,7 @@ ms.locfileid: "62869688"
   
  Fehlermeldung 1505 gibt die erste Zeile zurück, in der ein Verstoß gegen die Eindeutigkeitseinschränkung vorliegt. Es gibt möglicherweise weitere doppelte Zeilen in der Tabelle. Führen Sie zum Ermitteln aller doppelten Zeilen eine Abfrage der angegebenen Tabelle mit der GROUP BY-Klausel und der HAVING-Klausel aus, um die doppelten Zeilen zu melden. Mit folgender Abfrage werden beispielsweise die Zeilen aus der **Employee**-Tabelle zurückgegeben, die doppelte Vor- und Nachnamen aufweisen.  
   
- SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ SELECT LastName, FirstName, Count (\*) von Dbo. Employee-Gruppe von LastName, FirstName müssen Count (\*) > 1.  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Ziehen Sie die folgenden Lösungen in Betracht:  

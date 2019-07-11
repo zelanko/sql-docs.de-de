@@ -17,23 +17,23 @@ ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72e004e6fd41ee74643fc05ec9020e6ac1933e09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22eb60ce88c0d7d0a623a90c202c77a9828e3a34
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186256"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793773"
 ---
 # <a name="affected-odbc-components"></a>Betroffene ODBC-Komponenten
 Abwärtskompatibilität wird beschrieben, wie Anwendungen, Treiber-Manager und Treiber durch die Einführung einer neuen Version des Treiber-Managers betroffen sind. Dies wirkt sich auf Anwendungen und Treiber, wenn eine oder beide Angaben in der alten Version bleiben. Es gibt daher drei Arten von Abwärtskompatibilität berücksichtigt werden, wie in der folgenden Tabelle gezeigt.  
   
 |Typ|DM-Version|Version der Anwendung|Version des Treibers|  
 |----------|-------------------|----------------------------|-----------------------|  
-|Abwärtskompatibilität des Treiber-Managers|3 *.x*|2.*x*|2.*x*|  
-|Abwärtskompatibilität von Treiber [1]|3 *.x*|2.*x*|3.*x*|  
-|Abwärtskompatibilität der Anwendung|3.*x*|3.*x*|2.*x*|  
+|Abwärtskompatibilität des Treiber-Managers|*3.x*|*2.x*|*2.x*|  
+|Abwärtskompatibilität von Treiber [1]|*3.x*|*2.x*|*3.x*|  
+|Abwärtskompatibilität der Anwendung|*3.x*|*3.x*|*2.x*|  
   
  [1] die Abwärtskompatibilität der Treiber wird in erster Linie in Anhang G: erläutert. Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
   
 > [!NOTE]
->  Eine Standards kompatible Anwendung – z. B. eine Anwendung, die gemäß den Standards Open Group oder ISO-CLI - geschrieben wurde ist garantiert zum Arbeiten mit einer ODBC-3 *.x* Treiber über die ODBC 3. *.x*-Treiber-Manager. Es wird vorausgesetzt, dass die Funktionalität, die die Anwendung im Treiber verfügbar ist. Außerdem wird vorausgesetzt, dass die ODBC 3. die Standards kompatible Anwendung kompiliert wurde *.x* Headerdateien.
+>  Eine Standards kompatible Anwendung – z. B. eine Anwendung, die gemäß den Standards Open Group oder ISO-CLI - geschrieben wurde mit einer ODBC-funktioniert Sicherheit *3.x* Treiber über die ODBC *3.x*-Treiber-Manager. Es wird vorausgesetzt, dass die Funktionalität, die die Anwendung im Treiber verfügbar ist. Außerdem wird vorausgesetzt, dass es sich bei der Kompilierung der Standards kompatible Anwendung mit der ODBC *3.x* Headerdateien.

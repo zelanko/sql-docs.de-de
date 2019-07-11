@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 94ed170ea4aa99d861bea2e087310260982af4d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cd552d357284ce6fefd85df43baa38ad52ebb310
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031769"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716635"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL-Datenbank)
 
@@ -31,7 +31,7 @@ ms.locfileid: "56031769"
 
   Enthält eine Zeile für jeden Replikationslink zwischen primären und sekundären Datenbanken in einer georeplikationspartnerschaft. Diese Ansicht befindet sich in der logischen Masterdatenbank.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID der aktuellen Datenbank in der Ansicht "sys.databases".|  
 |start_date|**datetimeoffset**|UTC-Zeit in einem regionalen SQL-Datenbank-Datencenter, wenn die Datenbankreplikation initiiert wurde|  

@@ -21,19 +21,19 @@ ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224480"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793198"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Konvertieren von Daten von SQL- zu C-Datentypen
 Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, ruft der Treiber die Daten aus der Datenquelle. Bei Bedarf die Daten aus dem Datentyp konvertiert sie in dem der Treiber, die den angegebenen Datentyp abgerufen die *TargetType* -Argument in **SQLBindCol** oder **SQLGetData.** Zum Schluss speichert die Daten in den Speicherort verweist die *TargetValuePtr* -Argument in **SQLBindCol** oder **SQLGetData** (und das SQL_DESC_DATA_PTR-Feld, der die ARD).  
   
  Die folgende Tabelle zeigt die unterstützten Konvertierungen von ODBC-SQL-Datentypen in ODBC-C-Datentypen. Ein ausgefüllten Kreis gibt an, die standardkonvertierung für einen SQL-Datentyp (der C-Datentyp, der die Daten werden, wenn konvertiert werden, der Wert des *TargetType* SQL_C_DEFAULT ist). Ein leerer Kreis gibt an, eine Konvertierung unterstützt wird.  
   
- Eine ODBC 3 *.x* Anwendung mit einer ODBC 2. *X* Treiber, die Konvertierung vom Treiber-spezifische Typen möglicherweise nicht unterstützt.  
+ Für eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber, die Konvertierung vom Treiber-spezifische Typen möglicherweise nicht unterstützt.  
   
  Das Format der konvertierten Daten ist von der Windows® Land-Einstellung nicht betroffen.  
   

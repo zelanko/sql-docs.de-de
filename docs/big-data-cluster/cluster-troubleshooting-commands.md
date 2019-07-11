@@ -2,20 +2,20 @@
 title: Überwachung und Problembehandlung
 titleSuffix: SQL Server big data clusters
 description: Dieser Artikel enthält Befehle für die Überwachung und Problembehandlung von eines SQL Server-2019 big Data-Clusters (Vorschau).
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 404d81c8d16a6ee6c173de4ebc5a85edc070a6ca
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388716"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729218"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Überwachung und Problembehandlung für SQL Server-big Data-Cluster
 
@@ -112,7 +112,7 @@ kubectl get svc -n mssql-cluster
 
 Die folgenden Dienste unterstützen, externe Verbindungen mit der big Data-Cluster:
 
-| Dienst | Description |
+| Dienst | Beschreibung |
 |---|---|
 | **master-svc-external** | Bietet Zugriff auf die master-Instanz.<br/>(**Externe IP-, 31433** und **SA** Benutzer) |
 | **controller-svc-external** | Unterstützt die Tools und Clients, die den Cluster zu verwalten. |

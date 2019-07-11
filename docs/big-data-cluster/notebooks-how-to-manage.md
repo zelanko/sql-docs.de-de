@@ -2,20 +2,20 @@
 title: Verwalten von Notebooks in Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Informationen Sie zum Verwalten von Notebooks in Azure Data Studio. Dies umfasst das Öffnen von Notebooks speichern möchten, und ändern Ihre big Data-Cluster-Verbindung.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 9173c630514465914a31bb5b4c2999145884c78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf0041ee2beecb0864f196c4d13c7be309b40d17
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790045"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727569"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Gewusst wie: Verwalten von Notebooks in Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "66790045"
 
 In diesem Artikel wird das Öffnen und speichern Notebook-Dateien in Azure Data Studio mit der Vorschau von SQL Server-2019 veranschaulicht. Es veranschaulicht auch so ändern Sie die Verbindung in Ihrer SQL Server-big Data-Cluster.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 In diesem Artikel wird davon ausgegangen, dass Sie bereits ein Notebook, das Sie in Azure Data Studio verwenden möchten. Wenn Sie ein Notebook zu erstellen möchten, finden Sie unter [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md). Um Notebooks in Azure Data Studio verwenden zu können, müssen die folgenden Voraussetzungen erfüllt sein:
 
@@ -64,7 +64,7 @@ Zurzeit besteht eine Möglichkeit zum Speichern eines Notebooks. Sie müssen aus
 > [!NOTE]
 > Die folgenden Methoden werden derzeit nicht Notebooks speichern:
 >
-> - **Datei speichern**, **Datei speichern unter... ** und **Datei Alles speichern** Befehle über das Menü Datei.
+> - **Datei speichern**, **Datei speichern unter...**  und **Datei Alles speichern** Befehle über das Menü Datei.
 > - **Datei: Speichern Sie** Befehle in der befehlspalette den Befehl eingegeben wurden.
 
 ## <a name="change-the-big-data-cluster"></a>Ändern Sie die big Data-cluster

@@ -1,36 +1,36 @@
 ---
-title: Schnellstart für die Bereitstellung
+title: Bereitstellungsskript
 titleSuffix: SQL Server big data clusters
 description: Exemplarische Vorgehensweise eine Bereitstellung von SQL Server-2019 big Data-Cluster (Vorschau) in Azure Kubernetes Service (AKS).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798734"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728773"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Schnellstart: Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Bereitstellen von SQL Server-big Data-Cluster in Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Schnellstart verwenden Sie ein Beispielskript für die Bereitstellung, um die SQL Server-2019 big Data-Cluster (Vorschau) zu Azure Kubernetes Service (AKS) bereitstellen. 
+In diesem Tutorial verwenden Sie ein Beispielskript für die Bereitstellung, um die SQL Server-2019 big Data-Cluster (Vorschau) zu Azure Kubernetes Service (AKS) bereitstellen. 
 
 > [!TIP]
 > ACS ist nur eine Option für das Hosten von Kubernetes für Ihre big Data-Cluster. Weitere Informationen zu anderen Bereitstellungsoptionen sowie wie die Optionen zum Anpassen der Bereitstellung finden Sie unter [große SQL Server-Daten bereitstellen in Kubernetes-Clustern](deployment-guidance.md).
 
-Die hier verwendete Standard big Data-Clusterbereitstellung besteht aus einer Instanz von SQL Master, einer Compute-poolinstanz, zwei Daten ressourcenpoolvorlage ressourcenpoolinstanzen und zwei Instanzen von Speicher-Pool. Daten werden beibehalten, über persistente Kubernetes-Volumes, die Speicher-Standardklassen AKS verwenden. Die Standardkonfiguration, die in diesem Schnellstart verwendete eignet sich für Entwicklungs-/testumgebungen.
+Die hier verwendete Standard big Data-Clusterbereitstellung besteht aus einer Instanz von SQL Master, einer Compute-poolinstanz, zwei Daten ressourcenpoolvorlage ressourcenpoolinstanzen und zwei Instanzen von Speicher-Pool. Daten werden beibehalten, über persistente Kubernetes-Volumes, die Speicher-Standardklassen AKS verwenden. Die Standardkonfiguration, die in diesem Tutorial verwendete eignet sich für Entwicklungs-/testumgebungen.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Ein Azure-Abonnement.
 - [Big Data-Tools](deploy-big-data-tools.md):
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>Laden Sie das Bereitstellungsskript
 
-In dieser schnellstartanleitung wird die Erstellung der big Data-Cluster in AKS über ein Python-Skript automatisiert **bereitstellen – Sql-big-Data-aks.py**. Wenn Sie Python für bereits installiert **Mssqlctl**, Sie muss das Skript erfolgreich in dieser schnellstartanleitung ausführen können. 
+In diesem Tutorial wird die Erstellung der big Data-Cluster in AKS über ein Python-Skript automatisiert **bereitstellen – Sql-big-Data-aks.py**. Wenn Sie Python für bereits installiert **Mssqlctl**, Sie muss das Skript erfolgreich in diesem Tutorial ausführen können. 
 
 Führen Sie in einer Windows PowerShell oder Linux-Bash-Eingabeaufforderung den folgenden Befehl aus, um das Bereitstellungsskript von GitHub herunterladen.
 

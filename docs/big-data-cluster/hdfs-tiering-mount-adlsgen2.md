@@ -4,24 +4,24 @@ titleSuffix: How to mount ADLS Gen2
 description: In diesem Artikel wird erläutert, wie HDFS, die Informationen zum Einbinden von eines externen Systems von Azure Data Lake Store-Datei in HDFS auf eine SQL Server-2019 big Data-Cluster (Vorschau) tiering konfiguriert.
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 94835b3ae041aa721e915bb5399737b35c52799f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419047"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728787"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount ADLS Gen2 für HDFS-Staffelung in einem big Data-cluster
 
 Die folgenden Abschnitte enthalten ein Beispiel für HDFS, die horizontale Skalierung mit einer Azure Data Lake-Speicher Gen2-Datenquelle konfigurieren.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [Bereitgestellte big Data-cluster](deployment-guidance.md)
 - [Big Data-tools](deploy-big-data-tools.md)

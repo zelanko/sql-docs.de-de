@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Eine Python- oder R-Skript als eine Anwendung auf SQL Server-2019 big Data-Cluster (Vorschau) bereitstellen.
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b0d76db3813e0a399f1ece841d729711743cbd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801904"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729303"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Gewusst wie: Verwenden Sie Visual Studio Code zum Bereitstellen von Anwendungen auf SQL Server-big Data-Cluster
 
@@ -23,7 +23,7 @@ ms.locfileid: "66801904"
 
 In diesem Artikel wird beschrieben, wie Anwendungen auf einer SQL Server-big Data-Cluster mithilfe von Visual Studio-Code mit der Bereitstellung der App-Erweiterung bereitgestellt wird. Diese Funktion wurde in CTP 2.3 eingeführt. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [Visual Studio-Code](https://code.visualstudio.com/).
 - [SQL Server-big Data-Cluster](big-data-cluster-overview.md) CTP 2.3 oder höher.

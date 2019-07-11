@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e3432bbf535b329f539b9404cb0f5b5b87d38542
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035711"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716601"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -40,12 +40,12 @@ ms.locfileid: "56035711"
   
  Die **Sys. bandwidth_usage** -Ansicht enthält die folgenden Spalten.  
   
-|Column Name|Description|  
+|Column Name|Beschreibung|  
 |-----------------|-----------------|  
-|**Uhrzeit**|Die Stunde, als die Bandbreite verwendet wurde. Die Zeilen in dieser Sicht enthalten stündliche Angaben. Beispielsweise bedeutet 2009-09-19 02:00:00.000, dass die Bandbreite am 19. September 2009 zwischen 2:00 Uhr und 3:00 Uhr verwendet wurde.|  
+|**time**|Die Stunde, als die Bandbreite verwendet wurde. Die Zeilen in dieser Sicht enthalten stündliche Angaben. Beispielsweise bedeutet 2009-09-19 02:00:00.000, dass die Bandbreite am 19. September 2009 zwischen 2:00 Uhr und 3:00 Uhr verwendet wurde.|  
 |**database_name**|Der Name der Datenbank, die Bandbreite verwendet hat.|  
-|**direction**|Der Typ der Bandbreite, der verwendet wurde. Dies kann eine der folgenden Optionen sein:<br /><br /> Eingang: In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] eingehende Daten.<br /><br /> Ausgang: Aus [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ausgehende Daten.|  
-|**class**|Die Klasse der Bandbreite, die verwendet wurde. Dies kann eine der folgenden Optionen sein:<br />Interne: Daten, die auf der Azure-Plattform verschoben werden.<br />Extern: Daten, die aus der Azure-Plattform heraus verschoben werden.<br /><br /> Diese Klasse wird nur zurückgegeben, wenn die Datenbank in einer kontinuierlichen Kopienbeziehung zwischen Regionen ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) ist. Wenn eine bestimmte Datenbank nicht in jeder fortlaufenden kopierbeziehung beteiligt ist, werden keine "Interlink"-Zeilen zurückgegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
+|**direction**|Der Typ der Bandbreite, der verwendet wurde. Dies kann eine der folgenden Optionen sein:<br /><br /> Eingang: Daten, die auf verschoben werden die [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Ausgang: Daten, die ausgehende der [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**class**|Die Klasse der Bandbreite, die verwendet wurde. Dies kann eine der folgenden Optionen sein:<br />Interne: Daten, die in der Azure-Plattform verschoben werden.<br />Extern: Daten, die aus der Azure-Plattform heraus verschoben werden.<br /><br /> Diese Klasse wird nur zurückgegeben, wenn die Datenbank in einer kontinuierlichen Kopienbeziehung zwischen Regionen ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) ist. Wenn eine bestimmte Datenbank nicht in jeder fortlaufenden kopierbeziehung beteiligt ist, werden keine "Interlink"-Zeilen zurückgegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
 |**time_period**|Der Zeitraum, der die Verwendung des Auftretens ist Spitze oder OffPeak. Die Spitzenzeit basiert auf der Region, in der der Server erstellt wurde. Wenn ein -Server beispielsweise in der Region "US_Northwest" erstellt wurde, liegt die Spitzenzeit laut Definition zwischen 10:00 Uhr und 18:00 Uhr PST.|  
 |**quantity**|Die Menge der verwendeten Bandbreite in KB.|  
   
@@ -59,10 +59,10 @@ ms.locfileid: "56035711"
 
  Für jede Datenbank zu einem bestimmten Zeitpunkt, verwendet der **Sys. bandwidth_usage** -Sicht die Zeilen, die die Klasse und die Richtung der bandbreitenverwendung anzeigen zurück. Das folgende Beispiel zeigt Daten, die für eine bestimmte Datenbank verfügbar gemacht werden können. In diesem Beispiel ist der Zeitpunkt 2012-04-21 17:00:00, der im Zeitraum mit Spitzenwerten liegt. Der Datenbankname ist Db1. In diesem Beispiel **Sys. bandwidth_usage** wie folgt eine Zeile für alle vier Kombinationen der Ingress- und Egress-Richtungen und externe und interne Klassen zurück:  
   
-|Uhrzeit|database_name|direction|class|time_period|quantity|  
+|time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
+|2012-04-21 17:00:00|Db1|Egress|Extern|Peak|741|  
 |2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Intern|Peak|3525|  
   

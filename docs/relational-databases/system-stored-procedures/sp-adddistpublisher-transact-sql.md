@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistpublisher
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b7f55d89054ff7d950921e0c6762770c6e714500
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492772"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716744"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort.  
   
-`[ @working_directory = ] 'working_directory'` Ist der Name des Arbeitsverzeichnisses zum Speichern von Daten- und Schemadateien für die Veröffentlichung verwendet. *Working_directory* ist **nvarchar(255)**, und der Standardwert ist der Ordner ReplData für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], z. B. `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Dieser Name sollte im UNC-Format angegeben werden.  
+`[ @working_directory = ] 'working_directory'` Ist der Name des Arbeitsverzeichnisses zum Speichern von Daten- und Schemadateien für die Veröffentlichung verwendet. *Working_directory* ist **nvarchar(255)** , und der Standardwert ist der Ordner ReplData für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], z. B. `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Dieser Name sollte im UNC-Format angegeben werden.  
 
  Verwenden Sie für Azure SQL-Datenbank `\\<storage_account>.file.core.windows.net\<share>`.
 
@@ -74,20 +74,20 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'` Dieser Parameter ist veraltet und wird nur zur Abwärtskompatibilität bereitgestellt. *vertrauenswürdige* ist **nvarchar(5)**, und wenn diese Option auf einen anderen Wert **"false"** führt zu einem Fehler.  
+`[ @trusted = ] 'trusted'` Dieser Parameter ist veraltet und wird nur zur Abwärtskompatibilität bereitgestellt. *vertrauenswürdige* ist **nvarchar(5)** , und wenn diese Option auf einen anderen Wert **"false"** führt zu einem Fehler.  
   
 `[ @encrypted_password = ] encrypted_password` Festlegen von *Encrypted_password* wird nicht mehr unterstützt. Es wird versucht, diese festgelegt **Bit** Parameter **1** führt zu einem Fehler.  
   
 `[ @thirdparty_flag = ] thirdparty_flag` Wenn der Verleger ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Thirdparty_flag* ist **Bit**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0** (Standardwert)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**1**|Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
   
 `[ @publisher_type = ] 'publisher_type'` Gibt den verlegertyp an, beim Verleger nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher_type* ist vom Datentyp Sysname und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (Standard)|Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an.|  
 |**ORACLE**|Gibt einen standardmäßigen Oracle-Verleger an.|  

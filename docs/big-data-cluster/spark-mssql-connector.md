@@ -2,19 +2,20 @@
 title: Verbinden von Spark mit SQLServer
 titleSuffix: SQL Server big data clusters
 description: Erfahren Sie, wie Sie mit der MSSQL-Spark-Connector in Spark zum Lesen und Schreiben in SQL Server.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469120"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727453"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Das Lesen und Schreiben in SQL Server aus Spark mithilfe von der MSSQL-Spark-Connector
 
@@ -39,13 +40,13 @@ SQL Server-2019 Preview bietet die **MSSQL-Spark-Connector** für big Data Clust
 
 Die folgende Tabelle beschreibt die Parameter für die Benutzeroberfläche, die geändert oder sind neu:
 
-| Eigenschaftenname | Optional | Description |
+| Eigenschaftenname | Optional | Beschreibung |
 |---|---|---|
 | **isolationLevel** | Ja | Hier wird beschrieben, die Isolationsstufe der Verbindung. Der Standardwert für MSSQLSpark Connector ist **READ_COMMITTED** |
 
 Der Connector verwendet SQL Server-Bulk Schreiben von APIs. Jeder Bulk-Schreibvorgang Parameter können als optionale Parameter übergeben werden, durch den Benutzer und werden als übergeben-ist, indem Sie den Connector an die zugrunde liegende API. Weitere Informationen über die massenbearbeitung von Schreibvorgängen, finden Sie unter [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Ein [SQL Server-big Data-Cluster](deploy-get-started.md).
 

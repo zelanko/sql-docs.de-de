@@ -4,18 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Verwenden Sie PySpark wird zum Trainieren und erstellen Sie mit Spark Machine Learning-Modelle in SQL Server-big Data-Clustern (Vorschau). Exportieren mit MLeap, und klicken Sie dann das Modell mit Java in SQL Server zu bewerten.
 author: lgongmsft
 ms.author: lgong
-ms.manager: craigg
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 709d74ef33ab6b54ac688763b006d66e4210006d
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412884"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727374"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Erstellen, exportieren und Bewerten von Machine Learning-Modelle in SQL Server-big Data-Clustern für Spark
 
@@ -25,7 +24,7 @@ Das folgende Diagramm veranschaulicht die Aufgaben in diesem Beispiel:
 
 ![Bewertung Exportieren mit Spark trainieren](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Alle Dateien für dieses Beispiel befinden sich unter [ https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml ](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml).
 

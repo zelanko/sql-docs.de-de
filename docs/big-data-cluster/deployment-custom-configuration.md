@@ -2,19 +2,20 @@
 title: Konfigurieren von Bereitstellungen
 titleSuffix: SQL Server big data clusters
 description: Erfahren Sie, wie Sie eine big Data-Clusterbereitstellung mit Konfigurationsdateien anpassen.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 19654422bcc57f2ad00b9ab8170d163f848f188b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388800"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728889"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Konfigurieren von bereitstellungseinstellungen für big Data-Cluster
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388800"
 
 Informationen zum Anpassen der Konfigurationsdatei des Cluster-Bereitstellung können Sie alle mit JSON-Format-Editor, z. B. VSCode verwenden. Verwenden Sie für die Skripterstellung diese Änderungen zur Automatisierung verwenden, die **Mssqlctl Bdc-Abschnitt "Config"** Befehl. In diesem Artikel wird erläutert, wie Sie big Data-Cluster-Bereitstellungen zu konfigurieren, durch das Ändern von Konfigurationsdateien für die Bereitstellung. Es bietet Beispiele für die Konfiguration für verschiedene Szenarien zu ändern. Weitere Informationen zur Verwendung von Konfigurationsdateien in Bereitstellungen finden Sie unter den [bereitstellungsanleitung](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [Installieren Sie Mssqlctl](deploy-install-mssqlctl.md).
 

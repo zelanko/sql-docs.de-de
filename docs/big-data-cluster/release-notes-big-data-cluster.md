@@ -2,20 +2,20 @@
 title: Versionshinweise
 titleSuffix: SQL Server big data clusters
 description: Dieser Artikel beschreibt die neuesten Updates und bekannte Probleme bei der SQL Server-2019 big Data-Clustern (Vorschau).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681556"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794090"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
 
@@ -113,6 +113,11 @@ In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen 
 - Die SA_PASSWORD ist Teil der Umgebung "und" ermittelt (z. B. in einer Dumpdatei "Cord"). Sie müssen die SA_PASSWORD für die master-Instanz nach der Bereitstellung zurücksetzen. Dies ist nicht auf, einen Fehler, aber eine Sicherheitsschritt. Weitere Informationen zum Ändern der SA_PASSWORD in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
 - AKS-Protokolle können das SA-Kennwort für big Data-Cluster-Bereitstellungen enthalten.
+
+#### <a name="kibana-logs-dashboards"></a>Kibana-Dashboards Protokolle
+
+- Zwischen Aris CTP 3.0 und 3.1 wurde die Kibana-Version von 6.3.1 auf 7.0.1 aktualisiert.  Dies hat den Edge-Browser nicht kompatibel mit Kibana vorgenommen. Benutzern werden eine leere Seite angezeigt, beim Laden der aktuellen Version von der Kibana-Dashboards in Microsoft Edge. Finden Sie unter [hier]( https://www.elastic.co/support/matrix#matrix_browse) für die unterstützten Browser Kibana.rs 
+
 
 ## <a id="ctp30"></a> CTP-Version 3.0 (Mai)
 

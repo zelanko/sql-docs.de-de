@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274350"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793917"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-zu-Peer-Transaktionsreplikation
   Peer-zu-Peer-Replikation bietet eine skalierbare Lösung mit hoher Verfügbarkeit, da Kopien der Daten auf mehreren Serverinstanzen verwaltet werden, die auch als *Knoten*bezeichnet werden. Auf der Grundlage der Transaktionsreplikation aufbauend, gibt die Peer-zu-Peer-Replikation transaktionskonsistente Änderungen fast in Echtzeit weiter. Dies macht Anwendungen möglich, die skalierbare Lesevorgänge voraussetzen, weil die Leseanforderungen von Clients über mehrere Knoten verteilt werden können. Da die Knoten die Daten fast in Echtzeit übernehmen, bietet die Peer-zu-Peer-Replikation Datenredundanz, die die Verfügbarkeit der Daten erhöht.  
@@ -137,19 +137,19 @@ ms.locfileid: "63274350"
   
 -   Der Verteilungs-Agent-Parameter **-SubscriptionStreams** und der Protokolllese-Agent-Parameter **-MaxCmdsInTran**.  
   
--   Die Artikeleigenschaften **@destination_owner** und **@destination_table** bezeichnet werden.  
+-   Die Artikeleigenschaften  **\@Destination_owner** und  **\@Destination_table**.  
 
 -   Die Peer-zu-Peer-Transaktionsreplikation unterstützt keine Erstellung von unidirektionalen Transaktionsabonnements an eine Peer-zu-Peer-Veröffentlichung.
   
  Für folgende Eigenschaften gelten spezielle Bedingungen:  
   
--   Die veröffentlichungseigenschaft **@allow_initialize_from_backup** erfordert einen Wert von `true`.  
+-   Die veröffentlichungseigenschaft  **\@Allow_initialize_from_backup** erfordert einen Wert von `true`.  
   
--   Die Artikeleigenschaft **@replicate_ddl** erfordert einen Wert von `true`; **@identityrangemanagementoption** erfordert einen Wert von `manual`; und **@status** muss **24** festgelegt ist.  
+-   Die Artikeleigenschaft  **\@Replicate_ddl** erfordert einen Wert von `true`;  **\@Identityrangemanagementoption** erfordert einen Wert von `manual`; und  **\@Status** muss **24** wird festgelegt.  
   
--   Der Wert für die Artikeleigenschaften **@ins_cmd** , **@del_cmd** , und **@upd_cmd** kann nicht festgelegt werden, um `SQL`.  
+-   Der Wert für die Artikeleigenschaften  **\@Ins_cmd**,  **\@Del_cmd**, und  **\@Upd_cmd** kann nicht festgelegt werden, um `SQL`.  
   
--   Die Abonnementeigenschaft **@sync_type** erfordert einen Wert von `none` oder `automatic`.  
+-   Die Abonnementeigenschaft  **\@Sync_type** erfordert einen Wert von `none` oder `automatic`.  
   
 ### <a name="maintenance-considerations"></a>Überlegungen in Bezug auf die Wartung  
  Die folgenden Aktionen erfordern, dass das System in den inaktiven Status versetzt werden muss. Dazu müssen alle Aktivitäten an veröffentlichten Tabellen in allen Knoten beendet werden, und es muss sichergestellt werden, dass jeder Knoten alle Änderungen von allen anderen Knoten erhalten hat.  

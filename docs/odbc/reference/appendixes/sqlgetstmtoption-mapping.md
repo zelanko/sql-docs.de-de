@@ -14,15 +14,15 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2423d41b1e9c549b7202a68fb2a0e085e0a6e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98bbdcf66ed9ee8f2d716d8953fde8f4a888fca0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297962"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792854"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption-Zuordnung
-Wenn eine Anwendung ruft **SQLGetStmtOption** auf eine ODBC 3 *.x* Treiber, den sie den Aufruf von nicht unterstützt  
+Wenn eine Anwendung ruft **SQLGetStmtOption** an die ODBC *3.x* Treiber, den sie den Aufruf von nicht unterstützt  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -52,6 +52,6 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  Für ODBC definierte Zeichenfolge Verbindungsoptionen, des Treiber-Managers festlegt der *Pufferlänge* Argument im Aufruf von **SQLGetConnectAttr** auf die vordefinierte maximale Länge (SQL_MAX_OPTION_STRING_LENGTH); für eine Verbindungsoption keine Zeichenfolgen darstellen *Pufferlänge* auf 0 festgelegt ist.  
   
- Die SQL_GET_BOOKMARK Option-Anweisung ist veraltet in ODBC 3 *.x*. Eine ODBC 3 *.x* -Treiber zur Arbeit mit ODBC 2. *X* Anwendungen, die SQL_GET_BOOKMARK, muss er SQL_GET_BOOKMARK unterstützen. Eine ODBC 3 *.x* -Treiber zur Arbeit mit ODBC 2. *X* Anwendungen, es muss unterstützen SQL_USE_BOOKMARKS auf SQL_UB_ON festlegen und sollte verfügbar zu machen Lesezeichen mit fester Länge. Wenn eine ODBC 3 *.x* -Treiber unterstützt nur variabler Länge, die Lesezeichen nicht Lesezeichen mit fester Länge, sie muss SQLSTATE HYC00 zurückgeben (optionales Feature nicht implementiert) Wenn einer ODBC 2. *X* Anwendung versucht, SQL_UB_ON SQL_USE_BOOKMARKS fest.  
+ Die SQL_GET_BOOKMARK Option-Anweisung ist veraltet in ODBC *3.x*. Für eine ODBC *3.x* -Treiber zur Arbeit mit ODBC *2.x* Anwendungen, die SQL_GET_BOOKMARK, muss er SQL_GET_BOOKMARK unterstützen. Für eine ODBC *3.x* -Treiber zur Arbeit mit ODBC *2.x* Anwendungen, es muss unterstützen SQL_USE_BOOKMARKS auf SQL_UB_ON festlegen und sollte verfügbar zu machen Lesezeichen mit fester Länge. Wenn eine ODBC *3.x* -Treiber unterstützt nur variabler Länge, die Lesezeichen nicht Lesezeichen mit fester Länge, sie muss SQLSTATE HYC00 zurückgeben (optionales Feature nicht implementiert) Wenn ODBC *2.x* Anwendung versucht, SQL_USE_BOOKMARKS auf SQL_UB_ON festgelegt.  
   
- Eine ODBC 3 *.x* -Treiber verwenden, der Treiber-Manager nicht mehr überprüft, ob *Option* zwischen SQL_STMT_OPT_MIN und SQL_STMT_OPT_MAX ist, oder ist größer als SQL_CONNECT_OPT_DRVR_START. Der Treiber muss dies zu überprüfen.
+ Für eine ODBC *3.x* -Treiber verwenden, der Treiber-Manager nicht mehr überprüft, ob *Option* zwischen SQL_STMT_OPT_MIN und SQL_STMT_OPT_MAX ist, oder ist größer als SQL_CONNECT_OPT_DRVR_START. Der Treiber muss dies zu überprüfen.

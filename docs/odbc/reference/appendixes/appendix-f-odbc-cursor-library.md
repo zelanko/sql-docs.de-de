@@ -16,12 +16,12 @@ ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c27845976651b0d68b91b6269a21d1cae3518df8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a87f6c365762f5b262dfbed07bbae14cb08604a
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267798"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794150"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Anhang F: ODBC-Cursorbibliothek
 > [!IMPORTANT]  
@@ -31,7 +31,7 @@ ms.locfileid: "63267798"
   
  Die Cursorbibliothek ist eine Dynamic Link Library (DLL), die zwischen der Treiber-Manager und der Treiber befindet. Wenn eine Anwendung eine Funktion aufruft, ruft der Treiber-Manager die Funktion in der Cursorbibliothek, die die Funktion ausgeführt, oder ruft sie in der angegebenen Treiber an. Für eine angegebene Verbindung gibt eine Anwendung an, ob die Cursorbibliothek ist immer verwendet, verwendet, wenn der Treiber scrollfähige Cursor nicht unterstützt oder noch nie verwendet.  
   
- Die Cursorbibliothek wird als einen Treiber in den Treiber-Manager angezeigt. Wenn die Cursorbibliothek zwischen der Treiber-Manager und einer ODBC 2. befindet. *x* -Treiber die Cursorbibliothek angezeigt, als einer ODBC 2. *X* Treiber. Wenn die Cursorbibliothek zwischen der Treiber-Manager "und" einen ODBC-3 befindet *.x* -Treiber die Cursor-Bibliothek angezeigt wird, als eine ODBC 3 *.x* Treiber. Das Verhalten, die von der Cursorbibliothek richtet sich nach der Version des Treibers, mit denen sie ist arbeiten, mit Ausnahme der Bindung Offsets, die für beide ODBC 2. unterstützt wird. *x* und ODBC 3. *X* Treiber.  
+ Die Cursorbibliothek wird als einen Treiber in den Treiber-Manager angezeigt. Wenn die Cursorbibliothek zwischen der Treiber-Manager "und" einen ODBC befindet *2.x* -Treiber die Cursorbibliothek angezeigt, als einen ODBC *2.x* Treiber. Wenn die Cursorbibliothek zwischen der Treiber-Manager "und" einen ODBC befindet *3.x* -Treiber die Cursorbibliothek angezeigt, als einen ODBC *3.x* Treiber. Das Verhalten, die von der Cursorbibliothek hängt von der Version des Treibers, mit Ausnahme der Bindung Offsets, funktioniert, dies für beide ODBC unterstützt *2.x* und ODBC *3.x* Treiber.  
   
  Zum Implementieren von Blockcursor **SQLFetch** und **SQLFetchScroll**, ruft die Cursorbibliothek wiederholt **SQLFetch** im Treiber. Um einen Bildlauf zu implementieren, zwischengespeichert die Daten, die er, im Arbeitsspeicher und in Dateien auf Datenträgern abgerufen hat. Wenn eine Anwendung ein neues Rowset anfordert, ruft die Cursorbibliothek es nach Bedarf aus der Treiber oder dem Cache ab.  
   

@@ -18,12 +18,12 @@ ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2101277aecd3ca9c844fb447f5ab772847d77020
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721106"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793306"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>Initialisieren eines Transaktionsabonnements von einer Sicherung (Replikationsprogrammierung mit Transact-SQL)
   Obwohl ein Abonnement für eine Transaktionsveröffentlichung in der Regel mit einer Momentaufnahme initialisiert wird, kann ein Abonnement auch mit gespeicherten Replikationsprozeduren von einer Sicherung initialisiert werden. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
@@ -34,7 +34,7 @@ ms.locfileid: "62721106"
   
     -   Wenn der Wert **1**ist, unterstützt die Veröffentlichung diese Funktionalität.  
   
-    -   Ist der Wert **0**, führen Sie [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **Allow_initialize_from_backup** für **@property** und den Wert `true` für **@value** .  
+    -   Ist der Wert **0**, führen Sie [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **Allow_initialize_from_backup** für  **\@Eigenschaft** und den Wert `true` für  **\@Wert**.  
   
 2.  Führen Sie für eine neue Veröffentlichung [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert `true` für **Allow_initialize_from_backup**. Weitere Informationen finden Sie unter [Create a Publication](publish/create-a-publication.md).  
   
@@ -47,23 +47,23 @@ ms.locfileid: "62721106"
   
 5.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank die gespeicherte Prozedur [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus. Geben Sie die folgenden Parameter an:  
   
-    -   **@sync_type** &ndash; der Wert **initialize with backup**.  
+    -   **\@Sync_type** -Wert **initialisieren mit der Sicherung**.  
   
-    -   **@backupdevicetype** &ndash; der Typ des Sicherungsmediums: **logical** (Standard), **disk**oder **tape**.  
+    -   **\@Backupdevicetype** – der Typ des Sicherungsmediums: **logische** (Standard), **Datenträger**, oder **Band**.  
   
-    -   **@backupdevicename** &ndash; das logische oder physische Sicherungsmedium, das für den Wiederherstellungsvorgang verwendet wird.  
+    -   **\@Backupdevicename** -das logische oder physische Sicherungsmedium, für die Wiederherstellung verwendet.  
   
          Für ein logisches Gerät geben Sie den Namen des Sicherungsmediums an, der beim Erstellen des Geräts mit **sp_addumpdevice** festgelegt wurde.  
   
          Geben Sie für ein physisches Gerät einen vollständigen Pfad und einen Dateinamen an, z. B. `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\BACKUP\Mybackup.dat'` oder `TAPE = '\\.\TAPE0'`.  
   
-    -   (Optional) **@password** &ndash; ein Kennwort, das bereitgestellt wurde, als der Sicherungssatz erstellt wurde.  
+    -   (Optional)  **\@Kennwort** -ein Kennwort, das bereitgestellt wurde, als der Sicherungssatz erstellt wurde.  
   
-    -   (Optional) **@mediapassword** &ndash; ein Kennwort, das bereitgestellt wurde, als der Mediensatz formatiert wurde.  
+    -   (Optional)  **\@Mediapassword** -ein Kennwort, das bereitgestellt wurde, als der Mediensatz formatiert wurde.  
   
-    -   (Optional) **@fileidhint** &ndash; Bezeichner für den Sicherungssatz, der wiederhergestellt werden soll. **1** gibt z. B. den ersten Sicherungssatz auf dem Sicherungsmedium an und **2** den zweiten Sicherungssatz.  
+    -   (Optional)  **\@Fileidhint** -Bezeichner für den Sicherungssatz wiederhergestellt werden. **1** gibt z. B. den ersten Sicherungssatz auf dem Sicherungsmedium an und **2** den zweiten Sicherungssatz.  
   
-    -   (Optional für Bandmedien) **@unload** &ndash; Geben Sie den Wert **1** (Standardwert) an, wenn das Band nach Abschluss der Wiederherstellung aus dem Laufwerk ausgegeben werden soll, und **0** , wenn es nicht ausgegeben werden soll.  
+    -   (Optional für Bandmedien)  **\@nicht entladen** -Geben Sie den Wert **1** (Standard), wenn das Band aus dem Laufwerk werden soll, nachdem die Wiederherstellung abgeschlossen ist und **0** Wenn es nicht entladen werden soll .  
   
 6.  (Optional) Führen Sie für ein Pullabonnement [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) und [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) im Abonnenten für die Abonnementdatenbank aus. Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md).  
   

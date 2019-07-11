@@ -19,25 +19,25 @@ ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93c8510bb23bb57244590a472073fc882f9fe64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208454"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793276"
 ---
 # <a name="writing-odbc-3x-applications"></a>Schreiben von ODBC-3.x-Anwendungen
-Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um ODBC 3. *X*, sodass Funktionsweise mit ODBC 2 geschrieben werden sollen. *X* und 3. *X* Treiber. Die Anwendung sollte bedingten Code, um die ODBC 3. nutzen integrieren. *x* Funktionen.  
+Wenn eine ODBC *2.x* Anwendung wird aktualisiert, um ODBC *3.x*, sollten sie geschrieben werden, so, dass sie sich mit den beiden ODBC funktioniert *2.x* und *3.x* Treiber . Die Anwendung soll bedingten Code zum Nutzen der ODBC-integrieren *3.x* Funktionen.  
   
- Umgebungsattributs SQL_ATTR_ODBC_VERSION sollte auf SQL_OV_ODBC2 festgelegt werden. Dadurch wird sichergestellt, dass der Treiber wie einer ODBC 2. verhält *.x* Treiber in Bezug auf die Änderungen, die im Abschnitt beschriebenen [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md).  
+ Umgebungsattributs SQL_ATTR_ODBC_VERSION sollte auf SQL_OV_ODBC2 festgelegt werden. Dadurch wird sichergestellt, dass der Treiber wie einen ODBC verhält *2.x* Treiber in Bezug auf die Änderungen, die im Abschnitt beschriebenen [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
- Wenn die Anwendung eines der Features, die im Abschnitt beschriebenen verwenden [neue Features](../../../odbc/reference/develop-app/new-features.md), bedingter Code sollte verwendet werden, um festzustellen, ob der Treiber eine ODBC-3 ist. *X* oder ODBC 2 *.x* Treiber. Die Anwendung verwendet **SQLGetDiagField** und **SQLGetDiagRec** ODBC 3. abrufen. *X* SQLSTATEs während der Durchführung der Fehler beim Verarbeiten dieser Fragmente bedingten Code. Die folgenden Punkte bezüglich der neuen Funktionalität sollte berücksichtigt werden:  
+ Wenn die Anwendung eines der Features, die im Abschnitt beschriebenen verwenden [neue Features](../../../odbc/reference/develop-app/new-features.md), bedingter Code sollte verwendet werden, um festzustellen, ob der Treiber ODBC ist *3.x* oder ODBC- *2.x* Treiber. Die Anwendung verwendet **SQLGetDiagField** und **SQLGetDiagRec** zum Abrufen von ODBC *3.x* SQLSTATEs während der Durchführung der Fehler beim Verarbeiten dieser Fragmente bedingten Code. Die folgenden Punkte bezüglich der neuen Funktionalität sollte berücksichtigt werden:  
   
--   Eine Anwendung, die von der Änderung im Verhalten der Rowset-Größe betroffenen vorsichtig nicht aufzurufende **SQLFetch** Wenn die Arraygröße ist größer als 1. Ersetzen Sie diese Anwendungen sollten Aufrufe **SQLExtendedFetch** mit Aufrufen von **SQLSetStmtAttr** das SQL_ATTR_ARRAY_STATUS_PTR-Anweisungsattribut festgelegt und **SQLFetchScroll**, sodass sie gemeinsamen Code verfügen, die mit den beiden ODBC 3. funktioniert. *x* und ODBC-2. *X* Treiber. Da **SQLSetStmtAttr** mit SQL_ATTR_ROW_ARRAY_SIZE zugeordnet **SQLSetStmtAttr** mit SQL_ROWSET_SIZE setzen ODBC 2. *X* Treiber, Anwendungen können die SQL_ATTR_ROW_ARRAY_SIZE für die Einfügung mehrerer Zeilen Abrufvorgänge einfach festlegen.  
+-   Eine Anwendung, die von der Änderung im Verhalten der Rowset-Größe betroffenen vorsichtig nicht aufzurufende **SQLFetch** Wenn die Arraygröße ist größer als 1. Ersetzen Sie diese Anwendungen sollten Aufrufe **SQLExtendedFetch** mit Aufrufen von **SQLSetStmtAttr** das SQL_ATTR_ARRAY_STATUS_PTR-Anweisungsattribut festgelegt und **SQLFetchScroll**, sodass sie gemeinsamen Code verfügen, die mit sowohl ODBC-als *3.x* und ODBC *2.x* Treiber. Da **SQLSetStmtAttr** mit SQL_ATTR_ROW_ARRAY_SIZE zugeordnet **SQLSetStmtAttr** mit SQL_ROWSET_SIZE setzen für ODBC *2.x* Treiber, Anwendungen können nur SQL festlegen _ATTR_ROW_ARRAY_SIZE für ihre Abrufvorgänge für die Einfügung mehrerer Zeilen.  
   
--   Die meisten Anwendungen, die gerade aktualisiert werden, sind nicht tatsächlich von Änderungen in SQLSTATE-Codes betroffen. Bei Anwendungen, die betroffen sind, können sie mechanischen suchen und Ersetzen Sie in den meisten Fällen mithilfe von Konvertierungstabelle für die Fehler im Abschnitt "SQLSTATE-Zuordnungen" ODBC 3. zu konvertieren. *x* Fehlercodes ODBC 2 *.x* Codes. Da die ODBC 3 *.x* führt-Treiber-Manager die Zuordnung von ODBC 2. *X* SQLSTATEs zu ODBC 3. *X* SQLSTATEs diese Anwendungsentwickler benötigen nur die Kontrollkästchen für die ODBC 3. *X* SQLSTATEs und keine Sorgen, einschließlich der ODBC 2. *X* SQLSTATEs in bedingten Code.  
+-   Die meisten Anwendungen, die gerade aktualisiert werden, sind nicht tatsächlich von Änderungen in SQLSTATE-Codes betroffen. Bei Anwendungen, die betroffen sind, können sie mechanischen suchen und Ersetzen Sie in den meisten Fällen mithilfe von Konvertierungstabelle für die Fehler im Abschnitt "SQLSTATE-Zuordnungen" Konvertieren von ODBC *3.x* ODBC-Fehlercodes *2.x* Codes. Seit der ODBC *3.x* führt-Treiber-Manager die Zuordnung von ODBC *2.x* SQLSTATEs zu ODBC *3.x* SQLSTATEs diese Anwendungsentwickler benötigen nur die Kontrollkästchen für den ODBC-  *3.x* SQLSTATEs und keine Sorgen, einschließlich ODBC *2.x* SQLSTATEs in bedingten Code.  
   
--   Wenn eine Anwendung gute Möglichkeit zur Verwendung von Date, Time und Timestamp-Datentypen, kann die Anwendung selbst werden von einer ODBC 2. deklarieren. *x* -Anwendung und zur Verwendung vorhandener code anstelle der Klimaanlage Code.  
+-   Wenn eine Anwendung gute Möglichkeit zur Verwendung von Date, Time und Timestamp-Datentypen, die Anwendung kann deklarieren, sich einen ODBC *2.x* -Anwendung und zur Verwendung vorhandener code anstelle der Klimaanlage Code.  
   
  Das Upgrade sollte auch die folgenden Schritte umfassen:  
   
@@ -57,7 +57,7 @@ Wenn eine ODBC-2. *x* Anwendung wird aktualisiert, um ODBC 3. *X*, sodass Funkti
   
 -   Ersetzen Sie alle Aufrufe **SQLTransact** mit Aufrufen von **SQLEndTran**. Wenn der äußersten rechten gültiges Handle in die **SQLTransact** Aufruf ist ein Umgebungshandle eine *HandleType* Argument SQL_HANDLE_ENV auf sollte verwendet werden, der **SQLEndTran** rufen Sie mit die entsprechende *behandeln* Argument. Wenn der äußersten rechten gültiges Handle in Ihre **SQLTransact** Aufruf ist ein Verbindungshandle ein *HandleType* Argument SQL_HANDLE_DBC auf, im verwendet werden soll die **SQLEndTran** mit aufrufen die entsprechende *behandeln* Argument.  
   
--   Ersetzen Sie alle Aufrufe **SQLColAttributes** mit Aufrufen von **SQLColAttribute**. Wenn die *FieldIdentifier* Argument ist einem SQL_COLUMN_PRECISION SQL_COLUMN_SCALE oder SQL_COLUMN_LENGTH, verändern sich etwas anderes als den Namen der Funktion nicht. Ändern Sie die *FieldIdentifier* aus SQL_COLUMN_XXXX zu SQL_DESC_XXXX. Wenn *FieldIdentifier* SQL_DESC_CONCISE_TYPE und der Datentyp Datetime-Datentyp, wechseln Sie in der entsprechenden ODBC 3 *.x* -Datentyp.  
+-   Ersetzen Sie alle Aufrufe **SQLColAttributes** mit Aufrufen von **SQLColAttribute**. Wenn die *FieldIdentifier* Argument ist einem SQL_COLUMN_PRECISION SQL_COLUMN_SCALE oder SQL_COLUMN_LENGTH, verändern sich etwas anderes als den Namen der Funktion nicht. Ändern Sie die *FieldIdentifier* aus SQL_COLUMN_XXXX zu SQL_DESC_XXXX. Wenn *FieldIdentifier* SQL_DESC_CONCISE_TYPE und der Datentyp Datetime-Datentyp, wechseln Sie in der entsprechenden ODBC *3.x* -Datentyp.  
   
 -   Wenn Sie Blockcursor, scrollfähige Cursor oder beides verwenden zu können, führt die Anwendung Folgendes aus:  
   

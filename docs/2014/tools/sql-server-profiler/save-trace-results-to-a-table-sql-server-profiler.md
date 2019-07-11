@@ -13,12 +13,12 @@ ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4679576a8336d9a35299622b8513b9c8ae855287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267783"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792689"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Speichern von Ablaufverfolgungsergebnissen in einer Tabelle (SQL Server Profiler)
   In diesem Thema wird beschrieben, wie Ablaufverfolgungsergebnisse mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]in einer Datenbanktabelle gespeichert werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "63267783"
   
 6.  Geben Sie im Feld **Tabelle** den Tabellennamen für die Ablaufverfolgungsergebnisse ein, oder wählen Sie den Namen aus. Klicken Sie auf **OK.**  
   
-7.  Aktivieren Sie im Dialogfeld **Ablaufverfolgungseigenschaften** das Kontrollkästchen **Maximale Zeilenzahl festlegen (in Tausend)**, um die maximale Anzahl zu speichernder Zeilen anzugeben.  
+7.  In der **Ablaufverfolgungseigenschaften** wählen Sie im Dialogfeld die **maximale Zeilenzahl festlegen (in Schritten von Tausend)** Kontrollkästchen, um die maximale Anzahl zu speichernder Zeilen anzugeben.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Profiler](sql-server-profiler.md)  

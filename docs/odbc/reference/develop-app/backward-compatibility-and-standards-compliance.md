@@ -15,15 +15,15 @@ ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c644f7ad008efb10d0397cccb00432da684295fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc89fd8d43df4b906f47ab1ef6b6932a5a814a86
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201580"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794110"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Abwärtskompatibilität und Einhaltung von Standards
-Abwärtskompatibilität ist die Fähigkeit von neueren ODBC-Komponenten, die alte ODBC-Komponenten ausführen möchten. Die folgenden Abschnitte beschreiben, wie diese Komponenten betroffen sind, indem Sie die Änderungen in ODBC 3. *.x*. Die Informationen, die in erster Linie in ihnen enthaltenen behandelt das Schreiben von einer ODBC 3. *.x* Anwendung, und ODBC-Treiber wie rückwärts Kompatibilitätsprobleme behandelt werden. Bestimmte Richtlinien dazu, wie die Abwärtskompatibilität Probleme Auswirkungen auf das Schreiben von einer ODBC 3. *.x* -Treiber verwenden, finden Sie unter [Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Abwärtskompatibilität ist die Fähigkeit von neueren ODBC-Komponenten, die alte ODBC-Komponenten ausführen möchten. Die folgenden Abschnitte beschreiben, wie diese Komponenten betroffen sind, durch die Änderungen in ODBC *3.x*. Die Informationen, die in erster Linie in ihnen enthaltenen behandelt das Schreiben von ODBC *3.x* Anwendung, und ODBC-Treiber wie rückwärts Kompatibilitätsprobleme behandelt werden. Bestimmte Richtlinien dazu, wie die Abwärtskompatibilität Probleme Auswirkungen auf das Schreiben von ODBC *3.x* -Treiber verwenden, finden Sie unter [Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Dieser Abschnitt enthält die folgenden Themen.  
   

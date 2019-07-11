@@ -19,17 +19,17 @@ ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032835"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793310"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Zuordnen von Ersatzfunktionen für die Abwärtskompatibilität von Anwendungen
-Eine ODBC 3. *.x* Anwendung über die ODBC 3. *.x* -Treiber-Manager funktioniert mit einer ODBC 2. *X* Treiber, solange keine neuen Funktionen verwendet werden. Beide Funktionen dupliziert und Änderungen am Verhalten, allerdings wirken sich die Möglichkeit, die die ODBC 3. *x* Anwendung funktioniert in einer ODBC 2. *X* Treiber. Wenn Sie mit einer ODBC 2. arbeiten zu können. *x* -Treiber verwenden, wird der Treiber-Manager die folgenden ODBC 3. zugeordnet. *X* -Funktionen, die eine oder mehrere ODBC 2. ersetzt haben. *X* -Funktionen in die entsprechenden ODBC 2. *X* Funktionen.  
+ODBC *3.x* Anwendung über die ODBC *3.x* für einen ODBC-Treiber-Manager funktioniert *2.x* Treiber, solange keine neuen Funktionen verwendet werden. Beide Funktionen dupliziert und Änderungen am Verhalten, allerdings wirken sich die Möglichkeit, die die ODBC *3.x* Anwendung funktioniert auf eine ODBC *2.x* Treiber. Beim Arbeiten mit ODBC *2.x* -Treiber verwenden, wird der Treiber-Manager die folgende ODBC zugeordnet *3.x* -Funktionen, die eine oder mehrere ODBC ersetzt haben *2.x* -Funktionen in der entsprechende ODBC *2.x* Funktionen.  
   
-|ODBC 3. *x* Funktion|ODBC-2. *x* Funktion|  
+|ODBC *3.x* Funktion|ODBC *2.x* Funktion|  
 |-------------------------|-------------------------|  
 |**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, oder **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
@@ -102,7 +102,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY091 (Ungültiger Deskriptorfeldbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
   
-2.  Der Treiber-Manager ordnet SQL_COLUMN_COUNT SQL_COLUMN_NAME oder SQL_COLUMN_NULLABLE SQL_DESC_COUNT SQL_DESC_NAME oder SQL_DESC_NULLABLE, bzw. (Einer ODBC 2. *.x* Treiber muss nur SQL_COLUMN_COUNT, SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE, nicht SQL_DESC_COUNT, SQL_DESC_NAME, und unterstützen SQL_DESC_NULLABLE.) Der Aufruf von SQLColAttribute zugeordnet ist:  
+2.  Der Treiber-Manager ordnet SQL_COLUMN_COUNT SQL_COLUMN_NAME oder SQL_COLUMN_NULLABLE SQL_DESC_COUNT SQL_DESC_NAME oder SQL_DESC_NULLABLE, bzw. (ODBC *2.x* Treiber muss nur SQL_COLUMN_COUNT, SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE, nicht SQL_DESC_COUNT, SQL_DESC_NAME, und unterstützen SQL_DESC_NULLABLE.) Der Aufruf von SQLColAttribute zugeordnet ist:  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -219,7 +219,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
   
  führt die folgende Sequenz von Schritten:  
   
-1.  Wenn *Attribut* ist kein treiberdefinierten Verbindung oder Anweisung Attribut und ist kein Attribut in ODBC 2. definiert. *X*, der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 (Ungültiger Attribut-/Optionsbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
+1.  Wenn *Attribut* ist kein treiberdefinierten Verbindung oder Anweisung Attribut und ist kein Attribut in ODBC definiert *2.x*, der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 zurück (ungültige / der Optionsbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
   
 2.  Wenn *Attribut* ist gleich SQL_ATTR_AUTO_IPD oder SQL_ATTR_METADATA_ID, die Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 (Ungültiger Attribut-/Optionsbezeichner).  
   
@@ -234,7 +234,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      Beachten Sie, dass die *Pufferlänge* und *StringLengthPtr* werden ignoriert.  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *.x* Treiber ruft **SQLGetData** mit der *ColumnNumber* Argument ungleich 0 ist, die ODBC 3. *.x* -Treiber-Manager wird hier zugeordnet, für einen Aufruf von **SQLGetStmtOption** mit der *Option* -Attributsatz auf SQL_GET_BOOKMARK.  
+ Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber ruft **SQLGetData** mit der *ColumnNumber* Argument ungleich 0 ist, die ODBC *3.x* -Treiber-Manager wird hier zugeordnet, für einen Aufruf von **SQLGetStmtOption** mit der *Option* -Attributsatz auf SQL_GET_BOOKMARK.  
   
 ## <a name="sqlgetstmtattr"></a>'SQLGetStmtAttr'  
  Der Treiber-Manager zugeordnet wird, diese Option, um **SQLGetStmtOption**. Der folgende Aufruf von **SQLGetStmtAttr**:  
@@ -245,7 +245,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
  führt die folgende Sequenz von Schritten:  
   
-1.  Wenn *Attribut* ist kein treiberdefinierten Verbindung oder Anweisung Attribut und ist kein Attribut in ODBC 2. definiert. *X*, der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 (Ungültiger Attribut-/Optionsbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
+1.  Wenn *Attribut* ist kein treiberdefinierten Verbindung oder Anweisung Attribut und ist kein Attribut in ODBC definiert *2.x*, der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 zurück (ungültige / der Optionsbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
   
 2.  Wenn *Attribut* ist eine der folgenden:  
   
@@ -304,7 +304,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
   
  führt die folgende Sequenz von Schritten:  
   
-1.  Wenn *Attribut* ist kein treiberdefinierten Verbindung oder Anweisung Attribut und ist kein Attribut in ODBC 2. definiert. *X*, der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 (Ungültiger Attribut-/Optionsbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
+1.  Wenn *Attribut* ist kein treiberdefinierten Verbindung oder Anweisung Attribut und ist kein Attribut in ODBC definiert *2.x*, der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 zurück (ungültige / der Optionsbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
   
 2.  Wenn *Attribut* SQL_ATTR_AUTO_IPD, die Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 entspricht (Ungültiger Attribut-/Optionsbezeichner).  
   
@@ -319,7 +319,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
      in denen *Hdbc*, *fOption*, und *vParam* festgelegt auf die Werte der *ConnectionHandle*, *Attribut*, und *ValuePtr*bzw. *StringLengthPtr* wird ignoriert.  
   
 > [!NOTE]  
->  Die Möglichkeit, auf der Verbindungsebene Anweisungsattribute festlegt ist veraltet. Anweisungsattribute sollte nie auf der Verbindungsebene durch ein ODBC-3 festgelegt werden. *x* Anwendung.  
+>  Die Möglichkeit, auf der Verbindungsebene Anweisungsattribute festlegt ist veraltet. Anweisungsattribute sollte nie auf der Verbindungsebene festgelegt werden, von einer ODBC *3.x* Anwendung.  
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  Der Treiber-Manager zugeordnet wird, diese Option, um **SQLSetStmtOption**. Der folgende Aufruf von **SQLSetStmtAttr**:  
@@ -330,7 +330,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
  führt die folgende Sequenz von Schritten:  
   
-1.  Wenn *Attribut* ist kein treiberdefinierten Verbindung oder Anweisung Attribut und ist kein Attribut in ODBC 2. definiert. *X*, der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 (Ungültiger Attribut-/Optionsbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
+1.  Wenn *Attribut* ist kein treiberdefinierten Verbindung oder Anweisung Attribut und ist kein Attribut in ODBC definiert *2.x*, der Treiber-Manager gibt SQL_ERROR mit SQLSTATE HY092 zurück (ungültige / der Optionsbezeichner). Keine weiteren Regeln in diesem Abschnitt gelten.  
   
 2.  Wenn *Attribut* ist eine der folgenden:  
   
@@ -382,7 +382,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
      in denen *Befehls beschäftigt*, *fOption*, und *vParam* festgelegt auf die Werte der *StatementHandle*, *Attribut*, und *ValuePtr*bzw. Die *StringLength* Argument wird ignoriert.  
   
-     Wenn eine ODBC-2. *x* -Treiber unterstützt-Zeichenfolge, die treiberspezifische Anweisungsoptionen können nur eine ODBC 3. *X* Anwendung aufrufen sollten **SQLSetStmtOption** um diese Optionen festzulegen.  
+     Wenn eine ODBC *2.x* -Treiber unterstützt-Zeichenfolge, die treiberspezifische Anweisungsoptionen können nur einen ODBC *3.x* Anwendung aufrufen sollten **SQLSetStmtOption** um diese Optionen festzulegen.  
   
 ## <a name="mappings-for-handling-parameter-arrays"></a>Zuordnungen für die Behandlung von Parameterarrays  
  Wenn die Anwendung aufruft:  
@@ -399,23 +399,23 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
   
  Der Treiber-Manager gibt einen Zeiger später auf diese Variable, wenn die Anwendung aufruft **SQLGetStmtAttr** SQL_ATTR_PARAMS_PROCESSED_PTR abrufen. Der Treiber-Manager können diese internen Variablen nicht ändern, bis das Anweisungshandle auf den vorbereiteten oder zugeordneten Zustand zurückgegeben wird.  
   
- Eine ODBC-3. *x* Anwendung aufrufen kann **SQLGetStmtAttr** um den Wert der SQL_ATTR_PARAMS_PROCESSED_PTR zu erhalten, obwohl sie nicht explizit das Feld SQL_DESC_ARRAY_SIZE im APD festgelegt wurde. Diese Situation kann beispielsweise auftreten, wenn die Anwendung verfügt über eine generische Routine, die prüft, ob die aktuelle "Zeile" der Parameter verarbeitet werden, wenn **SQLExecute** wird SQL_NEED_DATA zurückgegeben. Diese Routine wird aufgerufen, und zwar unabhängig davon, ob die SQL_DESC_ARRAY_SIZE 1 ist, oder größer als 1 ist. Um dies zu berücksichtigen, der Treiber-Manager müssen diese interne Variable definieren, und zwar unabhängig davon, ob die Anwendung aufgerufen hat **SQLSetStmtAttr** Feld SQL_DESC_ARRAY_SIZE im APD festlegen. Wenn SQL_DESC_ARRAY_SIZE nicht festgelegt wurde, wird der Treiber-Manager hat, um sicherzustellen, dass diese Variable den Wert "1" vor der Rückgabe von enthält **SQLExecDirect** oder **SQLExecute**.  
+ ODBC *3.x* Anwendung aufrufen kann **SQLGetStmtAttr** um den Wert der SQL_ATTR_PARAMS_PROCESSED_PTR zu erhalten, obwohl sie nicht explizit das Feld SQL_DESC_ARRAY_SIZE im APD festgelegt wurde. Diese Situation kann beispielsweise auftreten, wenn die Anwendung verfügt über eine generische Routine, die prüft, ob die aktuelle "Zeile" der Parameter verarbeitet werden, wenn **SQLExecute** wird SQL_NEED_DATA zurückgegeben. Diese Routine wird aufgerufen, und zwar unabhängig davon, ob die SQL_DESC_ARRAY_SIZE 1 ist, oder größer als 1 ist. Um dies zu berücksichtigen, der Treiber-Manager müssen diese interne Variable definieren, und zwar unabhängig davon, ob die Anwendung aufgerufen hat **SQLSetStmtAttr** Feld SQL_DESC_ARRAY_SIZE im APD festlegen. Wenn SQL_DESC_ARRAY_SIZE nicht festgelegt wurde, wird der Treiber-Manager hat, um sicherzustellen, dass diese Variable den Wert "1" vor der Rückgabe von enthält **SQLExecDirect** oder **SQLExecute**.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
- In ODBC 3. *x*, wird beim Aufruf **SQLFetch** oder **SQLFetchScroll** füllt die SQL_DESC_ARRAY_STATUS_PTR in IRD und das SQL_DIAG_ROW_NUMBER-Feld, der einen bestimmten Datensatz für die Diagnose enthält die Nummer der Zeile im Rowset, dem auf diesen Eintrag bezieht. Die Anwendung kann anhand dieser eine Fehlermeldung mit einer bestimmten Zeilenposition korrelieren.  
+ In ODBC *3.x*, wird beim Aufruf **SQLFetch** oder **SQLFetchScroll** füllt die SQL_DESC_ARRAY_STATUS_PTR in IRD und das Feld SQL_DIAG_ROW_NUMBER einer bestimmten Diagnose Datensatz enthält die Nummer der Zeile im Rowset, dem auf diesen Eintrag bezieht. Die Anwendung kann anhand dieser eine Fehlermeldung mit einer bestimmten Zeilenposition korrelieren.  
   
- Eine ODBC-2. *x* Treiber werden in der Lage, diese Funktion bereitstellen. Sie erhalten jedoch Abgrenzung der Fehler mit SQLSTATE 01 s 01 (Fehler in Zeile). Eine ODBC-3. *x* Anwendung, die **SQLFetch** oder **SQLFetchScroll** mit einer ODBC 2. machen Sie sich beim. *X* Treiber benötigt diese Tatsache berücksichtigen. Beachten Sie, dass eine solche Anwendung kann nicht aufgerufen werden **SQLGetDiagField** um das Feld "SQL_DIAG_ROW_NUMBER" tatsächlich trotzdem zu erhalten. Eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber werden in der Lage, rufen Sie **SQLGetDiagField** nur mit einem *DiagIdentifier* Argument SQL_DIAG_MESSAGE_TEXT SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE oder SQL_DIAG_ SQLSTATE. Die ODBC 3. *.x* -Treiber-Manager verwaltet die Diagnosedaten-Struktur, bei der Arbeit mit einer ODBC 2. *X* Treiber, aber die ODBC 2. *X* Treiber nur diese vier Felder zurückgegeben.  
+ ODBC *2.x* Treiber werden in der Lage, diese Funktion bereitstellen. Sie erhalten jedoch Abgrenzung der Fehler mit SQLSTATE 01 s 01 (Fehler in Zeile). ODBC *3.x* Anwendung, die **SQLFetch** oder **SQLFetchScroll** für einen ODBC machen Sie sich beim *2.x* Treiber benötigt, zu berücksichtigen Diese Tatsache. Beachten Sie, dass eine solche Anwendung kann nicht aufgerufen werden **SQLGetDiagField** um das Feld "SQL_DIAG_ROW_NUMBER" tatsächlich trotzdem zu erhalten. ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber werden in der Lage, rufen Sie **SQLGetDiagField** nur mit einem *DiagIdentifier* ein Argument vom SQL_DIAG_MESSAGE_TEXT SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE oder SQL_DIAG_SQLSTATE. Die ODBC *3.x* -Treiber-Manager verwaltet die Diagnosedaten-Struktur, bei der Arbeit mit einer ODBC- *2.x* Treiber, aber die ODBC *2.x* Treiber nur diese vier Felder zurückgegeben.  
   
- Wenn eine ODBC-2. *x* Anwendung arbeitet mit einer ODBC 2. *X* -Treiber verwenden, wenn ein Vorgang mehrere Fehler, die vom Treiber-Manager, zurückgegeben werden kann verschiedene Fehler können zurückgegeben werden, indem die ODBC 3. *.x* -Treiber-Manager als durch die ODBC 2. *X* -Treiber-Manager.  
+ Wenn eine ODBC *2.x* mit einer ODBC-Anwendung funktioniert *2.x* -Treiber verwenden, wenn ein Vorgang mehrere Fehler, die vom Treiber-Manager, zurückgegeben werden kann verschiedene Fehler können zurückgegeben werden, indem die ODBC- *3.x* -Treiber-Manager als von der ODBC *2.x* -Treiber-Manager.  
   
 ## <a name="mappings-for-bookmark-operations"></a>Zuordnungen für die Lesezeichen-Vorgänge  
- Die ODBC 3. *.x* -Treiber-Manager führt die folgenden Zuordnungen, wenn eine ODBC 3. *X* Anwendung mit einer ODBC 2. *X* Treiber führt die Lesezeichen-Vorgänge.  
+ Die ODBC *3.x* -Treiber-Manager führt die folgenden Zuordnungen, wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber führt die Lesezeichen-Vorgänge.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber ruft **SQLBindCol** zum Binden an die Spalte 0 mit *fCType* gleich SQL_C_VARBOOKMARK, die ODBC 3. *.x* -Treiber-Manager wird überprüft ob die *Pufferlänge* Argument ist kleiner als 4 oder größer als 4, und wenn dies der Fall ist, gibt SQLSTATE HY090 (ungültige Zeichenfolgen- oder Pufferlänge Länge). Wenn die *Pufferlänge* Argument gleich 4 ist, ruft der Treiber-Manager **SQLBindCol** im Treiber, nach dem Ersetzen *fCType* mit SQL_C_BOOKMARK.  
+ Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber ruft **SQLBindCol** zum Binden an die Spalte 0 mit *fCType* SQL_C_ gleich VARBOOKMARK, die ODBC *3.x* -Treiber-Manager überprüft, ob die *Pufferlänge* Argument ist kleiner als 4 oder größer als 4, und wenn dies der Fall ist, gibt SQLSTATE HY090 (ungültige Zeichenfolgen- oder Pufferlänge (Länge). Wenn die *Pufferlänge* Argument gleich 4 ist, ruft der Treiber-Manager **SQLBindCol** im Treiber, nach dem Ersetzen *fCType* mit SQL_C_BOOKMARK.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber ruft **SQLColAttribute** mit der *ColumnNumber* Argument auf 0 festgelegt, der Treiber-Manager gibt den *FieldIdentifier* Werte in der folgenden Tabelle aufgeführt.  
+ Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber ruft **SQLColAttribute** mit der *ColumnNumber* -Argument auf 0 (null) der Treiber-Manager gibt den *FieldIdentifier* Werte in der folgenden Tabelle aufgeführt.  
   
 |*FieldIdentifier*|Wert|  
 |-----------------------|-----------|  
@@ -447,7 +447,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber ruft **SQLDescribeCol** mit der *ColumnNumber* Argument auf 0 festgelegt, gibt der Treiber-Manager in der folgenden Tabelle aufgeführten Werte zurück.  
+ Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber ruft **SQLDescribeCol** mit der *ColumnNumber* -Argument auf 0 (null) der Treiber-Manager gibt in der folgenden Tabelle aufgeführten Werte zurück.  
   
 |Puffer|Wert|  
 |------------|-----------|  
@@ -459,7 +459,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber wird den folgenden Aufruf **SQLGetData** ein Lesezeichens abgerufen:  
+ Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber wird den folgenden Aufruf **SQLGetData** ein Lesezeichens abgerufen:  
   
 ```  
 SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, StrLen_or_IndPtr)  
@@ -473,9 +473,9 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  wo *Befehls beschäftigt* und *PvParam* festgelegt sind, auf die Werte in *StatementHandle* und *TargetValuePtr*bzw. Das Lesezeichen wird zurückgegeben, in den Puffer, der auf die *PvParam* (*TargetValuePtr*) Argument. Der Wert in den Puffer verweist die *StrLen_or_IndPtr* Argument im Aufruf von **SQLGetData** auf 4 festgelegt ist.  
   
- Diese Zuordnung ist notwendig, für den Fall, in dem Konto **SQLFetch** aufgerufen wurde, vor dem Aufruf von **SQLGetData** und die ODBC 2. *X* Treiber nicht **SQLExtendedFetch**. In diesem Fall **SQLFetch** über die ODBC 2. übergeben werden sollen. *X* Treiber, die in der Groß-/Kleinschreibung Lesezeichen abrufen wird nicht unterstützt.  
+ Diese Zuordnung ist notwendig, für den Fall, in dem Konto **SQLFetch** aufgerufen wurde, vor dem Aufruf von **SQLGetData** und den ODBC- *2.x* Treiber nicht **SQLExtendedFetch**. In diesem Fall **SQLFetch** würde an ODBC übergeben werden *2.x* Treiber, die in der Groß-/Kleinschreibung Lesezeichen abrufen wird nicht unterstützt.  
   
- **SQLGetData** kann nicht mehrere Male aufgerufen werden, in einer ODBC 2. *X* Treiber zum Abrufen eines Lesezeichens in Teilen, daher ist das Aufrufen **SQLGetData** mit der *Pufferlänge* -Argument auf einen Wert kleiner als 4 festgelegt und die *ColumnNumber*SQLSTATE HY090-Argument auf 0 zurück (ungültige Zeichenfolgen- oder Pufferlänge Länge). **SQLGetData** kann jedoch werden mehrere Male abrufen desselben Lesezeichens aufgerufen.  
+ **SQLGetData** kann nicht mehrere Male aufgerufen werden, in ODBC *2.x* Treiber zum Abrufen eines Lesezeichens in Teilen, daher ist das Aufrufen **SQLGetData** mit der *Pufferlänge* -Argument auf einen Wert kleiner als 4 festgelegt und die *ColumnNumber* SQLSTATE HY090-Argument auf 0 zurück (ungültige Zeichenfolgen- oder Pufferlänge Länge). **SQLGetData** kann jedoch werden mehrere Male abrufen desselben Lesezeichens aufgerufen.  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
- Wenn eine ODBC-3. *x* Anwendung mit einer ODBC 2. *X* Treiber ruft **SQLSetStmtAttr** um das Attribut SQL_ATTR_USE_BOOKMARKS SQL_UB_VARIABLE festzulegen, der Treiber-Manager wird das Attribut auf SQL_UB_ON in die zugrunde liegenden ODBC 2. *X* Treiber.
+ Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber ruft **SQLSetStmtAttr** Festlegen der SQL_ATTR_USE_BOOKMARKS-Attribut SQL_UB_VARIABLE, den Treiber Manager legt das Attribut auf SQL_UB_ON in der zugrunde liegenden ODBC *2.x* Treiber.

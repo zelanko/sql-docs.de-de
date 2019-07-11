@@ -20,12 +20,12 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536275"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793165"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec-Funktion
 **Übereinstimmung mit Standards**  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY016|Ein Implementierungszeilendeskriptor kann nicht geändert werden.|Die *DescriptorHandle* Argument wurde ein IRD zugeordnet.|  
 |HY021|Inkonsistente deskriptorinformation|Die *Typ* Feld oder jedes andere Feld, das SQL_DESC_TYPE-Feld in der Deskriptor zugeordnet war nicht gültig oder konsistent.<br /><br /> Informationen der Sicherheitsbeschreibung, die während einer konsistenzprüfung eingecheckt war nicht konsistent. (Siehe "Konsistenzprüfungen," weiter unten in diesem Abschnitt.)|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Treiber wurde von einer ODBC 2. *.x* -Treiber der Deskriptor wurde ein ARD, die *ColumnNumber* -Argument wurde auf 0 und dem Wert des Arguments festgelegt *Pufferlänge* wurde nicht gleich 4.|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Treiber ist ODBC *2.x* -Treiber der Deskriptor wurde ein ARD, die *ColumnNumber* -Argument wurde auf 0 und dem Wert des Arguments festgelegt *Pufferlänge* wurde nicht gleich 4.|  
 |HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *DescriptorHandle* die Funktion nicht unterstützt.|  

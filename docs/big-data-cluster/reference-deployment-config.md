@@ -2,19 +2,20 @@
 title: Bereitstellung-konfigurationsdateireferenz
 titleSuffix: SQL Server big data clusters
 description: Referenz für eine Bereitstellungskonfigurationsdatei für big Data-Cluster.
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59b7de44af6873e18dbc1292bd5eccd6f33b637f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0ddc730e677c70e0d25274ed1383ea6f9c21934
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798730"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727542"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Bereitstellung von-konfigurationsdateireferenz für big Data-Cluster
 

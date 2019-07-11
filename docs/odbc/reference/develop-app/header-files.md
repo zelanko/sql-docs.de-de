@@ -13,19 +13,19 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c706dca3a1479a299841f9d47743785d29689f12
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724365"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792558"
 ---
 # <a name="header-files"></a>Headerdateien
 Die Headerdatei Sql.h enthält Prototypen für die Funktionen und Funktionen in der Konformitätsgrad des Core-ODBC-Schnittstelle. Die Headerdatei Sqlext.h enthält Prototypen für die Funktionen und Funktionen in der Ebene 1 und Level 2-API-Konformitätsgrad. Die Headerdatei Sqltypes.h enthält Typdefinitionen und Indikatoren für die SQL-Datentypen.  
   
  Die Headerdateien enthalten eine **#define**, ODBCVER, die eine Anwendung oder ein Treiber festlegen können, für verschiedene Versionen von ODBC kompiliert werden.  
   
- Um mit dem ISO-CLI und Open Group CLI auszurichten, die Headerdateien enthalten Aliase für den Informationstypen, die in Aufrufen verwendet **SQLGetInfo**. In der folgenden Tabelle gibt die Spalte "ODBC-Name" an den ODBC-Namen für den Informationstyp im [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md). Die Spalte "Alias in der Headerdatei" gibt an, den Namen, der in der ISO-CLI und die Open Group-CLI verwendet wird. Der tatsächliche numerische Wert dieser manifest Namen ist in ODBC und die standard-CLIs identisch. Diese Aliase zu ermöglichen, eine Standards kompatible Anwendung oder den Treiber mit der ODBC 3. Kompilieren *.x* Headerdateien.  
+ Um mit dem ISO-CLI und Open Group CLI auszurichten, die Headerdateien enthalten Aliase für den Informationstypen, die in Aufrufen verwendet **SQLGetInfo**. In der folgenden Tabelle gibt die Spalte "ODBC-Name" an den ODBC-Namen für den Informationstyp im [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md). Die Spalte "Alias in der Headerdatei" gibt an, den Namen, der in der ISO-CLI und die Open Group-CLI verwendet wird. Der tatsächliche numerische Wert dieser manifest Namen ist in ODBC und die standard-CLIs identisch. Diese Aliase ermöglichen, dass ein Standards kompatible Anwendung oder Treiber, kompilieren Sie mit der ODBC *3.x* Headerdateien.  
   
  Diese Aliase enthalten Erweiterungen der Abkürzungen in den ODBC-Namen, sodass die Namen der leichter verständlich sind. "MAX" wird zu "MAXIMUM", "LEN", "LENGTH", "MULT" auf "MULTIPLE", "ABl.", "OUTER_JOIN" und "Transaktionsvorgänge", "Transaction". erweitert  
   

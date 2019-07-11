@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Eine Python- oder R-Skript als eine Anwendung auf SQL Server-2019 big Data-Cluster (Vorschau) bereitstellen.
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681593"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729289"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Gewusst wie: Bereitstellen einer app auf SQL Server-big Data-Cluster (Vorschau)
 
@@ -38,7 +37,7 @@ Die folgenden Arten von apps werden unterstützt:
 - MLeap-Bereitstellung
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [SQL Server-2019 big Data-cluster](deployment-guidance.md)
 - [Mssqlctl-Befehlszeilen-Hilfsprogramm](deploy-install-mssqlctl.md)
@@ -47,7 +46,7 @@ Die folgenden Arten von apps werden unterstützt:
 
 In SQL Server 2019 (Vorschau) Sie erstellen, löschen, zu beschreiben, initialisiert werden können, Liste ausgeführt, und aktualisieren Sie Ihre Anwendung. Die folgende Tabelle beschreibt die Befehle der Anwendung-Bereitstellung, mit denen Sie mit **Mssqlctl**.
 
-|Befehl |Description |
+|Befehl |Beschreibung |
 |:---|:---|
 |`mssqlctl login` | Melden Sie sich bei einer SQL Server-big Data-cluster |
 |`mssqlctl app create` | Erstellen Sie die Anwendung. |
@@ -111,7 +110,7 @@ Dabei wird davon ausgegangen, dass Sie Ihre Anwendung gespeichert, der `addpy` O
 
 Um diese app-Beispiel-app bereitzustellen, erstellen Sie die folgenden Dateien in einem Verzeichnis namens `addpy`:
 
-- `add.py`. installiert haben. Kopieren Sie den folgenden Python-Code in diese Datei ein:
+- `add.py`. Kopieren Sie den folgenden Python-Code in diese Datei ein:
    ```py
    #add.py
    def add(x,y):
@@ -220,7 +219,7 @@ Der Befehl im folgenden Beispiel wird veranschaulicht, mit dem Befehl "run":
 mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-Wenn die Ausführung erfolgreich war, sehen Sie die Ausgabe angegeben wird, wenn Sie die app erstellt. Im Folgenden finden Sie ein Beispiel.
+Wenn die Ausführung erfolgreich war, sehen Sie die Ausgabe angegeben wird, wenn Sie die app erstellt. Nachfolgend finden Sie ein Beispiel:
 
 ```json
 {

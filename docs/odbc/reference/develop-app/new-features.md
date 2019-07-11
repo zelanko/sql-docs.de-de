@@ -17,15 +17,15 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4582a99797d5f6035f6d5d639514c5a6fdd572d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658183"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794058"
 ---
 # <a name="new-features"></a>Neue Funktionen
-Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3.*x* Anwendung mit einer ODBC 2 *.x* Treiber werden nicht in der Lage, diese Funktion zu verwenden. Der ODBC-3.*x* -Treiber-Manager lässt diese Funktionen nicht zuordnen, bei der Arbeit mit einer ODBC 2 *.x* Treiber.  
+Die folgende neue Funktionen wurde eingeführt, in ODBC *3.x*. ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber werden nicht in der Lage, diese Funktion zu verwenden. Die ODBC *3.x* -Treiber-Manager ordnet diese Funktionen nicht, bei der Arbeit mit einer ODBC- *2.x* Treiber.  
   
 -   Funktionen, die einen Deskriptor akzeptieren behandeln, als Argument: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, und **SQLCopyDesc**.  
   
@@ -81,7 +81,7 @@ Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3.*x* 
   
 -   Benannte Parameter.  
   
--   Alle von der ODBC-3. *x*-spezifische **SQLGetInfo** Optionen. (Bei einer ODBC-3.*x* Anwendung mit einer ODBC 2.*x* ruft der Treiber die SQL_XXX_CURSOR_ATTRIBUTES1 Informationstypen, die mehrere ODBC 2. ersetzt haben. *X* Informationstypen, einige der Informationen sind möglicherweise in der zuverlässigen, aber einige möglicherweise unzuverlässig. Weitere Informationen finden Sie unter [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Einer der ODBC- *3.x*-spezifische **SQLGetInfo** Optionen. (Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* ruft der Treiber die SQL_XXX_CURSOR_ATTRIBUTES1 Informationstypen, die mehrere ODBC ersetzt haben *2.x* Informationstypen, einige der Informationen können zuverlässig sein, aber einige möglicherweise unzuverlässig. Weitere Informationen finden Sie unter [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Binden Sie Offsets an.  
   
@@ -103,7 +103,7 @@ Die folgende neue Funktionen wurde in ODBC 3. eingeführt. *x*. Eine ODBC-3.*x* 
   
 -   Verwenden von **SQLDescribeCol** und **SQLColAttribute** für die Spalte 0.  
   
--   Verwendung von jeder ODBC 3. *x*-spezifische Spaltenattribute in einem Aufruf von **SQLColAttribute**.  
+-   Verwendung von jeder ODBC *3.x*-spezifische Spaltenattribute in einem Aufruf von **SQLColAttribute**.  
   
 -   Verwendung von mehreren Umgebungshandles.  
   

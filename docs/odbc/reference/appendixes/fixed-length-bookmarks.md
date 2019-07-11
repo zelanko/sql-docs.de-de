@@ -16,16 +16,16 @@ ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e40947dc4dbad0830444870ea7e2d0c663490b25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21af6ef1be21e000d25582151650f274fe3561a4
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188968"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793373"
 ---
 # <a name="fixed-length-bookmarks"></a>Textmarke mit fester Länge
-Wenn eine ODBC 3. *.x* Treiber sollte mit einer ODBC 2. funktionieren. *X* Anwendung, dass verwendet Lesezeichen mit fester Länge, der Treiber die folgenden unterstützen müssen:  
+Wenn eine ODBC *3.x* Treiber sollte funktionieren mit einer ODBC- *2.x* Anwendung, dass verwendet Lesezeichen mit fester Länge, der Treiber die folgenden unterstützen müssen:  
   
--   SQL_UB_ON als Wert für die SQL_USE_BOOKMARKS-Option-Anweisung. (SQL_UB_ON veraltetes Feature in ODBC 3. *.x*.)  
+-   SQL_UB_ON als Wert für die SQL_USE_BOOKMARKS-Option-Anweisung. (SQL_UB_ON veraltetes Feature in ODBC *3.x*.)  
   
 -   Die Option für den SQL_GET_BOOKMARK-Anweisung.

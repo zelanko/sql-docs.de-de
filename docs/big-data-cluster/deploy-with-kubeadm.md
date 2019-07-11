@@ -2,20 +2,20 @@
 title: Konfigurieren von Kubernetes mit kubeadm
 titleSuffix: SQL Server big data clusters
 description: Erfahren Sie, wie Sie Kubernetes in mehrere Ubuntu 16.04 oder 18.04 Computer (physisch oder virtuell) für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen konfigurieren.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: c48a8a8ad84a1378eed09727a3e51a51252b88c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5e59caaf408968f6b669364ccbe07e8ea973c34
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803067"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728898"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehrere Computer für SQL Server-big Data-Cluster-Bereitstellungen
 
@@ -26,7 +26,7 @@ Dieser Artikel enthält ein Beispiel zur Verwendung **Kubeadm** Kubernetes auf m
 > [!TIP] 
 > Beispielskripts, die Kubernetes konfigurieren, finden Sie unter [erstellen Sie einen Kubernetes-Cluster mithilfe von Kubeadm unter Ubuntu 16.04 LTS oder 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Mindestens 3 Linux-Computer – physische oder virtuelle Computer
 - Empfohlene Konfiguration pro Computer:

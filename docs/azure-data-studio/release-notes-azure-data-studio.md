@@ -10,17 +10,37 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 06/06/2019
-ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.date: 07/10/2019
+ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681613"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794072"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
 **[Herunterladen Sie und installieren Sie die neueste Version.](download.md)**
+
+## <a name="july-2019"></a>Juli 2019
+
+10 Juli 2019 &nbsp;  /  &nbsp; Version: 1.9.0 
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Release von SentryOne Planen der Explorer-Erweiterung | Unser Microsoft Partner SentryOne versenden wird ihre [SentryOne Planen der Explorer-Erweiterung für Azure Data Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio). <br> Dies ist eine kostenlose Erweiterung, die bereitstellt, führen Sie erweiterte Plan Diagramme für Abfragen in Azure Data Studio mit optimiertes Layout-Algorithmen und intuitive farbcodierung zur Identifizierung von schnell die teuersten Operatoren, die auf die abfrageleistung auswirkt. Weitere Informationen zu der Erweiterung, sehen Sie sich SentryOnes-Blogbeitrag [hier](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio). |
+| Neuen Features für Schemavergleich | &bull; &nbsp; Schema vergleichen-Dateiunterstützung (. SCMP) <br/>&bull; &nbsp; Unterstützung für das Vergleichen Abbrechen <br/>&bull; &nbsp; Finden Sie umfassende Änderungen [hier](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
+| Notebook-Verbesserungen | &bull; &nbsp; Plotly Python-Unterstützung <br/>&bull; &nbsp; Notizbuch in Browser öffnen <br/> &bull; &nbsp; Python-Paket-Dialogfeld <br/> &bull; &nbsp; Leistung und Markdown-Erweiterungen <br/> &bull; &nbsp; Tastatur Verknüpfungen Aktualisieren <br/>  &bull; &nbsp; Fehlerbehebungen und kleinere Features finden Sie [hier](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
+| Unterstützung für SQL Server 2019 |  Diese Version enthält Unterstützung für zusätzliche SQL Server 2019 Big Data-Cluster-Funktionen, einschließlich: <br/> &bull; &nbsp; Dienstendpunkte-Tabelle in der Management-Dashboard, die alle wichtige Dienste im Cluster auflistet. <br/> &bull; &nbsp; Cluster-Status-Notebook wird gezeigt, wie Sie Abfragen können, und Beheben von Clusterstatus für alle Dienste und Pods.| 
+| Aktualisierte Language Packs verfügbar| Im Marketplace Erweiterungs-Manager sind jetzt 10 Sprachpakete verfügbar. Klicken Sie einfach, für die jeweilige Sprache, die über den Marketplace Erweiterung suchen, und installieren. Nach der Installation der ausgewählten Sprache fordert Azure Data Studio, mit der neuen Sprache neu zu starten. |
+| Update für SQL Server Profiler | Die Erweiterung für SQL Server-Profil wurde aktualisiert, um die neuen Features, einschließlich gehören: <br/> &bull; &nbsp; Nach Datenbanknamen filtern <br/> &bull; &nbsp; Kopieren und Einfügen-Support <br/> &bull; &nbsp; Filter speichern/laden <br/>Eine vollständige Liste der Verbesserungen für SQL Server Profiler-Erweiterung finden Sie [hier](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+).  |
+| Visual Studio-Code kann Merge 1.35 freizugeben. | Neueste Verbesserungen finden Sie [hier](https://code.visualstudio.com/updates/v1_35). |
+| Behobene Fehler und Probleme | Wenn eine Benutzerdatenbank beim Verbinden von aus dem Dialogfeld "Verbindung" ausgewählt wurde, wurde der resultierende Objekt-Explorer-Eintrag in früheren Versionen von Azure Data Studio ausschließlich für diesen einzelnen Datenbank beschränkt. Beginnen in dieser Version, dass das Verhalten geändert wird, sodass auf Servereigenschaften auch im Objekt-Explorer angezeigt werden. <br/> Eine vollständige Liste der Fehlerbehebungen finden Sie unter [Fehlern und Problemen, die auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
+| &nbsp; | &nbsp; |
+
+
 
 ## <a name="june-2019"></a>Juni 2019
 
@@ -34,7 +54,7 @@ ms.locfileid: "67681613"
 | Version der Datenbank-Verwaltung-Tool-Erweiterungen für Windows | Diese Erweiterung wird gestartet, zwei der am häufigsten verwendeten Funktionen in SQL Server Management Studio aus Azure Data Studio. Benutzer können klicken Sie mit der rechten Maustaste auf viele verschiedene Objekte (z. B. Datenbanken, Tabellen, Spalten, Sichten usw.) und Eigenschaften auswählen, um das Dialogfeld Eigenschaften von SSMS für dieses Objekt anzeigen. Darüber hinaus können Benutzer klicken Sie mit der rechten Maustaste auf eine Datenbank und wählen Sie "Skripts generieren", um die bekannten SSMS Assistent zum Generieren Skripts zu starten. 
 | Schema vergleichen-Verbesserungen | &bull; &nbsp; Optionen für die hinzugefügte einschließen/ausschließen <br/>&bull; &nbsp; Skriptgenerierung Skript öffnet nach generiert werden <br/>&bull; &nbsp; Entfernt doppelte Bildlaufleisten  <br/>&bull; &nbsp; Verbesserungen bei der Formatierung und layout <br/>&bull; &nbsp; Finden Sie umfassende Änderungen [hier](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Verschobene Messages-Abschnitt zur Registerkarte "Eigene" | Als Benutzer mit SQL-Abfragen ausgeführt haben, wurden Ergebnisse und Meldungen für gestapelte Bereiche. Jetzt sind sie auf separaten Registerkarten in einem Bereich z. B. in SSMS. |
-| SQL-Notebook-Verbesserungen | &bull; &nbsp; Benutzer können jetzt auch ihre eigenen Python 3 oder Anaconda-Installationen in Notizbüchern verwenden <br/>&bull; &nbsp; Mehrere Stabilität + anpassen/Ende Korrekturen &bull; &nbsp; zeigt die vollständige Liste der Verbesserungen [hier](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| SQL-Notebook-Verbesserungen | &bull; &nbsp; Benutzer können jetzt auch ihre eigenen Python 3 oder Anaconda-Installationen in Notizbüchern verwenden <br/>&bull; &nbsp; Mehrere Stabilität + anpassen/Ende Korrekturen <br/> &bull; &nbsp; Zeigt die vollständige Liste der Verbesserungen [hier](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
 | Visual Studio-Code kann Merge 1.34 freizugeben. | Neueste Verbesserungen finden Sie [hier](https://code.visualstudio.com/updates/v1_34) |
 | Behobene Fehler und Probleme. | Finden Sie unter [Fehlern und Problemen, die auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |

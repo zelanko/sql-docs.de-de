@@ -17,12 +17,12 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273301"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794105"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC und die Standard-CLI
 ODBC richtet mit den folgenden Spezifikationen und Standards, die mit der Call-Level-Interface (CLI) zu behandeln. (Die ODBC-Funktionen sind eine Obermenge aller dieser Standards.)  
@@ -33,17 +33,17 @@ ODBC richtet mit den folgenden Spezifikationen und Standards, die mit der Call-L
   
  Aufgrund dieser Ausrichtung gilt Folgendes:  
   
--   Eine Anwendung geschrieben, um die Open Group und ein ISO-CLI-Spezifikationen funktioniert mit einer ODBC-3. *x* Treibers oder einer standardkonformen beim Kompilieren mit der ODBC-3. *X* Header-Dateien, und klicken Sie mit ODBC 3. verknüpft. *X* Bibliotheken, und wenn sie den Zugriff auf die vom Treiber über die ODBC 3. erzielt. *X* -Treiber-Manager.  
+-   Eine Anwendung geschrieben, um die Open Group und ISO-CLI-Spezifikationen funktioniert mit einer ODBC- *3.x* Treiber oder eine Standards kompatible beim Kompilieren mit der ODBC-Treiber *3.x* Header-Dateien und verknüpft mit ODBC *3.x* Bibliotheken, und wenn sie den Zugriff auf den über die ODBC-Treiber erhält *3.x* -Treiber-Manager.  
   
--   Ein Treiber geschrieben, um die Open Group und ISO-CLI-Spezifikationen funktioniert mit einer ODBC 3. *.x* Anwendung oder eine Standards kompatible Anwendung, die beim Kompilieren mit der ODBC 3. *.x* Header-Dateien und verknüpft mit ODBC 3. *.x* Bibliotheken, und wenn die Anwendung erhält Zugriff auf die vom Treiber über die ODBC 3. *.x* -Treiber-Manager. (Weitere Informationen finden Sie unter [den Standards entsprechende Anwendungen und Treiber](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Mit einer ODBC-Treiber geschrieben, um die Open Group und ISO-CLI-Spezifikationen funktioniert *3.x* Anwendung oder eine Standards kompatible Anwendung, wenn die Kompilierung mit der ODBC *3.x* Header-Dateien und verknüpft mit dem ODBC- *3.x* Bibliotheken, und wenn die Anwendung erhält Zugriff auf den über die ODBC-Treiber *3.x* -Treiber-Manager. (Weitere Informationen finden Sie unter [den Standards entsprechende Anwendungen und Treiber](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- Der Konformitätsgrad des Core-Schnittstelle umfasst alle Features in der ISO-CLI und alle nonoptional Funktionen in der Open Group-CLI. Optionale Features der CLI öffnen Gruppe werden in höheren Ebenen der schnittstellenübereinstimmung Schnittstelle angezeigt. Da alle ODBC-3. *x* Treiber sind erforderlich, um die Funktionen in der Konformitätsgrad des Core-Schnittstelle unterstützen, die folgende Bedingungen erfüllt sind:  
+ Der Konformitätsgrad des Core-Schnittstelle umfasst alle Features in der ISO-CLI und alle nonoptional Funktionen in der Open Group-CLI. Optionale Features der CLI öffnen Gruppe werden in höheren Ebenen der schnittstellenübereinstimmung Schnittstelle angezeigt. Da alle ODBC *3.x* Treiber sind erforderlich, um die Funktionen in der Konformitätsgrad des Core-Schnittstelle unterstützen, die folgende Bedingungen erfüllt sind:  
   
--   Eine ODBC-3. *x* Treiber unterstützt alle Funktionen, die von einer standardkonformen Anwendung verwendet.  
+-   ODBC *3.x* Treiber unterstützt alle Funktionen, die von einer standardkonformen Anwendung verwendet.  
   
--   Eine ODBC-3. *x* -Anwendung mit nur die Funktionen in der ISO-CLI und die nonoptional Features der CLI Open Group funktioniert mit jeder standardkonformen Treiber.  
+-   ODBC *3.x* -Anwendung mit nur die Funktionen in der ISO-CLI und die nonoptional Features der CLI Open Group funktioniert mit jeder standardkonformen Treiber.  
   
- Zusätzlich zu den Call-Level-Interface-Spezifikationen enthalten, die in den ISO/IEC und Open Group-CLI-Standards implementiert ODBC die folgenden Features. (Einige dieser Features war in Versionen von ODBC, bevor Sie ODBC 3. *x*.)  
+ Zusätzlich zu den Call-Level-Interface-Spezifikationen enthalten, die in den ISO/IEC und Open Group-CLI-Standards implementiert ODBC die folgenden Features. (Einige dieser Features war in Versionen von ODBC, bevor Sie ODBC *3.x*.)  
   
 -   Mehrzeilige Abrufvorgänge durch einen einzelnen Funktionsaufruf  
   

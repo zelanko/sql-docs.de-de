@@ -2,20 +2,20 @@
 title: Laden von Beispieldaten
 titleSuffix: SQL Server big data clusters
 description: In diesem Tutorial wird veranschaulicht, wie zum Laden von Beispieldaten in eine SQL Server-big Data-Cluster wird. Die Beispieldaten werden relationale Daten in der master-SQL Server-Instanz enthält. Darüber hinaus HDFS-Daten im Speicherpool. Diese Daten unterstützt andere Tutorials in diesem Abschnitt.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770827"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727342"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Laden Sie Beispieldaten in eine SQL Server-big Data-cluster
 
@@ -26,7 +26,7 @@ In diesem Tutorial wird erläutert, wie Sie mithilfe eines Skripts zum Laden von
 > [!TIP]
 > Zusätzliche Beispiele für SQL Server-2019 big Data-Cluster (Vorschau) finden Sie in der [Sql Server Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub-Repository. Befinden sie sich die **sql-server-samples/samples/features/sql-big-data-cluster/** Pfad.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [Eine bereitgestellte big Data-cluster](deployment-guidance.md)
 - [Big Data-tools](deploy-big-data-tools.md)
@@ -62,7 +62,7 @@ Die folgenden Schritte beschreiben, wie Sie einen Windows-Client verwenden, um d
 
 1. Das bootstrap-Skript erfordert die folgenden positionelle Parameter für Ihre big Data-Cluster:
 
-   | Parameter | Description |
+   | Parameter | Beschreibung |
    |---|---|
    | <CLUSTER_NAMESPACE> | Der Name gegeben haben Sie Ihre big Data-Cluster. |
    | <SQL_MASTER_IP> | Die IP-Adresse Ihrer master-Instanz. |
@@ -98,7 +98,7 @@ Die folgenden Schritte beschreiben, wie Sie einen Linux-Client verwenden, um die
 
 1. Das bootstrap-Skript erfordert die folgenden positionelle Parameter für Ihre big Data-Cluster:
 
-   | Parameter | Description |
+   | Parameter | Beschreibung |
    |---|---|
    | <CLUSTER_NAMESPACE> | Der Name gegeben haben Sie Ihre big Data-Cluster. |
    | <SQL_MASTER_IP> | Die IP-Adresse Ihrer master-Instanz. |

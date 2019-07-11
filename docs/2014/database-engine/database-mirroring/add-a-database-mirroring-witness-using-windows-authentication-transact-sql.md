@@ -14,12 +14,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754921"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792615"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
   Um einen Zeugen für eine Datenbank einzurichten, weist der Datenbankbesitzer einer Instanz der Datenbank-Engine die Rolle des Zeugenservers zu. Die Zeugenserverinstanz kann auf demselben Computer wie die Prinzipal- oder Spiegelserverinstanz ausgeführt werden. Hierdurch wird jedoch die Zuverlässigkeit des automatischen Failovers erheblich reduziert.  
@@ -33,7 +33,7 @@ ms.locfileid: "62754921"
   
 ### <a name="to-establish-a-witness"></a>So richten Sie einen Zeugen ein  
   
-1.  Stellen Sie für die Zeugenserverinstanz sicher, dass ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl von Spiegelungssitzungen, die unterstützt werden sollen, darf die Serverinstanz nur einen Endpunkt der Datenbankspiegelung aufweisen. Wenn Sie diese Serverinstanz ausschließlich als Zeugen bei Datenbank-Spiegelungssitzungen verwenden möchten, weisen Sie dem Endpunkt die Rolle des Zeugen zu (ROLE **=** WITNESS). Wenn Sie diese Serverinstanz als Partner bei mindestens einer Datenbank-Spiegelungssitzung verwenden möchten, weisen Sie die Rolle des Endpunkts als ALL zu.  
+1.  Stellen Sie für die Zeugenserverinstanz sicher, dass ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl von Spiegelungssitzungen, die unterstützt werden sollen, darf die Serverinstanz nur einen Endpunkt der Datenbankspiegelung aufweisen. Wenn Sie diese Serverinstanz ausschließlich als Zeugen bei Datenbank-spiegelungssitzungen verwenden möchten, weisen Sie die Rolle des Zeugen auf den Endpunkt (Rolle **=** WITNESS). Wenn Sie diese Serverinstanz als Partner bei mindestens einer Datenbank-Spiegelungssitzung verwenden möchten, weisen Sie die Rolle des Endpunkts als ALL zu.  
   
      Zum Ausführen einer SET WITNESS-Anweisung muss die Datenbank-Spiegelungssitzung bereits gestartet sein (zwischen den Partnern), und als STATE muss für den Endpunkt des Zeugen STARTED festgelegt sein.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62754921"
   
 3.  Stellen Sie anhand der folgenden Anweisung eine Verbindung mit dem Prinzipalserver her:  
   
-     ALTER DATABASE *<Datenbankname>* SET WITNESS **=** _<Servernetzwerkadresse>_  
+     ALTER DATABASE *< Database_name >* SET WITNESS **=** _< Servernetzwerkadresse >_  
   
      Dabei ist *<Datenbankname>* der Name der zu spiegelnden Datenbank (dieser Name ist auf beiden Partnern gleich), und *<Servernetzwerkadresse>* ist die Servernetzwerkadresse der Zeugenserverinstanz.  
   

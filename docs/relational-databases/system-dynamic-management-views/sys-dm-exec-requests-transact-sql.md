@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 961878494958f0f7ef5d1814c0836a98f5da5682
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462525"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716578"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "66462525"
 
 Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|ID der Sitzung, auf die sich diese Anforderung bezieht. Lässt keine NULL-Werte zu.|  
 |request_id|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig. Lässt keine NULL-Werte zu.|  
@@ -89,8 +89,8 @@ Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion
 |group_id|**int**|ID der Arbeitsauslastungsgruppe, zu der diese Abfrage gehört. Lässt keine NULL-Werte zu.|  
 |query_hash|**binary(8)**|Binärer Hashwert, der in der Abfrage berechnet wird und zum Identifizieren von Abfragen mit ähnlicher Logik verwendet wird. Sie können den Abfragehash verwenden, um die aggregierte Ressourcennutzung für Abfragen zu ermitteln, die sich nur durch Literalwerte unterscheiden.|  
 |query_plan_hash|**binary(8)**|Binärer Hashwert, der im Abfrageausführungsplan wird und zum Identifizieren ähnlicher Abfrageausführungspläne verwendet wird. Sie können diesen Abfrageplan-Hashwert verwenden, um die kumulierten Kosten für Abfragen mit ähnlichen Ausführungsplänen zu suchen.|  
-|statement_sql_handle|**varbinary(64)**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> SQL-Handle für die einzelne Abfrage. |  
-|statement_context_id|**bigint**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die optionale Fremdschlüssel sys.query_context_settings. |  
+|statement_sql_handle|**varbinary(64)**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> SQL-Handle für die einzelne Abfrage.<br /><br />Diese Spalte ist NULL, wenn Query Store nicht für die Datenbank aktiviert ist. |  
+|statement_context_id|**bigint**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die optionale Fremdschlüssel sys.query_context_settings.<br /><br />Diese Spalte ist NULL, wenn Query Store nicht für die Datenbank aktiviert ist. |  
 |dop |**int** |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Der Grad der Parallelität für die Abfrage. |  
 |parallel_worker_count |**int** |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die Anzahl der reservierten parallelen Arbeitsthreads, wenn dies eine parallele Abfrage ist.  |  
 |external_script_request_id |**uniqueidentifier** |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die externen Skript-Anforderungs-ID der aktuellen Anforderung zugeordnet ist. |  
@@ -101,7 +101,7 @@ Gibt Informationen über jede einzelne Anforderung, die in [!INCLUDE[ssNoVersion
 ## <a name="remarks"></a>Hinweise 
 Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.
 
-Beim Ausführen von paralleler Anforderungen in [Zeilenmodus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeitsthread zum Koordinieren der Arbeitsthreads, die zum Abschließen der Aufgaben, die ihnen zugewiesene verantwortlich. In dieser DMV ist nur der koordinatorthread für die Anforderung angezeigt. Die Spalten **liest**, **schreibt**, **Logical_reads**, und **Row_count** sind **nicht aktualisiert** für die koordinatorthread. Die Spalten **"wait_type"**, **"wait_time"**, **Last_wait_type**, **Wait_resource**, und **Granted_query_memory** sind **nur dann aktualisiert,** für den koordinatorthread. Weitere Informationen finden Sie unter den [Handbuch zur Architektur und Thread](../../relational-databases/thread-and-task-architecture-guide.md).
+Beim Ausführen von paralleler Anforderungen in [Zeilenmodus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeitsthread zum Koordinieren der Arbeitsthreads, die zum Abschließen der Aufgaben, die ihnen zugewiesene verantwortlich. In dieser DMV ist nur der koordinatorthread für die Anforderung angezeigt. Die Spalten **liest**, **schreibt**, **Logical_reads**, und **Row_count** sind **nicht aktualisiert** für die koordinatorthread. Die Spalten **"wait_type"** , **"wait_time"** , **Last_wait_type**, **Wait_resource**, und **Granted_query_memory** sind **nur dann aktualisiert,** für den koordinatorthread. Weitere Informationen finden Sie unter den [Handbuch zur Architektur und Thread](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Berechtigungen
 Wenn der Benutzer hat `VIEW SERVER STATE` -Berechtigung auf dem Server, sieht der Benutzer alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist, andernfalls sieht der Benutzer nur die aktuelle Sitzung. `VIEW SERVER STATE` kann nicht gewährt werden, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] damit `sys.dm_exec_requests` ist immer auf die aktuelle Verbindung beschränkt.

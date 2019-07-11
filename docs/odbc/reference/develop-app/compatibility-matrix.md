@@ -19,22 +19,22 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026568"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793764"
 ---
 # <a name="compatibility-matrix"></a>Kompatibilitätsmatrix
 Die folgende Tabelle enthält Informationen zur Kompatibilität der Typen von Anwendungen und Treiber, die zuvor in diesem Abschnitt definiert.  
   
-|Anwendungstyp<br /><br /> und version|32-Bit-ODBC<br /><br /> 2.*x* Treiber|ODBC 3.*x*<br /><br /> Treiber|ODBC 3.8-Treiber|ISO "und" Open Group-kompatiblen Treiber|  
+|Anwendungstyp<br /><br /> und version|32-Bit-ODBC<br /><br /> *2.x* Treiber|ODBC *3.x*<br /><br /> Treiber|ODBC 3.8-Treiber|ISO "und" Open Group-kompatiblen Treiber|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |eine beliebige Version 16-Bit-Anwendung|Kompatibel|Kompatibel|Kompatibel|Kompatibel|  
-|Reine 2. *x* Anwendung|Kompatibel|Kompatibel|Kompatibel|Nicht kompatible [3]|  
-|Reine 2. *x* neu kompiliert die Anwendung|Kompatibel|Kompatible [1]|Kompatible [1]|Nicht kompatible [3]|  
-|Reine 2. *x* Unicode-Anwendung|Kompatibel|Kompatible [1]|Kompatible [1]|Nicht kompatible [3]|  
+|Reine *2.x* Anwendung|Kompatibel|Kompatibel|Kompatibel|Nicht kompatible [3]|  
+|Reine *2.x* neu kompiliert die Anwendung|Kompatibel|Kompatible [1]|Kompatible [1]|Nicht kompatible [3]|  
+|Reine *2.x* Unicode-Anwendung|Kompatibel|Kompatible [1]|Kompatible [1]|Nicht kompatible [3]|  
 |Reine Open Group und ISO-kompatible Anwendung|Nicht kompatibel|Kompatible [2]|Kompatible [2]|Kompatible [2]|  
 |Reine 3.0-Anwendung|Nicht kompatibel|Kompatibel|Kompatibel|Nicht kompatible [4]|  
 |Reine 3.5-Anwendung|Nicht kompatibel|Kompatibel|Kompatibel|Nicht kompatible [4]|  
@@ -45,9 +45,9 @@ Die folgende Tabelle enthält Informationen zur Kompatibilität der Typen von An
   
  [2] für die Anwendung muss Kompilieren mit der ODBC 3.5 (oder höher) Header und Verknüpfen mit der ODBC-Treiber-Manager. Sie müssen auch das seitenheaderflag ODBC_STD festgelegt.  
   
- [3] für diese Konfiguration kann möglicherweise fehlschlagen, funktioniert, weil in ODBC 2. Features stehen. *x* , die nicht in den Standards, z. B. Lesezeichen sind.  
+ [3] in dieser Konfiguration kann ausfallen funktioniert, weil es in der ODBC Features gibt *2.x* , die nicht in den Standards, z. B. Lesezeichen sind.  
   
- [4] in dieser Konfiguration kann ausfallen funktioniert, weil es Funktionen in ODBC 3. gibt *.x* , die nicht in den Standards, z. B. Lesezeichen sind.  
+ [4] in dieser Konfiguration kann ausfallen funktioniert, weil es in der ODBC Features gibt *3.x* , die nicht in den Standards, z. B. Lesezeichen sind.  
   
  [5] für diese Konfiguration kann möglicherweise fehlschlagen, da es sich bei verfügt über Features sind ODBC 3.8, die nicht in ODBC 2.x oder 3.x-Treiber, z. B. treiberspezifische [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   

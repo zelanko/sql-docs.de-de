@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Nutzen Sie eine Anwendung, die auf SQL Server-2019 big Data-Cluster mithilfe einer RESTful-Web-Diensts (Vorschauversion) bereitgestellt.
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: a3894ccbd8ffda7cfe00d61a7a47622f7f481c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801903"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729294"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Nutzen einer app, die auf SQL Server-big Data-Cluster mit einem RESTful-Webdienst bereitgestellt
 
@@ -24,7 +23,7 @@ ms.locfileid: "66801903"
 
 Dieser Artikel beschreibt, wie eine app, die auf eine SQL Server-2019 big Data-Cluster mithilfe einer RESTful-Web-Diensts (Vorschauversion) bereitgestellt wird.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [SQL Server-2019 big Data-cluster](deployment-guidance.md)
 - [Mssqlctl-Befehlszeilen-Hilfsprogramm](deploy-install-mssqlctl.md)
@@ -34,7 +33,7 @@ Dieser Artikel beschreibt, wie eine app, die auf eine SQL Server-2019 big Data-C
 
 Nachdem Sie eine Anwendung in Ihrer SQL Server-2019 big Data-Cluster (Vorschau) bereitgestellt haben, können Sie Zugriff auf und nutzen die Anwendung mit einer RESTful-Webdienst. Dies ermöglicht die Integration der app von anderen Anwendungen oder Diensten (z. B. eine mobile app oder Website). Die folgende Tabelle beschreibt die Befehle der Anwendung-Bereitstellung, mit denen Sie mit **Mssqlctl** zum Abrufen von Informationen über den RESTful-Web-Dienst für Ihre app.
 
-|Befehl |Description |
+|Befehl |Beschreibung |
 |:---|:---|
 |`mssqlctl app describe` | Beschreiben Sie die Anwendung. |
 

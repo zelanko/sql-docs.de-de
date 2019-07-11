@@ -4,24 +4,24 @@ titleSuffix: SQL Server big data clusters
 description: In diesem Artikel wird erläutert, wie HDFS, die Informationen zum Einbinden von eines externen Systems des S3-Datei in HDFS auf big Data-Cluster (Vorschau) eine SQL Server-2019 tiering konfiguriert.
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: d782a2c8727f053b569c77af525795d81afebbc7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400028"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728748"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount S3 für HDFS-Staffelung in einem big Data-cluster
 
 Die folgenden Abschnitte enthalten ein Beispiel für horizontale Skalierung mit einer Datenquelle für die S3-Speicher HDFS zu konfigurieren.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [Bereitgestellte big Data-cluster](deployment-guidance.md)
 - [Big Data-tools](deploy-big-data-tools.md)

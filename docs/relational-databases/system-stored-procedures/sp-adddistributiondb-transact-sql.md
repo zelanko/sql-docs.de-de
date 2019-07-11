@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61425d2af597299e3f34186c4555d324278d8cbf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a6fb689832069ab8be4a260fecaa27b6b29f7ca5
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492553"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716741"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +56,15 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Argumente  
 `[ @database = ] database'` Ist der Name der Verteilungsdatenbank erstellt werden. *Datenbank* ist **Sysname**, hat keinen Standardwert. Wenn die angegebene Datenbank bereits vorhanden und noch nicht als Verteilungsdatenbank gekennzeichnet ist, werden die zum Aktivieren der Verteilung erforderlichen Objekte installiert, und die Datenbank wird als Verteilungsdatenbank gekennzeichnet. Wenn die angegebene Datenbank bereits als Verteilungsdatenbank aktiviert wurde, wird ein Fehler zurückgegeben.  
   
-`[ @data_folder = ] 'data_folder'_` Ist der Name des Verzeichnisses zum Speichern von Daten der Verteilungs-Datenbankdatei verwendet. *Data_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+`[ @data_folder = ] 'data_folder'_` Ist der Name des Verzeichnisses zum Speichern von Daten der Verteilungs-Datenbankdatei verwendet. *Data_folder* ist **nvarchar(255)** , hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
-`[ @data_file = ] 'data_file'` Ist der Name der Datenbankdatei. *Data_file* ist **nvarchar(255)**, hat den Standardwert **Datenbank**. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
+`[ @data_file = ] 'data_file'` Ist der Name der Datenbankdatei. *Data_file* ist **nvarchar(255)** , hat den Standardwert **Datenbank**. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
 `[ @data_file_size = ] data_file_size` Ist die ursprüngliche Datendateigröße in Megabytes (MB) an. *Data_file_size ich*s **Int**, hat den Standardwert 5 MB.  
   
-`[ @log_folder = ] 'log_folder'` Ist der Name des Verzeichnisses für die Datenbank-Protokolldatei. *Log_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet (beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
+`[ @log_folder = ] 'log_folder'` Ist der Name des Verzeichnisses für die Datenbank-Protokolldatei. *Log_folder* ist **nvarchar(255)** , hat den Standardwert NULL. Bei NULL wird das Datenverzeichnis für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet (beispielsweise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
-`[ @log_file = ] 'log_file'` Ist der Name der Protokolldatei. *Log_file* ist **nvarchar(255)**, hat den Standardwert NULL. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
+`[ @log_file = ] 'log_file'` Ist der Name der Protokolldatei. *Log_file* ist **nvarchar(255)** , hat den Standardwert NULL. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
 `[ @log_file_size = ] log_file_size` Ist die ursprüngliche Protokolldateigröße in Megabyte (MB) an. *Log_file_size* ist **Int**, hat den Standardwert 0 MB, d. h. die Dateigröße erstellt wird, mit der kleinsten zugelassenen Protokolldateigröße von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

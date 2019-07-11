@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790659"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793435"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On-Clientkonnektivität (SQL Server)
   In diesem Thema werden Überlegungen zur Clientkonnektivität für AlwaysOn-Verfügbarkeitsgruppen beschrieben, einschließlich Voraussetzungen, Einschränkungen und Empfehlungen für Clientkonfigurationen und Einstellungen.  
@@ -33,12 +33,12 @@ ms.locfileid: "62790659"
   
  In der folgenden Tabelle ist die Treiberunterstützung für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]zusammengefasst:  
   
-|Treiber|Multisubnetz-Failover|Application Intent|Schreibgeschütztes Routing|-Multisubnetz-Failovercluster: Schnelleres Einzelsubnetz-Endpunkt-Failover|-Multisubnetz-Failovercluster: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
+|Treiber|Multisubnetz-Failover|Application Intent|Schreibgeschütztes Routing|Multisubnetz-Failover: Schnelleres Endpunktfailover in einzelnen Subnetzen|Multisubnetz-Failover: Auflösung benannter Instanzen für SQL-Clusterinstanzen|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Ja|Ja|Ja|Ja|Ja|  
 |SQL Native Client 11.0 OLEDB|Nein|Ja|Ja|Nein|Nein|  
-|ADO.NET mit .NET Framework 4.0 mit konnektivitätspatch **<sup>*</sup>**|Ja|Ja|Ja|Ja|Ja|  
-|ADO.NET mit .NET Framework 3.5 SP1 mit konnektivitätspatch **<sup>** </sup>**|Ja|Ja|Ja|Ja|Ja|  
+|ADO.NET mit .NET Framework 4.0 mit konnektivitätspatch **<sup>*</sup>** |Ja|Ja|Ja|Ja|Ja|  
+|ADO.NET mit .NET Framework 3.5 SP1 mit konnektivitätspatch **<sup>** </sup>** |Ja|Ja|Ja|Ja|Ja|  
 |Microsoft JDBC-Treiber 4.0 für SQL Server|Ja|Ja|Ja|Ja|Ja|  
   
  **<sup>*</sup>**  Download des konnektivitätspatches für ADO.NET mit .NET Framework 4.0: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  

@@ -15,14 +15,14 @@ ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74c122819980abaa328db5ad46f240cae24b92d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2f731589dcbc10d24ff42d895db60f9f8c054de
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280590"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794185"
 ---
 # <a name="returning-sqlnodata"></a>Rückgabe von SQL_NO_DATA
-Wenn eine ODBC-2. *x* Anwendung arbeiten, eine ODBC 3. *.x* Treiber ruft **SQLExecDirect**, **SQLExecute**, oder **der SQLParamData**, und ein gesuchtes Update oder Delete-Anweisung wurde ausgeführt, aber keine Auswirkungen auf die Zeilen in der Datenquelle, die ODBC 3. *.x* Treiber sollte SQL_SUCCESS zurück. Wenn eine ODBC 3. *.x* Anwendung mit einer ODBC 3. *.x* Treiber ruft **SQLExecDirect**, **SQLExecute**, oder  **SQLParamData** dasselbe Ergebnis erzielt, die ODBC 3. *.x* Treiber sollte SQL_NO_DATA zurückgegeben werden.  
+Wenn eine ODBC *2.x* Anwendung arbeiten, eine ODBC- *3.x* Treiber ruft **SQLExecDirect**, **SQLExecute**, oder  **SQLParamData**, und ein gesuchtes Update oder Delete-Anweisung wurde ausgeführt, aber keine Auswirkungen auf die Zeilen in der Datenquelle, die ODBC *3.x* Treiber sollte SQL_SUCCESS zurück. Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *3.x* Treiber ruft **SQLExecDirect**, **SQLExecute**, oder  **SQLParamData** dasselbe Ergebnis erzielt, die ODBC *3.x* Treiber sollte SQL_NO_DATA zurückgegeben werden.  
   
  Wenn eine gesuchte update oder-Anweisung in DELETE ein Batch von Anweisungen hat keine Auswirkungen auf alle Zeilen in der Datenquelle **SQLMoreResults** gibt SQL_SUCCESS zurück. Es kann keine SQL_NO_DATA, zurückgeben, da dieser Wert bedeuten würde, dass es sind keine weiteren Ergebnisse, nicht, die es ein Ergebnis aus einer komplexen aktualisieren/löschen, die keine Zeilen betroffen.

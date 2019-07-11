@@ -2,20 +2,20 @@
 title: Konfigurieren von minikube
 titleSuffix: SQL Server big data clusters
 description: Informationen Sie zum Konfigurieren von Minikube für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen auf einem einzelnen Computer.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 5b7698cd439461a9ee9280571f49649fb03387a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e4fe9439264b9b2dee3d95423bf1d3f420379d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803099"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728902"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Minikube für SQL Server-big Data-Cluster-Bereitstellungen
 
@@ -23,7 +23,7 @@ ms.locfileid: "66803099"
 
 In diesem Artikel wird beschrieben, wie so konfigurieren Sie **Minikube** auf einem einzelnen Computer für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen. Minikube ist ein Tool, das zum Ausführen von Kubernetes auf einem einzelnen Computer wie einem Laptop oder einem Desktop erleichtert. Minikube führt einen Einzelknoten-Kubernetes-Cluster auf einem virtuellen Computer auf Ihrem Laptop für Benutzer, um die Kubernetes ausprobieren oder entwickeln sie mit der täglichen. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - 32 GB RAM (empfohlene 64 GB).
 

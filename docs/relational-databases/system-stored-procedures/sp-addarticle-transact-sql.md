@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addarticle
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f24f7ca51f4836c8b1e446283eabb858eb8d387
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 045b1cb853603a2550110db18f5658453f19e6ce
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493892"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716759"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @destination_table = ] 'destination_table'` Ist der Name der Zieltabelle (Abonnement), wenn sich von *Source_table*oder der gespeicherten Prozedur. *Destination_table* ist **Sysname**, hat den Standardwert NULL, was bedeutet, dass *Source_table* gleich *Destination_table **.*  
   
-`[ @vertical_partition = ] 'vertical_partition'` Aktiviert und deaktiviert die spaltenfilterung für einen Tabellenartikel. *Vertical_partition* ist **nchar(5)**, hat den Standardwert "false".  
+`[ @vertical_partition = ] 'vertical_partition'` Aktiviert und deaktiviert die spaltenfilterung für einen Tabellenartikel. *Vertical_partition* ist **nchar(5)** , hat den Standardwert "false".  
   
  **"false"** zeigt an, dass keine vertikale Filterung und alle Spalten veröffentlicht.  
   
@@ -87,7 +87,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'` Ist der Typ des Artikels. *Typ* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**nur Aggregatschemas**|Aggregatfunktion vom Typ schema only.|  
 |**nur Func schema**|Funktion vom Typ schema only.|  
@@ -105,13 +105,13 @@ sp_addarticle [ @publication = ] 'publication'
 |**Serializable Proc exec**|Repliziert die Ausführung der gespeicherten Prozedur nur, wenn die Prozedur im Kontext einer serialisierbaren Transaktion ausgeführt wird. Diese Option wird für Oracle-Verleger nicht unterstützt.<br /><br /> Die Prozedur muss innerhalb einer expliziten Transaktion für die Ausführung der Prozedur repliziert wird, werden auch ausgeführt werden.|  
 |**nur Schema anzeigen**|Sicht vom Typ schema only. Diese Option wird für Oracle-Verleger nicht unterstützt. Wenn diese Option verwendet wird, müssen Sie auch die Basistabelle veröffentlichen.|  
   
-`[ @filter = ] 'filter'` Um die Tabelle horizontal gefiltert wird die gespeicherte Prozedur (erstellt mit FOR REPLICATION) verwendet werden. *Filter* ist **nvarchar(386)**, hat den Standardwert NULL. [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) und [Sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) müssen manuell zum Erstellen der Ansicht, und Filtern die gespeicherte Prozedur ausgeführt werden. Bei einem Wert ungleich NULL wird die Filterprozedur nicht erstellt (es wird angenommen, dass die gespeicherte Prozedur manuell erstellt wird).  
+`[ @filter = ] 'filter'` Um die Tabelle horizontal gefiltert wird die gespeicherte Prozedur (erstellt mit FOR REPLICATION) verwendet werden. *Filter* ist **nvarchar(386)** , hat den Standardwert NULL. [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) und [Sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) müssen manuell zum Erstellen der Ansicht, und Filtern die gespeicherte Prozedur ausgeführt werden. Bei einem Wert ungleich NULL wird die Filterprozedur nicht erstellt (es wird angenommen, dass die gespeicherte Prozedur manuell erstellt wird).  
   
-`[ @sync_object = ] 'sync_object'` Ist der Name der Tabelle oder Sicht, die zum Erzeugen der Datendatei verwendet, um die Momentaufnahme für diesen Artikel darzustellen. *Sync_object* ist **nvarchar(386)**, hat den Standardwert NULL. Wenn der Wert NULL, [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) wird aufgerufen, um automatisch die Ansicht verwendet, um die Generierung der Ausgabedatei zu erstellen. Dieser Schritt erfolgt nach jedem Hinzufügen von Spalten mit [Sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Bei einem Wert ungleich NULL wird keine Sicht erstellt (es wird angenommen, dass die Sicht manuell erstellt wird).  
+`[ @sync_object = ] 'sync_object'` Ist der Name der Tabelle oder Sicht, die zum Erzeugen der Datendatei verwendet, um die Momentaufnahme für diesen Artikel darzustellen. *Sync_object* ist **nvarchar(386)** , hat den Standardwert NULL. Wenn der Wert NULL, [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) wird aufgerufen, um automatisch die Ansicht verwendet, um die Generierung der Ausgabedatei zu erstellen. Dieser Schritt erfolgt nach jedem Hinzufügen von Spalten mit [Sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Bei einem Wert ungleich NULL wird keine Sicht erstellt (es wird angenommen, dass die Sicht manuell erstellt wird).  
   
-`[ @ins_cmd = ] 'ins_cmd'` Der Befehlstyp für die Replikation ist verwendet werden, bei der Replikation für diesen Artikel eingefügt. *Ins_cmd* ist **nvarchar(255)**, und kann einen der folgenden Werte.  
+`[ @ins_cmd = ] 'ins_cmd'` Der Befehlstyp für die Replikation ist verwendet werden, bei der Replikation für diesen Artikel eingefügt. *Ins_cmd* ist **nvarchar(255)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
 |**CALL sp_MSins_**<br /> **_Tabelle_**  (Standard)<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>Sp_MSins_*Tabelle*</strong>  enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `CALL sp_MSins_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Angeben von *custom_stored_procedure_name* wird für Updateabonnenten nicht unterstützt.|  
@@ -119,9 +119,9 @@ sp_addarticle [ @publication = ] 'publication'
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   
-`[ @del_cmd = ] 'del_cmd'` Der Befehlstyp für die Replikation wird verwendet werden, wenn replizieren, die in diesem Artikel werden gelöscht. *Del_cmd* ist **nvarchar(255)**, und kann einen der folgenden Werte.  
+`[ @del_cmd = ] 'del_cmd'` Der Befehlstyp für die Replikation wird verwendet werden, wenn replizieren, die in diesem Artikel werden gelöscht. *Del_cmd* ist **nvarchar(255)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
 |**CALLsp_MSdel_**<br /> **_Tabelle_**  (Standard)<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure_name* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>Sp_MSdel_*Tabelle*</strong>  enthält den Namen der Zieltabelle anstelle des dem *_tabulky* -Teils des Parameters. Wenn *Destination_owner* angegeben ist, wird er dem Namen der Zieltabelle vorangestellt wird. Z. B. für die **"ProductCategory"** -Tabelle im Besitz der **Produktion** Schema auf dem Abonnenten, der-Parameter wäre `CALL sp_MSdel_ProductionProductCategory`. Für einen Artikel in einer Peer-zu-Peer-Replikationstopologie *_tabulky* mit einem GUID-Wert angefügt. Angeben von *custom_stored_procedure_name* wird für Updateabonnenten nicht unterstützt.|  
@@ -130,9 +130,9 @@ sp_addarticle [ @publication = ] 'publication'
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   
-`[ @upd_cmd = ] 'upd_cmd'` Der Befehlstyp für die Replikation wird verwendet werden, wenn updates für diesen Artikel repliziert. *Upd_cmd* ist **nvarchar(255)**, und kann einen der folgenden Werte.  
+`[ @upd_cmd = ] 'upd_cmd'` Der Befehlstyp für die Replikation wird verwendet werden, wenn updates für diesen Artikel repliziert. *Upd_cmd* ist **nvarchar(255)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
 |**CALL sp_MSupd_**<br /> **_Tabelle_**<br /><br /> -oder-<br /><br /> **Rufen Sie custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Verwenden Sie zum Verwenden dieser Methode der Replikation *Schema_option* , geben die automatische Erstellung der gespeicherten Prozedur, oder erstellen die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels.|  
@@ -144,13 +144,13 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Die CALL-, MCALL-, SCALL- und XCALL-Syntax variiert den Umfang der Daten, die an den Abonnenten weitergegeben werden. Die CALL-Syntax übergibt alle Werte für alle eingefügten und gelöschten Spalten. Die SCALL-Syntax übergibt nur die Werte für betroffene Spalten. Die XCALL-Syntax übergibt die Werte für alle Spalten, unabhängig davon, ob diese geändert wurden, einschließlich des vorherigen Werts der Spalte. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)  
   
-`[ @creation_script = ] 'creation_script'` Ist der Pfad und Name von einem optionalen Artikelschemaskripts, das verwendet wird, um den Artikel in der Abonnementdatenbank zu erstellen. *Creation_script* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @creation_script = ] 'creation_script'` Ist der Pfad und Name von einem optionalen Artikelschemaskripts, das verwendet wird, um den Artikel in der Abonnementdatenbank zu erstellen. *Creation_script* ist **nvarchar(255)** , hat den Standardwert NULL.  
   
-`[ @description = ] 'description'` Ist ein beschreibender Eintrag für den Artikel. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Ist ein beschreibender Eintrag für den Artikel. *Beschreibung* ist **nvarchar(255)** , hat den Standardwert NULL.  
   
-`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Gibt an, was das System tun sollte, wenn beim Anwenden der Momentaufnahme für diesen Artikel ein vorhandenes Objekt mit dem gleichen Namen auf dem Abonnenten erkannt. *Pre_creation_cmd* ist **nvarchar(10)**, und kann einen der folgenden Werte.  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Gibt an, was das System tun sollte, wenn beim Anwenden der Momentaufnahme für diesen Artikel ein vorhandenes Objekt mit dem gleichen Namen auf dem Abonnenten erkannt. *Pre_creation_cmd* ist **nvarchar(10)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Keine**|Verwendet keinen Befehl.|  
 |**delete**|Löscht Daten aus der Zieltabelle vor dem Anwenden der Momentaufnahme. Wird der Artikel horizontal gefiltert, werden nur Daten in Spalten gelöscht, die von der Filterklausel angegeben werden. Wird von Oracle-Verlegern nicht unterstützt, wenn ein horizontaler Filter definiert wurde.|  
@@ -159,12 +159,12 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @filter_clause = ] 'filter_clause'` Ist eine Einschränkung (WHERE)-Klausel, die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort, in dem. *Filter_clause* ist **Ntext**, hat den Standardwert NULL. Weitere Informationen finden Sie unter [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md).  
   
-`[ @schema_option = ] schema_option` Ist eine Bitmaske der schemagenerierungsoption für den angegebenen Artikel. *Schema_option* ist **binary(8)**, und kann die [| (Bitweises OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt eine oder mehrere der folgenden Werte:  
+`[ @schema_option = ] schema_option` Ist eine Bitmaske der schemagenerierungsoption für den angegebenen Artikel. *Schema_option* ist **binary(8)** , und kann die [| (Bitweises OR) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt eine oder mehrere der folgenden Werte:  
   
 > [!NOTE]  
 >  Ist dieser Wert NULL, generiert das System automatisch eine gültige Schemaoption für den Artikel, abhängig von anderen Artikeleigenschaften. Die **Default Schema Options** Tabelle, die in den Hinweisen angegebene wird der Wert, der ausgewählt wird, auf der Grundlage der Kombination des Artikeltyps und des Replikationstyps.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0x00**|Deaktiviert die Skripterstellung durch den Momentaufnahme-Agent und verwendet *Creation_script*.|  
 |**0x01**|Generiert das Objekterstellungsskript (CREATE TABLE, CREATE PROCEDURE usw.). Dies ist der Standardwert für alle Artikel mit gespeicherten Prozeduren.|  
@@ -179,7 +179,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x200**|Repliziert Fremdschlüsseleinschränkungen. Wenn die Tabelle, auf die verwiesen wird, nicht Teil einer Veröffentlichung ist, werden keine Fremdschlüsseleinschränkungen für eine veröffentlichte Tabelle repliziert. *Nicht für Oracle-Verleger unterstützt*.|  
 |**0x400**|Repliziert CHECK-Einschränkungen. *Nicht für Oracle-Verleger unterstützt*.|  
 |**0x800**|Repliziert Standards. *Nicht für Oracle-Verleger unterstützt*.|  
-|**0x1000**|Repliziert die Sortierung auf Spaltenebene.<br /><br /> **Hinweis**: Dieser Option sollte für Oracle-Verleger eingerichtet werden, um Vergleiche zu ermöglichen, die nach Groß-/Kleinschreibung unterscheiden.|  
+|**0x1000**|Repliziert die Sortierung auf Spaltenebene.<br /><br /> **Hinweis**: Diese Option sollte für Oracle-Verleger, um Groß-/Kleinschreibung Vergleiche festgelegt werden.|  
 |**0x2000**|Repliziert erweiterte Eigenschaften, die dem Quellobjekt des veröffentlichten Artikels zugeordnet sind. *Nicht für Oracle-Verleger unterstützt*.|  
 |**0x4000**|Repliziert UNIQUE-Einschränkungen. Alle Indizes bezüglich der Einschränkung werden ebenfalls repliziert, auch wenn Optionen **0 x 10** und **0 x 40** sind nicht aktiviert.|  
 |**0x8000**|Diese Option ist für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Verleger nicht gültig.|  
@@ -196,7 +196,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x4000000**|Repliziert Indizes für **Xml** Spalten.|  
 |**0x8000000**|Legt Schemas an, die auf dem Abonnent noch nicht vorhanden sind.|  
 |**0x10000000**|Konvertiert **Xml** Spalten **Ntext** auf dem Abonnenten.|  
-|**0x20000000**|Konvertiert, die große Objekttypen Daten (**nvarchar(max)**, **varchar(max)**, und **'varbinary(max)'**) in eingeführte [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Datentypen, die auf unterstütztwerden[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+|**0x20000000**|Konvertiert, die große Objekttypen Daten (**nvarchar(max)** , **varchar(max)** , und **'varbinary(max)'** ) in eingeführte [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Datentypen, die auf unterstütztwerden[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |**0x40000000**|Berechtigungen für die Replikation.|  
 |**0x80000000**|Der Versuch, Abhängigkeiten für Objekte zu löschen, die nicht Teil der Veröffentlichung sind.|  
 |**0x100000000**|Mit dieser Option können Sie das FILESTREAM-Attribut replizieren, wenn es für angegeben wird **'varbinary(max)'** Spalten. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Abonnenten wird unabhängig von der Festlegung dieser Schemaoption nicht unterstützt.<br /><br /> Siehe die verwandte Option **0 x 800000000**.|  
@@ -249,9 +249,9 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @artid = ] _article_ID_ OUTPUT` Ist die Artikel-ID des neuen Artikels. *Article_id* ist **Int** hat den Standardwert NULL, und es ist ein OUTPUT-Parameter.  
   
-`[ @auto_identity_range = ] 'auto_identity_range'` Aktiviert und deaktiviert die automatische Behandlung von Identitätsbereichen für eine Veröffentlichung, zu dem Zeitpunkt, die sie erstellt wird. *Auto_identity_range* ist **nvarchar(5)**, und kann einen der folgenden Werte:  
+`[ @auto_identity_range = ] 'auto_identity_range'` Aktiviert und deaktiviert die automatische Behandlung von Identitätsbereichen für eine Veröffentlichung, zu dem Zeitpunkt, die sie erstellt wird. *Auto_identity_range* ist **nvarchar(5)** , und kann einen der folgenden Werte:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**true**|Aktiviert die automatische Behandlung von Identitätsbereichen|  
 |**false**|Deaktiviert die automatische Behandlung von Identitätsbereichen|  
@@ -262,9 +262,9 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @pub_identity_range = ] pub_identity_range` Steuert die Bereichsgröße auf dem Verleger aus, wenn der Artikel hat *Identityrangemanagementoption* festgelegt **automatisch** oder *Auto_identity_range* festgelegt **"true"** . *Pub_identity_range* ist **Bigint**, hat den Standardwert NULL. *Nicht für Oracle-Verleger unterstützt*.  
   
-`[ @identity_range = ] identity_range` Steuert die Bereichsgröße auf dem Abonnenten, wenn der Artikel hat *Identityrangemanagementoption* festgelegt **automatisch** oder *Auto_identity_range* festgelegt **"true"** . *Identity_range* ist **Bigint**, hat den Standardwert NULL. Wird verwendet, wenn *Auto_identity_range* nastaven NA hodnotu **"true"**. *Nicht für Oracle-Verleger unterstützt*.  
+`[ @identity_range = ] identity_range` Steuert die Bereichsgröße auf dem Abonnenten, wenn der Artikel hat *Identityrangemanagementoption* festgelegt **automatisch** oder *Auto_identity_range* festgelegt **"true"** . *Identity_range* ist **Bigint**, hat den Standardwert NULL. Wird verwendet, wenn *Auto_identity_range* nastaven NA hodnotu **"true"** . *Nicht für Oracle-Verleger unterstützt*.  
   
-`[ @threshold = ] threshold` Ist der Prozentsatz-Wert, der steuert, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist. Wenn der Prozentsatz der Werte in angegebenen *Schwellenwert* wird verwendet, erstellt der Verteilungs-Agent einen neuen Identitätsbereich. *Schwellenwert für* ist **Bigint**, hat den Standardwert NULL. Wird verwendet, wenn *Identityrangemanagementoption* nastaven NA hodnotu **automatisch** oder *Auto_identity_range* nastaven NA hodnotu **"true"**. *Nicht für Oracle-Verleger unterstützt*.  
+`[ @threshold = ] threshold` Ist der Prozentsatz-Wert, der steuert, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist. Wenn der Prozentsatz der Werte in angegebenen *Schwellenwert* wird verwendet, erstellt der Verteilungs-Agent einen neuen Identitätsbereich. *Schwellenwert für* ist **Bigint**, hat den Standardwert NULL. Wird verwendet, wenn *Identityrangemanagementoption* nastaven NA hodnotu **automatisch** oder *Auto_identity_range* nastaven NA hodnotu **"true"** . *Nicht für Oracle-Verleger unterstützt*.  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *Force_invalidate_snapshot* ist eine **Bit**, hat den Standardwert 0.  
   
@@ -283,14 +283,14 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Dieser Parameter sollte nur für Oracle-Verleger verwendet werden. Festlegen von *Use_default_datatypes* zu **0** für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger wird ein Fehler generiert.  
   
-`[ @identityrangemanagementoption = ] identityrangemanagementoption` Gibt an, wie die Verwaltung des Identitätsbereichs für den Artikel behandelt wird. *Identityrangemanagementoption* ist **nvarchar(10)**, und kann einen der folgenden Werte.  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` Gibt an, wie die Verwaltung des Identitätsbereichs für den Artikel behandelt wird. *Identityrangemanagementoption* ist **nvarchar(10)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Keine**|Die Replikation führt keine explizite Identitätsbereichsverwaltung aus. Diese Option wird nur aus Gründen der Abwärtskompatibilität mit früheren Versionen von SQL Server verwendet. Ist für die Peer-Replikation nicht zulässig.|  
 |**manual**|Markiert die Identitätsspalte mithilfe von NOT FOR REPLICATION, um die manuelle Identitätsbereichsverwaltung zu ermöglichen.|  
 |**auto**|Gibt die automatisierte Verwaltung von Identitätsbereichen an.|  
-|Null(Default)|Standardmäßig **keine** Wenn der Wert des *Auto_identity_range* nicht **"true"**. Standardmäßig **manuelle** in einer Peer-zu-Peer-Topologie-Default (*Auto_identity_range* wird ignoriert).|  
+|Null(Default)|Standardmäßig **keine** Wenn der Wert des *Auto_identity_range* nicht **"true"** . Standardmäßig **manuelle** in einer Peer-zu-Peer-Topologie-Default (*Auto_identity_range* wird ignoriert).|  
   
  Für die Abwärtskompatibilität bei der der Wert des *Identityrangemanagementoption* NULL ist, den Wert der *Auto_identity_range* aktiviert ist. Jedoch, wenn der Wert des *Identityrangemanagementoption* ist nicht NULL, und klicken Sie dann auf den Wert der *Auto_identity_range* wird ignoriert.  
   
@@ -301,7 +301,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, wenn ein Artikel hinzugefügt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
-`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` Ist repliziert Benutzertrigger ausgeführt werden, wenn die anfangsmomentaufnahme angewendet wird. *Fire_triggers_on_snapshot* ist **nvarchar(5)**, hat den Standardwert "false". **"true"** bedeutet, dass Benutzertrigger für eine replizierte Tabelle ausgeführt werden, wenn die Momentaufnahme angewendet wird. In der Reihenfolge, damit Trigger repliziert werden der Bitmaskenwert von *Schema_option* muss den Wert enthalten **0 x 100**.  
+`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` Ist repliziert Benutzertrigger ausgeführt werden, wenn die anfangsmomentaufnahme angewendet wird. *Fire_triggers_on_snapshot* ist **nvarchar(5)** , hat den Standardwert "false". **"true"** bedeutet, dass Benutzertrigger für eine replizierte Tabelle ausgeführt werden, wenn die Momentaufnahme angewendet wird. In der Reihenfolge, damit Trigger repliziert werden der Bitmaskenwert von *Schema_option* muss den Wert enthalten **0 x 100**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -329,7 +329,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Wenn Sie Objekte veröffentlichen, werden ihre Definitionen auf Abonnenten kopiert. Wenn Sie ein Datenbankobjekt veröffentlichen, das von mindestens einem anderen Objekt abhängig ist, müssen Sie alle Objekte veröffentlichen, auf die verwiesen wird. Wenn Sie beispielsweise eine Sicht veröffentlichen, die von einer Tabelle abhängt, muss auch die Tabelle veröffentlicht werden.  
   
- Wenn *Vertical_partition* nastaven NA hodnotu **"true"**, **Sp_addarticle** verzögert die Erstellung der Sicht, bis [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) heißt (nach die letzte [Sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) hinzugefügt wird).  
+ Wenn *Vertical_partition* nastaven NA hodnotu **"true"** , **Sp_addarticle** verzögert die Erstellung der Sicht, bis [Sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) heißt (nach die letzte [Sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) hinzugefügt wird).  
   
  Wenn die Veröffentlichung updateabonnements zulässt und die veröffentlichte Tabelle keine **Uniqueidentifier** Spalte **Sp_addarticle** Fügt eine **Uniqueidentifier** Spalte in der Tabelle automatisch.  
   
