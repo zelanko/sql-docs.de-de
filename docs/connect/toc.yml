@@ -2721,6 +2721,8 @@
           href: ../connect/odbc/bug-fixes.md
     - name: Herunterladen des ODBC-Treibers für SQL Server
       href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+    - name: C++-Beispielanwendung mithilfe von ODBC
+      href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
     - name: ODBC erweitert
       items:
         - name: Microsoft Open Database Connectivity (ODBC)
