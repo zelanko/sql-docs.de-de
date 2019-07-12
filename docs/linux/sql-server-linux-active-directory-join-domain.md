@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50f2685b5b981cddfdba61f91b7ec04e9f6345d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822525"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834442"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server auf einem Linux-Host zu einer Active Directory-Domäne beitreten
 
@@ -23,7 +23,7 @@ ms.locfileid: "66822525"
 
 Dieser Artikel enthält allgemeine Hinweise dazu, wie auf einen SQL Server Linux-Host-Computer mit einer Active Directory (AD)-Domäne zu verknüpfen. Es gibt zwei Methoden: Verwenden Sie eine integrierte SSSD-Paket oder dritten Active Directory-Anbieter. Beispiele für Drittanbieter-Domänendienst-Join-Produkte sind [PowerBroker Identität Dienste (PBIS)](https://www.beyondtrust.com/), [eine Identität](https://www.oneidentity.com/products/authentication-services/), und [Centrify](https://www.centrify.com/). Dieses Handbuch enthält die Schritte aus, um Ihre Active Directory-Konfiguration zu überprüfen. Es ist jedoch nicht vorgesehen, Anweisungen dazu, wie Sie einen Computer in eine Domäne einbinden, bei Verwendung der Hilfsprogramme bereitstellen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Bevor Sie die Active Directory-Authentifizierung konfigurieren, müssen Sie eine Active Directory-Domänencontroller, Windows, in Ihrem Netzwerk eingerichtet. Anschließend verknüpfen Sie Ihre SQL Server auf Linux-Host zu einer Active Directory-Domäne.
 

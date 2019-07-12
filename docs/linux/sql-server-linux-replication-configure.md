@@ -1,21 +1,22 @@
 ---
-title: Konfigurieren von SQL Server-Replikation unter Linux | Microsoft-Dokumentation
+title: Konfigurieren von SQL Server-Replikation unter Linux
 description: Dieser Artikel beschreibt, wie Sie SQL Server-Replikation unter Linux konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c8dd4ef4898796722e1c54eeaff94afef1c0c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe12afac12e34dfb6c66a44a1d1de6c2b5ce1876
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705334"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834789"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Konfigurieren von SQL Server-Replikation unter Linux
 
@@ -33,7 +34,7 @@ Konfigurieren der Replikation unter Linux mit SQL Server Management Studio (SSMS
   
 * Ein Beispiel mit gespeicherten Prozeduren führen Sie die [Konfigurieren von SQL Server-Replikation unter Linux](sql-server-linux-replication-tutorial-tsql.md) Tutorial.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Vor dem Konfigurieren von Verlegern, Verteilern und Abonnenten, müssen Sie einige Konfigurationsschritte für die SQL Server-Instanz.
 

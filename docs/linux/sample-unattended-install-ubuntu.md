@@ -2,19 +2,19 @@
 title: Unbeaufsichtigte Installation für SQL Server unter Ubuntu
 titleSuffix: SQL Server
 description: SQL Server-Skriptbeispiel – für die unbeaufsichtigte Installation unter Ubuntu
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: caa08ab4780defb1ddcd6dedd49e261ea9c45625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bd5728e8046d7e48945fe815b64735362873ac1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713551"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834475"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Beispiel: Für die unbeaufsichtigte Installation-SQL Server-Skript für Ubuntu
 
@@ -25,7 +25,7 @@ Das folgende Bash-Skript installiert die SQL Server 2017 auf Ubuntu 16.04 ohne i
 > [!TIP]
 > Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [Schnellstart für Ubuntu](quickstart-install-connect-ubuntu.md). Weitere Informationen zum Setup finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Sie benötigen mindestens 2 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
 - Das Dateisystem muss **XFS** oder **EXT4**. Andere Dateisysteme, z. B. **BTRFS**, werden nicht unterstützt.

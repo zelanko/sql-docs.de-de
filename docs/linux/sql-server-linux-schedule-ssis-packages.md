@@ -1,20 +1,20 @@
 ---
-title: Planen von SSIS-Pakete auf Linux mit Cron | Microsoft-Dokumentation
+title: Planen von SSIS-Pakete auf Linux mit cron
 description: Dieser Artikel beschreibt, wie Sie SQL Server Integration Services (SSIS)-Pakete für Linux mit dem Cron-Dienst zu planen.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6d78190f5c6acf1f5dc8bfaccbf072a290faa908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b171f3e3ba24474afcea09498d69574d69b3c33
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705316"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834732"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Zeitplan SQL Server Integration Services-paketausführung unter Linux mit cron
 
@@ -24,7 +24,7 @@ Beim Ausführen von SQL Server Integration Services (SSIS) und SQL Server unter 
 
 Dieser Artikel enthält Beispiele, die zeigen, wie Sie die Ausführung von SSIS-Paketen zu automatisieren. In den Beispielen werden geschrieben, auf Red Hat Enterprise ausgeführt wird. Der Code ist ähnlich für andere Linux-Distributionen wie Ubuntu.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Bevor Sie den Cron-Dienst zum Ausführen von Aufträgen verwenden, überprüfen Sie, ob sie auf Ihrem Computer ausgeführt wird.
 

@@ -1,20 +1,21 @@
 ---
-title: Installieren von SQL Server-Spracherweiterungen (Java) unter Linux | Microsoft-Dokumentation
+title: Installieren von SQL Server-Spracherweiterungen (Java) unter Linux
 description: Erfahren Sie, wie zum Installieren von SQL Server-Spracherweiterungen (Java) auf Red Hat, Ubuntu und SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399938"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834698"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installieren von SQL Server 2019-Spracherweiterungen (Java) unter Linux
 
@@ -64,7 +65,7 @@ Für jeden Satz betriebssystemspezifischen Anweisungen zur Installation *höchst
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 + Die Linux-Version muss [von SQL Server unterstützte](sql-server-linux-release-notes-2019.md#supported-platforms), aber nicht die Docker-Engine enthalten ist. Versionen werden unterstützt:
 
@@ -80,7 +81,7 @@ Für jeden Satz betriebssystemspezifischen Anweisungen zur Installation *höchst
 
 Pakete sind auf einem Gerät Internetverbindung heruntergeladen und installiert, unabhängig von der Datenbank-Engine, die mit dem Paketinstaller für jedes Betriebssystem. Die folgende Tabelle beschreibt alle verfügbaren Pakete.
 
-| Paketname | Applies-to | Description |
+| Paketname | Applies-to | Beschreibung |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | Alle Sprachen | Das Erweiterungsframework zum Ausführen der Java-Code verwendet. |
 |mssql-server-extensibility-java | Java | Java-Erweiterung für das Laden einer Java-ausführungsumgebung. Es gibt keine zusätzliche Bibliotheken oder Pakete für Java. |

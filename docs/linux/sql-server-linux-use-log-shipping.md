@@ -1,19 +1,19 @@
 ---
-title: Konfigurieren des Protokollversands für SQL Server unter Linux | Microsoft-Dokumentation
+title: Konfigurieren des Protokollversands für SQL Server unter Linux
 description: Dieses Lernprogramm zeigt ein einfaches Beispiel dafür, wie zum Replizieren von SQL Server-Instanz unter Linux in einer sekundären Instanz mithilfe des Protokollversands.
-author: meet-bhagdev
-ms.author: meetb
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5643a1d8421f74c7a12861cef3b47f43382b0cf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bbe4e8076578afd3addb9521a60bc72b5be9a06
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712831"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834627"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit Protokollversand unter Linux
 
@@ -30,7 +30,7 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
 - Kopieren der Transaktionsprotokolldatei Sicherung über das Netzwerk auf eine oder mehrere sekundäre SQL Server-Instanzen
 - Wiederherstellen der Transaktion Protokollsicherungsdatei an, auf den sekundären SQL Server-Instanzen
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 - [Installieren von SQL Server-Agent unter Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Einrichten von einer Netzwerkfreigabe für den Protokollversand mithilfe von CIFS 

@@ -1,20 +1,21 @@
 ---
-title: Installieren von SQL Server Machine Learning-Diensten (R, Python) unter Linux | Microsoft-Dokumentation
+title: Installieren von SQL Server Machine Learning-Diensten (R, Python) unter Linux
 description: Erfahren Sie, wie zum Installieren von SQL Server Machine Learning Services (R, Python) unter Red Hat, Ubuntu und SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399951"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834683"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installieren von SQL Server 2019 Machine Learning-Dienste (R, Python) unter Linux
 
@@ -75,7 +76,7 @@ Für jeden Satz betriebssystemspezifischen Anweisungen zur Installation *höchst
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 + Die Linux-Version muss [von SQL Server unterstützte](sql-server-linux-release-notes-2019.md#supported-platforms), aber nicht die Docker-Engine enthalten ist. Versionen werden unterstützt:
 
@@ -278,7 +279,7 @@ Zusätzliche Konfiguration ist in erster Linie durch die [Mssql-Conf-Tool](sql-s
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. Akzeptieren Sie die Lizenzbedingungen für Open-Source-R und Python. Es gibt mehrere Möglichkeiten zur Verfügung. Wenn Sie zuvor, SQL Server-Lizenzierung akzeptiert und nun die R- oder Python-Erweiterungen hinzufügen, ist der folgende Befehl Ihre Zustimmung zu seinen Bedingungen:
+2. Akzeptieren Sie die Lizenzbedingungen für Open-Source-R und Python. Dafür stehen verschiedene Möglichkeiten zur Verfügung: Wenn Sie zuvor, SQL Server-Lizenzierung akzeptiert und nun die R- oder Python-Erweiterungen hinzufügen, ist der folgende Befehl Ihre Zustimmung zu seinen Bedingungen:
 
    ```bash
    # Run as SUDO or root
@@ -515,7 +516,7 @@ Integration von R und Python unter Linux ist immer noch in der aktiven Entwicklu
 
 Es gibt Parität zwischen Linux und Windows für [Ressourcenkontrolle](../t-sql/statements/create-external-resource-pool-transact-sql.md) für externe Ressourcenpools, aber die Statistiken für [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) derzeit andere Einheiten unter Linux. Einheiten werden in einer zukünftigen CTP-Version ausgerichtet.
  
-| Spaltenname   | Description | Der Wert unter Linux | 
+| Spaltenname   | Beschreibung | Der Wert unter Linux | 
 |---------------|--------------|---------------|
 |peak_memory_kb | Die Höchstmenge an Arbeitsspeicher, die für den Ressourcenpool verwendet werden soll. | Unter Linux ist diese Statistik des Arbeitsspeichersubsystems CGroups, stammen, in denen der Wert memory.max_usage_in_bytes |
 |write_io_count | Die Gesamtanzahl Schreibvorgänge seit dem Zurücksetzen der ressourcenkontrollenstatistiken wurden ausgegeben. | Unter Linux ist diese Statistik über das Subsystem für CGroups Blkio, stammt, in denen der Wert in der Zeile schreiben blkio.throttle.io_serviced | 

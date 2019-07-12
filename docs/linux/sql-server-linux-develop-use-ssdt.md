@@ -1,20 +1,20 @@
 ---
 title: Entwickeln und Bereitstellen von SQL Server-Datenbanken für Linux | Microsoft-Dokumentation
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3981071bb6f175a130444dabc588d1dba18112f7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713285"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833814"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden Sie Visual Studio zum Erstellen von Datenbanken für SQL Server unter Linux
 
@@ -110,8 +110,8 @@ Wenn Sie mit T-SQL vertraut sind, finden Sie unter [Tutorial: Schreiben von Tran
 
 Weitere Informationen zum Entwickeln von einer Datenbank mit SQL Data Tools finden Sie unter [SSDT MSDN-Dokumente]
 
-[Herunterladen Sie und installieren Sie Visual Studio]:https://www.visualstudio.com/downloads/
+[Herunterladen Sie und installieren Sie Visual Studio]: https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN-Dokumente]:https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Tutorial: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL-Referenz (Datenbank-Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
+[SSDT MSDN-Dokumente]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
+[Tutorial: Schreiben von Transact-SQL-Anweisungen]: https://msdn.microsoft.com/library/ms365303.aspx
+[Transact-SQL-Referenz (Datenbank-Engine)]: https://msdn.microsoft.com/library/bb510741.aspx

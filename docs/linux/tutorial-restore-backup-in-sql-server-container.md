@@ -1,20 +1,20 @@
 ---
-title: Wiederherstellen einer SQL Server-Datenbank in Docker | Microsoft-Dokumentation
+title: Wiederherstellen einer SQL Server-Datenbank in Docker
 description: In diesem Lernprogramm erfahren wiederherstellen wie SQL Server-Datenbank-Sicherung in einem neuen Linux-Docker-Container.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79a480f2bd162e44a622413d091a2bebdaa82c00
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 826d62b3f1aeb75a89aa65be4755839f6601fcf2
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399917"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834561"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Wiederherstellen einer SQL Server-Datenbank in einem Linux-Docker-container
 
@@ -40,7 +40,7 @@ In diesem Tutorial wird veranschaulicht, wie zum Verschieben und Wiederherstelle
 > * Führen Sie Transact-SQL-Anweisungen zum Anzeigen und ändern die Datenbank an.
 > * Sichern Sie die geänderte Datenbank.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 * Docker-Engine 1.8 und höher auf unterstütztem Linux-Betriebssystem oder Docker für Mac bzw. Windows. Weitere Informationen finden Sie unter [Install Docker (Installieren von Docker)](https://docs.docker.com/engine/installation/).
 * Mindestens 2 GB freier Speicherplatz auf dem Datenträger

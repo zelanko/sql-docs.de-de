@@ -1,20 +1,21 @@
 ---
-title: SLES freigegebene Datenträgercluster für SQL Server konfigurieren | Microsoft-Dokumentation
+title: Konfigurieren Sie SLES Cluster mit freigegebenen Datenträgern werden für SQL Server.
 description: Implementieren Sie hohen Verfügbarkeit, indem freigegebene Datenträgercluster für SUSE Linux Enterprise Server (SLES) für SQL Server konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: e7f315e65702eab373430ede3adb23199f4edc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b65c2cca781dc077e72ff06fb7de5ae8ee2e8c5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712844"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834649"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie SLES Cluster mit freigegebenen Datenträgern werden für SQL Server.
 
@@ -24,7 +25,7 @@ Dieses Handbuch enthält Anweisungen zum Erstellen von eines Clusters mit zwei K
 
 Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, bewährte Methoden und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie die NFS-Freigabe bereitzustellen. Unten aufgeführten Schritte beschreiben Sie, wie diese Server konfiguriert werden.
 
