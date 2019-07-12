@@ -1,21 +1,22 @@
 ---
-title: SQL Server-Replikation unter Linux | Microsoft-Dokumentation
+title: SQL Server-Replikation unter Linux
 description: Dieser Artikel beschreibt die SQL Server-Replikation unter Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ac812b8f39e9332f8bfcc22e91a6f575ef2873d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a083a5fe3710ca9682c9d9df9ba0f6a0eceaad6c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705111"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834772"
 ---
 # <a name="sql-server-replication-on-linux"></a>SQL Server-Replikation unter Linux
 

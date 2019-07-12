@@ -1,20 +1,20 @@
 ---
-title: Versionshinweise für SQL Server 2017 unter Linux | Microsoft-Dokumentation
+title: Anmerkungen zu dieser Version von SQL Server 2017 unter Linux
 description: Dieser Artikel enthält die Versionshinweise und unterstützte Funktionen für SQL Server 2017 unter Linux ausgeführt wird. Anmerkungen zu dieser Version sind für die neueste Version und früheren Versionen enthalten.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705142"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834812"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Anmerkungen zu dieser Version von SQL Server 2017 unter Linux
 
@@ -396,7 +396,7 @@ Die folgenden Features und Dienste sind zum Zeitpunkt der GA-Version nicht unter
 | **Sicherheit** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | AD-Authentifizierung für Verbindungsserver | 
 | &nbsp; | AD-Authentifizierung für Verfügbarkeitsgruppen (Verfügbarkeitsgruppen) | 
-| &nbsp; | 3. Drittanbietertools AD zur Verfügung (Centrify, Vintela, Powerbroker) | 
+| &nbsp; | 3\. Drittanbietertools AD zur Verfügung (Centrify, Vintela, Powerbroker) | 
 | **Dienste** | SQL Server-Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |

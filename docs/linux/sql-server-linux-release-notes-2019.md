@@ -1,20 +1,20 @@
 ---
-title: Versionsanmerkungen zu SQL Server-2019-Vorschauversion unter Linux | Microsoft-Dokumentation
+title: Versionshinweise für SQL Server-2019-Vorschauversion unter Linux
 description: Dieser Artikel enthält die Anmerkungen zu dieser Version und die unterstützten Funktionen für SQL Server-2019 Vorschau unter Linux ausgeführt wird. Anmerkungen zu dieser Version sind für die neueste Version und früheren Versionen enthalten.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f172cf3b4ab72fe413cbc639c3e880edef311e9e
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533845"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834819"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Versionshinweise für SQL Server-2019-Vorschauversion unter Linux
 
