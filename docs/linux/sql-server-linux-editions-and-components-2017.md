@@ -1,8 +1,7 @@
 ---
-title: Editionen und unterstützte Funktionen von SQL Server 2017 ~ Linux | Microsoft-Dokumentation
+title: Editionen und unterstützte Funktionen von SQL Server 2017 ~ Linux
 ms.date: 09/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: linux
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.reviewer: vanto
+manager: jroth
+ms.openlocfilehash: c3fe41e136bb3a4614c791cb7f225c8b32c63692
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713172"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833783"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux
 
@@ -70,7 +69,7 @@ Sie können auch nur die Clientkomponenten von [!INCLUDE[ssNoVersion](../include
 
 SQL Server 2017 unter Linux unterstützt die SQL Server-Datenbank-Engine. Die folgende Tabelle beschreibt die Funktionen in der Datenbank-Engine.   
   
-|Serverkomponenten|Description|  
+|Serverkomponenten|Beschreibung|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] enthält die [!INCLUDE[ssDE](../includes/ssde-md.md)], den Basisdienst für speichern, verarbeiten und Sichern von Daten, Replikation, Volltextsuche, Tools zum Verwalten von relationalen und XML-Daten, und klicken Sie in der Datenbank-Analytics-Integration.|  
 
@@ -81,7 +80,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
   
 ##  <a name="Cross-BoxScaleLimits"></a> Skalierungsgrenzen  
   
-|Funktion|Enterprise|Standard|Web|Express| 
+|Feature|Enterprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
 |Maximale von einer einzelnen Instanz verwendete Rechenkapazität ( [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Maximum des Betriebssystems|Beschränkt auf weniger als 4 Sockets oder 24 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne| 
 |Maximale von einer einzelnen Instanz verwendete Rechenkapazität ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])|Maximum des Betriebssystems|Beschränkt auf weniger als 4 Sockets oder 24 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|
@@ -94,7 +93,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
  
 ##  <a name="RDBMSHA"></a> RDBMS: Hochverfügbarkeit  
   
-|Funktion|Enterprise|Standard|Web|Express|  
+|Feature|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
 |Protokollversand|Ja|Ja|Ja|Nein|  
 |Sicherungskomprimierung|Ja|Ja|Nein|Nein| 
@@ -122,7 +121,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 
 ##  <a name="RDBMSSP"></a> RDBMS: Skalierbarkeit und Leistung  
   
-|Funktion|Enterprise|Standard|Web|Express|  
+|Feature|Enterprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Ja|Ja|Ja|Ja|  
 |Große Objektbinärdateien in gruppierten Columnstore-Indizes|Ja|Ja|Ja|Ja|  
@@ -147,7 +146,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 
 ##  <a name="RDBMSS"></a> RDBMS: Sicherheit  
   
-|Funktion|Enterprise|Standard|Web|Express|
+|Feature|Enterprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |Sicherheit auf Zeilenebene|Ja|Ja|Ja|Ja|  
 |Always Encrypted|Ja|Ja|Ja|Ja| 
@@ -161,7 +160,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 
 ##  <a name="RDBMSM"></a> RDBMS: Verwaltbarkeit  
   
-|Funktion|Enterprise|Standard|Web|Express|   
+|Feature|Enterprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
 |Dedizierte Administratorverbindung|Ja|Ja|Ja|Ja, mit Ablaufverfolgungsflag|Ja, mit Ablaufverfolgungsflag|   
 |PowerShell-Skriptunterstützung|Ja|Ja|Ja|Ja| 
@@ -180,7 +179,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 
 ##  <a name="Programmability"></a> Programmability  
   
-|Funktion|Enterprise|Standard|Web|Express 
+|Feature|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
 |JSON|Ja|Ja|Ja|Ja|   
 |Abfragespeicher|Ja|Ja|Ja|Ja|   

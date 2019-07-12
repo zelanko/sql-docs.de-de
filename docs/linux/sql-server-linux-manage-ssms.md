@@ -1,20 +1,20 @@
 ---
-title: Verwenden von SSMS zum Verwalten von SQLServer unter Linux | Microsoft-Dokumentation
+title: Verwenden von SSMS zum Verwalten von SQLServer unter Linux
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eba01fdd332e86327da627dd934806c1eedc9d5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713158"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834939"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von SQL Server Management Studio auf Windows zum Verwalten von SQL Server unter Linux
 
@@ -56,7 +56,7 @@ Verwenden Sie die folgenden grundlegenden Schritte, um eine Verbindung herzustel
 
 1. In der **Herstellen einer Verbindung mit Server** Fenster, geben Sie die folgende Informationen (wenn SSMS bereits ausgeführt wird, klicken Sie auf **verbinden > Datenbank-Engine** zu öffnen der **Verbindung mit Server herstellen** (Fenster):
 
-   | Einstellung | Description |
+   | Einstellung | Beschreibung |
    |-----|-----|
    | **Servertyp** | Die Standardeinstellung ist die Datenbank-Engine. Ändern Sie diesen Wert nicht. |
    | **Servername** | Geben Sie den Namen der Zielcomputer für die virtuellen SQL Server oder die IP-Adresse ein. |

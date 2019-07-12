@@ -2,9 +2,9 @@
 title: Erste Schritte mit SQL Server Linux-Containern für Docker
 titleSuffix: SQL Server
 description: Dieser Schnellstart veranschaulicht das Verwenden von Docker zum Ausführen von SQL Server 2017 und containerimages 2019. Anschließend erstellen Sie mit dem Hilfsprogramm „sqlcmd“ eine Datenbank und fragen diese ab.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
 ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 667103945781e5c7814879456027a81b77cf7338
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e9dfbd9edbb7a363c3f88845bfe3a6331bbd7db9
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399924"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833620"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Ausführen von SQL Server-Container-Images mit Docker
 
@@ -243,7 +243,7 @@ Vergewissern Sie die folgenden Schritte aus, sich vor, dass Sie Ihrer bevorzugte
 
    In der folgenden Tabelle finden Sie Beschreibungen der Parameter des vorangegangenen Beispiels für `docker run`:
 
-   | Parameter | Description |
+   | Parameter | Beschreibung |
    |-----|-----|
    | **-e "ACCEPT_EULA = Y"** |  Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |

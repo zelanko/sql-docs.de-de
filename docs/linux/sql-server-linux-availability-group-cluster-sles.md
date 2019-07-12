@@ -4,18 +4,19 @@ titleSuffix: SQL Server
 description: Erfahren Sie, wie Sie Availability Group-Cluster für SQL Server unter SUSE Linux Enterprise Server (SLES) erstellen.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: f69a4c0d98807d11b0ef2b01fb2995a0eeaddf21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f6638d1d31be45f12f0b80b7fc63f918e90d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705597"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834393"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie SLES-Cluster für SQL Server-Verfügbarkeitsgruppe
 
@@ -48,7 +49,7 @@ Das Verfahren zum Erstellen einer verfügbarkeitsgruppe für hochverfügbarkeit 
 
 5. [Fügen Sie die verfügbarkeitsgruppe als Ressource im Cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie drei Computer, die den drei Knoten-Cluster bereitzustellen. Die folgenden Schritte beschreiben, wie Sie diese Server zu konfigurieren.
 

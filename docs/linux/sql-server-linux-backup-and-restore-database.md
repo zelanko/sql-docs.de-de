@@ -1,20 +1,21 @@
 ---
-title: Sichern und Wiederherstellen von SQL Server-Datenbanken unter Linux | Microsoft-Dokumentation
+title: Sichern und Wiederherstellen der SQL Server-Datenbanken unter Linux
 description: Informationen Sie zum Sichern und Wiederherstellen von SQL Server-Datenbanken unter Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f07885aaef22da63d1c94e669db17e7536ccc933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4722afd669893dc4bfa9cad23a7c97cdef5cc182
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713348"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834204"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen der SQL Server-Datenbanken unter Linux
 

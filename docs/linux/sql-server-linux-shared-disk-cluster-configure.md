@@ -1,20 +1,21 @@
 ---
-title: Failoverclusterinstanz – SQL Server unter Linux (RHEL) konfigurieren | Microsoft-Dokumentation
+title: Konfigurieren Sie Failoverclusterinstanz – SQL Server unter Linux (RHEL)
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 00ae511095e046623df080e7cc6f9704aedc87ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 407e1e11bcaf2c1b7ffe0426c6a3c7493e71bc74
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712924"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833165"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Konfigurieren Sie Failoverclusterinstanz – SQL Server unter Linux (RHEL)
 
@@ -34,7 +35,7 @@ In diesem Artikel wird erläutert, wie eine zwei-Knoten freigegebenen Datenträg
 
 Konzeptionelle Informationen finden Sie unter [SQL Server Failoverclusterinstanz (FCI) unter Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server für den Speicher bereitstellen. Unten aufgeführten Schritte beschreiben Sie, wie diese Server konfiguriert werden.
 

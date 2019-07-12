@@ -14,12 +14,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5776fc96789eeb66f5bc7c4373b86a829f409bb9
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66105543"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826502"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
   Der Karten-Assistent und der Kartenebenen-Assistent automatisieren das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
@@ -124,12 +124,12 @@ ms.locfileid: "66105543"
  Der Kartenkatalog enthält Karten aus Berichten, die sich im Kartenkatalogordner für die Berichterstellungsumgebung befinden. Karten aus dem Katalog ermöglichen es, dem Bericht schnell eine Karte hinzuzufügen. Die vordefinierten Karten im Katalog werden von einem Kartenanbieter bereitgestellt.  
   
 > [!NOTE]  
->  Für diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Kartenfunktion werden Daten aus TIGER/Line-Shape-Dateien verwendet, die vom U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro (U.S. Census Bureau) verfügbar. Weitere Informationen zu den TIGER/Line-Shape-Dateien finden Sie unter [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  
+>  Für diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Kartenfunktion werden Daten aus TIGER/Line-Shape-Dateien verwendet, die vom U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro (U.S. Census Bureau) verfügbar. Um weitere Informationen zu den TIGER/Line-Shape-Dateien zu erhalten, navigieren Sie zu [TIGER/Line-Shape-Dateien und der technischen Dokumentation zu TIGER/Line-Dateien](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  
   
  Um den Kartenkatalog zu erweitern, können Sie Berichte im Kartenkatalogverzeichnis hinzufügen oder entfernen sowie Ordner hinzufügen, um die Karten zu verwalten. Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Die Gruppe von Dateien enthält im Allgemeinen die Datei *\<Dateiname>*.shp, die die räumlichen Daten und eine Unterstützungsdatei enthält, in der Regel *\<Dateiname>*.dbf.  
+ Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Die Gruppe von Dateien enthält im Allgemeinen die Datei *\<Dateiname>* .shp, die die räumlichen Daten und eine Unterstützungsdatei enthält, in der Regel *\<Dateiname>* .dbf.  
   
  Wenn Sie eine Shape-Datei als räumliche Datenquelle angeben und sie sich auf dem lokalen Computer befindet, werden die räumlichen Daten automatisch in den Bericht eingebettet. Um räumliche Daten aus einer ESRI-Datei dynamisch zu verwenden, gehen Sie wie folgt vor:  
   

@@ -1,20 +1,21 @@
 ---
-title: Konfigurieren von persistenten Speicher (PMEM) für SQL Server unter Linux | Microsoft-Dokumentation
+title: Konfigurieren von persistenten Speicher (PMEM) für SQL Server unter Linux
 description: Dieser Artikel enthält eine schrittweise Anleitung zum Konfigurieren von PMEM unter Linux.
 author: DBArgenis
 ms.author: argenisf
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5421d42933660843ac51be3d942a94cf47866200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bda17b382420f57e25c40d4a7a2d29477bb507d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713234"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834004"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Konfigurieren von persistenten Speicher (PMEM) für SQL Server unter Linux
 

@@ -10,12 +10,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fe19165a8b9e0d419a1cba67eeb4ada6a3ce183
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071431"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826333"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot-Authentifizierung und -Autorisierung
   Eine PowerPivot für SharePoint-Bereitstellung, die innerhalb einer SharePoint 2010-Farm ausgeführt wird, verwendet das von den SharePoint-Servern bereitgestellte Authentifizierungssubsystem und Autorisierungsmodell. Die SharePoint-Sicherheitsinfrastruktur erstreckt sich auch auf PowerPivot-Inhalte und -Vorgänge, da sämtliche PowerPivot-bezogenen Inhalte in SharePoint-Inhaltsdatenbanken gespeichert und alle PowerPivot-bezogenen Vorgänge von freigegebenen PowerPivot-Diensten in der Farm ausgeführt werden. Benutzer, die eine Arbeitsmappe mit PowerPivot-Daten anfordern, werden mit einer SharePoint-Benutzeridentität authentifiziert, die auf deren Windows-Benutzeridentität basiert. Anzeigeberechtigungen für die Arbeitsmappe bestimmen, ob die Anforderung gewährt oder verweigert wird.  
@@ -107,8 +107,8 @@ ms.locfileid: "66071431"
 ||Externe Daten zulassen|Für diesen Wert muss **Vertrauenswürdige Datenverbindungsbibliotheken und eingebettete Verbindungen**festgelegt werden. PowerPivot-Datenverbindungen sind in die Arbeitsmappe eingebettet. Wenn Sie keine eingebetteten Verbindungen zulassen, können Benutzer den PivotTable-Cache anzeigen, aber eine Interaktion mit PowerPivot-Daten kann nicht stattfinden.|  
 ||Beim Aktualisieren warnen|Dieser Wert sollte deaktiviert werden, wenn Sie Arbeitsmappen und Berichte mithilfe des PowerPivot-Katalogs speichern. Der PowerPivot-Katalog umfasst eine Dokumentvorschaufunktion, die am besten funktioniert, wenn Beim Öffnen aktualisieren und Beim Aktualisieren warnen deaktiviert sind.|  
 |Vertrauenswürdige Datenanbieter|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 ist standardmäßig eingeschlossen, aber der Zugriff auf PowerPivot-Daten erfordert, dass der MSOLAP.4-Anbieter der SQL Server 2008 R2-Version entspricht.<br /><br /> MSOLAP.5 wird mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von PowerPivot für SharePoint installiert.<br /><br /> Entfernen Sie diese Anbieter nicht aus der Liste vertrauenswürdiger Datenanbieter. In einigen Fällen kann es erforderlich sein, zusätzliche Kopien dieses Anbieters auf weiteren SharePoint-Servern in der Farm zu installieren. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).|  
-|Vertrauenswürdige Datenverbindungsbibliotheken|Optional.|Sie können Office Data Connection (ODC)-Dateien in PowerPivot-Arbeitsmappen verwenden. Wenn Sie Verbindungsinformationen mithilfe von ODC-Dateien für lokale PowerPivot-Arbeitsmappen bereitstellen, können Sie der Bibliothek die gleichen ODC-Dateien hinzufügen.|  
-|Benutzerdefinierte Funktionsassembly|Nicht verfügbar.|Benutzerdefinierte Funktionsassemblys, die Sie für Excel Services erstellen und bereitstellen, werden von PowerPivot für SharePoint ignoriert. Wenn Sie benutzerdefinierte Assemblys für ein bestimmtes Verhalten benötigen, beachten Sie, dass die von Ihnen erstellten benutzerdefinierten Funktionen bei der Verarbeitung von PowerPivot-Abfragen nicht verwendet werden.|  
+|Vertrauenswürdige Datenverbindungsbibliotheken|Dies ist optional.|Sie können Office Data Connection (ODC)-Dateien in PowerPivot-Arbeitsmappen verwenden. Wenn Sie Verbindungsinformationen mithilfe von ODC-Dateien für lokale PowerPivot-Arbeitsmappen bereitstellen, können Sie der Bibliothek die gleichen ODC-Dateien hinzufügen.|  
+|Benutzerdefinierte Funktionsassembly|Nicht zutreffend.|Benutzerdefinierte Funktionsassemblys, die Sie für Excel Services erstellen und bereitstellen, werden von PowerPivot für SharePoint ignoriert. Wenn Sie benutzerdefinierte Assemblys für ein bestimmtes Verhalten benötigen, beachten Sie, dass die von Ihnen erstellten benutzerdefinierten Funktionen bei der Verarbeitung von PowerPivot-Abfragen nicht verwendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von PowerPivot-Dienstkonten](configure-power-pivot-service-accounts.md)   

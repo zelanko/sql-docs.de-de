@@ -10,13 +10,13 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794072"
+ms.locfileid: "67826518"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
@@ -24,7 +24,7 @@ ms.locfileid: "67794072"
 
 ## <a name="july-2019"></a>Juli 2019
 
-10 Juli 2019 &nbsp;  /  &nbsp; Version: 1.9.0 
+11 Juli 2019 &nbsp;  /  &nbsp; Version: 1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ ms.locfileid: "67794072"
 | Visual Studio-Code kann Merge 1.35 freizugeben. | Neueste Verbesserungen finden Sie [hier](https://code.visualstudio.com/updates/v1_35). |
 | Behobene Fehler und Probleme | Wenn eine Benutzerdatenbank beim Verbinden von aus dem Dialogfeld "Verbindung" ausgewählt wurde, wurde der resultierende Objekt-Explorer-Eintrag in früheren Versionen von Azure Data Studio ausschließlich für diesen einzelnen Datenbank beschränkt. Beginnen in dieser Version, dass das Verhalten geändert wird, sodass auf Servereigenschaften auch im Objekt-Explorer angezeigt werden. <br/> Eine vollständige Liste der Fehlerbehebungen finden Sie unter [Fehlern und Problemen, die auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>Juni 2019

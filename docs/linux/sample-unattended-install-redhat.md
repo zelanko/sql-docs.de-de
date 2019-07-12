@@ -2,19 +2,19 @@
 title: Unbeaufsichtigte Installation für SQL Server unter Red Hat Enterprise Linux
 titleSuffix: SQL Server
 description: SQL Server-Skriptbeispiel – für die unbeaufsichtigte Installation unter Red Hat Enterprise Linux
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e72c027f9426376ab79f29067385d2c4a8910a9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8a58ecebdbd8f5ffb8b03a06f44ab85d5281245
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713535"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834974"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Beispiel: Für die unbeaufsichtigte Installation-SQL Server-Skript für Red Hat Enterprise Linux
 
@@ -25,7 +25,7 @@ Dieses Bash-Beispielskript wird von SQL Server 2017 auf Red Hat Enterprise Linux
 > [!TIP]
 > Wenn Sie ein Skript für die unbeaufsichtigte Installation nicht benötigen, ist die schnellste Möglichkeit zum Installieren von SQL Server, führen die [Schnellstart für Red Hat](quickstart-install-connect-red-hat.md). Weitere Informationen zum Setup finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Sie benötigen mindestens 2 GB Arbeitsspeicher zum Ausführen von SQL Server unter Linux.
 - Das Dateisystem muss **XFS** oder **EXT4**. Andere Dateisysteme, z. B. **BTRFS**, werden nicht unterstützt.

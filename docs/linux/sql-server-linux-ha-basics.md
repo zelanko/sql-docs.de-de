@@ -1,19 +1,20 @@
 ---
-title: SQL Server-Verfügbarkeitsgrundlagen für Linux-Bereitstellungen | Microsoft-Dokumentation
+title: SQL Server-Verfügbarkeitsgrundlagen für Linux-Bereitstellungen
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719371"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833564"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>SQL Server-Verfügbarkeitsgrundlagen für Linux-Bereitstellungen
 
@@ -83,7 +84,7 @@ Schließlich ist die Verwendung einer Dateifreigabe im Netzwerk-System (NFS) ein
 ### <a name="configure-the-firewall"></a>Konfigurieren der Firewall
 Ähnlich wie Windows, Linux-Distributionen müssen eine integrierte Firewall. Wenn Ihr Unternehmen mit eine externe Firewall auf dem Server verwendet wird, kann das Deaktivieren der Firewalls unter Linux akzeptabel sein. Allerdings unabhängig davon, in dem die Firewall aktiviert ist, müssen die Ports geöffnet werden. Der folgenden Tabelle sind die allgemeinen erforderlichen Ports für hoch verfügbare [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Bereitstellungen unter Linux.
 
-| Portnummer | Typ     | Description                                                                                                                 |
+| Portnummer | Typ     | Beschreibung                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (sofern verwendet) - Endpunkt-Mapper                                                                                          |
@@ -160,7 +161,7 @@ Weitere Informationen zu den gesamten Stapel, auch finden Sie auf der offizielle
 ### <a name="pacemaker-concepts-and-terminology"></a>Pacemaker-Konzepte und Terminologie
 In diesem Abschnitt dokumentiert die allgemeinen Konzepte und Terminologie für eine Implementierung von Pacemaker.
 
-#### <a name="node"></a>Node
+#### <a name="node"></a>Knoten
 Ein Knoten ist ein Server, die Teil des Clusters. Ein Pacemaker-Cluster unterstützt bis zu 16 Knoten. Diese Zahl kann überschritten werden, wenn Corosync auf zusätzlichen Knoten nicht ausgeführt wird, aber Corosync erforderlich, damit ist [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Aus diesem Grund die maximale Anzahl von Knoten ein Clusters sich für eine beliebige haben [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Basis Konfiguration ist 16, dies ist der Grenzwert für die Pacemaker und hat nichts zu tun mit Obergrenzen für Verfügbarkeitsgruppen oder FCIs seitens [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
 
 #### <a name="resource"></a>Ressource

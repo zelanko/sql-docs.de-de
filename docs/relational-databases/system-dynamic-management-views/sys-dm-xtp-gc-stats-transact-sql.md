@@ -19,23 +19,23 @@ ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab8e21dd9c4a475f635573ff913d230d0e6fe7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10c58086a6d7e562548024273c71ef36664dff11
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730938"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826624"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Enthält Informationen (Gesamtstatistiken) über das aktuelle Verhalten der [!INCLUDE[hek_2](../../includes/hek-2-md.md)] Garbage Collection-Prozesses.  
+  Enthält Informationen (Gesamtstatistiken) zum aktuellen Verhalten des Garbage Collection-Prozesses von [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
  Zeilen werden im Rahmen der regulären Transaktionsverarbeitung von der Garbage Collection oder vom Garbage Collection-Hauptthread bereinigt, der als Leerlaufthread bezeichnet wird. Wenn eine Benutzertransaktion ein Commit ausgeführt werden, entfernt er eine Arbeitsaufgabe aus der Garbage Collection-Warteschlange ([Sys. dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Alle Zeilen, die durch die Garbage Collection bereinigt werden konnten, auf die jedoch nicht durch die Hauptbenutzertransaktion zugegriffen wurde, werden im Rahmen des Dusty-Corner-Scans (einem Scan der Indexbereiche, auf die seltener zugegriffen wird) durch den Leerlaufthread bereinigt.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Spaltenname|Typ|Description|  
+|Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|Die Anzahl der Zeilen, die vom Subsystem der Garbage Collection überprüft werden, nachdem der Server gestartet wurde.|  
 |rows_no_sweep_needed|**bigint**|Die Anzahl der Zeilen, die ohne Dusty-Corner-Scan entfernt wurden.|  

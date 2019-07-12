@@ -1,20 +1,20 @@
 ---
-title: Konfigurieren von SQL Server-Einstellungen unter Linux | Microsoft-Dokumentation
+title: Konfigurieren von SQL Server-Einstellungen unter Linux
 description: Dieser Artikel beschreibt, wie Sie die Mssql-Conf-Tool zu verwenden, um SQL Server-Einstellungen unter Linux konfigurieren.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719403"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834003"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
 
@@ -394,7 +394,7 @@ Die erste Phase Aufzeichnung wird gesteuert, indem die **coredump.coredumptype**
 
     Die folgende Tabelle enthält die möglichen **coredump.coredumptype** Werte.
 
-    | Typ | Description |
+    | Typ | Beschreibung |
     |-----|-----|
     | **mini** | Mini ist der kleinste Dump-Dateityp. Es verwendet die Linux-System-Informationen, um zu bestimmen, Threads und Module im Prozess. Das Speicherabbild enthält nur die Host-Umgebung Threadstapel und Module. Es enthält keine Speicherverweise indirekte oder globale Variablen. |
     | **miniplus** | MiniPlus Mini ähnelt, aber sie zusätzlichen Arbeitsspeicher enthält. Es versteht die Interna der SQLPAL und der hostumgebung, die der Dump werden die folgenden Arbeitsspeicherbereiche hinzugefügt:</br></br> -Verschiedene globale Variablen</br> – Alle Arbeitsspeicher über 64TB</br> -Alle Regionen finden Sie im Namen **/proc/$ pid/Zuordnungen**</br> -Indirekte Arbeitsspeicher von Threads und Stapel</br> -Thread Informationen</br> -Verknüpft ist, die Teb und des Peb</br> -Module-Informationen</br> -VMM und VAD-Struktur |
@@ -614,7 +614,7 @@ Die **network.tcpport** Einstellung ändert sich des TCP-Ports, in dem von SQL S
 
 Die folgenden Optionen konfigurieren TLS für eine Instanz von SQL Server unter Linux ausgeführt wird.
 
-|Option |Description |
+|Option |Beschreibung |
 |--- |--- |
 |**network.forceencryption** |Wenn der Wert 1 ist, klicken Sie dann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erzwingt, dass alle Verbindungen verschlüsselt werden. Standardmäßig ist diese Option 0. |
 |**network.tlscert** |Der absolute Pfad zu dem Zertifikat-Datei, die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS verwendet. Beispiel:   `/etc/ssl/certs/mssql.pem`  Die Zertifikatdatei muss den Mssql-Konto zugänglich sein. Microsoft empfiehlt die Beschränkung des Zugriffs auf die Datei mit `chown mssql:mssql <file>; chmod 400 <file>`. |

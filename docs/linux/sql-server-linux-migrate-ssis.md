@@ -1,20 +1,20 @@
 ---
-title: Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS | Microsoft-Dokumentation
+title: Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS
 description: Dieser Artikel beschreibt die SQL Server Integration Services (SSIS) für Linux-Computer
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 724f78cd88330a0dc2fcc001cb4c34d09e453246
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 161bdd4d624e342864a930ae67b70a2f866b2acd
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705201"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834877"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS
 
@@ -26,7 +26,7 @@ SSIS-Pakete, die unter Linux können mit Microsoft SQL Server unter Windows loka
 
 Weitere Informationen zu den Funktionen von SSIS finden Sie unter [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um die SSIS-Pakete auf einem Linux-Computer ausführen zu können, müssen Sie zuerst installieren Sie SQL Server Integration Services. SSIS ist nicht bei der Installation von SQL Server für Linux-Computer enthalten. Installationsanweisungen finden Sie unter [Installieren von SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 

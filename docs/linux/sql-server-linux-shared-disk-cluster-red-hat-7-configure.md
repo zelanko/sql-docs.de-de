@@ -1,20 +1,21 @@
 ---
-title: Konfigurieren Sie freigegebenen Cluster Red Hat Enterprise Linux für SQL Server | Microsoft-Dokumentation
+title: Konfigurieren Sie freigegebenen Cluster Red Hat Enterprise Linux für SQL Server
 description: Implementieren Sie hohen Verfügbarkeit durch Cluster mit freigegebenen Datenträgern Red Hat Enterprise Linux für SQL Server konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2eb3a0a135fc43e3dadb855682cea9f6465d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712897"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833137"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie Red Hat Enterprise Linux Cluster mit freigegebenen Datenträgern werden für SQL Server.
 
@@ -38,7 +39,7 @@ Eine Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server v
 
 Die folgenden Abschnitte führen die Schritte zum Einrichten einer Lösung mit Failovercluster. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie den NFS-Server bereitstellen. Unten aufgeführten Schritte beschreiben Sie, wie diese Server konfiguriert werden.
 

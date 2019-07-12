@@ -1,20 +1,20 @@
 ---
-title: Problembehandlung bei SQLServer unter Linux | Microsoft-Dokumentation
+title: Problembehandlung bei SQLServer unter Linux
 description: Bietet Tipps zur Problembehandlung für die Verwendung von SQL Server unter Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 6ff0e1eb50f7e7af831ed58b4de05b520fd3f06a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 507b8e590a359df9a2abf53531dbddf7cca814ea
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712857"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833115"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer unter Linux
 
@@ -28,7 +28,7 @@ Dieses Dokument beschreibt, wie Sie die Problembehandlung für Microsoft SQL Ser
 ## <a id="connection"></a> Problembehandlung bei Verbindungsfehlern
 Wenn beim Herstellen einer Verbindung mit dem Linux-SQL-Server Probleme auftreten, sind einige Punkte zu überprüfen.
 
-- Wenn Sie nicht lokal über eine Verbindung herstellen können **"localhost"**, versuchen Sie es stattdessen mit die IP-Adresse 127.0.0.1. Es ist möglich, **"localhost"** ist nicht ordnungsgemäß an diese Adresse zugeordnet.
+- Wenn Sie nicht lokal über eine Verbindung herstellen können **"localhost"** , versuchen Sie es stattdessen mit die IP-Adresse 127.0.0.1. Es ist möglich, **"localhost"** ist nicht ordnungsgemäß an diese Adresse zugeordnet.
 
 - Stellen Sie sicher, dass der Servername oder IP-Adresse von Ihrem Clientcomputer erreichbar ist.
 

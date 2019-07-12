@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716678"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833041"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67716678"
 |end_time|**datetime**|UTC-Zeit, die das Ende des aktuellen Berichtsintervalls angibt.|  
 |avg_cpu_percent|**Decimal (5,2)**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
 |avg_data_io_percent|**Decimal (5,2)**|Durchschnittliche Daten-e/a-Auslastung in Prozent des Grenzwerts der Dienstebene.|  
-|avg_log_write_percent|**Decimal (5,2)**|Durchschnittliche Schreib-e/a-Durchsatz Auslastung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
+|avg_log_write_percent|**Decimal (5,2)**|Durchschnittliche Transaktionsprotokoll-Schreibvorgänge als Prozentsatz des Dienst-ebenenhöchstwerts (in Mbit/s).|  
 |avg_memory_usage_percent|**Decimal (5,2)**|Die durchschnittliche Arbeitsspeichernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.<br /><br /> Dies schließt für pufferpoolseiten und Speicherung von In-Memory-OLTP-Objekten verwendete Arbeitsspeicher.|  
 |xtp_storage_percent|**Decimal (5,2)**|Speicherauslastung für In-Memory OLTP in Prozent des Grenzwerts der Dienstebene (am Ende des Berichtsintervalls). Dies umfasst auch Arbeitsspeicher, die für die Speicherung der folgenden In-Memory OLTP-Objekte verwendet: Speicheroptimierte Tabellen, Indizes und Tabellenvariablen. Darüber hinaus Arbeitsspeicher für die Verarbeitung von ALTER TABLE-Vorgänge verwendet.<br /><br /> Gibt 0 zurück, wenn In-Memory OLTP nicht in der Datenbank verwendet wird.|  
 |max_worker_percent|**Decimal (5,2)**|Maximale gleichzeitige Worker (Anforderungen) in Prozent des Grenzwerts der Dienstebene der Datenbank.|  

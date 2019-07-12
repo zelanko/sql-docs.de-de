@@ -6,16 +6,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 manager: jroth
-ms.date: 02/28/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728918"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826522"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für SQL Server-big Data-Cluster-Bereitstellungen
 
@@ -76,9 +76,39 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
    az group create --name sqlbdcgroup --location westus2
    ```
 
+## <a name="verify-available-kubernetes-versions"></a>Überprüfen Sie die verfügbare Kubernetes-Versionen
+
+Verwenden Sie die neueste verfügbare Version von Kubernetes. Die neueste verfügbare Version hängt von den Speicherort der Bereitstellung des Clusters ab. Der folgende Befehl gibt Kubernetes-Versionen verfügbar an einem bestimmten Ort zurück.
+
+Bevor Sie den Befehl ausführen, aktualisieren Sie das Skript. Ersetzen Sie dies `<Azure data center>` durch den Speicherort Ihres Clusters.
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+Wählen Sie die neueste verfügbare Version für Ihren Cluster. Notieren Sie die Versionsnummer. Sie werden im nächsten Schritt verwendet.
+
 ## <a name="create-a-kubernetes-cluster"></a>Erstellen Sie einen Kubernetes-cluster
 
-1. Erstellen Sie einen Kubernetes-Cluster in AKS mit den [az Aks erstellen](https://docs.microsoft.com/cli/azure/aks) Befehl. Das folgende Beispiel erstellt einen Kubernetes-Cluster mit dem Namen *Kubcluster* mit einem Linux-Agent-Knoten der Größe **Standard_L8s**. Stellen Sie sicher, dass den AKS-Cluster in der gleichen Ressourcengruppe zu erstellen, die Sie in den vorherigen Abschnitten verwendet.
+1. Erstellen Sie einen Kubernetes-Cluster in AKS mit den [az Aks erstellen](https://docs.microsoft.com/cli/azure/aks) Befehl. Das folgende Beispiel erstellt einen Kubernetes-Cluster mit dem Namen *Kubcluster* mit einem Linux-Agent-Knoten der Größe **Standard_L8s**.
+
+   Ersetzen Sie vor dem Ausführen des Skripts `<version number>` mit der Versionsnummer, die Sie in den vorherigen Schritt identifiziert haben.
+
+   Stellen Sie sicher, dass den AKS-Cluster in der gleichen Ressourcengruppe zu erstellen, die Sie in den vorherigen Abschnitten verwendet.
 
    **bash:**
 
@@ -88,7 +118,7 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
    --generate-ssh-keys \
    --node-vm-size Standard_L8s \
    --node-count 1 \
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    **PowerShell:**
@@ -99,7 +129,7 @@ Eine Azure-Ressourcengruppe ist eine logische Gruppe, in dem, die Azure Ressourc
    --generate-ssh-keys `
    --node-vm-size Standard_L8s `
    --node-count 1 `
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    Sie können erhöhen oder verringern Sie die Anzahl von Kubernetes-Agent-Knoten durch Ändern der `--node-count <n>` , in denen `<n>` ist die Anzahl von Agent-Knoten, die Sie verwenden möchten. Dies schließt nicht den Hauptschlüssel Kubernetes-Knoten, der hinter den Kulissen von AKS verwaltet wird. Im vorherige Beispiel verwendet einen einzelnen Knoten nur für Evaluierungszwecke.

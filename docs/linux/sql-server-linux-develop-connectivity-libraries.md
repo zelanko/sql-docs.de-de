@@ -1,20 +1,20 @@
 ---
-title: Verbindungsbibliotheken und-Frameworks | Microsoft-Dokumentation
+title: Verbindungsbibliotheken und-Frameworks
 description: Zeigt die Connectivity-Treiber, die Client-apps in verschiedenen Sprachen verwenden können, die Verbindung mit Microsoft SQL Server lokal oder in der Cloud unter Linux, Windows oder mit Docker und Azure SQL-Datenbank und Azure SQL Data Warehouse.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88b212d9a39f990184753382f433f1c002a4634d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713204"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833853"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Verbindungsbibliotheken und-Frameworks für Microsoft SQL Server
 

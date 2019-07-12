@@ -1,31 +1,31 @@
 ---
-title: Konfigurieren von Linux-Repositorys für SQL Server 2017 und 2019 | Microsoft-Dokumentation
+title: Konfigurieren von Linux-Repositorys für SQL Server 2017 und 2019
 description: Überprüfen Sie, und konfigurieren Sie des Quellcode-Repositorys für 2019 für SQL Server und SQL Server 2017 unter Linux. Das Quellrepository wirkt sich auf die Version von SQL Server, die während der Installation und Upgrade angewendet wird.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713337"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834086"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Konfigurieren von Repositorys zum Installieren und Aktualisieren von SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-Dieser Artikel beschreibt, wie Sie die richtige Repository für SQL Server 2017 und 2019 für SQL Server-Installationen und Upgrades unter Linux konfigurieren. Im oberen Bereich die aktuelle Auswahl ist **Red Hat (RHEL)**.
+Dieser Artikel beschreibt, wie Sie die richtige Repository für SQL Server 2017 und 2019 für SQL Server-Installationen und Upgrades unter Linux konfigurieren. Im oberen Bereich die aktuelle Auswahl ist **Red Hat (RHEL)** .
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-Dieser Artikel beschreibt, wie Sie die richtige Repository für SQL Server 2017 und 2019 für SQL Server-Installationen und Upgrades unter Linux konfigurieren. Im oberen Bereich die aktuelle Auswahl ist **SUSE (SLES)**.
+Dieser Artikel beschreibt, wie Sie die richtige Repository für SQL Server 2017 und 2019 für SQL Server-Installationen und Upgrades unter Linux konfigurieren. Im oberen Bereich die aktuelle Auswahl ist **SUSE (SLES)** .
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -50,7 +50,7 @@ Wenn Sie SQL Server unter Linux installieren, müssen Sie ein Microsoft-Reposito
 
 Es ist wichtig zu beachten, dass es zwei Haupttypen von Repositorys für jede Verteilung gibt:
 
-- **Kumulative Updates (CU)**: Das kumulative Update (CU)-Repository enthält Pakete für die grundlegenden SQL Server-Version und alle Fehler behoben oder Verbesserungen seit diesem Release. Kumulative Updates sind spezifisch für ein Releaseversion, z. B. SQL Server 2017. Sie werden in regelmäßigen Abständen veröffentlicht.
+- **Kumulative Updates (CU)** : Das kumulative Update (CU)-Repository enthält Pakete für die grundlegenden SQL Server-Version und alle Fehler behoben oder Verbesserungen seit diesem Release. Kumulative Updates sind spezifisch für ein Releaseversion, z. B. SQL Server 2017. Sie werden in regelmäßigen Abständen veröffentlicht.
 
 - **GDR**: Das GDR-Repository enthält Pakete für die grundlegenden SQL Server-Version und nur wichtige Updates und Sicherheitsupdates seit diesem Release. Diese Updates werden auch die nächste CU-Version hinzugefügt.
 

@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652865"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833573"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Enthält Informationen über jeden Ausführungsplan, der mit einer Abfrage verbunden.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Der Primärschlüssel.|  
 |**query_id**|**bigint**|Fremdschlüssel. Verknüpft mit [query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
@@ -68,8 +68,11 @@ Erstens, wenn der Plan die folgenden Konstruktionen enthält:
 * einen Verweis auf eine externe Tabelle
 * eine verteilte Abfrage oder Volltextvorgänge
 * globale Abfragen 
-* Dynamischen oder Keyset-Cursor (das Erzwingen eines Plans wird für statische und schnellen Vorlauf Cursor unterstützt)
+* Dynamischen oder Keyset-Cursor 
 * eine ungültige Sternverknüpfungsspezifikation 
+
+> [!NOTE]
+> Azure SQL-Datenbank und SQL Server-2019 (Vorschau) unterstützt das Erzwingen eines Plans für statische und schnellen Vorlauf Cursor.
 
 Zweitens, wenn Objekte, die der Plan verwendet, nicht mehr zur Verfügung stehen:
 * eine Datenbank (wenn die Datenbank, aus der der Plan kommt, nicht mehr existiert)

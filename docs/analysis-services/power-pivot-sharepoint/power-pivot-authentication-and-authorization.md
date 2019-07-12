@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c4f72522c1803a364d9a309b5fa2d21fd9f2fe18
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402645"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826491"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot-Authentifizierung und -Autorisierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -100,20 +100,20 @@ ms.locfileid: "52402645"
 > [!NOTE]  
 >  Die meisten sicherheitsbezogenen Einstellungen gelten für vertrauenswürdige Speicherorte. Wenn Sie die Standardwerte beibehalten oder andere Werte für verschiedene Websites verwenden möchten, können Sie einen zusätzlichen vertrauenswürdigen Speicherort für Websites mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten erstellen und dann die folgenden Einstellungen nur für diese Websites konfigurieren. Weitere Informationen finden Sie unter [Erstellen eines vertrauenswürdigen Speicherorts für Power Pivot-Websites in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-|Bereich|Einstellung|Description|  
+|Bereich|Einstellung|Beschreibung|  
 |----------|-------------|-----------------|  
 |Webanwendung|Windows-Authentifizierungsanbieter|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] konvertiert ein von Excel Services abgerufenes Anspruchstoken in eine Windows-Benutzeridentität. Jede Webanwendung, die Excel Services als Ressource verwendet, muss für die Verwendung des Anbieters der Windows-Authentifizierung konfiguriert sein.|  
 |Vertrauenswürdiger Speicherort|Speicherorttyp|Für diesen Wert muss **Microsoft SharePoint Foundation**festgelegt werden. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server rufen eine Kopie der XLSX-Datei ab und laden sie auf einen Analysis Services-Server in der Farm hoch. Der Server kann nur XLSX-Dateien aus einer Inhaltsbibliothek abrufen.|  
 ||Externe Daten zulassen|Für diesen Wert muss **Vertrauenswürdige Datenverbindungsbibliotheken und eingebettete Verbindungen**festgelegt werden. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datenverbindungen sind in die Arbeitsmappe eingebettet. Wenn Sie keine eingebetteten Verbindungen zulassen, können Benutzer den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Cache anzeigen, aber eine Interaktion mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten kann nicht stattfinden.|  
 ||Beim Aktualisieren warnen|Dieser Wert sollte deaktiviert werden, wenn Sie Arbeitsmappen und Berichte mithilfe des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalogs speichern. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Der Katalog umfasst eine Dokumentvorschaufunktion, die am besten funktioniert, wenn Beim Öffnen aktualisieren und Beim Aktualisieren warnen deaktiviert sind.|  
 |Vertrauenswürdige Datenanbieter|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 ist standardmäßig eingeschlossen, aber der Zugriff auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten erfordert, dass der MSOLAP.4-Anbieter der SQL Server 2008 R2-Version entspricht.<br /><br /> MSOLAP.5 wird mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint installiert.<br /><br /> Entfernen Sie diese Anbieter nicht aus der Liste vertrauenswürdiger Datenanbieter. In einigen Fällen kann es erforderlich sein, zusätzliche Kopien dieses Anbieters auf weiteren SharePoint-Servern in der Farm zu installieren. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).|  
-|Vertrauenswürdige Datenverbindungsbibliotheken|Dies ist optional.|Sie können Office Data Connection-Dateien (ODC) in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen verwenden. Wenn Sie Verbindungsinformationen mithilfe von ODC-Dateien für lokale [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen bereitstellen, können Sie der Bibliothek die gleichen ODC-Dateien hinzufügen.|  
-|Benutzerdefinierte Funktionsassembly|Nicht verfügbar.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint ignoriert benutzerdefinierte Funktionsassemblys, die Sie für Excel Services erstellen und bereitstellen. Wenn Sie benutzerdefinierte Assemblys für ein bestimmtes Verhalten benötigen, beachten Sie, dass die von Ihnen erstellten benutzerdefinierten Funktionen bei der Verarbeitung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Abfragen nicht verwendet werden.|  
+|Vertrauenswürdige Datenverbindungsbibliotheken|Optional.|Sie können Office Data Connection-Dateien (ODC) in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen verwenden. Wenn Sie Verbindungsinformationen mithilfe von ODC-Dateien für lokale [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen bereitstellen, können Sie der Bibliothek die gleichen ODC-Dateien hinzufügen.|  
+|Benutzerdefinierte Funktionsassembly|Nicht zutreffend.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint ignoriert benutzerdefinierte Funktionsassemblys, die Sie für Excel Services erstellen und bereitstellen. Wenn Sie benutzerdefinierte Assemblys für ein bestimmtes Verhalten benötigen, beachten Sie, dass die von Ihnen erstellten benutzerdefinierten Funktionen bei der Verarbeitung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Abfragen nicht verwendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Power Pivot-Dienstkonten](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Konfigurieren des Power Pivot-Kontos für die unbeaufsichtigte Datenaktualisierung (Power Pivot für SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
- [Erstellen eines vertrauenswürdigen Speicherorts für Power Pivot-Websites in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Power Pivot-Sicherheitsarchitektur](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [PowerPivot-Sicherheitsarchitektur](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

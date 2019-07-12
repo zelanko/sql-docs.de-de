@@ -1,20 +1,21 @@
 ---
-title: Bereitstellen ein SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS) | Microsoft-Dokumentation
+title: Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS)
 description: In diesem Tutorial zeigt, wie Sie eine SQL Server-hochverfügbarkeitslösung mit Kubernetes in Azure Kubernetes Service bereitstellen.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 236ae198b77f8fdc63a6c4d5069e3b335a44a472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76c4003398368a1cdbadb257165dab6b048ebced
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704848"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832990"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS)
 
@@ -47,7 +48,7 @@ Im folgenden Diagramm das hosting der Knoten die `mssql-server` Container ein Fe
 
 ![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 * **Kubernetes-cluster**
    - Dieses Lernprogramm setzt voraus, einen Kubernetes-Cluster. Verwenden Sie die Schritte ["kubectl"](https://kubernetes.io/docs/user-guide/kubectl/) zum Verwalten des Clusters. 

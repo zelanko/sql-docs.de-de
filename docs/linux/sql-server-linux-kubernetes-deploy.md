@@ -3,18 +3,19 @@ title: Bereitstellen einer SQL Server Always On-verfügbarkeitsgruppe in einem K
 description: In diesem Artikel werden die Parameter für die SQL Server Kubernetes Always On Availability Group-Operator globale Anforderungen erläutert.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 07d0929dbdf60c31f1518a19a2999f0845d7d2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88b3b2a8c955c628284bec59c9e9fead98e174b8
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713115"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833244"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Bereitstellen einer SQL Server Always On-verfügbarkeitsgruppe in einem Kubernetes-cluster
 

@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,26 +18,25 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420852"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826603"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Gibt Informationen zu allen Spinlock-Wartevorgängen, die nach Typ strukturiert.  
   
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |NAME|**nvarchar(256)**|Der Name des Spinlock-Typs.|  
 |Konflikte|**bigint**|Wie oft ein Thread versucht, für den Spinlock und blockiert, weil ein anderer thread zurzeit enthält das Spinlock.|  
@@ -75,7 +71,7 @@ GO
    
  Die folgende Tabelle enthält kurze Beschreibungen der einige der am häufigsten verwendeten Spinlock-Typen.  
   
-|Spinlocktyp|Description|  
+|Spinlocktyp|Beschreibung|  
 |-----------------|-----------------|  
 |ABR|Nur interne Verwendung.|
 |ADB_CACHE|Nur interne Verwendung.|
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|Nur interne Verwendung.|
 |LIVE_TARGET_TVF|Nur interne Verwendung.|
 |LOCK_FREE_LIST|Nur interne Verwendung.|
-|LOCK_HASH|Schützt den Zugriff auf die Sperren-Manager-Hash-Tabelle, die Informationen zu den Sperren in einer Datenbank gespeichert. Finden Sie unter [in diesem Artikel](https://support.microsoft.comkb/2926217) für Weitere Informationen.|
+|LOCK_HASH|Schützt den Zugriff auf die Sperren-Manager-Hash-Tabelle, die Informationen zu den Sperren in einer Datenbank gespeichert. Finden Sie unter [in diesem Artikel](https://support.microsoft.com/kb/2926217) für Weitere Informationen.|
 |LOCK_NOTIFICATION|Nur interne Verwendung.|
 |LOCK_RESOURCE_ID|Nur interne Verwendung.|
 |LOCK_RW_ABTX_HASH_SET|Nur interne Verwendung.|
