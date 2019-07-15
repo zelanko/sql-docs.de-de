@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2e412e2ef25e9eb48a8068cbe6e75b2c1ec8797
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 18668d7c5a36a39bacf61383507d0911737e7762
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579826"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860639"
 ---
 # <a name="replicate-identity-columns"></a>Replizieren von Identitätsspalten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "67579826"
  So könnten Sie z. B. für **@pub_identity_range** 10.000, für **@identity_range** 1.000 (unter der Annahme einer geringeren Anzahl von Updates auf dem Abonnenten) und für **@threshold** . Nach 800 Einfügungen auf einem Abonnenten (80 Prozent von 1.000) wird einem Abonnenten ein neuer Bereich zugewiesen. Nach 8.000 Einfügungen auf dem Verleger wird dem Verleger ein neuer Bereich zugewiesen. Beim Zuweisen eines neuen Bereichs ergibt sich jedoch eine Lücke in den Identitätsbereichswerten in der Tabelle. Durch Angabe eines höheren Schwellenwerts fallen diese Lücken zwar kleiner aus, das System ist dann aber auch weniger fehlertolerant, d. h., wenn der Verteilungs-Agent aus irgendeinem Grund nicht ausgeführt werden kann, gehen einem Abonnenten möglicherweise schneller die Identitäten aus.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Zuweisen von Bereichen für die manuelle Identitätsbereichsverwaltung  
- Wenn Sie die manuelle Identitätsbereichsverwaltung angeben, müssen Sie sicherstellen, dass der Verleger und alle Abonnenten verschiedene Identitätsbereiche verwenden. Stellen Sie sich z. B. eine Tabelle auf dem Verleger mit einer als `IDENTITY(1,1)`definierten Identitätsspalte vor: Die Identitätsspalte beginnt mit 1 und erhöht sich bei jeder neu eingefügten Zeile um 1. Wenn die Tabelle auf dem Verleger 5.000 Zeilen besitzt und Sie für den weiteren Entwicklungsverlauf der Anwendung eine gewisse Vergrößerung der Tabelle erwarten, könnte der Verleger den Bereich 1-10.000 verwenden. Bei zwei Abonnenten könnte der Abonnent A den Bereich 10.001 bis 20.000 und der Abonnent B den Bereich 20.001 bis 30.000 verwenden.  
+ Wenn Sie die manuelle Identitätsbereichsverwaltung angeben, müssen Sie sicherstellen, dass der Verleger und alle Abonnenten verschiedene Identitätsbereiche verwenden. Stellen Sie sich z. B. eine Tabelle auf dem Verleger mit einer als `IDENTITY(1,1)`definierten Identitätsspalte vor: Die Identitätsspalte beginnt mit 1 und erhöht sich bei jeder neu eingefügten Zeile um 1. Wenn die Tabelle auf dem Verleger 5.000 Zeilen besitzt und Sie für den weiteren Entwicklungsverlauf der Anwendung eine gewisse Vergrößerung der Tabelle erwarten, könnte der Verleger den Bereich 1-10.000 verwenden. Bei Vorhandensein zweier Abonnenten könnte der Abonnent A den Bereich 10.001 bis 20.000 und der Abonnent B den Bereich 20.001 bis 30.000 verwenden.  
   
  Nachdem ein Abonnent mit einer Momentaufnahme oder auf andere Weise initialisiert wurde, führen Sie DBCC CHECKIDENT aus, um dem Abonnenten einen Anfangspunkt für dessen Identitätsbereich zuzuweisen. Auf Abonnent A würden Sie dazu z. B. `DBCC CHECKIDENT('<TableName>','reseed',10001)`ausführen. Auf Abonnent B ist dann `CHECKIDENT('<TableName>','reseed',20001)`auszuführen.  
   

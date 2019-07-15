@@ -20,12 +20,12 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981660"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832963"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Anweisungen für SQL Server-Hilfsprogramme - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "65981660"
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  Auf den ODBC- oder OLE DB-APIs basierende Anwendungen erhalten einen Syntaxfehler, wenn sie versuchen, einen GO-Befehl auszuführen. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramme senden nie einen GO-Befehl an den Server.  
   
- Verwenden Sie kein Semikolon als Abschlusszeichen für Anweisung nach GO.  
-  
-## <a name="permissions"></a>Berechtigungen  
- GO ist ein Hilfsprogrammbefehl, für den keine Berechtigungen erforderlich sind. Der Befehl kann von jedem Benutzer ausgeführt werden.  
-  
-```  
+ Verwenden Sie kein Semikolon als Abschlusszeichen für Anweisung nach GO.
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>Berechtigungen  
+ GO ist ein Hilfsprogrammbefehl, für den keine Berechtigungen erforderlich sind. Der Befehl kann von jedem Benutzer ausgeführt werden.    
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden zwei Batches erstellt. Der erste Batch enthält nur eine `USE AdventureWorks2012`-Anweisung zum Festlegen des Datenbankkontexts. Die verbleibenden Anweisungen verwenden eine lokale Variable. Daher müssen alle Deklarationen von lokalen Variablen in einem einzelnen Batch gruppiert werden. Dies wird erreicht, indem ein `GO`-Befehl erst nach der letzten Anweisung, die auf die Variable verweist, ausgeführt wird.  

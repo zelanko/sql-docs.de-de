@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85125ef01d299c34081578bd38eb6ac3fdb328a4
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 74f0746d3b69183702ef2a9d0609c39e25b28e95
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582719"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860474"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Arbeiten mit Replikations-Agent-Profilen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "67582719"
   
 1.  Wenn im Dialogfeld **Agentprofile** Profile für mehrere Agents angezeigt werden, wählen Sie einen Agent aus.  
   
-2.  Klicken Sie auf die Eigenschaftenschaltfläche ( **?** ) neben einem Profil.  
+2.  Klicken Sie auf die Eigenschaftenschaltfläche ( **…** ) neben einem Profil.  
   
 3.  Im Dialogfeld **\<Profilname> Profileigenschaften** werden die Parameter und Werte angezeigt.  
   

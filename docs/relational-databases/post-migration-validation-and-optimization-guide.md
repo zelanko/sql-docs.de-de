@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1ba2746e91c33c49c943a9c100e9ea3bd6d3d9e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581229"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860498"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 
@@ -53,7 +53,7 @@ Weitere Informationen zu diesem Thema finden Sie unter [Aufrechterhalten einer s
 **Gilt für:** die Migration von Drittanbieterplattformen (z.B. Oracle, DB2, MySQL und Sybase) zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Wenn bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] das Problem bereits in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Quellinstanz vorlag, wird es durch eine Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht behoben. 
+> Bei Migrationen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird dieses Szenario bei einer Migration auf eine neuere, unveränderte Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht berücksichtigt, wenn das Problem auf dem Quell-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereits bestand. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kompiliert Abfragepläne in gespeicherten Prozeduren, indem die Eingabeparameter bei der ersten Kompilierung ermittelt werden. Anschließend wird ein parametrisierter und wiederverwendeter Plan generiert, der für diese Verteilung von Eingabedaten optimiert ist. Die meisten Anweisungen, die triviale Pläne generieren, werden parametrisiert, wenn auch nicht in gespeicherten Prozeduren. Nachdem Sie ein Plan zuerst zwischengespeichert wird, wird jede spätere Ausführung einem zuvor zwischengespeicherten Plan zugeordnet.
 Ein mögliches Problem tritt auf, wenn diese erste Kompilierung möglicherweise nicht die am häufigsten verwendeten Parametersätze für die übliche Arbeitsauslastung verwendet hat. Bei anderen Parametern wird derselbe Ausführungsplans ineffizient. Weitere Informationen zu diesem Thema finden Sie unter [Parameterermittlung](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).

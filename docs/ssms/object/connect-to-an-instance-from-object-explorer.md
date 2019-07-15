@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fa363c2715057a0f81a691911a7e06b5104c5501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 2ce44830eedc410388d44558371dc42f1ee52825
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088755"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690030"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Verbinden mit einem SQL-Server oder einer Azure SQL-Datenbank
 
@@ -27,7 +27,7 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
   
 ## <a name="connecting-to-a-server"></a>Verbinden mit einem Server  
 
-1. Klicken Sie im **Objekt-Explorer** auf **Verbinden &gt; Datenbank-Engine…**.
+1. Klicken Sie im **Objekt-Explorer** auf **Verbinden &gt; Datenbank-Engine…** .
 
    ![connect](../media/connect-to-server/connect-db-engine.png)
 
@@ -35,7 +35,7 @@ Um mit Servern und Datenbanken arbeiten zu können, müssen Sie zuerst eine Verb
 
    ![Verbindung mit Server herstellen](../media/connect-to-server/connect.png)
 
-1. Wenn Sie eine Verbindung zu einem Azure SQL-Server herstellen, werden Sie möglicherweise dazu aufgefordert, sich anzumelden, um eine Firewallregel zu erstellen. Klicken Sie auf **Anmelden…**. Falls dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.
+1. Wenn Sie eine Verbindung zu einem Azure SQL-Server herstellen, werden Sie möglicherweise dazu aufgefordert, sich anzumelden, um eine Firewallregel zu erstellen. Klicken Sie auf **Anmelden…** . Falls dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.
 
    ![Firewall](../media/connect-to-server/firewall-rule-sign-in.png)
 

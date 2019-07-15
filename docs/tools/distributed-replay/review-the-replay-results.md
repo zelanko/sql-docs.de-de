@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a491f61544e89883a46632aca17c80d8f883dee8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715662"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729338"
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ ms.locfileid: "62715662"
 |TextData|**ntext**|Der Inhalt von TextData hängt von der EventClass ab.<br /><br /> Für Audit Login und ExistingConnection sind dies die festgelegten Optionen für die Verbindung.<br /><br /> Für SQL:BatchStarting ist dies der Text der Batchanforderung.<br /><br /> Für RPC:Starting ist dies die gespeicherte Prozedur, die aufgerufen wurde.<br /><br /> Für das Replay Settings-Ereignis enthält diese Spalte die in der Wiedergabekonfigurationsdatei definierten Einstellungen.<br /><br /> Für das Replay Statistics-Ereignis enthält diese Spalte die folgenden Informationen:<br /><br /> – Die Zielinstanz von SQL Server für die Wiedergabe<br /><br /> – Die Gesamtanzahl der wiedergebbaren Ereignisse<br /><br /> – Die Anzahl der Anbieterfehler<br /><br /> – Die Anzahl der internen Fehler<br /><br /> – Interne Warnungen<br /><br /> – Gesamtzahl der Fehler<br /><br /> – Gesamterfolgsquote<br /><br /> – Die Wiedergabezeit (HH:MM:SS:MMM)<br /><br /> Für das Replay Result Set-Ereignis wird die Liste der Spaltenheader für die Rückgabeergebnisse angezeigt.<br /><br /> Für das Replay Result Row-Ereignis wird der Rückgabewert aller Spalten für diese Zeile angezeigt.<br /><br /> Für Replay Internal Warning und Replay Provider Error enthält diese Spalte die Anbieterwarnungen bzw. -fehler.|4|  
 |Attention|**bigint**|Die Beachtungsdauer (in Millisekunden) für das Ereignis. Dies wird anhand des Attention-Ereignisses der Aufzeichnungsablaufverfolgung berechnet. Wenn kein Abfragetimeout für das Ereignis angegeben wurde, wird diese Spalte nicht aufgefüllt (NULL).|5|  
 |SubmitTime|**datetime**|Der Zeitpunkt, zu dem das Ereignis an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet wurde.|6|  
-|IsSuccessful|**ssNoversion**|Ein boolesches Flag, das angibt, ob ein bestimmtes Ereignis erfolgreich ausgeführt wurde und Resultsets an den Client zurückgegeben wurden.<br /><br /> Ein Ereignis, das eine Warnung generiert (wenn z. B. ein Ereignis aufgrund von Attention oder eines vom Benutzer angegebenen Timeouts abgebrochen wird), gilt als erfolgreich.<br /><br /> IsSuccessful kann die folgenden Werte aufweisen:<br /><br /> 1 = erfolgreich<br /><br /> 0 = Fehler|7|  
+|IsSuccessful|**int**|Ein boolesches Flag, das angibt, ob ein bestimmtes Ereignis erfolgreich ausgeführt wurde und Resultsets an den Client zurückgegeben wurden.<br /><br /> Ein Ereignis, das eine Warnung generiert (wenn z. B. ein Ereignis aufgrund von Attention oder eines vom Benutzer angegebenen Timeouts abgebrochen wird), gilt als erfolgreich.<br /><br /> IsSuccessful kann die folgenden Werte aufweisen:<br /><br /> 1 = erfolgreich<br /><br /> 0 = Fehler|7|  
 |Duration [microsec]|**bigint**|Die Antwortzeitdauer (in Mikrosekunden) für das Ereignis. Die Messung beginnt, wenn das Anmelde-/Abmelde-/RPC-/Sprachereignis an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet wurde.<br /><br /> Bei erfolgreichem Ereignis wird die Messung beendet, wenn das vollständige Resultset verarbeitet wurde.<br /><br /> Wenn das Ereignis nicht erfolgreich ist, endet die Messung zum Zeitpunkt des Fehlschlags oder Abbruchs des Ereignisses.|8|  
 |RowCount|**bigint**|Wird abhängig vom Wert von `<RecordRowCount>` in der Wiedergabekonfigurationsdatei aufgefüllt:<br /><br /> Wenn `<RecordRowCount>` gleich Yes ist, enthält diese Zelle die Anzahl der Zeilen im Resultset, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurückgegeben werden.<br /><br /> Wenn `<RecordRowCount>` gleich No ist, wird diese Zelle nicht aufgefüllt (NULL).|9|  
-|CaptureSPID|**ssNoversion**|Die ID der Aufzeichnungssitzung für das Ereignis.|10|  
-|ConnectionID|**ssNoversion**|Die ID der Aufzeichnungsverbindung für das Ereignis.|11|  
-|ReplaySPID|**ssNoversion**|Die ID der Wiedergabesitzung für das Ereignis.|12|  
+|CaptureSPID|**int**|Die ID der Aufzeichnungssitzung für das Ereignis.|10|  
+|ConnectionID|**int**|Die ID der Aufzeichnungsverbindung für das Ereignis.|11|  
+|ReplaySPID|**int**|Die ID der Wiedergabesitzung für das Ereignis.|12|  
 |DatabaseName|**nvarchar**|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|13|  
 |LoginName|**nvarchar**|Der Benutzeranmeldename. Dabei kann es sich um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder die Microsoft Windows-Anmeldeinformationen im Format *Domänenname*\\*Benutzername*handeln.|14|  
 |CaptureHostName|**nvarchar**|Der Name des Computers, auf dem der Clientdienst während der Aufzeichnung ausgeführt wird.|15|  

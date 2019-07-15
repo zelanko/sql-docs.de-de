@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f2113d360f1c8de274d1609d70a66b82118043ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d62eee56c01ba17ead5ae16b1ddf8fc70004812
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600539"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731869"
 ---
 # <a name="sql-server-services"></a>SQL Server-Dienste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47600539"
 > [!NOTE]  
 >  Falls die Knoten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste nicht durch die auf dem Computer verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste aufgefüllt werden, haben Sie möglicherweise keine ausreichenden Berechtigungen zum Zugreifen auf die Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI). Informationen zum Konfigurieren von Berechtigungen für WMI finden Sie in der Online-Dokumentation im Thema "Vorgehensweise: Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools."  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hilfe zu SQL Server-Konfigurations-Manager](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   
