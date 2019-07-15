@@ -9041,11 +9041,13 @@
             - name: Installieren nicht englischsprachiger SSMS-Versionen
               href: ssms/install-other-languages.md
             - name: Verwenden von Vorlagen in SSMS
-              href: ssms/tutorials/templates-ssms.md
+              href: ssms/template/templates-ssms.md
             - name: Erstellen von Skripts für Objekte
               href: ssms/tutorials/scripting-ssms.md
             - name: SSMS-Konfiguration
               href: ssms/tutorials/ssms-configuration.md
+            - name: Verwenden von anderen Tipps und Tricks
+              href: ssms/tutorials/ssms-tricks.md
             - name: Anpassen von Menüs und Tastenkombinationen
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools
@@ -9959,8 +9961,6 @@
                   href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: Ressourcen
           items:
-            - name: SQL Server Management Studio
-              href: ssms/tutorials/tutorial-sql-server-management-studio.md
             - name: SSMS-Supportrichtlinie
               href: ssms/support-policy.md
             - name: Supportoptionen für Geschäftsbenutzer
@@ -10180,15 +10180,15 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: Lernprogramme
       items:
-        - name: '1: Migrieren von Windows'
+        - name: Migrieren von Windows
           href: linux/sql-server-linux-migrate-restore-database.md
-        - name: '2: Migrieren zu Docker'
+        - name: Migrieren zu Docker
           href: linux/tutorial-restore-backup-in-sql-server-container.md
-        - name: '3: Erstellen eines Auftrags'
+        - name: Erstellen eines Auftrags
           href: linux/sql-server-linux-run-sql-server-agent-job.md
-        - name: '4: Einrichten der AD-Authentifizierung'
+        - name: Einrichten der AD-Authentifizierung
           href: linux/sql-server-linux-active-directory-authentication.md
-        - name: '5: Erstellen einer Failoverclusterinstanz'
+        - name: Erstellen einer Failoverclusterinstanz
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
             - name: iSCSI
@@ -10197,16 +10197,18 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: '6: Ausführen einer Failoverclusterinstanz (SQL Server unter Linux)'
+        - name: Ausführen einer Failoverclusterinstanz – SQL Server unter Linux
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
-        - name: '7: Bereitstellen eines Pacemaker-Clusters'
+        - name: Bereitstellen eines Pacemaker-Clusters
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-        - name: '8: Erstellen und Konfigurieren von Verfügbarkeitsgruppen'
+        - name: Erstellen und Konfigurieren von Verfügbarkeitsgruppen
           href: linux/sql-server-linux-create-availability-group.md
-        - name: '9: Bereitstellen in Kubernetes'
+        - name: Bereitstellen in Kubernetes
           href: linux/tutorial-sql-server-containers-kubernetes.md
-        - name: '10: Konfigurieren der Replikation'
+        - name: Konfigurieren der Replikation
           href: linux/sql-server-linux-replication-tutorial-tsql.md
+        - name: Machine Learning in einem Container
+          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: Konzepte
       items:
         - name: Installieren
