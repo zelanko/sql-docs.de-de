@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037835"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688514"
 ---
 # <a name="report-builder-in-sql-server"></a>Berichts-Generator in SQL Server
 
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist ein Tool zum Erstellen von paginierten Berichten für Geschäftsbenutzer, die es bevorzugen, in einer eigenständigen Umgebung zu arbeiten, statt den Berichts-Designer in Visual Studio bzw. SSDT zu verwenden.  Wenn Sie einen paginierten Bericht erstellen, erstellen Sie Berichtsdefinitionen, die angeben, welche Daten abgerufen werden sollen, von woher die Daten abgerufen werden sollen und wie sie dargestellt werden sollen. Wenn Sie den Bericht ausführen lassen, nimmt der Berichtsprozessor die von Ihnen angegebene Berichtsdefinition, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu erstellen. Sie können eine Vorschau des Berichts in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] anzeigen. Dann veröffentlichen Sie den Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus (2016 und frühere Versionen). 
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ist ein Tool zum Erstellen von paginierten Berichten für Geschäftsbenutzer, die es bevorzugen, in einer eigenständigen Umgebung zu arbeiten, statt den Berichts-Designer in Visual Studio bzw. SSDT zu verwenden.  Wenn Sie einen paginierten Bericht entwerfen, erstellen Sie Berichtsdefinitionen, die angeben, welche Daten abgerufen werden sollen, von woher die Daten abgerufen werden sollen und wie sie dargestellt werden sollen. Wenn Sie den Bericht ausführen lassen, nimmt der Berichtsprozessor die von Ihnen angegebene Berichtsdefinition, ruft die Daten ab und kombiniert sie mit dem Berichtslayout, um den Bericht zu erstellen. Sie können eine Vorschau des Berichts in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] anzeigen. Dann veröffentlichen Sie den Bericht auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver im einheitlichen Modus oder im integrierten SharePoint-Modus (2016 und frühere Versionen). 
 
 Sie können einen paginierten Bericht auch im Power BI-Dienst veröffentlichen. Weitere Informationen finden Sie unter [paginierte Berichte in Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (Vorschau).
   

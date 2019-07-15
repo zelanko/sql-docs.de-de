@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b9fe3c95d268291ea06bb7471c8dad627aa89028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 716768027c855b86a0cffdee4bf64c5d1c66badd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403004"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686708"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Reporting Services-Beispielskript für "rs.exe" zum Migrieren von Inhalten zwischen Berichtsservern
 
@@ -49,7 +49,7 @@ Mit dem Skript können Inhalte zwischen Berichtsservern im gleichen Modus oder i
 |Element|Migriert|SharePoint|und Beschreibung|  
 |----------|--------------|----------------|-----------------|  
 |Kennwörter|**Nein**|**Nein**|Kennwörter werden **NICHT** migriert. Aktualisieren Sie nach dem Migrieren der Inhaltselemente die Anmeldeinformationen auf dem Zielserver. Beispiel: Datenquellen mit gespeicherten Anmeldeinformationen.|  
-|Meine Berichte|**Nein**|**Nein**|Die Funktion „Meine Berichte“ im einheitlichen Modus basiert auf einzelnen Benutzeranmeldungen. Daher hat der Skriptdienst keinen Zugriff auf Inhalte im Ordner „Meine Berichte“ für Benutzer, sofern nicht der **-u**-Parameter verwendet wird, mit dem das RSS-Skript ausgeführt wird. Außerdem ist „Meine Berichte“ kein Feature des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SharePoint-Modus, und Elemente in den Ordnern können nicht in eine SharePoint-Umgebung kopiert werden. Mit dem Skript werden daher keine Berichtselemente in den „Meine Berichte“-Ordnern auf einem Quellberichtsserver im einheitlichen Modus kopiert.<br /><br /> Führen Sie die folgenden Schritte aus, um die Inhalte der „Meine Berichte“-Ordner mit diesem Skript zu migrieren:<br /><br /> 1.  Erstellen Sie neue Ordner im Webportal. Optional können Sie Ordner oder Unterordner für jeden Benutzer erstellen.<br />2.  Melden Sie sich als einer der Benutzer mit Inhalten in „Meine Berichte“ an.<br />3.  Wählen Sie im Webportal den Ordner **Meine Berichte** aus.<br />4.  Klicken Sie auf die Ansicht **Details** für den Ordner.<br />5.  Wählen Sie die Berichte aus, die Sie kopieren möchten.<br />6.  Wählen Sie **Verschieben** in der Symbolleiste des Webportals aus.<br />7.  Wählen Sie den gewünschten Zielordner aus.<br />8.  Wiederholen Sie die Schritte 2–7 für jeden Benutzer.<br />9. Führen Sie das Skript aus.|  
+|Meine Berichte|**Nein**|**Nein**|Die Funktion „Meine Berichte“ im einheitlichen Modus basiert auf einzelnen Benutzeranmeldungen. Daher hat der Skriptdienst keinen Zugriff auf Inhalte im Ordner „Meine Berichte“ für Benutzer, sofern nicht der **-u**-Parameter verwendet wird, mit dem das RSS-Skript ausgeführt wird. Außerdem ist „Meine Berichte“ kein Feature des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-SharePoint-Modus, und Elemente in den Ordnern können nicht in eine SharePoint-Umgebung kopiert werden. Mit dem Skript werden daher keine Berichtselemente in den „Meine Berichte“-Ordnern auf einem Quellberichtsserver im einheitlichen Modus kopiert.<br /><br /> Führen Sie die folgenden Schritte aus, um die Inhalte der „Meine Berichte“-Ordner mit diesem Skript zu migrieren:<br /><br /> 1.  Erstellen Sie neue Ordner im Webportal. Optional können Sie Ordner oder Unterordner für jeden Benutzer erstellen.<br />2.  Melden Sie sich als einer der Benutzer mit Inhalten in „Meine Berichte“ an.<br />3.  Wählen Sie im Webportal den Ordner **Meine Berichte** aus.<br />4.  Klicken Sie auf die Ansicht **Details** für den Ordner.<br />5.  Wählen Sie die Berichte aus, die Sie kopieren möchten.<br />6.  Wählen Sie in der Symbolleiste des Webportals die Option **Verschieben** aus.<br />7.  Wählen Sie den gewünschten Zielordner aus.<br />8.  Wiederholen Sie die Schritte 2–7 für jeden Benutzer.<br />9. Führen Sie das Skript aus.|  
 |Verlauf|**Nein**|**Nein**||  
 |Verlaufseinstellungen|Ja|Ja|Die Verlaufseinstellungen werden migriert, die Verlaufsdetails werden jedoch NICHT migriert.|  
 |Zeitpläne|Ja|Ja|Zum Migrieren von Zeitplänen muss der SQL Server-Agent auf dem Zielserver ausgeführt werden. Wenn der SQL Server-Agent auf dem Zielserver nicht ausgeführt wird, wird eine Fehlermeldung ähnlich wie in diesem Beispiel angezeigt:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  

@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bc5ee796addb8c77170de2e3166aefb74d046ad1
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: HT
+ms.openlocfilehash: a8ff4689c4b9746178d9030d82b9ed8fccdb961f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044616"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733420"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte "Erweitert")
 
@@ -34,15 +34,15 @@ Weitere Informationen zum Konfigurieren anderer [!INCLUDE[ssNoVersion](../../inc
 
 **Erweiterter Schutz** wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]vollständig unterstützt. Für andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clientanbieter wird **Erweiterter Schutz** derzeit nicht unterstützt.
 
-## <a name="options"></a>Optionen
+## <a name="options"></a>enthalten
 
 ### <a name="extended-protection"></a>wird von
 
 Es gibt drei mögliche Werte:  
 
-- **Off**: Bedeutet, dass **erweiterter Schutz** ist deaktiviert. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz akzeptiert Verbindungen von jedem beliebigen Client, unabhängig davon, ob er geschützt ist oder nicht. **Aus** ist mit älteren und nicht gepatchten Betriebssystemen kompatibel, bietet aber weniger Sicherheit. Verwenden Sie diese Einstellung nur, wenn Sie wissen, dass die Clientbetriebssysteme keinen erweiterten Schutz unterstützen.
+- **Off**: bedeutet, dass **erweiterter Schutz** ist deaktiviert. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz akzeptiert Verbindungen von jedem beliebigen Client, unabhängig davon, ob er geschützt ist oder nicht. **Aus** ist mit älteren und nicht gepatchten Betriebssystemen kompatibel, bietet aber weniger Sicherheit. Verwenden Sie diese Einstellung nur, wenn Sie wissen, dass die Clientbetriebssysteme keinen erweiterten Schutz unterstützen.
 
-- **Zulässig**: Bedeutet, dass **Erweiterter Schutz** für Verbindungen von Betriebssystemen vorausgesetzt wird, die die Funktion **Erweiterter Schutz** unterstützen. Verbindungen von ungeschützten Clientanwendungen, die auf geschützten Clientbetriebssystemen ausgeführt werden, werden abgelehnt. **Erweiterter Schutz** wird für Verbindungen von ungeschützten Betriebssystemen ignoriert. Diese Einstellung ist sicherer als **Aus**, bietet jedoch nicht die höchste Sicherheit. Verwenden Sie diese Einstellung in gemischten Umgebungen, in denen einige Betriebssysteme oder Anwendungen die Funktion **Erweiterter Schutz** unterstützen, andere jedoch nicht.
+- **Zulässig**: Bedeutet, dass **Erweiterter Schutz** für Verbindungen von Betriebssystemen erforderlich ist, die die Funktion **Erweiterter Schutz** unterstützen. Verbindungen von ungeschützten Clientanwendungen, die auf geschützten Clientbetriebssystemen ausgeführt werden, werden abgelehnt. **Erweiterter Schutz** wird für Verbindungen von ungeschützten Betriebssystemen ignoriert. Diese Einstellung ist sicherer als **Aus**, bietet jedoch nicht die höchste Sicherheit. Verwenden Sie diese Einstellung in gemischten Umgebungen, in denen einige Betriebssysteme oder Anwendungen die Funktion **Erweiterter Schutz** unterstützen, andere jedoch nicht.
 
 - **Erforderliche**: bedeutet, dass für eine Verbindung akzeptiert wird, sie aus einer geschützten Anwendung unter einem Betriebssystem geschützt werden muss. Diese Einstellung ist die sicherste der drei Optionen. Verbindungen von Betriebssystemen, die nicht unterstützen, aber **erweiterter Schutz** ist nicht möglich für die Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

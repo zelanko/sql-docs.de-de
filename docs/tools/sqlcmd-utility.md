@@ -24,16 +24,16 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 12a3fff2ff310f2aa096ec4bc49b76b9895cf3f7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
-ms.translationtype: HT
+ms.openlocfilehash: afbb8ce321418cce7797b12b161bcef88b88183e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974519"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728189"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -232,7 +232,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   Die Gastbenutzeralias wird verwendet, wenn Gastbenutzer in einer bestimmten Azure AD-Instanz vorhanden und Teil einer Gruppe von SQL-Datenbank sind, die über Datenbankberechtigungen zum Ausführen des sqlcmd-Befehls verfügt (z. B. *keith0@adventureworks.com*).
+   Die Gastbenutzeralias wird verwendet, wenn Gastbenutzer in einer bestimmten Azure AD-Instanz vorhanden und Teil einer Gruppe von SQL-Datenbank sind, die über Datenbankberechtigungen zum Ausführen des sqlcmd-Befehls verfügt (z. B. *keith0@adventureworks.com* ).
 
   >[!IMPORTANT]
   >Besteht ein bekanntes Problem bei Verwendung der `-G` und `-U` Option mit SQLCMD, wo Platzieren der `-U` vor der option der `-G` Option kann die Authentifizierung einen Fehler verursachen. Beginnen immer mit der `-G` Option, gefolgt von der `-U` Option.
@@ -260,7 +260,7 @@ Legt „Column Encryption Setting“ auf `Enabled`fest. Weitere Informationen hi
 
 Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
  
-#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**Verwenden Sie ein sicheres Kennwort!**](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**Verwenden Sie ein sicheres Kennwort!** ](../relational-databases/security/strong-passwords.md)
   
   
  Die Aufforderung zur Eingabe des Kennworts wird folgendermaßen an der Konsole ausgegeben: `Password:`  
@@ -284,14 +284,14 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  Werden nach der Option **-P** mehrere Argumente angegeben, wird eine Fehlermeldung generiert und das Programm beendet.  
   
- **-S** [*Protokoll*:]*Server*[**\\**_Instanz\_Namen_] [**,**  _Port_]  
+ **-S** [*protocol*:]*server*[ **\\** _instance\_name_][ **,** _port_]  
  Gibt die SQL Server-Instanz an, mit der eine Verbindung hergestellt werden soll. Durch die Option wird die **sqlcmd** -Skriptvariable SQLCMDSERVER festgelegt.  
   
- Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von SQL Server auf diesem Servercomputer herzustellen. Geben Sie *server_name* [ **\\**_instance\_name_ ] an, um eine Verbindung mit der benannten Instanz von SQL Server auf diesem Servercomputer herzustellen. Wenn kein Servercomputer angegeben wird, stellt **sqlcmd** eine Verbindung mit der Standardinstanz von SQL Server auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **sqlcmd** von einem Remotecomputer im Netzwerk ausgeführt wird.  
+ Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von SQL Server auf diesem Servercomputer herzustellen. Geben Sie *server_name* [ **\\** _instance\_name_ ] an, um eine Verbindung mit der benannten Instanz von SQL Server auf diesem Servercomputer herzustellen. Wenn kein Servercomputer angegeben wird, stellt **sqlcmd** eine Verbindung mit der Standardinstanz von SQL Server auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **sqlcmd** von einem Remotecomputer im Netzwerk ausgeführt wird.  
   
  *Protokoll* kann Folgendes sein: **tcp** (TCP/IP), **lpc** (Shared Memory) oder **np** (Named Pipes).  
   
- Wenn Sie *server_name* [ **\\**_instance\_name_ ] beim Starten von **sqlcmd** nicht angeben, sucht SQL Server nach der SQLCMDSERVER-Umgebungsvariable und verwendet diese.  
+ Wenn Sie *server_name* [ **\\** _instance\_name_ ] beim Starten von **sqlcmd** nicht angeben, sucht SQL Server nach der SQLCMDSERVER-Umgebungsvariable und verwendet diese.  
   
 > [!NOTE]  
 >  Die OSQLSERVER-Umgebungsvariable wurde aus Gründen der Abwärtskompatibilität beibehalten. Die SQLCMDSERVER-Umgebungsvariable hat Vorrang vor der OSQLSERVER-Umgebungsvariablen. Das bedeutet, dass **sqlcmd** und **osql** störungsfrei parallel verwendet werden können und dass alte Skripts weiterhin funktionsfähig sind.  
@@ -317,7 +317,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Eingabe-/Ausgabeoptionen**  
-  **-f** _Codepage_ | **i:**_Codepage_[**,o:**_Codepage_] | **o:**_Codepage_[**,i:**_Codepage_]  
+  **-f** _Codepage_ | **i:** _Codepage_[ **,o:** _Codepage_] | **o:** _Codepage_[ **,i:** _Codepage_]  
  Gibt die Eingabe- und Ausgabecodepages an. Die Codepagenummer ist ein numerischer Wert, der eine installierte Windows-Codepage angibt.  
   
  Regeln zum Konvertieren von Codepages:  
@@ -332,7 +332,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  Geben Sie an der Eingabeaufforderung **chcp** ein, um die Codepage von Cmd.exe zu überprüfen.  
   
- **-i** _Input_file_[**,**_Eingabe\_Datei2_...]  
+ **-i** _Input_file_[ **,** _Eingabe\_Datei2_...]  
  Identifiziert die Datei, die einen Batch mit SQL-Anweisungen oder gespeicherten Prozeduren enthält. Sie können mehrere Dateien angeben, die der Reihe nach gelesen und verarbeitet werden. Verwenden Sie keine Leerzeichen zwischen Dateinamen. **sqlcmd** prüft zunächst, ob alle angegebenen Dateien vorhanden sind. Wenn eine oder mehrere Dateien nicht vorhanden sind, wird **sqlcmd** beendet. Die Optionen -i und -Q/-q schließen sich gegenseitig aus.  
   
  Beispiele für Pfade:  
@@ -414,7 +414,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
 >  Der tatsächliche Timeoutwert kann einige Sekunden von dem für *Timeout* angegebenen Wert abweichen.  
   
  **-vvar =**  _Wert_ [**var =** _Wert_...]  
- Erstellt eine **sqlcmd**-Skriptvariable, die in einem **sqlcmd** -Skript verwendet werden kann. Setzen Sie den Wert in Anführungszeichen, falls er Leerzeichen enthält. Sie können mehrere Werte für _**var**_=**"**_values_**"** angeben. Wenn einer der angegebenen Werte fehlerhaft ist, generiert **sqlcmd** eine Fehlermeldung und wird beendet.  
+ Erstellt eine **sqlcmd**-Skriptvariable, die in einem **sqlcmd** -Skript verwendet werden kann. Setzen Sie den Wert in Anführungszeichen, falls er Leerzeichen enthält. Sie können mehrere Werte für _**var**_ = **"** _values_ **"** angeben. Wenn einer der angegebenen Werte fehlerhaft ist, generiert **sqlcmd** eine Fehlermeldung und wird beendet.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -468,15 +468,15 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
  **-Y** _feste_Länge_Typ_Anzeigebreite_  
  Dadurch wird die **sqlcmd** -Skriptvariable `SQLCMDMAXFIXEDTYPEWIDTH`festgelegt. Der Standardwert ist 0 (unbegrenzt). Er begrenzt die Anzahl der zurückgegebenen Zeichen für die folgenden Datentypen:  
   
--   **char(** _n_ **)**, wobei 1 <= n <= 8000  
+-   **char(** _n_ **)** , wobei 1 <= n <= 8000  
   
--   **nchar(** _n_ **)**, wobei 1 <= n <= 4000  
+-   **nchar(** _n_ **)** , wobei 1 <= n <= 4000  
   
--   **varchar(** _n_ **)**, wobei 1 <= n <= 8000  
+-   **varchar(** _n_ **)** , wobei 1 <= n <= 8000  
   
--   **nvarchar(** _n_ **)**, wobei 1 <= n <= 4000  
+-   **nvarchar(** _n_ **)** , wobei 1 <= n <= 4000  
   
--   **varbinary(n** _n_ **)**, wobei 1 <= n \<= 4000  
+-   **varbinary(n** _n_ **)** , wobei 1 <= n \<= 4000  
   
 -   **variant**  
   
@@ -607,11 +607,11 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
 |||  
 |-|-|  
 |**GO** [*Anzahl*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
+|[ **:** ] **RESET**|**:Error**|  
+|[ **:** ] **ED**|**:Out**|  
+|[ **:** ] **!!**|**:Perftrace**|  
+|[ **:** ] **QUIT**|**:Connect**|  
+|[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
 |**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
 |**:Setvar**|**:Listvar**|  
@@ -621,7 +621,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
 -   Mit Ausnahme von GO muss vor allen **sqlcmd** -Befehlen ein Doppelpunkt (:) angegeben werden.  
   
     > [!IMPORTANT]  
-    >  Aus Gründen der Abwärtskompatibilität mit bestehenden **osql** -Skripts werden einige der Befehle auch ohne Angabe des Doppelpunkts erkannt, die durch [**:**] gekennzeichnet werden.
+    >  Aus Gründen der Abwärtskompatibilität mit bestehenden **osql** -Skripts werden einige der Befehle auch ohne Angabe des Doppelpunkts erkannt, die durch [ **:** ] gekennzeichnet werden.
   
 -   **sqlcmd** -Befehle werden nur erkannt, wenn sie am Anfang einer Zeile stehen.  
   
@@ -632,21 +632,21 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
 -   Die Befehle werden sofort ausgeführt. Sie werden nicht wie Transact-SQL-Anweisungen im Ausführungspuffer abgelegt.  
   
  **Bearbeitungsbefehle**  
-  [**:**] **ED**  
+  [ **:** ] **ED**  
  Startet den Text-Editor. Mit diesem Editor kann der aktuelle Transact-SQL-Batch oder der zuletzt ausgeführte Batch bearbeitet werden. Um den zuletzt ausgeführten Batch zu bearbeiten, muss der **ED** -Befehl unmittelbar nach Abschluss der Ausführung des letzten Batches eingegeben werden.  
   
  Der Text-Editor wird durch die SQLCMDEDITOR-Umgebungsvariable definiert. Der Standardeditor ist 'Edit'. Sie können den Editor ändern, indem Sie die SQLCMDEDITOR-Umgebungsvariable festlegen. Wenn Sie beispielsweise den Microsoft-Editor als Editor festlegen möchten, müssen Sie Folgendes über die Eingabeaufforderung eingeben:  
   
  `SET SQLCMDEDITOR=notepad`  
   
- [**:**] **RESET**  
+ [ **:** ] **RESET**  
  Löscht den Anweisungscache.  
   
  **:List**  
  Gibt den Inhalt des Anweisungscaches aus.  
   
  **Variablen**  
-  **: Setvar** \< **Var**> [ **"**_Wert_**"** ]  
+  **: Setvar** \< **Var**> [ **"** _Wert_ **"** ]  
  Definiert **sqlcmd** -Skriptvariablen. Skriptvariablen haben das folgende Format: `$(VARNAME)`.  
   
  Bei Variablennamen wird die Groß- und Kleinschreibung nicht beachtet.  
@@ -678,7 +678,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  **Ausgabebefehle**  
   **:Error**   
- _**\<**_  _Dateiname_  **_>|_ STDERR|STDOUT**  
+ _ **\<**_  _Dateiname_  ** _>|_ STDERR|STDOUT**  
  Leitet die gesamte Fehlerausgabe in die mit *Dateiname*angegebene Datei, in **stderr** oder in **stdout**um. Der Befehl **Error** kann mehrmals in einem Skript verwendet werden. Die Fehlerausgabe wird standardmäßig an **stderr**gesendet.  
   
  *file name*  
@@ -690,10 +690,10 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
  **STDOUT**  
  Leitet die Fehlerausgabe in den **stdout** -Datenstrom. Wenn dieser Datenstrom umgeleitet wurde, wird die Fehlerausgabe von dem Ziel empfangen, zu dem der Datenstrom umgeleitet wurde.  
   
- **:Out \<** _Dateiname_ **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _Dateiname_ **>** | **STDERR**| **STDOUT**  
  Erstellt und leitet alle Abfrageergebnisse in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder an **stdout**um. Standardmäßig wird die Ausgabe an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Out** kann mehrmals in einem Skript verwendet werden.  
   
- **:Perftrace \<** _Dateiname_ **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _Dateiname_ **>** | **STDERR**| **STDOUT**  
  Erstellt und leitet alle Informationen zur Leistungsnachverfolgung in der bzw. an die durch *Dateiname*angegebene Datei, an **stderr** oder **stdout**um. Standardmäßig wird die Ausgabe zur Leistungsnachverfolgung an **stdout**gesendet. Wenn die Datei bereits vorhanden ist, wird sie auf 0 Byte gekürzt. Der Befehl **Perftrace** kann mehrmals in einem Skript verwendet werden.  
   
  **Befehle zur Ausführungssteuerung**  
@@ -704,15 +704,15 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  Wenn die Option **ignore** verwendet wird, ignoriert **sqlcmd** den Fehler und setzt die Batch- oder Skriptausführung fort. Standardmäßig wird eine Fehlermeldung ausgegeben.  
   
- [**:**] **QUIT**  
+ [ **:** ] **QUIT**  
  Bewirkt, dass **sqlcmd** beendet wird.  
   
- [**:**] **EXIT** [**(**_Anweisung_**)**]  
+ [ **:** ] **EXIT** [ **(** _Anweisung_ **)** ]  
  Gibt Ihnen die Möglichkeit, das Ergebnis einer SELECT-Anweisung als Rückgabewert von **sqlcmd**zu verwenden. Wenn numerisch, wird die erste Spalte der letzten Ergebniszeile in eine 4 Byte lange ganze Zahl (Long) konvertiert. MS-DOS übergibt das niedrige Byte an den übergeordneten Prozess oder an die Fehlerebene des Betriebssystems. Windows 200x übergibt die gesamte 4 Bytes lange ganze Zahl. Die Syntax ist:  
   
  `:EXIT(query)`  
   
- Zum Beispiel:  
+ Beispiel:  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -738,7 +738,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  Führt den Batch mit der darin enthaltenen Abfrage aus und beendet dann das Hilfsprogramm, nachdem die Ergebnisse der Abfrage zurückgegeben wurden.  
   
- Wird RAISERROR in einem **sqlcmd** -Skript verwendet und der Status 127 ausgelöst, wird **sqlcmd** beendet und die entsprechende Meldungs-ID an den Client zurückgegeben. Zum Beispiel:  
+ Wird RAISERROR in einem **sqlcmd** -Skript verwendet und der Status 127 ausgelöst, wird **sqlcmd** beendet und die entsprechende Meldungs-ID an den Client zurückgegeben. Beispiel:  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -746,7 +746,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  Die Rückgabewerte −1 bis −99 sind für SQL Server reserviert. **sqlcmd** definiert die folgenden zusätzlichen Rückgabewerte:  
   
-|Rückgabewerte|Beschreibung|  
+|Rückgabewerte|und Beschreibung|  
 |-------------------|-----------------|  
 |-100|Vor dem Auswählen des Rückgabewerts ist ein Fehler aufgetreten.|  
 |-101|Beim Auswählen eines Rückgabewerts wurden keine Zeilen gefunden.|  
@@ -757,7 +757,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  **Sonstige Befehle**  
   **:r \<** _filename_ **>**  
- Analysiert zusätzliche Transact-SQL-Anweisungen und **sqlcmd**-Befehle aus der durch **\<**_filename_**>** angegebenen Datei und schreibt das Ergebnis in den Anweisungscache.  
+ Analysiert zusätzliche Transact-SQL-Anweisungen und **sqlcmd**-Befehle aus der durch **\<** _filename_ **>** angegebenen Datei und schreibt das Ergebnis in den Anweisungscache.  
   
  Wenn die Datei Transact-SQL-Anweisungen enthält, die nicht von **GO** gefolgt sind, müssen Sie **GO** in der ersten Zeile nach **:r** eingeben.  
   
@@ -772,7 +772,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
  **:Serverlist**  
  Listet die lokal konfigurierten Server sowie die Namen der Server auf, die Nachrichten über das Netzwerk senden.  
   
- **:Connect**  _server_name_[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  _server_name_[ **\\** _instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  Stellt eine Verbindung mit einer Instanz von SQL Server her. Schließt außerdem die aktuelle Verbindung.  
   
  Timeoutoptionen:  
@@ -798,8 +798,8 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**< *Befehl*>  
- Führt Betriebssystembefehle aus. Um einen Betriebssystembefehl auszuführen, geben Sie zwei Ausrufezeichen (**!!**) gefolgt von dem Betriebssystembefehl in eine neue Zeile ein. Zum Beispiel:  
+ [ **:** ] **!!** < *Befehl*>  
+ Führt Betriebssystembefehle aus. Um einen Betriebssystembefehl auszuführen, geben Sie zwei Ausrufezeichen ( **!!** ) gefolgt von dem Betriebssystembefehl in eine neue Zeile ein. Beispiel:  
   
  `:!! Dir`  
   
@@ -815,7 +815,7 @@ Es wird empfohlen, dass Sie ein sicheres Kennwort verwenden.
 ### <a name="sqlcmd-file-names"></a>sqlcmd-Dateinamen  
  **sqlcmd** -Eingabedateien können mit der Option **-i** oder dem Befehl **:r** angegeben werden. Ausgabedateien können mit der Option **-o** oder den Befehlen **:Error**, **:Out** und **:Perftrace** angegeben werden. Es folgen einige Richtlinien für das Verwenden dieser Dateien:  
   
--   Für **:Error**, **:Out** und **:Perftrace** sollten verschiedene **\<**_Dateiname_**>**-Parameter verwendet werden. Wird derselbe **\<**_Dateiname_**>** -Parameter verwendet, werden Eingaben von den Befehlen womöglich vermischt.  
+-   Für **:Error**, **:Out** und **:Perftrace** sollten verschiedene **\<** _Dateiname_ **>** -Parameter verwendet werden. Wird derselbe **\<** _Dateiname_ **>** -Parameter verwendet, werden Eingaben von den Befehlen womöglich vermischt.  
   
 -   Wenn eine Eingabedatei auf einem Remoteserver einen Laufwerksdateipfad wie „:Out c:\OutputFile.txt“ enthält und von **sqlcmd** auf einem lokalen Computer aufgerufen wird, Die wird Ausgabedatei auf dem lokalen Computer und nicht auf dem Remoteserver erstellt.  
   

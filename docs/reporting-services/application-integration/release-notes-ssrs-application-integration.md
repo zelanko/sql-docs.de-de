@@ -9,18 +9,38 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maghan
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: d6d4da6d5574288fa66ea18a9c63b1488a6abcca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1528358c8aff5d6e99869f0f4f8c1676ee2d5e75
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226005"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730909"
 ---
 # <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Anmerkungen zu dieser Version für die Berichts-Viewer-Steuerelemente für WebForms und WinForms von SSRS
 
 Hierbei handelt es sich um die Anmerkungen zu dieser Version für die Berichts-Viewer-Steuerelemente eines WebForms und WinForms, die im Zusammenhang mit [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS).
 
 Die Versionshinweise für SSRS finden Sie unter [Versionsanmerkungen für SQL Server Reporting Services (SSRS) 2017 und höher](../release-notes-reporting-services.md).
+
+## <a name="15013580"></a>150.1358.0
+| Beschreibung der Änderung | Details |
+| :----------------- | :------ |
+| Fehlerbehebungen | Eine Änderung, die die Microsoft.ReportViewer.Design-Assemblys aus den Projektverweisen entfernt wird zurückgesetzt. |
+|           | Als Teil anderer Änderungen wurden zwei Assemblys in Version 15.3 15,0-Version geändert. Dies wurde zurückgesetzt. |
+| &nbsp; | &nbsp; |
+
+## <a name="15013570"></a>150.1357.0
+| Beschreibung der Änderung | Details |
+| :----------------- | :------ |
+| Behebung von Programmfehlern  | Richtige Seitenansicht für hohe DPI-monitor |
+|            | Dialogfeld "Drucken" wird außerhalb der Raum angezeigt. |
+|            | Große Anzahl von Parametern, die im Parameter-Bildlaufleisten und Dropdownlisten funktioniert nicht ordnungsgemäß geführt haben |
+|            | Korrigiert: Probleme mit Null und das Datum-Uhrzeit-Parameter. |
+|            | Aktualisierte JQuery Version 3.3.1 |
+|            | Feste überschneidet sich mit den Tablix-Zellen im HTML-rendering |
+|            | Entfernt die Entwurfszeit Projekt verweist, um fehlerhafte VS-Assemblys, die hinzugefügt wird, an den Projekten zu entfernen. |
+|            | Barrierefreiheit für die Symbolleiste zu Erzählen Sie nur für Elemente zu beheben |
+| &nbsp; | &nbsp; |
 
 ## <a name="15900148"></a>15.900.148
 

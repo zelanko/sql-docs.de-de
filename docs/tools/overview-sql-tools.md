@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
-ms.translationtype: HT
+ms.openlocfilehash: 0d7683ed4f45a2d2e28843b24d9abd2592b08fae
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190990"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731596"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL-Tools und Hilfsprogramme für SQLServer, Azure SQL-Datenbank und Azure SQL Datawarehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,12 +26,11 @@ Zum Verwalten ("Abfrage", "überwachen", "usw.") Ihrer Datenbank, die Sie benöt
 
 Stehen viele Datenbanktools zur Verfügung, damit dieser Artikel Beschreibungen und Verweise auf einige der verfügbaren Tools enthält, für die Arbeit mit Ihrer SQL-Datenbanken. Informationen dazu, welches Tool Sie benötigen, finden Sie unter [welches Tool soll ich verwenden?](#which-tool-should-i-choose).
 
-
 ## <a name="gui-tools-to-manage-databases"></a>GUI-Tools zum Verwalten von Datenbanken  
 
 Im folgenden sind die wichtigsten grafische Benutzeroberfläche (GUI) Tools:
 
-| Tool | Beschreibung | Ausgeführt wird |
+| Tool | und Beschreibung | Ausgeführt wird |
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] ist eine kostenlose, leicht-Tool zum Verwalten von Datenbanken aus, wo sie ausgeführt werden. Diese Preview-Version stellt die Datenbank-Management-Funktionen, einschließlich einer erweiterten Transact-SQL-Editor und anpassbare Einblicke in den Betriebszustand der Datenbanken bereit. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] unter Windows, MacOS und Linux ausgeführt wird**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Verwenden Sie SQL Server Management Studio (SSMS), um Abfragen, Entwerfen und Verwalten Ihrer SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse. | **SSMS wird unter Windows ausgeführt**.|
@@ -43,15 +42,15 @@ Im folgenden sind die wichtigsten grafische Benutzeroberfläche (GUI) Tools:
 
 Im folgenden sind die wichtigsten Befehlszeilentools:
 
-| Tool | Beschreibung | Ausgeführt wird |
+| Tool | und Beschreibung | Ausgeführt wird |
 |:--|:--|:--|
-|[**mssql-cli (Vorschauversion)**](mssql-cli.md)|**MSSQL-Cli** ist ein interaktives Befehlszeilentools-Tool zum Abfragen von SQL Server. | Windows, MacOS und Linux|
+|[**mssql-cli (Vorschauversion)** ](mssql-cli.md)|**MSSQL-Cli** ist ein interaktives Befehlszeilentools-Tool zum Abfragen von SQL Server. | Windows, MacOS und Linux|
 | [**sqlpackage**](sqlpackage.md) |**"Sqlpackage"** ist ein Befehlszeilenprogramm, das mehrere Aufgaben der Datenbankentwicklung automatisiert. MacOS und Linux-Versionen von "Sqlpackage" befinden sich derzeit in der Vorschauphase. | Windows, MacOS und Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** stellt Cmdlets bereit, für die Arbeit mit SQL| Windows, MacOS und Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**Sqlcmd** Dienstprogramm können Sie die Transact-SQL-Anweisungen, Systemprozeduren und Skriptdateien an der Eingabeaufforderung eingeben. | Windows, MacOS und Linux|
 |[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|Mit dem Hilfsprogramm **bcp**(**B**ulk **C**opy **P**rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert.|Windows, MacOS und Linux|
-|[**MSSQL-Skripter (Vorschau)**](https://github.com/Microsoft/mssql-scripter)|**MSSQL-Skripter** ist eine plattformübergreifende Befehlszeile-Umgebung für die Skripterstellung von SQL Server-Datenbanken|Windows, MacOS und Linux|
-|[**MSSQL-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-Conf** konfiguriert SQL Server unter Linux ausgeführt wird.|Linux|
+|[**MSSQL-Skripter (Vorschau)** ](https://github.com/Microsoft/mssql-scripter)|**MSSQL-Skripter** ist eine plattformübergreifende Befehlszeile-Umgebung für die Skripterstellung von SQL Server-Datenbanken|Windows, MacOS und Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-Conf** konfiguriert SQL Server unter Linux ausgeführt wird.|Linux|
 
 
 
@@ -67,7 +66,7 @@ Im folgenden sind die wichtigsten Befehlszeilentools:
 
 ## <a name="additional-tools"></a>Zusätzliche tools
 
-| Tool | Beschreibung |
+| Tool | und Beschreibung |
 |:--|:--|
 | [Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Verwenden Sie SQL Server Configuration Manager, SQL Server-Dienste konfigurieren, und konfigurieren die Netzwerkkonnektivität. Configuration Manager ausgeführt wird, auf Windows|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Verwenden Sie SQL Server Migration Assistant zur Automatisierung der Datenbankmigration von Microsoft Access, DB2, MySQL, Oracle und Sybase zu SQL Server.|
