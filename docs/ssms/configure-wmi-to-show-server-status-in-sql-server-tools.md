@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16e262dbc1a89ef16fff5906e128b5f073c8bc3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 72562be771703451589b6b91177f0199ee7a7b71
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102842"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680449"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ In diesem Thema wird beschrieben, wie WMI konfiguriert wird, um den Serverstatus
   
 2.  Geben Sie im Feld **Öffnen** die Zeichenfolge **wmimgmt.msc**ein, und klicken Sie dann auf **OK**.  
   
-3.  Klicken Sie im Programm **Windows-Verwaltungsinfrastruktur** mit der rechten Maustaste auf **WMI-Steuerung (Lokal)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie im Programm **Windows-Verwaltungsinfrastruktur** mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** , und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Erweitern Sie im Dialogfeld **Eigenschaften von WMI-Steuerung (Lokal)** auf der Registerkarte **Sicherheit** den Eintrag **Root**, und klicken Sie dann auf **CIMV2**.  
   
@@ -39,7 +39,7 @@ In diesem Thema wird beschrieben, wie WMI konfiguriert wird, um den Serverstatus
   
 6.  Fügen Sie zum Feld **Gruppen- oder Benutzernamen** eine Gruppe oder einen Benutzer hinzu, und markieren Sie die Gruppe bzw. den Benutzer.  
   
-7.  Wählen Sie im Feld **Berechtigungen für**_<group or user>_ die Spalte **Zulassen** für die Berechtigung **Remoteaktivierung** für Benutzer aus, durch die der Dienststatus remote erkannt werden soll.  
+7.  Wählen Sie im Feld **Berechtigungen für** _<group or user>_ die Spalte **Zulassen** für die Berechtigung **Remoteaktivierung** für Benutzer aus, durch die der Dienststatus remote erkannt werden soll.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Starten, Beenden oder Anhalten des SQL Server-Agent-Dienstes](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

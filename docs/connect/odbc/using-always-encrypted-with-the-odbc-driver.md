@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: jroth
 author: MightyPen
-ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801737"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680080"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,7 +58,12 @@ Beachten Sie, dass das Aktivieren von Always Encrypted für eine erfolgreiche Ve
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
 
-Nachdem Sie Always Encrypted für eine Verbindung aktiviert haben, können Sie zum Abrufen oder Ändern von Daten in verschlüsselten Datenbankspalten Standard-ODBC-APIs verwenden (Informationen hierzu finden Sie unter [ODBC-Beispielcode](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) oder [ODBC-Programmierreferenz](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)). Wenn Ihre Anwendung über die erforderlichen Datenberechtigungen verfügt und auf den Spaltenhauptschlüssel zugreifen kann, verschlüsselt der Treiber alle Abfrageparameter für verschlüsselte Spalten und entschlüsselt Daten, die aus verschlüsselten Spalten abgefragt wurden. Dieser Vorgang erfolgt in der Anwendung transparent, als ob die Spalten nicht verschlüsselt wären.
+Nachdem Sie Always Encrypted für eine Verbindung aktiviert haben, können Sie die standard-ODBC-APIs verwenden. Die ODBC-APIs können abrufen oder Ändern von Daten in verschlüsselten Datenbankspalten. Die folgenden Elemente für die Dokumentation können dabei helfen:
+
+- [ODBC-Beispielcode](cpp-code-example-app-connect-access-sql-db.md)
+- [ODBC-Programmierreferenz](../../odbc/reference/odbc-programmer-s-reference.md)
+
+Ihre Anwendung muss über die erforderlichen Datenbankberechtigungen verfügen, und muss auf den spaltenhauptschlüssel zugreifen können. Der Treiber verschlüsselt dann alle Abfrageparameter, die auf verschlüsselte Spalten ausgerichtet. Der Treiber wird auch von verschlüsselten Spalten abgerufene Daten entschlüsselt. Der Treiber führt alle diese verschlüsseln und Entschlüsseln von ohne jegliche Unterstützung aus dem Quellcode. Um das Programm ist es, als ob die Spalten nicht verschlüsselt sind.
 
 Wenn Always Encrypted nicht aktiviert ist, tritt bei Abfragen mit Parametern, die auf verschlüsselte Spalten ausgerichtet sind, ein Fehler auf. Daten können weiterhin aus verschlüsselten Spalten abgerufen werden, solange die Abfrage keine Parameter für verschlüsselte Spalten enthält. Der Treiber versucht jedoch nicht, die Daten zu entschlüsseln. Daher erhält die Anwendung die verschlüsselten Binärdaten (als Bytearrays).
 

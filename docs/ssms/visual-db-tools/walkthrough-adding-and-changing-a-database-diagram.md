@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6e55163886d39fc59cd8ce8787088f3645fb7e51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f47c0e080132efeff4bac411337fe2678f61552c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105599"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689243"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +80,7 @@ Wenn Sie diese exemplarische Vorgehensweise abschließen möchten, müssen folge
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**ssNoversion**|Überprüft|  
+    |**T1col1**|**int**|Überprüft|  
     |**T1col2**|**varchar(50)**|Überprüft|  
     |**T1col3**|**float**|Überprüft|  
   
@@ -123,7 +123,7 @@ Im Datenbank-Designer können Sie CHECK-Einschränkungen hinzufügen und Beziehu
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |-------------------|-----------------|-------------------|  
-    |**T2col1**|**ssNoversion**|nicht aktiviert|  
+    |**T2col1**|**int**|nicht aktiviert|  
     |**T2col2**|**varchar(50)**|Überprüft|  
     |**T2col3**|**xml**|Überprüft|  
   

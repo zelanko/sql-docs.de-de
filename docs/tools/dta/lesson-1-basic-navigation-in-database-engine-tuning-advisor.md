@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201779"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727618"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiede
 ## <a name="launch-database-tuning-advisor"></a>Starten des Datenbankoptimierungsratgebers 
 Zunächst öffnen Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers (Database Engine Tuning Advisor, DTA). Bei der ersten Verwendung muss ein Mitglied der festen Serverrolle **sysadmin** den Datenbankoptimierungsratgeber starten, um die Anwendung zu initialisieren. Nach der Initialisierung können Mitglieder der festen Datenbankrolle **db_owner** mit dem Datenbankoptimierungsratgeber eigene Datenbanken optimieren. Weitere Informationen zum Initialisieren des Datenbankoptimierungsratgebers finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Starten Sie SQL Server Management Studio (SSMS). Klicken Sie auf der Windows **Menü "Start"**, zeigen Sie auf **Programme** und suchen Sie nach **SQL Server Management Studio**. 
+1. Starten Sie SQL Server Management Studio (SSMS). Klicken Sie auf der Windows **Menü "Start"** , zeigen Sie auf **Programme** und suchen Sie nach **SQL Server Management Studio**. 
 2. Nach dem SSMS öffnen, wählen Sie die **Tools** Menü **Database Tuning Advisor**. 
 
   ![DTA aus SSMS starten](media/dta-tutorials/launch-dta.png)

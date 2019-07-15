@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
-ms.translationtype: HT
+ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100755"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728074"
 ---
 # <a name="sqllogship-application"></a>Anwendung sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-verboselevel** _level_  
  Gibt die Ebene der dem Protokollversandverlauf hinzugefügten Meldungen an. *level* entspricht einer der folgenden ganzen Zahlen:  
   
-|level|Beschreibung|  
+|level|und Beschreibung|  
 |-----------|-----------------|  
 |0|Keine Ausgabe von Ablaufverfolgungs- oder Debugmeldungen|  
 |1|Ausgabe von Fehlerbehandlungsmeldungen|  
@@ -64,10 +64,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|Ausgabe aller Debug- und Ablaufverfolgungsmeldungen|  
   
  **-logintimeout** _timeout_value_  
- Gibt die für das Anmelden an der Serverinstanz vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standardwert ist 15 Sekunden. *timeout_value* hat den Typ **int**_._  
+ Gibt die für das Anmelden an der Serverinstanz vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standardwert ist 15 Sekunden. *timeout_value* hat den Typ **int** _._  
   
  **-querytimeout** _timeout_value_  
- Gibt die für das Starten des angegebenen Vorgangs vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standard ist kein Timeout. *timeout_value* hat den Typ **int**_._  
+ Gibt die für das Starten des angegebenen Vorgangs vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standard ist kein Timeout. *timeout_value* hat den Typ **int** _._  
   
 ## <a name="remarks"></a>Remarks  
  Verwenden Sie zum Sichern, Kopieren und Wiederherstellen nach Möglichkeit die Sicherungs-, Kopier- und Wiederherstellungsaufträge. Rufen Sie die gespeicherte Prozedur [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) auf, um diese Aufträge aus einem Batchvorgang oder einer anderen Anwendung zu starten.  

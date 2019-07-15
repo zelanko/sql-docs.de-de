@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6b8e961af919f3d92dad4aba5d87e910e341ce07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 038c179061c2210278dbfadea236be9dc0bcb09f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797399"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728300"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP-Eigenschaften (Registerkarte Protokoll)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47797399"
   
  Microsoft SQL Server muss neu gestartet werden, damit die Änderungen in Kraft treten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Enabled**  
  Mögliche Werte sind **Yes** und **No**.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47797399"
  **No Delay**  
  SQL Server implementiert keine Änderungen an dieser Eigenschaft.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Auswählen eines Netzwerkprotokolls](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)  
   

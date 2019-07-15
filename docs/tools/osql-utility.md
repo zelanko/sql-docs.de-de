@@ -21,16 +21,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
-ms.translationtype: HT
+ms.openlocfilehash: 736375fb0877dbe8eac497e269ef8620a871917b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356463"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731638"
 ---
 # <a name="osql-utility"></a>osql (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ C:\>osql
  Verwendet eine vertrauenswürdige Verbindung, statt ein Kennwort anzufordern.  
   
  **-S** _Server\_Namen_[ **\\** _Instanz\_Namen_]  
- Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt wird. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Geben Sie _server\_name_**\\**_instance\_name_ an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Falls kein Server angegeben ist, stellt **osql** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **osql** von einem Remotecomputer im Netzwerk ausgeführt wird.  
+ Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt wird. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Geben Sie _server\_name_ **\\** _instance\_name_ an, um eine Verbindung mit der benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Falls kein Server angegeben ist, stellt **osql** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **osql** von einem Remotecomputer im Netzwerk ausgeführt wird.  
   
  **-H** _wksta_name_  
  Der Name einer Arbeitsstation. Dieser Name ist in **sysprocesses.hostname** gespeichert und wird mithilfe von **sp_who**angezeigt. Wenn diese Option nicht angegeben ist, wird der Name des aktuellen Computers angenommen.  
@@ -112,7 +112,7 @@ C:\>osql
  Gibt an, nach wie vielen Sekunden ein Befehl wegen eines Timeout abgebrochen wird. Wenn für *time_out* kein Wert angegeben wird, tritt für die Befehle kein Timeout ein.  
   
  **-h** _headers_  
- Gibt die Anzahl der Zeilen an, die zwischen den Spaltenüberschriften gedruckt werden. Standardmäßig werden die Überschriften für jedes Resultset der Abfrage einmal gedruckt. Mit -1 können Sie angeben, dass keine Überschriften gedruckt werden sollen. Falls -1 verwendet wird, darf zwischen dem Parameter und der Einstellung kein Leerzeichen stehen (**-h-1**und nicht **-h -1**).  
+ Gibt die Anzahl der Zeilen an, die zwischen den Spaltenüberschriften gedruckt werden. Standardmäßig werden die Überschriften für jedes Resultset der Abfrage einmal gedruckt. Mit -1 können Sie angeben, dass keine Überschriften gedruckt werden sollen. Falls -1 verwendet wird, darf zwischen dem Parameter und der Einstellung kein Leerzeichen stehen ( **-h-1**und nicht **-h -1**).  
   
  **-s** _col_separator_  
  Gibt das Spaltentrennzeichen an. Standardmäßig wird ein Leerzeichen verwendet. Um Zeichen verwenden zu können, die für das Betriebssystem eine besondere Bedeutung haben (z. B. | ; & < >), müssen Sie das Zeichen in doppelte Anführungszeichen (") setzen.  
@@ -139,7 +139,7 @@ C:\>osql
  Gibt das Befehlsabschlusszeichen an. Standardmäßig werden Befehle abgeschlossen und an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gesendet, indem Sie GO in eine eigene Zeile eingeben. Wenn Sie das Befehlsabschlusszeichen neu festlegen, dürfen Sie keine für [!INCLUDE[tsql](../includes/tsql-md.md)] reservierten Wörter oder Zeichen verwenden, die eine spezielle Bedeutung für das Betriebssystem haben, unabhängig davon, ob vor einem Wort bzw. Zeichen ein umgekehrter Schrägstrich steht.  
   
  **-q "** _query_ **"**  
- Führt eine Abfrage aus, wenn **osql** startet, beendet **osql** aber nicht, nachdem die Abfrage abgeschlossen ist. (Beachten Sie, dass die Abfrageanweisung keinen GO-Befehl enthalten darf.) Wenn Sie eine Abfrage aus einer Batchdatei ausgeben, können Sie Variablen (%Variable) oder Umgebungsvariablen (%Umgebungsvariable%) verwenden. Zum Beispiel:  
+ Führt eine Abfrage aus, wenn **osql** startet, beendet **osql** aber nicht, nachdem die Abfrage abgeschlossen ist. (Beachten Sie, dass die Abfrageanweisung keinen GO-Befehl enthalten darf.) Wenn Sie eine Abfrage aus einer Batchdatei ausgeben, können Sie Variablen (%Variable) oder Umgebungsvariablen (%Umgebungsvariable%) verwenden. Beispiel:  
   
 ```  
 SET table=sys.objects  
@@ -155,16 +155,16 @@ osql -E -q "select name, object_id from %table%"
  Entfernt die Nummerierung und das Symbol für die Eingabeaufforderung (>) aus den Eingabezeilen.  
   
  **-m** _error_level_  
- Passt die Anzeige der Fehlermeldungen an. Für jeden Fehler mit dem angegebenen oder einem höheren Schweregrad wird die Meldungsnummer, der Status und der Fehlergrad angezeigt. Für Fehler mit einem niedrigeren ist als dem angegebenen Schweregrad wird nichts angezeigt. Mit **-1** können Sie angeben, dass alle Header mit Meldungen zurückgegeben werden. Dies gilt auch für Informationsmeldungen. Falls Sie **-1**verwenden, darf kein Leerzeichen zwischen dem Parameter und der Einstellung stehen (**-m-1**und nicht **-m -1**).  
+ Passt die Anzeige der Fehlermeldungen an. Für jeden Fehler mit dem angegebenen oder einem höheren Schweregrad wird die Meldungsnummer, der Status und der Fehlergrad angezeigt. Für Fehler mit einem niedrigeren ist als dem angegebenen Schweregrad wird nichts angezeigt. Mit **-1** können Sie angeben, dass alle Header mit Meldungen zurückgegeben werden. Dies gilt auch für Informationsmeldungen. Falls Sie **-1**verwenden, darf kein Leerzeichen zwischen dem Parameter und der Einstellung stehen ( **-m-1**und nicht **-m -1**).  
   
  **-r** { **0**| **1**}  
  Leitet die Meldungsausgabe auf den Bildschirm um (**stderr**). Wenn Sie keinen Parameter oder **0**angeben, werden nur Fehlermeldungen umgeleitet, deren Schweregrad 11 oder höher ist. Wenn Sie **1**angeben, werden alle Meldungsausgaben (einschließlich der Ausgabe von "print") umgeleitet.  
   
  **-i** _input_file_  
- Identifiziert die Datei, die einen Batch mit SQL-Anweisungen oder gespeicherten Prozeduren enthält. Anstelle von**\<**-i **kann der Kleiner-als-Vergleichsoperator (**) verwendet werden.  
+ Identifiziert die Datei, die einen Batch mit SQL-Anweisungen oder gespeicherten Prozeduren enthält. Anstelle von **\<** -i **kann der Kleiner-als-Vergleichsoperator (** ) verwendet werden.  
   
  **-o** _output_file_  
- Identifiziert die Datei, die die Ausgabe von **osql**erhält. Anstelle von**>**-o **kann der Größer-als-Vergleichsoperator (**) verwendet werden.  
+ Identifiziert die Datei, die die Ausgabe von **osql**erhält. Anstelle von **>** -o **kann der Größer-als-Vergleichsoperator (** ) verwendet werden.  
   
  Falls *input_file* nicht im Unicode-Format vorliegt und **-u** nicht angegeben ist, wird *output_file* im OEM-Format gespeichert. Falls *input_file* im Unicode-Format vorliegt oder **-u** angegeben ist, wird *output_file* im Unicode-Format gespeichert.  
   
@@ -197,7 +197,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  Das Hilfsprogramm **osql** wird direkt vom Betriebssystem aus mit den hier aufgelisteten Optionen gestartet, wobei bei den Optionen zwischen Groß- und Kleinschreibung unterschieden wird. Nachdem **osql**gestartet wurde, akzeptiert das Hilfsprogramm SQL-Anweisungen und sendet diese interaktiv an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Die Ergebnisse werden formatiert und auf dem Bildschirm angezeigt (**stdout**). Verwenden Sie QUIT oder EXIT zum Beenden von **osql**.  
   
- Falls Sie beim Starten von **osql**keinen Benutzernamen angeben, überprüft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Umgebungsvariablen und verwendet diese, z.B. **osqluser=(**_user_**)** oder **osqlserver=(**_server_**)**. Wenn keine Umgebungsvariablen festgelegt sind, wird der Benutzername der Arbeitsstation verwendet. Wenn Sie keinen Server angeben, wird der Name der Arbeitsstation verwendet.  
+ Falls Sie beim Starten von **osql**keinen Benutzernamen angeben, überprüft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Umgebungsvariablen und verwendet diese, z.B. **osqluser=(** _user_ **)** oder **osqlserver=(** _server_ **)** . Wenn keine Umgebungsvariablen festgelegt sind, wird der Benutzername der Arbeitsstation verwendet. Wenn Sie keinen Server angeben, wird der Name der Arbeitsstation verwendet.  
   
  Falls weder die Option **-U** noch die Option **-P** verwendet wird, versucht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die Verbindung mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierungsmodus herzustellen. Die Authentifizierung basiert auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] -Windows-Konto des Benutzers, der **osql**ausführt.  
   
@@ -209,7 +209,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL-Befehle  
  Zusätzlich zu den [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen in **osql**, sind auch die folgenden Befehle verfügbar.  
   
-|Befehl|Beschreibung|  
+|Befehl|und Beschreibung|  
 |-------------|-----------------|  
 |GO|Führt alle Anweisungen aus, die nach dem letzten GO-Befehl eingegeben wurden.|  
 |RESET|Löscht alle Anweisungen, die Sie eingegeben haben.|  
@@ -271,13 +271,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- Zum Beispiel:  
+ Beispiel:  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- Sie können den EXIT-Parameter auch als Teil einer Batchdatei einschließen. Zum Beispiel:  
+ Sie können den EXIT-Parameter auch als Teil einer Batchdatei einschließen. Beispiel:  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -297,7 +297,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Führt den Batch aus, beendet dann das Hilfsprogramm und gibt keinen Wert zurück.  
   
--   EXIT **(**_query_**)**  
+-   EXIT **(** _query_ **)**  
   
 > [!NOTE]  
 >  Führt den Batch einschließlich der Abfrage aus und beendet dann das Hilfsprogramm, nachdem die Ergebnisse der Abfrage zurückgegeben wurden.  
@@ -305,7 +305,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR mit einem Status von 127  
   
 > [!NOTE]  
->  Falls RAISERROR in einem **osql** -Skript verwendet wird, und der Status 127 ausgelöst wird, wird **osql** beendet und gibt die Meldungs-ID an den Client zurück. Zum Beispiel:  
+>  Falls RAISERROR in einem **osql** -Skript verwendet wird, und der Status 127 ausgelöst wird, wird **osql** beendet und gibt die Meldungs-ID an den Client zurück. Beispiel:  
   
 ```  
 RAISERROR(50001, 10, 127)  
