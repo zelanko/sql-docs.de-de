@@ -1,5 +1,5 @@
 ---
-title: Kommentare, Formen, andere Objekte, die von Excel Services nicht unterstützt | Microsoft Docs
+title: Kommentare, Formen, andere Objekte, die von Excel Services nicht unterstützt | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df13c3fa92d5439e559e286424438569b3ead86b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025407"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164389"
 ---
-# <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>Kommentare, Formen, andere Objekte, die von Excel Services nicht unterstützt.
+# <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>Kommentare, Formen, die andere Objekte, die von Excel Services nicht unterstützt.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dieser Fehler tritt auf, wenn Sie einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe Slicer aus einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Feldliste hinzufügen.  
   
