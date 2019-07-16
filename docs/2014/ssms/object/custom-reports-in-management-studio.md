@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618287"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188292"
 ---
 # <a name="custom-reports-in-management-studio"></a>Benutzerdefinierte Berichte in Management Studio
   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
