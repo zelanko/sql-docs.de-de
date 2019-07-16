@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211640"
 ---
 # <a name="get-information-about-a-view"></a>Abrufen von Informationen zu einer Sicht
   Sie erhalten Informationen zur Definition oder den Eigenschaften einer Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Manchmal ist es erforderlich, die Definition einer Sicht anzuzeigen, um zu verstehen, wie die Daten in der Sicht aus den Quelltabellen abgeleitet werden, oder um die durch die Sicht definierten Daten anzuzeigen.  
@@ -145,7 +145,7 @@ ms.locfileid: "52528443"
      **(Nach oben)**  
      Gibt an, dass die Sicht eine TOP-Klausel enthält, die bewirkt, dass nur die ersten N Zeilen oder ersten N Prozent der Zeilen im Resultset zurückgegeben werden. In der Standardeinstellung gibt die Sicht die ersten 10 Zeilen im Resultset zurück. Verwenden Sie dies, um die Anzahl der zurückzugebenden Zeilen zu ändern oder einen anderen Prozentwert anzugeben.  
   
-     **Ausdruck**  
+     **expression**  
      Zeigt an, welchen Prozentsatz (wenn **Prozent** auf **Ja**festgelegt ist) oder welche Datensätze (wenn **Prozent** auf **Nein**festgelegt wird) die Sicht zurückgegeben wird.  
   
      **Prozent**  

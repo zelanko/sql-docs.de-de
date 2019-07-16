@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e143d970a09b41b0b9f955eed69edbe9546092e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cf7c9eb150ce54a9ec04c996c4c7e4d1f58b858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047338"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Ändern einer Benutzer-E-Mail-Adresse (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65485345"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie die E-Mail-Adresse ändern, an die Benachrichtigungen gesendet werden, sowie das Standardformat von Benachrichtigungs-E-Mails.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Benutzer und Gruppen** zuzugreifen.  

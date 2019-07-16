@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036387"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Zuordnen von Ersatzfunktionen für die Abwärtskompatibilität von Anwendungen
 ODBC *3.x* Anwendung über die ODBC *3.x* für einen ODBC-Treiber-Manager funktioniert *2.x* Treiber, solange keine neuen Funktionen verwendet werden. Beide Funktionen dupliziert und Änderungen am Verhalten, allerdings wirken sich die Möglichkeit, die die ODBC *3.x* Anwendung funktioniert auf eine ODBC *2.x* Treiber. Beim Arbeiten mit ODBC *2.x* -Treiber verwenden, wird der Treiber-Manager die folgende ODBC zugeordnet *3.x* -Funktionen, die eine oder mehrere ODBC ersetzt haben *2.x* -Funktionen in der entsprechende ODBC *2.x* Funktionen.  
@@ -452,11 +451,11 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |Puffer|Wert|  
 |------------|-----------|  
 |ColumnName|"" (leere Zeichenfolge)|  
-|*NameLengthPtr|0|  
-|*DataTypePtr|SQL_BINARY|  
-|*ColumnSizePtr|4|  
+|\* NameLengthPtr|0|  
+|\* DataTypePtr|SQL_BINARY|  
+|\* ColumnSizePtr|4|  
 |*DecimalDigitsPtr|0|  
-|*NullablePtr|SQL_NO_NULLS|  
+|\* NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Wenn eine ODBC *3.x* arbeiten mit einer ODBC-Anwendung *2.x* Treiber wird den folgenden Aufruf **SQLGetData** ein Lesezeichens abgerufen:  

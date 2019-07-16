@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 2766005287a522a84d209d995be0de9a94e45c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aaadf6f4226b2c9a457c7437412f35c1bbe20fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054710"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Übersicht über Data Migration Assistant
 Die Data Migration Assistant (DMA) können, die Sie ein upgrade auf eine moderne Datenplattform durch das Erkennen von Kompatibilitätsproblemen, die Datenbankfunktionalität in die neue Version der SQL Server oder Azure SQL-Datenbank beeinflussen können. DMA empfiehlt, zuverlässigkeitverbesserungen der Leistung und für Ihre zielumgebung und ermöglicht es Ihnen, Ihr Schema, Daten und nicht enthaltene Objekte vom Quellserver zum Zielserver zu verschieben.
@@ -59,7 +58,7 @@ Um DMA zu installieren, laden Sie die neueste Version des Tools aus der [Microso
 
 - Nachdem eine erfolgreiche Migration können Anwendungen nahtlos mit der Ziel-SQL Server-Datenbanken verbinden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 Um eine Bewertung ausführen zu können, müssen Sie Mitglied der SQL Server **Sysadmin** Rolle.
 
 ## <a name="supported-source-and-target-versions"></a>Unterstützte Versionen von Quelle und Ziel

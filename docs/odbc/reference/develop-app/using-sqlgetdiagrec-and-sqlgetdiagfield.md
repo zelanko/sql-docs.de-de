@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1db402e7c015ef50ce47b5137e670d9f1836a326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022149"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Verwenden von SQLGetDiagRec und SQLGetDiagField
 -Anwendungen rufen **SQLGetDiagRec** oder **SQLGetDiagField** zum Abrufen von Diagnoseinformationen zu erhalten. Diese Funktionen akzeptieren eine Umgebung, Verbindung, Anweisung oder -Deskriptor-Handle und Diagnose von der Funktion, die zuletzt verwendet von diesem Handle zurück. Die Diagnose in einem bestimmten Handle protokolliert werden verworfen, wenn eine neue Funktion mit diesem Handle aufgerufen wird. Wenn die Funktion mehrere DiagnoseDatensätze zurückgegeben wird, ruft die Anwendung dieser Funktionen mehrmals; Die Gesamtzahl der Statusdatensätze wird abgerufen, durch den Aufruf **SQLGetDiagField** für den Headerdatensatz (Datensatz 0), mit der Option SQL_DIAG_NUMBER.  

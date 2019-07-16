@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6f43b362b0386b20103f139c2726bf19c41408df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 041f651fb34c486cebc589f119f3e5f220314dd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059233"
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
 ## <a name="arguments"></a>Argumente  
  *trace_id*  
- Die ID der Ablaufverfolgung. *Trace_id* ist **Int**.  Gültige Eingaben sind die ID einer Ablaufverfolgung, NULL, 0 und DEFAULT. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Geben Sie NULL, 0 oder DEFAULT an, wenn Informationen zu allen Ablaufverfolgungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen.  
+ Die ID der Ablaufverfolgung. *Trace_id* ist **Int**.  Gültige Eingaben sind die ID einer Ablaufverfolgung, NULL, 0 oder DEFAULT. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Geben Sie NULL, 0 oder DEFAULT an, wenn Informationen zu allen Ablaufverfolgungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen.  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|ID der Ablaufverfolgung.|  
 |property|**int**|Eigenschaft der Ablaufverfolgung:<br /><br /> 1= Ablaufverfolgungsoptionen. Weitere Informationen finden Sie unter @options in [Sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Dateiname<br /><br /> 3 = Maximale Größe<br /><br /> 4 = Beendigungszeit<br /><br /> 5 = Aktueller Status der Ablaufverfolgung 0 = beendet. 1 = aktiv|  

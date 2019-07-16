@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f94b1191815f37728a2d8de8fc1175113644bc5a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068684"
 ---
 # <a name="calling-sqlsetpos"></a>Aufrufen von SQLSetPos
 In ODBC *2.x*, der Zeiger auf die zeilenstatusarray wurde ein Argument für **SQLExtendedFetch**. Die zeilenstatusarray wurde durch einen Aufruf von später aktualisiert **SQLSetPos**. Einige Treiber auf die Tatsache, die dieses Array nicht zwischen ändert basierten **SQLExtendedFetch** und **SQLSetPos**. In ODBC *3.x*, der Zeiger auf die Statusarray wird einem Beschreibungsfeld und aus diesem Grund die Anwendung kann ganz einfach ändern, damit auf ein anderes Array zu verweisen. Dies liegt möglicherweise ein Problem bei der Verwendung einer ODBC *3.x* mit einer ODBC-Anwendung funktioniert *2.x* Treiber jedoch ist der Aufruf **SQLSetStmtAttr** der Zeiger für den arraystatus festgelegt und ist der Aufruf  **SQLFetchScroll** zum Abrufen von Daten. Der Treiber-Manager wird es als eine Sequenz von Aufrufen an zugeordnet **SQLExtendedFetch**. Im folgenden Code wird ein Fehler würde normalerweise ausgelöst, wenn der Treiber-Manager das zweite entspricht **SQLSetStmtAttr** bei der Arbeit mit einer ODBC-aufrufen *2.x* Treiber:  

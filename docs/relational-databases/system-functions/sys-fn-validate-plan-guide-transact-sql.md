@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059195"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Argumente  
  *plan_guide_id*  
- Ist die ID der Planhinweisliste, wie Sie in der [Sys. plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) -Katalogsicht angezeigt. *plan_guide_id* ist vom Datentyp **int** und besitzt keinen Standardwert.  
+ Die ID der Planhinweisliste, wie sie in der [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) -Katalogsicht angegeben ist. *plan_guide_id* ist vom Datentyp **int** und besitzt keinen Standardwert.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|ID der Fehlermeldung.|  
 |severity|**tinyint**|Schweregrad des Fehlers, der zwischen 1 und 25 liegen kann.|  
@@ -76,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. Testen der Gültigkeitsüberprüfung der Planhinweislisten vor dem Implementieren von Änderungen an der Datenbank  
- Im folgenden Beispiel wird eine explizite Transaktion verwendet, um einen Index zu löschen. Die `sys.fn_validate_plan_guide` Funktion wird ausgeführt, um zu bestimmen, ob diese Aktion Planhinweislisten in der Datenbank ungültig werden. Auf der Basis der Ergebnisse der Funktion wird entweder ein Commit der `DROP INDEX` -Anweisung oder ein Rollback der Transaktion ausgeführt, sodass der Index nicht gelöscht wird.  
+ Im folgenden Beispiel wird eine explizite Transaktion verwendet, um einen Index zu löschen. Die Funktion `sys.fn_validate_plan_guide` -Funktion wird ausgeführt, um zu bestimmen, ob durch diese Aktion Planhinweislisten in der Datenbank ungültig gemacht werden. Auf der Basis der Ergebnisse der Funktion wird entweder ein Commit der `DROP INDEX` -Anweisung oder ein Rollback der Transaktion ausgeführt, sodass der Index nicht gelöscht wird.  
   
 ```sql  
 USE AdventureWorks2012;  

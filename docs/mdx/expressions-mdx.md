@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8ed2484bb3eb31b1bb73000f848dffd27e85e9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118870"
 ---
 # <a name="expressions-mdx"></a>Ausdrücke (MDX)
 
@@ -74,7 +73,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Using Cube and Subcube Expressions (Verwenden von Cube- und Teilcubeausdrücken)](../mdx/using-cube-and-subcube-expressions.md)|Definiert Cube- und Teilcubeausdrücke.|  
 |[Using Dimension Expressions (Verwenden von Dimensionsausdrücken)](../mdx/using-dimension-expressions.md)|Definiert Dimensionsausdrücke.|  

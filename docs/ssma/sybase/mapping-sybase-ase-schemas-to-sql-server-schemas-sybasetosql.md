@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c39e81f8faffed606e6ca94315c47d383174c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028870"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Zuordnen von Sybase ASE-Schemas zu SQL Server-Schemas (SybaseToSQL)
 In Sybase Adaptive Server Enterprise (ASE), dass jede Datenbank eine oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte in einer Datenbank und Schema auf die gleiche Datenbank und das Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können jedoch die Zuordnung zwischen der ASE anpassen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbanken und Schemas.  

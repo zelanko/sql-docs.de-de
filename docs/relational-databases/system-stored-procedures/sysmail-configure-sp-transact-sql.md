@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017722"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@parameter_name** =] **"**_Parameter_name_**"**  
+ [ **@parameter_name** =] **"** _Parameter_name_ **"**  
  Der Name des Parameters, der geändert werden soll  
   
- [**@parameter_value** =] **"**_Parameter_value_**"**  
+ [ **@parameter_value** =] **"** _Parameter_value_ **"**  
  Der neue Wert des Parameters  
   
- [**@description** =] **"**_Beschreibung_**"**  
+ [ **@description** =] **"** _Beschreibung_ **"**  
  Eine Beschreibung des Parameters  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -62,7 +61,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Parametername|Description|Standardwert|  
+|Parametername|Beschreibung|Standardwert|  
 |*AccountRetryAttempts*|Gibt an, wie oft der externe E-Mail-Prozess versucht, die E-Mail-Nachricht zu senden, wobei jedes Konto im angegebenen Profil verwendet wird.|**1**|  
 |*AccountRetryDelay*|Gibt an, wie lange (in Sekunden) der externe E-Mail-Prozess zwischen zwei Versuchen, eine Nachricht zu senden, warten soll.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|Gibt an, wie lange (in Sekunden) der externe E-Mail-Prozess mindestens aktiv bleibt. Wenn Datenbank-E-Mail viele Nachrichten sendet, sollten Sie diesen Wert erhöhen, damit Datenbank-E-Mail aktiv bleibt und unnötiger Aufwand durch häufiges Starten und Beenden vermieden wird.|**600**|  

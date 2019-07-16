@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27359133-dd41-478f-8902-996022deb845
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8899881a83137d4038cd3a04adf3df1feb08d981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80a388fd459ab9fb71a115ca7f9cf9149c872caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030682"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Visual FoxPro-ODBC-Treiber
 Microsoft Visual FoxPro ist eine leistungsfähige objektorientierte Umgebung für die Entwicklung von Erstellung und Anwendung. Die Microsoft Visual FoxPro-ODBC-Treiber ermöglicht es Anwendungen zu öffnen, Abfragen und Aktualisieren von Daten in der Visual FoxPro- und früheren Versionen von FoxPro über die Benutzeroberfläche öffnen Database Connectivity (ODBC).  
@@ -38,7 +37,7 @@ Microsoft Visual FoxPro ist eine leistungsfähige objektorientierte Umgebung fü
   
  Sie können den Treiber verwenden, um viele andere Aufgaben auszuführen. Die folgende Tabelle enthält einige Themen, um Ihnen beim Einstieg helfen.  
   
-|Aktion|Finden Sie unter|  
+|Beschreibung|Finden Sie unter|  
 |--------|---------|  
 |Erfahren Sie mehr über die Verwendung von Visual FoxPro-Daten mit Microsoft Office|[Zugreifen auf Visual FoxPro-Daten aus Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
 |Erfahren Sie mehr über die Verwendung von Visual FoxPro-Daten in Visual Basic-Anwendungen|[Mithilfe des Visual FoxPro-ODBC-Treibers mit Visual Basic-Anwendung](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|  

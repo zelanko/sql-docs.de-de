@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c64e89fd5d965b98b59107d6047e6f43c0bcc9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053110"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +51,18 @@ sp_describe_cursor_columns
  Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und darf nicht werden die zum Zeitpunkt der Aufruf von Sp_describe_cursor_columns keinem Cursor zugeordnet. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
  [ @cursor_source=] {N'local "| N'global "| N'variable'}  
- Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)**.  
+ Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)** .  
   
  [ @cursor_identity=] N'*Local_cursor_name*"  
- Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *Local_cursor_name* ist **vom Datentyp nvarchar(128)**.  
+ Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *Local_cursor_name* ist **vom Datentyp nvarchar(128)** .  
   
  [ @cursor_identity=] N'*Global_cursor_name*"  
- Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* ist **vom Datentyp nvarchar(128)**.  
+ Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* ist **vom Datentyp nvarchar(128)** .  
   
  *Global_cursor_name* kann auch der Namen des ein API-Servercursor, die von einer ODBC-Anwendung geöffnet ist, und klicken Sie dann durch Aufrufen von SQLSetCursorName benannt sein.  
   
  [ @cursor_identity=] N'*Input_cursor_variable*"  
- Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)**.  
+ Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)** .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
@@ -73,7 +72,7 @@ sp_describe_cursor_columns
   
  In der folgenden Tabelle wird das Format des mit sp_describe_cursor_columns zurückgegebenen Cursors dargestellt.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |column_name|**Sysname** (NULL zulassen)|Der Name, der der Resultsetspalte zugewiesen ist. Die Spalte weist den Wert NULL auf, wenn die Spalte ohne zugehörige AS-Klausel angegeben wurde.|  
 |ordinal_position|**int**|Die relative Position der Spalte in Bezug auf die äußerst linke Spalte im Resultset. Die erste Spalte befindet sich an Position 0.|  
@@ -83,7 +82,7 @@ sp_describe_cursor_columns
 |column_precision|**tinyint**|Maximale Genauigkeit der Spalte gemäß der *bPrecision* -Wert in OLE DB.|  
 |column_scale|**tinyint**|Anzahl der Ziffern rechts vom Dezimaltrennzeichen für die **numerischen** oder **decimal** Datentypen gemäß den *bScale* -Wert in OLE DB.|  
 |order_position|**int**|Wenn die Spalte bei der Sortierung des Resultsets berücksichtigt wird, bezeichnet dies die Position der Spalte im Sortierschlüssel relativ zur Spalte ganz links.|  
-|order_direction|**varchar(1)**(NULL zulassen)|A = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist aufsteigend.<br /><br /> D = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist absteigend.<br /><br /> NULL = Die Spalte wird nicht bei der Sortierung berücksichtigt.|  
+|order_direction|**varchar(1)** (NULL zulassen)|A = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist aufsteigend.<br /><br /> D = Die Spalte befindet sich im Sortierschlüssel, und die Sortierung ist absteigend.<br /><br /> NULL = Die Spalte wird nicht bei der Sortierung berücksichtigt.|  
 |hidden_column|**smallint**|0 = Diese Spalte wird in der Auswahlliste angezeigt.<br /><br /> 1 = Zur künftigen Verwendung reserviert.|  
 |columnid|**int**|Die Spalten-ID der Basisspalte. Wenn die Resultsetspalte mit einem Ausdruck erstellt wurde, weist columnid den Wert -1 auf.|  
 |objectid|**int**|Die Objekt-ID des Objekts oder der Basistabelle, das bzw. die die Spalte bereitstellt. Wenn die Resultsetspalte mit einem Ausdruck erstellt wurde, weist objectid den Wert -1 auf.|  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d44d8031daaac656cb99a7477991dc6c30ce864
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037320"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Gespeicherte Systemprozeduren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51666509"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Kategorie|Description|  
+|Kategorie|Beschreibung|  
 |--------------|-----------------|  
 |[Aktive geografische Replikation gespeicherten Prozeduren](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Zum Verwalten von Konfigurationen der aktiven geografischen Replikation in Azure SQL-Datenbank verwalten|  
 |[Gespeicherte Prozeduren für Kataloginformationen](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Implementieren Funktionen ODBC-Datenwörterbüchern und isolieren ODBC-Anwendungen von Änderungen an den zugrunde liegenden Systemtabellen.|  
@@ -174,7 +173,7 @@ ms.locfileid: "51666509"
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [Gespeicherte Prozeduren &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Ausführen von gespeicherten Prozeduren &#40;OLE-DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [Ausführen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

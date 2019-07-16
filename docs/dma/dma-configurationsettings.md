@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: a360c86edc08916f1e28157a54503f64c152dec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058875"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für den Data Migration Assistant
 
@@ -85,17 +84,17 @@ Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung 
 > [!NOTE]
 > Die gesamte &lt;Dacfx&gt; Eintrag ist standardmäßig auskommentiert. Entfernen Sie die Kommentare, und klicken Sie dann ändern Sie den Wert, je nach Bedarf.
 
-- commandTimeout
+- "CommandTimeout"
 
-   Dieser Parameter wird die Eigenschaft IDbCommand.CommandTimeout *Sekunden*. (Default=60)
+   Dieser Parameter wird die Eigenschaft IDbCommand.CommandTimeout *Sekunden*. (Standard = 60)
 
 - databaseLockTimeout
 
-   Dieser Parameter entspricht dem [SPERRE festgelegt\_TIMEOUT Timeout\_Zeitraum](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Default=5000)
+   Dieser Parameter entspricht dem [SPERRE festgelegt\_TIMEOUT Timeout\_Zeitraum](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standard = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Dieser Parameter legt fest, die Anzahl der SQL-Verbindung-Pool-Verbindungen, die verwendet wird. (Default=8)
+  Dieser Parameter legt fest, die Anzahl der SQL-Verbindung-Pool-Verbindungen, die verwendet wird. (Standard = 8)
 
 ```
 <advisorGroup>

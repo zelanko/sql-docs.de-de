@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce54144c3f7f367248cdb9d92484874deaaf78fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059250"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,12 +52,12 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  Gibt die folgenden Informationen zurück. Weitere Informationen zu den Spalten finden Sie unter [Sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md).  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**Spalten-ID**|**int**|Die ID der Spalte, auf die der Filter angewendet wird|  
 |**logical_operator**|**int**|Gibt an, ob der Operator AND oder OR angewendet wird|  
 |**comparison_operator**|**int**|Gibt die Art des Vergleichs an:<br /><br /> 0 = Gleich<br /><br /> 1 = Ungleich<br /><br /> 2 = Größer als<br /><br /> 3 = Kleiner als<br /><br /> 4 = Größer als oder gleich<br /><br /> 5 = Kleiner als oder gleich<br /><br /> 6 = Wie<br /><br /> 7 = Nicht wie|  
-|**Wert**|**sql_variant**|Gibt den Wert an, auf den der Filter angewendet wird|  
+|**value**|**sql_variant**|Gibt den Wert an, auf den der Filter angewendet wird|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Benutzer legt *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung. Wenn die ID einer bestimmten Ablaufverfolgung übergeben **Fn_trace_getfilterinfo** gibt Informationen zu allen Filtern dieser Ablaufverfolgung zurück. Wenn die angegebene Ablaufverfolgung keinen Filter aufweist, gibt diese Funktion ein leeres Rowset zurück. Wird eine ungültige ID übergeben, gibt die Funktion ein leeres Rowset zurück. Ähnliche Informationen zu ablaufverfolgungen finden Sie unter [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  

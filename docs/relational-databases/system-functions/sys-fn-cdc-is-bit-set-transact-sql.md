@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0796f25396d4c5303fb0de1762f6f04a18035fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046356"
 ---
 # <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +52,9 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
  **bit**  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion wird in der Regel als Teil einer Änderungsdatenabfrage verwendet, um anzuzeigen, ob eine Spalte geändert wurde. In diesem Szenario wird die Funktion [Sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) vor der Abfrage verwendet, um die erforderliche Spaltenordnungszahl abzurufen. **sys.fn_cdc_is_bit_set** wird dann auf jede Zeile von abgerufenen Änderungsdaten angewendet und stellt die spaltenspezifischen Informationen als Teil des zurückgegebenen Resultsets bereit.  
+ Diese Funktion wird in der Regel als Teil einer Änderungsdatenabfrage verwendet, um anzuzeigen, ob eine Spalte geändert wurde. In diesem Szenario wird die Funktion [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) vor der Abfrage verwendet, um die erforderliche Spaltenordnungszahl abzurufen. **sys.fn_cdc_is_bit_set** wird dann auf jede Zeile von abgerufenen Änderungsdaten angewendet und stellt die spaltenspezifischen Informationen als Teil des zurückgegebenen Resultsets bereit.  
   
- Es wird empfohlen, diese Funktion statt der [fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) bestimmen, ob die Spalten für alle Zeilen eines zurückgegebenen Resultsets geändert haben.  
+ Die Verwendung dieser Funktion statt der [sys.fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) -Funktion wird empfohlen, wenn bestimmt wird, ob sich Spalten für alle Zeilen eines zurückgegebenen Resultsets geändert haben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  

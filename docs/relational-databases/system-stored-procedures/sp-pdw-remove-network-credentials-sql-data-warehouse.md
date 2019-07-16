@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a86459f8ea20b2596068093a2e24cb87aa788cb
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: d3c19439a481b843edec8210f83a4a82e5dd27a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056446"
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>Sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- '*target_server_name*'  
+ "*Target_server_name*"  
  Gibt an, die Ziel-Serverhostnamen oder die IP-Adresse. Anmeldeinformationen für den Zugriff auf diesem Server aus entfernt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Dies nicht ändern oder entfernen Sie alle Berechtigungen auf dem tatsächlichen Zielserver, der von Ihrem eigenen Team verwaltet wird.  
   
  *Target_server_name* als nvarchar(337) definiert ist.  

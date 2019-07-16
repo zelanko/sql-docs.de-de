@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079229"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @type = ] type` Ist der Typ des Abonnenten. *Typ* ist **Tinyint**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0** (Standardwert)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten|  
 |**1**|ODBC-Datenquellenserver|  
@@ -77,7 +76,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
-`[ @password = ] 'password'` Das Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *Kennwort* ist **nvarchar(524)**, hat den Standardwert NULL.  
+`[ @password = ] 'password'` Das Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *Kennwort* ist **nvarchar(524)** , hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort.  
@@ -116,7 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
- [**@frequency_interval=** ] *Frequency_interval*  
+ [ **@frequency_interval=** ] *Frequency_interval*  
  Ist der Wert der Häufigkeit festgelegt angewendet *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert 1.  
   
 > [!NOTE]  
@@ -124,7 +123,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum des Replikations-Agents. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1** (Standard)|Erster|  
 |**2**|Zweimal|  
@@ -177,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die Eigenschaft ist nun auf abonnementspezifischer Basis angegeben, beim Ausführen [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
   
-`[ @description = ] 'description'` Ist eine textbeschreibung des Abonnenten. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Ist eine textbeschreibung des Abonnenten. *Beschreibung* ist **nvarchar(255)** , hat den Standardwert NULL.  
   
 `[ @security_mode = ] security_mode` Ist der implementierte Sicherheitsmodus. *Security_mode* ist **Int**, hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. **1** gibt die Windows-Authentifizierung.  
   

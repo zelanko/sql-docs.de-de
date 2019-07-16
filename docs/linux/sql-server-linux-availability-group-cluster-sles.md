@@ -5,18 +5,17 @@ description: Erfahren Sie, wie Sie Availability Group-Cluster für SQL Server un
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 0f6638d1d31be45f12f0b80b7fc63f918e90d5ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003558"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren Sie SLES-Cluster für SQL Server-Verfügbarkeitsgruppe
 
@@ -30,7 +29,7 @@ Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, M
 >SQL Server Integration mit Pacemaker unter Linux ist an diesem Punkt nicht als gekoppelt als mit WSFC unter Windows. SQL Server Service unter Linux ist nicht clusterabhängig. Pacemaker steuert alle von der Orchestrierung der Clusterressourcen, einschließlich der Verfügbarkeitsgruppen-Ressource. Unter Linux sollten Sie nicht für immer auf Verfügbarkeit Gruppe Dynamic Management Views (DMVs) verlassen, die Clusterinformationen, z. B. sys. dm_hadr_cluster bereitstellen. Darüber hinaus Name des virtuellen Netzwerks ist spezifisch für die WSFC, es gibt keine Entsprechung desselben in Pacemaker. Sie können einen Listener für die Verwendung für transparente erneute Verbindung nach einem Failover weiterhin erstellen, aber müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server registrieren, mit der IP-Adresse verwendet, um die virtuelle IP-Ressource (wie in den folgenden Abschnitten erläutert wird) zu erstellen.
 
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Roadmap für die
 
 Das Verfahren zum Erstellen einer verfügbarkeitsgruppe für hochverfügbarkeit unterscheidet sich zwischen Linux-Servern und einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 

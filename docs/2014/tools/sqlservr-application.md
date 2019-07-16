@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211018"
 ---
 # <a name="sqlservr-application"></a>sqlservr (Anwendung)
   Mithilfe der Anwendung **sqlservr** können Sie die Ausführung einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz von der Eingabeaufforderung aus starten, beenden, anhalten und fortsetzen.  
@@ -61,7 +61,7 @@ ms.locfileid: "53591864"
  Startet eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz mit Minimalkonfiguration. Dies ist hilfreich, wenn der Server aufgrund der Einstellung eines Konfigurationswerts (z. B. aufgrund von Arbeitsspeichermangel) nicht gestartet werden kann.  
   
  **-e** _error_log_path_  
- Gibt den vollqualifizierten Pfad der Fehlerprotokolldatei an. Wird der Pfad nicht angegeben, wird standardmäßig der Pfad *\<Drive>*:\Programme\Microsoft SQL Server\MSSQL\Log\Errorlog für die Standardinstanz und *\<Drive>*:\Programme\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog für eine benannte Instanz verwendet. Zwischen **-e** und *error_log_path*darf sich kein Leerzeichen befinden.  
+ Gibt den vollqualifizierten Pfad der Fehlerprotokolldatei an. Wird der Pfad nicht angegeben, wird standardmäßig der Pfad *\<Drive>* :\Programme\Microsoft SQL Server\MSSQL\Log\Errorlog für die Standardinstanz und *\<Drive>* :\Programme\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog für eine benannte Instanz verwendet. Zwischen **-e** und *error_log_path*darf sich kein Leerzeichen befinden.  
   
  **-l** _master_log_path_  
  Gibt den vollqualifizierten Pfad für die Transaktionsprotokolldatei der **master** -Datenbank an. Zwischen **-l** und *master_log_path*darf sich kein Leerzeichen befinden.  
@@ -73,10 +73,10 @@ ms.locfileid: "53591864"
  Ermöglicht es Ihnen, eine benannte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz zu starten. Wurde der **-s** -Parameter nicht festgelegt, versucht die Standardinstanz zu starten. Sie müssen an der Eingabeaufforderung in das entsprechende BINN-Verzeichnis für die Instanz wechseln, bevor Sie **sqlservr.exe**starten. Wenn Instanz 1 beispielsweise das Verzeichnis „\mssql$Instance1“ für die zugehörigen Binärdateien verwendet, muss der Benutzer zum Verzeichnis „\mssql$Instance1\binn“ wechseln, um **sqlservr.exe -s instance1**starten zu können. Wenn Sie eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz mit der Option **-n** starten, sollten Sie auch die Option **-e** verwenden, da sonst keine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Ereignisse protokolliert werden.  
   
  **-T** _trace#_  
- Gibt an, dass eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz so gestartet werden soll, dass ein bestimmtes Ablaufverfolgungsflag (*trace#*) wirksam wird. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
+ Gibt an, dass eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz so gestartet werden soll, dass ein bestimmtes Ablaufverfolgungsflag (*trace#* ) wirksam wird. Ablaufverfolgungsflags werden verwendet, um den Server mit nicht standardmäßigem Verhalten zu starten. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  Wenn Sie ein Ablaufverfolgungsflag angeben, sollten Sie **-T** verwenden, um die Nummer des Ablaufverfolgungsflags zu übergeben. Der Kleinbuchstabe „t“ (**-t**) wird von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]akzeptiert. Mit **-t** werden jedoch andere interne Ablaufverfolgungsflags festgelegt, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Supporttechnikern benötigt werden.  
+>  Wenn Sie ein Ablaufverfolgungsflag angeben, sollten Sie **-T** verwenden, um die Nummer des Ablaufverfolgungsflags zu übergeben. Der Kleinbuchstabe „t“ ( **-t**) wird von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]akzeptiert. Mit **-t** werden jedoch andere interne Ablaufverfolgungsflags festgelegt, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Supporttechnikern benötigt werden.  
   
  **-v**  
  Zeigt die Serverversionsnummer an.  
@@ -91,9 +91,9 @@ ms.locfileid: "53591864"
   
  Verwenden Sie den Standardwert für den **-g** -Parameter, es sei denn, das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Fehlerprotokoll enthält eine der folgenden Warnungen:  
   
--   "Fehler bei virtuellen Bytes zuordnen: FAIL_VIRTUAL_RESERVE \<Größe > "  
+-   „Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>“ (Virtuelle Zuordnung von Bytes fehlgeschlagen: FAIL_VIRTUAL_RESERVE <Größe>)  
   
--   "Fehler bei virtuellen Bytes zuordnen: FAIL_VIRTUAL_COMMIT \<Größe > "  
+-   „Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>“ (Virtuelle Zuordnung von Bytes fehlgeschlagen: FAIL_VIRTUAL_COMMIT <Größe>)  
   
  Diese Meldungen können darauf hinweisen, dass [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versucht, Teile des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Speicherpools freizugeben, um Speicherplatz für Elemente wie DLL-Dateien von erweiterten gespeicherten Prozeduren oder Automatisierungsobjekte zu erhalten. In diesem Fall sollten Sie erwägen, den durch den Schalter **-g**reservierten Umfang an Arbeitsspeicher zu erhöhen.  
   

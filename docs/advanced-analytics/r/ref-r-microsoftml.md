@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: e3dc94026f90ef769abb3889a716b5dadb317c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962503"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (R-Bibliothek in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +54,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ## <a name="1-machine-learning-algorithms"></a>1 – Machine Learning-Algorithmen
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | Eine Implementierung von FastRank, eine effiziente Implementierung des MART-Gradient-boosting-Algorithmus.  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Ein zufälliger Gesamtstruktur und die Quantile Regression Gesamtstruktur Implementierung mit [RxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees).  |
@@ -69,7 +68,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ## <a name="2-transformation-functions"></a>2-Transformationsfunktionen
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | Transformation, die eine einzelne Spalte mit Vektor-Wert aus mehreren Spalten zu erstellen.  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Indikator Vektor Wörterbuch mit kategorischen Transformation zu erstellen.  |
@@ -87,7 +86,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ## <a name="3-scoring-and-training-functions"></a>3-Bewertung und Training-Funktionen
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Führt die bewertungs-Bibliothek an, entweder über SQL Server, mit der gespeicherten Prozedur, oder über R-Code aktivieren die echtzeitbewertung und ermöglicht damit deutlich schneller vorhersageleistung.|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | Transformiert die Daten aus einem Eingabedataset auf einen Ausgabe-DataSet.|
@@ -124,14 +123,14 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ## <a name="7-neural-networking-functions"></a>7-neuronalen Netzwerke-Funktionen
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
-|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Gibt die Algorithmen für die [RxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) Machine Learning-Algorithmus.|
+|[Abfrageoptimierer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Gibt die Algorithmen für die [RxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) Machine Learning-Algorithmus.|
 
 
 ## <a name="8-package-state-functions"></a>Status des 8 Funktionen
 
-| Funktionsname | Description |
+| Funktionsname | Beschreibung |
 |---------------|-------------|
 |[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | Eine Umgebungsobjekt, das zum Speichern von Paket Zustand verwendet. |
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1283cd0b41eff971a1014b213bda5e44f1912039
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107329"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Standardkonforme Anwendungen und Treiber
 Eine Standards kompatible Anwendung oder der Treiber ist eine, die die Open Group CAE-Spezifikation entspricht "Datenverwaltung: SQL-Call-Level-Interface (CLI)"und dem ISO/IEC 9075-3:1995 (E)-Call-Level-Interface (SQL/CLI).  

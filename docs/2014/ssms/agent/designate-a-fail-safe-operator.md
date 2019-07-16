@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211422"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Bestimmen eines Ausfallsicherheitsoperators
   Ein Ausfallsicherheitsoperator ist ein Benutzer, der die Warnungen empfängt, wenn der vorgesehene Operator nicht erreichbar ist. In diesem Thema wird beschrieben, wie Sie einen Ausfallsicherheitsoperator zum Empfang von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnbenachrichtigungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen.  
@@ -60,13 +60,13 @@ ms.locfileid: "52760752"
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent** , und wählen Sie **Eigenschaften**aus.  
 
-3.  In der **SQL Server-Agent-Eigenschaften –**_Server_name_ Dialogfeld **Seite auswählen**Option **Warnungssystem**.  
+3.  In der **SQL Server-Agent-Eigenschaften –** _Server_name_ Dialogfeld **Seite auswählen**Option **Warnungssystem**.  
  
 4.  Aktivieren Sie unter **Ausfallsicherheitsoperator**die Option **Ausfallsicherheitsoperator aktivieren**.  
   
 5.  Wählen Sie in der Liste **Operator** den Operator aus, den Sie als ausfallsicher bestimmen möchten.  
   
-6.  Aktivieren Sie entweder eines oder alle der folgenden Kontrollkästchen, um zu bestimmen, wie der Operator benachrichtigt wird: **E-Mail**, **Pager**, oder **Net Send**.  
+6.  Aktivieren Sie entweder eines oder alle der folgenden Kontrollkästchen, um zu bestimmen, wie der Operator benachrichtigt wird: **E-Mail**, **Pager** oder **NET SEND**.  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

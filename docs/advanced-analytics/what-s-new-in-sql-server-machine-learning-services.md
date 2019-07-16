@@ -5,17 +5,16 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b7daefb0f5e9514372fadd9377b05c84784e34
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: b3b5b5a8a1386086f03681db49b72aca5a294d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961669"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuerungen in SQL Server Machine Learning Services
 
@@ -64,7 +63,7 @@ Die neuen Funktionen für R umfassen [ **paketverwaltung**](r/install-additional
 
 ### <a name="r-libraries"></a>R-Bibliotheken
 
-| Package | Description |
+| Package | Beschreibung |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | In dieser Version ist MicrosoftML in einer Standardinstallation von R enthalten beseitigen den Schritt zum Upgrade in der vorherigen SQL Server 2016 R Services erforderlich. MicrosoftML bietet die neuesten Machine learning-Algorithmen und Transformieren von Daten, die skaliert werden können oder die in remotecomputekontexten ausgeführt werden kann. Algorithmen sind anpassbare tiefgreifende neuronale Netzwerke, schnelle Entscheidungsstrukturen und entscheidungswälder, lineare Regression und logistische Regression.  |
 
@@ -80,7 +79,7 @@ Können Sie das T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) Funkti
 
 ### <a name="python-libraries"></a>Python-Bibliotheken
 
-| Package | Description |
+| Package | Beschreibung |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-Entsprechung zu RevoScaleR. Sie können Python-Modelle für lineare und logistische Regressionen, Entscheidungsstrukturen, verstärkte Strukturen und zufällige Gesamtstrukturen, die alle parallelisiert werden kann und mit in remotecomputekontexten ausgeführt wird, erstellen. Dieses Paket unterstützt die Verwendung von mehreren Datenquellen und remote Compute-Kontexte. Der Data Scientist oder Entwickler kann Python-Code auf einem remote-SQL-Server, zum Durchsuchen von Daten oder erstellen Sie Modelle ohne Verschieben von Daten ausführen. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Python-Darstellung des MicrosoftML-R-Pakets. |

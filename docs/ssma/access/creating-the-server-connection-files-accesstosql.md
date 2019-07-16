@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fabc454fe6adc77ec3e9789925e099fb6b0de6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006608"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Erstellen des Servers Connection-Dateien (AccessToSQL)
 Informationen zum Server möglich. entweder in den Bereich "Server", der Skriptdatei angegeben. Informationen zum Server kann auch in einer separaten Server Connection-Datei angegeben werden. Die Befehlszeilenparameter für die Server-Verbindungsdatei ist `-c <serverconnectionfile>`. Wenn die gleiche Id in das Skript und die Server-Connection-Dateien vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  

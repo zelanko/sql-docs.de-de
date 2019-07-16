@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002505"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_refresh_log_shipping_monitor
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine.  
+ Keine  
   
 ## <a name="remarks"></a>Hinweise  
  **Sp_refresh_log_shipping_monitor** aktualisiert die **Log_shipping_monitor_primary**, **Log_shipping_monitor_secondary**, **Log_shipping_monitor_history_detail** , und **Log_shipping_monitor_error_detail** Tabellen mit allen, die noch nicht übertragenen Sitzungsinformationen. Dies ermöglicht das Synchronisieren des Überwachungsservers mit dem primären oder einem sekundären Server, wenn der Überwachungsserver für einen bestimmten Zeitraum nicht mehr synchronisiert wurde. Zudem können Sie die Überwachungsinformationen auf dem Überwachungsserver bei Bedarf leeren.  

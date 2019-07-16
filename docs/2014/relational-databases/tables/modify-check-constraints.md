@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211844"
 ---
 # <a name="modify-check-constraints"></a>Ändern von CHECK-Einschränkungen
   Sie können eine CHECK-Einschränkung mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)] ändern, wenn Sie entweder den Einschränkungsausdruck oder die Optionen ändern möchten, mit denen die Einschränkung unter bestimmten Bedingungen aktiviert bzw. deaktiviert werden.  
@@ -50,13 +50,13 @@ ms.locfileid: "54130320"
   
 1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle mit der CHECK-Einschränkung, und wählen Sie dann **Entwerfen**aus.  
   
-2.  Klicken Sie im Menü **Tabellen-Designer** auf **Einschränkungen überprüfen...**.  
+2.  Klicken Sie im Menü **Tabellen-Designer** auf **Einschränkungen überprüfen...** .  
   
 3.  Wählen Sie im Dialogfeld **CHECK-Einschränkungen** unter **Ausgewählte CHECK-Einschränkung**die Einschränkung aus, die Sie bearbeiten möchten.  
   
 4.  Führen Sie eine Aktion aus der folgenden Tabelle aus:  
   
-    |Aktion|Schritte|  
+    |Beschreibung|Schritte|  
     |--------|------------------------|  
     |Ändern des Einschränkungsausdrucks|Geben Sie im Feld **Ausdruck** den neuen Ausdruck ein.|  
     |Umbenennen der Einschränkung|Geben Sie im Feld **Name** einen neuen Namen ein.|  

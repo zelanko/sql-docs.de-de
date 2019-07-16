@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066660"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (AccessToSQL)
 Die projekteinstellungen Type Mapping können Sie die standardtypmappings für das SSMA-Projekt festgelegt. Sie können auch die replikationsdatentyp-Zuordnungen für einzelne Objekte angeben. Weitere Informationen finden Sie unter [Zuordnen von Quell- und Ziel-Datentypen](mapping-source-and-target-data-types-accesstosql.md).  
@@ -47,7 +46,7 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen.
 |**Binary [\*... \*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
-|**currency**|**money**|  
+|**Währung**|**money**|  
 |**Datum**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
@@ -55,11 +54,11 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen.
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
+|**Memo**|**nvarchar(max)**|  
 |**Memo** Access 97:|**varchar(max)**|  
-|**single**|**real**|  
-|**Text [\*... \*]**|**nvarchar[\*]**|  
-|**Text [\*... \*]** – für Access 97|**varchar[\*]**|  
+|**einzelne**|**real**|  
+|**Text [\*... \*]**|**Nvarchar [\*]**|  
+|**Text [\*... \*]** – für Access 97|**Varchar [\*]**|  
   
 **Hinzufügen**  
 Klicken Sie auf diese Option, um einen Datentyp der Zuordnungsliste hinzuzufügen.  

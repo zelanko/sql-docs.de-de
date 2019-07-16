@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14e35b85b594cadf90a467c5017ac31033bc464b
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f676acf9b3ee91bb5a1fb46cae2f7c693dc66983
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061824"
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,9 +89,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@restricted = ] 'restricted'` Nur für Abwärtskompatibilität unterstützt. Verwenden Sie *Default_access*.  
   
-`[ \@sync_method = ] _'sync_method'` Ist der Synchronisierungsmodus. *Sync_method* ist **vom Datentyp nvarchar(13)**, und kann einen der folgenden Werte.  
+`[ \@sync_method = ] _'sync_method'` Ist der Synchronisierungsmodus. *Sync_method* ist **vom Datentyp nvarchar(13)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**native**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. *Nicht für Oracle-Verleger unterstützt*.|  
 |**character**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. _Für einen Oracle-Verleger_ **Zeichen** _gilt nur für die momentaufnahmereplikation_.|  
@@ -102,41 +101,41 @@ sp_addpublication [ @publication = ] 'publication'
 |**Zeichensatz der Datenbank-Momentaufnahme**|Erstellt aus einer Datenbankmomentaufnahme eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Datenbank-Momentaufnahmen sind nicht verfügbar in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |NULL (Standard)|Standardmäßig **native** für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber. Für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber, der Standardwert ist **Zeichen** bei den Wert der *Repl_freq* ist **Momentaufnahme** und **Concurrent_c** für alle anderen Fälle.|  
   
-`[ \@repl_freq = ] 'repl_freq'` Ist der Typ der replikationshäufigkeit, *Repl_freq* ist **nvarchar(10)**, und kann einen der folgenden Werte.  
+`[ \@repl_freq = ] 'repl_freq'` Ist der Typ der replikationshäufigkeit, *Repl_freq* ist **nvarchar(10)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**fortlaufende** (Standard)|Der Verleger stellt die Ausgabe aller protokollbasierten Transaktionen bereit. Für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber, das erfordert, dass *Sync_method* festgelegt werden, um **Concurrent_c**.|  
 |**snapshot**|Der Verleger gibt nur geplante Synchronisierungsereignisse aus. Für nicht -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber, das erfordert, dass *Sync_method* festgelegt werden, um **Zeichen**.|  
   
-`[ \@description = ] 'description'` Ist eine optionale Beschreibung für die Veröffentlichung. *Beschreibung* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ \@description = ] 'description'` Ist eine optionale Beschreibung für die Veröffentlichung. *Beschreibung* ist **nvarchar(255)** , hat den Standardwert NULL.  
   
-`[ \@status = ] 'status'` Gibt an, ob Veröffentlichungsdaten verfügbar sind. *Status* ist **nvarchar(8)**, und kann einen der folgenden Werte.  
+`[ \@status = ] 'status'` Gibt an, ob Veröffentlichungsdaten verfügbar sind. *Status* ist **nvarchar(8)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**active**|Die Veröffentlichungsdaten sind für Abonnenten sofort verfügbar.|  
+|**aktiv**|Die Veröffentlichungsdaten sind für Abonnenten sofort verfügbar.|  
 |**Inaktive** (Standard)|Die Veröffentlichungsdaten sind für Abonnenten zunächst nicht verfügbar, wenn die Veröffentlichung erstellt wird (die Abonnierung ist möglich, aber die Abonnements werden nicht verarbeitet).|  
   
  *Nicht für Oracle-Verleger unterstützt*.  
   
-`[ \@independent_agent = ] 'independent_agent'` Gibt an, ob ein eigenständiger Verteilungs-Agent für diese Veröffentlichung. *Independent_agent* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"true"**, ein eigenständiger Verteilungs-Agent für diese Veröffentlichung vorhanden ist. Wenn **"false"**, die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Verlegerdatenbank und Abonnentendatenbank-Paar verfügt über einen einzelnen freigegebenen Agent.  
+`[ \@independent_agent = ] 'independent_agent'` Gibt an, ob ein eigenständiger Verteilungs-Agent für diese Veröffentlichung. *Independent_agent* ist **nvarchar(5)** , hat den Standardwert "false". Wenn **"true"** , ein eigenständiger Verteilungs-Agent für diese Veröffentlichung vorhanden ist. Wenn **"false"** , die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Verlegerdatenbank und Abonnentendatenbank-Paar verfügt über einen einzelnen freigegebenen Agent.  
   
-`[ \@immediate_sync = ] 'immediate_synchronization'` Gibt an, ob die Synchronisierungsdateien für die Veröffentlichung jedes Mal erstellt werden, denen der Momentaufnahme-Agent ausgeführt wird. *immediate_sync* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"true"**, die Synchronisierungsdateien erstellt oder bei jeder Ausführung des Momentaufnahme-Agents neu erstellt werden. Abonnenten können die Synchronisierungsdateien sofort abrufen, wenn der Momentaufnahme-Agent vor dem Erstellen des Abonnements abgeschlossen wurde. Neue Abonnements rufen die neuesten Synchronisierungsdateien ab, die von der letzten Ausführung des Momentaufnahmeagents generiert wurden. *Independent_agent* muss **"true"** für *immediate_sync* sein **"true"**. Wenn **"false"**, die Synchronisierungsdateien nur erstellt, wenn neue Abonnements vorhanden sind. Rufen Sie [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) für jedes Abonnement, wenn Sie einen neuen Artikel inkrementell zu einer vorhandenen Veröffentlichung hinzufügen. Abonnenten können die Synchronisierungsdateien nach dem Einrichten des Abonnements erst empfangen, wenn die Momentaufnahme-Agents gestartet und abgeschlossen wurden.  
+`[ \@immediate_sync = ] 'immediate_synchronization'` Gibt an, ob die Synchronisierungsdateien für die Veröffentlichung jedes Mal erstellt werden, denen der Momentaufnahme-Agent ausgeführt wird. *immediate_sync* ist **nvarchar(5)** , hat den Standardwert "false". Wenn **"true"** , die Synchronisierungsdateien erstellt oder bei jeder Ausführung des Momentaufnahme-Agents neu erstellt werden. Abonnenten können die Synchronisierungsdateien sofort abrufen, wenn der Momentaufnahme-Agent vor dem Erstellen des Abonnements abgeschlossen wurde. Neue Abonnements rufen die neuesten Synchronisierungsdateien ab, die von der letzten Ausführung des Momentaufnahmeagents generiert wurden. *Independent_agent* muss **"true"** für *immediate_sync* sein **"true"** . Wenn **"false"** , die Synchronisierungsdateien nur erstellt, wenn neue Abonnements vorhanden sind. Rufen Sie [Sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) für jedes Abonnement, wenn Sie einen neuen Artikel inkrementell zu einer vorhandenen Veröffentlichung hinzufügen. Abonnenten können die Synchronisierungsdateien nach dem Einrichten des Abonnements erst empfangen, wenn die Momentaufnahme-Agents gestartet und abgeschlossen wurden.  
   
-`[ \@enabled_for_internet = ] 'enabled_for_internet'` Gibt an, ob die Veröffentlichung für das Internet aktiviert ist, und bestimmt, ob das Dateiübertragungsprotokoll (FTP) verwendet werden kann, um die momentaufnahmedateien an einen Abonnenten übertragen. *Enabled_for_internet* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"true"**, werden die Synchronisierungsdateien für die Veröffentlichung im Verzeichnis c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp eingefügt. Der Benutzer muss das FTP-Verzeichnis erstellen.  
+`[ \@enabled_for_internet = ] 'enabled_for_internet'` Gibt an, ob die Veröffentlichung für das Internet aktiviert ist, und bestimmt, ob das Dateiübertragungsprotokoll (FTP) verwendet werden kann, um die momentaufnahmedateien an einen Abonnenten übertragen. *Enabled_for_internet* ist **nvarchar(5)** , hat den Standardwert "false". Wenn **"true"** , werden die Synchronisierungsdateien für die Veröffentlichung im Verzeichnis c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp eingefügt. Der Benutzer muss das FTP-Verzeichnis erstellen.  
   
-`[ \@allow_push = ] 'allow_push'` Gibt an, wenn für die angegebene Veröffentlichung Pushabonnements erstellt werden können. *Allow_push* ist **nvarchar(5)**, hat den Standardwert "true", wodurch Pushabonnements für die Veröffentlichung.  
+`[ \@allow_push = ] 'allow_push'` Gibt an, wenn für die angegebene Veröffentlichung Pushabonnements erstellt werden können. *Allow_push* ist **nvarchar(5)** , hat den Standardwert "true", wodurch Pushabonnements für die Veröffentlichung.  
   
-`[ \@allow_pull = ] 'allow_pull'` Gibt an, wenn für die angegebene Veröffentlichung Pullabonnements erstellt werden können. *Allow_pull* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"false"**, Pullabonnements sind für die Veröffentlichung nicht zulässig.  
+`[ \@allow_pull = ] 'allow_pull'` Gibt an, wenn für die angegebene Veröffentlichung Pullabonnements erstellt werden können. *Allow_pull* ist **nvarchar(5)** , hat den Standardwert "false". Wenn **"false"** , Pullabonnements sind für die Veröffentlichung nicht zulässig.  
   
-`[ \@allow_anonymous = ] 'allow_anonymous'` Gibt an, wenn für die angegebene Veröffentlichung anonyme Abonnements erstellt werden können. *Allow_anonymous* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"true"**, *immediate_sync* muss ebenfalls festgelegt werden, um **"true"**. Wenn **"false"**, anonyme Abonnements sind nicht für die Veröffentlichung zulässig.  
+`[ \@allow_anonymous = ] 'allow_anonymous'` Gibt an, wenn für die angegebene Veröffentlichung anonyme Abonnements erstellt werden können. *Allow_anonymous* ist **nvarchar(5)** , hat den Standardwert "false". Wenn **"true"** , *immediate_sync* muss ebenfalls festgelegt werden, um **"true"** . Wenn **"false"** , anonyme Abonnements sind nicht für die Veröffentlichung zulässig.  
   
-`[ \@allow_sync_tran = ] 'allow_sync_tran'` Gibt an, ob Abonnements mit sofortigem Update für die Veröffentlichung zulässig sind. *Allow_sync_tran* ist **nvarchar(5)**, hat den Standardwert "false". **"true"** ist *nicht für Oracle-Verleger unterstützt*.  
+`[ \@allow_sync_tran = ] 'allow_sync_tran'` Gibt an, ob Abonnements mit sofortigem Update für die Veröffentlichung zulässig sind. *Allow_sync_tran* ist **nvarchar(5)** , hat den Standardwert "false". **"true"** ist *nicht für Oracle-Verleger unterstützt*.  
   
-`[ \@autogen_sync_procs = ] 'autogen_sync_procs'` Gibt an, ob die synchronisierende gespeicherte Prozedur zum Aktualisieren von Abonnements auf dem Verleger generiert wird. *Autogen_sync_procs* ist **nvarchar(5)**, und kann einen der folgenden Werte.  
+`[ \@autogen_sync_procs = ] 'autogen_sync_procs'` Gibt an, ob die synchronisierende gespeicherte Prozedur zum Aktualisieren von Abonnements auf dem Verleger generiert wird. *Autogen_sync_procs* ist **nvarchar(5)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**true**|Wird automatisch festgelegt, wenn das Aktualisieren von Abonnements aktiviert ist.|  
 |**false**|Wird automatisch für Oracle-Verleger festgelegt oder wenn das Aktualisieren von Abonnements nicht aktiviert ist.|  
@@ -147,23 +146,23 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@retention = ] retention` Ist die Aufbewahrungsdauer für Abonnementaktivitäten in Stunden an. *Aufbewahrung* ist **Int**, Standardwert ist 336 Stunden. Wenn ein Abonnement im Beibehaltungszeitraum nicht aktiv ist, läuft es ab und wird entfernt. Der Wert kann größer als die maximale Beibehaltungsdauer der vom Verleger verwendeten Verteilungsdatenbank sein. Wenn **0**, laufen bekannte Abonnements der Veröffentlichung nie abläuft, und das abgelaufene Abonnement Verteilungscleanup-Agent entfernt werden.  
   
-`[ \@allow_queued_tran = ] 'allow_queued_updating'` Aktiviert oder deaktiviert die queuing von Änderungen auf dem Abonnenten, bis sie auf dem Verleger angewendet werden können. *Allow_queued_updating* ist **nvarchar(5)** hat den Standardwert "false". Wenn **"false"**, Änderungen am Abonnenten werden nicht in die Warteschlange eingereiht. **"true"** ist *nicht für Oracle-Verleger unterstützt*.  
+`[ \@allow_queued_tran = ] 'allow_queued_updating'` Aktiviert oder deaktiviert die queuing von Änderungen auf dem Abonnenten, bis sie auf dem Verleger angewendet werden können. *Allow_queued_updating* ist **nvarchar(5)** hat den Standardwert "false". Wenn **"false"** , Änderungen am Abonnenten werden nicht in die Warteschlange eingereiht. **"true"** ist *nicht für Oracle-Verleger unterstützt*.  
   
-`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` Gibt an, wenn die momentaufnahmedateien im Standardordner gespeichert werden. *Snapshot_in_default_folder* ist **nvarchar(5)** hat den Standardwert "true". Wenn **"true"**, momentaufnahmedateien im Standardordner speichern befinden. Wenn **"false"**, momentaufnahmedateien am alternativen Speicherort vom angegebenen gespeichert wurden *Alternate_snapshot_folder*. Alternative Speicherorte können sich auf einem anderen Server, auf einem Netzlaufwerk oder auf Wechselmedien befinden (z. B. auf CD-ROM oder auf einem Wechseldatenträger). Momentaufnahmedateien können auch auf einer FTP-Site gespeichert werden, um zu einem späteren Zeitpunkt vom Abonnenten abgerufen zu werden. Beachten Sie, dass dieser Parameter kann "true" werden und immer einen Speicherort in noch der  **\@Alt_snapshot_folder** Parameter. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardpfad als auch im alternativen Pfad gespeichert werden.  
+`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` Gibt an, wenn die momentaufnahmedateien im Standardordner gespeichert werden. *Snapshot_in_default_folder* ist **nvarchar(5)** hat den Standardwert "true". Wenn **"true"** , momentaufnahmedateien im Standardordner speichern befinden. Wenn **"false"** , momentaufnahmedateien am alternativen Speicherort vom angegebenen gespeichert wurden *Alternate_snapshot_folder*. Alternative Speicherorte können sich auf einem anderen Server, auf einem Netzlaufwerk oder auf Wechselmedien befinden (z. B. auf CD-ROM oder auf einem Wechseldatenträger). Momentaufnahmedateien können auch auf einer FTP-Site gespeichert werden, um zu einem späteren Zeitpunkt vom Abonnenten abgerufen zu werden. Beachten Sie, dass dieser Parameter kann "true" werden und immer einen Speicherort in noch der  **\@Alt_snapshot_folder** Parameter. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardpfad als auch im alternativen Pfad gespeichert werden.  
   
 `[ \@alt_snapshot_folder = ] 'alternate_snapshot_folder'` Gibt den Speicherort des alternativen Ordners für die Momentaufnahme. *Alternate_snapshot_folder* ist **nvarchar(255)** hat den Standardwert NULL.  
   
 `[ \@pre_snapshot_script = ] 'pre_snapshot_script'` Gibt einen Zeiger auf ein **.sql** Dateispeicherort. *Pre_snapshot_script* ist **nvarchar(255),** hat den Standardwert NULL. Der Verteilungs-Agent führt das vor der Momentaufnahme ausgeführte Skript vor allen Skripts für replizierte Objekte aus, wenn die Momentaufnahme bei einem Abonnenten angewendet wird. Das Skript wird beim Herstellen der Verbindung mit der Abonnementdatenbank in dem vom Verteilungs-Agent verwendeten Sicherheitskontext ausgeführt.  
   
-`[ \@post_snapshot_script = ] 'post_snapshot_script'` Gibt einen Zeiger auf ein **.sql** Dateispeicherort. *Post_snapshot_script* ist **nvarchar(255)**, hat den Standardwert NULL. Der Verteilungs-Agent führt das nach der Momentaufnahme ausgeführte Skript aus, nachdem alle anderen Skripts für replizierte Objekte und Daten während der Erstsynchronisierung angewendet wurden. Das Skript wird beim Herstellen der Verbindung mit der Abonnementdatenbank in dem vom Verteilungs-Agent verwendeten Sicherheitskontext ausgeführt.  
+`[ \@post_snapshot_script = ] 'post_snapshot_script'` Gibt einen Zeiger auf ein **.sql** Dateispeicherort. *Post_snapshot_script* ist **nvarchar(255)** , hat den Standardwert NULL. Der Verteilungs-Agent führt das nach der Momentaufnahme ausgeführte Skript aus, nachdem alle anderen Skripts für replizierte Objekte und Daten während der Erstsynchronisierung angewendet wurden. Das Skript wird beim Herstellen der Verbindung mit der Abonnementdatenbank in dem vom Verteilungs-Agent verwendeten Sicherheitskontext ausgeführt.  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'` Gibt an, dass die Momentaufnahme, die geschrieben wird die  **\@Alt_snapshot_folder** Speicherort ist in komprimiert die [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB-Format. *Compress_snapshot* ist **nvarchar(5)**, hat den Standardwert "false". **"false"** gibt an, dass die Momentaufnahme nicht komprimiert wird. **"true"** gibt an, dass die Momentaufnahme komprimiert wird. Momentaufnahmedateien, die größer als 2 Gigabyte (GB) sind, können nicht komprimiert werden. Komprimierte Momentaufnahmedateien werden an dem Speicherort dekomprimiert, an dem der Verteilungs-Agent ausgeführt wird. Pullabonnements werden normalerweise mit komprimierten Momentaufnahmen verwendet, sodass die Dateien auf dem Abonnenten dekomprimiert werden. Die Momentaufnahme im Standardordner kann nicht komprimiert werden.  
+`[ \@compress_snapshot = ] 'compress_snapshot'` Gibt an, dass die Momentaufnahme, die geschrieben wird die  **\@Alt_snapshot_folder** Speicherort ist in komprimiert die [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB-Format. *Compress_snapshot* ist **nvarchar(5)** , hat den Standardwert "false". **"false"** gibt an, dass die Momentaufnahme nicht komprimiert wird. **"true"** gibt an, dass die Momentaufnahme komprimiert wird. Momentaufnahmedateien, die größer als 2 Gigabyte (GB) sind, können nicht komprimiert werden. Komprimierte Momentaufnahmedateien werden an dem Speicherort dekomprimiert, an dem der Verteilungs-Agent ausgeführt wird. Pullabonnements werden normalerweise mit komprimierten Momentaufnahmen verwendet, sodass die Dateien auf dem Abonnenten dekomprimiert werden. Die Momentaufnahme im Standardordner kann nicht komprimiert werden.  
   
 `[ \@ftp_address = ] 'ftp_address'` Ist die Netzwerkadresse des FTP-Diensts für den Verteiler. *Ftp_address* ist **Sysname**, hat den Standardwert NULL. Gibt an, wo die Veröffentlichungsmomentaufnahmedateien für den Verteilungs-Agent oder Merge-Agent eines Abonnenten zum Abholen gespeichert sind. Da diese Eigenschaft für jede Veröffentlichung gespeichert wird, kann jede Veröffentlichung einen anderen haben *Ftp_address*. Die Veröffentlichung muss die Weitergabe von Momentaufnahmen über FTP unterstützen.  
   
 `[ \@ftp_port = ] ftp_port` Ist die Portnummer des FTP-Diensts für den Verteiler. *Ftp_port* ist **Int**, hat den Standardwert 21. Gibt an, wo die veröffentlichungsmomentaufnahmedateien für den Verteilungs-Agent oder Merge-Agent eines Abonnenten zum Abholen befinden. Da diese Eigenschaft für jede Veröffentlichung gespeichert wird, jede Veröffentlichung haben eine eigene *Ftp_port*.  
   
-`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` Gibt an, in dem die momentaufnahmedateien für den Verteilungs-Agent oder Merge-Agent eines Abonnenten zum Abholen bereitliegen, wenn die Veröffentlichung die Weitergabe von Momentaufnahmen über FTP unterstützt. *Ftp_subdirectory* ist **nvarchar(255)**, hat den Standardwert NULL. Da diese Eigenschaft für jede Veröffentlichung gespeichert wird, jede Veröffentlichung haben eine eigene *ftp_subdirectory* oder keine Unterverzeichnisse mit einem Nullwert verwenden möchten.  
+`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` Gibt an, in dem die momentaufnahmedateien für den Verteilungs-Agent oder Merge-Agent eines Abonnenten zum Abholen bereitliegen, wenn die Veröffentlichung die Weitergabe von Momentaufnahmen über FTP unterstützt. *Ftp_subdirectory* ist **nvarchar(255)** , hat den Standardwert NULL. Da diese Eigenschaft für jede Veröffentlichung gespeichert wird, jede Veröffentlichung haben eine eigene *ftp_subdirectory* oder keine Unterverzeichnisse mit einem Nullwert verwenden möchten.  
   
 `[ \@ftp_login = ] 'ftp_login'` Der Benutzername wird für die Verbindung mit dem FTP-Dienst verwendet werden. *Ftp_login* ist **Sysname**, hat den Standardwert Anonymous.  
   
@@ -173,26 +172,26 @@ sp_addpublication [ @publication = ] 'publication'
   
  **"true"** ist *nicht für Oracle-Verleger unterstützt*.  
   
-`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` Aktiviert oder deaktiviert die Möglichkeit zum Kopieren der Abonnementdatenbanken, die für diese Veröffentlichung abonnieren. *Allow_subscription_copy* ist**nvarchar(5)**, hat den Standardwert "false".  
+`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` Aktiviert oder deaktiviert die Möglichkeit zum Kopieren der Abonnementdatenbanken, die für diese Veröffentlichung abonnieren. *Allow_subscription_copy* ist**nvarchar(5)** , hat den Standardwert "false".  
   
 `[ \@conflict_policy = ] 'conflict_policy'` Gibt an, die die Richtlinie zur konfliktlösung bei der Option zur verzögerten Aktualisierung verwendet wird. *Conflict_policy* ist **nvarchar(100)** hat den Standardwert NULL und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Pub wins**|Der Verleger gewinnt den Konflikt.|  
-|**sub reinit**|Erneutes Initialisieren des Abonnements.|  
+|**Sub reinit**|Erneutes Initialisieren des Abonnements.|  
 |**Sub wins**|Der Abonnent gewinnt den Konflikt.|  
 |NULL (Standard)|Ist NULL, und die Veröffentlichung eine momentaufnahmeveröffentlichung, wird die Standardrichtlinie **sub Reinit**. Wenn NULL ist, und die Veröffentlichung keine momentaufnahmeveröffentlichung ist, wird der Standardwert **Pub Wins**.|  
   
  *Nicht für Oracle-Verleger unterstützt*.  
   
-`[ \@centralized_conflicts = ] 'centralized_conflicts'` Gibt an, ob Konfliktdatensätze auf dem Verleger gespeichert werden. *Centralized_conflicts* ist **nvarchar(5)**, hat den Standardwert "true". Wenn **"true"**, Konfliktdatensätze werden auf dem Verleger gespeichert. Wenn **"false"**, Konfliktdatensätze werden gespeichert, auf dem Verleger und auf dem Abonnenten, die den Konflikt verursacht hat. *Nicht für Oracle-Verleger unterstützt*.  
+`[ \@centralized_conflicts = ] 'centralized_conflicts'` Gibt an, ob Konfliktdatensätze auf dem Verleger gespeichert werden. *Centralized_conflicts* ist **nvarchar(5)** , hat den Standardwert "true". Wenn **"true"** , Konfliktdatensätze werden auf dem Verleger gespeichert. Wenn **"false"** , Konfliktdatensätze werden gespeichert, auf dem Verleger und auf dem Abonnenten, die den Konflikt verursacht hat. *Nicht für Oracle-Verleger unterstützt*.  
   
 `[ \@conflict_retention = ] conflict_retention` Gibt die Konfliktaufbewahrungsdauer in Tagen an. Der Zeitraum, in dem Konfliktmetadaten für Peer-zu-Peer-Transaktionsreplikation und Abonnements mit verzögertem Update gespeichert werden. *Conflict_retention* ist **Int**, hat den Standardwert 14. *Nicht für Oracle-Verleger unterstützt*.  
   
-`[ \@queue_type = ] 'queue_type'` Gibt an, welche Art von Warteschlange verwendet wird. *QUEUE_TYPE* ist **nvarchar(10)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ \@queue_type = ] 'queue_type'` Gibt an, welche Art von Warteschlange verwendet wird. *QUEUE_TYPE* ist **nvarchar(10)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**sql**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.|  
 |NULL (Standard)|Standardmäßig **Sql**, dadurch wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.|  
@@ -213,9 +212,9 @@ sp_addpublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  *Publisher* sollte nicht verwendet werden, wenn Sie eine Veröffentlichung Hinzufügen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
   
-`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` Gibt an, wenn Abonnenten ein Abonnement für diese Veröffentlichung aus einer Sicherung anstelle einer anfangsmomentaufnahme initialisieren können. *Allow_initialize_from_backup* ist **nvarchar(5)**, und kann einen der folgenden Werte:  
+`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` Gibt an, wenn Abonnenten ein Abonnement für diese Veröffentlichung aus einer Sicherung anstelle einer anfangsmomentaufnahme initialisieren können. *Allow_initialize_from_backup* ist **nvarchar(5)** , und kann einen der folgenden Werte:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**true**|Aktiviert die Initialisierung aus einer Sicherung.|  
 |**false**|Deaktiviert die Initialisierung aus einer Sicherung.|  
@@ -236,21 +235,21 @@ sp_addpublication [ @publication = ] 'publication'
   
 -   Wenn eine DDL-Anweisung eine neue Spalte hinzugefügt wird, umfasst Sysarticlecolumns keine die neue Spalte. DML-Anweisungen versuchen nicht, Daten für die neue Spalte zu replizieren. Der Parameter wird berücksichtigt, da sowohl das Replizieren als auch das Nicht-Replizieren der DDL akzeptabel ist.  
   
-`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` Ermöglicht die Veröffentlichung in einer Peer-zu-Peer-Replikationstopologie verwendet werden. *enabled_for_p2p* ist **nvarchar(5)**, hat den Standardwert "false". **"true"** gibt an, dass die Veröffentlichung Peer-zu-Peer-Replikation unterstützt. Beim Festlegen *enabled_for_p2p* zu **"true"**, gelten die folgenden Einschränkungen:  
+`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` Ermöglicht die Veröffentlichung in einer Peer-zu-Peer-Replikationstopologie verwendet werden. *enabled_for_p2p* ist **nvarchar(5)** , hat den Standardwert "false". **"true"** gibt an, dass die Veröffentlichung Peer-zu-Peer-Replikation unterstützt. Beim Festlegen *enabled_for_p2p* zu **"true"** , gelten die folgenden Einschränkungen:  
   
--   *Allow_anonymous* muss **"false"**.  
+-   *Allow_anonymous* muss **"false"** .  
   
--   *allow_dts nicht* muss **"false"**.  
+-   *allow_dts nicht* muss **"false"** .  
   
--   *Allow_initialize_from_backup* muss **"true"**.  
+-   *Allow_initialize_from_backup* muss **"true"** .  
   
--   *Allow_queued_tran* muss **"false"**.  
+-   *Allow_queued_tran* muss **"false"** .  
   
--   *Allow_sync_tran* muss **"false"**.  
+-   *Allow_sync_tran* muss **"false"** .  
   
--   *Conflict_policy* muss **"false"**.  
+-   *Conflict_policy* muss **"false"** .  
   
--   *Independent_agent* muss **"true"**.  
+-   *Independent_agent* muss **"true"** .  
   
 -   *Repl_freq* muss **fortlaufende**.  
   
@@ -260,25 +259,25 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@publish_local_changes_only = ] 'publish_local_changes_only'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'` Ermöglicht der Veröffentlichung die Unterstützung von nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. *Enabled_for_het_sub* ist **nvarchar(5)** hat den Standardwert "false". Der Wert **"true"** bedeutet, dass die Veröffentlichung nicht-unterstützt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. Wenn *Enabled_for_het_sub* ist **"true"**, gelten die folgenden Einschränkungen:  
+`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'` Ermöglicht der Veröffentlichung die Unterstützung von nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. *Enabled_for_het_sub* ist **nvarchar(5)** hat den Standardwert "false". Der Wert **"true"** bedeutet, dass die Veröffentlichung nicht-unterstützt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten. Wenn *Enabled_for_het_sub* ist **"true"** , gelten die folgenden Einschränkungen:  
   
--   *Allow_initialize_from_backup* muss **"false"**.  
+-   *Allow_initialize_from_backup* muss **"false"** .  
   
--   *Allow_push* muss **"true"**.  
+-   *Allow_push* muss **"true"** .  
   
--   *Allow_queued_tran* muss **"false"**.  
+-   *Allow_queued_tran* muss **"false"** .  
   
--   *Allow_subscription_copy* muss **"false"**.  
+-   *Allow_subscription_copy* muss **"false"** .  
   
--   *Allow_sync_tran* muss **"false"**.  
+-   *Allow_sync_tran* muss **"false"** .  
   
--   *Autogen_sync_procs* muss **"false"**.  
+-   *Autogen_sync_procs* muss **"false"** .  
   
 -   *Conflict_policy* muss NULL sein.  
   
--   *Enabled_for_internet* muss **"false"**.  
+-   *Enabled_for_internet* muss **"false"** .  
   
--   *enabled_for_p2p* muss **"false"**.  
+-   *enabled_for_p2p* muss **"false"** .  
   
 -   *Ftp_address* muss NULL sein.  
   

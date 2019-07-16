@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006627"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Konvertieren den Zugriff auf Datenbankobjekte (AccessToSQL)
 Nachdem Sie den Zugriff auf Datenbanken hinzugefügt und verbunden haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, SSMA zeigt die Metadaten für den Zugriff und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbankobjekte. Sie können jetzt den Zugriff auf Datenbankobjekte auswählen und anschließend konvertiert der Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Schemas.  
@@ -64,7 +63,7 @@ Die folgende Tabelle zeigt, welche Zugriff Objekte konvertiert werden, und das r
 |Bericht|nicht konvertiert|  
 |Formular|nicht konvertiert|  
 |Makro|nicht konvertiert|  
-|Modul|nicht konvertiert|  
+|module|nicht konvertiert|  
 |Standardwert|Standardwert|  
 |Zulassen von NULL Length-Eigenschaft für Spalte|CHECK-Einschränkung|  
 |Validierungsregel für die Spalte|CHECK-Einschränkung|  
@@ -111,7 +110,7 @@ Nach der Konvertierung auf Metadaten zugreifen, [!INCLUDE[ssNoVersion](../../inc
   
     Bewegen des Cursors aus der Zelle der geänderten Eigenschaft. Dies ist möglich, durch Klicken auf eine neue Zeile ein, oder Drücken der Tab-Taste.  
   
-3.  Klicken Sie auf **Anwenden**.  
+3.  Klicken Sie auf **Übernehmen**.  
   
 Sie können jetzt die Änderungen im Code anzeigen, auf die **SQL** Registerkarte.  
   

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b68dafa89f8285f532fc6e92e80f9741be239f65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047157"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -44,7 +43,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
   
  {(X1, y1), (X1, y2),..., (X1, y*n*), (X2, y1), (X2, y2),...,  
   
- (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
+ (X2, y*n*),..., (X*n*, y1), (X*n*, y2),..., (Xn, y*n*)}  
   
 > [!IMPORTANT]  
 >  Wenn die Mengen im Cross Join aus Tupeln unterschiedlicher Attributhierarchien der gleichen Dimension bestehen, gibt die Funktion nur die Tupel zurück, die tatsächlich vorhanden sind. Weitere Informationen finden Sie unter [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  

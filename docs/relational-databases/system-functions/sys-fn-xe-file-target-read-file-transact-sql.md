@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b28967d1000a8e307c99d05ea840dd62ced09fb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059106"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argumente  
  *path*  
- Der Pfad zu den zu lesenden Dateien. *Pfad* kann Platzhalter und enthalten den Namen einer Datei enthalten. *Pfad* ist **nvarchar(260)**. Es gibt keinen Standardwert. Im Kontext von Azure SQL-Datenbank ist dieser Wert eine HTTP-URL in eine Datei im Azure-Speicher.
+ Der Pfad zu den zu lesenden Dateien. *Pfad* kann Platzhalter und enthalten den Namen einer Datei enthalten. *Pfad* ist **nvarchar(260)** . Es gibt keinen Standardwert. Im Kontext von Azure SQL-Datenbank ist dieser Wert eine HTTP-URL in eine Datei im Azure-Speicher.
   
  *mdpath*  
- Der Pfad zur Metadatendatei, die der angegebenen Datei bzw. Dateigruppe von entspricht, dem *Pfad* Argument. *Mdpath* ist **nvarchar(260)**. Es gibt keinen Standardwert. Ab SQL Server 2016 wird kann dieser Parameter als null angegeben werden.
+ Der Pfad zur Metadatendatei, die der angegebenen Datei bzw. Dateigruppe von entspricht, dem *Pfad* Argument. *Mdpath* ist **nvarchar(260)** . Es gibt keinen Standardwert. Ab SQL Server 2016 wird kann dieser Parameter als null angegeben werden.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] erfordert keine der *Mdpath* Parameter. Er wird jedoch beibehalten, um die Abwärtskompatibilität für in früheren Versionen von SQL Server erstellte Protokolldateien aufrechtzuerhalten.  
   
  *initial_file_name*  
- Die erste Datei zum Lesen aus *Pfad*. *' initial_file_name '* ist **nvarchar(260)**. Es gibt keinen Standardwert. Wenn **null** angegeben ist, als das Argument, das alle Dateien finden Sie in *Pfad* gelesen werden.  
+ Die erste Datei zum Lesen aus *Pfad*. *' initial_file_name '* ist **nvarchar(260)** . Es gibt keinen Standardwert. Wenn **null** angegeben ist, als das Argument, das alle Dateien finden Sie in *Pfad* gelesen werden.  
   
 > [!NOTE]  
 >  *' initial_file_name '* und *Initial_offset* sind paarargumente. Wenn Sie einen Wert für eines der beiden Argumente angeben, müssen Sie auch einen Wert für das andere Argument angeben.  
@@ -68,7 +67,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|Die Ereignismodul-GUID. Lässt keine NULL-Werte zu.|  
 |package_guid|**uniqueidentifier**|Die Ereignispaket-GUID. Lässt keine NULL-Werte zu.|  

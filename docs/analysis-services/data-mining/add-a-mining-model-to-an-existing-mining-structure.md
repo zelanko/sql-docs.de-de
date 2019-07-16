@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur | Microsoft Docs
+title: Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8b995a5b3fb89956e690598c786dc0a09474021
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019777"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210226"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "34019777"
  Auf der Registerkarte **Miningmodelle** wird ein neues Miningmodell angezeigt. Das Modell verwendet die in der Struktur vorhandenen Standardspalten. Informationen zum Ändern der Spalten finden Sie unter [Ändern der Eigenschaften eines Miningmodells](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Miningmodelltasks und -anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

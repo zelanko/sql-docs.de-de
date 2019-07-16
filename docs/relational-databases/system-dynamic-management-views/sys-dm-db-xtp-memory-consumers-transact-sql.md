@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 768fb39cdf26b01d55ffaf175ec07e181d265b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026822"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "52522747"
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (intern) des Arbeitsspeicherconsumers.|  
 |memory_consumer_type|**int**|Der Typ des Arbeitsspeicherconsumers:<br /><br /> 0=Aggregation. (Aggregiert die Arbeitsspeichernutzung von mindestens zwei Consumern. Sollte nicht angezeigt werden.)<br /><br /> 2=VARHEAP (Verfolgt die Arbeitsspeichernutzung für einen Heap variabler Länge nach.)<br /><br /> 3=HASH (Verfolgt die Arbeitsspeichernutzung für einen Index nach.)<br /><br /> 5=DB-Seitenpool (Verfolgt die Arbeitsspeichernutzung für einen Datenbank-Seitenpool nach, der für Laufzeitvorgänge verwendet wird, z. B. Tabellenvariablen und einige serialisierbare Scans. Es gibt nur einen Arbeitsspeicherconsumer dieses Typs pro Datenbank.)|  
-|memory_consumer_type_desc|**Nvarchar(64)**|Der Typ des Arbeitsspeicherconsumers. VARHEAP, HASH oder PGPOOL.<br /><br /> 0 – (es sollte nicht angezeigt.)<br /><br /> 2 - VARHEAP<br /><br /> 3 – HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**Nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Datenbankheap. Wird zum Zuordnen von Benutzerdaten für eine Datenbank (d. h. Zeilen) verwendet.<br />Datenbank-Systemheap. Wird zum Zuordnen von Datenbankdaten verwendet, die in Speicherabbilder eingefügt werden und keine Benutzerdaten enthalten.<br />Bereichsindexheap. Ein privater Heap, der vom Breichsindex zum Zuordnen von BW-Seiten verwendet wird.<br /><br /> HASH: Keine Beschreibung, da object_id die Tabelle und index_id den Hashindex selbst angibt.<br /><br /> PGPOOL: Für die Datenbank ist nur ein Seitenpool von 64 K vorhanden.|  
+|memory_consumer_type_desc|**Nvarchar(64)**|Der Typ des arbeitsspeicherconsumers: VARHEAP, HASH oder PGPOOL.<br /><br /> 0 – (es sollte nicht angezeigt.)<br /><br /> 2 - VARHEAP<br /><br /> 3 – HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**Nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Datenbankheap. Wird zum Zuordnen von Benutzerdaten für eine Datenbank (d. h. Zeilen) verwendet.<br />Datenbank-Systemheap. Wird zum Zuordnen von Datenbankdaten verwendet, die in Speicherabbilder eingefügt werden und keine Benutzerdaten enthalten.<br />Bereichsindexheap. Ein privater Heap, der vom Breichsindex zum Zuordnen von BW-Seiten verwendet wird.<br /><br /> HASH: Keine Beschreibung, da die Object_id gibt an, in der Tabelle und die Index_id den Hashindex selbst.<br /><br /> PGPOOL: Für die Datenbank ist nur ein Seitenpool Datenbank 64-KB-Seitenpool.|  
 |object_id|**bigint**|Die Objekt-ID, der der belegte Arbeitsspeicher attributiert wird. Ein negativer Wert für Systemobjekte.|  
 |xtp_object_id|**bigint**|Die Objekt-ID für die Speicheroptimierte Tabelle.|  
 |index_id|**int**|Die Index-ID des Consumers (sofern vorhanden). NULL für Basistabellen.|  

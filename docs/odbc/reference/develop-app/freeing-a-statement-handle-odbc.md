@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc16e820671aa69c15365413d44fb9bcf807236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 638cf9fb3c7af73130cf1413559b9baee2a354c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069779"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>Freigeben einer Anweisungshandle-ODBC
 Wie bereits erwähnt, ist es effizienter, Wiederverwenden von Anweisungen als zum Löschen und neu zuzuordnen. Vor der Ausführung einer neuen SQL-Anweisung in einer Anweisung, sollten Anwendungen sicher sein, dass die aktuellen anweisungseinstellungen korrekt sind. Dazu zählen beispielsweise Anweisungsattribute, Parameterbindungen und Resultsetbindungen. Im allgemeinen Parametern und Resultsets für die alte SQL-Anweisung müssen entfernt werden soll (durch Aufrufen von **SQLFreeStmt** mit den Optionen SQL_RESET_PARAMS und SQL_UNBIND) und den neu zugeordneten für die neue SQL-Anweisung.  

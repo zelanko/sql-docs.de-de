@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069769"
 ---
 # <a name="freeing-descriptors"></a>Freigeben von Deskriptoren
 Explizit zugewiesene Deskriptoren können werden freigegeben, entweder explizit durch Aufrufen von **SQLFreeHandle** mit *HandleType* SQL_HANDLE_DESC oder implizit, wenn das Verbindungshandle freigegeben. Wenn ein explizit zugewiesene Deskriptor freigegeben wird, alle Anweisungshandles auf die freigegebene Deskriptor automatisch angewendet, die implizit für sie reservierten Deskriptoren wiederherstellen.  

@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9f6ad55aff8291e3c0f14e8f44085da71d2b594c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119521"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Verwaltete SQLXML-Klassen – SqlXmlCommand-Objekt
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ public SqlXmlCommand(string cnString)
  void ExecuteNonQuery()  
  Führt den Befehl aus, gibt aber nichts zurück. Diese Methode ist nützlich, wenn Sie einen Nichtabfragebefehl ausführen möchten (ein Befehl, der nichts zurückgibt). Ein Beispiel ist das Ausführen eines Updategrams oder DiffGrams, das Datensätze aktualisiert, aber nichts zurückgibt.  
   
- Stream ExecuteStream()  
+ Stream-ExecuteStream()  
  Gibt ein neues Stream-Objekt zurück. Diese Methode ist nützlich, wenn Sie möchten, dass Ihnen die Abfrageergebnisse in einem neuen Datenstrom zurückgegeben werden. Ein Arbeitsbeispiel finden Sie unter [SQL-Abfragen ausführen &#40;verwaltete SQLXML-Klassen&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  Öffentliche void ExecuteToStream (Stream OutputStream)  
@@ -104,12 +103,12 @@ public SqlXmlCommand(string cnString)
  Der Text des Befehls. Diese Eigenschaft wird zum Angeben des Texts des Befehls verwendet, den Sie ausführen möchten. Ein Arbeitsbeispiel finden Sie unter [SQL-Abfragen ausführen &#40;verwaltete SQLXML-Klassen&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  CommandStream  
- Der Befehlsdatenstrom. Diese Eigenschaft ist nützlich, wenn Sie einen Befehl aus einer Datei ausführen möchten (z. B. aus einer XML-Vorlage). Bei Verwendung CommandStream, nur **"Template"**, **"UpdateGram"** und **"DiffGram" CommandType** Werte werden unterstützt. Ein Arbeitsbeispiel finden Sie unter [Ausführen von Vorlagendateien mit der ' CommandStream '-Eigenschaft](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md).  
+ Der Befehlsdatenstrom. Diese Eigenschaft ist nützlich, wenn Sie einen Befehl aus einer Datei ausführen möchten (z. B. aus einer XML-Vorlage). Bei Verwendung CommandStream, nur **"Template"** , **"UpdateGram"** und **"DiffGram" CommandType** Werte werden unterstützt. Ein Arbeitsbeispiel finden Sie unter [Ausführen von Vorlagendateien mit der ' CommandStream '-Eigenschaft](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  
  Gibt den Befehlstyp an. Diese Eigenschaft wird zum Angeben des Typs des Befehls verwendet, den Sie ausführen möchten. Die Werte in der folgenden Tabelle bestimmen den Typ des Befehls. Ein Arbeitsbeispiel finden Sie unter [zugreifen auf SQLXML-Funktionalität in der .NET-Umgebung](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |SqlXmlCommandType.Sql|Führt einen SQL-Befehl aus (z. B. `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType.XPath|Führt einen XPath-Befehl aus (z. B. `Employees[@EmployeeID=1]`).|  

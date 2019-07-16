@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 5703eb39-f3b2-4f3a-8676-a5625ae29a41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62f1033abeaa32499602534f7f43b17fefe55ce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c17cd473d3c96032817c2b183bf65fe360cf3cdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053683"
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Teilweise  
+ Unterstützung: Teilweise  
   
  ODBC-API-Übereinstimmung: Ebene 1  
   

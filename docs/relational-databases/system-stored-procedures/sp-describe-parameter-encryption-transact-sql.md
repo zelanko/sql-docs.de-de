@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 377a1e342970e9593b37924c3739ee7a706d5264
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053034"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>"sp_describe_parameter_encryption" (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_describe_parameter_encryption
   
  Jede Zeile das erste Resultset beschreibt ein Schlüsselpaar; ein Verschlüsselungsschlüssel der verschlüsselten Spalte und der entsprechenden spaltenhauptschlüssel.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|Die ID der Zeile im Resultset.|  
 |**database_id**|**int**|Id der Datenbank.|  
@@ -75,7 +74,7 @@ sp_describe_parameter_encryption
   
  Jede Zeile das zweite Resultset enthält die verschlüsselungsmetadaten für einen Parameter.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|Die ID der Zeile im Resultset.|  
 |**parameter_name**|**sysname**|Name eines der die angegebenen Parameter die  *\@Params* Argument.|  
@@ -165,7 +164,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |1|1|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Always Encrypted &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted &#40;Cliententwicklung&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

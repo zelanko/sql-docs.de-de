@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0c7817d37e14ad07b9cc64f59691c27cf665177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070096"
 ---
 # <a name="system-functions"></a>Systemfunktionen
 Die folgende Tabelle enthält die Systemfunktionen, die in der ODBC-Skalarfunktion Menge enthalten sind. Durch Aufrufen von **SQLGetInfo** mit einer *Informationstyp* des SQL_SYSTEM_FUNCTIONS, kann eine Anwendung bestimmen, welche Systemfunktionen durch einen Treiber unterstützt werden.  
@@ -30,7 +29,7 @@ Die folgende Tabelle enthält die Systemfunktionen, die in der ODBC-Skalarfunkti
   
  Zurückgegebenen Werte werden als ODBC-Datentypen dargestellt.  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |**DATENBANK ()** (ODBC 1.0)|Gibt den Namen der Datenbank entspricht dem Verbindungshandle. (Der Name der Datenbank kann auch durch Aufrufen von **SQLGetConnectOption** mit der SQL_CURRENT_QUALIFIER-Verbindungsoption.)|  
 |**IFNULL (** _"exp"_ ,_Wert_ **)** (ODBC-1.0)|Wenn *"exp"* null ist, *Wert* zurückgegeben wird. Wenn *"exp"* ist nicht null, *"exp"* zurückgegeben wird. Die möglichen Datentyp oder die Arten von *Wert* muss mit dem Datentyp kompatibel sein *"exp"* .|  

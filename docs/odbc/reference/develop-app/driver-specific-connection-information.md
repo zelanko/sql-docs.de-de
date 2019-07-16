@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3852e713e517828e83e74bf7fb291ef20865532
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69f2c98678739a8b7879e152e13546f2bf9b9cc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046932"
 ---
 # <a name="driver-specific-connection-information"></a>Treiberspezifische Verbindungsinformationen
 **SQLConnect** wird davon ausgegangen, dass eine ODBC-Datenquellenname, Benutzer-ID und Kennwort für die Verbindung mit einer Datenquelle ausreichen und alle anderen Verbindungsinformationen auf dem System gespeichert werden kann. Dies ist häufig nicht der Fall. Ein Treiber möglicherweise z. B. eine Benutzer-ID und Kennwort zum Anmelden bei einem Server und einen anderen Benutzer-ID und ein Kennwort zum Anmelden ein DBMS. Da **SQLConnect** akzeptiert einen einzelnen Benutzer-ID und ein Kennwort, das bedeutet, dass andere Benutzer-ID und Kennwort mit Informationen für die Datenquelle auf dem System bei gespeichert werden müssen **SQLConnect** verwendet werden soll. Dies ist eine potenzielle Sicherheitslücke und sollte vermieden werden, es sei denn, das Kennwort verschlüsselt wird.  

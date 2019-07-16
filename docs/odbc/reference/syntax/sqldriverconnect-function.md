@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104704"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriveConnect-Funktion
 **Übereinstimmung mit Standards**  
@@ -93,12 +92,12 @@ SQLRETURN SQLDriverConnect(
  (Weitere Informationen finden Sie auf "Kommentare".)  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt, wird SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDriverConnect** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *fHandleType*SQL_HANDLE_DBC auf, und ein *hHandle* von *ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLDriverConnect** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Der Puffer \* *OutConnectionString* nicht groß genug war, um die komplette Verbindungszeichenfolge und zurückzugeben, damit die Zeichenfolge abgeschnitten wurde. Die Länge der Verbindungszeichenfolge den ungekürzten wird zurückgegeben, **StringLength2Ptr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -145,13 +144,13 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Kommentare  
  Eine Verbindungszeichenfolge weist die folgende Syntax:  
   
- *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
+ *Verbindungszeichenfolge* :: = *leeren Zeichenfolge*[;] &#124; *Attribut*[;] &#124; *Attribut*; *Verbindungszeichenfolgen*  
   
- *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
+ *leeren Zeichenfolge* :: =*Attribut* :: = *-Schlüsselwort*=*Attribut / Wert* &#124; DRIVER = {[}] *Attribut-Wert*[}]  
   
  *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   
- *attribute-value* ::= *character-string*  
+ *Attribut-Wert* :: = *-Zeichenfolge*  
   
  *Treiber-definierten-Attribut-Schlüsselwort* :: = *Bezeichner*  
   

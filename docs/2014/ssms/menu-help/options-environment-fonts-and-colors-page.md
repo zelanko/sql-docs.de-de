@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211256"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Optionen (Umgebung: Schriftarten und Farben-Seite)
+# <a name="options-environment-fonts-and-colors-page"></a>Optionen (Umgebung: Seite zu Schriftarten und Farben)
   Im Dialogfeld **Optionen** können Sie ein benutzerdefiniertes Schriftart- und Farbschema für verschiedene Elemente der Benutzeroberfläche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen. Klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie den Ordner **Umgebung** , und klicken Sie anschließend auf **Schriftarten und Farben**.  
   
  Änderungen am Farbschema werden nicht in der Sitzung wirksam, in der Sie sie vornehmen. Sie können Farbänderungen auswerten, indem Sie eine andere Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen und die Bedingungen erstellen, unter denen Sie die Anwendung Ihrer Änderungen erwarten.  
@@ -29,8 +29,8 @@ ms.locfileid: "52818752"
 |Begriff|Definition|  
 |----------|----------------|  
 |Text-Editor|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für den Text-Editor wirken sich auf die Darstellung von Text in Ihrem Standard-Text-Editor aus. In einem Text-Editor außerhalb von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] geöffnete Dokumente sind von diesen Einstellungen nicht betroffen.|  
-|Drucker|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für den Drucker wirken sich auf die Darstellung von Text in gedruckten Dokumenten aus.<br /><br /> Tipp: Bei Bedarf können Sie für das Drucken eine andere Standardschriftart als für die Anzeige im Text-Editor auswählen. Das kann sehr hilfreich sein, wenn Sie Code ausdrucken, der Ein-Byte- und Doppelbyte-Zeichen enthält.|  
-|[Alle Texttoolfenster **]**|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text in Toolfenstern aus, die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]über Ausgabebereiche verfügen. Zum Beispiel Ausgabefenster, TextResults-Fenster usw.<br /><br /> Hinweis: Änderungen am Text von [alle Text-Tool Windows] Elemente werden nicht während der Sitzung wirksam in denen Sie sie vornehmen. Solche Änderungen können Sie auswerten, indem Sie eine andere Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]öffnen.|  
+|Drucker|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für den Drucker wirken sich auf die Darstellung von Text in gedruckten Dokumenten aus.<br /><br /> Tipp: Bei Bedarf können Sie eine andere Standardschriftart für den Druck als für die Anzeige im Text-Editor auswählen. Das kann sehr hilfreich sein, wenn Sie Code ausdrucken, der Ein-Byte- und Doppelbyte-Zeichen enthält.|  
+|[Alle Texttoolfenster **]**|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text in Toolfenstern aus, die in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]über Ausgabebereiche verfügen. Zum Beispiel Ausgabefenster, TextResults-Fenster usw.<br /><br /> Hinweis: Änderungen am Text von [Alle Texttoolfenster]-Elementen werden nicht in der Sitzung wirksam, in der Sie sie vornehmen. Solche Änderungen können Sie auswerten, indem Sie eine andere Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]öffnen.|  
 |Fenster "Suchergebnisse"|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Fenster „Suchergebnisse“ (FindResults) aus.|  
 |Ausgabefenster|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Ausgabefenster aus.|  
 |Rasterergebnisse|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Bereich **Rasterergebnisse** des Fensters „Abfrage“ aus.|  
@@ -55,9 +55,9 @@ ms.locfileid: "52818752"
   
  Zu den Anzeigeelementen gehören unter anderem:  
   
--   Indikatorrand: Der Rand auf der linken Seite des Code-Editor, in dem Haltepunkte und Lesezeichensymbole angezeigt werden.  
+-   Indikatorrand: Der Rand auf der linken Seite des Code-Editors, auf dem Breakpoints und Lesezeichensymbole angezeigt werden.  
   
--   Reduzierbarer Text: Ein Block mit Text oder Code, der in und aus der Ansicht innerhalb der CodeEditor (nur XML) verwendet werden kann.  
+-   Reduzierbarer Text: Ein Block mit Text oder Code, der innerhalb des Code-Editors (nur XML) ein- bzw. ausgeblendet werden kann.  
   
  **Elementvordergrund**  
  Führt die verfügbaren Farben auf, die Sie für den Vordergrund des unter **Elemente anzeigen**ausgewählten Elements auswählen können. Weil einige Elemente in Beziehung zueinander stehen, sollte ein einheitliches Anzeigeschema beibehalten werden. Beispielsweise wird bei Änderung der Vordergrundfarbe von Text auch die Vordergrundfarbe für Elemente des Typs Zeichenfolge geändert.  

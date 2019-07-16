@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c2b8e9404b447c098fb4513fe0cea261da04626a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020863"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referenz zur Benutzeroberfläche (SybaseToSQL)
 Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Sybase.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |---------|---------------|  
 |[Erweiterte Objektauswahl &#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|Verwenden der **erweiterte Objekt auswählen** Dialogfeld Suchen Datenbankobjekte mit Filterkriterien, und klicken Sie dann aktivieren oder deaktivieren diese Objekte.|  
 |[Bewertungsbericht &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Verwenden Sie zum Anzeigen der Ergebnisse der Konvertierung von Sybase Adaptive Server Enterprise (ASE)-Objekten, die den Bewertungsbericht [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax und die Uhrzeit und die Komplexität der Migration zu einzuschätzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.|  
@@ -32,11 +31,11 @@ Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes
 |[Data Migration Report Bericht &#40;SybaseToSQL&#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|Zeigt die Ergebnisse der Daten aus der App Service-Umgebung migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.|  
 |[Data Migration Settings (Einstellungen für die Datenmigration)](data-migration-settings-sybasetosql.md)|Verwenden der **erweiterte Data Migration Settings** Tab, um benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
 |[Bearbeiten der Typzuordnung &#40;SybaseToSQL&#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|Verwenden der **neue Typzuordnung** oder **Bearbeiten der Typzuordnung** Dialogfeld zum Erstellen oder bearbeiten die Zuordnung von Datentypen zwischen den Quell- und Ziel-Datenbanken und Datenbankobjekte.|  
-|[Global Settings &#40;Editor&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
+|[Globale Einstellungen &#40;Editor&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
 |[Globale Einstellungen &#40;Dialogfelder&#41;&#40;SybaseToSQL  &#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** konfigurieren – Dialogfeld "und" Warnung Einstellungen im Dialogfeld.|  
-|[Global Settings &#40;Logging&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Protokollierung auf der Seite des der **globale Einstellungen** Dialogfeld zum Konfigurieren der Protokollierung.|  
+|[Globale Einstellungen &#40;Protokollierung&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Protokollierung auf der Seite des der **globale Einstellungen** Dialogfeld zum Konfigurieren der Protokollierung.|  
 |[Globale Einstellungen &#40;Protokollierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-logging-sybasetosql.md)|Verwenden der **globale Einstellungen** im Dialogfeld Einstellungen der SSMA für Sybase-Benutzeroberfläche festgelegt werden.|  
-|[Global Settings &#40;Tester&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Verwenden Sie die Seite Tester, der die **GlobalSettings** Dialogfeld die Einstellungen für Tester.|  
+|[Globale Einstellungen &#40;Tester&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Verwenden Sie die Seite Tester, der die **GlobalSettings** Dialogfeld die Einstellungen für Tester.|  
 |[Neues Projekt &#40;SybaseToSQL&#41;](../../ssma/sybase/new-project-sybasetosql.md)|Verwenden der **neues Projekt** um ein neues SSMA für Sybase-Projekt zu erstellen.|  
 |[Projekteinstellungen &#40;Konvertierung&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|Verwenden Sie die Seite die **Projekteinstellungen** im Dialogfeld, um anzugeben, wie SSMA für Sybase Funktionen und globalen Variablen konvertiert.|  
 |[Projekteinstellungen &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)|Mithilfe der GUI-Seite des der **Projekteinstellungen** Dialogfeld wird angezeigt, wie viele Daten auf den **Daten** Registerkarte.|  

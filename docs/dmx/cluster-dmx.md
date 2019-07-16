@@ -1,5 +1,5 @@
 ---
-title: Cluster (DMX) | Microsoft Docs
+title: (DMX)-Cluster | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 41f835a93e5976945281b6b04258c516b0322236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071079"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,15 +31,15 @@ Cluster()
  Diese Funktion kann nur verwendet werden, wenn das zugrunde liegende Data Mining-Modell Cluster unterstützt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Die **Cluster** Funktion keine Parameter erfordert.  
+ Die **Cluster** Funktion erfordert keine Parameter.  
   
- Die **Cluster** Funktion gibt einen Skalarwert eines Clusternamens zurück. Jedoch, wenn Sie diese Funktion als Argument einer anderen Funktion verwenden, Sie müssen unter Berücksichtigung als eine \<cluster Spaltenverweis >.  
+ Die **Cluster** Funktion gibt einen Skalarwert eines Clusternamens zurück. Aber wenn Sie diese Funktion als Argument einer anderen Funktion verwenden, Sie müssen betrachten Sie dies als eine \<cluster Spaltenverweis >.  
   
 ## <a name="remarks"></a>Hinweise  
- **Cluster** kann auch verwendet werden, als ein `<`cluster Spaltenverweis`>` für eine **"PredictHistogram"** Funktion.  
+ **Cluster** kann auch verwendet werden, als eine `<`cluster Spaltenverweis`>` für eine **PredictHistogram** Funktion.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird eine Singleton-Abfrage mit der ["PredictHistogram" &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) und -Funktionen, um die Entfernung des einzelnen Falls von jedem Cluster des Miningmodells TM Clustering zurückzugeben und die die Wahrscheinlichkeit, dass die einzelnen Groß-/Kleinschreibung in jedem Cluster vorhanden ist.  
+ Im folgenden Beispiel wird eine Singleton-Abfrage mit der [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) und Funktionen, um die Entfernung des einzelnen Falls von jedem Cluster das TM Clustering-Miningmodell zurückzugeben und die die Wahrscheinlichkeit, dass der einzelne Fall in jedem Cluster vorhanden sind.  
   
 ```  
 SELECT  
@@ -57,7 +56,7 @@ FROM
   
 ## <a name="see-also"></a>Siehe auch  
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis-Funktion](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
