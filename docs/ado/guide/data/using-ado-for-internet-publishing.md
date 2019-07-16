@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac7922dda2d486f4783d1230296dc89b81cb4fe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923617"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Verwenden von ADO für die Veröffentlichung im Internet
 [Der OLE DB-Anbieter für Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) zeigt ein Beispiel für den Zugriff auf heterogene Daten mit ADO. Obwohl in die Beispielen in diesem Abschnitt werden über die Verwendung der Internet-Publishing-Anbieter ist, sollte der dargestellten Prinzipien ähneln bei Verwendung von ADO mit anderen Anbietern für heterogene Daten, z. B. ein Provider in einen Speicher-e-Mail.  
@@ -54,6 +53,6 @@ ms.locfileid: "66718608"
 -   [Records and Provider-Supplied Fields (Datensätze und von Anbietern bereitgestellte Felder)](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [ADO-Verlauf](../../../ado/guide/ado-history.md)

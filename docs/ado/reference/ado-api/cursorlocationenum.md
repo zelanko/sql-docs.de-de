@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 43c2043917d6b21293fea71566dfdf1202b6f59e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919293"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 Gibt den Speicherort des Cursordiensts.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|Verwendet die clientseitigen Cursorn, die von einer lokalen Cursor-Bibliothek bereitgestellt. Lokale Cursor Services ermöglichen häufig viele Funktionen, die Cursor nicht der Fall, können daher mit dieser Einstellung einen Vorteil in Bezug auf Features können, die konfiguriert werden. Um Abwärtskompatibilität zu gewährleisten, das Synonym **AdUseClientBatch** wird ebenfalls unterstützt.|  
 |**adUseNone**|1|Cursor-Dienste wird nicht verwendet werden. (Diese Konstante ist veraltet und wird nur aus Gründen der Abwärtskompatibilität angezeigt.)|  

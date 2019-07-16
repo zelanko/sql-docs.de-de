@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926637"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB-Anbieter für ODBC-Übersicht
 Ein ADO- oder RDS-Programmierer wäre eine ideale Welt eine Datenquelle in dem jeder eine OLE DB-Schnittstelle verfügbar macht, damit ADO direkt in der Datenquelle aufgerufen werden kann. Obwohl Datenbankanbieter zunehmend OLE DB-Schnittstellen implementieren, werden einige Datenquellen nicht noch auf diese Weise verfügbar gemacht. Allerdings können die meisten DBMS-Systeme heutzutage über ODBC zugegriffen werden.
@@ -65,7 +64,7 @@ MSDASQL
 
  Der Anbieter unterstützt keine bestimmten Verbindungsparameter zusätzlich zu den von ADO definiert. Allerdings wird der Anbieter alle nicht-ADO-Verbindung-Parameter auf dem ODBC-Treiber-Manager übergeben.
 
- Da Sie weglassen können die **Anbieter** -Parameter können aus diesem Grund erstellen Sie eine ADO-Verbindungszeichenfolge, die mit einer ODBC-Verbindungszeichenfolge für die gleiche Datenquelle identisch ist. Verwenden Sie die gleichen Parameternamen (**Treiber =**, **Datenbank =**, **DSN =** und so weiter), Werte und wie Sie die Syntax wie bei der eine ODBC-Verbindungszeichenfolge zu erstellen. Sie können mit oder ohne eine vordefinierte Datenquellenname (DSN) oder die Datei-DSN verbinden.
+ Da Sie weglassen können die **Anbieter** -Parameter können aus diesem Grund erstellen Sie eine ADO-Verbindungszeichenfolge, die mit einer ODBC-Verbindungszeichenfolge für die gleiche Datenquelle identisch ist. Verwenden Sie die gleichen Parameternamen (**Treiber =** , **Datenbank =** , **DSN =** und so weiter), Werte und wie Sie die Syntax wie bei der eine ODBC-Verbindungszeichenfolge zu erstellen. Sie können mit oder ohne eine vordefinierte Datenquellenname (DSN) oder die Datei-DSN verbinden.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Die Syntax mit einem DSN oder Datei-DSN:
 
@@ -84,9 +83,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>Hinweise
  Bei Verwendung einer **DSN** oder **FileDSN**, er muss über die ODBC-Datenquellen-Administrator in der Windows-Systemsteuerung definiert werden. Der ODBC-Administrator befindet sich in Microsoft Windows 2000 unter Verwaltung. In früheren Versionen von Windows, das Symbol "ODBC-Administrator" heißt **32-Bit-ODBC-** oder nur **ODBC**.
 
- Als Alternative zum Festlegen einer **DSN**, können Sie angeben, den ODBC-Treiber (**Treiber =**), z. B. "SQLServer;" den Namen des Servers (**SERVER =**); und den Datenbanknamen (**Datenbank =**).
+ Als Alternative zum Festlegen einer **DSN**, können Sie angeben, den ODBC-Treiber (**Treiber =** ), z. B. "SQLServer;" den Namen des Servers (**SERVER =** ); und den Datenbanknamen (**Datenbank =** ).
 
- Sie können auch einen Benutzernamen für das Konto angeben (**UID =**), und das Kennwort für das Benutzerkonto (**PWD =**) in der ODBC-spezifische Parameter oder in der Standard ADO definierten *Benutzer* und *Kennwort* Parameter.
+ Sie können auch einen Benutzernamen für das Konto angeben (**UID =** ), und das Kennwort für das Benutzerkonto (**PWD =** ) in der ODBC-spezifische Parameter oder in der Standard ADO definierten *Benutzer* und *Kennwort* Parameter.
 
  Obwohl eine **DSN** bereits Definition gibt es sich um eine Datenbank, können Sie angeben, *eine* *Datenbank* Parameter zusätzlich zu einer **DSN** eine Verbindung herstellen mit einer anderen Datenbank. Es ist eine gute Idee, immer *der* *Datenbank* Parameter bei Verwendung einer **DSN**. Dadurch wird sichergestellt, dass Sie eine Verbindung mit der richtigen Datenbank herstellen, wenn ein anderer Benutzer den Standardparameter für die Datenbank geändert, seit Sie zuletzt überprüft die **DSN** Definition.
 
@@ -122,7 +121,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |Eigenschaftenname|Description|
 |-------------------|-----------------|
-|Query Based Updates/Deletes/Inserts (KAGPROP_QUERYBASEDUPDATES)|Gibt an, ob Updates, löschungen und einfügungen mithilfe von SQL-Abfragen ausgeführt werden können.|
+|Abfragebasiert Aktualisierungen/Löschungen/Einfügevorgänge (KAGPROP_QUERYBASEDUPDATES)|Gibt an, ob Updates, löschungen und einfügungen mithilfe von SQL-Abfragen ausgeführt werden können.|
 |ODBC-Parallelitätstyp (KAGPROP_CONCURRENCY)|Gibt die Methode zum Verringern des möglichen Problemen aufgrund von zwei Benutzern, die die gleichen Daten gleichzeitig aus der Datenquelle zugreifen möchten.|
 |BLOB-Zugriff auf die Forward-Only-Cursor (KAGPROP_BLOBSONFOCURSOR)|Gibt an, ob BLOB- **Felder** kann zugegriffen werden, wenn ein Vorwärtscursor verwenden.|
 |Schließen Sie SQL_FLOAT SQL_DOUBLE und SQL_REAL in QBU WHERE-Klauseln (KAGPROP_INCLUDENONEXACT)|Gibt an, ob es sich bei SQL_FLOAT SQL_DOUBLE und SQL_REAL Werte in einer QBU WHERE-Klausel aufgenommen werden können.|
@@ -173,13 +172,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Verfügbarkeit von standard-ADO- **Recordset** Eigenschaften:
 
-|Eigenschaft|ForwardOnly|Dynamic|Keyset|Statisch|
+|Eigenschaft|"ForwardOnly"|Dynamic|Keyset|Statisch|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Nicht verfügbar.|Nicht verfügbar.|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Nicht verfügbar.|Nicht verfügbar.|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|Schreibgeschützt|Schreibgeschützt|Schreibgeschützt|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Nicht verfügbar.|Nicht verfügbar.|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
+|[Textmarke](../../../ado/reference/ado-api/bookmark-property-ado.md)|Nicht verfügbar.|Nicht verfügbar.|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|Lese-/Schreibzugriff|
@@ -199,13 +198,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Verfügbarkeit von standard-ADO- **Recordset** Methoden:
 
-|Methode|ForwardOnly|Dynamic|Keyset|Statisch|
+|Methode|"ForwardOnly"|Dynamic|Keyset|Statisch|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Ja|Ja|Ja|Ja|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein|Ja|Ja|
+|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Nein|Nein|Ja|Ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Ja|Ja|Ja|Ja|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|Ja|Ja|Ja|
@@ -217,12 +216,12 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Ja|Ja|Ja|Ja|
 |[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Ja|Ja|Ja|Ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|Ja|Ja|Ja|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Nein|Nein|Ja|Ja|
+|[Erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md)|Nein|Nein|Ja|Ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|Ja|Ja|Ja|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Ja|Ja|Ja|Ja|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Ja|Ja|Ja|Ja|
 
- * Nicht Microsoft Access-Datenbanken unterstützt.
+ \* Nicht Microsoft Access-Datenbanken unterstützt.
 
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
  Microsoft OLE DB-Anbieter für ODBC fügt verschiedene Eigenschaften in der **Eigenschaften** Auflistung von nicht geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekte.
@@ -247,7 +246,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellenobjekt Threading-Modell|DBPROP_DSOTHREADMODEL|
 |Der DBMS-Name|DBPROP_DBMSNAME|
-|DBMS Version|DBPROP_DBMSVER|
+|DBMS-Version|DBPROP_DBMSVER|
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|
 |GROUP BY-Unterstützung|DBPROP_GROUPBY|
 |Heterogene Tabellenunterstützung|DBPROP_HETEROGENEOUSTABLES|
@@ -269,7 +268,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |NULL-Zusammenstellungsreihenfolge|DBPROP_NULLCOLLATION|
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB-Diensten|DBPROP_INIT_OLEDBSERVICES|
-|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
+|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|
 |OLE-Objektunterstützung|DBPROP_OLEOBJECTS|
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY-Spalten in Auswahlliste|DBPROP_ORDERBYCOLUMNSINSELECT|

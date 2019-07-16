@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1591843667ef01c6c88f5dfafb734f044679b2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909833"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Automatische Auffüllung des IPD
 Einige Treiber können mit der die Felder des IPD festlegen, nachdem eine parametrisierte Abfrage vorbereitet wurde. Die deskriptorfelder sind automatisch mit Informationen über den Parameter, einschließlich der Datentyp, Genauigkeit, Dezimalstellen und andere Eigenschaften aufgefüllt. Dies ist gleichbedeutend mit Unterstützung von **SQLDescribeParam**. Diese Informationen können besonders nützlich, um eine Anwendung sein, wenn es keine andere Möglichkeit zum Ermitteln besitzt, wie z. B. wenn eine ad-hoc-Abfrage mit Parametern ausgeführt wird, die die Anwendung nicht kennt.  

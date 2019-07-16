@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6babeebec1eac78949f0a80eb0701b5b5ba1dcc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918453"
 ---
 # <a name="getrows-method-ado"></a>GetRows-Methode (ADO)
 Ruft mehrere Datensätze aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt in ein Array.  
@@ -42,10 +41,10 @@ array = recordset.GetRows(Rows, Start, Fields )
  Optional. Ein [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) Wert, der die Anzahl der abzurufenden Datensätze angibt. Der Standardwert ist **AdGetRowsRest**.  
   
  *Start*  
- Optional. Ein **Zeichenfolge** Wert oder **Variant** , ausgewertet wird, zu dem Lesezeichen für den Datensatz aus der die **GetRows** Vorgang beginnen soll. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
+ Dies ist optional. Ein **Zeichenfolge** Wert oder **Variant** , ausgewertet wird, zu dem Lesezeichen für den Datensatz aus der die **GetRows** Vorgang beginnen soll. Sie können auch eine [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) Wert.  
   
- *Fields*  
- Optional. Ein **Variant** , die einen einzelnen Feldnamen oder Ordnungsposition oder ein Array von Feldnamen oder Ordnungsposition Zahlen darstellt. ADO werden nur die Daten in diesen Feldern zurück.  
+ *Felder*  
+ Dies ist optional. Ein **Variant** , die einen einzelnen Feldnamen oder Ordnungsposition oder ein Array von Feldnamen oder Ordnungsposition Zahlen darstellt. ADO werden nur die Daten in diesen Feldern zurück.  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der **GetRows** Methode zum Kopieren der Datensätze aus einer **Recordset** in ein zweidimensionales Array. Der erste Index identifiziert das Feld und die zweite die Datensatznummer. Die *Array* Variable automatisch der richtige dimensioniert ist Größe, wenn die **GetRows** Methode gibt die Daten zurück.  

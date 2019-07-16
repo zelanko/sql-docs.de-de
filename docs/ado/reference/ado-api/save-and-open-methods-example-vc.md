@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 021a20ba3aa151181d3ce26a5a1fd3cef621984c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917077"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Speichern Sie und öffnen Sie die Methode – Beispiel (VC++)
 Diese drei Beispielen wird gezeigt, wie die [speichern](../../../ado/reference/ado-api/save-method.md) und **öffnen** Methoden gemeinsam verwendet werden können.  
@@ -263,5 +262,5 @@ bool FileExists() {
   
 ## <a name="see-also"></a>Siehe auch  
  [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)

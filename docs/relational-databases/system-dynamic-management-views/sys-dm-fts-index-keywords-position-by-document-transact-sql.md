@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
+title: dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 12c557029b0b479fbb780fdd93ae05faa4c26735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900957"
 ---
 # <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ OBJECT_ID('table_name')
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spalte|Datentyp|Description|  
+|Spalte|Datentyp|Beschreibung|  
 |------------|---------------|-----------------|  
 |Schlüsselwort (keyword)|**varbinary(128)**|Binäre Zeichenfolge, die das Schlüsselwort darstellt.|  
 |display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.|  

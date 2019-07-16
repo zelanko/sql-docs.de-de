@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904904"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Arbeiten mit SSMA-Projekten (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie zuerst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei mit den folgenden Informationen an:  
@@ -66,7 +65,7 @@ SSMA enthält verschiedene Einstellungen für konvertieren und laden die Datenba
 ## <a name="creating-new-projects"></a>Erstellen neuer Projekte  
 Um Daten aus MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie ein Projekt erstellen.  
   
-##### <a name="to-create-a-new-project"></a>Zum Erstellen eines neuen Projekts  
+##### <a name="to-create-a-new-project"></a>So erstellen Sie ein neues Projekt  
   
 1.  Wählen Sie **neues Projekt** aus der **Datei** Menü. Das Dialogfeld **Neues Projekt** wird angezeigt. Wählen Sie im Menü **Datei** die Option **Neues Projekt** aus. Das Dialogfeld **Neues Projekt** wird angezeigt.  
   

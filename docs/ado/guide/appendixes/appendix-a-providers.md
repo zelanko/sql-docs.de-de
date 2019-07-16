@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f31e5522fdac506e31ffe0bbaa5ad76e3fae87b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926970"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Anhang A: Daten und Dienstanbieter
 In diesem Abschnitt werden drei Arten von Anbietern: Datenanbieter, Dienstanbietern und Dienstkomponenten. Anbieter können in zwei Kategorien unterteilt: die Bereitstellung von Daten und die Dienste bereitstellen. Ein *Datenanbieter* besitzt seine eigenen Daten und macht Sie sie in tabellarischer Form für Ihre Anwendung verfügbar. Ein *Dienstanbieter* kapselt einen Dienst starten, indem Sie erzeugen und Nutzen von Daten, die Funktionen in den ADO-Anwendungen zu erweitern. Ein Dienstanbieter sind als auch noch weiter definiert eine *Dienstkomponente*, die zusammen mit anderen Dienstanbietern oder Komponenten funktionieren müssen.
@@ -49,7 +48,7 @@ In diesem Abschnitt werden drei Arten von Anbietern: Datenanbieter, Dienstanbiet
 |Microsoft SQL Server|[Microsoft OLE DB-Anbieter für SQLServer](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Oracle-Datenbanken|[Microsoft OLE DB-Anbieter für Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Internet-Publishing|[Microsoft OLE DB-Anbieter für Internet-Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
-|Einfache Datenquellen|[Microsoft OLE DB Simple Provider](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
+|Einfache Datenquellen|[Einfache Microsoft OLE DB-Anbieter](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
 ## <a name="provider-specific-dynamic-properties"></a>Dynamische Eigenschaften der anbieterspezifischen
  Die [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Sammlungen von der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Befehl](../../../ado/reference/ado-api/command-object-ado.md), und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte enthalten die dynamische Eigenschaften, die spezifisch für die Anbieter. Diese Eigenschaften enthalten Informationen zu Funktionen, die spezifisch für den Anbieter über die integrierte Eigenschaften, die ADO unterstützt.

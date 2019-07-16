@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37d1fe31524d245da2a6bac9b90ab2e680fab450
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920104"
 ---
 # <a name="chapter-property-ado"></a>Chapter-Eigenschaft (ADO)
 Ruft ab oder legt einen OLE DB **Kapitel** Objekt aus, bzw. auf eine [ADORecordsetConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) Objekt. Bei Verwendung von **Put_Chapter** Festlegen der **Kapitel** Objekt, eine Teilmenge von Zeilen in eine ADO umgewandelt [Recordset-Objekts](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt. Hiermit wird das aktuelle Kapitel des der **Rowset**Objekt. Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.  

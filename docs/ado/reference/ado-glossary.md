@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911693"
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden die Begriffe, die relevant für ADO definiert.  
@@ -74,7 +73,7 @@ In diesem Thema werden die Begriffe, die relevant für ADO definiert.
   
  Kapitelspalten ermöglichen das Definieren einer *über-und untergeordneten* Beziehung, in denen die *übergeordneten* ist die **Recordset** mit der Kapitelspalte im und die  *untergeordnete* ist die **Recordset** durch das Kapitel dargestellt wird.  
   
- chapter-alias  
+ Kapitel-alias  
  Ein Alias, der auf die Spalte aus, das dem übergeordneten angefügt verweist.  
   
  Zeichensatz  
@@ -230,7 +229,7 @@ In diesem Thema werden die Begriffe, die relevant für ADO definiert.
  parent (parent)  
  Die steuernde Seite einer hierarchischen Beziehung. In einer hierarchischen Struktur hat ein übergeordnetes Element ein oder mehrere untergeordnete Knoten direkt darunter liegenden in der Hierarchie. Siehe auch Alias des übergeordneten Elements, die über-/ unterordnungsbeziehung, die untergeordnete.  
   
- parent-alias  
+ übergeordnete-alias  
  Ein Alias, der auf das übergeordnete Element verweist. Siehe auch alias übergeordneten.  
   
  über-/ unterordnungsbeziehung  
@@ -247,7 +246,7 @@ In diesem Thema werden die Begriffe, die relevant für ADO definiert.
  ProgID (Programmbezeichner)  
  Ein eindeutiger Name, der die Windows-Registrierung einer COM-Anwendung zugeordnet ist. Die ProgID für eine ADO-Verbindung ist "ADODB. Verbindung". Siehe auch CLSID, COM.  
   
- proxy  
+ Proxy  
  Ein Schnittstellenspezifische-Objekt, das Parameter-Marshalling bereitstellt, und die Kommunikation erforderlich, damit ein Client ein Anwendungsobjekt aufrufen, die in einer anderen ausführungsumgebung, z. B. in einem anderen Thread oder in einem anderen Prozess ausgeführt wird. Der Proxy befindet, mit dem Client und kommuniziert mit einem entsprechenden Stub, der sich auf das Anwendungsobjekt ist, die aufgerufen wird. Siehe auch Stub.  
   
 ## <a name="r"></a>R  
@@ -279,10 +278,10 @@ In diesem Thema werden die Begriffe, die relevant für ADO definiert.
  )  
  Eine vorkompilierte Auflistung von Code, z. B. SQL-Anweisungen und optionalen Control-of-Flow-Anweisungen, die unter einem Namen gespeichert und als Einheit verarbeitet werden soll. Gespeicherte Prozeduren werden in einer Datenbank gespeichert. Sie können mit einem Aufruf in eine Anwendung ausgeführt werden, und es ermöglichen, User-deklarierten Variablen, bedingte Ausführung und andere leistungsstarke Features für die Programmierung.  
   
- stub  
+ Stub  
  Ein Schnittstellenspezifische-Objekt, das Parameter-Marshalling bereitstellt, und die Kommunikation, die erforderlich sind, für ein Anwendungsobjekt, die Aufrufe von einem Client zu empfangen, die in einer anderen ausführungsumgebung, z. B. in einem anderen Thread oder in einem anderen Prozess ausgeführt wird. Der Stub befindet wie das Anwendungsobjekt und kommuniziert mit einem entsprechenden Proxy aus, der mit dem Client befindet, die ihn aufruft. Siehe auch "Proxy".  
   
- sub-node  
+ untergeordnete Knoten  
  Finden Sie unter untergeordneten.  
   
  synchrone Vorgänge  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d0c2fa02eaf5ec72c31bd733401ff93ee259a9cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e460a5b571988de65f1d3921f73f011520e6ca15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929441"
 ---
 # <a name="project-settings-gui-accesstosql"></a>Project Settings (GUI) (AccessToSQL)
 Die GUI-projekteinstellungen können Sie konfigurieren, wie Daten auf angezeigt wird der **Daten** Registerkarte und Berichte mit Bewertungsberichte Daten einschließen, wenn.  

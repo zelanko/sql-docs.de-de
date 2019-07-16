@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18950d49afdab8517b95c59df8841c33b5d3d086
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bea124a78e2a180180c59de3577fe1db7637e110
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897784"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Access-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält die Access-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|fOption|Anmerkung|  
+|fOption|Kommentar|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|Die SQL_ACCESS_MODE fOption kann entweder SQL_MODE_READ_ONLY oder SQL_MODE_READ_WRITE festgelegt werden. Der Treiber verhindert jedoch nicht Updates, wenn SQL_ACCESS_MODE SQL_MODE_READ_ONLY festgelegt ist.|  
 |SQL_AUTOCOMMIT|Wenn die Microsoft Access-Treiber verwendet wird, kann die SQL_AUTOCOMMIT-Option auf SQL_AUTOCOMMIT_ON oder SQL_AUTOCOMMIT_OFF, festgelegt werden, da es sich bei der Microsoft Access-Treiber unterstützt die Transaktionen [1].|  

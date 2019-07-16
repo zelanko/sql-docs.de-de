@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8dd1263d19972124166e1e11d91c8370fc3a9ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921081"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO – Index für dynamische Eigenschaften
 Datenanbieter, Dienstanbietern und Dienstkomponenten können dynamische Eigenschaften zum Hinzufügen der **Eigenschaften** Auflistungen von nicht geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte. Ein angegebenen Anbieter kann auch weitere Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften finden Sie in der [ADO – dynamische Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md) Abschnitt. Mehr finden Sie unter den jeweiligen Anbietern in der [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) Abschnitt.  
@@ -43,7 +42,7 @@ Datenanbieter, Dienstanbietern und Dienstkomponenten können dynamische Eigensch
 |Datenquellenname|DBPROP_DATASOURCENAME|  
 |Datenquellenobjekt Threading-Modell|DBPROP_DSOTHREADMODEL|  
 |Der DBMS-Name|DBPROP_DBMSNAME|  
-|DBMS Version|DBPROP_DBMSVER|  
+|DBMS-Version|DBPROP_DBMSVER|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|  
 |GROUP BY-Unterstützung|DBPROP_GROUPBY|  
 |Heterogene Tabellenunterstützung|DBPROP_HETEROGENEOUSTABLES|  
@@ -65,7 +64,7 @@ Datenanbieter, Dienstanbietern und Dienstkomponenten können dynamische Eigensch
 |NULL-Zusammenstellungsreihenfolge|DBPROP_NULLCOLLATION|  
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|  
 |OLE DB-Diensten|DBPROP_INIT_OLEDBSERVICES|  
-|OLE DB Version|DBPROP_PROVIDEROLEDBVER|  
+|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|  
 |OLE-Objektunterstützung|DBPROP_OLEOBJECTS|  
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|  
 |ORDER BY-Spalten in Auswahlliste|DBPROP_ORDERBYCOLUMNSINSELECT|  

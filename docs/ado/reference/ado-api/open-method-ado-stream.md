@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1d1863b28367ba825541c6e334613f65d3bc657
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917835"
 ---
 # <a name="open-method-ado-stream"></a>Open-Methode (ADO-Datenstrom)
 Öffnet eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt zum Bearbeiten von binären Vergleich oder einen Datenströme.  
@@ -45,10 +44,10 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  Optional. Ein [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) Wert. Standardwert ist **AdOpenStreamUnspecified**.  
   
  *UserName*  
- Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
+ Dies ist optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
   
  *Kennwort*  
- Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
+ Dies ist optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält, wenn es erforderlich ist, greift auf, die **Stream** Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn eine **Datensatz** Objekt wird als der Quellparameter übergeben die *"UserID"* und *Kennwort* Parameter werden nicht verwendet werden, da Zugriff auf die **Datensatz** Objekt ist bereits verfügbar. Auf ähnliche Weise die [Modus](../../../ado/reference/ado-api/mode-property-ado.md) von der **Datensatz** Objekt wird zum Übertragen der **Stream** Objekt. Wenn *Quelle* nicht angegeben ist, die **Stream** geöffnet enthält keine Daten und verfügt über eine [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) von 0 (null). Um zu vermeiden, Verlust von Daten, die in diese geschrieben werden **Stream** beim der **Stream** ist geschlossen, Speichern der **Stream** mit der [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) oder [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) Methoden, oder auf einem anderen Speicherort speichern.  

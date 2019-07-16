@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbff704e174dd824eca7b1f71c8f9d3fc15def51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923204"
 ---
 # <a name="ado-md-fundamentals"></a>Grundlegendes zu ADO MD
 Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) bietet einfachen Zugriff auf mehrdimensionale Daten in Sprachen wie z. B. Microsoft Visual Basic®, fest Microsoft Visual C++®. ADO MD erweitert Microsoft ActiveX® Data Objects (ADO), um die Objekte, die speziell für mehrdimensionale Daten, z. B. enthalten die [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) und [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Objekte. Mit ADO MD können Sie mehrdimensionales Schema durchsuchen, Abfragen ein Cubes und die Ergebnisse abzurufen.  

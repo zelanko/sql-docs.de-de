@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44ab042814b95886faa9f632fb58d7a809c9e458
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930118"
 ---
 # <a name="functions-on-nodes---number"></a>Funktionen für Knoten – number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  Knoten, dessen Wert als Zahl zurückgegeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn *$arg* ist nicht angegeben ist, wird der numerische Wert des Kontextknotens aus, konvertiert in einen Double-Wert zurückgegeben. In SQL Server **Fn:Number()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden kann. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden. Beispielsweise gibt der folgende Ausdruck das <`ROOT`>-Element zurück.  
+ Wenn *$arg* ist nicht angegeben ist, wird der numerische Wert des Kontextknotens aus, konvertiert in einen Double-Wert zurückgegeben. In SQL Server **Fn:Number()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden kann. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden. Beispielsweise der folgende Ausdruck gibt die <`ROOT`> Element.  
   
 ```  
 declare @x xml  

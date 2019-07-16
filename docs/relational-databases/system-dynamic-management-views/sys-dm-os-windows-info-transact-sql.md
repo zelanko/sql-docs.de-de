@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899593"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51663138"
   
   Gilt nur für SQL Server unter Windows. Verwenden, um ähnliche Informationen finden in SQL Server auf einem nicht-Windows-Host, z.B. Linux, [dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Für Windows können Sie die Release-Anzahl zurück. Eine Liste der Werte mit Beschreibungen finden Sie unter [Betriebssystemversion (Windows)](/windows/desktop/SysInfo/operating-system-version). Lässt keine NULL-Werte zu.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Für Windows gibt die Nummer des Service Packs. Lässt keine NULL-Werte zu. |  

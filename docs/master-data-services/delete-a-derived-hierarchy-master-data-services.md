@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 66671c88d3cf2cec018da1450ce8564853a3e3f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 437342af4f0aa188fb898bd951249629ee44be3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906467"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Löschen einer abgeleiteten Hierarchie (Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65487794"
 > [!NOTE]  
 >  Das Löschen einer abgeleiteten Hierarchie wirkt sich nicht auf die Attributbeziehungen aus, auf denen die Hierarchie basiert.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  

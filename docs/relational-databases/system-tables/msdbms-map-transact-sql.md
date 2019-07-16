@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ad9106bb9cde64953643e86bf81e72684858bd65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fffa30d0e252392c41cee34c1875b12b5b7a53b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907489"
 ---
 # <a name="msdbmsmap-transact-sql"></a>MSdbms_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSdbms_map** Tabelle enthält die Datentypinformationen Quell-als auch einen Link zur Standardinformationen zum standardzieldatentyp für DBMS Paare aus Quelle und Ziel. Diese Tabelle befindet sich in der **Msdb** Datenbank und für die heterogene Veröffentlichung verwendet wird.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**map_id**|**int**|Identifiziert eine Datentypzuordnung eindeutig.|  
 |**src_dbms_id**|**int**|Identifiziert das Quell-DBMS durch Angabe der **Dbms_id** in die [MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) Tabelle.|  

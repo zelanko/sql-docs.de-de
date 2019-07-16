@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920906"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO-Objekte und -Schnittstellen
 Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -39,7 +38,7 @@ Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO-Objektmode
 |[Feld](../../../ado/reference/ado-api/field-object.md)|Stellt eine Spalte mit einem gemeinsamen Datentyp.|  
 |[Parameter](../../../ado/reference/ado-api/parameter-object.md)|Stellt einen Parameter oder die zugeordnete Argument ein **Befehl** -Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur.<br /><br /> Die **Parameter** Objekt ist nicht sicher für Skripting.|  
 |[Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md)|Repräsentiert eine dynamische Eigenschaft eines ADO-Objekts, das vom Anbieter definiert ist.|  
-|[Record](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile einer **Recordset**, oder ein Verzeichnis oder eine Datei in einem Dateisystem. Die **Datensatz** Objekt für die Skripterstellung sicher ist.|  
+|[Datensatz](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile einer **Recordset**, oder ein Verzeichnis oder eine Datei in einem Dateisystem. Die **Datensatz** Objekt für die Skripterstellung sicher ist.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Stellt die Gruppe von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Zu jedem Zeitpunkt den **Recordset** -Objekt verweist auf nur einen einzelnen Datensatz in der Gruppe als aktuellen Datensatz.<br /><br /> Die **Recordset** Objekt für die Skripterstellung sicher ist.|  
 |[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Die **Stream** Objekt für die Skripterstellung sicher ist.|  
   

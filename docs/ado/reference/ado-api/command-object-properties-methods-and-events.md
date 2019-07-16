@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a569800d132e95668c728f10226c2f8820757921
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd8992acf5652d4fad1e4e14a67c847bb30c6d34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919818"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Befehls-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -54,7 +53,7 @@ ms.locfileid: "66695818"
  [Execute-Methode (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

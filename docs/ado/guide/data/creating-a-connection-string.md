@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ed1a2ec745b1e1ca961c71c81d44ff659789efea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925763"
 ---
 # <a name="creating-a-connection-string"></a>Erstellen einer Verbindungszeichenfolge
 Eine Verbindungszeichenfolge besteht aus einer Liste von Argument-Wert-Paaren (das heißt, Parameter), die durch Semikolons getrennt. Zum Beispiel:  
@@ -32,7 +31,7 @@ Eine Verbindungszeichenfolge besteht aus einer Liste von Argument-Wert-Paaren (d
   
  ADO erkennt die folgenden fünf Argumente in einer Verbindungszeichenfolge.  
   
-|Argument|Description|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*Anbieter*|Gibt den Namen eines Anbieters für die Verbindung verwendet.|  
 |*Dateiname*|Gibt den Namen einer anbieterspezifischen-Datei (z. B. eine persistente Daten Quellobjekt), die vordefinierten Verbindungsinformationen enthält.|  

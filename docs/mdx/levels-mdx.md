@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905646"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
 
@@ -39,7 +38,7 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Number*  
  Ein gültiger numerischer Ausdruck, der eine Ebenennummer angibt.  
   
- *Level_Name*  
+ *Ebenenname*  
  Ein gültiger Zeichenfolgenausdruck, der einen Ebenennamen angibt.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -53,7 +52,7 @@ Hierarchy_Expression.Levels( Level_Name )
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen veranschaulicht die **Ebenen** Syntaxen funktionieren.  
   
-### <a name="numeric"></a>Numerisch  
+### <a name="numeric"></a>Numeric  
  Im folgenden Beispiel wird die Country-Ebene zurückgegeben:  
   
 ```  

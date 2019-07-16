@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab2f2fcb07fb181fd32d5a60f9fd2d8f25725f96
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3ce9b0972bc95a927729f55e10e329cddb2993c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896460"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ sp_purge_jobhistory
   
 `[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, für die Datensätze gelöscht werden soll. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. Siehe Hinweis in der Beschreibung des **@job_name** Informationen **Sysadmin** oder **SQLAgentOperatorRole** Benutzer können dieses Argument verwenden.  
   
-`[ @oldest_date = ] oldest_date` Der älteste Eintrag im Verlauf beibehalten werden sollen. *Oldest_date* ist **"DateTime"**, hat den Standardwert NULL. Wenn *Oldest_date* angegeben wird, **Sp_purge_jobhistory** entfernt nur die Datensätze, die älter als der angegebene Wert sind.  
+`[ @oldest_date = ] oldest_date` Der älteste Eintrag im Verlauf beibehalten werden sollen. *Oldest_date* ist **"DateTime"** , hat den Standardwert NULL. Wenn *Oldest_date* angegeben wird, **Sp_purge_jobhistory** entfernt nur die Datensätze, die älter als der angegebene Wert sind.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

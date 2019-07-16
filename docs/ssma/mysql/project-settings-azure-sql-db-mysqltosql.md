@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e0c16fe617b5808f22f15cdf89af8dc7a1e79898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908821"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Projekteinstellungen (Azure SQL-DB) (MySqlToSql)
 Die SQL Azure-projekteinstellungen können Sie konfigurieren das SQL Azure-Datenbank-Suffix in das Dialogfeld "Verbindung" hinzugefügt werden und auch erlauben taktmechanismus in Verbindung mit SQL Azure implementieren.  

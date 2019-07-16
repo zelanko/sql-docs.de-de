@@ -3,18 +3,17 @@ title: Versionshinweise für SQL Server-2019-Vorschauversion unter Linux
 description: Dieser Artikel enthält die Anmerkungen zu dieser Version und die unterstützten Funktionen für SQL Server-2019 Vorschau unter Linux ausgeführt wird. Anmerkungen zu dieser Version sind für die neueste Version und früheren Versionen enthalten.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 490b47c43e5a930f42163edc75280b2642e2dabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896142"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Versionshinweise für SQL Server-2019-Vorschauversion unter Linux
 
@@ -103,7 +102,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 Derzeit erfordert MSDTC Transaktionen nicht authentifiziert. Z. B. Wenn Sie einen Verbindungsserver von SQL Server auf Windows, SQL Server unter Linux verwenden oder eine Windows-Client-Anwendung verwenden, um eine verteilte Transaktion für SQL Server unter Linux zu starten, wird MS DTC ist auf Windows Server und Client erforderlich, um die Option "nicht verwenden Authentifizierung erforderlich".
 
-## <a id="CTP25"></a> CTP 2.5 (Apr 2019)
+## <a id="CTP25"></a> CTP-Version 2.5 (April 2019)
 
 Die folgenden Abschnitte enthalten Paketspeicherorte und bekannte Probleme für die CTP-Version 2.5-Version. Weitere Informationen zu neuen Funktionen von SQL Server-2019 Linux finden Sie unter den [Neuigkeiten in SQL Server-2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 
@@ -123,7 +122,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 Derzeit erfordert MSDTC Transaktionen nicht authentifiziert. Z. B. Wenn Sie einen Verbindungsserver von SQL Server auf Windows, SQL Server unter Linux verwenden oder eine Windows-Client-Anwendung verwenden, um eine verteilte Transaktion für SQL Server unter Linux zu starten, wird MS DTC ist auf Windows Server und Client erforderlich, um die Option "nicht verwenden Authentifizierung erforderlich".
 
-## <a id="CTP24"></a> CTP 2.4 (Mar 2019)
+## <a id="CTP24"></a> CTP-Version 2.4 (Mar 2019)
 
 Die folgenden Abschnitte enthalten Paketspeicherorte und bekannte Probleme bei der CTP-Version 2.4-Version. Weitere Informationen zu neuen Funktionen von SQL Server-2019 Linux finden Sie unter den [Neuigkeiten in SQL Server-2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 
@@ -203,7 +202,7 @@ Für die manuelle oder offline-Paketinstallationen können Sie die u/min und Deb
 
 Derzeit erfordert MSDTC Transaktionen nicht authentifiziert. Z. B. Wenn Sie einen Verbindungsserver von SQL Server auf Windows, SQL Server unter Linux verwenden oder eine Windows-Client-Anwendung verwenden, um eine verteilte Transaktion für SQL Server unter Linux zu starten, wird MS DTC ist auf Windows Server und Client erforderlich, um die Option "nicht verwenden Authentifizierung erforderlich".
 
-## <a id="CTP20"></a> CTP 2.0 (Sept 2018)
+## <a id="CTP20"></a> CTP-Version 2.0 (September 2018)
 
 Die folgenden Abschnitte enthalten Paketspeicherorte und bekannte Probleme für die CTP-Version 2.0-Version. Weitere Informationen zu neuen Funktionen von SQL Server-2019 Linux finden Sie unter den [Neuigkeiten in SQL Server-2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 

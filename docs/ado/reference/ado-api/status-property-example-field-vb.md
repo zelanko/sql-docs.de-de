@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 12ae39b965678a47053d3d312c750f7bd87bd7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916825"
 ---
 # <a name="status-property-example-field-vb"></a>Status-Eigenschaft – Beispiel (Field) (VB)
 Im folgende Beispiel wird ein Dokument aus einem Ordner mit Lese-/Schreibzugriff geöffnet. die [Internet Publishing-Anbieter](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) Eigenschaft eine [Feld](../../../ado/reference/ado-api/field-object.md) Objekt die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) wird zunächst festgelegt **AdFieldPendingInsert**, und klicken Sie dann auf aktualisiertwerden**AdFieldOk**.  
@@ -94,5 +93,5 @@ Attribute VB_Name = "StatusField"
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status-Eigenschaft (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)

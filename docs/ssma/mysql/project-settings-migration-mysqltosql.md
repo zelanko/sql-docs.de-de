@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908867"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Projekteinstellungen (Migration) (MySqlToSql)
 Der Seite für die Migration von der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA Daten aus MySQL zu SQL Server migriert.  
@@ -35,8 +34,8 @@ Der Bereich für die Migration finden Sie in der **Projekteinstellungen** und **
 |**Batchgröße**|Gibt den Batch Größe, die während der Migration von Daten verwendet.<br /><br />**Im Modus Standard**:  1000<br /><br />**Vollständige**:  1000<br /><br />**Vollständiger Modus**:  1000|  
 |**Check-Einschränkungen**|Gibt an, ob SSMA Einschränkungen überprüft werden sollen, wenn sie Daten in SQL Server-Tabellen einfügt.<br /><br />**Im Modus Standard**:  False<br /><br />**Vollständige**:  False<br /><br />**Vollständiger Modus**:  False|  
 |**Trigger auslösen**|Gibt an, ob SSMA einfügen Trigger ausgelöst werden soll, wenn sie Daten in SQL Server-Tabellen hinzufügt.<br /><br />**Im Modus Standard**:  False<br /><br />**Vollständige**:  False<br /><br />**Vollständiger Modus**:  False|  
-|**Identität beibehalten**|Gibt an, ob SSMA MySQL-Identity-Werte beibehält, wenn Daten mit SQL Server hinzugefügt. Der Wert "false" bewirkt, dass Identitätswerte vom Ziel zugewiesen werden soll.<br /><br />**Im Modus Standard**:  Wahr<br /><br />**Vollständige**:  Wahr<br /><br />**Vollständiger Modus**:  Wahr|  
-|**NULL-Werte beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  Wahr<br /><br />**Vollständige**:  Wahr<br /><br />**Vollständiger Modus**:  Wahr|  
+|**Identität beibehalten**|Gibt an, ob SSMA MySQL-Identity-Werte beibehält, wenn Daten mit SQL Server hinzugefügt. Der Wert "false" bewirkt, dass Identitätswerte vom Ziel zugewiesen werden soll.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
+|**NULL-Werte beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
 |**Tabellensperre**|Gibt an, ob es sich bei SSMA Tabellen sperrt, wenn sie Daten in Tabellen während der Datenmigration hinzufügt. Ruft eine Massenaktualisierungssperre für die Dauer des Massenkopiervorgangs ab. Wenn der Wert "false" ist, wird eine Sperre auf Zeilenebene festgelegt.<br /><br />**Im Modus Standard**:  False<br /><br />**Vollständige**:  False<br /><br />**Vollständiger Modus**:  False|  
   
 ### <a name="data-modification"></a>Datenänderung  

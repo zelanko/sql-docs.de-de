@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e93d397d10a99f844454494c4bf0d82b7fe6d660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899419"
 ---
 # <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "62502949"
 |connect_time|**datetime**|Zeitstempel, der angibt, wann die Verbindung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
 |encrypt_option|**nvarchar(40)**|Gibt "true" (Verbindung verschlüsselt ist) oder "false" (Verbindung ist nicht Enctypred).|  
 |auth_scheme|**nvarchar(40)**|Gibt das mit dieser Verbindung verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-/Windows-Authentifizierungsschema an. Lässt keine NULL-Werte zu.|  
-|client_id|**varchar(48)**|IP-Adresse des Clients eine Verbindung mit diesem Server. Lässt NULL-Werte zu.|  
+|Client-ID|**varchar(48)**|IP-Adresse des Clients eine Verbindung mit diesem Server. Lässt NULL-Werte zu.|  
 |sql_spid|**int**|Die Serverprozess-ID der Verbindung. Verwendung `@@SPID` Zurückgeben der `sql_spid` der aktuellen Verbindung. Verwenden Sie für die meisten Zwecken, die `session_id` stattdessen.|  
   
 ## <a name="permissions"></a>Berechtigungen  

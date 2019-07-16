@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900668"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile mit Informationen vorgesehen, Ihnen einen Einblick in die Integrität der verfügbarkeitsdatenbanken in der Always On-Verfügbarkeitsgruppen in jeder AlwaysOn-verfügbarkeitsgruppe auf dem Windows Server Failover Clustering (WSFC)-Cluster bereitstellen. Abfrage **Sys. dm_hadr_database_replica_states** die folgenden Fragen beantworten:  
+  Gibt eine Zeile mit Informationen zurück, die Aufschluss über die Integrität der Verfügbarkeitsdatenbanken in den Always On-Verfügbarkeitsgruppen in jeder Always On-Verfügbarkeitsgruppe im WSFC-Cluster (Windows Server Failover Clustering) geben sollen. Abfrage **Sys. dm_hadr_database_replica_states** die folgenden Fragen beantworten:  
   
 -   Sind alle Datenbanken in einer Verfügbarkeitsgruppe für ein Failover bereit?  
   
@@ -39,9 +38,9 @@ ms.locfileid: "47636678"
   
 -   Bei welchem sekundären Replikat wäre der Datenverlust am geringsten, wenn es zum primären Replikat würde, weil das primäre Replikat derzeit nicht verfügbar wäre?  
   
--   Wenn der Wert des der [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**Log_reuse_wait_desc** Spalte ist "AVAILABILITY_REPLICA", welches sekundäres Replikat in einer verfügbarkeitsgruppe auf kürzungen von Transaktionsprotokollen in einer bestimmten primären Datenbank aufhält ?     
+-   Wenn der Wert des der [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**Log_reuse_wait_desc** Spalte ist "AVAILABILITY_REPLICA", welches sekundäres Replikat in einer verfügbarkeitsgruppe auf kürzungen von Transaktionsprotokollen in einer bestimmten primären Datenbank aufhält ?  
    
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Der Bezeichner des Verfügbarkeitsreplikats in der Verfügbarkeitsgruppe.|  
 |**group_database_id**|**uniqueidentifier**|Der Bezeichner der Datenbank in der Verfügbarkeitsgruppe. Dieser Bezeichner ist auf jedem Replikat, mit dem diese Datenbank verknüpft ist, identisch.|  
@@ -52,7 +51,7 @@ ms.locfileid: "47636678"
 |**recovery_lsn**|**numeric(25,0)**|Bei einem primären Replikat das Ende des Transaktionsprotokolls, bevor das Replikat nach einer Wiederherstellung oder einem Failover neue Protokolldatensätze schreibt. Auf dem primären Replikat verfügt die Zeile für eine bestimmte sekundäre Datenbank über den Wert, in den das primäre Replikat das sekundäre Replikat synchronisieren soll (also der Wert für die Wiederherstellung und erneute Initialisierung).<br /><br /> Auf sekundären Replikaten ist dieser Wert NULL. Beachten Sie, dass jedes sekundäre Replikat entweder den MAX-Wert oder einen niedrigeren Wert aufweist, auf den das sekundäre Replikat auf Aufweisung des primären Replikats zurückgesetzt werden soll.|  
 |**truncation_lsn**|**numeric(25,0)**|Der [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Protokollkürzungswert, der höher als die lokale Kürzungs-LSN sein kann, wenn die lokale Protokollkürzung blockiert wird (z. B. durch einen Sicherungsvorgang).|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

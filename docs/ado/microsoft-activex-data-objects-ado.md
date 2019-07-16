@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05cc5d08785b116f4e4dd27b8a0a61b34a14d473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921872"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX-Datenobjekte (ADO)
 
@@ -62,7 +61,7 @@ Jeder Abschnitt in diesem Artikel wird beschrieben, eine Komponente von ADO.
   
  [ADO-Glossar](../ado/ado-glossary.md)  
   
-## <a name="support"></a>Support  
+## <a name="support"></a>Unterstützung  
  Kostenlos mit ADO-Problemen helfen, versuchen Sie es bereitstellen für die öffentliche ADO-Newsgroup. Von Supportmitarbeitern von Microsoft Product Support Services (PSS), die ADO behandelt und von anderen erfahrenen Entwicklern von ADO, wird dieser Newsgroup an, überwacht.  
   
  Weitere Informationen zu Supportoptionen finden Sie auf der Website Microsoft Help und unterstützen.

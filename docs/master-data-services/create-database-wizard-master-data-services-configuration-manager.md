@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a808883b706700bb28888e4d66b8aa64bf1c7ee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15fb0978443c50bd38bb743feed65f4769831340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906504"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Datenbank erstellen (Assistent im Konfigurations-Manager für Master Data Services)
 
@@ -40,7 +39,7 @@ ms.locfileid: "65484530"
 ## <a name="database"></a>Datenbank  
  Geben Sie einen Datenbanknamen und Sortierungsoptionen für die neue Datenbank an. Sortierungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie char und varchar verwendet werden, geben die Codepage und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Weitere Informationen zur Datenbanksortierung finden Sie unter [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).  
   
-|Steuerelementname|Description|  
+|Steuerelementname|Beschreibung|  
 |------------------|-----------------|  
 |**Datenbankname**|Geben Sie einen Namen für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank an.|  
 |**SQL Server-Standardsortierung**|Aktivieren Sie diese Option, um die aktuelle Datenbanksortierungseinstellung der angegebenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz für die neue Datenbank zu verwenden.|  

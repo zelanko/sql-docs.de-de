@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0de43bfdce0f5ec232beaf0f9e10dc5d7fec067c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921107"
 ---
 # <a name="ado-collections"></a>ADO-Collections
 Werden die Beziehungen zwischen diesen Auflistungen und die ADO-Objekte dargestellt, der [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -29,7 +28,7 @@ Werden die Beziehungen zwischen diesen Auflistungen und die ADO-Objekte dargeste
 |||  
 |-|-|  
 |[Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)|Enthält alle der **Fehler** Objekte, die in Reaktion auf einen einzelnen Anbieter bezogene Fehler erstellt.|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle der **Feld** Objekte von einem **Recordset** Objekt.|  
+|[Felder](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle der **Feld** Objekte von einem **Recordset** Objekt.|  
 |[Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md)|Enthält alle der **Parameter** Objekte von einem **Befehl** Objekt.|  
 |[Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md)|Enthält alle der **Eigenschaft** Objekte für eine bestimmte Instanz eines Objekts.|  
   

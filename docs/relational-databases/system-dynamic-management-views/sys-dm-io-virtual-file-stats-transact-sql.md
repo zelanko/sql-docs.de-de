@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 524f0d82b5f426ae41169b8358dd8ad8be66da03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900289"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -74,7 +73,7 @@ Die ID der Datei. *FILE_ID* ist "Int" hat keinen Standardwert. Eine gültige Ein
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Datenbankname.</br></br>Für SQL Data Warehouse ist dies der Name der Datenbank gespeichert, auf dem Knoten, der durch Pdw_node_id identifiziert wird. Jeder Knoten verfügt über einen Tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung aus, und jede Verteilungsdatenbank hat 5 Dateien. Wenn jeder Knoten 4 Verteilungen enthält, zeigen die Ergebnisse z. B. 20 Dateien der Verteilungsdatenbank pro Pdw_node_id. 
 |**database_id**|**smallint**|ID der Datenbank.|  
@@ -89,8 +88,8 @@ Die ID der Datei. *FILE_ID* ist "Int" hat keinen Standardwert. Eine gültige Ein
 |**io_stall**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Vorgänge für die Datei abgeschlossen werden.|  
 |**size_on_disk_bytes**|**bigint**|Anzahl von Bytes, die auf dem Datenträger für diese Datei verwendet werden. Für Sparsedateien ist dies die tatsächliche Anzahl von Bytes auf dem Datenträger, die für Datenbankmomentaufnahmen verwendet werden.|  
 |**file_handle**|**varbinary**|Windows-Dateihandle für diese Datei.|  
-|**io_stall_queued_read_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Schreibvorgänge eingeführt wird. Lässt keine NULL-Werte zu.|
+|**io_stall_queued_read_ms**|**bigint**|**Gilt nicht für:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|**Gilt nicht für:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Schreibvorgänge eingeführt wird. Lässt keine NULL-Werte zu.|
 |**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Der Bezeichner des Knotens für die Verteilung.
  
   

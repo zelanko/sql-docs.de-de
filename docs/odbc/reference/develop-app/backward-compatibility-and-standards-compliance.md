@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc89fd8d43df4b906f47ab1ef6b6932a5a814a86
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7588859abb8298a9191409e5c05df1949e85ba89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909871"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Abwärtskompatibilität und Einhaltung von Standards
 Abwärtskompatibilität ist die Fähigkeit von neueren ODBC-Komponenten, die alte ODBC-Komponenten ausführen möchten. Die folgenden Abschnitte beschreiben, wie diese Komponenten betroffen sind, durch die Änderungen in ODBC *3.x*. Die Informationen, die in erster Linie in ihnen enthaltenen behandelt das Schreiben von ODBC *3.x* Anwendung, und ODBC-Treiber wie rückwärts Kompatibilitätsprobleme behandelt werden. Bestimmte Richtlinien dazu, wie die Abwärtskompatibilität Probleme Auswirkungen auf das Schreiben von ODBC *3.x* -Treiber verwenden, finden Sie unter [Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 265b274a76e1cf88b5d039a1296090e4fa4c6324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920982"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++ – Syntaxindex für COM
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsoft Visual C++.  
@@ -33,7 +32,7 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsof
   
  In Visual C++-Methode und Eigenschaft-Syntax wird für die folgenden Elemente aufgeführt:  
   
--   [Auflistungen](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
+-   [Sammlungen](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
 -   [Command-Objekt](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
   

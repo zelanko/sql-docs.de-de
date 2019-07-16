@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9ed2152873f40fd2f2ded34a11a2cfded2fbe2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904476"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>Sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "47823539"
 
 Gibt den gespeicherten externen Ressourcenpoolkonfiguration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Jede Zeile der Sicht bestimmt die Konfiguration eines Pools.
   
-|Spaltenname|Datentyp|Description|
+|Spaltenname|Datentyp|Beschreibung|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|Eindeutige ID des Ressourcenpools. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** kann in der Zukunft umbenannt werden.|
+|pool_id|**int**|Eindeutige ID des Ressourcenpools. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis**: In der Zukunft möglicherweise umbenannt werden.|
 |NAME|**sysname**|Name des Ressourcenpools. Lässt keine NULL-Werte zu.|
 |max_cpu_percent|**int**|Maximal zulässige durchschnittliche CPU-Bandbreite für alle Anforderungen im Ressourcenpool an, wenn CPU-Konflikte bestehen. Lässt keine NULL-Werte zu.|
 |max_memory_percent|**int**|Prozentsatz des gesamten Serverspeichers, der für Anforderungen in diesem Ressourcenpool verwendet werden kann. Lässt keine NULL-Werte zu. Der geltende Höchstwert hängt von den Pool-Mindestwerten ab. So kann für max_memory_percent beispielsweise 100 festgelegt sein, aber der geltende Höchstwert ist niedriger.|

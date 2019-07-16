@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
+title: Sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899509"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Systemsicht, die Informationen über alle Schritte zur Windows-Verwaltungsinstrumentation (Data Movement Service, DMS) für externe Vorgänge enthält.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Abfrage, die der DMS-Worker verwendet wird.<br /><br /> Anforderungs-ID, Step_index und Dms_step_index bilden den Schlüssel für diese Ansicht ein.|Identisch mit der Anforderungs-ID in [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Schritte der Abfrage, die der DMS-Worker aufruft.<br /><br /> Anforderungs-ID, Step_index und Dms_step_index bilden den Schlüssel für diese Ansicht ein.|Identisch mit Step_index in [dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
@@ -36,7 +35,7 @@ ms.locfileid: "62691047"
 |input_name|**nvarchar(60)**|Der Zeichenfolgenname für die Eingabe gelesen wird.|Bei einer Hadoop-Datei ist dies der Name des Hadoop-Datei.|  
 |read_location|**bigint**|Offset der schreibgeschützten Speicherort.||  
 |estimated_bytes_processed|**bigint**|Anzahl der Bytes, die von diesem Arbeitsthread verarbeitet werden.|Größer als oder gleich 0.|  
-|length|**bigint**|Teilen Sie die Anzahl der Bytes in der Datei.<br /><br /> Für Hadoop ist dies die Größe des HDFS-Blocks.|Vom Benutzer definiert. Der Standardwert ist 64 MB.|  
+|Länge|**bigint**|Teilen Sie die Anzahl der Bytes in der Datei.<br /><br /> Für Hadoop ist dies die Größe des HDFS-Blocks.|Vom Benutzer definiert. Der Standardwert ist 64 MB.|  
 |status|**nvarchar(32)**|Status des Arbeitsthreads.|Ausstehende, Verarbeitung, ausgeführt, Fehler, wurde abgebrochen|  
 |start_time|**datetime**|Zeitpunkt, an dem Ausführung dieses Arbeitsthreads gestartet wurde.|Größer als oder gleich der Startzeit des abfrageschritts gehört dieser Worker. Finden Sie unter [dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Zeitpunkt, an der Ausführung beendet wurde, Fehler, oder wurde abgebrochen.|NULL für laufende oder in der Warteschlange-Worker. Andernfalls, Start_time größer.|  

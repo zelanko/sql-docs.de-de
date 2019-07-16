@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 434c27f5e2da0208ba5141664ccc69accfc2fbb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c455d816b3ba5a9606d09e3b05e54583e11ca41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922532"
 ---
 # <a name="rds-object-model-summary"></a>Zusammenfassung zum RDS-Objektmodell
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|Objekt|Description|  
+|Objekt|Beschreibung|  
 |------------|-----------------|  
 |[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Dieses Objekt enthält eine Methode zum Abrufen eines Server-Proxys. Der Proxy kann es sich um die Standardeinstellung oder benutzerdefinierte Serverprogramm (Business-Objekt) sein. Des Programms aufgerufen werden kann, auf das Internet, Intranet, einem lokalen Netzwerk oder eine lokale Dynamic-Link Library sein.<br /><br /> Die **DataSpace** Objekt für die Skripterstellung sicher ist.|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Dieses Objekt stellt das Standardprogramm für den Server dar. Dadurch wird das standardmäßige RDS Daten abrufen und aktualisieren Verhalten ausgeführt.<br /><br /> Die **DataFactory** Objekt ist nicht sicher für Skripting.|  
@@ -34,7 +33,7 @@ ms.locfileid: "66704248"
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

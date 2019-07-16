@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da8ef8208ae3edd1219eb81ec93e77ba5a275f87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921325"
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für einen aktualisierbaren [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -39,7 +38,7 @@ recordset.AddNew FieldList, Values
  Ein **Recordset** Objekt.  
   
  *FieldList*  
- Optional. Ein einzelner Name oder ein Array von Namen oder die Ordnungspositionen der Felder im neuen Datensatz.  
+ Dies ist optional. Ein einzelner Name oder ein Array von Namen oder die Ordnungspositionen der Felder im neuen Datensatz.  
   
  *Werte*  
  Optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *Fieldlist* ist ein Array, *Werte* muss auch ein Array mit der gleichen Anzahl von Elementen andernfalls, ein Fehler auftritt. Die Reihenfolge von Feldnamen muss es sich um die Reihenfolge der Werte des Felds in jedem Array entsprechen.  

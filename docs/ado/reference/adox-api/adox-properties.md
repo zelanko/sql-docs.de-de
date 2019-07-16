@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a6e149c81345cae00d5fdc918fa4366685bfd58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910610"
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
 
@@ -35,7 +34,7 @@ ms.locfileid: "66708617"
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Gibt die festgelegte maximale Größe der Spalte an.|  
 |[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Gibt an, die Aktion ausgeführt wird, wenn ein Primärschlüssel gelöscht wird.|  
 |[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Gibt an, ob Datensätze mit null-Werte in ihren Indexfeldern Indexeinträge verfügen.|  
-|[Element](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung nach Name oder Ordinalzahl an.|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung nach Name oder Ordinalzahl an.|  
 |[Name](../../../ado/reference/adox-api/name-property-adox.md)|Gibt den Namen des Objekts.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Gibt die Dezimalstellen eines numerischen Werts in der Spalte an.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Gibt den übergeordneten Katalog eine Tabelle oder Spalte, um den Zugriff auf Anbieter-spezifischen Eigenschaften an.|  

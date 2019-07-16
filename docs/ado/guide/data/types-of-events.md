@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923817"
 ---
 # <a name="types-of-events"></a>Ereignistypen
 Es gibt zwei grundlegende Arten von Ereignissen. "Werden Ereignisse" die aufgerufen werden, bevor ein Vorgang gestartet wird, stehen in der Regel "Wird" im Namen – beispielsweise **WillChangeRecordset** oder **WillConnect**. Ereignisse, die aufgerufen werden, nachdem ein Ereignis in der Regel abgeschlossen wurde enthalten "Abgeschlossen" im Namen – beispielsweise **RecordChangeComplete** oder **ConnectComplete**. Ausnahmen vorhanden sind – z. B. **InfoMessage** –, aber diese treten auf, nachdem der zugeordnete Vorgang abgeschlossen wurde.  

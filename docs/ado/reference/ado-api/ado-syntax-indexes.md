@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d225fa7af71b905ebe2de383af92156ba12fc74c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4e4b071b8c62d3110d9d732d4cc63be3cce084d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920881"
 ---
 # <a name="ado-syntax-indexes"></a>ADO – Syntaxindizes
 Die Syntax zum Aufrufen von ADO-Methoden und Eigenschaften unterscheidet sich je nach Ihrer Entwicklungsumgebung. Die restlichen ADO-Sprachreferenz verwendet das Microsoft Visual Basic programming Language zur Veranschaulichung der ADO-Methode und Eigenschaft-Syntax. Allerdings finden Sie in den folgenden Abschnitten spezifischere basierend auf Ihren Programmiersprache und die Methodik Syntaxbeispiele:  

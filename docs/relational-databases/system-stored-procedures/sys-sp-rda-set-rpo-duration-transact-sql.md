@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f46dd0bbedfebec5e21800b477a23d664446bf24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905015"
 ---
-# <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact-SQL)
+# <a name="syssprdasetrpoduration-transact-sql"></a>Sys. sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Legt die Anzahl der Stunden der migrierten Daten, die von SQL Server beibehalten in einer Stagingtabelle aus, um sicherzustellen, eine vollständige Wiederherstellung von Azure-Remotedatenbank, wenn ein Punkt in der Time-Wiederherstellung erforderlich ist.    
@@ -42,7 +41,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>Argumente    
- [ @duration_hrs = ] *duration_hrs*    
+ [ @duration_hrs =] *Duration_hrs*    
  Die Anzahl der Stunden (ein nicht-Null-Integer-Wert) der migrierten Daten, die Sie für die aktuelle Datenbank für Stretch-aktivierten SQL Server beibehalten möchten. Der Standardwert und der minimale Wert beträgt 8 Stunden.    
  
  > [!NOTE]

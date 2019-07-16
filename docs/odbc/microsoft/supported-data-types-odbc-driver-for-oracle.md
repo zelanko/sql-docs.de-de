@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 219a6d2e837280ca3220382bea56d2ab610ce87a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915670"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Unterstützte Datentypen (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -27,21 +26,21 @@ ms.locfileid: "63270884"
   
  Der ODBC-Treiber für Oracle unterstützt alle Datentypen von Oracle 7.3. Allerdings unterstützt es eines der neuen 8-Datentypen, die hier aufgeführten nicht.  
   
-|Datentyp|Oracle 7.3|Oracle8|  
+|Datentyp|Oracle 7.3|8|  
 |---------------|----------------|-------------|  
-|BFILE|–|Nicht unterstützt|  
-|BLOB|–|Nicht unterstützt|  
+|BFILE|n/v|Nicht unterstützt|  
+|BLOB|n/v|Nicht unterstützt|  
 |CHAR|Supported|Supported|  
-|CLOB|–|Nicht unterstützt|  
+|CLOB|n/v|Nicht unterstützt|  
 |DATE|Supported|Supported|  
 |GLEITKOMMAZAHL|Supported|Supported|  
 |INTEGER|Supported|Supported|  
 |LONG|Supported|Supported|  
 |LONG RAW|Supported|Supported|  
-|NCHAR|–|Nicht unterstützt|  
-|NCLOB|–|Nicht unterstützt|  
+|NCHAR|n/v|Nicht unterstützt|  
+|NCLOB|n/v|Nicht unterstützt|  
 |NUMBER|Supported|Supported|  
-|NVARCHAR2|–|Nicht unterstützt|  
+|NVARCHAR2|n/v|Nicht unterstützt|  
 |RAW|Supported|Supported|  
 |VARCHAR2|Supported|Supported|  
 |MLSLABEL|Wird nicht unterstützt.|Wird nicht unterstützt.|  

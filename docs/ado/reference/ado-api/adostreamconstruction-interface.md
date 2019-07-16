@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bc15042a0f8f1cf08abadb0ee4a5fe1d5f36631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920784"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction-Schnittstelle
 Die **ADOStreamConstruction** Schnittstelle wird verwendet, um eine ADO erstellen **Stream** Objekt von einem OLE DB **IStream** Objekts in einer C/C++-Anwendung.  
@@ -33,10 +32,10 @@ Die **ADOStreamConstruction** Schnittstelle wird verwendet, um eine ADO erstelle
 |[Stream-Eigenschaft](../../../ado/reference/ado-api/stream-property.md)|Lese-/Schreibzugriff. Ruft ab oder legt ihn fest, eine OLE DB **Stream** Objekt.|  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="remarks"></a>Hinweise  
  Erhalten eine OLE DB **IStream** Objekt (`pStream`), die zur Erstellung eines ADO **Stream** Objekt (`adoStr`) die folgenden drei grundlegenden Schritten:  

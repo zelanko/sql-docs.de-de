@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 487fb5c04d623f2a4ef408cf35784dd57b067f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913838"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,14 +51,14 @@ USING <algorithm> [(<parameter list>)]
  *geschachtelte Filterkriterien*  
  Ein Filterausdruck, der für die Spalten in einer geschachtelten Tabelle übernommen wird.  
   
- *Algorithmus*  
+ *algorithm*  
  Der Name eines Data Mining-Algorithmus, der vom Anbieter definiert wurde.  
   
 > [!NOTE]  
 >  Eine Liste der vom aktuellen Anbieter unterstützt Algorithmen kann abgerufen werden, mithilfe von [DMSCHEMA_MINING_SERVICES-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Die in der aktuellen Instanz von unterstützten Algorithmen an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], finden Sie unter [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Parameterliste*  
- Dies ist optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
+ Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *Filterkriterien*  
  Ein Filterausdruck, der für die Spalten in der Falltabelle übernommen wird.  
@@ -177,7 +176,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Beispiel 3: Hinzufügen eines gefilterten Modells zu einer Struktur mit einer geschachtelten Tabelle  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Beispiel 3: Hinzufügen eines gefilterten Modells zu einer Struktur mit einer geschachtelten Tabelle  
  Im folgenden Beispiel wird ein Miningmodell einer geänderten Version der Warenkorbminingstruktur hinzugefügt. Im Beispiel verwendete Miningstruktur wurde geändert, um das Hinzufügen einer **Region** Spalte, die Attribute für die Kundenregion enthält, und ein **Einkommensgruppe** Spalte, die Einkommen der Kunden mit kategorisiert. die Werte **hohe**, **Moderate**, oder **niedrig**.  
   
  Die Miningstruktur schließt auch eine geschachtelte Tabelle ein, in der die Elemente, die der Kunde gekauft hat, aufgelistet werden.  

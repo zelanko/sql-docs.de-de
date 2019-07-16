@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 256a2c3ca6801e09bed0a96a63cc6d6540d466ff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907254"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSmerge_articlehistory** Tabelle verfolgt Änderungen an Artikeln während einer synchronisierungssitzung des Merge-Agent, mit einer Zeile für jeden Artikel, an dem Änderungen vorgenommen wurden. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Die ID einer Sitzung des Merge-Agent-Auftrag in der [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) -Systemtabelle.|  
 |**phase_id**|**int**|Die Phase der Synchronisierungssitzung, die einen der folgenden Werte haben kann:<br /><br /> **1** = Upload.<br /><br /> **2** = herunterladen.<br /><br /> **4** = Cleanup.<br /><br /> **5** = Herunterfahren.<br /><br /> **6** = Schema geändert wird.<br /><br /> **7** = BCP.|  
-|**Artikelname**|**sysname**|Der Name des Artikels, an dem Änderungen vorgenommen wurden.|  
+|**article_name**|**sysname**|Der Name des Artikels, an dem Änderungen vorgenommen wurden.|  
 |**start_time**|**datetime**|Der Zeitpunkt, an dem der Agent mit der Verarbeitung des Artikels begonnen hat.|  
 |**duration**|**int**|Angabe der Dauer (in Sekunden) der Verarbeitung eines Artikels durch den Agent.|  
 |**Fügt ein**|**int**|Die Anzahl von Einfügevorgängen, die für einen bestimmten Artikel bei der Synchronisierung durchgeführt wurden. Dieser Wert wird während der Synchronisierung inkrementiert, die Gesamtzahl wird im Endwert angegeben.|  

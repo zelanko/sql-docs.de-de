@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e6d558b64095a4071687ed8edd62d54985015c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922659"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist
 Wenn Fehler, bei der Behandlung auftreten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekte, die Verarbeitung von Speicherplatz auf der Microsoft SQL Server 6.5, müssen Sie möglicherweise die Größe der TempDB erhöhen. (Einige Abfragen erfordern der temporäre Verarbeitungsbereich; zum Beispiel eine Abfrage mit ORDER BY-Klausel erfordert eine Art von der **Recordset**, wofür einige vorläufige Speicherplatz.)  

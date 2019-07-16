@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ccf5afd559d4d3716c22b42665c516aa230fafe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901633"
 ---
 # <a name="setting-tracing-options"></a>Festlegen von Ablaufverfolgungsoptionen
 Die **Ablaufverfolgung** Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld können Sie so konfigurieren Sie die Möglichkeit, ODBC-Funktionsaufrufe werden nachverfolgt.  
@@ -51,7 +50,7 @@ Die **Ablaufverfolgung** Registerkarte die **ODBC-Datenquellenadministrator** Di
   
 6.  Deaktivieren Sie das Kontrollkästchen, damit wieder der Einzelbenutzer-Ablaufverfolgung.  
   
-7.  Klicken Sie auf **Anwenden**.  
+7.  Klicken Sie auf **Übernehmen**.  
   
 > [!NOTE]  
 >  Wenn die Ablaufverfolgung bereits in einem Modus gestartet haben, müssen Sie die Ablaufverfolgung zu beenden, und wechseln Sie zu den jeweils anderen Modus für den Modus wurde erfolgreich geändert werden.  

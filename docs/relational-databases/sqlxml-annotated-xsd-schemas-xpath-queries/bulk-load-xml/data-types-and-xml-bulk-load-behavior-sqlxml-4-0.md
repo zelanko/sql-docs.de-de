@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3c4f77d06c8beca3c9da7e885a839883f70ec41
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 820d2b083544542d1c1414f978105fe992b0ce36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915144"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Datentypen und XML-Massenladenverhalten (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "56012731"
   
  Bei XDR:  
   
--   Wenn die **dt: Type** ist **"DateTime"**, **Zeit**, **dateTime.tz**, oder **time.tz**, müssen Sie beide angeben die **dt: Type** und **SQL: DataType** -Datentypen, da XML-Massenladen eine Datenkonvertierung durchführt, bevor die Daten gesendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Wenn die **dt: Type** ist **"DateTime"** , **Zeit**, **dateTime.tz**, oder **time.tz**, müssen Sie beide angeben die **dt: Type** und **SQL: DataType** -Datentypen, da XML-Massenladen eine Datenkonvertierung durchführt, bevor die Daten gesendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Wenn Ihre XML-Daten vom Typ **Uuid**, **SQL: DataType** muss angegeben werden; **dt: Type = "Uuid"** ist auch erforderlich, es sei denn, die Daten um Zeichenfolgendaten handelt. Wenn Sie keinen angeben **Dt:uuid**, XML-Massenladen Zeichenfolgen mit geschweiften Klammern akzeptiert (und entfernt diese ggf.).  
   

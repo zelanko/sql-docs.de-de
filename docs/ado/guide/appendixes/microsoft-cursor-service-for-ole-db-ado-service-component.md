@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8b52f2cf665232c5e16677a257465d020c227c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926798"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft Cursor Service für OLE DB-Übersicht
 Der Microsoft Cursor Service für OLE DB ergänzt die Cursorfunktionen der Unterstützung von Datenanbietern. Daher nimmt der Benutzer die relativ einheitliche Funktionalität von allen Datenanbietern.
@@ -57,9 +56,9 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  Die dynamische Eigenschaft DBPROP_SERVERDATAONINSERT wird durch den Cursordienst nicht unterstützt, auch wenn sie von den zugrunde liegenden Datenanbieter unterstützt wird.
 
-|Eigenschaftenname|Description|
+|Eigenschaftenname|Beschreibung|
 |-------------------|-----------------|
-|Auto Recalc (DBPROP_ADC_AUTORECALC)|Für Recordsets erstellt mit dem Data Shaping Service, dieser Wert gibt an, wie oft werden berechnete und aggregierte Spalten berechnet. Der Standardwert (Wert = 1) besteht darin, neu berechnen, wenn die Data Shaping Service bestimmt, dass die Werte geändert haben. Wenn der Wert 0 ist, werden nur die berechneten oder aggregierten Spalten berechnet, wenn die Hierarchie anfänglich erstellt wird.|
+|Automatische Neuberechnung (DBPROP_ADC_AUTORECALC)|Für Recordsets erstellt mit dem Data Shaping Service, dieser Wert gibt an, wie oft werden berechnete und aggregierte Spalten berechnet. Der Standardwert (Wert = 1) besteht darin, neu berechnen, wenn die Data Shaping Service bestimmt, dass die Werte geändert haben. Wenn der Wert 0 ist, werden nur die berechneten oder aggregierten Spalten berechnet, wenn die Hierarchie anfänglich erstellt wird.|
 |Batchgröße (DBPROP_ADC_BATCHSIZE)|Gibt die Anzahl der updateanweisungen, die zusammengefasst werden können, bevor Sie mit dem Datenspeicher gesendet werden. Die weitere Anweisungen in einem Batch aus, die weniger Roundtrips an den Daten zu speichern.|
 |Zwischenspeichern von untergeordneten Zeilen (DBPROP_ADC_CACHECHILDROWS)|Für Recordsets mit den Data Shaping Service erstellt wurde gibt dieser Wert an, ob untergeordneten Recordsets in einem Cache für die spätere Verwendung gespeichert werden.|
 |Cursor-Engine-Version (DBPROP_ADC_CEVER)|Gibt die Version des Diensts Cursor verwendet wird.|
@@ -83,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Verhalten der integrierten Eigenschaft
  Der Cursor Service für OLE DB wirkt sich auch das Verhalten bestimmter integrierte Eigenschaften.
 
-|Eigenschaftenname|Description|
+|Eigenschaftenname|Beschreibung|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Ergänzen Sie die Typen der Cursor, die für die verfügbar sind ein **Recordset**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Ergänzen Sie die verfügbaren Typen von Sperren für eine **Recordset**. Aktiviert die batch-Updates.|

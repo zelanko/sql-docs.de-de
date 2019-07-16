@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56fff67f882eceec3c07553e5c465da65a69ce65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924545"
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Tritt ein Fehler auf, wird ein Fehler während der Ausführung von-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Auflistung der aktiven **Verbindung** -Objekt, das enthält mindestens ein Fehler, die beschreiben, was aufgetreten ist.  
@@ -68,7 +67,7 @@ End Function
 |Eigenschaftenname|Beschreibung|  
 |-------------------|-----------------|  
 |**Beschreibung**|Eine textbeschreibung des Fehlers, der aufgetreten ist.|  
-|**HelpContext, HelpFile**|Bezieht sich auf die Hilfe-Thema und in der Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  
+|**HelpContext-und HelpFile**|Bezieht sich auf die Hilfe-Thema und in der Hilfe-Datei, die eine Beschreibung des Fehlers enthalten, die aufgetreten sind.|  
 |**NativeError**|Die anbieterspezifischen-Fehlernummer.|  
 |**Anzahl**|Eine lange ganze Zahl, der angibt (aufgeführt der **ErrorValueEnum**) des aufgetretenen Fehlers.|  
 |**Quelle**|Gibt den Namen des Objekts oder der Anwendung, einen Fehler generiert hat.|  

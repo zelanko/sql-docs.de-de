@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14f06b98896a63f8e19ce22fb9cd1eb5b181f481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921934"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Verwenden von RDS mit ODBC-Verbindungspooling
 Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Option in Internet Information Services (IIS), um Behandlung Clientauslastung hohe Leistung zu erzielen. Verbindungspooling ist die Ressourcen-Manager für Verbindungen, verwalten den Zustand "geöffnet" häufig verwendete Verbindung.  
@@ -43,7 +42,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Opt
   
 ### <a name="to-specify-the-tcpip-socket-network-library-on-the-sql-server-computer"></a>Die TCP/IP-Sockets-Netzwerkbibliothek für SQL Server-Computers angeben  
   
-### <a name="in-microsoft-sql-server-65"></a>In Microsoft SQL Server 6.5:  
+### <a name="in-microsoft-sql-server-65"></a>Microsoft SQL Server 6.5 gilt Folgendes:  
   
 1.  Zeigen Sie über das Startmenü auf Programme, zeigen Sie auf der Microsoft SQL Server 6.5, und klicken Sie dann auf SQL-Setup.  
   
@@ -84,7 +83,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Opt
   
 4.  Klicken Sie auf "erfolgt, um die Änderungen zu speichern und beenden Sie das Dienstprogramm".  
   
-### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>Für Microsoft SQL Server 7.0:  
   
 1.  Zeigen Sie über das Startmenü auf Programme, zeigen Sie auf der Microsoft SQL Server 7.0, und klicken Sie dann auf SQL Server-Clientkonfiguration.  
   
@@ -112,7 +111,7 @@ Wenn Sie eine ODBC-Datenquelle verwenden, können Sie der Verbindungspooling-Opt
   
 6.  Klicken Sie auf "Fertig".  
   
-### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>Für Microsoft SQL Server 7.0:  
   
 1.  Zeigen Sie über das Startmenü auf Programme, zeigen Sie auf der Microsoft SQL Server 7.0, und klicken Sie dann auf Clientkonfigurations-Hilfsprogramm.  
   

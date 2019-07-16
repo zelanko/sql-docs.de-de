@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbd7e416-badd-4332-a45c-438aa0145a99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8cbc116b10f4de2fc8165050780c25d250afc098
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e33207fd6fd14fe4fe2f8bcc732b2f762f3723
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900620"
 ---
 # <a name="sysdmhadravailabilityreplicaclusternodes-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ ms.locfileid: "47630088"
 
  ##  <a name="connected_state"></a>  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**group_name**|**nvarchar(256)**|Der Name der Verfügbarkeitsgruppe.|  
-|**replica_server_name**|**nvarchar(256)**|Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Replikat hostet.|  
+|**replica_server_name**|**nvarchar(256)**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die das Replikat hostet.|  
 |**node_name**|**nvarchar(256)**|Der Name des Clusterknotens.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

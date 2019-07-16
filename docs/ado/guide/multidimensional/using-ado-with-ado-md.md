@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2fd684e35c9cebf4a91a0b396e2c8b572e1ecf8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923148"
 ---
 # <a name="using-ado-with-ado-md"></a>Verwenden von ADO mit ADO MD
 Sind ADO und ADO MD verwandten, separaten Object-Modelle. ADO stellt Objekte für eine Verbindung mit Datenquellen, Ausführen von Befehlen, Abrufen von Tabellendaten und Schemametadaten in einem tabellarischen Format und Anzeigen von Fehlerinformationen des Anbieters bereit. ADO MD bietet Objekte zum Abrufen von mehrdimensionalen Daten und Anzeigen von Metadaten von mehrdimensionalen Schema.  
@@ -47,7 +46,7 @@ Sind ADO und ADO MD verwandten, separaten Object-Modelle. ADO stellt Objekte fü
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Übersicht über multidimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Arbeiten mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

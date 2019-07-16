@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f270d31e18edadd2c30003c3615e232d36d23ba4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899752"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Gibt verschiedene nützliche Informationen zum Computer und den Ressourcen zurück, die für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] zur Verfügung stehen und verwendet werden.  
   
-> **Hinweis:** aus rufe [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_sys_info**.  
+> **HINWEIS:** Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_sys_info**.  
   
 |Spaltenname|Datentyp|Beschreibung und Anmerkungen zu dieser Version hängt von der version |  
 |-----------------|---------------|-----------------|  
@@ -73,18 +72,18 @@ ms.locfileid: "51663589"
 |**virtual_machine_type_desc**|**nvarchar(60)**|**Gilt für:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Beschreibt die **Virtual_machine_type** Spalte. Lässt keine NULL-Werte zu.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht auf einem virtuellen Computer ausgeführt wird.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird in einem Hypervisor ausgeführt, der eine hardwareunterstützte Virtualisierung bedeutet. Bei der Installation der Hyper_V-Rolle hostet der Hypervisor das Betriebssystem, damit eine Serverinstanz, die auf dem Hostbetriebssystem im Hypervisor ausgeführt wird.<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird auf einem virtuellen Computer ausgeführt, der keinen Hardware-Assistenten z. B. Microsoft Virtual PC verwendet.|  
 |**softnuma_configuration**|**int**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt an, dass die Möglichkeit NUMA-Knoten konfiguriert sind. Lässt keine NULL-Werte zu.<br /><br /> 0 = OFF gibt an die Hardwarestandard<br /><br /> 1 = automatische Soft-NUMA<br /><br /> 2 = manuellen Soft-NUMA-über-Registrierung|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> OFF = Soft-NUMA-Funktion ist deaktiviert<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt automatisch die Größen der NUMA-Knoten für den Soft-NUMA<br /><br /> MANUELL = manuell konfigurierten Soft-NUMA|
-|**process_physical_affinity**|**nvarchar(3072)** |**Gilt für:** ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />Informationen zu kommen. |
+|**process_physical_affinity**|**nvarchar(3072)** |**Gilt für:** Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />Informationen zu kommen. |
 |**sql_memory_model**|**int**|**Gilt für:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt an, das Speichermodell, die von verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um Speicher zu belegen. Lässt keine NULL-Werte zu.<br /><br />1 = konventionellen Arbeitsspeicher gespeicherten Modells<br />2 = Sperren von Seiten im Speicher<br /> 3 = große Seiten im Speicher|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Gilt für:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt an, das Speichermodell, die von verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um Speicher zu belegen. Lässt keine NULL-Werte zu.<br /><br />**HERKÖMMLICHE**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konventionellen Arbeitsspeicher gespeicherten Modells zur speicherbelegung verwendet. Dies ist die Standard-Sql-Speicher Modell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto besitzt keine Sperren von Seiten im Speicher Berechtigungen während des Starts.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sperren von Seiten im Speicher verwendet, um Speicher zu belegen. Dies ist der Standard-Sql-Speicher-Manager, wenn SQL Server-Dienstkonto über Sperren von Seiten im Speicher-Berechtigung verfügen, während des Starts von SQL Server.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] große Seiten im Speicher verwendet, um Speicher zu belegen. SQL Server verwendet große Seiten Zuweisung, bei der arbeitsspeicherzuweisung nur mit Enterprise Edition bei SQL Server-Dienstkonto Sperren von Seiten im Speicher-Berechtigung verfügen, während des Serverstarts und Trace Flag 834 aktiviert ist.|
 |**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
-|**socket_count** |**int** | **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />Gibt die Anzahl von prozessorsockets verfügbar im System an. |  
-|**cores_per_socket** |**int** | **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />Gibt die Anzahl der Prozessoren pro Socket verfügbar im System an. |  
-|**numa_node_count** |**int** | **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />Gibt die Anzahl der verfügbaren Numa-Knoten im System an. Dieser Artikel enthält die physischen Numa-Knoten als auch von soft-Numa-Knoten. |  
+|**socket_count** |**int** | **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt die Anzahl von prozessorsockets verfügbar im System an. |  
+|**cores_per_socket** |**int** | **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt die Anzahl der Prozessoren pro Socket verfügbar im System an. |  
+|**numa_node_count** |**int** | **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Gibt die Anzahl der verfügbaren Numa-Knoten im System an. Dieser Artikel enthält die physischen Numa-Knoten als auch von soft-Numa-Knoten. |  
   
 ## <a name="permissions"></a>Berechtigungen
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
 
 ## <a name="see-also"></a>Siehe auch  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

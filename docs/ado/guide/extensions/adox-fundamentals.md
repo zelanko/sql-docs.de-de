@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 824c3fd5121aca7638d67cc3606d8280f75e255b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66965b99d0f8bcc87025239f7ffa54814e6d74f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923265"
 ---
 # <a name="adox-fundamentals"></a>ADOX-Grundlagen
 Microsoft® ActiveX® Data Objects Extensions für Datendefinitionssprache und Sicherheit (ADOX) ist eine Erweiterung der ADO-Objekte und -Programmiermodell verwendet. ADOX enthält Objekte für die Schema-Erstellung und Änderung sowie Sicherheit. Da es sich um eine schemabearbeitung Vorgehensweise objektbasiert ist, können Sie Code schreiben, die für verschiedene Datenquellen unabhängig von deren systemeigenen Syntax verwendet werden.  
@@ -52,5 +51,5 @@ Microsoft® ActiveX® Data Objects Extensions für Datendefinitionssprache und S
  [ADOX-Objektmodell](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADO-Objekte](../../../ado/reference/adox-api/adox-objects.md)   
  [ADOX-Eigenschaften](../../../ado/reference/adox-api/adox-properties.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO Programmer's Guide (Programmierhandbuch zu ADO)](../../../ado/guide/ado-programmer-s-guide.md)

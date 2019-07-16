@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09e55da499359bfcb44cd794db1ba11503d1fc62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd52aa1427e5fa768ab521d3533cbabfa4d6ad0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901350"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Vom ODBC-Treiber-Manager generierte Ereignisse
 > [!IMPORTANT]  
@@ -27,9 +26,9 @@ ms.locfileid: "63061638"
   
  Vom ODBC-Treiber-Manager generierte Ereignisse werden registriert, wenn auf die Schaltfläche "Starten Sie Visual Studio Analyzer" geklickt wird. Das Tool selbst bietet systemdefinierte Ereignisse sowie die Möglichkeit, benutzerdefinierte Ereignisse zu erstellen. Weitere Informationen zu Ereignissen finden Sie unter den *Visual Studio Analyzer-Referenzhandbuch* innerhalb der Visual Studio-Suite-Dokumentation.  
   
-|Visual Studio Analyzer-Ereignis|Description|  
+|Visual Studio Analyzer-Ereignis|Beschreibung|  
 |----------------------------------|-----------------|  
-|**Rufen Sie**|Generiert für jede ODBC-API-Eintrag.|  
+|**Call**|Generiert für jede ODBC-API-Eintrag.|  
 |**ReturnException**|Generiert für jede ODBC-API-Rückgabe ist der Rückgabecode SQL_ERROR zurück.|  
 |**ReturnNormal**|Für jede ODBC-API-Rückgabe generiert, wenn der Rückgabecode nicht als SQL_ERROR ist.|  
 |**Verbindung starten**|Gibt an, dass eine Verbindung gestartet. generiert, wenn der ODBC-Treiber-Manager des Treibers Verbindungs-APIs aufruft.|  

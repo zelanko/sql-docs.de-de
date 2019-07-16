@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5521fb11cad064cf487d38562f4146fd32587993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898784"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Ebene 1  
   
  Gibt die aktuelle Einstellung der Option-Anweisung ein.  
   
-|*FOption*|Rückgabewert|  
+|*fOption*|Rückgabewert|  
 |---------------|-------------|  
 |SQL_GET_BOOKMARK|32-Bit-Ganzzahl-Wert, der das Lesezeichen für die Nummer des aktuellen Datensatzes ist|  
 |SQL_ROW_NUMBER|Legen Sie die 32-Bit-Ganzzahl, die die Position des die aktuelle Zeile in das Ergebnis angeben|  

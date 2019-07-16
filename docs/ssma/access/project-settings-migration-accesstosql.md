@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929393"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Project Settings (Migration) (AccessToSQL)
 Die projekteinstellungen für die Migration können Sie konfigurieren, wie Daten migriert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.  
@@ -35,7 +34,7 @@ Gibt an, ob SSMA Einschränkungen überprüft werden sollen, wenn sie Daten in T
   
 -   **Im Modus Standard**: False  
   
--   **Vollständige**: Wahr  
+-   **Vollständige**: True  
   
 -   **Vollständiger Modus**: False  
   
@@ -44,36 +43,36 @@ Gibt an, ob SSMA einfügen Trigger ausgelöst werden soll, wenn sie Daten hinzuf
   
 -   **Im Modus Standard**: False  
   
--   **Vollständige**: Wahr  
+-   **Vollständige**: True  
   
 -   **Vollständiger Modus**: False  
   
 **Identität beibehalten**  
 Gibt an, ob SSMA Zugriff, Identity-Werte beibehalten, wenn sie Daten hinzufügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn dieser Wert "False" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identitätswerte zuweist.  
   
--   **Im Modus Standard**: Wahr  
+-   **Im Modus Standard**: True  
   
--   **Vollständige**: Wahr  
+-   **Vollständige**: True  
   
 -   **Vollständiger Modus**: False  
   
 **NULL-Werte beibehalten**  
 Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn sie Daten hinzufügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unabhängig davon, die im angegebenen Standardwerte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Im Modus Standard**: Wahr  
+-   **Im Modus Standard**: True  
   
 -   **Vollständige**: False  
   
--   **Vollständiger Modus**: Wahr  
+-   **Vollständiger Modus**: True  
   
 **Tabellensperren**  
 Gibt an, ob es sich bei SSMA Tabellen sperrt, wenn sie Daten in Tabellen während der Datenmigration hinzufügt. Wenn der Wert "false" ist, wird in SSMA Zeilensperren verwendet.  
   
--   **Im Modus Standard**: Wahr  
+-   **Im Modus Standard**: True  
   
--   **Vollständige**: Wahr  
+-   **Vollständige**: True  
   
--   **Vollständiger Modus**: Wahr  
+-   **Vollständiger Modus**: True  
   
 **Ersetzen Sie dies nicht unterstützte Datumswerte**  
 Gibt an, ob SSMA Zugriffsdaten einwirken soll, die älter als Frühestes unterstütztes sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "DateTime"-Datum (01 Januar 1753).  

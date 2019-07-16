@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5b4a62dbb86008f686cb0d630386340238f42c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895553"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,17 +67,17 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|Sowohl als auch|**datetime**|  
 |**SQLBITN**|Sowohl als auch|**bit-null**|  
 |**SQLBIT**|Sowohl als auch|**bit**|  
-|**SQLBIGCHAR**|nein|**char**|  
-|**SQLCHARACTER**|nein|**char**|  
-|**SQLBIGVARCHAR**|nein|**varchar**|  
-|**SQLVARCHAR**|nein|**varchar**|  
+|**SQLBIGCHAR**|Nein|**char**|  
+|**SQLCHARACTER**|Nein|**char**|  
+|**SQLBIGVARCHAR**|Nein|**varchar**|  
+|**SQLVARCHAR**|Nein|**varchar**|  
 |**SQLTEXT**|Sowohl als auch|**text**|  
-|**SQLBIGBINARY**|nein|**binary**|  
-|**SQLBINARY**|nein|**Binär (Binary)**|  
-|**SQLBIGVARBINARY**|nein|**varbinary**|  
-|**SQLVARBINARY**|nein|**varbinary**|  
-|**SQLIMAGE**|Sowohl als auch|**Bild**|  
-|**SQLINTN**|Sowohl als auch|**Int null**|  
+|**SQLBIGBINARY**|Nein|**binary**|  
+|**SQLBINARY**|Nein|**Binary**|  
+|**SQLBIGVARBINARY**|Nein|**varbinary**|  
+|**SQLVARBINARY**|Nein|**varbinary**|  
+|**SQLIMAGE**|Sowohl als auch|**Image**|  
+|**SQLINTN**|Sowohl als auch|**int-null**|  
 |**SQLDATETIMN**|Sowohl als auch|**datetime-null**|  
 |**SQLMONEYN**|Sowohl als auch|**Money-null**|  
 |**SQLFLTN**|Sowohl als auch|**float-null**|  
@@ -91,22 +90,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|Sowohl als auch|**smallmoney**|  
 |**SQLFLT4**|Sowohl als auch|**Real**|  
 |**SQLUNIQUEID**|Sowohl als auch|**uniqueidentifier**|  
-|**SQLNCHAR**|nein|**NCHAR**|  
-|**SQLNVARCHAR**|nein|**Nvarchar**|  
+|**SQLNCHAR**|Nein|**Nchar**|  
+|**SQLNVARCHAR**|Nein|**Nvarchar**|  
 |**SQLNTEXT**|Sowohl als auch|**Ntext**|  
 |**SQLVARIANT**|Sowohl als auch|**sql_variant**|  
 |**SQLINT8**|Sowohl als auch|**Bigint**|  
-|**SQLCHARACTER**|Benutzerkontensteuerung|**varchar(max)**|  
-|**SQLBIGCHAR**|Benutzerkontensteuerung|**varchar(max)**|  
-|**SQLBIGVARCHAR**|Benutzerkontensteuerung|**varchar(max)**|  
-|**SQLVARCHAR**|Benutzerkontensteuerung|**varchar(max)**|  
-|**SQLBINARY**|Benutzerkontensteuerung|**varbinary(max)**|  
-|**SQLBIGBINARY**|Benutzerkontensteuerung|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|Benutzerkontensteuerung|**varbinary(max)**|  
-|**SQLVARBINARY**|Benutzerkontensteuerung|**varbinary(max)**|  
-|**SQLNCHAR**|Benutzerkontensteuerung|**nvarchar(max)**|  
-|**SQLNVARCHAR**|Benutzerkontensteuerung|**nvarchar(max)**|  
-|**SQLXML**|Benutzerkontensteuerung|**Xml**|  
+|**SQLCHARACTER**|Ja|**varchar(max)**|  
+|**SQLBIGCHAR**|Ja|**varchar(max)**|  
+|**SQLBIGVARCHAR**|Ja|**varchar(max)**|  
+|**SQLVARCHAR**|Ja|**varchar(max)**|  
+|**SQLBINARY**|Ja|**varbinary(max)**|  
+|**SQLBIGBINARY**|Ja|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|Ja|**varbinary(max)**|  
+|**SQLVARBINARY**|Ja|**varbinary(max)**|  
+|**SQLNCHAR**|Ja|**nvarchar(max)**|  
+|**SQLNVARCHAR**|Ja|**nvarchar(max)**|  
+|**SQLXML**|Ja|**Xml**|  
 |**SQLUDT**|Sowohl als auch|**UDT**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  

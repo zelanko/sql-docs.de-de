@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15366693f212690176620bd1b395dae856ff1302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f16cac6a715716dcef0a1c2b337716835c14b2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910372"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.81 Standards Compliance: ODBC  
+ Eingeführt in Version: ODBC-3,81 Standardkompatibilität: ODBC  
   
  **Zusammenfassung**  
  **SQLSetConnectAttrForDbcInfo** ist identisch mit **SQLSetConnectAttr**, sondern legt das Attribut auf der Verbindung Informationen-Token anstelle von auf dem Verbindungshandle fest.  
@@ -64,7 +63,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 -   Wenn *ValuePtr* enthält einen Wert fester Länge *StringLength* ist SQL_IS_INTEGER oder SQL_IS_UINTEGER, nach Bedarf.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Identisch mit [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), mit dem Unterschied, dass der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und **behandeln** von *hDbcInfoToken* .  

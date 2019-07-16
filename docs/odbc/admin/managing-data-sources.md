@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dc741321894ae69a9ffb59738576a01d47628f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901657"
 ---
 # <a name="managing-data-sources"></a>Verwalten von Datenquellen
 Nachdem Sie einen ODBC-Treiber vom Setupprogramm vom Treiber installiert haben, können Sie eine oder mehrere Datenquellen dafür definieren. Der Datenquellenname (DSN) sollte eine eindeutige Beschreibung des ausgewählten angeben; z. B. *Gehaltsabrechnungen* oder *Accounts Payable*. Die Benutzer und System-Datenquellen, die für alle Treiber installierten definiert sind, finden Sie in der **Benutzer-DSN** oder **System-DSN** Registerkarten der **ODBC-Datenquellenadministrator**Dialogfeld. In einem Verzeichnis die Datei-Datenquellen finden Sie in der **Datei-DSN** Registerkarte Verzeichnis angezeigt werden wird eingegeben in die **Suchen in** im Feld der **Datei-DSN** Registerkarte.  
@@ -40,7 +39,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Eine Datenquelle ordnet einen bestimmten ODBC-Treiber die Daten, die Sie über diesen Treiber zugreifen möchten. Beispielsweise können Sie eine Datenquelle den ODBC-dBASE-Treiber zu verwenden, um Zugriff auf eine oder mehrere dBASE-Dateien finden Sie in einem bestimmten Verzeichnis auf Ihrer Festplatte oder einem Netzlaufwerk erstellen. Verwenden den ODBC-Datenquellen-Administrator, können Sie hinzufügen, ändern und Löschen von Datenquellen, wie in der folgenden Tabelle beschrieben.  
   
-|Aktion|Description|  
+|Aktion|Beschreibung|  
 |------------|-----------------|  
 |Hinzufügen von Datenquellen|Es ist möglich, mehrere Datenquellen hinzufügen jeweils einen Treiber zuordnen, mit einigen Daten, die Sie mit diesen Treiber zugreifen möchten. Benennen Sie jede Datenquelle, die diese Datenquelle eindeutig identifiziert. Z. B. Wenn Sie eine Datenquelle für einen Satz von dBASE-Dateien, die Kundeninformationen enthalten erstellen, können Sie die Datenquelle "Customers". nennen Anwendungen anzeigen in der Regel Datenquellennamen für Benutzer eine Auswahl treffen.<br /><br /> Das Hinzufügen einer Datei als Datenquelle ist geringfügig von dem Benutzer oder System-Datenquellen hinzufügen. Weitere Informationen finden Sie unter den ODBC-Datenquellenadministrator Hilfedatei.|  
 |Ändern von Datenquellen|Je nach Ihren Anforderungen finden Sie es möglicherweise erforderlich, um Datenquellen neu zu konfigurieren. Sie können die Optionen zurücksetzen, indem Sie auf **konfigurieren** in einem beliebigen Dialogfeld des Treiber-Setup.|  

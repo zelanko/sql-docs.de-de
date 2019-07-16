@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f29be5e03a6cc9c1c91809db2b8ec7c686e90f11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898632"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Ebene 1  
   
@@ -36,7 +35,7 @@ ms.locfileid: "63181414"
 |SQL_BIT|Logische Operatoren|  
 |SQL_CHAR|Zeichen|  
 |SQL_DATE|date|  
-|SQL_DECIMAL|Numerisch|  
+|SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
 |SQL_INTEGER|Integer|  
@@ -46,7 +45,7 @@ ms.locfileid: "63181414"
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Integer|  
 |SQL_TIME|Wird nicht unterstützt. Es ist kein Visual FoxPro *Zeit* Typ.|  
-|SQL_TIMESTAMP|datetime|  
+|SQL_TIMESTAMP|DateTime|  
 |SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memo (binär) *, Allgemein|  
 |SQL_VARCHAR|Zeichen|  

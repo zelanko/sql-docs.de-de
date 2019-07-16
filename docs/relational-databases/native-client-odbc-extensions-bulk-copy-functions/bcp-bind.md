@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895736"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ RETCODE bcp_bind (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *HDBC*  
+ *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *pData*  
@@ -189,7 +188,7 @@ bcp_bind(hdbc, szName, 0,
   
  Wenn *pData* für eine Spalte auf NULL festgelegt wird, da sein Wert durch Aufrufe von angegeben [Bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), alle nachfolgenden Spalten mit *eDataType* SQLText, SQLNTEXT, festlegen SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR oder SQLIMAGE muss auch mit gebunden sein *pData* auf NULL festgelegt, und ihre Werte müssen auch angegeben werden, durch Aufrufe von **Bcp_moretext**.  
   
- Für neue Typen mit umfangreichen Werten wie z. B. **varchar(max)**, **'varbinary(max)'**, oder **nvarchar(max)**, können Sie SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, und SQLNCHAR als typindikatoren im der *eDataType* Parameter.  
+ Für neue Typen mit umfangreichen Werten wie z. B. **varchar(max)** , **'varbinary(max)'** , oder **nvarchar(max)** , können Sie SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, und SQLNCHAR als typindikatoren im der *eDataType* Parameter.  
   
  Wenn *CbTerm* ist nicht 0 ist, einen beliebigen Wert (1, 2, 4 oder 8) ist gültig für das Präfix (*CbIndicator*). In diesem Fall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client werden Suchen Sie nach dem Abschlusszeichen, berechnet die Datenlänge in Bezug auf das Abschlusszeichen (*ich*), und legen Sie die *CbData* auf den kleineren Wert von i und den Wert des Präfix.  
   

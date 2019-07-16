@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 131abdd4a401e336ccd78ca79fdf6666b1911fee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915455"
 ---
 # <a name="dynamic-sql"></a>Dynamische SQL-Anweisungen
 Statische SQL-Anweisungen in vielen Situationen funktioniert, aber es ist eine Klasse von Anwendungen, die in denen der Datenzugriff im Voraus nicht bestimmt werden kann. Nehmen wir beispielsweise an, dass eine Tabelle ermöglicht dem Benutzer eine Abfrage aus, geben die klicken Sie dann das Arbeitsblatt für das DBMS sendet, um Daten abzurufen. Den Inhalt dieser Abfrage können nicht für den Programmierer natürlich bekannt sein, wenn das Arbeitsblatt-Programm geschrieben wird.  

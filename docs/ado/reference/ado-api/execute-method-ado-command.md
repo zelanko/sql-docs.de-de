@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918850"
 ---
 # <a name="execute-method-ado-command"></a>Execute-Methode (ADO-Befehl)
 Führt die Abfrage, SQL-Anweisung oder gespeicherte Prozedur, die im angegebenen die [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oder [' CommandStream '](../../../ado/reference/ado-api/commandstream-property-ado.md) Eigenschaft der [Befehlsobjekt](../../../ado/reference/ado-api/command-object-ado.md).  

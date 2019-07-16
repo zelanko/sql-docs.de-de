@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c108689f2b06fca884978de68c106c2c8f28f741
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899030"
 ---
 # <a name="functions-on-string-values---contains"></a>Funktionen für Zeichenfolgenwerte – contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  Abzurufende Unterzeichenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert des *$arg2* ist eine Zeichenfolge der Länge 0 (null), die Funktion gibt **"true"**. Wenn der Wert des *$arg1* ist eine Zeichenfolge der Länge 0 (null) und den Wert der *$arg2* ist keine Zeichenfolge der Länge 0 (null), die Funktion gibt **"false"**.  
+ Wenn der Wert des *$arg2* ist eine Zeichenfolge der Länge 0 (null), die Funktion gibt **"true"** . Wenn der Wert des *$arg1* ist eine Zeichenfolge der Länge 0 (null) und den Wert der *$arg2* ist keine Zeichenfolge der Länge 0 (null), die Funktion gibt **"false"** .  
   
  Wenn der Wert des *$arg1* oder *$arg2* leere Sequenz ist, wird das Argument wird als die Zeichenfolge der Länge 0 (null) behandelt.  
   
  Die contains()-Funktion verwendet die Unicode-Codepunkt-Standardsortierung von XQuery für den Zeichenfolgenvergleich.  
   
- Für die angegebene Unterzeichenfolgenwert *$arg2* muss kleiner oder gleich 4000 Zeichen sein. Wenn der angegebene Wert größer als 4000 Zeichen ist, tritt eine dynamische fehlerbedingung auf, und die Contains()-Funktion gibt eine leere Sequenz statt eines booleschen Werts von **"true"** oder **"false"**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] löst keine dynamischen Fehler bei XQuery-Ausdrücken aus.  
+ Für die angegebene Unterzeichenfolgenwert *$arg2* muss kleiner oder gleich 4000 Zeichen sein. Wenn der angegebene Wert größer als 4000 Zeichen ist, tritt eine dynamische fehlerbedingung auf, und die Contains()-Funktion gibt eine leere Sequenz statt eines booleschen Werts von **"true"** oder **"false"** . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] löst keine dynamischen Fehler bei XQuery-Ausdrücken aus.  
   
  Um die Groß-/Kleinschreibung Vergleiche, bei der [Großbuchstaben](../xquery/functions-on-string-values-upper-case.md) oder lower-case-Funktionen können verwendet werden.  
   
@@ -60,7 +59,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen vom Typ Xml-Spalten in der AdventureWorks-Datenbank gespeichert.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Verwenden der contains()-Funktion von XQuery zum Suchen nach einer bestimmten Zeichenfolge  
- Die folgende Abfrage sucht nach Produkten, die das Wort Aerodynamic in den Zusammenfassungsbeschreibungen enthalten. Die Abfrage gibt ProductID und das <`Summary`>-Element für derartige Produkte zurück.  
+ Die folgende Abfrage sucht nach Produkten, die das Wort Aerodynamic in den Zusammenfassungsbeschreibungen enthalten. Die Abfrage gibt ProductID und die <`Summary`>-Element für derartige Produkte.  
   
 ```  
 --The product model description document uses  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901363"
 ---
 # <a name="establishing-a-connection"></a>Herstellen einer Verbindung
 Nach dem Zuweisen der umgebungs- und Verbindungshandles und Verbindungsattribute festlegen, ist die Anwendung bereit für die Datenquelle oder der Treiber die Verbindung. Es gibt drei verschiedene Funktionen, die die Anwendung zu diesem Zweck verwenden kann: **SQLConnect** (Core Konformitätsgrad Schnittstelle), **SQLDriverConnect** (Core), und **SQLBrowseConnect** (Stufe 1). Jeder der drei wird in ein anderes Szenario verwendet werden soll. Bevor Sie eine Verbindung herstellen, kann die Anwendung ermitteln, welche dieser Funktionen mit unterstützt wird die **ConnectFunctions** Schlüsselwort zurückgegebenes **SQLDrivers**.  

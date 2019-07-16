@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 690173882856e1b53e6f50eefc2cdd9115bd38bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937832"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update- und CancelUpdate-Methode – Beispiel (VB)
 Dieses Beispiel zeigt die [Update](../../../ado/reference/ado-api/update-method.md) -Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode.  
@@ -123,5 +122,5 @@ Attribute VB_Name = "Update"
   
 ## <a name="see-also"></a>Siehe auch  
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)

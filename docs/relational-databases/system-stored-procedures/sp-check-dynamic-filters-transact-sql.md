@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc961ef5f3c22d8da7a97f53b387cd1d0c09c679
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 59011e56766d46f768e579a21207dde2ecf84be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905282"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung Vorausberechnete Partitionen verwenden. wo **1** bedeutet, dass Partitionen verwendet werden können vorausberechnete, und **0** bedeutet, dass nicht verwendet werden.|  
 |**has_dynamic_filters**|**bit**|Ist, wenn in der Veröffentlichung mindestens einen parametrisierten Filter definiert wurde. in denen **1** bedeutet, die eine oder mehrere parametrisierte Zeilenfilter vorhanden sind, und **0** bedeutet, die keine dynamischen Filter vorhanden sind.|  

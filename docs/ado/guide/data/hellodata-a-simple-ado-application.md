@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925137"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Eine einfache ADO-Anwendung
 Diese einfache Anwendung führt in jeder der vier wichtigsten ADO-Vorgänge: Abrufen, untersuchen, bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden mit der Northwind-Beispieldatenbank, die in Microsoft® SQL Server enthalten. Im Beispiel für die Fehlerbehandlung ist minimal, die sich auf den Grundlagen von ADO und Übersichtlichkeit des Code zu verhindern.  
@@ -45,12 +44,12 @@ Diese einfache Anwendung führt in jeder der vier wichtigsten ADO-Vorgänge: Abr
   
 |Steuerelementtyp|Eigenschaft|Wert|  
 |------------------|--------------|-----------|  
-|Form|Name|Form1|  
+|Formular|Name|Form1|  
 ||Höhe|6500|  
 ||Breite|6500|  
 |MS-DataGrid|Name|grdDisplay1|  
 |TextBox|Name|txtDisplay1|  
-||Multiline|true|  
+||Mehrzeilig|true|  
 |Schaltfläche "Befehl"|Name|cmdGetData|  
 ||Beschriftung|Get Data|  
 |Schaltfläche "Befehl"|Name|cmdExamineData|  

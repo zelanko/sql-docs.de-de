@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6af8fcd665fdfe503eab5aec591419982d0d3958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926622"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB-Anbieter für Oracle (Übersicht)
 > [!IMPORTANT]
@@ -63,12 +62,12 @@ MSDAORA
 
  Diese Parameter sind ausführlich erläutert, in der [OLE DB-Programmierreferenz](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). Die [ADO dynamische Property-Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) bietet einen Querverweis zwischen diesen Parameternamen und den entsprechenden OLE DB-Eigenschaften.
 
-|Parameter|Description|
+|Parameter|Beschreibung|
 |---------------|-----------------|
 |**Das Fensterhandle**|Gibt das Fensterhandle verwenden, um zusätzliche Informationen aufzufordern.|
 |**Locale Identifier**|Gibt eine eindeutige 32-Bit-Zahl (z. B. 1033), die angibt, Einstellungen, die im Zusammenhang mit der Sprache des Benutzers an. Diese Einstellungen angeben, wie Datums- und Uhrzeitangaben formatiert sind, Elemente alphabetisch sortiert sind, die Zeichenfolgen verglichen werden und so weiter.|
 |**OLE DB-Diensten**|Gibt an, eine Bitmaske, die angibt, OLE DB-Dienste zum Aktivieren oder deaktivieren.|
-|**Prompt**|Gibt an, ob der Benutzer aufgefordert, während eine Verbindung erstellt wird.|
+|**Eingabeaufforderung**|Gibt an, ob der Benutzer aufgefordert, während eine Verbindung erstellt wird.|
 |**Erweiterte Eigenschaften**|Eine Zeichenfolge mit anbieterspezifischen erweiterten Verbindungsinformationen. Verwenden Sie diese Eigenschaft nur für anbieterspezifische Verbindungsinformationen, die über den Eigenschaftenmechanismus kann nicht beschrieben werden.|
 
 ## <a name="see-also"></a>Siehe auch

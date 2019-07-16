@@ -1,5 +1,5 @@
 ---
-title: sys.database_files (Transact-SQL) | Microsoft Docs
+title: Sys. database_files (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/19/2016
 ms.prod: sql
@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37ec05a27421b8b55fb0085dbac97ab564bc5bff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915092"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Enthält eine Zeile pro Datei einer Datenbank, wie sie in der Datenbank selbst gespeichert ist. Hierbei handelt es sich um eine Sicht pro Datenbank.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID der Datei in der Datenbank|  
 |**file_guid**|**uniqueidentifier**|GUID der Datei.<br /><br /> NULL = Die Datenbank wurde von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert.|  
@@ -46,7 +45,7 @@ ms.locfileid: "56032301"
 |**state_desc**|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Aktuelle Größe der Datei in Seiten mit einer Größe von 8 KB.<br /><br /> 0 = Nicht zutreffend<br /><br /> Für eine Datenbankmomentaufnahme gibt die Größe den maximalen Speicherplatz, den die Momentaufnahme für die Datei verwenden kann.<br /><br /> Für FILESTREAM-dateigruppencontainern gibt Größe an, dass die aktuelle Größe des Containers verwendet.|  
 |**max_size**|**int**|Maximale Dateigröße in Seiten mit einer Größe von 8 KB:<br /><br /> 0 = Keine Vergrößerung zulässig.<br /><br /> -1 = Datei wird vergrößert, bis der Datenträger voll ist.<br /><br /> 268435456 = Protokolldatei wird bis zu einer maximalen Größe von 2 TB vergrößert.<br /><br /> Für FILESTREAM-dateigruppencontainern gibt Max_size die maximale Größe des Containers.<br /><br /> Beachten Sie, die von Datenbanken, die mit einer unbegrenzten Protokolldateigröße aktualisiert werden, wird-1 für die maximale Größe der Protokolldatei gemeldet.|  
-|**growth**|**int**|0 = Die Datei hat eine feste Größe und wird nicht vergrößert.<br /><br /> >0 = Die Datei wird automatisch vergrößert.<br /><br /> Wenn Is_percent_growth = 0, Schrittweite für die Vergrößerung in Einheiten von 8-KB-Seiten, gerundet auf den nächsten durch 64 KB ist.<br /><br /> Wenn Is_percent_growth = 1, Schrittweite für die Vergrößerung als ganzzahliger Prozentwert ausgedrückt ist.|  
+|**growth**|**int**|0 = Die Datei hat eine feste Größe und wird nicht vergrößert.<br /><br /> > 0 = Datei wird automatisch vergrößert.<br /><br /> Wenn Is_percent_growth = 0, Schrittweite für die Vergrößerung in Einheiten von 8-KB-Seiten, gerundet auf den nächsten durch 64 KB ist.<br /><br /> Wenn Is_percent_growth = 1, Schrittweite für die Vergrößerung als ganzzahliger Prozentwert ausgedrückt ist.|  
 |**is_media_read_only**|**bit**|1 = Die Datei befindet sich auf einem schreibgeschützten Medium.<br /><br /> 0 = Die Datei befindet sich auf einem Lese/Schreib-Medium.|  
 |**is_read_only**|**bit**|1 = Die Datei ist als schreibgeschützt gekennzeichnet.<br /><br /> 0 = Die Datei ist als Lese/Schreib-Datei gekennzeichnet.|  
 |**is_sparse**|**bit**|1 = Die Datei ist eine Sparsedatei.<br /><br /> 0 = Die Datei ist keine Sparsedatei.<br /><br /> Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  

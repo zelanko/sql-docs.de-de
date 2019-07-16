@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901371"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (SQL-Befehl)
 Programmgesteuertes Ändern der Struktur einer Tabelle.  
@@ -85,7 +84,7 @@ ALTER TABLE TableName1
  Überprüfen Sie *lExpression1*  
  Gibt eine Überprüfungsregel für das Feld. *lExpression1* muss zu einem logischen Ausdruck ausgewertet und kann eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur. Wenn Sie ein leerer Datensatz angefügt wird, wird die Validierungsregel überprüft. Ein Fehler wird generiert, wenn die Überprüfungsregel für ein leeres Feld-Wert in eine angefügte Datensatz nicht zulässt.  
   
- ERROR *cMessageText1*  
+ Fehler *cMessageText1*  
  Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel Feld einen Fehler generiert.  
   
  Standard *eExpression1*  
@@ -128,7 +127,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  SET-CHECK *lExpression2*  
  Gibt eine neue Überprüfungsregel für ein vorhandenes Feld. *lExpression2* muss zu einem logischen Ausdruck ausgewertet und eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein.  
   
- ERROR *cMessageText2*  
+ Fehler *cMessageText2*  
  Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel Feld einen Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Fenster "Durchsuchen" oder "Bearbeiten" geändert werden.  
   
  DROP DEFAULT  
@@ -145,7 +144,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  SET-CHECK *lExpression3*  
  Gibt die Validierungsregel für die Tabelle an. *lExpression3* muss zu einem logischen Ausdruck ausgewertet und eine benutzerdefinierte Funktion oder eine gespeicherte Prozedur sein.  
   
- ERROR *cMessageText3*  
+ Fehler *cMessageText3*  
  Gibt an, die Fehlermeldung angezeigt, wenn die Validierungsregel für die Tabelle einen Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Fenster "Durchsuchen" oder "Bearbeiten" geändert werden.  
   
  LÖSCHEN SIE DIE KONTROLLKÄSTCHEN  

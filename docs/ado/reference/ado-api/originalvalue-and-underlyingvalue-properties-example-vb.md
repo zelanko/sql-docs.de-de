@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8caf11b72de62c62484f7548a9f73f33b70795bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917799"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue und UnderlyingValue – Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, die [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) und [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) Eigenschaften, indem eine Meldung angezeigt, wenn ein Datensatz Daten liegenden hat sich geändert, während eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) BatchUpdate.  
@@ -121,6 +120,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [OriginalValue Property (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [OriginalValue-Eigenschaft (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue-Eigenschaft](../../../ado/reference/ado-api/underlyingvalue-property.md)

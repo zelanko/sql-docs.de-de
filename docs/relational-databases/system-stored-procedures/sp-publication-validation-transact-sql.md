@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896624"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +41,19 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publication=**] **'**_publication'_  
+ [ **@publication=** ] **"** _Veröffentlichung"_  
  Der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
- [**@rowcount_only=**] *rowcount_only*  
+ [ **@rowcount_only=** ] *Rowcount_only*  
  Gibt an, ob nur die Zeilenanzahl für die Tabelle zurückgegeben werden soll. *Rowcount_only* ist **Smallint** und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
-|**0**|Führt eine mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 kompatible Prüfsummenberechnung durch.<br /><br /> Hinweis: Wird ein Artikel horizontal gefiltert, wird eine Überprüfung der Zeilenanzahl anstelle einer Prüfsummenberechnung durchgeführt.|  
+|**0**|Führt eine mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 kompatible Prüfsummenberechnung durch.<br /><br /> Hinweis: Wenn ein Artikel horizontal gefiltert wird, wird ein Vorgang für die Überprüfung der Zeilenanzahl anstelle einer prüfsummenberechnung ausgeführt.|  
 |**1** (Standard)|Führt nur eine Überprüfung der Zeilenanzahl aus.|  
-|**2**|Führt eine Überprüfung der Zeilenanzahl und der binären Prüfsumme aus.<br /><br /> Hinweis: Für Abonnenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Version 7.0, wird nur eine Überprüfung der Zeilenanzahl ausgeführt.|  
+|**2**|Führt eine Überprüfung der Zeilenanzahl und der binären Prüfsumme aus.<br /><br /> Hinweis: Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0-Abonnenten können nur eine Überprüfung der Zeilenanzahl wird ausgeführt.|  
   
- [**@full_or_fast=**] *full_or_fast*  
+ [ **@full_or_fast=** ] *Full_or_fast*  
  Die Methode, mit der die Zeilenanzahl berechnet wird. *Full_or_fast* ist **Tinyint** und kann einen der folgenden Werte.  
   
 |Wert|Description|  
@@ -86,7 +85,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="see-also"></a>Siehe auch  
  [Überprüfen der Daten am Abonnenten](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [Sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

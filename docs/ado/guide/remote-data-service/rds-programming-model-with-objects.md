@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cfba2b659ed03f67d94c2c80812d7712e481f50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922466"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS-Programmiermodell mit Objekten
 Das Ziel von RDS ist zum Zugreifen auf und Aktualisieren von Datenquellen über einen Vermittler, z. B. IIS. Das Programmiermodell gibt an, die Abfolge von Aktivitäten erforderlich, dieses Ziel zu erreichen. Das Objektmodell gibt an, die Objekte, deren Methoden und Eigenschaften das Programmiermodell beeinflussen.  
@@ -44,11 +43,11 @@ Das Ziel von RDS ist zum Zugreifen auf und Aktualisieren von Datenquellen über 
 ## <a name="see-also"></a>Siehe auch  
  [RDS-Modell: Zusammenfassung](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
+ [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

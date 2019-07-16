@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b4571eae744998c287b7388bc6b098f11a4543bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918239"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions-Eigenschaft – Beispiel (VB)
 Dieses Beispiel verwendet die [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) Eigenschaft, um anzugeben, welche Zeilen an den Server - alle Zeilen oder nur geänderte Zeilen gesendet werden.  
@@ -133,5 +132,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MarshalOptions Property (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
+ [MarshalOptions-Eigenschaft (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918620"
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
 Sucht eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Zeile, die die angegebenen Kriterien erfüllt. Optional kann die Richtung der Suche, Startzeile und Offset von der Startzeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilenposition auf den gefundenen Datensatz festgelegt. Andernfalls wird die Position festgelegt, oder zum Ende (Start) von der **Recordset**.  
@@ -39,7 +38,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Ein **Zeichenfolge** -Wert, der eine Anweisung, die der Name der Spalte, einen Vergleichsoperator und einen Wert mit angeben, in die Suche enthält.  
   
  *SkipRows*  
- Optional. Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, den Zeilenoffset aus der aktuellen Zeile oder *starten* Lesezeichen aus, um die Suche zu starten. Standardmäßig beginnt die Suche in der aktuellen Zeile.  
+ Dies ist optional. Ein **lange** Wert, dessen Standardwert ist 0 (null), der angibt, den Zeilenoffset aus der aktuellen Zeile oder *starten* Lesezeichen aus, um die Suche zu starten. Standardmäßig beginnt die Suche in der aktuellen Zeile.  
   
  *SearchDirection*  
  Optional. Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) Wert, der angibt, ob die Suche auf die aktuelle Zeile oder die nächste verfügbare Zeile in die Richtung für die Suche beginnen soll. Eine Suche nicht erfolgreiche beendet wird, am Ende der **Recordset** lautet der Wert **AdSearchForward**. Bei einer nicht erfolgreiche Suche wird am Anfang der **Recordset** lautet der Wert **AdSearchBackward**.  

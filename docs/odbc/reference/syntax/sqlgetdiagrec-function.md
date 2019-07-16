@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cb79375475e4827e1e1c4d3b76721f1614e864e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911319"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetDiagRec** gibt die aktuellen Werte aus mehreren Feldern, der ein Diagnosedatensatz, die Fehler, Warnung und Statusinformationen enthält. Im Gegensatz zu **SQLGetDiagField**, womit eine diagnosefeld pro Aufruf **SQLGetDiagRec** gibt verschiedene, häufig verwendete Felder des ein Diagnosedatensatz, einschließlich SQLSTATE, der systemeigene Fehlercode, und der diagnosemeldung Text.  
@@ -89,7 +88,7 @@ SQLRETURN SQLGetDiagRec(
  [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme von der Anzahl von Zeichen, die für die Null-Terminierungszeichen erforderlich) zur Verfügung, die in zurückgegeben  *\*MessageText*. Ist die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als *Pufferlänge*, den Text der diagnosemeldung in  *\*MessageText* auf abgeschnitten *Pufferlänge* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  **SQLGetDiagRec** veröffentlichen DiagnoseDatensätze nicht für sich selbst. Sie können die folgenden Rückgabewerte verwendet, um das Ergebnis seiner eigenen Ausführung zu melden:  
@@ -100,7 +99,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_INVALID_HANDLE: Das Handle angegeben wird, indem *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
   
--   SQL_ERROR: Eine der folgenden aufgetreten ist:  
+-   SQL_ERROR ZURÜCK: Eine der folgenden aufgetreten ist:  
   
     -   *RecNumber* war negativ oder 0.  
   

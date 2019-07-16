@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926677"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory-Dienst
 Die Active Directory Service Interfaces (ADSI)-Anbieter ermöglicht ADO zur Verbindung mit heterogenen Verzeichnisdiensten über ADSI. Dadurch erhält der ADO-Anwendungen nur-Lese Zugriff auf der Microsoft Windows NT 4.0 und Microsoft Windows 2000-Verzeichnisdienste, zusätzlich zu der alle LDAP-kompatiblen Verzeichnisdienst und Novell-Verzeichnisdienste. ADSI selbst basiert auf ein Anbietermodell, so dass bei ein neuen Anbieter haben Zugriff auf ein anderes Verzeichnis wird die ADO-Anwendung können sie problemlos darauf zugreifen kann. Der ADSI-Anbieter Freethread- und Unicode aktiviert ist.  
@@ -96,11 +95,11 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Lese-/Schreibzugriff|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Schreibgeschützt|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Lese-/Schreibzugriff|  
+|[Textmarke](../../../ado/reference/ado-api/bookmark-property-ado.md)|Lese-/Schreibzugriff|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lese-/Schreibzugriff|  
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|immer **AdUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|immer **AdEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lese-/Schreibzugriff|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Lese-/Schreibzugriff|  
@@ -121,7 +120,7 @@ objectClass='user' AND objectCategory='Person'"
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Nein|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|  
+|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|  
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|  
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|  
@@ -133,7 +132,7 @@ objectClass='user' AND objectCategory='Person'"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Ja|  
 |[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Ja|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Ja|  
+|[Erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md)|Ja|  
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Nein|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|  
@@ -145,5 +144,5 @@ objectClass='user' AND objectCategory='Person'"
  [ConnectionString-Eigenschaft (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Provider-Eigenschaft (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports-Methode](../../../ado/reference/ado-api/supports-method.md)

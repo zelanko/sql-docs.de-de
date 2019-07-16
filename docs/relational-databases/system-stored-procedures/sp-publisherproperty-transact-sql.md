@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5c4ba291619ae756fa9803606eda4427a155ae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896494"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +39,13 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publisher** =] **"***Verleger***"**  
+ [ **@publisher** = ] **'***publisher***'**  
  Der Name des heterogenen Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [**@propertyname** =] **"***Propertyname***"**  
+ [ **@propertyname** =] **"***Propertyname***"**  
  Der Name der Eigenschaft, die festgelegt wird. *PropertyName* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**xactsetbatching**|Gibt an, ob Transaktionen auf dem Verleger zur weiteren Verarbeitung gruppiert werden, in Mengen, die im Hinblick auf Transaktionen konsistent sind und als Xactsets bezeichnet werden. Der Wert **aktiviert** bedeutet, dass Xactsets erstellt werden können, dies ist die Standardeinstellung. Der Wert **deaktiviert** bedeutet, dass vorhandene Xactsets, jedoch keine neuen xactsets verarbeitet werden erstellt werden.|  
 |**xactsetjob**|Gibt an, ob der Xactset-Auftrag zum Erstellen von Xactsets aktiviert ist. Der Wert **aktiviert** bedeutet, dass der Xactset-Auftrag regelmäßig ausgeführt wird, um Xactsets auf dem Verleger zu erstellen. Der Wert **deaktiviert** bedeutet, dass die Xactsets nur vom Protokolllese-Agent erstellt werden, wenn sie Änderungen vom Verleger abruft.|  
@@ -54,12 +53,12 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  Wenn *Propertyname* fehlt alle festlegbare Eigenschaften zurückgegeben werden.  
   
- [**@propertyvalue** =] **"***Propertyvalue***"**  
+ [ **@propertyvalue** =] **"***Propertyvalue***"**  
  Der neue Wert für die Eigenschafteneinstellung. *PropertyValue* ist **Sysname**, hat den Standardwert NULL. Wenn *Propertyvalue* weggelassen wird, wird die aktuelle Einstellung für die Eigenschaft zurückgegeben wird.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|Gibt die folgenden Veröffentlichungseigenschaften zurück, die festgelegt werden können:<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**PropertyValue**|**sysname**|Ist die aktuelle Einstellung für die Eigenschaft in der **Propertyname** Spalte.|  

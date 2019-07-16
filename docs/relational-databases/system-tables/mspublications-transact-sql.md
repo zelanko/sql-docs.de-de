@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb939681cb97b80a7bd0498a2e0c1fa30202c404
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939013"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSpublications** -Tabelle enthält eine Zeile für jede Veröffentlichung, die von einem Verleger repliziert wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
-|**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
+|**publication**|**sysname**|Der Name der Veröffentlichung.|  
 |**publication_id**|**int**|Die ID der Veröffentlichung.|  
 |**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktionsveröffentlichung.<br /><br /> **1** = Momentaufnahme.<br /><br /> **2** = Merge.|  
 |**thirdparty_flag**|**bit**|Gibt an, ob eine Veröffentlichung ist eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = andere Datenquelle als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -45,7 +44,7 @@ ms.locfileid: "52791542"
 |**allow_anonymous**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung anonyme Abonnements erstellt werden können.|  
 |**description**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
 |**$vendor_name**|**nvarchar(100)**|Der Name des Herstellers, wenn der Verleger keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ist.|  
-|**Beibehaltungsdauer**|**int**|Die Beibehaltungsdauer der Veröffentlichung (in Stunden).|  
+|**retention**|**int**|Die Beibehaltungsdauer der Veröffentlichung (in Stunden).|  
 |**sync_method**|**int**|Synchronisierungsmethode:<br /><br /> **0** = Native (erzeugt im einheitlichen Modus massenkopierausgabe aller Tabellen).<br /><br /> **1** = Character (erzeugt eine Massenkopierprogramm-Ausgabe aller Tabellen kopieren).<br /><br /> **3** = Concurrent (erzeugt im einheitlichen Modus massenkopierausgabe aller Tabellen sperrt jedoch nicht in der Tabelle während der Momentaufnahme).<br /><br /> **4** = Concurrent_c (erzeugt eine im Zeichenmodus massenkopierausgabe aller Tabellen sperrt jedoch nicht in der Tabelle während der Momentaufnahme)<br /><br /> Die Werte **3** und **4** stehen für Transaktions- und Mergereplikation, aber nicht für die momentaufnahmereplikation.|  
 |**allow_subscription_copy**|**bit**|Aktiviert oder deaktiviert die Option zum Kopieren der Abonnementdatenbanken, die diese Veröffentlichung abonniert haben. **0** bedeutet, dass das Kopieren deaktiviert ist, und **1** bedeutet, dass es aktiviert ist.|  
 |**thirdparty_options**|**int**|Gibt an, ob die Anzeige einer Veröffentlichung im Ordner "Replikation" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterdrückt wird:<br /><br /> **0** = heterogene Veröffentlichung im Ordner Replikation angezeigt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> **1** = unterdrückt die Anzeige im Ordner "Replikation" in heterogene Veröffentlichung [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898411"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |-----------------|---------------|-----------------|  
 |**Kontoname**|**sysname**|Der vollqualifizierte Windows-Kontoname.|  
 |**type**|**char(8)**|Der Windows-Kontotyp. Gültige Werte sind **user** oder **group**.|  
-|**privilege**|**char(9)**|Das Zugriffsprivileg für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gültige Werte sind **admin**, **user**oder **null**.|  
+|**Berechtigungen**|**char(9)**|Das Zugriffsprivileg für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gültige Werte sind **admin**, **user**oder **null**.|  
 |**zugeordnete Anmeldename**|**sysname**|Für Benutzerkonten mit Benutzerprivileg wird mit **mapped login name** der zugeordnete Anmeldename angezeigt, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei der Anmeldung mit diesem Konto zu verwenden versucht. Dabei werden die Zuordnungsregeln mit Voranstellung des Domänennamens verwendet.|  
 |**Berechtigungspfad**|**sysname**|Die Gruppenmitgliedschaft, die dem Konto den Zugriff ermöglicht hat.|  
   

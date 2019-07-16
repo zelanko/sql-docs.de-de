@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c3aa056447bd6e2eb7451db4d9af8090edc54d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923188"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Übersicht über mehrdimensionale Schemas und Daten
 ## <a name="understanding-multidimensional-schemas"></a>Grundlegendes zu MDX-Schemas  
@@ -34,7 +33,7 @@ ms.locfileid: "66699665"
   
  Cubes werden durch dargestellt [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) Objekte im ADO MD. Dimensionen, Hierarchien, Ebenen und Elemente werden auch durch die entsprechenden ADO MD-Objekte dargestellt: [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md), und [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
-### <a name="dimensions"></a>Dimensionen  
+### <a name="dimensions"></a>Abmessungen  
  Die Dimensionen eines Cubes richten sich nach Ihrer Geschäftseinheiten und die Arten von Daten, die in der Datenbank modelliert werden. In der Regel ist jede Dimension, eine unabhängige Einstiegspunkt oder einen Mechanismus zum Auswählen von Daten.  
   
  Ein Cube mit Verkaufsdaten hat beispielsweise die folgenden fünf Dimensionen: Vertriebsmitarbeiter, Geography, Zeit, Produkte und Measures. Die Measures-Dimension enthält Werte des tatsächlichen Umsatzdaten, während die anderen Dimensionen darstellen Möglichkeiten zum Kategorisieren und gruppiert die Werte für die Verkaufsdaten.  
@@ -86,7 +85,7 @@ Hamburg, Munich, Stuttgart}
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Verwenden von ADO mit ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [Arbeiten mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

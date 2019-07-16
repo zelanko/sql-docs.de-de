@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1fa350d9ff9d5e90eb595f1f693b8e62a46fa555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910246"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ smart_admin.fn_get_current_xevent_settings ()
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  Die Kanäle Admin, Analytic und Operation der erweiterten Ereignisse sind erforderlich, standardmäßig aktiviert und nicht konfigurierbar.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|Erweiterter Ereignistyp|  
-|is_configurable|NVARCHAR(128)|Dieser Wert auf festgelegt **"true"** Wenn das Ereignis konfigurierbar ist, andernfalls festgelegt werden, **"false"**.|  
+|is_configurable|NVARCHAR(128)|Dieser Wert auf festgelegt **"true"** Wenn das Ereignis konfigurierbar ist, andernfalls festgelegt werden, **"false"** .|  
 |is_enabled|NVARCHAR(128)|Ist auf True festgelegt, wenn das Ereignis aktiviert ist; ist auf False festgelegt, wenn es nicht aktiviert ist. Verwenden Sie den smart_admin.sp_set_parameter, um Debugereignisse zu aktivieren.|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **wählen** Berechtigungen für die Funktion.  

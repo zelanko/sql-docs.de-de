@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6234ca377497ad3f03bd0d05441ae361b80bc220
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930966"
 ---
 # <a name="sort-property-example-vc"></a>Sort-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [sortieren](../../../ado/reference/ado-api/sort-property.md) Eigenschaft, um die Zeilen der neu anordnen einer **Recordset** abgeleitet der ***Autoren*** Tabelle die **Pubs** Datenbank. Eine sekundäre Dienstprogrammroutine gibt jede Zeile aus.  
@@ -134,5 +133,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 926e5abc1c65db152c5ca5927c5acd2c932d6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924755"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB-Anbieter (ADO)
 OLE DB definiert einen Satz von COM-Schnittstellen für Anwendungen mit einheitlichen Zugriff auf Daten bereitzustellen, die in verschiedenen Datenquellen gespeichert sind. Dieser Ansatz ermöglicht eine Datenquelle, die Daten über die Schnittstellen freizugeben, die Menge der DBMS-Funktionen, die für die Datenquelle zu unterstützen. Standardmäßig basiert die Hochleistungs-Architektur von OLE DB für die Verwendung eines flexiblen, komponentenbasierte Services-Modells. Anstatt einer vorgegebenen Anzahl von zwischengeschalteten Schichten zwischen der Anwendung und die Daten, erfordert die OLE DB nur, wie viele Komponenten, wie die an eine bestimmte Aufgabe auszuführen.  

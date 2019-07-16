@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b48507e59fa77cc0e6e47b4874cd1c010cd36cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2475a3881cb73d9dd82ee7fc311e7288aa4738
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900647"
 ---
 # <a name="sysdmhadrclusternetworks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47746208"
  > [!TIP]
  > Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], diese dynamische verwaltungssicht unterstützt immer auf Failoverclusterinstanzen zusätzlich zu AlwaysOn-Verfügbarkeitsgruppen.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**member_name**|**nvarchar(128)**|Der Computername eines Knotens im WSFC-Cluster.|  
 |**network_subnet_ip**|**nvarchar(48)**|Die Netzwerk-IP-Adresse des Subnetzes, zu der der Computer gehört. Dies kann eine IPv4- oder eine IPv6-Adresse sein.|  
@@ -48,7 +47,7 @@ ms.locfileid: "47746208"
 |**is_public**|**bit**|Gibt an, ob das Netzwerk im WSFC-Cluster privat oder öffentlich ist. Folgende Werte sind möglich:<br /><br /> 0 = Privat<br /><br /> 1 = Öffentlich|  
 |**is_ipv4**|**bit**|Der Typ des Subnetzes. Folgende Werte sind möglich:<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

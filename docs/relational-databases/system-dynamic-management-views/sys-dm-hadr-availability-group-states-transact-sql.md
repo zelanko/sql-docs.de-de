@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b06ffc7a8400d3b02698009b2452282658cf959e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900779"
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47745358"
 > [!NOTE]  
 >  Um die vollständige Liste der zu erhalten, Fragen Sie die [Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) -Katalogsicht angezeigt.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Eindeutiger Bezeichner der Verfügbarkeitsgruppe.|  
 |**primary_replica**|**varchar(128)**|Name der Serverinstanz, die das aktuelle primäre Replikat hostet.<br /><br /> NULL = Nicht das primäre Replikat, oder mit dem WSFC-Failovercluster kann nicht kommuniziert werden.|  
@@ -43,10 +42,10 @@ ms.locfileid: "47745358"
 |**primary_recovery_health_desc**|**nvarchar(60)**|Beschreibung der **Primary_replica_health**, eine von:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Gibt den Wiederherstellungszustand eines sekundären replikatreplikats, eines an:<br /><br /> 0 = wird ausgeführt<br /><br /> 1 = Online<br /><br /> NULL<br /><br /> Klicken Sie auf dem primären Replikat der **Secondary_recovery_health** Spalte ist NULL.|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|Beschreibung der **Secondary_recovery_health**, eine von:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|Stellt ein Rollup von der **"synchronization_health"** aller verfügbarkeitsreplikate in der verfügbarkeitsgruppe. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0: nicht fehlerfrei. Keines der verfügbarkeitsreplikate verfügt über einen fehlerfreien **"synchronization_health"** (2 = HEALTHY).<br /><br /> 1: teilweise fehlerfrei. Der Synchronisierungsstatus einiger, aber nicht aller Verfügbarkeitsreplikate ist fehlerfrei.<br /><br /> 2: fehlerfrei. Der Synchronisierungsstatus jedes Verfügbarkeitsreplikats ist fehlerfrei.<br /><br /> Weitere Informationen zum Synchronisierungsstatus des Replikats, finden Sie unter der **"synchronization_health"** Spalte [Sys. dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
-|**synchronization_health_desc**|**nvarchar(60)**|Beschreibung der **"synchronization_health"**, eine von:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
+|**synchronization_health**|**tinyint**|Stellt ein Rollup von der **"synchronization_health"** aller verfügbarkeitsreplikate in der verfügbarkeitsgruppe. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0: Nicht fehlerfrei. Keines der verfügbarkeitsreplikate verfügt über einen fehlerfreien **"synchronization_health"** (2 = HEALTHY).<br /><br /> 1: Teilweise fehlerfrei. Der Synchronisierungsstatus einiger, aber nicht aller Verfügbarkeitsreplikate ist fehlerfrei.<br /><br /> 2: Fehlerfrei. Der Synchronisierungsstatus jedes Verfügbarkeitsreplikats ist fehlerfrei.<br /><br /> Weitere Informationen zum Synchronisierungsstatus des Replikats, finden Sie unter der **"synchronization_health"** Spalte [Sys. dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
+|**synchronization_health_desc**|**nvarchar(60)**|Beschreibung der **"synchronization_health"** , eine von:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  

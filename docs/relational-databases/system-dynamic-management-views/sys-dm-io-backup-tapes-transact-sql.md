@@ -18,24 +18,23 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 195c8dc2db7011801023e7e21e68ed1f5ed75a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c58f34404119592308515f95934e23cfc94e1fc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900398"
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die Liste der Bandmedien und den Status von Einbindungsanforderungen für Sicherungen zurück.   
  
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|Der Name des tatsächlichen physischen Mediums, auf dem eine Sicherung erstellt werden kann. Lässt keine NULL-Werte zu.|  
 |**logical_device_name**|**nvarchar(256)**|Vom Benutzer angegebener Name für das Laufwerk (von **Sys. backup_devices**). NULL, wenn kein benutzerdefinierter Name verfügbar ist. Lässt NULL-Werte zu.|  
-|**status**|**int**|Bandstatus:<br /><br /> 1 = Geöffnet und kann verwendet werden<br /><br /> 2 = Einbindung erfolgt<br /><br /> 3 = In Verwendung<br /><br /> 4 = Wird geladen<br /><br /> **Hinweis:** beim Laden eines Bandes ist (**Status = 4**), die medienbezeichnung noch nicht gelesen. Spalten, die medienbezeichnung von-Werten, z. B. kopieren **Media_sequence_number**, zeigen erwartete Werte an, die von der tatsächlichen Werte auf dem Band abweichen können. Nachdem Sie die Bezeichnung gelesen wurde, **Status** Änderungen an **3** (in der Verwendung), und die medienbezeichnung Spalten klicken Sie dann das Band wider, die geladen wird.<br /><br /> Lässt keine NULL-Werte zu.|  
+|**status**|**int**|Bandstatus:<br /><br /> 1 = Geöffnet und kann verwendet werden<br /><br /> 2 = Einbindung erfolgt<br /><br /> 3 = In Verwendung<br /><br /> 4 = Wird geladen<br /><br /> **Hinweis**: Beim Laden eines Bandes ist (**Status = 4**), die medienbezeichnung noch nicht gelesen. Spalten, die medienbezeichnung von-Werten, z. B. kopieren **Media_sequence_number**, zeigen erwartete Werte an, die von der tatsächlichen Werte auf dem Band abweichen können. Nachdem Sie die Bezeichnung gelesen wurde, **Status** Änderungen an **3** (in der Verwendung), und die medienbezeichnung Spalten klicken Sie dann das Band wider, die geladen wird.<br /><br /> Lässt keine NULL-Werte zu.|  
 |**status_desc**|**nvarchar(520)**|Bandstatusbeschreibung:<br /><br /> AVAILABLE<br /><br /> MOUNT PENDING<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> Lässt keine NULL-Werte zu.|  
 |**mount_request_time**|**datetime**|Uhrzeit, zu der die Einbindung angefordert wurde. NULL, wenn keine Einbindung aussteht (**Status! = 2**). Lässt NULL-Werte zu.|  
 |**mount_expiration_time**|**datetime**|Uhrzeit, zu der die Einbindungssanforderung abläuft (Timeout). NULL, wenn keine Einbindung aussteht (**Status! = 2**). Lässt NULL-Werte zu.|  

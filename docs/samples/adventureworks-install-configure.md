@@ -9,20 +9,19 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894931"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks-Installation und Konfiguration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 AdventureWorks laden Links und Anweisungen zur Installation herunter. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [SQLServer](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server-Evaluierung, Developer, Enterprise Edition ein.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Für die besten Ergebnisse verwenden Sie das Release vom Juni 2016 oder höher.
@@ -67,7 +66,7 @@ Führen Sie die folgenden Schritte aus, um eine Sicherung der Datenbank mit SQL 
 
 1. Öffnen Sie SQL Server Management Studio, und Verbinden mit der SQL Server-Zielinstanz.
 2. Mit der rechten Maustaste auf die **Datenbanken** Knoten, und wählen **Restore Database**.
-3. Wählen Sie **Gerät** , und klicken Sie auf die Auslassungspunkte (**...** )
+3. Wählen Sie **Gerät** , und klicken Sie auf die Auslassungspunkte ( **...** )
 4. Im Dialogfeld **Sicherungsmedien auswählen**, klicken Sie auf **hinzufügen**, navigieren Sie zu der datenbanksicherung in das Dateisystem des Servers ein, und wählen Sie die Sicherung. Klicken Sie auf **OK**.
 5. Bei Bedarf ändern, das der Zielort für die Daten und Protokolldateien, in der **Dateien** Bereich. Beachten Sie, dass es wird empfohlen, zum Hinzufügen von Daten und Protokolldateien auf verschiedenen Laufwerken.
 6. Klicken Sie auf **OK**. Dadurch wird die Wiederherstellung der Datenbank ausgelöst. Nachdem der Vorgang abgeschlossen ist, müssen Sie die AdventureWorks-Datenbank, die auf Ihrer SQL Server-Instanz installiert.
@@ -82,7 +81,7 @@ Führen Sie die folgenden Schritte aus, um die Datendatei für Ihre Datenbank mi
 2. Mit der rechten Maustaste auf die **Datenbanken** Knoten, und wählen **Anfügen**.
 3. Wählen Sie **hinzufügen** und navigieren Sie zu der. MDF-Datei, die Sie anfügen möchten. 
 1. Wählen Sie die Datei, und klicken Sie auf **OK**. 
-    1. Die Datenbank, die Sie ausgewählt haben, sollte im unteren Fenster angezeigt werden. Wenn die Datei aufgeführt wird als "nicht gefunden", wählen Sie die Auslassungspunkte (**...** ) neben dem Dateinamen, und aktualisieren Sie den Pfad zu den richtigen Pfad. 
+    1. Die Datenbank, die Sie ausgewählt haben, sollte im unteren Fenster angezeigt werden. Wenn die Datei aufgeführt wird als "nicht gefunden", wählen Sie die Auslassungspunkte ( **...** ) neben dem Dateinamen, und aktualisieren Sie den Pfad zu den richtigen Pfad. 
     1. Wenn Sie nur die Datendatei (.mdf), und nicht die Protokolldatei (.ldf) haben, markieren Sie die .ldf im unteren Fenster, und wählen **entfernen**. Dadurch wird eine neue Protokolldatei erstellt. 
 1. Wählen Sie **OK** , die Datei anzufügen. Nachdem die Datei angefügt ist, müssen Sie die AdventureWorks-Datenbank, die auf Ihrer SQL Server-Instanz installiert.  
 

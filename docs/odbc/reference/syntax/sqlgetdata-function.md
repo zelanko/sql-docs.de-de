@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f33d55cc8ac5dab37ce200a5a654bcb4be7cc9ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911358"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData-Funktion
 **Übereinstimmung mit Standards**  
@@ -91,7 +90,7 @@ SQLRETURN SQLGetData(
  Weitere Informationen finden Sie unter [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md) und "Kommentare" in diesem Thema.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetData** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, zurück ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLGetData** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -116,7 +115,7 @@ SQLRETURN SQLGetData(
 |HY003|Typ des Programms außerhalb des gültigen Bereichs|(DM) das Argument *TargetType* war keinen gültigen Datentyp, SQL_C_DEFAULT, SQL_ARD_TYPE (im Falle von Abrufen von Spaltendaten) oder SQL_APD_TYPE (im Falle von Abrufen von Parameterdaten).<br /><br /> (DM) das Argument *Col_or_Param_Num* wurde 0 und das Argument *TargetType* war nicht SQL_C_BOOKMARK für ein Lesezeichen mit fester Länge oder SQL_C_VARBOOKMARK für ein Lesezeichen variabler Länge.|  
 |HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*, und klicken Sie dann die Funktion aufgerufen wurde erneut auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* von einem anderen Thread in einem Multithread-Anwendung, und klicken Sie dann die Funktion wurde erneut aufgerufen, auf die *StatementHandle*.|  
 |HY009|Ungültige Verwendung eines null-Zeiger|(DM) das Argument *TargetValuePtr* wurde ein null-Zeiger.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) der angegebenen *StatementHandle* war nicht in einem ausgeführten Zustand befindet. Die Funktion wurde aufgerufen, ohne den ersten Aufruf **SQLExecDirect**, **SQLExecute** oder einer Katalogfunktion.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLGetData** Funktion aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) die *StatementHandle* wurde in einem ausgeführten Zustand befindet, aber kein Resultset zugeordnet wurde die *StatementHandle*.<br /><br /> Ein Aufruf von **SQLExeceute**, **SQLExecDirect**, oder **SQLMoreResults** zurückgegebenen SQL_PARAM_DATA_AVAILABLE, aber **SQLGetData** aufgerufen wurde , anstelle von **SQLParamData**.|  
+|HY010|Fehler in der Funktionsreihenfolge|(DM) der angegebenen *StatementHandle* war nicht in einem ausgeführten Zustand befindet. Die Funktion wurde aufgerufen, ohne den ersten Aufruf **SQLExecDirect**, **SQLExecute** oder einer Katalogfunktion.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLGetData** Funktion aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) die *StatementHandle* wurde in einem ausgeführten Zustand befindet, aber kein Resultset zugeordnet wurde die *StatementHandle*.<br /><br /> Ein Aufruf von **SQLExeceute**, **SQLExecDirect**, oder **SQLMoreResults** zurückgegebenen SQL_PARAM_DATA_AVAILABLE, aber **SQLGetData** aufgerufen wurde , anstelle von **SQLParamData**.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *Pufferlänge* war kleiner als 0.<br /><br /> Für Argument angegebene Wert *Pufferlänge* kleiner als 4 wurde die *Col_or_Param_Num* Argument auf 0 festgelegt wurde, und der Treiber wurde von einer ODBC 2. *.x* Treiber.|  
 |HY109|Ungültige Cursorposition|Der Cursor positioniert wurde (durch **SQLSetPos**, **SQLFetch**, **SQLFetchScroll**, oder **SQLBulkOperations**) in einer Zeile, die gelöscht wurde oder konnte nicht abgerufen werden.<br /><br /> Der Cursor wurde ein Vorwärtscursor, und die Rowsetgröße war größer als 1.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 41b72647af357bc73eb3e9a2f8c3063f2275f6a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 708d146aaa40d873e0a519c860a047d4b1f93161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931927"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Gibt an, ob ein Objekt offen oder geschlossen ist, Herstellen einer Verbindung mit einer Datenquelle Ausführen eines Befehls oder Abrufen von Daten.  
