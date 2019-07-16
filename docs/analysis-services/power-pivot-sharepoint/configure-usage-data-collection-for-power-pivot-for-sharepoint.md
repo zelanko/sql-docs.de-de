@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164150"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Konfigurieren der Sammlung von Verwendungsdaten für Power Pivot für SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "52420281"
   
 4.  Aktivieren oder deaktivieren Sie im Abschnitt **Zu protokollierende Ereignisse** die entsprechenden Kontrollkästchen, um die folgenden Analysis Services-Ereignisse zu aktivieren oder zu deaktivieren:  
   
-    |Ereignis|Description|  
+    |Ereignis|Beschreibung|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Verbindungen**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Das Verbindungen-Ereignis wird zum Überwachen von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Serververbindungen verwendet, die im Auftrag eines Benutzers hergestellt werden.|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Verwendung von Datenladevorgängen**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Die Verwendung von Datenladevorgängen wird zum Überwachen von Anforderungen verwendet, durch die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in den Serverarbeitsspeicher geladen werden. Ein Ladeereignis wird für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datendateien generiert, die aus einer Inhaltsdatenbank oder dem Cache geladen werden.|  
@@ -128,7 +128,7 @@ ms.locfileid: "52420281"
  Weitere Informationen dazu, wie Verwendungsdaten gesammelt und gespeichert werden, finden Sie unter [Sammlung von Power Pivot-Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definieren schneller, mittlerer und langsamer Abfrageantwortkategorien für die Berichterstellung  
- Die Leistung der Abfrageverarbeitung wird anhand vordefinierter Kategorien gemessen, in denen ein Anforderung/Antwort-Zyklus durch dessen Ausführungsdauer definiert wird. Die vordefinierten Kategorien lauten: Trivial, Schnell, Erwartet, Lange Ausführung und Überschritten. Jede an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server übermittelte Anforderung wird abhängig von ihrer Ausführungsdauer in eine der Kategorien eingeteilt.  
+ Die Leistung der Abfrageverarbeitung wird anhand vordefinierter Kategorien gemessen, in denen ein Anforderung/Antwort-Zyklus durch dessen Ausführungsdauer definiert wird. Vordefinierten Kategorien lauten: Trivial, schnell, erwartet, lang andauernde und überschritten. Jede an einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server übermittelte Anforderung wird abhängig von ihrer Ausführungsdauer in eine der Kategorien eingeteilt.  
   
  Die Abfrageantwortinformationen werden in Aktivitätsberichten verwendet. Alle Kategorien werden innerhalb der Berichte unterschiedlich verwendet, um die Leistungstrends des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systems besser zu verdeutlichen. Beispielsweise werden triviale Anforderungen völlig ausgeschlossen, um unwesentliche Daten herauszufiltern und mithilfe der verbleibenden Kategorien aussagekräftigere Trends aufzuzeigen. Im Gegensatz dazu sind Statistiken zu Anforderungen mit langer oder überschrittener Ausführungszeit im Bericht gut erkennbar, damit Administratoren oder Arbeitsmappenbesitzer unverzüglich Korrekturmaßnahme ergreifen können.  
   

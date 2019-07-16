@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189829"
 ---
 # <a name="alert-properties-history-page"></a>Warnungseigenschaften (Seite Verlauf)
   Mithilfe dieser Seite können Sie den Verlauf von Agentwarnungen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen und ändern.  
@@ -36,6 +36,6 @@ ms.locfileid: "52757372"
  Setzt die Informationen auf dieser Seite zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Warnungen](alerts.md)  
+ [Benachrichtigungen](alerts.md)  
   
   
