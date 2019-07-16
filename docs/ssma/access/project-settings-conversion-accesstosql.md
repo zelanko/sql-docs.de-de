@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929459"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Project Settings (Conversion) (AccessToSQL)
 Die projekteinstellungen für die Konvertierung können Sie konfigurieren, wie die Objekte aus den Zugriff auf Datenbankobjekte, konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbankobjekte.  
@@ -37,7 +36,7 @@ Erstellt einen neuen primären Schlüssel in der [!INCLUDE[ssNoVersion](../../in
   
 -   **Vollständige**: False  
   
--   **Vollständiger Modus**: Wahr  
+-   **Vollständiger Modus**: True  
   
 Beim Verbinden mit SQL Azure, ist es standardmäßig "true". **Timestamp-Spalten hinzufügen**  
 Gibt an, ob es sich bei SSMA einen Timestamp-Wert erstellen soll, wenn dies erforderlich ist.  
@@ -51,11 +50,11 @@ Gibt an, ob es sich bei SSMA einen Timestamp-Wert erstellen soll, wenn dies erfo
 **Ein Daten-Bewertungsbericht mit Konvertierung Bewertungsberichte einschließen**  
 Enthält eine Bewertung von Daten in den Bewertungsbericht.  
   
--   **Im Modus Standard**: Wahr  
+-   **Im Modus Standard**: True  
   
 -   **Vollständige**: False  
   
--   **Vollständiger Modus**: Wahr  
+-   **Vollständiger Modus**: True  
   
 **Nachrichtentyp, wenn ein Primärschlüssel auf NULL festlegbare Spalten enthalten**  
 Gibt den Typ der Nachricht (Warnung, Fehler oder "Nothing"), die im Ausgabebereich SSMA anzeigt, wenn Primärschlüssel mit auf NULL festlegbare Spalten gefunden.  
@@ -87,29 +86,29 @@ Gibt den Typ der Meldung (Warnung, Fehler oder nichts) aus mit SSMA im Ausgabebe
 **Warnen, wenn eine komplexe Abfrage einen Platzhalter verwendet (\&#42;)**  
 Wenn Sie ein Spaltennamen in einer SELECT-Anweisung ein Platzhalter (*) ist, wird eine Warnung im Bereich der Ausgabe und Fehlerliste angezeigt.  
   
--   **Im Modus Standard**: Wahr  
+-   **Im Modus Standard**: True  
   
 -   **Vollständige**: False  
   
--   **Vollständiger Modus**: Wahr  
+-   **Vollständiger Modus**: True  
   
 **Warnen Sie, wenn Bezeichnername geändert wird.**  
 Zeigt eine Meldung in den Bewertungsbericht und dem Ausgabebereich angezeigt, wenn ein Bezeichner von SSMA geändert wird.  
   
--   **Im Modus Standard**: Wahr  
+-   **Im Modus Standard**: True  
   
 -   **Vollständige**: False  
   
--   **Vollständiger Modus**: Wahr  
+-   **Vollständiger Modus**: True  
   
 **Warnen Sie, wenn Bezeichner in Anführungszeichen eingeschlossen**  
 Zeigt eine Meldung in den Bewertungsbericht und dem Ausgabebereich angezeigt, wenn ein Bezeichner von SSMA zitiert wird. Bezeichner ist erforderlich, wenn der Name ein Schlüsselwort ist oder Sonderzeichen enthält.  
   
--   **Im Modus Standard**: Wahr  
+-   **Im Modus Standard**: True  
   
 -   **Vollständige**: False  
   
--   **Vollständiger Modus**: Wahr  
+-   **Vollständiger Modus**: True  
   
 ## <a name="see-also"></a>Siehe auch  
 [Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  

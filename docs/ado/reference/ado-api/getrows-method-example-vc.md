@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 728edb30336d3687e92638b348d605fef5842d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932497"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows-Methode – Beispiel (VC++)
 Dieses Beispiel verwendet die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) Methode zum Abrufen einer angegebenen Anzahl von Zeilen aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und ein Array mit den sich ergebenden Daten zu füllen. Die **GetRows** Methode wird in zwei Fällen kleiner als die gewünschte Anzahl von Zeilen zurück: entweder If [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde, oder wenn **GetRows** beim Versuch, einen Datensatz abzurufen, die von einem anderen Benutzer gelöscht. Die Funktion gibt **"false"** nur, wenn der zweite Fall auftritt. Die GetRowsOK-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
@@ -245,6 +244,6 @@ Pedro Afonso, 12/24/1990
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [BOF, EOF Properties (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [BOF-und EOF-Eigenschaft (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [GetRows-Methode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c56d169e8aa55e83b86713e1b9fa476bc213ae3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899369"
 ---
 # <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Enthält zusätzliche Informationen (über [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) über die Leistung und Status von allen applianceknoten. Sie enthält eine Zeile pro Knoten in der Appliance.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Eindeutige numerische Id, die dem Knoten zugeordnet.<br /><br /> Der Schlüssel für diese Sicht.|Auf der gesamten Appliance, unabhängig vom Typ eindeutig.|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
@@ -34,7 +33,7 @@ ms.locfileid: "56014146"
 |available_memory|**bigint**|Gesamten verfügbaren Arbeitsspeichers auf diesem Knoten.||  
 |process_cpu_usage|**bigint**|Gesamt-Prozess-CPU-Nutzung in Ticks.||  
 |total_cpu_usage|**bigint**|Gesamte CPU-Auslastung in Ticks.||  
-|thread_count|**bigint**|Die Gesamtanzahl der Threads auf diesem Knoten.||  
+|Thread_Count|**bigint**|Die Gesamtanzahl der Threads auf diesem Knoten.||  
 |handle_count|**bigint**|Gesamtanzahl der Handles in Verwendung auf diesem Knoten.||  
 |total_elapsed_time|**bigint**|Insgesamt verstrichene Zeit seit System starten oder neu starten.|Insgesamt verstrichene Zeit seit System starten oder neu starten. Überschreitet Total_elapsed_time den maximalen Wert für eine ganze Zahl (rund 24,8 Tage in Millisekunden), wird es Materialisierung Fehler aufgrund einer zu einem Überlauf führen.<br /><br /> Der maximale Wert in Millisekunden entspricht rund 24,8 Tage.|  
 |is_available|**bit**|Flag, der angibt, ob dieser Knoten verfügbar ist.||  

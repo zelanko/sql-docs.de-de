@@ -1,5 +1,5 @@
 ---
-title: Microsoft Decision Trees-Algorithmus | Microsoft Docs
+title: Microsoft Decision Trees-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9d4bbe16f28adf0fe3f3cf73f12a18e9d0e7f20f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209838"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft Decision Trees-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,13 +50,13 @@ ms.locfileid: "34017487"
 ### <a name="predicting-continuous-columns"></a>Vorhersagen kontinuierlicher Spalten  
  Bei Entscheidungsstrukturen, die der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus anhand einer kontinuierlichen vorhersagbaren Spalte erstellt, enthält jeder Knoten eine Regressionsformel. Teilungen finden an Stellen der Nichtlinearität in der Regressionsformel statt. Betrachten Sie beispielsweise das folgende Diagramm.  
   
- ![Mehrere Regressionsgeraden Linien mit Nichtlinearität](../../analysis-services/data-mining/media/regression-tree1.gif "mehrfachregression Linien mit Nichtlinearität")  
+ ![Mehrfachregression Zeilen mit Nichtlinearität](../../analysis-services/data-mining/media/regression-tree1.gif "mehrfachregression Zeilen mit Nichtlinearität")  
   
  In einem standardmäßigen Regressionsmodell versuchen Sie, eine einzelne Formel abzuleiten, die den Trend und die Beziehungen für die Daten als Ganzes darstellt.  Eine einzelne Formel würde die Diskontinuität in komplexen Daten jedoch nur unzureichend wiedergeben. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus sucht stattdessen nach Struktursegmenten, die größtenteils linear sind und erstellt separate Formeln für diese Segmente. Indem die Daten in verschiedene Segmente aufgeteilt werden, kann das Modell die Daten viel besser darstellen.  
   
  Das folgende Diagramm stellt das Strukturdiagramm für das Modell im obigen Punktdiagramm dar.  Das Modell stellt zwei unterschiedliche Formeln bereit, um das Ergebnis vorherzusagen: eine für den linken Bereich mit der Formel y = .5x x 5 und eine für den rechten Bereich mit der Formel y = .25x + 8.75. Die Stelle, an der die beiden Linien im Punktdiagramm zusammentreffen, ist die Stelle der Nichtlinearität und damit die Stelle, an der sich ein Knoten im Entscheidungsstrukturmodell teilen würde.  
   
- ![Formel, die einen Punkt der Nichtlinearität darstellt](../../analysis-services/data-mining/media/regression-tree2.gif "Gleichung, die einen Punkt der Nichtlinearität darstellt")  
+ ![Formel, die einen Punkt der Nichtlinearität darstellt](../../analysis-services/data-mining/media/regression-tree2.gif "Gleichung, die einen Punkt der Nichtlinearität darstellt.")  
   
  Dies ist ein einfaches Modell mit nur zwei Geradengleichungen. Daher wird die Teilung in der Struktur unmittelbar nach dem **Alle** -Knoten vorgenommen. Allerdings kann eine Teilung auf jeder Ebene der Struktur auftreten. Das bedeutet, dass in einer Struktur mit mehreren Ebenen und Knoten, wo jeder Knoten durch eine andere Sammlung von Attributen gekennzeichnet ist, eine Formel möglicherweise über mehrere Knoten freigegeben werden kann oder nur für einen einzelnen Knoten gilt. Sie erhalten z.B. eine Formel für einen Knoten, der als „Kunden über einem gewissen Alter und Einkommen“ definiert ist, und einen anderen, der „Kunden, die lange Strecken pendeln“ repräsentiert. Klicken Sie einfach auf den Knoten, um die Formel für einen einzelnen Knoten oder ein einzelnes Segment anzuzeigen.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34017487"
 ## <a name="viewing-a-decision-trees-model"></a>Anzeigen eines Entscheidungsstrukturmodells  
  Mit dem **Microsoft Struktur-Viewer**können Sie das Modell anzeigen. Wenn das Modell mehrere Strukturen generiert, wählen Sie eine Struktur aus. Daraufhin wird im Viewer eine Aufschlüsselung der Fallkategorien für jedes vorhersagbare Attribut angezeigt. Mit dem Abhängigkeitsnetzwerk-Viewer können Sie die Abhängigkeiten zwischen den Strukturen anzeigen. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
   
- Wenn Sie Näheres über die Verzweigungen bzw. Knoten in der Struktur in Erfahrung bringen möchten, können Sie das Modell im [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)durchsuchen. Der für das Modell gespeicherte Inhalt umfasst die Verteilung der Werte an jedem Knoten, die Wahrscheinlichkeiten auf jeder Strukturebene und die Regressionsformeln für kontinuierliche Attribute. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Wenn Sie Näheres über die Verzweigungen bzw. Knoten in der Struktur in Erfahrung bringen möchten, können Sie das Modell im [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)durchsuchen. Der für das Modell gespeicherte Inhalt umfasst die Verteilung der Werte an jedem Knoten, die Wahrscheinlichkeiten auf jeder Strukturebene und die Regressionsformeln für kontinuierliche Attribute. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)dargestellt.  
   
 ## <a name="creating-predictions"></a>Erstellen von Vorhersagen  
  Nachdem das Modell verarbeitet wurde, werden die Ergebnisse als Satz von Mustern und Statistiken gespeichert, die Sie zum Untersuchen von Beziehungen bzw. zum Erstellen von Vorhersagen verwenden können.  
@@ -94,9 +94,9 @@ ms.locfileid: "34017487"
 -   Unterstützt die Verwendung von OLAP-Miningmodellen und die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Decision Trees-Algorithmus technische Referenz](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [Decision Trees-Abfragebeispiele](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Miningmodellinhalt von Entscheidungsstrukturmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Technische Referenz für den Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
+ [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

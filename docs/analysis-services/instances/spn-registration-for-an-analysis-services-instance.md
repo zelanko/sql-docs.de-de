@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b4516470b1b55c697cbfee065dbf53c3187a6a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209420"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN-Registrierung für eine Analysis Services-Instanz
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52526492"
   
  In der folgenden Tabelle werden die einzelnen Bestandteile des Analysis Services-SPNs beschrieben.  
   
-|Element|Description|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |Dienstklasse|MSOLAPSvc.3 identifiziert den Dienst als Analysis Services-Instanz. Die " .3" ist ein Verweis auf die Version des XMLA-over-TCP/IP Protokolls, das für Analysis Services-Übertragungen verwendet wird. Die Zahl hat keinen Bezug zur Produktversion. Daher ist MSOLAPSvc.3 die richtige Dienstklasse für SQL Server 2005, 2008, 2008, 2012 R2 und jede zukünftige Version von Analysis Services, bis das Protokoll selbst überarbeitet wird.|  
 |Hostname|Identifiziert den Computer, auf dem der Dienst ausgeführt wird. Das kann ein vollqualifizierter Domänenname oder ein NetBIOS-Name sein. Sie sollten einen SPN für beide Namen registrieren.<br /><br /> Wenn Sie einen SPN für den NetBIOS-Namen eines Servers registrieren, sollten Sie anhand von `SetupSPN -S` doppelte Registrierungseinträge suchen. NetBIOS-Namen sind innerhalb einer Gesamtstruktur nicht unbedingt eindeutig, und eine doppelte SPN-Registrierung führt zu einem Verbindungsfehler.<br /><br /> Bei Analysis Services-Clustern mit Lastenausgleich sollte der Hostname dem virtuellen Namen entsprechen, der dem Cluster zugewiesen ist.<br /><br /> Ein SPN sollte nie anhand der IP-Adresse erstellt werden. Kerberos verwendet die DNS-Auflösungsfunktionen der Domäne. Das wird umgangen, indem eine IP-Adresse angegeben wird.|  
@@ -76,7 +76,7 @@ ms.locfileid: "52526492"
 |Dienstkonto|Dies ist das Startkonto des Windows-Diensts **MSSQLServerOLAPService** . Es kann sich um ein Windows-Domänenbenutzerkonto, ein virtuelles Konto, ein verwaltetes Dienstkonto (MSA) oder ein integriertes Konto handeln, wie z. B. Pro-Dienst-SID, NetworkService oder LocalSystem. Ein Windows-Domänenbenutzerkonto "Domäne\Benutzer" formatiert werden kann oder user@domain.|  
   
 ##  <a name="bkmk_virtual"></a> SPN-Registrierung für ein virtuelles Konto  
- Virtuelle Konten sind der Standardkontotyp für SQL Server-Dienste. Das virtuelle Konto lautet **NT Service\MSOLAPService** für eine Standardinstanz und **NT Service\MSOLAP$**\<Instanzname > für eine benannte Instanz.  
+ Virtuelle Konten sind der Standardkontotyp für SQL Server-Dienste. Das virtuelle Konto lautet **NT Service\MSOLAPService** für eine Standardinstanz und **NT Service\MSOLAP$** \<Instanzname > für eine benannte Instanz.  
   
  Wie der Name bereits aussagt, sind diese Konten nicht in Active Directory enthalten. Ein virtuelles Konto ist nur auf dem lokalen Computer vorhanden. Bei der Verbindung mit externen Diensten, Anwendungen oder Geräten wird die Verbindung über das lokale Computerkonto hergestellt. Wenn der SPN also für eine Analysis Services-Instanz registriert wird, die unter einem virtuellen Konto ausgeführt wird, handelt es sich tatsächlich um eine SPN-Registrierung für das Computerkonto.  
   
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Beispielsyntax für eine benannte Instanz ausgeführt wird als NT Service\MSOLAP$\<Instanzname >**  
   
- In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02** und der Instanzname **AW-FINANCE**. In diesem Fall wird das Computerkonto für den SPN angegeben ist, nicht das virtuelle Konto **NT Service\MSOLAP$**\<Instanzname >.  
+ In diesem Beispiel wird die **setspn** -Syntax für eine benannte Instanz veranschaulicht, die unter dem virtuellen Standardkonto ausgeführt wird. Der Computerhostname lautet in diesem Fall **AW-SRV02** und der Instanzname **AW-FINANCE**. In diesem Fall wird das Computerkonto für den SPN angegeben ist, nicht das virtuelle Konto **NT Service\MSOLAP$** \<Instanzname >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

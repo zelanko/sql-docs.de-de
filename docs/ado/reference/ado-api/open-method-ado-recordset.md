@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9aee9b4f6054b5cbfca41db35f34a27000a7ac01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931904"
 ---
 # <a name="open-method-ado-recordset"></a>Open-Methode (ADO-Recordset)
 Öffnet einen Cursor auf einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -39,7 +38,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Optional. Ein **Variant** , ausgewertet wird, auf ein gültiges [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, eine SQL-Anweisung, einen Tabellennamen, Aufruf einer gespeicherten Prozedur, eine URL oder den Namen einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt mit einer dauerhaft gespeichert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
- Optional. Entweder ein **Variant** , ausgewertet wird, auf ein gültiges [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Namen der Objektvariablen, oder ein **Zeichenfolge** , enthält ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Parameter.  
+ Dies ist optional. Entweder ein **Variant** , ausgewertet wird, auf ein gültiges [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Namen der Objektvariablen, oder ein **Zeichenfolge** , enthält ["ConnectionString"](../../../ado/reference/ado-api/connectionstring-property-ado.md) Parameter.  
   
  *CursorType*  
  Optional. Ein [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) Wert, der den Typ des Cursors bestimmt, die der Anbieter, beim Öffnen verwenden soll der **Recordset**. Der Standardwert ist **AdOpenForwardOnly**.  
@@ -48,7 +47,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) Wert, der bestimmt, welche Art von Sperren (nebenläufigkeit) des Anbieters verwenden soll, beim Öffnen der **Recordset**. Der Standardwert ist **AdLockReadOnly**.  
   
  *Options*  
- Optional. Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *Quelle* Argument, wenn es etwas anders als darstellt eine **Befehl** -Objekt, oder dass die **Recordset** wiederhergestellt werden sollen, aus einer Datei, in denen es bereits gespeichert wurde. Kann sein, eine oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte, die mit einem bitweisen OR-Operator kombiniert werden können.  
+ Dies ist optional. Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *Quelle* Argument, wenn es etwas anders als darstellt eine **Befehl** -Objekt, oder dass die **Recordset** wiederhergestellt werden sollen, aus einer Datei, in denen es bereits gespeichert wurde. Kann sein, eine oder mehrere [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte, die mit einem bitweisen OR-Operator kombiniert werden können.  
   
 > [!NOTE]
 >  Beim Öffnen einer **Recordset** aus eine **Stream** , enthält eine persistierte **Recordset**mithilfe einer [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Wert **AdAsyncFetchNonBlocking** hat keine Auswirkungen; die Fetch werden synchron und blockiert.  

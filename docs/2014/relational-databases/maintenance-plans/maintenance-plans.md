@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206854"
 ---
 # <a name="maintenance-plans"></a>Wartungspläne
   Mit Wartungsplänen wird ein Workflow der Tasks erstellt, die erforderlich sind, um sicherzustellen, dass Ihre Datenbank optimiert und regelmäßig gesichert wird und dass sie keine Inkonsistenzen aufweist. Mit dem Wartungsplanungs-Assistenten werden zudem zentrale Wartungspläne erstellt, doch durch das manuelle Erstellen von Plänen steht Ihnen eine sehr viel höhere Flexibilität zur Verfügung.  

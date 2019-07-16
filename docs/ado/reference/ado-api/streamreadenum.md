@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37d2ba0834d2a4469d97a36f39677f407a5e61be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928661"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Gibt an, ob der gesamte Datenstrom oder die nächste Zeile aus gelesen werden sollen eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adReadAll**|-1|Standard. Liest alle Bytes aus dem Stream, aus der aktuellen Position oder höher auf dem [EOS](../../../ado/reference/ado-api/eos-property.md) Marker. Dies ist der einzige gültige **StreamReadEnum** Wert mit binären Datenströmen ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeBinary**).|  
 |**adReadLine**|-2|Liest die nächste Zeile aus dem Stream (gekennzeichnet durch die [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) Eigenschaft).|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144855"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180267"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anfügen und Trennen von Analysis Services-Datenbanken
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50144855"
   
 |Trennen einer Datenbank mit Lese-/Schreibzugriff|Trennen einer schreibgeschützten Datenbank|  
 |--------------------------------------|-------------------------------------|  
-|1) Der Server gibt eine Anforderung für eine CommitExclusive-Sperre für die Datenbank aus.<br /><br /> 2) Der Server wartet, bis für alle laufenden Transaktionen ein Commit oder ein Rollback ausgeführt wird.<br /><br /> 3) Der Server erstellt alle Metadaten, die zum Trennen der Datenbank erforderlich sind.<br /><br /> 4) Die Datenbank wird als gelöscht markiert.<br /><br /> 5) Der Server führt einen Commit für die Transaktion aus.|1) Die Datenbank wird als gelöscht markiert.<br /><br /> 2) Der Server führt einen Commit für die Transaktion aus.<br /><br /> Hinweis: Das Kennwort für die Trennung kann für eine schreibgeschützte Datenbank nicht geändert werden. Wenn der Kennwortparameter für eine angefügte Datenbank, die bereits ein Kennwort enthält, angegeben wird, wird ein Fehler ausgegeben.|  
+|1) Der Server gibt eine Anforderung für eine CommitExclusive-Sperre für die Datenbank aus.<br /><br /> 2) Der Server wartet, bis für alle laufenden Transaktionen ein Commit oder ein Rollback ausgeführt wird.<br /><br /> 3) Der Server erstellt alle Metadaten, die zum Trennen der Datenbank erforderlich sind.<br /><br /> 4) Die Datenbank wird als gelöscht markiert.<br /><br /> 5) Der Server führt einen Commit für die Transaktion aus.|1) Die Datenbank wird als gelöscht markiert.<br /><br /> 2) Der Server führt einen Commit für die Transaktion aus.<br /><br /> Hinweis: Das Trennen von Kennwort kann nicht für eine schreibgeschützte Datenbank geändert werden. Wenn der Kennwortparameter für eine angefügte Datenbank, die bereits ein Kennwort enthält, angegeben wird, wird ein Fehler ausgegeben.|  
   
  Die Befehle **Attach** und **Detach** müssen als einzelne Vorgänge ausgeführt werden. Sie können nicht in der gleichen Transaktion mit anderen Vorgängen kombiniert werden. Außerdem sind die Befehle **Attach** und **Detach** unteilbare Transaktionsbefehle. Dies bedeutet, dass der Vorgang entweder erfolgreich ist oder fehlschlägt. Keine Datenbank wird in einem unvollendeten Status belassen.  
   

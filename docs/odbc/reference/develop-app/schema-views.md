@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 782dec08b76a9e5a97719d6af39e2c30c0f92d19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e2dd512ab529f1fb5d216f4a2e459cd601d40e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943757"
 ---
 # <a name="schema-views"></a>Schemaansichten
 Eine Anwendung kann aus dem DBMS entweder durch Aufrufen von ODBC-Katalogfunktionen oder INFORMATION_SCHEMA-Sichten mit Abrufen von Metadateninformationen. Durch den ANSI SQL-92-Standard definiert werden.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b695f847ec7f99366e71e76aefe5aecb99cf5933
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162643"
 ---
 # <a name="project-properties"></a>Projekteigenschaften 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53072657"
 ##  <a name="bkmk_proj_properties"></a> Projekteigenschaften  
  **Bereitstellungsoptionen**  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Verarbeitungsoption**|**Default**|Analysis Services bestimmt standardmäßig den Verarbeitungstyp, der beim Bereitstellen der an Objekten vorgenommenen Änderungen erforderlich ist. Diese Einstellung ermöglicht im Allgemeinen die schnellste Bereitstellungszeit. Sie haben aber auch die Möglichkeit, für die jeweilige Bereitstellung die vollständige Verarbeitung oder keine Verarbeitung zu wählen.|  
 |**Transaktionsbereitstellung**|**False**|Gibt an, ob es sich um eine Transaktionsbereitstellung des Modells handelt. Standardmäßig ist die Bereitstellung aller oder geänderter Objekte keine Transaktionsbereitstellung bei der Verarbeitung dieser bereitgestellten Objekte. Die Bereitstellung kann erfolgreich ausgeführt werden und persistent sein, auch wenn bei der Verarbeitung ein Fehler auftritt. Sie können diese Einstellung ändern, um die Bereitstellung und Verarbeitung in einer einzelnen Transaktion zu integrieren.|  
@@ -37,7 +37,7 @@ ms.locfileid: "53072657"
   
  **Bereitstellungsserver**  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Server**|**localhost**|Gibt eine Analysis Services-Instanz an. Standardmäßig werden Modelle in der Standardinstanz von Analysis Services auf dem lokalen Computer bereitgestellt. Sie können diese Einstellung ändern und eine benannte Instanz auf dem lokalen Computer bzw. eine beliebige Instanz auf einem Remotecomputer angeben, auf dem Sie über die Berechtigung zum Erstellen von Analysis Services-Objekten verfügen. Normalerweise sind dies Administratorberechtigungen.<br /><br /> Die Standardeinstellung für diese Eigenschaft kann im Dialogfeld Extras\Optionen auf der Seite Bereitstellung in den Analysis-Server-Einstellungen mithilfe der Eigenschaft Standardbereitstellungsserver geändert werden. Weitere Informationen finden Sie unter [konfigurieren Sie die Modellierung und Bereitstellung Standardeigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).|  
 |**Edition**|**Entwickler**|Gibt die Edition des Analysis Services-Servers an, auf dem das Modell bereitgestellt wird. In der Serveredition sind verschiedene Funktionen definiert, die in das Projekt eingebunden werden können.|  
@@ -47,7 +47,7 @@ ms.locfileid: "53072657"
   
  **DirectQuery-Optionen**  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Identitätswechseleinstellungen**|**Default**|Gibt die Anmeldeinformationen an, über die ein Modell, das im DirectQuery-Modus ausgeführt wird, mit Datenquellen verbunden wird. Diese Anmeldeinformationen unterscheiden sich von den Identitätswechselinformationen, die im speicherinternen Standardmodus verwendet werden. Weitere Informationen finden Sie unter [Identitätswechsel](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).|  
   

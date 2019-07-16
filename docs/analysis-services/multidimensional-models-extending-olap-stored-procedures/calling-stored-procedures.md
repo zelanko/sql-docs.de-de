@@ -1,5 +1,5 @@
 ---
-title: Aufrufen von gespeicherten Prozeduren | Microsoft Docs
+title: Aufrufen von gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a0bdf517f2845e28a9d3520034d9de16ff65a25e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181166"
 ---
-# <a name="calling-stored-procedures"></a>Aufrufen von gespeicherten Prozeduren
+# <a name="calling-stored-procedures"></a>Aufrufen gespeicherter Prozeduren
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Gespeicherte Prozeduren können auf dem Server oder aus einer Clientanwendung aufgerufen werden. In beiden Fällen werden gespeicherte Prozeduren immer auf dem Server ausgeführt, entweder im Kontext des Servers oder einer Datenbank. Zum Ausführen einer gespeicherten Prozedur sind keine besonderen Berechtigungen erforderlich. Nach dem Hinzufügen einer gespeicherten Prozedur von einer Assembly zum Server- oder Datenbankkontext kann diese gespeicherte Prozedur von jedem Benutzer ausgeführt werden, sofern die Rolle des Benutzers die von der gespeicherten Prozedur durchgeführten Aktionen ermöglicht.  
   
@@ -60,15 +60,15 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>Aufrufen von gespeicherten Prozeduren mit der CALL-Anweisung  
  Gespeicherte Prozeduren aufgerufen werden können, außerhalb des Kontexts einer MDX-Abfrage mithilfe der MDX **Aufrufen** Anweisung.  
   
- Sie können diese Methode verwenden, um entweder die Nebeneffekte einer gespeicherten Abfrage zu instanziieren, oder damit die Anwendung die Ergebnisse einer gespeicherten Abfrage erhält. Eine häufige Verwendung der **Aufrufen** Anweisung wäre, Analysis Management Objects (AMO) verwenden, um administrative Funktionen auszuführen, die nicht über ein Ergebnis zurückzugeben brauchen. Der folgende Befehl ruft beispielsweise eine gespeicherte Prozedur auf:  
+ Sie können diese Methode verwenden, um entweder die Nebeneffekte einer gespeicherten Abfrage zu instanziieren, oder damit die Anwendung die Ergebnisse einer gespeicherten Abfrage erhält. Eine übliche Verwendung dieser die **Aufrufen** -Anweisung wäre mit Analysis Management Objects (AMO) administrative Funktionen auszuführen, die nicht über ein Ergebnis zurückzugeben brauchen. Der folgende Befehl ruft beispielsweise eine gespeicherte Prozedur auf:  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- Der einzige unterstützte Typ zurückgegeben, die von der gespeicherten Prozedur in eine **Aufrufen** -Anweisung ist ein Rowset. Die Serialisierung für ein Rowset wird durch XML for Analysis definiert. Wenn eine gespeicherte Prozedur in einer **Aufrufen** Anweisung einen anderen Typ zurückgibt, wird dieser ignoriert und nicht im XML-Format an die aufrufende Anwendung zurückgegeben. Weitere Informationen zu XMLA-Rowsets (XML for Analysis) finden Sie unter XMLA-Schemarowsets.  
+ Die einzige unterstützte Typ gespeicherte Prozedur in einer **Aufrufen** -Anweisung ist ein Rowset. Die Serialisierung für ein Rowset wird durch XML for Analysis definiert. Wenn eine gespeicherte Prozedur in einer **Aufrufen** Anweisung einen anderen Typ zurückgibt, wird Sie ignoriert und nicht im XML-Code an die aufrufende Anwendung zurückgegeben. Weitere Informationen zu XMLA-Rowsets (XML for Analysis) finden Sie unter XMLA-Schemarowsets.  
   
- Wenn eine gespeicherte Prozedur ein .NET-Rowset zurückgibt, konvertiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Ergebnis auf dem Server in ein XMLA-Rowset. Die XML for Analysis-Schemarowset wird immer zurückgegeben, durch eine gespeicherte Prozedur in der **Aufrufen** Funktion. Wenn ein Dataset Funktionen enthält, die nicht in einem XMLA-Rowset ausgedrückt werden können, tritt ein Fehler auf.  
+ Wenn eine gespeicherte Prozedur ein .NET-Rowset zurückgibt, konvertiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Ergebnis auf dem Server in ein XMLA-Rowset. Das XML for Analysis-Rowset wird immer zurückgegeben, von einer gespeicherten Prozedur in der **Aufrufen** Funktion. Wenn ein Dataset Funktionen enthält, die nicht in einem XMLA-Rowset ausgedrückt werden können, tritt ein Fehler auf.  
   
  Prozeduren, die void zurückgeben (wie z. B. Unterroutinen in Visual Basic), können ebenfalls mit dem CALL-Schlüsselwort verwendet werden. Beispielsweise wird die MyVoidFunction()-Funktion in einer MDX-Anweisung mit folgender Syntax verwendet:  
   
@@ -77,7 +77,7 @@ CALL(MyVoidFunction)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Mehrdimensionales Modell Assemblys-Verwaltung](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
- [Definieren von gespeicherten Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Verwaltung von mehrdimensionalen Modellassemblys](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Definieren gespeicherter Prozeduren](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

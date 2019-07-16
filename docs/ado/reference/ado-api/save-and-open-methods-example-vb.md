@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32ed7e6240f5f9622bfcb80e2f05a633fcaf2fdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d42488f8f167cc7c98f663478c742963d24253c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931196"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save- und Open-Methode – Beispiel (VB)
 Diese drei Beispielen wird gezeigt, wie die [speichern](../../../ado/reference/ado-api/save-method.md) und [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methoden gemeinsam verwendet werden können.  
@@ -99,6 +98,6 @@ Attribute VB_Name = "Save"
   
 ## <a name="see-also"></a>Siehe auch  
  [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Weitere Informationen zur Recordset-Beibehaltung](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)

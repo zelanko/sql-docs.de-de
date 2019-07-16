@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7f593dafc1a734cd5f3a0c9fde4f47987f0b92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685611"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207371"
 ---
 # <a name="create-relationships"></a>Erstellen von Beziehungen
 
@@ -23,9 +23,9 @@ ms.locfileid: "57685611"
 
 In dieser Lektion überprüfen Sie die Beziehungen, die automatisch, beim Importieren von Daten erstellt wurden und Hinzufügen neuer Beziehungen zwischen verschiedenen Tabellen. Eine Beziehung ist eine Verbindung zwischen zwei Tabellen, die festlegt, wie die Daten in diesen Tabellen miteinander in Beziehung gesetzt werden sollen. Die DimProduct-Tabelle und die DimProductSubcategory-Tabelle haben beispielsweise eine Beziehung, die darauf beruht, dass jedes Produkt zu einer Unterkategorie gehört. Weitere Informationen finden Sie unter [Beziehungen](../tabular-models/relationships-ssas-tabular.md).
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **10 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **10 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 
 Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 3: Als Datumstabelle markieren](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
@@ -63,8 +63,8 @@ Bevor Sie mit der Erstellung Ihres Modells fortfahren, sollten Sie überprüfen,
     |Ja|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Ja|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
     |Ja|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |Ja|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |Ja|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |Ja|**"Factinternetsales" [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |Ja|**"Factinternetsales" [ProductKey]**|**DimProduct [ProductKey]**|  
   
     Wenn einige dieser Beziehungen fehlen, überprüfen Sie, ob Ihr Modell in den folgenden Tabellen enthält: DimCustomer, DimDate, DimGeography, DimProduct, DimProductCategory, DimProductSubcategory und FactInternetSales. Wenn Tabellen aus derselben datenquellenverbindung zu unterschiedlichen Zeitpunkten, Beziehungen zwischen importiert werden diese Tabellen werden nicht erstellt werden, und müssen manuell erstellt werden. Wenn keine Beziehungen angezeigt werden, bedeutet dies, dass in der Datenquelle keine Beziehungen vorhanden sind. Sie können diese manuell im Datenmodell erstellen.
 
@@ -76,7 +76,7 @@ Beachten Sie in der Diagrammsicht einen Pfeil, ein Sternchen und eine Zahl auf d
 
 Der Pfeil zeigt die filterrichtung. Das Sternchen zeigt an, diese Tabelle ist die *viele* -Seite in der Kardinalität der Beziehung, und der wird diese Tabelle ist die *eine* Seite der Beziehung. Wenn Sie eine Beziehung bearbeiten müssen. z. B. ändern Sie die Beziehung die filterrichtung oder Kardinalität zu, doppelklicken Sie auf die Beziehungslinie, um das Dialogfeld "Beziehung bearbeiten" zu öffnen.
 
-![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![als lesson4 bearbeiten](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 Diese Features sind nur für den erweiterten datenmodellierung und befinden sich außerhalb des Bereichs in diesem Tutorial. Weitere Informationen finden Sie unter [bidirektionale kreuzfilter für tabellarische Modelle in Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 

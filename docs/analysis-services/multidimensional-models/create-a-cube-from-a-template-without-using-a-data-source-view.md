@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209098"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52521346"
 ## <a name="selecting-dimensions"></a>Auswählen von Dimensionen  
  Mithilfe der Seite **Dimensionen auswählen** des Assistenten können Sie dem Cube vorhandene Dimensionen hinzufügen. Diese Seite wird nur angezeigt, wenn im Projekt oder der Datenbank bereits freigegebene Dimensionen ohne eine Datenquelle vorhanden sind. Dimensionen, die über eine Datenquelle verfügen, sind nicht aufgeführt.  
   
- Um vorhandene Dimensionen hinzuzufügen, wählen Sie in der Liste **Gemeinsame Dimensionen** mindestens eine Dimension aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts (**>**), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche mit dem Doppelpfeil (**>>**), um alle Dimensionen in der Liste zu verschieben.  
+ Um vorhandene Dimensionen hinzuzufügen, wählen Sie in der Liste **Gemeinsame Dimensionen** mindestens eine Dimension aus, und klicken Sie auf die Schaltfläche mit dem Pfeil nach rechts ( **>** ), um sie in die Liste **Cubedimensionen** zu verschieben. Klicken Sie auf die Schaltfläche mit dem Doppelpfeil ( **>>** ), um alle Dimensionen in der Liste zu verschieben.  
   
 ## <a name="defining-new-measures"></a>Definieren neuer Measures  
  Verwenden Sie die Seite **Neue Measures definieren** des Assistenten, um die Measures und Measuregruppen im neuen Cube anzugeben. Die hier angegebenen Measuregruppen entsprechen den Faktentabellen im generierten Schema. Die hier angegebenen Measures entsprechen den numerischen Nichtschlüsselspalten in den Tabellen.  
@@ -39,7 +39,7 @@ ms.locfileid: "52521346"
   
  Sowohl das Raster **Measures aus der Vorlage auswählen** als auch das Raster **Neue Measures hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Spalte|Description|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |**Measurename**|Durch einen Wert in dieser Spalte wird der Name eines im Cube enthaltenen Measures definiert. Klicken Sie auf einen Wert in dieser Spalte, um einen Namen einzugeben. Klicken Sie in dieser Spalte auf **Neues Measure hinzufügen** , um ein neues Measure zu erstellen. In dieser Spalte wird die **Name** -Eigenschaft für das Measureobjekt festgelegt.|  
 |**Measuregruppe**|Der Name der Measuregruppe, in der das Measure enthalten ist. Klicken Sie auf diesen Wert, um einen Namen auszuwählen oder einzugeben. Wenn Sie alle Measures löschen, die zu einer bestimmten Measuregruppe gehören, wird die Measuregruppe ebenfalls entfernt. In dieser Spalte wird die **Name** -Eigenschaft für das Measuregruppenobjekt festgelegt.|  
@@ -55,7 +55,7 @@ ms.locfileid: "52521346"
   
  Sowohl das Raster **Dimensionen aus der Vorlage auswählen** als auch das Raster **Neue Dimensionen hinzufügen** enthält Werte in den Spalten, die in der folgenden Tabelle beschrieben sind. Sie können auf einen Wert in einer der Listen klicken, um ihn zu ändern.  
   
-|Spalte|Description|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |**Typ**|Zeigt den Dimensionstyp einer Vorlagendimension an. Klicken Sie auf diese Zelle, um den Dimensionstyp für eine Dimension zu ändern. In dieser Spalte wird die **Type** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
 |**Name**|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Durch diesen Wert wird die **Name** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
@@ -79,7 +79,7 @@ ms.locfileid: "52521346"
 ## <a name="specifying-additional-calendars"></a>Angeben zusätzlicher Kalender  
  Auf der Seite **Zusätzliche Kalender angeben** des Assistenten können Sie Kalender auswählen, auf denen die Hierarchien der Dimension basieren sollen. Sie können einen der folgenden Kalender auswählen:  
   
-|Kalender|Description|  
+|Kalender|Beschreibung|  
 |--------------|-----------------|  
 |Geschäftskalender|Ein zwölfmonatiger Geschäftskalender. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag des vom Unternehmen verwendeten Geschäftsjahres angeben.|  
 |Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem sich wiederholenden dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, geben Sie den Anfangstag und den drei Monate 4-4-5, 4-5-4 oder 5-4-4 Wochen, wobei jede Ziffer für die Anzahl der Wochen in einem Monat darstellt.|  

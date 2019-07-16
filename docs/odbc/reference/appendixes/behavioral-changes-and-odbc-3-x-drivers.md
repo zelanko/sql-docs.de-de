@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18dd126363d39f4352298cf672922c6113482764
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 27b48951c6fb3be8bfe070863409d77ab760d5fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915614"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Verhaltensänderungen und ODBC 3.x-Treiber
 SQL_ATTR_ODBC_VERSION überprüfen, ob der Treiber ODBC aufweisen muss umgebungsattributs *2.x* Verhalten oder die ODBC- *3.x* Verhalten. Wie umgebungsattributs SQL_ATTR_ODBC_VERSION festgelegt wird, hängt von der Anwendung ab. ODBC *3.x* müssen Anwendungen Aufrufen **SQLSetEnvAttr** , dieses Attribut festzulegen, nachdem sie rufen **SQLAllocHandle** ein Umgebungshandle und vor dem Aufruf von  **SQLAllocHandle** ein Verbindungshandle zuordnen. Wenn sie nicht dies tun, gibt der Treiber-Manager SQLSTATE HY010 (Funktion Sequenzfehler) auf dem letzten Aufruf von **SQLAllocHandle**.  

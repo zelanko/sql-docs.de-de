@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7493c09964db2e0a8cbd17c6a2278dd554a2dcc
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207889"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Programmieren von tabellarischen Modellen für Kompatibilitätsgrad 1200 und höher
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b7e80f8a9dfb82f13350b94b310690a081fae1de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 258e648ac2ebe3da2c30faa908a3474e9e51264a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937719"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +28,7 @@ IsTestCase()
 ```  
   
 ## <a name="result-type"></a>Ergebnistyp  
- Gibt **"true"** ist der Fall ein Teil des testdatasets; andernfalls **"false"**.  
+ Gibt **"true"** ist der Fall ein Teil des testdatasets; andernfalls **"false"** .  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Sie eine Miningstruktur und ein damit verknüpftes Miningmodell mit dem Data Mining-Assistenten erstellen, werden standardmäßig 30 Prozent der Fälle zur Verwendung als Testdataset zurückgehalten. Die übrigen Fälle werden zum Trainieren des Data Mining-Modells verwendet. Dasselbe Testdataset kann mit allen Modellen verwendet werden, die auf der Struktur basieren. Wenn Sie das Miningmodell jedoch mithilfe von DMX erstellen, werden standardmäßig alle Daten zum Trainieren des Modells verwendet, und es wird kein Testsatz erstellt. Um ein testdataset erstellt werden kann, müssen Sie die Parameter der WITH HOLDOUT-Klausel festlegen.  

@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc006a940318ba84c3670ed9d10b96f728219668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd7d1ddf40805eb94ca71594c7e4f7f6dae6ca7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899943"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt Speicherobjekte, die derzeit von zugeordnet sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können **Sys. dm_os_memory_objects** speicherauslastung zu analysieren und zur Identifizierung möglicher Speicherverluste.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary(8)**|Adresse des Speicherobjekts. Lässt keine NULL-Werte zu.|  
 |**parent_address**|**varbinary(8)**|Adresse des übergeordneten Speicherobjekts. Lässt NULL-Werte zu.|  
@@ -62,7 +61,7 @@ ms.locfileid: "47800648"
 ## <a name="permissions"></a>Berechtigungen
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
 
 ## <a name="remarks"></a>Hinweise  
  Speicherobjekte sind Heaps. Sie stellen im Vergleich zu den Arbeitsspeicherclerks Zuordnungen mit feinerer Granularität bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten verwenden Arbeitsspeicherobjekte anstelle der Arbeitsspeicherclerks. Speicherobjekte verwenden die Seitenzuordnungsschnittstelle des Arbeitsspeicherclerks für die Zuordnung von Seiten. Speicherobjekte verwenden keine Schnittstellen, die auf virtuellem Speicher oder Shared Memory basieren. Abhängig von den Zuordnungsmustern können Komponenten verschiedene Typen von Speicherobjekten erstellen, um Bereiche zufälliger Größe zuzuordnen.  

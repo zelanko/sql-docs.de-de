@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz zu Microsoft Linear Regression-Algorithmus | Microsoft Docs
+title: Technische Referenz zu Microsoft Linear Regression-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84d0d6609538bb9abdbca61e75c6691c25a45950
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183059"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Linear Regression-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34019377"
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  In der folgenden Tabelle werden die Parameter, die für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus bereitgestellt werden, aufgelistet.  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|Definiert die Anzahl von Eingabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.<br /><br /> Der Standardwert lautet 255.|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|Definiert die Anzahl von Ausgabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.<br /><br /> Der Standardwert lautet 255.|  
@@ -52,10 +52,10 @@ ms.locfileid: "34019377"
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus unterstützt die folgenden Modellierungsflags. Wenn Sie die Miningstruktur oder das Miningmodell erstellen, definieren Sie Modellierungsflags, die angeben, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
-|Modellierungsflag|Description|  
+|Modellierungsflag|Beschreibung|  
 |-------------------|-----------------|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalten.|  
-|REGRESSOR|Gibt an, dass die Spalte kontinuierliche numerische Werte enthält, die bei der Analyse als potenzielle unabhängige Variablen behandelt werden sollen. Gilt für die Miningmodellspalten.<br /><br /> Hinweis: Das Kennzeichnen einer Spalte als Regressor gewährleistet nicht, dass die Spalte im fertigen Modell als Regressor verwendet wird.|  
+|REGRESSOR|Gibt an, dass die Spalte kontinuierliche numerische Werte enthält, die bei der Analyse als potenzielle unabhängige Variablen behandelt werden sollen. Gilt für die Miningmodellspalten.<br /><br /> Hinweis: Kennzeichnen einer Spalte als Regressor gewährleistet nicht, dass die Spalte im fertigen Modell als Regressor verwendet werden soll.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regressoren in linearen Regressionsmodellen  
  Lineare Regressionsmodelle basieren auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Auch wenn Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus nicht verwenden, kann jedes Entscheidungsstrukturmodell eine Struktur oder Knoten enthalten, die eine Regression für ein kontinuierliches Attribut darstellen.  
@@ -72,7 +72,7 @@ ms.locfileid: "34019377"
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Column|Inhaltstypen|  
+|Spalte|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Key, Table und Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical und Ordered|  
@@ -82,7 +82,7 @@ ms.locfileid: "34019377"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
- [Lineare Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Miningmodellinhalt, lineare Regressionsmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

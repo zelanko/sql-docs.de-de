@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Rollupoperatoren in über-und untergeordneten Dimensionen | Microsoft Docs
+title: Benutzerdefinierte Rollupoperatoren in über-und untergeordnete Dimensionen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 000d6355aee1fc38aa4fdcb97cf02df2a4ef09da
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020957"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165425"
 ---
-# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Über-und untergeordneten Dimensionsattribute – benutzerdefinierte Rollupoperatoren
+# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Über- und untergeordnete Dimensionsattribute – benutzerdefinierte Rollupoperatoren
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Mit benutzerdefinierten Rollup-Operatoren können Sie auf einfache Weise steuern, wie Rollups von Elementwerten zu übergeordneten Werten in einer Hierarchie mit über- und untergeordneten Elementen ausgeführt werden. In einer Dimension mit einer Über-/Unterordnungsbeziehung geben Sie eine Spalte mit unären Operatoren an, die einen Rollup für alle nicht berechneten Elemente des übergeordneten Attributs angeben. Der unäre Operator wird immer dann auf die Elemente angewendet, wenn die Werte des übergeordneten Elements ausgewertet werden.  
   
@@ -29,6 +29,6 @@ ms.locfileid: "34020957"
   
 ## <a name="see-also"></a>Siehe auch  
  [Definieren von benutzerdefinierten Elementformeln](../../analysis-services/multidimensional-models/attribute-properties-define-custom-member-formulas.md)   
- [Unäre Operatoren in über-und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
+ [Unäre Operatoren in über- und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
   
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6ce0fa8270a05d8c3385cbc7b5c25edeaa84bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899638"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "62998003"
   
  **Ressourcenbesitzer der parallelen Abfrage:**  
   
--   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
+-   ExchangeEvent-Id = {Port | Pipe}\<Hex-Address > Wartetyp =\<Exchange-Wait-Type >-Knoten-ID =\<Exchange-Knoten-Id >  
   
  **Exchange-Wait-Type:**  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62998003"
   
  **Der Besitzer der Lock-Ressource:**  
   
--   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
+-   \<Type-Specific-Description > Id = Sperre\<Lock-Hex-Address > Modus =\<Modus > AssociatedObjectId =\<verknüpfte-Obj-Id >  
   
      **\<Type-Specific-Description > kann sein:**  
   
@@ -115,7 +114,7 @@ ms.locfileid: "62998003"
   
  **Besitzer der allgemeinen Ressource:**  
   
--   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
+-   TransactionMutex TransactionInfo Arbeitsbereich =\<Arbeitsbereich-Id >  
   
 -   Mutex  
   
@@ -133,12 +132,12 @@ ms.locfileid: "62998003"
   
 -   \<GUID>  
   
--   \<latch-class> (\<latch-address>)  
+-   \<latchklasse > (\<Latch-Address >)  
   
 ## <a name="permissions"></a>Berechtigungen
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
  
 ## <a name="example"></a>Beispiel
 In diesem Beispiel wird die blockierte Sitzungen identifiziert.  Führen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].

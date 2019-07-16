@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899192"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +68,8 @@ sp_dbmmonitorhelpalert database_name
 |Spalte|Datentyp|Description|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|Die folgende Tabelle listet die **Alert_id** Wert für jede Leistungsmetrik und die Maßeinheit der Metrik angezeigt, der **Sp_dbmmonitorresults** Resultset:|  
-|**threshold**|**int**|Der Schwellenwert für die Warnung. Wenn der Rückgabewert beim Aktualisieren des Spiegelungsstatus diesen Schwellenwert überschreitet, wird ein Eintrag im Windows-Ereignisprotokoll generiert. Der Wert stellt je nach Warnung KB, Minuten oder Millisekunden dar. Ist der Schwellenwert aktuell nicht festgelegt, lautet der Wert NULL.<br /><br /> **Hinweis:** um die aktuellen Werte anzuzeigen, führen Sie die [Sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) gespeicherte Prozedur.|  
-|**aktiviert**|**bit**|0 = Ereignis ist deaktiviert.<br /><br /> 1 = Ereignis ist aktiviert.<br /><br /> **Hinweis:** Beibehaltungsdauer ist immer aktiviert.|  
+|**threshold**|**int**|Der Schwellenwert für die Warnung. Wenn der Rückgabewert beim Aktualisieren des Spiegelungsstatus diesen Schwellenwert überschreitet, wird ein Eintrag im Windows-Ereignisprotokoll generiert. Der Wert stellt je nach Warnung KB, Minuten oder Millisekunden dar. Ist der Schwellenwert aktuell nicht festgelegt, lautet der Wert NULL.<br /><br /> **Hinweis**: Um die aktuellen Werte anzuzeigen, führen Sie die [Sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) gespeicherte Prozedur.|  
+|**aktiviert**|**bit**|0 = Ereignis ist deaktiviert.<br /><br /> 1 = Ereignis ist aktiviert.<br /><br /> **Hinweis**: Die Beibehaltungsdauer ist immer aktiviert.|  
   
 |Wert|Leistungsmetrik|Einheit|  
 |-----------|------------------------|----------|  

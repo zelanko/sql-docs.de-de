@@ -1,5 +1,5 @@
 ---
-title: Festlegen der Verwendungseigenschaft | Microsoft Docs
+title: Festlegen der Verwendungseigenschaft | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 603ef66e0021c2250987a0605fe9b28aae5e3490
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209169"
 ---
-# <a name="attribute-properties---set-usage-property"></a>Attributeigenschaften - Set Usage-Eigenschaft
+# <a name="attribute-properties---set-usage-property"></a>Attributeigenschaften – Festlegen der Usage-Eigenschaft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Sie können die Verwendung eines Attributs mithilfe der Sicht **Dimensionsstruktur** im Dimensions-Designer festlegen. Der Zugriff auf diese Sicht erfolgt über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

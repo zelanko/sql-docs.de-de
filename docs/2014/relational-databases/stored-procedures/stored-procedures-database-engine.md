@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197106"
 ---
 # <a name="stored-procedures-database-engine"></a>Gespeicherte Prozeduren (Datenbank-Engine)
   Eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht einer oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder einem Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-Methode (Common Language Runtime). Prozeduren sind mit Konstrukten anderer Programmiersprachen vergleichbar, da sie folgende Fähigkeiten aufweisen:  

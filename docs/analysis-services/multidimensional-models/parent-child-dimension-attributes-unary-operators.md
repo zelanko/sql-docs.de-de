@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208592"
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Über- und untergeordnete Dimensionsattribute – unäre Operatoren
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52539743"
   
  Die Standardeinstellung für die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut ist (keine), wodurch die benutzerdefinierten Rollup-Operatoren deaktiviert werden. In der folgenden Tabelle werden die unären Operatoren aufgelistet. Außerdem wird das Verhalten dieser Operatoren beschrieben, wenn sie auf eine Ebene angewendet werden.  
   
-|Unärer Operator|Description|  
+|Unärer Operator|Beschreibung|  
 |--------------------|-----------------|  
 |+ (Pluszeichen)|Der Wert des Elements wird dem Aggregatwert der gleichgeordneten Elemente hinzugefügt, die vor dem Element auftreten. Bei diesem Operator handelt es sich um den Standardoperator, wenn für ein Attribut keine unäre Operatorspalte definiert ist.|  
 |– (Minuszeichen)|Der Wert des Elements wird vom Aggregatwert der gleichgeordneten Elemente subtrahiert, die vor dem Element auftreten.|  
