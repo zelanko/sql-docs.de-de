@@ -2,19 +2,18 @@
 title: PDW-Status - Dienste Analytics Platform System | Microsoft-Dokumentation
 description: Parallel Data Warehouse (PDW)-Dienststatus für Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3db994b4869c1b017a079b404af3d95db1316dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960364"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Parallel Data Warehouse-Dienststatus für Analytics Platform System
 Die Parallel Data Warehouse **Dienststatus** Seite in das Microsoft Analytics Platform System Configuration-Manager zeigt den aktuellen Status aller SQL Server-PDW-Dienste und bietet die Möglichkeit, die PDW-Dienste beenden und starten. Dies ist die einzige unterstützte Methode zum Starten und beenden die PDW-Dienste. Beachten Sie, dass einzelne Komponenten oder Dienste unabhängig voneinander nicht gestartet werden können.  
@@ -27,7 +26,7 @@ Die Parallel Data Warehouse **Dienststatus** Seite in das Microsoft Analytics Pl
   
 Es ist nicht erforderlich, klicken Sie auf **übernehmen** beim Starten und beenden die Anwendung Dienste mit **starten Appliance** und **Gerät beenden**.  
   
-![DWConfig Appliance PDW Services](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
+![DWConfig-Anwendung-PDW-Dienste](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
   
 > [!NOTE]  
 > Beenden die PDW-Region beendet wird, wird damit auch den PDW-Agent (Sqldwagent) auf den Knoten. Der PDW-Agent erfordert der PDW-steuerknoten Überwachung der Integrität melden.  

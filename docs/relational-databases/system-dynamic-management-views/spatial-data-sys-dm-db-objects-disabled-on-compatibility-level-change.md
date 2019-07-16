@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
+title: dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 343acc1c284027dc6faf4eb08fc93e2cd528df05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937103"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Räumliche Daten - dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Führt die Indizes und die Einschränkungen auf, die in Folge der Änderung des Kompatibilitätsgrads in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deaktiviert werden. Indizes und Einschränkungen, die persistierte berechnete Spalten enthalten, deren Ausdrücke räumliche UDTs verwenden, werden nach einem Upgrade oder einer Änderung des Kompatibilitätsgrads deaktiviert. Bestimmen Sie die Auswirkungen einer Änderung des Kompatibilitätsgrads mithilfe dieser dynamischen Verwaltungsfunktion.  
@@ -47,13 +46,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = Einschränkungen<br /><br /> 7 = Indizes und Heaps|  
 |**class_desc**|**nvarchar(60)**|OBJECT oder COLUMN für Einschränkungen<br /><br /> INDEX für Indizes und Heaps|  
 |**major_id**|**int**|OBJECT ID der Einschränkungen<br /><br /> OBJECT ID der Tabelle, die Indizes und Heaps enthält|  
 |**minor_id**|**int**|NULL für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
-|**dependency**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
+|**Abhängigkeit**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Persistente berechnete Spalten, die systeminterne Funktionen verwenden, werden bei einer Änderung des Kompatibilitätsgrads deaktiviert. Darüber hinaus werden persistierte berechnete Spalten, die eine Geometry-Methode oder Geography-Methode verwenden, beim Upgrade einer Datenbank deaktiviert.  
@@ -65,7 +64,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Wenn die folgenden Funktionen im Ausdruck einer persistierten berechneten Spalte verwendet werden, bewirken sie, dass Indizes und Einschränkungen, die auf diese Spalten verweisen, bei einer Änderung des Kompatibilitätsgrads von 100 auf 110 oder höher deaktiviert werden:  
   
--   **Soundex**  
+-   **SOUNDEX**  
   
 -   **Geografie:: GeomFromGML**  
   

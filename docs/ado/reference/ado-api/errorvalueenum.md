@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f9efa743e6e5f9efe99e08001980ab87bf13247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932876"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Gibt den Typ des ADO-Laufzeitfehler.  
@@ -32,12 +31,12 @@ Gibt den Typ des ADO-Laufzeitfehler.
   
 -   Negative dezimale Decimal: die Übersetzung der vollständigen Fehlernummer.  
   
--   Hexadezimal: die hexadezimale Darstellung des vollständigen Fehlernummer. Der Windows-Funktionscode ist die vierte Ziffer. Ist der Einrichtungscode für ADO-Fehlernummern *ein*. Zum Beispiel: 0x800***A***0E7B.  
+-   Hexadezimal: die hexadezimale Darstellung des vollständigen Fehlernummer. Der Windows-Funktionscode ist die vierte Ziffer. Ist der Einrichtungscode für ADO-Fehlernummern *ein*. Zum Beispiel: 0 x 800***ein***0E7B.  
   
 > [!NOTE]
 >  OLE DB-Fehler können der ADO-Anwendung übergeben werden. Diese können in der Regel identifiziert werden, von einem Windows-Funktionscode von *4*. Z. B. 0 x 800***4***.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|Kann nicht geändert werden die **ActiveConnection** Eigenschaft eine **Recordset** Objekt mit einem **Befehl** Objekt als Quelle.|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|Server kann den Vorgang nicht abschließen.|  
@@ -62,7 +61,7 @@ Gibt den Typ des ADO-Laufzeitfehler.
 |**adErrInvalidParamInfo**|3708 -2146824580 0x800A0E7C|**Parameter** Objekt falsch definiert ist. Inkonsistente oder unvollständige Informationen wurden bereitgestellt.|  
 |**adErrInvalidTransaction**|3714 -2146824574 0x800A0E82|Koordinieren die Transaktion ist ungültig oder wurde nicht gestartet.|  
 |**adErrInvalidURL**|3729 -2146824559 0x800A0E91|URL enthält ungültige Zeichen. Stellen Sie sicher, dass die URL richtig eingegeben wurde.|  
-|**adErrItemNotFound**|3265 -2146825023 0x800A0CC1|Element kann nicht in der Auflistung gefunden werden, der der angeforderte Name oder Ordinalzahl entspricht.|  
+|**adErrItemNotFound**|3265-2146825023 0x800A0CC1|Element kann nicht in der Auflistung gefunden werden, der der angeforderte Name oder Ordinalzahl entspricht.|  
 |**adErrNoCurrentRecord**|3021 -2146825267 0x800A0BCD|Entweder **BOF** oder **EOF** ist "true" oder der aktuelle Datensatz wurde gelöscht. Der angeforderte Vorgang erfordert einen aktuellen Datensatz.|  
 |**adErrNotExecuting**|3715 -2146824573 0x800A0E83|Vorgang kann nicht ausgeführt werden, während der Ausführung nicht.|  
 |**adErrNotReentrant**|3710 -2146824578 0x800A0E7E|Vorgang kann nicht beim Verarbeiten des Ereignisses ausgeführt werden.|  

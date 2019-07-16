@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1581cb7ecc694dc9adcbb03d83cf73a6ba41dbed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e554a8669b6e6e95e234a5b939477a8bb2f7b8cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948864"
 ---
 # <a name="sqltransact-visual-foxpro-odbc-driver"></a>SQLTransact (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Kern-Ebene  
   

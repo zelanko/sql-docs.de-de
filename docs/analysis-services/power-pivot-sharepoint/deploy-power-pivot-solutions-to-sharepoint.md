@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544267"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208223"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Bereitstellen von Power Pivot-Lösungen in SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52544267"
   
  [Informationen zu den Power Pivot-Lösungen](#intro)  
   
-##  <a name="bkmk_classic"></a> Voraussetzung: Überprüfen, ob die Webanwendung den klassischen Authentifizierungsmodus verwendet  
+##  <a name="bkmk_classic"></a> Voraussetzung: Stellen Sie sicher, dass die Webanwendung den klassischen Authentifizierungsmodus verwendet  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint wird nur für Webanwendungen unterstützt, die den klassischen Authentifizierungsmodus in Windows verwenden. Führen Sie das folgende PowerShell-Cmdlet aus, um zu überprüfen, ob die Anwendung den klassischen Modus verwendet, die **SharePoint 2010-Verwaltungsshell**und ersetzt dabei **http://\<Standort auf oberster Ebene Name >** mit der Name der SharePoint-Website:  
   
 ```  
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Der Rückgabewert sollte **FALSE**sein. Wenn der Wert **TRUE**ist, kann über diese Webanwendung nicht auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten zugegriffen werden.  
   
-##  <a name="bkmk_farm"></a> Schritt 1: Bereitstellen der Farmlösung  
+##  <a name="bkmk_farm"></a>Schritt 1: Bereitstellen der Farmlösung  
  In diesem Abschnitt erfahren Sie, wie Sie Lösungen mithilfe der PowerShell bereitstellen können. Sie können aber auch das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool verwenden, um diese Aufgabe abzuschließen. Weitere Informationen finden Sie unter [Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 (PowerPivot-Konfigurationstool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Diese Aufgabe muss nur einmal ausgeführt werden, nachdem Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint installiert haben.  
@@ -68,7 +68,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> Schritt 2: Bereitstellen der PowerPivot-Webanwendungslösung in der Zentraladministration  
+##  <a name="deployCA"></a>Schritt 2: Bereitstellen der PowerPivot-Webanwendungslösung in der Zentraladministration  
  Nach dem Bereitstellen der Farmlösung müssen Sie die Webanwendungslösung in der Zentraladministration bereitstellen. Durch diesen Schritt wird das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard der Zentraladministration hinzugefügt.  
   
 1.  Öffnen Sie eine SharePoint 2010-Verwaltungsshell mithilfe der Option **Als Administrator ausführen** .  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Da Sie nun die Webanwendungslösung in der Zentraladministration bereitgestellt haben, können Sie mithilfe der Zentraladministration alle verbleibenden Konfigurationsschritte ausführen.  
   
-##  <a name="deployUI"></a> Schritt 3: Bereitstellen der PowerPivot-Webanwendungslösung auf anderen Webanwendungen  
+##  <a name="deployUI"></a>Schritt 3: Bereitstellen der PowerPivot-Webanwendungslösung auf anderen Webanwendungen  
  In der vorherigen Aufgabe haben Sie powerpivotwebapp.wsp in der Zentraladministration bereitgestellt. In diesem Abschnitt stellen Sie die Lösung „powerpivotwebapp.wsp“ in jeder vorhandenen Webanwendung bereit, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenzugriff unterstützt. Wenn Sie später weitere Webanwendungen hinzufügen, wiederholen Sie unbedingt diesen Schritt für die zusätzlichen Webanwendungen.  
   
 1.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Farmlösungen verwalten**.  
@@ -142,7 +142,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Die Webanwendungslösung wird anfänglich in der Zentraladministration bereitgestellt. Es folgen weitere Bereitstellungen für alle zusätzlichen Webanwendungen, die Anfragen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten unterstützen. Sie müssen das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool oder PowerShell-Cmdlets verwenden, um die Webanwendungslösung in der Zentraladministration bereitzustellen. Für alle anderen Webanwendungen können Sie die Webanwendungslösung manuell bereitstellen, und zwar mithilfe der Zentraladministration oder der PowerShell.  
   
-|Lösung|Description|  
+|Lösung|Beschreibung|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Der globalen Assembly wird Microsoft.AnalysisServices.SharePoint.Integration.dll hinzugefügt.<br /><br /> Der globalen Assembly wird Microsoft.AnalysisServices.ChannelTransport.dll hinzugefügt.<br /><br /> Installiert Funktionen sowie Ressourcendateien und registriert Inhaltstypen.<br /><br /> Fügt Bibliotheksvorlagen für den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog und Datenfeedbibliotheken hinzu.<br /><br /> Fügt Anwendungsseiten für die Dienstanwendungskonfiguration, das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard, die Datenaktualisierung und den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog hinzu.|  
 |powerpivotwebapp.wsp|Fügt dem Ordner für Webservererweiterungen auf dem Web-Front-End Microsoft.AnalysisServices.SharePoint.Integration.dll-Ressourcendateien hinzu.<br /><br /> Fügt dem Web-Front-End den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webdienst hinzu.<br /><br /> Fügt die Miniaturbildgenerierung für den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog hinzu.|  

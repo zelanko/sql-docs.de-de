@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 60cb539a22a53573d184afe55f612e20e39811eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f544afd1a82a2e42a7fae110f20dc51f865a69f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932074"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst, MoveLast, MoveNext und MovePrevious-Methode – Beispiel (VC++)
 Dieses Beispiel verwendet die [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) -Methoden verschieben den Zeiger für den Datensatz von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf den angegebenen Befehl. Die MoveAny-Funktion ist erforderlich, damit dieses Beispiel ausführen.  

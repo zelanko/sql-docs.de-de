@@ -64,7 +64,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 |||
 |-|-|-|
-|** _\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;

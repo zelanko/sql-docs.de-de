@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80bb86beedf54c29fbe67e2362a4163cb489c05a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962079"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Schnellstart: Verarbeiten von Eingaben und Ausgaben, die mithilfe von Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ Andere Arten von Eingaben, die als SQL-Variablen übergeben werden können: beis
 
 Die gespeicherte Prozedur gibt ein einzelnen Python [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Datenrahmen als Ausgabe, aber Sie können auch skalare und Modelle als Variablen ausgeben. Sie können z. B. die Ausgabe eines trainierten Modells als binäre Variable und übergeben, um eine T-SQL INSERT-Anweisung, um das Modell in einer Tabelle zu schreiben. Sie können auch Diagramme (im binären Format) oder skalare generieren (einzelne Werte, z. B. Datum und Uhrzeit, die verstrichene Zeit zum Trainieren des Modells und so weiter).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Einen vorherigen schnellstartanleitung [Python überprüfen, die in SQL Server vorhanden ist](quickstart-python-verify.md), enthält Informationen und links für das Einrichten der Python-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
 
