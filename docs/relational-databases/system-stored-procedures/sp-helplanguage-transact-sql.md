@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122512"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,17 +48,17 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|Sprachen-ID|  
-|**dateformat**|**nchar(3)**|Datumsformat.|  
-|**datefirst**|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag und so weiter, bis 7 für Sonntag.|  
+|**dateformat**|**NCHAR(3)**|Datumsformat.|  
+|**DATEFIRST**|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag usw., bis 7 für Sonntag.|  
 |**upgrade**|**int**|Version des letzten Upgrades von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für diese Sprache.|  
 |**name**|**sysname**|Name der Sprache.|  
 |**alias**|**sysname**|Alternativer Name der Sprache|  
-|**months**|**nvarchar(372)**|Monatsnamen|  
+|**Monate**|**nvarchar(372)**|Monatsnamen|  
 |**shortmonths**|**nvarchar(132)**|Kurznamen für die Monate|  
-|**days**|**nvarchar(217)**|Tagesnamen|  
+|**Tage**|**nvarchar(217)**|Tagesnamen|  
 |**lcid**|**int**|Windows-Gebietsschema-ID für die Sprache.|  
 |**msglangid**|**smallint**|ID der Meldungsgruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   

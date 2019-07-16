@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054928"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,15 +82,15 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**2**|Wiederholen (nur Schritte)|  
 |**3**|Canceled|  
 |**4**|In Bearbeitung befindlichen Nachrichten|  
-|**5**|Unknown|  
+|**5**|Unbekannt|  
   
 `[ @minimum_retries = ] minimum_retries` Die Mindestanzahl an, wie oft, die Wiederholen eines Auftrags ausführen soll. *Minimum_retries* ist **Int**, hat den Standardwert NULL.  
   
 `[ @oldest_first = ] oldest_first` Gibt an, ob die Ausgabe die ältesten Aufträge zuerst angezeigt. *Oldest_first* ist **Int**, hat den Standardwert **0**, der die neuesten Aufträge zuerst dargestellt. **1** die ältesten Aufträge zuerst präsentiert.  
   
-`[ @server = ] 'server'` Der Name des Servers, auf dem der Auftrag ausgeführt wurde. *Server* ist **nvarchar(30)**, hat den Standardwert NULL.  
+`[ @server = ] 'server'` Der Name des Servers, auf dem der Auftrag ausgeführt wurde. *Server* ist **nvarchar(30)** , hat den Standardwert NULL.  
   
-`[ @mode = ] 'mode'` Gibt, ob SQL Server alle Spalten im Resultset ausgibt (**vollständige**) oder eine Zusammenfassung der Spalten. *Modus* ist **vom Datentyp varchar(7)**, hat den Standardwert **Zusammenfassung**.  
+`[ @mode = ] 'mode'` Gibt, ob SQL Server alle Spalten im Resultset ausgibt (**vollständige**) oder eine Zusammenfassung der Spalten. *Modus* ist **vom Datentyp varchar(7)** , hat den Standardwert **Zusammenfassung**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -99,7 +98,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>Resultsets  
  Die tatsächliche Spaltenliste hängt vom Wert der *Modus*. Die umfassendste Sammlung von Spalten ist unten dargestellt und wird zurückgegeben, wenn *Modus* ist "FULL".  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Verlaufseintrags-ID|  
 |**job_id**|**uniqueidentifier**|ID des Auftrags.|  

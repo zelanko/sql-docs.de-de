@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f60ce03d303941855b0b1eaa242b03966db1e79f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946104"
 ---
 # <a name="xqueries-involving-hierarchy"></a>XQuery-Abfragen unter Einbeziehung von Hierarchien
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51670839"
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Abrufen von Arbeitsplatzstandorten mit dem zugehörigen ersten Fertigungsschritt aus Dokumenten mit Produktionsanweisungen  
  Für Produktmodell 7, die Abfrage erstellt XML mit der <`ManuInstr`>-Element mit **ProductModelID** und **ProductModelName** Attribute, und einen oder mehrere <`Location`> untergeordnete Elemente.  
   
- Jedes <`Location`>-Element verfügt über einen eigenen Satz von Attributen sowie ein untergeordnetes <`step`>-Element. Das untergeordnete <`step`>-Element stellt den ersten Fertigungsschritt am Arbeitsplatzstandort dar.  
+ Jedes <`Location`>-Element verfügt über einen eigenen Satz von Attributen sowie ein <`step`> untergeordnete Element. Diese <`step`> untergeordnete Element ist der erste Fertigungsschritt am arbeitsplatzstandort.  
   
 ```sql
 SELECT Instructions.query('  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
 -   Die **'sql:Column()'** wird verwendet, um einen relationalen Wert in der XML einzuschließen, das erstellt wird.  
   
--   Beim Erstellen des <`Location`>-Elements werden alle Attribute für den Arbeitsplatzstandort von $wc/@* abgerufen.  
+-   Beim Erstellen der <`Location`>-Element alle Arbeit Center Speicherort Attribute von $wc/@* abgerufen.  
   
 -   Die **string()** Funktion gibt den Zeichenfolgenwert von der <`step`> Element.  
   
@@ -85,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Suchen aller Telefonnummern in der AdditionalContactInfo-Spalte  
- Die folgende Abfrage ruft zusätzliche Telefonnummern für einen bestimmten Kundenkontakt ab, indem die gesamte Hierarchie nach dem <`telephoneNumber`>-Element durchsucht wird. Da das <`telephoneNumber`>-Element an einer beliebigen Stelle in der Hierarchie angezeigt werden kann, verwendet die Abfrage den descendant- und den self-Operator (//) in der Suche.  
+ Die folgende Abfrage Ruft zusätzliche Telefonnummern für einen bestimmten Kundenkontakt durch suchen die gesamte Hierarchie für die <`telephoneNumber`> Element. Da die <`telephoneNumber`>-Elements können an beliebiger Stelle in der Hierarchie, die Abfrage verwendet den descendant- und den Self-Operator (/ /) in der Suche.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -112,7 +111,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Um nur die Telefonnummern der obersten Ebene abzurufen, insbesondere die untergeordneten <`telephoneNumber`>-Elemente von <`AdditionalContactInfo`>, wird der FOR-Ausdruck in der Abfrage wie folgt geändert:  
+ Insbesondere abzurufenden nur Telefonnummern der obersten Ebene, die <`telephoneNumber`> untergeordnete Elemente des <`AdditionalContactInfo`>, wird nun der FOR-Ausdruck in der Abfrage  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`. installiert haben.  
   

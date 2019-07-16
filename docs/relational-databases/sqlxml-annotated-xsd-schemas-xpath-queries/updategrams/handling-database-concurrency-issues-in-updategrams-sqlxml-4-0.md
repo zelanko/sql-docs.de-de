@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee4f532954092bd7e969e666fe05dcbeb320b42c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cb7981be5bcb3885003e0fdd7adc367b28c9690c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086866"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Behandlungsdatenbankparallelität gibt in Updategrams (SQLXML 4.0) heraus
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ ms.locfileid: "56023040"
   
 -   Geben Sie die Timestamp-Spalte (falls vorhanden) in der  **\<vor >** Block.  
   
-     Anstatt alle Datensatzspalten im der  **\<vor**>-Block können nur Geben Sie die Timestamp-Spalte (falls die Tabelle vorhanden) sowie die Primärschlüsselspalte(n) im der  **\<vor >** Block. Die Datenbank aktualisiert nach jedem Update des Datensatzes die timestamp-Spalte auf einen eindeutigen Wert. In diesem Fall vergleicht das Updategram den Wert des Timestamps mit dem zugehörigen Wert in der Datenbank. Der in der Datenbank gespeicherte Timestampwert ist ein Binärwert. Aus diesem Grund muss die Timestamp-Spalte angegeben werden, im Schema als **dt:type="bin.hex"**, **dt:type="bin.base64"**, oder **SQL: datatype = "Timestamp"**. (Geben Sie entweder die **Xml** -Datentyp oder die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.)  
+     Anstatt alle Datensatzspalten im der  **\<vor**>-Block können nur Geben Sie die Timestamp-Spalte (falls die Tabelle vorhanden) sowie die Primärschlüsselspalte(n) im der  **\<vor >** Block. Die Datenbank aktualisiert nach jedem Update des Datensatzes die timestamp-Spalte auf einen eindeutigen Wert. In diesem Fall vergleicht das Updategram den Wert des Timestamps mit dem zugehörigen Wert in der Datenbank. Der in der Datenbank gespeicherte Timestampwert ist ein Binärwert. Aus diesem Grund muss die Timestamp-Spalte angegeben werden, im Schema als **dt:type="bin.hex"** , **dt:type="bin.base64"** , oder **SQL: datatype = "Timestamp"** . (Geben Sie entweder die **Xml** -Datentyp oder die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyp.)  
   
 #### <a name="to-test-the-updategram"></a>So testen Sie das Updategram  
   

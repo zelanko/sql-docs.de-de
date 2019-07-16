@@ -17,27 +17,26 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 39444e0eaf9a44f48fc86b5d7f4595d63d1e9823
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 594c984be10d592246696730dd393efdfc48e259
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029595"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Protokolliert Artikel vom Typ schema only für Momentaufnahme- und Transaktionsveröffentlichungen. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Die Artikel-ID.|  
 |**creation_script**|**nvarchar(255)**|Der Pfad und der Name eines Artikelschemaskripts, mit dem die Zieltabelle erstellt wird.|  
 |**description**|**nvarchar(255)**|Der Beschreibungseintrag für den Artikel.|  
 |**dest_object**|**sysname**|Der Name des Objekts in der Abonnementdatenbank, wenn der Artikel vom Typ schema only ist, wie z. B. eine gespeicherte Prozedur, eine Sicht oder eine UDF.|  
 |**name**|**sysname**|Der Name des Artikels vom Typ schema only in einer Veröffentlichung.|  
-|**Objekt-ID**|**int**|Der Objektbezeichner des Basisobjekts des Artikels. Dies kann der Objektbezeichner einer Prozedur, einer Sicht, einer indizierten Sicht oder einer UDF sein.|  
+|**objid**|**int**|Der Objektbezeichner des Basisobjekts des Artikels. Dies kann der Objektbezeichner einer Prozedur, einer Sicht, einer indizierten Sicht oder einer UDF sein.|  
 |**pubid**|**int**|Die ID für die Veröffentlichung.|  
 |**pre_creation_cmd**|**tinyint**|Gibt die vom System durchzuführenden Schritte an, wenn es beim Anwenden der Momentaufnahme für diesen Artikel ein vorhandenes Objekt mit demselben Namen beim Abonnenten erkennt:<br /><br /> **0** = nothing.<br /><br /> **1** = Zieltabelle löschen.<br /><br /> **2** = entfernt die Zieltabelle.<br /><br /> **3** = schneidet die Zieltabelle.|  
 |**status**|**int**|Das Bitmuster, das zum Anzeigen des Artikelstatus verwendet wird.|  

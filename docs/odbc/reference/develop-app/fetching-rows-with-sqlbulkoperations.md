@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a99592210ff315db026d60b8743d4a3bca13c969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60b6673c4a6d618e52c78b48fe7307c20c8628f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069843"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Abrufen von Zeilen mit SQLBulkOperations
 Daten können in ein Rowset mithilfe von Lesezeichen erneut abgerufen werden, durch einen Aufruf von **SQLBulkOperations.** Die Zeilen abgerufen werden, werden durch die Lesezeichen in einer Lesezeichenspalte gebundene identifiziert. Spalten mit einem Wert von SQL_COLUMN_IGNORE werden nicht abgerufen.  

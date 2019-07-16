@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 240bdf074fbe7fd28f5aafff5c1bbab7651d0c71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067474"
 ---
 # <a name="custom-applications"></a>Benutzerdefinierte Anwendungen
 Benutzerdefinierte Anwendungen werden in der Regel eine bestimmte Aufgabe ausführen, für einige DBMS. Z. B. eine Anwendung möglicherweise Abrufen von Daten aus einer einzelnen DBMS und einen Bericht generieren, oder es kann Daten zwischen mehreren DBMS-Systeme übertragen. Was diese Anwendungen gemeinsam haben ist, dass diese DBMS bekannt sind, bevor die Anwendung geschrieben wird und es unwahrscheinlich, dass während der Lebensdauer der Anwendung ändern.  

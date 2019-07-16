@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 25f802f5c9cb67646903179c9100c7014fe466df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f49968392dd813b48f43e5e63586fd0c6bec71d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118518"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR-Integration und Codezugriffssicherheit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,18 +29,18 @@ ms.locfileid: "47802278"
   
  Die Sicherheitsrichtlinie, die die Berechtigungen für Assemblys bestimmt, wird an drei verschiedenen Stellen definiert:  
   
--   Computerrichtlinie: Diese Richtlinie gilt für den gesamten verwalteten Code auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert ist.  
+-   Computerrichtlinie: Dies gilt die Richtlinie für den gesamten verwalteten Code auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert ist.  
   
--   Benutzerrichtlinie: Diese Richtlinie ist für verwalteten Code gültig, der von einem Prozess gehostet wird. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gilt die Benutzerrichtlinie für das Windows-Konto, unter dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst ausgeführt wird.  
+-   Benutzerrichtlinie: Dies ist die Richtlinie wirksam für verwalteten Code, die von einem Prozess gehostet wird. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gilt die Benutzerrichtlinie für das Windows-Konto, unter dem der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst ausgeführt wird.  
   
--   Hostrichtlinie: Diese Richtlinie wird vom Host der CLR (in diesem Fall [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) eingerichtet, die für den verwalteten Code gültig ist, der auf diesem Host ausgeführt wird.  
+-   Hostrichtlinie: Dies ist die Richtlinie einrichten, die vom Host der CLR (in diesem Fall [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]), die in Kraft für verwalteten Code, die auf diesem Host ausgeführt wird.  
   
  Der von der CLR unterstützte Codezugriffs-Sicherheitsmechanismus basiert auf der Annahme, dass die Laufzeit sowohl vollständig vertrauenswürdigen als auch teilweise vertrauenswürdigen Code hosten kann. Die durch die CLR-Codezugriffssicherheit geschützten Ressourcen sind in der Regel von verwalteten Anwendungsprogrammierschnittstellen umschlossen, die die entsprechende Berechtigung vor dem Zugriff auf die Ressource erforderlich ist. Die Anforderung der Berechtigung ist nur dann erfüllt, wenn alle aufrufenden Prozesse (auf Assemblyebene) in der Aufrufliste über die entsprechende Ressourcenberechtigung verfügen.  
   
  Die Menge der Codezugriffsberechtigungen, die verwaltetem Code gewährt werden, wenn dieser innerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, ist die Schnittmenge der Berechtigungen, die auf den drei oben genannten Richtlinienebenen erteilt werden. Auch wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einer in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] geladenen Assembly einen Berechtigungssatz gewährt, kann der schließlich für Benutzercode gewährte Berechtigungssatz durch die Richtlinien auf Computer- und Benutzerebenen weiter eingeschränkt sein.  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Berechtigungssätze auf SQL Server Host-Richtlinienebene  
- Die Menge der Codezugriffsberechtigungen, die Assemblys von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Hostrichtlinienebene gewährt wird, wird von dem Berechtigungssatz bestimmt, der beim Erstellen der Assembly angegeben wurde. Es gibt drei Berechtigungssätze: **sicher**, **EXTERNAL_ACCESS** und **UNSAFE** (angegeben mit der **PERMISSION_SET** Option [ Erstellen der ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
+ Die Menge der Codezugriffsberechtigungen, die Assemblys von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Hostrichtlinienebene gewährt wird, wird von dem Berechtigungssatz bestimmt, der beim Erstellen der Assembly angegeben wurde. Es gibt drei Berechtigungssätze: **Sichere**, **EXTERNAL_ACCESS** und **UNSAFE** (angegeben mit der **PERMISSION_SET** Option [CREATE ASSEMBLY &#40; Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit; diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der zwei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erstellt wird. Sie ist nicht für die Standardanwendungsdomäne bestimmt, die gültig ist, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Instanz der CLR erstellt.  
   
@@ -58,8 +57,8 @@ ms.locfileid: "47802278"
   
 |Berechtigung|Wert(e)/Beschreibung|  
 |----------------|-----------------------------|  
-|**SecurityPermission**|**Ausführung:** Berechtigung zum Ausführen von verwalteten Codes.|  
-|**SqlClientPermission**|**Kontextverbindung = True**, **kontextverbindung = Yes**: nur die kontextverbindung verwendet werden kann und die Verbindungszeichenfolge nur Sie den Wert geben kann "kontextverbindung = True" oder "kontextverbindung = Yes".<br /><br /> **AllowBlankPassword = False:** leere Kennwörter sind nicht zulässig.|  
+|**SecurityPermission**|**Ausführung:** Die Berechtigung zum Ausführen von verwalteten Codes.|  
+|**SqlClientPermission**|**Context Connection = True**, **kontextverbindung = Yes**: Nur die kontextverbindung verwendet werden kann und die Verbindungszeichenfolge nur Sie den Wert geben kann "Context Connection = True" oder "kontextverbindung = Yes".<br /><br /> **AllowBlankPassword = False:**  Leere Kennwörter sind nicht zulässig.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS-Assemblys über die gleichen Berechtigungen wie **sicher** Assemblys, mit der zusätzlichen Fähigkeit, auf externe Systemressourcen wie Dateien, Netzwerke, Webdienste, Umgebungsvariablen und die Registrierung zugreifen.  
@@ -68,20 +67,20 @@ ms.locfileid: "47802278"
   
 |Berechtigung|Wert(e)/Beschreibung|  
 |----------------|-----------------------------|  
-|**DistributedTransactionPermission**|**Unrestricted:** verteilte Transaktionen sind zulässig.|  
-|**DNSPermission**|**Unrestricted:** über die Berechtigung zum Anfordern von Informationen von DNS-Servern.|  
-|**EnvironmentPermission**|**Unrestricted:** vollständigen Zugriff auf System- und Benutzerumgebungsvariablen ist zulässig.|  
-|**EventLogPermission**|**Verwalten:** die folgenden Aktionen sind zulässig: Erstellen einer Ereignisquelle, lesen vorhandener Protokolle, Löschen von Ereignisquellen oder-Protokolle, reagieren auf Einträge, Löschen eines Ereignisprotokolls, Überwachen von Ereignissen und Zugreifen auf eine Auflistung sämtlicher Ereignisprotokolle.|  
-|**FileIOPermission**|**Unrestricted:** vollen Zugriff auf Dateien und Ordner zulässig ist.|  
-|**KeyContainerPermission**|**Unrestricted:** vollständigen Zugriff auf Schlüsselcontainer ist zulässig.|  
-|**NetworkInformationPermission**|**Zugriff:** Ping ist zulässig.|  
+|**DistributedTransactionPermission**|**Unrestricted:** Verteilte Transaktionen sind zulässig.|  
+|**DNSPermission**|**Unrestricted:** Die Berechtigung zum Anfordern von Informationen von DNS-Servern.|  
+|**EnvironmentPermission**|**Unrestricted:** Vollständiger Zugriff auf System-als auch Umgebungsvariablen ist zulässig.|  
+|**EventLogPermission**|**Verwalten:** Die folgenden Aktionen sind zulässig: Erstellen einer Ereignisquelle, lesen vorhandener Protokolle, Löschen von Ereignisquellen oder-Protokolle, reagieren auf Einträge, Löschen eines Ereignisprotokolls, Überwachen von Ereignissen und Zugreifen auf eine Auflistung sämtlicher Ereignisprotokolle.|  
+|**FileIOPermission**|**Unrestricted:** Vollständiger Zugriff auf Dateien und Ordner ist zulässig.|  
+|**KeyContainerPermission**|**Unrestricted:** Vollständiger Zugriff auf Schlüsselcontainer ist zulässig.|  
+|**NetworkInformationPermission**|**Zugriff:** Die pingausführung ist zulässig.|  
 |**RegistryPermission**|Lässt Leseberechtigungen für **HKEY_CLASSES_ROOT**, **HKEY_LOCAL_MACHINE**, **HKEY_CURRENT_USER**, **HKEY_CURRENT_CONFIG**, und  **HKEY_USERS.**|  
-|**SecurityPermission**|**-Assertion:** Fähigkeit zu bestätigen, dass alle Aufrufer dieses Codes über die erforderliche Berechtigung für den Vorgang verfügen.<br /><br /> **ControlPrincipal:** können Sie das principal-Objekt zu ändern.<br /><br /> **Ausführung:** Berechtigung zum Ausführen von verwalteten Codes.<br /><br /> **SerializationFormatter:** Möglichkeit zum Bereitstellen von Serialisierungsdiensten.|  
-|**SmtpPermission**|**Zugriff:** ausgehende Verbindungen mit dem SMTP-Host-Port 25 zugelassen werden.|  
-|**SocketPermission**|**Eine Verbindung herstellen:** ausgehende Verbindungen (alle Ports, alle Protokolle) auf einer Transportadresse werden zugelassen.|  
-|**SqlClientPermission**|**Unrestricted:** vollständigen Zugriff auf die Datenquelle ist zulässig.|  
-|**StorePermission**|**Unrestricted:** vollen Zugriff auf x. 509-Zertifikat wird der Speicher ist zulässig.|  
-|**WebPermission**|**Eine Verbindung herstellen:** ausgehende Verbindungen an Webressourcen werden zugelassen.|  
+|**SecurityPermission**|**-Assertion:** Die Fähigkeit zu bestätigen, dass alle Aufrufer dieses Codes über die erforderliche Berechtigung für den Vorgang verfügen.<br /><br /> **ControlPrincipal:** Fähigkeit zum Bearbeiten des Hauptobjekts.<br /><br /> **Ausführung:** Die Berechtigung zum Ausführen von verwalteten Codes.<br /><br /> **SerializationFormatter:** Möglichkeit zum Bereitstellen von Serialisierungsdiensten.|  
+|**SmtpPermission**|**Zugriff:** Ausgehende Verbindungen mit dem SMTP-Host-Port 25 sind zulässig.|  
+|**SocketPermission**|**Eine Verbindung herstellen:** Ausgehende Verbindungen (alle Ports, alle Protokolle) auf einer Transportadresse werden zugelassen.|  
+|**SqlClientPermission**|**Unrestricted:** Vollständiger Zugriff auf die Datenquelle ist zulässig.|  
+|**StorePermission**|**Unrestricted:** Vollzugriff auf das x. 509-Zertifikatspeicher ist zulässig.|  
+|**WebPermission**|**Eine Verbindung herstellen:** Ausgehende Verbindungen an Webressourcen werden zugelassen.|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE ermöglicht Assemblys den uneingeschränkten Zugriff auf Ressourcen innerhalb und außerhalb [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Code ausführen, die innerhalb einer **UNSAFE** Assembly kann auch nicht verwalteten Code aufrufen.  
@@ -108,10 +107,10 @@ ms.locfileid: "47802278"
 |-|-|-|-|  
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSICHERE**|  
 |**Berechtigungen für die Codezugriffssicherheit**|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt (einschließlich P/Invoke)|  
-|**Einschränkungen des Programmiermodells**|Benutzerkontensteuerung|Benutzerkontensteuerung|Keine Einschränkungen|  
-|**Überprüfbarkeit erforderlich**|Benutzerkontensteuerung|Benutzerkontensteuerung|nein|  
-|**Zugriffe auf lokale Daten**|Benutzerkontensteuerung|Benutzerkontensteuerung|Benutzerkontensteuerung|  
-|**Möglichkeit zum Aufrufen von nativem code**|nein|nein|Benutzerkontensteuerung|  
+|**Einschränkungen des Programmiermodells**|Ja|Ja|Keine Einschränkungen|  
+|**Überprüfbarkeit erforderlich**|Ja|Ja|Nein|  
+|**Zugriffe auf lokale Daten**|Ja|Ja|Ja|  
+|**Möglichkeit zum Aufrufen von nativem code**|Nein|Nein|Ja|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit der CLR-Integration](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

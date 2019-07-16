@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80a86ef188796883e76c6d5f6149a3e40afd341b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88f11adcab09dbe6964bfd67a944912fc185bccb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031119"
 ---
 # <a name="enabling-new-data-types-by-setting-extendedansisql"></a>Aktivieren neuer Datentypen durch Festlegen von ExtendedAnsiSQL
 Zwei neue Datentypen sind in Jet 4.0-Datenbanken verfügbar, wenn das Flag ExtendedAnsiSQL aktiviert ist: SQL_DECIMAL und SQL_NUMERIC. Die standardmäßige Genauigkeit und Dezimalstellenanzahl sind 18 0 (null) bzw. Daten, die über ODBC, die als SQL_DECIMAL oder SQL_NUMERIC typisiert ist zugegriffen werden Microsoft Jet Decimal anstatt Währung zugeordnet werden.  

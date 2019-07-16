@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f748e75f4e1579446b72b519356f2f649889fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078957"
 ---
 # <a name="was-a-result-set-created"></a>Wurde ein Resultset erstellt?
 In den meisten Fällen kennen Anwendungsprogrammierer an, ob die Anweisungen aus, wenn, die Ihre Anwendung ausgeführt wird, ein Resultset erstellt werden. Dies ist der Fall, wenn die Anwendung auf hartcodierte SQL-Anweisungen, die durch den Programmierer verwendet. Es ist normalerweise der Fall, wenn die Anwendung SQL-Anweisungen zur Laufzeit erstellt: Der Programmierer kann problemlos enthalten Code, der kennzeichnet, ob eine **wählen** Anweisung oder ein **einfügen** -Anweisung erstellt wird. In einigen Fällen kann nicht der Programmierer wissen, ob eine Anweisung ein Resultset erstellt. Dies gilt, wenn die Anwendung bietet eine Möglichkeit für den Benutzer zum eingeben und Ausführen einer SQL-Anweisung. Es ist auch "true", wenn die Anwendung eine Anweisung zur Laufzeit zum Ausführen einer Prozedur erstellt wird.  

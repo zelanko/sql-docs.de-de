@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 23d5177ace1079525ae880b36617904a164ad5d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 484460c56ae043561f8f19313e6f09743ba2caed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029082"
 ---
-# <a name="global-settings-dialogs--sybasetosql"></a>Global Settings (Dialogs)  (SybaseToSQL)
+# <a name="global-settings-dialogs--sybasetosql"></a>Globale Einstellungen (Dialogfelder) (SybaseToSQL)
 Mithilfe der Dialogfelder-Seite des der **globale Einstellungen** Dialogfeld zum Angeben der Standardaktion für Benutzer und die Einstellungen für die Warnung für SSMA.  
   
 Um die Einstellungen des Dialogfelds auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand der linken Seite, und wählen Sie dann **-Dialogfelder**.  

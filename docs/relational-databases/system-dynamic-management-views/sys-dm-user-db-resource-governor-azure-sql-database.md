@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: eebc22fa4f17680b843f195777d7cc5f4b2835ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090450"
 ---
-# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
+# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>Sys.dm_user_db_resource_governance (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Gibt Ressourcen-Governance-Einstellungen für Konfiguration und Kapazität für eine Azure SQL-Datenbank zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|ssNoversion|ID der Datenbank, eindeutig innerhalb einer Azure SQL-Datenbank-Server.|
 |**logical_database_guid**|UNIQUEIDENTIFIER|Logische Guid für die Benutzerdatenbank und bleibt während des Lebenszyklus einer Benutzerdatenbank.  Umbenennen oder Festlegen einer Datenbank auf einen anderen SLO ändert nicht die GUID. |
@@ -50,7 +49,7 @@ Gibt Ressourcen-Governance-Einstellungen für Konfiguration und Kapazität für 
 |**min_cores**|SMALLINT|Anzahl der CPUs, die von SQL verwendet.|
 |**max_dop**|SMALLINT|Maximalen Grad an Parallelität, die von Benutzer-Workloads verwendet.|
 |**min_memory**|ssNoversion|Mindestens Erforderlicher Arbeitsspeicher-Prozentsatz, die vom Benutzer-Workloads verwendet werden kann.|
-|**max_memory**|ssNoversion|Maximaler Arbeitsspeicher-Prozentsatz, die vom Benutzer-Workloads verwendet werden kann.|
+|**MAX_MEMORY**|ssNoversion|Maximaler Arbeitsspeicher-Prozentsatz, die vom Benutzer-Workloads verwendet werden kann.|
 |**max_sessions**|ssNoversion|Maximale Sitzungen für Benutzer die Gruppe.|
 |**max_memory_grant**|ssNoversion|Maximale arbeitsspeicherzuweisung für jede Abfrage in benutzerworkload, in Prozent.|
 |**max_db_memory**|ssNoversion|Max Buffer Pool Arbeitsspeicher Cap für Benutzer DB-Workloads|

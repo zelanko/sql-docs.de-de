@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8bf2f1b58a40118d64673a7464a242e6821e4c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 706677b71d1243baac0ca576bb3087d50abb6796
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63050168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098298"
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Kern-Ebene  
   

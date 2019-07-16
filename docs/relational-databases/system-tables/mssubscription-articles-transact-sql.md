@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36d6c5db3f675c570237a436557bbe6827af09e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139776"
 ---
 # <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSsubscription_articles** Tabelle enthält Informationen zu den Artikeln in einem Abonnement in der Warteschlange. Diese Tabelle wird nur für die folgenden Replikationstypen aufgefüllt: Verzögertes Update über eine Warteschlange und sofortiges Update mit verzögertem Update über eine Warteschlange als Failover.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|Die ID der Momentaufnahme, die diesen Artikel bedient.|  
 |**artid**|**int**|Die Artikel-ID aus der **Sysarticles** Tabelle.|  

@@ -21,28 +21,27 @@ helpviewer_keywords:
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097821"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen über alle Schritte, die eine bestimmte Anforderung von PolyBase oder Abfrage bilden. Sie enthält eine Zeile pro abfrageschritt.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|Execution_id und Step_index stellen Sie den Schlüssel für diese Sicht. Eindeutige numerische Id der Anforderung zugeordnet ist.|Finden Sie unter-ID in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|Die Position dieses Schritts in der Reihenfolge der Schritte, aus denen die Anforderung besteht.|0, um (n-1) für eine Anforderung mit n Schritten.|  
 |operation_type|**nvarchar(128)**|Der Typ des Vorgangs durch diesen Schritt dargestellt.|'MoveOperation', "OnOperation", "RandomIDOperation", "RemoteOperation", "ReturnOperation", "ShuffleMoveOperation", "TempTablePropertiesOperation", "DropDiagnosticsNotifyOperation", "HadoopShuffleOperation", "HadoopBroadCastOperation", "HadoopRoundRobinOperation"|  
 |distribution_type|**nvarchar(32)**|Gibt an, in der Schritt ausgeführt wird.|"AllComputeNodes","AllDistributions,"ComputeNode", 'Distribution',"AllNodes","SubsetNodes","SubsetDistributions,"Unspecified".|  
 |location_type|**nvarchar(32)**|Gibt an, in der Schritt ausgeführt wird.|"Compute", "Head" oder "DMS". Alle Schritte zum Verschieben von Daten anzeigen "DMS".|  
-|status|**nvarchar(32)**|Status dieses Schritts|"Ausstehend" "abgebrochen"Running","Abgeschlossen","Fehlgeschlagen", 'UndoFailed', 'PendingCancel',',"Rückgängig gemacht werden","Abgebrochen"|  
+|status|**nvarchar(32)**|Status dieses Schritts|'Pending', 'Running', 'Complete', 'Failed', 'UndoFailed', 'PendingCancel', 'Cancelled', 'Undone', 'Aborted'|  
 |error_id|**nvarchar(36)**|Eindeutige Id des Fehlers mit diesem Schritt verknüpft ist, falls vorhanden|Finden Sie die Id des [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), NULL, wenn kein Fehler aufgetreten ist.|  
 |start_time|**datetime**|Zeitpunkt, an dem der Schritt die Ausführung gestartet|Kleiner oder gleich der aktuellen Zeit und größer oder gleich End_compile_time der Abfrage zu der dieser Schritt gehört.|  
 |end_time|**datetime**|Zeitpunkt, an dem dieser Schritt ausgeführt wurden, wurde abgebrochen oder fehlerhaft.|Kleiner oder gleich der aktuellen Zeit und größer oder gleich Start_time, für die Schritte, die derzeit in der Ausführung auf NULL festgelegt oder in die Warteschlange eingereiht.|  

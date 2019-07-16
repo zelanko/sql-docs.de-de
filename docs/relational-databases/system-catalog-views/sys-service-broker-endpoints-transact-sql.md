@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f93ac0b4a11e10d3db952fd850f4c83668a97d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33d94bf5a709c2581c6ee99a1e019f4eebcabe0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132956"
 ---
 # <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Diese Katalogsicht enthält eine Zeile für den Service Broker-Endpunkt. Für jede Zeile in dieser Ansicht ist eine entsprechende Zeile mit dem gleichen **Endpoint_id** in die **Sys. tcp_endpoints** an, die die TCP-Konfigurationsmetadaten enthält. TCP ist das einzige für Service Broker zulässige Protokoll.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**\<geerbte Spalten >**|**--**|Erbt Spalten von [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_message_forwarding_enabled**|**bit**|Gibt an, ob die Nachrichtenweiterleitung vom Endpunkt unterstützt wird. Dies wird anfänglich auf festgelegt **0** (deaktiviert). Lässt keine NULL-Werte zu.|  
@@ -40,8 +39,8 @@ ms.locfileid: "62855272"
 |**connection_auth**|**tinyint**|Der Typ von Verbindungsauthentifizierung, der für Verbindungen mit diesem Endpunkt erforderlich ist. Folgende Werte sind möglich:<br /><br /> **1** -NTLM<br /><br /> **2** – KERBEROS<br /><br /> **3** -AUSHANDLUNG<br /><br /> **4** -ZERTIFIKAT<br /><br /> **5** -NTLM, ZERTIFIKAT<br /><br /> **6** -KERBEROS, ZERTIFIKAT<br /><br /> **7** -AUSHANDELN, ZERTIFIKAT<br /><br /> **8** -ZERTIFIKAT, NTLM<br /><br /> **9** -ZERTIFIKAT, KERBEROS<br /><br /> **10** -ZERTIFIKAT, AUSHANDELN<br /><br /> Lässt keine NULL-Werte zu.|  
 |**connection_auth_desc**|**nvarchar(60)**|Die Beschreibung des Types von Verbindungsauthentifizierung, der für Verbindungen mit diesem Endpunkt erforderlich ist. Folgende Werte sind möglich:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> Lässt NULL-Werte zu.|  
 |**certificate_id**|**int**|Gegebenenfalls ID des für die Authentifizierung verwendeten Zertifikats.<br /><br /> 0 = Windows-Authentifizierung wird verwendet.|  
-|**encryption_algorithm**|**tinyint**|Verschlüsselungsalgorithmus. Im folgenden sind die möglichen Werte mit ihren Beschreibungen und entsprechende DDL-Optionen.<br /><br /> **0** : NONE. Entsprechende DDL-Option: Deaktiviert.<br /><br /> **1** :  RC4. Entsprechende DDL-Option: {erforderlich &#124; erforderlichen Algorithmus RC4}.<br /><br /> **2** : AES. Entsprechende DDL-Option: Required Algorithm AES.<br /><br /> **3** : NONE, RC4. Entsprechende DDL-Option: {unterstützte &#124; Verschlüsselungsalgorithmus RC4 unterstützt}.<br /><br /> **4** : KEINER, AES. Entsprechende DDL-Option: Unterstützt AES-Algorithmus.<br /><br /> **5** : RC4, AES. Entsprechende DDL-Option: Erforderliche Verschlüsselungsalgorithmus RC4 AES.<br /><br /> **6** : AES, RC4. Entsprechende DDL-Option: Required Algorithm AES RC4.<br /><br /> **7** : KEINER, RC4, AES. Entsprechende DDL-Option: Unterstützt Verschlüsselungsalgorithmus RC4 AES.<br /><br /> **8** : NONE, AES, RC4. Entsprechende DDL-Option: Verschlüsselungsalgorithmus AES RC4 wird unterstützt.<br /><br /> Lässt keine NULL-Werte zu.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Beschreibung der Encryption-Algorithmus. Die möglichen Werte und die entsprechenden DDL-Optionen sind unten aufgeführt:<br /><br /> NICHTS: Disabled<br /><br /> RC4: {erforderlich &#124; Verschlüsselungsalgorithmus RC4 erforderlich}<br /><br /> AES: Required Algorithm AES<br /><br /> KEINER, RC4: {unterstützt &#124; Verschlüsselungsalgorithmus RC4 unterstützt}<br /><br /> KEINER, AES: Unterstützter Algorithmus AES<br /><br /> RC4, AES: Erforderliche Verschlüsselungsalgorithmus RC4 AES<br /><br /> AES, RC4 : Required Algorithm AES RC4<br /><br /> KEINER, RC4, AES: Verschlüsselungsalgorithmus RC4 unterstützt AES<br /><br /> NONE, AES, RC4 : Unterstützte Verschlüsselungsalgorithmus AES RC4<br /><br /> Lässt NULL-Werte zu.|  
+|**encryption_algorithm**|**tinyint**|Verschlüsselungsalgorithmus. Im folgenden sind die möglichen Werte mit ihren Beschreibungen und entsprechende DDL-Optionen.<br /><br /> **0** : NONE. Entsprechende DDL-Option: Deaktiviert.<br /><br /> **1** :  RC4. Entsprechende DDL-Option: {erforderlich &#124; erforderlichen Algorithmus RC4}.<br /><br /> **2** : AES. Entsprechende DDL-Option: Required Algorithm AES.<br /><br /> **3** : KEINER, RC4. Entsprechende DDL-Option: {unterstützte &#124; Verschlüsselungsalgorithmus RC4 unterstützt}.<br /><br /> **4** : KEINER, AES. Entsprechende DDL-Option: Unterstützt AES-Algorithmus.<br /><br /> **5** : RC4, AES. Entsprechende DDL-Option: Erforderliche Verschlüsselungsalgorithmus RC4 AES.<br /><br /> **6** : AES, RC4. Entsprechende DDL-Option: Required Algorithm AES RC4.<br /><br /> **7** : KEINER, RC4, AES. Entsprechende DDL-Option: Unterstützt Verschlüsselungsalgorithmus RC4 AES.<br /><br /> **8** : KEINER, AES, RC4. Entsprechende DDL-Option: Verschlüsselungsalgorithmus AES RC4 wird unterstützt.<br /><br /> Lässt keine NULL-Werte zu.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Beschreibung der Encryption-Algorithmus. Die möglichen Werte und die entsprechenden DDL-Optionen sind unten aufgeführt:<br /><br /> NICHTS: Disabled<br /><br /> RC4: {erforderlich &#124; Verschlüsselungsalgorithmus RC4 erforderlich}<br /><br /> AES: Required Algorithm AES<br /><br /> KEINER, RC4: {unterstützt &#124; Verschlüsselungsalgorithmus RC4 unterstützt}<br /><br /> KEINER, AES: Unterstützter Algorithmus AES<br /><br /> RC4, AES: Erforderliche Verschlüsselungsalgorithmus RC4 AES<br /><br /> AES, RC4 : Required Algorithm AES RC4<br /><br /> KEINER, RC4, AES: Verschlüsselungsalgorithmus RC4 unterstützt AES<br /><br /> KEINER, AES, RC4: Unterstützte Verschlüsselungsalgorithmus AES RC4<br /><br /> Lässt NULL-Werte zu.|  
   
 ## <a name="remarks"></a>Hinweise  
   

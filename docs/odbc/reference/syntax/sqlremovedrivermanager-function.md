@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3413cf3c0e316e25ad52cc35ba348cab1694ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cd31a45ed891a8dc95f4f23981d4b626a6095b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024537"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager-Funktion
 **Übereinstimmung mit Standards**  
@@ -52,7 +51,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLRemoveDriverManager** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|Komponente wurde in der Registrierung nicht gefunden.|Der Installer konnte nicht die Informationen des Treiber-Manager entfernt, da sie in der Registrierung nicht vorhanden noch oder nicht in der Registrierung gefunden werden konnte.|  
@@ -84,10 +83,10 @@ BOOL SQLRemoveDriverManager(
 |ODBC32DLL|ODBCCP32.DLL|  
 |ODBCCR32.DLL|ODBC16GT.DLL|  
 |ODBCCU32.DLL|ODBC32GT.DLL|  
-|ODBCINT.DLL|DS16GT.DLL|  
-|ODBCTRAC.DLL|DS32GT.DLL|  
+|ODBCINT. DLL|DS16GT.DLL|  
+|ODBCTRAC. DLL|DS32GT.DLL|  
 |MSVCRT40.DLL|ODBCAD32.EXE|  
-|ODBCCP32.CPL||  
+|ODBCCP32. CPL||  
   
  **SQLRemoveDriverManager** wird auch als Teil eines Upgradevorgangs bezeichnet. Wenn eine Anwendung erkennt, dass sie ein Upgrade durchführen und den Treiber wurde bereits installierte, sollte der Treiber entfernt und anschließend neu installiert werden.  
   

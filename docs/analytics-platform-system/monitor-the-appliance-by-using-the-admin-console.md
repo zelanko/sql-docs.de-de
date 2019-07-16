@@ -2,28 +2,27 @@
 title: Monitor mit Admin Console - Analytics Platform System | Microsoft-Dokumentation
 description: Für Analytics Platform System ist die Verwaltungskonsole für eine Anwendung, die die Appliance Zustand, Integrität und Leistung Informationen angezeigt. Herstellen einer Verbindung auf die Verwaltungskonsole über einen Internetbrowser.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960489"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Überwachen der Appliance mit der Admin Console - Analytics Platform System
 Die Verwaltungskonsole ist eine SQL Server-PDW-Webanwendung, die die Appliance Zustand, Integrität und Leistung Informationen angezeigt. Herstellen einer Verbindung auf die Verwaltungskonsole über Internet Explorer.  
   
 ## <a name="About"></a>Informationen zur Verwaltungskonsole  
-![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Anwendungskonsole, Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Appliance**  
-Home  
+Privat  
 Bietet eine kurze Übersicht über den Anwendungszustand.  
   
 Integrität  
@@ -35,7 +34,7 @@ Systemmonitor
 Zeigt Leistungsdiagramme für die Überwachung an.  
   
 **Parallel Data Warehouse**  
-Home  
+Privat  
 Bietet eine kurze Übersicht über die PDW-Zustand.  
   
 Sitzungen  
@@ -44,7 +43,7 @@ Zeigt aktive Sitzungen von PDW-Benutzer. Dies kann helfen, für die Überwachung
 Abfragen  
 Zeigt eine Liste der ausgeführten Abfragen und kürzlich abgeschlossenen Abfragen. Verwandte Fehler werden angezeigt, sofern vorhanden. Außerdem bietet die Möglichkeit zum Anzeigen von Details der Ausführungsinformationen für die Abfrage Ausführung planen und Knoten aus.  
   
-Loads  
+Lädt  
 Zeigt geladen werden Plänen, die den aktuellen Zustand der PDW-Ladevorgänge sowie verknüpfte Fehler, falls vorhanden.  
   
 Sicherung und Wiederherstellung  

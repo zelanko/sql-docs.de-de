@@ -17,32 +17,31 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084770"
 ---
-# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
+# <a name="conflictltschemagtlttablegt-transact-sql"></a>Conflict_&lt;Schema&gt;_&lt;Tabelle&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die Conflict_\<Schema > _\<Table >-Tabelle enthält Informationen über in Konflikt stehende Zeilen in der Peer-zu-Peer-Replikation. Eine Konflikttabelle besteht für jede replizierte Tabelle in einer Veröffentlichung, wobei der Name der Konflikttabelle mit dem Schema- und Artikelnamen angefügt wird. Diese artikelspezifischen Konflikttabellen sind in jeder Veröffentlichungsdatenbank vorhanden.  
   
  Bei der Peer-zu-Peer-Replikation schlägt der Verteilungs-Agent standardmäßig fehl, wenn er einen Konflikt erkennt. Im Fehlerprotokoll wird ein Konfliktfehler protokolliert, jedoch werden in der Konflikttabelle keine Konfliktdaten erfasst; daher können sie nicht angezeigt werden. Wenn der Verteilungs-Agent fortfahren kann, wird der Konflikt lokal auf jedem Knoten protokolliert, auf dem er erkannt wurde. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |__$originator_id|**int**|ID des Knotens, aus dem die konfliktverursachende Änderung stammt. Führen Sie eine Liste von IDs, [Sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md).|  
 |__$origin_datasource|**int**|Knoten, aus dem die konfliktverursachende Änderung stammt.|  
-|__$tranid|**nvarchar (40)**|Protokollsequenznummer (LSN) der den Konflikt verursachenden Änderung bei der Anwendung auf __$origin_datasource.|  
+|__$tranid|**Nvarchar (40)**|Protokollsequenznummer (LSN) der den Konflikt verursachenden Änderung bei der Anwendung auf __$origin_datasource.|  
 |__$conflict_type|**int**|Typ des Konflikts. Die folgenden Werte sind möglich:<br /><br /> 1: Ein Update ist fehlgeschlagen, da die lokale Zeile durch eine andere aktualisieren oder es geändert wurde, gelöscht und dann erneut eingefügt wurde.<br /><br /> 2: Ein Update ist fehlgeschlagen, da die lokale Zeile bereits gelöscht wurde.<br /><br /> 3: Ein Löschvorgang ist fehlgeschlagen, da die lokale Zeile durch eine andere aktualisieren oder es geändert wurde, gelöscht und dann erneut eingefügt wurde.<br /><br /> 4: Ein Löschvorgang ist fehlgeschlagen, da die lokale Zeile bereits gelöscht wurde.<br /><br /> 5: Ein Einfügevorgang ist fehlgeschlagen, da die lokale Zeile bereits eingefügt wurde oder eingefügt und anschließend aktualisiert.|  
 |__$is_winner|**bit**|Gibt an, ob die Zeile in dieser Tabelle der Konfliktgewinner war. Das bedeutet, dass sie auf den lokalen Knoten angewendet wurde.|  
 |__$pre_version|**Varbinary (32)**|Version der Datenbank, aus der die konfliktverursachende Änderung stammt.|  
 |__$reason_code|**int**|Auflösungscode für den Konflikt. Kann einer der folgenden Werte sein:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Weitere Informationen finden Sie unter **__ $Reason_text**.|  
-|__$reason_text|**nvarchar (720)**|Auflösung für den Konflikt. Kann einer der folgenden Werte sein:<br /><br /> Aufgelöst (1)<br /><br /> Nicht aufgelöst (2)<br /><br /> Unbekannt (0)|  
-|__$update_bitmap|**varbinary(** *n* **)** . Größe variiert je nach Inhalt.|Bitmap, die angibt, welche Spalten im Fall eines UPDATE/UPDATE-Konflikts aktualisiert wurden.|  
+|__$reason_text|**Nvarchar (720)**|Auflösung für den Konflikt. Kann einer der folgenden Werte sein:<br /><br /> Aufgelöst (1)<br /><br /> Nicht aufgelöst (2)<br /><br /> Unbekannt (0)|  
+|__$update_bitmap|**Varbinary (** *n* **)** . Größe variiert je nach Inhalt.|Bitmap, die angibt, welche Spalten im Fall eines UPDATE/UPDATE-Konflikts aktualisiert wurden.|  
 |__$inserted_date|**datetime**|Datum und Uhrzeit, zu der die Konfliktzeile in diese Tabelle eingefügt wurde.|  
 |__$row_id|**timestamp**|Zeilenversion, die mit der Zeile verknüpft ist, die den Konflikt verursacht hat.|  
 |__$change_id|**Binärdatei (8)**|Für eine lokale Zeile entspricht dieser Wert der __$row_id der eingehenden Zeile, die in Konflikt mit der lokalen Zeile steht. Dieser Wert ist NULL für eine eingehende Zeile.|  

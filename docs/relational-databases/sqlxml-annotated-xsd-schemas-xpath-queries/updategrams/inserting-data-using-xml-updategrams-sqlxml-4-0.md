@@ -33,14 +33,13 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad4e43d04c16443323358f0b84e6f26a9f9ab6bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086838"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Einfügen von Daten mit XML-Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -238,7 +237,7 @@ ms.locfileid: "56019011"
   
  Die UnitPrice-Spalte in der Order Details-Tabelle weist die **Geld** Typ. Anwenden die geeigneten typkonvertierung (aus einer **Zeichenfolge** Geben Sie auf eine **Geld** Typ), muss das Dollarzeichen ($) als Teil des Werts hinzugefügt werden. Wenn das Updategram kein Zuordnungsschema, das erste Zeichen angegeben ist die **Zeichenfolge** Wert ausgewertet wird. Wenn das erste Zeichen ein Dollarzeichen ($) ist, wird die entsprechende Konvertierung angewendet.  
   
- Wenn das Updategram ein Zuordnungsschema angegeben ist, die Spalte entsprechend entweder als markiert **dt:type="fixed.14.4"** oder **SQL: datatype = "Money"**, das Dollarzeichen ($) ist nicht erforderlich, und die Konvertierung erfolgt durch die Zuordnung. Dies ist die empfohlene Methode, um sicherzustellen, dass die richtige Typkonvertierung stattfindet.  
+ Wenn das Updategram ein Zuordnungsschema angegeben ist, die Spalte entsprechend entweder als markiert **dt:type="fixed.14.4"** oder **SQL: datatype = "Money"** , das Dollarzeichen ($) ist nicht erforderlich, und die Konvertierung erfolgt durch die Zuordnung. Dies ist die empfohlene Methode, um sicherzustellen, dass die richtige Typkonvertierung stattfindet.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
   

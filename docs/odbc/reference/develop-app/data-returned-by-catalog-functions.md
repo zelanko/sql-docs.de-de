@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14499071bd180a7ea709fda3eb26aeae46f229c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077026"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Von Katalogfunktionen zurückgegebene Daten
 Jede Katalogfunktion gibt die Daten als Resultset zurück. Dieses Resultset unterscheidet sich nicht von anderen Resultsets. Es wird in der Regel generiert, durch eine vordefinierte, parametrisiert **wählen** -Anweisung, die in der Treiber hartcodiert oder in einer Prozedur in der Datenquelle gespeichert ist. Weitere Informationen zum Abrufen von Daten aus einem Resultset zu erhalten, finden Sie unter [wurde ein Ergebnis erstellt festlegen?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

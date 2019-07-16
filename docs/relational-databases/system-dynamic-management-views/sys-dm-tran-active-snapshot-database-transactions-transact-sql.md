@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a020dc8b695bbebaef4bc5cc60c956b5a9e4e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 9c9acae0a0d3f0b7c89296f795c8fd34929cf72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090652"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +58,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|Eindeutige, der Transaktion zugewiesene ID. Die Transaktions-ID wird in erster Linie zum Identifizieren der Transaktion in Sperrvorgängen verwendet.|  
 |**transaction_sequence_num**|**bigint**|Transaktionssequenznummer. Hierbei handelt es sich um eine eindeutige, der Transaktion beim Start zugewiesene Sequenznummer. Transaktionen, die keine Versionsdatensätze generieren und keine Momentaufnahmescans verwenden, erhalten keine Transaktionssequenznummer.|  
@@ -75,7 +74,7 @@ sys.dm_tran_active_snapshot_database_transactions
 ## <a name="permissions"></a>Berechtigungen
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
 
 ## <a name="remarks"></a>Hinweise  
  **sys.dm_tran_active_snapshot_database_transactions** reports transactions that are assigned a transaction sequence number (XSN). Die XSN wird zugewiesen, wenn die Transaktion zum ersten Mal auf den Versionsspeicher zugreift. In den folgenden Beispielen wird gezeigt, wann in einer Datenbank, die für die Momentaufnahmeisolation oder die READ COMMITTED-Isolation aktiviert ist, die die Zeilenversionsverwaltung verwendet, einer Transaktion eine XSN zugewiesen wird:  
@@ -148,11 +147,11 @@ elapsed_time_seconds
   
 -   XSN-57: Da diese Transaktion nicht unter der momentaufnahmeisolation ausgeführt wird die `is_snapshot` Wert und `first_snapshot_sequence_num` sind `0`. `transaction_sequence_num` zeigt an, dass der Transaktion eine Transaktionsnummer zugewiesen wurde, da die Datenbankoption ALLOW_SNAPSHOT_ISOLATION und/oder die Datenbankoption READ_COMMITTED_SNAPSHOT aktiviert sind (ON).  
   
--   XSN-58: Diese Transaktion wird nicht unter der Momentaufnahmeisolation ausgeführt. Es gelten die gleichen Informationen wie für XSN-57.  
+-   XSN-58: Diese Transaktion nicht unter der momentaufnahmeisolation ausgeführt wird, und gelten die gleichen Informationen wie für XSN-57.  
   
--   XSN-59: Dies ist die erste aktive Transaktion, die unter der Momentaufnahmeisolation ausgeführt wird. Diese Transaktion liest Daten, für die vor XSN-57 ein Commit ausgeführt wird, wie dies durch `first_snapshot_sequence_num` angezeigt wird. Die Ausgabe für diese Transaktion zeigt außerdem an, dass die maximale Versionskette, die für eine Zeile durchsucht wird, `1` beträgt und dass für jede Zeile, auf die zugegriffen wird, durchschnittlich `1` Version durchsucht wurde. Dies bedeutet, dass die Transaktionen XSN-57, XSN-58 und XSN-60 keine Zeilen geändert und kein Commit ausgeführt haben.  
+-   XSN-59: Dies ist die erste aktive Transaktion, die unter der momentaufnahmeisolation ausgeführt wird. Diese Transaktion liest Daten, für die vor XSN-57 ein Commit ausgeführt wird, wie dies durch `first_snapshot_sequence_num` angezeigt wird. Die Ausgabe für diese Transaktion zeigt außerdem an, dass die maximale Versionskette, die für eine Zeile durchsucht wird, `1` beträgt und dass für jede Zeile, auf die zugegriffen wird, durchschnittlich `1` Version durchsucht wurde. Dies bedeutet, dass die Transaktionen XSN-57, XSN-58 und XSN-60 keine Zeilen geändert und kein Commit ausgeführt haben.  
   
--   XSN-60: Dies ist die zweite Transaktion, die unter der Momentaufnahmeisolation ausgeführt wird. Die Ausgabe zeigt die gleichen Informationen an wie für XSN-59.  
+-   XSN-60: Dies ist die zweite Transaktion, die unter momentaufnahmeisolation ausgeführt wird. Die Ausgabe zeigt die gleichen Informationen an wie für XSN-59.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

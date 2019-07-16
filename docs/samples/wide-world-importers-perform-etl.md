@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067624"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL-workflow
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ Die wichtigsten Verarbeitung beginnt mit dem Auffüllen der Tabelle Date-Dimensi
 
 Als Nächstes lädt eine Reihe von Datenflusstasks jeder Dimension. Dann laden sie jede Faktentabelle aus.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - SQLServer 2016 (oder höher) mit den Datenbanken "wideworldimporters" und "wideworldimportersdw" (in der gleichen oder in verschiedenen Instanzen von SQL Server)
 - SQL Server Management Studio
@@ -49,13 +48,13 @@ Die neueste Version des Beispiels, finden Sie unter [Wide-Welt-Importer-Release]
 
 Der Quellcode zum Neuerstellen der-Beispieldatenbank, finden Sie unter [Wide-Welt-Importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl).
 
-## <a name="install"></a>Install
+## <a name="install"></a>Installieren
 
 1. Stellen Sie das Integration Services-Paket:
    1. Öffnen Sie im Windows Explorer die *tägliche ETL.ispac* Paket. Dadurch wird die SQL Server Integration Services-Bereitstellungs-Assistent gestartet.
    2. Klicken Sie unter **Quelle auswählen**, befolgen Sie die Standardwerte für die Bereitstellung von Projekten, mit dem Pfad, der auf die *tägliche ETL.ispac* Paket.
    3. Klicken Sie unter **Ziel auswählen**, geben Sie den Namen des Servers, der den Integration Services-Katalog hostet.
-   4. Wählen Sie einen Pfad unter dem Integration Services-Katalog, z. B. in einem neuen Ordner mit dem Namen *"wideworldimporters"*.
+   4. Wählen Sie einen Pfad unter dem Integration Services-Katalog, z. B. in einem neuen Ordner mit dem Namen *"wideworldimporters"* .
    5. Wählen Sie **bereitstellen** um den Assistenten abzuschließen.
 
 2. Erstellen eines SQL Server-Agent-Auftrags für ETL-Prozess:

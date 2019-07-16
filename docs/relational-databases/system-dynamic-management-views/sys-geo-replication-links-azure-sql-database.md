@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cd552d357284ce6fefd85df43baa38ad52ebb310
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 6e768f447cd53321861eae91bbe40e2e34ad12f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043160"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL-Datenbank)
 
@@ -44,7 +43,7 @@ ms.locfileid: "67716635"
 |Rolle (role)|**tinyint**|Rolle "georeplikation", eine der:<br /><br /> 0 = Primary. Die Database_id bezieht sich auf der primären Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = der sekundären Datenbank.  Die Database_id bezieht sich auf der primären Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Sekundären Typs, eines der:<br /><br /> 0 = Nein. Die sekundäre Datenbank kann nicht zugegriffen werden, bis ein Failover erfolgt.<br /><br /> 1 = ReadOnly. Die sekundäre Datenbank kann zugegriffen werden, nur für Clientverbindungen mit ApplicationIntent = ReadOnly.<br /><br /> 2 = Alle. Die sekundäre Datenbank wird auf jede Clientverbindung zugreifen kann.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|Nein<br /><br /> All<br /><br /> Schreibgeschützt|  
+|Secondary_allow_connections _desc|**nvarchar(256)**|Nein<br /><br /> All<br /><br /> Schreibgeschützt|  
   
 ## <a name="permissions"></a>Berechtigungen
 

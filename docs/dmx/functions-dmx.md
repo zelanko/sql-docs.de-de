@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f0fce34f57591d9c6c3f3a9c7382266d655f364
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 32cf59ea3ca8c7f153170881ac5eb970e50c90b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076406"
 ---
 # <a name="functions-dmx"></a>Funktionen (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "37985447"
   
  Die meisten DMX-Funktionen geben einen Skalarwert (z. B. ist der Unterstützungswert einer Vorhersage ein Skalarwert), einige Funktionen geben aber ein tabellarisches Ergebnis zurück. Die PredictHistogram-Funktion gibt z. B. eine Tabelle, die Unterstützung und Wahrscheinlichkeit für jeden Zustand der angegebenen vorhersagbaren Spalte enthält. Die Ergebnisse werden als neue tabellarische Spalte angezeigt.  
   
- **Weitere Informationen:** [allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Weitere Informationen finden Sie unter** [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>VBA-Funktionen (Visual Basic für Applikationen) und Excel-Funktionen  
  Zusätzlich zu DMX-Funktionen können Sie aus DMX-Anweisungen eine Vielzahl von VBA- und Excel-Funktionen aufrufen. Sie können z. B. die lCase-Funktion verwenden, ändern, wie die Attribute_Name-Spalte im TM_Decision_Tree-Modellinhalt angezeigt wird. Dies ist im folgenden Codebeispiel gezeigt.  
@@ -49,10 +48,10 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Gespeicherte Prozeduren  
  Mit den üblichen Programmiersprachen für Laufzeitprozeduren können Sie gespeicherte Prozeduren erstellen, die die Funktionalität von DMX erweitern. Beispielsweise gibt zurück, eine regressionsstruktur-Miningmodell Koeffizienten, z. B. A, B, und usw., die die Regressionsformel beschreiben, aber das Modell gibt nicht die Formel selbst, wie z. B. ein + Bx zurück = y. Für einen solchen Fall können Sie eine gespeicherte Prozedur schreiben, in der das Data Mining-Modellobjekt dazu verwendet wird, das Inhaltsschema auszuwerten und die Regressionsgleichung als Ausgabe zurückzugeben. Auf diese Weise kann eine DMX-Anweisung eine Liste der Regressionsgleichungen als Teil eines Abfrageergebnisses zurückgeben.  
   
- **Weitere Informationen:** [Verwaltung von mehrdimensionalen Modellassemblys](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ **Weitere Informationen finden Sie unter** [Verwaltung von mehrdimensionalen Modellassemblys](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   

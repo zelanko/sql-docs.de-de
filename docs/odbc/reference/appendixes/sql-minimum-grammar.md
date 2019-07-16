@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057010"
 ---
 # <a name="sql-minimum-grammar"></a>Minimale SQL-Grammatik
 Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unterstützen muss. Die in diesem Abschnitt erläuterten Syntax ist eine Teilmenge der Syntax der Eintrag auf der SQL-92.  
@@ -33,24 +32,24 @@ Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unters
   
  CREATE TABLE *Basis-Table-Name*  
   
- (*Spaltenbezeichner Datentyp* [*, Spalten-ID Datentyp*]...)  
+ (*Spaltenbezeichner Datentyp* [ *, Spalten-ID Datentyp*]...)  
   
 > [!IMPORTANT]  
 >  Als eine *Datentyp* in einer *-Anweisung create Table*, Anwendungen müssen einen Datentyp aus der TYPE_NAME-Spalte des Resultsets vom verwenden **SQLGetTypeInfo**.  
   
- *delete-statement-searched* ::=  
+ *DELETE-Anweisung durchsucht* :: =  
   
  DELETE FROM *Tabellenname* [, in denen *Suchbedingung*]  
   
- *drop-table-statement* ::=  
+ *Drop-Table-Anweisung* :: =  
   
  DROP TABLE *Basis-Table-Name*  
   
- *insert-statement* ::=  
+ *INSERT-Anweisung* :: =  
   
  INSERT INTO *Tabellenname* [( *Spaltenbezeichner* [, *Spaltenbezeichner*]...)]      Werte (*Wert einfügen*[, *Wert einfügen*]...)  
   
- *select-statement* ::=  
+ *SELECT-Anweisung* :: =  
   
  Wählen Sie [alle &#124; DISTINCT] *Select-Liste*  
   
@@ -58,21 +57,21 @@ Dieser Abschnitt beschreibt die minimale SQL-Syntax, die ein ODBC-Treiber unters
   
  [, In denen *Suchbedingung*]  
   
- [*order-by-clause*]  
+ [*Order by-Klausel*]  
   
- *statement* ::= *create-table-statement*  
+ *Anweisung* :: = *-Anweisung create Table*  
   
- &#124; *delete-statement-searched*  
+ &#124;*Delete-Anweisung durchsucht*  
   
- &#124; *drop-table-statement*  
+ &#124;*Drop-Table-Anweisung*  
   
- &#124; *insert-statement*  
+ &#124;*Insert-Anweisung*  
   
- &#124; *select-statement*  
+ &#124;*Select-Anweisung*  
   
- &#124; *update-statement-searched*  
+ &#124;*Update-Anweisung durchsucht*  
   
- *update-statement-searched*  
+ *Update-Anweisung durchsucht*  
   
  UPDATE *Tabellenname*  
   

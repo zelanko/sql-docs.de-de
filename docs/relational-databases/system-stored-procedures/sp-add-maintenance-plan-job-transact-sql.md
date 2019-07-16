@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f941269d1e42e1adc09dce2a6937b900e0aaa13
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091921"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,9 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [  **@plan_id =**] **"**_Plan_id_**"**  
- Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
+`[ @plan_id = ] 'plan_id'` Gibt die ID des Wartungsplans. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
   
- [  **@job_id =**] **"**_Job_id_**"**  
- Gibt die ID des Auftrags an, der dem Wartungsplan zugeordnet werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein. Um einen oder mehrere Aufträge zu erstellen, führen Sie **sp_add_job**aus, oder verwenden Sie SQL Server Management Studio.  
+`[ @job_id = ] 'job_id'` Gibt die ID des Auftrags, dem Wartungsplan zugeordnet werden sollen. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein. Um einen oder mehrere Aufträge zu erstellen, führen Sie **sp_add_job**aus, oder verwenden Sie SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 089af95e914c844c6fc6220146ab4a635db2b4ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 921e9bce35ce9dc2ae91afb2c4cea5badafeaf2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063434"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Einrichten des Visual FoxPro-ODBC-Treibers
 Informationen zum Herunterladen und Installieren des Visual FoxPro-ODBC-Treibers finden Sie unter [Visual FoxPro-ODBC-Treiber](https://go.microsoft.com/fwlink/?LinkId=121318) Downloads für MSDN.  

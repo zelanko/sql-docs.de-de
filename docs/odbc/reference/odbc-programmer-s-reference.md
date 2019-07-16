@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111193"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC-Programmierer&#39;s-Referenz
 Die *ODBC Programmer's Reference* enthält die folgenden Abschnitte.  
@@ -76,13 +75,13 @@ Die *ODBC Programmer's Reference* enthält die folgenden Abschnitte.
   
 -   Datum, J. c, mit Darwen, Hugh: *Eine Anleitung für die SQL-Standard* (Addison-Wesley, 1993).  
   
--   Emerson, Stefan L., Darnovsky, Marcy und Bowman, Judith S.: *The Practical SQL Handbook* (Addison-Wesley, 1989).  
+-   Emerson, Stefan L., Darnovsky, Marcy und Bowman, Judith S.: *Die praktische SQL Handbook* (Addison-Wesley, 1989).  
   
 -   Groff, James r und Weinberg, Paul N.: *Mithilfe von SQL* (Osborne McGraw-Hill, 1990).  
   
 -   Gruber, Martin: *Grundlegendes zum SQL* (Sybex, 1990).  
   
--   Hursch, Jack L. and Carolyn J.: *SQL, die strukturierte Abfragesprache* (Registerkarte Bücher, 1988).  
+-   Hursch, Jack L. und Carolyn J.: *SQL, die strukturierte Abfragesprache* (Registerkarte Bücher, 1988).  
   
 -   Melton "," Jim "und" Simon "," Alan r ": *Grundlegendes zu neuen: Eine vollständige Anleitung* (Morgan Kaufmann Publishers, 1993).  
   
@@ -110,15 +109,15 @@ Die *ODBC Programmer's Reference* enthält die folgenden Abschnitte.
   
  Weitere Informationen zu ODBC sind eine Reihe von Büchern zur Verfügung, darunter:  
   
--   Geiger, Kyle: *Inside ODBC* (Microsoft Press®, 1995).  
+-   Geiger, Kyle: *In ODBC* (Microsoft Press®, 1995).  
   
 -   Gryphon "," Robert "," Charpentier "," Luc "," Oelschlager "," Jon "," Shoemaker, Andrew, Cross, Jim, "und" Lilley, Albert W.: *Mithilfe von ODBC 2* (Que, 1994).  
   
--   Johnston, Tom und Osborne, zu markieren: *ODBC Developers Guide* (Howard W. Sams & Company, 1994).  
+-   Johnston, Tom und Osborne, zu markieren: *ODBC-Developers Guide* (Howard W. Sams & Unternehmens, 1994).  
   
--   Nord, Ken: *Windows-Multi-DBMS-Programmierung: Using C++, Visual Basic, ODBC, OLE 2 and Tools for DBMS Projects* (John Wiley & Sons, Inc., 1995).  
+-   Nord, Ken: *Windows-Multi-DBMS-Programmierung: Verwenden von C++, Visual Basic, ODBC, OLE 2 und Tools für DBMS-Projekte* (Wiley John & Sons, Inc., 1995).  
   
--   Stegman, Michael O., Signore, Robert, and Creamer, John: *Der ODBC-Lösung, eine offene Datenbankverbindung in verteilten Umgebungen* (McGraw-Hill, 1995).  
+-   Stegman, Michael O., Signore, Robert und Creamer, John: *Der ODBC-Lösung, eine offene Datenbankverbindung in verteilten Umgebungen* (McGraw-Hill, 1995).  
   
 -   Welch, Keith: *Mithilfe von ODBC 2* (Que, 1994).  
   

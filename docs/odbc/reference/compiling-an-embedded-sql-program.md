@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ef460a7d004227e34e0043223abdf3769c92520
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135662"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Kompilieren eines eingebetteten SQL-Programms
 Da ein eingebettetes SQL-Programms eine Mischung aus SQL- und Host-Anweisungen enthält, kann es direkt an einen Compiler für die Hostsprache übermittelt werden. Stattdessen wird er durch einen Prozess mit mehreren kompiliert. Obwohl dieser Prozess vom jeweiligen Produkt im Detail variiert, sind die Schritte ungefähr gleich für alle Produkte.  

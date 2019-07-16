@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 18ac429a536b657b7f7c0cf91c100eed8a152e52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed669adc19dddc96ba953ba73f73805925968d19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058913"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Data Migration Assistant über die Befehlszeile
 
@@ -41,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argument  |Description  | Erforderlich (J/N)
+|Argument  |Beschreibung  | Erforderlich (J/N)
 |---------|---------|---------------|
 | `/help or /?`     | Wie Sie mit der dmacmd.exe-Hilfetext        | N
 |`/AssessmentName`     |   Name des Bewertungsprojekts   | J
@@ -249,7 +248,7 @@ Diese Befehle unterstützen die Empfehlungen für Azure SQL-einzeldatenbanken un
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argument  |Description  | Erforderlich (J/N)
+|Argument  |Beschreibung  | Erforderlich (J/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Führen Sie die SKU-Bewertung über DMA-Befehlszeile | J
 |`/SkuRecommendationInputDataFilePath` | Vollständiger Pfad der Performance Counter-Datei erfasst, auf dem Computer, auf dem Ihre Datenbanken gehostet | J
@@ -257,9 +256,9 @@ Diese Befehle unterstützen die Empfehlungen für Azure SQL-einzeldatenbanken un
 |`/SkuRecommendationJsonOutputResultsFilePath` | Vollständiger Pfad in die JSON-Ergebnisdatei | J <br> (Muss entweder "TSV" oder "JSON" oder "HTML-Pfad)
 |`/SkuRecommendationHtmlResultsFilePath` | Vollständiger Pfad in die HTML-Ergebnisdatei | J <br> (Muss entweder "TSV" oder "JSON" oder "HTML-Pfad)
 |`/SkuRecommendationPreventPriceRefresh` | Verhindert, dass die Preis-Aktualisierung auftreten. Verwenden Sie im Offlinemodus ausgeführt werden (z. B., "true"). | J <br> (Wählen Sie entweder dieses Argument für statische Preise oder müssen alle Argumente, die unten ausgewählt werden, um den aktuellen Preisen zu erhalten.)
-|`/SkuRecommendationCurrencyCode` | Die Währung, in dem Preise angezeigt werden (z.B.) "USD") | J <br> (Für den aktuellen Preisen)
-|`/SkuRecommendationOfferName` | Das Angebot benennen (z.B.) "MS-AZR-0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite. | J <br> (Für den aktuellen Preisen)
-|`/SkuRecommendationRegionName` | Benennen Sie die Region (z.B.) "WestUS") | J <br> (Für den aktuellen Preisen)
+|`/SkuRecommendationCurrencyCode` | Die Währung, in dem Preise angezeigt werden (z.B.) "US") | J <br> (Für den aktuellen Preisen)
+|`/SkuRecommendationOfferName` | Das Angebot benennen (z.B.) "MS-AZR - 0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite. | J <br> (Für den aktuellen Preisen)
+|`/SkuRecommendationRegionName` | Benennen Sie die Region (z.B.) "USA, Westen") | J <br> (Für den aktuellen Preisen)
 |`/SkuRecommendationSubscriptionId` | Die Abonnement-ID. | J <br> (Für den aktuellen Preisen)
 |`/SkuRecommendationDatabasesToRecommend` | Durch Leerzeichen getrennte Liste von Datenbanken, für die Empfehlungen (z.B.) "Database1" "" database2 "" "Database3"). Namen wird Groß-/Kleinschreibung beachtet und doppelte Anführungszeichen gesetzt werden müssen. Wenn nicht angegeben, werden Empfehlungen für alle Datenbanken bereitgestellt. | N
 |`/AzureAuthenticationTenantId` | Die Authentication-Mandant. | J <br> (Für den aktuellen Preisen)

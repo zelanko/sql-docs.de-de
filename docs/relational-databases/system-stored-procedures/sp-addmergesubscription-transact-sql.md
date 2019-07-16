@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5c8d968a3baa17749acccdde5ef54b4da7394ca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117923"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,14 +67,14 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db*ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)**, hat den Standardwert PUSH. Wenn **Push**, wird ein Pushabonnement hinzugefügt, und der Merge-Agent auf dem Verteiler hinzugefügt. Wenn **Pull**, ein Pullabonnement wird hinzugefügt, ohne dass ein Merge-Agent auf dem Verteiler hinzugefügt.  
+`[ @subscription_type = ] 'subscription_type'` Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)** , hat den Standardwert PUSH. Wenn **Push**, wird ein Pushabonnement hinzugefügt, und der Merge-Agent auf dem Verteiler hinzugefügt. Wenn **Pull**, ein Pullabonnement wird hinzugefügt, ohne dass ein Merge-Agent auf dem Verteiler hinzugefügt.  
   
 > [!NOTE]  
 >  Für anonyme Abonnements ist diese gespeicherte Prozedur nicht erforderlich.  
   
-`[ @subscriber_type = ] 'subscriber_type'` Ist der Typ des Abonnenten. *subscriber_type kann*ist **nvarchar(15)**, und kann einen der folgenden Werte.  
+`[ @subscriber_type = ] 'subscriber_type'` Ist der Typ des Abonnenten. *subscriber_type kann*ist **nvarchar(15)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**lokale** (Standard)|Der Abonnent ist nur dem Verleger bekannt.|  
 |**global**|Der Abonnent ist allen Servern bekannt.|  
@@ -84,7 +83,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscription_priority = ] subscription_priority` Ist eine Zahl, die die Priorität für das Abonnement angibt. *Subscription_priority*ist **echte**, hat den Standardwert NULL. Für lokale und anonyme Abonnements ist die Priorität 0,0. Für globale Abonnements muss die Priorität niedriger als 100,0 sein.  
   
-`[ @sync_type = ] 'sync_type'` Ist der Synchronisierungsart des Abonnements an. *Sync_type*ist **nvarchar(15)**, hat den Standardwert **automatische**. Kann **automatische** oder **keine**. Wenn **automatische**, das Schema und die Ausgangsdaten für veröffentlichte Tabellen zuerst an den Abonnenten übertragen werden. Wenn **keine**, es wird davon ausgegangen, dass der Abonnent hat bereits das Schema und die Ausgangsdaten für veröffentlichte Tabellen. Systemtabellen und Daten werden immer übertragen.  
+`[ @sync_type = ] 'sync_type'` Ist der Synchronisierungsart des Abonnements an. *Sync_type*ist **nvarchar(15)** , hat den Standardwert **automatische**. Kann **automatische** oder **keine**. Wenn **automatische**, das Schema und die Ausgangsdaten für veröffentlichte Tabellen zuerst an den Abonnenten übertragen werden. Wenn **keine**, es wird davon ausgegangen, dass der Abonnent hat bereits das Schema und die Ausgangsdaten für veröffentlichte Tabellen. Systemtabellen und Daten werden immer übertragen.  
   
 > [!NOTE]  
 >  Es wird empfohlen, keine Angabe des Werts **keine**.  
@@ -150,11 +149,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date` Ist das Datum, ab der Merge-Agent nicht mehr, geplant JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Ist die optional auszuführende Befehlszeile an. *Der Standardwert*ist **nvarchar(4000)**, hat den Standardwert NULL. Dieser Parameter wird verwendet, um einen Befehl hinzuzufügen, der die Ausgabe aufzeichnet und in einer Datei speichert, oder um eine Konfigurationsdatei oder ein Konfigurationsattribut anzugeben.  
+`[ @optional_command_line = ] 'optional_command_line'` Ist die optional auszuführende Befehlszeile an. *Der Standardwert*ist **nvarchar(4000)** , hat den Standardwert NULL. Dieser Parameter wird verwendet, um einen Befehl hinzuzufügen, der die Ausgabe aufzeichnet und in einer Datei speichert, oder um eine Konfigurationsdatei oder ein Konfigurationsattribut anzugeben.  
   
-`[ @description = ] 'description'` Ist eine kurze Beschreibung dieses Mergeabonnements. *Beschreibung*ist **nvarchar(255)**, hat den Standardwert NULL. Dieser Wert wird angezeigt, vom Replikationsmonitor in der **Anzeigenamen** Spalte, die zum Sortieren von Abonnements für eine überwachte Veröffentlichung verwendet werden kann.  
+`[ @description = ] 'description'` Ist eine kurze Beschreibung dieses Mergeabonnements. *Beschreibung*ist **nvarchar(255)** , hat den Standardwert NULL. Dieser Wert wird angezeigt, vom Replikationsmonitor in der **Anzeigenamen** Spalte, die zum Sortieren von Abonnements für eine überwachte Veröffentlichung verwendet werden kann.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Gibt an, ob das Abonnement kann, über synchronisiert werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungsverwaltung von Windows. *Enabled_for_syncmgr* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"false"**, das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"**, das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Gibt an, ob das Abonnement kann, über synchronisiert werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungsverwaltung von Windows. *Enabled_for_syncmgr* ist **nvarchar(5)** , hat den Standardwert "false". Wenn **"false"** , das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"** , das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @offloadagent = ] remote_agent_activation` Gibt an, dass der Agent Remote aktiviert werden kann. *Remote_agent_activation* ist **Bit** hat den Standardwert **0**.  
   
@@ -163,7 +162,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @offloadserver = ] 'remote_agent_server_name'` Gibt den Netzwerknamen des Servers für Remoteaktivierung der Momentaufnahme verwendet werden soll. *Remote_agent_server_name*ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver'` Können Konflikte interaktiv für alle Artikel aufgelöst werden, die interaktive Lösung zulassen. *Use_interactive_resolver* ist **nvarchar(5)**, hat den Standardwert "false".  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'` Können Konflikte interaktiv für alle Artikel aufgelöst werden, die interaktive Lösung zulassen. *Use_interactive_resolver* ist **nvarchar(5)** , hat den Standardwert "false".  
   
 `[ @merge_job_name = ] 'merge_job_name'` Die *@merge_job_name* -Parameter ist veraltet und kann nicht festgelegt werden. *Merge_job_name* ist **Sysname**, hat den Standardwert NULL.  
   
@@ -178,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Hinweise  
  **Sp_addmergesubscription** wird bei der Mergereplikation verwendet.  
   
- Wenn **Sp_addmergesubscription** ausgeführt wird, von einem Mitglied der **Sysadmin** feste Serverrolle, um ein Pushabonnement zu erstellen, der Merge-Agent-Auftrag implizit erstellt und ausgeführt wird, klicken Sie unter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Dienstkonto. Es wird empfohlen, die Sie ausführen [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) und geben Sie die Anmeldeinformationen eines anderen, Agent-spezifischen Windows-Kontos für **@job_login** und **@job_password**. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Wenn **Sp_addmergesubscription** ausgeführt wird, von einem Mitglied der **Sysadmin** feste Serverrolle, um ein Pushabonnement zu erstellen, der Merge-Agent-Auftrag implizit erstellt und ausgeführt wird, klicken Sie unter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Dienstkonto. Es wird empfohlen, die Sie ausführen [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) und geben Sie die Anmeldeinformationen eines anderen, Agent-spezifischen Windows-Kontos für **@job_login** und **@job_password** . Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

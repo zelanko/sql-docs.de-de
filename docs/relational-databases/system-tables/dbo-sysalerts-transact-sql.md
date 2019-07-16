@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084686"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede Warnung. Eine Warnung ist eine Nachricht, die als Reaktion auf ein Ereignis gesendet wird. Eine Warnung kann Nachrichten über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung hinaus weiterleiten. Eine Warnung kann eine E-Mail- oder eine Pagernachricht sein. Außerdem kann eine Warnung einen Task generieren.  Diese Tabelle wird in der **msdb** -Datenbank gespeichert.
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Warnungs-ID.|  
 |**name**|**sysname**|Name der Warnung.|  
@@ -41,7 +40,7 @@ ms.locfileid: "62470888"
 |**event_id**|**int**|Zur künftigen Verwendung reserviert.|  
 |**message_id**|**int**|Benutzerdefinierte Nachrichten-ID oder Verweis auf die **sysmessages** -Nachricht, die diese Warnung auslöst.|  
 |**severity**|**int**|Schweregrad, der diese Warnung auslöst.|  
-|**enabled**|**tinyint**|Status der Warnung:<br /><br /> **0** = Deaktiviert.<br /><br /> **1** = Aktiviert.|  
+|**aktiviert**|**tinyint**|Status der Warnung:<br /><br /> **0** = Deaktiviert.<br /><br /> **1** = Aktiviert.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen den Benachrichtigungen für diese Warnung.|  
 |**last_occurrence_date**|**int**|Letztes Auftreten (Datum) der Warnung.|  
 |**last_occurrence_time**|**int**|Letztes Auftreten (Tageszeit) der Warnung.|  
@@ -64,7 +63,7 @@ ms.locfileid: "62470888"
 
 Die folgende Tabelle zeigt die Werte für die Bitmaske Include_event_description. Der decimal-Wert wird von dbo.sysalerts zurückgegeben. 
 
-|Decimal | BINARY | Bedeutung |
+|decimal | BINARY | Bedeutung |
 |------|------|------|
 |0 |0000 |keine Meldung |
 |1 |0001 |E-Mail |

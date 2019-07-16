@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c98acb87e180dce32a00e77ba6c1af9fbd48b6fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140014"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Stellt Informationen zu gruppierten Columnstore-Indizes auf Segmentbasis bereit, um den Administrator bei Fragen zur Systemverwaltung zu unterstützen. **column_store_row_groups** verfügt über eine Spalte für die Gesamtzahl der physisch gespeicherten Zeilen (einschließlich als gelöscht markierten) und eine Spalte für die Anzahl der Zeilen als gelöscht markiert. Verwendung **column_store_row_groups** um zu bestimmen, welche Zeile Gruppen haben einen hohen Prozentsatz gelöschter Zeilen und neu erstellt werden sollen.  
    
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die ID der Tabelle, in der dieser Index definiert ist.|  
 |**index_id**|**int**|ID des Indexes, der diesen columnstore-Index enthält.|  

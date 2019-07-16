@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c7ec642a516d4ad2ac5a0f8d894351fc6670c117
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038979"
 ---
 # <a name="context-functions---position-xquery"></a>Kontextfunktionen – position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ fn:position() as xs:integer
  In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Abrufen der ersten beiden Produktfunktionen mit der XQuery-Funktion position()  
- Die folgende Abfrage ruft die beiden ersten Funktionen, die ersten beiden untergeordneten Elemente des <`Features`>-Elements, aus der Produktmodell-Katalogbeschreibung ab. Wenn mehr Funktionen vorhanden sind, wird dem Ergebnis ein <`there-is-more/`>-Element hinzugefügt.  
+ Die folgende Abfrage ruft die beiden ersten Funktionen, die ersten beiden untergeordneten Elemente von der <`Features`>-Element aus der Produktmodell-katalogbeschreibung. Wenn mehrere Funktionen vorhanden sind, fügt es eine <`there-is-more/`>-Element auf das Ergebnis.  
   
 ```  
 SELECT CatalogDescription.query('  

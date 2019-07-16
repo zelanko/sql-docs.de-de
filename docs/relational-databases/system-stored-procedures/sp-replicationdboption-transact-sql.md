@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950663"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +41,20 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@dbname=**] **"***Dbname***"**  
+ [ **@dbname=** ] **"***Dbname***"**  
  Die Datenbank, für die die Replikationsdatenbankoption festgelegt wird. *Db_name* ist **Sysname**, hat keinen Standardwert.  
   
- [**@optname=**] **'***optname***'**  
+ [ **@optname=** ] **"***Optname***"**  
  Die Replikationsdatenbankoption, die aktiviert oder deaktiviert werden soll. *Optname* ist **Sysname**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Veröffentlichen von Merge**|Die Datenbank kann für die Mergeveröffentlichung verwendet werden.|  
 |**publish**|Die Datenbank kann für andere Veröffentlichungstypen verwendet werden.|  
 |**subscribe**|Die Datenbank ist eine Abonnementdatenbank.|  
 |**Synchronisieren Sie mit der Sicherung**|Die Datenbank ist für eine koordinierte Sicherung aktiviert. Weitere Informationen finden Sie unter [aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'` Ist Sie, ob aktiviert oder deaktiviert die angegebene Replikationsdatenbankoption. *Wert* ist **Sysname**, und kann **"true"** oder **"false"**. Wenn dieser Wert ist **"false"** und *Optname* ist **Merge veröffentlichen**, Abonnements für die Datenbank mit Mergeveröffentlichung werden ebenfalls gelöscht.  
+`[ @value = ] 'value'` Ist Sie, ob aktiviert oder deaktiviert die angegebene Replikationsdatenbankoption. *Wert* ist **Sysname**, und kann **"true"** oder **"false"** . Wenn dieser Wert ist **"false"** und *Optname* ist **Merge veröffentlichen**, Abonnements für die Datenbank mit Mergeveröffentlichung werden ebenfalls gelöscht.  
   
 `[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**, der Verteiler sollte verbunden und mit den neuen Status der Verlegerdatenbank aktualisiert werden. Der Wert **1** sollte nur angegeben werden, wenn der Verteiler nicht zugegriffen werden kann und **Sp_replicationdboption** wird verwendet, um die Veröffentlichung deaktivieren.  
   

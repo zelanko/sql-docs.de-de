@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f96a3966a3f7d6a7c3c115586929cf975d54e45c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a099d67d337544a33bfc922fe14e07af39bd619d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022620"
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **trace_subclass_values** -Katalogsicht enthält eine Liste benannter Spaltenwerte. Diese Unterklassenwerte ändern sich für eine bestimmte Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht.  
   
- Eine vollständige Liste der unterstützten Ablaufverfolgungsereignisse, finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Eine vollständige Liste der unterstützten Ablaufverfolgungsereignisse finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die Katalogsichten für erweiterte Ereignisse.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|ID des Ablaufverfolgungsereignisses. Dieser Parameter ist auch in der **trace_events** -Katalogsicht angezeigt.|  
 |**trace_column_id**|**smallint**|ID der Ablaufverfolgungsspalte, die für die Enumeration verwendet wird. Dieser Parameter ist auch in der **trace_columns** -Katalogsicht angezeigt.|  

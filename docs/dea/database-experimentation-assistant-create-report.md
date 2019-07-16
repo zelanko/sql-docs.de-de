@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53d8734e0c01fa2056b9d560f3bc65b7f64d9a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058974"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Erstellen von Analyseberichten im Datenbank-experimentieren-Assistenten
 
@@ -36,7 +35,7 @@ Klicken Sie unter **Analyseberichte**Option **neue Analysebericht**.
 
 Geben Sie ein, oder wählen Sie die folgende Informationen:
 
-- **Name des Berichts**: Geben Sie einen Namen für den Bericht aus. Den Namen des Berichts wird verwendet, sowohl für A und B-Datenbanken. Beispiel: *Ein (oder B)* + *Berichtsnamen* + *Eindeutiger Bezeichner*. 
+- **Name des Berichts**: Geben Sie einen Namen für den Bericht aus. Den Namen des Berichts wird verwendet, sowohl für A und B-Datenbanken. Beispiel: *Ein (oder B)*  + *Berichtsnamen* + *Eindeutiger Bezeichner*. 
 - **Servername**: Geben Sie den Namen des Servercomputers, die in A, enthalten sein sollen B und Analysedatenbanken.
 - **SQL Server-Instanzname**: Geben Sie den Namen der SQL Server-Instanz, die für den Bericht verwendet werden soll.
 - **Ablaufverfolgung für den Quellserver**: Geben Sie die erste Ablaufverfolgungs-(.trc)-Optimierungs-arbeitsauslastungsdateien-Datei von SQL Server (2008 R2).

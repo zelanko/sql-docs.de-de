@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211797"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Tabellenspalteneigenschaften (SQL Server Management Studio)
   Diese Eigenschaften werden im unteren Bereich des Tabellen-Designers angezeigt. Wenn nicht anders beschrieben, können Sie diese Eigenschaften im Eigenschaftenfenster bearbeiten, wenn die Spalte markiert ist. Die **Spalteneigenschaften** können nach Kategorie oder alphabetisch angezeigt werden. Viele Eigenschaften werden nur für bestimmte Datentypen angezeigt oder können nur für bestimmte Datentypen geändert werden.  

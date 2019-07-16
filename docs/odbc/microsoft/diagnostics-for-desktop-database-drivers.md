@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6c21af2ef3f47c05aacf4b47673ab42a170f506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4e7c8ea96708886f9edf54047bd2a2104ba0ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031221"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Diagnose für Desktop-Datenbanktreiber
 Alle Fehler und Warnungen, die nicht überprüft oder nur teilweise aktiviert der Treiber-Manager werden vom Treiber verarbeitet. Der Treiber ordnet außerdem native Fehler oder Fehler, die von der Datenquelle an SQLSTATEs zurückgegeben. Jede Funktion aufgeführt, die der *ODBC Programmer's Reference* enthält einen Abschnitt "Diagnose", der angibt, Bedingungen und Nachrichten.  

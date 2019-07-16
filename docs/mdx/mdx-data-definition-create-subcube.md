@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038273"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX-Datendefinition – CREATE SUBCUBE
 
@@ -44,10 +43,10 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |Ursprüngliches Standardelement|Kann aggregiert werden|Untergeordneter SELECT-Ausdruck|Geändertes Standardelement|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|Ja|{Time.Year.2003}|Keine Änderung|  
-|Time.Year.[1997]|Ja|{Time.Year.2003}|Time.Year.All|  
-|Time.Year.[1997]|Nein|{Time.Year.2003}|Time.Year.[2003]|  
-|Time.Year.[1997]|Ja|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year.[1997]|Nein|{Time.Year.2003, Time.Year.2004}|Entweder Time.Year.[2003] oder<br /><br /> Time.Year.[2004]|  
+|Time.Year. [1997]|Ja|{Time.Year.2003}|Time.Year.All|  
+|Time.Year. [1997]|Nein|{Time.Year.2003}|Time.Year. [2003]|  
+|Time.Year. [1997]|Ja|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time.Year. [1997]|Nein|{Time.Year.2003, Time.Year.2004}|Entweder Time.Year.[2003] oder<br /><br /> Time.Year.[2004]|  
   
  [All]-Elemente sind immer in einem Teilcube vorhanden.  
   

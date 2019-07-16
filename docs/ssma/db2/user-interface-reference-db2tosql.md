@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63080671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059957"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referenz zur Benutzeroberfläche (DB2ToSQL)
 Dieser Abschnitt enthält Hilfethemen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für DB2.  
@@ -25,7 +24,7 @@ Die folgende Tabelle enthält die SSMA-Dialogfelder:
   
 |||  
 |-|-|  
-|Thema|Description|  
+|Thema|Beschreibung|  
 |[Erweiterte Objektauswahl &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Verwenden der **erweiterte Objekt auswählen** Dialogfeld Suchen Datenbankobjekte mit Filterkriterien, und klicken Sie dann aktivieren oder deaktivieren diese Objekte.|  
 |[Bewertungsbericht &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Verwenden Sie zum Anzeigen der Ergebnisse der Konvertierung von DB2-Objekten, die den Bewertungsbericht [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax und die Uhrzeit und die Komplexität der Migration zu einzuschätzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Herstellen einer Verbindung mit DB2-Datenbank &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Verwenden der **Herstellen einer Verbindung mit DB2** im Dialogfeld Verbindung mit der DB2-Datenbank, die Sie migrieren möchten.|  
@@ -33,8 +32,8 @@ Die folgende Tabelle enthält die SSMA-Dialogfelder:
 |[Data Migration Report Bericht &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Zeigt die Ergebnisse der Migration Daten aus DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Data Migration Settings (Einstellungen für die Datenmigration)](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Verwenden der **erweiterte Data Migration Settings** Tab, um benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
 |[Bearbeiten der Typzuordnung &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Verwenden der **neue Typzuordnung** oder **Bearbeiten der Typzuordnung** Dialogfelder zum Erstellen oder ändern die Zuordnung von Datentypen zwischen den Quell- und Ziel-Datenbanken und Datenbankobjekte.|  
-|[Global Settings &#40;Editor&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
-|[Global Settings &#40;Dialogs&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Mithilfe der Dialogfelder-Seite des der **globale Einstellungen** Dialogfeld zum Standard-Dialogfeld "und" Warnung Einstellungen zu konfigurieren.|  
+|[Globale Einstellungen &#40;Editor&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Verwenden Sie die Editor-Seite von der **globale Einstellungen** Dialogfeld zum Code-Editor-Optionen konfigurieren.|  
+|[Globale Einstellungen &#40;Dialogfelder&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Mithilfe der Dialogfelder-Seite des der **globale Einstellungen** Dialogfeld zum Standard-Dialogfeld "und" Warnung Einstellungen zu konfigurieren.|  
 |[Globale Einstellungen &#40;Protokollierung&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-logging-db2tosql.md)|Protokollierung auf der Seite des der **globale Einstellungen** Dialogfeld zum Konfigurieren der Protokollierung.|  
 |[Globale Einstellungen &#40;Ausgabefenster&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-output-window-db2tosql.md)|Verwenden der **globale Einstellungen** im Dialogfeld Einstellungen der SSMA für DB2-Benutzeroberfläche festgelegt werden.|  
 |[Neues Projekt &#40;DB2ToSQL&#41;](../../ssma/db2/new-project-db2tosql.md)|Verwenden der **neues Projekt** um ein neues SSMA für DB2-Projekt zu erstellen.|  
@@ -45,7 +44,7 @@ Die folgende Tabelle enthält die SSMA-Dialogfelder:
 |[Projekteinstellungen&#40;Laden von Systemobjekten&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|Verwenden Sie die Seite Laden von Systemobjekten, der die **Projekteinstellungen** im Dialogfeld, um anzugeben, welche DB2 Systemobjekte SSMA konvertiert und lädt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Projekteinstellungen &#40;Typzuordnung&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|Type Mapping auf der Seite des der **Projekteinstellungen** im Dialogfeld die standardtypmappings für alle Datenbanken und Datenbankobjekte in SSMA for DB2-Projekt angeben.|  
 |[Refresh from Database aktualisieren &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|Verwenden der **Refresh from Database aktualisieren** Dialogfeld zum Auswählen der Objekte aus der DB2-Datenbank zu aktualisieren.|  
-|[Save Metadata &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|Die **speichern Metadaten** Dialogfeld wird angezeigt, wenn Sie ein Projekt speichern, die Metadaten nicht vorhanden ist.|  
+|[Speichern von Metadaten &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|Die **speichern Metadaten** Dialogfeld wird angezeigt, wenn Sie ein Projekt speichern, die Metadaten nicht vorhanden ist.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  

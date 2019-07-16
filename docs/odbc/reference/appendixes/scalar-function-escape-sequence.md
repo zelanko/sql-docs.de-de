@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057073"
 ---
 # <a name="scalar-function-escape-sequence"></a>Skalarfunktion-Escapesequenz
 ODBC verwendet Escapesequenzen für Skalarfunktionen. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
@@ -32,16 +31,16 @@ ODBC verwendet Escapesequenzen für Skalarfunktionen. Die Syntax dieser Escape-S
 ## <a name="remarks"></a>Hinweise  
  In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-scalar-function-escape* ::=  
+ *ODBC-Skalar-Funktion-Escapesequenz* :: =  
   
  *Initiator der ODBC-esc* fn *-Skalarfunktion ODBC-esc-Terminator*  
   
- *scalar-function* ::= *function-name* (*argument-list*)  
+ *-Skalarfunktion* :: = *Funktionsname-* (*Argumentliste*)  
   
  (Die Definitionen für die Nichtterminale *Funktionsname-* und *Funktionsname-* (*Argumentliste*) abgeleitet werden, aus der Liste von Skalarfunktionen in [ Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *ODBC-esc-initiator* ::= {  
+ *Initiator der ODBC-esc* :: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC-esc-Terminator* :: =}  
   
  Um zu bestimmen, ob die Datenquelle, Verfahren unterstützt und der Treiber die Aufrufsyntax des ODBC-Prozedur unterstützt, eine Anwendung aufrufen kann **SQLGetInfo**. Weitere Informationen finden Sie unter [Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).

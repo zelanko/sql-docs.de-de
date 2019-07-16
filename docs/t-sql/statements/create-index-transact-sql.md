@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500240"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652792"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -734,7 +734,7 @@ Die folgenden Richtlinien gelten für fortsetzbare Indexvorgänge:
 - Eine Onlineneuerstellung eines Indexes wird mit der `RESUMABLE = ON`-Option als fortsetzbar angegeben.
 - Die RESUMABLE-Option wird in den Metadaten nicht für einen bestimmten Index beibehalten und gilt nur für die Dauer der aktuellen DDL-Anweisung. Daher muss die `RESUMABLE = ON`-Klausel explizit angegeben werden, wenn Fortsetzbarkeit aktiviert werden soll.
 - Die MAX_DURATION-Option wird nur für die `RESUMABLE = ON`-Option unterstützt.
-- MAX_DURATION gibt bei der RESUMABLE-Option das Zeitintervall an, in dem ein Index erstellt wird. Sobald dieses Zeitintervall beendet ist, wird die Indexerstellung entweder angehalten oder in ihrer Ausführung beendet. Der Benutzer entscheidet, wann die Erstellung eines angehaltenen Index fortgesetzt werden kann. Die **Zeitspanne** für MAX_DURATION in Minuten muss größer als 0 Minuten und kleiner oder gleich einer Woche (7 * 24 * 60 = 10.080 Minuten) sein. Das lange Anhalten eines Indexvorgangs kann Auswirkungen auf die DML-Leistung für eine bestimmte Tabelle sowie die Datenträgerkapazität der Datenbank haben, da sowohl der ursprüngliche Index als auch der neu erstellte Index Speicherplatz benötigen und während der DML-Vorgänge aktualisiert werden müssen. Wird die MAX_DURATION-Option ausgelassen, dann wird der Indexvorgang bis zum vollständigen Abschluss oder bis ein Fehler auftritt fortgeführt.
+- MAX_DURATION gibt bei der RESUMABLE-Option das Zeitintervall an, in dem ein Index erstellt wird. Sobald dieses Zeitintervall beendet ist, wird die Indexerstellung entweder angehalten oder in ihrer Ausführung beendet. Der Benutzer entscheidet, wann die Erstellung eines angehaltenen Index fortgesetzt werden kann. Die **Zeitspanne** für MAX_DURATION in Minuten muss größer als 0 Minuten und kleiner oder gleich einer Woche (7 \* 24 \* 60 = 10.080 Minuten) sein. Das lange Anhalten eines Indexvorgangs kann Auswirkungen auf die DML-Leistung für eine bestimmte Tabelle sowie die Datenträgerkapazität der Datenbank haben, da sowohl der ursprüngliche Index als auch der neu erstellte Index Speicherplatz benötigen und während der DML-Vorgänge aktualisiert werden müssen. Wird die MAX_DURATION-Option ausgelassen, dann wird der Indexvorgang bis zum vollständigen Abschluss oder bis ein Fehler auftritt fortgeführt.
 - Wenn Sie den Indexvorgang sofort anhalten möchten, können Sie den laufenden Befehl beenden (STRG+C) oder die Befehle [ALTER INDEX](alter-index-transact-sql.md) PAUSE oder `KILL <session_id>` ausführen. Ein angehaltener Befehl kann mit dem Befehl [ALTER INDEX](alter-index-transact-sql.md) fortgesetzt werden.
 - Das erneute Ausführen der ursprünglichen CREATE INDEX-Anweisung für den fortsetzbaren Index führt dazu, dass ein angehaltener Indexvorgang automatisch fortgesetzt wird.
 - Die Option `SORT_IN_TEMPDB = ON` wird für den fortsetzbaren Index nicht unterstützt.

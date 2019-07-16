@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e00b6907d58cda1708cf61907d3c5ff6bf56edfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d0b136b9748de1991888abb0c19bc0d2ac65ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046969"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>Fehler des Treiber-Managers und Überprüfungen der Warnung
 Der Treiber-Manager vollständig oder teilweise implementiert eine Reihe von Funktionen und daher alle oder einige der Fehler und Warnungen in diesen Funktionen überprüft.  

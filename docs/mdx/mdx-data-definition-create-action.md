@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098556"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX-Datendefinition – CREATE ACTION
 
@@ -81,7 +80,7 @@ FOR
 ## <a name="action-types"></a>Aktionstypen  
  Die folgende Tabelle beschreibt die verschiedenen Arten von Aktionen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Aktionstyp|Description|  
+|Aktionstyp|Beschreibung|  
 |-----------------|-----------------|  
 |**URL**|Die zurückgegebene Aktionszeichenfolge ist eine URL, die mit einem Internetbrowser geöffnet werden sollte.<br /><br /> Hinweis: Wenn diese Aktion nicht mit beginnt `https://` oder `https://`, die Aktion wird an den Browser nicht verfügbar sein, es sei denn, **SafetyOptions** nastaven NA hodnotu **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|Die zurückgegebene Aktionszeichenfolge ist ein HTML-Skript. Die Zeichenfolge sollte in einer Datei gespeichert werden, und die Datei sollte mit einem Internetbrowser gerendert werden. In diesem Fall kann ein ganzes Skript als Teil des generierten HTML-Codes ausgeführt werden.|  
@@ -94,7 +93,7 @@ FOR
 ## <a name="invocation-types"></a>Aufruftypen  
  In der folgenden Tabelle sind die verschiedenen Typen von Aufrufen beschrieben, die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zur Verfügung stehen. Der Aufruftyp wird nur von der Clientanwendung verwendet, um zu bestimmen, wann die Aktion aufgerufen werden soll. Das Aufrufverhalten der Aktion selbst wird nicht durch den Aufruftyp bestimmt.  
   
-|Aufruftyp|Description|  
+|Aufruftyp|Beschreibung|  
 |---------------------|-----------------|  
 |**INTERAKTIVE**|Die Aktion sollte von der Clientanwendung durch Benutzerinteraktion aufgerufen werden.|  
 |**ON_OPEN**|Die Aktion sollte von der Clientanwendung aufgerufen werden, wenn das Zielobjekt geöffnet wird. Dieser Aufruftyp ist zurzeit nicht implementiert.|  

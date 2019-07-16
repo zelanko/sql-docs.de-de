@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096233"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_Db\_Optimierung\_Empfehlungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,11 +47,11 @@ ms.locfileid: "54226517"
 | **ist\_ausführbare\_Aktion** | **bit** | 1 = die Empfehlung ausgeführt werden kann, für die Datenbank über [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Skript.<br />0 = die Empfehlung kann nicht für die Datenbank ausgeführt werden (z. B.: Informationen nur oder wiederhergestellten Empfehlung) |
 | **ist\_revertable\_Aktion** | **bit** | 1 = die Empfehlung automatisch überwacht und von Datenbank-Engine zurückgesetzt.<br />0 = die Empfehlung kann nicht automatisch überwacht und werden zurückgesetzt. Die meisten &quot;ausführbare&quot; Maßnahmen &quot;revertable&quot;. |
 | **Führen Sie\_Aktion\_starten\_Zeit** | **datetime2** | Datum, an die Empfehlung angewendet wurde. |
-| **Führen Sie\_Aktion\_Dauer** | **Uhrzeit** | Die Dauer der Aktion ausführen. |
+| **Führen Sie\_Aktion\_Dauer** | **time** | Die Dauer der Aktion ausführen. |
 | **execute\_action\_initiated\_by** | **nvarchar(4000)** | `User` = Benutzer erzwungen manuell Plan in der Empfehlung. <br /> `System` = System werden Empfehlungen automatisch angewendet. |
 | **Führen Sie\_Aktion\_initiiert\_Zeit** | **datetime2** | Datum, an die Empfehlung angewendet wurde. |
 | **REVERT\_Aktion\_starten\_Zeit** | **datetime2** | Datum, an die Empfehlung zurückgesetzt wurde. |
-| **REVERT\_Aktion\_Dauer** | **Uhrzeit** | Die Dauer der Aktion wiederherstellen. |
+| **REVERT\_Aktion\_Dauer** | **time** | Die Dauer der Aktion wiederherstellen. |
 | **REVERT\_Aktion\_initiiert\_durch** | **nvarchar(4000)** | `User` = Benutzer empfohlener Plan manuell mehr erzwungen. <br /> `System` = Empfehlung wird von System automatisch wiederhergestellt. |
 | **REVERT\_Aktion\_initiiert\_Zeit** | **datetime2** | Datum, an die Empfehlung zurückgesetzt wurde. |
 | **score** | **int** | Geschätzter Wert/Auswirkungen auf diese Empfehlung wird auf der 0-100 skalieren (je größer die besser) |
@@ -63,7 +62,7 @@ ms.locfileid: "54226517"
 
  `currentValue` im Feld der `state` Spalte kann die folgenden Werte aufweisen:
  
- | Status | Description |
+ | Status | Beschreibung |
  |--------|-------------|
  | `Active` | Es wird empfohlen, active und noch nicht angewendet. Benutzer profitieren von Empfehlungsskript und manuell ausführen. |
  | `Verifying` | Empfehlung wird angewendet, indem [!INCLUDE[ssde_md](../../includes/ssde_md.md)] und interne Überprüfung vergleicht die Leistung des erzwungenen Plans mit der zurückgestellte Plan. |
@@ -73,7 +72,7 @@ ms.locfileid: "54226517"
 
 JSON-Dokuments in `state` Spalte enthält den Grund an, die beschreibt, warum die Empfehlung in den aktuellen Zustand ist. Unter Umständen Werte in das Feld "Grund": 
 
-| Reason | Description |
+| Reason | Beschreibung |
 |--------|-------------|
 | `SchemaChanged` | Empfehlung ist abgelaufen, weil das Schema einer Tabelle verwiesen wird, geändert wird. |
 | `StatisticsChanged`| Empfehlung abgelaufen aufgrund der Änderung der Statistik für eine Tabelle verwiesen wird. |
@@ -182,6 +181,6 @@ Erfordert die `VIEW DATABASE STATE` über die Berechtigung für die Datenbank in
 ## <a name="see-also"></a>Siehe auch  
  [Die automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
- [database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON-Unterstützung](../../relational-databases/json/index.md)
  

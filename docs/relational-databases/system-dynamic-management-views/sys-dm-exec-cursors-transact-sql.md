@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097840"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID der Sitzung, die diesen Cursor enthält.|  
 |**cursor_id**|**int**|ID des Cursorobjekts.|  
@@ -66,7 +65,7 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**int**|Cursorposition innerhalb des Fetchpuffers.|  
 |**worker_time**|**bigint**|Der Zeitaufwand in Mikrosekunden zum Ausführen dieses Cursors durch den Arbeitsthread.|  
 |**reads**|**bigint**|Anzahl von Lesevorgängen, die der Cursor ausgeführt hat.|  
-|**writes**|**bigint**|Anzahl von Schreibvorgängen, die der Cursor ausgeführt hat.|  
+|**Schreibt**|**bigint**|Anzahl von Schreibvorgängen, die der Cursor ausgeführt hat.|  
 |**dormant_duration**|**bigint**|Millisekunden seit dem Start der letzten Abfrage (Öffnen oder Abrufen) für diesen Cursor.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -75,14 +74,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle stellt Informationen zur Cursordeklarationsschnittstelle bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |API|Cursor wurde mithilfe einer der Datenzugriffs-APIs (ODBC, OLE DB) deklariert.|  
 |TSQL|Cursor wurde mithilfe der DECLARE CURSOR-Syntax von Transact-SQL deklariert.|  
   
  Die folgende Tabelle stellt Informationen zum Cursortyp bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Typ|Description|  
+|Typ|Beschreibung|  
 |----------|-----------------|  
 |Keyset|Cursor wurde als Keyset deklariert.|  
 |Dynamic|Cursor wurde als dynamisch deklariert.|  
@@ -91,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  Die folgende Tabelle stellt Informationen zur Cursorparallelität bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Parallelität|Description|  
+|Parallelität|Beschreibung|  
 |-----------------|-----------------|  
 |Schreibgeschützt|Cursor wurde als schreibgeschützt deklariert.|  
 |Scroll Locks|Cursor verwendet Scrollsperren.|  
@@ -99,7 +98,7 @@ dm_exec_cursors (session_id | 0 )
   
  Die folgende Tabelle stellt Informationen zum Cursorbereich bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Scope|Description|  
+|Scope|Beschreibung|  
 |-----------|-----------------|  
 |Lokal|Gibt an, dass der Gültigkeitsbereich des Cursors lokal zu dem Batch, der gespeicherten Prozedur oder dem Trigger ist, in dem bzw. in der er erstellt wurde.|  
 |Global|Gibt an, dass der Bereich des Cursors global zur Verbindung ist.|  

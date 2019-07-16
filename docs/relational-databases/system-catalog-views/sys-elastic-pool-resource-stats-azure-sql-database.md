@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d7fff3c65aaf6a5670be2d457440f4384f7c5fdd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec3fae7d4e2a649ea05c48d400728e229607d92f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079270"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys. elastic_pool_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,20 +33,20 @@ ms.locfileid: "56011991"
 |-|  
 |**Gilt für**:  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|UTC-Zeit, die den Anfang des Berichtsintervalls von 15 Sekunden.|  
 |**end_time**|**datetime2**|UTC-Zeit, die das Ende des Berichtsintervalls von 15 Sekunden.|  
 |**elastic_pool_name**|**nvarchar(128)**|Der Name des Pools für elastische Datenbanken.|  
-|**avg_cpu_percent**|**decimal(5,2)**|Durchschnittliche computeauslastung als Prozentwert der maximalen Kapazität des Pools an.|  
-|**avg_data_io_percent**|**decimal(5,2)**|Durchschnittliche e/a-Auslastung als Prozentwert der maximalen Kapazität des Pools.|  
-|**avg_log_write_percent**|**decimal(5,2)**|Durchschnittliche Schreibressourcen als Prozentwert der maximalen Kapazität des Pools.|  
-|**avg_storage_percent**|**decimal(5,2)**|Durchschnittliche speicherauslastung als Prozentwert der speicherbeschränkung des Pools.|  
-|**max_worker_percent**|**decimal(5,2)**|Maximale gleichzeitige Worker (Anforderungen) als Prozentwert der maximalen Kapazität des Pools.|  
-|**max_session_percent**|**decimal(5,2)**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität des Pools.|  
+|**avg_cpu_percent**|**decimal(5,2) wird**|Durchschnittliche computeauslastung als Prozentwert der maximalen Kapazität des Pools an.|  
+|**avg_data_io_percent**|**decimal(5,2) wird**|Durchschnittliche e/a-Auslastung als Prozentwert der maximalen Kapazität des Pools.|  
+|**avg_log_write_percent**|**decimal(5,2) wird**|Durchschnittliche Schreibressourcen als Prozentwert der maximalen Kapazität des Pools.|  
+|**avg_storage_percent**|**decimal(5,2) wird**|Durchschnittliche speicherauslastung als Prozentwert der speicherbeschränkung des Pools.|  
+|**max_worker_percent**|**decimal(5,2) wird**|Maximale gleichzeitige Worker (Anforderungen) als Prozentwert der maximalen Kapazität des Pools.|  
+|**max_session_percent**|**decimal(5,2) wird**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität des Pools.|  
 |**elastic_pool_dtu_limit**|**int**|Aktuelle Höchstwerte für Pools für elastische Datenbanken DTU-Einstellung für diesen Pool für elastische Datenbanken während dieses Intervalls.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle Höchstwerte für Pools für elastische Datenbanken Speichergrenzwert für diesen elastischen Pool in MB während dieses Intervalls festlegen.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|Der Prozentsatz an Datenspeicherplatz, von allen Datenbanken im Pool für elastische Datenbanken.  Dies ist das Verhältnis des Datenspeicherplatzes, die Daten die maximale Größe für den elastischen Pool zugeordnet.  Weitere Informationen finden Sie unter: [Verwaltung von Übersetzungsdateien Speicherplatz in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal(5,2) wird**|Der Prozentsatz an Datenspeicherplatz, von allen Datenbanken im Pool für elastische Datenbanken.  Dies ist das Verhältnis des Datenspeicherplatzes, die Daten die maximale Größe für den elastischen Pool zugeordnet.  Weitere Informationen finden Sie unter: [Verwaltung von Übersetzungsdateien Speicherplatz in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Hinweise
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072663"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,10 +67,10 @@ sp_addlogin [ @loginame = ] 'login'
  Die Standardsprache der Anmeldung. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Sprache* nicht angegeben ist, der Standardwert *Sprache* für den neuen Anmeldenamen auf die aktuelle Standardsprache des Servers festgelegt ist.  
   
  [ @sid=] '*Sid*"  
- Die Sicherheits-ID (SID). *SID* ist **varbinary(16)**, hat den Standardwert NULL. Wenn *Sid* NULL ist, generiert das System eine SID für den neuen Anmeldenamen. Trotz der Verwendung des eine **Varbinary** -Datentyp, Werte ungleich NULL genau 16 Byte lang sein und darf nicht bereits vorhanden sein. Angeben von *Sid* ist nützlich, z. B. Wenn Sie Skripts oder verschoben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen von einem Server in eine andere und Sie möchten die Benutzernamen auf die gleiche SID auf verschiedenen Servern haben.  
+ Die Sicherheits-ID (SID). *SID* ist **varbinary(16)** , hat den Standardwert NULL. Wenn *Sid* NULL ist, generiert das System eine SID für den neuen Anmeldenamen. Trotz der Verwendung des eine **Varbinary** -Datentyp, Werte ungleich NULL genau 16 Byte lang sein und darf nicht bereits vorhanden sein. Angeben von *Sid* ist nützlich, z. B. Wenn Sie Skripts oder verschoben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen von einem Server in eine andere und Sie möchten die Benutzernamen auf die gleiche SID auf verschiedenen Servern haben.  
   
  [ @encryptopt=] '*Encryption_option*"  
- Gibt an, ob das Kennwort als Klartext oder als Hash des Klartextkennworts weitergegeben wird. Dabei ist zu beachten, dass keine Verschlüsselung stattfindet. Der Begriff "verschlüsseln" wird in diesem Zusammenhang aus Gründen der Abwärtskompatibilität verwendet. Wenn ein Klartextkennwort übergeben wird, geschieht dies in Form eines Hashs. Der Hash wird gespeichert. *Encryption_option* ist **varchar(20)**, und kann einen der folgenden Werte.  
+ Gibt an, ob das Kennwort als Klartext oder als Hash des Klartextkennworts weitergegeben wird. Dabei ist zu beachten, dass keine Verschlüsselung stattfindet. Der Begriff "verschlüsseln" wird in diesem Zusammenhang aus Gründen der Abwärtskompatibilität verwendet. Wenn ein Klartextkennwort übergeben wird, geschieht dies in Form eines Hashs. Der Hash wird gespeichert. *Encryption_option* ist **varchar(20)** , und kann einen der folgenden Werte.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -142,8 +141,8 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ## <a name="see-also"></a>Siehe auch  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [Sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc6d8bb4c3318f488c7969359c6aa8b18782b6cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046312"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,12 +55,12 @@ fn_ check_object_signatures (
  \@*Klasse* ist **Sysname**.  
   
  { \@ *Fingerabdruck* }  
- SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des asymmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird. \@*Fingerabdruck* ist **varbinary(20)**.  
+ SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wird, oder der GUID des asymmetrischen Schlüssels, mit dem der Schlüssel verschlüsselt wird. \@*Fingerabdruck* ist **varbinary(20)** .  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  Die folgende Tabelle listet die Spalten, die **Fn_check_object_signatures** zurückgibt.  
   
-|Spalte|Typ|Description|  
+|Spalte|Typ|Beschreibung|  
 |------------|----------|-----------------|  
 |Typ|**nvarchar(120)**|Gibt die Typbeschreibung oder -assembly zurück.|  
 |entity_id|**int**|Gibt die Objekt-ID des Objekts zurück, das ausgewertet wird.|  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9764c33f311aa799935a51301c2c5237abfc9d6c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129541"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (Systemsicht) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **Sysarticles** -Sicht macht Artikeleigenschaften. Diese Sicht wird in der distribution-Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Die Identitätsspalte, die eine eindeutige ID für den Artikel bereitstellt.|  
 |**creation_script**|**nvarchar(255)**|Das Schemaskript für den Artikel.|  
@@ -41,7 +40,7 @@ ms.locfileid: "52759822"
 |**filter_clause**|**ntext**|Die WHERE-Klausel des Artikels, die für horizontales Filtern verwendet wird.|  
 |**ins_cmd**|**nvarchar(255)**|Der beim Ausführen einer INSERT-Anweisung auszuführende Befehl. Andernfalls wird der Befehl aus dem Protokoll konstruiert.|  
 |**name**|**sysname**|Der mit dem Artikel verknüpfte Name, der innerhalb der Veröffentlichung eindeutig ist.|  
-|**Objekt-ID**|**int**|Die Objekt-ID der veröffentlichten Tabelle.|  
+|**objid**|**int**|Die Objekt-ID der veröffentlichten Tabelle.|  
 |**pubid**|**int**|Die ID der Veröffentlichung, zu der der Artikel gehört.|  
 |**pre_creation_cmd**|**tinyint**|Der Voraberstellungsbefehl für DROP TABLE, DELETE TABLE oder TRUNCATE:<br /><br /> **0** = None.<br /><br /> **1** = DROP.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRUNCATE.|  
 |**status**|**tinyint**|Die Bitmaske der Artikeloptionen und der Status, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein können:<br /><br /> **1** = Artikel ist aktiv.<br /><br /> **8** = Den Spaltennamen in INSERT-Anweisungen einschließen.<br /><br /> **16** = Parametrisierte Anweisungen verwenden.<br /><br /> **24** = Sowohl den Spaltennamen in INSERT-Anweisungen einschließen als auch parametrisierte Anweisungen verwenden.<br /><br /> **64** = die horizontale Partition aus, für der Artikel, die durch ein transformierbares Abonnement definiert ist.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert **17** anzeigen. Der Wert **0** bedeutet, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  

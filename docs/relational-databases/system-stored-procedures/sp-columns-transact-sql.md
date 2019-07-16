@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1155937c8634fe9859b13b84f2e42be6ceb825d0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070356"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,15 +45,15 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@table_name = ] object` Ist der Name des Objekts, das Zurückgeben von Kataloginformationen verwendet wird. *Objekt* möglich, eine Tabelle, Sicht oder ein anderes Objekt mit den Spalten z. B. Tabellenwertfunktionen. *Objekt* ist **nvarchar(384)**, hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+`[ \@table_name = ] object` Ist der Name des Objekts, das Zurückgeben von Kataloginformationen verwendet wird. *Objekt* möglich, eine Tabelle, Sicht oder ein anderes Objekt mit den Spalten z. B. Tabellenwertfunktionen. *Objekt* ist **nvarchar(384)** , hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
-`[ \@table_owner = ] owner` Ist der Objektbesitzer des Objekts, das Zurückgeben von Kataloginformationen verwendet wird. *Besitzer* ist **nvarchar(384)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *Besitzer* nicht angegeben ist, gelten die Standardregeln für die Sichtbarkeit von Objekt des zugrunde liegenden DBMS.  
+`[ \@table_owner = ] owner` Ist der Objektbesitzer des Objekts, das Zurückgeben von Kataloginformationen verwendet wird. *Besitzer* ist **nvarchar(384)** , hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *Besitzer* nicht angegeben ist, gelten die Standardregeln für die Sichtbarkeit von Objekt des zugrunde liegenden DBMS.  
   
  Wenn der aktuelle Benutzer ein Objekt mit dem angegebenen Namen besitzt, werden die Spalten dieses Objekts zurückgegeben. Wenn *Besitzer* nicht angegeben ist und der aktuelle Benutzer besitzt nicht die ein Objekt mit dem angegebenen *Objekt*, **Sp_columns** sucht nach einem Objekt mit dem angegebenen  *Objekt* gehören dem Datenbankbesitzer. Sofern ein solches Objekt vorhanden ist, werden dessen Spalten zurückgegeben.  
   
-`[ \@table_qualifier = ] qualifier` Ist der Name des Objektqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Objekte (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
+`[ \@table_qualifier = ] qualifier` Ist der Name des Objektqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Objekte (_Qualifizierer_ **.** _Besitzer_ **.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
   
-`[ \@column_name = ] column` Eine einzelne Spalte aus, und wird verwendet, wenn nur eine Spalte mit Kataloginformationen gewünscht wird. *Spalte* ist **nvarchar(384)**, hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, den Namen der Spalte in der **Syscolumns** Tabelle. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-92-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
+`[ \@column_name = ] column` Eine einzelne Spalte aus, und wird verwendet, wenn nur eine Spalte mit Kataloginformationen gewünscht wird. *Spalte* ist **nvarchar(384)** , hat den Standardwert NULL. Wenn *Spalte* ist nicht angegeben ist, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Spalte* dar, den Namen der Spalte in der **Syscolumns** Tabelle. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-92-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
 `[ \@ODBCVer = ] ODBCVer` Ist die Version von ODBC, der verwendet wird. *ODBCVer* ist **Int**, hat den Standardwert von 2. Dieser gibt ODBC, Version 2, an. Gültige Werte sind 2 oder 3. Informationen zu den verhaltensunterschieden zwischen den Versionen 2 und 3, finden Sie in der **SQLColumns** Spezifikation.  
   
@@ -64,7 +63,7 @@ sp_columns [ @table_name = ] object
 ## <a name="result-sets"></a>Resultsets  
  Die **Sp_columns** Katalogversion der gespeicherten Prozedur entspricht **SQLColumns** in ODBC. Die zurückgegebenen Ergebnisse sind sortiert nach **TABLE_QUALIFIER**, **TABLE_OWNER**, und **TABLE_NAME**.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Objektqualifizierername. Dieses Feld kann den Wert NULL annehmen.|  
 |**TABLE_OWNER**|**sysname**|Objektbesitzername. Dieses Feld gibt immer einen Wert zurück.|  
@@ -76,7 +75,7 @@ sp_columns [ @table_name = ] object
 |**LENGTH**|**int**|Die Übertragungsgröße der Daten. <sup>1</sup>|  
 |**SKALIEREN**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
 |**RADIX**|**smallint**|Die Basis für numerische Datentypen.|  
-|**NULLABLE**|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = NULL ist möglich<br /><br /> 0 = NOT NULL|  
+|**NULL-WERTE ZULÄSST**|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = NULL ist möglich<br /><br /> 0 = NOT NULL|  
 |**"HINWEISE"**|**varchar(254)**|Dieses Feld gibt immer NULL zurück.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Standardwert der Spalte|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist identisch mit der **DATA_TYPE** Spalte, mit Ausnahme der **"DateTime"** und SQL-92 **Intervall** -Datentypen. Diese Spalte gibt immer einen Wert zurück.|  

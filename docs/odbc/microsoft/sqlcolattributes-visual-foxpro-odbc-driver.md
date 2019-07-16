@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e34929315d3a3548799bc605dbb8f3c4a2f665d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fb35211160cb7cba866c2b1c9b1cf72340e92ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132619"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Kern-Ebene  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62928162"
   
  Der Visual FoxPro-ODBC-Treiber unterstützt alle *fDescType* Werte. Die folgende Tabelle enthält Kommentare vom Treiber-Implementierung der ausgewählten Werte.  
   
-|*fDescType*|Anmerkung|  
+|*fDescType*|Kommentar|  
 |-----------------|-------------|  
 |SQL_COLUMN_AUTO_INCREMENT|"False" zurückgibt: Visual FoxPro weist keine Zählerfelder auf.|  
 |SQL_COLUMN_CASE_SENSITIVE|Wenn der Spaltentyp Zeichen ist, wird immer TRUE zurückgegeben.|  

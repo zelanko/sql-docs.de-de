@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59a58e143809848640db7d92d912e3eac619d0b5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dcf3788480a6e3dbb3bde20ef3f9e6a43269c9e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026730"
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ## <a name="arguments"></a>Argumente  
 `[ @group_name = ] 'group_name'` Der Name der Gruppe. *Gruppenname* ist **Sysname**, hat keinen Standardwert.  
   
-`[ @server_name = ] 'server_name'` Der Name des Servers, der aus der angegebenen Gruppe entfernt. *Server_name* ist **nvarchar(30)**, hat keinen Standardwert.  
+`[ @server_name = ] 'server_name'` Der Name des Servers, der aus der angegebenen Gruppe entfernt. *Server_name* ist **nvarchar(30)** , hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9c07ac791d7729ffa2b61664c3294c891dd554f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a927b31e12aaf01c5fe30bfcf530bd049989e48f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66213741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005030"
 ---
 # <a name="sysdmdatabasereplicastates-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -68,11 +67,11 @@ ms.locfileid: "66213741"
 |**redo_rate**|**bigint**|Die durchschnittliche Rate an dem die Protokolldatensätze für eine bestimmte sekundäre Datenbank, in Kilobyte (KB) wiederholt werden / Sekunde.|  
 |**filestream_send_rate**|**bigint**|Die Rate in KB/Sekunde, mit der die FILESTREAM-Dateien an das sekundäre Replikat übertragen werden.|  
 |**end_of_log_lsn**|**numeric(25,0)**|Lokale Protokollende-LSN. Die tatsächliche LSN, die dem letzten Protokolldatensatz im Protokollcache der primären und sekundären Datenbanken entspricht. Für das primäre Replikat geben die sekundären Zeilen die Protokollende-LSN der letzten Statusmeldungen an, die die sekundären Replikate an das primäre Replikat gesendet haben.<br /><br /> **End_of_log_lsn** stellt eine Protokollblock-ID mit Nullen aufgefüllte. Es ist keine tatsächliche Protokollfolgenummer.|  
-|**last_commit_lsn**|**Numeric(25,0)**|Tatsächliche Protokollfolgenummer, die dem letzten Commitdatensatz im Transaktionsprotokoll entspricht.<br /><br /> Entspricht bei der primären Datenbank dem zuletzt verarbeiteten Commitdatensatz. In den Zeilen für sekundäre Datenbanken wird die Protokollfolgenummer angezeigt, die das sekundäre Replikat dem primären Replikat gesendet hat.<br /><br /> Beim sekundären Replikat ist dies der letzte Commitdatensatz, der wiederholt wurde.|  
+|**last_commit_lsn**|**numeric(25,0)**|Tatsächliche Protokollfolgenummer, die dem letzten Commitdatensatz im Transaktionsprotokoll entspricht.<br /><br /> Entspricht bei der primären Datenbank dem zuletzt verarbeiteten Commitdatensatz. In den Zeilen für sekundäre Datenbanken wird die Protokollfolgenummer angezeigt, die das sekundäre Replikat dem primären Replikat gesendet hat.<br /><br /> Beim sekundären Replikat ist dies der letzte Commitdatensatz, der wiederholt wurde.|  
 |**last_commit_time**|**datetime**|Die Zeit, die dem letzten Commitdatensatz entspricht.<br /><br /> Bei der sekundären Datenbank ist diese Zeit mit der für die primäre Datenbank identisch.<br /><br /> Auf dem primären Replikat zeigt jede Zeile für die sekundäre Datenbank die Zeit an, die das sekundäre Replikat, das die sekundäre Datenbank hostet, dem primären Replikat zurückgemeldet hat. Der Zeitunterschied zwischen der Zeile für die primäre Datenbank und einer bestimmten sekundären Datenbank Zeile darstellt, etwa das Recovery Point Objective (RPO) ab, vorausgesetzt, dass der Wiederholungsprozess abgefangen wird und der Fortschritt wieder an das primäre Replikat gemeldet wurde vom sekundären Replikat.|  
 |**low_water_mark_for_ghosts**|**bigint**|Eine monoton steigende Zahl für die Datenbank, die eine Untergrenze angibt, die für das Cleanup inaktiver Datensätze verwendet wurde. Wenn diese Zahl im Zeitverlauf nicht zunimmt, weist dies darauf hin, dass das Cleanup für inaktive Datensätze möglicherweise nicht erfolgt ist. Um zu entscheiden, welche Zeilen mit inaktiven Datensätzen bereinigt werden sollen, verwendet das primäre Replikat den Mindestwert dieser Spalte für alle Verfügbarkeitsreplikate (einschließlich des primären Replikats) für diese Datenbank.|  
 |**secondary_lag_seconds**|**bigint**|Die Anzahl der Sekunden an, denen das sekundäre Replikat hinter dem primären Replikat während der Synchronisierung wird.<br /><br />**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**quorum_commit_lsn**|**Numeric(25,0)**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
+|**quorum_commit_lsn**|**numeric(25,0)**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
 |**quorum_commit_time**|**datetime**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
 
 

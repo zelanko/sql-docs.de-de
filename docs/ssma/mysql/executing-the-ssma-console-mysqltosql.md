@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d309a1d0bbdf21c94458771e38aa67fd3eb3fe4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102993"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ausführen der SSMA-Konsole (MySqlToSql)
 Microsoft bietet einen robusten Satz von Skript Befehle zum Ausführen und Steuerungsaktivitäten SSMA Datei.  
@@ -33,7 +32,7 @@ Die Konsolenanwendung verwendet bestimmte standard Skriptbefehle für die Datei 
 ## <a name="project--script-file-commands"></a>Project-Datei-Skriptbefehle  
 **Befehl**  
   
-create-new-project:   
+Neues-Projekt erstellen:   
                    Erstellt ein neues SSMA-Projekt an.  
   
 Die Projekt-Befehle verarbeiten, erstellen Projekte öffnen, speichern und Beenden von Projekten.  
@@ -44,7 +43,7 @@ Die Projekt-Befehle verarbeiten, erstellen Projekte öffnen, speichern und Beend
   
 2.  `project-name` Gibt den Namen des Projekts. {string}  
   
-3.  `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {boolean}  
+3.  `overwrite-if-exists`Optionales Attribut gibt an, ob ein vorhandenes Projekt überschrieben werden soll. {Boolean}  
   
 4.  `project-type:`Optionales Attribut. Gibt an, das z. B. "Sql Server 2005" Projekt "Projekttyp" oder "Sql Server 2008" Projekt oder "Sql Server 2012" oder "Sql Server 2014" Projekt oder "Sql Azure". Standardwert ist "Sql Server 2008".  
   
@@ -106,7 +105,7 @@ Save-Projekt: Speichert das Migrationsprojekt.
 **Befehl**  
   
 Close-Projekt  
-                  decodiert werden: Schließt das Migrationsprojekt.  
+                  : Schließt das Migrationsprojekt.  
   
 **Skript**  
   
@@ -118,7 +117,7 @@ Close-Projekt
 **Befehl**  
   
 Close-Projekt  
-                  decodiert werden: Schließt das Migrationsprojekt.  
+                  : Schließt das Migrationsprojekt.  
   
 **Skript**  
   
@@ -144,7 +143,7 @@ Die Verbindung mit Datenbank-Befehle können mit der Datenbank herstellen.
   
 **Befehl**  
   
-connect-source-database  
+Connect-Source-Datenbank  
   
 -   Führt die Verbindung mit der Quelldatenbank und lädt die Metadaten für die hohe auf die Quelldatenbank, aber nicht alle Metadaten.  
   
@@ -184,7 +183,7 @@ Ist eine oder mehrere Metabase-Knoten als Befehlszeilenparameter erforderlich.
 ```  
 **Befehl**  
   
-reconnect-source-database  
+Verbindung-Source-Datenbank  
   
 1.  Verbindung mit der Quelldatenbank, aber keine Metadaten im Gegensatz zu den Connect-Source-Database-Befehl wird nicht geladen.  
   
@@ -199,7 +198,7 @@ reconnect-source-database
 ```  
 **Befehl**  
   
-connect-target-database  
+Connect-Zieldatenbank  
   
 1.  Stellt eine Verbindung her, in die Zieldatenbank für SQL Server oder SQL Azure und high Level Metadaten der Zieldatenbank, aber nicht die Metadaten vollständig geladen.  
   
@@ -216,7 +215,7 @@ Definition des Servers wird aus dem Namensattribut für jede Verbindung im Serve
 ```  
 **Befehl**  
   
-reconnect-target-database  
+Verbindung-Zieldatenbank  
   
 1.  Verbindung mit der Zieldatenbank, aber alle Metadaten, im Gegensatz zu den Connect-Ziel-Database-Befehl wird nicht geladen.  
   
@@ -311,7 +310,7 @@ Die Ausgabe der Standard-Konsole, die Einstellung für die migrationsbefehle ist
   
 **Befehl**  
   
-convert-schema  
+Convert-schema  
   
 1.  Führt die schemakonvertierung aus der Quelle in das Zielschema.  
   
@@ -377,7 +376,7 @@ oder
 ```  
 **Befehl**  
   
-migrate-data  
+Migrieren von Daten  
   
 1.  Werden die Quelldaten zum Ziel migriert.  
   
@@ -439,7 +438,7 @@ Der Befehl Vorbereiten der Migration initiiert schemazuordnung zwischen den Quel
   
 **Befehl**  
   
-map-schema  
+Map-schema  
   
 Schemazuordnung der Quelldatenbank mit dem Zielschema.  
   
@@ -485,9 +484,9 @@ Synchronisieren von Ziel
   
     -   Bericht insgesamt als Warnung  
   
-    -   report-each-as-warning  
+    -   Bericht-each-als-Warnung  
   
-    -   fail-script  
+    -   Fehler-Skript  
   
 4.  `report-errors-to:` Speicherort der Fehlerbericht angibt, für der Synchronisierungsvorgang (optionales Attribut), wenn nur Ordnerpfad angegeben wird, klicken Sie dann Datei anhand des Namens **TargetSynchronizationReport.XML** erstellt wird.  
   
@@ -532,7 +531,7 @@ oder
 ```  
 **Befehl**  
   
-refresh-from-database  
+Refresh-aus-Datenbank  
   
 1.  Aktualisiert die Source-Objekte aus der Datenbank.  
   
@@ -548,9 +547,9 @@ refresh-from-database
   
     -   Bericht insgesamt als Warnung  
   
-    -   report-each-as-warning  
+    -   Bericht-each-als-Warnung  
   
-    -   fail-script  
+    -   Fehler-Skript  
   
 4.  `report-errors-to:` Speicherort der Fehlerbericht angibt, für der Synchronisierungsvorgang (optionales Attribut), wenn nur Ordnerpfad angegeben wird, klicken Sie dann Datei anhand des Namens **SourceDBRefreshReport.XML** erstellt wird.  
   
@@ -597,7 +596,7 @@ Die Generierung des Datenupdateskripts-Befehle führen zwei Aufgaben aus: Sie he
   
 **Befehl**  
   
-save-as-script  
+Save-als-script  
   
 Speichern die Skripts für die Objekte in einer Datei, die bereits erwähnt, wenn zum Metabase = Ziel, dies ist eine Alternative zum Befehl zur abonnementsynchronisierung in wir Abrufen der Skripts und führen Sie in der Zieldatenbank identisch.  
   
@@ -649,7 +648,7 @@ oder
 ```  
 **Befehl**  
   
-convert-sql-statement  
+Convert-Sql-Anweisung  
   
 1.  `context` Gibt den Schemanamen an.  
   

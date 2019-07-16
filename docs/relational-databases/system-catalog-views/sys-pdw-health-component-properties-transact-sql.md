@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6f74c53c7b7380308ee0c620bcf07c1a8ddbc8f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016552"
 ---
 # <a name="syspdwhealthcomponentproperties-transact-sql"></a>sys.pdw_health_component_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Speichert die Eigenschaften, die ein Gerät beschreiben. Einige Eigenschaften anzeigen des Gerätestatus und einige Eigenschaften werden das Gerät selbst beschrieben.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |property_id|**int**|Eindeutiger Bezeichner der Eigenschaft einer Komponente.<br /><br /> Property_id und Component_id bilden den Schlüssel für diese Ansicht ein.|NOT NULL|  
 |component_id|**int**|Die ID der Komponente. Finden Sie unter [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> Property_id und Component_id bilden den Schlüssel für diese Ansicht ein.|NOT NULL|  

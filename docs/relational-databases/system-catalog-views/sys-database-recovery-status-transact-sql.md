@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 72a292724a08917b18baedd6a3adbb8dfd00f739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e78b5a8640918291fc68e5b4882448b94a1b9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079522"
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile pro Datenbank. Wenn die Datenbank nicht geöffnet wird, versucht das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], sie zu starten.  
+  Enthält eine Zeile pro Datenbank. Wenn die Datenbank nicht geöffnet wird, versucht das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , sie zu starten.  
   
  Um die Zeile für eine andere Datenbank als die **master** - oder die **tempdb**-Datenbank anzeigen zu können, muss eine der folgenden Bedingungen erfüllt sein:  
   
@@ -40,7 +39,7 @@ ms.locfileid: "47707348"
   
 -   Sie müssen über die CREATE DATABASE-Berechtigung für die **master** -Datenbank verfügen.    
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank und innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eindeutig.|  
 |**database_guid**|**uniqueidentifier**|Wird verwendet, um alle Datenbankdateien einer Datenbank miteinander in Verbindung zu bringen. Die Headerseiten aller Dateien müssen diesen GUID aufweisen, damit die Datenbank erwartungsgemäß gestartet wird. Es sollte immer nur eine Datenbank diesen GUID aufweisen. Duplikate können jedoch durch Kopieren und Anfügen von Datenbanken erstellt werden. Durch RESTORE wird immer ein neuer GUID erstellt, wenn Sie eine Datenbank wiederherstellen, die noch nicht vorhanden ist.<br /><br /> NULL= Die Datenbank ist offline, oder die Datenbank wird nicht gestartet.|  

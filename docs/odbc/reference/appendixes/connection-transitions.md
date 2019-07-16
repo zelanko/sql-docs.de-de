@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019189"
 ---
 # <a name="connection-transitions"></a>Verbindungsübergänge
 ODBC-Verbindungen werden die folgenden Status haben.  
@@ -42,9 +41,9 @@ ODBC-Verbindungen werden die folgenden Status haben.
 |C0<br /><br /> Keine Env.|C1 nicht zugeordnet.|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH)[2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH)[3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
-|(IH)[4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|(BEI) [2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|(BEI) [3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
+|(BEI) [4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
   
@@ -60,7 +59,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C3 [d] C4 [s]|-- [d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|[D] C3, C4 [s]|--[d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
@@ -72,7 +71,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
  [2]. die Verbindung wurde im Autocommit Modus.  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges, and SQLTables  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges und SQLTables  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
@@ -112,14 +111,14 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4 s -- n[f]|(08002)|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4 s – n [f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|--[3]|--[3]|--[3]|--|--|: [4] oder ([5], [6] und [8]) C4 [5] und [7] C5 [5], [6] und [9]|  
-|(IH)[2]|(IH)|(08003)|(08003)|--|--|C5|  
+|(BEI) [1]|--[3]|--[3]|--[3]|--|--|: [4] oder ([5], [6] und [8]) C4 [5] und [7] C5 [5], [6] und [9]|  
+|(BEI) [2]|(IH)|(08003)|(08003)|--|--|C5|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
   
@@ -155,10 +154,10 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH)[2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH)[3]|(IH)|(IH)|(IH)|(IH)|C4[5] --[6]|--[7] C4 [5] und [8] C5 [6] und [8]|  
-|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
+|(BEI) [1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(BEI) [2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(BEI) [3]|(IH)|(IH)|(IH)|(IH)|C4[5] --[6]|--[7] C4 [5] und [8] C5 [6] und [8]|  
+|(BEI) [4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
   
@@ -180,8 +179,8 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
-|(IH)[2]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|(BEI) [1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
+|(BEI) [2]|(IH)|(IH)|(IH)|(IH)|--|--|  
   
  [1] für diese Zeile zeigt Transaktionen bei der *Option* Argument ist SQL_CLOSE.  
   
@@ -195,7 +194,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|HY010|--|--|--|  
+|BEI|BEI|--[1] 08003[2]|HY010|--|--|--|  
   
  [1] der *Attribut* Argument war SQL_ATTR_ACCESS_MODE SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE oder SQL_ATTR_TRACEFILE oder ein Wert für das Verbindungsattribut festgelegt wurde.  
   
@@ -205,10 +204,10 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|--|--|--|--|--|--|  
-|(IH)[2]|(IH)|--|--|--|--|--|  
-|(IH)[3]|(IH)|(IH)|(IH)|(IH)|--|--|  
-|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
+|(BEI) [1]|--|--|--|--|--|--|  
+|(BEI) [2]|(IH)|--|--|--|--|--|  
+|(BEI) [3]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|(BEI) [4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
   
@@ -222,19 +221,19 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|--|--|--|--|--|--|  
+|BEI|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|HY010|HY010|--|--|--|  
+|BEI|BEI|HY010|HY010|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|08003|--|--|--|  
+|BEI|BEI|--[1] 08003[2]|08003|--|--|--|  
   
  [1] der *Informationsart* Argument war SQL_ODBC_VER.  
   
@@ -272,7 +271,7 @@ ODBC-Verbindungen werden die folgenden Status haben.
   
 |C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|: [3] und [6] C5 [8] [4] HY011-08002 [5] oder [7]|  
+|BEI|BEI|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|: [3] und [6] C5 [8] [4] HY011-08002 [5] oder [7]|  
   
  [1] der *Attribut* Argument war kein SQL_ATTR_TRANSLATE_LIB oder SQL_ATTR_TRANSLATE_OPTION.  
   

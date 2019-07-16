@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019236"
 ---
 # <a name="column-size"></a>Spaltengröße
 Die Spalte (oder Parameter) die Größe der numerischen Datentypen wird als die maximale Anzahl von Ziffern durch den Datentyp der Spalte oder Parameter oder die Genauigkeit der Daten definiert. Für Zeichentypen handelt ist dies die Länge in Zeichen, der Daten; für binäre Datentypen wird die Spaltengröße als die Länge in Bytes der Daten definiert. Für die Zeit, Timestamp und alle Interval-Datentypen ist dies die Anzahl der Zeichen in die Darstellung dieser Daten. Die Größe der Spalte für jeden präzise SQL-Datentyp definiert, wird in der folgenden Tabelle angezeigt.  
@@ -37,7 +36,7 @@ Die Spalte (oder Parameter) die Größe der numerischen Datentypen wird als die 
 |SQL_BIGINT[c]|19 (falls mit Vorzeichen) oder 20 (falls ohne Vorzeichen)|  
 |SQL_REAL[c]|7|  
 |SQL_FLOAT[c]|15|  
-|SQL_DOUBLE[c]|15|  
+|SQL_DOUBLE [c]|15|  
 |Alle binären Typen [a] [b].|Die definiert oder maximale Länge in Bytes der Spalte oder des Parameters. Die Länge einer Spalte, die als Binary(10)-Wert definiert ist z. B. 10.|  
 |SQL_TYPE_DATE[c]|10 (die Anzahl der Zeichen in der *jjjj-mm-tt* Format).|  
 |SQL_TYPE_TIME[c]|8 (die Anzahl der Zeichen in der *Hh-mm-ss* Format), oder 9 + *s* (die Anzahl der Zeichen in der *hh: mm:* [: ss. fff...]-Format, in denen *s*ist die Genauigkeit, Sekunden).|  

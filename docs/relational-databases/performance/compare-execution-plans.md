@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5ee4fc6502b9d31d9ccade786c5cc0129c61da22
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584491"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860552"
 ---
 # <a name="compare-execution-plans"></a>Vergleichen von Ausführungsplänen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ Wenn zwei Ausführungspläne verglichen werden, werden Bereiche des Plans, die *
      > [!TIP]
      > Alle für Ausführungspläne verfügbaren Zoom- und Navigationsoptionen funktionieren im Planvergleichsmodus. Weitere Einzelheiten finden Sie unter [Anzeigen eines tatsächlichen Ausführungsplans](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Auf der rechten Seite öffnet sich ebenfalls ein Fenster mit zwei Eigenschaften im Rahmen der Standardauswahl. Eigenschaften, die in beiden verglichenen Operatoren vorhanden sind, aber Unterschiede aufweisen, wird zur leichteren Identifizierung das *Ungleichheitszeichen* (?) vorangestellt.
+5.  Auf der rechten Seite öffnet sich ebenfalls ein Fenster mit zwei Eigenschaften im Rahmen der Standardauswahl. Eigenschaften, die in beiden verglichenen Operatoren vorhanden sind, aber Unterschiede aufweisen, wird zur leichteren Identifizierung das *Ungleichheitszeichen* (&ne;) vorangestellt.
 
     ![Duales Eigenschaftenfenster](../../relational-databases/performance/media/plancomparison-properties.png "Duales Eigenschaftenfenster")  
 

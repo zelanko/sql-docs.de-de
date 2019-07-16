@@ -21,23 +21,22 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041059"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Für jede AlwaysOn-zurückgibt verfügbarkeitsgruppe entweder 0 (null) gibt an, dass kein Netzwerkname zugeordnet ist, mit der verfügbarkeitsgruppe ist, oder eine Zeile für jede Verfügbarkeitsgruppen-Listenerkonfiguration im Windows Server Failover Clustering (WSFC gibt) Zeilen -Cluster. In dieser Sicht wird die von Cluster erfasste Echtzeitkonfiguration angezeigt.  
+  Für jede Always On-Verfügbarkeitsgruppe gilt: Entweder werden null Zeilen zurückgegeben, um anzuzeigen, dass der Verfügbarkeitsgruppe kein Netzwerkname zugeordnet ist, oder für jede Verfügbarkeitsgruppen-Listenerkonfiguration im WSFC-Cluster (Windows Server-Failoverclustering) wird eine Zeile zurückgegeben. In dieser Sicht wird die von Cluster erfasste Echtzeitkonfiguration angezeigt.  
   
 > [!NOTE]  
 >  In dieser Katalogsicht werden nicht die Details einer IP-Konfiguration beschrieben, die im WSFC-Cluster definiert wurde.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Verfügbarkeitsgruppen-ID (**Group_id**) von [Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar(36)**|Die GUID der Clusterressourcen-ID.|  

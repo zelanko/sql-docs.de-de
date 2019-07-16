@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216359"
 ---
 # <a name="getting-long-data"></a>Abrufen von Long-Daten
 Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, wie z. B. 255 Zeichen lang sein. Diese Daten möglicherweise klein genug, um in einem einzigen Puffer, z. B. eine Beschreibung für den mehrere Tausend Zeichen gespeichert werden. Allerdings kann es zu lange im Arbeitsspeicher, z. B. langer Text-Dateien oder Bitmaps gespeichert sein. Da solche Daten nicht in einem einzigen Puffer gespeichert werden können, wird sie abgerufen, Webparts mit dem Treiber **SQLGetData** nach die anderen Daten in die Zeile abgerufen wurde.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068639"
 ---
 # <a name="file-data-sources"></a>Dateidatenquellen
 *Datei-Datenquellen* werden in einer Datei gespeichert und können Sie die Verbindungsinformationen, die wiederholt verwendet werden, indem Sie einen einzelnen Benutzer oder von mehreren Benutzern gemeinsam verwendet werden soll. Wenn eine Datei als Datenquelle verwendet wird, stellt der Treiber-Manager die Verbindung mit der Datenquelle anhand der Informationen in einer DSN-Datei her. Diese Datei kann wie jede andere Datei bearbeitet werden. Eine Datenquelle einen Datenquellennamen ein, keinen ist eine Datenquelle für den Computer, und nicht auf einen Benutzer oder Computer registriert ist.  

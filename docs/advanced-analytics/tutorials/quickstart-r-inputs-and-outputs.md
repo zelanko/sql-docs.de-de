@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962002"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Schnellstart: Verarbeiten von Eingaben und Ausgaben, die mithilfe von R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ In der Standardeinstellung [Sp_execute_external_script](https://docs.microsoft.c
 
 Die gespeicherte Prozedur gibt einen einzelnen R-Datenrahmen als Ausgabe zurück, aber Sie können auch skalare und Modelle als Variablen ausgeben. Sie können z. B. die Ausgabe eines trainierten Modells als binäre Variable und übergeben, um eine T-SQL INSERT-Anweisung, um das Modell in einer Tabelle zu schreiben. Sie können auch Diagramme (im binären Format) oder skalare generieren (einzelne Werte, z. B. Datum und Uhrzeit, die verstrichene Zeit zum Trainieren des Modells und so weiter).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Einen vorherigen schnellstartanleitung [R stellen Sie sicher, die in SQL Server vorhanden ist](quickstart-r-verify.md), enthält Informationen und links für das Einrichten der R-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
 
@@ -72,7 +71,7 @@ Sehen wir uns die standardmäßigen Eingabe- und Variablen von Sp_execute_extern
 
     ![Ausgabe von R-Skript, das Daten aus einer Tabelle zurückgegeben.](./media/r-output-rtestdata.png)
 
-2. Ändern wir den Namen der Eingabe- oder Variablen. Das obige Skript verwendet die Standardeingabe und eingabevariablennamen _"inputdataset"_ und _"outputdataset"_. Definieren Sie die Eingabedaten _InputDatSet_, Sie verwenden die *@input_data_1* Variable.
+2. Ändern wir den Namen der Eingabe- oder Variablen. Das obige Skript verwendet die Standardeingabe und eingabevariablennamen _"inputdataset"_ und _"outputdataset"_ . Definieren Sie die Eingabedaten _InputDatSet_, Sie verwenden die *@input_data_1* Variable.
 
     In diesem Skript wurde die Namen der Ausgabe- und der Eingabevariablen für die gespeicherte Prozedur zu geändert *SQL_out* und *SQL_in*:
 

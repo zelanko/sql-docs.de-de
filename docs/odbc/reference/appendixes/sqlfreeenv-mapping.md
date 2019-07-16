@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6070d7a9d9a7d2eafa35b87c94d6cfd320f916ae
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ef89943f95a6492614972c3e89fe2129becc1aa5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086425"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv-Zuordnung
 Wenn eine Anwendung ruft **SQLFreeEnv** über einen ODBC *3.x* Treiber, den Aufruf von  

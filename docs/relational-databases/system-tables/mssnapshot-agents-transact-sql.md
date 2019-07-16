@@ -17,29 +17,28 @@ helpviewer_keywords:
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3449893576870b9ff4f02da044a5b86d09cab286
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079963"
 ---
 # <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSsnapshot_agents** -Tabelle enthält eine Zeile für jede Momentaufnahme-Agent mit dem lokalen Verteiler verknüpft ist. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Die ID des Momentaufnahme-Agents.|  
 |**name**|**nvarchar(100)**|Der Name des Momentaufnahme-Agents|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
-|**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
+|**publication**|**sysname**|Der Name der Veröffentlichung.|  
 |**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktionsveröffentlichung.<br /><br /> **1** = Momentaufnahme.<br /><br /> **2** = Merge.|  
 |**local_job**|**bit**|Gibt an, ob sich ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag auf dem lokalen Verteiler befindet.|  
-|**job_id**|**'binary(16)'**|Die Auftrags-ID|  
+|**job_id**|**binary(16)**|Die Auftrags-ID|  
 |**profile_id**|**int**|Der Konfigurations-ID aus der [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle.|  
 |**dynamic_filter_login**|**sysname**|Der Wert, der zum Auswerten von der [SUSER_SNAME &#40;Transact-SQL&#41; ](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion in parametrisierten Filtern, die eine Partition zu definieren. Diese Spalte wird für eine partitionierte Momentaufnahme verwendet.|  
 |**dynamic_filter_hostname**|**sysname**|Der Wert, der zum Auswerten von der [HOST_NAME &#40;Transact-SQL&#41; ](../../t-sql/functions/host-name-transact-sql.md) -Funktion in parametrisierten Filtern, die eine Partition zu definieren. Diese Spalte wird für eine partitionierte Momentaufnahme verwendet.|  
@@ -47,7 +46,7 @@ ms.locfileid: "52808632"
 |**publisher_login**|**sysname**|Der Anmeldename, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird|  
 |**publisher_password**|**nvarchar(524)**|Der verschlüsselte Wert des Kennworts, das verwendet wird, um eine Verbindung mit dem Verleger herzustellen.|  
 |**job_step_uid**|**uniqueidentifier**|Die eindeutige ID des Auftragsschritts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, in dem der Agent gestartet wird.|  
-|**job_login-Wert**|**sysname**||  
+|**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  
   
 ## <a name="see-also"></a>Siehe auch  

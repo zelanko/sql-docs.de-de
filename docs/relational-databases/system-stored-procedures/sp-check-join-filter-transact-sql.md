@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02c46d74a1e68af322aa50c7b0ac1c3d4f96ee49
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f180e2b3478ce136fa16d82084d46b79e6152957
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070422"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @filtered_table = ] 'filtered_table'` Ist der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)**, hat keinen Standardwert.  
+`[ @filtered_table = ] 'filtered_table'` Ist der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)** , hat keinen Standardwert.  
   
-`[ @join_table = ] 'join_table'` Der Name einer Tabelle, die zu verknüpfenden *Filtered_table*. *Join_table* ist **nvarchar(400)**, hat keinen Standardwert.  
+`[ @join_table = ] 'join_table'` Der Name einer Tabelle, die zu verknüpfenden *Filtered_table*. *Join_table* ist **nvarchar(400)** , hat keinen Standardwert.  
   
-`[ @join_filterclause = ] 'join_filterclause'` Ist die joinfilterklausel getestet wird. *Join_filterclause* ist **nvarchar(1000)**, hat keinen Standardwert.  
+`[ @join_filterclause = ] 'join_filterclause'` Ist die joinfilterklausel getestet wird. *Join_filterclause* ist **nvarchar(1000)** , hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung für Vorausberechnete Partitionen. wo **1** bedeutet, dass Vorausberechnete Partitionen verwendet werden können, und **0** bedeutet, dass nicht verwendet werden.|  
 |**has_dynamic_filters**|**bit**|Ist, wenn die bereitgestellte Filterklausel mindestens eine parametrisierte Filterfunktion enthält. wo **1** bedeutet, dass eine parametrisierte Filterfunktion verwendet wird, und **0** bedeutet, dass eine solche Funktion nicht verwendet wird.|  

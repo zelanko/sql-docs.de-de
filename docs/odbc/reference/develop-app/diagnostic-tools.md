@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a580492c-1b41-4393-9604-faa0bd28854b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fe70b1e484039593c9bb02a28788259f9afaf18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aadec3adbf7b3928f182c99e5545165b5cfd372
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039870"
 ---
 # <a name="diagnostic-tools"></a>Diagnosetools
 Zwei Funktionen können bei der Diagnose von Problemen in ODBC-Anwendungen unterstützen. Beide sind die ODBC-Administrator verfügbar sind und vom Treiber-Manager implementiert. *Ablaufverfolgung* bietet die Möglichkeit, die in einer Protokolldatei die Sequenz von Funktionsaufrufen aufzeichnen. Visual Studio Analyzer ermöglicht die Analyse von Informationen über die Interaktion der Komponenten in einer verteilten Umgebung.  

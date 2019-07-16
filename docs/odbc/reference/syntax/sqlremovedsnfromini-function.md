@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01ecb5457ce3fbc343541063047cb935cbf85a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024530"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni-Funktion
 **Übereinstimmung mit Standards**  
@@ -52,7 +51,7 @@ BOOL SQLRemoveDSNFromIni(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLRemoveDSNFromIni** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
 |ODBC_ERROR_INVALID_DSN|Ungültige DSN|Die *LpszDSN* Argument war ungültig.|  

@@ -14,27 +14,26 @@ helpviewer_keywords:
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab72d89bba748b272322783fb2f14afb8e08bf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64de081adef73e1480fd0bc4ca6b9bf3aacded7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030181"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planen von automatischen, administrativen Tasks im SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent wird durch die folgenden Objekte dargestellt:  
+  In SMO wird der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent durch die folgenden Objekte dargestellt:  
   
--   Die <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> Objekt verfügt über drei Auflistungen von Aufträgen, Warnungen und Operatoren.  
+-   Das <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer>-Objekt verfügt über drei Auflistungen von Aufträgen, Warnungen und Operatoren.  
   
 -   Das <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection>-Objekt stellt eine Liste von Pager-, E-Mail-Adressen und NET SEND-Operatoren dar, die automatisch über den Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent über Ereignisse benachrichtigt werden können.  
   
 -   Das <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection>-Objekt stellt eine Liste von Umständen dar, wie z. B. Systemereignisse oder Leistungsbedingungen, die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] überwacht werden.  
   
--   Die <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> -Objekt ist geringfügig komplexer. Es stellt eine Liste von Tasks dar, die aus mehreren Schritten bestehen und nach festgelegten Plänen ausgeführt werden. Die Schritte und die Zeitplaninformationen werden im <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep>-Objekt und <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule>-Objekt gespeichert.  
+-   Das <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection>-Objekt ist geringfügig komplexer. Es stellt eine Liste von Tasks dar, die aus mehreren Schritten bestehen und nach festgelegten Plänen ausgeführt werden. Die Schritte und die Zeitplaninformationen werden im <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep>-Objekt und <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule>-Objekt gespeichert.  
   
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Objekte befinden sich im <xref:Microsoft.SqlServer.Management.Smo.Agent>-Namespace.  
   
@@ -167,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Erstellen einer Warnung in Visual C#  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName | CounterName | Instanz | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Die <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> -Typ erfordert eckige Klammern, da **Operator** ist eine [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort.  
   
@@ -200,7 +199,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Erstellen einer Warnung in PowerShell  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName | CounterName | Instanz | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Die <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> -Typ erfordert eckige Klammern, da **Operator** ist eine [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort.  
   
@@ -236,7 +235,7 @@ $op.Drop()
 ```
   
 ## <a name="allowing-user-access-to-subsystem-by-using-a-proxy-account-in-visual-c"></a>Zulassen des Benutzerzugriffs auf das Subsystem mit einem Proxykonto in Visual C#  
- Dieses Codebeispiel zeigt, wie ein Benutzerzugriff auf ein bestimmtes Subsystem mit der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> Methode der <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> Objekt.  
+ Dieses Codebeispiel zeigt, wie einem Benutzer der Zugriff auf ein festgelegtes Subsystem über die <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount>-Objekts gewährt wird.  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

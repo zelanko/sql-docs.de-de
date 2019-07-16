@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070480"
 ---
 # <a name="standard-gateway"></a>Standardgateway
 Ein *Gateway* ist eine Softwarekomponente, die bewirkt, dass ein DBMS an, wie eine andere aus. Das heißt, akzeptiert das Gateway, die Programmierschnittstelle, die SQL-Grammatik, und Daten streamen Protokoll einer einzelnen DBMS und übersetzt diesen auf die Programmierschnittstelle, die SQL-Grammatik, und Protokolls des ausgeblendeten DBMS Data stream. Beispielsweise können Anwendungen so geschrieben, dass Microsoft® SQL Server™ auch DB2-Daten mithilfe der Micro Decisionware DB2-Gateway zugreifen. Dieses Produkt führt DB2, wie SQL Server zu suchen. Wenn Gateways verwendet werden, muss ein anderes Gateway für jede Zieldatenbank geschrieben werden.  

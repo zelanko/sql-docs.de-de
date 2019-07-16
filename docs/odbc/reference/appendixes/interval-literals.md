@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e90f7683c13d8693529c60f1ba893bd645920bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041909"
 ---
 # <a name="interval-literals"></a>Intervallliterale
 ODBC ist erforderlich, dass alle Treiber Konvertierung des Datentyps SQL_CHAR oder SQL_VARCHAR sein alle C-Intervall-Datentypen zu unterstützen. Wenn die Interval-Datentypen nicht von die zugrunde liegenden Datenquelle unterstützt wird, jedoch muss der Treiber das richtige Format für den Wert im Feld SQL_CHAR zu kennen, um diese Konvertierungen zu unterstützen. Entsprechend muss ODBC an, dass alle ODBC C Typ SQL_CHAR oder SQL_VARCHAR, konvertiert werden, damit ein Treiber, in welchem Format ein Intervall, in das Zeichenfeld gespeichert wissen muss haben soll. Dieser Abschnitt beschreibt die Syntax des Intervall-Literale, die der Treiber-Writer, um die Felder SQL_CHAR während der Konvertierung in oder aus C Interval-Datentypen zu überprüfen verwenden muss.  

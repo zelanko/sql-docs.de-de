@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 130c4f9c38e5eb7ee47d31377a224c5b602b5b35
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 7b40d9afe54137fb31088aa8aa8b5664c90b715d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053306"
 ---
-# <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>Sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Gibt die Momentaufnahme in Intervallen von 15 Sekunden für die letzten 30 Minuten der Resource pools Statistiken für eine Azure SQL-Datenbank.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|ssNoversion|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu.
 |**name**|sysname|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu.|
@@ -85,7 +84,7 @@ Gibt die Momentaufnahme in Intervallen von 15 Sekunden für die letzten 30 Minut
 |**max_vcores**|decimal(5,2) wird|Die aktuelle Konfiguration für die maximale durchschnittliche CPU-Bandbreite, die für alle Anforderungen im Ressourcenpool zulässig ist, wenn CPU-Konflikte bestehen.  In der Einheit von virtuellen Kernen|
 |**cap_vcores**|decimal(5,2) wird|Feste Obergrenze der CPU-Bandbreite, die allen Anforderungen im Ressourcenpool zugewiesen wird.  In virtuellen Kernen-Komponente|
 |**instance_cpu_count**|ssNoversion|Anzahl von CPUS, die für die Instanz konfiguriert|
-|**instance_cpu_percent|decimal(5,2) wird|CPU-Prozentsatz für die Instanz konfiguriert|
+|** instance_cpu_percent|decimal(5,2) wird|CPU-Prozentsatz für die Instanz konfiguriert|
 |**instance_vcores**|decimal(5,2) wird|Anzahl von virtuellen Kernen, die für die Instanz konfiguriert|
 |**delta_log_bytes_used**|decimal(5,2) wird|Gesamtprotokoll Generierung (in Byte) auf der Poolebene seit der letzten Momentaufnahme|
 |**avg_login_rate_percent**|decimal(5,2) wird|Anzahl der Anmeldeversuche seit der letzten Momentaufnahme, mit der Grenzwert für Anmeldungen verglichen|

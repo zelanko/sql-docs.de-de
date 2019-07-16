@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b349838788a3c442ea9c32fc5b8a7ebbd0240e37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a12d1579af407bca77c9fa61d660a84a09f04e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924912"
 ---
 # <a name="keyset-cursors"></a>KEYSET-Cursor
 Der Keyset-Cursor bietet Funktionalität zwischen statischen und eines dynamischen Cursors in seiner Fähigkeit, Änderungen zu erkennen. Wie ein statischer Cursor ermittelt er nicht immer Änderungen an der Mitgliedschaft und Reihenfolge des Resultsets. Wie ein dynamischer Cursor ermittelt er Änderungen an den Werten der Zeilen im Resultset.  

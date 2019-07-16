@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eeab20c5385b02a874908cc941c1c69910efa228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 966962bdda79a57e83a0bce06b9254267efb474c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068658"
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL – Beispiel
 Der folgende Code ist eine einfache eingebettete SQL-Programms, in c geschriebenen Das Programm veranschaulicht viele, aber nicht alle, die eingebettete SQL-Techniken. Das Programm fordert den Benutzer für eine Bestellnummer, ruft die Anzahl der Kunden, Vertriebsmitarbeiter und Status des Auftrags ab und zeigt die abgerufene Informationen auf dem Bildschirm.  

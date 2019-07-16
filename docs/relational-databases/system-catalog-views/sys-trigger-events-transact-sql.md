@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0071b7c0f955befba458a41ce813a8aff5aabe8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc2732797551317a392b0ab55d9ecbeb28d990a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091945"
 ---
 # <a name="systriggerevents-transact-sql"></a>sys.trigger_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "47748938"
   Enthält eine Zeile für jedes Ereignis, für das ein Trigger ausgelöst wird.  
   
 > [!NOTE]  
->  **Sys. trigger_events** gilt nicht für ereignisbenachrichtigungen.  
+>  **sys.trigger_events** gilt nicht für Ereignisbenachrichtigungen.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**\<Von sys.events geerbte Spalten >**|Nicht verfügbar|Erbt die **Object_id**, **Typ**, **Type_desc** Spalten aus [sys.events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
+|**\<Von sys.events geerbte Spalten >**|Nicht verfügbar|Erbt die Spalten **object_id**, **type**, **type_desc** von [sys.events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
 |**is_first**|**bit**|Der Trigger ist als derjenige gekennzeichnet, der für dieses Ereignis als erster ausgelöst wird.|  
 |**is_last**|**bit**|Der Trigger ist als derjenige gekennzeichnet, der für dieses Ereignis als letzter ausgelöst wird.|  
 |**event_group_type**|**int**|Ereignisgruppe, für die der Trigger erstellt wurde, bzw. NULL, wenn sie nicht für eine Ereignisgruppe erstellt wurden.|  

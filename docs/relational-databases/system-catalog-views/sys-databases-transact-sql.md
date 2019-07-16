@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbb52087baa5c11f972ae531f6c619352fbd13a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6817e41f48df740a59e371da9b78e09dd6894af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079391"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +34,7 @@ Enthält eine Zeile für jede Datenbank in der [!INCLUDE[ssNoVersion](../../incl
   
 Wenn eine Datenbank nicht `ONLINE`, oder `AUTO_CLOSE` nastaven NA hodnotu `ON` und die Datenbank geschlossen wird, können die Werte einiger Spalten sein `NULL`. Wenn eine Datenbank ist `OFFLINE`, die entsprechende Zeile ist nicht für Benutzer mit geringen Privilegien sichtbar. Die entsprechende Zeile angezeigt, wenn die Datenbank ist `OFFLINE`, Benutzer benötigen mindestens die `ALTER ANY DATABASE` Berechtigung auf Serverebene, oder die `CREATE DATABASE` -Berechtigung für die `master` Datenbank.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name der Datenbank, eindeutig innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder innerhalb eines [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]servers.|  
 |**database_id**|**int**|ID der Datenbank, eindeutig innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder innerhalb eines [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]servers.|  
@@ -49,7 +48,7 @@ Wenn eine Datenbank nicht `ONLINE`, oder `AUTO_CLOSE` nastaven NA hodnotu `ON` u
 |**is_read_only**|**bit**|1 = Datenbank ist READ_ONLY<br /> 0 = Datenbank ist READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE ist ON<br /> 0 = AUTO_CLOSE ist OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK ist ON<br /> 0 = AUTO_SHRINK ist OFF|  
-|**state**|**tinyint**|**Wert &#124; gilt für**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = beim Wiederherstellen eines &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = EMERGENCY &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = OFFLINE &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Hinweis**: Abfragen für Always On-Datenbanken, die `database_state` oder `database_state_desc` Spalten [Sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
+|**state**|**tinyint**|**Wert &#124; gilt für**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = beim Wiederherstellen eines &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = EMERGENCY &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = OFFLINE &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = KOPIEREN&#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Hinweis**: Abfragen für Always On-Datenbanken, die `database_state` oder `database_state_desc` Spalten [Sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Datenbankstatus. Status wird angezeigt.|  
 |**is_in_standby**|**bit**|Datenbank ist für die Wiederherstellungsprotokollierung schreibgeschützt.|  
 |**is_cleanly_shutdown**|**bit**|1 = Datenbank wurde ordnungsgemäß heruntergefahren, keine Wiederherstellung beim Starten erforderlich<br /> 0 = Datenbank wurde nicht ordnungsgemäß heruntergefahren, Wiederherstellung beim Starten erforderlich|  
@@ -117,7 +116,7 @@ Wenn eine Datenbank nicht `ONLINE`, oder `AUTO_CLOSE` nastaven NA hodnotu `ON` u
 |**is_temporal_retention_enabled**|**bit**|Gibt an, ob der Task ' Verlaufscleanup ' der temporalen Beibehaltung-Richtlinie aktiviert ist.<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|Die sortierungseinstellung für den Katalog:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Die sortierungseinstellung für den Katalog:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = Is_result_set_caching_on befindet sich auf</br>0 = Is_result_set_caching_on deaktiviert ist.</br>**Gilt für**: Azure SQL Data Warehouse Gen2. Während dieses Features wird zurückgesetzt wird in allen Regionen, und überprüfen Sie die Version, die mit Ihrer Instanz und die neueste Version bereitgestellt [Anmerkungen zur Version von Azure SQL Data Warehouse](/azure/sql-data-warehouse/release-notes-10-0-10106-0) für die Verfügbarkeit von Features.|
+|**is_result_set_caching_on**|**int**|1 = Is_result_set_caching_on befindet sich auf</br>0 = Is_result_set_caching_on deaktiviert ist.</br>**Gilt für**: Azure SQL Datawarehouse Gen2. Während dieses Features wird zurückgesetzt wird in allen Regionen, und überprüfen Sie die Version, die mit Ihrer Instanz und die neueste Version bereitgestellt [Anmerkungen zur Version von Azure SQL Data Warehouse](/azure/sql-data-warehouse/release-notes-10-0-10106-0) für die Verfügbarkeit von Features.|
   
 ## <a name="permissions"></a>Berechtigungen  
  Wenn der Aufrufer `sys.databases` ist nicht der Besitzer der Datenbank und die Datenbank ist nicht `master` oder `tempdb`, mindestens die Berechtigung erforderlich, um die entsprechende Zeile finden Sie unter `ALTER ANY DATABASE` oder `VIEW ANY DATABASE` Berechtigung auf Serverebene oder `CREATE DATABASE` -Berechtigung für die `master` Datenbank. Die Datenbank, mit denen der Aufrufer verbunden ist, immer in angezeigt werden kann `sys.databases`.  

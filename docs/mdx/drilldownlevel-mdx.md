@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049289"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -34,13 +33,13 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
  *Level_Expression*  
- (Optional). Ein MDX-Ausdruck, der explizit die Ebene für den Drilldown identifiziert. Wenn Sie einen Ebenenausdruck angegeben, überspringen Sie das Indexargument unten.  
+ (Optional) Ein MDX-Ausdruck, der explizit die Ebene für den Drilldown identifiziert. Wenn Sie einen Ebenenausdruck angegeben, überspringen Sie das Indexargument unten.  
   
  *Index*  
- (Optional). Ein gültiger numerischer Ausdruck, der die Nummer der Hierarchie angibt, in die innerhalb der Menge ein Drilldown durchgeführt werden soll. Sie können die Indexebene statt Level_Expression verwenden, um explizit die Ebene festzulegen, auf die ein Drilldown ausgeführt werden soll.  
+ (Optional) Ein gültiger numerischer Ausdruck, der die Nummer der Hierarchie angibt, in die innerhalb der Menge ein Drilldown durchgeführt werden soll. Sie können die Indexebene statt Level_Expression verwenden, um explizit die Ebene festzulegen, auf die ein Drilldown ausgeführt werden soll.  
   
  *Include_Calc_Members*  
- (Optional). Ein Flag, das anzeigt, ob berechnete Elemente eingeschlossen werden sollen, wenn sie vorhanden sind (auf Drilldownebene).  
+ (Optional) Ein Flag, das anzeigt, ob berechnete Elemente eingeschlossen werden sollen, wenn sie vorhanden sind (auf Drilldownebene).  
   
 ## <a name="remarks"></a>Hinweise  
  Die **DrilldownLevel** Funktion gibt einen Satz untergeordneter Elemente in einer hierarchischen Reihenfolge, basierend auf den Elementen, die in der angegebenen Menge enthalten. Die Reihenfolge der ursprünglichen Elemente in der angegebenen Menge wird beibehalten, wobei jedoch alle in das Resultset der Funktion aufgenommenen untergeordneten Elemente direkt unter ihrem übergeordneten Element aufgenommen werden.  

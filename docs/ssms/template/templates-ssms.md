@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822941"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866262"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Verwenden von Vorlagen in SQL Server Management Studio
 
@@ -35,8 +35,9 @@ In diesem Tutorial werden die vorgefertigten T-SQL-Vorlagen (Transact-SQL) vorge
 
 Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio und Zugriff auf einen SQL-Server.
 
-- Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+
+* Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 ## <a name="use-template-browser"></a>Verwenden des Vorlagenbrowsers
 
@@ -108,15 +109,17 @@ Sie können im Vorlagenbrowser auch eine neue Vorlage erstellen. In den folgende
 
 5. Führen Sie einen Rechtsklick auf die erstellte Vorlage aus, und klicken Sie dann auf **Bearbeiten**. Ein neues Abfragefenster wird geöffnet.
 
-6. Geben Sie den T-SQL-Text ein, der gespeichert werden soll. 
+6. Geben Sie den T-SQL-Text ein, der gespeichert werden soll.
 
 7. Klicken Sie im Menü **Datei** auf **Speichern**.
 
-8. Schließen Sie das vorhandene Abfragefenster, und öffnen Sie Ihre neue benutzerdefinierte Vorlage. 
+8. Schließen Sie das vorhandene Abfragefenster, und öffnen Sie Ihre neue benutzerdefinierte Vorlage.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Der nachfolgende Artikel enthält zusätzliche Tipps und Tricks zur Verwendung von SQL Server Management Studio. 
+Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. Dieses *Tutorial* und Artikel zu *Vorgehensweisen* unterstützen Sie bei der Verwendung der verschiedenen Features, die in SSMS verfügbar sind.  In diesen Artikeln erfahren Sie, wie Sie die Komponenten von SSMS verwalten und wie Sie die Funktionen finden, die Sie regelmäßig verwenden.
 
-> [!div class="nextstepaction"]
-> [Zusätzliche Tipps und Tricks für die Verwendung von SSMS](../tutorials/ssms-tricks.md)
+* [Herstellen einer Verbindung mit einer Instanz und Abfragen einer Instanz](../tutorials/connect-query-sql-server.md)
+* [Skripterstellung](../tutorials/scripting-ssms.md)
+* [SSMS-Konfiguration](../tutorials/ssms-configuration.md)
+* [Zusätzliche Tipps und Tricks für die Verwendung von SSMS](../tutorials/ssms-tricks.md)

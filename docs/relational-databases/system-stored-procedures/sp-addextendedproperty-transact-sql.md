@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072692"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addextendedproperty
  Der Wert, der der Eigenschaft zugeordnet werden soll. *Wert* ist **Sql_variant**, hat den Standardwert NULL. *value* kann nicht größer als 7.500 Bytes sein.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Der Typ des Objekts der Ebene 0. *level0_object_type* ist **varchar(128)**, hat den Standardwert NULL.  
+ Der Typ des Objekts der Ebene 0. *level0_object_type* ist **varchar(128)** , hat den Standardwert NULL.  
   
  Gültige Eingabewerte sind ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE und NULL.  
   
@@ -72,12 +71,12 @@ sp_addextendedproperty
  Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_name* ist **Sysname** hat den Standardwert NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- Der Typ des Objekts der Ebene 1. *level1_object_type* ist **varchar(128)**, hat den Standardwert NULL. Gültige Eingaben sind Aggregat, Standard, -Funktion, LOGICAL FILE NAME, Prozedur, QUEUE, Regel, SEQUENZ, SYNONYM, TABLE, TABLE_TYPE, Typ, Ansicht, XML SCHEMA COLLECTION und NULL.    
+ Der Typ des Objekts der Ebene 1. *level1_object_type* ist **varchar(128)** , hat den Standardwert NULL. Gültige Eingaben sind Aggregat, Standard, -Funktion, LOGICAL FILE NAME, Prozedur, QUEUE, Regel, SEQUENZ, SYNONYM, TABLE, TABLE_TYPE, Typ, Ansicht, XML SCHEMA COLLECTION und NULL.    
  [ @level1name=] {'*level1_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist **Sysname**, hat den Standardwert NULL.  
   
  [ @level2type=] {'*level2_object_type*'}  
- Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)**, hat den Standardwert NULL. Gültige Eingabewerte sind COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
+ Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)** , hat den Standardwert NULL. Gültige Eingabewerte sind COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
   
  [ @level2name=] {'*level2_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist **Sysname**, hat den Standardwert NULL.  
@@ -86,9 +85,9 @@ sp_addextendedproperty
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- Für das Angeben erweiterter Eigenschaften werden die Objekte in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank in drei Ebenen unterteilt: 0, 1 und 2. Ebene 0 ist die höchste Ebene und als im Datenbankbereich enthaltene Objekte definiert. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden.  
+ Für das Angeben erweiterter Eigenschaften werden die Objekte in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank in drei Ebenen unterteilt: 0, 1 und 2. Ebene 0 ist die höchste Ebene und als im Datenbankbereich enthaltene Objekte definiert. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden.  
   
- Verweise auf ein Objekt einer Ebene müssen mit den Namen der Objekte der höheren Ebene gekennzeichnet werden, die diese besitzen oder enthalten. Wenn Sie beispielsweise einer Tabellenspalte (Ebene 2) eine erweiterte Eigenschaft hinzufügen, müssen Sie auch den Tabellennamen (Ebene 1) angeben, der die Spalte und das Schema (Ebene 0) enthält, das die Tabelle enthält.  
+ Verweise auf ein Objekt einer Ebene müssen mit den Namen der Objekte der höheren Ebene gekennzeichnet werden, die diese besitzen oder enthalten. Wenn Sie beispielsweise einer Tabellenspalte (Ebene 2) eine erweiterte Eigenschaft hinzufügen, müssen Sie auch den Tabellenamen (Ebene 1) angeben, der die Spalte und das Schema (Ebene 0) enthält, in dem die Tabelle enthalten ist.  
   
  Wenn alle Objekttypen und -namen NULL sind, gehört die Eigenschaft zur aktuellen Datenbank.  
   
@@ -99,8 +98,8 @@ sp_addextendedproperty
 ## <a name="replicating-extended-properties"></a>Replizieren erweiterter Eigenschaften  
  Erweiterte Eigenschaften werden nur in der ersten Synchronisierung zwischen dem Verleger und dem Abonnenten repliziert. Wenn Sie eine erweiterte Eigenschaft nach der ersten Synchronisierung hinzufügen oder ändern, wird die Änderung nicht repliziert. Weitere Informationen über das Replizieren von Datenbanken finden Sie unter [Veröffentlichen von Daten und Datenbankobjekte](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
-## <a name="schema-vs-user"></a>Schema oder Benutzer  
- Es wird nicht empfohlen, USER als einen Typ der Ebene 0 anzugeben, wenn eine erweiterte Eigenschaft auf ein Datenbankobjekt angewendet wird, da dies zu Mehrdeutigkeiten bei der Namensauflösung führen kann. Angenommen, Benutzer Mary besitzt beispielsweise zwei Schemas (Mary und MySchema), und diese Schemas enthalten beide eine Tabelle namens MyTable. Wenn Mary MyTable-Tabelle eine erweiterte Eigenschaft hinzufügt und gibt an,  **@level0type = n '**,  **@level0name = Mary**, es ist nicht klar, auf welche Tabelle die erweiterte Eigenschaft angewendet wird. Aus Gründen der Abwärtskompatibilität wendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eigenschaft auf die Tabelle im Schema namens Mary an.  
+## <a name="schema-vs-user"></a>Schema im Vergleich zu Benutzer  
+ Es wird nicht empfohlen, USER als einen Typ der Ebene 0 anzugeben, wenn eine erweiterte Eigenschaft auf ein Datenbankobjekt angewendet wird, da dies zu Mehrdeutigkeiten bei der Namensauflösung führen kann. Angenommen, Benutzer Mary besitzt beispielsweise zwei Schemas (Mary und MySchema), und diese Schemas enthalten beide eine Tabelle namens MyTable. Wenn Mary MyTable-Tabelle eine erweiterte Eigenschaft hinzufügt und gibt an,  **@level0type = n '** ,  **@level0name = Mary**, es ist nicht klar, auf welche Tabelle die erweiterte Eigenschaft angewendet wird. Aus Gründen der Abwärtskompatibilität wendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eigenschaft auf die Tabelle im Schema namens Mary an.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Mitglieder der festen Datenbankrollen db_owner und db_ddladmin können beliebigen Objekten erweiterte Eigenschaften hinzufügen, wobei die folgende Ausnahme gilt: db_ddladmin kann weder der Datenbank noch Benutzern oder Rollen Eigenschaften hinzufügen.  
@@ -238,8 +237,8 @@ EXEC sys.sp_addextendedproperty
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [Sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
+ [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf41671abc6393a18fad06e1debd297fed1f04c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947587"
 ---
 # <a name="guid-escape-sequences"></a>GUID-Escapesequenzen
 ODBC verwendet Escapesequenzen für GUID-Literale. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
@@ -32,16 +31,16 @@ ODBC verwendet Escapesequenzen für GUID-Literale. Die Syntax dieser Escape-Sequ
 ## <a name="remarks"></a>Hinweise  
  In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-guid-escape* ::=  
+ *ODBC-Guid-Escapesequenz* :: =  
      *Initiator-ODBC-esc-Guid* "*Guid-Wert*" *ODBC-esc-Terminator*  
   
- *ODBC-esc-initiator* ::= {  
+ *Initiator der ODBC-esc* :: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC-esc-Terminator* :: =}  
   
  *GUID-Wert* :: = *Uhr mit geringem Wert Guid-Trennzeichen-Uhr-Middle-Guid-Trennzeichen-Uhr-High-Value-Guid-Trennzeichen-Uhr-Seq-Guid-Trennzeichen Knotenwert*  
   
- *guid-separator* ::= -  
+ *GUID-Trennzeichen* :: = -  
   
  *Clock-mit geringem Wert* :: = *Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit*  
   
@@ -49,7 +48,7 @@ ODBC verwendet Escapesequenzen für GUID-Literale. Die Syntax dieser Escape-Sequ
   
  *Clock-High-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
   
- *clock-seq-value* ::= *hex_digit hex_digit hex_digit hex_digit*  
+ *Clock-Seq-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
   
  *Clock-Knotenwert* :: = *Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit*  
   

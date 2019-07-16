@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a36be7a98a39cab8b9df428b8d4bd9a1d399a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039511"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni-Funktion
 **Übereinstimmung mit Standards**  
@@ -56,7 +55,7 @@ BOOL SQLWriteDSNToIni(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLWriteDSNToIni** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
 |ODBC_ERROR_INVALID_DSN|Ungültige DSN|Die *LpszDSN* Argument enthalten sind, eine Zeichenfolge, die für eine DSN ungültig war.|  

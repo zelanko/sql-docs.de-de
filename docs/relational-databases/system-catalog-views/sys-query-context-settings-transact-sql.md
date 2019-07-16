@@ -1,5 +1,5 @@
 ---
-title: sys.query_context_settings (Transact-SQL) | Microsoft Docs
+title: Sys.query_context_settings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c7ab77981c329c334b22d6fd9735188882b385c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068064"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Enthält Informationen über die Auswirkungen auf das die kontexteinstellungen mit einer Abfrage verknüpften Semantik. Es stehen eine Reihe von kontexteinstellungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Semantik der Abfrage (definieren das richtige Ergebnis der Abfrage) beeinflussen. Derselbe Abfragetext mit unterschiedlichen Einstellungen kompiliert möglicherweise zu unterschiedlichen Ergebnissen (abhängig von den zugrunde liegenden Daten) führen.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|Der Primärschlüssel. Dieser Wert wird für Abfragen in Showplan XML verfügbar gemacht.|  
 |**set_options**|**varbinary(8)**|Die Bitmaske kritischem Zustand, der mehrere SET-Optionen. Weitere Informationen finden Sie unter [dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118055"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'` Ist der übergeordnete Artikel, der gemäß der untergeordneten Artikel, *Artikel*, muss hinzugefügt werden, mithilfe der Join-Klausel, die anhand des *Join_filterclause*, um die Zeilen im untergeordneten Artikel zu bestimmen, die erfüllen das Filterkriterium des Mergefilters. *Join_articlename* ist **Sysname**, hat keinen Standardwert. Der Artikel muss sich in der Veröffentlichung, die vom *Veröffentlichung*.  
   
-`[ @join_filterclause = ] join_filterclause` Die Join-Klausel, die verwendet werden muss, um die angegebenen untergeordneten Artikels zu verknüpfen *Artikel*und vom angegebenen übergeordneten Artikels *Join_article*, um zu ermitteln, die Zeilen mit dem Kriterium des Mergefilters erfüllen. *Join_filterclause* ist **nvarchar(1000)**.  
+`[ @join_filterclause = ] join_filterclause` Die Join-Klausel, die verwendet werden muss, um die angegebenen untergeordneten Artikels zu verknüpfen *Artikel*und vom angegebenen übergeordneten Artikels *Join_article*, um zu ermitteln, die Zeilen mit dem Kriterium des Mergefilters erfüllen. *Join_filterclause* ist **nvarchar(1000)** .  
   
 `[ @join_unique_key = ] join_unique_key` Gibt an, ob der Join zwischen dem untergeordneten Artikel *Artikel*und dem übergeordneten Artikel *Join_article*ist 1: n, 1: 1, n: 1- oder m: n. *Join_unique_key* ist **Int**, hat den Standardwert 0. **0** gibt einen n: 1- oder m: n Join. **1** gibt einen 1: 1- oder 1: n Join. Dieser Wert ist **1** Wenn bilden die zu verknüpfenden Spalten einen eindeutigen Schlüssel in *Join_article*, oder wenn *Join_filterclause* zwischen einem Fremdschlüssel in *Artikel* und einen Primärschlüssel in *Join_article*.  
   

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f47eaad9a13966abd1d08b0121fdd9c0a64a7438
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56884d76ff6b322b0ecc55e29fb2193183811fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038253"
 ---
 # <a name="mdx-data-definition---drop-action"></a>MDX-Datendefinition – DROP ACTION
 
@@ -33,7 +32,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  *Cube_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Cubenamen bereitstellt.  
   
- *Action_Name*  
+ *Aktionsname*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen der zu löschenden Aktion bereitstellt.  
   
 ## <a name="see-also"></a>Siehe auch  

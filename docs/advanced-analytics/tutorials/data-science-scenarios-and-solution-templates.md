@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962291"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Szenarios für Data Science und Lösungsvorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +79,7 @@ Jede Lösung enthält Beispieldaten, R-Code oder Python-Code und SQL gespeichert
 
 [Vorhersage des Energiebedarfs-Vorlage mit der SQL Server R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**Was:**: Für die nachfragevorhersage ist ein wichtiges Problem in verschiedenen Domänen, einschließlich der Energie, Verkaufs- und -Dienste. Genaue Vorhersage hilft Unternehmen, die eine bessere Planung, ressourcenzuweisung, Produktion durchführen und andere wichtige geschäftsentscheidungen zu treffen. Im Energiesektor ist die nachfragevorhersage für Energie Speicherkosten zu verringern und Ausgleichen von Angebot und Nachfrage entscheidend.
+**Was:** : Für die nachfragevorhersage ist ein wichtiges Problem in verschiedenen Domänen, einschließlich der Energie, Verkaufs- und -Dienste. Genaue Vorhersage hilft Unternehmen, die eine bessere Planung, ressourcenzuweisung, Produktion durchführen und andere wichtige geschäftsentscheidungen zu treffen. Im Energiesektor ist die nachfragevorhersage für Energie Speicherkosten zu verringern und Ausgleichen von Angebot und Nachfrage entscheidend.
 
 **So geht's:** Diese Vorlage verwendet SQL Server R Services, um den Bedarf an Strom vorherzusagen. Das Modell für die Vorhersage verwendet wird, eine random Forest-Regression-Modell basierend auf **RxDForest**, eine hohe Leistung Machine learning-Algorithmus, die in Microsoft R Server enthalten. Die Lösung umfasst einen Bedarfs-Simulator sowie alle erforderlichen R- und T-SQL-Codes, um ein Modell zu trainieren sowie gespeicherte Prozeduren, die Sie zum Generieren und Melden von Vorhersagen verwenden können. 
 

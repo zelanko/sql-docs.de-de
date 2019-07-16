@@ -3,18 +3,17 @@ title: Konfigurieren von SQL Server-Einstellungen unter Linux
 description: Dieser Artikel beschreibt, wie Sie die Mssql-Conf-Tool zu verwenden, um SQL Server-Einstellungen unter Linux konfigurieren.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077604"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server unter Linux mit dem Mssql-Conf-tool
 
@@ -27,7 +26,7 @@ ms.locfileid: "67834003"
 
 |||
 |---|---|
-| [Agent](#agent) | SQL Server-Agent aktivieren |
+| [Agent](#agent) | SQL Server-Agent zu aktivieren. |
 | [Sortierung](#collation) | Legen Sie eine neue Sortierung für SQL Server unter Linux. |
 | [Feedback von Kunden](#customerfeedback) | Wählen Sie, und zwar unabhängig davon, ob SQL Server Feedback an Microsoft sendet. |
 | [Datenbank-E-Mail-Profil](#dbmail) | Legen Sie das Standard-Datenbank-Mailprofil für SQL Server unter Linux. |
@@ -508,7 +507,7 @@ Sie müssen zusätzlich zum Festlegen dieser Werte können auch Konfigurieren de
 
 Es gibt verschiedene andere Einstellungen für die Mssql-Conf, die Sie verwenden können, Überwachung und Problembehandlung von MSDTC aus. Diese Einstellungen werden in die folgende Tabelle kurz beschrieben. Weitere Informationen zu deren Verwendung, finden Sie unter den Details in der Windows-Support-Artikel [Aktivieren von diagnoseablaufverfolgung für MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| mssql-conf setting | Beschreibung |
+| MSSQL-Conf-Einstellung | Beschreibung |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Konfigurieren von sicheren nur RPC-Aufrufe für verteilte Transaktionen |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Konfigurieren Sie für verteilte Sicherheit nur RPC-Aufrufe |Transaktionen
@@ -680,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Beachten Sie, dass alle Einstellungen, die in dieser Datei nicht angezeigt. die Standardwerte verwenden. Der nächste Abschnitt enthält ein Beispiel für **mssql.conf** Datei.
 
 
-## <a id="mssql-conf-format"></a> mssql.conf format
+## <a id="mssql-conf-format"></a> MSSQL.conf-format
 
 Die folgenden **/var/opt/mssql/mssql.conf** Datei enthält ein Beispiel für jede Einstellung. Sie können dieses Format verwenden, manuell vornehmen von Änderungen an der **mssql.conf** Datei je nach Bedarf. Wenn Sie die Datei manuell ändern, müssen Sie SQL Server neu starten, bevor die Änderungen angewendet werden. Verwenden der **mssql.conf** Datei mit Docker benötigen Sie Docker [speichern Ihre Daten](sql-server-linux-configure-docker.md). Fügen Sie zunächst eine vollständige **mssql.conf** -Datei in Ihrem Hostverzeichnis ein, und führen Sie dann den Container. Es ist ein Beispiel hierfür in [Kundenfeedback](sql-server-linux-customer-feedback.md).
 

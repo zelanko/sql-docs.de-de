@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff234d1d8e099611c8718eac5ae3b584e926a2bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98c36f02bde63862748eef14a8cbae063ca4e472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069956"
 ---
 # <a name="executing-procedures"></a>Ausführen von Prozeduren
 ODBC definiert eine standard-Escapesequenz Prozeduren ausgeführt werden. Die Syntax der Sequenz und ein Codebeispiel, das verwendet werden soll, finden Sie unter [Prozeduraufrufe](../../../odbc/reference/develop-app/procedure-calls.md).  

@@ -17,116 +17,107 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33f9e906d1266c54a6ef0d1e7bd9a4b86fb026ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df29531eb72457f371cde7e8c371006836fa6af5
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674733"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732024"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbank-Engine)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Tabellenwertparameter werden mit benutzerdefinierten Tabellentypen deklariert. Mit Tabellenwertparametern können Sie mehrere Datenzeilen an eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder an eine Routine übergeben, z. B. eine gespeicherte Prozedur oder eine Funktion, ohne eine temporäre Tabelle oder viele Parameter erstellen zu müssen.  
+Tabellenwertparameter werden mit benutzerdefinierten Tabellentypen deklariert. Mit Tabellenwertparametern können Sie mehrere Datenzeilen an eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder an eine Routine übergeben, z. B. eine gespeicherte Prozedur oder eine Funktion, ohne eine temporäre Tabelle oder viele Parameter erstellen zu müssen.
+
+Tabellenwertparameter entsprechen Parameterarrays in OLE DB und ODBC, bieten jedoch eine größere Flexibilität und eine engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ein weiterer Vorteil von Tabellenwertparametern besteht darin, dass sie in setbasierten Vorgängen verwendet werden können.
+
+[!INCLUDE[tsql](../../includes/tsql-md.md)] übergibt Tabellenwertparameter mittels Verweise an Routinen, sodass keine Kopie der Eingabedaten erstellt werden muss. Sie können [!INCLUDE[tsql](../../includes/tsql-md.md)] -Routinen mit Tabellenwertparametern erstellen und ausführen und diese über [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code, verwaltete und Native Clients in jeder beliebigen verwalteten Sprache aufrufen.
+
+ **In diesem Thema:**
+
+[Vorteile](#Benefits)
+
+[Einschränkungen](#Restrictions)
+
+[Tabellenwertparameter im Vergleich zu BULK INSERT-Vorgängen](#BulkInsert)
+
+[Beispiel](#Example)
+
+## <a name="Benefits"></a> Vorteile
+
+Der Bereich eines Tabellenwertparameters entspricht wie auch bei anderen Parametern der gespeicherten Prozedur, der Funktion oder dem dynamischen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Text. Ebenso entspricht der Bereich einer Tabellentypvariablen dem Bereich einer beliebigen lokalen Variablen, die mit einer DECLARE-Anweisung erstellt wurde. Sie können Tabellenwertvariablen in dynamischen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen deklarieren und diese Variablen dann als Tabellenwertparameter an gespeicherte Prozeduren und Funktionen übergeben.
+
+Tabellenwertparameter bieten mehr Flexibilität und in einigen Fällen auch eine bessere Systemleistung als temporäre Tabellen oder andere Methoden zum Übergeben von Parameterlisten. Tabellenwertparameter bieten die folgenden Vorteile:
+
+- Erfordern keine Sperren für die erste Auffüllung mit Daten von einem Client
+- Stellen ein einfaches Programmiermodell bereit
+- Ermöglichen die Einbindung komplexer Geschäftslogik in eine einzelne Routine
+- Weniger Roundtrips zum Server
+- Unterstützen Tabellenstrukturen mit unterschiedlicher Kardinalität
+- Weisen eine starke Typbindung auf
+- Ermöglichen die Angabe von Sortierreihenfolge und eindeutigen Schlüsseln über den Client
+- Werden bei der Verwendung in einer gespeicherten Prozedur wie eine temporäre Tabelle zwischengespeichert. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden Tabellenwertparameter auch für parametrisierte Abfragen zwischengespeichert.
+
+## <a name="Restrictions"></a> Einschränkungen
+
+Für Tabellenwertparameter gelten die folgenden Einschränkungen:
+
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spaltenstatistiken für Tabellenwertparameter werden nicht verwaltet.
+- Tabellenwertparameter müssen als READONLY-Eingabeparameter an [!INCLUDE[tsql](../../includes/tsql-md.md)] -Routinen übergeben werden. Für Tabellenwertparameter im Hauptteil einer Routine können keine DML-Vorgänge wie UPDATE, DELETE oder INSERT durchgeführt werden.
+- Tabellenwertparameter können nicht als Ziel einer SELECT INTO-Anweisung oder einer INSERT EXEC-Anweisung verwendet werden. Tabellenwertparameter können in der FROM-Klausel von SELECT INTO oder in der Zeichenfolge oder gespeicherten Prozedur von INSERT EXEC enthalten sein.
+
+## <a name="BulkInsert"></a> Tabellenwertparameter vs. BULK INSERT-Vorgänge
+
+Die Verwendung von Tabellenwertparametern ist mit anderen Methoden zur Verwendung setbasierter Variablen vergleichbar. Sehr große Datasets können mit Tabellenwertparametern jedoch häufig schneller verarbeitet werden. Im Vergleich zu Massenvorgängen, bei denen die Startkosten höher sind, eignen sich Tabellenwertparameter optimal zum Einfügen von weniger als 1000 Zeilen.
+
+Wiederverwendete Tabellenparameter nutzen den Zwischenspeicher für temporäre Tabellen. Diese Zwischenspeicherung ermöglicht eine bessere Skalierbarkeit als vergleichbare BULK INSERT-Vorgänge. Bei kleineren Vorgängen zum Einfügen von Zeilen können Sie u. U. eine bessere Leistung erzielen, wenn Sie Parameterlisten oder Batch-Anweisungen statt BULK INSERT-Vorgänge oder Tabellenwertparameter verwenden. Die Programmierung dieser Methoden ist allerdings komplexer, und die Leistung nimmt mit steigender Zeilenanzahl schnell ab.
+
+Tabellenwertparameter eignen sich mindestens so gut wie vergleichbare Parameterarray-Implementierungen.
+
+## <a name="Example"></a> Beispiel
+
+Im folgenden Beispiel wird [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet. Es zeigt, wie Sie einen Tabellenwertparameter erstellen, eine Variable deklarieren, die darauf verweist, Daten in die Parameterliste einfügen und die Werte dann an eine gespeicherte Prozedur in der AdventureWorks-Datenbank übergeben.
+
+```sql
+/* Create a table type. */
+CREATE TYPE LocationTableType 
+   AS TABLE
+      ( LocationName VARCHAR(50)
+      , CostRate INT );
+GO
+/* Create a procedure to receive data for the table-valued parameter. */
+CREATE PROCEDURE dbo. usp_InsertProductionLocation
+   @TVP LocationTableType READONLY
+      AS
+      SET NOCOUNT ON
+      INSERT INTO AdventureWorks2012.Production.Location
+         (
+            Name
+            , CostRate
+            , Availability
+            , ModifiedDate
+         )
+      SELECT *, 0, GETDATE()
+      FROM @TVP;
+GO
+/* Declare a variable that references the type. */
+DECLARE @LocationTVP AS LocationTableType;
+/* Add data to the table variable. */
+INSERT INTO @LocationTVP (LocationName, CostRate)
+   SELECT Name, 0.00
+   FROM AdventureWorks2012.Person.StateProvince;
   
- Tabellenwertparameter entsprechen Parameterarrays in OLE DB und ODBC, bieten jedoch eine größere Flexibilität und eine engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ein weiterer Vorteil von Tabellenwertparametern besteht darin, dass sie in setbasierten Vorgängen verwendet werden können.  
-  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] übergibt Tabellenwertparameter mittels Verweise an Routinen, sodass keine Kopie der Eingabedaten erstellt werden muss. Sie können [!INCLUDE[tsql](../../includes/tsql-md.md)] -Routinen mit Tabellenwertparametern erstellen und ausführen und diese über [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code, verwaltete und Native Clients in jeder beliebigen verwalteten Sprache aufrufen.  
-  
- **In diesem Thema:**  
-  
- [Vorteile](#Benefits)  
-  
- [Einschränkungen](#Restrictions)  
-  
- [Tabellenwertparameter im Vergleich zu BULK INSERT-Vorgängen](#BulkInsert)  
-  
- [Beispiel](#Example)  
-  
-##  <a name="Benefits"></a> Vorteile  
- Der Bereich eines Tabellenwertparameters entspricht wie auch bei anderen Parametern der gespeicherten Prozedur, der Funktion oder dem dynamischen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Text. Ebenso entspricht der Bereich einer Tabellentypvariablen dem Bereich einer beliebigen lokalen Variablen, die mit einer DECLARE-Anweisung erstellt wurde. Sie können Tabellenwertvariablen in dynamischen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen deklarieren und diese Variablen dann als Tabellenwertparameter an gespeicherte Prozeduren und Funktionen übergeben.  
-  
- Tabellenwertparameter bieten mehr Flexibilität und in einigen Fällen auch eine bessere Systemleistung als temporäre Tabellen oder andere Methoden zum Übergeben von Parameterlisten. Tabellenwertparameter bieten die folgenden Vorteile:  
-  
--   Erfordern keine Sperren für die erste Auffüllung mit Daten von einem Client  
-  
--   Stellen ein einfaches Programmiermodell bereit  
-  
--   Ermöglichen die Einbindung komplexer Geschäftslogik in eine einzelne Routine  
-  
--   Weniger Roundtrips zum Server  
-  
--   Unterstützen Tabellenstrukturen mit unterschiedlicher Kardinalität  
-  
--   Weisen eine starke Typbindung auf  
-  
--   Ermöglichen die Angabe von Sortierreihenfolge und eindeutigen Schlüsseln über den Client  
-  
--   Werden bei der Verwendung in einer gespeicherten Prozedur wie eine temporäre Tabelle zwischengespeichert. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]werden Tabellenwertparameter auch für parametrisierte Abfragen zwischengespeichert.  
-  
-##  <a name="Restrictions"></a> Einschränkungen  
- Für Tabellenwertparameter gelten die folgenden Einschränkungen:  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Spaltenstatistiken für Tabellenwertparameter werden nicht verwaltet.  
-  
--   Tabellenwertparameter müssen als READONLY-Eingabeparameter an [!INCLUDE[tsql](../../includes/tsql-md.md)] -Routinen übergeben werden. Für Tabellenwertparameter im Hauptteil einer Routine können keine DML-Vorgänge wie UPDATE, DELETE oder INSERT durchgeführt werden.  
-  
--   Tabellenwertparameter können nicht als Ziel einer SELECT INTO-Anweisung oder einer INSERT EXEC-Anweisung verwendet werden. Tabellenwertparameter können in der FROM-Klausel von SELECT INTO oder in der Zeichenfolge oder gespeicherten Prozedur von INSERT EXEC enthalten sein.  
-  
-##  <a name="BulkInsert"></a> Tabellenwertparameter vs. BULK INSERT-Vorgänge  
- Die Verwendung von Tabellenwertparametern ist mit anderen Methoden zur Verwendung setbasierter Variablen vergleichbar. Sehr große Datasets können mit Tabellenwertparametern jedoch häufig schneller verarbeitet werden. Im Vergleich zu Massenvorgängen, bei denen die Startkosten höher sind, eignen sich Tabellenwertparameter optimal zum Einfügen von weniger als 1000 Zeilen.  
-  
- Wiederverwendete Tabellenparameter nutzen den Zwischenspeicher für temporäre Tabellen. Diese Zwischenspeicherung ermöglicht eine bessere Skalierbarkeit als vergleichbare BULK INSERT-Vorgänge. Bei kleineren Vorgängen zum Einfügen von Zeilen können Sie u. U. eine bessere Leistung erzielen, wenn Sie Parameterlisten oder Batch-Anweisungen statt BULK INSERT-Vorgänge oder Tabellenwertparameter verwenden. Die Programmierung dieser Methoden ist allerdings komplexer, und die Leistung nimmt mit steigender Zeilenanzahl schnell ab.  
-  
- Tabellenwertparameter eignen sich mindestens so gut wie vergleichbare Parameterarray-Implementierungen.  
-  
-##  <a name="Example"></a> Beispiel  
- Im folgenden Beispiel wird [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet. Es zeigt, wie Sie einen Tabellenwertparameter erstellen, eine Variable deklarieren, die darauf verweist, Daten in die Parameterliste einfügen und die Werte dann an eine gespeicherte Prozedur übergeben.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-  
-/* Create a table type. */  
-CREATE TYPE LocationTableType AS TABLE   
-( LocationName VARCHAR(50)  
-, CostRate INT );  
-GO  
-  
-/* Create a procedure to receive data for the table-valued parameter. */  
-CREATE PROCEDURE dbo. usp_InsertProductionLocation  
-    @TVP LocationTableType READONLY  
-    AS   
-    SET NOCOUNT ON  
-    INSERT INTO AdventureWorks2012.Production.Location  
-           (Name  
-           ,CostRate  
-           ,Availability  
-           ,ModifiedDate)  
-        SELECT *, 0, GETDATE()  
-        FROM  @TVP;  
-        GO  
-  
-/* Declare a variable that references the type. */  
-DECLARE @LocationTVP AS LocationTableType;  
-  
-/* Add data to the table variable. */  
-INSERT INTO @LocationTVP (LocationName, CostRate)  
-    SELECT Name, 0.00  
-    FROM AdventureWorks2012.Person.StateProvince;  
-  
-/* Pass the table variable data to a stored procedure. */  
-EXEC usp_InsertProductionLocation @LocationTVP;  
-GO  
-```  
-  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
- [sys.parameter_type_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
-  
-  
+/* Pass the table variable data to a stored procedure. */
+EXEC usp_InsertProductionLocation @LocationTVP;
+```
+
+## <a name="see-also"></a>Weitere Informationen
+
+- [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
+- [DECLARE@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
+- [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
+- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)
+- [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)
+- [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)
+- [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)  

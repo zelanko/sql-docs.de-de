@@ -4,17 +4,16 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: cbac33943de34c8757d5319e5a59b049973d50c4
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032365"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Konfigurieren Sie Failoverclusterinstanz – NFS - SQL Server unter Linux
 
@@ -36,7 +35,7 @@ Wenn Sie die Ordner auf dem Server für NFS freigegeben werden konfigurieren zu 
 
 Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwungen werden. Wenn Sie den Ordner konfigurieren zu können, stellen Sie sicher, dass nur die Server, die Teilnahme an der FCI für den NFS-Ordner finden Sie unter sollten. Ein Beispiel für eine geänderte/etc/Exports auf einer Linux-basierten NFS-Lösung wird unten, in dem der Ordner auf FCIN1 und FCIN2 beschränkt ist.
 
-![05-nfsacl][1]
+![05 – nfsacl][1]
 
 ## <a name="instructions"></a>Instructions
 
@@ -156,7 +155,7 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
     
    * Geben Sie beenden, um das Root nicht verwendet werden
 
-   * Start SQL Server. Wenn alles richtig kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß SQL Server zeigen sollte, wie gestartet.
+   * Starten Sie SqlServer. Wenn alles richtig kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß SQL Server zeigen sollte, wie gestartet.
 
     ```bash
     sudo systemctl start mssql-server

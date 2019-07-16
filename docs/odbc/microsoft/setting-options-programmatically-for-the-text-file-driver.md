@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1a28e5c7ccf3c701e5f97440cd97ed843ab53dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063504"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Programmgesteuertes Festlegen von Optionen für die Textdateitreiber
 
-|Option|Description|Methode|  
+|Option|Beschreibung|Methode|  
 |------------|-----------------|------------|  
 |Datenquellenname|Ein Name, der die Datenquelle, z. B. Gehaltsabrechnungen oder Mitarbeiter identifiziert.|Um diese Option dynamisch festzulegen, verwenden die **DSN** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Definieren von Format|Zeigt die **-Text-Format definieren** Dialogfeld und ermöglicht Ihnen die Angabe des Schemas für einzelne Tabellen im Data Source-Verzeichnis.|Diese Option kann nicht dynamisch festgelegt werden, durch einen Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Description|Eine optionale Beschreibung der Daten in der Datenquelle; z. B. "Hire Date, Gehaltsverlauf und aktuelle Überprüfung aller Mitarbeiter."|Um diese Option dynamisch festzulegen, verwenden die **Beschreibung** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Beschreibung|Eine optionale Beschreibung der Daten in der Datenquelle; z. B. "Hire Date, Gehaltsverlauf und aktuelle Überprüfung aller Mitarbeiter."|Um diese Option dynamisch festzulegen, verwenden die **Beschreibung** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Verzeichnis|Wählt die entsprechenden Verzeichnis.|Um diese Option dynamisch festzulegen, verwenden die **Wert** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Liste der Erweiterungen|Listet die Dateinamenerweiterungen der Text-Dateien für die Datenquelle an. Wenn der Text-Treiber verwendet wird, wird eine Datei ohne Erweiterung erstellt, wenn die CREATE TABLE-Anweisung mit einem Namen ausgeführt wird, die keine Erweiterung besitzt. Andere Treiber erstellen Sie eine Datei mit einer standarderweiterung, wenn keine Erweiterung angegeben wird. Zum Erstellen einer Datei mit der Erweiterung TXT, muss die Erweiterung im Namen enthalten sein. Zum Anzeigen von Dateien ohne Erweiterungen in der **-Text-Format definieren** im Dialogfeld "*." die Liste der Erweiterungen hinzugefügt werden muss.|Um diese Option dynamisch festzulegen, verwenden die **ERWEITERUNGEN** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Schreibgeschützt|Legt die Datenbank als schreibgeschützt fest.|Um diese Option dynamisch festzulegen, verwenden die **READONLY** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  

@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61936891ecd31b3bf5421a8cac49aad9f0dd37f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089202"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede von einem Benutzer festgelegte Konfigurationsoption. **Sysconfigures** enthält die Konfigurationsoptionen, die vor dem letzten Start von definiert sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sowie alle dynamischen Konfigurationsoptionen seitdem festgelegten.  
+  Enthält eine Zeile für jede von einem Benutzer festgelegte Konfigurationsoption. **sysconfigures** enthält die vor dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]definierten Konfigurationsoptionen sowie alle seitdem festgelegten dynamischen Konfigurationsoptionen.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**Wert**|**int**|Vom Benutzer änderbarer Wert für die Variable. Hiermit wird durch die [!INCLUDE[ssDE](../../includes/ssde-md.md)] nur dann, wenn RECONFIGURE ausgeführt wurde.|  
+|**value**|**int**|Vom Benutzer änderbarer Wert für die Variable. Wird nur von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet, wenn RECONFIGURE ausgeführt wurde.|  
 |**config**|**int**|Nummer der Konfigurationsvariablen.|  
 |**Kommentar**|**nvarchar(255)**|Erläuterung der Konfigurationsoption.|  
-|**status**|**smallint**|Bitmuster, das den Status der Option anzeigt. Folgende Werte sind möglich:<br /><br /> 0 = Statisch Die Einstellung wird beim Neustart des Servers wirksam.<br /><br /> 1 = Dynamisch. Variable wird beim Ausführen der RECONFIGURE-Anweisung wirksam.<br /><br /> 2 = Erweitert. Variable wird nur angezeigt, wenn **Erweiterte Optionen anzeigen** festgelegt ist. Die Einstellung wird beim Neustart des Servers wirksam.<br /><br /> 3 = Dynamisch und erweitert.|  
+|**status**|**smallint**|Bitmuster, das den Status der Option anzeigt. Mögliche Werte:<br /><br /> 0 = Statisch Die Einstellung wird beim Neustart des Servers wirksam.<br /><br /> 1 = Dynamisch. Variable wird beim Ausführen der RECONFIGURE-Anweisung wirksam.<br /><br /> 2 = Erweitert. Variable wird nur angezeigt, wenn **Erweiterte Optionen anzeigen** festgelegt ist. Die Einstellung wird beim Neustart des Servers wirksam.<br /><br /> 3 = Dynamisch und erweitert.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

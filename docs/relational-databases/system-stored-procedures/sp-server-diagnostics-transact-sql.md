@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056300"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,20 +56,20 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Resultsets  
 **Sp_server_diagnostics** die folgenden Informationen zurückgegeben  
   
-|Spalte|Datentyp|Description|  
+|Spalte|Datentyp|Beschreibung|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Gibt den Zeitstempel der Zeilenerstellung an. Jede Zeile in einem einzelnen Rowset weist denselben Zeitstempel auf.|  
 |**component_type**|**sysname**|Gibt an, ob die Zeile Informationen für enthält die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzebene Komponente, oder für eine Always On-verfügbarkeitsgruppe:<br /><br /> Instanz<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**component_name**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> -Ereignisse<br /><br /> *\<Name der verfügbarkeitsgruppe >*|  
+|**Komponentenname**|**sysname**|Gibt den Namen der Komponente oder den Namen der Verfügbarkeitsgruppe an:<br /><br /> System<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> -Ereignisse<br /><br /> *\<Name der verfügbarkeitsgruppe >*|  
 |**state**|**int**|Gibt den Integritätsstatus der Komponente an:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: Unknown<br /><br /> 1: clean<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
-|**data**|**varchar (max)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
+|**state_desc**|**sysname**|Beschreibt die Zustandsspalte. Folgende Beschreibungen entsprechen den Werten in der Statusspalte:<br /><br /> 0: Unbekannt<br /><br /> 1: Bereinigen<br /><br /> 2: Warnung<br /><br /> 3: Fehler|  
+|**data**|**Varchar (Max.)**|Gibt Daten an, die für die Komponente spezifisch sind.|  
   
  Im Folgenden finden Sie die Beschreibungen der fünf Komponenten:  
   
--   **system**: Erfasst Daten von einer Systemperspektive Spinlocks, verarbeitungsbedingungen, offenbar keine Tasks, Seitenfehlern und CPU-Auslastung. Diese Informationen ergeben eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **System**: Erfasst Daten von einer Systemperspektive Spinlocks, verarbeitungsbedingungen, offenbar keine Tasks, Seitenfehlern und CPU-Auslastung. Diese Informationen ergeben eine allgemeine Empfehlung zum Integritätsstatus.  
   
--   **resource**:  Sammelt Daten aus ressourcenperspektive auf physischen und virtuellen Arbeitsspeichers, Pufferpools, Seiten, Cache und anderen Arbeitsspeicherobjekten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
+-   **Ressource**:  Sammelt Daten aus ressourcenperspektive auf physischen und virtuellen Arbeitsspeichers, Pufferpools, Seiten, Cache und anderen Arbeitsspeicherobjekten. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
   
 -   **Query_processing**: Sammelt Daten hinsichtlich der Verarbeitung von Abfragen auf die Anzahl der Arbeitsthreads, Tasks, Wartetypen, CPU-intensiven Sitzungen und blockierenden Tasks an. Diese Informationen erzeugt eine allgemeine Empfehlung zum Integritätsstatus.  
   
@@ -78,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **Ereignisse**: Sammelt Daten und Oberflächen, die über die gespeicherte Prozedur, auf die Fehler und Ereignisse von Interesse, die von dem Server, einschließlich Details zu ringpufferausnahmen, speicherbroker, ungenügender Arbeitsspeicher, Zeitplanungsmodul-Überwachung, Pufferpool, Spinlocks Ring Buffer Ereignisse aufgezeichnet wurden, Sicherheit und Konnektivität. Ereignisse zeigen als Status immer 0 an.  
   
--   **\<Name der verfügbarkeitsgruppe >**: Sammelt Daten für die angegebene verfügbarkeitsgruppe (wenn Component_type = "immer auf: AvailabilityGroup").  
+-   **\<Name der verfügbarkeitsgruppe >** : Sammelt Daten für die angegebene verfügbarkeitsgruppe (wenn Component_type = "immer auf: AvailabilityGroup").  
   
 ## <a name="remarks"></a>Hinweise  
 Die Komponenten system, resource und query_processing werden zur Fehlererkennung aus Fehlerperspektive genutzt, während die Komponenten io_subsystem und events nur zu Diagnosezwecken genutzt werden.  
@@ -87,11 +86,11 @@ In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integrit�
   
 |Komponenten|Clean (1)|Warning (2)|Error (3)|Unknowns (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
-|System|x|x|x||  
-|resource|x|x|x||  
-|query_processing|x|x|x||  
-|io_subsystem|x|x|||  
-|-Ereignisse||||x|  
+|System|w|w|w||  
+|resource|w|w|w||  
+|query_processing|w|w|w||  
+|io_subsystem|w|w|||  
+|-Ereignisse||||w|  
   
 Das (x) in jeder Zeile steht für gültige Zustände für die Komponente. Im Beispiel wird io_subsystem als fehlerfrei oder Warnung angezeigt. Der Fehlerstatus wird nicht angezeigt.  
  

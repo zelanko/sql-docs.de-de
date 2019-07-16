@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc34bb3dc275e325163d8113db1a3b38c954840b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947747"
 ---
 # <a name="cell-object-ado-md"></a>Cell-Objekt (ADO MD)
 Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthalten, die in einem Cellset dar.  
@@ -43,9 +42,9 @@ Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthalten, die in einem C
   
  Die **Eigenschaften** Auflistung enthält die Eigenschaften vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise verfügbar sind. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Finden Sie unter der Dokumentation für Ihren Anbieter, um eine vollständige Liste der verfügbaren Eigenschaften.  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|BackColor|Hintergrundfarbe die Zelle angezeigt.|  
+|Hintergrundfarbe|Hintergrundfarbe die Zelle angezeigt.|  
 |FontFlags|Bitmaske, die mit Details zu Auswirkungen auf die Schriftart.|  
 |FontName|Der Wert der Zelle anzuzeigenden verwendete Schriftart.|  
 |FontSize|Der Schriftgrad ist der Wert der Zelle angezeigt.|  

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41595e6aeee31c5503531f2eb13e9e50c13430b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf121a37bf0229ba3366e18c149530f316fcdc56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098284"
 ---
 # <a name="setting-properties---smo"></a>Festlegen von Eigenschaften – SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,15 +32,15 @@ ms.locfileid: "47790858"
  Ein Eigenschaftswert kann geändert oder abgerufen werden. Dies hängt davon ab, ob die Eigenschaft Lese-/Schreibzugriff hat oder schreibgeschützt ist. Bevor ein Objekt erstellt wird, müssen bestimmte Eigenschaften festgelegt werden. Weitere Informationen finden Sie in der SMO-Referenz für das entsprechende Objekt.  
   
 > [!NOTE]  
->  Auflistungen von untergeordneten Objekten werden als Eigenschaft eines Objekts angezeigt. Die **Tables** -Auflistung ist beispielsweise eine Eigenschaft eines **Server** -Objekts. Weitere Informationen finden Sie unter [verwenden Auflistungen](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
+>  Auflistungen von untergeordneten Objekten werden als Eigenschaft eines Objekts angezeigt. Die **Tables** -Auflistung ist beispielsweise eine Eigenschaft eines **Server** -Objekts. Weitere Informationen finden Sie unter [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
   
  Die Eigenschaften eines Objekts sind Mitglieder einer Eigenschaftsauflistung. Mithilfe der Eigenschaftsauflistung kann jede Eigenschaft eines Objekts durchlaufen werden.  
   
  Mitunter ist eine Eigenschaft aus den folgenden Gründen nicht verfügbar:  
   
--   Die Serverversion unterstützt die Eigenschaft nicht, z. B. wenn Sie versuchen auf eine Eigenschaft, die eine neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Funktion darstellt, in einer älteren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zuzugreifen.  
+-   Die Serverversion unterstützt die Eigenschaft nicht, z. B. wenn Sie versuchen auf eine Eigenschaft, die eine neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Funktion darstellt, in einer älteren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zuzugreifen.  
   
--   Der Server bietet keine Daten für die Eigenschaft, z. B. Wenn Sie versuchen, eine Eigenschaft zuzugreifen, die darstellt eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Komponente, die nicht installiert ist.  
+-   Der Server stellt keine Daten für die Eigenschaft zur Verfügung, z. B. wenn Sie versuchen auf eine Eigenschaft zuzugreifen, die eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Komponente darstellt, die nicht installiert ist.  
   
  Sie können diese Situationen bewältigen, indem Sie die <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException>- und die <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> SMO-Ausnahmen abfangen.  
   
@@ -52,11 +51,11 @@ ms.locfileid: "47790858"
   
 2.  Vollständig geladen. Wenn auf eine Eigenschaft verwiesen wird, werden die übrigen Eigenschaften, die schnell geladen werden können, initialisiert und zur Verfügung gestellt.  
   
-3.  Eigenschaften, die viel Arbeitsspeicher in Anspruch nehmen. Die übrigen nicht verfügbaren Eigenschaften nehmen viel Arbeitsspeicher und haben eine <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> -Eigenschaftswert True (z. B. <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). Diese Eigenschaften werden nur geladen, wenn auf sie ausdrücklich verwiesen wird.  
+3.  Eigenschaften, die viel Arbeitsspeicher in Anspruch nehmen. Die übrigen nicht verfügbaren Eigenschaften nehmen viel Arbeitsspeicher in Anspruch und haben den <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A>-Eigenschaftswert TRUE (z. B. <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). Diese Eigenschaften werden nur geladen, wenn auf sie ausdrücklich verwiesen wird.  
   
- Wenn Ihre Anwendung zusätzliche Eigenschaften zu den im teilweise geladenen Status verfügbaren Eigenschaften abruft, übermittelt sie eine Abfrage zum Abrufen dieser zusätzlichen Eigenschaften und wechselt in den vollständig geladenen Status. Dies kann unnötigen Datenverkehr zwischen dem Client und dem Server verursachen. Weitere Optimierung kann erreicht werden, durch den Aufruf der <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> Methode. Die <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>-Methode ermöglicht die Angabe der Eigenschaften, die beim Initialisieren des Objekts geladen werden.  
+ Wenn Ihre Anwendung zusätzliche Eigenschaften zu den im teilweise geladenen Status verfügbaren Eigenschaften abruft, übermittelt sie eine Abfrage zum Abrufen dieser zusätzlichen Eigenschaften und wechselt in den vollständig geladenen Status. Dies kann unnötigen Datenverkehr zwischen dem Client und dem Server verursachen. Eine weitere Optimierung kann durch Aufrufen der <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>-Methode erzielt werden. Die <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>-Methode ermöglicht die Angabe der Eigenschaften, die beim Initialisieren des Objekts geladen werden.  
   
- Die <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>-Methode legt das Verhalten zum Laden von Eigenschaften für die restliche Anwendung oder bis zum Zurücksetzen der Anwendung fest. Sie können das ursprüngliche Verhalten speichern, mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> Methode, und es nach Bedarf wiederherstellen.  
+ Die <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>-Methode legt das Verhalten zum Laden von Eigenschaften für die restliche Anwendung oder bis zum Zurücksetzen der Anwendung fest. Sie können das ursprüngliche Verhalten mit der <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A>-Methode speichern und es nach Bedarf wiederherstellen.  
   
 ## <a name="examples"></a>Beispiele  
 Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -91,7 +90,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql;
 ```  
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-basic"></a>Festlegen von verschiedenen Eigenschaften vor dem Erstellen eines Objekts in Visual Basic  
- Dieses Codebeispiel zeigt, wie Sie direkt festlegen der <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Table> Objekt und das Erstellen und Hinzufügen von Spalten vor der Erstellung der <xref:Microsoft.SqlServer.Management.Smo.Table> Objekt.  
+ Dieses Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekts direkt festgelegt wird und wie Spalten erstellt und hinzugefügt werden, bevor Sie das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt erstellen.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -122,7 +121,7 @@ tb.Create()
 ```
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-c"></a>Festlegen von verschiedenen Eigenschaften vor dem Erstellen eines Objekts in Visual C#  
- Dieses Codebeispiel zeigt, wie Sie direkt festlegen der <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Table> Objekt und das Erstellen und Hinzufügen von Spalten vor der Erstellung der <xref:Microsoft.SqlServer.Management.Smo.Table> Objekt.  
+ Dieses Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekts direkt festgelegt wird und wie Spalten erstellt und hinzugefügt werden, bevor Sie das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt erstellen.  
   
 ```csharp  
 {   
@@ -157,7 +156,7 @@ tb.Create();
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Durchlaufen aller Eigenschaften eines Objekts in Visual Basic  
  Dieses Codebeispiel durchläuft die **Eigenschaften** Auflistung von der <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> -Objekt und zeigt sie auf die [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabefenster.  
   
- Im Beispiel die <xref:Microsoft.SqlServer.Management.Smo.Property> Objekt wurde in eckige Klammern gesetzt wurde, da es auch eine [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Schlüsselwort.  
+ In dem Beispiel wurde das <xref:Microsoft.SqlServer.Management.Smo.Property>-Objekt in eckige Klammern gesetzt, da es auch ein [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Schlüsselwort ist.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -202,7 +201,7 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Festlegen von Standardinitialisierungsfeldern in Visual Basic  
- In diesem Codebeispiel wird gezeigt, wie die Anzahl der in einem SMO-Programm initialisierten Objekteigenschaften minimiert wird. Sie gehören müssen die `using System.Collections.Specialized`; Anweisung zum Verwenden der <xref:System.Collections.Specialized.StringCollection> Objekt.  
+ In diesem Codebeispiel wird gezeigt, wie die Anzahl der in einem SMO-Programm initialisierten Objekteigenschaften minimiert wird. Sie müssen die `using System.Collections.Specialized`-Anweisung einschließen, um das <xref:System.Collections.Specialized.StringCollection>-Objekt zu verwenden.  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] kann verwendet werden, um die mit dieser Optimierung an die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendeten Zahlenanweisungen zu vergleichen.  
   
@@ -234,7 +233,7 @@ srv.SetDefaultInitFields(typ, sc)
 ```
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Festlegen von Standardinitialisierungsfeldern in Visual C#  
- In diesem Codebeispiel wird gezeigt, wie die Anzahl der in einem SMO-Programm initialisierten Objekteigenschaften minimiert wird. Sie gehören müssen die `using System.Collections.Specialized`; Anweisung zum Verwenden der <xref:System.Collections.Specialized.StringCollection> Objekt.  
+ In diesem Codebeispiel wird gezeigt, wie die Anzahl der in einem SMO-Programm initialisierten Objekteigenschaften minimiert wird. Sie müssen die `using System.Collections.Specialized`-Anweisung einschließen, um das <xref:System.Collections.Specialized.StringCollection>-Objekt zu verwenden.  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] kann verwendet werden, um die mit dieser Optimierung an die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendeten Zahlenanweisungen zu vergleichen.  
   

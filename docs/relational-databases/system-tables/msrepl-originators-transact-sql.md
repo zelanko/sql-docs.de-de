@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e12c62d9cbbc1f856e862fc64331f6cbb280ee7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e5d98606d14e660b0dcbad43eecf97ce6446767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079182"
 ---
 # <a name="msreploriginators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSrepl_originators** Tabelle enthält eine Zeile für jeden aktualisierbaren Abonnenten, die von dem die Transaktion stammt. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifiziert den Updateabonnenten.|  
 |**publisher_database_id**|**int**|Identifiziert die Veröffentlichungsdatenbank.|  
-|**mit srvname**|**sysname**|Der Name des aktualisierenden Servers.|  
-|**"dbname"**|**sysname**|Der Name der aktualisierenden Datenbank.|  
+|**srvname**|**sysname**|Der Name des aktualisierenden Servers.|  
+|**dbname**|**sysname**|Der Name der aktualisierenden Datenbank.|  
 |**publication_id**|**int**|Identifiziert die Veröffentlichung.|  
 |**dbversion**|**int**|Identifiziert die Datenbankversion.|  
   

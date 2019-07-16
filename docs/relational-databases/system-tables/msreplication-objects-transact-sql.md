@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0098cd55f03a7103345407e566615e10a63b2ac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079082"
 ---
 # <a name="msreplicationobjects-transact-sql"></a>MSreplication_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSreplication_objects** Tabelle enthält eine Zeile für jedes Objekt, das Replikation in der Abonnentendatenbank zugeordnet ist. Diese Tabelle wird in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Der Name des Verlegers.|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
-|**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
+|**publication**|**sysname**|Der Name der Veröffentlichung.|  
 |**object_name**|**sysname**|Der Name des Objekts.|  
 |**object_type**|**char(2)**|Der Objekttyp:<br /><br /> **u** = Tabelle.<br /><br /> **t** = Trigger.<br /><br /> **p** = gespeicherte Prozedur.|  
 |**article**|**sysname**|Der Name des Artikels, dem das Objekt zugeordnet ist|  

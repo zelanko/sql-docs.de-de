@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 98b7c0433e506d7ef6e825199a9a6629c52e6f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103000"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Bearbeiten der Typzuordnung (MySqlToSql)
 Die **Bearbeiten der Typzuordnung** Dialogfeld können Sie angeben, wie Datentypen zwischen Quelle und Ziel-Datenbankobjekten zugeordnet werden.  
@@ -38,7 +37,7 @@ Wenn der Datentyp mit variabler Länge ist, erscheint die folgenden Felder unter
 ##### <a name="from"></a>Von  
 Geben Sie die minimale Länge für diese Zuordnung. Z. B. für die **Nchar** -Datentyp, Sie können eingeben, 10, um anzugeben, dass diese Zuordnung für einen Bereich ab **nchar(10).**  
   
-##### <a name="to"></a>Aktion  
+##### <a name="to"></a>Beschreibung  
 Geben Sie die maximale Länge für diese Zuordnung. Z. B. für die **Nchar** -Datentyp, Sie können eingeben, 20, um anzugeben, dass diese Zuordnung für einen Bereich endet **nchar(20).**  
   
 ##### <a name="target-type"></a>Zieltyp  

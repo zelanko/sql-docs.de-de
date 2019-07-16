@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13c566ef9163cd7bc71ac6934f3db9782c87f06f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096050"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,15 +48,15 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @table_name = ] 'name'` Wird in der Tabelle, die zum Zurückgeben von Kataloginformationen verwendet wird. *Namen* ist **nvarchar(384)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+`[ @table_name = ] 'name'` Wird in der Tabelle, die zum Zurückgeben von Kataloginformationen verwendet wird. *Namen* ist **nvarchar(384)** , hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
-`[ @table_owner = ] 'owner'` Ist der Tabellenbesitzer der Tabelle zurückgeben von Kataloginformationen verwendet wird. *Besitzer* ist **nvarchar(384)**, hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn der Besitzer nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
+`[ @table_owner = ] 'owner'` Ist der Tabellenbesitzer der Tabelle zurückgeben von Kataloginformationen verwendet wird. *Besitzer* ist **nvarchar(384)** , hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn der Besitzer nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Falls der Besitzer nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit dem angegebenen Namen besitzt, wird nach einer Tabelle mit dem angegebenen Namen gesucht, deren Besitzer der Datenbankbesitzer ist. Wenn eine vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
-`[ @table_qualifier = ] 'qualifier'` Ist der Name des Qualifizierers der Tabelle. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+`[ @table_qualifier = ] 'qualifier'` Ist der Name des Qualifizierers der Tabelle. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_ **.** _Besitzer_ **.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` Ist eine Liste mit Werten, getrennt durch Kommas, die Informationen über alle Tabellen, Tabellentypen zu erhalten, die angegeben werden. Dazu gehören **Tabelle**, **SYSTEMTABLE**, und **Ansicht**. *Typ* ist **varchar(100)**, hat den Standardwert NULL.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` Ist eine Liste mit Werten, getrennt durch Kommas, die Informationen über alle Tabellen, Tabellentypen zu erhalten, die angegeben werden. Dazu gehören **Tabelle**, **SYSTEMTABLE**, und **Ansicht**. *Typ* ist **varchar(100)** , hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Jeder Tabellentyp muss in einfache Anführungszeichen und der gesamte Parameter in doppelte Anführungszeichen eingeschlossen werden. Für Tabellentypen müssen Großbuchstaben verwendet werden. Wenn SET QUOTED_IDENTIFIER auf ON festgelegt ist, müssen alle einfachen Anführungszeichen in doppelte Anführungszeichen geändert werden, und der gesamte Parameter muss in einfache Anführungszeichen eingeschlossen werden.  
@@ -69,7 +68,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Name des Qualifizierers Tabelle. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**TABLE_OWNER**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, den Namen des Datenbankbenutzers, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  

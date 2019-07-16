@@ -18,20 +18,19 @@ ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 74a44e8c3e6b0be026ac716d43b539869345b3b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018198"
 ---
 # <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Stretch Database-Katalogsichten - remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede Remotedatenbank, die Daten aus einer lokalen Datenbank mit aktivierter Funktion Stretch-speichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**remote_database_id**|**int**|Der automatisch generierten lokale Bezeichner der Remotedatenbank.|  
 |**remote_database_name**|**sysname**|Der Name der Remotedatenbank.|  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 151e6573ebeb5497f2de001d57272af647f5e737
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469194"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860685"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
@@ -165,7 +165,7 @@ Ausführlichere Informationen, samt dem empfohlenen Workflow zum Aktualisieren d
 > - Geänderte Spaltennamen in Systemobjekten. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde die Spalte *single_pages_kb* in sys.dm_os_sys_info in *pages_kb* umbenannt. Unabhängig vom Kompatibilitätsgrad erzeugt die Abfrage `SELECT single_pages_kb FROM sys.dm_os_sys_info` den Fehler 207 (ungültiger Spaltenname).
 > - Entfernte Systemobjekte. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde `sp_dboption` entfernt. Unabhängig vom Kompatibilitätsgrad erzeugt die Anweisung `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` den Fehler 2812 (gespeicherte Prozedur „sp_dboption“ konnte nicht gefunden werden).
 >
-> Weitere Informationen zu wichtigen Änderungen finden Sie unter [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) und [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2008](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai).
+> Weitere Informationen zu wichtigen Änderungen finden Sie unter [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) und [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Bewährte Methoden zum Aktualisieren des Datenbank-Kompatibilitätsgrads
 
@@ -197,7 +197,7 @@ In diesem Abschnitt werden neue mit Kompatibilitätsgrad 140 eingeführte Verhal
 
 |Kompatibilitätsgradeinstellung 130 oder niedriger|Kompatibilitätsgradeinstellung 140|
 |--------------------------------------------------|-----------------------------------------|
-|Bei Kardinalitätsschätzungen für Anweisungen, die auf Tabellenwertfunktionen mit mehreren Anweisungen verweisen, wird eine feste Zeilenvorhersage verwendet.|Bei Kardinalitätsschätzungen für zulässige Anweisungen, die auf Tabellenwertfunktionen mit mehreren Anweisungen verweisen, wird die tatsächliche Kardinalität der Funktionsausgabe verwendet. Dies wird über die **verschachtelte Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen aktiviert.|
+|Bei Kardinalitätsschätzungen für Anweisungen, die auf Tabellenwertfunktionen mit mehreren Anweisungen verweisen, wird eine feste Zeilenvorhersage verwendet.|Bei Kardinalitätsschätzungen für zulässige Anweisungen, die auf Tabellenwertfunktionen mit mehreren Anweisungen verweisen, wird die tatsächliche Kardinalität der Funktionsausgabe verwendet. Dies wird über die **geschachtelte Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen aktiviert.|
 |Abfragen im Batchmodus, die nicht genügend Arbeitsspeicherzuweisungen anfordern, was zu einem Überlauf der Datenträger führt, haben möglicherweise weiterhin Probleme mit aufeinanderfolgenden Ausführungen.|Abfragen im Batchmodus, die nicht genügend Arbeitsspeicherzuweisungen anfordern, was zu einem Überlauf der Datenträger führt, weisen bei aufeinanderfolgenden Ausführungen möglicherweise eine Leistungssteigerung auf. Dies wird über das **Feedback zur Speicherzuweisung im Batchmodus** ermöglicht, das die Arbeitsspeicherzuweisung eines zwischengespeicherten Plans aktualisiert, wenn es bei Operatoren im Batchmodus zu Überläufen kommt. |
 |Abfragen im Batchmodus, die eine übermäßige Arbeitsspeicherzuweisung anfordern, die zu Parallelitätsproblemen führt, haben möglicherweise weiterhin Probleme mit aufeinanderfolgenden Ausführungen.|Abfragen im Batchmodus, die eine übermäßige Arbeitsspeicherzuweisung anfordern, die zu Parallelitätsproblemen führt, weisen bei aufeinanderfolgenden Ausführungen möglicherweise eine verbesserte Parallelität auf. Dies wird über das **Feedback zur Speicherzuweisung im Batchmodus** ermöglicht, das die Arbeitsspeicherzuweisung eines zwischengespeicherten Plans aktualisiert, wenn ursprünglich eine übermäßige Speicherkapazität angefordert wurde.|
 |Abfragen im Batchmodus, die Verknüpfungsoperatorrn enthalten, sind für drei physische LOIN-Algorithmen geeignet, zu denen geschachtelte Schleifen, Hashjoins und Mergejoins zählen. Wenn Kardinalitätsschätzungen für Join-Eingaben falsch sind, wird möglicherweise ein ungeeigneter JOIN-Algorithmus ausgewählt. Dies hat negative Auswirkungen auf die Leistung. Zudem wird der ungeeignete JOIN-Algorithmus so lange weiter verwendet, bis der zwischengespeicherte Plan erneut kompiliert wurde.|Es gibt einen weiteren Verknüpfungsoperator mit dem Namen **adaptiver Join**. Wenn Kardinalitätsschätzungen für die äußere erstellte Join-Eingaben falsch sind, wird möglicherweise ein ungeeigneter Join-Algorithmus ausgewählt. Wenn dieser Fall eintritt und die Anweisung für einen adaptiven Join geeignet ist, wird auf dynamische Weise für kleinere Join-Eingaben eine geschachtelte Schleife und für umfangreichere Join-Eingaben ein Hashjoin verwendet, ohne dass eine Rekompilierung erforderlich ist. |
@@ -240,7 +240,7 @@ In diesem Abschnitt werden neue mit Kompatibilitätsgrad 120 eingeführte Verhal
 |Deaktivierte Trigger werden aktiviert, wenn die Trigger geändert werden.|Das Ändern eines Triggers ändert nicht den Status (deaktiviert oder aktiviert) des Triggers.|
 |Die OUTPUT INTO-Tabellenklausel ingoiert die `IDENTITY_INSERT SETTING = OFF` und lässt zu, dass explizite Werte eingefügt werden.|Sie können keine expliziten Werte für eine Identitätsspalte in einer Tabelle einfügen, wenn `IDENTITY_INSERT` auf OFF festgelegt ist.|
 |Wenn die Datenbankkapselung auf PARTIAL festgelegt ist, kann die Überprüfung des `$action`-Felds in der `OUTPUT`-Klausel einer `MERGE`-Anweisung einen Sortierungsfehler zurückgeben.|Die von der `$action`-Klausel einer `MERGE`-Anweisung zurückgegebene Sortierung der Werte entspricht der Datenbanksortierung anstelle der Serversortierung. Es wird kein Sortierungskonfliktfehler zurückgegeben.|
-|Durch eine `SELECT INTO`-Anweisung wird immer ein Singlethread-Einfügevorgang erstellt.|Durch eine `SELECT INTO`-Anweisung kann ein paralleler Einfügevorgang erstellt werden. Beim Einfügen großer Zeilenanzahlen kann die Leistung durch den parallelen Vorgang verbessert werden.|
+|Durch eine `SELECT INTO`-Anweisung wird immer ein Singlethread-Einfügevorgang erstellt.|Durch eine `SELECT INTO`-Anweisung kann ein paralleler Einfügevorgang erstellt werden. Beim Einfügen einer großer Anzahl von Zeilen kann die Leistung durch den parallelen Vorgang verbessert werden.|
 
 ## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>Unterschiede zwischen niedrigeren Kompatibilitätsgraden und Kompatibilitätsgraden 100 und 110
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067782"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|Datenbankname.|  
 |db_guid|UNIQUEIDENTIFIER|Ein Bezeichner, der die Datenbank eindeutig identifiziert.|  
@@ -60,7 +59,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |is_managed_backup_enabled|INT|Gibt an, ob [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] derzeit für diese Datenbank aktiviert ist. Der Wert 1 gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] derzeit aktiviert ist, der Wert 0 gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für diese Datenbank deaktiviert ist.|  
 |storage_url|NVARCHAR(1024)|Die URL des Speicherkontos.|  
 |Encryption_algorithm|NCHAR(20)|Gibt den aktuellen Verschlüsselungsalgorithmus zurück, der beim Verschlüsseln der Sicherung verwendet werden soll.|  
-|Encryptor_type|NCHAR(15)|Gibt die Verschlüsselungseinstellung zurück: Zertifikat oder asymmetrischer Schlüssel|  
+|Encryptor_type|NCHAR(15)|Gibt die verschlüsselungseinstellung zurück: Zertifikat oder asymmetrischer Schlüssel.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|Der Name des Zertifikats oder des asymmetrischen Schlüssels.|  
   
 ## <a name="security"></a>Sicherheit  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2c7f7f4296b3cbed025303f58cf07717db06c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026907"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ ms.locfileid: "52510866"
  Weitere Informationen finden Sie unter [erstellen und Verwalten von Speicher für arbeitsspeicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher  
- Die folgende Tabelle beschreibt die Spalten für `sys.dm_db_xtp_checkpoint_files`ab **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+ Die folgende Tabelle beschreibt die Spalten für `sys.dm_db_xtp_checkpoint_files`ab **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Spaltenname|Typ|Description|  
+|Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit File_id in [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID des Containers, in dem das Stammverzeichnis, Daten- oder Änderungsdatei angehört. Joins mit File_guid in der Sys. database_files-Tabelle.|  
@@ -65,19 +64,19 @@ ms.locfileid: "52510866"
 |end_checkpoint_id|**bigint**|Die ID des Prüfpunkts End.|  
 |last_updated_checkpoint_id|**bigint**|Die ID des letzten Prüfpunkts, die diese Datei aktualisiert.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; VERSCHLÜSSELT MIT SCHLÜSSEL 1<br /><br /> 2 = &GT; MIT SCHLÜSSEL 2 VERSCHLÜSSELT. Dies gilt nur für aktive Dateien.|  
+|encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > VERSCHLÜSSELT MIT SCHLÜSSEL 1<br /><br /> 2 = > MIT SCHLÜSSEL 2 VERSCHLÜSSELT. Dies gilt nur für aktive Dateien.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- Die folgende Tabelle beschreibt die Spalten für `sys.dm_db_xtp_checkpoint_files`, für die **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+ Die folgende Tabelle beschreibt die Spalten für `sys.dm_db_xtp_checkpoint_files`, für die **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Spaltenname|Typ|Description|  
+|Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit File_id in [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Die GUID des Containers, dem die Daten- oder Änderungsdatei angehört.|  
 |checkpoint_file_id|**GUID**|Die ID der Daten- oder Änderungsdatei.|  
 |relative_file_path|**nvarchar(256)**|Der Pfad zu der Daten- oder Änderungsdatei relativ zum Speicherort des Containers.|  
 |file_type|**tinyint**|0 für die Datendatei.<br /><br /> 1 für die Änderungsdatei.<br /><br /> NULL, wenn die Zustandsspalte auf 7 festgelegt ist.|  
-|file_type_desc|**nvarchar(60)**|Dateityp: DATA_FILE, DELTA_FILE oder NULL, wenn die Zustandsspalte auf 7 festgelegt ist.|  
+|file_type_desc|**nvarchar(60)**|Der Typ der Datei: DATA_FILE, DELTA_FILE oder NULL, wenn die Zustandsspalte auf 7 festgelegt ist.|  
 |internal_storage_slot|**int**|Der Index der Datei im internen Speicherarray. NULL, wenn die Zustandsspalte auf 2 oder 3 festgelegt ist.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|Die entsprechende Daten- oder Änderungsdatei.|  
 |file_size_in_bytes|**bigint**|Die Größe der Datei, die verwendet wird. NULL, wenn die Zustandsspalte auf 5, 6 oder 7 festgelegt ist.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c4147b1bfa5ffb1e379c3aa8be2c9ea2a9d2775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130011"
 ---
 # <a name="default-c-data-types"></a>Standardmäßige C-Datentypen
 Wenn eine Anwendung SQL_C_DEFAULT in angibt **SQLBindCol**, **SQLGetData**, oder **SQLBindParameter**, der Treiber wird davon ausgegangen, dass der C-der Eingabe- oder Ausgabe Datentyp entspricht dem SQL-Datentyp der Spalte oder des Parameters an die der Puffer gebunden ist.  

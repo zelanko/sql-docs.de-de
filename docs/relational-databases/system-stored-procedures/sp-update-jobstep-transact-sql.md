@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
+title: Sp_update_jobstep (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084879"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ sp_update_jobstep
   
 `[ @step_name = ] 'step_name'` Ist ein neuer Name für den Schritt. *Step_name*ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @subsystem = ] 'subsystem'` Das Subsystem, das zum Ausführen von Microsoft SQL Server-Agent verwendet *Befehl*. *Subsystem* ist **nvarchar(40)**, hat den Standardwert NULL.  
+`[ @subsystem = ] 'subsystem'` Das Subsystem, das zum Ausführen von Microsoft SQL Server-Agent verwendet *Befehl*. *Subsystem* ist **nvarchar(40)** , hat den Standardwert NULL.  
   
-`[ @command = ] 'command'` Die Befehle, die über eine ausgeführt werden *Subsystem*. *Befehl* ist **nvarchar(max)**, hat den Standardwert NULL.  
+`[ @command = ] 'command'` Die Befehle, die über eine ausgeführt werden *Subsystem*. *Befehl* ist **nvarchar(max)** , hat den Standardwert NULL.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -100,7 +99,7 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id` Die ID des Schritts in diesem Auftrag ausgeführt wird, wenn der Schritt fehlschlägt und *fail_action gleich* ist **4**. *Fail_step_id* ist **Int**, hat den Standardwert NULL.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Server* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Server* ist **vom Datentyp nvarchar(128)** , hat den Standardwert NULL.  
   
 `[ @database_name = ] 'database'` Der Name der Datenbank, in der zum Ausführen einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Schritt. *Datenbank*ist **Sysname**. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
@@ -120,7 +119,7 @@ sp_update_jobstep
   
 `[ @flags = ] flags` Eine Option, die Verhalten steuert. *Flags* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0** (Standardwert)|Ausgabedatei überschreiben.|  
 |**2**|An Ausgabedatei anfügen|  

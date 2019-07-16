@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 02d320990b255cdee2a6d75ac88a93ab98ce5ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 036ae77a6d65ff396df60f54b38eeffba4e202f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086206"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Neuerungen in SSMA für DB2 (DB2ToSQL)
 
@@ -35,14 +34,14 @@ Die v8.2-Version von SSMA für DB2 ist mit dem Probleme mit Verbindungen mit Azu
 > [!IMPORTANT]
 > SSMA v7.4 und höher ist .net 4.5.2 eine Voraussetzung für Installation.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>SSMA v8. 1
 
 Die v8. 1-Version von SSMA für DB2 wird erweitert, um gezielte Fixes bereitzustellen, die entwickelt wurden, um die Qualität und Konvertierung von Metriken zu verbessern.
 
 > [!NOTE]
 > Ein bekanntes Problem bei der automatischen Aktualisierung möglicherweise den Fehler eines Updates von SSMA-Version 8.0 auf v8. 1. Wenn dieser Fehler auftritt, können herunterladen Sie die neue Version und installieren Sie ihn manuell klicken.
 
-## <a name="ssma-v80"></a>SSMA v8.0
+## <a name="ssma-v80"></a>SSMA v8. 0
 
 Die Version 8.0 von SSMA für DB2 wird erweitert, um gezielte Fixes, die zur Verbesserung der Qualität und Konvertierung Metriken entwickelt bereitzustellen. Diese Version bietet auch die folgenden neuen Features:
 
@@ -74,7 +73,7 @@ Die Version v7.9 von SSMA für DB2 enthält die folgenden Änderungen:
 * Unterstützung für die Migration von Daten mithilfe von SQL Server Integration Services (SSIS). Nach der Konvertierung des Schemas ist es möglich, ein SSIS-Paket mit einer Option für das Kontextmenü zu erstellen.
 * Die Azure SQL-Datenbank-Verbindungsdialogfeld in SSMA wurde auch geändert, um den vollqualifizierten Servernamen angeben. In früheren Versionen von SSMA musste das Präfix für die Azure SQL-Datenbank innerhalb von Projekten Einstellungen angegeben werden.
 
-## <a name="ssma-v78"></a>SSMA v7.8
+## <a name="ssma-v78"></a>SSMA V7. 8
 
 Die V7. 8-Version von SSMA für DB2 enthält die folgenden Änderungen:
 
@@ -92,7 +91,7 @@ Die Version v7.7 von SSMA für DB2 enthält die folgenden Änderungen:
 
 Die Version v7.6 von SSMA für DB2 wird erweitert, mit gezielte Fixes, die die Qualität und Konvertierung von Metriken zu verbessern und mit Unterstützung für SQL Server 2017 (öffentliche Vorschau). Unterstützung für SQL Server 2017 unter Windows und Linux wird in der öffentlichen Vorschau und darf nicht für Produktionsmigrationen verwendet werden.
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA V7. 5
 
 Die Version 7.5 von SSMA für DB2 ist mit verschiedene Verbesserungen, um sicherzustellen, dass größere Barrierefreiheit für Personen mit behinderungen verbessert.
 
@@ -109,7 +108,7 @@ Die Version v7.4 von SSMA für DB2 enthält die folgenden Änderungen:
   > [!IMPORTANT]
   > .NET 4.5.2 ist eine Voraussetzung zum Installieren von SSMA-v7.4. Darüber hinaus v7.4 ab, die 32-Bit-Version von SSMA nicht mehr unterstützt.
 
-## <a name="ssma-v73"></a>SSMA v7.3
+## <a name="ssma-v73"></a>SSMA V7. 3
 
 Die V7. 3-Version von SSMA für DB2 enthält die folgenden Änderungen:
 
@@ -124,7 +123,7 @@ Die V7. 3-Version von SSMA für DB2 enthält die folgenden Änderungen:
       * Anweisungen dazu, einen benutzerdefinierten Konverter erstellen finden Sie in diesem Blogbeitrag [Erweitern von SQL Server Migration Assistant Konvertierungsfunktionen](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       * Ein Beispielprojekt für die Konvertierung aus dieser [Blogbeitrag](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>SSMA V7. 2
 
 Die V7. 2-Version von SSMA für DB2 enthält die folgenden Änderungen:
 

@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 156e8a2cd2ee6e0d2789526615b7236b26874dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d74fd55d4d2bf230cbb190cad428b371807f32ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022612"
 ---
 # <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **sys.trace_event_bindings** -Katalogsicht enthält eine Liste aller möglichen Verwendungskombinationen von Ereignissen und Spalten. In der **trace_column_id** -Spalte werden alle verfügbaren Spalten für jedes in der **trace_event_id** -Spalte aufgeführte Ereignis aufgelistet. Nicht alle verfügbaren Spalten werden beim Eintreten eines bestimmten Ereignisses aufgefüllt. Diese Werte ändern sich abhängig von der jeweiligen Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nicht.  
+  Die **sys.trace_event_bindings** -Katalogsicht enthält eine Liste aller möglichen Verwendungskombinationen von Ereignissen und Spalten. In der **trace_column_id** -Spalte werden alle verfügbaren Spalten für jedes in der **trace_event_id** -Spalte aufgeführte Ereignis aufgelistet. Nicht alle verfügbaren Spalten werden beim Eintreten eines bestimmten Ereignisses aufgefüllt. Diese Werte ändern sich abhängig von der jeweiligen Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]nicht.  
   
- Eine vollständige Liste der unterstützten Ablaufverfolgungsereignisse, finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Eine vollständige Liste der unterstützten Ablaufverfolgungsereignisse finden Sie unter [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die Katalogsichten für erweiterte Ereignisse.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|ID des Ablaufverfolgungsereignisses. Diese Spalte befindet sich auch in der Katalogsicht **sys.trace_events** .|  
 |**trace_column_id**|**smallint**|ID der Ablaufverfolgungsspalte. Diese Spalte wird auch in der **sys.trace_columns** -Katalogsicht gespeichert.|  

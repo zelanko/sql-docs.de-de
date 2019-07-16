@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8b36fffa5c1999033f0cc1902eda9c2cb4ba61d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061797"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,7 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @configname = ] 'option_name'` Ist der Name einer Konfigurationsoption. *option_name* ist vom Datentyp **varchar(35)**. Der Standardwert ist NULL. Von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird jede eindeutige Zeichenfolge erkannt, die Teil des Konfigurationsnamens ist. Erfolgt keine Angabe, wird die gesamte Liste der Optionen zurückgegeben.  
+`[ @configname = ] 'option_name'` Ist der Name einer Konfigurationsoption. *option_name* ist vom Datentyp **varchar(35)** . Der Standardwert ist NULL. Von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird jede eindeutige Zeichenfolge erkannt, die Teil des Konfigurationsnamens ist. Erfolgt keine Angabe, wird die gesamte Liste der Optionen zurückgegeben.  
   
  Weitere Informationen zu den verfügbaren Konfigurationsoptionen und ihren Einstellungen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
@@ -77,7 +76,7 @@ RECONFIGURE
   
  Die Werte für **Config_value** und **Run_value** sind nicht automatisch gleich. Nach dem Update einer Konfigurationseinstellung mithilfe von **Sp_configure**, die vom Systemadministrator muss des ausgeführten Konfigurationswerts mit entweder RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  
@@ -98,7 +97,7 @@ RECONFIGURE
   
  Mit der RECONFIGURE-Anweisung werden einige Optionen dynamisch aktualisiert. Für andere Optionen ist jedoch das Beenden und Neustarten des Servers erforderlich. Z. B. die **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** Serverarbeitsspeicher-Optionen werden dynamisch aktualisiert die [!INCLUDE[ssDE](../../includes/ssde-md.md)]; aus diesem Grund können Sie sie ändern, ohne einen Neustart des Servers. Neukonfiguration des laufenden Werts für die **Füllfaktor** Option erfordert einen Neustart der [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Nach dem Ausführen von RECONFIGURE für eine Konfigurationsoption, sehen Sie, ob die Option durch Ausführen dynamisch aktualisiert wurde **Sp_configure'***Optionsname***"**. Die Werte in der **Run_value** und **Config_value** Spalten zu einer dynamisch aktualisierten Option übereinstimmen sollte. Sie können auch überprüfen, um festzustellen, welche Optionen dynamisch sind, anhand der **Is_dynamic** Spalte die **sys.configurations** -Katalogsicht angezeigt.  
+ Nach dem Ausführen von RECONFIGURE für eine Konfigurationsoption, sehen Sie, ob die Option durch Ausführen dynamisch aktualisiert wurde **Sp_configure'***Optionsname***"** . Die Werte in der **Run_value** und **Config_value** Spalten zu einer dynamisch aktualisierten Option übereinstimmen sollte. Sie können auch überprüfen, um festzustellen, welche Optionen dynamisch sind, anhand der **Is_dynamic** Spalte die **sys.configurations** -Katalogsicht angezeigt.  
   
 > [!NOTE]  
 >  Wenn ein angegebener *Wert* ist zu hoch ist, eine Option der **Run_value** -Spalte dargestellt, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)] hat standardmäßig dynamischer Arbeitsspeicher nicht mehr benötigen Sie eine Einstellung, die nicht gültig ist.  

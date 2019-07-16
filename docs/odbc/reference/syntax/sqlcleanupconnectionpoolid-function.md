@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4d00fcff0b2fa1948f6b2f6f66b863501e12d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee8f9b9879a3533e8196bbc89f8ae0b0a132293a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036090"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.81 Standards Compliance: ODBC  
+ Eingeführt in Version: ODBC-3,81 Standardkompatibilität: ODBC  
   
  **Zusammenfassung**  
  **SQLCleanupConnectionPoolID** informiert einen Treiber, der Pool-ID Zeitlimit überschritten wurde. Timeout bei ein Pool ID können Timeout auf, wenn alle Verbindungen in einem Pool, der dieser Anwendungspool-ID zugeordnet wurden. Finden Sie unter [Verbindungspooling in der Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) für Weitere Informationen zum Verbindungstimeout.  
@@ -44,7 +43,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  [Eingabe] Der Pool, die die Pool-ID, bei denen Timeout wurde zugeordnet sind.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Der Treiber-Manager verarbeitet keine Diagnoseinformationen Merry **SQLCleanupConnectionPoolID**.  

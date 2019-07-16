@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 398d098615a0453cb016286867836388fd817540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48a4c8666ab7aa7e210289564210d99c947e5631
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071710"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Teilweise  
+ Unterstützung: Teilweise  
   
  ODBC-API-Übereinstimmung: Ebene 1  
   

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 898990152a86380ae9ba28e9766ae47675a39706
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079141"
 ---
 # <a name="msreplicationmonitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSreplication_monitordata** -Tabelle enthält zwischengespeicherte Daten, die vom Replikationsmonitor überwacht, die mit einer Zeile für jedes überwachte Abonnement verwendet. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**' lastrefresh '**|**datetime**|Datum und Uhrzeit des Updates der Überwachungsdaten|  
 |**computeTime**|**int**|Zeit (in Sekunden) zum Berechnen der Überwachungsdaten|  
@@ -38,7 +37,7 @@ ms.locfileid: "52775532"
 |**publisher**|**sysname**|Der Name des Verlegers.|  
 |**publisher_srvid**|**int**|Server-ID des Verlegers|  
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungsdatenbank.|  
-|**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
+|**publication**|**sysname**|Der Name der Veröffentlichung.|  
 |**publication_type**|**int**|Der Veröffentlichungstyp. Die folgenden Werte sind möglich:<br /><br /> **0** = transaktionsveröffentlichung<br /><br /> **1** = momentaufnahmeveröffentlichung<br /><br /> **2** = Mergeveröffentlichung|  
 |**agent_type**|**int**|Der Typ des Replikations-Agents. Die folgenden Werte sind möglich.<br /><br /> **1** = Momentaufnahme-Agent<br /><br /> **2** = Protokolllese-Agent<br /><br /> **3** = Verteilungs-Agent<br /><br /> **4** = Merge-Agent<br /><br /> **9** = Warteschlangenlese-Agent|  
 |**agent_id**|**int**|ID des Replikations-Agents|  
@@ -50,7 +49,7 @@ ms.locfileid: "52775532"
 |**last_distsync**|**datetime**|Datum und die Uhrzeit, wann der Verteilungs-Agent zuletzt ausgeführt wurde|  
 |**agentstoptime**|**datetime**|Datum und die Uhrzeit der Beendigung der Momentaufnahme|  
 |**distdb**|**sysname**|Name der Verteilungsdatenbank für das Abonnement|  
-|**Beibehaltungsdauer**|**int**|Beibehaltungsdauer für die Veröffentlichung|  
+|**retention**|**int**|Beibehaltungsdauer für die Veröffentlichung|  
 |**time_stamp**|**datetime**|Intern-nur zur Verwendung.|  
 |**worst_latency**|**int**|Die längste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
 |**best_latency**|**int**|Die kürzeste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
