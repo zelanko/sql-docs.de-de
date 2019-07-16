@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023343"
 ---
 # <a name="pattern-value-arguments"></a>Argumente des Musterwerts
 Einige Argumente im Katalog-Funktionen, wie die *TableName* -Argument in **SQLTables**, Suchmuster akzeptieren. Diese Argumente akzeptieren, Suchmuster, wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_FALSE; festgelegt ist Sie sind bezeichnerargumente, die einem Suchmuster nicht akzeptiert werden, wenn dieses Attribut auf SQL_TRUE festgelegt ist.  
@@ -35,9 +34,9 @@ Einige Argumente im Katalog-Funktionen, wie die *TableName* -Argument in **SQLTa
   
  Das Escapezeichen wird abgerufen, mit der Option SQL_SEARCH_PATTERN_ESCAPE **SQLGetInfo**. Es muss Unterstriche, Prozentzeichen oder Escape-Zeichen in einem Argument vorangestellt sein, das Suchmuster enthält das Zeichen als Literal akzeptiert. Beispiele sind in der folgenden Tabelle gezeigt.  
   
-|Suchmuster|Description|  
+|Suchmuster|Beschreibung|  
 |--------------------|-----------------|  
-|%A%|Alle Bezeichner, die mit dem Buchstaben A|  
+|%A %|Alle Bezeichner, die mit dem Buchstaben A|  
 |ABC_|Alle aus vier Buchstaben bestehende Bezeichner ab, die mit ABC|  
 |ABC\\_|Der Bezeichner ABC_, vorausgesetzt das Escapezeichen ist ein umgekehrter Schrägstrich (\\)|  
 |\\\\%|Alle IDs beginnen mit einem umgekehrten Schrägstrich (\\), sofern das Escapezeichen ist ein umgekehrter Schrägstrich|  

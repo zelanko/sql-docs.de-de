@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a85f6938ec0f97ff69eab1782c0a24b78a5a6e8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964124"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions-Eigenschaft (RDS)
 Gibt den Typ des asynchronen abrufen.  
@@ -30,7 +29,7 @@ Gibt den Typ des asynchronen abrufen.
 ## <a name="setting-and-return-values"></a>Festlegen und Rückgabewerte  
  Legt fest oder gibt einen der folgenden Werte zurück.  
   
-|Konstante|Description|  
+|Konstante|Beschreibung|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Werden alle Datensätze der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abgerufen werden, bevor die Steuerung an die Anwendung zurückgegeben wird. Die vollständige **Recordset** wird abgerufen, bevor die Anwendung darf nichts damit zu tun.|  
 |**adcFetchBackground**|Steuerelement kann an die Anwendung zurückgegeben, sobald der erste Batch an Datensätzen abgerufen wurde. Ein späterer lesen, der die **Recordset** Zugriffsversuche auf einen Datensatz nicht in den ersten Batch abgerufen werden verzögert, bis der gesuchte Datensatz tatsächlich abgerufen wurde, zu diesem Zeitpunkt die Steuerung an die Anwendung zurückgegeben.|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038918"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Ausdruckskontext und Ausdrucksauswertung (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "54256875"
   
 -   Beim Abfragen einer typisierten **Xml** Spalte oder Variablen, die Komponenten der XML-schemaauflistung, die die Spalte oder Variablen zugeordnet sind in statischen Kontext importiert. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Für jeden atomaren Typ in den importierten Schemas wird im statischen Kontext auch eine Umwandlungsfunktion verfügbar gemacht. Dies wird im folgenden Beispiel veranschaulicht. In diesem Beispiel wird eine Abfrage angegeben für eine typisierte **Xml** Variable. Die dieser Variablen zugeordnete XML-Schemaauflistung definiert den atomaren Typ myType. Dieser Typ eine Umwandlungsfunktion für **myType()**, während der statischen Analyse der verfügbar ist. Der Abfrageausdruck (`ns:myType(0)`) gibt einen Wert von myType zurück.  
+-   Für jeden atomaren Typ in den importierten Schemas wird im statischen Kontext auch eine Umwandlungsfunktion verfügbar gemacht. Dies wird im folgenden Beispiel veranschaulicht. In diesem Beispiel wird eine Abfrage angegeben für eine typisierte **Xml** Variable. Die dieser Variablen zugeordnete XML-Schemaauflistung definiert den atomaren Typ myType. Dieser Typ eine Umwandlungsfunktion für **myType()** , während der statischen Analyse der verfügbar ist. Der Abfrageausdruck (`ns:myType(0)`) gibt einen Wert von myType zurück.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 485cd951992ed427461e497c53d17a4f6db24a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020398"
 ---
 # <a name="role-of-the-driver-manager"></a>Rolle des Treiber-Managers
 Der Treiber-Manager bestimmt die endgültige Reihenfolge in den statusdatensätzen zurückgegeben, die es generiert. Insbesondere bestimmt, welcher Datensatz, hat den höchsten Rang, und zuerst zurückgegeben werden soll. Der Treiber ist verantwortlich für die Sortierung der Statusdatensätze, die es generiert. Wenn sowohl der Treiber-Manager als auch der Treiber Statusdatensätze bereitgestellt werden, ist der Treiber-Manager für ihre Anordnung verantwortlich. Weitere Informationen finden Sie unter [Sequenz der Statusdatensätze](../../../odbc/reference/develop-app/sequence-of-status-records.md).  

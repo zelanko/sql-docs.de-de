@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6bda48b3645260ed3886316a0ba478aad214b593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8d15e06a9a832d28e9314f6dc0cb1c80daf3207
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047757"
 ---
 # <a name="approval-required-master-data-services"></a>Genehmigung erforderlich (Master Data Services)
 
@@ -31,7 +30,7 @@ ms.locfileid: "65486383"
 >   
 >  Bei Änderungen, die durch eine Geschäftsregel vorgenommen werden, wird die Genehmigung umgangen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich der Systemverwaltung zuzugreifen.  

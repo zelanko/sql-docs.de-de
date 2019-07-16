@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bbfc973f476bfb2f855b42f2b2e4d4486ba631c2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001009"
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spalte|Description|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |**secondary_server**|Der Name der sekundären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration.|  
 |**secondary_database**|Der Name der sekundären Datenbank in der Protokollversandkonfiguration.|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c898cb5cd8c9998d9126ec468a2b43587e2e279a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52015cb202f46c50c16dcab408bed7761f0925db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951803"
 ---
 # <a name="using-data-sources"></a>Verwenden von Datenquellen
 Datenquellen werden in der Regel vom Benutzer erstellt oder ein Techniker mit einem Programm Namens der *ODBC-Administrator*. Der ODBC-Administrator fordert den Benutzer für den Treiber verwenden und ruft dann diesen Treiber. Der Treiber zeigt ein Dialogfeld, das die Informationen anfordert, wird, die es eine Verbindung mit der Datenquelle herstellen muss. Nachdem der Benutzer die Informationen eingegeben hat, werden Sie von der Treiber auf dem System gespeichert.  

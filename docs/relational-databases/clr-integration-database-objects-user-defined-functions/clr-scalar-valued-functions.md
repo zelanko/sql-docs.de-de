@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 41c8dad185ad310cda38521819fc46146fe57743
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ac063fa59d22308cb90206816555eea8474acca6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009773"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR-Skalarwertfunktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +111,7 @@ Using conn As New SqlConnection("context connection=true")
 End Using  
 ```  
   
- Der entsprechende Befehlstext wird angegeben, durch die Initialisierung der **SqlCommand** Objekt. Im vorherige Beispiel zählt die Anzahl der Zeilen in Tabelle **"SalesOrderHeader"**. Als Nächstes die **"ExecuteScalar"** Methode der **Cmd** -Objekts aufgerufen wird. Der zurückgegebene Wert vom Typ **Int** basierend auf der Abfrage. Abschließend wird die Anzahl der Bestellungen an den Aufrufer zurückgegeben.  
+ Der entsprechende Befehlstext wird angegeben, durch die Initialisierung der **SqlCommand** Objekt. Im vorherige Beispiel zählt die Anzahl der Zeilen in Tabelle **"SalesOrderHeader"** . Als Nächstes die **"ExecuteScalar"** Methode der **Cmd** -Objekts aufgerufen wird. Der zurückgegebene Wert vom Typ **Int** basierend auf der Abfrage. Abschließend wird die Anzahl der Bestellungen an den Aufrufer zurückgegeben.  
   
  Wenn dieser Code in einer Datei namens FirstUdf.cs gespeichert wird, kann er wie folgt als Assembly kompiliert werden:  
   

@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: da9676f029bb917adf15690b6870583fb0465fc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09934e01d6118bfa48a7c3f62e8086763ebf44c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962915"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installieren von SQL Server-Machine learning-R und Python auf Computern ohne Internetzugang
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +42,7 @@ Release  |Downloadlink  |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Öffnen Sie Microsoft-Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2: Abrufen von SQL Server 2017-Installationsmedien
 
@@ -55,7 +54,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016-offline-Installation
 
-SQL Server 2016-in-Database-Analyse ist R ausschließlich mit nur zwei CAB-Dateien für die Produktpakete und die Microsoft-Distribution von Open-Source-R bzw. Starten Sie eine dieser Versionen installieren: RTM, SP 1, SP 2. Sobald eine Basisinstallation vorhanden ist, können die kumulativen Updates als Nächstes angewendet werden.
+SQL Server 2016-in-Database-Analyse ist R ausschließlich mit nur zwei CAB-Dateien für die Produktpakete und die Microsoft-Distribution von Open-Source-R bzw. Starten Sie eine dieser Versionen installieren: RTM SP 1, SP 2. Sobald eine Basisinstallation vorhanden ist, können die kumulativen Updates als Nächstes angewendet werden.
 
 Laden Sie auf einem Computer, die über einen Internetzugang verfügen die CAB-Dateien von Setup verwendet werden, um die datenbankinternen Analysen auf SQL Server 2016 zu installieren. 
 
@@ -65,7 +64,7 @@ Release  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
-**SQL Server 2016 SP 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
+**SQL Server 2016 SP2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
 
 ### <a name="2---get-sql-server-2016-installation-media"></a>2: Abrufen von SQL Server 2016-Installationsmedien
 

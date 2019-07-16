@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8cad8d669452fb5d3bdff154cd7c07239f25044
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938231"
 ---
 # <a name="type-property-ado-stream"></a>Type-Eigenschaft (ADO-Stream)
 Gibt den Typ der Daten in die [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binär oder Text).  
@@ -40,5 +39,5 @@ Gibt den Typ der Daten in die [Stream](../../../ado/reference/ado-api/stream-obj
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [RecordType Property (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
+ [RecordType-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type-Eigenschaft (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

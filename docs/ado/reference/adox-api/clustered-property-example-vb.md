@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ddcc576731091596b8efa00c9473a7d167c9ee99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2eb5e19e166a468a9ee30758da79d503f1b9932
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966950"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered-Eigenschaft – Beispiel (VB)
 Dieses Beispiel zeigt die [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) Eigenschaft eine [Index](../../../ado/reference/adox-api/index-object-adox.md). Beachten Sie, dass Microsoft Jet-Datenbanken nicht gruppierte Indizes, unterstützen und daher in diesem Beispiel zurückgibt **"false"** für die **Clustered** Eigenschaft aller Indizes in der **Northwind** die Datenbank.  

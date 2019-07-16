@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: debe88da4effd02ac15af965656232d4ec1f3395
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079170"
 ---
 # <a name="msreplqueuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSreplication_queuedtraninfo** Tabelle wird vom Replikationsprozess verwendet, zum Speichern von Informationen über die Warteschlange eingereihten Befehlen, die von allen die Abonnements mit verzögertem Aktualisieren, die SQL-basierte verzögerte Update ausgestellt. Diese Tabelle wird in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Der Name des Verlegers.|  
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungsdatenbank.|  
-|**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
+|**publication**|**sysname**|Der Name der Veröffentlichung.|  
 |**der Standard**|**sysname**|Die Transaktions-ID, unter der der Befehl in der Warteschlange ausgeführt wurde|  
 |**maxorderkey**|**bigint**|Intern-nur zur Verwendung.|  
 |**commandcount**|**bigint**|Intern-nur zur Verwendung.|  

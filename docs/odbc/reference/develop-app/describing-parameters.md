@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040020"
 ---
 # <a name="describing-parameters"></a>Beschreiben von Parametern
 **SQLBindParameter** enthält Argumente, die den Parameter zu beschreiben: die SQL-Datentyp, Genauigkeit und Skalierung. Der Treiber verwendet diese Informationen, oder *Metadaten* umzuwandelnde Wert des Parameters in den Typ, der von der Datenquelle erforderlich sind. Auf den ersten Blick scheint es sich, dass der Treiber in einer besseren Position, die Metadaten von Parametern als die Anwendung wissen ist; Schließlich kann der Treiber mühelos ermitteln, die Metadaten für eine Resultsetspalte. Wie sich herausstellt, ist dies nicht der Fall. Zunächst die meisten Datenquellen bieten keine Möglichkeit für den Treiber, um Metadaten von Parametern zu ermitteln. Zweitens wird die meisten Anwendungen bereits kennen, die Metadaten.  

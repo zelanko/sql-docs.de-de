@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004508"
 ---
 # <a name="logical-expressions-xquery"></a>Logische Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ expression1 or expression2
   
  Die logische **und** und **oder** -Operator klicken Sie dann auf die sich ergebenden booleschen Werte der Ausdrücke mit der logischen Standardsemantik angewendet wird.  
   
- Mit der folgenden Abfrage werden die Miniaturbilder mit der Frontansicht, d. h. das <`Picture`>-Element, für ein bestimmtes Produktmodell aus dem Produktkatalog abgerufen. Beachten Sie, dass der Katalog für jedes Produktbeschreibungsdokument eine oder mehrere Produktabbildungen mit verschiedenen Attributen wie z. B. Größe und Ansicht speichern kann.  
+ Die folgende Abfrage ruft aus dem Produktkatalog ab, die kleinen Bilder Blickwinkel, den <`Picture`>-Element, für ein bestimmtes Produktmodell. Beachten Sie, dass der Katalog für jedes Produktbeschreibungsdokument eine oder mehrere Produktabbildungen mit verschiedenen Attributen wie z. B. Größe und Ansicht speichern kann.  
   
 ```  
 SELECT CatalogDescription.query('  

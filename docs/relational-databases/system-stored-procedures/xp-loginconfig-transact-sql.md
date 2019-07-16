@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116689"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ xp_loginconfig ['config_name']
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **'** *config_name* **'**  
+ **"** *Config_name* **"**  
  Der anzuzeigende Konfigurationswert. Wenn *Config_name* ist nicht angegeben ist, werden alle Konfigurationswerte gemeldet. *Config_name* ist **Sysname**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Beschreibung|  
@@ -54,7 +53,7 @@ xp_loginconfig ['config_name']
 |**Überwachungsebene**|Die Überwachungsebene. Mögliche Werte sind **keine**, **Erfolg**, **Fehler**, und **alle**. Überwachungen werden in das Fehlerprotokoll und in die Windows-Ereignisanzeige geschrieben.|  
 |**Set-hostname**|Gibt an, ob der Hostname aus dem Clientanmeldedatensatz durch den Windows-Netzwerk-Benutzernamen ersetzt wird. Mögliche Werte sind **"true"** oder **"false"** . Wenn dies festgelegt ist, der Netzwerknamen für den Benutzer angezeigt wird, in der Ausgabe von **Sp_who**.|  
 |**map _**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Unterstrich (_) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne** (Standard), **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
-|**map $**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dollarzeichen ($) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Der Standardwert ist **Speicherplatz**. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
+|**Zuordnen von $**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dollarzeichen ($) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Der Standardwert ist **Speicherplatz**. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
 |**# zuordnen**|Meldet, welche Windows-Sonderzeichen dem gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Nummernzeichen (#) zugeordnet sind. Mögliche Werte sind **Trennzeichen für Domäne**, **Speicherplatz**, **null**, oder ein beliebiges einzelnes Zeichen. Der Standard ist der Bindestrich. Dieser Wert wird nur aus Gründen der Abwärtskompatibilität bereitgestellt.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -62,7 +61,7 @@ xp_loginconfig ['config_name']
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Konfigurationswert|  
 |**Konfigurationswert**|**sysname**|Die Einstellung für den Konfigurationswert|  

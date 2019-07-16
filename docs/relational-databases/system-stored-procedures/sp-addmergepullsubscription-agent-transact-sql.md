@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117957"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -214,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` Ist das Datum, ab der Merge-Agent nicht mehr, geplant JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Ist eine optionale Eingabeaufforderung, die für den Merge-Agent bereitgestellt wird. *Der Standardwert* ist **nvarchar(255)**, hat den Standardwert ' '. Kann zur Bereitstellung zusätzlicher Parameter für den Merge-Agent verwendet werden, wie im folgenden Beispiel gezeigt wird, bei dem das Standardtimeout für Abfragen auf `600` Sekunden erhöht wird:  
+`[ @optional_command_line = ] 'optional_command_line'` Ist eine optionale Eingabeaufforderung, die für den Merge-Agent bereitgestellt wird. *Der Standardwert* ist **nvarchar(255)** , hat den Standardwert ' '. Kann zur Bereitstellung zusätzlicher Parameter für den Merge-Agent verwendet werden, wie im folgenden Beispiel gezeigt wird, bei dem das Standardtimeout für Abfragen auf `600` Sekunden erhöht wird:  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` Ist der Ausgabeparameter für die Auftrags-ID. *der Standard* ist **'binary(16)'**, hat den Standardwert NULL.  
+`[ @merge_jobid = ] merge_jobid` Ist der Ausgabeparameter für die Auftrags-ID. *der Standard* ist **'binary(16)'** , hat den Standardwert NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Gibt an, ob das Abonnement über Windows Synchronization Manager synchronisiert werden kann. *Enabled_for_syncmgr* ist **nvarchar(5)**, hat den Standardwert "false". Wenn **"false"**, das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"**, das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Gibt an, ob das Abonnement über Windows Synchronization Manager synchronisiert werden kann. *Enabled_for_syncmgr* ist **nvarchar(5)** , hat den Standardwert "false". Wenn **"false"** , das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"** , das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @ftp_address = ] 'ftp_address'` Nur für Abwärtskompatibilität.  
   
@@ -232,15 +231,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` Nur für Abwärtskompatibilität.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Gibt den Speicherort zum Abholen der momentaufnahmedateien an. *Alternate_snapshot_folder* ist **nvarchar(255)**, hat den Standardwert NULL. Wenn dieser Wert NULL ist, werden die Momentaufnahmedateien aus dem vom Verleger angegebenen Standardspeicherort abgeholt.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Gibt den Speicherort zum Abholen der momentaufnahmedateien an. *Alternate_snapshot_folder* ist **nvarchar(255)** , hat den Standardwert NULL. Wenn dieser Wert NULL ist, werden die Momentaufnahmedateien aus dem vom Verleger angegebenen Standardspeicherort abgeholt.  
   
-`[ @working_directory = ] 'working_directory'` Ist der Name des Arbeitsverzeichnisses zum temporären Speichern von Daten- und Schemadateien für die Veröffentlichung wird zum Übertragen von momentaufnahmedateien FTP verwendet. *Working_directory* ist **nvarchar(255)**, hat den Standardwert NULL.  
+`[ @working_directory = ] 'working_directory'` Ist der Name des Arbeitsverzeichnisses zum temporären Speichern von Daten- und Schemadateien für die Veröffentlichung wird zum Übertragen von momentaufnahmedateien FTP verwendet. *Working_directory* ist **nvarchar(255)** , hat den Standardwert NULL.  
   
-`[ @use_ftp = ] 'use_ftp'` Gibt die Verwendung an, dass FTP anstelle des normalen Protokolls zum Abrufen von Momentaufnahmen. *Use_ftp* ist **nvarchar(5)**, hat den Standardwert "false".  
+`[ @use_ftp = ] 'use_ftp'` Gibt die Verwendung an, dass FTP anstelle des normalen Protokolls zum Abrufen von Momentaufnahmen. *Use_ftp* ist **nvarchar(5)** , hat den Standardwert "false".  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Verwendet den interaktiven Konfliktlöser zum Lösen von Konflikten für alle Artikel, die interaktive Lösung zulassen. *Use_interactive_resolver* ist **nvarchar(5)**, hat den Standardwert "false".  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Verwendet den interaktiven Konfliktlöser zum Lösen von Konflikten für alle Artikel, die interaktive Lösung zulassen. *Use_interactive_resolver* ist **nvarchar(5)** , hat den Standardwert "false".  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -252,15 +251,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` Ist der Name eines vorhandenen Agent-Auftrags. *Job_name* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement mithilfe eines vorhandenen Auftrags statt mit einem neu erstellten Auftrag (Standard) synchronisiert wird. Wenn Sie nicht Mitglied der sind die **Sysadmin** festen Serverrolle an, Sie müssen angeben, *Job_login* und *Job_password* beim Angeben von *Job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Der Pfad zu dem Ordner, in dem die momentaufnahmedateien aus dem bei eine Momentaufnahme gefilterter Daten gelesen werden, ist, verwendet werden soll. *Dynamic_snapshot_location* ist **nvarchar(260)**, hat den Standardwert NULL. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Der Pfad zu dem Ordner, in dem die momentaufnahmedateien aus dem bei eine Momentaufnahme gefilterter Daten gelesen werden, ist, verwendet werden soll. *Dynamic_snapshot_location* ist **nvarchar(260)** , hat den Standardwert NULL. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 `[ @use_web_sync = ] use_web_sync` Gibt an, dass die websynchronisierung aktiviert ist. *Use_web_sync* ist **Bit**, hat den Standardwert 0. **1** gibt an, dass das Pullabonnement mithilfe von HTTP über das Internet synchronisiert werden kann.  
   
-`[ @internet_url = ] 'internet_url'` Ist der Speicherort der replikationsüberwachung (REPLISAPI. DLL) für die websynchronisierung. *Internet_url* ist **nvarchar(260)**, hat den Standardwert NULL. *Internet_url* ist eine vollqualifizierte URL im Format `http://server.domain.com/directory/replisapi.dll`. Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `http://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
+`[ @internet_url = ] 'internet_url'` Ist der Speicherort der replikationsüberwachung (REPLISAPI. DLL) für die websynchronisierung. *Internet_url* ist **nvarchar(260)** , hat den Standardwert NULL. *Internet_url* ist eine vollqualifizierte URL im Format `http://server.domain.com/directory/replisapi.dll`. Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `http://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
   
 `[ @internet_login = ] 'internet_login'` Der Anmeldename, der der Merge-Agent verwendet beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet, die HTTP-Standardauthentifizierung verwendet. *sich* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @internet_password = ] 'internet_password'` Das Kennwort, mit der Merge-Agent beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet, die HTTP-Standardauthentifizierung verwendet. *Internet_password* ist **nvarchar(524)**, hat den Standardwert NULL.  
+`[ @internet_password = ] 'internet_password'` Das Kennwort, mit der Merge-Agent beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet, die HTTP-Standardauthentifizierung verwendet. *Internet_password* ist **nvarchar(524)** , hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` Überschreibt den Wert von HOST_NAME(), wenn diese Funktion in der WHERE-Klausel eines parametrisierten Filters verwendet wird. *Hostname* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)**, hat keinen Standardwert. Für Agentverbindungen mit dem Abonnenten sowie für Verbindungen mit dem Verteiler und Verleger über die integrierte Windows-Authentifizierung wird stets dieses Windows-Konto verwendet.  
+`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_login* ist **nvarchar(257)** , hat keinen Standardwert. Für Agentverbindungen mit dem Abonnenten sowie für Verbindungen mit dem Verteiler und Verleger über die integrierte Windows-Authentifizierung wird stets dieses Windows-Konto verwendet.  
   
 `[ @job_password = ] 'job_password'` Ist das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *Job_password* ist **Sysname**, hat keinen Standardwert.  
   
@@ -306,7 +305,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [Sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

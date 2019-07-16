@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57a2fb53226af9aeb6e546f6109a3e182ffc754f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019004"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx-Funktion
 **Übereinstimmung mit Standards**  
@@ -56,7 +55,7 @@ BOOL SQLInstallTranslatorEx(
   
  Die **Translator** und **Setup** Schlüsselwörter enthalten sein müssen, der *LpszTranslator* Zeichenfolge. Die Übersetzung DLL wird aufgeführt, mit der **Translator** -Schlüsselwort und die Translator-Setup, die DLL wird aufgeführt, mit der **Setup** Schlüsselwort. Jedes Paar wird mit NULL Byte beendet, und die gesamte Liste wird mit einem Byte NULL beendet. (D. h., markieren Sie zwei NULL-Bytes am Ende der Liste.) Das Format der *LpszTranslator* lautet wie folgt:  
   
- \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
+ \0Translator=*Translator-DLL-Dateiname*\0[Setup= *-Setup-DLL-Dateiname*\0]\0  
   
  *lpszPathIn*  
  [Eingabe] Vollständiger Pfad der, in denen das Konvertierungsprogramm installiert werden oder ein null-Zeiger. Wenn *LpszPath* ist ein null-Zeiger im Systemverzeichnis der Übersetzer installiert werden.  
@@ -88,7 +87,7 @@ BOOL SQLInstallTranslatorEx(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLInstallTranslatorEx** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Die *LpszPathOut* Argument war nicht groß genug, um den Ausgabepfad enthalten. Der Puffer enthält den Pfad abgeschnitten.<br /><br /> Die *CbPathOutMax* Argument wurde 0 (null) und die *häufigsten* Argument war ODBC_INSTALL_COMPLETE.|  

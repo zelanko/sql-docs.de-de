@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b326ed0c4e9a196904aa0f5c60b705243ef3bd97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061582"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Durchscrollen und Abrufen von Zeilen (ODBC)
 Wenn Sie einen bildlauffähigen Cursor verwenden, um Anwendungen Aufrufen **SQLFetchScroll** , positionieren Sie den Cursor und Fetch-Zeilen. **SQLFetchScroll** relative Bildlauf unterstützt (Weiter vor und relativ *n* Zeilen), absolute Bildlauf (Vorname, Nachname und Zeile *n*), und die Positionierung von Lesezeichen. Die *FetchOrientation* und *FetchOffset* Argumente in **SQLFetchScroll** welche Rowset abzurufen, geben Sie wie in den folgenden Diagrammen dargestellt.  

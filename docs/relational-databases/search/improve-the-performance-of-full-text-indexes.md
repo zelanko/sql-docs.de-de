@@ -18,12 +18,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a38cad4af807d5d9d7a64e6ca45a4fdfa0df77c7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973579"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652813"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,11 +133,11 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
   
 |Platform|Schätzung des von „fdhost.exe“ benötigten Arbeitsspeichers in MB: *F*^1|Formel zum Berechnen des „max server memory“-Werts: *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Anzahl der Durchforstungsbereiche*.*.50|*M* = Minimum (*T*, 2000) - F - 500|  
-|x64|*F* = *Anzahl der Durchforstungsbereiche** 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *Anzahl der Durchforstungsbereiche* \* 50|*M* = Minimum (*T*, 2000) - F - 500|  
+|x64|*F* = *Anzahl der Durchforstungsbereiche* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **Hinweise zu den Formeln**
-1.  Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die Arbeitsspeicheranforderungen für „fdhost.exe“ separat, also *F1*, *F2*, usw. Berechnen Sie anschließend *M* als _T_**-** sigma **(**_F_i **)**.  
+1.  Wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die Arbeitsspeicheranforderungen für „fdhost.exe“ separat, also *F1*, *F2*, usw. Berechnen Sie anschließend *M* als _T_ **-** sigma **(** _F_i **)** .  
 2.  500 MB ist eine Schätzung des erforderlichen Speichers, der von den anderen Prozessen im System benötigt wird. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
 3.  .*ism_size* wird 8 MB für x64-Plattformen angenommen.  
   
@@ -179,7 +179,7 @@ Es ist wahrscheinlich, dass die Leistung der vollständigen Auffüllungen nicht 
   
      In der folgenden Tabelle sind die relevanten Wartetypen aufgeführt.  
   
-    |Wartetyp|Beschreibung|Mögliche Lösung|  
+    |Wartetyp|und Beschreibung|Mögliche Lösung|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX oder _UP)|Dies kann auf einen E/A-Engpass hinweisen. In diesem Fall ist normalerweise auch eine hohe durchschnittliche Warteschlangenlänge des Datenträgers zu erkennen.|Sie können den E/A-Engpass ggf. reduzieren, indem Sie den Volltextindex in eine andere Dateigruppe auf einem anderen Datenträger verschieben.|  
     |PAGELATCH_EX (oder _UP)|Dies kann auf eine hohe Zahl von Konflikten zwischen Threads hinweisen, die versuchen, in dieselbe Datenbankdatei zu schreiben.|Diese Konflikte können ggf. verringert werden, indem Sie Dateien der Dateigruppe hinzufügen, auf der sich der Volltextindex befindet.|  

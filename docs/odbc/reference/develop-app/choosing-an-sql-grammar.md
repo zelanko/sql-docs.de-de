@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f7bf7e77f892f10de17402b59e732523d58fbc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036549"
 ---
 # <a name="choosing-an-sql-grammar"></a>Auswählen einer SQL-Grammatik
 Die erste Entscheidung bei der Erstellung der SQL-Anweisungen ist die Grammatik zu verwenden. Zusätzlich zu der Grammatiken für verschiedene Standardorganisationen, z. B. Open Group, ANSI und ISO-Images definiert praktisch jeden DBMS-Hersteller eine eigene Grammatik, von denen jede geringfügig von der Standard variiert.  

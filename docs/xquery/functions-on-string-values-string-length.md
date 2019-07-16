@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8193643e59c89d1bdc2877e72105f83a1fd6df3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004652"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funktionen für Zeichenfolgenwerte – string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ fn:string-length($arg as xs:string?) as xs:integer
   
  Wenn der Wert ein 4-Byte-Unicode-Zeichen enthält, das durch zwei Ersatzzeichen dargestellt wird, zählt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Ersatzzeichen einzeln.  
   
- Die **string-length()** ohne Parameter nur innerhalb eines Prädikats verwendet werden kann. Beispielsweise gibt die folgende Abfrage das <`ROOT`>-Element zurück:  
+ Die **string-length()** ohne Parameter nur innerhalb eines Prädikats verwendet werden kann. Z. B. die folgende Abfrage gibt die <`ROOT`> Element:  
   
 ```  
 DECLARE @x xml;  
@@ -62,7 +61,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Verwenden der string-length()-Funktion von XQuery zum Abrufen von Produkten mit langen Zusammenfassungsbeschreibungen  
- Für Produkte, deren Zusammenfassungsbeschreibung größer als 50 Zeichen ist, ruft die folgende Abfrage die Produkt-ID, die Länge der Zusammenfassungsbeschreibung sowie die Zusammenfassung selbst (das <`Summary`>-Element) ab.  
+ Für Produkte, deren zusammenfassungsbeschreibung größer als 50 Zeichen ist, die folgende Abfrage ruft die Produkt-ID, die Länge der zusammenfassungsbeschreibung sowie die Zusammenfassung selbst, die <`Summary`> Element.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -100,9 +99,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. Verwenden der string-length()-Funktion von XQuery zum Abrufen von Produkten, deren Garantiebeschreibungen kurz sind  
- Für Produkte, deren Garantiebeschreibung weniger als 20 Zeichen lang ist, ruft die folgende Abfrage XML ab, das die Produkt-ID, die Länge, die Garantiebeschreibung und das <`Warranty`>-Element selbst enthält.  
+ Für Produkte, deren garantiebeschreibung weniger als 20 Zeichen lang sein, die folgende Abfrage ruft XML mit der Produkt-ID, Länge, die garantiebeschreibung und das <`Warranty`> Element selbst.  
   
- Die Garantie ist eine der Produktfunktionen. Ein optionales untergeordnetes <`Warranty`>-Element folgt nach dem <`Features`>-Element.  
+ Die Garantie ist eine der Produktfunktionen. Eine optionale <`Warranty`> untergeordneten-Element folgt nach dem <`Features`> Element.  
   
 ```  
 WITH XMLNAMESPACES (  

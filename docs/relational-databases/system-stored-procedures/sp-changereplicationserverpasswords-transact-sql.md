@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e138a8845336c41a031bd6e25b92138ae03ed63b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099066"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung  
   
-`[ @login = ] 'login'` Der Name des Windows-Kontos oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung geändert werden. *Anmeldung* ist **nvarchar(257)**, hat keinen Standardwert  
+`[ @login = ] 'login'` Der Name des Windows-Kontos oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung geändert werden. *Anmeldung* ist **nvarchar(257)** , hat keinen Standardwert  
   
 `[ @password = ] 'password'` Das neue Kennwort gespeichert werden für den angegebenen *Anmeldung*. *Kennwort* ist **Sysname**, hat keinen Standardwert.  
   
@@ -56,7 +55,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 `[ @server = ] 'server'` Ist die Server-Verbindung, die für die das gespeicherte Kennwort geändert wird. *Server* ist **Sysname**, und kann einen der folgenden Werte:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**distributor**|Alle Agentverbindungen zum Verteiler|  
 |**publisher**|Alle Agentverbindungen zum Verleger|  

@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0b5e33f94c5452a2062f7c18339f27c8da73fa9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086057"
 ---
-# <a name="transaction-support"></a>Transaktionsunterstützung.
+# <a name="transaction-support"></a>Transaktionsunterstützung
 Das Maß an Unterstützung für Transaktionen wird-Treiber definiert. ODBC soll für eine einzelne Benutzer oder desktop-Datenbank implementiert werden, die nicht erforderlich, mehrere Updates auf ihre Daten zu verwalten. Führen Sie darüber hinaus einige Datenbanken, die Transaktionen unterstützen, nur für die Anweisungen (Data Manipulation Language, DML) von SQL; Es gibt Einschränkungen oder spezielle Transaktionssemantik im Hinblick auf die Verwendung der Windows-Verwaltungsinstrumentation (Data Definition Language, Datendefinitionssprache), wenn eine Transaktion aktiv ist. D. h. möglicherweise Unterstützung von Transaktionen für mehrere gleichzeitige Updates an Tabellen jedoch nicht für die Anzahl und die Definition von Tabellen während einer Transaktion ändern.  
   
  Eine Anwendung, ob Transaktionen unterstützt werden, bestimmt, ob DDL in einer Transaktion und alle Spezialeffekte einschließlich DDL in einer Transaktion kann durch Aufrufen von aufgenommen werden kann **SQLGetInfo** mit der Option SQL_TXN_CAPABLE. Weitere Informationen finden Sie unter den [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) funktionsbeschreibung.  

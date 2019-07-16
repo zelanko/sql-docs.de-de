@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af4b2b5546e8b084afbdd769fb93c416964b0c13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0e62e7aaba276643a2874a22e74a08214cfe51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030657"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo-Funktion
 **Übereinstimmung mit Standards**  
@@ -71,12 +70,12 @@ SQLRETURN SQLGetInfo(
  Für alle anderen Typen von Daten, die den Wert der *Pufferlänge* wird ignoriert, und der Treiber geht davon aus, die Größe des \* *InfoValuePtr* ist SQLUSMALLINT oder SQLUINTEGER, je nach den  *Informationsart*.  
   
 ## <a name="return-value"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetInfo** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, zurück ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_DBC auf, und eine *behandeln* von *ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLGetInfo** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Der Puffer \* *InfoValuePtr* nicht groß genug war, um alle angeforderten Informationen zurückzugeben. Aus diesem Grund wurden die Informationen abgeschnitten. Die Länge der angeforderten Informationen in den ungekürzten Form wird zurückgegeben, **StringLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -114,7 +113,7 @@ SQLRETURN SQLGetInfo(
  Zeichenfolge ("Y" oder "N")  
  "N"  
   
- Character string (not "Y" or "N")  
+ Zeichenfolge (nicht "Y" oder "N")  
  Leere Zeichenfolge  
   
  SQLUSMALLINT  
@@ -356,7 +355,7 @@ SQLRETURN SQLGetInfo(
  SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
  Eine Zeichenfolge: "Y", wenn der Benutzer **wählen** Berechtigungen, um alle Tabellen, die vom **SQLTables**; "N", wenn Tabellen möglicherweise zurückgegeben, dass der Benutzer zugreifen kann.  
   
- SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
+ SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
  Ein SQLUSMALLINT-Wert, der angibt, die maximale Anzahl von aktiven Umgebungen, die der Treiber unterstützt werden. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
  SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
@@ -467,7 +466,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_BS_ROW_COUNT_PROC = der Treiber unterstützt explizite Prozeduren, die Anzahl von Zeilen Generieren von Anweisungen haben können.  
   
- SQL_BOOKMARK_PERSISTENCE(ODBC 2.0)  
+ SQL_BOOKMARK_PERSISTENCE (ODBC 2.0)  
  Eine SQLUINTEGER-Bitmaske, die die Vorgänge, die über denen Lesezeichen beibehalten auflisten.  
   
  Die folgenden Bitmasken werden zusammen mit dem Flag verwendet, um zu bestimmen, über die Optionen Lesezeichen speichern:  
@@ -533,7 +532,7 @@ SQLRETURN SQLGetInfo(
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_QUALIFIER_USAGE.  
   
- SQL_COLLATION_SEQ(ODBC 3.0)  
+ SQL_COLLATION_SEQ (ODBC 3.0)  
  Der Name der die Sortierreihenfolge. Dies ist eine Zeichenfolge, die den Namen der standardsortierung für den Standardzeichensatz für diesen Server angibt (z. B. "ISO 8859-1" oder EBCDIC). Wenn dies nicht bekannt ist, wird eine leere Zeichenfolge zurückgegeben. Ein vollständige SQL-92 Level-konformen-Treiber wird immer eine nicht leere Zeichenfolge zurückgegeben.  
   
  SQL_COLUMN_ALIAS(ODBC 2.0)  
@@ -566,7 +565,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_CVT_CASTSQL_FN_CVT_CONVERT  
   
- SQL_CORRELATION_NAME(ODBC 1.0)  
+ SQL_CORRELATION_NAME (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der angibt, ob abhängige Tabellennamen unterstützt werden:  
   
  SQL_CN_NONE = Korrelation, die Namen werden nicht unterstützt.  
@@ -701,7 +700,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CB_PRESERVE Preserve-Cursor in der gleichen Position wie zuvor = die **ROLLBACK** Vorgang. Die Anwendung kann weiterhin zum Abrufen von Daten, oder schließen Sie den Cursor und führen Sie die Anweisung erneut aus, ohne repreparing es werden können.  
   
- SQL_CURSOR_SENSITIVITY (ODBC 3.0)  
+ SQL_CURSOR_SENSITIVITY FEST (ODBC 3.0)  
  Eine SQLUINTEGER-Wert, der die Unterstützung für Cursor Vertraulichkeit angibt:  
   
  SQL_INSENSITIVE = alle Cursor auf die Anweisung Handle anzeigen, die das Resultset ohne spiegeln alle Änderungen, die vorgenommen wurden, durch einen anderen Cursor innerhalb der gleichen Transaktion ausgeführt.  
@@ -728,7 +727,7 @@ SQLRETURN SQLGetInfo(
 > [!NOTE]
 >  In ODBC 3. *.x*, der zurückgegebene Wert für diesen *Informationsart* kann auch zurückgegeben werden, indem **SQLGetConnectAttr** mit einer *Attribut* ein Argument vom SQL_ATTR_CURRENT_CATALOG.  
   
- SQL_DATETIME_LITERALS(ODBC 3.0)  
+ SQL_DATETIME_LITERALS (ODBC 3.0)  
  Eine SQLUINTEGER-Bitmaske Aufzählen der SQL-92-Datetime-Literale, die von der Datenquelle unterstützt. Beachten Sie, dass diese die Datetime-Literale, die in der SQL-92-Spezifikation aufgelistet werden und sind getrennt von der mit "DateTime" literal Escape-Klauseln von ODBC definiert. Weitere Informationen zu Literalen ODBC Datetime-Escape-Klauseln, finden Sie unter [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
  Ein FIPS Transitional Level-konformen-Treiber gibt immer den Wert "1" in der Bitmaske für die Bits in der folgenden Liste zurück. Ein Wert von "0" bedeutet, dass SQL-92-Datetime-Literale nicht unterstützt werden.  
@@ -770,7 +769,7 @@ SQLRETURN SQLGetInfo(
  Sql_txn_serializable festgelegt sind = Transaktionen sind serialisierbar. Dirty Reads, nicht wiederholbaren Lesevorgängen oder Phantome zulassen Serializable-Transaktionen nicht.  
   
  SQL_DESCRIBE_PARAMETER(ODBC 3.0)  
- Eine Zeichenfolge: "Y" if parameters can be described; "N", if not.  
+ Eine Zeichenfolge: "Y", wenn die Parameter beschrieben werden können; "N", ist dies nicht.  
   
  Ein vollständige SQL-92 Level-konformen-Treiber gibt "Y" in der Regel zurück, da unterstützt wird die **BESCHREIBEN Eingabe** Anweisung. Da dies die zugrunde liegenden SQL-Unterstützung nicht direkt angegeben ist, kann jedoch, die Parameter beschreibt nicht, auch in einen vollständigen SQL-92-Level-konformen-Treiber unterstützt.  
   
@@ -820,7 +819,7 @@ SQLRETURN SQLGetInfo(
   
  Dieser Informationstyp wird vom Treiber-Manager allein implementiert.  
   
- SQL_DRIVER_NAME(ODBC 1.0)  
+ SQL_DRIVER_NAME (ODBC 1.0)  
  Eine Zeichenfolge mit dem Namen der Datei des Treibers, der Zugriff auf die Datenquelle.  
   
  SQL_DRIVER_ODBC_VER(ODBC 2.0)  
@@ -987,10 +986,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA2_SIMULATE_UNIQUE = den Treiber gewährleistet, dass die simulierte positioniert, Update oder Delete-Anweisungen wirken nur eine Zeile, wenn der Cursor befindet sich ein dynamic-Cursor. Wenn der Treiber dies für eine angegebene Anweisung nicht garantieren kann **SQLExecDirect** oder **SQLPrepare** SQLSTATE 01001 (Konflikt beim Cursorvorgang) zurück. Dieses Verhalten, die Anwendung ruft festzulegende **SQLSetStmtAttr** -Attribut Sie mit der SQL_ATTR_SIMULATE_CURSOR auf SQL_SC_UNIQUE festgelegt.  
   
- SQL_EXPRESSIONS_IN_ORDERBY(ODBC 1.0)  
+ SQL_EXPRESSIONS_IN_ORDERBY (ODBC 1.0)  
  Eine Zeichenfolge: "Y", wenn die Datenquelle Ausdrücke in unterstützt die **ORDER BY** auflisten. "N", wenn dies nicht der Fall.  
   
- SQL_FILE_USAGE(ODBC 2.0)  
+ SQL_FILE_USAGE (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der angibt, wie ein ein-Ebenen-Treiber-Dateien in eine Datenquelle direkt behandelt:  
   
  SQL_FILE_NOT_SUPPORTED = der Treiber ist nicht nur einer Ebene Treiber. Beispielsweise ist ein ORACLE-Treiber ein zwei-Ebenen-Treiber.  
@@ -1040,18 +1039,18 @@ SQLRETURN SQLGetInfo(
   
  Wenn ein Treiber Lesezeichen (fester oder variabler Länge) unterstützt, muss er aufrufen unterstützen **SQLGetData** für die Spalte 0. Diese Unterstützung ist erforderlich, unabhängig davon, was der Treiber für einen Aufruf von gibt **SQLGetInfo** mit der SQL_GETDATA_EXTENSIONS *Informationsart*.  
   
- SQL_GROUP_BY(ODBC 2.0)  
+ SQL_GROUP_BY (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der angibt, die Beziehung zwischen den Spalten in der **GROUP BY** -Klausel und den nicht zusammengesetzten Spalten in der select-Liste:  
   
  SQL_GB_COLLATE = A **COLLATE** -Klausel angegeben werden kann, am Ende der einzelnen Spalten gruppieren. (ODBC 3.0)  
   
- SQL_GB_NOT_SUPPORTED = **GROUP BY** Klauseln werden nicht unterstützt. (ODBC 2.0)  
+ SQL_GB_NOT_SUPPORTED = **GROUP BY** Klauseln werden nicht unterstützt. ODBC (2.0)  
   
- SQL_GB_GROUP_BY_EQUALS_SELECT = die **GROUP BY** -Klausel muss alle nicht zusammengesetzten Spalten in der select-Liste enthalten. Sie können keine anderen Spalten enthalten. Z. B. **wählen DEPT, MAX(SALARY) aus Mitarbeiter GROUP BY Abteilung**. (ODBC 2.0)  
+ SQL_GB_GROUP_BY_EQUALS_SELECT = die **GROUP BY** -Klausel muss alle nicht zusammengesetzten Spalten in der select-Liste enthalten. Sie können keine anderen Spalten enthalten. Z. B. **wählen DEPT, MAX(SALARY) aus Mitarbeiter GROUP BY Abteilung**. ODBC (2.0)  
   
- SQL_GB_GROUP_BY_CONTAINS_SELECT = die **GROUP BY** -Klausel muss alle nicht zusammengesetzten Spalten in der select-Liste enthalten. Sie können Spalten enthalten, die nicht in der Auswahlliste sind. Z. B. **wählen DEPT, MAX(SALARY) aus Mitarbeiter GROUP BY Abteilung, dem Alter**. (ODBC 2.0)  
+ SQL_GB_GROUP_BY_CONTAINS_SELECT = die **GROUP BY** -Klausel muss alle nicht zusammengesetzten Spalten in der select-Liste enthalten. Sie können Spalten enthalten, die nicht in der Auswahlliste sind. Z. B. **wählen DEPT, MAX(SALARY) aus Mitarbeiter GROUP BY Abteilung, dem Alter**. ODBC (2.0)  
   
- SQL_GB_NO_RELATION = die Spalten in der **GROUP BY** -Klausel und die select-Liste beziehen sich nicht. Die Bedeutung der nongrouped, zusammengesetzten Spalten in der select-Liste ist datenquellenabhängig. Z. B. **wählen DEPT, Gehalt von EMPLOYEE-Gruppe BY DEPT, dem Alter**. (ODBC 2.0)  
+ SQL_GB_NO_RELATION = die Spalten in der **GROUP BY** -Klausel und die select-Liste beziehen sich nicht. Die Bedeutung der nongrouped, zusammengesetzten Spalten in der select-Liste ist datenquellenabhängig. Z. B. **wählen DEPT, Gehalt von EMPLOYEE-Gruppe BY DEPT, dem Alter**. ODBC (2.0)  
   
  Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer die Option SQL_GB_GROUP_BY_EQUALS_SELECT zurückgegeben, da unterstützt. Ein vollständige SQL-92 Level-konformen-Treiber wird immer die Option SQL_GB_COLLATE zurückgegeben, unterstützt. Wenn keine der Optionen unterstützt wird, die **GROUP BY** -Klausel wird von der Datenquelle nicht unterstützt.  
   
@@ -1184,13 +1183,13 @@ SQLRETURN SQLGetInfo(
   
  Anhang C: SQL-Grammatik  
   
- SQL_LIKE_ESCAPE_CLAUSE(ODBC 2.0)  
+ SQL_LIKE_ESCAPE_CLAUSE (ODBC 2.0)  
  Eine Zeichenfolge: "Y", wenn die Datenquelle ein Escapezeichen unterstützt, für das Prozentzeichen (%) und Unterstrich (_) in einem **wie** Prädikat und der Treiber die ODBC-Syntax zum Definieren von unterstützt eine **wie** Prädikat Escapezeichen; "N" andernfalls.  
   
  SQL_MAX_ASYNC_CONCURRENT_STATEMENTS(ODBC 3.0)  
  Eine SQLUINTEGER-Wert, der die maximale Anzahl der aktiven gleichzeitigen Anweisungen im asynchronen Modus gibt an, die der Treiber auf eine bestimmte Verbindung unterstützt. Wenn es keine bestimmte Beschränkung gibt oder der Grenzwert unbekannt ist, ist dieser Wert 0 (null).  
   
- SQL_MAX_BINARY_LITERAL_LEN(ODBC 2.0)  
+ SQL_MAX_BINARY_LITERAL_LEN (ODBC 2.0)  
  Eine SQLUINTEGER-Wert, der angibt, die maximale Länge (Anzahl von hexadezimalen Zeichen, mit Ausnahme von Zeichenfolgenliteral-Präfix und Suffix zurückgegebenes **SQLGetTypeInfo**) der ein binäres literal in einer SQL-Anweisung. Die binäre Literale 0xFFAA hat z. B. eine Länge von 4. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
  SQL_MAX_CATALOG_NAME_LEN(ODBC 1.0)  
@@ -1200,7 +1199,7 @@ SQLRETURN SQLGetInfo(
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_MAX_QUALIFIER_NAME_LEN.  
   
- SQL_MAX_CHAR_LITERAL_LEN(ODBC 2.0)  
+ SQL_MAX_CHAR_LITERAL_LEN (ODBC 2.0)  
  Eine SQLUINTEGER-Wert, der angibt, die maximale Länge (Anzahl von Zeichen, mit Ausnahme von Zeichenfolgenliteral-Präfix und Suffix zurückgegebenes **SQLGetTypeInfo**) von einem Zeichenliteral in einer SQL­Anweisung. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
  SQL_MAX_COLUMN_NAME_LEN(ODBC 1.0)  
@@ -1226,12 +1225,12 @@ SQLRETURN SQLGetInfo(
   
  Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 100 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 250 zurück.  
   
- SQL_MAX_COLUMNS_IN_TABLE(ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_TABLE (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Anzahl zulässiger Spalten in einer Tabelle angibt. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
  Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 100 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 250 zurück.  
   
- SQL_MAX_CONCURRENT_ACTIVITIES(ODBC 1.0)  
+ SQL_MAX_CONCURRENT_ACTIVITIES (ODBC 1.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Anzahl aktiver Anweisungen angibt, die der Treiber für eine Verbindung unterstützt werden. Eine Anweisung als aktiv definiert ist, wenn sie die Ergebnisse wartet, mit dem Begriff "Ergebnisse" Bedeutung Zeilen verfügt eine **wählen** Vorgang oder von betroffenen Zeilen eine **einfügen**, **UPDATE**, oder **Löschen** Vorgang (z. B. eine Zeilenanzahl) oder in einem NEED_DATA Zustand ist. Dieser Wert kann es sich um eine Einschränkung auferlegt, indem Sie entweder den Treiber oder der Datenquelle widerspiegeln. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
  Dies *Informationsart* für ODBC 3.0 von der ODBC 2.0 umbenannt wurde *Informationsart* SQL_ACTIVE_STATEMENTS.  
@@ -1280,7 +1279,7 @@ SQLRETURN SQLGetInfo(
   
  Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 18 zurück. Ein Intermediate FIPS-Level-konformen-Treiber wird mindestens 128 zurückgegeben.  
   
- SQL_MAX_TABLES_IN_SELECT(ODBC 2.0)  
+ SQL_MAX_TABLES_IN_SELECT (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der angibt, die maximale Anzahl von Tabellen, die innerhalb der **FROM** -Klausel eine **wählen** Anweisung. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
  Ein FIPS-Eintrag-Level-konformen-Treiber gibt mindestens 15 zurück. Ein Intermediate FIPS-Level-konformen-Treiber gibt mindestens 50 zurück.  
@@ -1288,7 +1287,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_USER_NAME_LEN(ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der die maximale Länge des einen Benutzernamen in der Datenquelle angibt. Wenn keine maximale Länge oder die Länge unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
- SQL_MULT_RESULT_SETS(ODBC 1.0)  
+ SQL_MULT_RESULT_SETS (ODBC 1.0)  
  Eine Zeichenfolge: "Y", wenn die Datenquelle mehrere Resultsets "N" unterstützt, wenn dies nicht der Fall.  
   
  Weitere Informationen über mehrere Resultsets finden Sie unter [mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md).  
@@ -1310,7 +1309,7 @@ SQLRETURN SQLGetInfo(
   
  Ein SQL-92-Eintrag-Level-konformen-Treiber gibt SQL_NNC_NON_NULL zurück.  
   
- SQL_NULL_COLLATION(ODBC 2.0)  
+ SQL_NULL_COLLATION (ODBC 2.0)  
  Ein SQLUSMALLINT-Wert, der angibt, in denen NULL-Werte in einem Resultset sortiert werden:  
   
  SQL_NC_END = NULL-Werte werden am Ende des Resultsets, unabhängig von den ASC oder DESC-Schlüsselwörter sortiert.  
@@ -1344,7 +1343,7 @@ SQLRETURN SQLGetInfo(
  SQL_ODBC_VER(ODBC 1.0)  
  Eine Zeichenfolge mit der Version von ODBC, der der Treiber-Manager entspricht. Die Version des Formulars wird ##. ##. 0000, wobei die ersten beiden Ziffern sind die Hauptversionsnummer und die nächsten beiden Ziffern sind die Nebenversion. Dies wird nur im Treiber-Manager implementiert.  
   
- SQL_OJ_CAPABILITIES(ODBC 2.01)  
+ SQL_OJ_CAPABILITIES (ODBC 2.01)  
  Eine SQLUINTEGER-Bitmaske Auflisten der Typen von äußeren Verknüpfungen, die von der Treiber und die Datenquelle unterstützt werden. Die folgenden Bitmasken werden verwendet, um zu bestimmen, welche Typen werden unterstützt:  
   
  SQL_OJ_LEFT = Left outer Joins werden unterstützt.  
@@ -1375,7 +1374,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_PARC_NO_BATCH = es ist nur eine Zeilenanzahl verfügbar ist, wird die Anzahl der kumulativen Zeilen, die durch die Ausführung der Anweisung für das gesamte Array von Parametern. Dies entspricht vom Konzept her, die die Anweisung zusammen mit der vollständigen Parameter-Array als eine unteilbare Einheit behandelt. Fehler werden gleich behandelt, als ob eine Anweisung ausgeführt wurden.  
   
- SQL_PARAM_ARRAY_SELECTS(ODBC 3.0)  
+ SQL_PARAM_ARRAY_SELECTS (ODBC 3.0)  
  Legt fest, eine SQLUINTEGER Aufzählen des Treibers Eigenschaften in Bezug auf die Verfügbarkeit des Ergebnisses in einer parametrisierten Ausführung. Hat die folgenden Werte an:  
   
  SQL_PAS_BATCH = es gibt ein Resultset pro Satz von Parametern zur Verfügung. Dies ist der Treiber generiert einen Batch von SQL-Anweisungen, eine für jeden Parameter legen Sie in das Array vergleichbar.  
@@ -1387,10 +1386,10 @@ SQLRETURN SQLGetInfo(
  SQL_PROCEDURE_TERM (ODBC 1.0)  
  Eine Zeichenfolge mit den Datenquelle Herstellernamen für eine Prozedur; z. B. "Datenbankprozedur", "gespeicherte Prozedur", "Procedure", "Package" oder "gespeicherte Abfrage".  
   
- SQL_PROCEDURES(ODBC 1.0)  
+ SQL_PROCEDURES (ODBC 1.0)  
  Eine Zeichenfolge: "Y", wenn die Datenquelle, Prozeduren unterstützt und der Treiber die ODBC-Prozedur der Aufrufsyntax unterstützt; "N" andernfalls.  
   
- SQL_POS_OPERATIONS(ODBC 2.0)  
+ SQL_POS_OPERATIONS (ODBC 2.0)  
  Eine SQLINTEGER-Bitmaske, die die Supportvorgänge in auflisten **SQLSetPos**.  
   
  Die folgenden Bitmasken werden zusammen mit dem Flag verwendet, um zu bestimmen, welche Optionen unterstützt werden.  
@@ -1446,26 +1445,26 @@ SQLRETURN SQLGetInfo(
   
  Die folgenden Bitmasken werden verwendet, um zu bestimmen, welche Optionen unterstützt werden:  
   
- SQL_SO_FORWARD_ONLY = der Cursor nur einen Bildlauf vorwärts. (ODBC 1.0)  
+ SQL_SO_FORWARD_ONLY = der Cursor nur einen Bildlauf vorwärts. ODBC (1.0)  
   
- SQL_SO_STATIC = die Daten in das Ergebnis ist statisch. (ODBC 2.0)  
+ SQL_SO_STATIC = die Daten in das Ergebnis ist statisch. ODBC (2.0)  
   
- SQL_SO_KEYSET_DRIVEN = der Treiber speichert und den Schlüssel für jede Zeile im Resultset verwendet. (ODBC 1.0)  
+ SQL_SO_KEYSET_DRIVEN = der Treiber speichert und den Schlüssel für jede Zeile im Resultset verwendet. ODBC (1.0)  
   
- SQL_SO_DYNAMIC = der Treiber behält die Schlüssel für jede Zeile im Rowset (die Keysetgröße ist identisch mit die Größe des Rowsets). (ODBC 1.0)  
+ SQL_SO_DYNAMIC = der Treiber behält die Schlüssel für jede Zeile im Rowset (die Keysetgröße ist identisch mit die Größe des Rowsets). ODBC (1.0)  
   
- SQL_SO_MIXED = der Treiber wird der Schlüssel, für jede Zeile in das Keyset, und die Keysetgröße die Rowsetgröße größer ist. Der Cursor ist in das Keyset keysetgesteuerte und dynamische außerhalb das Keyset. (ODBC 1.0)  
+ SQL_SO_MIXED = der Treiber wird der Schlüssel, für jede Zeile in das Keyset, und die Keysetgröße die Rowsetgröße größer ist. Der Cursor ist in das Keyset keysetgesteuerte und dynamische außerhalb das Keyset. ODBC (1.0)  
   
  Informationen über bildlauffähigen Cursor finden Sie unter [scrollfähige Cursor](../../../odbc/reference/develop-app/scrollable-cursors.md).  
   
- SQL_SEARCH_PATTERN_ESCAPE(ODBC 1.0)  
+ SQL_SEARCH_PATTERN_ESCAPE (ODBC 1.0)  
  Eine Zeichenfolge, die angeben, was der Treiber als Escapezeichen unterstützt, die die Verwendung des Musters Übereinstimmung Metazeichen Unterstrich (_) und Prozentzeichen (%) ermöglicht. als gültige Zeichen in Suchmuster. Dieses Escape-Zeichen gilt nur für die Katalog-Funktionsargumente, die die Suchzeichenfolgen zu unterstützen. Wenn diese Zeichenfolge leer ist, unterstützt der Treiber ein Suchmuster Escape-Zeichen nicht.  
   
  Da dieses Typs nicht allgemeinen Unterstützung von Escape-Zeichen im angegeben die **wie** -Prädikats SQL-92 enthält keine Anforderungen für diese Zeichenfolge.  
   
  Dies *Informationsart* auf Katalogfunktionen beschränkt ist. Eine Beschreibung der Verwendung des Escapezeichens in Suchzeichenfolgen-Muster finden Sie unter [Musterwerts](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
- SQL_SERVER_NAME(ODBC 1.0)  
+ SQL_SERVER-NAME (ODBC 1.0)  
  Eine Zeichenfolge mit dem Namen der tatsächlichen Daten datenquellenspezifische Server; ist nützlich, wenn der Name der Datenquelle verwendet wird, während der **SQLConnect**, **SQLDriverConnect**, und **SQLBrowseConnect**.  
   
  SQL_SPECIAL_CHARACTERS(ODBC 2.0)  
@@ -1613,7 +1612,7 @@ SQLRETURN SQLGetInfo(
   
  (Weitere Informationen finden Sie unter [Zeichenfolgenfunktionen](../../../odbc/reference/appendixes/string-functions.md) in Anhang E, "Skalarfunktionen.")  
   
- SQL_SUBQUERIES(ODBC 2.0)  
+ SQL_SUBQUERIES (ODBC 2.0)  
  Eine SQLUINTEGER-Bitmaske Aufzählen der Prädikate, die Unterabfragen unterstützen:  
   
  SQL_SQ_CORRELATED_SUBQUERIESSQL_SQ_COMPARISONSQL_SQ_EXISTSSQL_SQ_INSQL_SQ_QUANTIFIED  
@@ -1645,7 +1644,7 @@ SQLRETURN SQLGetInfo(
   
  Ein FIPS Transitional Level-konformen-Treiber gibt immer eine Bitmaske zurück, in der alle diese Bits festgelegt sind.  
   
- SQL_TIMEDATE_DIFF_INTERVALS(ODBC 2.0)  
+ SQL_TIMEDATE_DIFF_INTERVALS (ODBC 2.0)  
  Eine SQLUINTEGER-Bitmaske, die Timestamp-Intervalle, die vom Treiber und zugeordnete Datenquelle für die Skalarfunktion TIMESTAMPDIFF unterstützt auflisten.  
   
  Die folgenden Bitmasken werden verwendet, um zu bestimmen, welche Intervalle unterstützt werden:  
@@ -1668,15 +1667,15 @@ SQLRETURN SQLGetInfo(
   
  Ein SQLUSMALLINT-Wert, der die transaktionsunterstützung in das Treiber oder die Datenquelle beschreibt:  
   
- SQL_TC_NONE = Transactions not supported. (ODBC 1.0)  
+ SQL_TC_NONE = Transaktionen nicht unterstützt. ODBC (1.0)  
   
- SQL_TC_DML = Transaktionen können nur die Anweisungen (Data Manipulation Language, DML) enthalten (**wählen**, **einfügen**, **UPDATE**, **löschen** ). Anweisungen der Data Definition Language (DDL) ist ein Fehler in eine Ursache für die Transaktion aus. (ODBC 1.0)  
+ SQL_TC_DML = Transaktionen können nur die Anweisungen (Data Manipulation Language, DML) enthalten (**wählen**, **einfügen**, **UPDATE**, **löschen** ). Anweisungen der Data Definition Language (DDL) ist ein Fehler in eine Ursache für die Transaktion aus. ODBC (1.0)  
   
- SQL_TC_DDL_COMMIT = Transaktionen können nur DML-Anweisungen enthalten. DDL-Anweisungen (**CREATE TABLE**, **DROP INDEX**usw.) bei der eine Transaktion Ursache die Transaktion ein Commit ausgeführt werden. (ODBC 2.0)  
+ SQL_TC_DDL_COMMIT = Transaktionen können nur DML-Anweisungen enthalten. DDL-Anweisungen (**CREATE TABLE**, **DROP INDEX**usw.) bei der eine Transaktion Ursache die Transaktion ein Commit ausgeführt werden. ODBC (2.0)  
   
- SQL_TC_DDL_IGNORE = Transaktionen können nur DML-Anweisungen enthalten. DDL-Anweisungen, die in einer Transaktion auftreten, werden ignoriert. (ODBC 2.0)  
+ SQL_TC_DDL_IGNORE = Transaktionen können nur DML-Anweisungen enthalten. DDL-Anweisungen, die in einer Transaktion auftreten, werden ignoriert. ODBC (2.0)  
   
- SQL_TC_ALL = Transaktionen können DDL-Anweisungen und DML-Anweisungen in beliebiger Reihenfolge enthalten. (ODBC 1.0)  
+ SQL_TC_ALL = Transaktionen können DDL-Anweisungen und DML-Anweisungen in beliebiger Reihenfolge enthalten. ODBC (1.0)  
   
  (Da Unterstützung für Transaktionen in SQL-92 obligatorisch ist, wird ein SQL-92-konforme Funktion Treiber [jeder Ebene] nie SQL_TC_NONE zurückgegeben.)  
   
@@ -1702,7 +1701,7 @@ SQLRETURN SQLGetInfo(
   
  Ein Level-konformen-Treiber für SQL-92-Eintrag wird immer diese beiden Optionen zurückgegeben, da unterstützt.  
   
- SQL_USER_NAME(ODBC 1.0)  
+ SQL_USER_NAME (ODBC 1.0)  
  Eine Zeichenfolge, mit dem Namen in einer bestimmten Datenbank, die sich von der Anmeldename möglicherweise verwendet werden soll.  
   
  SQL_XOPEN_CLI_YEAR(ODBC 3.0)  
@@ -1714,7 +1713,7 @@ SQLRETURN SQLGetInfo(
  SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
  Eine Zeichenfolge: "Y", wenn der Benutzer **wählen** Berechtigungen, um alle Tabellen, die vom **SQLTables**; "N", wenn Tabellen möglicherweise zurückgegeben, dass der Benutzer zugreifen kann.  
   
- SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
+ SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
  Ein SQLUSMALLINT-Wert, der angibt, die maximale Anzahl von aktiven Umgebungen, die der Treiber unterstützt werden. Wenn es keine angegebenen Beschränkung gibt oder der Grenzwert unbekannt ist, wird dieser Wert auf 0 (null) festgelegt.  
   
  SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  

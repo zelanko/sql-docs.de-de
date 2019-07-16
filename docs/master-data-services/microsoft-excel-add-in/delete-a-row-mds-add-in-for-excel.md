@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c2eae25d729cf93206203da784185ed484c3b1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ea865049ecbcfa41390671880e0b5bbeae38cb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092388"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Löschen einer Zeile (MDS-Add-In für Excel)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65488012"
 > [!NOTE]  
 >  Administratoren können gelöschte Elemente erneut aktivieren. Weitere Informationen finden Sie unter [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../master-data-services/reactivate-a-member-or-collection-master-data-services.md).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Zugriffsberechtigung auf den Funktionsbereich **Explorer** verfügen.  

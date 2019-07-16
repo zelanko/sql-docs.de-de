@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946382"
 ---
 # <a name="primary-expressions-xquery"></a>Primärausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- Die integrierten booleschen Funktionen **True()"** und **" false()""**, zur Darstellung boolescher Werte verwendet werden können, wie im folgenden Beispiel gezeigt.  
+ Die integrierten booleschen Funktionen **True()"** und **" false()""** , zur Darstellung boolescher Werte verwendet werden können, wie im folgenden Beispiel gezeigt.  
   
 ```  
 DECLARE @var XML  
@@ -157,7 +156,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>Kontextelementausdrücke  
  Das Kontextelement ist das Element, das aktuell im Kontext eines path-Ausdrucks verarbeitet wird. Es wird in einer XML-Datentypinstanz ungleich NULL mit dem Dokumentknoten initialisiert. Sie können auch von der Nodes()-Methode, im Kontext von XPath-Ausdrücken oder []-Prädikaten geändert werden.  
   
- Das Kontextelement wird von einem Ausdruck zurückgegeben, der einen Punkt (.) enthält. Beispielsweise wertet die folgende Abfrage jedes <`a`>-Element auf das Vorhandensein des `attr`-Attributs aus. Wenn das Attribut vorhanden ist, wird das Element zurückgegeben. Beachten Sie, dass die Bedingung im Prädikat angibt, dass der Kontextknoten durch einen einzelnen Punkt angegeben wird.  
+ Das Kontextelement wird von einem Ausdruck zurückgegeben, der einen Punkt (.) enthält. Die folgende Abfrage wird beispielsweise aus jedem Element <`a`> auf das Vorhandensein des Attributs `attr`. Wenn das Attribut vorhanden ist, wird das Element zurückgegeben. Beachten Sie, dass die Bedingung im Prädikat angibt, dass der Kontextknoten durch einen einzelnen Punkt angegeben wird.  
   
 ```  
 DECLARE @var XML  

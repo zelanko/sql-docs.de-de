@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51ab87c830d27a2749fdb332c5a13a5b5dd85542
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139710"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSsubscriptions** -Tabelle enthält eine Zeile für jede in einem Abonnement, das vom lokalen Verteiler bediente Artikel veröffentlicht. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|Die ID der Verlegerdatenbank.|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
@@ -46,7 +45,7 @@ ms.locfileid: "52823594"
 |**snapshot_seqno_flag**|**bit**|Gibt die Quelle an die Sequenznummer der Snapshot-Transaktion ein Wert von **1** bedeutet, dass **Subscription_seqno** die momentaufnahmesequenznummer ist.|  
 |**independent_agent**|**bit**|Zeigt an, ob ein Verteilungs-Agent im Einzelplatzmodus für diese Veröffentlichung vorhanden ist.|  
 |**subscription_time**|**datetime**|Nur interne Verwendung.|  
-|**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **1** unterstützt = sendet nicht zurück.<br /><br /> **0** = sendet zurück.<br /><br /> Hinweis: Diese Spalte wird nur aus Gründen der Abwärtskompatibilität mit der direktionalen Replikationsfunktionalität in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] unterstützt. In höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte stattdessen eine Peer-zu-Peer-Replikation verwendet werden. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **1** unterstützt = sendet nicht zurück.<br /><br /> **0** = sendet zurück.<br /><br /> Hinweis: Diese Spalte wird nur für Abwärtskompatibilität mit in die bidirektionale Replikation-Funktionalität unterstützt [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. In höheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte stattdessen eine Peer-zu-Peer-Replikation verwendet werden. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |**agent_id**|**int**|Die ID der Momentaufnahme.|  
 |**update_mode**|**tinyint**|Der Typ des Updates.|  
 |**publisher_seqno**|**varbinary(16)**|Die Sequenznummer der Transaktion auf dem Verleger für dieses Abonnement.|  
@@ -55,6 +54,6 @@ ms.locfileid: "52823594"
 ## <a name="see-also"></a>Siehe auch  
  [Replikationstabellen](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [Sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

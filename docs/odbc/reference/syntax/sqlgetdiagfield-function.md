@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103775"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
 
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetDiagField** gibt den aktuellen Wert eines Felds eines Datensatzes von der Diagnosedaten-Struktur (mit einem angegebenen Handle zugeordnete), Fehler-, Warnungs-und Statusinformationen enthält.  
@@ -96,7 +95,7 @@ SQLRETURN SQLGetDiagField(
  [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtanzahl der Bytes, die (mit Ausnahme von der Anzahl der Bytes, die für die Null-Terminierungszeichen erforderlich) zur Verfügung, die in zurückgegeben \* *DiagInfoPtr*, für Zeichendaten. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *Pufferlänge*, den Text im \* *DiagInfoPtr* auf abgeschnitten *Pufferlänge* minus die Länge eines Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_NO_DATA.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_NO_DATA zurückgibt.  
   
 ## <a name="diagnostics"></a>Diagnose  
  **SQLGetDiagField** veröffentlichen DiagnoseDatensätze nicht für sich selbst. Sie können die folgenden Rückgabewerte verwendet, um das Ergebnis seiner eigenen Ausführung zu melden:  
@@ -107,7 +106,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_INVALID_HANDLE: Das Handle angegeben wird, indem *HandleType* und *behandeln* war es sich nicht um ein gültiges Handle.  
   
--   SQL_ERROR: Eine der folgenden aufgetreten ist:  
+-   SQL_ERROR ZURÜCK: Eine der folgenden aufgetreten ist:  
   
     -   *Die DiagIdentifier* Argument war keiner der gültigen Werte.  
   
@@ -194,8 +193,8 @@ SQLRETURN SQLGetDiagField(
 |*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
 |*assertion-definition*|"ERSTELLEN SIE ASSERTION"|SQL_DIAG_CREATE_ASSERTION|  
 |*character-set-definition*|"CREATE-ZEICHENSATZ AUSGEWÄHLT WERDEN."|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*collation-definition*|"ERSTELLEN DER SORTIERUNG"|SQL_DIAG_CREATE_COLLATION|  
-|*domainn-definition*|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
+|*Sortierung-definition*|"ERSTELLEN DER SORTIERUNG"|SQL_DIAG_CREATE_COLLATION|  
+|*Domänen-definition*|"ERSTELLEN SIE DOMÄNE"|SQL_DIAG_CREATE_DOMAIN|
 |*create-index-statement*|"ERSTELLEN SIE INDEX"|SQL_DIAG_CREATE_INDEX|  
 |*create-table-statement*|"ERSTELLEN SIE TABELLE"|SQL_DIAG_CREATE_TABLE|  
 |*create-view-statement*|"ERSTELLEN SIE ANSICHT"|SQL_DIAG_CREATE_VIEW|  
@@ -204,22 +203,22 @@ SQLRETURN SQLGetDiagField(
 |*delete-statement-searched*|"WHERE LÖSCHEN"|SQL_DIAG_DELETE_WHERE|  
 |*drop-assertion-statement*|"ASSERTION" DROP "|SQL_DIAG_DROP_ASSERTION|  
 |*drop-character-set-stmt*|"DROP-ZEICHENSATZ"|SQL_DIAG_DROP_CHARACTER_SET|  
-|*drop-collation-statement*|"DROP COLLATION"|SQL_DIAG_DROP_COLLATION|  
+|*Ablegen-Sortierung-Anweisung*|"DROP COLLATION"|SQL_DIAG_DROP_COLLATION|  
 |*drop-domain-statement*|"DROP-DOMÄNE"|SQL_DIAG_DROP_DOMAIN|  
 |*drop-index-statement*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
 |*drop-schema-statement*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
-|*drop-table-statement*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
+|*Drop-Table-Anweisung*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
 |*drop-translation-statement*|"DROP TRANSLATION"|SQL_DIAG_DROP_TRANSLATION|  
 |*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
 |*grantstatement*|"GEWÄHRUNG"|SQL_DIAG_GRANT|
-|*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
-|*ODBC-procedure-extension*|"CALL"|SQL_DIAG_-AUFRUF|  
-|*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
+|*INSERT-Anweisung*|"INSERT"|SQL_DIAG_INSERT|  
+|*ODBC-Prozedur-extension*|"CALL"|SQL_DIAG_-AUFRUF|  
+|*REVOKE-Anweisung*|"REVOKE"|SQL_DIAG_REVOKE|  
 |*schema-definition*|"ERSTELLEN SIE SCHEMA"|SQL_DIAG_CREATE_SCHEMA|  
 |*translation-definition*|"ÜBERSETZUNG ZU ERSTELLEN"|SQL_DIAG_CREATE_TRANSLATION|  
 |*update-statement-positioned*|"DYNAMISCHES UPDATE CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*update-statement-searched*|"AKTUALISIEREN, WO"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|*Update-Anweisung durchsucht*|"AKTUALISIEREN, WO"|SQL_DIAG_UPDATE_WHERE|  
+|Unbekannt|*leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.

@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a568fdfcf2e6dc6abd59d060f2e374339e13341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 188a2322dd60a84b62a509d5622e827bdbae8e38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106915"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Funktionen für Datum und Uhrzeit bei früheren SQL Server-Versionen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "52534721"
   
 -   Wechsel zu **datetime2** da dies der bevorzugte Datentyp für Datum und Uhrzeit ist.  
   
- Anwendungen, die über ICommandWithParameters:: GetParameterInfo oder Schema Rowsets erhaltenen Metadaten zu verwenden, um Informationen zum Parametertyp über ICommandWithParameters:: SetParameterInfo festzulegen werden schlagen bei clientkonvertierungen fehl, in dem die Zeichenfolge Darstellung der Quelltyp ist größer als die Zeichenfolgendarstellung des Zieltyps. Wenn eine Clientbindung DBTYPE_DBTIMESTAMP verwendet und die Serverspalte Date, beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client wandelt den Wert in "Yyyy-Dd-mm-ss.fff", aber die Metadaten werden als zurückgegeben **nvarchar(10)**. Der resultierende Überlauf löst DBSTATUS_E_CATCONVERTVALUE aus. Ähnliche Probleme treten bei datenkonvertierungen durch IRowsetChange, da die rowsetmetadaten von den resultsetmetadaten festgelegt ist.  
+ Anwendungen, die über ICommandWithParameters:: GetParameterInfo oder Schema Rowsets erhaltenen Metadaten zu verwenden, um Informationen zum Parametertyp über ICommandWithParameters:: SetParameterInfo festzulegen werden schlagen bei clientkonvertierungen fehl, in dem die Zeichenfolge Darstellung der Quelltyp ist größer als die Zeichenfolgendarstellung des Zieltyps. Wenn eine Clientbindung DBTYPE_DBTIMESTAMP verwendet und die Serverspalte Date, beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client wandelt den Wert in "Yyyy-Dd-mm-ss.fff", aber die Metadaten werden als zurückgegeben **nvarchar(10)** . Der resultierende Überlauf löst DBSTATUS_E_CATCONVERTVALUE aus. Ähnliche Probleme treten bei datenkonvertierungen durch IRowsetChange, da die rowsetmetadaten von den resultsetmetadaten festgelegt ist.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Metadaten für Parameter und Rowsets  
  Dieser Abschnitt beschreibt die Metadaten für Parameter, Ergebnisspalten und Schemarowsets für Clients, die mit einer Version kompiliert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -69,7 +68,7 @@ ms.locfileid: "52534721"
 |Parametertyp|wType|ulParamSize|bPrecision|bscale|  
 |--------------------|-----------|-----------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
-|Uhrzeit|DBTYPE_WSTR|8, 10..16|~0|~0|  
+|time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
@@ -83,7 +82,7 @@ ms.locfileid: "52534721"
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
 |date|DBTYPE_WSTR|10|NULL|NULL|  
-|Uhrzeit|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
@@ -110,7 +109,7 @@ ms.locfileid: "52534721"
 |Spaltentyp|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
 |date|DBTYPE_WSTR|10|20|NULL|  
-|Uhrzeit|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
@@ -122,7 +121,7 @@ ms.locfileid: "52534721"
 |Spaltentyp|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
 |date|DBTYPE_WSTR|10|20|date|  
-|Uhrzeit|DBTYPE_WSTR|8, 10..16|16,20..32|Uhrzeit|  
+|time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
@@ -131,9 +130,9 @@ ms.locfileid: "52534721"
 #### <a name="providertypes-rowset"></a>PROVIDER_TYPES-Rowset  
  Die folgenden Zeilen werden für date/time-Typen zurückgegeben:  
   
-|Typ -><br /><br /> Spalte|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Eingeben von „->“<br /><br /> Spalte|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -145,7 +144,7 @@ ms.locfileid: "52534721"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|Uhrzeit|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

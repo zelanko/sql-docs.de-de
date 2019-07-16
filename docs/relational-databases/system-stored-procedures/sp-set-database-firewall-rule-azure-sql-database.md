@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e5363e741c827a0fb16528a8b617e26a5b95f8a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025689"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@name**  =] [N]'*Namen*"  
  Der verwendete Name, um die Firewalleinstellung auf Datenbankebene zu beschreiben und von anderen zu unterscheiden. *Namen* ist **vom Datentyp nvarchar(128)** hat keinen Standardwert. Der Unicode-Bezeichner `N` ist optional für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address** =] '*start_ip_address*'  
+ **[@start_ip_address**  =] '*Start_ip_address*"  
  Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`. *Start_ip_address* ist **varchar(50)-Spalte** hat keinen Standardwert.  
   
- [**@end_ip_address** =] '*End_ip_address*"  
+ [ **@end_ip_address** =] '*End_ip_address*"  
  Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Datenbankebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit der [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Instanz herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`. *End_ip_address* ist **varchar(50)-Spalte** hat keinen Standardwert.  
   
  In der folgende Tabelle veranschaulicht die unterstützten Argumente und Optionen in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: HÄUFIG GESTELLTE FRAGEN
+title: FAQ
 titleSuffix: Azure Data Studio
 description: Häufig gestellte Fragen (FAQ) zu Azure Data Studio ein.
 ms.prod: sql
@@ -7,18 +7,17 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959546"
 ---
-# <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
+# <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] HÄUFIG GESTELLTE FRAGEN
 
 ## <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
@@ -81,7 +80,7 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 
 ### <a name="shell-features"></a>Shell-features
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure-Anmeldung|Ja|Ja|
 |Dashboard|Ja| |
@@ -103,7 +102,7 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 
 ### <a name="query-editor"></a>Abfrage-Editor
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Diagramm-Viewer|Ja||
 |Exportieren Sie Ergebnisse in CSV, JSON, XLSX|Ja||
@@ -121,7 +120,7 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 
 ### <a name="operating-system-support"></a>Betriebssystemunterstützung
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|Ja|Ja|
 |macOS|Ja||
@@ -129,7 +128,7 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 
 ### <a name="data-engineering"></a>Datentechnik
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Externe Daten-Assistenten|Vorschau||
 |HDFS-Integration|Vorschau||
@@ -137,7 +136,7 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 
 ### <a name="database-administration"></a>Datenbankverwaltung
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Sicherung / Wiederherstellung|Ja|Ja|
 |Flatfile-Datei importieren|Vorschau|Ja|

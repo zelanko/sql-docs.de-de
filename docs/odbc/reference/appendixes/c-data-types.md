@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037772"
 ---
 # <a name="c-data-types"></a>C-Datentypen
 ODBC C-Datentypen anzugeben, den den Datentyp des C-Puffer zum Speichern von Daten in der Anwendung verwendet wird.  
@@ -37,18 +36,18 @@ ODBC C-Datentypen anzugeben, den den Datentyp des C-Puffer zum Speichern von Dat
 |SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
 |SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT[j]|SQLUSMALLINT|kurze ganze Zahl ohne Vorzeichen|  
+|SQL_C_USHORT [j]|SQLUSMALLINT|kurze ganze Zahl ohne Vorzeichen|  
 |SQL_C_SLONG[j]|SQLINTEGER|Long int|  
-|SQL_C_ULONG[j]|SQLUINTEGER|lange ganze Zahl ohne Vorzeichen|  
+|SQL_C_ULONG [j]|SQLUINTEGER|lange ganze Zahl ohne Vorzeichen|  
 |SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|ohne Vorzeichen|  
-|SQL_C_STINYINT[j]|SQLSCHAR|Char mit Vorzeichen|  
-|SQL_C_UTINYINT[j]|SQLCHAR|ohne Vorzeichen|  
+|SQL_C_STINYINT [j]|SQLSCHAR|Char mit Vorzeichen|  
+|SQL_C_UTINYINT [j]|SQLCHAR|ohne Vorzeichen|  
 |SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|unsigned __int64 [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK[i]|LESEZEICHEN|lange ganze Zahl ohne Vorzeichen [d]|  
+|SQL_C_BOOKMARK [i]|LESEZEICHEN|lange ganze Zahl ohne Vorzeichen [d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |Alle Datentypen der C-Intervall|SQL_INTERVAL_STRUCT|Finden Sie unter den [C-Intervall-Struktur](../../../odbc/reference/appendixes/c-interval-structure.md) weiter unten in diesem Anhang.|  
   

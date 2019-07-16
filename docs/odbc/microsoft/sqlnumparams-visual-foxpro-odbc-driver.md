@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a9ae08fe6e13238e86b38e19c6df959b4840e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8020bdd1339cf9b46682e85456c3d1a26db6c517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002261"
 ---
 # <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Ebene 2  
   

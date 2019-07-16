@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997569"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'` Ist der Name der Datenbank. *Dbname* ist **Sysname**, hat den Standardwert **%**. Wenn **%**, klicken Sie dann das Resultset enthält alle Datenbanken auf dem Verleger, andernfalls nur Informationen für die angegebene Datenbank zurückgegeben. Es werden keine Informationen für Datenbanken zurückgegeben, für die der Benutzer wie nachstehend beschrieben keine entsprechenden Berechtigungen besitzt.  
+`[ @dbname = ] 'dbname'` Ist der Name der Datenbank. *Dbname* ist **Sysname**, hat den Standardwert **%** . Wenn **%** , klicken Sie dann das Resultset enthält alle Datenbanken auf dem Verleger, andernfalls nur Informationen für die angegebene Datenbank zurückgegeben. Es werden keine Informationen für Datenbanken zurückgegeben, für die der Benutzer wie nachstehend beschrieben keine entsprechenden Berechtigungen besitzt.  
   
 `[ @type = ] 'type'` Beschränkt das Resultset enthält nur Datenbanken, für die der angegebenen Replikationsoption *Typ* Wert aktiviert wurde. *Typ* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**publish**|Transaktionsreplikation ist zulässig.|  
 |**Veröffentlichen von Merge**|Mergereplikation ist zulässig.|  
@@ -54,7 +53,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Datenbank.|  
 |**id**|**int**|Datenbankbezeichner.|  

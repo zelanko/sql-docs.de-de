@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a60ae0e3cd8fb4a07ac9a947a8e4a7ea692d9b26
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b1b204024d65e72eb65eefc9f63f914eab6ace29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032600"
 ---
 # <a name="mspubidentityrange-transact-sql"></a>MSpub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSpub_identity_range** Tabelle stellt Unterstützung für die identitätsbereichsverwaltung bereit. Diese Tabelle wird in den Datenbanken publication und subscription gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**Objekt-ID**|**int**|Die ID der Tabelle, die die durch Replikation verwaltete Identitätsspalte enthält.|  
+|**objid**|**int**|Die ID der Tabelle, die die durch Replikation verwaltete Identitätsspalte enthält.|  
 |**range**|**bigint**|Steuert die Bereichsgröße der aufeinander folgenden Identitätswerte, die im Abonnement bei einer Anpassung zugewiesen würden.|  
 |**pub_range**|**bigint**|Steuert die Bereichsgröße der aufeinander folgenden Identitätswerte, die in der Veröffentlichung bei einer Anpassung zugewiesen würden.|  
 |**current_pub_range**|**bigint**|Der aktuelle Bereich, der von der Veröffentlichung verwendet wird. Unterschiedlich sein *Pub_range* Wenn angezeigt wird, nachdem geändert wird, indem **Sp_changearticle** und vor dem nächsten Bereich Einstellung.|  
