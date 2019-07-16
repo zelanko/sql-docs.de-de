@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f52e461a6f7f0cb318a58cb439d7b15b9d780a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1faec789d9b0da874415fb06fa69b972e5b46fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937115"
 ---
 # <a name="data-type-usage"></a>Datentypverwendung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47686608"
 |**tinyint**|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Tinyint** Datentyp ohne Vorzeichen ist. Ein **Tinyint** Spalte wird standardmäßig auf eine Variable des Datentyps SQL_C_UTINYINT gebunden.|  
 |Alias-Datentypen|Beim Verbinden mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, der ODBC-Treiber fügt NULL für die Spaltendefinition einer, die einer Spalte NULL-Zulässigkeit nicht explizit deklarieren. Deshalb wird der NULL-Zulässigkeitsstatus, der in der Definition eines Aliasdatentyps gespeichert ist, ignoriert.<br /><br /> Beim Verbinden mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, Spalten mit einem Aliasdatentyp vom Basisdatentyp, der Typ des **Char** oder **binäre** und für die keine NULL-Zulässigkeit ist deklariert werden als Datentyp erstellt **Varchar** oder **Varbinary**. [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md), und [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) geben SQL_VARCHAR oder SQL_VARBINARY als Datentyp für diese Spalten geben. Daten, die von diesen Spalten abgerufen werden, werden nicht aufgefüllt.<br /><br /> Hinweis: Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Native Client ODBC-Treiber zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 und früher.|  
 |LONG-Datentypen|*Data-at-Execution-* Parameter sind für die SQL_LONGVARBINARY und SQL_LONGVARCHAR Datentypen beschränkt.|  
-|Typen für hohe Werte|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber macht **varchar(max)**, **'varbinary(max)'**, und **nvarchar(max)** Typen als SQL_VARCHAR, SQL_VARBINARY und SQL_ In WVARCHAR-APIs, die akzeptieren oder Zurückgeben der ODBC-SQL-Datentypen.|  
+|Typen für hohe Werte|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber macht **varchar(max)** , **'varbinary(max)'** , und **nvarchar(max)** Typen als SQL_VARCHAR, SQL_VARBINARY und SQL_ In WVARCHAR-APIs, die akzeptieren oder Zurückgeben der ODBC-SQL-Datentypen.|  
 |Benutzerdefinierter Typ (User-defined type, UDT)|UDT-Spalten werden als SQL_SS_UDT zugeordnet. Wenn eine UDT-Spalte unter Verwendung der ToString()- oder der ToXMLString()-Methode des UDT oder über die CAST/CONVERT-Funktionen explizit einem anderen Typ in der SQL-Anweisung zugeordnet wird, gibt der Typ der Spalte im Resultset den tatsächlichen Typ wieder, in den die Spalte konvertiert wurde.<br /><br /> Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber kann nur an eine UDT-Spalte als Binärdaten gebunden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur die Konvertierung zwischen den Datentypen SQL_SS_UDT und SQL_C_BINARY.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert XML automatisch zu Unicode-Text. Der XML-Typ wird als SQL_SS_XML zugeordnet.|  
   

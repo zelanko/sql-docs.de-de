@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48554e48d09822b23320d36080084d4947882736
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936897"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>Argumente  
 *sql_handle*  
-Ist ein Token, die einen Batch eindeutig identifiziert wird, der ausgeführt wurde oder gerade ausgeführt. *Sql_handle* ist **varbinary(64)**. 
+Ist ein Token, die einen Batch eindeutig identifiziert wird, der ausgeführt wurde oder gerade ausgeführt. *Sql_handle* ist **varbinary(64)** . 
 
 Die *Sql_handle* aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden kann:  
   
@@ -75,7 +74,7 @@ Ist ein Token, die eindeutig einen Abfrageplan für die Ausführung für einen B
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|ID der Datenbank.<br /><br /> Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.|  
 |**objectid**|**int**|ID des Objekts.<br /><br /> Dieser Wert ist für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen NULL.|  

@@ -2,19 +2,18 @@
 title: Verarbeitung und Speicherkapazität - Analytics Platform System | Microsoft-Dokumentation
 description: Ihre geschäftlichen Anforderungen bestimmen die Anzahl der Skalierungseinheiten für die Daten und die Größe der Compute-Knoten Datenträger, die in Ihrer Appliance Analytics Platform System (APS) erforderlich.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2b68230e0e2a1fa9a5645ff40c25cc5146392c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960237"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Verarbeitung und Speicherkapazität in Analytics Platform System
 Ihre geschäftlichen Anforderungen bestimmen die Anzahl der Skalierungseinheiten für die Daten und die Größe der Compute-Knoten Datenträger, die in Ihrer Appliance Analytics Platform System (APS) erforderlich. Verwenden Sie diese Berechnungen Prozessor- und Speicherressourcen, um Ihre Kapazität erwerben und planungsentscheidungen geführt.  
@@ -83,7 +82,7 @@ In dieser Tabelle schätzt, dass Sie laden und nicht komprimierten Daten auf ein
   
 |Hersteller|Laufwerkgröße|Physischer Daten-Speicher pro Compute-Knoten|Maximale Compute-Knoten pro rack|Physische, maximale Datenspeicherkapazität pro rack|Geschätzte maximale Benutzerdatenspeicher pro rack|Maximale racks|Geschätzte maximale Benutzerdatenspeicher pro Einheit|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
-|HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
+|HPE|1 TB|16 TB|8|128-TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
 |HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8,960 TB|  
 |DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bda27b7941244ac77de08e81baeb1307c14c60cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eff8b97d1248acaae23f5bcd21e050da61cf4346
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932885"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Execute, Requery und Clear-Methode – Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, die **Execute** Methode, die beim Ausführen von beiden eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und ein [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet er die [Requery](../../../ado/reference/ado-api/requery-method.md) Methode zum Abrufen der aktuellen Daten in eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und die [löschen](../../../ado/reference/ado-api/clear-method-ado.md) Methode, um den Inhalt löschen der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)Auflistung. (Die **Fehler** Auflistung erfolgt über die **Verbindung** Objekt die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Die Prozeduren ExecuteCommand und PrintOutput sind zum Ausführen dieser Prozedur erforderlich.  
@@ -175,5 +174,5 @@ End Sub
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)   
  [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Execute-Methode (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)

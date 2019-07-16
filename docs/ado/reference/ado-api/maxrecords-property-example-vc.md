@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 503651db5d71403802c82a4931e4bdf9b1a69fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932247"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel verwendet die [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) Eigenschaft öffnen Sie eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , enthält der 10 teuersten Titel in der ***Titel*** Tabelle.  
@@ -178,5 +177,5 @@ void PrintComError(_com_error &e) {
 **Sushi, jede Person? ---14,99**  
 **50 Jahre in Buckingham Palace Keller----11.95**   
 ## <a name="see-also"></a>Siehe auch  
- [MaxRecords Property (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
+ [MaxRecords-Eigenschaft (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

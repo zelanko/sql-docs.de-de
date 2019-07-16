@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6e41dbd41aefeabecd9d60278aca718a413e33d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8264f1dfad8bff5d676cd4de8c8b9d7763b39b52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63189000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948751"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo-Resultset – Beispiel
 Ruft die Anwendung **SQLGetTypeInfo** um zu bestimmen, welche Arten von Daten von einer Datenquelle und die Merkmale dieser Datentypen unterstützt werden. Die folgenden Tabellen zeigen ein beispielresultset, das von zurückgegebene **SQLGetTypeInfo** für eine Datenquelle, die SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR und SQL_INTERVAL_DAY_TO_SECOND unterstützt.  
@@ -31,7 +30,7 @@ Ruft die Anwendung **SQLGetTypeInfo** um zu bestimmen, welche Arten von Daten vo
 |"text"|SQL_LONGVARCHAR|2147483647|"'"|"'"|\<Null>|SQL_TRUE|  
 |"decimal"|SQL_DECIMAL|28|\<Null>|\<Null>|"Precision,<br />Scale"|SQL_TRUE|  
 |"real"|SQL_REAL|7|\<Null>|\<Null>|\<Null>|SQL_TRUE|  
-|"datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<Null>|SQL_TRUE|  
+|"Datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<Null>|SQL_TRUE|  
 |"INTERVALL YEAR() JAHR"|SQL_INTERVAL_YEAR|9|"'"|"'"|"Precision"|SQL_TRUE|  
 |"INTERVALL DAY() ZU FRACTION(5)"|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|"Precision"|SQL_TRUE|  
   
@@ -41,7 +40,7 @@ Ruft die Anwendung **SQLGetTypeInfo** um zu bestimmen, welche Arten von Daten vo
 |**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<Null>|SQL_FALSE|\<Null>|"text"|  
 |**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"decimal"|  
 |**SQL_REAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"real"|  
-|**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"datetime"|  
+|**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"Datetime"|  
 |**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Null>|SQL_FALSE|\<Null>|"INTERVALL YEAR() JAHR"|  
 |**SQL_INTERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<Null>|SQL_FALSE|\<Null>|"INTERVALL DAY() ZU FRACTION(5)"|  
   

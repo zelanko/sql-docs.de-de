@@ -7,20 +7,19 @@ ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: a2d0987441f8f26304590f5ccbde15a2e15cf3c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59476635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962069"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Schnellstart: "Hello World"-Python-Skript in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In dieser schnellstartanleitung erfahren Sie, wichtige Konzepte, die durch Ausführen einer "Hello World"-Python script InT-SQL, um eine Einführung in die **Sp_execute_external_script** gespeicherten Systemprozedur. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Einen vorherigen schnellstartanleitung [Python überprüfen, die in SQL Server vorhanden ist](quickstart-python-verify.md), enthält Informationen und links für das Einrichten der Python-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
 
@@ -89,7 +88,7 @@ Eingaben für diese gespeicherte Prozedur gehören:
 
 **Ergebnisse**
 
-| Hallo Welt |
+| Hello World |
 |-------------|
 | 1 |
 

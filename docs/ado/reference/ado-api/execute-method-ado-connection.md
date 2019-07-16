@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932891"
 ---
 # <a name="execute-method-ado-connection"></a>Execute-Methode (ADO-Verbindung)
 Führt die angegebene Abfrage, SQL-Anweisung, gespeicherte Prozedur oder Anbieter-spezifischen Text.  
@@ -43,7 +42,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Ein **Zeichenfolge** Wert, der die SQL-Anweisung, gespeicherte Prozedur, eine URL oder Anbieter-spezifischen Text zum Ausführen enthält. **Optional**, Tabellennamen können jedoch nur verwendet werden, wenn der Anbieter SQL bewusst ist. Wenn z. B. einen Tabellennamen "Kunden" verwendet wird, voranstellen ADO die SQL-Select-Standardsyntax bilden, und übergeben "SELECT * FROM Customers" als eine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung an den Anbieter.  
   
  *RecordsAffected*  
- Optional. Ein **lange** Variablen zu dem der Anbieter gibt die Anzahl der Datensätze, die der Vorgang betroffen.  
+ Dies ist optional. Ein **lange** Variablen zu dem der Anbieter gibt die Anzahl der Datensätze, die der Vorgang betroffen.  
   
  *Options*  
  Optional. Ein **lange** Wert, der angibt, wie der Anbieter die CommandText-Argument ausgewertet werden soll. Eine Bitmaske aus einem oder mehreren möglich [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oder [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) Werte.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 06091ffc26ea036a4a0bd7e30196545bcaca60d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936945"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +46,24 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID der Sitzung. Lässt keine NULL-Werte zu.|
 |request_id|**int**|ID der Anforderung. Lässt keine NULL-Werte zu.|
-|sql_handle|**varbinary(64)**|Hashzuordnung des SQL-Text der Anforderung. NULL-Werte sind zulässig.|
-|plan_handle|**varbinary(64)**|Hashzuordnung des Abfrageplans. NULL-Werte sind zulässig.|
-|query_plan|**xml**|Showplan XML mit partiellen Statistiken. NULL-Werte sind zulässig.|
+|sql_handle|**varbinary(64)**|Ist ein Token, das den Batch eindeutig identifiziert oder die gespeicherte Prozedur, die die Abfrage angehört. NULL-Werte sind zulässig.|
+|plan_handle|**varbinary(64)**|Ist ein Token, die eindeutig einen Abfrageplan für die Ausführung für einen Batch, die gerade ausgeführt wird. NULL-Werte sind zulässig.|
+|query_plan|**xml**|Enthält die Laufzeit showplandarstellung des Abfrageausführungsplans, der mit angegeben wird *Plan_handle* , teilweise Statistiken enthält. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert. NULL-Werte sind zulässig.|
 
 ## <a name="remarks"></a>Hinweise
 Dieser Systemfunktion steht ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Finden Sie im KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Dieser Systemfunktion funktioniert sowohl **standard** und **einfache** abfrageausführungsstatistik profilerstellungsinfrastruktur. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
+Dieser Systemfunktion funktioniert sowohl **standard** und **einfache** abfrageausführungsstatistik profilerstellungsinfrastruktur. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).  
+
+Unter den folgenden Bedingungen wird keine Showplanausgabe zurückgegeben, der **Query_plan** Spalte der zurückgegebenen Tabelle für **dm_exec_query_statistics_xml**:  
+  
+-   Wenn der Abfrageplan entspricht, mit dem angegebenen *Sitzungs-ID* nicht mehr ausgeführt wird, die **Query_plan** -Spalte der zurückgegebenen Tabelle den Wert null. Diese Bedingung kann z. B. auftreten, liegt eine zeitliche Verzögerung zwischen, wenn das planhandle erfasst wurde und seiner Verwendung mit wurde **dm_exec_query_statistics_xml**.  
+    
+Aufgrund einer Einschränkung in der Anzahl geschachtelter Ebenen innerhalb der **Xml** Datentyp **dm_exec_query_statistics_xml** keine Abfragepläne, die erfüllen 128 oder mehr Ebenen geschachtelter Elemente zurückgeben. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verhinderte diese Bedingung das Zurückgeben des Abfrageplans, wobei der Fehler 6335 generiert wurde. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen gibt die **query_plan** -Spalte NULL zurück.   
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  

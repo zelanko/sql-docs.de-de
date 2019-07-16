@@ -5,17 +5,16 @@ description: In diesem Tutorial wird veranschaulicht, wie zum Laden von Beispiel
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 30e3756251cc8df5ba9e14278983d44d0f6d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957788"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Laden Sie Beispieldaten in eine SQL Server-big Data-cluster
 
@@ -64,11 +63,11 @@ Die folgenden Schritte beschreiben, wie Sie einen Windows-Client verwenden, um d
 
    | Parameter | Beschreibung |
    |---|---|
-   | <CLUSTER_NAMESPACE> | Der Name gegeben haben Sie Ihre big Data-Cluster. |
+   | < CLUSTER_NAMESPACE > | Der Name gegeben haben Sie Ihre big Data-Cluster. |
    | <SQL_MASTER_IP> | Die IP-Adresse Ihrer master-Instanz. |
    | <SQL_MASTER_SA_PASSWORD> | Das SA-Kennwort für die master-Instanz. |
-   | <KNOX_IP> | Die IP-Adresse des Gateways HDFS/Spark. |
-   | <KNOX_PASSWORD> | Das Kennwort für das HDFS/Spark-Gateway. |
+   | < KNOX_IP > | Die IP-Adresse des Gateways HDFS/Spark. |
+   | < KNOX_PASSWORD > | Das Kennwort für das HDFS/Spark-Gateway. |
 
    > [!TIP]
    > Verwendung ["kubectl"](cluster-troubleshooting-commands.md) um die IP-Adressen für die SQL Server-Masterinstanz und Knox zu finden. Führen Sie `kubectl get svc -n <your-big-data-cluster-name>` und sehen Sie sich die externe IP-Adressen für die master-Instanz (**Master-svc-External**) und Knox (**Gateway-svc-External**). Der Standardname eines Clusters ist **Mssql-Cluster**.
@@ -100,11 +99,11 @@ Die folgenden Schritte beschreiben, wie Sie einen Linux-Client verwenden, um die
 
    | Parameter | Beschreibung |
    |---|---|
-   | <CLUSTER_NAMESPACE> | Der Name gegeben haben Sie Ihre big Data-Cluster. |
+   | < CLUSTER_NAMESPACE > | Der Name gegeben haben Sie Ihre big Data-Cluster. |
    | <SQL_MASTER_IP> | Die IP-Adresse Ihrer master-Instanz. |
    | <SQL_MASTER_SA_PASSWORD> | Das SA-Kennwort für die master-Instanz. |
-   | <KNOX_IP> | Die IP-Adresse des Gateways HDFS/Spark. |
-   | <KNOX_PASSWORD> | Das Kennwort für das HDFS/Spark-Gateway. |
+   | < KNOX_IP > | Die IP-Adresse des Gateways HDFS/Spark. |
+   | < KNOX_PASSWORD > | Das Kennwort für das HDFS/Spark-Gateway. |
 
    > [!TIP]
    > Verwendung ["kubectl"](cluster-troubleshooting-commands.md) um die IP-Adressen für die SQL Server-Masterinstanz und Knox zu finden. Führen Sie `kubectl get svc -n <your-big-data-cluster-name>` und sehen Sie sich die externe IP-Adressen für die master-Instanz (**Master-svc-External**) und Knox (**Gateway-svc-External**). Der Standardname eines Clusters ist **Mssql-Cluster**.

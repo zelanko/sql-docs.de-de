@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2d7370b9b219c43bab4bfdc45377795edf148fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f40fd6fa88b001eaa222789d6be35b83f9bf90a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63207851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948547"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>Herstellen einer Verbindung mit SQL Server (SybaseToSQL)
 Zum Migrieren von Sybase Adaptive Server Enterprise (ASE) Datenbanken auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie müssen mit der Ziel-Instanzen verbinden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie eine Verbindung herstellen, erhält der SSMA Metadaten zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und zeigt die Metadaten der Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer. SSMA speichert Informationen über die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie verbunden sind, jedoch werden keine Kennwörter gespeichert.  
@@ -55,7 +54,7 @@ Wenn Sie die Verbindungseigenschaften definieren, geben Sie auch die Datenbank, 
   
 2.  Klicken Sie im Dialogfeld "Verbindung" eingeben, oder wählen Sie den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Wenn Sie mit der Standardinstanz auf dem lokalen Computer herstellen, geben Sie **"localhost"** oder einen Punkt (**.**).  
+    -   Wenn Sie mit der Standardinstanz auf dem lokalen Computer herstellen, geben Sie **"localhost"** oder einen Punkt ( **.** ).  
   
     -   Wenn Sie mit der Standardinstanz auf einem anderen Computer herstellen, geben Sie den Namen des Computers ein.  
   

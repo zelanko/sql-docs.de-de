@@ -1,5 +1,5 @@
 ---
-title: OPENROWSET (DMX) | Microsoft Docs
+title: OPENROWSET (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 43431be3f68bc7146d9e5a6cc137100ec384c960
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938126"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;quelldatenabfrage&gt; -OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +38,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  Eine Abfragesyntax, die ein Rowset zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Datamining-Anbieter Herstellen einer Verbindung mit dem Datenquellenobjekt mit *Provider_name* und *Provider_string,* und führt die Abfrage, die im angegebenen *Query_syntax* um das Rowset aus den Quelldaten abzurufen.  
+ Die Datamining-Anbieter Herstellen einer Verbindung mit dem Datenquellenobjekt mit *Provider_name* und *Provider_string,* und führt die Abfrage im angegebenen *Query_syntax* um das Rowset aus den Quelldaten abzurufen.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel kann in einer PREDICTION JOIN-Anweisung verwendet werden, um Daten mit einer [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-SELECT-Anweisung aus der [!INCLUDE[tsql](../includes/tsql-md.md)]-Datenbank abzurufen.  

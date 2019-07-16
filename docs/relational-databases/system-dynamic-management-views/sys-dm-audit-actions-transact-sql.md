@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a64e683ebe83da31f678f1a5ec1e6c97abf1e601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936974"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Gibt eine Zeile für jede Überwachungsaktion zurück, die im Überwachungsprotokoll festgehalten werden kann, und für jede Überwachungsaktionsgruppe, die als Teil von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit konfiguriert werden kann. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Überwachung finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**varchar(4)**|ID der Überwachungsaktion. Im Zusammenhang mit der **Action_id** für jeden Überwachungsdatensatz geschriebenen Wert. Lässt NULL-Werte zu. NULL für Überwachungsgruppen.|  
 |**action_in_log**|**bit**|Gibt an, ob eine Aktion in ein Überwachungsprotokoll geschrieben werden kann. Werte sind wie folgt aus:<br /><br /> 1 = Ja<br /><br /> 0 = Nein|  
@@ -45,7 +44,7 @@ ms.locfileid: "47824808"
 ## <a name="permissions"></a>Berechtigungen  
  Prinzipale müssen **wählen** Berechtigung. Standardmäßig wird der Gruppe Public dies gewährt.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. installiert haben. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

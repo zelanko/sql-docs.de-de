@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a58fbca8f9b47e271881f636cabfc0e54a528e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933016"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -35,10 +34,10 @@ ms.locfileid: "66719291"
  [SQLState-Eigenschaft](../../../ado/reference/ado-api/sqlstate-property.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)

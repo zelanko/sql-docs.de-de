@@ -2,19 +2,18 @@
 title: Remotetabellenkopie - Parallel Data Warehouse | Microsoft-Dokumentation
 description: Verwenden von remotetabellenkopie in Analytics Platform System Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960203"
 ---
 # <a name="remote-table-copy"></a>Remotetabellenkopie
 Beschreibt, wie die remotetabellenkopie-Features, die zum Kopieren von Tabellen aus SQL Server-PDW-Datenbanken auf SMP-SQL Server-Remotedatenbanken (nicht zur Appliance gehört) verwenden. Verwenden Sie für SQL Server PDW remotetabellenkopie Hub- und Spoke-Szenarien ermöglicht.  

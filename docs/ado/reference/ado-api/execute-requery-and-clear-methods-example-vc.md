@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2e319fe88f709acd25bded8c4dce8e6b4c702773
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533ffd2404d445e89dd50695fb6317eb72db1435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932850"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, Requery und Clear-Methode – Beispiel (VC++)
 In diesem Beispiel wird veranschaulicht, die **Execute** Methode, die beim Ausführen von beiden eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und ein [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt. Darüber hinaus verwendet er die [Requery](../../../ado/reference/ado-api/requery-method.md) Methode zum Abrufen der aktuellen Daten in eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), und die [löschen](../../../ado/reference/ado-api/clear-method-ado.md) Methode, um den Inhalt löschen der [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)Auflistung. Die Funktionen ExecuteCommand und PrintOutput sind erforderlich, damit dieses Beispiel ausführen.  

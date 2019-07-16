@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4811d27e00336f6e02d62d9dd6c346d26400f129
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66429026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936932"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 > [!NOTE]
 > Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_query_stats**.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |Ist ein Token, das den Batch eindeutig identifiziert oder die gespeicherte Prozedur, die die Abfrage angehört.<br /><br /> **Sql_handle**zusammen mit **Statement_start_offset** und **Statement_end_offset**, können verwendet werden, um den SQL-Text der Abfrage abzurufen, indem die **sys.dm_exec_sql_ Text** dynamische Verwaltungsfunktion.|  
 |**statement_start_offset**|**int**|Gibt die Startposition der Abfrage, die in der Zeile beschrieben wird, beginnend mit 0 im Text des zugehörigen persistenten Objekts oder Batchobjekts an (in Bytes).|  
@@ -78,7 +77,7 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 |**total_rows**|**bigint**|Die Gesamtanzahl der von der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**last_rows**|**bigint**|Die Anzahl der bei der letzten Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**min_rows**|**bigint**|Minimale Anzahl von einmal während einer Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
-|**max_rows**|**bigint**|Maximale Anzahl von einmal während einer Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
+|**Max_Rows**|**bigint**|Maximale Anzahl von einmal während einer Ausführung der Abfrage zurückgegebenen Zeilen. Lässt keine NULL-Werte zu.<br /><br /> Ist immer 0, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**statement_sql_handle**|**varbinary(64)**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Mit nicht-NULL-Werte nur aufgefüllt, wenn Query Store aktiviert ist, und Sammeln von Statistiken für diese bestimmte Abfrage.|  
 |**statement_context_id**|**bigint**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Mit nicht-NULL-Werte nur aufgefüllt, wenn Query Store aktiviert ist, und Sammeln von Statistiken für diese bestimmte Abfrage.|  
 |**total_dop**|**bigint**|Gesamtsumme der Grad an Parallelität verwendet dieses Plans seit der Kompilierung. Es wird immer 0 für die Abfrage einer speicheroptimierten Tabelle sein.<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -128,7 +127,7 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 ## <a name="permissions"></a>Berechtigungen  
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
    
 ## <a name="remarks"></a>Hinweise  
  Statistiken in der Sicht werden nach Abschluss einer Abfrage aktualisiert.  

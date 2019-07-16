@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962028"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Schnellstart: Behandeln von Datentypen und Objekte, die mithilfe von R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +26,7 @@ Häufige Probleme von vornherein wissen gehören:
 + Cast- und Convert-Vorgänge sind manchmal erforderlich
 + R und SQL verwenden verschiedene Datenobjekte
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Einen vorherigen schnellstartanleitung [R stellen Sie sicher, die in SQL Server vorhanden ist](quickstart-r-verify.md), enthält Informationen und links für das Einrichten der R-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
 
@@ -64,7 +63,7 @@ Warum sind die Ergebnisse so unterschiedlich?
 
 Die Antwort finden Sie in der Regel mithilfe des R-`str()`-Befehls. Fügen Sie die Funktion `str(object_name)` in Ihrem R-Skript hinzu, um das Datenschema des festgelegten R-Objekts als Informationsmeldung zurückzugeben. Nachrichten finden Sie unter **Nachrichten**, im Bereich des Visual Studio-Code oder unter der **Nachrichten**-Registerkarte in SSMS.
 
-Um zu ermitteln, warum Beispiel 1 und Beispiel 2 solch unterschiedliche Ergebnisse haben, fügen Sie die Zeile `str(OutputDataSet)` am Ende der _@script_-Variablendefinition in jeder Anweisung, wie folgt ein:
+Um zu ermitteln, warum Beispiel 1 und Beispiel 2 solch unterschiedliche Ergebnisse haben, fügen Sie die Zeile `str(OutputDataSet)` am Ende der _@script_ -Variablendefinition in jeder Anweisung, wie folgt ein:
 
 **Beispiel 1 mit str-Funktion hinzugefügt**
 

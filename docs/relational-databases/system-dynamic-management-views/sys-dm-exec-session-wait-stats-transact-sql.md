@@ -16,22 +16,21 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89054576eb64a913e67bf3ae9a3f53d0c79eb48f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f04f959a55e183185796360476e7dc59a6889937
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936919"
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>Sys. dm_exec_session_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu allen Wartevorgängen in den von Threads, die für jede Sitzung ausgeführt. Mithilfe dieser Sicht können Sie zum Diagnostizieren von Leistungsproblemen mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sitzung sowie bei bestimmten Abfragen und Batches.  Diese Sicht gibt dieselbe Informationen, die aggregiert werden, für die Sitzung zurück [Sys. dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) bietet jedoch die **Session_id** Anzahl als auch.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Die Id der Sitzung.|  
 |wait_type|**nvarchar(60)**|Name des Wartetyps. Weitere Informationen finden Sie unter [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe57ffa0d7628601fcb6dd19218715b32a57322b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bf99aace8b058e429898846466294cc42612070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948835"
 ---
 # <a name="statement-options"></a>Anweisungsoptionen
 > [!IMPORTANT]  
@@ -37,5 +36,5 @@ ms.locfileid: "63270014"
 |SQL_KEYSET_SIZE|Kann nur auf 0 festgelegt werden.|  
 |SQL_MAX_ROWS|Legen Sie die maximale Anzahl von Zeilen aus einem Resultset zurückgegeben.|  
 |SQL_ROW_NUMBER|Gibt eine 32-Bit-Ganzzahl, die die Position der aktuellen Zeile im Resultset angeben. Erhalten Sie nur; kann nicht festgelegt.|  
-|SQL_ROWSET_SIZE|4\.294.967.296 Zeilen darf nicht überschreiten; Allerdings müssen Sie genügend virtuellen Arbeitsspeicher auf dem Computer zur Verarbeitung Ihrer Anforderung verfügen.|  
+|SQL_ROWSET_SIZE SETZEN|4\.294.967.296 Zeilen darf nicht überschreiten; Allerdings müssen Sie genügend virtuellen Arbeitsspeicher auf dem Computer zur Verarbeitung Ihrer Anforderung verfügen.|  
 |SQL_USE_BOOKMARKS|Unterstützt das Festlegen von SQL_USE_BOOKMARKS zu SQL_UB_ON und macht Lesezeichen mit fester Länge.|
