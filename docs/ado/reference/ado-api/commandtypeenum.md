@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09874df6d9e09da8b6dc0df3e9670e4ff130c511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919686"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Gibt an, wie ein Befehlsargument interpretiert werden soll.  
   
  Es ist wichtig, überprüfen Sie die benutzerdefinierte *CommandString* Werte zu vermeiden, dass Benutzer die Möglichkeit zum Einfügen von potenziell gefährliche Befehle für ADO zum Ausführen.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Es gibt keine das Befehlsargument für den Typ.|  
 |**adCmdText**|1|Wertet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) als Textdefinition einen Befehl oder gespeicherte Prozedur aufrufen.|  

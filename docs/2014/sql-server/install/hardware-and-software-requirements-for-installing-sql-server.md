@@ -46,11 +46,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5d310ce3482c14556ba2d85d03339f1b00e78b3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860751"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68191405"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server 2014
 
@@ -76,7 +76,7 @@ ms.locfileid: "58860751"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setuphilfsdateien  
   
--   Die Mindestanforderungen an die Version zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)] oder [!INCLUDE[win8](../../includes/win8-md.md)]finden Sie unter [Installieren von SQL Server unter Windows Server 2012 oder Windows 8](https://support.microsoft.com/kb/2681562) (https://support.microsoft.com/kb/2681562)).  
+-   Die Mindestanforderungen an die Version zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)] oder [!INCLUDE[win8](../../includes/win8-md.md)]finden Sie unter [Installieren von SQL Server unter Windows Server 2012 oder Windows 8](https://support.microsoft.com/kb/2681562) (https://support.microsoft.com/kb/2681562) ).  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -105,19 +105,19 @@ ms.locfileid: "58860751"
 |Virtualisierung|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wird in virtuellen Computerumgebungen unterstützt, die unter der Hyper-V-Rolle in den folgenden Editionen ausgeführt werden:<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard, Enterprise und Datacenter<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard, Enterprise und Datacenter-Editionen.<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter und Standard Edition.<br /><br /> Zusätzlich zu den Ressourcen, die von der übergeordneten Partition benötigt werden, müssen jedem virtuellen Computer (untergeordnete Partition) ausreichend Prozessorressourcen, Speicherplatz und Datenträgerressourcen für die jeweilige [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz bereitgestellt werden. Anforderungen werden später in diesem Thema aufgeführt.\*<br /><br /> Innerhalb der Hyper-V-Rolle für [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 oder [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 können virtuellen Computern, auf denen eine 32-Bit-/64-Bit-Edition von [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 bzw. eine 64-Bit-Edition von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 oder eine 64-Bit-Edition von [!INCLUDE[win8srv](../../includes/win8srv-md.md)] ausgeführt wird, maximal vier virtuelle Prozessoren zugeordnet werden.<br /><br /> Innerhalb der Hyper-V-Rolle für [!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />Virtuellen Computern, auf denen eine 32-Bit- oder 64-Bit-Edition von [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 ausgeführt wird, können maximal acht virtuelle Prozessoren zugeordnet werden.<br />können virtuellen Computern mit einer 64-Bit-Edition von [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 oder [!INCLUDE[win8srv](../../includes/win8srv-md.md)] maximal 64 virtuelle Prozessoren zugeordnet werden.<br /><br /> Weitere Informationen zu rechenkapazitätsgrenzen für verschiedene Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und wie sie sich in physischen und virtualisierten Umgebungen mit Hyperthreaded-Prozessoren unterscheiden, finden Sie unter [Compute Capacity Limits Edition von SQL Server-](../compute-capacity-limits-by-edition-of-sql-server.md). Weitere Informationen über die Rolle für Hyper-V finden Sie auf der [Windows Server 2008-Website](https://go.microsoft.com/fwlink/?LinkId=182820).<br /><br /> **\*\* Wichtige \* \***  gastfailoverclustering wird in unterstützt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Weitere Informationen zu den unterstützten Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Betriebssystemen für Gast-Failoverclustering und zur Unterstützung für Virtualisierung finden Sie in der [Unterstützungsrichtlinie für Microsoft SQL Server-Produkte in einer virtuellen Hardwareumgebung](https://go.microsoft.com/fwlink/?LinkId=151676).|  
 |Festplatte|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfordert mindestens 6 GB verfügbaren Festplattenspeicher.<br /><br /> Der erforderliche freie Festplattenspeicher ist von den installierten [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Komponenten abhängig. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) . Informationen zu unterstützten Speichertypen für Datendateien finden Sie unter [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Laufwerk|Ein DVD-Laufwerk ist erforderlich, falls die Installation von einem DVD-Medium erfolgt.|  
-|Monitor|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfordert eine Super VGA-Grafikkarte mit einer Mindestauflösung von 800x600 Pixel.|  
+|Überwachen|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erfordert eine Super VGA-Grafikkarte mit einer Mindestauflösung von 800x600 Pixel.|  
 |Internet|Zur Nutzung des Internets ist ein Internetzugang erforderlich (möglicherweise gebührenpflichtig).|  
   
- * Ausführen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einem virtuellen Computer werden langsamer als die Ausführung systemeigen wegen des Aufwandes der Virtualisierung.  
+ \* Ausführen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf einem virtuellen Computer werden langsamer als die Ausführung systemeigen wegen des Aufwandes der Virtualisierung.  
   
 ##  <a name="pmosr"></a> Anforderungen an Prozessor, Arbeitsspeicher und Betriebssystem  
  Der folgende Arbeitsspeicher- und Prozessoranforderungen gelten für alle Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
 |Komponente|Anforderung|  
 |---------------|-----------------|  
-|Arbeitsspeicher<sup>[1]</sup>|**Minimum:**<br /><br /> Express-Editionen: 512 MB<br /><br /> Alle anderen Editionen: 1 GB<br /><br /> **Empfohlen:**<br /><br /> Express-Editionen: 1 GB<br /><br /> Alle anderen Editionen: Mindestens 4 GB und erhöht werden sollte, wenn Datenbank Größe zunimmt, um eine optimale Leistung sicherzustellen.|  
-|Prozessorgeschwindigkeit:|**Minimum:**<br /><br /> X86 Prozessor: 1,0 GHz<br /><br /> X64 Prozessor: 1,4 GHz<br /><br /> **Empfohlen:** 2,0 GHz oder schneller|  
-|Prozessortyp|X64 Prozessor: AMD Opteron, AMD Athlon 64, Intel Xeon mit Intel EM64T-Unterstützung, Intel Pentium IV mit EM64T-Unterstützung<br /><br /> X86 Prozessor: Pentium III-kompatibler Prozessor oder schneller|  
+|Arbeitsspeicher<sup>[1]</sup>|**Minimum:**<br /><br /> Express-Editionen: 512 MB<br /><br /> Alle anderen Editionen: 1 GB<br /><br /> **Empfohlen:**<br /><br /> Express-Editionen: 1 GB<br /><br /> Alle anderen Editionen: Mindestens 4 GB. Mit zunehmender Datenbankgröße sollte außerdem der Speicher erhöht werden, um eine optimale Leistung sicherzustellen.|  
+|Prozessorgeschwindigkeit:|**Minimum:**<br /><br /> X86 Prozessor: 1,0 GHz<br /><br /> x64-Prozessor: 1,4 GHz<br /><br /> **Empfohlen:** 2,0 GHz oder schneller|  
+|Prozessortyp|x64-Prozessor: AMD Opteron, AMD Athlon 64, Intel Xeon mit Intel EM64T-Unterstützung, Intel Pentium IV mit EM64T-Unterstützung<br /><br /> X86 Prozessor: Pentium III-kompatibler Prozessor oder schneller|  
   
  <sup>[1] </sup>Erforderlich für die Installation der [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Komponente in [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) ist 2 GB RAM, die von der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] arbeitsspeichermindestanforderung. Informationen zum Installieren von DQS finden Sie unter [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   

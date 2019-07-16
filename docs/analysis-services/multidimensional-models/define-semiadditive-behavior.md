@@ -1,5 +1,5 @@
 ---
-title: Semiadditives Verhalten definieren | Microsoft Docs
+title: Semiadditives Verhalten definieren | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ab36e1835af05010fa3fa206e49feec6161c31d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023437"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178644"
 ---
 # <a name="define-semiadditive-behavior"></a>Semiadditives Verhalten definieren
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "34023437"
   
 -   First Nonempty Child  
   
--   Keine  
+-   None  
   
- Mit dieser Option werden keine Measures mit einer regulären Aggregationsfunktion geändert: **Sum**, **Min**, **Max**, **Count**oder **Distinct****Count**.  
+ Diese Option werden keine Measures mit einer regulären Aggregationsfunktion geändert: **Summe**, **Min**, **Max**, **Anzahl**, oder **unterschiedliche *** Anzahl**.  
   
- **Die Account-Kontodimension, die semiadditive Elemente enthält, wurde vom Assistenten erkannt. Elemente dieser Dimension gemäß dem semiadditiven Verhalten, die für den jeweiligen Kontotyp angegeben werden vom Server aggregiert.**  
+ **Der Assistent wurde die "Konto" Kontodimension, die semiadditive Elemente enthält. Elemente dieser Dimension gemäß dem semiadditiven Verhalten, die für den jeweiligen Kontotyp angegeben werden vom Server aggregiert.**  
  Bewirkt, dass alle Measures aus einer Measuregruppe, die durch eine Dimension des Typs Account dimensioniert wurden, vom System auf die Aggregationsfunktion By Account festgelegt und Elemente dieser Dimension gemäß dem semiadditiven Verhalten, das für den jeweiligen Kontotyp angegeben ist, vom Server aggregiert werden.  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "34023437"
   
  Für die einzelnen Measures können Sie einen der Typen der semiadditiven Funktionalität auswählen, die in der folgenden Tabelle beschrieben sind.  
   
-|Semiadditive Funktion|Description|  
+|Semiadditive Funktion|Beschreibung|  
 |---------------------------|-----------------|  
 |Average of Children|Die Aggregation eines Elements ist der Durchschnitt seiner untergeordneten Elemente.|  
 |ByAccount|Das System liest das für den Kontotyp angegebene semiadditive Verhalten.|  
@@ -74,7 +74,7 @@ ms.locfileid: "34023437"
 |LastNonEmpty|Der Elementwert wird als der Wert seines letzten untergeordneten Elements in der Zeitdimension ausgewertet, das Daten enthält.|  
 |Max|Die Standardfunktion für maximale Aggregation wird angewendet.|  
 |Min|Die Standardfunktion für minimale Aggregation wird angewendet.|  
-|InclusionThresholdSetting|Keine Aggregation wird angewendet.|  
+|None|Keine Aggregation wird angewendet.|  
 |SUM|Die Standardfunktion zur Summierung wird angewendet.|  
   
  Vorhandenes semiadditive Verhalten wird nach Abschluss des Assistenten überschrieben.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0953b76ff642387679c907e6f0b3364cbac898df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931173"
 ---
 # <a name="save-method"></a>Save-Methode
 Speichert die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
@@ -36,10 +35,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parameter  
  *Ziel*  
- Optional. Ein **Variant** , die den vollständigen Pfadnamen der Datei darstellt, in denen die **Recordset** gespeichert werden soll, oder ein Verweis auf eine **Stream** Objekt.  
+ Dies ist optional. Ein **Variant** , die den vollständigen Pfadnamen der Datei darstellt, in denen die **Recordset** gespeichert werden soll, oder ein Verweis auf eine **Stream** Objekt.  
   
  *PersistFormat*  
- Optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der angibt, in dem das Format der **Recordset** (XML oder ADTG) gespeichert werden soll. Der Standardwert ist **AdPersistADTG**.  
+ Dies ist optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der angibt, in dem das Format der **Recordset** (XML oder ADTG) gespeichert werden soll. Der Standardwert ist **AdPersistADTG**.  
   
 ## <a name="remarks"></a>Hinweise  
  Die [Methode speichern](../../../ado/reference/ado-api/save-method.md) Methode kann nur aufgerufen werden, auf einem geöffneten **Recordset**. Verwenden der [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode, um spätere Wiederherstellung der **Recordset** aus *Ziel*.  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7225f8a7612f08947720eb2912722dc92b7a2a96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937880"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 Gibt das Format an, beim Abrufen von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) als Zeichenfolge.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|Grenzt die Zeilen nach *RowDelimiter*, Spalten, indem *ColumnDelimiter*, und null-Werte von *NullExpr*. Diese drei Parameter, der die [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) Methode sind nur gültig mit einer *StringFormat* von **AdClipString**.|  
   

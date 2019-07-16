@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189150"
 ---
 # <a name="manage-job-steps"></a>Verwalten von Auftragsschritten
   Ein Auftragsschritt ist eine Aktion, die der Auftrag auf einer Datenbank oder einem Server ausführt. Jeder Auftrag muss mindestens einen Auftragsschritt aufweisen. Folgende Auftragsschritte sind möglich:  
@@ -75,7 +75,7 @@ ms.locfileid: "52768452"
   
 -   Den Prozessexitcode, der zurückgegeben wird, wenn der Befehl erfolgreich ausgeführt wurde.  
   
--   Den auszuführenden Befehl. Beim Ausführen eines Betriebssystembefehls handelt es sich hierbei einfach um den Befehl selbst. Bei einem externen Programm ist dies der Name des Programms und die Argumente für das Programm, z. B.: **C:\Programme\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e --q "Sp_who"**  
+-   Den auszuführenden Befehl. Beim Ausführen eines Betriebssystembefehls handelt es sich hierbei einfach um den Befehl selbst. Für ein externes Programm lauten der Name des Programms und die Argumente des Programms z.B. folgendermaßen: **C:\Programme\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  Sie müssen den vollständigen Pfad zur ausführbaren Datei angeben, wenn diese sich nicht in dem Verzeichnis befindet, das im Systempfad oder dem Pfad für den Benutzer angegeben ist, als der der Auftragsschritt ausgeführt wird.  

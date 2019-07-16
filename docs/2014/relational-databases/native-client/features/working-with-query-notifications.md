@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206601"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
   Abfragebenachrichtigungen wurden in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client eingeführt. Mit Abfragebenachrichtigungen, die auf der in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich für Anwendungen, die einen Informationscache aus einer Datenbank zur Verfügung stellen, z. B. eine Webanwendung, und die benachrichtigt werden müssen, wenn die Quelldaten geändert wurden.  
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Die DBPROPSET_SQLSERVERROWSET-Eigenschaftsgruppe  
  Um die Unterstützung von abfragebenachrichtigungen mit OLE DB zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client der DBPROPSET_SQLSERVERROWSET-Eigenschaftsgruppe die folgenden neuen Eigenschaften hinzugefügt.  
   
-|Name|Typ|Description|  
+|Name|Typ|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Die Anzahl der Sekunden, die die Abfragebenachrichtigung aktiv bleiben soll.<br /><br /> Der Standardwert ist 432000 Sekunden (5 Tage). Der Mindestwert ist 1 Sekunde und der Höchstwert 2^31-1 Sekunden.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Der Text der Benachrichtigung. Dieser ist benutzerdefiniert und weist kein vordefiniertes Format auf.<br /><br /> Standardmäßig ist die Zeichenfolge leer. Sie können eine Meldung mit 1-2000 Zeichen angeben.|  
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  Wenn eine Abonnementanforderung für einen Batch oder eine gespeicherte Prozedur erfolgt, wird für jede Anweisung, die innerhalb des Batches oder der gespeicherten Prozedur ausgeführt wird, eine separate Abonnementanforderung ausgegeben. EXECUTE-Anweisungen registrieren keine Benachrichtigung, sondern senden die Benachrichtigungsanforderung an den ausgeführten Befehl. Wenn es sich um einen Batch handelt, wird der Kontext auf die ausgeführten Anweisungen angewendet, und es gelten die gleichen Regeln wie oben beschrieben.  
   
- Wenn Sie eine Abfrage für eine Benachrichtigung übermitteln, die von dem gleichen Benutzer in dem gleichen Datenbankkontext übermittelt wurde und die die gleiche Vorlage, die gleichen Parameterwerte, die gleiche Benachrichtigungs-ID und den gleichen Übermittlungsort eines vorhandenen aktiven Abonnements verwendet, wird das vorhandene Abonnement verlängert und der neue angegebene Timeout festgelegt. Das bedeutet, dass nur eine einzige Benachrichtigung gesendet wird, wenn für identische Abfragen eine Benachrichtigung angefordert wird. Dies gilt sowohl für Abfragen, die in einem Batch dupliziert werden, als auch für Abfragen in einer gespeicherten Prozedur, die mehrmals aufgerufen wurde.  
+ Eine Abfrage für die Benachrichtigung, die von demselben Benutzer unter dem gleichen Datenbankkontext übermittelt wurde und die gleiche Vorlage, dieselben Parameterwerte, dieselbe benachrichtigungs-ID und gleichen Übermittlungsort eines vorhandenen aktiven Abonnements verlängert die vorhandene Abonnement, das Zurücksetzen auf die neue angegeben Timeout. Dies bedeutet, dass die Anforderung einer Benachrichtigung für identische Abfragen nur eine Benachrichtigung gesendet wird, wenn ein. Dies gilt sowohl für Abfragen, die in einem Batch dupliziert werden, als auch für Abfragen in einer gespeicherten Prozedur, die mehrmals aufgerufen wurde.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Native Client-Features](sql-server-native-client-features.md)  

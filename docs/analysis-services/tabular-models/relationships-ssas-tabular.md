@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072527"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207513"
 ---
 # <a name="relationships"></a>Beziehungen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -164,14 +164,14 @@ ms.locfileid: "53072527"
 ##  <a name="bkmk_dupl_errors"></a> Duplicate values and other errors  
  Wenn Sie eine Spalte auswählen, die nicht in der Beziehung verwendet werden kann, wird ein rotes X neben der Spalte angezeigt. Sie können den Mauszeiger auf das Fehlersymbol bewegen, um eine Meldung anzuzeigen, die weitere Informationen zum Problem enthält. Beispiele für Probleme, die es unmöglich machen können, eine Beziehung zwischen den ausgewählten Spalten zu erstellen, sind:  
   
-|Problem oder Meldung|Lösung|  
+|Problem oder Meldung|Auflösung|  
 |------------------------|----------------|  
 |Die Beziehung kann nicht erstellt werden, weil beide ausgewählte Spalten doppelte Werte enthalten.|Um eine gültige Beziehung zu erstellen, muss mindestens eine Spalte des ausgewählten Paars ausschließlich eindeutige Werte enthalten.<br /><br /> Sie können entweder die Spalten bearbeiten, um Duplikate zu entfernen, oder Sie können die Reihenfolge der Spalten umkehren, sodass die Spalte, die die eindeutigen Werte enthält, als **Verknüpfte Suchspalte**verwendet wird.|  
 |Die Spalte enthält eine NULL oder einen leeren Wert.|Datenspalten können nicht über einen NULL-Wert miteinander verknüpft werden. Für jede Zeile muss in beiden Spalten, die in einer Beziehung verwendet werden, ein Wert enthalten sein.|  
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen einer Beziehung zwischen zwei Tabellen](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Beschreibt, wie Sie manuell eine Beziehung zwischen zwei Tabellen erstellen.|  
 |[Löschen von Beziehungen](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Beschreibt das Löschen einer Beziehung und welche Auswirkungen dies haben kann.|  

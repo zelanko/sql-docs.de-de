@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d7bcecfbd880f53d1067fd68202b62c34fce398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a026922cb98fdb520c9eeab223c8b34a231a179e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905331"
 ---
 # <a name="sqlsetstmtoption-visual-foxpro-odbc-driver"></a>SQLSetStmtOption (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Ebene 1  
   
@@ -42,7 +41,7 @@ ms.locfileid: "63305819"
 |SQL_NOSCAN|SQL_NOSCAN_OFF||  
 |SQL_QUERY_TIMEOUT|0|Wenn Sie versuchen, diese festzulegen *fOption* Wert, gibt der Treiber den Fehler "Vom Treiber nicht unterstützt".|  
 |SQL_RETRIEVE_DATA|SQL_RD_ON, SQL_RD_OFF||  
-|SQL_ROWSET_SIZE|zu 4.294.967.296 1||  
+|SQL_ROWSET_SIZE SETZEN|zu 4.294.967.296 1||  
 |SQL_SIMULATE_CURSOR|Fehler: "Vom Treiber nicht unterstützt"||  
 |SQL_USE_BOOKMARKS|SQL_UB_OFF<br /><br /> SQL_UB_ON||  
   

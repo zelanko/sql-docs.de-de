@@ -1,5 +1,5 @@
 ---
-title: Der Data Connection-Benutzer konnten nicht delegiert werden | Microsoft Docs
+title: Der Data Connection-Benutzer konnten nicht delegiert werden | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208016"
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>Der Data Connection-Benutzer konnten nicht delegiert werden
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34028341"
 |Gilt für|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Verbindungsfehler beim Versuch, einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenanbieter zu verwenden.|  
-|Meldungstext|Die Datenverbindung verwendet die Windows-Authentifizierung, und Benutzeranmeldeinformationen konnten nicht delegiert werden. Die folgenden Verbindungen wurden nicht aktualisiert: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten|  
+|Meldungstext|Die Datenverbindung verwendet die Windows-Authentifizierung, und Benutzeranmeldeinformationen konnten nicht delegiert werden. Die folgenden Verbindungen wurden nicht aktualisiert: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Daten|  
   
 ## <a name="explanation"></a>Erklärung  
  Es gibt mehrere Ursachen für diese Fehlermeldung. Alle haben gemeinsam, dass Excel Services keine gültige Windows-Benutzeridentität von einem Claims-Token in SharePoint abrufen können. Bei Excel-Arbeitsmappen, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten enthalten, tritt dieser Fehler auf, wenn eine der folgenden Bedingungen zutrifft:  

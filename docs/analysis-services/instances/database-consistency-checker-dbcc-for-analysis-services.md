@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181795"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Datenbankkonsistenzprüfung (DBCC) für Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -259,7 +259,7 @@ Execution complete
 ## <a name="common-resolutions-for-error-conditions"></a>Allgemeine Lösungen für Fehlerbedingungen  
  Die folgenden Fehler werden in SQL Server Management Studio oder in „msmdsrv.log“-Dateien angezeigt. Diese Fehler treten auf, wenn mindestens eine Überprüfung nicht erfolgreich ausgeführt wird. Je nach Fehler ist die empfohlene Lösung ein Objekt zu verarbeiten, eine Lösung zu löschen und erneut bereitzustellen oder die Datenbank wiederherzustellen.  
   
-|Fehler|Problem|Lösung|  
+|Fehler|Problem|Auflösung|  
 |-----------|-----------|----------------|  
 |**Fehler im Metadaten-Manager**<br /><br /> Der Objektverweis "\<ObjectID >' ist ungültig. Er stimmt nicht mit der Struktur der Metadatenklassenhierarchie überein.|Falsch formatierter Befehl|Überprüfen Sie die Befehlssyntax. Wahrscheinlich haben Sie ein Objekt einer niedrigeren Ebene aufgenommen, ohne mindestens eines der übergeordneten Objekte anzugeben.|  
 |**Fehler im Metadaten-Manager**<br /><br /> Entweder die \<Objekt > mit der ID "\<ObjectID >' ist nicht in der \<Parentobject > mit der ID"\<übergeordnetes >', oder der Benutzer besitzt keine Berechtigungen zum Zugriff auf das Objekt.|Beschädigung des Index (mehrdimensional)|Verarbeiten Sie das Objekt und alle abhängigen Objekte erneut.|  

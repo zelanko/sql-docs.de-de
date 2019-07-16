@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt für logistische Regressionsmodelle | Microsoft Docs
+title: Mingingmodellinhalt von logistischen Regressionsmodellen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8d5aab960b1987a0c076504b4e2858403a2ecb99
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017597"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182720"
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Miningmodellinhalt von logistischen Regressionsmodellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34017597"
  ATTRIBUTE_NAME  
  Die Namen des Attributs, das diesem Knoten entspricht.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -68,7 +68,7 @@ ms.locfileid: "34017597"
  NODE_TYPE  
  Ein logistisches Regressionsmodell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |1|Modell.|  
 |17|Planerknoten für das Subnetzwerk.|  
@@ -85,7 +85,7 @@ ms.locfileid: "34017597"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Gibt die Anzahl der untergeordneten Knoten an; enthält mindestens 1 Netzwerk, 1 erforderlichen Knoten für Randstatistik und 1 erforderliche Eingabeebene. Beispiel: Bei einem Wert von 5 sind 3 Subnetzwerke vorhanden.|  
 |Randstatistik|Immer 0.|  
@@ -103,7 +103,7 @@ ms.locfileid: "34017597"
  NODE_DESCRIPTION  
  Eine benutzerfreundliche Beschreibung des Knotens.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -116,7 +116,7 @@ ms.locfileid: "34017597"
  NODE_RULE  
  Eine XML-Beschreibung der Regel, die in den Knoten eingebettet ist.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -147,7 +147,7 @@ ms.locfileid: "34017597"
  Informationen über die Unterstützung in Trainingsfällen für spezifische Werte finden Sie über den Knoten für Randstatistik.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Inhalt|  
+ |Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -181,8 +181,8 @@ ms.locfileid: "34017597"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Miningmodellinhalt, neuronale Netzwerkmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Logistische Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Technische Referenz zu Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

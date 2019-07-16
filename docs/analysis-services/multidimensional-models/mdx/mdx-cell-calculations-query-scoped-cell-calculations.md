@@ -1,5 +1,5 @@
 ---
-title: Erstellen die Abfrage Zellberechnungen (MDX) | Microsoft Docs
+title: Erstellen im Bereich einer Abfrage Zellenberechnungen (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022837"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208781"
 ---
 # <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX-Zellenberechnungen - Zellenberechnungen im Bereich einer Abfrage
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -51,6 +51,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Andererseits verarbeitet MDX die Berechnungsformel immer dann, wenn eine MDX-Abfrage für den Cube ausgegeben wird, bei der Zellen aus der Definition berechneter Zellen betroffen sind. Diese Verarbeitung erfolgt unabhängig vom Gültigkeitsbereich bei der Erstellung.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie CELL CALCULATION-Anweisung & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

@@ -16,14 +16,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198423"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
-  Die*Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)]auftreten. Mithilfe von[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
+  Die *Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)] auftreten. Mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
   
  Es gibt mehrere Überwachungsebenen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die von gesetzlichen oder standardspezifischen Anforderungen für die Installation abhängig sind. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit enthält die Tools und Prozesse, die Sie zum Aktivieren, Speichern und Anzeigen von Überwachungen auf verschiedenen Server- und Datenbankobjekten benötigen.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "53373522"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Datenbankspiegelung und SQL Server Audit  
  Eine Datenbank, für die eine Datenbank-Überwachungsspezifikation definiert wurde und für die Datenbankspiegelung verwendet wird, enthält die Datenbank-Überwachungsspezifikation. Die folgenden Elemente müssen konfiguriert werden, damit sie auf der gespiegelten SQL-Instanz ordnungsgemäß arbeitet:  
   
--   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Dies kann konfiguriert werden, mit dem Befehl CREATE AUDIT WITH GUID`=`*\<GUID quellserverüberwachung*>.  
+-   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Dies kann konfiguriert werden, mit dem Befehl CREATE AUDIT WITH GUID`=` *\<GUID quellserverüberwachung*>.  
   
 -   Bei Binärdateizielen muss das Dienstkonto des Spiegelservers über die erforderlichen Berechtigungen für den Speicherort verfügen, an den der Überwachungspfad geschrieben wird.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "53373522"
 ### <a name="dynamic-views-and-functions"></a>Dynamische Sichten und Funktionen  
  In der folgenden Tabelle werden die dynamischen Sichten und Funktion aufgelistet, die Sie für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  
   
-|Dynamische Sichten und Funktionen|Description|  
+|Dynamische Sichten und Funktionen|Beschreibung|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)|Gibt eine Zeile für jede Überwachungsaktion zurück, die im Überwachungsprotokoll festgehalten werden kann, und für jede Überwachungsaktionsgruppe, die als Teil von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit konfiguriert werden kann.|  
 |[sys.dm_server_audit_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)|Stellt Informationen über den aktuellen Status der Überwachung bereit.|  
@@ -155,7 +155,7 @@ ms.locfileid: "53373522"
 ### <a name="catalog-views"></a>Katalogsichten  
  In der folgenden Tabelle werden die Katalogsichten aufgeführt, die Sie für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  
   
-|Katalogsichten|Description|  
+|Katalogsichten|Beschreibung|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Enthält Informationen über die Datenbanküberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Enthält Informationen über die Datenbank-Überwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz für alle Datenbanken.|  
@@ -213,7 +213,7 @@ ms.locfileid: "53373522"
  [DDL-Trigger](../../triggers/ddl-triggers.md)  
  Erklärt, wie Sie DDL-Trigger (Data Definition Language) zum Nachverfolgen von Änderungen an den Datenbanken verwenden können.  
   
- [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005, Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Stellt aktuelle Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit bereit.  
   
 ## <a name="see-also"></a>Siehe auch  

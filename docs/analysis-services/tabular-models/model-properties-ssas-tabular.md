@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d9251a09039d93d473963ced235669c66f99431b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072187"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207600"
 ---
 # <a name="model-properties"></a>Modelleigenschaften 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "53072187"
 -   [Konfigurieren der Eigenschafteneinstellungen für Modelle](#bkmk_conf_model_prop)  
   
 ##  <a name="bkmk_model_properties"></a> Eigenschaften des Modells  
- **Erweitert:**  
+ **Erweitert**  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Buildvorgang**|Kompilieren|Diese Eigenschaft gibt die Funktion der Datei beim Erstellungs- und Bereitstellungsprozess an. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Kompilieren Sie** – ein normaler Buildvorgang wird ausgeführt. Definitionen für Modellobjekte werden in die ASDATABASE-Datei geschrieben.<br /><br /> **Keine** – die Ausgabe in die asdatabase-Datei ist leer sein.|  
 |**In Ausgabeverzeichnis kopieren**|Nicht kopieren|Diese Eigenschaft gibt an, dass die Quelldatei in das Ausgabeverzeichnis kopiert wird. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Kopieren Sie nicht** – im Ausgabeverzeichnis wird keine Kopie erstellt.<br /><br /> **Immer kopieren** – im Ausgabeverzeichnis wird immer eine Kopie erstellt.<br /><br /> **Kopieren, wenn neuer** – Im Ausgabeverzeichnis wird nur eine Kopie erstellt, wenn die Datei „model.bim“ geändert wurde.|  
   
- **Sonstiges**  
+ **Verschiedenes**  
   
 > [!NOTE]  
 >  Manche Eigenschaften werden beim Erstellen des Modells automatisch festgelegt und können nicht geändert werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "53072187"
 > [!NOTE]  
 >  Auf die Eigenschaften Arbeitsbereichsserver, Arbeitsbereich beibehalten und Datensicherung werden beim Erstellen eines neuen Modellprojekts die Standardeinstellungen angewendet. Die Standardeinstellungen für neue Modelle können in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden. Diese und andere Eigenschaften können auch für jedes Modell im Eigenschaftenfenster festgelegt werden. Weitere Informationen finden Sie unter [konfigurieren Sie die Modellierung und Bereitstellung Standardeigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Sortierung**|Die Standardsortierung für den Computer, für den Visual Studio installiert wurde.|Der Sortierungskennzeichner für das Modell.|  
 |**Kompatibilitätsgrad**|Standardmäßiger oder anderer Wert ist beim Erstellen des Projekts ausgewählt.|Gilt für SQL Server 2012 Analysis Services SP1 oder höher. Gibt die für dieses Modell verfügbaren Funktionen und Einstellungen an. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
@@ -54,7 +54,7 @@ ms.locfileid: "53072187"
 |**Sprache**|Englisch|Die Standardsprache des Modells. Die Standardsprache wird durch die für Visual Studio eingestellte Sprache bestimmt. Diese Eigenschaft kann nicht im Eigenschaftenfenster festgelegt werden.|  
 |**Arbeitsbereichsdatenbank**|Der Projektname gefolgt von einem Unterstrich und einer GUID.|Der Name der Arbeitsbereichsdatenbank, die zum Speichern und Bearbeiten des Modells im Arbeitsspeicher für die ausgewählte Datei model.bim verwendet wird. Diese Datenbank wird in der in der Eigenschaft Arbeitsbereichsserver angegebenen Analysis Services-Instanz angezeigt. Diese Eigenschaft kann nicht im Eigenschaftenfenster festgelegt werden. Weitere Informationen finden Sie unter [Arbeitsbereichsdatenbank](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md).|  
 |**Arbeitsbereich beibehalten**|Aus dem Arbeitsspeicher entladen|Gibt an, wie eine Arbeitsbereichsdatenbank beibehalten wird, nachdem ein Modell geschlossen wurde. Eine Arbeitsbereichsdatenbank enthält Modellmetadaten, die in ein Modell importierten Daten und Identitätswechselinformationen (verschlüsselt). In einigen Fällen kann die Arbeitsbereichsdatenbank sehr groß sein und viel Arbeitsspeicher benötigen. Standardmäßig werden Arbeitsbereichsdatenbanken aus dem Arbeitsspeicher entladen. Wenn Sie diese Einstellung ändern, sind die folgenden Überlegungen wichtig: verfügbare Speicherressourcen und wie häufig das Modell bearbeitet werden soll. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Im Arbeitsspeicher beibehalten** – Gibt an, dass die Arbeitsbereichsdatenbank im Arbeitsspeicher beibehalten wird, nachdem ein Modell geschlossen wurde. Diese Option erfordert mehr Arbeitsspeicher. Wenn Sie jedoch ein Modell öffnen, werden weniger Ressourcen belegt, und die Arbeitsbereichsdatenbank wird schneller geladen.<br /><br /> **Aus dem Arbeitsspeicher entladen** – Gibt an, dass die Arbeitsbereichsdatenbank auf dem Datenträger, aber nicht im Arbeitsspeicher beibehalten wird, nachdem ein Modell geschlossen wurde. Diese Option erfordert weniger Arbeitsspeicher. Wenn Sie jedoch ein Modell öffnen, werden zusätzliche Ressourcen belegt, und das Laden des Modells dauert länger, als bei einer Arbeitsbereichsdatenbank, die im Arbeitsspeicher beibehalten wird. Verwenden Sie diese Option, wenn die Arbeitsspeicherressourcen beschränkt sind, oder wenn Sie mit einer Remote-Arbeitsbereichsdatenbank arbeiten.<br /><br /> **Arbeitsbereich löschen** – Gibt an, dass die Arbeitsbereichsdatenbank aus dem Arbeitsspeicher gelöscht und nicht auf dem Datenträger beibehalten wird, nachdem das Modell geschlossen wurde. Diese Option erfordert weniger Arbeitsspeicher und Speicherplatz. Wenn Sie jedoch ein Modell in öffnen, werden zusätzliche Ressourcen belegt, und das Laden des Modells dauert länger, als bei einer Arbeitsbereichsdatenbank, die im Arbeitsspeicher oder auf dem Datenträger beibehalten wird. Verwenden Sie diese Option, wenn Sie nur gelegentlich an Modellen arbeiten.<br /><br /> <br /><br /> Die Standardeinstellung für diese Eigenschaft kann in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden.|  
-|**Arbeitsbereichsserver**|localhost|Diese Eigenschaft gibt den Standardserver an, der zum Hosten der Arbeitsbereichsdatenbank verwendet wird, während das Modell erstellt wird. Alle verfügbaren Analysis Services-Instanzen, die auf dem lokalen Computer ausgeführt werden, sind im Listenfeld enthalten.<br /><br /> Die Standardeinstellung für diese Eigenschaft kann in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden.<br /><br /> <br /><br /> Hinweis: Es wird empfohlen, dass Sie immer einen lokalen Analysis Services-Server als Arbeitsbereichsserver angeben. Für Arbeitsbereichsdatenbanken auf einem Remoteserver wird das Importieren aus [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nicht unterstützt. Außerdem können Daten nicht lokal gesichert werden, und bei Abfragen kommt es auf der Benutzeroberfläche möglicherweise zu Latenzen.|  
+|**Arbeitsbereichsserver**|localhost|Diese Eigenschaft gibt den Standardserver an, der zum Hosten der Arbeitsbereichsdatenbank verwendet wird, während das Modell erstellt wird. Alle verfügbaren Analysis Services-Instanzen, die auf dem lokalen Computer ausgeführt werden, sind im Listenfeld enthalten.<br /><br /> Die Standardeinstellung für diese Eigenschaft kann in den Einstellungen für Analysis-Server im Dialogfeld Extras/Optionen auf der Seite Datenmodellierung geändert werden.<br /><br /> <br /><br /> Hinweis: Es wird empfohlen, dass Sie immer einen lokalen Analysis Services-Server als arbeitsbereichsserver angeben. Für Arbeitsbereichsdatenbanken auf einem Remoteserver wird das Importieren aus [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] nicht unterstützt. Außerdem können Daten nicht lokal gesichert werden, und bei Abfragen kommt es auf der Benutzeroberfläche möglicherweise zu Latenzen.|  
   
 ##  <a name="bkmk_conf_model_prop"></a> Konfigurieren der Eigenschafteneinstellungen für Modelle  
   

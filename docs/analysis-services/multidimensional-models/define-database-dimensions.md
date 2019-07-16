@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178751"
 ---
 # <a name="define-database-dimensions"></a>Definieren von Datenbankdimensionen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52534712"
   
  Der Dimensions-Designer besitzt drei Registerkarten, die in der folgenden Tabelle beschrieben werden.  
   
-|Registerkarte|Description|  
+|Registerkarte|Beschreibung|  
 |---------|-----------------|  
 |**Dimensionsstruktur**|Verwenden Sie diese Registerkarte, um das Arbeiten mit der Struktur einer Dimension zu überprüfen oder zu erstellen das Schema der Datenquellensicht angezeigt bei einer Dimension, für die Arbeit mit Attributen und Attribute in benutzerdefinierten Hierarchien zu organisieren.|  
 |**Attributbeziehungen**|Verwenden Sie diese Registerkarte, um die Attributbeziehungen einer Dimension zu erstellen, zu ändern oder zu löschen.|  

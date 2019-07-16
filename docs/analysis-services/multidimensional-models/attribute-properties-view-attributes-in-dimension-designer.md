@@ -1,5 +1,5 @@
 ---
-title: Anzeigen der Attribute im Dimensions-Designer | Microsoft Docs
+title: Anzeigen von Attributen im Dimensions-Designer | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c8e0535a1df60b4a4e1550e2b49a02e7a60e2c04
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022957"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179377"
 ---
 # <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Attributeigenschaften – Anzeigen von Attributen im Dimensions-Designer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "34022957"
   
 |Symbol|Attributverwendung|  
 |----------|---------------------|  
-|![Symbol "Attribut"](../../analysis-services/multidimensional-models/media/as-icon-attribute.gif "Attribut (Symbol)")|Regular oder AccountType|  
-|![Schlüsselattribut (Symbol)](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "Key-Attribut (Symbol)")|Key|  
-|![Übergeordnetes Attribut (Symbol)](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "übergeordnete Attribut (Symbol)")|Parent|  
+|![Symbol "Kontoattribut"](../../analysis-services/multidimensional-models/media/as-icon-attribute.gif "Attribut (Symbol)")|Regular oder AccountType|  
+|![Schlüsselattribut (Symbol)](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "schlüsselattributsymbol")|Key|  
+|![Übergeordnetes Attribut (Symbol)](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "übergeordnetes Attribut (Symbol)")|Parent|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  

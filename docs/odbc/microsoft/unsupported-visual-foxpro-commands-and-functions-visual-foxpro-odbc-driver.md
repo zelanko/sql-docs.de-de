@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912321"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Nicht unterstützte Visual FoxPro-Befehle und -Funktionen (Visual FoxPro-ODBC-Treiber)
 Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microsoft® Visual FoxPro unterstützt werden, werden von der Visual FoxPro-ODBC-Treiber nicht unterstützt.  
@@ -56,7 +55,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
   
 ||||  
 |-|-|-|  
-|BALKEN ()-Funktion|BARCOUNT ()-Funktion|BARPROMPT( ) Function|  
+|BALKEN ()-Funktion|BARCOUNT ()-Funktion|BARPROMPT ()-Funktion|  
 |Arbeitsspeicher-Systemvariable _BEAUTIFY|Arbeitsspeicher-Systemvariable _BOX|Befehl Suchen|  
 |Arbeitsspeicher-Systemvariable _BROWSER|Erstellen von APP-Befehl|Erstellen Sie die EXE-Befehl|  
 |BUILD Projektbefehl|Arbeitsspeicher-Systemvariable _BUILDER||  
@@ -69,7 +68,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
 |Arbeitsspeicher-Systemvariable _CUROBJ|Aufrufbefehl für|CANCEL-Befehl|  
 |CAPSLOCK ()-Funktion|Befehl "CD"|Befehl zum Ändern|  
 |CHDIR-Befehl|CHRSAW ()-Funktion|Schließen MEMO-Befehl|  
-|CNTBAR ()-Funktion|CNTPAD( ) Function|Spalte ()-Funktion|  
+|CNTBAR ()-Funktion|CNTPAD ()-Funktion|Spalte ()-Funktion|  
 |Kompilieren Sie Befehl|Kompilieren Sie die DATABASE-Befehl|Kompilieren Sie die FORM-Befehl|  
 |COMPOBJ ()-Funktion|Container-Objekt|Control-Objekt|  
 |Befehl "Datei kopieren"|Kopieren Sie MEMO-Befehl|Erstellen Sie den Befehl Klasse|  
@@ -113,8 +112,8 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
 |FCLOSE ()-Funktion|FCREATE ()-Funktion|FGETS ()-Funktion|  
 |FERROR ()-Funktion|FFLUSH ()-Funktion|FKLABEL ()-Funktion|  
 |Filter-Befehl|Befehl "Suchen"|FOPEN ()-Funktion|  
-|FKMAX( ) Function|FONTMETRIC ()-Funktion|FSEEK ()-Funktion|  
-|FPUTS ()-Funktion|FREAD( ) Function||  
+|FKMAX ()-Funktion|FONTMETRIC ()-Funktion|FSEEK ()-Funktion|  
+|FPUTS ()-Funktion|FREAD ()-Funktion||  
 |FWRITE ()-Funktion|FCHSIZE ()-Funktion||  
   
 ## <a name="g"></a>G  
@@ -139,7 +138,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
 ||||  
 |-|-|-|  
 |IMESTATUS ()-Funktion|IMPORT-Befehl|Eingabe-Befehl|  
-|INDEX für den Befehl|INKEY( ) Function|ISCOLOR ()-Funktion|  
+|INDEX für den Befehl|INKEY ()-Funktion|ISCOLOR ()-Funktion|  
 |Einfügen (Befehl)|INSMODE ()-Funktion||  
 |ISMOUSE ()-Funktion|Arbeitsspeicher-Systemvariable _INDENT||  
   
@@ -159,7 +158,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _LMARGIN|LABEL-Befehl|LASTKEY( ) Function|  
+|Arbeitsspeicher-Systemvariable _LMARGIN|LABEL-Befehl|LASTKEY ()-Funktion|  
 |"LineNo" ()-Funktion|Auflisten der Befehle|VERBINDUNGEN auflisten (Befehl)|  
 |-Befehl|LocFile ABGELEGT ()-Funktion||  
   
@@ -177,7 +176,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
 |Ändern der Abfragebefehl|Ändern Sie BERICHTSSERVER-Befehl|Ändern Sie im Fenster-Befehl|  
 |Ändern Sie die Struktur-Befehl|Ändern von VIEW (Befehl)|Verschieben des Befehls "Fenster"|  
 |Der Befehl für Maus|Verschieben Sie POPUP-Befehl|MROW ()-Funktion|  
-|MRKBAR ()-Funktion|MRKPAD( ) Function||  
+|MRKBAR ()-Funktion|MRKPAD ()-Funktion||  
 |MWINDOW ()-Funktion|MDOWN ()-Funktion||  
   
 ## <a name="n"></a>N  
@@ -209,7 +208,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
 |Arbeitsspeicher-Systemvariable _PEPAGE|Arbeitsspeicher-Systemvariable _PLENGTH|Arbeitsspeicher-Systemvariable _PLINENO|  
 |Arbeitsspeicher-Systemvariable _PLOFFSET|Arbeitsspeicher-Systemvariable _PPITCH|Arbeitsspeicher-Systemvariable _PQUALITY|  
 |Arbeitsspeicher-Systemvariable _PRETEXT|Arbeitsspeicher-Systemvariable _PSCODE|Arbeitsspeicher-Systemvariable _PSPACING|  
-|Arbeitsspeicher-Systemvariable _PWAIT|PACK-DATABASE-Befehl|PAD( ) Function|  
+|Arbeitsspeicher-Systemvariable _PWAIT|PACK-DATABASE-Befehl|AUFFÜLLZEICHEN ()-Funktion|  
 |PCOL ()-Funktion|PEMSTATUS ()-Funktion|MAKRO-Befehl "WIEDERGEBEN"|  
 |POPUPFENSTER Tastaturbefehl|POP Menübefehl|POP-POPUP-Befehl|  
 |Popups ()-Funktion|PRINTJOB... ENDPRINTJOB-Befehl|PRINTSTATUS ()-Funktion|  
@@ -227,7 +226,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
   
 ||||  
 |-|-|-|  
-|Arbeitsspeicher-Systemvariable _RMARGIN|Remotedesktop-Befehl|READKEY( ) Function|  
+|Arbeitsspeicher-Systemvariable _RMARGIN|Remotedesktop-Befehl|READKEY ()-Funktion|  
 |Befehl lesen|KONTEXTMENÜBEFEHL von "" Lesen|RELEASE-BALKEN-Befehl|  
 |Refresh()-Funktion|NEUINDIZIEREN-Befehl|RELEASE-LIBRARY-Befehl|  
 |Version CLASSLIB-Befehl|RELEASE-Befehl|RELEASE-PAD-Befehl|  
@@ -236,7 +235,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
 |Befehl "Klasse" entfernen|Benennen Sie den Befehl Klasse|Benennen Sie VIEW (Befehl)|  
 |Verbindungsbefehl umbenennen|Benennen Sie die TABLE-Befehl|Wiederherstellen von Befehl|  
 |Bericht-Befehl|REQUERY ()-Funktion|Fenster-Befehl "Wiederherstellen"|  
-|MAKROS-Befehl "Wiederherstellen"|Bildschirm-Befehl "Wiederherstellen"|RGBSCHEME( ) Function|  
+|MAKROS-Befehl "Wiederherstellen"|Bildschirm-Befehl "Wiederherstellen"|RGBSCHEME ()-Funktion|  
 |Befehl "fortsetzen"|RGB ()-Funktion|RUN &#124; ! Befehl|  
 |RMDIR-Befehl|Zeile ()-Funktion||  
 |RUNSCRIPT-Befehl|RDLEVEL ()-Funktion||  
@@ -278,10 +277,10 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
 |SET-XCMDFILE-Befehl|Arbeitsspeicher-Systemvariable _SHELL|GET-Befehl "SHOW"|  
 |ANZEIGEN (Befehl) Ruft|KONTEXTMENÜBEFEHL von "anzeigen"|OBJECT-Befehl anzeigen|  
 |POPUP-Befehl anzeigen|Befehl "SHOW-Fenster"|Größe POPUP-Befehl|  
-|Fenster-Befehl Größe|SKPBAR ()-Funktion|SKPPAD( ) Function|  
+|Fenster-Befehl Größe|SKPBAR ()-Funktion|SKPPAD ()-Funktion|  
 |SOUNDEX ()-Funktion|Arbeitsspeicher-Systemvariable _SPELLCHK|SQL-Funktionen|  
 |SROWS ()-Funktion|Arbeitsspeicher-Systemvariable _STARTUP|Befehl "Anhalten"|  
-|Sys()-Funktionen mit Ausnahme von SYS(2011)|SYSMETRIC( ) Function||  
+|Sys()-Funktionen mit Ausnahme von SYS(2011)|SYSMETRIC ()-Funktion||  
   
 ## <a name="t"></a>T  
   
@@ -311,7 +310,7 @@ Die folgende Tabelle enthält die FoxPro-Befehle und Funktionen, die von Microso
 |Warten Sie, Befehl|WBORDER ()-Funktion|WFONT ()-Funktion|  
 |WCOLS ()-Funktion|WEXIST ()-Funktion|WLROW ()-Funktion|  
 |MIT... ENDWITH-Befehl|WLAST ()-Funktion|WONTOP ()-Funktion|  
-|WMAXIMUM ()-Funktion|WLCOL ()-Funktion|WREAD( ) Function|  
+|WMAXIMUM ()-Funktion|WLCOL ()-Funktion|WREAD ()-Funktion|  
 |WOUTPUT ()-Funktion|WMINIMUM ()-Funktion|WVISIBLE ()-Funktion|  
 |WPARENT ()-Funktion|WTITLE ()-Funktion||  
 |WROWS ()-Funktion|Arbeitsspeicher-Systemvariable _WRAP||  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206838"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
   Sie können Massenkopiervorgänge direkt aus Programmvariablen durchführen. Nach der Zuweisung von Variablen, um die Daten für eine Zeile und der Aufruf von aufzunehmen [Bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) rufen Sie zum Starten des Massenkopiervorgangs [Bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte an den Speicherort und Format der Programmvariablen zugeordnet werden soll mit der Spalte. Füllen Sie jede Variable mit Daten, und rufen dann [Bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) auf eine Zeile mit Daten an den Server gesendet. Wiederholen Sie den Vorgang Variablen füllen und Aufrufen von **Bcp_sendrow** bis alle Zeilen an den Server gesendet wurden, rufen Sie anschließend [Bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) um anzugeben, dass der Vorgang abgeschlossen ist.  

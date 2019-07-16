@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181866"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Erstellen von Analysis Services-Skripts in Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38057818"
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Datenbank, und klicken Sie auf **Sichern**. Daraufhin wird das Dialogfeld Datenbank sichern geöffnet. Geben Sie einen Sicherungsdateinamen an, und wählen Sie die gewünschten Optionen für diese Sicherung aus.  
   
-3.  Klicken Sie auf **Skript** am oberen Rand des Dialogfelds. Die Funktion Skript ist ein Teil aller taskbasierten Dialogfelder in Management Studio. Es hat die folgenden Optionen: **Skript für Aktion in Fenster 'Neue Abfrage' schreiben** , um das Abfrage-Editor-Fenster zu öffnen, **Skript für Aktion in Datei schreiben** , um das XMLA-Skript in einer Datei zu speichern, oder **Skript für Aktion in Zwischenablage schreiben** , um das XMLA-Skript in der Zwischenablage zu speichern.  
+3.  Klicken Sie auf **Skript** am oberen Rand des Dialogfelds. Die Funktion Skript ist ein Teil aller taskbasierten Dialogfelder in Management Studio. Es enthält die folgenden Optionen: **Skript für Aktion in neuem Abfragefenster** um den Abfrage-Editorfenster zu öffnen **Skript für Aktion in Datei** um das XMLA-Skript in eine Datei zu speichern oder **Skript für Aktion in Zwischenablage** der XMLA-Skript zum Speichern der Die Zwischenablage.  
   
      Beachten Sie, dass die Option **Skript für Aktion in Auftrag schreiben** , die in Management Studio als Skriptoption aufgelistet wird, für Analysis Services-Skripts nicht unterstützt wird.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "38057818"
   
 2.  Suchen Sie das Objekt, für das Sie ein Skript zum Erstellen, Ändern oder Löschen von Objekten erstellen möchten.  
   
-3.  Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript für Cube als**, zeigen Sie auf **CREATE in**, **ALTER in**oder **DELETE in**, und klicken Sie anschließend auf eine der folgenden Optionen: **Neues Abfrage-Editorfenster** zum Öffnen des Abfrage-Editorfensters, **Datei** zum Speichern des XMLA-Skripts in einer Datei oder **Zwischenablage** zum Speichern des XMLA-Skripts in der Zwischenablage.  
+3.  Mit der rechten Maustaste in des Objekts, zeigen Sie auf **Skript für Cube als**, zeigen Sie auf **CREATE in**, **ALTER in**, oder **Delete in**, und klicken Sie dann auf eines der folgende Optionen: **Neues Abfrage-Editor-Fenster** zu den Abfrage-Editorfenster öffnen **Datei** um das XMLA-Skript in eine Datei zu speichern oder **Zwischenablage** um das XMLA-Skript in die Zwischenablage zu speichern.  
   
     > [!NOTE]  
     >  Normalerweise würden Sie **Datei** auswählen, wenn Sie mehrere verschiedene Versionen der Datei erstellen möchten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [XMLA-Abfrage-Editor &#40;Analysis Services – mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [XMLA-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

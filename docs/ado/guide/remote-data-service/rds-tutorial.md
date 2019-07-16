@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d1f328baf628e86c75abc9a452600e1f0e8cf88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922414"
 ---
 # <a name="rds-tutorial"></a>RDS-Tutorial
 Dieses Tutorial veranschaulicht das Verwenden von RDS-Programmiermodell zum Abfragen und Aktualisieren einer Datenquelle. Zuerst beschreibt es die erforderlichen Schritte zum Ausführen dieser Aufgabe. Anschließend wird das Tutorial in Microsoft® Visual Basic Scripting Edition (mit ADO für die Windows Foundation Classes (ADO/WFC)) wiederholt.  

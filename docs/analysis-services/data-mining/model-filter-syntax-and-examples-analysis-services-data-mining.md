@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209769"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Modellfiltersyntax und Beispiele (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "52393546"
  *avPredicate*  
  Filterausdruck, der nur auf skalare Miningstrukturspalten angewendet werden kann. Ein *avPredicate* -Ausdruck kann sowohl in Modellfiltern als auch in geschachtelten Tabellenfiltern verwendet werden.  
   
- Ein Ausdruck, der einen der folgenden Operatoren verwendet, kann nur auf eine kontinuierliche Spalte angewendet werden. decodiert werden:  
+ Ein Ausdruck, der einen der folgenden Operatoren verwendet, kann nur auf eine kontinuierliche Spalte angewendet werden. :  
   
 -   **\<** (kleiner als)  
   

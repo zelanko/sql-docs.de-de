@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942814"
 ---
 # <a name="updating-data-overview"></a>Aktualisieren einer Datenübersicht
 Anwendungen können Daten aktualisieren, entweder durch Ausführen von SQL-Anweisungen oder durch Aufrufen von **SQLSetPos** oder **SQLBulkOperations**. **UPDATE**, **löschen**, und **einfügen** -Anweisungen direkt in der Datenquelle reagieren und werden in der Regel von Treibern unterstützt. Durchsucht Update und Delete-Anweisungen enthalten, eine Spezifikation der Zeilen, die zu ändern. Positioniert Update und delete-Anweisungen und **SQLSetPos** wirken sich auf die Datenquelle über einen Cursor und weniger häufig verwendet werden.  

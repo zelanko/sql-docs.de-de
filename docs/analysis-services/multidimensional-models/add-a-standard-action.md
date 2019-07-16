@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Standardaktion | Microsoft Docs
+title: Hinzufügen einer Standardaktion | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a6af04d1ed2b8db53425ad0aaf83d95d73dd6f8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180280"
 ---
 # <a name="add-a-standard-action"></a>Hinzufügen einer Standardaktion
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34020637"
   
     -   Wählen Sie in der Dropdownliste **Typ** den Typ der Aktion aus, den Sie erstellen möchten. In der folgenden Tabelle sind die verfügbaren Aktionstypen aufgelistet.  
   
-        |Typ|Description|  
+        |Typ|Beschreibung|  
         |----------|-----------------|  
         |Dataset|Ruft ein Dataset ab.|  
         |Proprietär|Führt einen Vorgang über eine Schnittstelle aus, die nicht in dieser Tabelle aufgelistet ist.|  
@@ -61,7 +61,7 @@ ms.locfileid: "34020637"
   
     -   Geben Sie mithilfe der Dropdownliste **Aufruf** an, wie die Aktion aufgerufen wird. In der folgenden Tabelle werden die verfügbaren Optionen zum Aufrufen einer Aktion beschrieben.  
   
-        |Option|Description|  
+        |Option|Beschreibung|  
         |------------|-----------------|  
         |Interaktiv|Die Aktion wird durch eine Benutzerinteraktion ausgelöst.|  
         |Batch|Die Aktion wird als Batchvorgang ausgeführt.|  
@@ -72,7 +72,7 @@ ms.locfileid: "34020637"
         > [!NOTE]  
         >  Proprietäre Aktionen werden erst an den Server zurückgegeben, wenn das Schemarowset von der Clientanwendung explizit so beschränkt wird, dass nur Aktionen zurückgegeben werden, die mit dem in **Anwendung**angegebenen Namen übereinstimmen.  
   
-    -   In **Aktionsinhalt**, wenn Sie die URL-Typ verwenden, schließen Sie die Internetadresse in Anführungszeichen, z. B. "http://www.adventure-works.com".  
+    -   In **Aktionsinhalt**, wenn Sie die URL-Typ verwenden, schließen Sie die Internetadresse in Anführungszeichen ein, z. B. "http://www.adventure-works.com".  
   
     -   Geben Sie in **Beschreibung**eine Beschreibung für die Aktion ein.  
   

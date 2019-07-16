@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196535"
 ---
 # <a name="create-nested-triggers"></a>Erstellen von geschachtelten Triggern
   Sowohl DML-Trigger als auch DDL-Trigger werden geschachtelt, wenn ein Trigger eine Aktion ausführt, die einen anderen Trigger auslöst. Diese Aktionen können andere Trigger auslösen usw. DML- und DDL-Trigger können bis auf 32 Ebenen geschachtelt werden. Sie können über die **Geschachtelte Trigger** -Serverkonfigurationsoption steuern, ob AFTER-Trigger geschachtelt werden können. INSTEAD OF-Trigger (nur DML-Trigger können INSTEAD OF-Trigger sein) können unabhängig von dieser Einstellung geschachtelt werden.  

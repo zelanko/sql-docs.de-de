@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658229"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208150"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Power Pivot-Datenaktualisierung mit SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "58658229"
   
 -   Bei der interaktiven Datenaktualisierung werden nur die Daten in der aktuellen Benutzersitzung aktualisiert. Die Daten werden nicht automatisch wieder im Arbeitsmappenelement in der SharePoint-Inhaltsdatenbank gespeichert.  
   
--   **Anmeldeinformationen:** Die interaktive Datenaktualisierung kann die Identität des aktuell angemeldeten Benutzers als Anmeldeinformationen oder gespeicherte Anmeldeinformationen verwenden, um eine Verbindung mit der Datenquelle herzustellen. Welche Anmeldeinformationen verwendet werden, hängt von den Excel Services-Authentifizierungseinstellungen ab, die für die Verbindung der Arbeitsmappe mit der externen Datenquelle definiert sind.  
+-   **Anmeldeinformationen:** Interaktive datenaktualisierung kann die Identität des aktuell angemeldeten Benutzers als Anmeldeinformationen oder gespeicherte Anmeldeinformationen verwenden, für die Verbindung mit der Datenquelle. Welche Anmeldeinformationen verwendet werden, hängt von den Excel Services-Authentifizierungseinstellungen ab, die für die Verbindung der Arbeitsmappe mit der externen Datenquelle definiert sind.  
   
 -   **Unterstützte Arbeitsmappen:**  In Excel 2013 erstellte Arbeitsmappen.  
   
@@ -83,30 +83,30 @@ ms.locfileid: "58658229"
   
 3.  Excel Services lädt die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenbank, verarbeitet sie und fragt sie anschließend ab, um den Excel-Arbeitsmappencache zu aktualisieren.  
   
-4.  **Hinweis**: Die aktualisierte Arbeitsmappe wird nicht automatisch wieder in der Dokumentbibliothek gespeichert.  
+4.  **Hinweis**: Die aktualisierte Arbeitsmappe wird nicht automatisch wieder in die Dokumentbibliothek gespeichert.  
   
  ![interaktive Datenaktualisierung](../../analysis-services/power-pivot-sharepoint/media/as-interactive-datarefresh-sharepoint2013.gif "interaktive Datenaktualisierung")  
   
 ###  <a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows-Authentifizierung mit Arbeitsmappen-Datenverbindungen und interaktiver Datenaktualisierung  
  Excel Services sendet dem Analysis Services-Server einen Verarbeitungsbefehl, der den Server anweist, die Identität eines Benutzerkontos anzunehmen. Um ausreichende Systemrechte zum Delegieren des Benutzeridentitätswechsels zu erhalten, benötigt das Analysis Services-Dienstkonto die Berechtigung **Einsetzen als Teil des Betriebssystems** auf dem lokalen Server. Der Analysis Services-Server muss auch in der Lage sein, die Anmeldeinformationen des Benutzers für Datenquellen zu delegieren. Das Abfrageergebnis wird an Excel Services gesendet.  
   
- Typische Benutzererfahrung: Wenn ein Kunde "Alle Verbindungen aktualisieren" auswählt, in einer Excel 2013-Arbeitsmappe, enthält eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Modell, sie sehen eine Fehlermeldung ähnlich der folgenden angezeigt:  
+ Typische benutzererfahrung: Wenn ein Kunde "Alle Verbindungen aktualisieren" auswählt, in einer Excel 2013-Arbeitsmappe, enthält eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Modell, sie sehen eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
--   **Fehler bei der Aktualisierung der externen Daten:** Beim Arbeiten am Datenmodell in der Arbeitsmappe ist ein Fehler aufgetreten. Wiederholen Sie den Vorgang. Eine oder mehrere Datenverbindungen in dieser Arbeitsmappe können nicht aktualisiert werden.  
+-   **Fehler bei der Aktualisierung der externen Daten:** Fehler beim Arbeiten am Datenmodell in der Arbeitsmappe. Versuchen Sie es erneut. Eine oder mehrere Datenverbindungen in dieser Arbeitsmappe können nicht aktualisiert werden.  
   
  Abhängig vom jeweiligen Datenanbieter werden im ULS-Protokoll Meldungen ähnlich den folgenden angezeigt.  
   
  **Bei SQL Native Client:**  
   
--   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Das Out-of-Line-Objekt 'DataSource', das auf die ID(s) '20102481-39c8-4d21-bf63-68f583ad22bb' verweist, wurde angegeben, jedoch nicht verwendet.  OLE DB- oder ODBC-Fehler: Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. Weitere Informationen finden Sie in der SQL Server-Onlinedokumentation.; 08001; SSL-Anbieter: Das angeforderte Sicherheitspaket ist nicht vorhanden; 08001; Der Client kann keine Verbindung herstellen; 08001; Verschlüsselung wird auf dem Client nicht unterstützt.; 08001.  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: Mappe1.xlsx.  
+-   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Line-of-Objekt 'DataSource', Verweis auf die ID(s) ' 20102481-39 c 8-4-d 21-bf63-68f583ad22bb', wurde angegeben, jedoch nicht verwendet wurde.  OLE DB or ODBC error: Ein netzwerkbezogener oder Instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. Weitere Informationen finden Sie unter SQL Server-Onlinedokumentation.; 08001; SSL-Anbieter: Das angeforderte Sicherheitspaket ist nicht vorhanden; 08001; Client kann keine Verbindung herstellen 08001; Verschlüsselung wird auf dem Client nicht unterstützt.; 08001.  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: Mappe1.xlsx.  
   
  **Bei Microsoft OLE DB-Anbieter für SQL Server:**  
   
--   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Das Out-of-Line-Objekt 'DataSource', das auf die ID(s) '6e711bfa-b62f-4879-a177-c5dd61d9c242' verweist, wurde angegeben, jedoch nicht verwendet. OLE DB- oder ODBC-Fehler. , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: OLEDB Provider.xlsx.  
+-   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Line-of-Objekt 'DataSource', auf die ID(s) '6e711bfa-b62f-4879-a177-c5dd61d9c242', wurde angegeben, jedoch nicht verwendet wurde. OLE DB- oder ODBC-Fehler. , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: OLEDB Provider.xlsx.  
   
  **Bei .NET Framework-Datenanbieter für SQL Server:**  
   
--   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Das Out-of-Line-Objekt 'DataSource', das auf die ID(s) 'f5fb916c-3eac-4d07-a542-531524c0d44a' verweist, wurde angegeben, jedoch nicht verwendet.  Fehler in der relationalen Engine. Die folgende Ausnahme ist aufgetreten, während die verwaltete IDbConnection-Schnittstelle verwendet wurde: Die Datei oder Assembly 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' oder eine Abhängigkeit davon wurde nicht gefunden. Entweder wurde eine geforderte Identitätswechselebene nicht geliefert, oder die gelieferte Identitätswechselebene ist unzulässig. (Ausnahme von HRESULT: 0x80070542).  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: NETProvider.xlsx.  
+-   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Objekt 'DataSource', auf die ID(s) 'f5fb916c-3eac - 4D 07-a542-531524c0d44a ' verweist, aus der Zeile wurde angegeben, jedoch nicht verwendet wurde.  Fehler in der relationalen Engine. Die folgende Ausnahme ist aufgetreten, während die verwaltete IDbConnection-Schnittstelle verwendet wurde: Konnte nicht geladen werden, Datei oder Assembly ' System.Transactions, Version = 4.0.0.0, Culture = Neutral, PublicKeyToken = b77a5c561934e089' oder eine ihrer Abhängigkeiten. Entweder wurde eine geforderte Identitätswechselebene nicht geliefert, oder die gelieferte Identitätswechselebene ist unzulässig. (Ausnahme von HRESULT: 0 x 80070542).  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: NETProvider.xlsx.  
   
  **Zusammenfassung der Konfigurationsschritte** zum Konfigurieren der Berechtigung **Einsetzen als Teil des Betriebssystems** auf dem lokalen Server:  
   
@@ -147,7 +147,7 @@ ms.locfileid: "58658229"
   
 -   Beachten Sie die Abbildung nach den Schritten.  
   
-1.  Klicken Sie in einer SharePoint-Dokumentbibliothek auf das Menü **Öffnen** (**...**) für eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappe.  
+1.  Klicken Sie in einer SharePoint-Dokumentbibliothek auf das Menü **Öffnen** ( **...** ) für eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappe.  
   
 2.  Klicken Sie auf das zweite Menü **Öffnen**, und klicken Sie anschließend auf **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenaktualisierung verwalten**.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "58658229"
   
  ![Architektur von SQL Server 2012 SP1 datenaktualisierung](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "Architektur von SQL Server 2012 SP1 datenaktualisierung")  
   
-||Description||  
+||Beschreibung||  
 |-|-----------------|-|  
 |**(1)**|Analysis Services-Engine|Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server, der im SharePoint-Modus ausgeführt wird. Der Server wird außerhalb der SharePoint-Farm ausgeführt.|  
 |**(2)**|Benutzeroberfläche|Die Benutzeroberfläche besteht aus zwei Seiten. Auf einer Seite wird der Zeitplan definiert, auf der zweiten Seite wird der Aktualisierungsverlauf angezeigt. Die Seiten greifen nicht direkt auf die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungs-Datenbanken zu, sondern über den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst.|  
@@ -199,7 +199,7 @@ ms.locfileid: "58658229"
   
 3.  Weitere Informationen zu Verwendungsdaten und wie Sie diese aktivieren finden Sie unter [PowerPivot-Management-Dashboard und Verwendungsdaten](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
- **Diagnoseprotokolldaten:** Sie können SharePoint-Diagnoseprotokolldaten zur Datenaktualisierung anzeigen. Überprüfen Sie zunächst die Konfiguration der Diagnoseprotokollierung für den **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst** auf der Seite **Überwachung** der SharePoint-Zentraladministration. Müssen Sie möglicherweise erhöhen Sie die Ebene der Protokollierung für das "unwichtigste Ereignis" anmelden. Legen Sie beispielsweise vorübergehend den Wert auf **Ausführlich** fest, und führen Sie dann die Datenaktualisierungsvorgänge erneut aus.  
+ **Diagnoseprotokolldaten:** Sie können SharePoint-diagnoseprotokolldaten zur datenaktualisierung anzeigen. Überprüfen Sie zunächst die Konfiguration der Diagnoseprotokollierung für den **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst** auf der Seite **Überwachung** der SharePoint-Zentraladministration. Müssen Sie möglicherweise erhöhen Sie die Ebene der Protokollierung für das "unwichtigste Ereignis" anmelden. Legen Sie beispielsweise vorübergehend den Wert auf **Ausführlich** fest, und führen Sie dann die Datenaktualisierungsvorgänge erneut aus.  
   
  Die Protokolleinträge enthalten Folgendes:  
   
@@ -212,9 +212,9 @@ ms.locfileid: "58658229"
 ##  <a name="datarefresh_additional_authentication"></a> Zusätzliche Überlegungen zur Authentifizierung  
  Die Einstellungen im Dialogfeld **Excel Services-Authentifizierungseinstellungen** in Excel 2013 bestimmen die Windows-Identität, die Excel Services und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Datenaktualisierung verwenden.  
   
--   **Konto des authentifizierten Benutzers verwenden**: Excel Services führt die Datenaktualisierung unter der Identität des aktuell angemeldeten Benutzers aus.  
+-   **Konto des authentifizierten Benutzers verwenden**: Excel Services führt die datenaktualisierung unter der Identität des aktuell angemeldeten Benutzers.  
   
--   **Ein gespeichertes Konto verwenden**: Geht von einer SharePoint Secure Store Service-Anwendungs-ID aus, die Excel Services verwendet, um den Benutzernamen und das Kennwort abzurufen, um die Datenaktualisierung zu authentifizieren.  
+-   **Ein gespeichertes Konto verwenden**: Geht davon aus einer SharePoint Secure Store Service-Anwendungs-ID, die Excel Services verwendet, um den Benutzernamen und ein Kennwort zur Authentifizierung der datenaktualisierung Authentifizierung abzurufen.  
   
 -   **None:** Die Excel Services **unbeaufsichtigte Dienstkonto** verwendet wird. Das Dienstkonto ist einem Secure Store Service-Proxy zugeordnet. Konfigurieren Sie die Einstellungen auf der Seite **Excel Services-Anwendungseinstellungen** im Abschnitt **Externe Daten** .  
   

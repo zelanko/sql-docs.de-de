@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196653"
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
   Spalten mit geringer Dichte sind gewöhnliche Spalten, die einen optimierten Speicher für NULL-Werte haben. Spalten mit geringer Dichte reduzieren die Speicherplatzanforderungen von NULL-Werten auf Kosten eines erhöhten Aufwands, um Werte ungleich NULL abzurufen. Verwenden Sie Sparsespalten, wenn dadurch mindestens 20 Prozent bis 40 Prozent Speicherplatz eingespart werden. Spalten mit geringer Dichte und Spaltensätze werden mit der [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) -Anweisung oder der [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) -Anweisung definiert.  

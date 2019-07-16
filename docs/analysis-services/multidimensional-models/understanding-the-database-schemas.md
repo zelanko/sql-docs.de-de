@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Datenbankschemas | Microsoft Docs
+title: Grundlegendes zu Datenbankschemas | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023477"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164969"
 ---
 # <a name="understanding-the-database-schemas"></a>Grundlegendes zu Datenbankschemas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Der Schemagenerierungs-Assistent generiert ein nicht normalisiertes relationales Schema für die Datenbank des Themenbereichs auf Basis der Dimensionen und Measuregruppen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Der Assistent generiert für jede Dimension eine relationale Tabelle zum Speichern von Dimensionsdaten, die als Dimensionstabelle bezeichnet wird, und für jede Measuregruppe eine relationale Tabelle zum Speichern von Faktendaten, die als Faktentabelle bezeichnet wird. Beim Generieren dieser relationalen Tabellen ignoriert der Assistent verknüpfte Dimensionen, verknüpfte Measuregruppen und Serverzeitdimensionen.  
   
-## <a name="validation"></a>Überprüfung  
+## <a name="validation"></a>Validierung  
  Bevor das zugrunde liegende relationale Schema generiert wird, überprüft der Schemagenerierungs-Assistent die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cubes und -Dimensionen. Wenn der Assistent einen Fehler feststellt, wird der Assistent beendet, und die Fehler werden an das Fenster Aufgabenliste in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]berichtet. Im Folgenden finden Sie Beispiele für Fehler, die das Generieren verhindern:  
   
 -   Dimensionen, die mehr als ein Schlüsselattribut enthalten.  
@@ -36,7 +36,7 @@ ms.locfileid: "34023477"
 ## <a name="dimension-tables"></a>Dimensionstabellen  
  Der Schemagenerierungs-Assistent generiert für jede Dimension eine Dimensionstabelle, die in die Datenbank des Themenbereichs eingeschlossen werden soll. Die Struktur der Dimensionstabelle hängt von den Optionen ab, die Sie beim Entwerfen der Dimension, auf der die Dimensionstabelle basiert, ausgewählt haben.  
   
- Spalten  
+ Spalte  
  Der Assistent generiert eine Spalte für die Bindungen, die den einzelnen Attributen der Dimension zugeordnet sind, auf der die Dimensionstabelle basiert. Hierzu zählen z.B. die Bindungen für die Eigenschaften **KeyColumns**, **NameColumn**, **ValueColumn**, **CustomRollupColumn**, **CustomRollupPropertiesColumn**und **UnaryOperatorColumn** jedes Attributs.  
   
  Beziehungen  
@@ -50,13 +50,13 @@ ms.locfileid: "34023477"
 > [!NOTE]  
 >  Ein Fehler tritt auf, wenn mehr als ein Schlüsselattribut in der Dimension, auf der die Dimensionstabelle basiert, angegeben wird.  
   
- Übersetzungen  
+ Translations  
  Der Assistent generiert eine separate Tabelle für die übersetzten Werte eines beliebigen Attributs, das eine Übersetzungsspalte erfordert. Des Weiteren erstellt der Assistent eine separate Spalte für jede erforderliche Sprache.  
   
 ## <a name="fact-tables"></a>Faktentabellen  
  Der Schemagenerierungs-Assistent generiert für jede Measuregruppe eines Cubes eine Faktentabelle, die in die Datenbank des Themenbereichs eingeschlossen werden soll. Die Struktur der Faktentabelle hängt von den Optionen ab, die Sie beim Entwerfen der Measuregruppe, auf der die Faktentabelle basiert, ausgewählt haben. Des Weiteren hängt die Struktur von den zwischen der Measuregruppe und den eingeschlossenen Dimensionen erstellten Beziehungen ab.  
   
- Spalten  
+ Spalte  
  Der Assistent generiert für jedes Measure eine Spalte. Dies gilt nicht für Measures, die die **Count** -Aggregationsfunktion verwenden. Für diese Art von Measures ist in der Faktentabelle keine entsprechende Spalte erforderlich.  
   
  Der Assistent generiert ebenfalls eine Spalte pro Granularitätsattributspalte für jede reguläre Dimensionsbeziehung der Measuregruppe. Bei Bedarf generiert der Assistent mindestens eine Spalte für die Bindungen, die jedem Attribut einer Dimension mit einer Faktendimensionsbeziehung zur Measuregruppe, auf der die Tabelle basiert, zugeordnet sind.  
@@ -71,7 +71,7 @@ ms.locfileid: "34023477"
   
  Wenn Sie die referenzielle Integrität erzwingen möchten, werden bei Bedarf Einschränkungen für die referenzielle Integrität zwischen Dimensionstabellen und Faktentabellen generiert.  
   
- Übersetzungen  
+ Translations  
  Der Assistent generiert eine separate Tabelle für die übersetzten Werte beliebiger Eigenschaften der Measuregruppe, die eine Übersetzungsspalte erfordert. Des Weiteren erstellt der Assistent eine separate Spalte für jede erforderliche Sprache.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Datentypkonvertierung und Standardlängen  

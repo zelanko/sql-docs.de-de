@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Abfrage- und Slicerachsen in einem einfachen Beispiel (MDX) | Microsoft Docs
+title: Verwenden von Abfrage- und Slicerachsen in einem einfachen Beispiel (MDX) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fce95d7e51c17f6e8a0fedbec01eccf7bd8ec8c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022627"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165834"
 ---
-# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX Abfrage- und Slicerachsen - mithilfe von Achsen in einem einfachen Beispiel
+# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX-Abfrage- und Slicerachsen – Verwenden von Achsen in einem einfachen Beispiel
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Anhand des einfachen Beispiels, das in diesem Thema vorgestellt wird, werden die Grundlagen zum Angeben und Verwenden von Abfrage- und Slicerachsen erläutert.  
   
@@ -45,7 +45,7 @@ WHERE ( [Measures].[Packages] )
 |Zweites Quartal|45|45|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Angeben des Inhalts einer Abfrageachse & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [Angeben des Inhalts einer Slicerachse & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Angeben des Inhalts einer Abfrageachse &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [Angeben des Inhalts einer Slicerachse &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

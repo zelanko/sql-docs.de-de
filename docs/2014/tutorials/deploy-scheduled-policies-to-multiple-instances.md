@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016721"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185801"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Bereitstellen geplanter Richtlinien auf mehreren Instanzen
   Mithilfe von registrierten Servern können Sie geplante Richtlinien von einem zentralen Ort aus auf verwalteten Servern bereitstellen. Sie können geplante Richtlinien entweder über eine lokale Servergruppe oder über einen zentralen Verwaltungsserver bereitstellen.  
@@ -28,7 +28,7 @@ ms.locfileid: "56016721"
   
  Sie führen diese Aufgaben auf dem Computer durch, auf dem Sie auch die vorherigen Aufgaben dieser Lektion durchgeführt haben.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Für diese Aufgabe gelten die folgenden Voraussetzungen:  
   
 -   Sie müssen die vorherigen Aufgaben dieser Lektion abgeschlossen haben.  
@@ -71,7 +71,7 @@ ms.locfileid: "56016721"
     > [!NOTE]  
     >  Wenn Sie mit der rechten Maustaste **lokale Servergruppen** oder den zentralen Verwaltungsserver selbst, die Richtlinien werden für alle verwalteten Server bereitgestellt werden. Falls Sie mit der rechten Maustaste auf eine bestimmte Servergruppe klicken, werden die Richtlinien nur auf den Servern dieser Gruppe bereitgestellt. Falls Sie mit der rechten Maustaste auf einen bestimmten registrierten Server klicken, werden die Richtlinien nur auf diesem Server bereitgestellt.  
   
-3.  Neben **zu importierende Dateien**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...** ).  
+3.  Neben **zu importierende Dateien**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
   
 4.  In der **Richtlinie auswählen** (Dialogfeld), navigieren Sie zum Speicherort Ordners, dem Sie die geplanten Richtlinien gespeichert haben. In diesem Beispiel navigieren Sie zum Speicherort **C:\Scheduled_BP_Policies**.  
   

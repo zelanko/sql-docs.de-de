@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d946e744fe3b3e5fba12f83067dc751296b58ac6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938857"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue-Eigenschaft
 Gibt den aktuellen Wert von einem [Feld](../../../ado/reference/ado-api/field-object.md) Objekt in der Datenbank.  
@@ -47,5 +46,5 @@ Gibt den aktuellen Wert von einem [Feld](../../../ado/reference/ado-api/field-ob
 ## <a name="see-also"></a>Siehe auch  
  [OriginalValue und UnderlyingValue – Beispiel (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [OriginalValue und UnderlyingValue – Beispiel (VC++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
- [OriginalValue Property (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+ [OriginalValue-Eigenschaft (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)

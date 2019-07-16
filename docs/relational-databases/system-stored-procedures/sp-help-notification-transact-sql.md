@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906105"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @object_type = ] 'object_type'` Der Typ der zurückzugebenden Informationen. *Object_type*ist **char(9)**, hat keinen Standardwert. *Object_type* sind ALERTS, womit die dem angegebenen Operator zugewiesenen Warnungen aufgelistet *,* oder OPERATORS, womit die für die angegebene Warnung verantwortlichen Operatoren aufgelistet *.*  
+`[ @object_type = ] 'object_type'` Der Typ der zurückzugebenden Informationen. *Object_type*ist **char(9)** , hat keinen Standardwert. *Object_type* sind ALERTS, womit die dem angegebenen Operator zugewiesenen Warnungen aufgelistet *,* oder OPERATORS, womit die für die angegebene Warnung verantwortlichen Operatoren aufgelistet *.*  
   
 `[ @name = ] 'name'` Ein Operatorname (Wenn *Object_type* is-OPERATOREN) oder ein Warnungsname (Wenn *Object_type* gleich ALERTS ist). *Namen* ist **Sysname**, hat keinen Standardwert.  
   
 `[ @enum_type = ] 'enum_type'` Die *Object_type*Informationen, die zurückgegeben wird. *Enum_type* tatsächlich in den meisten Fällen ist. *Enum_type*ist **char(10)** und hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ACTUAL|Listet nur die *object_types auf* zugeordneten *Namen*.|  
 |ALL|Listet alle die*object_types auf* einschließlich derer, die nicht zugeordnet sind *Namen*.|  
@@ -87,7 +86,7 @@ sp_help_notification
   
  Wenn **Object_type** ist **OPERATOREN**, das Resultset werden alle Operatoren für eine bestimmte Warnung aufgelistet.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Operator-ID.|  
 |**operator_name**|**sysname**|Name des Operators|  

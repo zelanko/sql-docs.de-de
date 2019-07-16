@@ -1,5 +1,5 @@
 ---
-title: Funktionsauswahl (Datamining) | Microsoft Docs
+title: Funktionsauswahl (Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a93e503978779e56250ddf190c61b1b2411050b9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019187"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183266"
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019187"
   
  Bei der Featureauswahl wählt der Analyst oder das Modellierungstool oder ein Algorithmus aktiv Attribute basierend auf deren Eignung für die Analyse aus oder verwirft sie.  Der Analyst kann mithilfe der Featureentwicklung Features hinzufügen und vorhandene Daten entfernen oder ändern, während der Machine Learning-Algorithmus in der Regel Spalten bewertet und ihre Nützlichkeit im Modell überprüft.  
   
- ![Das Feature Selection und engineering-Prozess](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "Feature Selection und engineering-Prozess")  
+ ![Engineering-Prozess und Auswahl von Features](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "engineering-Prozess und Auswahl von Features")  
   
  Die Featureauswahl ist also hilfreich für die Lösung von zwei Problemen, nämlich dass zu viele Daten mit geringem Wert oder zu wenige hochwertige Daten vorhanden sind. Ziel der Featureauswahl sollte das Ermitteln der kleinstmöglichen Anzahl von Spalten aus der Datenquelle sein, die bei der Erstellung eines Modells von Bedeutung sind.  
   

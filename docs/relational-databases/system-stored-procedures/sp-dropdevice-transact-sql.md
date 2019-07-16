@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 633dff3e79a32f73c9ec7c4c376a60969db45aef
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 998794fd2e5fe5521587ebbb2a88c61c80cff39e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927827"
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ## <a name="arguments"></a>Argumente  
 `[ @logicalname = ] 'device'` Wird von der logische Name des Datenbank- oder Sicherungsmediums gemäß **master.dbo.sysdevices.name**. *Gerät* ist **Sysname**, hat keinen Standardwert.  
   
-`[ @delfile = ] 'delfile'` Gibt an, ob die physische sicherungsmediumsdatei gelöscht werden soll. *Delfile* ist **vom Datentyp varchar(7)**. Bei Angabe als **DELFILE**, die Datenträgerdatei physische Sicherungsmedium wird gelöscht.  
+`[ @delfile = ] 'delfile'` Gibt an, ob die physische sicherungsmediumsdatei gelöscht werden soll. *Delfile* ist **vom Datentyp varchar(7)** . Bei Angabe als **DELFILE**, die Datenträgerdatei physische Sicherungsmedium wird gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

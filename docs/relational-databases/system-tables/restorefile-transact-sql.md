@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7414ca1c7d3ef3455aeb3b41c677ebc946a0e3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 788d0296087ee8980be0b0ecf56c43f09fb3780c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910191"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede wiederhergestellte Datei. Dies gilt auch für Dateien, die indirekt nach Dateigruppennamen wiederhergestellt werden. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|Eindeutiger Bezeichner, der den entsprechenden Wiederherstellungsvorgang angibt. Verweise **restorehistory(restore_history_id)**.|  
+|**restore_history_id**|**int**|Eindeutiger Bezeichner, der den entsprechenden Wiederherstellungsvorgang angibt. Verweise **restorehistory(restore_history_id)** .|  
 |**file_number**|**numeric(10,0)**|Datei-ID der wiederhergestellten Datei. Diese Nummer muss in jeder Datenbank eindeutig sein. Kann den Wert NULL haben.<br /><br /> Wird eine Datenbankmomentaufnahme einer Datenbank wiederhergestellt, wird dieser Wert auf die gleiche Weise wie bei einer vollständigen Wiederherstellung aufgefüllt.|  
 |**destination_phys_drive**|**nvarchar(260)**|Laufwerk oder Partition, in welche(s) die Datei wiederhergestellt wurde. Kann den Wert NULL haben.<br /><br /> Wird eine Datenbankmomentaufnahme einer Datenbank wiederhergestellt, wird dieser Wert auf die gleiche Weise wie bei einer vollständigen Wiederherstellung aufgefüllt.|  
 |**destination_phys_name**|**nvarchar(260)**|Name der Datei, in welche die Datei wiederhergestellt wurde, ohne die Informationen zu Laufwerk oder Partition. Kann den Wert NULL haben.<br /><br /> Wird eine Datenbankmomentaufnahme einer Datenbank wiederhergestellt, wird dieser Wert auf die gleiche Weise wie bei einer vollständigen Wiederherstellung aufgefüllt.|  

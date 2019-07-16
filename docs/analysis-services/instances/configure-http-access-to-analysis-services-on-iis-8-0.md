@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182143"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services auf IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "56079466"
   
 -   **Anwendungsentwicklung** | **ISAPI-Erweiterungen**  
   
- Verwenden Sie zum Überprüfen oder Hinzufügen dieser Komponenten **Server-Manager** | **Verwalten** | **Rollen und Features hinzufügen**. Durchlaufen Sie den Assistenten, bis Sie zu **Serverrollen**gelangen. Scrollen Sie nach unten zur Option **Webserver (IIS)**.  
+ Verwenden Sie zum Überprüfen oder Hinzufügen dieser Komponenten **Server-Manager** | **Verwalten** | **Rollen und Features hinzufügen**. Durchlaufen Sie den Assistenten, bis Sie zu **Serverrollen**gelangen. Scrollen Sie nach unten zur Option **Webserver (IIS)** .  
   
 1.  Öffnen Sie **Webserver** | **Sicherheit** , und wählen Sie die Authentifizierungsmethoden aus.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "56079466"
   
  Das Laufwerk muss für das NTFS-Dateisystem formatiert sein. Der Pfad zum Ordner, den Sie erstellen, darf keine Leerzeichen enthalten.  
   
-1.  Kopieren Sie die folgenden Dateien, finden Sie unter \<Laufwerk >: \Programme\Microsoft SQL Server\\< Instanz\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI und einen Ordner namens Resources.  
+1.  Kopieren Sie die folgenden Dateien, finden Sie unter \<Laufwerk >: \Programme\Microsoft SQL Server\\< Instanz\>\OLAP\bin\isapi: MSMDPUMP. MSMDPUMP-DLL. INI, sowie einen Ressourcenordner.  
   
      ![Ordnerstruktur von MSMDPUMP-Dateien](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "Ordnerstruktur von MSMDPUMP-Dateien")  
   
@@ -104,11 +104,11 @@ ms.locfileid: "56079466"
   
 3.  Fügen Sie die zuvor kopierten Dateien in diesen neuen Ordner ein.  
   
-4.  Stellen Sie sicher, dass der Ordner \inetpub\wwwroot\OLAP auf Ihrem Webserver die folgenden Elemente enthält: MSMDPUMP.DLL, MSMDPUMP.INI und einen Ordner namens Resources. Die Ordnerstruktur sollte wie folgt aussehen:  
+4.  Stellen Sie sicher, dass der Ordner \inetpub\wwwroot\OLAP auf dem Webserver Folgendes enthält: MSMDPUMP. MSMDPUMP-DLL. INI, sowie einen Ressourcenordner. Die Ordnerstruktur sollte wie folgt aussehen:  
   
     -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<Laufwerk >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<Laufwerk >: \inetpub\wwwroot\OLAP\Resources  
 > [!NOTE]  
@@ -155,7 +155,7 @@ ms.locfileid: "56079466"
   
 -   Windows-Authentifizierung (Kerberos oder NTLM)  
   
--   Standardauthentifizierung  
+-   Standardauthentifizierung.  
   
 -   Anonyme Authentifizierung  
   
@@ -167,7 +167,7 @@ ms.locfileid: "56079466"
   
  Die**anonyme Authentifizierung** wird häufig in anfänglichen Testverfahren verwendet, weil sie einfach zu konfigurieren ist und hilft, die HTTP-Verbindung mit Analysis Services schnell zu überprüfen. In wenigen Schritten können Sie ein eindeutiges Benutzerkonto als Identität zuweisen, die Kontoberechtigungen in Analysis Services erteilen, über das Konto den Datenzugriff in einer Clientanwendung überprüfen und die anonyme Authentifizierung wieder deaktivieren, wenn die Tests abgeschlossen sind.  
   
- Sie können die anonyme Authentifizierung auch in einer Produktionsumgebung verwenden, wenn die Benutzer keine Windows-Benutzerkonten besitzen. Dabei sollten Sie jedoch die im folgenden Artikel beschriebenen bewährten Methoden befolgen und die Berechtigungen für das Hostsystem sperren: [Aktivieren der anonymen Authentifizierung (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Achten Sie darauf, die Authentifizierung für das virtuelle Verzeichnis und nicht für die übergeordnete Website festzulegen, um die Kontozugriffsebene weiter einzuschränken.  
+ Sie können auch die anonyme Authentifizierung in einer produktionsumgebung verwenden, wenn Ihre Benutzer sich nicht auf Windows-Benutzerkonten müssen, aber beschriebenen in diesem Artikel befolgen und bewährte Methoden von Berechtigungen für das Hostsystem sperren: [Aktivieren der anonymen Authentifizierung (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Achten Sie darauf, die Authentifizierung für das virtuelle Verzeichnis und nicht für die übergeordnete Website festzulegen, um die Kontozugriffsebene weiter einzuschränken.  
   
  Falls die anonyme Authentifizierung aktiviert ist, kann jeder Benutzer als anonymer Benutzer eine Verbindung mit dem HTTP-Endpunkt herstellen. Sie sind nicht in der Lage, einzelne benutzerverbindungen zu überwachen oder verwenden die Identität des Benutzers, Daten aus einem Modell auszuwählen. Folglich wirkt sich die Verwendung eines anonymen Kontos nicht nur auf den Modellentwurf, sondern auch auf die Datenaktualisierung und den Datenzugriff aus. Wenn Benutzer anfänglich jedoch keine Windows-Benutzeranmeldung besitzen, besteht in der Verwendung des anonymen Kontos u. U. Ihre einzige Alternative.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "56079466"
 |-|-|  
 |Anonym|Fügen Sie der Liste „Mitgliedschaft“ das unter **Anmeldeinformationen für anonyme Authentifizierung bearbeiten** in IIS angegebene Konto hinzu. Weitere Informationen finden Sie unter [Anonyme Authentifizierung](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication),|  
 |Windows-Authentifizierung|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, über die Analysis Services-Daten per Identitätswechsel oder Delegierung angefordert werden.<br /><br /> Falls eingeschränkte Kerberos-Delegierung verwendet wird, benötigen nur die Windows-Benutzer- und -Gruppenkonten, die Zugriff anfordern, Berechtigungen. Für die Anwendungspoolidentität sind keine Berechtigungen erforderlich.|  
-|Standardauthentifizierung|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, die in der Verbindungszeichenfolge übergeben werden.<br /><br /> Falls Sie Anmeldeinformationen über **EffectiveUserName** in der Verbindungszeichenfolge übergeben, muss die Anwendungspoolidentität außerdem über Administratorrechte in der Analysis Services-Instanz verfügen. In SSMS mit der Maustaste der Instanz &#124; **Eigenschaften** &#124; **Sicherheit** &#124; **hinzufügen**. Geben Sie die Anwendungspoolidentität ein. Wenn Sie die integrierte Standardidentität verwendet haben, wird das Konto angegeben, als **IIS AppPool\DefaultAppPool**.<br /><br /> ![Zeigt, wie das AppPoolIdentity-Konto eingeben](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "wird gezeigt, wie die AppPoolIdentity-Kontonamen eingeben")|  
+|Standardauthentifizierung.|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, die in der Verbindungszeichenfolge übergeben werden.<br /><br /> Falls Sie Anmeldeinformationen über **EffectiveUserName** in der Verbindungszeichenfolge übergeben, muss die Anwendungspoolidentität außerdem über Administratorrechte in der Analysis Services-Instanz verfügen. In SSMS mit der Maustaste der Instanz &#124; **Eigenschaften** &#124; **Sicherheit** &#124; **hinzufügen**. Geben Sie die Anwendungspoolidentität ein. Wenn Sie die integrierte Standardidentität verwendet haben, wird das Konto angegeben, als **IIS AppPool\DefaultAppPool**.<br /><br /> ![Zeigt, wie das AppPoolIdentity-Konto eingeben](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "wird gezeigt, wie die AppPoolIdentity-Kontonamen eingeben")|  
   
  Weitere Informationen finden Sie unter [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   

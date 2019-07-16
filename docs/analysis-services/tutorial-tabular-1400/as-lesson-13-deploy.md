@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685307"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162215"
 ---
 # <a name="deploy"></a>Bereitstellen
 
@@ -23,9 +23,9 @@ ms.locfileid: "57685307"
 
 In dieser Lektion Konfigurieren Sie Bereitstellungseigenschaften; ein Server für die Bereitstellung und einen Namen für das Modell angeben. Klicken Sie dann bereitgestellt das Modell mit dem Server. Nachdem das Modell bereitgestellt wurde, können Benutzer das Herstellen einer Verbindung mit einer Clientanwendung zur berichtserstellung. Weitere Informationen finden Sie unter [bereitstellen an Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy) und [Bereitstellung von tabellenmodelllösungen](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **5 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **5 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 
 Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 12: In Excel analysieren](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
 
@@ -44,7 +44,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
 2.  In der **Eigenschaftenseiten des AW Internet Sales** Dialogfeld **Bereitstellungsserver**in die **Server** -Eigenschaft, geben Sie den vollständigen Servernamen. Wenn Sie eine Verbindung mit Azure Analysis Services herstellen möchten, muss Servernamen enthalten die vollständige URL an.
 
-    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![als lesson13-bereitstellen-Eigenschaft](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  In der **Datenbank** Eigenschaft **Adventure Works Internet Sales**.  
   
@@ -62,7 +62,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
     Das Dialogfeld "Deploy" wird angezeigt und zeigt den Bereitstellungsstatus der Metadaten und jede im Modell enthaltene Tabelle an.  
     
-    ![as-lesson13-deploy-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
+    ![als-lesson13-bereitstellen-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
   
 3. Wenn die Bereitstellung erfolgreich abgeschlossen wurde, fahren Sie fort, und klicken Sie auf **Schließen**.  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4e546aa56cf9831a0b519f5788359d8c58c41fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9ead25f93ff16d453923be437dfacd7572c09f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937977"
 ---
 # <a name="odbc-64-bit-information"></a>64-Bit-ODBC-Informationen
 Ab Windows Server 2003, müssen Microsoft-Betriebssystemen die 64-Bit-ODBC-Bibliotheken unterstützt. Die ODBC-Header und Bibliotheken, die zuerst im Lieferumfang von MDAC 2.7 SDK enthalten Änderungen, um Programmierern, leicht Schreiben von Code für den neuen 64-Bit-Plattformen zu ermöglichen. Sicherstellen, dass Ihr Code, die ODBC verwendet-definierten Typen, die unten aufgeführten, können Sie sowohl für 64-Bit und 32-Bit-Plattformen basierend auf demselben Quellcode kompilieren der **_WIN64** oder **WIN32** Makros.  
@@ -373,7 +372,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_MAX_ROWS  
   
- SQL_ROWSET_SIZE  
+ SQL_ROWSET_SIZE SETZEN  
   
  **SQLSetConnectAttr**  
   
@@ -495,7 +494,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_MAX_ROWS  
   
- SQL_ROWSET_SIZE  
+ SQL_ROWSET_SIZE SETZEN  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in ODBC](../../odbc/reference/introduction-to-odbc.md)

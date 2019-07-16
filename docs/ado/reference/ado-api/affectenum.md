@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6ff6704ca12fbb20c93133d7e73f29a5f72c9e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920755"
 ---
 # <a name="affectenum"></a>AffectEnum
 Gibt an, welche Datensätze von einem Vorgang betroffen sind.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|Wenn keine vorhanden ist eine [Filter](../../../ado/reference/ado-api/filter-property.md) angewendet werden, um die **Recordset**, wirkt sich auf alle Datensätze.<br /><br /> Wenn die **Filter** -Eigenschaftensatz auf eine Zeichenfolgenkriterien (wie z. B. "Autor ="Smith""), und klicken Sie dann der Vorgang wirkt sich die sichtbaren Datensätze in das aktuelle Kapitel auf.<br /><br /> Wenn die **Filter** -Eigenschaftensatz auf einen Member der [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) oder ein Array von Lesezeichen, und klicken Sie dann auf den Vorgang wirkt sich auf alle Zeilen der **Recordset**. **Hinweis: AdAffectAll** wird ausgeblendet, im Objektkatalog Visual Basic.|  
 |**adAffectAllChapters**|4|Wirkt sich auf alle Datensätze in der alle gleichgeordneten Kapiteln die **Recordset**, einschließlich derjenigen, die über einen nicht sichtbaren **Filter** , die derzeit angewendet wird.|  

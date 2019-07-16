@@ -1,5 +1,5 @@
 ---
-title: Übersetzungen in tabellarischen Modellen (Analysis Services) | Microsoft Docs
+title: Übersetzungen in tabellenmodellen (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddd49ce6d3edc3f1e2f72a3fe7f5ab61621eef62
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044174"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162396"
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Übersetzungen in Tabellenmodellen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Fügt Unterstützung für übersetzungszeichenfolgen für Tabellenmodelle hinzu. Einzelne Objekte im Modell können mehrere Übersetzungen eines Namens oder einer Beschreibung aufweisen, wodurch die Unterstützung von mehrsprachigen Versionen innerhalb der Modelldefinition möglich wird.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Fügt Unterstützung für übersetzungszeichenfolgen für Tabellenmodelle. Einzelne Objekte im Modell können mehrere Übersetzungen eines Namens oder einer Beschreibung aufweisen, wodurch die Unterstützung von mehrsprachigen Versionen innerhalb der Modelldefinition möglich wird.  
   
  Übersetzte Zeichenfolgen stehen nur für Objektmetadaten (Namen und Beschreibungen von Tabellen und Spalten) zur Verfügung, die in einem Clienttool wie einer Excel PivotTable-Liste angezeigt werden.  Zum Verwenden von übersetzten Listen gibt die Clientverbindung die Kultur an. Im Feature **In Excel analysieren** können Sie die Sprache in einer Dropdownliste auswählen. Für andere Tools muss die Kultur möglicherweise in der Verbindungszeichenfolge eingegeben werden.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0f0084f93fa648e5db79ef70dd5f05a259b94b67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50723f7b7161bbed960ce2f94e1b7bbf79d420d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938413"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neuerungen in SSMA für Access (AccessToSQL)
 
@@ -31,14 +30,14 @@ Die v8.2-Version von SSMA für Access wird der gezielte Fixes erweitert, die ent
 > [!IMPORTANT]
 > SSMA v7.4 und höher ist .net 4.5.2 eine Voraussetzung für Installation.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>SSMA v8. 1
 
 Die v8. 1-Version von SSMA für Access wird der gezielte Fixes erweitert, die entwickelt wurden, um die Qualität und Konvertierung von Metriken zu verbessern.
 
 > [!NOTE]
 > Ein bekanntes Problem bei der automatischen Aktualisierung möglicherweise den Fehler eines Updates von SSMA-Version 8.0 auf v8. 1. Wenn dieser Fehler auftritt, können herunterladen Sie die neue Version und installieren Sie ihn manuell klicken.
 
-## <a name="ssma-v80"></a>SSMA v8.0
+## <a name="ssma-v80"></a>SSMA v8. 0
 
 Die v8. 0-Version von SSMA für Access wird erweitert, gezielte Fixes, die zur Verbesserung der Qualität und Konvertierung Metriken entwickelt. Diese Version bietet auch die folgenden neuen Features:
 
@@ -66,7 +65,7 @@ Die v7.9-Version von SSMA für Access umfasst die folgenden Änderungen:
 * Unterstützt die in der SSMA-Befehlszeile, Data Type Mapping und Projekt-Einstellungen zu ändern.
 * Die Azure SQL-Datenbank-Verbindungsdialogfeld in SSMA wurde auch geändert, um den vollqualifizierten Servernamen angeben. In früheren Versionen von SSMA musste das Präfix für die Azure SQL-Datenbank innerhalb von Projekten Einstellungen angegeben werden.
 
-## <a name="ssma-v78"></a>SSMA v7.8
+## <a name="ssma-v78"></a>SSMA V7. 8
 
 Die V7. 8-Version von SSMA für Access umfasst die folgenden Änderungen:
 
@@ -84,7 +83,7 @@ Die v7.7-Version von SSMA für Access umfasst die folgenden Änderungen:
 
 Die v7.6-Version von SSMA für Access wird erweitert, mit gezielte Fixes, die die Qualität und Konvertierung von Metriken zu verbessern und mit Unterstützung für SQL Server 2017 (öffentliche Vorschau). Unterstützung für SQL Server 2017 unter Windows und Linux wird in der öffentlichen Vorschau und darf nicht für Produktionsmigrationen verwendet werden.
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA V7. 5
 
 Die V7. 5-Version von SSMA für Access wird durch verschiedene Verbesserungen, um sicherzustellen, dass größere Barrierefreiheit für Personen mit behinderungen erweitert.
 
@@ -101,7 +100,7 @@ Die v7.4-Version von SSMA für Access umfasst die folgenden Änderungen:
   > [!IMPORTANT]
   > .NET 4.5.2 ist eine Voraussetzung zum Installieren von SSMA-v7.4. Darüber hinaus v7.4 ab, die 32-Bit-Version von SSMA nicht mehr unterstützt.
 
-## <a name="ssma-v73"></a>SSMA v7.3
+## <a name="ssma-v73"></a>SSMA V7. 3
 
 Die V7. 3-Version von SSMA für Access umfasst die folgenden Änderungen:
 
@@ -116,7 +115,7 @@ Die V7. 3-Version von SSMA für Access umfasst die folgenden Änderungen:
       * Anweisungen dazu, einen benutzerdefinierten Konverter erstellen finden Sie in diesem Blogbeitrag [Erweitern von SQL Server Migration Assistant Konvertierungsfunktionen](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       * Ein Beispielprojekt für die Konvertierung aus dieser [Blogbeitrag](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>SSMA V7. 2
 
 Die V7. 2-Version von SSMA für Access umfasst die folgenden Änderungen:
 

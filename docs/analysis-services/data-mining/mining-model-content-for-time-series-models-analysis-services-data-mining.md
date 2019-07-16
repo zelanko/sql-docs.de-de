@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182663"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52513780"
  Die folgenden Abschnitte erklären, wie die Knoten innerhalb jedes dieser Modelltypen angeordnet sind.  
   
 ### <a name="structure-of-an-artxp-model"></a>Struktur des ARTXP-Modells  
- Mit dem ARTXP-Algorithmus wird ein Modell erstellt, das einem Entscheidungsstrukturmodell entspricht. Vorhersagbare Attribute werden gruppiert und immer dann geteilt, wenn signifikante Unterschiede gefunden werden. Aus diesem Grund enthält jedes ARTXP-Modell eine separate Verzweigung für jedes vorhersagbare Attribut. Im Lernprogramm zu Data Mining-Grundlagen wird beispielsweise ein Modell erstellt, das den Betrag der Verkäufe für mehrere Regionen vorhersagt. In diesem Fall ist **[Amount]** das vorhersagbare Attribut, und für jede Region wird eine separate Verzweigung erstellt. Bei zwei vorhersagbaren Attributen, z.B. **[Amount]** und **[Quantity]**, wird für jede Attribut/Region-Kombination eine separate Verzweigung erstellt.  
+ Mit dem ARTXP-Algorithmus wird ein Modell erstellt, das einem Entscheidungsstrukturmodell entspricht. Vorhersagbare Attribute werden gruppiert und immer dann geteilt, wenn signifikante Unterschiede gefunden werden. Aus diesem Grund enthält jedes ARTXP-Modell eine separate Verzweigung für jedes vorhersagbare Attribut. Im Lernprogramm zu Data Mining-Grundlagen wird beispielsweise ein Modell erstellt, das den Betrag der Verkäufe für mehrere Regionen vorhersagt. In diesem Fall ist **[Amount]** das vorhersagbare Attribut, und für jede Region wird eine separate Verzweigung erstellt. Bei zwei vorhersagbaren Attributen, z.B. **[Amount]** und **[Quantity]** , wird für jede Attribut/Region-Kombination eine separate Verzweigung erstellt.  
   
  Der oberste Knoten der ARTXP-Struktur enthält dieselben Informationen wie der Stammknoten einer Entscheidungsstruktur. Dazu gehören die Anzahl der untergeordneten Elemente für diesen Knoten (CHILDREN_CARDINALITY), die Anzahl der Fälle, die die Bedingungen dieses Knotens erfüllen (NODE_SUPPORT), sowie verschiedene beschreibende Statistiken (NODE_DISTRIBUTION).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52513780"
 >  Sie finden die komplette Regressionsformel auf Blattknotenebene, jedoch nicht in Stamm- oder Zwischenebenenknoten.  
   
 ### <a name="structure-of-an-arima-model"></a>Struktur eines ARIMA-Modells  
- Der ARIMA-Algorithmus erstellt eine einzelne Information für jede Kombination einer Datenreihe (z. B. **[Region]**) und einem vorhersagbaren Attribut (z. B. **[Sales Amount]**)-die Formel, beschreibt der Änderung des vorhersagbaren Attributs im Laufe der Zeit.  
+ Der ARIMA-Algorithmus erstellt eine einzelne Information für jede Kombination einer Datenreihe (z. B. **[Region]** ) und einem vorhersagbaren Attribut (z. B. **[Sales Amount]** )-die Formel, beschreibt der Änderung des vorhersagbaren Attributs im Laufe der Zeit.  
   
  Die Formel für jede Reihe wird von mehreren Komponenten abgeleitet, eine für jede in den Daten gefundene periodische Struktur. Wenn Sie beispielsweise über Verkaufsdaten verfügen, die auf monatlicher Basis erfasst werden, können mit dem Algorithmus monatliche, vierteljährliche oder jährliche periodische Strukturen erkannt werden.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "52513780"
   
  **ARTXP:**  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |1 (Model)|Zeitreihe|  
 |3 (Innen)|Stellt eine Verzweigung innerhalb einer ARTXP-Zeitreihenstruktur dar.|  
@@ -126,7 +126,7 @@ ms.locfileid: "52513780"
   
  **ARIMA:**  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |27 (ARIMA-Stamm)|Der oberste Knoten einer ARIMA-Struktur.|  
 |28 (ARIMA Periodische Struktur)|Komponente einer ARIMA-Struktur, die eine einzelne periodische Struktur beschreibt.|  
@@ -303,7 +303,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Grundlegendes zur ARIMA-Struktur  
  Jede Struktur in einem ARIMA-Modell entspricht einer *Periodizität* oder *periodischen Struktur*. Eine periodische Struktur ist ein Datenmuster, das sich durch die gesamte Datenreihe zieht. Geringfügige Abweichungen in diesem Muster sind innerhalb statistischer Grenzen erlaubt. Die Periodizität wird nach den Standardzeiteinheiten gemessen, die in den Trainingsdaten verwendet wurden. Beispiel: Wenn die Trainingsdaten Verkaufsdaten für jeden Tag enthalten, ist die Standardzeiteinheit ein Tag, und alle periodischen Strukturen werden als Anzahl von Tagen definiert.  
   
- Jede periodische Struktur, die vom Algorithmus erkannt wird, erhält einen eigenen Strukturknoten. Wenn Sie z. B. Verkaufsdaten auf Tagesbasis analysieren, können periodische Strukturen erkannt werden, die Wochen darstellen. In diesem Fall erstellt der Algorithmus zwei periodische Strukturen im fertigen Modell: eine für den standardmäßigen Zeitraum von einem Tag, die als {1} bezeichnet wird, und eine für Wochen, die als {7} bezeichnet wird.  
+ Jede periodische Struktur, die vom Algorithmus erkannt wird, erhält einen eigenen Strukturknoten. Wenn Sie z. B. Verkaufsdaten auf Tagesbasis analysieren, können periodische Strukturen erkannt werden, die Wochen darstellen. In diesem Fall wird der Algorithmus zwei periodische Strukturen erstellt, im fertigen Modell: eine für den standardmäßigen Zeitraum, in der schulungsausgabe als {1}, und eine für Wochen, angegeben durch {7}.  
   
  Beispiel: Die folgende Abfrage gibt alle ARIMA-Strukturen aus einem Miningmodell zurück.  
   

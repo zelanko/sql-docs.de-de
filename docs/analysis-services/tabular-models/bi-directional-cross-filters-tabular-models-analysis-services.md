@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072307"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163188"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Bidirektionale kreuzfilter in tabellarischen Modellen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "53072307"
   
 4.  Überprüfen Sie, ob Kompatibilitätsgrad nastaven NA hodnotu **SQL Server 2016 RTM (1200)** oder höher.  
   
-     Klicken Sie auf **OK** , um das Projekt zu erstellen.  
+     Klicken Sie auf **OK**, um das Projekt zu erstellen.  
   
 ### <a name="add-data"></a>Hinzufügen von Daten  
   

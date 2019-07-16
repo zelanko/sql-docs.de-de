@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923416"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die Reihenfolge der Daten im Resultset, suchen Sie nach einem bestimmten Datensatz basierend auf Kriterien, die Sie angeben, und sogar die Suchvorgänge mithilfe von Indizes optimieren ändern können. Gibt an, ob diese Features verwendet werden könne.n hängt davon ab, der Anbieter und in einigen Fällen – wie z. B. mit der die [Index](../../../ado/reference/ado-api/index-property.md) -Eigenschaft: die Struktur der Datenquelle selbst.  
@@ -112,7 +111,7 @@ Die **Recordset** Objekt verfügt über integrierte Features, mit denen Sie die 
 ### <a name="filtering-with-a-constant"></a>Mit einer Konstanten filtern  
  Die folgenden Konstanten sind verfügbar für die Filterung **Recordsets**.  
   
-|Konstante|Description|  
+|Konstante|Beschreibung|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filter für die Anzeige von nur Datensätze, die von der letzten betroffen **löschen**, **Resync**, **UpdateBatch**, oder **CancelBatch** aufrufen.|  
 |**adFilterConflictingRecords**|Die Filter zum Anzeigen der Datensätze, die Fehler bei der letzten Batchaktualisierung.|  

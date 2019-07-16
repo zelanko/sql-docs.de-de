@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145705"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209203"
 ---
 # <a name="actions-in-multidimensional-models"></a>Aktionen in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "50145705"
  **Aktionsinhalt**  
  Wählen Sie den Typ der Aktion aus. In der folgenden Tabelle werden die verfügbaren Aktionstypen zusammengefasst.  
   
-|Typ|Description|  
+|Typ|Beschreibung|  
 |----------|-----------------|  
 |Dataset|Ruft ein Dataset ab.|  
 |Proprietär|Führt einen Vorgang über eine Schnittstelle aus, die nicht in dieser Tabelle aufgelistet ist.|  
@@ -65,10 +65,10 @@ ms.locfileid: "50145705"
  **Weitere Eigenschaften**  
  Wählen Sie die Eigenschaft aus. In der folgenden Tabelle werden die verfügbaren Eigenschaften zusammengefasst.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**Aufruf**|Gibt an, wie die Aktion ausgeführt wird. Die Standardeinstellung Interaktiv gibt an, dass die Aktion ausgeführt wird, wenn ein Benutzer auf ein Objekt zugreift. Die möglichen Einstellungen sind:<br /><br /> Batch<br /><br /> Interaktiv<br /><br /> Beim Öffnen|  
-|**Application**|Beschreibt die Anwendung der Aktion.|  
+|**Anwendung**|Beschreibt die Anwendung der Aktion.|  
 |**Beschreibung**|Beschreibt die Aktion.|  
 |**Beschriftung**|Stellt eine Beschriftung bereit, die für die Aktion angezeigt wird. Handelt es sich bei der Beschriftung um MDX, geben Sie **True** für **Beschriftung ist MDX**an.|  
 |**Beschriftung ist MDX**|Geben Sie **True** an, wenn es sich bei der Beschriftung um MDX handelt; andernfalls geben Sie **False** an.|  
@@ -82,7 +82,7 @@ ms.locfileid: "50145705"
  **Berichtsserver**  
  Die in der folgenden Tabelle beschriebenen Eigenschaften sind spezifisch für den Berichtsserver.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**Servername**|Name des Computers, auf dem der Berichtsserver ausgeführt wird.|  
 |**Serverpfad**|Der vom Berichtsserver verfügbar gemachte Pfad.|  

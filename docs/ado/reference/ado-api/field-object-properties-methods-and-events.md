@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50344cc7152e1d91208e6bc2aa9f92d6d8895568
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 556ac82e9f588183effe2abe2e4b15e279258a3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932762"
 ---
 # <a name="field-object-properties-methods-and-events"></a>Feld Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -52,7 +51,7 @@ ms.locfileid: "63267020"
  [GetChunk-Methode](../../../ado/reference/ado-api/getchunk-method-ado.md)  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410667"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210006"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52410667"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Erstellen von Modellfiltern unter Verwendung des Data Mining-Designers  
  Sie filtern ein Modell im Data Mining-Designer, indem Sie die **Filter** -Eigenschaft des Miningmodells ändern. Sie können einen Filterausdruck entweder direkt im Bereich **Eigenschaften** eingeben, oder Sie öffnen ein Filterdialogfeld, um Bedingungen zu erstellen.  
   
- Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. Mithilfe der Operatoren **AND**/**OR** können Sie mehrere Bedingungen verknüpfen. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Zum Beispiel können Sie mit fortlaufenden Werten die Operatoren **greater than** und **less than** verwenden. Für diskrete Werte können Sie allerdings nur die Operatoren **= (gleich)**, **!= (ungleich)** und **ist NULL** verwenden.  
+ Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. Mithilfe der Operatoren **AND**/**OR** können Sie mehrere Bedingungen verknüpfen. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Zum Beispiel können Sie mit fortlaufenden Werten die Operatoren **greater than** und **less than** verwenden. Für diskrete Werte können Sie allerdings nur die Operatoren **= (gleich)** , **!= (ungleich)** und **ist NULL** verwenden.  
   
 > [!NOTE]  
 >  Das Schlüsselwort **LIKE** wird nicht unterstützt. Wenn Sie mehrere diskrete Attribute einfügen möchten, müssen Sie einzelne Bedingungen erstellen und diese mithilfe des Operators **OR** verknüpfen.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13c7179576cd29fb646b3fc62b21694452a0749b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922175"
 ---
 # <a name="solutions-for-remote-data-access"></a>Lösungen für den Remotedatenzugriff
 ## <a name="the-issue"></a>Das Problem  
@@ -46,7 +45,7 @@ ms.locfileid: "66699322"
 ## <a name="see-also"></a>Siehe auch  
  [Grundlegendes RDS-Programmiermodell](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [RDS-Architektur](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [RDS-Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Verwendung und Sicherheit von RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

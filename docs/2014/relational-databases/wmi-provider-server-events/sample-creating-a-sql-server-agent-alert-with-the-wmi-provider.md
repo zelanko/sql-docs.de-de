@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195836"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Beispiel: Erstellen einer SQL Server-Agent-Warnung mithilfe des WMI-Anbieters für Serverereignisse
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter für Serverereignisse
   Eine gebräuchliche Möglichkeit zum Verwenden des WMI-Ereignisanbieters ist die Erstellung von SQL Server-Agent-Warnungen, die auf bestimmte Ereignisse antworten. Das folgende Beispiel stellt eine einfache Warnung dar, die XML-Deadlockdiagrammereignisse in einer Tabelle zur späteren Analyse speichert. SQL Server-Agent übermittelt eine WQL-Anforderung, empfängt WMI-Ereignisse und führt als Antwort auf das Ereignis einen Auftrag aus. Beachten Sie, dass der WMI-Ereignisanbieter die Details bei der Erstellung und Verwaltung von Service Broker-Objekten behandelt, obwohl mehrere dieser Objekte an der Verarbeitung der Benachrichtigungsmeldung beteiligt sind.  
   
 ## <a name="example"></a>Beispiel  
@@ -102,7 +102,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Führen Sie auf der zweiten Abfrageregisterkarte das folgende Skript aus. Dieses Skript erzeugt ein Resultset und blockiert dann und wartet auf das Abrufen einer Sperre von `Production.Product`.  
+ Führen Sie in der zweiten abfrageregisterkarte das folgende Skript ein. Dieses Skript erzeugt ein Resultset und blockiert dann und wartet auf eine Sperre auf `Production.Product`.  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +118,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Führen Sie auf der ersten Abfrageregisterkarte das folgende Skript aus. Dieses Skript blockiert und wartet auf das Abrufen einer Sperre von `Production.Location`. Nach einem kurzen Timeout wählt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Skript oder das Skript aus dem Beispiel als Deadlockopfer aus und beendet die Transaktion.  
+ Führen Sie auf der ersten abfrageregisterkarte das folgende Skript. Dieses Skript blockiert und die darauf warten, auf das Abrufen einer Sperre `Production.Location`. Nach einem kurzen Timeout wählt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Skript oder das Skript aus dem Beispiel als Deadlockopfer aus und beendet die Transaktion.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e38b253cdebcc5ab976de8c8eb355f7f6fb03aec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922764"
 ---
 # <a name="customization-file-userlist-section"></a>UserList-Abschnitt der Anpassungsdatei
 Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem gleichen *Bezeichner* Parameter.  
@@ -32,10 +31,10 @@ Die **Userlist** Abschnitt bezieht sich auf die **verbinden** Abschnitt mit dem 
 ## <a name="syntax"></a>Syntax  
  Ein Eintrag des Benutzers Zugriff hat das Format:  
   
- _userName_ **=**    
+ _Benutzername_ **=**    
  **_accessRights_**  
   
-|Teil|Beschreibung|  
+|Segment|Beschreibung|  
 |----------|-----------------|  
 |*userName*|Die *Benutzernamen* der Person, die diese Verbindung. Gültige Benutzernamen sind mit IIS hergestellt **Service Manager** Dialogfeld.|  
 |**_accessRights_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** -Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   **ReadOnly** -Benutzer kann die Datenquelle lesen.<br />-    **"ReadWrite"** -Benutzer Lese- oder Schreibzugriff auf Daten in die Datenquelle.|  

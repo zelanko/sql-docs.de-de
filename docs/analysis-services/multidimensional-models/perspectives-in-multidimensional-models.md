@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae14c0e76564ebcaffecb7591d14c283fffd2906
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208561"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Perspektiven in mehrdimensionalen Modellen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53072587"
   
 -   Measures  
   
--   Dimensionen  
+-   Abmessungen  
   
 -   Hierarchien  
   

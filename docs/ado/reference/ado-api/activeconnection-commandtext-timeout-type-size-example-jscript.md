@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3844bcc8488dedf2d5ab7d9fdd9492caaf0fdf3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9c474cfe2b1d38154129070cb11c91434ee4fad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921559"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (JScript)
 Dieses Beispiel verwendet die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), ["CommandTimeout"](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md), und [Richtung](../../../ado/reference/ado-api/direction-property.md) Eigenschaften zum Ausführen einer gespeicherten Prozedur. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **ActiveConnectionJS.asp**.  
@@ -182,6 +181,6 @@ BODY {
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Direction-Eigenschaft](../../../ado/reference/ado-api/direction-property.md)   
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)   
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Size-Eigenschaft (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

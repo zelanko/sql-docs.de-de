@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 38ba526abcafb8d8bd046cbb1624b778bab52090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c85332cb1c26f81cdbbaa7bffa5410cf29e711e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904550"
 ---
 # <a name="sysresourcegovernorconfiguration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt den gespeicherten Status der Ressourcenkontrolle zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|Die ID der Klassifizierungsfunktion, wie sie in den Metadaten gespeichert ist. Lässt keine NULL-Werte zu.<br /><br /> **Beachten Sie** diese Funktion wird verwendet, um neue Sitzungen zu klassifizieren und verwendet Regeln, um die arbeitsauslastung an die entsprechende Arbeitsauslastungsgruppe weiterzuleiten. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_enabled|**bit**|Gibt den aktuellen Status der Ressourcenkontrolle an:<br /><br /> 0 = Resource Governor ist nicht aktiviert.<br /><br /> 1 = die Ressourcenkontrolle aktiviert ist.<br /><br /> Lässt keine NULL-Werte zu.|  

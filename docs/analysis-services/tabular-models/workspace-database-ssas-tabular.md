@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b3f9d94d35d5aaa4ea86cf1f1d9dc845b67eaf4f
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072267"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162354"
 ---
 # <a name="workspace-database"></a>Arbeitsbereichsdatenbank
 
@@ -79,9 +79,9 @@ Sie können mithilfe der Eigenschaften „Arbeitsbereichsdatenbank“ und „Arb
  Die Eigenschaften von Arbeitsbereichsdatenbanken sind in den Modelleigenschaften enthalten. Um Modelleigenschaften in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im **Projektmappen-Explorer**anzuzeigen, klicken Sie auf die Datei **Model.bim** . Modelleigenschaften können mit dem **Eigenschaftenfenster** konfiguriert werden. Die Eigenschaften von Arbeitsbereichsdatenbanken umfassen:  
   
 > [!NOTE]  
->  Auf die Eigenschaften **Modus „Integrierter Arbeitsbereich“**, **Arbeitsbereichsserver**, **Arbeitsbereich beibehalten** und **Datensicherung** werden beim Erstellen eines neuen Modellprojekts die Standardeinstellungen angewendet. Die Standardeinstellungen für neue Modellprojekte können auf der Seite **Datenmodellierung** in den Einstellungen für **Analysis-Server** im Dialogfeld „Extras/Optionen“ geändert werden. Diese und andere Eigenschaften können auch für jedes Modellprojekt im **Eigenschaftenfenster** festgelegt werden. Änderungen an den Standardeinstellungen wirken sich nicht auf bereits erstellte Modellprojekte aus. Weitere Informationen finden Sie unter [konfigurieren Sie die Modellierung und Bereitstellung Standardeigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
+>  Auf die Eigenschaften **Modus „Integrierter Arbeitsbereich“** , **Arbeitsbereichsserver**, **Arbeitsbereich beibehalten** und **Datensicherung** werden beim Erstellen eines neuen Modellprojekts die Standardeinstellungen angewendet. Die Standardeinstellungen für neue Modellprojekte können auf der Seite **Datenmodellierung** in den Einstellungen für **Analysis-Server** im Dialogfeld „Extras/Optionen“ geändert werden. Diese und andere Eigenschaften können auch für jedes Modellprojekt im **Eigenschaftenfenster** festgelegt werden. Änderungen an den Standardeinstellungen wirken sich nicht auf bereits erstellte Modellprojekte aus. Weitere Informationen finden Sie unter [konfigurieren Sie die Modellierung und Bereitstellung Standardeigenschaften](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md).  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Modus „Integrierter Arbeitsbereich“**|TRUE, FALSE|Wenn bei der Projekterstellung der Modus „Integrierter Arbeitsbereich“ für die Arbeitsbereichsdatenbank ausgewählt ist, ist diese Eigenschaft TRUE. Wenn bei der Projekterstellung der Modus **Arbeitsbereichsserver** ausgewählt ist, ist diese Eigenschaft FALSE. | 
 |**Arbeitsbereichsdatenbank**|Name|Der Name der Arbeitsbereichsdatenbank. Diese Eigenschaft kann nicht bearbeitet werden, wenn der **Modus „Integrierter Arbeitsbereich“** auf **TRUE**festgelegt ist.|  

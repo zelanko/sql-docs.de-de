@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984101"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209412"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Dynamische Verwaltungssichten (DMVs) 
 
@@ -103,7 +103,7 @@ Schemarowsets werden in zwei SQL Server Analysis Services-Protokollen beschriebe
 
 ### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Rowsets, die in der [MS-SSAS-T] beschrieben werden: SQL Server Analysis Services Tabular Protocol
 
-|Rowset  |Description  |
+|Rowset  |Beschreibung  |
 |---------|---------|
 |[TMSCHEMA_ANNOTATIONS](https://msdn.microsoft.com/library/mt704370)|Enthält Informationen zu den Annotation-Objekten im Modell.|
 |[TMSCHEMA_ATTRIBUTE_HIERARCHIES](https://msdn.microsoft.com/library/mt704362)     |   Enthält Informationen über die AttributeHierarchy-Objekte für eine Spalte.      |
@@ -136,7 +136,7 @@ Schemarowsets werden in zwei SQL Server Analysis Services-Protokollen beschriebe
 
 ### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Rowsets, die in der [MS-SSAS] beschrieben werden: SQL Server Analysis Services-Protokoll
 
-|Rowset|Description|  
+|Rowset|Beschreibung|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS](https://msdn.microsoft.com/library/ee302115)|Beschreibt die Kataloge, die auf dem Server zugegriffen werden kann.|  
 |[DBSCHEMA_COLUMNS](https://msdn.microsoft.com/library/ee301789)|Gibt eine Zeile für jedes Measure, jedes Dimensionsattribut Cube und jede Spalte Schema Rowsets, als einer Spalte verfügbar gemacht werden.|  

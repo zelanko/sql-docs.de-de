@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften für Miningstrukturen und Strukturspalten | Microsoft Docs
+title: Eigenschaften für Miningstrukturen und Strukturspalten | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 72f89879ac7b50f35af283e13b25fb8c8b439b2d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182449"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "34017137"
   
 ### <a name="properties-of-the-mining-structure"></a>Eigenschaften der Miningstruktur  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen. **Hinweis:**  Dieses Attribut muss auf **KeepTrainingCases** festgelegt werden, um Drillthroughs und zurückgehaltene Daten zu ermöglichen.|  
+|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen. **Hinweis**:  Diese Eigenschaft muss festgelegt werden, um **KeepTrainingCases** um Drillthroughs und Zurückgehaltene Daten zu aktivieren.|  
 |**Sortierung**|Gibt die Standardsortierung für die Spalte an. Wird keine Sortierung angegeben, wird die Sortierung des Servers verwendet.|  
 |**Beschreibung**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
 |**ErrorConfiguration (Standard)**|Legt Optionen für die spezielle Behandlung möglicher Fehler fest.|  
-|**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
-|**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
-|**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann. **Hinweis:**  Zum Festlegen dieser Eigenschaft muss <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> auf **KeepTrainingCases**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.|  
+|**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis**:  Zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss festgelegt werden, um **KeepTrainingCases**.|  
+|**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert. **Hinweis**:  Zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss festgelegt werden, um **KeepTrainingCases**.|  
+|**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann. **Hinweis**:  Zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss festgelegt werden, um **KeepTrainingCases**.|  
 |**ID**|Zeigt den eindeutigen Bezeichner der Miningstruktur an.<br /><br /> Der Name, den Sie der Miningstruktur bei deren Erstellung zugewiesen haben, wird als ID verwendet. Wenn Sie den Namen später ändern, indem Sie einen neuen Wert für die **Name** -Eigenschaft eingeben, wird der neue Name nur als Alias verwendet. Die ID wird nicht geändert.|  
 |**Sprache**|Gibt die Sprache für die Beschriftungen in der Miningstruktur an.|  
 |**Name**|Gibt den Namen oder Alias der Miningstruktur an.<br /><br /> Wenn Sie den Wert für die Name-Eigenschaft ändern, wird der neue Name nur als Beschriftung oder Alias verwendet. Der Bezeichner für die Miningstruktur wird nicht geändert.|  
@@ -48,7 +48,7 @@ ms.locfileid: "34017137"
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Eigenschaften der Miningstrukturspalten  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifiziert die Spalte, die eine klassifizierte Spalte beschreibt.|  
 |**Inhalt**|Der Inhaltstyp der Spalte.|  
@@ -62,8 +62,8 @@ ms.locfileid: "34017137"
 |**ModelingFlags**|Legt weitere Parameter fest, die vom Algorithmus verfügbar gemacht werden.|  
 |**Name**|Name der Spalte.|  
 |**NameColumn**|Identifiziert die Spalte, die den Namen des übergeordneten Elements bereitstellt.|  
-|**Quelle**|Zeigt die Quelle der Spalte an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
-|**SourceMeasureGroup**|Zeigt die Quelle der Measuregruppe an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
+|**Quelle**|Zeigt die Quelle der Spalte an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)** .<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
+|**SourceMeasureGroup**|Zeigt die Quelle der Measuregruppe an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)** .<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
 |**Typ**|Der Datentyp für den Inhalt der Spalte.|  
   
  Weitere Informationen zum Festlegen oder Ändern von Eigenschaften finden Sie unter [Tasks und Anweisungen für Miningstrukturen](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md).  

@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: b3f09b15-0863-4418-9347-a4f5fd2ab7c7
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d0ef7c4424f4a8d1a18d3b6c7a5776e9df0f5f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76a154639a71b22bfe3f119233f3abbcd329f7c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899527"
 ---
 # <a name="sysdmpdwdmscores-transact-sql"></a>sys.dm_pdw_dms_cores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen über alle DMS-Dienste, die auf den Computeknoten der Appliance ausgeführt wird. Sie enthält eine Zeile für jede Dienstinstanz, die sich derzeit um eine Zeile pro Knoten befindet.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|Eindeutige numerische Id diese DMS-Core zugeordnet.<br /><br /> Der Schlüssel für diese Sicht.|Legen Sie auf die Pdw_node_id des Knotens, der diesem DMS-Kern ausgeführt wird.|  
 |pdw_node_id|**int**|Die ID des Knotens, auf dem diese DMS-Dienst ausgeführt wird.|Finden Sie unter Node_id in [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  

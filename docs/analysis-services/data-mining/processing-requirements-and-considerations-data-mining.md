@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Anforderungen und Überlegungen (Datamining) | Microsoft Docs
+title: Verarbeiten von Anforderungen und Überlegungen (Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016147"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182467"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Anforderungen und Überlegungen zur Verarbeitung (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34016147"
 ##  <a name="bkmk_QueryReqs"></a> Abfragen an den relationalen Speicher während der Verarbeitung  
  Für Data Mining besteht der Verarbeitungsprozess aus drei Phasen: Abfragen der Quelldaten, Bestimmen der statistischen Rohdaten und Trainieren des Miningmodells mit der Modelldefinition und dem Modellalgorithmus.  
   
- Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server gibt Abfragen an die Datenbank aus, die die Rohdaten bereitstellt. Bei dieser Datenbank kann es sich um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder einer früheren Version des SQL Server-Datenbankmoduls handeln. Beim Verarbeiten einer Data Mining-Struktur werden die Daten der Quelle an die Miningstruktur übertragen und in einem neuen komprimierten Format auf dem Datenträger gespeichert. Es werden nicht alle Spalten der Datenquelle verarbeitet: Es werden nur die Spalten verarbeitet, die gemäß der Definition durch die Bindungen in der Miningstruktur enthalten sind.  
+ Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server gibt Abfragen an die Datenbank aus, die die Rohdaten bereitstellt. Bei dieser Datenbank kann es sich um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder einer früheren Version der SQL Server-Datenbank-Engine handeln. Beim Verarbeiten einer Data Mining-Struktur werden die Daten der Quelle an die Miningstruktur übertragen und in einem neuen komprimierten Format auf dem Datenträger gespeichert. Es werden nicht alle Spalten der Datenquelle verarbeitet: Es werden nur die Spalten verarbeitet, die gemäß der Definition durch die Bindungen in der Miningstruktur enthalten sind.  
   
  Mit den Rohdaten baut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Index aller Daten und diskretisierten Spalten auf und erstellt einen separaten Index für fortlaufende Spalten. Für jede geschachtelte Tabelle wird zum Erstellen des Index eine Abfrage ausgegeben. Eine weitere Abfrage wird für jede geschachtelte Tabelle generiert, um die Beziehungen zwischen den einzelnen Paaren einer geschachtelten Tabelle und Falltabelle zu verarbeiten. Es werden mehrere Abfragen erstellt, um einen besonderen internen mehrdimensionalen Datenspeicher zu verarbeiten. Sie können die Anzahl der Abfragen, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an den relationalen Speicher gesendet werden, beschränken, indem Sie die Servereigenschaft **DatabaseConnectionPoolMax**festlegen. Weitere Informationen finden Sie unter [OLAP Properties](../../analysis-services/server-properties/olap-properties.md).  
   
@@ -58,13 +58,13 @@ ms.locfileid: "34016147"
   
  Miningmodelle werden auch in folgenden Szenarien verarbeitet:  
   
- **Bereitstellung eines Projekts**: Abhängig von den Projekteinstellungen und dem aktuellen Projektstatus werden die Miningmodelle im Projekt in der Regel zum Zeitpunkt der Bereitstellung des Projekts vollständig verarbeitet.  
+ **Bereitstellung eines Projekts**: Je nach den projekteinstellungen und den aktuellen Zustand des Projekts werden die Miningmodelle im Projekt in der Regel vollständig verarbeitet, wenn das Projekt bereitgestellt wird.  
   
  Beim Initiieren der Bereitstellung beginnt die Verarbeitung automatisch, es sei denn, auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server befindet sich eine zu einem früheren Zeitpunkt verarbeitete Version und es gibt keine strukturellen Änderungen. Wählen Sie in der Dropdownliste **Projektmappe bereitstellen** aus, oder drücken Sie F5, um ein Projekt bereitzustellen. Folgende Aktionen sind möglich:  
   
  Weitere Informationen zum Festlegen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Bereitstellungseigenschaften, die steuern, wie Miningmodelle bereitgestellt werden, finden Sie unter [Bereitstellen von Data Mining-Lösungen](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
   
- **Verschieben eines Miningmodells**: Wenn Sie mit dem EXPORT-Befehl ein Miningmodell verschieben, wird nur die Definition des Modells exportiert. Dazu gehört der Name der Miningstruktur, die Daten an das Modell bereitstellen soll.  
+ **Verschieben eines Miningmodells**: Wenn Sie ein Miningmodell verschieben, indem Sie mithilfe des Befehls EXPORTIEREN, wird nur die Definition des Modells exportiert, dazu gehört der Name der Miningstruktur, die Daten für das Modell bereitstellen soll.  
   
  Neuverarbeitungsanforderungen für die folgenden Szenarien, die die Befehle EXPORT und IMPORT verwenden:  
   
@@ -83,8 +83,8 @@ ms.locfileid: "34016147"
  Weitere Informationen finden Sie unter [Exportieren und Importieren von Data Mining-Objekten](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningstrukturen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Miningstrukturen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Verarbeiten eines mehrdimensionalen Modells &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5db5706af88a657b213e85d97777abe3ef4f744
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207992"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Daten können nicht für eine Datenverbindung in der Arbeitsmappe aktualisiert werden.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "53203139"
   
  Die Arbeitsmappe, die Sie zu öffnen versuchen, könnte in der SQL Server 2008 R2-Version von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel erstellt worden sein. Höchstwahrscheinlich ist der in der Datenverbindungszeichenfolge angegebene Analysis Service-Datenanbieter nicht auf dem Computer vorhanden, auf dem die Abfrage verarbeitet wird.  
   
- Wenn dies der Fall ist, finden Sie eine Nachricht ähnlich der folgenden im ULS-Protokoll: "Fehler beim Aktualisieren der" [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t Daten "in der Arbeitsmappe '\<URL zu der Arbeitsmappe >'", gefolgt von "Es kann keine Verbindung hergestellt werden".  
+ Wenn dies der Fall ist, finden Sie diese Meldung in das ULS-Protokoll: "Fehler beim Aktualisieren der" [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t Daten "in der Arbeitsmappe '\<URL zu der Arbeitsmappe >'", gefolgt von "Es kann keine Verbindung hergestellt werden".  
   
  Um die Version der Arbeitsmappe zu bestimmen, öffnen Sie sie in Excel, und überprüfen Sie, welcher Datenanbieter in der Verbindungszeichenfolge angegeben ist. Eine SQL Server 2008 R2-Arbeitsmappe verwendet MSOLAP.4 als Datenanbieter.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "53203139"
   
  Server, auf denen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint ausgeführt wird, erhalten automatisch den aktualisierten OLE DB-Datenanbieter. Andere Server, beispielsweise solche, auf denen eine eigenständige Excel Services-Instanz ohne [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint auf dem gleichen Computer ausgeführt wird, müssen für die Verwendung neuerer Clientbibliotheken gepatcht werden. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
- **Szenario 3: Domänencontroller ist nicht verfügbar**  
+ **Szenario 3: Domänencontroller ist nicht verfügbar**  
   
  Eine mögliche Ursache ist, dass kein Domänencontroller verfügbar ist, um die Benutzeridentität zu überprüfen. Ein Domänencontroller ist für den Claims to Windows Token Service erforderlich, um den SharePoint-Benutzer für jede Verbindung zu authentifizieren. c2WTS (Claims to Windows Token Service) verwendet keine zwischengespeicherten Anmeldeinformationen. Er überprüft die Benutzeridentität für jede Verbindung.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53203139"
   
  Die Installation eines Domänencontrollers auf Ihrem Computer ist nützlich, wenn die Zielsetzung darin besteht, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint in einem Offlinestatus zu verwenden. Ausführliche Anweisungen zur Verwendung von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] offline finden Sie im Blogeintrag "dauert Ihre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server außerhalb des Netzwerks" auf [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
- **Szenario 4: Instabiler server**  
+ **Szenario 4: Instabiler server**  
   
  Ein oder mehrere Dienste könnten sich in einem inkonsistenten Status befinden. In einigen Fällen kann das Problem durch Ausführen von IISRESET behoben werden.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6863a14a467e1d884d43b982451ec5807820486b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924693"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Übergeben von Parametern an einen benannten Befehl
 Genauso wie das Ergebnis des Befehls als, sich übergeben wird ein *out* Variablen des benannten Befehls, der Parameter wurde für ein parametrisierter Befehl kann als übergebenen *in* Variablen auf den benannten Befehl.  

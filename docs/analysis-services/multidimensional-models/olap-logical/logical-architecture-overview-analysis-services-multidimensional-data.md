@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208627"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "57579440"
 ### <a name="measures"></a>Measures  
  Die Werte innerhalb der Cubezellen stellen die beiden Measures Packages und Last dar. Das Packages-Measure darstellt, die Anzahl importierter Pakete an, und die **Summe** Funktion wird zum Aggregieren der measurefakten verwendet. Die Last-Measure gibt das Datum der Bestätigung, und die **Max** Funktion wird zum Aggregieren der measurefakten verwendet.  
   
-### <a name="dimensions"></a>Dimensionen  
+### <a name="dimensions"></a>Abmessungen  
  Die Route-Dimension stellt dar, auf welchem Weg die Importwaren ihr Ziel erreichen. Zu den Elementen dieser Dimension gehören ground, nonground, air, sea, road und rail. Die Source-Dimension gibt die Orte an, an denen die Importe produziert werden, z. B. Africa oder Asia. Die Time-Dimension stellt die Quartale und Halbjahre eines einzelnen Jahres dar.  
   
 ### <a name="aggregates"></a>Aggregate  
@@ -86,7 +86,7 @@ ms.locfileid: "57579440"
 |||3rd quarter|6119|1444|4675|30.09.1999|18.09.1999|30.09.1999|  
 |||Viertes Quartal|7818|2126|5692|29.12.1999|22.12.1999|29.12.1999|  
   
- Wenn ein Cube definiert wurde, können Sie neue Aggregationen erstellen, oder Sie können vorhandene Aggregationen ändern, um Optionen festzulegen, die angeben, ob Aggregationen während der Verarbeitung im Voraus oder zum Zeitpunkt der Abfrage berechnet werden. **Verwandtes Thema:**[Aggregationen und Aggregationsentwürfe](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Wenn ein Cube definiert wurde, können Sie neue Aggregationen erstellen, oder Sie können vorhandene Aggregationen ändern, um Optionen festzulegen, die angeben, ob Aggregationen während der Verarbeitung im Voraus oder zum Zeitpunkt der Abfrage berechnet werden. **Verwandtes Thema:** [Aggregationen und Aggregationsentwürfe](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Zuordnen von Measures, Attributen und Hierarchien  
  Die Measures, Attribute und Hierarchien des Cubes in dem Beispiel werden aus den folgenden Spalten in den Fakten- und Dimensionstabellen des Cubes abgeleitet.  
@@ -116,9 +116,9 @@ ms.locfileid: "57579440"
   
  In der obigen Tabelle weist jede Zeile die gleichen Werte für die **RouteKey**, **SourceKey**, und **TimeKey** Spalten, die angibt, dass diese Zeilen zur selben Cubezelle beitragen.  
   
- In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandtes Thema:**[Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ In dem hier dargestellten Beispiel geht es um einen sehr einfachen Cube, der nur eine einzige Measuregruppe enthält und bei dem alle Dimensionstabellen in einem Sternschema mit der Faktentabelle verknüpft sind. In weiteres häufiges Schema ist das Schneeflockenschema, in dem mindestens eine Dimensionstabelle mit einer anderen Dimensionstabelle und nicht direkt mit der Faktentabelle verknüpft wird. **Verwandtes Thema:** [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandtes Thema:**[Dimensionsbeziehungen](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandtes Thema:** [Dimensionsbeziehungen](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Mehrdimensionale Modelldatenbanken](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  

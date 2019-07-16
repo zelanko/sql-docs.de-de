@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt für neuronale Netzwerkmodelle | Microsoft Docs
+title: Mingingmodellinhalt von neuronalen Netzwerkmodellen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e01fea742e5af04efa470bd80da4e2c75c5eebc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018527"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182666"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Miningmodellinhalt von neuronalen Netzwerkmodellen (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "34018527"
  ATTRIBUTE_NAME  
  Die Namen der Attribute, die diesem Knoten entsprechen.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -78,7 +78,7 @@ ms.locfileid: "34018527"
  NODE_TYPE  
  Ein neuronales Netzwerkmodell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |1|Modell.|  
 |17|Planerknoten für das Subnetzwerk.|  
@@ -96,7 +96,7 @@ ms.locfileid: "34018527"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Gibt die Anzahl der untergeordneten Knoten an; enthält mindestens 1 Netzwerk, 1 erforderlichen Knoten für Randstatistik und 1 erforderliche Eingabeebene. Beispiel: Bei einem Wert von 5 sind 3 Subnetzwerke vorhanden.|  
 |Randstatistik|Immer 0.|  
@@ -115,7 +115,7 @@ ms.locfileid: "34018527"
  NODE_DESCRIPTION  
  Eine benutzerfreundliche Beschreibung des Knotens.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -129,7 +129,7 @@ ms.locfileid: "34018527"
  NODE_RULE  
  Eine XML-Beschreibung der Regel, die in den Knoten eingebettet ist.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -161,7 +161,7 @@ ms.locfileid: "34018527"
  Informationen über die Unterstützung in Trainingsfällen für spezifische Werte finden Sie über den Knoten für Randstatistik.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Inhalt|  
+ |Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -206,9 +206,9 @@ ms.locfileid: "34018527"
 ### <a name="input-nodes"></a>Eingabeknoten  
  Die Eingabeebene enthält einen Knoten für jeden im Modell verwendeten Wert des Attributs.  
   
- **Diskretes Attribut** : Der Eingabeknoten speichert nur den Namen des Attributs und dessen Wert in den Spalten ATTRIBUTE_NAME und ATTRIBUTE_VALUE. Ist zum Beispiel [Work Shift] die Spalte, wird ein separater Knoten für jeden im Modell verwendeten Wert der Spalte erstellt, zum Beispiel AM und PM. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
+ **Diskretes Attribut:** Der Eingabeknoten speichert nur den Namen des Attributs und dessen Wert in den Spalten ATTRIBUTE_NAME und ATTRIBUTE_VALUE. Ist zum Beispiel [Work Shift] die Spalte, wird ein separater Knoten für jeden im Modell verwendeten Wert der Spalte erstellt, zum Beispiel AM und PM. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
   
- **Diskretisiertes numerisches Attribut:** Der Eingabeknoten speichert den Namen des Attributs und den Wert, bei dem es sich um einen Bereich oder einen spezifischen Wert handeln kann. Alle Werte werden durch Ausdrücke dargestellt. Beispiel: '77.4 - 87.4' oder ' < 64.0' für den Wert von [Time Per Issue]. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
+ **Diskretisiertes numerisches Attribut:** Der Eingabeknoten speichert den Namen des Attributs, und den Wert, der einen Bereich sein kann oder einen bestimmten Wert. Alle Werte werden durch Ausdrücke dargestellt. Beispiel: '77.4 - 87.4' oder ' < 64.0' für den Wert von [Time Per Issue]. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
   
  **Kontinuierliches Attribut:** Der Eingabeknoten speichert den Mittelwert des Attributs. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
   
@@ -220,15 +220,15 @@ ms.locfileid: "34018527"
   
  Die NODE_DISTRIBUTION-Tabelle weist die folgenden weiteren Informationen auf, abhängig vom Typ des Attributs:  
   
- **Diskretes Attribut** : Die letzten beiden Zeilen der NODE_DISTRIBUTION-Tabelle enthalten einen Koeffizienten für den Knoten als ganzes und den aktuellen Wert des Attributs.  
+ **Diskretes Attribut:** Die letzten beiden Zeilen der NODE_DISTRIBUTION-Tabelle enthalten einen Koeffizienten für den Knoten als Ganzes und den aktuellen Wert des Attributs.  
   
- **Diskretisiertes numerisches Attribut:** Wie bei den diskreten Attributen, ausgenommen, dass es sich beim Wert des Attributs um einen Wertebereich handelt.  
+ **Diskretisiertes numerisches Attribut:** Mit diskreten Attributen identisch, außer dass der Wert des Attributs auf einen Bereich von Werten ist.  
   
- **Kontinuierliches Attribut** : Die letzten beiden Zeilen der NODE_DISTRIBUTION-Tabelle enthalten den Mittelwert des Attributs, den Koeffizienten für den Knoten als ganzes und die Varianz des Koeffizienten.  
+ **Kontinuierliches Attribut:** Die letzten beiden Zeilen der NODE_DISTRIBUTION-Tabelle enthalten den Mittelwert des Attributs, den Koeffizienten für den Knoten als Ganzes und die Varianz des Koeffizienten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Technische Referenz zu Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Neural Network-Abfragebeispiele](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Technische Referenz für den Microsoft Neural Network-Algorithmus](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Neuronale Beispiele für Netzwerkmodellabfragen](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

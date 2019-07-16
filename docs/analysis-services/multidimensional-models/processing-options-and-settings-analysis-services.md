@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Optionen und Einstellungen (Analysis Services) | Microsoft Docs
+title: Verarbeiten von Optionen und Einstellungen (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 002e1a760faf584a556d66a2c228a7838d5f49fd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027197"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165319"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Verarbeiten von Optionen und Einstellungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "34027197"
 ## <a name="processing-options"></a>Verarbeitungsoptionen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügbaren Verarbeitungsmethoden beschrieben und die Objekte identifiziert, für die die einzelnen Methoden Unterstützung bieten.  
   
-|Modus|Gilt für|Description|  
+|Modus|Betrifft|Beschreibung|  
 |----------|----------------|-----------------|  
 |**Standard verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Erkennt den Verarbeitungsstatus von Datenbankobjekten und führt die Verarbeitung durch, mit der nicht verarbeitete oder teilweise verarbeitete Objekte in den vollständig verarbeiteten Status versetzt werden. Wenn Sie eine Datenbindung ändern, führt die Option Standard verarbeiten für das betroffene Objekt den Schritt Vollständig verarbeiten aus.|  
 |**Vollständig verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Verarbeitet ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt und alle in ihm enthaltenen Objekte. Wenn die Verarbeitungsmethode Vollständig verarbeiten für ein bereits verarbeitetes Objekt ausgeführt wird, löscht [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Daten im Objekt und verarbeitet anschließend das Objekt. Dieser Verarbeitungstyp ist erforderlich, wenn eine strukturelle Änderung am Objekt vorgenommen wurde, z. B. wenn eine Attributhierarchie hinzugefügt, gelöscht oder umbenannt wurde.|  
 |**Löschung verarbeiten**|Cubes, Datenbanken, Dimensionen, Measuregruppen, Miningmodelle, Miningstrukturen und Partitionen.|Löscht die Daten im angegebenen Objekt und sämtliche untergeordneten Komponentenobjekte. Nach dem Löschen der Daten wird das Objekt nicht erneut geladen.|  
-|**Daten verarbeiten**|Dimensionen, Cubes, Measuregruppen und Partitionen.|Verarbeitet Daten ohne die Erstellung von Aggregationen oder Indizes. Wenn in den Partitionen Daten enthalten sind, wird die Partition gelöscht, bevor sie mit Quelldaten neu aufgefüllt wird.|  
-|**Hinzufügung verarbeiten**|Dimensionen, Measuregruppen und Partitionen.<br /><br /> Hinweis: **Hinzufügung verarbeiten** ist für die Verarbeitung von Dimensionen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]nicht verfügbar, aber Sie können XMLA-Skripts schreiben, die diese Aktion ausführen.|Fügt für Dimensionen neue Elemente hinzu und aktualisiert Beschriftungen und Beschreibungen von Dimensionsattributen.<br /><br /> Fügt für Measuregruppen und Partitionen neu verfügbare Faktendaten hinzu und verarbeitet nur die relevanten Partitionen.|  
-|**Update verarbeiten**|Dimensionen|Erzwingt das erneute Lesen von Daten und ein Update der Dimensionsattribute. Flexible Aggregationen und Indizes in verknüpften Partitionen werden gelöscht.|  
+|**Verarbeiten von Daten**|Dimensionen, Cubes, Measuregruppen und Partitionen.|Verarbeitet Daten ohne die Erstellung von Aggregationen oder Indizes. Wenn in den Partitionen Daten enthalten sind, wird die Partition gelöscht, bevor sie mit Quelldaten neu aufgefüllt wird.|  
+|**Hinzufügung verarbeiten**|Dimensionen, Measuregruppen und Partitionen.<br /><br /> Hinweis: **Verarbeiten von Add** ist nicht verfügbar für die Verarbeitung von Dimensionen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], aber Sie können das XMLA-Skript führt diese Aktion schreiben.|Fügt für Dimensionen neue Elemente hinzu und aktualisiert Beschriftungen und Beschreibungen von Dimensionsattributen.<br /><br /> Fügt für Measuregruppen und Partitionen neu verfügbare Faktendaten hinzu und verarbeitet nur die relevanten Partitionen.|  
+|**Update verarbeiten**|Abmessungen|Erzwingt das erneute Lesen von Daten und ein Update der Dimensionsattribute. Flexible Aggregationen und Indizes in verknüpften Partitionen werden gelöscht.|  
 |**Index verarbeiten**|Cubes, Dimensionen, Measuregruppen und Partitionen.|Erstellt Indizes und Aggregationen für alle verarbeiteten Partitionen oder erstellt diese neu. Für nicht verarbeitete Objekte verursacht diese Option einen Fehler.<br /><br /> Die Verarbeitung mit dieser Option ist erforderlich, wenn Sie Verzögertes Verarbeiten deaktivieren.|  
 |**Struktur verarbeiten**|Cubes und Miningstrukturen|Wenn der Cube nicht verarbeitet ist, verarbeitet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gegebenenfalls alle Dimensionen des Cubes. Danach erstellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lediglich Cubedefinitionen. Wenn diese Option für eine Mininingstruktur angewendet wird, wird die Mininingstruktur mit Quelldaten aufgefüllt. Der Unterschied zwischen dieser Option und der Option Vollständig verarbeiten liegt darin, dass mit dieser Option nicht die Iteration der Verarbeitung auf die Miningmodelle selbst erfolgt.|  
 |**Klarstruktur verarbeiten**|Miningstrukturen|Entfernt alle Trainingsdaten aus einer Miningstruktur.|  
@@ -43,7 +43,7 @@ ms.locfileid: "34027197"
 ## <a name="processing-settings"></a>Aufbereitungseinstellungen  
  In der folgenden Tabelle werden die Aufbereitungseinstellungen beschrieben, die beim Erstellen von Verarbeitungsvorgängen zur Verfügung stehen.  
   
-|Verarbeitungsoption|Description|Optionswert|  
+|Verarbeitungsoption|Beschreibung|Optionswert|  
 |-----------------------|-----------------|------------------|  
 |**Parallel**|Wird zu Batchverarbeitungszwecken genutzt. Veranlasst [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , Verarbeitungstasks abzuzweigen, damit sie parallel als Teil einer einzigen Transaktion ausgeführt werden. Gibt es einen Systemausfall, so wird als Ergebnis ein Rollback aller Änderungen ausgeführt. Sie können die maximale Anzahl von parallel auszuführenden Tasks explizit festlegen oder dem Server die Entscheidung über die optimale Verteilung überlassen. Die Paralleloption ist beim Beschleunigen des Verarbeitungsvorgangs hilfreich.||  
 |**Sequenziell (Transaktionsmodus)**|Steuert das Ausführungsverhalten des Verarbeitungsauftrags. Es stehen zwei Optionen zur Verfügung:<br /><br /> Bei der Verarbeitung mit der Option **Eine Transaktion**erfolgt ein Commit aller Änderungen nach erfolgreichem Abschluss des Verarbeitungsauftrags. Dies bedeutet, dass alle von einem bestimmten Verarbeitungsauftrag betroffenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte für eventuelle Abfragen verfügbar sind, bis das Commit erfolgt. Während des Commitvorgangs sind die Objekte vorübergehend nicht verfügbar. Bei der Verarbeitung mit der Option **Separate Transaktionen** sind alle von einem bestimmten Vorgang in einem Verarbeitungsauftrag betroffenen Objekte nicht verfügbar, sobald der entsprechende Vorgang erfolgreich abgeschlossen ist.|**Eine Transaktion**. Der Verarbeitungsauftrag wird als eine einzige Transaktion ausgeführt. Wenn alle Prozesse im Verarbeitungsauftrag erfolgreich ausgeführt werden, wird für alle Änderungen durch den Verarbeitungsauftrag ein Commit ausgeführt. Wenn bei einem Verarbeitungsvorgang ein Fehler auftritt, erfolgt ein Rollback aller Änderungen. **Eine Transaktion** ist der Standardwert.<br /><br /> **Separate Transaktionen**. Jeder Verarbeitungsvorgang des Verarbeitungsauftrags wird als eigenständiger Auftrag ausgeführt. Wenn bei einem Verarbeitungsvorgang ein Fehler auftritt, erfolgt nur für diesen Vorgang ein Rollback, und die Ausführung des Verarbeitungsauftrags wird fortgesetzt. Für jeden Auftrag wird bei Auftragsende ein Commit aller Änderungen durchgeführt.|  

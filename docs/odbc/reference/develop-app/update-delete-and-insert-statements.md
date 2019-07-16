@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942836"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE-, DELETE- und INSERT-Anweisungen
 SQL-basierten Anwendungen und nehmen Sie Änderungen an Tabellen durch Ausführen der **UPDATE**, **löschen**, und **einfügen** Anweisungen. Diese Anweisungen sind Teil der Konformitätsgrad des mindestens SQL-Grammatik und von allen Treibern und Datenquellen unterstützt werden müssen.  
@@ -31,7 +30,7 @@ SQL-basierten Anwendungen und nehmen Sie Änderungen an Tabellen durch Ausführe
   
  **UPDATE** _Tabellenname_  
   
- **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
+ **Legen Sie** _Spaltenbezeichner_ **=** {*Ausdruck* &#124; **NULL**}  
   
  [ **,** _Spaltenbezeichner_ **=** {*Ausdruck* &#124; **NULL**}]...  
   

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207140"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Ergänzende Lektion: unregelmäßige Hierarchien
 
@@ -23,13 +23,13 @@ ms.locfileid: "57685397"
 
 In dieser ergänzenden Lektion beheben Sie ein häufiges Problem beim Pivotieren von Hierarchien, die leere Werte (Member) auf verschiedenen Ebenen enthalten. Beispielsweise muss eine Organisation, in dem eine hochrangigen Führungskraft sowohl Abteilungsleiter als auch ohne Führungskompetenzen unterstellt ist. Oder geografische Hierarchien bestehen Country-Region-Stadt, in denen einige Städte ein Bundesland / Kanton untergeordnet, z. B. Washington d. c., Vatikanstadt fehlt. Wenn eine Hierarchie leere Member aufweist, verzweigt es häufig zu anderen oder unregelmäßigen Ebenen.
 
-![as-lesson-detail-ragged-hierarchies-table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
+![As-Lesson-Detail-ragged-hierarchies-Table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
 
 Tabellarische Modelle mit Kompatibilitätsgrad 1400 verfügen über eine zusätzliche **Member ausblenden** -Eigenschaft für Hierarchien. Die **Standard** Einstellung wird vorausgesetzt, es sind keine leeren Mitglieder auf jeder Ebene. Die **leere Member ausblenden** Einstellung schließt leere Member aus der Hierarchie, wenn eine PivotTable oder ein Bericht hinzugefügt.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **20 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 In diesem Artikel ergänzende Lektion ist Teil einer Tutorials zur tabellenmodellierung. Vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion an, Sie sollten abgeschlossen haben alle vorherige Lektionen oder über einen abgeschlossenen Adventure Works Internet Sales-Beispiel-Modellprojekt. 
 
 Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ihr Modell noch keine Daten oder Hierarchien, die unregelmäßig sind. Um diese ergänzende Lektion durchführen zu können, müssen Sie zuerst erstellen das Problem, indem einige weiteren Tabellen hinzufügen, Beziehungen, berechnete Spalten, ein Measure und eine neue Organisationshierarchie zu erstellen. Dies nimmt etwa 15 Minuten. Anschließend können Sie es in wenigen Minuten zu lösen.  
@@ -48,11 +48,11 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
 
     | Tabelle 1           | Spalte       | Filterrichtung   | Tabelle 2     | Spalte      | Active |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Standard            | DimDate     | date        | Ja    |
-    | FactResellerSales | DueDate      | Standard            | DimDate     | date        | Nein     |
-    | FactResellerSales | ShipDateKey  | Standard            | DimDate     | date        | Nein     |
-    | FactResellerSales | ProductKey   | Standard            | DimProduct  | ProductKey  | Ja    |
-    | FactResellerSales | EmployeeKey  | Für beide Tabellen | DimEmployee | EmployeeKey | Ja    |
+    | FactResellerSales | OrderDateKey | Default            | DimDate     | date        | Ja    |
+    | FactResellerSales | DueDate      | Default            | DimDate     | date        | Nein     |
+    | FactResellerSales | ShipDateKey  | Default            | DimDate     | date        | Nein     |
+    | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | Ja    |
+    | FactResellerSales | EmployeeKey  | Für beide Tabellen | "Dimemployee" | EmployeeKey | Ja    |
 
 5. In der **DimEmployee** Tabelle, erstellen Sie die folgende [berechnete Spalten](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
 
@@ -61,7 +61,7 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
     =PATH([EmployeeKey],[ParentEmployeeKey])
     ```
 
-    **FullName** 
+    **"FullName"** 
     ```
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
@@ -81,17 +81,17 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],3,1)) 
     ```
 
-    **Level4** 
+    **"Level4"** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],4,1)) 
     ```
 
-    **Level5** 
+    **Ebene5** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],5,1)) 
     ```
 
-6.  In der **DimEmployee** Tabelle, erstellen Sie eine [Hierarchie](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md) mit dem Namen **Organisation**. Fügen Sie die folgenden Spalten in dieser Reihenfolge hinzu: **Level1**, **Level2**, **Level3**, **Level4**, **Level5**.
+6.  In der **DimEmployee** Tabelle, erstellen Sie eine [Hierarchie](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md) mit dem Namen **Organisation**. Fügen Sie die folgenden Spalten in dieser Reihenfolge hinzu: **Level1**, **Level2**, **Level3**, **"Level4"** , **ebene5**.
 
 7.  In der **FactResellerSales** Tabelle, erstellen Sie die folgende [Measure](../tutorial-tabular-1400/as-lesson-6-create-measures.md):
 
@@ -103,7 +103,7 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
 
 9.  In **PivotTable Fields**, Hinzufügen der **Organisation** -Hierarchie aus der **DimEmployee** Tabelle **Zeilen**, und die  **ResellerTotalSales** measure aus der **FactResellerSales** Tabelle **Werte**.
 
-    ![as-lesson-detail-ragged-hierarchies-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
+    ![As-Lesson-Detail-ragged-hierarchies-PivotTable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
 
     Wie Sie in der PivotTable sehen, zeigt die Hierarchie unregelmäßige Zeilen an. Es gibt viele Zeilen, in denen leere Member angezeigt werden.
 
@@ -117,7 +117,7 @@ Wenn Sie das AW Internet Sales-Projekt als Teil des Tutorials erstellt haben, Ih
 
 3.  Aktualisieren Sie die PivotTable in Excel. 
 
-    ![as-lesson-detail-ragged-hierarchies-pivottable-refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
+    ![As-Lesson-Detail-ragged-hierarchies-PivotTable-Refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
 
     Das sieht doch sehr viel besser!
 

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196427"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
   In diesem Thema wird beschrieben, wie eine indizierte Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.  
@@ -43,7 +43,7 @@ ms.locfileid: "54131810"
 5.  Erstellen Sie den eindeutigen gruppierten Index für die Sicht.  
   
 ###  <a name="Restrictions"></a> Erforderliche SET-Optionen für indizierte Sichten  
- Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option CONCAT_NULL_YIELDS_NULL auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'** abc **'** + NULL den Wert NULL zurück. Wenn die Option CONCAT_NULL_YIEDS_NULL allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'** abc **'**.  
+ Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option CONCAT_NULL_YIELDS_NULL auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'** abc **'** + NULL den Wert NULL zurück. Wenn die Option CONCAT_NULL_YIEDS_NULL allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'** abc **'** .  
   
  Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen festgelegt werden, auf die Werte der **RequiredValue** Spalte, wenn die folgenden Bedingungen zutrifft:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54131810"
   
 -   Die indizierte Sicht wird vom Abfrageoptimierer verwendet, um den Abfrageplan zu erstellen.  
   
-    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Standard<br /><br /> OLE DB- und ODBC-Wert|Standard<br /><br /> DB-Library-Wert|  
+    |SET-Optionen|Erforderlicher Wert|Standardserverwert|Default<br /><br /> OLE DB- und ODBC-Wert|Default<br /><br /> DB-Library-Wert|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -86,11 +86,11 @@ ms.locfileid: "54131810"
   
 -   Wenn Sie den Index erstellen, muss die Option IGNORE_DUP_KEY auf OFF (Standardeinstellung) festgelegt sein.  
   
--   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen _Schema_**.**_Tabellenname_ verwiesen werden.  
+-   Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen _Schema_ **.** _Tabellenname_ verwiesen werden.  
   
 -   Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option WITH SCHEMABINDING erstellt werden.  
   
--   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen _Schema_**.**_Funktion_verwiesen werden.  
+-   Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit dem zweiteiligen Namen _Schema_ **.** _Funktion_verwiesen werden.  
   
 -   Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss NO SQL lauten, und die Eigenschaft für den externen Zugriff muss NO lauten.  
   

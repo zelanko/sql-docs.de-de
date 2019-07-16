@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5d4da4f1d01d0afb66c998fc2c782afe0c2e6ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211579"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181926"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -228,7 +228,7 @@ ms.locfileid: "53211579"
  Wenn Sie SharePoint 2010 verwenden, müssen Sie keine Ports in der Windows-Firewall öffnen. SharePoint öffnet die Ports nach Bedarf selbst, und Add-Ins wie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint werden innerhalb der SharePoint-Umgebung ausgeführt. In einem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2010-Installation, die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst verwendet exklusiv die lokale SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) Dienstinstanz, die mit ihm auf dem gleichen Computer installiert ist. Dabei werden lokale Verbindungen und keine Netzwerkverbindungen verwendet, um auf den lokalen Analysis Services-Engine-Dienst zuzugreifen, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten auf den SharePoint-Server lädt, abfragt und verarbeitet. Auf Anforderung [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Daten von Clientanwendungen werden Anforderungen über Ports, die von SharePoint-Setup geöffnet werden weitergeleitet (insbesondere eingehende Regeln definiert, für den Zugriff auf SharePoint - 80, SharePoint-Zentraladministration v4, SharePoint-Webanwendung Dienste und SPUserCodeV4). Da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webdienste in einer SharePoint-Farm ausgeführt werden, reichen die SharePoint-Firewallregeln für den Remotezugriff auf [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in einer SharePoint-Farm aus.  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Browserdienst &amp;amp;#40;Datenbank-Engine und SSAS&amp;amp;#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   

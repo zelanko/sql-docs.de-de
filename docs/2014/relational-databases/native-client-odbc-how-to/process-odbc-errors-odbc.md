@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206789"
 ---
 # <a name="process-odbc-errors-odbc"></a>Verarbeiten von ODBC-Fehlern (ODBC)
   Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative**and **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit `SQLGetDiagField` abgerufen werden.  
@@ -26,7 +26,7 @@ ms.locfileid: "53354720"
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt einen einfachen Fehlerhandler, der [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) für die Standard-ODBC-Informationen aufruft. Anschließend wird geprüft, ob eine gültige Verbindung vorhanden ist. Ist dies der Fall, wird `SQLGetDiagField` für die ODBC-treiberspezifischen Diagnosefelder von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgerufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

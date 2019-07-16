@@ -1,5 +1,5 @@
 ---
-title: Anforderungen an die Clientarchitektur für Analysis Services-Entwicklung | Microsoft Docs
+title: Anforderungen an die Clientarchitektur für Analysis Services-Entwicklung | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ef45e149fc70fdf338a60cd823497eb2efb6a215
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165586"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Anforderungen an die Clientarchitektur für die Analysis Services-Entwicklung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt eine thin Client-Architektur. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Berechnungsmodul ist vollständig serverbasiert, sodass alle Abfragen auf dem Server aufgelöst werden. Daher ist für jede Abfrage nur ein Roundtrip zwischen dem Client und dem Server erforderlich, was zu skalierbarer Leistung führt, wenn die Komplexität der Abfragen zunimmt.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] unterstützt eine thin-Client-Architektur. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] berechnungs-Engine ist vollständig serverbasiert, sodass alle Abfragen auf dem Server aufgelöst werden. Daher ist für jede Abfrage nur ein Roundtrip zwischen dem Client und dem Server erforderlich, was zu skalierbarer Leistung führt, wenn die Komplexität der Abfragen zunimmt.  
   
  Das native Protokoll für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ist XMLA (XML for Analysis). [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stellt mehrere Datenzugriffsschnittstellen für Clientanwendungen zur Verfügung. Diese Komponenten verwenden jedoch alle XMLA für die Kommunikation mit einer Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -44,32 +44,32 @@ ms.locfileid: "34022387"
  Sowohl Clientanwendungen als auch Anwendungen der mittleren Ebene können direkt ohne Verwendung eines Anbieters mit [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] kommunizieren. Clientanwendungen und Anwendungen der mittleren Ebene können XMLA in SOAP-Paketen über TCP/IP, HTTP oder HTTPS senden. Der Client kann mithilfe jeder Sprache codiert werden, die SOAP unterstützt. In diesem Fall kann die Kommunikation am einfachsten mithilfe von HTTP über Internetinformationsdienste verwaltet werden, obwohl eine direkte Verbindung zum Server mithilfe von TCP/IP ebenfalls codiert werden kann. Die ist die minimal mögliche Clientlösung für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services im tabellarischen oder SharePoint-Modus  
- In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], der Server gestartet werden, im xVelocity Datenanalyse im Arbeitsspeicher (VertiPaq) Modulmodus für tabellarische Datenbanken und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Arbeitsmappen, die auf einer SharePoint-Website veröffentlicht wurden.  
+ In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] kann der Server im xVelocity-Engine-Modus für Datenanalyse im Arbeitsspeicher (VertiPaq) für tabellarische Datenbanken und für [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappen gestartet werden, die auf einer SharePoint-Website veröffentlicht wurden.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sind die einzigen Clientumgebungen, die zum Erstellen und Abfragen von Datenbanken im Arbeitsspeicher unterstützt werden und den SharePoint- bzw. den tabellarischen Modus verwenden. Der eingebettete [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Datenbank, die Sie erstellen, indem Sie mit Excel und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Tools ist in der Excel-Arbeitsmappe enthalten und wird als Teil der Excel-XLSX-Datei gespeichert.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] und [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] sind die einzigen Clientumgebungen, die zum Erstellen und Abfragen von Datenbanken im Arbeitsspeicher unterstützt werden und den SharePoint- bzw. den tabellarischen Modus verwenden. Die eingebettete [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenbank, die Sie erstellen, indem Sie mit Excel und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Tools ist in der Excel-Arbeitsmappe enthalten und wird als Teil der Excel-XLSX-Datei gespeichert.  
   
  Eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappe kann Daten verwenden, die in einem herkömmlichen Cube gespeichert werden, wenn Sie die Cubedaten in die Arbeitsmappe importieren. Sie können auch Daten aus einer anderen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappe importieren, wenn diese zu einer SharePoint-Website veröffentlicht wurde.  
   
 > [!NOTE]  
 >  Wenn Sie einen Cube als Datenquelle für eine [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]-Arbeitsmappe verwenden, werden die Daten, die Sie vom Cube erhalten, als MDX-Abfrage definiert; die Daten werden jedoch als vereinfachte Momentaufnahme importiert. Sie können mit den Daten nicht interaktiv arbeiten oder die Daten vom Cube aktualisieren.  
   
- Weitere Informationen zum Verwenden eines SSAS-Cubes als Datenquelle finden Sie unter der [Power Pivot für Excel](http://go.microsoft.com/fwlink/?LinkId=164234).  
+ Weitere Informationen zum Verwenden eines SSAS-Cubes als Datenquelle finden Sie unter den [Power Pivot für Excel](http://go.microsoft.com/fwlink/?LinkId=164234).  
   
-### <a name="interfaces-for-power-pivot-client"></a>Schnittstellen für PowerPivot-Client  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] interagiert mit dem xVelocity Datenanalyse im Arbeitsspeicher (VertiPaq) Modul innerhalb der Arbeitsmappe mithilfe der bestehenden Schnittstellen und Sprachen für Analysis Services: AMO und ADOMD.NET und MDX und XMLA. Innerhalb des Add-Ins werden Measures durch eine Formelsprache wie Excel, Data Analysis Expressions (DAX), ähnlich definiert. DAX-Ausdrücke werden innerhalb der XMLA-Meldungen eingebettet, die an den prozessinternen Server gesendet werden.  
+### <a name="interfaces-for-power-pivot-client"></a>Schnittstellen für die PowerPivot-Client  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] interagiert mit die xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) Speicher-Engine innerhalb der Arbeitsmappe die bestehenden Schnittstellen und Sprachen für Analysis Services mit: AMO und ADOMD.NET und MDX und XMLA. Innerhalb des Add-Ins werden Measures durch eine Formelsprache wie Excel, Data Analysis Expressions (DAX), ähnlich definiert. DAX-Ausdrücke werden innerhalb der XMLA-Meldungen eingebettet, die an den prozessinternen Server gesendet werden.  
   
 ### <a name="providers"></a>Anbieter  
  Kommunikation zwischen [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] und Excel verwendet den MSOLAP-OLEDB-Anbieter (Version 11.0). Innerhalb des MSOLAP-Anbieters gibt es vier verschiedene Module oder Transporte, das zum Senden von Meldungen zwischen Client und Server verwendet werden können.  
   
  **TCP/IP** für normale Client / Server-Verbindungen verwendet.  
   
- **HTTP** für HTTP-Verbindungen über den SSAS-datapumpdienst oder durch einen Aufruf an den SharePoint verwendet [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Web Service (WS) Komponente.  
+ **HTTP** für HTTP-Verbindungen über den SSAS-datapumpdienst oder durch einen Aufruf von SharePoint verwendet [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Web Service (WS) Komponente.  
   
- **INPROC** für Verbindungen zum prozessinternen Modul verwendet.  
+ **INPROC** für Verbindungen mit der in-Process-Engine verwendet.  
   
  **Kanal** reserviert für die Kommunikation mit dem [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Systemdienst in der SharePoint-Farm.  
   
 ## <a name="see-also"></a>Siehe auch  
- [OLAP-Modulserverkomponenten](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
+ [OLAP-Engine-Serverkomponenten](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
   

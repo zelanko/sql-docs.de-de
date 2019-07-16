@@ -1,5 +1,5 @@
 ---
-title: Microsoft Association-Algorithmus | Microsoft Docs
+title: Microsoft Association-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c5a6f5046c93355b3b1359c59d2e935c9aa6288a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017187"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209923"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34017187"
 ## <a name="viewing-an-association-model"></a>Anzeigen eines Zuordnungsmodells  
  Zum Durchsuchen des Modells können Sie den **Microsoft Zuordnungsregeln-Viewer**verwenden. In der Anzeige eines Zuordnungsmodells stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Korrelationen aus verschiedenen Blickwinkeln dar, sodass Sie die in den Daten festgestellten Beziehungen und Regeln besser verstehen können. Der Bereich **Itemset** des Viewers enthält eine detaillierte Analyse der am häufigsten vorkommenden Kombinationen oder Itemsets. Im Bereich **Regeln** wird eine Liste der aus den Daten abgeleiteten allgemeinen Regeln zusammen mit Berechnungen von deren Wahrscheinlichkeit dargestellt und die Rangfolge der Regeln nach ihrer relativen Wichtigkeit bestimmt. Im Abhängigkeitsnetzwerk-Viewer können Sie die Verbindungen zwischen den einzelnen Elementen untersuchen. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Wenn Sie Näheres über die Itemsets und Regeln in Erfahrung bringen möchten, können Sie das Modell im [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)durchsuchen. Der für das Modell gespeicherte Inhalt umfasst Unterstützungswerte für jedes Itemset, ein Ergebnis für jede Regel und andere statistischen Daten. Weitere Informationen finden Sie unter [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Wenn Sie Näheres über die Itemsets und Regeln in Erfahrung bringen möchten, können Sie das Modell im [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)durchsuchen. Der für das Modell gespeicherte Inhalt umfasst Unterstützungswerte für jedes Itemset, ein Ergebnis für jede Regel und andere statistischen Daten. Weitere Informationen finden Sie unter [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)bezeichnet.  
   
 ## <a name="creating-predictions"></a>Erstellen von Vorhersagen  
  Nachdem das Modell verarbeitet wurde, können Sie die Regeln und die Itemsets zum Erstellen von Vorlagen verwenden. In einem Zuordnungsmodell geht aus einer Vorhersage hervor, welches Element wahrscheinlich auftritt, wenn das angegebene Element vorhanden ist, und die Vorhersage kann Angaben wie Wahrscheinlichkeit, Unterstützung oder Wichtigkeit enthalten. Beispiele dazu, wie Abfragen für ein Zuordnungsmodell erstellt werden, finden Sie unter [Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md).  
@@ -77,10 +77,10 @@ ms.locfileid: "34017187"
 -   Unterstützt die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Miningmodellinhalt von Zuordnungsmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
- [Technische Referenz für die Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Technische Referenz für den Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
+ [Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

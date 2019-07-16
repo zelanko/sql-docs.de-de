@@ -1,5 +1,5 @@
 ---
-title: Measures und Measuregruppen | Microsoft Docs
+title: Measures und Measuregruppen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 04eb5a41bec6e9abb62cfde516f2dad2ff820521
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165753"
 ---
 # <a name="measures-and-measure-groups"></a>Measures und Measuregruppen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34024247"
   
  In diesem Thema werden [Measures](#bkmk_measure) und [Measure Groups](#bkmk_mg)beschrieben. Außerdem enthält es die folgende Tabelle mit Links zu Schritten zum Erstellen und Konfigurieren von Measures und Measuregruppen.  
   
-|**Link**|**Description**|  
+|**Link**|**Beschreibung**|  
 |--------------|---------------------|  
 |[Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Wählen Sie einen von mehreren Ansätzen zum Erstellen von Measures und Measuregruppen aus.|  
 |[Konfigurieren von Measureeigenschaften](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Wenn Sie den Cube-Assistenten zum Starten des Cubes verwendet haben, müssen Sie möglicherweise die Aggregationsmethode ändern, ein Datenformat anwenden, die Sichtbarkeit des Measures in Clientanwendungen festlegen oder einen Measureausdruck hinzufügen, um die Daten vor dem Aggregieren von Werten zu bearbeiten.|  
 |[Konfigurieren von Measuregruppeneigenschaften](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|In einem mehrdimensionalen Modell entspricht eine Measuregruppe einer Faktentabelle im als Quelle verwendeten Data Warehouse. Anhand von Eigenschaften für eine Measuregruppe können Sie Cacheverhalten, Speicher und Verarbeitungsrichtlinien festlegen, die kollektiv auf Ebene der Measuregruppe gelten. Die Partitionskonfiguration richtet sich teilweise nach den Eigenschaften, die Sie für Measuregruppenobjekte festgelegten.|  
 |[Verwenden von Aggregatfunktionen](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Machen Sie sich mit den Aggregationsmethoden vertraut, die einem Measure zugewiesen werden können.|  
-|[Semiadditives Verhalten definieren](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Semiadditives Verhalten bezieht sich auf Aggregationen, die nur für einige Dimensionen gültig sind. Ein typisches Beispiel ist der Saldo eines Bankkontos. Möglicherweise möchten Sie Saldi nach Kunde und Region hinzufügen, aber nicht nach Zeit. Beispielsweise würden Sie keine Saldi vom gleichen Konto über mehrere aufeinanderfolgende Tage hinzufügen wollen. Zum Definieren von semiadditivem Verhalten verwenden Sie den Assistenten zum Hinzufügen von Business Intelligence.|  
+|[Erweiterung auswählen](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Semiadditives Verhalten bezieht sich auf Aggregationen, die nur für einige Dimensionen gültig sind. Ein typisches Beispiel ist der Saldo eines Bankkontos. Möglicherweise möchten Sie Saldi nach Kunde und Region hinzufügen, aber nicht nach Zeit. Beispielsweise würden Sie keine Saldi vom gleichen Konto über mehrere aufeinanderfolgende Tage hinzufügen wollen. Zum Definieren von semiadditivem Verhalten verwenden Sie den Assistenten zum Hinzufügen von Business Intelligence.|  
 |[Verknüpfte Measuregruppen](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Führen Sie eine vorhandene Measuregruppe in anderen Cubes in derselben Datenbank oder in anderen Analysis Services-Datenbanken einem anderen Zweck zu.|  
   
 ##  <a name="bkmk_measure"></a> Measures  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162867"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Bereitstellen in SQL Server Data Tools
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53072137"
   
 #### <a name="to-deploy-a-tabular-model"></a>Bereitstellen ein tabellarisches Modells
   
--   In SSDT auf das **erstellen** Menü klicken Sie auf **bereitstellen \<Projektname >**.  
+-   In SSDT auf das **erstellen** Menü klicken Sie auf **bereitstellen \<Projektname >** .  
   
      Im Dialogfeld **Bereitstellen** wird der Status der Metadatenbereitstellung und der Verarbeitung jeder im Modell enthaltenen Tabelle angezeigt (es sei denn, die Eigenschaft „Verarbeitungsoption“ wurde auf „Nicht verarbeiten“ festgelegt). Nachdem der Bereitstellungsvorgang abgeschlossen ist, verwenden von SSMS eine Verbindung mit Analysis Services-Instanz, und stellen Sie sicher, dass das neue modelldatenbankobjekt erstellt wurde, oder verwenden Sie die clientberichterstellungsanwendung, um eine Verbindung mit dem bereitgestellten Modell herstellen.  
   

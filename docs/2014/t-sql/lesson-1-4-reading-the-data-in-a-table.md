@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187289"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>Lesen der Daten in einer Tabelle (Lernprogramm)
   Daten in einer Tabelle können mithilfe der SELECT-Anweisung gelesen werden. Die SELECT-Anweisung gehört zu den wichtigsten [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen. Ihre Syntax zeichnet sich durch unzählige Variationen aus. In diesem Lernprogramm arbeiten Sie mit fünf einfachen Versionen.  
@@ -34,7 +34,7 @@ ms.locfileid: "48182010"
   
     ```  
   
-2.  Sie können alle Spalten in der Tabelle mithilfe eines Sternchens (*) auswählen. Dies wird häufig bei Ad-hoc-Abfragen verwendet. Sie sollten die Spaltenliste im dauerhaften Code bereitstellen, sodass die Anweisung die vorhergesagten Spalten zurückgibt, selbst wenn der Tabelle später eine neue Spalte hinzugefügt wird.  
+2.  Sie können alle Spalten in der Tabelle mithilfe eines Sternchens auswählen. Dies wird häufig bei Ad-hoc-Abfragen verwendet. Sie sollten die Spaltenliste im dauerhaften Code bereitstellen, sodass die Anweisung die vorhergesagten Spalten zurückgibt, selbst wenn der Tabelle später eine neue Spalte hinzugefügt wird.  
   
     ```  
     -- Returns all columns in the table  
@@ -80,7 +80,7 @@ ms.locfileid: "48182010"
   
 |||  
 |-|-|  
-|[String Functions &#40;Transact-SQL&#41; (Zeichenfolgenfunktionen &#40;Transact-SQL&#41;)](/sql/t-sql/functions/string-functions-transact-sql)|[Date and Time Data Types and Functions &#40;Transact-SQL&#41; (Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL))](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[Zeichenfolgenfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
 |[Mathematische Funktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Text- und Bildfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  

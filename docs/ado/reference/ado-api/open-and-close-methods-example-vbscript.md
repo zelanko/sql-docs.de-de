@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56a695f742b2fb4ed324c7767a6191239378c6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87b2753c989ad2996dc7788bb0820d78b3b9b6ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931915"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open- und Close-Methode – Beispiel (VBScript)
 Dieses Beispiel verwendet die [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) und [schließen](../../../ado/reference/ado-api/close-method-ado.md) Methoden auf beiden [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekte, die geöffnet wurden.  

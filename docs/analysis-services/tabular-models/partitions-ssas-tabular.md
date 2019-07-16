@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d26b1b1558ca546fb47660488b15dc777c5ad87
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162719"
 ---
 # <a name="partitions"></a>Partitionen
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "54405850"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Beschreibt das Erstellen und Verwalten von Partitionen in der arbeitsbereichsdatenbank des Modells mit der Partitions-Manager in SSDT.|  
 |[Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)|Beschreibt, wie Partitionen in der Arbeitsbereichsdatenbank des Modells verarbeitet (aktualisiert) werden.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [DirectQuery-Modus](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Verarbeiten von Daten](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   

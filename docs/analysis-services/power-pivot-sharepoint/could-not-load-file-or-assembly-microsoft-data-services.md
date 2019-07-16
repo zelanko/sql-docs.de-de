@@ -1,5 +1,5 @@
 ---
-title: Konnte nicht geladen werden, Datei oder Assembly Microsoft Datendienste | Microsoft Docs
+title: Konnte nicht geladen werden, Datei oder Assembly ' Microsoft Datendienste | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9472fffb790d8d18ced8d2a528011927717aabc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026597"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164160"
 ---
-# <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>Datei oder Assembly Microsoft Datendienste konnte nicht geladen werden
+# <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>Datei oder Assembly ' Microsoft-Daten-Services konnte nicht geladen werden
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In SharePoint 2010-Umgebungen mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint tritt dieser Fehler auf, wenn Sie versuchen, einen Datenfeed zu exportieren und das System nicht über die erforderliche Version von Microsoft ADO.NET Data Services verfügt.  
   

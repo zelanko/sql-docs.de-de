@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2f9f19cc552209d2ecb35c1339d209cc04feb874
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f99cab327d9171aaa53b6c273c4a519bf13680b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920429"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans und RollbackTrans-Methode – Beispiel (VC++)
 In diesem Beispiel ändert den Book-Typ, der alle Psychologiebücher in die ***Titel*** Tabelle der Datenbank. Nach der [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode startet eine Transaktion, die alle Änderungen an isoliert die ***Titel*** Tabelle, die [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode speichert die Änderungen. Können Sie die [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) Methode, um die Änderungen rückgängig zu machen, die Sie unter Verwendung des gespeicherten der [Update](../../../ado/reference/ado-api/update-method.md) Methode.  

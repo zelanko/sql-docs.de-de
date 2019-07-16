@@ -1,5 +1,5 @@
 ---
-title: Bearbeiten oder Löschen von Partitionen (Analyisis Services – mehrdimensional) | Microsoft Docs
+title: Bearbeiten oder Löschen von Partitionen (Analyisis Services – mehrdimensional) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 739775890b324c89357ec4f1ba8f627277788087
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178225"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Bearbeiten oder Löschen von Partitionen (Analyisis Services – Mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "34024327"
  Das Löschen von Partitionen erfolgt automatisch, wenn Sie eine Quellpartition mit einer Zielpartition zusammenführen. Die als Quelle angegebene Partition wird nach Ende der Zusammenführung gelöscht. Sie können die Partitionen auch manuell in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder auf der Registerkarte Partitionen in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]löschen. Klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Löschen**aus. Zur Erinnerung: Beim Löschen einer Partition werden auch Daten und Aggregationen entfernt. Zur Vorsicht sollten Sie eine neuere Datenbanksicherung erstellen, falls Sie das Löschen später rückgängig machen müssen.  
   
 > [!NOTE]  
->  Alternativ können Sie XMLA-Skripts verwenden, um die Erstellung, das Zusammenführen und das Löschen von Partitionen zu automatisieren. XMLA-Skripts können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]oder in benutzerdefinierten SSIS-Paketen, die als geplanter Task ablaufen, erstellt und ausgeführt werden. Weitere Informationen finden Sie unter [Automatisieren von Analysis Services-Verwaltungsaufgaben mit SSIS](../../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
+>  Alternativ können Sie XMLA-Skripts verwenden, um die Erstellung, das Zusammenführen und das Löschen von Partitionen zu automatisieren. XMLA-Skripts können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]oder in benutzerdefinierten SSIS-Paketen, die als geplanter Task ablaufen, erstellt und ausgeführt werden. Weitere Informationen finden Sie unter [Automate Analysis Services Administrative Tasks with SSIS](../../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md).  
   
 ## <a name="partition-source"></a>Partitionsquelle  
- Gibt die Quelltabelle oder benannte Abfrage für die Partition an. Klicken Sie auf die Zelle, und klicken Sie anschließend auf die Schaltfläche zum Durchsuchen (**...**), um die Quelltabelle zu ändern.  
+ Gibt die Quelltabelle oder benannte Abfrage für die Partition an. Klicken Sie auf die Zelle, und klicken Sie anschließend auf die Schaltfläche zum Durchsuchen ( **...** ), um die Quelltabelle zu ändern.  
   
  ![Quellspalte im Bereich "Partition"](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "Quellspalte im Bereich \"Partition\"")  
   
- Wenn die Partition auf einer Abfrage basiert, klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um die Abfrage zu bearbeiten. Dadurch wird die **Source** -Eigenschaft der Partition bearbeitet. Weitere Informationen finden Sie unter [Ändern einer Partitionsquelle für die Verwendung einer anderen Faktentabelle](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md).  
+ Wenn die Partition auf einer Abfrage basiert, klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um die Abfrage zu bearbeiten. Dadurch wird die **Source** -Eigenschaft der Partition bearbeitet. Weitere Informationen finden Sie unter [Ändern einer Partitionsquelle für die Verwendung einer anderen Faktentabelle](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md).  
   
  Sie können eine Tabelle in der Datenquellensicht angeben, die die gleiche Struktur wie die ursprüngliche Quelltabelle (in der externen Datenquelle, aus der die Daten abgerufen werden) aufweist. Bei der Quelle kann es sich um eine beliebige Datenquelle oder Datenquellensicht der Cubedatenbank handeln.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "34024327"
  Speicher kann für jede Partition einer einzelnen Measuregruppe eines Cubes separat konfiguriert werden. Sie können auch die Standardspeichereinstellungen für einen Cube oder für eine Measuregruppe konfigurieren. Der Speicher wird im Cube-Assistenten auf der Registerkarte **Partitionen** konfiguriert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen Sie und verwalten Sie einer lokalen Partition & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Entwerfen von Aggregationen & #40; Analysis Services – mehrdimensional & #41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
- [Zusammenführen von Partitionen in Analysis Services & #40; SSAS – mehrdimensional & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Entwerfen von Aggregationen &#40;Analysis Services – mehrdimensional&#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
+ [Zusammenführen von Partitionen in Analysis Services &#40;SSAS – mehrdimensional&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

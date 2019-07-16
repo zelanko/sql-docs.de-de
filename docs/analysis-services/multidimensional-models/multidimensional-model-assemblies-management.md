@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165709"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +77,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Richtlinie auf Hostebene ist eine Kombination der festen Richtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für Systemassemblys und der benutzerdefinierten Richtlinie für Benutzerassemblys. Der benutzerdefinierte Teil der Hostrichtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basiert darauf, dass der Assemblybesitzer einen von drei Berechtigungsbuckets für jede Assembly angibt:  
   
-|Berechtigungseinstellung|Description|  
+|Berechtigungseinstellung|Beschreibung|  
 |------------------------|-----------------|  
 |**Safe**|Stellt eine interne Berechnungsberechtigung bereit. Dieser Berechtigungsbucket weist keine Berechtigungen für den Zugriff auf die geschützten Ressourcen in .NET Framework zu. Es handelt es hierbei um den Standard-Berechtigungsbucket für eine Assembly, sofern nicht mithilfe der **PermissionSet** -Eigenschaft ein anderer Bucket angegeben wurde.|  
 |**ExternalAccess**|Bietet den gleichen Zugriff wie die **Safe** -Einstellung, zusätzlich jedoch die Möglichkeit, auf externe Systemressourcen zuzugreifen. Dieser Berechtigungsbucket leistet keine Gewähr für Sicherheit (obwohl dieses Szenario gesichert werden kann), wohl aber für Zuverlässigkeit.|  

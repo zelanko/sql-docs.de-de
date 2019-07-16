@@ -1,5 +1,5 @@
 ---
-title: Attribute in über-/ Unterordnungshierarchien | Microsoft Docs
+title: Attribute in über-/ Unterordnungshierarchien | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6b6c10c8b1c7f311f7ba5e876c1b8d96c9e9701
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165421"
 ---
-# <a name="parent-child-dimension-attributes"></a>Über-und untergeordneten Dimension-Attribute
+# <a name="parent-child-dimension-attributes"></a>Über- und untergeordnete Dimensionsattribute
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]wird im Allgemeinen eine generelle Annahme hinsichtlich des Inhalts von Elementen in einer Dimension vorausgesetzt. Blattelemente enthalten Daten, die direkt aus den zugrunde liegenden Datenquellen abgeleitet wurden, Nichtblattelemente enthalten von Aggregationen abgeleitete Daten, die für untergeordnete Elemente ausgeführt wurden.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "34023457"
   
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [Über-und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
+ [Über- und untergeordnete Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   

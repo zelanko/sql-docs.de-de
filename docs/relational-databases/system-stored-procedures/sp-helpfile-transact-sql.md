@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943496"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Logischer Dateiname der Datei.|  
 |**fileid**|**smallint**|Numerischer Bezeichner der Datei. Wird nicht zurückgegeben, wenn *Namen* angegeben *.*|  
-|**filename**|**nchar(260)**|Physischer Dateiname.|  
+|**Dateiname**|**NCHAR(260)**|Physischer Dateiname.|  
 |**filegroup**|**sysname**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Die Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
 |**size**|**nvarchar(15)**|Die Dateigröße in KB.|  
 |**maxsize**|**nvarchar(15)**|Maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  
 |**growth**|**nvarchar(15)**|Vergrößerungsinkrement der Datei. Zeigt die Menge an Speicherplatz an, die jedes Mal der Datei hinzugefügt wird, sobald neuer Speicherplatz erforderlich wird.<br /><br /> 0 = Die Datei weist eine feste Größe auf und wird nicht vergrößert.|  
-|**usage**|**varchar(9)**|Bei einer Datendatei ist der Wert ist **'nur Daten'** und der Wert ist für die Protokolldatei **'nur protokollieren'**.|  
+|**Verwendung**|**varchar(9)**|Bei einer Datendatei ist der Wert ist **'nur Daten'** und der Wert ist für die Protokolldatei **'nur protokollieren'** .|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  

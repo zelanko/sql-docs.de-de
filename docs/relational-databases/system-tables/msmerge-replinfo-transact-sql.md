@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909058"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62903320"
 |**resync_gen**|**bigint**|Die Generierungsnummer, die für die erneute Synchronisierung des Abonnements verwendet wird. Der Wert **-1** gibt an, dass das Abonnement nicht für die erneute Synchronisierung markiert ist.|  
 |**login_name**|**sysname**|Der Name des Benutzers, der das Abonnement erstellt hat.|  
 |**hostname**|**sysname**|Der Wert, der beim Generieren der Partition für das Abonnement von den parametrisierten Zeilenfiltern verwendet wird.|  
-|**merge_jobid**|**binary(16)**|Die ID des Mergeauftrags für dieses Abonnement.|  
+|**der Standard**|**binary(16)**|Die ID des Mergeauftrags für dieses Abonnement.|  
 |**sync_info**|**int**|Intern-nur zur Verwendung.|  
   
 ## <a name="see-also"></a>Siehe auch  

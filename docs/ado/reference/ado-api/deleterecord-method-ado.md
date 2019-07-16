@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f67f074596bfcf93eb7017a7afe273285f721aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919083"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord-Methode (ADO)
 Löscht eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -36,7 +35,7 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Zeichenfolge** -Wert mit einer URL identifiziert die Entität (z. B. die Datei oder Verzeichnis) gelöscht werden soll. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge, die Entität, die vom aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) wird gelöscht. Wenn der Datensatz einen Datensatz für die Sammlung ist (["RecordType"](../../../ado/reference/ado-api/recordtype-property-ado.md) von **AdCollectionRecord**, z. B. einem Verzeichnis) alle untergeordneten Elemente (z. B. Unterverzeichnissen) werden ebenfalls gelöscht.  
+ Dies ist optional. Ein **Zeichenfolge** -Wert mit einer URL identifiziert die Entität (z. B. die Datei oder Verzeichnis) gelöscht werden soll. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge, die Entität, die vom aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) wird gelöscht. Wenn der Datensatz einen Datensatz für die Sammlung ist (["RecordType"](../../../ado/reference/ado-api/recordtype-property-ado.md) von **AdCollectionRecord**, z. B. einem Verzeichnis) alle untergeordneten Elemente (z. B. Unterverzeichnissen) werden ebenfalls gelöscht.  
   
  *Async*  
  Optional. Ein **booleschen** -Wert, wenn **"true"** , gibt an, dass der Löschvorgang asynchrone ist.  

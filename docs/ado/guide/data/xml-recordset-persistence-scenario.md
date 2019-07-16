@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 893921a7100ca22cae219f5a0e88d543499053b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923364"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Beibehaltungsszenario für XML-Recordsets
 In diesem Szenario erstellen Sie eine Active Server Pages (ASP)-Anwendung, die den Inhalt von einem Recordset-Objekt direkt in das ASP-Response-Objekt speichert.  
@@ -70,7 +69,7 @@ In diesem Szenario erstellen Sie eine Active Server Pages (ASP)-Anwendung, die d
   
  Lassen Sie die Datei, geöffnet, und fahren Sie mit dem nächsten Schritt.  
   
-## <a name="step-3-send-the-data"></a>Schritt 3: Die Daten senden  
+## <a name="step-3-send-the-data"></a>Schritt 3: Die Daten senden  
  Nun, da Sie ein Recordset verfügen, müssen Sie diese beim Speichern als XML an das ASP-Response-Objekt an den Client senden. Fügen Sie den folgenden Code am Ende XMLResponse.asp.  
   
 ```  

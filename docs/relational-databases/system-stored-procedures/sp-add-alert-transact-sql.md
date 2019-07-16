@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b16fe1f29d132b900eeb4c8f450fcdbd66eb22b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942384"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name der Warnung. Der Name wird in der E-Mail- oder Pagernachricht angezeigt, die als Reaktion auf die Warnung gesendet wird. Er muss eindeutig sein und darf kein Prozentzeichen (**%**) Zeichen. *Namen* ist **Sysname**, hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name der Warnung. Der Name wird in der E-Mail- oder Pagernachricht angezeigt, die als Reaktion auf die Warnung gesendet wird. Er muss eindeutig sein und darf kein Prozentzeichen ( **%** ) Zeichen. *Namen* ist **Sysname**, hat keinen Standardwert.  
   
 `[ @message_id = ] message_id` Die Anzahl der Nachrichten-Fehler, die die Warnung definiert. (Dies entspricht normalerweise einer Fehlernummer in der **Sysmessages** Tabelle.) *Message_id* ist **Int**, hat den Standardwert **0**. Wenn *Schweregrad* wird verwendet, um die Definition der Warnung *Message_id* muss **0** oder NULL.  
   
@@ -73,7 +72,7 @@ sp_add_alert [ @name = ] 'name'
   
  Mit dem Festlegen dieses Werts kann beispielsweise verhindert werden, dass unerwünschte E-Mail-Nachrichten gesendet werden, wenn eine Warnung in kurzen Zeitabständen wiederholt auftritt.  
   
-`[ @notification_message = ] 'notification_message'` Ist eine optionale zusätzliche Meldung, die an den Operator gesendet werden, als Teil der e-Mail- **net Send**,- oder Pagerbenachrichtigung. *Notification_message* ist **nvarchar(512)**, hat den Standardwert NULL. Angeben von *Notification_message* eignet sich für spezielle Anmerkungen, z. B. Hilfsmaßnahmen hinzuzufügen.  
+`[ @notification_message = ] 'notification_message'` Ist eine optionale zusätzliche Meldung, die an den Operator gesendet werden, als Teil der e-Mail- **net Send**,- oder Pagerbenachrichtigung. *Notification_message* ist **nvarchar(512)** , hat den Standardwert NULL. Angeben von *Notification_message* eignet sich für spezielle Anmerkungen, z. B. Hilfsmaßnahmen hinzuzufügen.  
   
 `[ @include_event_description_in = ] include_event_description_in` Ist, ob die Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehler sollte als Teil der benachrichtigungsmeldung enthalten sein. *Include_event_description_in*ist **Tinyint**, hat den Standardwert **5** (E-mail und **net Send**), und können über einen oder mehrere der folgenden Werte in Kombination mit einer **Oder** logischer Operator.  
   
@@ -89,7 +88,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @database_name = ] 'database'` Die Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst. Wenn *Datenbank*nicht angegeben wird, die Warnung ausgelöst wird, unabhängig davon, wo der Fehler aufgetreten ist. *Datenbank* ist **Sysname**. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'` Die Sequenz von Zeichen an, die Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlers entsprechen muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *Event_description_keyword_pattern* ist **nvarchar(100)**, hat den Standardwert NULL. Dieser Parameter ist hilfreich beim Filtern von Objektnamen (z. B. **%customer_table%**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` Die Sequenz von Zeichen an, die Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlers entsprechen muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *Event_description_keyword_pattern* ist **nvarchar(100)** , hat den Standardwert NULL. Dieser Parameter ist hilfreich beim Filtern von Objektnamen (z. B. **%customer_table%** ).  
   
 `[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, der als Reaktion auf diese Warnung ausgeführt werden soll. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL.  
   
@@ -102,17 +101,17 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @performance_condition = ] 'performance_condition'` Ein Wert im Format "*Itemcomparatorvalue*". *Performance_condition* ist **nvarchar(512)** hat den Standardwert NULL und besteht aus folgenden Elementen.  
   
-|Format-Element|Description|  
+|Format-Element|Beschreibung|  
 |--------------------|-----------------|  
-|*Element*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
-|*Comparator*|Einer dieser Operatoren: >, < oder =|  
+|*Item*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
+|*Comparator*|Einer dieser Operatoren: >, <, oder "="|  
 |*Wert*|Numerischer Wert des Indikators|  
   
 `[ @category_name = ] 'category'` Der Name der Warnungskategorie. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` Der WMI-Namespace zum Abfragen von Ereignissen. *Wmi_namespace* ist **Sysname**, hat den Standardwert NULL. Es werden nur Namespaces auf dem lokalen Server unterstützt.  
   
-`[ @wmi_query = ] 'wmi_query'` Die Abfrage, die das WMI-Ereignis für die Warnung angibt. *Wmi_query* ist **nvarchar(512)**, hat den Standardwert NULL.  
+`[ @wmi_query = ] 'wmi_query'` Die Abfrage, die das WMI-Ereignis für die Warnung angibt. *Wmi_query* ist **nvarchar(512)** , hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

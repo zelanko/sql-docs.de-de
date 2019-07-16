@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35fa15dc6651d8bfd9b6d32cafd00cd47698560b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206972"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, Cursor-Manager nach Typ-Objekt
   Das **SQLServer:Cursor-Manager nach Typ** -Objekt stellt Leistungsindikatoren zum Überwachen von Cursorn bereit, die nach dem Typ gruppiert sind.  
   
  Diese Tabelle beschreibt die Leistungsindikatoren des **SQLServer:Cursor-Manager nach Typ** -Objekts von SQL Server.  
   
-|Leistungsindikatoren des SQLServer:Cursor-Manager nach Typ-Objekts|Description|  
+|Leistungsindikatoren des SQLServer:Cursor-Manager nach Typ-Objekts|Beschreibung|  
 |-------------------------------------|-----------------|  
 |**Aktive Cursor**|Anzahl der aktiven Cursor.|  
 |**Cachetrefferquote**|Das Verhältnis zwischen Cachetreffern und -suchvorgängen.|  
@@ -38,7 +38,7 @@ ms.locfileid: "52804252"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Cursor-Manager-Instanz|Description|  
+|Cursor-Manager-Instanz|Beschreibung|  
 |-----------------------------|-----------------|  
 |**_Total**|Informationen für alle Cursor.|  
 |**API Cursor**|Nur die API-Cursor-Informationen.|  

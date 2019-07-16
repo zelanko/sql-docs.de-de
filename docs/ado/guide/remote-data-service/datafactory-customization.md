@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52cb60fc8d0c214bbc3d827617cf088a89b2aa83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922770"
 ---
 # <a name="datafactory-customization"></a>DataFactory-Anpassung
 Remote Data Service (RDS) bietet eine Möglichkeit zum Zugriff auf Daten ganz einfach in eine dreistufige Client/Server-System durchführen. Ein Client-Steuerelement gibt Verbindungs- und Parameter zum Ausführen einer Abfrage auf einem remote-Datenquelle oder eine Verbindungszeichenfolge und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt-Parameter, um ein Update durchzuführen.  

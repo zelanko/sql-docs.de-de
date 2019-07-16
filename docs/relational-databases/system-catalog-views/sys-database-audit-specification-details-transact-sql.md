@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: database_audit_specification_details (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940285"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "62652478"
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|ID der Überwachungsspezifikation.|  
 |**audit_action_id**|**int**|ID der Überwachungsaktion.|  
-|**audit_action_name**|**Sysname**|Name der Überwachungsaktion oder Überwachungsaktionsgruppe|  
+|**audit_action_name**|**sysname**|Name der Überwachungsaktion oder Überwachungsaktionsgruppe|  
 |**Klasse**|**int**|Identifiziert die Klasse des überwachten Objekts.|  
-|**class_ desc**|**Nvarchar(60)**|Beschreibung der Klasse des überwachten Objekts:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**Class_ desc**|**nvarchar(60)**|Beschreibung der Klasse des überwachten Objekts:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|Haupt-ID des überwachten Objekts, z. B. eine Tabellen-ID einer Tabellenüberwachungsaktion.|  
 |**minor_id**|**Int**|Sekundäre, entsprechend der Klasse interpretierte ID des überwachten Objekts, z. B. eine Spalten-ID einer Tabellenüberwachungsaktion.|  
 |**audited_principal_id**|**int**|Prinzipal, der überwacht wird.|  
-|**audited_result**|**Nvarchar(60)**|Ergebnisse der Überwachungsaktion:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**audited_result**|**nvarchar(60)**|Ergebnisse der Überwachungsaktion:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|Zeigt an, ob das Objekt eine Gruppe ist:<br /><br /> 0 – Keine Gruppe<br /><br /> 1 – Gruppe|  
   
 ## <a name="permissions"></a>Berechtigungen  

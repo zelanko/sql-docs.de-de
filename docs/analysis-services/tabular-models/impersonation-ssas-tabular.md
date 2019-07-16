@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207651"
 ---
 # <a name="impersonation"></a>Identitätswechsel 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -56,9 +56,9 @@ Wenn Daten nicht importiert oder verarbeitet werden, werden Identitätswechsel-A
   
 **Tabellarischen Modellen für Kompatibilitätsgrad 1400 und höher**
  
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
-|**Identität des Kontos annehmen**|Gibt an, das Modell ein Windows-Benutzerkonto zum Importieren oder Verarbeiten von Daten aus der Datenquelle. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format:**\<Domänenname >\\< Benutzerkontoname\>**.|  
+|**Identität des Kontos annehmen**|Gibt an, das Modell ein Windows-Benutzerkonto zum Importieren oder Verarbeiten von Daten aus der Datenquelle. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format: **\<Domänenname >\\< Benutzerkontoname\>** .|  
 |**Identität des aktuellen Benutzers**|Gibt an, dass die Daten zugegriffen werden soll, aus der Datenquelle, die mit der Identität des Benutzers, der die Anforderung gesendet wird. Diese Einstellung gilt nur für DirectQuery-Modus.|  
 |**Identität annehmen**|Gibt den Benutzernamen für den Zugriff auf die Datenquelle, jedoch nicht das Kennwort des Kontos angeben müssen. Diese Einstellung gilt nur, wenn die Kerberos-Delegierung aktiviert ist, und gibt an, dass die S4U-Authentifizierung verwendet werden soll.|  
 |**Identität des Dienstkontos annehmen**|Gibt an, das Modell die Sicherheitsanmeldeinformationen, die das Objekt verwaltet, die Analysis Services-Dienstinstanz zugeordnet.|  
@@ -70,9 +70,9 @@ Wenn Daten nicht importiert oder verarbeitet werden, werden Identitätswechsel-A
 
 **Tabellarische 1200-Modelle**
  
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
-|**Bestimmten Windows-Benutzernamen und Kennwort**|Diese Option gibt an das Modell ein Windows-Benutzerkonto zum Importieren oder Verarbeiten von Daten aus der Datenquelle. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format:**\<Domänenname >\\< Benutzerkontoname\>**. Wenn Sie ein neues Modell mit dem Tabellenimport-Assistenten erstellen, ist diese Einstellung die Standardoption.|  
+|**Bestimmten Windows-Benutzernamen und Kennwort**|Diese Option gibt an das Modell ein Windows-Benutzerkonto zum Importieren oder Verarbeiten von Daten aus der Datenquelle. Die Domäne und den Namen des Benutzerkontos folgen dem folgenden Format: **\<Domänenname >\\< Benutzerkontoname\>** . Wenn Sie ein neues Modell mit dem Tabellenimport-Assistenten erstellen, ist diese Einstellung die Standardoption.|  
 |**Dienstkonto**|Diese Option gibt an, dass das Modell die Sicherheitsanmeldeinformationen verwendet, die der Analysis Services-Dienstinstanz zugeordnet sind, die das Modell verwaltet.|  
   
 ##  <a name="bkmk_impers_sec"></a> Sicherheit  

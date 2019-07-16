@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79720c8e4e966c7f0129371dd6a22be4217f356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2212ebe8551f27c880ebf0c674f4b8d134617b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942508"
 ---
 # <a name="syscheckconstraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jedes Objekt, das eine CHECK-Einschränkung mit **sys.objects.type** = 'C'.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**\<Spalten, der von sys.objects geerbten >**||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_disabled**|**bit**|Die CHECK-Einschränkung ist deaktiviert.|  
 |**is_not_for_replication**|**bit**|Die CHECK-Einschränkung wurde mit der Option NOT FOR REPLICATION erstellt.|  
-|**Sys. check_constraints**|**bit**|Die CHECK-Einschränkung wurde nicht vom System für alle Zeilen überprüft.|  
+|**is_not_trusted**|**bit**|Die CHECK-Einschränkung wurde nicht vom System für alle Zeilen überprüft.|  
 |**parent_column_id**|**int**|0 gibt eine CHECK-Einschränkung auf Tabellenebene an.<br /><br /> Ein Wert ungleich 0 gibt an, dass es sich um eine CHECK-Einschränkung auf Spaltenebene handelt, die für die Spalte mit dem angegebenen ID-Wert definiert ist.|  
 |**definition**|**nvarchar(max)**|Ein SQL-Ausdruck, der die CHECK-Einschränkung definiert.|  
 |**uses_database_collation**|**bit**|1 = Die Einschränkungsdefinition hängt hinsichtlich einer richtigen Auswertung von der Standardsortierung der Datenbank ab, andernfalls 0. Durch diese Abhängigkeit wird verhindert, dass die Standardsortierung der Datenbank geändert wird.|  

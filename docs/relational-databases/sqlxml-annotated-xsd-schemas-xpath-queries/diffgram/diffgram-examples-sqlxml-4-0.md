@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 326bd4b924e0bd5e474399a372248addce8c4b78
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb8dfe264cfc8f1fb2d7d12b88fc483e46f50167
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895071"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram-Beispiele (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ ms.locfileid: "56030861"
 </ROOT>  
 ```  
   
- In der  **\<vor >** blockieren, gibt es eine  **\<Reihenfolge >** Element (**diffgr: ID = "Order1"**) und ein  **\< Kunde >** Element (**diffgr: ID = "Customer1"**). Diese Elemente stellen vorhandene Datensätze in der Datenbank dar. Die  **\<DataInstance >** -Element verfügt nicht über die entsprechenden Datensätze (mit dem gleichen **diffgr: ID**). Dies gibt einen Löschvorgang an.  
+ In der  **\<vor >** blockieren, gibt es eine  **\<Reihenfolge >** Element (**diffgr: ID = "Order1"** ) und ein  **\< Kunde >** Element (**diffgr: ID = "Customer1"** ). Diese Elemente stellen vorhandene Datensätze in der Datenbank dar. Die  **\<DataInstance >** -Element verfügt nicht über die entsprechenden Datensätze (mit dem gleichen **diffgr: ID**). Dies gibt einen Löschvorgang an.  
   
 #### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
@@ -169,7 +168,7 @@ ms.locfileid: "56030861"
 </ROOT>  
 ```  
   
- In diesem DiffGram der  **\<vor >** -Block nicht angegeben (keine vorhandenen Datenbank-Datensätze erkannt). Es gibt zwei Datensatzinstanzen (identifiziert durch die  **\<Kunden >** und  **\<Reihenfolge >** Elemente in der  **\<DataInstance >** Block), zuordnen zu Cust und Ord-Tabellen, bzw. Beide Elemente geben das **diffgr: HasChanges** Attribut (**HasChanges = "inserted"**). Dies gibt einen Einfügevorgang an. In diesem DiffGram, bei Angabe von **HasChanges = "modified"**, werden Sie an, dass einen Datensatz, der nicht vorhanden ist, was zu einem Fehler führt, ändern möchten.  
+ In diesem DiffGram der  **\<vor >** -Block nicht angegeben (keine vorhandenen Datenbank-Datensätze erkannt). Es gibt zwei Datensatzinstanzen (identifiziert durch die  **\<Kunden >** und  **\<Reihenfolge >** Elemente in der  **\<DataInstance >** Block), zuordnen zu Cust und Ord-Tabellen, bzw. Beide Elemente geben das **diffgr: HasChanges** Attribut (**HasChanges = "inserted"** ). Dies gibt einen Einfügevorgang an. In diesem DiffGram, bei Angabe von **HasChanges = "modified"** , werden Sie an, dass einen Datensatz, der nicht vorhanden ist, was zu einem Fehler führt, ändern möchten.  
   
 #### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
@@ -241,7 +240,7 @@ ms.locfileid: "56030861"
 </ROOT>  
 ```  
   
- Die  **\<vor >** -Block enthält ein  **\<Kunden >** Element (**diffgr: ID = "Customer1"**). Die  **\<DataInstance >** -Block enthält das entsprechende  **\<Kunden >** -Element mit derselben **Id**. Die  **\<Kunden >** Element in der  **\<NewDataSet >** gibt auch an **diffgr: HasChanges = "modified"**. Dies gibt an, einen Update-Vorgang und der Kundendatensatz in der **Cust** -Tabelle wird entsprechend aktualisiert. Beachten Sie, dass bei der **diffgr: HasChanges** -Attribut nicht angegeben ist, die DiffGram-Verarbeitungslogik ignoriert dieses Elements und keine Updates ausgeführt werden.  
+ Die  **\<vor >** -Block enthält ein  **\<Kunden >** Element (**diffgr: ID = "Customer1"** ). Die  **\<DataInstance >** -Block enthält das entsprechende  **\<Kunden >** -Element mit derselben **Id**. Die  **\<Kunden >** Element in der  **\<NewDataSet >** gibt auch an **diffgr: HasChanges = "modified"** . Dies gibt an, einen Update-Vorgang und der Kundendatensatz in der **Cust** -Tabelle wird entsprechend aktualisiert. Beachten Sie, dass bei der **diffgr: HasChanges** -Attribut nicht angegeben ist, die DiffGram-Verarbeitungslogik ignoriert dieses Elements und keine Updates ausgeführt werden.  
   
 #### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
@@ -344,13 +343,13 @@ ms.locfileid: "56030861"
   
 -   In Übereinstimmung mit der DiffGram-Verarbeitungslogik werden alle Elemente der obersten Ebene in der  **\<vor >** blockieren Sie den entsprechenden Tabellen zugeordnet, wie in der Mapping-Schema beschrieben.  
   
--   Die  **\<vor >** -Block umfasst ein  **\<Reihenfolge >** Element (**Dffgr:id = "Order1"**) und ein  **\<Kunden >** Element (**diffgr: ID = "Customer1"**) für das es kein entsprechendes Element in der  **\<DataInstance >** -Block (mit der gleichen ID). Dies gibt einen Löschvorgang an, und die Datensätze werden aus den Cust- und Ord-Tabellen gelöscht.  
+-   Die  **\<vor >** -Block umfasst ein  **\<Reihenfolge >** Element (**Dffgr:id = "Order1"** ) und ein  **\<Kunden >** Element (**diffgr: ID = "Customer1"** ) für das es kein entsprechendes Element in der  **\<DataInstance >** -Block (mit der gleichen ID). Dies gibt einen Löschvorgang an, und die Datensätze werden aus den Cust- und Ord-Tabellen gelöscht.  
   
--   Die  **\<vor >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer2"**) für den es einen entsprechenden  **\<Kunden >** Element in der  **\<DataInstance >** -Block (mit der gleichen ID). Das Element in der  **\<DataInstance >** -Block gibt **diffgr: HasChanges = "modified"**. Dies ist ein Updatevorgang, bei dem für den Kunden ANATR, die Angaben und in die Cust-Tabelle mit Werten, die im angegebenen aktualisiert, die  **\<DataInstance >** Block.  
+-   Die  **\<vor >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer2"** ) für den es einen entsprechenden  **\<Kunden >** Element in der  **\<DataInstance >** -Block (mit der gleichen ID). Das Element in der  **\<DataInstance >** -Block gibt **diffgr: HasChanges = "modified"** . Dies ist ein Updatevorgang, bei dem für den Kunden ANATR, die Angaben und in die Cust-Tabelle mit Werten, die im angegebenen aktualisiert, die  **\<DataInstance >** Block.  
   
--   Die  **\<DataInstance >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer3"**) und ein  **\<Reihenfolge >** Element (**diffgr: ID = "Order3"**). Keines dieser Elemente geben das **diffgr: HasChanges** Attribut. Daher ignoriert die DiffGram-Verarbeitungslogik diese Elemente.  
+-   Die  **\<DataInstance >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer3"** ) und ein  **\<Reihenfolge >** Element (**diffgr: ID = "Order3"** ). Keines dieser Elemente geben das **diffgr: HasChanges** Attribut. Daher ignoriert die DiffGram-Verarbeitungslogik diese Elemente.  
   
--   Die  **\<DataInstance >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer4"**) und ein  **\<Reihenfolge >** Element (**diffgr: ID = "Order4"**) für das es keine entsprechenden Elemente in der \<vor > Block. Diese Elemente in der  **\<DataInstance >** -Block geben **diffgr: HasChanges = "inserted"**. Daher wird ein neuer Datensatz der Cust-Tabelle und der Ord-Tabelle hinzugefügt.  
+-   Die  **\<DataInstance >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer4"** ) und ein  **\<Reihenfolge >** Element (**diffgr: ID = "Order4"** ) für das es keine entsprechenden Elemente in der \<vor > Block. Diese Elemente in der  **\<DataInstance >** -Block geben **diffgr: HasChanges = "inserted"** . Daher wird ein neuer Datensatz der Cust-Tabelle und der Ord-Tabelle hinzugefügt.  
   
 #### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   

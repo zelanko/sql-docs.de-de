@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c57878b73c3c6a20f8dc0a8abd422c12a0446a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931285"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) eines Datensatzes in Bezug auf Batch-Updates und andere Massenvorgänge.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Gibt an, dass der Datensatz wurde nicht gespeichert werden, da der Vorgang abgebrochen wurde.|  
 |**adRecCantRelease**|0x400|Gibt an, dass der neue Datensatz nicht gespeichert wurde, da der vorhandene Eintrag gesperrt wurde.|  

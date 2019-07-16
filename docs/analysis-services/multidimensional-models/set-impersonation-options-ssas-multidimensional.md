@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533813"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165198"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52533813"
 3.  Wählen Sie eine der Optionen aus, die in diesem Thema unter [Identitätswechseloptionen](#bkmk_options) beschrieben werden.  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Festlegen von Identitätswechseloptionen in Management Studio  
- Öffnen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]das Dialogfeld **Identitätswechselinformationen** , indem Sie für die folgenden Eigenschaften dieser Dialogfelder auf die Schaltfläche mit den Auslassungspunkten (**...**) klicken:  
+ Öffnen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]das Dialogfeld **Identitätswechselinformationen** , indem Sie für die folgenden Eigenschaften dieser Dialogfelder auf die Schaltfläche mit den Auslassungspunkten ( **...** ) klicken:  
   
 -   Dialogfeld**Datenbankeigenschaften** , über die Eigenschaft "Identitätswechselinformationen der Datenquelle"  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52533813"
  Alle Optionen sind im Dialogfeld verfügbar, aber nicht alle Optionen sind für jedes Szenario geeignet. Bestimmen Sie anhand folgender Informationen die beste Option für das Szenario.  
   
  **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
- Wählen Sie diese Option, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt verwenden Sie die Sicherheitsanmeldeinformationen eines Windows-Benutzerkontos in folgendem Format angegeben: *\<Domänenname >***\\***\<Benutzerkontonamen >*.  
+ Wählen Sie diese Option, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Objekt verwenden Sie die Sicherheitsanmeldeinformationen eines Windows-Benutzerkontos in folgendem Format angegeben: *\<Domänenname >***\\***\<Benutzerkontonamen >* .  
   
  Wählen Sie diese Option aus, um eine dedizierte Windows-Benutzeridentität mit den niedrigsten Privilegien zu verwenden, die Sie speziell für Datenzugriffszwecke erstellt haben. Wenn Sie z. B. routinemäßig ein allgemeines Konto zum Abrufen von Daten für Berichte erstellen, können Sie dieses Konto hier angeben.  
   

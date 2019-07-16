@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4415c5dba3382e636488ac94408f163c8e54dc6f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539027"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179533"
 ---
 # <a name="attribute-properties---modify-the-keycolumn-property"></a>Attributeigenschaften – Ändern der KeyColumn-Eigenschaft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52539027"
   
          -oder-  
   
-    -   Im Cube-Designer auf die **Cubestruktur** Registerkarte, erweitern Sie dann die Cubedimension in der **Dimensionen** Bereich, und klicken Sie auf **bearbeiten \<Dimension >**.  
+    -   Im Cube-Designer auf die **Cubestruktur** Registerkarte, erweitern Sie dann die Cubedimension in der **Dimensionen** Bereich, und klicken Sie auf **bearbeiten \<Dimension >** .  
   
 3.  Klicken Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** auf das Attribut, dessen **KeyColumns** -Eigenschaft Sie ändern möchten.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26d7bf92a3720b802818fd5d5bacc8d5a9d7b819
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207456"
 ---
 # <a name="tabular-model-projects"></a>Tabellenmodellprojekte 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072047"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen eines neuen Tabellenmodellprojekts &#40;Analysis Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)|Dieser Artikel beschreibt, wie ein neues, leeres tabellarisches Modellprojekt erstellt wird.|  
 |[Importieren aus Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)|Dieser Artikel beschreibt, wie Sie ein neues Projekt für tabellarische Modelle basierend auf einem vorhandenen Modell bereits in Analysis Services zu erstellen. Metadaten aus dem vorhandenen Modell werden extrahiert und für das neue Modell verwendet.|  

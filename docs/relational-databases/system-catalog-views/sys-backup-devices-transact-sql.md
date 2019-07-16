@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c48c029283b9fc5ec3be2d5b867ee7506d77f514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b70d87a6f1a72662c1ca466a532d3050b4fe58ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942580"
 ---
 # <a name="sysbackupdevices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede Sicherung-Gerät mit registriert **Sp_addumpdevice** oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name des Sicherungsmediums. Ist im Sicherungssatz eindeutig.|  
 |**type**|**tinyint**|Typ des Sicherungsmediums:<br /><br /> 2 = Datenträger<br /><br /> 3 = Diskette (veraltet)<br /><br /> 5 = Band<br /><br /> 6 = Pipe (veraltet)<br /><br /> 7 = Virtuelles Medium (für die optionale Verwendung von Drittsicherungsanbietern)<br /><br /> In der Regel werden nur Datenträger (2) und Band (5) verwendet.|  

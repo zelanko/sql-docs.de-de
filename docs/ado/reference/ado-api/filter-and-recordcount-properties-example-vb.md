@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0fbb20e623c37528285b8c1dd248ad24217cb2bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918641"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter- und RecordCount-Eigenschaft – Beispiel (VB)
 In diesem Beispiel öffnen eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Herausgeber-Tabelle in der ***Pubs*** Datenbank. Anschließend wird mithilfe der [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft, um die Anzahl der sichtbaren Datensätze auf diesen Verlegern in der ein bestimmtes Land/Region einzuschränken. Die **RecordCount** Eigenschaft wird verwendet, um den Unterschied zwischen der gefilterten und ungefilterten Recordsets anzeigen.  
@@ -117,5 +116,5 @@ Attribute VB_Name = "Filter"
   
 ## <a name="see-also"></a>Siehe auch  
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
+ [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Clustering Algorithm Technical Reference | Microsoft Docs
+title: Microsoft Clustering Algorithm Technical Reference | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb86c8271599b56deb27fd3143fd205c11f52f35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183126"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Clustering-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34018357"
   
  Weitere Informationen zum Verwenden von Clustermodellen finden Sie in folgenden Themen:  
   
--   [Miningmodellinhalt, für das Clustering-Modelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Miningmodellinhalt von Clustermodellen &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+-   [Beispiele für Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Implementierung des Microsoft Clustering-Algorithmus  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus stellt zwei Methoden zum Erstellen von Clustern und zum Zuweisen von Datenpunkten zu den Clustern zur Verfügung. Die erste Methode, der *K-Means-Algorithmus* , ist eine harte Clustermethode. Dies bedeutet, dass ein Datenpunkt nur zu einem Cluster gehören kann und dass für die Mitgliedschaft der einzelnen Datenpunkte in diesem Cluster nur eine einzige Wahrscheinlichkeit berechnet wird. Die zweite Methode, die *Expectation Maximization (EM)* -Methode, ist eine *weiche Clustermethode* . Dies bedeutet, dass ein Datenpunkt stets zu mehreren Clustern gehört und dass für jede Kombination aus Datenpunkt und Cluster eine Wahrscheinlichkeit berechnet wird.  
@@ -93,7 +93,7 @@ ms.locfileid: "34018357"
  CLUSTER_COUNT  
  Gibt die ungefähre Anzahl der vom Algorithmus zu erstellenden Cluster an. Falls die ungefähre Anzahl von Clustern nicht aus den Daten erstellt werden kann, erstellt der Algorithmus so viele Cluster wie möglich. Durch Festlegen des CLUSTER_COUNT-Parameters auf 0 wird der Algorithmus zur Verwendung heuristischer Methoden veranlasst, um die Anzahl von zu erstellenden Clustern so gut wie möglich zu bestimmen.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
  CLUSTER_SEED  
  Gibt den numerischen Ausgangswert für die zufällige Clustergenerierung in der Anfangsphase der Modellerstellung an.  
@@ -117,12 +117,12 @@ ms.locfileid: "34018357"
   
  Eine Reduzierung der Anzahl von Kandidatenmodellen kann zwar zur Verbesserung der Leistung führen, beinhaltet jedoch das Risiko, einige gute Kandidatenmodelle zu verpassen.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
  STOPPING_TOLERANCE  
  Gibt den Wert an, mit dem bestimmt wird, wann Konvergenz erreicht ist und die Modellerstellung mit dem Algorithmus abgeschlossen ist. Konvergenz ist erreicht, wenn die Gesamtänderung der Clusterwahrscheinlichkeiten kleiner als das Verhältnis des STOPPING_TOLERANCE-Parameters geteilt durch die Modellgröße ist.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
  SAMPLE_SIZE  
  Gibt die Anzahl von Fällen an, die bei jedem Durchlauf des Algorithmus verwendet werden, wenn der CLUSTERING_METHOD-Parameter auf eine der skalierbaren Clustermethoden festgelegt ist. Das Festlegen des SAMPLE_SIZE-Parameters auf 0 bewirkt eine Clustererstellung für das gesamte Dataset in einem einzelnen Durchlauf. Das gesamte Dataset in einem einzelnen Durchlauf zu laden, kann zu Problemen mit dem Arbeitsspeicher und der Leistung führen.  
@@ -146,9 +146,9 @@ ms.locfileid: "34018357"
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der Algorithmus unterstützt die folgenden Modellierungsflags. Modellierungsflags werden beim Erstellen der Miningstruktur oder des Miningmodells definiert. Die Modellierungsflags geben an, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden.  
   
-|Modellierungsflag|Description|  
+|Modellierungsflag|Beschreibung|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Die Spalte kann zwei mögliche Statuswerte haben: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
+|MODEL_EXISTENCE_ONLY|Die Spalte wird zwei mögliche Statuswerte haben behandelt: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Die Spalte darf keinen NULL-Wert enthalten. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -157,7 +157,7 @@ ms.locfileid: "34018357"
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Column|Inhaltstypen|  
+|Spalte|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Table, Ordered|  
@@ -167,7 +167,7 @@ ms.locfileid: "34018357"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Miningmodellinhalt, für das Clustering-Modelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Beispiele für Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)   
+ [Miningmodellinhalt von Clustermodellen &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

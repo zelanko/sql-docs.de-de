@@ -1,5 +1,5 @@
 ---
-title: Erteilen Cube- oder modellberechtigungen (Analysis Services) | Microsoft Docs
+title: Gewähren von Berechtigungen des Cube- oder modellberechtigungen (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f028885e91dd67869e15bab4d7b64cc97b64f9bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208880"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Erteilen von Cube- oder Modellberechtigungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34024367"
 > [!NOTE]  
 >  Nur Serveradministratoren, oder Datenbankadministratoren mit Vollzugriff, können einen Cube von Quelldateien auf einem Server bereitstellen bzw. Rollen erstellen und Mitglieder zuweisen. Einzelheiten zu diesen Berechtigungsebenen finden Sie unter [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) und [Gewähren von Datenbankberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
-#### <a name="step-1-create-the-role"></a>Schritt 1: Erstellen der Rolle  
+#### <a name="step-1-create-the-role"></a>Schritt 1: Die Rolle erstellen  
   
 1.  Verbinden Sie sich in SSMS mit Analysis Services. Falls Sie Hilfe bei den Schritten benötigen, lesen Sie unter [Herstellen einer Verbindung von Clientanwendungen &#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md) nach.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34024367"
   
      In diesem Bereich können Sie **Datenbank verarbeiten** -Rechte für den Cube gewähren, um allen Mitgliedern dieser Rolle die Möglichkeit zu geben, Daten für diesen Cube zu verarbeiten. Da die Verarbeitung in der Regel ein eingeschränkter Vorgang ist, empfehlen wir, diese Aufgabe den Administratoren zu überlassen oder speziell für diese Aufgabe separate Rollen zu definieren. Weitere Informationen zu Best Practises für Verarbeitungsberechtigungen finden Sie unter [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md).  
   
-#### <a name="step-4-test"></a>Schritt 4: Testen  
+#### <a name="step-4-test"></a>Schritt 4: Test  
   
 1.  Verwenden Sie Excel, um die Cube-Zugriffsberechtigungen zu testen. Sie können auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwenden und dem unten beschriebenen Verfahren folgen, während Sie die Anwendung als Nicht-Administrator ausführen.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34024367"
   
      Wenn bei der Verbindung Fehlermeldungen angezeigt werden, überprüfen Sie die Portkonfiguration für Analysis Services, und vergewissern Sie sich, dass der Server Remoteverbindungen akzeptiert. Informationen zur Portkonfiguration finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Schritt 5: Definition und Zuweisungen der Skriptrolle  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Schritt 5: Skript-Role-Definition und Zuweisungen  
   
 1.  Als letzten Schritt sollten Sie ein Skript generieren, in dem die gerade erstellte Rollendefinition erfasst wird.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34024367"
   
 ## <a name="see-also"></a>Siehe auch  
  [Von Analysis Services unterstützte Authentifizierungsmethoden](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Erteilen von Berechtigungen für Datamining-Strukturen und Modelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Erteilen von Berechtigungen für ein Datenquellenobjekt & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Erteilen von Berechtigungen für Data Mining-Strukturen und -Modelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Erteilen von Berechtigungen für ein Datenquellenobjekt &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

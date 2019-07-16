@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Daten in einer Datenquellensicht (Analysis Services) | Microsoft Docs
+title: Durchsuchen von Daten in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a7cb3d9895c7524bf0517270b50ac7830774dd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026837"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177802"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Durchsuchen von Daten in einer Datenquellensicht (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34026837"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Tabelle, Sicht oder benannte Abfrage, die die anzuzeigenden Daten enthält, und klicken Sie anschließend auf **Daten durchsuchen**.  
   
-     Die Datenquelle zugrunde liegenden der Tabelle, Sicht oder benannten Abfrage in der Datenquellensicht handelt es sich Abfragen und die Ergebnisse werden in der **Durchsuchen \<Objektname > Tabelle** Registerkarte.  
+     Die Datenquelle des zugrunde liegenden Tabelle, Ansicht oder benannten Abfrage in der Datenquellensicht sind Abfragen, und die Ergebnisse werden in der **Durchsuchen \<Objektname > Tabelle** Registerkarte.  
   
 4.  Auf der **Durchsuchen \<Objektname > Tabelle** -Symbolleiste klicken Sie auf die **Samplingoptionen** Symbol.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34026837"
   
 5.  Klicken Sie nach Bedarf auf **OK** oder **Abbrechen** .  
   
-6.  Um die Daten neu berechnen, klicken Sie auf **Resample Daten** auf die **Durchsuchen \<Objektname > Tabelle** Symbolleiste.  
+6.  Um die Daten erneut einlesen, klicken Sie auf **Resample Daten** auf die **Durchsuchen \<Objektname > Tabelle** Symbolleiste.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

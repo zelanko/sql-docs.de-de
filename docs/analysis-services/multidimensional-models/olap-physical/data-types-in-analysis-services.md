@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea192588186f69adbc04ab6a56123206e1fb7817
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146455"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208610"
 ---
 # <a name="data-types-in-analysis-services"></a>Datentypen in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,8 +25,8 @@ ms.locfileid: "50146455"
 |||  
 |-|-|  
 |BigInt|Ein 64-Bit-Integer mit Vorzeichen Die *BigInt* -Werttyp stellt Ganzzahlen dar, mit Werten zwischen-9.223.372.036.854.775.808 und + 9.223.372.036.854.775.807 liegen.|  
-|Binär (Binary)|Ein Stream binärer Daten der **Byte** Typ. **Byte** ist ein Werttyp, der Ganzzahlen ohne Vorzeichen darstellt, die zwischen 0 und 255 liegen.|  
-|Boolean|Instanzen dieses Typs weisen den Wert **"true"** oder **"false"**.|  
+|Binär|Ein Stream binärer Daten der **Byte** Typ. **Byte** ist ein Werttyp, der Ganzzahlen ohne Vorzeichen darstellt, die zwischen 0 und 255 liegen.|  
+|Boolean|Instanzen dieses Typs weisen den Wert **"true"** oder **"false"** .|  
 |Währung|Ein *Währung* Wert im Bereich zwischen-922.337.203.685.477,5808 bis + 922.337.203.685.477,5807 mit einer Genauigkeit von einem Zehntausendstel einer Währungseinheit (vier Dezimalstellen).|  
 |date|Datum und Uhrzeitdaten, die als double-Wert gespeichert werden. Der ganzzahlige Teil gibt die Anzahl von Tagen seit dem 30. Dezember 1899 wieder, während der Bruchteil ein Teil eines Tages oder die Tageszeit ist.|  
 |Double|Eine Gleitkommazahl im Bereich von -1,79769313486232E +308 bis 1,79769313486232E +308. Ein double-Wert speichert Informationen zur Zahl mit einer Genauigkeit von bis zu 15 Dezimalstellen.|  

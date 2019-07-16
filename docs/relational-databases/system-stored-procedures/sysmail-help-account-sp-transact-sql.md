@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2b5f416d1f2989cd9392ecac0279e792477cca8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909182"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
 ||||  
 |-|-|-|  
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |**account_id**|**int**|ID des Kontos|  
 |**name**|**sysname**|Der Name des Kontos.|  
 |**description**|**nvarchar(256)**|Beschreibung des Kontos|  
@@ -60,7 +59,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**display_name**|**nvarchar(128)**|Der Anzeigename des Kontos.|  
 |**replyto_address**|**nvarchar(128)**|Adresse, an die Antworten auf die Nachrichten von diesem Konto versandt werden|  
 |**servertype**|**sysname**|Typ des E-Mail-Servers für das Konto|  
-|**servername**|**sysname**|Name des E-Mail-Servers für das Konto|  
+|**Servername**|**sysname**|Name des E-Mail-Servers für das Konto|  
 |**port**|**int**|Portnummer, die der E-Mail-Server verwendet|  
 |**username**|**nvarchar(128)**|Der Benutzername für die Anmeldung am E-Mail-Server, wenn der E-Mail-Server eine Authentifizierung verwendet. Wenn **username** den Wert NULL hat, verwendet Datenbank-E-Mail keine Authentifizierung für dieses Konto.|  
 |**use_default_credentials**|**bit**|Gibt an, ob E-Mail mithilfe der Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]an den SMTP-Server gesendet wird. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail keine Anmeldeinformationen des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienstes. Wenn dieser Parameter 0 ist, verwendet Datenbank-e-Mails der **@username** und **@password** für die Authentifizierung auf dem SMTP-Server. Wenn **@username** und **@password** NULL sind, und klicken Sie dann Database Mail anonyme Authentifizierung verwendet. Wenden Sie sich an Ihren SMTP-Administrator, bevor Sie diesen Parameter angeben.|  

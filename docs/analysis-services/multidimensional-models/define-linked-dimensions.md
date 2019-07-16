@@ -1,5 +1,5 @@
 ---
-title: Definieren von verknüpften Dimensionen | Microsoft Docs
+title: Definieren von verknüpften Dimensionen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8441f37d902c823e9d8dce27a96b2d78f3f38b26
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023627"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209011"
 ---
 # <a name="define-linked-dimensions"></a>Definieren von verknüpften Dimensionen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34023627"
 > [!NOTE]  
 >  Da keine Aktualisierungsfunktion verfügbar ist, werden Dimensionen von den meisten Analysis Services-Entwicklern kopiert und nicht verknüpft. Sie können Dimensionen zwischen Projekten innerhalb derselben Projektmappe kopieren. Weitere Informationen finden Sie unter [Aktualisieren einer verknüpften Dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Die Quelldatenbank, die die Dimension enthält, und die aktuelle Datenbank, von der sie verwendet wird, müssen über die gleiche Version und den gleichen Kompatibilitätsgrad verfügen. Weitere Informationen finden Sie unter [Kompatibilitätsgrad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  Die Quelldatenbank muss bereitgestellt und online geschaltet sein. Server, die verknüpfte Objekte veröffentlichen oder nutzen, müssen so konfiguriert werden, dass der Vorgang zulässig ist (siehe unten).  

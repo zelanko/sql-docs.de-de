@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209550"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Verwenden von SQL Server Profiler zum Überwachen von Data Mining (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51818496"
 ## <a name="using-traces-to-monitor-data-mining"></a>Verwenden von Ablaufverfolgungen zum Überwachen von Data Mining  
  Wenn Sie Daten in einer Ablaufverfolgung aufzeichnen, können Sie festlegen, ob die Daten in einer Datei, einer Tabelle oder einer Instanz von SQL Server gespeichert werden sollen. Unabhängig davon, welche Methode Sie zum Speichern der Daten wählen, können Sie die Ablaufverfolgung mithilfe von SQL Server Profiler anzeigen und nach Ereignissen filtern. In der folgenden Tabellen werden einige Ereignisse und Unterklassen der Standard-Ablaufverfolgung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aufgeführt, die beim Data Mining von Interesse sind.  
   
-|EventClass|EventSubclass|Description|  
+|EventClass|EventSubclass|Beschreibung|  
 |----------------|-------------------|-----------------|  
 |**Query Begin**<br /><br /> **Abfrageende**|**0 - MDXQuery**|Enthält den Text aller Aufrufe an von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeicherten Prozeduren.|  
 |**Query Begin**<br /><br /> **Abfrageende**|**1 - DMXQuery**|Enthält den Text und die Ergebnisse von Data Mining Extension (DMX)-Anweisungen.|  

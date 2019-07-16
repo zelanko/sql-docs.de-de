@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 661ec0fca03349f4b833a9fa3128bd539a2cc267
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127195"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199288"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln
   In diesem Thema wird beschrieben, wie die Propagierungsmethode für Datenänderungen an Transaktionsartikeln in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]festgelegt wird.  
@@ -84,7 +84,7 @@ ms.locfileid: "54127195"
   
 #### <a name="to-create-an-article-that-uses-transact-sql-commands-to-propagate-data-changes"></a>So erstellen Sie einen Artikel, der Transact-SQL-Befehle verwendet, um Datenänderungen weiterzugeben  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**und den Wert **SQL** für wenigstens einen der folgenden Parameter an:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , das Datenbankobjekt, das veröffentlicht wird, für **@source_object** und den Wert **SQL** für wenigstens einen der folgenden Parameter an:  
   
     -   **@ins_cmd** &ndash; steuert die Replikation von [INSERT](/sql/t-sql/statements/insert-transact-sql) -Befehlen.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "54127195"
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>So erstellen Sie einen Artikel, der keine Datenänderungen weitergibt  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**und den Wert **NONE** für wenigstens einen der folgenden Parameter an:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , das Datenbankobjekt, das veröffentlicht wird, für **@source_object** und den Wert **NONE** für wenigstens einen der folgenden Parameter an:  
   
     -   **@ins_cmd** &ndash; steuert die Replikation von [INSERT](/sql/t-sql/statements/insert-transact-sql) -Befehlen.  
   
@@ -114,13 +114,13 @@ ms.locfileid: "54127195"
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>So erstellen Sie einen Artikel mit benutzerdefinierten gespeicherten Prozeduren  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**, einen Wert für die **@schema_option** -Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und wenigstens einen der folgenden Parameter an:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , das Datenbankobjekt, das veröffentlicht wird, für **@source_object** , einen Wert für die **@schema_option** -Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und wenigstens einen der folgenden Parameter an:  
   
-    -   **@ins_cmd** -Geben Sie den Wert <strong>CALL Sp_MSins_*Article_name*</strong>, wobei **_Article_name_** ist der angegebene Wert für **@article**.  
+    -   **@ins_cmd** -Geben Sie den Wert <strong>CALL Sp_MSins_*Article_name*</strong>, wobei **_Article_name_** ist der angegebene Wert für **@article** .  
   
     -   **@del_cmd** -Geben Sie den Wert <strong>CALL Sp_MSdel_*Article_name*</strong>  oder <strong>XCALL Sp_MSdel_*Article_name*</strong>, wobei **_Article_name_** ist der angegebene Wert für _ *@article**.  
   
-    -   **@upd_cmd** -Geben Sie den Wert <strong>SCALL Sp_MSupd_*Article_name*</strong>, <strong>CALL Sp_MSupd_*Article_name*</strong>, <strong>XCALL Sp_MSupd__ Article_name*</strong>, oder <strong>MCALL Sp_MSupd_* Article_name *</strong>, wobei _**Article_name**_ ist der Wert für die angegebene **@article**.  
+    -   **@upd_cmd** -Geben Sie den Wert <strong>SCALL Sp_MSupd_*Article_name*</strong>, <strong>CALL Sp_MSupd_*Article_name*</strong>, <strong>XCALL Sp_MSupd__ Article_name *</strong>, oder <strong>MCALL Sp_MSupd_* Article_name *</strong>, wobei _**Article_name**_ ist der Wert für die angegebene **@article** .  
   
     > [!NOTE]  
     >  Für jeden der obigen Befehlsparameter gilt: Sie können einen selbst gewählten Namen für die gespeicherten Prozeduren angeben, die von der Replikation generiert werden.  
@@ -134,13 +134,13 @@ ms.locfileid: "54127195"
   
 #### <a name="to-create-an-article-with-custom-scripting-in-the-custom-stored-procedures-to-propagate-data-changes"></a>So erstellen Sie einen Artikel mit benutzerdefinierter Skriptprozedur in den benutzerdefinierten gespeicherten Prozeduren, um Datenänderungen weiterzugeben  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication**, den Namen des Artikels für **@article**, das Datenbankobjekt, das veröffentlicht wird, für **@source_object**, einen Wert für die **@schema_option** -Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und wenigstens einen der folgenden Parameter an:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , das Datenbankobjekt, das veröffentlicht wird, für **@source_object** , einen Wert für die **@schema_option** -Bitmaske, der den Wert **0x02** enthält (aktiviert die automatische Erstellung benutzerdefinierter gespeicherter Prozeduren), und wenigstens einen der folgenden Parameter an:  
   
-    -   **@ins_cmd** -Geben Sie den Wert <strong>CALL Sp_MSins_*Article_name*</strong>, wobei _**Article_name**_ ist der angegebene Wert für **@article**.  
+    -   **@ins_cmd** -Geben Sie den Wert <strong>CALL Sp_MSins_*Article_name*</strong>, wobei _**Article_name**_ ist der angegebene Wert für **@article** .  
   
-    -   **@del_cmd** -Geben Sie den Wert <strong>CALL Sp_MSdel_*Article_name*</strong>  oder <strong>XCALL Sp_MSdel_*Article_name*</strong>, wobei _**Article_name**_ ist der angegebene Wert für **@article**.  
+    -   **@del_cmd** -Geben Sie den Wert <strong>CALL Sp_MSdel_*Article_name*</strong>  oder <strong>XCALL Sp_MSdel_*Article_name*</strong>, wobei _**Article_name**_ ist der angegebene Wert für **@article** .  
   
-    -   **@upd_cmd** -Geben Sie den Wert <strong>SCALL Sp_MSupd_*Article_name*</strong>, <strong>CALL Sp_MSupd_*Article_name*</strong>, <strong>XCALL Sp_MSupd_ *Article_name*</strong>, <strong>MCALL Sp_MSupd_*Article_name*</strong>, wobei _**Article_name**_ ist der angegebene Wert für **@article**.  
+    -   **@upd_cmd** -Geben Sie den Wert <strong>SCALL Sp_MSupd_*Article_name*</strong>, <strong>CALL Sp_MSupd_*Article_name*</strong>, <strong>XCALL Sp_MSupd_ *Article_name*</strong>, <strong>MCALL Sp_MSupd_*Article_name*</strong>, wobei _**Article_name**_ ist der angegebene Wert für **@article** .  
   
     > [!NOTE]  
     >  Für jeden der obigen Befehlsparameter gilt: Sie können einen selbst gewählten Namen für die gespeicherten Prozeduren angeben, die von der Replikation generiert werden.  
@@ -154,7 +154,7 @@ ms.locfileid: "54127195"
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>So ändern Sie die Methode zur Weitergabe von Änderungen an einen vorhandenen Artikel  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)aus. Geben Sie **@publication**, **@article**, den Wert **ins_cmd**, **upd_cmd**bzw. **del_cmd** für **@property**und die entsprechende Propagierungsmethode für **@value**festgelegt wird.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)aus. Geben Sie **@publication** , **@article** , den Wert **ins_cmd**, **upd_cmd**bzw. **del_cmd** für **@property** und die entsprechende Propagierungsmethode für **@value** festgelegt wird.  
   
 2.  Wiederholen Sie Schritt 1 für jede Propagierungsmethode, die geändert werden soll.  
   

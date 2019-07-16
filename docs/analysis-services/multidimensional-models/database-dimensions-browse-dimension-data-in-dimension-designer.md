@@ -1,5 +1,5 @@
 ---
-title: Durchsuchen von Dimensionsdaten im Dimensions-Designer | Microsoft Docs
+title: Durchsuchen von Dimensionsdaten im Dimensions-Designer | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3692d8f7267531e00f0393149823198cc59bab7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022867"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178911"
 ---
-# <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Datenbankdimensionen - Durchsuchen von Dimensionsdaten im Dimensions-Designer
+# <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Datenbankdimensionen Sie – Durchsuchen von Dimensionsdaten im Dimensions-Designer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Sie können die Daten in einer Dimension im Dimensions-Designer, auf den Sie über **zugreifen können, in der** Browser [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]-Sicht durchsuchen.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34022867"
     >  In der Dimension muss eine Übersetzung für die ausgewählte Sprache definiert sein.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Einführung in Dimensionen & #40; Analysis Services – mehrdimensionale Daten & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
+ [Einführung in Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [Dimensionen in mehrdimensionalen Modellen](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

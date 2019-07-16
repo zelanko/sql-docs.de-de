@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle | Microsoft Docs
+title: Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f9f84131307282b00fd99c1d5770ac352e31713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209076"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34024077"
   
 -   Customer  
   
--   Datum  
+-   date  
   
 -   Department  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34024077"
   
 -   Organization  
   
--   Product  
+-   Produkt  
   
 -   Promotion  
   

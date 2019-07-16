@@ -1,5 +1,5 @@
 ---
-title: Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft Docs
+title: Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek (PowerPivot für SharePoint) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f262fe19ba39f217135908173189bf93a7e68817
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030691"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163708"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Freigeben von Datenfeeds mithilfe einer Datenfeedbibliothek (PowerPivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -90,11 +90,11 @@ ms.locfileid: "34030691"
   
  Ebenso wird das Datendienstdokument aus allen Datenaktualisierungsvorgängen ausgeschlossen, die Sie anschließend planen. Während des Imports werden Verbindungsinformationen für jeden Feed zu Aktualisierungszwecken in die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenquelle kopiert. Das bedeutet, dass Berechtigungen für ein Datendienstdokument nicht auf Datenaktualisierungen überprüft werden, da in einem Aktualisierungsvorgang nie auf das Dokument selbst verwiesen wird.  
   
-|Task|SharePoint-Berechtigungsanforderungen|  
+|Aufgabe|SharePoint-Berechtigungsanforderungen|  
 |----------|----------------------------------------|  
 |Importieren von Datenfeeds in eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-fähige Arbeitsmappe.|Anzeigeberechtigungen für das Datendienstdokument in einer Bibliothek.|  
-|Aktualisieren von Daten, die zuvor über einen Feed abgerufen wurden, in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Clientanwendung.|Nicht verfügbar. Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Clientanwendung verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird von der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Clientanwendung nicht verwendet.|  
-|Aktualisieren von Daten als geplanter Task in einer SharePoint-Farm, ohne dass eine Benutzereingabe erforderlich ist.|Nicht verfügbar. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird vom [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst nicht verwendet.|  
+|Aktualisieren von Daten, die zuvor über einen Feed abgerufen wurden, in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Clientanwendung.|Nicht zutreffend. Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Clientanwendung verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird von der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Clientanwendung nicht verwendet.|  
+|Aktualisieren von Daten als geplanter Task in einer SharePoint-Farm, ohne dass eine Benutzereingabe erforderlich ist.|Nicht zutreffend. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird vom [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienst nicht verwendet.|  
 |Löschen eines Datendienstdokuments in einer Bibliothek.|Teilnahmeberechtigungen für die Bibliothek.|  
   
 ##  <a name="modifydsdoc"></a> Ändern eines Datendienstdokuments  

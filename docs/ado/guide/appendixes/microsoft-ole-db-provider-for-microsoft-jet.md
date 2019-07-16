@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71df952769ae509ba25b256ecdc9ddef3a54ebe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926648"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB-Anbieter für Microsoft Jet-Übersicht
 Der OLE DB-Anbieter für Microsoft Jet können ADO auf Microsoft Jet-Datenbanken zugreifen.
@@ -58,7 +57,7 @@ Microsoft.Jet.OLEDB.4.0
 
  In der folgende Tabelle werden diese Eigenschaften zusammen mit den entsprechenden OLE DB-Eigenschaftsnamen in Klammern aufgeführt.
 
-|Parameter|Description|
+|Parameter|Beschreibung|
 |---------------|-----------------|
 |Jet OLEDB:Compact freigegebenen Speicherplatz Betrag (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Gibt an, eine Schätzung der die Menge des Speicherplatzes in Bytes, die durch die Komprimierung der Datenbank verfügbar gemacht werden können. Dieser Wert ist nur gültig, nachdem eine datenbankverbindung hergestellt wurde.|
 |Jet OLEDB:Connection-Steuerelement (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Gibt an, ob Benutzer eine Verbindung mit der Datenbank herstellen können.|
@@ -92,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Anbieterspezifische Recordset und Befehlseigenschaften
  Der Jet-Anbieter unterstützt auch mehrere anbieterspezifische **Recordset** und **Befehl** Eigenschaften. Diese Eigenschaften werden abgerufen, und legen Sie über die **Eigenschaften** Auflistung von der **Recordset** oder **Befehl** Objekt. Die Tabelle enthält die Namen der ADO-Eigenschaft und dem entsprechenden Namen der OLE DB-Eigenschaft in Klammern angegeben.
 
-|Eigenschaftenname|Description|
+|Eigenschaftenname|Beschreibung|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk-Transaktionen (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Gibt an, ob die SQL-Massenvorgänge durchgeführt werden. Umfangreichen Massenvorgängen können fehlschlagen, wenn transaktiven aufgrund von Verzögerungen bei der Ressource.|
 |Jet OLEDB: Enable Fat Cursor (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Gibt an, ob mehrere Zeilen beim Auffüllen eines Recordsets für remote Zeilenquellen Jet zwischengespeichert werden soll.|
@@ -136,7 +135,7 @@ Microsoft.Jet.OLEDB.4.0
 |Datenquellenname|DBPROP_DATASOURCENAME|
 |Datenquellenobjekt Threading-Modell|DBPROP_DSOTHREADMODEL|
 |Der DBMS-Name|DBPROP_DBMSNAME|
-|DBMS Version|DBPROP_DBMSVER|
+|DBMS-Version|DBPROP_DBMSVER|
 |GROUP BY-Unterstützung|DBPROP_GROUPBY|
 |Heterogene Tabellenunterstützung|DBPROP_HETEROGENEOUSTABLES|
 |Bezeichner Groß-/Kleinschreibung|DBPROP_IDENTIFIERCASE|
@@ -154,7 +153,7 @@ Microsoft.Jet.OLEDB.4.0
 |Aktualisierung mehrerer Tabellen|DBPROP_MULTITABLEUPDATE|
 |NULL-Zusammenstellungsreihenfolge|DBPROP_NULLCOLLATION|
 |NULL-Verkettungsverhalten|DBPROP_CONCATNULLBEHAVIOR|
-|OLE DB Version|DBPROP_PROVIDEROLEDBVER|
+|OLE DB-Version|DBPROP_PROVIDEROLEDBVER|
 |OLE-Objektunterstützung|DBPROP_OLEOBJECTS|
 |Öffnen Sie die Schemarowset-Unterstützung|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY-Spalten in Auswahlliste|DBPROP_ORDERBYCOLUMNSINSELECT|

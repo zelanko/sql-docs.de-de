@@ -16,21 +16,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206962"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
   Das „SQLServer:Als veraltet markierte Funktionen“-Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Leistungsindikator bereit, um die als veraltet gekennzeichneten Funktionen zu überwachen. In jedem Fall stellt der Leistungsindikator einen Verwendungszähler bereit, der angibt, wie oft die veraltete Funktion seit dem letzten Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefunden wurde.  
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Description|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
-|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie dies durch `SELECT column_list FROM`  *\< Funktionsname >*`()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
+|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie dies durch `SELECT column_list FROM`  *\< Funktionsname >* `()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
 |\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. \@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |ADDING TAPE DEVICE|Die veraltete Funktionen Sp_addumpdevice'`tape`' wurde gefunden. Verwenden Sie Sp_addumpdevice'`disk`"stattdessen. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
@@ -112,7 +112,7 @@ ms.locfileid: "52763942"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Verweise auf die veraltete Funktionsys.numbered_procedure_parameters wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |numbered_procedures|Verweise auf die veraltete Funktionsys.numbered_procedures wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
-|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR-Syntax (Format: RAISERROR Integer String) wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
+|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR (Format: RAISERROR Integer String)-Syntax wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
 |OLEDB für Ad-hoc-Verbindungen|SQLOLEDB wird nicht als Anbieter unterstützt. Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für Ad-hoc-Verbindungen.|  
 |PERMISSIONS|Verweise auf die systeminterne PERMISSIONS-Funktion wurden gefunden. Fragen Sie stattdessen sys.fn_my_permissions ab. Tritt einmal pro Abfrage auf.|  
 |ProcNums|Die veraltete ProcNums-Syntax wurde gefunden. Schreiben Sie die Anweisungen um, um die Verweise zu entfernen. Tritt einmal pro Kompilierung auf.|  

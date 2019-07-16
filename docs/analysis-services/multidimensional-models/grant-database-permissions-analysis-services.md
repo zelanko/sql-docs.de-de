@@ -1,5 +1,5 @@
 ---
-title: Erteilen von Datenbankberechtigungen (Analysis Services) | Microsoft Docs
+title: Erteilen von Datenbankberechtigungen (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f799b086833f0be7b08786aff08e65d202f29674
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177641"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Erteilen von Datenbankberechtigungen (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Wenn Sie Datenbanken mit Analysis Services verwalten und bereits über Kenntnisse zu relationalen Datenbanken verfügen, müssen Sie zuerst verstehen, dass in Bezug auf Datenzugriff die Datenbank nicht das primäre sicherungsfähige Objekt in Analysis Services ist.  
   
- Die primäre Abfragestruktur in Analysis Services ist ein Cube (oder ein tabellarisches Modell), mit Benutzerberechtigungen, die für diese bestimmten Objekte festgelegt sind. Im Gegensatz zur relationalen Datenbank-Engine, bei der Datenbankanmeldenamen und Benutzerberechtigungen (oft **db_datareader**) für die Datenbank selbst festgelegt sind, ist eine Analysis Services-Datenbank hauptsächlich ein Container für die Hauptabfrageobjekte in einem Datenmodell. Wenn Sie hauptsächlich den Datenzugriff für einen Cube oder ein tabellarisches Modell aktivieren möchten, können Sie zunächst die Datenbankberechtigungen umgehen und sich direkt diesem Thema zuwenden: [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ Die primäre Abfragestruktur in Analysis Services ist ein Cube (oder ein tabellarisches Modell), mit Benutzerberechtigungen, die für diese bestimmten Objekte festgelegt sind. Im Gegensatz zur relationalen Datenbank-Engine, bei der Datenbankanmeldenamen und Benutzerberechtigungen (oft **db_datareader**) für die Datenbank selbst festgelegt sind, ist eine Analysis Services-Datenbank hauptsächlich ein Container für die Hauptabfrageobjekte in einem Datenmodell. Ist zuwenden Datenzugriff für einen Cube oder tabellarisches Modell aktivieren, können Sie jetzt zunächst die Datenbankberechtigungen umgehen und direkt zu diesem Thema wechseln: [Erteilen von Cube-oder modellberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Datenbankberechtigungen in Analysis Services ermöglichen administrative Funktionen. Weitgefasst gilt dies, wie es der Fall bei der Datenbankberechtigung Vollzugriff ist, oder granularer, wenn Sie die Verarbeitung von Vorgängen delegieren. Berechtigungsebenen für eine Analysis Services-Datenbank können Sie im Bereich **Allgemein** mit dem Dialogfeld **Rolle erstellen** festlegen. Dies wird in der folgenden Grafik gezeigt und nachstehend beschrieben.  
   
  Es gibt in Analysis Services keine Anmeldenamen. Sie erstellen einfach Rollen und weisen im Bereich **Mitgliedschaft** Windows-Konten zu. Alle Benutzer, einschließlich der Administratoren, stellen die Verbindung zu Analysis Services über ein Windows-Konto her.  
   
- ![Rolle erstellen, Dialogfeld mit Datenbankberechtigungen](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "Rolle Dialogfeld mit Datenbankberechtigungen erstellen.")  
+ ![Erstellen der Rolle Berechtigungen für die Datenbank von Dialogfeld zeigt](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "Rolle Berechtigungen für Dialogfeld zeigt die Datenbank erstellen.")  
   
  Auf Datenbankebene gibt es drei Berechtigungstypen.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "34024637"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erteilen von serverweiten Administratorrechten für eine Analysis Services-Instanz](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Erteilen Sie Berechtigungen zum Verarbeiten & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

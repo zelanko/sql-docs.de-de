@@ -5,17 +5,16 @@ description: Der Referenzartikel für die Mssqlctl app Befehle.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ac884a8d77aa241402cedce3eaedeef9f60512a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a14b548ed8c16776b4883e54f3ca47588dbb3e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958204"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl-App
 
@@ -31,9 +30,9 @@ Der folgende Artikel bietet Referenz für die **app** Befehle in der **Mssqlctl*
 [Mssqlctl-app erstellen](#mssqlctl-app-create) | Erstellen Sie die Anwendung.
 [Aktualisieren der Mssqlctl-app](#mssqlctl-app-update) | Aktualisieren Sie die Anwendung.
 [Mssqlctl app-Liste](#mssqlctl-app-list) | Auflisten von Anwendungen.
-[mssqlctl app delete](#mssqlctl-app-delete) | Löschen Sie die Anwendung.
+[Mssqlctl app löschen](#mssqlctl-app-delete) | Löschen Sie die Anwendung.
 [Mssqlctl-app-Ausführung](#mssqlctl-app-run) | Führen Sie die Anwendung.
-[mssqlctl app describe](#mssqlctl-app-describe) | Beschreiben Sie die Anwendung.
+[Beschreiben Sie Mssqlctl-app](#mssqlctl-app-describe) | Beschreiben Sie die Anwendung.
 ## <a name="mssqlctl-app-init"></a>Mssqlctl app init
 Können Sie neue Anwendung-Gerüst Kickstart bzw. Spec-Dateien basierend auf Laufzeitumgebungen.
 ```bash

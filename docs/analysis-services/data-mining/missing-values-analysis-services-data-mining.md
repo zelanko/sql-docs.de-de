@@ -1,5 +1,5 @@
 ---
-title: Fehlende Werte (Analysis Services – Datamining) | Microsoft Docs
+title: Fehlende Werte (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 662fdd55fc5929fe56734b9894bf971962ff2a7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182608"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Fehlende Werte (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34017647"
 ## <a name="calculation-of-the-missing-state"></a>Berechnen des Status "Missing"  
  Für den Data Mining-Algorithmus sind fehlende Werte informativ. In Falltabellen ist der Status **Missing** ebenso wie jeder andere Status zulässig. Darüber hinaus kann ein Data Mining-Modell mithilfe anderer Werte vorhersagen, ob ein Wert fehlt. Anders ausgedrückt: Die Tatsache, dass ein Wert fehlt, wird nicht als Fehler angesehen.  
   
- Während der Erstellung eines Miningmodells wird der Status **Missing** dem Modell automatisch für alle diskreten Spalten hinzugefügt. Wenn beispielsweise die Eingabespalte für [Geschlecht] die beiden möglichen Werte „Männlich“ und „Weiblich“ enthält, wird automatisch ein dritter Wert hinzugefügt, der den Wert **Nicht vorhanden** darstellt, und das Histogramm, das die Verteilung aller Werte der Spalte zeigt, beinhaltet stets die Anzahl der Fälle mit **Nicht vorhanden** -Werten. Wenn in der Spalte Geschlecht keine Werte fehlen, zeigt das Histogramm, dass der -Status in 0 Fällen vorkommt.  
+ Während der Erstellung eines Miningmodells wird der Status **Missing** dem Modell automatisch für alle diskreten Spalten hinzugefügt. Wenn beispielsweise die Eingabespalte für [Geschlecht] die beiden möglichen Werte „Männlich“ und „Weiblich“ enthält, wird automatisch ein dritter Wert hinzugefügt, der den Wert **Nicht vorhanden** darstellt, und das Histogramm, das die Verteilung aller Werte der Spalte zeigt, beinhaltet stets die Anzahl der Fälle mit **Nicht vorhanden** -Werten. Wenn in der Spalte Geschlecht keine Werte fehlen, zeigt das Histogramm, dass der -Status in 0 Fällen vorkommt.  
   
  Das automatische Einfügen des Status **Missing** hat folgenden Sinn: Sie halten es für möglich, dass sich in den Daten nicht für alle möglichen Werte Beispiele finden und möchten nicht, dass das Modell die Möglichkeit ausschließt, nur weil die Daten kein Beispiel enthalten. Wenn die Umsatzdaten eines Ladens beispielsweise zeigen, dass alle Kunden, die ein bestimmtes Produkt kauften, zufällig Frauen waren, ist es nicht wünschenswert, ein Modell zu erstellen, das vorhersagt, dass nur Frauen das Produkt kaufen können. Stattdessen fügt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Platzhalter namens **Nicht vorhanden**für den zusätzlichen unbekannten Wert hinzu, sodass andere mögliche Statuswerte berücksichtigt werden können.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34017647"
   
  Diese Verteilung zeigt, dass etwa eine Hälfte der Kunden ein Fahrrad gekauft hat und die andere Hälfte nicht. Dieses Dataset ist sehr sauber; daher ist für jeden Fall ein Wert in der Spalte [Bike Buyer] vorhanden, und die Anzahl der **Nicht vorhanden** -Werte ist 0. Wäre jedoch in einem Fall kein Wert im Feld [Bike Buyer] vorhanden, dann würde [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die betreffende Zeile als Fall mit einem **Nicht vorhanden** -Wert zählen.  
   
- Ist die Eingabe eine kontinuierliche Spalte, dann tabellarisiert das Modell zwei mögliche Zustände für das Attribut: **Existing** und **Missing**. Anders ausgedrückt: Entweder enthält die Spalte einen Wert eines numerischen Datentyps, oder sie enthält keinen Wert. Für die Fälle, in denen ein Wert gegeben ist, berechnet das Modell den Mittelwert, die Standardabweichung und andere aussagekräftige Statistiken. Für die Fälle, in denen kein Wert vorhanden ist, liefert das Modell die Anzahl der **Missing** -Werte und passt die Vorhersagen entsprechend an. Welche Methode zum Anpassen der Vorhersage eingesetzt wird, hängt vom Algorithmus ab und wird im folgenden Abschnitt beschrieben.  
+ Ist die Eingabe eine kontinuierliche Spalte, dann tabellarisiert das Modell zwei mögliche Zustände für das Attribut: **Vorhandene** und **fehlende**. Anders ausgedrückt: Entweder enthält die Spalte einen Wert eines numerischen Datentyps, oder sie enthält keinen Wert. Für die Fälle, in denen ein Wert gegeben ist, berechnet das Modell den Mittelwert, die Standardabweichung und andere aussagekräftige Statistiken. Für die Fälle, in denen kein Wert vorhanden ist, liefert das Modell die Anzahl der **Missing** -Werte und passt die Vorhersagen entsprechend an. Welche Methode zum Anpassen der Vorhersage eingesetzt wird, hängt vom Algorithmus ab und wird im folgenden Abschnitt beschrieben.  
   
 > [!NOTE]  
 >  Für Attribute in einer geschachtelten Tabelle sind fehlende Werte nicht informativ. Wenn ein Kunde beispielsweise kein Produkt gekauft hat, dann enthält die geschachtelte **Products** -Tabelle keine Zeile für das Produkt, und im Mining-Modell würde kein Attribut für das fehlende Produkt erstellt. Wenn Sie jedoch an den Kunden interessiert sind, die bestimmte Produkte nicht gekauft haben, können Sie ein Modell erstellen, das durch Verwendung einer NOT EXISTS-Anweisung im Modellfilter nach dem Nichtvorhandensein der Produkte in der geschachtelten Tabelle gefiltert wird. Weitere Informationen finden Sie unter [Anwenden eines Filters auf ein Miningmodell](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md).  
@@ -84,7 +84,7 @@ ms.locfileid: "34017647"
   
  StatusWahrscheinlichkeit = (KnotenVorherWahrscheinlichkeit) * (StatusUnterstützungswerte + 1)/(KnotenUnterstützungswerte + GesamtzahlStatuswerte)  
   
-Der Decision Trees-Algorithmus bietet eine zusätzliche Anpassung des Algorithmus, der die Anwendung von Filtern für das Modell zu kompensieren durch die viele Statuswerte während des Trainings ausgeschlossen werden kann.  
+Der Decision Trees-Algorithmus bietet eine zusätzliche Anpassung, mit dem können den Algorithmus für die Anwendung von Filtern im Modell zu kompensieren, durch die viele Statuswerte während des Trainings ausgeschlossen werden kann.  
   
  Wenn ein Statuswert während des Trainings vorhanden ist, aber an einem bestimmten Knoten über null (0) Unterstützungswerte verfügt, wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]die Standardanpassung vorgenommen. Wenn ein Statuswert während des Trainings jedoch nie auftritt, legt der Algorithmus die Wahrscheinlichkeit auf genau null (0) fest. Diese Anpassung gilt nicht nur für den Status **Missing** , sondern auch für andere Statuswerte, die in den Trainingsdaten vorhanden sind, infolge der Modellfilterung aber keine (0) Unterstützungswerte besitzen.  
   
@@ -96,18 +96,18 @@ Der Decision Trees-Algorithmus bietet eine zusätzliche Anpassung des Algorithmu
   
  Im Endeffekt soll durch diese Anpassung die Stabilität der Struktur aufrechterhalten werden.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
  Die folgenden Themen stellen weitere Informationen zur Behandlung fehlender Werte bereit.  
   
-|Aufgaben|Links|  
+|Richtlinienübersicht|Links|  
 |-----------|-----------|  
-|Hinzufügen von Flags zu einzelnen Modellspalten, um die Behandlung fehlender Werte zu steuern|[Zeigen Sie an oder ändern Sie die Modellierung von Ablaufverfolgungsflags & #40; Datamining & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Hinzufügen von Flags zu einzelnen Modellspalten, um die Behandlung fehlender Werte zu steuern|[Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Festlegen von Eigenschaften für ein Miningmodell, um die Behandlung fehlender Werte zu steuern|[Ändern der Eigenschaften eines Miningmodells](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
+|Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
 |Ändern der Methode, die von der Miningstruktur zur Behandlung fehlender Werte verwendet wird|[Ändern der Eigenschaften einer Miningstruktur](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Modellieren von Ablaufverfolgungsflags & #40; Datamining & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

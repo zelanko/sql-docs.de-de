@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt zuordnungsmodellen (Analysis Services – Datamining) | Microsoft Docs
+title: Mingingmodellinhalt von Clustermodellen (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b9c977cbe5a31672d6738e2aaa7f3f911975e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017577"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182791"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zuordnungsmodellen (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "34017577"
   
  **Übergeordneter Knoten** Enthält eine durch Trennzeichen getrennte Liste der folgenden Informationen über das Modell:  
   
-|Element|Description|  
+|Element|Beschreibung|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Anzahl aller Itemsets im Modell.|  
 |RULE_COUNT|Anzahl aller Regeln im Modell.|  
@@ -97,10 +97,10 @@ ms.locfileid: "34017577"
 |MAX_SUPPORT|Die maximale Unterstützung für jedes einzelne Itemset.<br /><br /> **Hinweis** Dieser Wert kann sich von dem Wert unterscheiden, den Sie für den *MAXIMUM_SUPPORT* -Parameter festgelegt haben.|  
 |MIN_ITEMSET_SIZE|Die Größe des kleinsten Itemsets, die als Anzahl von Elementen dargestellt wird.<br /><br /> Ein Wert von 0 gibt an, dass der **Missing** -Status als unabhängiges Element behandelt wurde.<br /><br /> **Hinweis** Der Standardwert des *MINIMUM_ITEMSET_SIZE* -Parameters ist 1.|  
 |MAX_ITEMSET_SIZE|Gibt die Größe des größten Itemsets an, das gefunden wurde.<br /><br /> **Hinweis** Dieser Wert wird durch den Wert beschränkt, den Sie bei der Erstellung des Modells für den *MAX_ITEMSET_SIZE* -Parameter festgelegt haben. Der erste Wert kann den anderen Wert nie übersteigen, aber er kann kleiner sein. Der Standardwert ist 3.|  
-|MIN_PROBABILITY|Die minimale Wahrscheinlichkeit, die für jedes einzelne Itemset oder eine Regel im Modell erkannt wurde.<br /><br /> Beispiel: 0,400390625<br /><br /> **Hinweis** Bei Itemsets ist dieser Wert immer größer als der Wert, den Sie bei der Erstellung des Modells für den *MINIMUM_PROBABILITY* -Parameter festgelegt haben.|  
+|MIN_PROBABILITY|Die minimale Wahrscheinlichkeit, die für jedes einzelne Itemset oder eine Regel im Modell erkannt wurde.<br /><br /> Beispiel: 0.400390625<br /><br /> **Hinweis** Bei Itemsets ist dieser Wert immer größer als der Wert, den Sie bei der Erstellung des Modells für den *MINIMUM_PROBABILITY* -Parameter festgelegt haben.|  
 |MAX_PROBABILITY|Die maximale Wahrscheinlichkeit, die für jedes einzelnes Itemset oder eine Regel im Modell erkannt wurde.<br /><br /> Beispiel: 1<br /><br /> **Hinweis** Es gibt keinen Parameter, der die maximale Wahrscheinlichkeit von Itemsets einschränkt. Wenn Sie Elemente ausschließen möchten, die zu häufig vorkommen, verwenden Sie stattdessen den *MAXIMUM_SUPPORT* -Parameter.|  
-|MIN_LIFT|Die Mindestmenge an Lift, die vom Modell für ein beliebiges Itemset bereitgestellt wird.<br /><br /> Beispiel: 0,4309369632511<br /><br /> Hinweis: Wenn Sie den minimalen Lift kennen, können Sie leichter bestimmen, ob der Lift für irgendein einzelnes Itemset signifikant ist.|  
-|MAX_LIFT|Die Höchstmenge an Lift, die vom Modell für ein beliebiges Itemset bereitgestellt wird.<br /><br /> Beispiel: 1,95758227647523 **Hinweis** Wenn Sie den maximalen Lift kennen, können Sie leichter bestimmen, ob der Lift für irgendein einzelnes Itemset signifikant ist.|  
+|MIN_LIFT|Die Mindestmenge an Lift, die vom Modell für ein beliebiges Itemset bereitgestellt wird.<br /><br /> Beispiel: 0.14309369632511<br /><br /> Hinweis: Wenn Sie den minimalen Lift kennen können Sie die zu bestimmen, ob der Lift für irgendein einzelnes Itemset signifikant ist.|  
+|MAX_LIFT|Die Höchstmenge an Lift, die vom Modell für ein beliebiges Itemset bereitgestellt wird.<br /><br /> Beispiel: 1,95758227647523 **Hinweis** den maximalen Lift kennen, können Sie ermitteln, ob der Lift für irgendein einzelnes Itemset signifikant ist.|  
   
  **Itemsetknoten** Diese Knoten enthalten eine Liste der Elemente, die als durch Trennzeichen getrennte Textzeichenfolge angezeigt wird.  
   
@@ -187,8 +187,8 @@ ms.locfileid: "34017577"
  Leer.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Association-Algorithmus](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Beispiele für Zuordnungsmodellabfragen](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

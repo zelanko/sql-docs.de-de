@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205528"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Inkrementelles Senden und Empfangen von Daten mit FILESTREAM (ODBC)
   Dieses Beispiel zeigt die Verwendung der FILESTREAM-Funktion zum inkrementellen Senden und Empfangen von Daten mit SQLPutData und SQLGetData.  
@@ -25,11 +25,11 @@ ms.locfileid: "48086440"
 ## <a name="example"></a>Beispiel  
  Bevor Sie kompilieren und dieses Beispiels ausführen, aktivieren Sie FILESTREAM-Unterstützung ([aktivieren und Konfigurieren von FILESTREAM](../blob/enable-and-configure-filestream.md)).  
   
- Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
+ Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete Datenbank. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
   
  Das zweite Codelisting ist der C++-Code. Sie müssen einen Server angeben. Ändern Sie im C++-Codelisting "MyServer" in einen gültigen Servernamen. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält. Kompilieren Sie das C++-Codelisting mit odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib und /EHsc.  
   
- Das dritte ([!INCLUDE[tsql](../../includes/tsql-md.md)]) Codelisting löscht die in diesem Beispiel verwendete Datenbank.  
+ Das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die im Beispiel verwendete Datenbank.  
   
 ```  
 USE master  

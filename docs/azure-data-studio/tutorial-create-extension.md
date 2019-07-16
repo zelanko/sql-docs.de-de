@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
-manager: jroth
-ms.openlocfilehash: 2f031ec68cc6ae342b8bac51c450ee40a9df0555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959083"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Erstellen Sie eine Azure Data Studio-Erweiterung
 
@@ -31,7 +30,7 @@ In diesem Tutorial erfahren Sie, wie Sie:
 > * Packen Sie die Erweiterung
 > * Die Erweiterung auf Marketplace veröffentlichen
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Azure Data Studio aufbaut, in demselben Framework als Visual Studio Code-Erweiterungen für Azure Data Studio mithilfe von Visual Studio-Code erstellt werden. Zunächst benötigen Sie die folgenden Komponenten:
 
@@ -82,7 +81,7 @@ Es ist leicht zu finden und Ersetzen Sie diese tastaturzuordnungen. Führen Sie 
 
 ![Tastenkombinationen](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
-![keybindings.json extension](./media/tutorial-create-extension/keybindings-json.png)
+![Erweiterung der Datei "KeyBindings.JSON"](./media/tutorial-create-extension/keybindings-json.png)
 
 
 **Schritt 2: Hinzufügen von Verknüpfungen mit der Erweiterung**

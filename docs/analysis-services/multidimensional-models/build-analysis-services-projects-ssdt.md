@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b00fecf6712d8ab1d4ba8b810485af6d432479ac
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147269"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209128"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Erstellen von Analysis Services-Projekten (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50147269"
   
  Ist die Überprüfung erfolgreich, werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] die XML-Dateien generiert. Nach der Erstellung enthält der Ausgabeordner die in der folgenden Tabelle beschriebenen Dateien.  
   
-|Dateien (im Ordner bin)|Description|  
+|Dateien (im Ordner bin)|Beschreibung|  
 |-----------------------------|-----------------|  
 |*Projectname*.asdatabase|Enthält die ASSL-Elemente, die die Metadaten für die Objekte des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in einer Bereitstellungsskriptdatei definieren. Diese Datei wird von der Bereitstellungs-Engine zum Bereitstellen der Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank verwendet.|  
 |*Projectname*.configsettings|Enthält während der Bereitstellung verwendete Konfigurationseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. die Verbindungszeichenfolge für die Datenquellen).|  
@@ -46,7 +46,7 @@ ms.locfileid: "50147269"
 |*Projectname*.deploymentoptions|Enthält verschiedene während der Bereitstellung verwendete Optionseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. Speicherorte).|  
 |*Assemblyname*/*dllname.* dll|Separate Ordner für jede Assembly, auf die verwiesen wird. In jedem Ordner sind jeweils die DLL für die Assembly, sämtliche Assemblys, auf die verwiesen wird, und sämtliche zugeordneten PDB-Dateien für Ausgabedebuginformationen enthalten.|  
   
-|Dateien (im Ordner obj)|Description|  
+|Dateien (im Ordner obj)|Beschreibung|  
 |-----------------------------|-----------------|  
 |\<Konfigurationsname > \LastBuilt.xml|Enthält den Zeitstempel und den Hashcode, der den Zeitpunkt identifiziert, als das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zum letzten Mal erstellt wurde.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Definieren von Elementgruppen | Microsoft Docs
+title: Definieren von Elementgruppen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1da226353847409f1d808472dc155cb2055395cd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179594"
 ---
-# <a name="attribute-properties---define-member-groups"></a>Attributeigenschaften: Definieren von Elementgruppen
+# <a name="attribute-properties---define-member-groups"></a>Attributeigenschaften – Definieren von Elementgruppen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Wenn ein Attribut über viele Elemente verfügt, können Sie diese Elemente in Buckets gruppieren und so die Zahl derjenigen Elemente verringern, die Benutzer sehen, wenn sie die Daten einer Hierarchie durchsuchen. Sie können auch die Zahl der Buckets festlegen, in denen die Elemente Gruppen bilden und ein Benennungsschema für die Buckets vorgeben. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   

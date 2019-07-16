@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195571"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
   Wenn Abfragen in erster Linie nur für eine geringe Anzahl von Element- und Attributwerten ausgeführt werden, kann es sinnvoll sein, diese Mengen in relationale Spalten heraufzustufen. Dies ist nützlich, wenn Abfragen für einen kleinen Teil der XML-Daten ausgegeben werden, während die gesamte XML-Instanz abgerufen wird. Das Erstellen eines XML-Indexes für die XML-Spalte ist nicht erforderlich. Stattdessen kann die heraufgestufte Spalte indiziert werden. Um die heraufgestufte Spalte zu verwenden, müssen Abfragen geschrieben werden. Das heißt, der Abfrageoptimierer richtet die Abfragen für die XML-Spalte nicht erneut an die heraufgestufte Spalte aus.  
@@ -28,7 +28,7 @@ ms.locfileid: "58533312"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Berechnete Spalte auf der Basis des xml-Datentyps  
  Eine berechnete Spalte kann erstellt werden, mithilfe einer benutzerdefinierten Funktion, die aufruft `xml` -Datentypmethoden. Der Typ der berechneten Spalte kann jeder SQL-Typ sein, einschließlich XML. Dies wird im folgenden Beispiel veranschaulicht.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalte basiert auf dem Xml-Datentypmethode  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalten basierend auf der XML-Datentypmethode  
  Erstellen Sie die benutzerdefinierte Funktion für die ISBN-Nummer eines Buchs:  
   
 ```  
@@ -91,7 +91,7 @@ WHERE  ISBN = '0-7356-1588-2'
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Beispiel: Erstellen Sie eine benutzerdefinierte Funktion zum Generieren eines Rowsets aus einer XML-Instanz  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Beispiel: Erstellen einer benutzerdefinierten Funktion zum Generieren eines Rowsets aus einer XML-Instanz  
  Die folgende Tabellenwertfunktion (udf_XML2Table) akzeptiert einen Primärschlüsselwert und eine XML-Instanz. Sie ruft den Vornamen aller Autoren aus den <`book`>-Elementen ab und gibt ein Rowset mit Paaren aus Primärschlüssel und Vorname zurück.  
   
 ```  
@@ -154,7 +154,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Beispiel: XML-Instanzen, deren Autoren denselben Vornamen haben  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Beispiel: Suchen nach XML-Instanzen, deren Autoren denselben Vornamen haben  
  Die Abfrage kann für die XML-Spalte geformt werden. Alternativ kann sie die Eigenschaftentabelle nach dem Vornamen "David" durchsuchen und einen Rückwärtsjoins mit der Basistabelle ausführen, um die XML-Instanz zurückzugeben: Zum Beispiel:  
   
 ```  
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Lösung, die mit der CLR-Streaming-Tabellenwertfunktion  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Lösung mit der Streaming-Tabellenwertfunktion in CLR  
  Diese Projektmappe umfasst die folgenden Schritte:  
   
 1.  Definieren Sie eine CLR-Klasse (SqlReaderBase), die ISqlReader implementiert und eine Tabellenwert-Streaming-Ausgabe generiert, indem ein Pfadausdruck auf eine XML-Instanz angewendet wird.  

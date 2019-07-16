@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925642"
 ---
 # <a name="data-section"></a>Datenabschnitt
 Data-Abschnitt definiert die Daten des Rowsets zusammen mit allen ausstehenden Updates, einfügungen und löschungen. Data-Abschnitt kann NULL oder mehr Zeilen enthalten. Es kann nur Daten aus einem Rowset enthalten, in die Zeile durch das Schema definiert ist. Darüber hinaus können wie bereits erwähnt, Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder Unterelement im Data-Abschnitt verwendet wird, und dieses Konstrukt nicht im Schema-Abschnitt definiert wurde, wird es ignoriert.  
@@ -35,7 +34,7 @@ Data-Abschnitt definiert die Daten des Rowsets zusammen mit allen ausstehenden U
 ## <a name="binary"></a>Binär  
  Binärdaten sind bin.hex codiert (d. h. ein Byte-Zuordnungen, die zwei Zeichen, ein Zeichen pro Halbbyte).  
   
-## <a name="datetime"></a>datetime  
+## <a name="datetime"></a>DateTime  
  Die Variante VT_DATE-Format wird nicht direkt von XML-Data-Datentypen unterstützt. Das richtige Format für Datumsangaben mit-Komponente in ein Datum und die Uhrzeit lautet jjjj-mm-TTThh.  
   
  Weitere Informationen zu XML angegebenen Datums-und Uhrzeitformate, finden Sie unter den [W3C XML-Data-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=5692).  

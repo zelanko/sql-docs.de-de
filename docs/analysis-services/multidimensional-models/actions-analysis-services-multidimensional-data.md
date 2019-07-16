@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146365"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180380"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Aktionen (Analysis Services – Mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "50146365"
 ## <a name="types-of-actions"></a>Aktionstypen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]enthaltenen Aktionstypen aufgeführt:  
   
-|Aktionstyp|Description|  
+|Aktionstyp|Beschreibung|  
 |-----------------|-----------------|  
 |CommandLine|Führt einen Befehl an der Eingabeaufforderung aus.|  
 |Dataset|Gibt ein Dataset an eine Clientanwendung zurück.|  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206591"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM-Unterstützung (ODBC)
   ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die verbesserte FILESTREAM-Funktion. Weitere Informationen zu diesem Feature finden Sie unter [FILESTREAM-Unterstützung](../features/filestream-support.md). Ein Beispiel, das die ODB-Unterstützung für FILESTREAM veranschaulicht, finden Sie unter [senden und Empfangen von Daten inkrementell mit FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48111134"
  Wenn Sie SQLFetch für eine gebundene Spalte aufrufen, erhalten Sie eine Warnung "die Daten abgeschnitten", wenn der Puffer nicht groß genug für den gesamten Wert ist. Ignorieren Sie diese Warnung, und aktualisieren Sie die Daten in dieser gebundenen Spalte mit der SQLParamData und SQLPutData-Aufrufe. Sie können FILESTREAM-Daten mit SQLSetPos, wenn es mit SQLBindCol gebunden ist, aktualisieren.  
   
 ## <a name="example"></a>Beispiel  
- FILESTREAM-Spalten verhalten sich genau wie `varbinary(max)`-Spalten, aber ohne eine Größenbeschränkung zu besitzen. Sie werden als SQL_VARBINARY gebunden. (SQL_LONGVARBINARY wird mit Imagespalten verwendet, und es gelten Einschränkungen für diesen Typ. Zum Beispiel kann SQL_LONGVARBINARY nicht als Ausgabeparameter verwendet werden.) In den folgenden Beispielen wird der direkte NTFS-Zugriff für FILESTREAM-Spalten dargestellt. In diesen Beispielen wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code in der Datenbank ausgeführt wurde:  
+ FILESTREAM-Spalten verhalten sich genau wie `varbinary(max)`-Spalten, aber ohne eine Größenbeschränkung zu besitzen. Sie werden als SQL_VARBINARY gebunden. (SQL_LONGVARBINARY wird mit Imagespalten verwendet, und es gelten Einschränkungen für diesen Typ. Z. B. SQL_LONGVARBINARY kann nicht als Output-Parameter verwendet werden.) Die folgenden Beispiele zeigen die direkte NTFS-Zugriff für FILESTREAM-Spalten. In diesen Beispielen wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code in der Datenbank ausgeführt wurde:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

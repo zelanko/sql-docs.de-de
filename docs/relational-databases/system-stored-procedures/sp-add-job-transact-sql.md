@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941740"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten (**%**) Zeichen. *Job_name*ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten ( **%** ) Zeichen. *Job_name*ist **vom Datentyp nvarchar(128)** , hat keinen Standardwert.  
   
 `[ @enabled = ] enabled` Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist **Tinyint**, hat den Standardwert 1 (aktiviert). Wenn **0**, der Auftrag nicht aktiviert ist und nicht gemäß dem Zeitplan ausgeführt, aber es kann manuell ausgeführt werden.  
   
-`[ @description = ] 'description'` Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)**, hat den Standardwert NULL. Wenn *Beschreibung* wird weggelassen, wird "Keine Beschreibung verfügbar" verwendet.  
+`[ @description = ] 'description'` Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)** , hat den Standardwert NULL. Wenn *Beschreibung* wird weggelassen, wird "Keine Beschreibung verfügbar" verwendet.  
   
 `[ @start_step_id = ] step_id` Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id*ist **Int**, hat den Standardwert 1.  
   
@@ -67,7 +66,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id` Ein sprachunabhängiger Mechanismus zum Angeben einer Auftragskategorie. *Category_id*ist **Int**, hat den Standardwert NULL.  
   
-`[ @owner_login_name = ] 'login'` Der Name der Anmeldung, die den Auftrag besitzt. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, der als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+`[ @owner_login_name = ] 'login'` Der Name der Anmeldung, die den Auftrag besitzt. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, der als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name** . Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name** , Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
   
 `[ @notify_level_eventlog = ] eventlog_level` Ein Wert, der angibt, wann einen Eintrag im Microsoft Windows-Anwendungsprotokoll für diesen Auftrag. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
   
@@ -123,7 +122,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Informationen zu den einzelnen Berechtigungen, die mit jeder dieser festen verknüpft sind, Datenbankrollen, finden Sie unter [SQL Server Agent Fixed-Datenbankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name**. Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name**, Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+ Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name** . Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name** , Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   

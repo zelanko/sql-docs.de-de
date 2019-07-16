@@ -1,5 +1,5 @@
 ---
-title: Benutzerhierarchien | Microsoft Docs
+title: Benutzerhierarchien | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40b3ebfd8a92bb1c577c9fbd8ee4c9ed0068a700
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027147"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209233"
 ---
 # <a name="user-hierarchies"></a>Benutzerhierarchien
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Benutzerdefinierte Hierarchien werden von benutzerdefinierten Hierarchien von Attributen, die verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Elemente einer Dimension in Form von hierarchischen Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
+  Benutzerdefinierte Hierarchien werden von benutzerdefinierten Hierarchien von Attributen, die verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Elemente einer Dimension in hierarchischen Strukturen zu organisieren und Navigationspfade in einem Cube bereitzustellen. In der folgenden Tabelle ist beispielsweise eine Dimensionstabelle für eine Zeitdimension definiert. Die Dimensionstabelle unterstützt die drei Attribute "Year", "Quarter" und "Month".  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
@@ -31,7 +31,7 @@ ms.locfileid: "34027147"
 |1999|Quarter 3|Jul|  
 |1999|Quarter 3|Aug|  
 |1999|Quarter 3|Sep|  
-|1999|Quarter 4|Oct|  
+|1999|Quarter 4|Oktober|  
 |1999|Quarter 4|Nov|  
 |1999|Quarter 4|Dec|  
   
@@ -75,11 +75,11 @@ ms.locfileid: "34027147"
   
  Bei Über-/Unterordnungshierarchien können die Zweige der Hierarchie unterschiedlich tief verzweigt sein. Das bedeutet, dass eine Über-/Unterordnungshierarchie eine unausgeglichene Hierarchie darstellt.  
   
- Im Gegensatz zu benutzerdefinierten Hierarchien, bei denen die Anzahl der Ebenen in der Hierarchie die Anzahl der für die Endbenutzer sichtbaren Ebenen bestimmt, wird eine Über-/Unterordnungshierarchie mit einer einzelnen Ebene einer Attributhierarchie definiert. Die Werte in dieser einen Ebene erzeugen die für die Benutzer sichtbaren mehreren Ebenen. Die Anzahl der angezeigten Ebenen hängt vom Inhalt der Dimensionstabellenspalten ab, in denen die Elementschlüssel und die Schlüssel der übergeordneten Elemente gespeichert sind. Die Anzahl der Ebenen kann sich ändern, wenn die Daten in den Dimensionstabellen geändert werden. Weitere Informationen finden Sie unter [über-und untergeordneten Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension.md), und [Attribute in über-/ Unterordnungshierarchien](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
+ Im Gegensatz zu benutzerdefinierten Hierarchien, bei denen die Anzahl der Ebenen in der Hierarchie die Anzahl der für die Endbenutzer sichtbaren Ebenen bestimmt, wird eine Über-/Unterordnungshierarchie mit einer einzelnen Ebene einer Attributhierarchie definiert. Die Werte in dieser einen Ebene erzeugen die für die Benutzer sichtbaren mehreren Ebenen. Die Anzahl der angezeigten Ebenen hängt vom Inhalt der Dimensionstabellenspalten ab, in denen die Elementschlüssel und die Schlüssel der übergeordneten Elemente gespeichert sind. Die Anzahl der Ebenen kann sich ändern, wenn die Daten in den Dimensionstabellen geändert werden. Weitere Informationen finden Sie unter [über-und untergeordnete Dimensionen](../../analysis-services/multidimensional-models/parent-child-dimension.md), und [Attribute in über-/ Unterordnungshierarchien](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von benutzerdefinierten Hierarchien](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Eigenschaften der Benutzerhierarchie](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [Dimensionsattributeigenschaftenverweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205575"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Verarbeiten von Rückgabecodes und Ausgabeparametern (ODBC)
   Gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung erst zur Verfügung, wenn [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA zurückgibt. Wenn ein Fehler von einer gespeicherten Prozedur zurückgegeben wird, rufen Sie SQLMoreResults, um zum nächsten Ergebnis fortzufahren, bis SQL_NO_DATA zurückgegeben wird.  

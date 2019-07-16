@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25c3a39ee5cab4f712e65e1afcc3b2e25d1dec79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: aa171f268fc6e39d584461dd0c2a4d69345706a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907380"
 ---
 # <a name="msdistributor-transact-sql"></a>MSdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSdistributor** Tabelle enthält die Verteilereigenschaften. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**property**|**sysname**|Name der Eigenschaft|  
 |**value**|**nvarchar(3000)**|Wert der Eigenschaft|  

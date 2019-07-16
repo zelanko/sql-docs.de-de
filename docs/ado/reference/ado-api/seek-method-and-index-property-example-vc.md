@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf814281f2700cac9158f66dee9a44187817ea5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931075"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek-Methode und Index-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [Seek](../../../ado/reference/ado-api/seek-method.md) Methode und [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft in Verbindung mit einer angegebenen ***Mitarbeiter-ID***, um suchen der Name des Mitarbeiters in der ***Mitarbeiter*** Tabelle der Datenbank Nwind.mdb.  
@@ -228,5 +227,5 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Siehe auch  
  [Index-Eigenschaft](../../../ado/reference/ado-api/index-property.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek-Methode](../../../ado/reference/ado-api/seek-method.md)

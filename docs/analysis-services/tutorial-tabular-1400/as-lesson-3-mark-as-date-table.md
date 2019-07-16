@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 41ff4c51d3dc357f253a42689565849f07235ff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685567"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162134"
 ---
 # <a name="mark-as-date-table"></a>Als Datumstabelle markieren
 
@@ -29,11 +29,11 @@ In dieser Lektion kennzeichnen Sie die **DimDate** als Tabelle die *Date-Tabelle
 
 Bevor Sie die Datumstabelle und Datumsspalte markieren, ist es ein guter Zeitpunkt, führen Sie einige einfache Wartungsaufgaben, um Ihr Modell verständlicher zu machen. Beachten Sie, dass in der Tabelle DimDate eine Spalte namens **FullDateAlternateKey**. Diese Spalte enthält eine Zeile für jeden Tag in jedem Kalenderjahr in der Tabelle. Sie verwenden diese Spalte sehr viel in measureformeln und Berichten. Allerdings ist FullDateAlternateKey kein guter Bezeichner für diese Spalte. Sie benennen Sie sie in **Datum**, um zu identifizieren, und schließen Sie in Formeln zu vereinfachen. Wann immer möglich, ist es eine gute Idee, Umbenennen von Objekten wie Tabellen und Spalten, die sie in SSDT und Client-berichtsanwendungen Identifizierung vereinfachen. 
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **Drei Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **Drei Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 
-Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 2: Abrufen von Daten](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
+Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 2: Abrufen von Daten](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Zum Umbenennen der Spalte FullDateAlternateKey
 
@@ -50,7 +50,7 @@ Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Rei
   
 3.  Wählen Sie im Dialogfeld **Als Datumstabelle markieren** im Listenfeld **Datum** die Spalte **Datum** als eindeutigen Bezeichner aus. Es ist in der Regel standardmäßig aktiviert. Klicken Sie auf **OK**. 
 
-    ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
+    ![als-lesson3-Date-Tabelle](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   
 
 ## <a name="whats-next"></a>Wie geht es weiter?

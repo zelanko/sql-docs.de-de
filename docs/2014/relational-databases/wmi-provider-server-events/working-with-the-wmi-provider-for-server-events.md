@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376213"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195733"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Verwenden des WMI-Anbieters für Serverereignisse
   Dieses Thema enthält Richtlinien, die Sie vor dem Programmieren mit dem WMI-Anbieter für Serverereignisse lesen sollten.  
@@ -109,7 +109,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY oder REVOKE (Gilt nur für die Berechtigungen ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION oder CREATE TRACE EVENT NOTIFICATION.)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Verwenden von Ereignisdaten auf der Clientseite  
- Nachdem der WMI-Anbieter für Serverereignisse die erforderliche ereignisbenachrichtigung in der Zieldatenbank erstellt sendet die ereignisbenachrichtigung Ereignisdaten an den Zieldienst in ' msdb ' mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification /V1.0**. Der Zieldienst fügt das Ereignis in einer Warteschlange in `msdb` mit dem Namen **WMIEventProviderNotificationQueue**. (Sowohl der Dienst als auch die Warteschlange werden vom Anbieter beim Herstellen der ersten Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamisch erstellt.) Der Anbieter liest die XML-Ereignisdaten aus dieser Warteschlange, wandelt sie in MOF-Daten (Managed Object Format) um und gibt sie dann an die Clientanwendung zurück. Die MOF-Daten bestehen aus den Eigenschaften des Ereignisses, das von der WQL-Abfrage als CIM-Classendefinition (Common Information Model) angefordert wird. Jede Eigenschaft verfügt über einen entsprechenden CIM-Typ. Die `SPID`-Eigenschaft wird beispielsweise als CIM-Typ `Sint32` zurückgegeben. Die CIM-Typen für die einzelnen Eigenschaften finden Sie unter jede Ereignisklasse in [WMI-Anbieter für Server Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Nachdem der WMI-Anbieter für Serverereignisse die erforderliche ereignisbenachrichtigung in der Zieldatenbank erstellt sendet die ereignisbenachrichtigung Ereignisdaten an den Zieldienst in ' msdb ' mit dem Namen **SQL/Notifications/ProcessWMIEventProviderNotification /V1.0**. Der Zieldienst fügt das Ereignis in einer Warteschlange in `msdb` mit dem Namen **WMIEventProviderNotificationQueue**. (Sowohl für den Dienst als auch für die Warteschlange werden dynamisch erstellt vom Anbieter beim ersten Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Dann wird der Anbieter liest die XML-Daten aus dieser Warteschlange und wandelt sie in das verwaltete Objektformat (MOF) vor der Rückgabe an die Clientanwendung. Die MOF-Daten bestehen aus den Eigenschaften des Ereignisses, das von der WQL-Abfrage als CIM-Classendefinition (Common Information Model) angefordert wird. Jede Eigenschaft verfügt über einen entsprechenden CIM-Typ. Die `SPID`-Eigenschaft wird beispielsweise als CIM-Typ `Sint32` zurückgegeben. Die CIM-Typen für die einzelnen Eigenschaften finden Sie unter jede Ereignisklasse in [WMI-Anbieter für Server Ereignisklassen und Eigenschaften](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konzepte des WMI-Anbieters für Serverereignisse](https://technet.microsoft.com/library/ms180560.aspx)  

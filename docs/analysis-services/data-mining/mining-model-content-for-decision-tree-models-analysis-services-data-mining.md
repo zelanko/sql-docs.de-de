@@ -1,5 +1,5 @@
 ---
-title: Miningmodellinhalt Entscheidungsstrukturmodellen | Microsoft Docs
+title: Mingingmodellinhalt von Entscheidungsstrukturmodellen | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 493ee56380a3e4665b10cbe27ef1cd1ea764438b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182765"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Miningmodellinhalt von Entscheidungsstrukturmodellen (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019367"
  Der Microsoft Decision Trees-Algorithmus lässt keine kontinuierlichen Datentypen als Eingaben zu. Daher werden die Werte diskretisiert, wenn Spalten über einen kontinuierlichen, numerischen Datentyp verfügen. Am Punkt einer Teilung führt der Algorithmus seine eigene Diskretisierung für alle kontinuierlichen Attribute aus.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Wählt automatisch eine Methode für Zuordnung von Buckets zu kontinuierlichen Attributen; Allerdings können Sie steuern, wie kontinuierliche Werte in den Eingaben diskretisiert werden, durch Festlegen den Inhaltstyp der Miningstrukturspalte auf **Discretized** festlegen und anschließend die <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> oder <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> Eigenschaft.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wählt automatisch eine Methode für die Zuordnung von Buckets zu kontinuierlichen Attributen aus. Allerdings können Sie steuern, wie kontinuierliche Werte diskretisiert werden, indem Sie den Inhaltstyp der Miningstrukturspalte auf **Discretized** setzen und dann die Eigenschaft <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> oder <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> einrichten.  
   
  [Top](#bkmk_Top)  
   
@@ -70,13 +70,13 @@ ms.locfileid: "34019367"
  NODE_TYPE  
  In Entscheidungsstrukturmodellen werden die folgenden Knotentypen erstellt:  
   
-|Knotentyp|Description|  
+|Knotentyp|Beschreibung|  
 |---------------|-----------------|  
 |1 (Model)|Stammknoten des Modells|  
-|2 (Struktur)|Übergeordneter Knoten für Klassifizierungsstrukturen im Modell. Gekennzeichnet mit **"Alle"**.|  
+|2 (Struktur)|Übergeordneter Knoten für Klassifizierungsstrukturen im Modell. Gekennzeichnet mit **"Alle"** .|  
 |3 (Innen)|Head des inneren Zweigs innerhalb einer Klassifizierungs- oder Regressionsstruktur.|  
 |4 (Verteilung)|Blattknoten innerhalb einer Klassifzierungs- oder Regressionsstruktur.|  
-|25 (Regressionsstruktur)|Übergeordneter Knoten für Regressionsstruktur innerhalb des Modells. Gekennzeichnet mit **"Alle"**.|  
+|25 (Regressionsstruktur)|Übergeordneter Knoten für Regressionsstruktur innerhalb des Modells. Gekennzeichnet mit **"Alle"** .|  
   
  NODE_CAPTION  
  Ein beschreibender Name, der angezeigt wird.  
@@ -231,7 +231,7 @@ ms.locfileid: "34019367"
 |Age < 30|40|Age < 30 und Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 und Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- Um mögliche fehlende Werte zu berücksichtigen, wird in allen Modellen eine geringfügige Anpassung vorgenommen. Bei kontinuierlichen Attributen wird jeder Wert oder Wertebereich als Status dargestellt wird (z. B. Alter \<30, Age = 30, "und" Age > 30) und die Wahrscheinlichkeiten werden wie folgt berechnet: Status vorhanden (Wert = 1), anderer Status vorhanden (Wert = 0), Zustand ist  **Fehlende**. Weitere Informationen über die Anpassung von Wahrscheinlichkeiten zur Darstellung fehlender Werte finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+ Um mögliche fehlende Werte zu berücksichtigen, wird in allen Modellen eine geringfügige Anpassung vorgenommen. Bei kontinuierlichen Attributen wird jeder Wert oder Wertebereich als Status dargestellt wird (beispielsweise Age \<30, Age = 30, und Age > 30) und die Wahrscheinlichkeiten werden wie folgt berechnet: Status vorhanden (Wert = 1), anderer Status vorhanden (Wert = 0), ist **Fehlende**. Weitere Informationen über die Anpassung von Wahrscheinlichkeiten zur Darstellung fehlender Werte finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
  Die Wahrscheinlichkeiten für jeden Knoten werden fast direkt aus der Verteilung berechnet. Dies geschieht wie folgt:  
   
@@ -251,7 +251,7 @@ ms.locfileid: "34019367"
   
  Die folgenden Typen der <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> -Enumeration werden in Klassifizierungsstrukturen verwendet.  
   
-|Werttyp|Description|  
+|Werttyp|Beschreibung|  
 |----------------|-----------------|  
 |1 (Missing)|Gibt eine Anzahl, Wahrscheinlichkeit oder andere Statistiken in Bezug auf fehlende Werte an.|  
 |4 (Discrete)|Gibt eine Anzahl, Wahrscheinlichkeit oder andere Statistiken in Bezug auf einen diskreten oder diskretisierten Wert an.|  
@@ -267,7 +267,7 @@ ms.locfileid: "34019367"
   
  Für alle anderen Knoten in der Struktur (ausgenommen der Blattknoten) stellt das Ergebnis eines jeden Knotens das beste Teilungsergebnis für den aktuellen Knoten minus dem Teilungsergebnis für den übergeordneten Knoten dar. Üblicherweise sollte das Teilungsergebnis für einen übergeordneten Knoten immer besser sein als das Teilungsergebnis auf seinen untergeordneten Knoten. Grund hierfür ist, dass ein Entscheidungsstrukturmodell idealerweise zuerst auf den wichtigsten Attributen teilt.  
   
- Je nach gewähltem Algorithmusparameter gibt es viele Möglichkeiten, ein Ergebnis für eine Teilung zu berechnen. Eine Erläuterung dazu, wie Ergebnisse für jede Bewertungsmethode berechnet werden, würde den Rahmen dieses Themas sprengen. Weitere Informationen finden Sie unter "[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)" auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research-Website.  
+ Je nach gewähltem Algorithmusparameter gibt es viele Möglichkeiten, ein Ergebnis für eine Teilung zu berechnen. Eine Erläuterung dazu, wie Ergebnisse für jede Bewertungsmethode berechnet werden, würde den Rahmen dieses Themas sprengen. Weitere Informationen finden Sie unter "[Learning Bayesian Networks: Die Combination of Knowledge and Statistical Data](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)"auf die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research-Website.  
   
 > [!NOTE]  
 >  Wenn Sie ein Entscheidungsstrukturmodell erstellen, das sowohl über kontinuierliche als auch diskrete vorhersagbare Attribute verfügt, erhalten Sie völlig unterschiedliche Ergebnisse auf den Knoten (Alle), die jeden Strukturknoten darstellen. Jedes Modell sollte unabhängig voneinander berücksichtigt werden, und die für die Bewertungsregression verwendeten Methoden unterscheiden sich vollständig von denen, die für die Bewertungsklassifzierung verwendet werden. Die Knotenergebniswerte können nicht verglichen werden.  
@@ -290,9 +290,9 @@ ms.locfileid: "34019367"
  Weitere Informationen zu Regressionsknoten finden Sie unter [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Datamining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining-Modell-Viewer](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

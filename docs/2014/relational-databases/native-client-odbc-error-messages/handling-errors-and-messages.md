@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207095"
 ---
 # <a name="handling-errors-and-messages"></a>Behandlung von Fehlern und Meldungen
   Wenn eine Anwendung eine ODBC-Funktion aufruft, wird der Treiber führt die Funktion aus und gibt Diagnoseinformationen zurück, gibt es zwei Möglichkeiten: Ein Rückgabecode gibt an, den Erfolg oder Fehlschlagen des ODBC-Funktion, und DiagnoseDatensätze liefern detaillierte Informationen über die Funktion. Diagnosedatensätze enthalten einen Headerdatensatz und Statusdatensätze. Auch wenn die Funktion erfolgreich ausgeführt wurde, wird zumindest ein Diagnosedatensatz, der Headerdatensatz, zurückgegeben.  

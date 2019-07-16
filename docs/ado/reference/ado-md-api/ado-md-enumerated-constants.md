@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6018cc0d5b4c74e15cf39c5b57e71ce57d1a39ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32c1905ffa7466da8c053cfb23a22cbc5d1a382e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939991"
 ---
 # <a name="ado-md-enumerated-constants"></a>Enumerationskonstanten – ADO MD
 Zur Unterstützung des Debugprozesses, Listen die Konstanten auf ADO MD aufgezählt einen Wert für jede Konstante. Allerdings wird dieser Wert ist nur eine Empfehlung und kann von einer Version von ADO MD zu einer anderen wechseln. Ihr Code sollte nur auf den Namen, die nicht der tatsächliche Wert, der Enumerationskonstanten abhängen.  

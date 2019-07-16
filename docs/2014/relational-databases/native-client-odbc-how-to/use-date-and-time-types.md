@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753447"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205509"
 ---
 # <a name="use-date-and-time-types"></a>Verwenden von Datums- und Uhrzeittypen
   In diesem Beispiel wird gezeigt, wie die Datum/Uhrzeit-Datenstrukturen, die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hinzugefügt wurden, initialisiert werden. Anschließend werden die Eingabewerte vorbereitet, Parameter gebunden und die Abfrage ausgeführt. Weitere Informationen zur Verwendung dieser Sicherungstypen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
- Sie benötigen eine ODBC-Datenquelle mit dem Namen DateTime. Die Standarddatenbank für DateTime sollte tempdb lauten. Diese Datenquelle muss auf dem ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client basieren.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen DateTime. Die Standarddatenbank für DateTime sollte tempdb lauten. Diese Datenquelle muss auf dem ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client basieren.  
   
  Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   

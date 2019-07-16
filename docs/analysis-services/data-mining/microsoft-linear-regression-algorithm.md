@@ -1,5 +1,5 @@
 ---
-title: Microsoft Linear Regression-Algorithmus | Microsoft Docs
+title: Microsoft Linear Regression-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 20d052ad91a00a7b70b658ff9118dfb73736a410
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183005"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft Linear Regression-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34017927"
   
  Die Beziehung nimmt die Form einer Formel für eine Linie an, die eine Reihe von Daten am besten darstellt. Die Linie des folgenden Diagramms ist z. B. die bestmögliche lineare Darstellung der Daten.  
   
- ![Eine Linie, die einen Satz von Daten modelliert](../../analysis-services/data-mining/media/linear-regression.gif "eine Linie, die Modelliert einen Satz von Daten")  
+ ![Eine Zeile, die einen Satz von Daten modelliert](../../analysis-services/data-mining/media/linear-regression.gif "einer Zeile, die einen Satz von Daten modelliert.")  
   
  Zu jedem Datenpunkt im Diagramm ist ein Fehler zugeordnet. Dieser wird durch seinen Abstand von der Regressionslinie dargestellt. Der Koeffizient a und der Koeffizient b in der Regressionsgleichung passen den Winkel und die Position der Regressionsgleichung an. Sie können die Regressionsgleichung abrufen, indem Sie a und b anpassen, bis die Summe der Fehler, die mit allen Punkten verknüpft sind, ein Minimum erreicht hat.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "34017927"
 -   Unterstützt die Verwendung von OLAP-Miningmodellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Technische Referenz zu Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Lineare Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Miningmodellinhalt, lineare Regressionsmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Technische Referenz für den Microsoft Linear Regression-Algorithmus](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Beispiele für lineare Regressionsmodellabfrage](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

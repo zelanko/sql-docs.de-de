@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e4b7d4f79b3ba3572a20cb8876909f90e4e5870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930554"
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
 
@@ -35,13 +34,13 @@ ms.locfileid: "66709998"
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Gibt die Anzahl der Dimensionen auf einer Achse an.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Gibt an, ob dem Element auf der Achse keine untergeordneten Elemente unmittelbar folgen.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Gibt Informationen für das aktuelle Cellset an.|  
-|[Element](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|Ruft eine Zelle aus unter Verwendung seiner Koordinaten Cellset ab.|  
-|[Element](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung nach Name oder Ordinalzahl zurück.|  
+|[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|Ruft eine Zelle aus unter Verwendung seiner Koordinaten Cellset ab.|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung nach Name oder Ordinalzahl zurück.|  
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|Gibt an, die formatierte Ansicht mit einem Zellenwert anzuzeigen.|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Gibt die Anzahl der Ebenen zwischen den Stamm der Hierarchie und einen Member an.|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Gibt den Namen der Ebene eines Elements.|  
 |[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)|Gibt den Namen eines Objekts.|  
-|[Ordinal (Cell)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Zur eindeutigen Identifizierung eine Zelle durch ihre Position innerhalb eines cellSets dar.|  
+|[Ordinalzahl (Zelle)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|Zur eindeutigen Identifizierung eine Zelle durch ihre Position innerhalb eines cellSets dar.|  
 |[Ordinalzahl (Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Zur eindeutigen Identifizierung eine Position auf einer Achse aus.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Gibt an, das Element, das das übergeordnete Element des aktuellen Elements in einer Hierarchie ist.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Gibt an, ob das übergeordnete Element dieses Positionselements dem übergeordneten Element des unmittelbar vorangehenden Elements übereinstimmt.|  

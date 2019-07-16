@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196707"
 ---
 # <a name="table-properties"></a>Tabelleneigenschaften
   In diesem Thema werden die Tabelleneigenschaften beschrieben, die im Dialogfeld "Tabelleneigenschaften" in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angezeigt werden. Weitere Informationen zum Anzeigen dieser Eigenschaften finden Sie unter [Anzeigen der Tabellendefinition](view-the-table-definition.md).  
@@ -171,6 +171,6 @@ ms.locfileid: "53356279"
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen der Tabellendefinition](view-the-table-definition.md)   
- [Ändern von Spalten &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../tables/modify-columns-database-engine.md)  
+ [Ändern von Spalten &#40;Datenbank-Engine&#41;](../tables/modify-columns-database-engine.md)  
   
   

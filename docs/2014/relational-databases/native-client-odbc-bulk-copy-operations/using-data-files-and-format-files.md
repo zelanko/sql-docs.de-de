@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206831"
 ---
 # <a name="using-data-files-and-format-files"></a>Verwenden von Datendateien und Formatdateien
   Das einfachste Massenkopierprogramm geht wie folgt vor:  
@@ -39,11 +39,11 @@ ms.locfileid: "48071930"
   
 2.  Rufen Sie [Bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) mit *eOption* auf BCPHINTS festgelegt und *iValue* auf einen Zeiger auf eine SQLTCHAR-Zeichenfolge, die mit der Transact-SQL-Anweisung festgelegt.  
   
-3.  Rufen Sie **Bcp_exec** um den Massenkopiervorgang auszuführen.  
+3.  Rufen Sie **bcp_exec** auf, um den Massenkopiervorgang auszuführen.  
   
  Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung kann jede Anweisung sein, die ein Resultset generiert. Die Datendatei wird mit dem ersten Resultset der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erstellt. Beim Massenkopieren wird jedes Resultset nach dem ersten ignoriert, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung mehrere Resultsets generiert.  
   
- Rufen Sie zum Erstellen einer Datendatei in die Spalte Daten in einem anderen Format als in der Tabelle gespeichert [Bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) aufrufen, um anzugeben, wie viele Spalten geändert werden soll, klicken Sie dann [Bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte, deren Format Sie möchten ändern. Dies erfolgt nach dem Aufruf **Bcp_init** aber vor dem Aufrufen **Bcp_exec**. **Bcp_colfmt** gibt das Format, in dem die Daten der Spalte in der Datendatei gespeichert ist. Es kann beim ein- oder ausgehenden Massenkopieren verwendet werden. Sie können auch **Bcp_colfmt** um die Zeilen- und Spaltenabschlusszeichen festzulegen. Z. B. wenn die Daten keine Tabulatorzeichen enthalten, können Sie erstellen eine Datei mit Tabstopptrennzeichen mit **Bcp_colfmt** das Tabulatorzeichen als Abschlusszeichen für jede Spalte festgelegt.  
+ Rufen Sie zum Erstellen einer Datendatei in die Spalte Daten in einem anderen Format als in der Tabelle gespeichert [Bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) aufrufen, um anzugeben, wie viele Spalten geändert werden soll, klicken Sie dann [Bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) für jede Spalte, deren Format Sie möchten ändern. Dies erfolgt nach dem Aufruf **Bcp_init** aber vor dem Aufrufen **Bcp_exec**. **Bcp_colfmt** gibt das Format, in dem die Daten der Spalte in der Datendatei gespeichert ist. Sie können beim Massenkopieren von herunter- oder hochskalieren verwendet werden. Sie können auch **Bcp_colfmt** um die Zeilen- und Spaltenabschlusszeichen festzulegen. Z. B. wenn die Daten keine Tabulatorzeichen enthalten, können Sie erstellen eine Datei mit Tabstopptrennzeichen mit **Bcp_colfmt** das Tabulatorzeichen als Abschlusszeichen für jede Spalte festgelegt.  
   
  Beim Massenkopieren und Verwenden von **Bcp_colfmt**, Sie können ganz einfach erstellen eine Formatdatei beschreiben die Datendatei, die Sie, durch den Aufruf erstellt haben [Bcp_writefmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) nach dem letzten Aufruf von **Bcp_colfmt**.  
   

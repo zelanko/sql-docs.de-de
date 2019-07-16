@@ -1,5 +1,5 @@
 ---
-title: Datentypen (Datamining) | Microsoft Docs
+title: Datentypen (Datamining) | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b62c9a4ebc9caf9875a1e5b6aef987bf0b4fa8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183351"
 ---
 # <a name="data-types-data-mining"></a>Datentypen (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "34014637"
  Wenn Sie den Datentyp einer Spalte ändern, müssen die Miningstruktur und alle auf dieser Struktur basierenden Miningmodelle neu verarbeitet werden. Beim Ändern des Datentyps kann es vorkommen, dass die jeweilige Spalte nicht mehr in einem bestimmten Modell verwendet werden kann. In diesem Fall gibt Analysis Services beim erneuten Verarbeiten entweder einen Fehler aus, oder das Modell wird unter Auslassung der Spalte verarbeitet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Content-Arten & #40; Datamining & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Content-Arten & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningstrukturen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Datentypen & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+ [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Inhaltstypen &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Datentypen &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [Miningmodellspalten](../../analysis-services/data-mining/mining-model-columns.md)   
  [Miningstrukturspalten](../../analysis-services/data-mining/mining-structure-columns.md)  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529107"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178961"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Datenquellen und Bindungen (SSAS – mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52529107"
 ## <a name="analysis-services-data-types"></a>Analysis Services – Datentypen  
  Die Datentypen, die in Bindungen verwendet werden, müssen zu den von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützten Datentypen passen. Die folgenden Datentypen werden in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]definiert:  
   
-|Analysis Services-Datentyp|Description|  
+|Analysis Services-Datentyp|Beschreibung|  
 |---------------------------------|-----------------|  
 |BigInt|Ein 64-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int64-Datentyp in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I8-Datentyp in der OLE DB zugeordnet.|  
 |Bool|Ein boolescher Wert. Dieser Datentyp wird dem booleschen Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_BOOL-Datentyp in der OLE DB zugeordnet.|  
@@ -43,7 +43,7 @@ ms.locfileid: "52529107"
 |Integer|Ein 32-Bit-Integer mit Vorzeichen Dieser Datentyp wird dem Int32-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I4-Datentyp in der OLE DB zugeordnet.|  
 |Single|Eine Gleitkommazahl mit einfacher Genauigkeit im Bereich von -3,40E +38 bis 3,40E +38. Dieser Datentyp wird dem Single-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_R4-Datentyp in der OLE DB zugeordnet.|  
 |SmallInt|Eine 16-Bit-Ganzzahl mit Vorzeichen. Dieser Datentyp wird dem Int16-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I2-Datentyp in der OLE DB zugeordnet.|  
-|TinyInt|Eine 8-Bit-Ganzzahl mit Vorzeichen. Dieser Datentyp wird dem SByte-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I1-Datentyp in OLE DB zugeordnet.<br /><br /> Hinweis: Wenn eine Datenquelle Felder enthält, die dem tinyint-Datentyp entsprechen und die Eigenschaft Automatisch inkrementieren auf TRUE festgelegt ist, werden sie in der Datenquellensicht zu ganzen Zahlen konvertiert.|  
+|TinyInt|Eine 8-Bit-Ganzzahl mit Vorzeichen. Dieser Datentyp wird dem SByte-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_I1-Datentyp in OLE DB zugeordnet.<br /><br /> Hinweis: Wenn eine Datenquelle enthält Felder, die von der Tinyint-Datentyp sind, und die Eigenschaft automatisch inkrementieren auf True festgelegt ist, sie in der Datenquellensicht zu ganzen Zahlen konvertiert werden.|  
 |UnsignedBigInt|Eine 64-Bit-Ganzzahl ohne Vorzeichen. Dieser Datentyp wird dem Uint64-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_UI8-Datentyp in der OLE DB zugeordnet.|  
 |UnsignedInt|Eine 32-Bit-Ganzzahl ohne Vorzeichen. Dieser Datentyp wird dem Uint32-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_UI4-Datentyp in der OLE DB zugeordnet.|  
 |UnsignedSmallInt|Eine 16-Bit-Ganzzahl ohne Vorzeichen. Dieser Datentyp wird dem Uint16-Datentyp in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und dem DBTYPE_UI2-Datentyp in der OLE DB zugeordnet.|  
@@ -145,7 +145,7 @@ ms.locfileid: "52529107"
   
  Out-of-Line-Bindungen werden durch Einfügung des optionalen **Bindings** -Auflistungsobjekts mit dem Verarbeitungsbefehl festgelegt. Die optionale **Bindings** -Auflistung enthält die folgenden Elemente.  
   
-|Eigenschaft|Cardinality|Typ|Description|  
+|Eigenschaft|Cardinality|Typ|Beschreibung|  
 |--------------|-----------------|----------|-----------------|  
 |**Bindung**|0-n|**Bindung**|Stellt eine Auflistung neuer Bindungen bereit.|  
 |**DataSource**|0-1|**DataSource**|Ersetzt **DataSource** vom Server, der verwendet worden wäre.|  

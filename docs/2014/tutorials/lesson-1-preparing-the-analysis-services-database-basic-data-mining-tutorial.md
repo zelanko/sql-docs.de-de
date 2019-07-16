@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036851"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185755"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lektion 1: Vorbereiten der Analysis Services-Datenbank (Lernprogramm zu Datamining-Grundlagen)
   Sie sind ein neuer Mitarbeiter von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] und wurden mit der Entwicklung einer Business Intelligence-Anwendung in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]beauftragt. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] erhofft sich, nutzen Sie Ihre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datamining-Erfahrung, um interessante und aussagefähige Informationen über Personen zu ermitteln, die Fahrräder gekauft haben. Das Unternehmen möchte, dass Sie vorhersagen, welche potenziellen Kunden höchstwahrscheinlich in der Zukunft ein Fahrrad kaufen werden.  
@@ -34,7 +34,7 @@ ms.locfileid: "56036851"
  [Erstellen eines Analysis Services-Projekt &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Erstellen einer Targeted Mailing-Struktur &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lektion 2: Erstellen einer Targeted Mailing-Struktur &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datenquellsichten in mehrdimensionalen Modellen](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   

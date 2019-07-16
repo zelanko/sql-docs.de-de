@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071537"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207856"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Hinzufügen von Beispieldaten zu einem DirectQuery-Modell im Entwurfsmodus
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ Sie können jedoch eine kleinere Menge an Beispieldaten der Arbeitsdatenbank Ihr
   
 2.  Klicken Sie auf **Tabelle** > **Eigenschaften** , um das Dialogfeld „Partitionsverwaltung“ zu öffnen.  
   
-    Beachten Sie, dass die Standardpartition **(DirectQuery) \<Tabellenname >**. Dies ist die vollständige Datenansicht. Löschen Sie diese Partition nicht! Diese Partition wird verwendet, wenn das Modell bereitgestellt wird.  
+    Beachten Sie, dass die Standardpartition **(DirectQuery) \<Tabellenname >** . Dies ist die vollständige Datenansicht. Löschen Sie diese Partition nicht! Diese Partition wird verwendet, wenn das Modell bereitgestellt wird.  
   
 4.  Wählen Sie die Partition aus, und klicken Sie anschließend auf **Kopieren**.  
 

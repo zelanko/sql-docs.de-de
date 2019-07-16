@@ -1,5 +1,5 @@
 ---
-title: Microsoft Logistic Regression-Algorithmus | Microsoft Docs
+title: Microsoft Logistic Regression-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d293b386cf02d492e3a78a6cef34396f22277ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016937"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183001"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft Logistic Regression-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "34016937"
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
- [Technische Referenz zu Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Beispiele für logistische Regressionsmodellabfragen](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
+ [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Logistische Regressionsmodell-Abfragebeispiele](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
   
   

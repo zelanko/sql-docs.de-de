@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 83159d1c6b66019aad196e2d05337f06c11f390f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b4e8d3c36054cd4e9dc49e940e60df51f17ddc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940015"
 ---
 # <a name="ado-md-collections"></a>ADO MD-Collections
 
@@ -30,8 +29,8 @@ ms.locfileid: "66709913"
 |[Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Enthält die **Dimension** Objekte, aus denen ein Cube besteht.|  
 |[Hierarchien](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Enthält den Satz **Hierarchie** Objekte aus einer Dimension.|  
 |[Levels](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Enthält die **Ebene** Objekte, die eine Hierarchie bilden.|  
-|[Elemente](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Enthält die **Member** Objekte aus einer Ebene oder eine Position auf einer Achse.|  
-|[Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Enthält die **Position** Objekte, die einen Punkt auf einer Achse zu definieren.|  
+|[Mitglieder](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|Enthält die **Member** Objekte aus einer Ebene oder eine Position auf einer Achse.|  
+|[Positionen](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|Enthält die **Position** Objekte, die einen Punkt auf einer Achse zu definieren.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ADO MD-API-Referenz](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

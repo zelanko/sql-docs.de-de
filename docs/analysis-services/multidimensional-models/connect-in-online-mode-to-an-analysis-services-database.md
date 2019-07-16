@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung im Onlinemodus mit einer Analysis Services-Datenbank | Microsoft Docs
+title: Im Onlinemodus mit einer Analysis Services-Datenbank verbinden | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 612e538ef01040778497242606115a01c6ef6921
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021307"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179006"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Herstellen in Onlinemodus einer Verbindung mit einer Analysis Services-Datenbank
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34021307"
      Sie können nun alle Objekte innerhalb der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank direkt bearbeiten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Analysis Services-Projekten und-Datenbanken während der Entwicklungsphase](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
- [Erstellen mehrdimensionaler Modelle mit SQL Server Datatools & #40; SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Arbeiten mit Analysis Services-Projekten und -Datenbanken während der Entwicklungsphase](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

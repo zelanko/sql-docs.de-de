@@ -1,5 +1,5 @@
 ---
-title: Hierarchiedarstellung (tabellarisch) | Microsoft Docs
+title: Hierarchiedarstellung (tabellarisch) | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ed1232a991ccdefbd9cae614698400cfe639492
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163289"
 ---
-# <a name="tables---hierarchy-representation"></a>Tabellen - Hierarchiedarstellung
+# <a name="tables---hierarchy-representation"></a>Tabellen – Hierarchiedarstellung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   In tabellarischen Modellen stellt eine Hierarchie einen Navigationspfad von einem Attribut zu einem anderen dar, der auf Werten basiert, die vom Benutzer ausgewählt wurden.  
   
 ## <a name="hierarchy-representation"></a>Hierarchiedarstellung  
   
 ### <a name="hierarchy-in-amo"></a>Hierarchie in AMO  
- Wenn AMO zum Verwalten einer Tabelle für ein tabellarisches Modell verwendet wird, besteht eine 1:1-Objektentsprechung zu einer Hierarchie in AMO. Eine Hierarchie wird dargestellt, indem die <xref:Microsoft.AnalysisServices.Hierarchy> Objekt.  
+ Wenn AMO zum Verwalten einer Tabelle für ein tabellarisches Modell verwendet wird, besteht eine 1:1-Objektentsprechung zu einer Hierarchie in AMO. Eine Hierarchie wird durch das <xref:Microsoft.AnalysisServices.Hierarchy>-Objekt dargestellt.  
   
  Der folgende Codeausschnitt veranschaulicht, wie einem vorhandenen tabellarischen Modell eine Hierarchie hinzugefügt wird. Im Code wird davon ausgegangen, dass Sie über das AMO-Datenbankobjekt newDatabase und das AMO-Cubeobjekt modelCube verfügen.  
   

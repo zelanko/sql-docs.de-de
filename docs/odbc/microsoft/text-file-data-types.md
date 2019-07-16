@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23416cb067507d821701e57255fdc6f81ee607c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 829f924d8d4893d45a48c193cd27fdd7ac261e3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939712"
 ---
 # <a name="text-file-data-types"></a>Textdatei-Datentypen
 Die folgende Tabelle zeigt, wie Text von Datentypen in ODBC-SQL-Datentypen zugeordnet werden. Beachten Sie, dass nicht alle ODBC-SQL-Datentypen, die durch den Text der ODBC-Treiber unterstützt werden.  
@@ -40,7 +39,7 @@ Die folgende Tabelle zeigt, wie Text von Datentypen in ODBC-SQL-Datentypen zugeo
   
  Die folgende Tabelle zeigt die Einschränkungen für Datentypen Text.  
   
-|Datentyp|Description|  
+|Datentyp|Beschreibung|  
 |---------------|-----------------|  
 |CHAR|Erstellen eine CHAR-Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 255-Bit-Spalte zurück.<br /><br /> In durch Trennzeichen getrennte Dateien wird eine CHAR-Spalte kann, oder Sie besitzen keine Trennzeichen doppelte Anführungszeichen, am Anfang und am Ende; in Dateien mit fester Länge sind die doppelten Anführungszeichen als Trennzeichen nicht verwendet.|  
 |DATETIME|MM-DD-YY (z. B. 01-17-92)<br /><br /> MMM-JJ (z. B. Januar-17-92)<br /><br /> TT-MMM-JJ (z. B. 17 Jan. 92)<br /><br /> JJJJ-MM-TT (z. B. 1992-01-17)<br /><br /> JJJJ-MMM-TT (z. B. 1992-Januar-17)<br /><br /> Gemischte Datumstrennzeichen dürfen nicht in einer Tabelle.<br /><br /> Text-ISAM-Formate ein DATETIME-Feld in den Vereinigten Staaten oder in Europa-Format, je nach der internationalen Einstellung in der Windows-Systemsteuerung.|  

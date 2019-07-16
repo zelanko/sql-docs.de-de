@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Zellenberechnungen in MDX (Multidimensional Expressions) | Microsoft Docs
+title: Erstellen von Zellenberechnungen in MDX (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2263ac667b65def1bd59745e3cfef711820b494
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208790"
 ---
-# <a name="mdx-cell-calculations---build-cell-calculations"></a>MDX-Zellenberechnungen - Build Zellenberechnungen
+# <a name="mdx-cell-calculations---build-cell-calculations"></a>MDX - Zellenberechnungen: Erstellen von Zellenberechnungen
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  MDX (Multidimensional Expressions) stellt eine Reihe von Tools zum Generieren berechneter Werte bereit, wie z. B. berechnete Elemente, benutzerdefinierte Rollups und benutzerdefinierte Elemente. Allerdings ist es schwierig, mithilfe dieser Funktionen eine bestimmte Menge von Zellen oder eine einzelne Zelle zu beeinflussen.  
+  MDX (Multidimensional Expressions) stellt eine Reihe von Tools zum Generieren berechneter Werte bereit, wie z. B. berechnete Elemente, benutzerdefinierte Rollups und benutzerdefinierte Elemente. Allerdings ist es schwierig, mithilfe dieser Funktionen eine bestimmte Menge von Zellen oder eine einzelne Zelle zu beeinflussen.  
   
  Wenn Sie berechnete Werte für bestimmte Zellen generieren möchten, sollten Sie die Funktion für berechnete Zellen in MDX verwenden. Mit berechneten Zellen können Sie einen bestimmten Slice von Zellen definieren, der als *Berechnungsteilcube*bezeichnet wird, und eine Formel auf jede einzelne Zelle im Berechnungsteilcube anwenden, wobei eine optionale Bedingung zugrunde liegt, die auf jede Zelle angewendet werden kann.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "34021647"
      Weitere Informationen zum Erstellen berechneter Elemente in einer Sitzung mithilfe der CREATE CELL CALCULATION- oder der ALTER CUBE-Anweisung finden Sie unter [Erstellen berechneter Zellen im Bereich einer Sitzung](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [ALTER CUBE-Anweisung & #40; MDX & #41;](../../../mdx/mdx-data-definition-alter-cube.md)   
- [Erstellen Sie CELL CALCULATION-Anweisung & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
- [Erstellen von Zellenberechnungen im Bereich einer Abfrage & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [Grundlegendes zu MDX-Abfrage & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [ALTER CUBE-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)   
+ [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [Erstellen von Zellenberechnungen im Bereich einer Abfrage &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

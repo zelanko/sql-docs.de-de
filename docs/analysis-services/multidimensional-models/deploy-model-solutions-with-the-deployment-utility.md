@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975161"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178511"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -67,7 +67,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ##  <a name="Modes"></a> Modi  
  Das Hilfsprogramm kann in den folgenden Modi ausgeführt werden.  
   
-|Mode|Description|  
+|Modus|Beschreibung|  
 |----------|-----------------|  
 |Unbeaufsichtigter Modus|Es wird keine Benutzeroberfläche angezeigt. Alle Informationen, die für die Bereitstellung benötigt werden, werden durch die Eingabedateien angegeben. Im unbeaufsichtigten Modus gibt das Hilfsprogramm keinen Status aus. Stattdessen kann eine optionale Protokolldatei verwendet werden, um Status- und Fehlerinformationen für eine spätere Prüfung aufzuzeichnen.|  
 |Antwortmodus|Die Benutzeroberfläche des Bereitstellungs-Assistenten wird angezeigt; die Benutzerantworten werden in den angegebenen Ausgabedateien gespeichert, um sie bei einer späteren Bereitstellung verwenden zu können. Im Antwortmodus erfolgt keine Bereitstellung. Der Antwortmodus dient lediglich dazu, die Benutzerantworten aufzuzeichnen.|  
@@ -85,7 +85,6 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Siehe auch  
- 
-  [Referenz zum Eingabeaufforderungs-Hilfsprogramm &amp;#40;Datenbank-Engine&amp;#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206579"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Aufrufen einer gespeicherten Prozedur (OLE DB)
   Eine gespeicherte Prozedur kann 0 oder mehr Parameter haben. Sie kann auch einen Wert zurückgeben: Bei Verwendung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, Parameter an eine gespeicherte Prozedur als übergeben werden können:  
@@ -91,7 +91,7 @@ ms.locfileid: "54134390"
   
  Die allgemeine Syntax zum Aufrufen einer Prozedur mit der ODBC CALL-Escapesequenz lautet:  
   
- {[**? =**]**Aufrufen**_Procedure_name_[**(**[*Parameter*] [**,**[*Parameter*]]... **)**]}  
+ {[ **? =** ]**Aufrufen**_Procedure_name_[ **(** [*Parameter*] [ **,** [*Parameter*]]... **)** ]}  
   
  Zum Beispiel:  
   

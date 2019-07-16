@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8874a442897bd5dd887d7e9903777f81824cb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543534"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165023"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52543534"
   
  ![Power View für mehrdimensionale Modelle-Architektur](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View für mehrdimensionale Modelle-Architektur")  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  **Serveranforderungen**  
   
 -   Microsoft SQL Server 2016 Analysis Services (Ausführung im mehrdimensionalen Modus)  
@@ -55,7 +55,7 @@ ms.locfileid: "52543534"
   
 |Mehrdimensionales Objekt|Tabellarisches Objekt|  
 |-----------------------------|--------------------|  
-|Cube|Model|  
+|Cube|Modell|  
 |Cubedimension|Tabelle|  
 |Dimensionsattribute (Schlüssel, Name)|Spalte|  
 |Measuregruppe|Tabelle|  
@@ -97,7 +97,7 @@ ms.locfileid: "52543534"
  Tabellarische Modelle bieten die Möglichkeit, *implizite* Measures wie COUNT, SUM oder AVERAGE für Felder zu erstellen. Für mehrdimensionale Modelle da Dimension-Attributdaten anders gespeichert werden dauert Abfragen impliziter Measures sehr lange. Aus diesem Grund sind in Power View keine impliziten Measures verfügbar.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensionen, Attribute und Hierarchien  
- Cubedimensionen werden in tabellarischen Metadaten als Tabellen verfügbar gemacht. In der Power View-Feldliste werden Dimensionsattribute als Spalten in Anzeigeordnern angezeigt.  Die Dimensionsattribute, für die die AttributeHierarchyEnabled-Eigenschaft auf "false" festgelegt ist. Beispiel: Birth Date-Attribut in der Customer-Dimension oder AttributeHierarchyVisible-Eigenschaft auf "false" wird nicht in der Power View-Feldliste angezeigt. Hierarchien mit mehreren Ebenen oder Benutzerhierarchien (z. B. "Customer Geography" in der Customer-Dimension) werden in der Power View-Feldliste als Hierarchien verfügbar gemacht. Auf Hidden festgelegte UnknownMembers eines Dimensionsattributs werden in DAX-Abfragen und in Power View verfügbar gemacht.  
+ Cubedimensionen werden in tabellarischen Metadaten als Tabellen verfügbar gemacht. In der Power View-Feldliste werden Dimensionsattribute als Spalten in Anzeigeordnern angezeigt.  Die Dimensionsattribute, die die AttributeHierarchyEnabled-Eigenschaft, die auf "false" festgelegt sein; Zum Beispiel: Birth Date-Attribut in der Customer-Dimension oder AttributeHierarchyVisible-Eigenschaft auf "false" festgelegt, wird in der Power View-Feldliste nicht angezeigt. Hierarchien mit mehreren Ebenen oder Benutzerhierarchien (z. B. "Customer Geography" in der Customer-Dimension) werden in der Power View-Feldliste als Hierarchien verfügbar gemacht. Auf Hidden festgelegte UnknownMembers eines Dimensionsattributs werden in DAX-Abfragen und in Power View verfügbar gemacht.  
   
  **Dimensionen, Attribute und Hierarchien in SQL Server Data Tools (SSDT) und der Power View-Feldliste**  
   
@@ -136,7 +136,7 @@ ms.locfileid: "52543534"
  Mehrdimensionale Modelle unterstützen Sicherheit auf Dimensions- und Zellenebene mithilfe von Rollen. Ein Benutzer, der über Power View eine Verbindung mit einem Cube herstellt, wird authentifiziert und auf die geeigneten Berechtigungen überprüft. Bei Sicherheit auf Dimensionsebene kann der Benutzer die jeweiligen Dimensionselemente in Power View nicht einsehen. Wurde für einen Benutzer jedoch eine Sicherheitsberechtigung auf Zellenebene definiert, bei der bestimmte Zellen eingeschränkt sind, kann er in Power View keine Verbindung mit dem Cube herstellen. In einigen Fällen können Benutzer Aggregatdaten anzeigen, wenn Teile davon aus gesicherten Daten berechnet werden.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Nicht aggregierbare Attribute/Hierarchien  
- Für die Attribute einer in einem mehrdimensionalen Modell enthaltenen Dimension kann die IsAggregatable-Eigenschaft auf Falsefestgelegt sein. Dies bedeutet, dass der Modellentwickler festgelegt hat, dass Daten von Clientanwendungen bei der Datenabfrage nicht hierarchieübergreifend (auf Attributebene oder auf mehreren Ebenen) aggregiert werden sollen. In Power View wird dieses Dimensionsattribut als Spalte verfügbar gemacht, für die keine Teilergebnisse verfügbar sind. Die folgende Abbildung enthält ein Beispiel für die nicht aggregierbare Hierarchie "Konten". Die oberste Ebene der Über-/Unterordnungshierarchie "Accounts" kann im Gegensatz zu den anderen Ebenen nicht aggregiert werden. In einer Matrixvisualisierung der Hierarchie "Accounts" (erste beide Ebenen) werden Teilergebnisse für "Account Level 02", aber nicht für die oberste Ebene "Account Level 01" angezeigt.  
+ Für die Attribute einer in einem mehrdimensionalen Modell enthaltenen Dimension kann die IsAggregatable-Eigenschaft auf Falsefestgelegt sein. Dies bedeutet, dass der Modellentwickler festgelegt hat, dass Daten von Clientanwendungen bei der Datenabfrage nicht hierarchieübergreifend (auf Attributebene oder auf mehreren Ebenen) aggregiert werden sollen. In Power View wird dieses Dimensionsattribut als Spalte verfügbar gemacht, für die keine Teilergebnisse verfügbar sind. In der folgenden Abbildung sehen Sie ein Beispiel für eine nicht-aggregierbare Hierarchie: Konten. Die oberste Ebene der Über-/Unterordnungshierarchie "Accounts" kann im Gegensatz zu den anderen Ebenen nicht aggregiert werden. In einer Matrixvisualisierung der Hierarchie "Accounts" (erste beide Ebenen) werden Teilergebnisse für "Account Level 02", aber nicht für die oberste Ebene "Account Level 01" angezeigt.  
   
  **Nicht aggregierbare Hierarchie in Power View**  
   
@@ -217,7 +217,7 @@ ms.locfileid: "52543534"
   
  Die DISCOVER_CSDL_METADATA-Anforderung weist folgende Einschränkungen auf:  
   
-|Name|Erforderlich|Description|  
+|Name|Erforderlich|Beschreibung|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Ja|Der Katalog-/Datenbankname.|  
 |PERSPECTIVE_NAME|Ja, wenn der Cube mehr als eine Perspektive enthält. Optional, wenn nur ein Cube oder eine Standardperspektive vorhanden ist.|Der Cube- oder Perspektivenname in der mehrdimensionalen Datenbank.|  

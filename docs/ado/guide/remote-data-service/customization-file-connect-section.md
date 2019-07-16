@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c9ec47ffb89724e8a7991dae1d2296aa813e0c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922807"
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des ereignishandlers ist, alle Verbindungen zu verweigern. Die **verbinden** Abschnitt gibt Ausnahmen, um dieses Verhalten. Z. B., wenn alle der **verbinden** Abschnitte wurden, fehlt oder ist leer, und dann in der Standardeinstellung keine Verbindungen hergestellt werden konnte.  
@@ -54,7 +53,7 @@ connectionString
   
 ## <a name="remarks"></a>Hinweise  
   
-|Teil|Description|  
+|Segment|Beschreibung|  
 |----------|-----------------|  
 |**Verbinden**|Eine Literalzeichenfolge, die dies weist darauf hin, ist ein Eintrag der Verbindungszeichenfolge.|  
 |**_connectionString_**|Eine Zeichenfolge, die die gesamte Client-Verbindungszeichenfolge ersetzt.|  

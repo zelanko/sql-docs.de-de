@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417121"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208245"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Erstellen und Anpassen des PowerPivot-Katalogs
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "52417121"
   
  In der folgenden Tabelle werden die verschiedenen Layouts zum Darstellen von Miniaturansichtsskizzen jeder in der Vorschau angezeigten Seite beschrieben:  
   
-|Anzeigen|Description|  
+|Anzeigen|Beschreibung|  
 |----------|-----------------|  
 |Katalogsicht (Standard)|Die Katalogsicht ist die Standardsicht für einen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog. Die Vorschau wird links angezeigt. Daneben werden kleinere Miniaturansichten der einzelnen Arbeitsblätter in sequenzieller Reihenfolge von links nach rechts angezeigt.|  
 |Alle Dokumente|Dies ist das Standardlayout für Dokumentbibliotheken. Sie können diese Sicht auswählen, um einzelne Dokumente zu verwalten oder Bibliotheksinhalte in einem Listenformat anzuzeigen.<br /><br /> Verwenden Sie diese Sicht, um Eigenschaften zu bearbeiten und einzelne Dokumente zu löschen oder zu verschieben.<br /><br /> Wenn Sie die Versionsverwaltung aktiviert haben, müssen Sie Dokumente unter Verwendung dieser Sicht in der Bibliothek einchecken oder auschecken.|  

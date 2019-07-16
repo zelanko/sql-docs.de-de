@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4c96a85ceb4347d663735dfb310764be1052860e
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984051"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208722"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52984051"
 ### <a name="performancepoint-dashboards"></a>PerformancePoint-Dashboards  
  PerformancePoint-Dashboards werden verwendet, um Scorecards in SharePoint zu erstellen, die Geschäftsleistung verglichen mit vordefinierten Maßnahmen übermitteln. PerformancePoint bietet Unterstützung für Datenverbindungen zu mehrdimensionalen Analysis Services-Daten. Weitere Informationen finden Sie unter [Erstellen einer Analysis Services-Datenverbindung (PerformancePoint Services)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>SQL Server Datatools  
+### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Modell- und Berichts-Designer erstellen Lösungen, die mehrdimensionale Modelle enthalten, mithilfe von SQL Server Data Tools. Durch die Bereitstellung der Lösung in einer Analysis Services-Instanz wird die Datenbank erstellt, mit der Sie anschließend von Excel, Reporting Services und anderen Business Intelligence-Clientanwendungen ausgehend Verbindungen herstellen.  
   
  SQL Server Data Tools werden auf einer Visual Studio-Shell erstellt und verwenden Projekte, die organisiert werden und das Modell enthalten. Weitere Informationen finden Sie unter [Erstellen mehrdimensionaler Modelle mit SQL Server Data Tools &#40;SSDT&#41;](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "52984051"
   
  Die folgende Tabelle enthält weitere Details und Links zu den Clientbibliotheken, die zum Verbinden von Analysis Services mit einer benutzerdefinierten Anwendung verwendet werden.  
   
-|Schnittstelle|Description|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |Analysis Services Management Objects (AMO)|AMO ist das primäre Objektmodell zum Verwalten von Analysis Services-Instanzen und mehrdimensionalen Datenbanken in Code. SQL Server Management Studio beispielsweise verwendet AMO zur Unterstützung von Server- und Datenbankverwaltung. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).|  
 |ADOMD.NET|ADOMD.NET ist das primäre Objektmodell, das mehrdimensionale Daten in benutzerdefinierten Anwendungen erstellt und aufruft. Sie können ADOMD.NET in einer verwalteten Clientanwendung verwenden, um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Informationen mithilfe der Schnittstellen für den Microsoft .NET Framework-Datenzugriff abzurufen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) und [ADOMD.NET Client-Programmierung](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming).|  

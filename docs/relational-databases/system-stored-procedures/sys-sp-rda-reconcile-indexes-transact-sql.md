@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fcb2226c52e8572e6432e0f21f4a782e130df067
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e439a04e55816f25cae318a8451452bf09dee0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905047"
 ---
-# <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact-SQL)
+# <a name="syssprdareconcileindexes-transact-sql"></a>Sys.sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Fügt eine Schemaaufgabe an, wenn Sie Indizes in der Remotetabelle abstimmen möchten. Nachdem diese Aufgabe erfolgreich abgeschlossen wurde, hat die Remotetabelle die gleichen Indizes, die auf der lokalen Stretch-aktivierte Tabelle vorhanden sind.  
@@ -42,7 +41,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@objname = ] *'objname'*  
+ [@objname =] *"Objname"*  
  Ist der qualifizierte oder nicht qualifizierte Name der Stretch-aktivierte Tabelle für die Indizes abgestimmt werden sollen. Anführungszeichen sind erforderlich, nur dann, wenn Sie ein qualifiziertes Objekt angeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

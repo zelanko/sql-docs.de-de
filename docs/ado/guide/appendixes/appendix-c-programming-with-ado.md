@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926874"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Anhang C: Programmieren mit ADO in Entwicklungsumgebungen
 ADO ist eine COM-Automatisierung Schnittstelle-Komponente, die mit vielen Programmiersprachen, einschließlich Microsoft Visual Basic, VBScript, JScript und Visual C++ verwendet werden kann. Eine ADO-Version wird mit jedem dieser Tools und andere Anwendungen wie Microsoft Office und Microsoft SQL Server installiert.
@@ -34,4 +33,4 @@ ADO ist eine COM-Automatisierung Schnittstelle-Komponente, die mit vielen Progra
 -   [Verwenden von ADO mit Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
 
 ## <a name="see-also"></a>Siehe auch
- [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md) [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [Konfigurieren von RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Anhang A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md) [ADO History](../../../ado/guide/ado-history.md)
+ [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md) [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [Konfigurieren von RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) [ADO-Verlauf](../../../ado/guide/ado-history.md)

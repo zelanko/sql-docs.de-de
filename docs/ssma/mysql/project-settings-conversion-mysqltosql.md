@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908873"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySqlToSql)
 Die Seite die **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA MySQL-Syntax in SQL Server oder SQL Azure-Syntax konvertiert.  
@@ -79,7 +78,7 @@ Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und
 |-|-|  
 |**Begriff**|**Definition**|  
 |**Standardkonvertierung-Funktion**|Gibt an, ob es sich bei Funktionen konvertiert werden sollen in der Standardeinstellung werden T-SQL-Funktionen oder gespeicherte Prozeduren.<br /><br />**Im Modus Standard**:  Konvertieren in Funktion<br /><br />**Vollständige**:  Konvertieren in Funktion<br /><br />**Vollständiger Modus**:  Konvertieren in Funktion|  
-|**Generate SET XACT_ABORT ON**|Gibt an, ob SET XACT_ABORT ON an den Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden muss.<br /><br />**Im Modus Standard**:  Ja<br /><br />**Vollständige**:  Ja<br /><br />**Vollständiger Modus**:  Ja|  
+|**SET XACT_ABORT auf generieren**|Gibt an, ob SET XACT_ABORT ON an den Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden muss.<br /><br />**Im Modus Standard**:  Ja<br /><br />**Vollständige**:  Ja<br /><br />**Vollständiger Modus**:  Ja|  
 |**Generieren von SET NOCOUNT auf**|Gibt an, ob SET NOCOUNT ON an den Anfang der konvertierten Prozedur oder des Triggers hinzugefügt werden muss.<br /><br />**Im Modus Standard**:  Ja<br /><br />**Vollständige**:  Ja<br /><br />**Vollständiger Modus**:  Ja|  
   
 ### <a name="spatial-data-types"></a>Räumliche Datentypen  
@@ -87,7 +86,7 @@ Im Bereich für die Konvertierung finden Sie in der **Projekteinstellungen** und
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Umgebendes Feld standardmäßig {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN} für räumliche Indizes**|Definiert die Standard-Wert für {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN}-Parameter des umgebenden Felds in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Vollständige**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Vollständigen-Modus**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Umgebendes Feld standardmäßig {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN} für räumliche Indizes**|Definiert die Standard-Wert für {"xmax"&#124;"xmin"&#124;YMAX&#124;YMIN}-Parameter des umgebenden Felds in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />"XMAX": 100<br /><br />"XMIN": 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Vollständige**<br /><br />"XMAX": 100<br /><br />"XMIN": 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Vollständigen-Modus**<br /><br />"XMAX": 100<br /><br />"XMIN": 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Standardmäßig die Dichte des Rasters für räumliche Indizes**|Definiert Standardwert für LEVEL_1, LEVEL_2, LEVEL_3 und LEVEL_4, der die Dichte des Rasters in räumlichen Indizes verwendet.<br /><br />**Standardmodus**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Vollständige**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Vollständigen-Modus**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default|  
   
 ### <a name="transactions"></a>Transaktionen  

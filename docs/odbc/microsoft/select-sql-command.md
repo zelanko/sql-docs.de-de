@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943788"
 ---
 # <a name="select---sql-command"></a>SELECT (SQL-Befehl)
 Ruft Daten aus einer oder mehreren Tabellen ab.  
@@ -126,7 +125,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 |--------------|----------------|  
 |=|Gleich|  
 |==|Genau gleich.|  
-|LIKE|SQL LIKE|  
+|LIKE|SQL-ÄHNLICHEN|  
 |<>, !=, #|Ungleich|  
 |>|Mehr als|  
 |>=|Größer als oder gleich|  

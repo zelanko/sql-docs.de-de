@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ae12ee7c40fe72e78bde2602177f741093a83c4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183024"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Logistic Regression-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ WHERE NODE_TYPE = 23
  Gilt für die Miningstrukturspalten.  
   
  MODEL_EXISTENCE_ONLY  
- Dies bedeutet, dass für die Spalte zwei mögliche Zustände vorliegen können: **Fehlende** und **vorhandenen**. Ein NULL-Wert ist ein fehlender Wert.  
+ Bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann behandelt werden: **Fehlende** und **vorhandenen**. Ein NULL-Wert ist ein fehlender Wert.  
   
  Gilt für die Miningmodellspalte.  
   

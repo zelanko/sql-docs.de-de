@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f44063e4f1994e01f3685fdb2c7c47a5c41d4998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924175"
 ---
 # <a name="shape-commands-in-general"></a>Shape-Befehle im Allgemeinen
 Strukturieren von Daten definiert die Spalten von einer geformten **Recordset**, die Beziehungen zwischen den Entitäten, die durch die Spalten und die Art und Weise, in dem dargestellt wird die **Recordset** mit Daten aufgefüllt wird.  
   
  Eine geformten **Recordset** können, bestehen die folgenden Typen von Spalten.  
   
-|Spaltentyp|Description|  
+|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|  
 |data|Felder aus einem **Recordset** von einem Abfragebefehl zurückgegeben wird für einem Datenanbieter, Tabelle oder zuvor strukturiert **Recordset**.|  
 |Kapitel|Ein Verweis auf einen anderen **Recordset**Namens eine *Kapitel*. Kapitelspalten können sie definieren eine *über-und untergeordneten* Beziehung, in denen die *übergeordneten* ist die **Recordset** , enthält das Kapitelspalte und die *untergeordneten* ist die **Recordset** durch das Kapitel dargestellt wird.|  

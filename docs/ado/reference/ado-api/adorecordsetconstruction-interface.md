@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f08d007395c85ef6b423c7db6c1aed5b39cb27ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920794"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
 Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erstellen **Recordset** Objekt von einem OLE DB **Rowset** Objekts in einer C/C++-Anwendung.  
@@ -32,15 +31,15 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
   
 |||  
 |-|-|  
-|[Chapter](../../../ado/reference/ado-api/chapter-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, eine OLE DB **Kapitel** Objekt aus bzw. in dieser ADO **Recordset** Objekt.|  
+|[Kapitel](../../../ado/reference/ado-api/chapter-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, eine OLE DB **Kapitel** Objekt aus bzw. in dieser ADO **Recordset** Objekt.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, eine OLE DB **RowPosition** Objekt aus bzw. in dieser ADO **Recordset** Objekt.|  
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lese-/Schreibzugriff.<br />Ruft ab oder legt ihn fest, eine OLE DB **Rowset** Objekt aus bzw. in dieser ADO **Recordset** Objekt.|  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="remarks"></a>Hinweise  
  Erhalten eine OLE DB **Rowset** Objekt (`pRowset`), die zur Erstellung eines ADO **Recordset** Objekt (`adoRs`) die folgenden drei grundlegenden Schritten:  
@@ -80,5 +79,5 @@ Die **ADORecordsetConstruction** Schnittstelle wird verwendet, um eine ADO erste
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Siehe auch  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset-Eigenschaft (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

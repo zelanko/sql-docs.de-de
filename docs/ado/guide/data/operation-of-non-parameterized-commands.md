@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40677971cc2bc5b97c62aad1e638e52deb24c67e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924747"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Verarbeitung nicht-parametrisierter Befehle
 Für nicht parametrisierte Befehle, die alle die Anbieterbefehle ausgeführt werden und die **Recordsets** werden während der Ausführung des Befehls erstellt. Wenn der Befehl, synchron ausgeführt wird, alle der **Recordsets** wird vollständig aufgefüllt. Wenn ein asynchrone Auffüllungsmodus ausgewählt wurde, den Auffüllungsstatus der der **Recordsets** hängt von der Auffüllungsmodus und die Größe des der **Recordsets**.  

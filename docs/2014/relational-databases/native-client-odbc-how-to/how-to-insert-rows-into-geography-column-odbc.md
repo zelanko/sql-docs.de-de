@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC) | Microsoft-Dokumentation'
+title: 'Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206811"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC)
-  In diesem Beispiel werden unter Verwendung zweier verschiedener Bindungen (SQLCCHAR und SQLCBINARY) zwei Zeilen in eine Tabelle mit einer geography-Spalte aus einem WellKnownBinary (WKB) eingefügt. Daraufhin wird im Beispiel eine Zeile aus der Tabelle ausgewählt und mit ::STAsText() angezeigt. Das WKB ist 0x01010000000700ECFAD03A4C4001008000B5DF07C0, und die Anwendung gibt POINT(56.4595 -2.9842) auf der Konsole aus.  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC)
+  In diesem Beispiel werden unter Verwendung zweier verschiedener Bindungen (SQLCCHAR und SQLCBINARY) zwei Zeilen in eine Tabelle mit einer geography-Spalte aus einem WellKnownBinary (WKB) eingefügt. Anschließend wird eine Zeile aus der Tabelle ausgewählt und verwendet:: STAsText(), um es anzuzeigen. Das WKB ist 0x01010000000700ECFAD03A4C4001008000B5DF07C0, und die Anwendung in der Konsole ausgegeben: POINT (56.4595-2.9842).  
   
  Dieses Beispiel erfordert keine ODBC-Datenquelle, es wird jedoch standardmäßig auf der lokalen Instanz von SQL Server ausgeführt.  
   

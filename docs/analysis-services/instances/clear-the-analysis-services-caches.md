@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700328"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181985"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Löschen des Zwischenspeichers von Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "51700328"
   
  Zum Löschen des Zwischenspeichers müssen Sie einen Objektbezeichner für die **ClearCache** -Anweisung in einer XMLA-Abfrage bereitstellen. Im ersten Schritt in diesem Thema erfahren Sie, wie ein Objektbezeichner abgerufen wird.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Schritt 1: Abrufen des Objektbezeichners  
+#### <a name="step-1-get-the-object-identifier"></a>Schritt 1: Rufen Sie die Objekt-ID  
   
 1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf ein Objekt, wählen Sie **Eigenschaften**aus, und kopieren Sie den Wert aus der ID-Eigenschaft im Bereich **Eigenschaften** . Dieser Ansatz funktioniert für die Datenbank, Cube, Dimension oder Tabelle.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Measuregruppe, und wählen Sie **Skript für Measuregruppe als**aus, um die Measuregruppen-ID abzurufen. Wählen Sie entweder **Erstellen** oder **Ändern**, und senden Sie die Abfrage an ein Fenster. Die ID der Measuregruppe ist in der Objektdefinition sichtbar. Kopieren Sie die ID der Objektdefinition.  
   
-#### <a name="step-2-run-the-query"></a>Schritt 2: Ausführen der Abfrage  
+#### <a name="step-2-run-the-query"></a>Schritt 2: Führen Sie die Abfrage  
   
 1.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Neue Abfrage**, und wählen Sie anschließend **XMLA**aus.  
   

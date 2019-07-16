@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31efe56dcb5ae926d5da08aa00a1005597b17b91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922974"
 ---
 # <a name="address-book-data-binding-object"></a>Adress Book-Datenbindungsobjekt
 Das Adressbuch-App verwendet die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt, das Daten aus SQL Server-Datenbank auf ein visuelles Objekt (in diesem Fall ein DHTML-Tabelle) in der Anwendung Client-HTML-Seite zu binden. Die Logik der ereignisgesteuerten VBScript-Programm verwendet die [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) auf:  
@@ -51,7 +50,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>Generisches Objekt Tag-Parametern  
  Die folgende Tabelle beschreibt die OBJECT-Tag zugeordneten Parameter.  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |***CLASSID***|Eine eindeutige, 128-Bit-Zahl, die den Typ des eingebetteten Objekt, das System identifiziert. Dieser Bezeichner wird in der systemregistrierung des lokalen Computers beibehalten. (Für den Klassen-IDs der **RDS. DataControl** Objekt, finden Sie unter [RDS. DataControl-Objekt](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
 |***ID***|Definiert einen dokumentweiten Bezeichner für das eingebettete Objekt, das verwendet wird, um es im Code zu identifizieren.|  
@@ -59,7 +58,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS. DataControl-Tag-Parametern  
  Die folgende Tabelle beschreibt die Parameter für die **RDS. DataControl** Objekt. (Eine vollständige Liste der **RDS. DataControl** Objekt, Parameter, und wann sie implementieren, finden Sie unter [RDS. DataControl-Objekt](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Wenn Sie HTTP verwenden, wird der Wert ist der Name des Servercomputers vorangestellt `https://`.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Stellt die erforderlichen Verbindungsinformationen für die **RDS. DataControl** zur Verbindung mit SQL Server.|  

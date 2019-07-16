@@ -1,5 +1,5 @@
 ---
-title: Microsoft Clustering-Algorithmus | Microsoft Docs
+title: Microsoft Clustering-Algorithmus | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21177dba0c17ec2ba8bd7af73585b4ede5a7d7e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209889"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34015357"
   
  Clustermodelle identifizieren Beziehungen in einem Dataset, die bei einer einfachen Betrachtung der Daten nicht unbedingt zu erkennen sind. Sie können z.B. einfach davon ausgehen, dass Personen, die mit dem Fahrrad zur Arbeit fahren, für gewöhnlich nicht weit von ihren Arbeitsplätzen entfernt wohnen. Der Algorithmus kann jedoch nach anderen Merkmalen von Fahrradpendlern suchen, die nicht so klar auf der Hand liegen. In dem folgenden Diagramm zeigt Cluster A Daten zu Personen, die dazu tendieren, mit dem Auto zur Arbeit fahren, während Cluster B Daten zu Personen zeigt, die dazu tendieren, mit dem Fahrrad zur Arbeit zu fahren.  
   
- ![Gruppiertes Muster von pendlertendenzen](../../analysis-services/data-mining/media/clustering-example.gif "gruppiertes Muster von pendlertendenzen")  
+ ![Cluster-Muster von pendlertendenzen](../../analysis-services/data-mining/media/clustering-example.gif "Muster von pendlertendenzen")  
   
  Der Clustering-Algorithmus unterscheidet sich von anderen Data Mining-Algorithmen, z. B. dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus, dadurch, dass Sie keine vorhersagbare Spalte bestimmen müssen, um in der Lage zu sein, ein Clustermodell aufzubauen. Der Clustering-Algorithmus trainiert das Modell systematisch anhand der Beziehungen, die in den Daten bestehen, und anhand der Cluster, die der Algorithmus identifiziert.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34015357"
   
  Nachdem Sie zuerst die Cluster definiert haben, berechnet der Algorithmus, wie gut die Cluster Punktegruppierungen darstellen. Anschließend versucht der Algorithmus, die Gruppierungen neu zu definieren, um Cluster zu erstellen, die den Daten besser entsprechen. Der Algorithmus wiederholt diesen Prozess so lange, bis sich die Ergebnisse durch Neudefinieren der Cluster nicht mehr verbessern lassen.  
   
- Sie können die Arbeitsweise des Algorithmus anpassen, indem Sie eine Clusteringtechnik auswählen, die maximale Anzahl von Clustern beschränken oder die Menge der zur Erstellung eines Clusters erforderlichen Unterstützungswerte ändern. Weitere Informationen zu diesem Algorithmus finden Sie unter [Technische Referenz für den Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md). Dieser Algorithmus umfasst zwei gängige Clustermethoden: K-Means-Clustering und die Expectation Maximization-Methode.  
+ Sie können die Arbeitsweise des Algorithmus anpassen, indem Sie eine Clusteringtechnik auswählen, die maximale Anzahl von Clustern beschränken oder die Menge der zur Erstellung eines Clusters erforderlichen Unterstützungswerte ändern. Weitere Informationen finden Sie unter [Technische Referenz für den Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md). Dieser Algorithmus umfasst zwei gängige Clustermethoden: K-Means-clustering und die Expectation-Maximization-Methode.  
   
 ## <a name="data-required-for-clustering-models"></a>Anforderungen für Clusteringmodelle  
  Wenn Sie Daten für das Training von Clusteringmodellen aufbereiten, müssen Sie sich mit den Anforderungen des jeweiligen Algorithmus, dessen Anforderungen an die Daten und der Verwendung der Daten vertraut machen.  
@@ -54,7 +54,7 @@ ms.locfileid: "34015357"
 ## <a name="viewing-a-clustering-model"></a>Anzeigen eines Clusteringmodells  
  Zum Durchsuchen des Modells können Sie den **Microsoft Cluster-Viewer**verwenden. Wenn Sie ein Clusteringmodell anzeigen, stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Cluster in einem Diagramm dar, das die Beziehungen zwischen den Clustern veranschaulicht, und stellt zudem ein detailliertes Profil für jedes Cluster, eine Liste der Attribute, durch die sich die einzelnen Cluster von anderen Clustern unterscheiden, und die Eigenschaften des gesamten Trainingsdatasets bereit. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Wenn Sie detailliertere Informationen möchten, können Sie das Modell im [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)durchsuchen. Der für das Modell gespeicherte Inhalt umfasst die Verteilung der Werte an jedem Knoten, die Wahrscheinlichkeit jedes Clusters und andere Informationen. Weitere Informationen zu diesem Algorithmus finden Sie unter [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ Wenn Sie detailliertere Informationen möchten, können Sie das Modell im [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)durchsuchen. Der für das Modell gespeicherte Inhalt umfasst die Verteilung der Werte an jedem Knoten, die Wahrscheinlichkeit jedes Clusters und andere Informationen. Weitere Informationen zu diesem Algorithmus finden Sie unter [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Erstellen von Vorhersagen  
  Nachdem das Modell trainiert wurde, werden die Ergebnisse als Mustersatz gespeichert, den Sie durchsuchen oder zum Erstellen von Vorhersagen verwenden können.  
@@ -72,9 +72,9 @@ ms.locfileid: "34015357"
 -   Unterstützt die Verwendung von OLAP-Miningmodellen und die Erstellung von Data Mining-Dimensionen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Algorithmen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
- [Miningmodellinhalt, für das Clustering-Modelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
- [Clusteringmodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Technische Referenz für den Microsoft Clustering-Algorithmus](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Beispiele für Clustermodellabfragen](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   

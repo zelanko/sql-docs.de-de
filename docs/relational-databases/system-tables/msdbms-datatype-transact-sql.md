@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 301aa5af9aa34031f381235341f1e7d461675432
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62816943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907512"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSdbms_datatype** Tabelle enthält die vollständige Liste der systemeigenen Datentypen in jeder unterstützten Datenbank-Managementsystem (DBMS) als Verleger oder Abonnenten bei der heterogenen Datenbankreplikation verwendet. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|Identifiziert jeden eindeutigen Datentyp.|  
 |**dbms_id**|**int**|Identifiziert das DBMS, zu dem der Typ gehört.|  
 |**type**|**sysname**|Der Name des Datentyps (systemeigen).|  
-|**createparams**|**int**|Das Bitmap, das beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für jeden Datentyp gilt:<br /><br /> **0x1** = PRECISION.<br /><br /> **0 x 2** = skalieren.<br /><br /> **0 x 4** = Länge.|  
+|**createparams**|**int**|Das Bitmap, das beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für jeden Datentyp gilt:<br /><br /> **0 x 1** = mit einfacher Genauigkeit.<br /><br /> **0 x 2** = skalieren.<br /><br /> **0 x 4** = Länge.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Tabelle enthält Einträge für SQL Server-Datentypen, da es sich bei eine Instanz von SQL Server in einer nicht - SQL Server-Datenbank abonnieren und Veröffentlichen auf einen nicht - SQL Server-Abonnenten kann.  

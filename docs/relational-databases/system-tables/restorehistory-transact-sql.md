@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910151"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jeden Wiederherstellungsvorgang. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|Eine Nummer als eindeutiger Bezeichner, der jeden Wiederherstellungsvorgang angibt. Identität, Primärschlüssel.|  
 |**restore_date**|**datetime**|Datum und Uhrzeit des Beginns des Wiederherstellungsvorgangs. Kann den Wert NULL haben.|  
 |**destination_database_name**|**nvarchar(128)**|Name der Zieldatenbank für den Wiederherstellungsvorgang. Kann den Wert NULL haben.|  
 |**user_name**|**nvarchar(128)**|Name des Benutzers, der den Wiederherstellungsvorgang ausgeführt hat. Kann den Wert NULL haben.|  
-|**backup_set_id**|**int**|Eindeutige ID, die den wiederhergestellten Sicherungssatz bezeichnet. Verweise **backupset(backup_set_id)**.|  
+|**backup_set_id**|**int**|Eindeutige ID, die den wiederhergestellten Sicherungssatz bezeichnet. Verweise **backupset(backup_set_id)** .|  
 |**restore_type**|**char(1)**|Typ des Wiederherstellungsvorgangs:<br /><br /> D = Datenbank<br /><br /> F = Datei<br /><br /> G = Dateigruppe<br /><br /> I = Differenziell<br /><br /> L = Protokoll<br /><br /> V = Nur überprüfen<br /><br /> Kann den Wert NULL haben.|  
 |**Ersetzen Sie**|**bit**|Zeigt an, ob der Wiederherstellungsvorgang die Option REPLACE angegeben hat:<br /><br /> 1 = Angegeben<br /><br /> 0 = Nicht angegeben<br /><br /> Kann den Wert NULL haben.<br /><br /> Wenn eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt wird, ist 0 die einzige mögliche Option.|  
 |**recovery**|**bit**|Zeigt an, ob der Wiederherstellungsvorgang die Option RECOVERY oder NORECOVERY angegeben hat:<br /><br /> 1 = RECOVERY<br /><br /> Kann den Wert NULL haben.<br /><br /> Wenn eine Datenbank mit einer Datenbankmomentaufnahme wiederhergestellt wird, ist 1 die einzige Option.<br /><br /> 0 = NORECOVERY|  

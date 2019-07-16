@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 84fe7cea5418a022282958a7c16d263e5c7e9604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942044"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> Argumente  
  @xevent_channel  
- Der Typ des erweiterten Ereignisses. Bei Verwendung des Standardwerts werden alle in den letzten 30 Minuten protokollierten Ereignisse zurückgegeben. Die protokollierten Ereignisse hängen vom aktivierten Typ der erweiterten Ereignisse ab. Sie können mithilfe dieses Parameters die gespeicherte Prozedur filtern, sodass nur Ereignisse eines bestimmten Typs angezeigt werden. Sie können den vollständigen Ereignisnamen oder eine Teilzeichenfolge angeben, wie z. B.: **'Admin'**, **'Analytic'**, **'Operational'**, und **"Debug"**. Die @event_channel ist **VARCHAR (255)**.  
+ Der Typ des erweiterten Ereignisses. Bei Verwendung des Standardwerts werden alle in den letzten 30 Minuten protokollierten Ereignisse zurückgegeben. Die protokollierten Ereignisse hängen vom aktivierten Typ der erweiterten Ereignisse ab. Sie können mithilfe dieses Parameters die gespeicherte Prozedur filtern, sodass nur Ereignisse eines bestimmten Typs angezeigt werden. Sie können den vollständigen Ereignisnamen oder eine Teilzeichenfolge angeben, wie z. B.: **'Admin'** , **'Analytic'** , **'Operational'** , und **"Debug"** . Die @event_channel ist **VARCHAR (255)** .  
   
  Um eine Liste der derzeit aktivierten Ereignistypen Ereignis erhalten die **managed_backup.fn_get_current_xevent_settings** Funktion.  
   
@@ -60,9 +59,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |event_type|NVARCHAR(512)|Typ des erweiterten Ereignisses.|  
-|Ereignis|NVARCHAR(512)|Die Zusammenfassung der Ereignisprotokolle.|  
+|event|NVARCHAR(512)|Die Zusammenfassung der Ereignisprotokolle.|  
 |Timestamp|timestamp|Der Zeitstempel des Ereignisses, der angibt, zu welchem Zeitpunkt das Ereignis ausgelöst wurde.|  
   
 ## <a name="security"></a>Sicherheit  

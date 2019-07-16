@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40ce74748e15a2715de26e813007e00be0c33729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919442"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Gibt an, ob ein Dialogfeld angezeigt werden soll, für die fehlenden Parameter aufgefordert, beim Öffnen einer Verbindung mit einer Datenquelle.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Immer aufgefordert.|  
 |**adPromptComplete**|2|Werden Sie aufgefordert, wenn weitere Informationen erforderlich sind.|  

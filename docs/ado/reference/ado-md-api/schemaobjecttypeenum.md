@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31b4edac079f8b05868b1ed7b16a7c71fa7aa39c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfb208880586d0bda6bfe6bf956bbb544b48e69a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949185"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 Gibt den Typ des Objekts, das abgerufen werden die [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) Methode.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adObjectTypeDimension**|1|Ein [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) Objekt.|  
 |**adObjectTypeHierarchy**|2|Ein [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) Objekt.|  

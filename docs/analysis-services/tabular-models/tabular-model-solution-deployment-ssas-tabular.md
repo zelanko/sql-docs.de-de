@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0fc639564c1ac37af1cf29cc119cbf48cbf3baee
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207462"
 ---
 # <a name="tabular-model-solution-deployment"></a>Bereitstellung von tabellenmodelllösungen 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "57579535"
 ### <a name="deployment-options-properties"></a>Eigenschaften für Bereitstellungsoptionen  
  Die folgenden: Eigenschaften für Bereitstellungsoptionen  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Verarbeitungsoption**|**Default**|Diese Eigenschaft gibt den erforderlichen Verarbeitungstyp an, wenn Änderungen an Objekten bereitgestellt werden. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **Standard** -diese Einstellung gibt an, Analysis Services bestimmt den Typ der Verarbeitung, die erforderlich sind. Nicht verarbeitete Objekte werden verarbeitet, und ggf. werden Attributbeziehungen, Attributhierarchien, Benutzerhierarchien und berechnete Spalten neu berechnet. Diese Einstellung führt im Allgemeinen zu einer schnelleren Bereitstellung als das die Option der vollständigen Verarbeitung.<br /><br /> **Nicht verarbeiten** -diese Einstellung gibt an, nur die Metadaten bereitgestellt werden. Nach der Bereitstellung kann es erforderlich sein, einen Verarbeitungsvorgang für das bereitgestellte Modell auszuführen, um Daten zu aktualisieren und zu neu berechnen.<br /><br /> **Vollständige** -diese Einstellung gibt an, dass sowohl die Metadaten bereitgestellt als auch ein vollständiger Verarbeitungsvorgang ausgeführt wird. Dies gewährleistet, dass das bereitgestellte Modell über die neuesten Updates sowohl für die Metadaten als auch die Daten verfügt.|  
 |**Transaktionsbereitstellung**|**False**|Diese Eigenschaft gibt an, ob es sich um eine Transaktionsbereitstellung handelt. Standardmäßig ist die Bereitstellung aller oder geänderter Objekte keine Transaktionsbereitstellung bei der Verarbeitung dieser bereitgestellten Objekte. Die Bereitstellung kann erfolgreich ausgeführt werden und persistent sein, auch wenn bei der Verarbeitung ein Fehler auftritt. Sie können diese Einstellung ändern, um die Bereitstellung und Verarbeitung in einer einzelnen Transaktion zu integrieren.|  
@@ -43,24 +43,24 @@ ms.locfileid: "57579535"
 ### <a name="deployment-server-properties"></a>Eigenschaften für Bereitstellungsserver  
  Zu den Eigenschaften für Bereitstellungsserver gehören:  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Server**<br /><br /> Wird bei der Projekterstellung festgelegt.|**localhost**|Diese Eigenschaft wird bei der Projekterstellung festgelegt und gibt den Namen der Analysis Services-Instanz an, für die das Modell bereitgestellt wird. Standardmäßig wird das Modell in der Standardinstanz von Analysis Services auf dem lokalen Computer bereitgestellt. Sie können diese Einstellung jedoch ändern und eine benannte Instanz auf dem lokalen Computer bzw. eine beliebige Instanz auf einem Remotecomputer angeben, auf dem Sie über die Berechtigung zum Erstellen von Analysis Services-Objekten verfügen.|  
 |**Edition**|Die gleiche Edition wie die Instanz, in der sich der Arbeitsbereichsserver befindet.|Diese Eigenschaft gibt die Edition des Analysis Services-Servers an, auf dem das Modell bereitgestellt wird. In der Serveredition sind verschiedene Funktionen definiert, die in das Projekt eingebunden werden können. Standardmäßig ist die Edition die des lokalen Analysis Services-Servers. Wenn Sie einen anderen Analysis Services-Server angeben, z. B. einen Analysis Services-Produktionsserver, müssen Sie die Edition dieses Analysis Services-Servers angeben.|  
-|**Datenbank**|**\<projectname>**|Diese Eigenschaft gibt den Namen der Analysis Services-Datenbank an, in der die Modellobjekte nach der Bereitstellung instanziiert werden. Dieser Name wird auch in einer Datenverbindung eines Berichterstellungsclients oder einer BISM-Datenverbindungsdatei angegeben.<br /><br /> Beim Erstellen des Modells können Sie diesen Namen jederzeit ändern. Wenn Sie den Namen nach dem Bereitstellen des Modells ändern, wirken sich nach der Bereitstellung vorgenommene Änderungen nicht auf das zuvor bereitgestellte Modell aus. Wenn Sie z. B. eine Projektmappe mit dem Namen **TestDB** öffnen, die Projektmappe mit dem Standardnamen der Modelldatenbank "Model" bereitstellen und dann die Projektmappe ändern und die Modelldatenbank in **Sales**umbenennen, werden in der Analysis Services-Instanz, für die die Projektmappen bereitgestellt wurden, die separaten Datenbanken "Model" und "Sales" angezeigt.|  
+|**Datenbank**|**\<Projektname >**|Diese Eigenschaft gibt den Namen der Analysis Services-Datenbank an, in der die Modellobjekte nach der Bereitstellung instanziiert werden. Dieser Name wird auch in einer Datenverbindung eines Berichterstellungsclients oder einer BISM-Datenverbindungsdatei angegeben.<br /><br /> Beim Erstellen des Modells können Sie diesen Namen jederzeit ändern. Wenn Sie den Namen nach dem Bereitstellen des Modells ändern, wirken sich nach der Bereitstellung vorgenommene Änderungen nicht auf das zuvor bereitgestellte Modell aus. Wenn Sie z. B. eine Projektmappe mit dem Namen **TestDB** öffnen, die Projektmappe mit dem Standardnamen der Modelldatenbank "Model" bereitstellen und dann die Projektmappe ändern und die Modelldatenbank in **Sales**umbenennen, werden in der Analysis Services-Instanz, für die die Projektmappen bereitgestellt wurden, die separaten Datenbanken "Model" und "Sales" angezeigt.|  
 |**Cubename**|**Model**|Diese Eigenschaft gibt den Cubenamen an, wie in Clienttools (z. B. Excel) und AMO (Analysis Management Objects) angezeigt.|  
   
 ### <a name="directquery-options-properties"></a>Eigenschaften für DirectQuery-Optionen  
  Zu den Eigenschaften für Bereitstellungsoptionen gehören:  
   
-|Eigenschaft|Standardeinstellung|Description|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Identitätswechseleinstellungen**|**Standard**|Diese Eigenschaft gibt die Identitätswechseleinstellungen an, die verwendet werden, wenn ein im DirectQuery-Modus ausgeführtes Modell eine Datenquellenverbindung herstellt. Beim Abfragen des speicherinternen Caches werden keine Identitätswechselinformationen verwendet. Für diese Eigenschafteneinstellung gibt es die folgenden Optionen:<br /><br /> **Standard** -diese Einstellung gibt an, beim Erstellen die datenquellenverbindung mit dem Tabellenimport-Assistenten erstellt wurde auf der Seite Identitätswechselinformationen angegebene Option von Analysis Services verwendet wird.<br /><br /> **ImpersonateCurrentUser** -diese Einstellung gibt an, das Benutzerkonto des derzeit angemeldeten Benutzers verwendet werden, Herstellen der Verbindung mit allen Datenquellen.|  
   
 ##  <a name="bkmk_meth"></a> Bereitstellungsmethoden  
  Es gibt mehrere Methoden, mit denen Sie ein Projekt für tabellarische Modelle bereitstellen können. Die meisten der Bereitstellungsmethoden, die für andere Analysis Services-Projekte verwendet werden können, z. B. die mehrdimensionale Methode, können auch verwendet werden, um Projekte für tabellarische Modelle bereitzustellen.  
   
-|Methode|Description|Link|  
+|Methode|Beschreibung|Link|  
 |------------|-----------------|----------|  
 |**Bereitstellungsbefehl in SQL Server-Datentools**|Der Bereitstellungsbefehl stellt eine einfache und intuitive Methode für die Bereitstellung eines tabellarischen Modellprojekts über die [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] -Erstellungsumgebung bereit.<br /><br /> **Vorsicht** diese Methode sollte nicht verwendet werden, um auf Produktionsservern bereitstellen. Mit dieser Methode kann bestimmte Eigenschaften in einem bereits bereitgestellten überschreiben vorhandene Modell; beispielsweise, wenn Sie Skripts oder SSMS verwenden, um Eigenschaften zu ändern.|[Bereitstellen über SQL Server Data Tools](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|  
 |**Analysis Management Objects (AMO)-Automatisierung**|AMO stellt eine programmgesteuerte Schnittstelle für den vollständigen Befehlssatz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereit, einschließlich Befehlen zur Bereitstellung von Projektmappen. Die AMO-Automatisierung bietet die flexibelste Möglichkeit zur Bereitstellung von Projektmappen, impliziert jedoch gleichzeitig einen gewissen Programmieraufwand.  Ein wichtiger Vorteil bei der Verwendung von AMO besteht darin, dass der SQL Server-Agent mit der AMO-Anwendung zum Ausführen einer Bereitstellung nach einem festgelegten Zeitplan verwendet werden kann.|[Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
@@ -77,7 +77,7 @@ ms.locfileid: "57579535"
   
 ##  <a name="bkmk_rt"></a> Related tasks  
   
-|Aufgabe|Description|  
+|Aufgabe|Beschreibung|  
 |----------|-----------------|  
 |[Bereitstellen über SQL Server Data Tools](../../analysis-services/tabular-models/deploy-from-sql-server-data-tools-ssas-tabular.md)|Beschreibt das Konfigurieren von Bereitstellungseigenschaften und die Bereitstellung eines tabellarischen Modellprojekts mit dem Bereitstellungsbefehl in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].|  
 |[Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|In Themen in diesem Abschnitt wird beschrieben, wie der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Bereitstellungs-Assistent verwendet wird, um sowohl tabellarische als auch mehrdimensionale Modelllösungen bereitzustellen.|  

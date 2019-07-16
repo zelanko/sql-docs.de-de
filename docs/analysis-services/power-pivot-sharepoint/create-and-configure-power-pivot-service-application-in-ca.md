@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164041"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Erstellen und Konfigurieren von PowerPivot-Dienstanwendung in der Zertifizierungsstelle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

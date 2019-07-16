@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b5f47146f02559e9b546d7e5ec164462ad2fdba1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042399"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180741"
 ---
 # <a name="dimensions---introduction"></a>Dimensionen – Einführung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "59042399"
   
  Im vorherigen Diagramm der **FactResellerSales** Faktentabelle verfügt nicht über eine fremdschlüsselbeziehung mit der **DimGeography** Dimensionstabelle. Allerdings die **FactResellerSales** Faktentabelle verfügt über eine fremdschlüsselbeziehung mit der **DimReseller** Dimensionstabelle, die wiederum hat eine fremdschlüsselbeziehung mit der  **DimGeography** Dimensionstabelle. Zum Definieren einer Reseller-Dimensions, die geografische Informationen zu jedem Wiederverkäufer enthält müssten Sie zum Abrufen dieser Attribute auf die **DimGeography** und **DimReseller** Dimensionstabellen. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erzielen Sie dasselbe Ergebnis, wenn Sie zwei separate Dimensionen erstellen und diese innerhalb einer Measuregruppe verknüpfen, indem Sie eine auf dem Konzept der Bezugsdimension basierende Beziehung zwischen beiden Dimensionen definieren. Weitere Informationen zu bezugsdimensionsbeziehungen, finden Sie unter [Dimensionsbeziehungen](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
- Ein Vorteil der Verwendung von Bezugsdimensionsbeziehungen in diesem Szenario liegt darin, dass Sie eine einzelne Geography-Dimension und anschließend mehrere darauf basierende Cubedimensionen erstellen können, ohne zusätzlichen Speicherplatz zu benötigen. Sie können z. B. eine der Geography-Cubedimensionen mit einer Reseller-Dimension verknüpfen und eine andere mit einer Customer-Dimension. **Verwandte Themen:**[Dimensionsbeziehungen](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [Definieren einer referenzierten Beziehung und deren Eigenschaften auf die verwiesen wird](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ Ein Vorteil der Verwendung von Bezugsdimensionsbeziehungen in diesem Szenario liegt darin, dass Sie eine einzelne Geography-Dimension und anschließend mehrere darauf basierende Cubedimensionen erstellen können, ohne zusätzlichen Speicherplatz zu benötigen. Sie können z. B. eine der Geography-Cubedimensionen mit einer Reseller-Dimension verknüpfen und eine andere mit einer Customer-Dimension. **Verwandte Themen:** [Dimensionsbeziehungen](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [Definieren einer referenzierten Beziehung und deren Eigenschaften auf die verwiesen wird](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>Verarbeiten einer Dimension  
  Wenn Sie eine Dimension erstellt haben, müssen Sie diese verarbeiten, bevor Sie die Elemente der Attribute und Hierarchien in der Dimension anzeigen können. Wenn sich die Struktur einer Dimension geändert hat oder die Informationen in den zugrunde liegenden Tabellen aktualisiert wurden, müssen Sie die Dimension erneut verarbeiten, bevor Sie die Änderungen anzeigen können. Beim Verarbeiten einer Dimension nach einer strukturellen Änderung müssen sämtliche Cubes, die die Dimension enthalten, ebenfalls verarbeitet werden. Andernfalls kann der Cube nicht angezeigt werden.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923463"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications-Funktionen
 Im folgende Visual Basic for Applications-Funktionen können in Data shaping CALC-Ausdrücken verwendet werden:  
@@ -35,17 +34,17 @@ Im folgende Visual Basic for Applications-Funktionen können in Data shaping CAL
 |DateDiff|DatTeil|DatSeriell|DatWert|Day|GDA|  
 |Fehler|Error$|Exponential|Fix|Format|Format$|  
 |ZW|Hex|Hex$|Hour|IIF|InStr|  
-|int|ZINSZ|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|Kleinbst|Kleinbst$|Left|  
+|Int|ZINSZ|IRR|IsDate|IsEmpty|IsError|  
+|IsNull|IsNumeric|IsObject|Kleinbst|Kleinbst$|Links|  
 |LINKSB|Links$|LeftB$|Len|Log|LGlätten|  
 |LGlätten$|Mid|Teil$|Minute|QIKV|Month|  
 |jetzt|ZZR|NBW|Oktober|Oktal$|RMZ|  
-|KAPZ|BW|QBColor|ZINS|RGB|Right|  
+|KAPZ|BW|QBColor|ZINS|RGB|Rechts|  
 |RECHTSB|Rechts$|RightB$|ZZG|RGlätten|RTrim$|  
 |Zweimal|Vorzchn|Sin|LIA|LeerZchn|LeerZchn$|  
 |QWurzel|Str|Str$|StrVgl|StrKonv|Zeichenfolge|  
 |String$|DIA|Tan|Uhrzeit|Time$|Zeitgeber|  
-|ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypName|Großbst|  
+|ZeitSeriell|ZeitSeriellStr|Glätten|Glätten$|TypeName|Großbst|  
 |Großbst$|val|VarType|Arbeitstag|Year||  
   
 ## <a name="see-also"></a>Siehe auch  

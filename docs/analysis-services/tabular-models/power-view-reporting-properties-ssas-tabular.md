@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 302a4885833c6e26f9c4eaf6e3acf57d2b278845
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072257"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162730"
 ---
 # <a name="power-view---reporting-properties"></a>Power View – Berichterstellungseigenschaften 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "53072257"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Konfigurieren eines Standardfeldsatzes für Power View-Berichte](../../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)|Hier wird beschrieben, wie ein Standardfeldsatz konfiguriert werden kann. Bei diesem handelt es sich um eine vordefinierte Liste von Spalten und Measures, die einem [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichtszeichenbereich automatisch hinzugefügt werden, wenn Sie in der Berichtsfeldliste die Tabelle auswählen.|  
 |[Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|Hier wird beschrieben, wie Tabellenverhaltenseigenschaften, die Detailzeilen auf einer präziseren Ebene verfügbar machen, konfiguriert werden. Das Festlegen von Tabellenverhaltenseigenschaften ändert das Gruppierungsverhalten von Detailzeilen und erzeugt eine bessere Standardplatzierung bei der Identifizierung von Informationen in Kachel, Karten- und Diagrammlayouts.|  

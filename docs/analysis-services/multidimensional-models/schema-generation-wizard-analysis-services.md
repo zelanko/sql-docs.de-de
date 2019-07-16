@@ -1,5 +1,5 @@
 ---
-title: Schemagenerierungs-Assistent (Analysis Services) | Microsoft Docs
+title: Schemagenerierungs-Assistent (Analysis Services) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41e1c17aac763657a16327bb038c180f614fcf67
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022977"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165230"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Schemagenerierungs-Assistent (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34022977"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In der folgenden Tabelle sind die zusätzlichen Themen in diesem Abschnitt aufgeführt, in denen die Verwendung des Schemagenerierungs-Assistenten erklärt wird.  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Verwenden des Schemagenerierungs-Assistenten &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/use-the-schema-generation-wizard-analysis-services.md)|Beschreibt, wie das Schema für die Themenbereichs- und Stagingbereichsdatenbanken generiert wird.|  
 |[Grundlegendes zu Datenbankschemas](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|Beschreibt das Schema, das für die Themenbereichs- und Stagingbereichsdatenbanken generiert wird.|  

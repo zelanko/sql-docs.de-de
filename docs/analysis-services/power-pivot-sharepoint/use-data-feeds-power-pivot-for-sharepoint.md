@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207983"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Verwenden von Datenfeeds (Power Pivot für SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

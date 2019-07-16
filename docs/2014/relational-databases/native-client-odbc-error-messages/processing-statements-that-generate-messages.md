@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11235979a886e82fa09ca1d1a79fa21550965d0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205703"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Verarbeiten von Anweisungen, die Meldungen generieren
   Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-SET-Anweisungsoptionen STATISTICS TIME und STATISTICS IO werden verwendet, um Informationen zur Unterstützung bei der Diagnose von Abfragen mit langer Ausführungszeit zu gewinnen. Frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen auch die SHOWPLAN-Option zur Analyse von Abfrageplänen. Eine ODBC-Anwendung kann diese Optionen festlegen, indem sie die folgenden Anweisungen ausführt:  

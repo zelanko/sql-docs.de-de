@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940238"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
 
@@ -33,7 +32,7 @@ ms.locfileid: "59242328"
 
   Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbank **Konnektivität** Ereignisse, und eine Übersicht über Datenbank erfolgreichen und fehlgeschlagenen Datenbankverbindungen. Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignistypen in [Sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistik|Typ|Description|  
+|Statistik|Typ|Beschreibung|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Der Name der Datenbank.|  
 |**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Die Uhrzeit ist immer ein Vielfaches von 5 Minuten. Zum Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  

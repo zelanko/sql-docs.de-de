@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit der RollupChildren-Funktion (MDX) | Microsoft Docs
+title: Arbeiten mit der RollupChildren-Funktion (Multidimensional Expressions) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 135ab6e43a0b751639bd1ce1d93bf2183039f713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208773"
 ---
-# <a name="mdx-data-manipulation---rollupchildren-function"></a>Datenbearbeitung für MDX - RollupChildren-Funktion
+# <a name="mdx-data-manipulation---rollupchildren-function"></a>MDX – Datenbearbeitung: RollupChildren-Funktion
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Die MDX-Funktion (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) führt einen Rollup der untergeordneten Elemente eines Elements aus, wobei auf jedes untergeordnete Element ein anderer unärer Operator angewendet wird. Der Wert des Rollups wird als Zahl zurückgegeben. Der unäre Operator kann durch eine Elementeigenschaft des untergeordneten Elements bereitgestellt werden, oder der Operator kann ein Zeichenfolgenausdruck sein, der direkt an die Funktion übergeben wird.  
   
@@ -68,6 +68,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  Die MDX-Anweisung wertet den unären Operator des untergeordneten Elements aus. Wird der unäre Operator zur Subtraktion verwendet (wie dies bei den Elementen der in- und ausländischen Rücknahmen der Fall ist), wird der unäre Tildeoperator (~) durch die **IIf** -Funktion ersetzt. Andernfalls verwendet die **IIf** -Funktion den unären Operator des untergeordneten Elements. Schließlich wird der zurückgegebene Rollupgesamtwert mit 1,1 multipliziert, um die Vorhersage der in- und ausländischen Bruttoumsätze bereitzustellen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von Daten & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Bearbeiten von Daten &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

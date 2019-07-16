@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207345"
 ---
 # <a name="create-measures"></a>Erstellen von Measures
 
@@ -29,9 +29,9 @@ Sie können ein Measure erstellen, indem Sie auf eine leere Zelle im measurerast
   
 In dieser Lektion erstellen Sie Measures sowohl durch Eingabe einer DAX-Formel in der Bearbeitungsleiste, und klicken Sie mit der AutoSumme-Funktion.  
   
-Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
+Geschätzte Zeit zum Abschließen dieser Lektion: **30 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 
 Dieser Artikel ist Teil einer Tutorials zur tabellenmodellierung, das in der Reihenfolge absolviert werden sollte. Bevor Sie die Aufgaben in dieser Lektion ausführen, sollten Sie die vorherige Lektion abgeschlossen haben: [Lesson 5: Erstellen von berechneten Spalten](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   

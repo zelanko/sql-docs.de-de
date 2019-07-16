@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208304"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Konfigurieren von Power Pivot-Dienstkonten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Zu einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installation gehören zwei Dienste, die Servervorgänge unterstützen. Der **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**-Dienst ist ein Windows-Dienst, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenverarbeitung und -Abfrageunterstützung auf einem Anwendungsserver bietet. Das Anmeldekonto für diesen Dienst wird immer während des SQL Server-Setups angegeben, wenn Sie Analysis Services im integrierten SharePoint-Modus installieren.  
+  Zu einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installation gehören zwei Dienste, die Servervorgänge unterstützen. Der **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** -Dienst ist ein Windows-Dienst, der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenverarbeitung und -Abfrageunterstützung auf einem Anwendungsserver bietet. Das Anmeldekonto für diesen Dienst wird immer während des SQL Server-Setups angegeben, wenn Sie Analysis Services im integrierten SharePoint-Modus installieren.  
   
  Ein zweites Konto muss für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung angegeben werden, einen freigegebenen Webdienst, der unter einer Anwendungspoolidentität in einer SharePoint-Farm ausgeführt wird. Dieses Konto wird angegeben, wenn Sie mit dem [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Konfigurationstool oder PowerShell eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Installation konfigurieren.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52509554"
   
 ##  <a name="bkmk_passwordssas"></a> Aktualisieren eines abgelaufenen Kennworts für eine Instanz von SQL Server Analysis Services (Power Pivot)  
   
-1.  Zeigen Sie auf „Start“, klicken Sie auf **Verwaltung**, und klicken Sie dann auf **Dienste**. Doppelklicken Sie auf **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**. Klicken Sie auf **Anmelden**, und geben Sie dann ein neues Kennwort für das Konto ein.  
+1.  Zeigen Sie auf „Start“, klicken Sie auf **Verwaltung**, und klicken Sie dann auf **Dienste**. Doppelklicken Sie auf **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** . Klicken Sie auf **Anmelden**, und geben Sie dann ein neues Kennwort für das Konto ein.  
   
 2.  Klicken Sie in der Zentraladministration im Abschnitt „Sicherheit“ auf **Verwaltete Konten konfigurieren**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52509554"
   
 #### <a name="analysis-services-service-account"></a>Analysis Services-Dienstkonto  
   
-|Anforderung|Description|  
+|Anforderung|Beschreibung|  
 |-----------------|-----------------|  
 |Bereitstellungsanforderung|Dieses Konto muss beim SQL Server-Setup auf der Seite **Analysis Services - Konfiguration** des Installationsassistenten (oder bei einem Befehlszeilensetup im Installationsparameter **ASSVCACCOUNT** ) angegeben werden.<br /><br /> Sie können den Benutzernamen oder das Kennwort über die Zentraladministration, PowerShell oder das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool ändern. Die Verwendung anderer Tools zum Ändern von Konten und Kennwörtern wird nicht unterstützt.|  
 |Domänenbenutzerkonto-Anforderung|Bei diesem Konto muss es sich um ein Windows-Domänenbenutzerkonto handeln. Integrierte Computerkonten (z. B. Netzwerkdienst oder Lokaler Dienst) sind nicht zulässig. SQL Server-Setup erzwingt die Domänenbenutzerkonto-Anforderung, indem die Installation blockiert wird, sobald ein Computerkonto angegeben wird.|  
@@ -108,12 +108,12 @@ ms.locfileid: "52509554"
   
 #### <a name="power-pivot-service-application-pool"></a>Power Pivot-Dienstanwendungspool  
   
-|Anforderung|Description|  
+|Anforderung|Beschreibung|  
 |-----------------|-----------------|  
 |Bereitstellungsanforderung|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Beim Systemdienst handelt es sich um eine in der Farm freigegebene Ressource, die verfügbar wird, wenn Sie eine Dienstanwendung erstellen. Der Dienstanwendungspool muss bei der Erstellung der Dienstanwendung angegeben werden. Er kann auf zwei Arten angegeben werden: mithilfe des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstools oder durch PowerShell-Befehle.<br /><br /> Sie haben die Anwendungspoolidentität möglicherweise so konfiguriert, dass sie unter einem eindeutigen Konto ausgeführt wird. Aber falls nicht, sollten Sie jetzt für die Ausführung unter einem anderen Konto zu ändern.|  
 |Domänenbenutzerkonto-Anforderung|Die Anwendungspoolidentität muss ein Windows-Domänenbenutzerkonto sein. Integrierte Computerkonten (z. B. Netzwerkdienst oder Lokaler Dienst) sind nicht zulässig.|  
 |Berechtigungsanforderungen|Dieses Konto benötigt keine lokalen Systemadministratorberechtigungen auf dem Computer. Dieses Konto muss Analysis Services-Systemadministratorberechtigungen auf dem lokalen [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Computer aufweisen, der auf dem gleichen Computer installiert ist. Diese Berechtigungen werden automatisch von SQL Server-Setup oder beim Festlegen oder Ändern der Anwendungspoolidentität in der Zentraladministration gewährt.<br /><br /> Administratorberechtigungen sind erforderlich, damit das Weiterleiten von Abfragen an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]-Computer erfolgen kann. Sie sind auch zum Überwachen des Zustands, zum Schließen inaktiver Sitzungen und zum Lauschen auf Ablaufverfolgungsereignisse erforderlich.<br /><br /> Das Konto muss über Verbindungs-, Lese- und Schreibberechtigungen für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungsdatenbank verfügen. Diese Berechtigungen werden automatisch gewährt, wenn die Anwendung erstellt wird, und automatisch aktualisiert, wenn Sie Konten oder Kennwörter in der Zentraladministration ändern.<br /><br /> Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung überprüft, ob ein SharePoint-Benutzer berechtigt ist, Daten vor dem Abrufen der Datei anzuzeigen, sie nimmt jedoch nicht die Identität des Benutzers an. Es gibt keine Berechtigungsanforderungen für Identitätswechsel.|  
-|Anforderungen für horizontales Skalieren|Keine.|  
+|Anforderungen für horizontales Skalieren|Keine|  
   
 ##  <a name="updatemanually"></a> Problembehandlung: Manuelles Gewähren von Administratorberechtigungen  
  Administratorberechtigungen werden nicht aktualisiert, wenn die Person, die die Anmeldeinformationen aktualisiert, kein lokaler Administrator auf dem Computer ist. Wenn dies auftritt, können Sie Administratorberechtigungen manuell gewähren. Die einfachste Möglichkeit hierzu besteht darin, den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Zeitgeberauftrag für die Konfiguration in der Zentraladministration auszuführen. Mit dieser Vorgehensweise können Sie Berechtigungen für alle [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm zurücksetzen. Beachten Sie, dass dieser Ansatz nur funktioniert, wenn der SharePoint-Zeitgeberauftrag sowohl als Farmadministrator als auch als lokaler Administrator auf dem Computer ausgeführt wird.  
@@ -150,7 +150,7 @@ ms.locfileid: "52509554"
   
 11. Geben Sie den Namen des Kontos an, das für den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungspool verwendet wird, und klicken Sie auf **OK**.  
   
-##  <a name="expired"></a> Problembehandlung: Problembehandlung: Beheben von HTTP 503-Fehlern aufgrund abgelaufener Kennwörter für die zentrale Verwaltung oder den SharePoint Foundation-Webanwendungsdienst  
+##  <a name="expired"></a> Problembehandlung: Beheben von HTTP 503-Fehlern aufgrund abgelaufener Kennwörter für die zentrale Verwaltung oder den SharePoint Foundation-Webanwendungsdienst  
  Wenn der zentrale Verwaltungsdienst oder der SharePoint Foundation-Webanwendungsdienst aufgrund der Rücksetzung eines Kontos oder des Ablaufs eines Kennworts aufhört zu arbeiten, erhalten Sie die Fehlermeldung HTTP 503 "Dienst nicht verfügbar", wenn Sie versuchen, die zentrale SharePoint-Verwaltung oder eine SharePoint-Website zu öffnen. Führen Sie folgende Schritte aus, um den Server online zurückzubringen. Sobald die zentrale Verwaltung verfügbar ist, können Sie damit fortfahren, abgelaufene Kontoinformationen zu aktualisieren.  
   
 1.  Klicken Sie in der Verwaltung auf **Internetinformationsdienste-Manager**.  

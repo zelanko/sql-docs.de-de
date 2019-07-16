@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906737"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;Modell&gt;. INHALT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Liste mit Ausdrücken*  
  Eine durch Trennzeichen getrennte Liste mit Spalten, die aus dem Schemarowset des Inhalts abgeleitet wurden.  
@@ -47,14 +46,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **SELECT FROM**  _\<Modell >_**. Inhalt** -Anweisung gibt Inhalt, der für jeden Algorithmus spezifischen zurück. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **SELECT FROM \<Modell >. Inhalt** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
+ Die **SELECT FROM**  _\<Modell >_ **. Inhalt** -Anweisung gibt Inhalt, der für jeden Algorithmus spezifischen zurück. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **SELECT FROM \<Modell >. Inhalt** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
   
  In der folgenden Tabelle sind die im Miningmodellinhalt enthaltenen Spalten aufgeführt.  
   
 > [!NOTE]  
 >  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung der für jeden Algorithmus und Tipps zur Interpretation und Abfrage für jeden Modelltyp Inhalt des Miningmodells Inhalt des Miningmodells, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-|CONTENT-Rowsetspalte|Description|  
+|CONTENT-Rowsetspalte|Beschreibung|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|Ein Katalogname. NULL, wenn der Anbieter Kataloge nicht unterstützt.|  
 |MODEL_SCHEMA|Ein nicht qualifizierter Schemaname. NULL, wenn der Anbieter Schemas nicht unterstützt.|  
@@ -144,7 +143,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Siehe auch  
- [WÄHLEN SIE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   

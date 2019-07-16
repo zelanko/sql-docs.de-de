@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186717"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Eigenschaften von SQL Server Integration Services (Registerkarte Dienst)
   Verwenden Sie die Registerkarte **Dienst** im Dialogfeld **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Eigenschaften**, um die folgenden Optionen anzuzeigen oder anzugeben.  
@@ -45,13 +45,13 @@ ms.locfileid: "52755872"
  **Startmodus**  
  Richten Sie den Dienst mit den folgenden Auswahlmöglichkeiten ein:  
   
--   Manuell: Dieser Dienst wird nicht automatisch zusammen mit dem Computer gestartet. Zum Starten des Dienstes verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager oder ein anderes Tool.  
+-   Manuell: Dieser Dienst wird beim Starten des Computers nicht automatisch gestartet. Zum Starten des Dienstes verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager oder ein anderes Tool.  
   
--   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
+-   Automatisch: Dieser Dienst wird zusammen mit dem dieser Computer gestartet.  
   
--   Deaktiviert: Der Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
   
  **Zustand**  
- Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „**…**“ gibt einen ausstehenden Statuswechsel an.  
+ Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „ **…** “ gibt einen ausstehenden Statuswechsel an.  
   
   

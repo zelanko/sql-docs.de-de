@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181697"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Konfigurieren von Analysis Services und der eingeschränkten Kerberos-Delegierung
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "52811152"
   
     3.  Klicken Sie auf **Eigenschaften**.  
   
-    4.  Klicken Sie auf **Internet Protocol Version 6 (TCP/IPv6)**.  
+    4.  Klicken Sie auf **Internet Protocol Version 6 (TCP/IPv6)** .  
   
     5.  Klicken Sie auf **Eigenschaften**.  
   

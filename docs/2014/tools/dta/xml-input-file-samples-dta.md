@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3cf9ec0ff53fced20701b0b5b3379c1ec8dac219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186523"
 ---
 # <a name="xml-input-file-samples-dta"></a>Beispiele für XML-Eingabedateien (DTA)
   Dieser Abschnitt enthält XML-Beispieleingabedateien, die Sie mit dem Befehlszeilentool **dta** verwenden können. Dieses Tool ist eine der Benutzeroberflächen des Datenbankoptimierungsratgebers. Dabei handelt es sich um ein Tool, mit dem Sie Datenbanken zur Verbesserung der Abfrageleistung optimieren können. Der Datenbankoptimierungsratgeber analysiert die Auswirkungen einer Arbeitsauslastung auf eine oder mehrere Datenbanken. Eine Arbeitsauslastung ist ein Satz von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die für zu optimierende Datenbanken ausgeführt werden. Wenn der Datenbankoptimierungsratgeber die Analyse der Auswirkungen der Arbeitsauslastung beendet hat, erstellt er eine Empfehlung zum Hinzufügen von Indizes, indizierten Sichten oder Partitionierungsstrategien, mit denen sich die Abfrageleistung Ihrer Datenbanken verbessern lässt.  

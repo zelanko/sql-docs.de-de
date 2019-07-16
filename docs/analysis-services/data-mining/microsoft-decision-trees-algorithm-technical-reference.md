@@ -1,5 +1,5 @@
 ---
-title: Microsoft Decision Trees Algorithm Technical Reference | Microsoft Docs
+title: Microsoft Decision Trees Algorithm Technical Reference | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 186245b549d8aa9370551311e792067e0131e076
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018737"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183091"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "34018737"
   
  Wenn es sich bei dem vorhersagbaren Attribut um einen kontinuierlichen numerischen Datentyp handelt, wird die Funktionsauswahl auch auf die Ausgaben angewendet, um die mögliche Zahl von Ausgaben zu reduzieren und das Modell schneller zu erstellen. Sie können den Schwellenwert für die Funktionsauswahl ändern und so die Zahl der möglichen Werte erhöhen oder reduzieren, indem Sie den MAXIMUM_OUTPUT_ATTRIBUTES-Parameter festlegen.  
   
- Eine ausführlichere Erläuterung zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus im Zusammenhang mit diskreten vorhersagbaren Spalten finden Sie unter [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf). Weitere Informationen zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus im Zusammenhang mit kontinuierlichen vorhersagbaren Spalten finden Sie im Anhang des Dokuments [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(Autoregressive Strukturmodelle zur Zeitreihenanalyse).  
+ Eine ausführlichere Erläuterung zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus mit diskreten vorhersagbaren Spalten funktioniert, finden Sie unter [Learning Bayesian Networks: Die Kombination aus wissen und statistischen Daten](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf). Weitere Informationen zur Funktionsweise des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus im Zusammenhang mit kontinuierlichen vorhersagbaren Spalten finden Sie im Anhang des Dokuments [Autoregressive Tree Models for Time-Series Analysis](http://go.microsoft.com/fwlink/?LinkId=45966)(Autoregressive Strukturmodelle zur Zeitreihenanalyse).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Bewertungsmethoden und Funktionsauswahl  
- Der Microsoft Decision Trees-Algorithmus bietet drei Formeln zur Bewertung des Informationsgewinns: Shannon-Entropie, Bayes-Methode mit K2-A-priori-Verteilung und Bayes-Netzwerk mit einheitlicher Dirichlet-Verteilung von A-priori-Zuständen. Alle drei Methoden sind im Data Mining-Bereich etabliert. Es wird empfohlen, mit verschiedenen Parametern und Bewertungsmethoden zu experimentieren, um festzustellen, welche die besten Ergebnisse erzielen. Weitere Informationen zu diesen Bewertungsmethoden finden Sie unter [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
+ Der Microsoft Decision Trees-Algorithmus bietet drei Formeln zur Bewertung des informationsgewinns: Berechnung Shannons-Entropie, Bayessches Netz mit K2 vor und Bayessches Netz mit eine gleichmäßige Dirichlet-Verteilung von Zuständen. Alle drei Methoden sind im Data Mining-Bereich etabliert. Es wird empfohlen, mit verschiedenen Parametern und Bewertungsmethoden zu experimentieren, um festzustellen, welche die besten Ergebnisse erzielen. Weitere Informationen zu diesen Bewertungsmethoden finden Sie unter [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
   
  Die Funktionsauswahl wird automatisch von allen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Data Mining-Algorithmen zur Verbesserung der Analyse und zur Reduzierung der Verarbeitungslast verwendet. Die für die Funktionsauswahl verwendete Methode hängt vom Algorithmus ab, mit dem das Modell erstellt wird. Die Algorithmusparameter, die die Funktionsauswahl für ein Entscheidungsstrukturmodell steuern, sind MAXIMUM_INPUT_ATTRIBUTES und MAXIMUM_OUTPUT.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34018737"
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt Parameter, die sich auf die Leistung und Genauigkeit des resultierenden Miningmodells auswirken. Sie können außerdem Modellierungsflags für die Miningmodellspalten oder Miningstrukturspalten festlegen, um die Verarbeitung der Daten zu steuern.  
   
 > [!NOTE]  
->  Der Microsoft Decision Trees-Algorithmus ist in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar, einige erweiterte Parameter, mit denen das Verhalten des Microsoft Decision Trees-Algorithmus angepasst werden kann, stehen jedoch nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung. Eine Liste der Funktionen, die von den Editionen unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter [von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Der Microsoft Decision Trees-Algorithmus ist in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar, einige erweiterte Parameter, mit denen das Verhalten des Microsoft Decision Trees-Algorithmus angepasst werden kann, stehen jedoch nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  In der folgenden Tabelle sind die Parameter beschrieben, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet werden können.  
@@ -132,12 +132,12 @@ ms.locfileid: "34018737"
  *MINIMUM_SUPPORT*  
  Bestimmt die Mindestanzahl von Blattfällen, die zum Generieren einer Teilung in der Entscheidungsstruktur erforderlich sind.  
   
- Der Standardwert lautet 10.  
+ Der Standardwert ist 10.  
   
  Sie müssen möglicherweise diesen Wert erhöhen, wenn das Dataset sehr groß ist, um übermäßiges Trainieren zu vermeiden.  
   
  *SCORE_METHOD*  
- Bestimmt die zum Berechnen des Teilungsergebnisses zu verwendende Methode. Die folgenden Optionen stehen zur Verfügung:  
+ Bestimmt die zum Berechnen des Teilungsergebnisses zu verwendende Methode. Die folgenden Optionen sind verfügbar:  
   
 |ID|Name|  
 |--------|----------|  
@@ -150,22 +150,22 @@ ms.locfileid: "34018737"
  Eine Erläuterung dieser Bewertungsmethoden finden Sie unter [Feature Selection](http://msdn.microsoft.com/library/73182088-153b-4634-a060-d14d1fd23b70).  
   
  *SPLIT_METHOD*  
- Bestimmt die zum Teilen des Knotens zu verwendende Methode. Die folgenden Optionen stehen zur Verfügung:  
+ Bestimmt die zum Teilen des Knotens zu verwendende Methode. Die folgenden Optionen sind verfügbar:  
   
 |ID|Name|  
 |--------|----------|  
-|1|**Binary:** Gibt an, dass die Struktur unabhängig von der tatsächlichen Anzahl der Werte für das Attribut in zwei Verzweigungen aufgeteilt werden soll.|  
-|2|**Complete:** Gibt an, dass die Struktur so viele Teilungen erstellen kann, wie Attributwerte vorhanden sind.|  
-|3|**Both:** Gibt an, dass Analysis Services bestimmen kann, ob eine binäre oder vollständige Teilung verwendet werden soll, um die besten Ergebnisse zu erzielen.|  
+|1|**Binary:** Gibt an, dass unabhängig von der tatsächlichen Anzahl der Werte für das Attribut, die Struktur in zwei Verzweigungen aufgeteilt werden soll.|  
+|2|**Führen Sie aus:** Gibt an, dass die Struktur so viele Teilungen zusammen, wie Attributwerte vorhanden sind erstellen kann.|  
+|3|**Beide:** Gibt an, dass Analysis Services bestimmen kann, ob eine binäre oder vollständige Teilung verwendet werden soll, um die besten Ergebnisse zu erzeugen.|  
   
  Der Standardwert lautet 3.  
   
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Tree-Algorithmus unterstützt die folgenden Modellierungsflags. Wenn Sie die Miningstruktur oder das Miningmodell erstellen, definieren Sie Modellierungsflags, die angeben, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
-|Modellierungsflag|Description|  
+|Modellierungsflag|Beschreibung|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: **Missing** und **Existing**. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalten.|  
+|MODEL_EXISTENCE_ONLY|Bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann behandelt werden: **Fehlende** und **vorhandenen**. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalten.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalten.|  
   
 ### <a name="regressors-in-decision-tree-models"></a>Regressoren in Entscheidungsstrukturmodellen  
@@ -183,7 +183,7 @@ ms.locfileid: "34018737"
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Column|Inhaltstypen|  
+|Spalte|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Ordered, Table|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Ordered, Table|  
@@ -193,7 +193,7 @@ ms.locfileid: "34018737"
   
 ## <a name="see-also"></a>Siehe auch  
  [Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [Decision Trees-Abfragebeispiele](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Miningmodellinhalt von Entscheidungsstrukturmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Beispiele für Entscheidungsstruktur-Modellabfragen](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
+ [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

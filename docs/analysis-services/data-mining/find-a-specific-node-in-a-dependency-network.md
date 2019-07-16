@@ -1,5 +1,5 @@
 ---
-title: Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk | Microsoft Docs
+title: Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad00f715533e5da24cbec9c61dc79a045fa035ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183248"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Suchen eines bestimmten Knotens in einem Abhängigkeitsnetzwerk
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,6 +33,6 @@ ms.locfileid: "34014467"
 3.  Wählen Sie aus der Liste den richtigen Knoten aus, und klicken Sie dann auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tasks und Anweisungen für den Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

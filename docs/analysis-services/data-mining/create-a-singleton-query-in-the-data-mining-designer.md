@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine Singleton-Abfrage im Datamining-Designer | Microsoft Docs
+title: Erstellen eine Singleton-Abfrage im Datamining-Designer | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d30fee91882ecd2f76fde1e0c61d0e5bc3d302bc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183931"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Erstellen einer SINGLETON-Abfrage im Data Mining-Designer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -77,6 +77,6 @@ AS [t]
      Ein neuer Bildschirm wird geöffnet, der das Ergebnis der Abfrage anzeigt. Um die DMX-Anweisung anzuzeigen, die Sie gerade erstellt haben, klicken Sie auf **SQL**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Vorhersageabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Vorhersageabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

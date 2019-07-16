@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185973"
 ---
 # <a name="tablediff-utility"></a>tablediff (Hilfsprogramm)
   Mit dem Hilfsprogramm **tablediff** wird verglichen, ob die Daten in zwei Tabellen konvergent sind. Das Hilfsprogramm eignet sich besonders zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie. Dieses Hilfsprogramm kann an der Eingabeaufforderung oder in einer Batchdatei verwendet werden, um die folgenden Aufgaben auszuführen:  
@@ -76,8 +76,8 @@ ms.locfileid: "52791912"
  [ **-?** ]  
  Gibt die Liste unterstützter Parameter zurück.  
   
- **-sourceserver** *Name des Quellservers*[**\\**_Instanzname_]  
- Der Name des Quellservers. Geben Sie _Quelle\_Server\_Namen_ für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie _Quelle\_Server\_Namen_**\\**_Instanz\_Namen_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *Name des Quellservers*[ **\\** _Instanzname_]  
+ Der Name des Quellservers. Geben Sie _Quelle\_Server\_Namen_ für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie _Quelle\_Server\_Namen_ **\\** _Instanz\_Namen_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *Quelldatenbank*  
  Der Name der Quelldatenbank.  
@@ -100,8 +100,8 @@ ms.locfileid: "52791912"
  **-sourcelocked**  
  Die Quelltabelle wird während des Vergleichs mit den Tabellenhinweisen TABLOCK und HOLDLOCK gesperrt.  
   
- **-Destinationserver** *Zielservername*[**\\**_Instanz\_Namen_]  
- Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie _Ziel\_Server\_Namen_**\\**_Instanz\_Namen_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-Destinationserver** *Zielservername*[ **\\** _Instanz\_Namen_]  
+ Der Name des Zielservers. Angeben von *Zielservername* für die Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Geben Sie _Ziel\_Server\_Namen_ **\\** _Instanz\_Namen_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *Abonnementdatenbank*  
  Der Name der Zieldatenbank.  

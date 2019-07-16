@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926665"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB-Anbieter für Microsoft, die Indizierung Service – Übersicht
 Microsoft OLE DB-Anbieter für Microsoft Indexdienst ermöglicht programmgesteuerten schreibgeschützten Zugriff auf System- und Webdaten indiziert, die vom Microsoft Indexdienst-Datei. ADO-Anwendungen können SQL-Abfragen zum Abrufen von Inhalten und Informationen ausgeben.
@@ -75,9 +74,9 @@ MSIDXS
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|
 |[Lesezeichen](../../../ado/reference/ado-api/bookmark-property-ado.md)*|Lese-/Schreibzugriff|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Lese-/Schreibzugriff|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|immer **AdUseServer**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|immer **AdEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Schreibgeschützt|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Lese-/Schreibzugriff|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Lese-/Schreibzugriff|
@@ -100,7 +99,7 @@ MSIDXS
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Ja|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Nein|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Nein|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
+|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Ja|
 |[Schließen](../../../ado/reference/ado-api/close-method-ado.md)|Ja|
 |[Löschen](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Nein|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Ja|
@@ -109,7 +108,7 @@ MSIDXS
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Ja|
 |[Datei](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Ja|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Ja|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Ja|
+|[Erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md)|Ja|
 |[Unterstützt](../../../ado/reference/ado-api/supports-method.md)|Ja|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Nein|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Nein|

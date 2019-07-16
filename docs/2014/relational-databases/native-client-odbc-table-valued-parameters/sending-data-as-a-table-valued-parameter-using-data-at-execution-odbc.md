@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205465"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
   Dies ist vergleichbar mit der [alle im Arbeitsspeicher](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) Verfahren verwendet jedoch Data-at-Execution für den Tabellenwertparameter.  
@@ -183,7 +183,7 @@ from @Items
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt, dass Sie zeilenstreaming, eine Zeile pro Aufruf von SQLPutData, mit ODBC TVP auf ähnliche, wie Sie BCP.exe zum Laden von Daten in einer Datenbank verwenden ggf. verwenden können.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
@@ -371,7 +371,7 @@ EXIT:
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt, dass Sie zeilenstreaming, mehrere Zeilen pro Aufruf von SQLPutData, mit ODBC TVP auf ähnliche, wie Sie BCP.exe zum Laden von Daten in einer Datenbank verwenden ggf. verwenden können.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  

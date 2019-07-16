@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196452"
 ---
 # <a name="modify-user-defined-functions"></a>Ändern benutzerdefinierter Funktionen
   Sie können benutzerdefinierte Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern. Durch die Änderung von benutzerdefinierten Funktionen wie unten beschrieben werden die Funktionsberechtigungen nicht geändert. Es ergeben sich auch keine Auswirkungen auf abhängige Funktionen, gespeicherte Prozeduren oder Trigger.  
@@ -76,7 +76,7 @@ ms.locfileid: "54133600"
   
 #### <a name="to-modify-a-user-defined-function"></a>So ändern Sie eine benutzerdefinierte Funktion  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

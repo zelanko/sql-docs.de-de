@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine währungstypdimension | Microsoft Docs
+title: Erstellen eine währungstypdimension | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 73c44e299e448606ce37848ee8f58dd0e15aea76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178882"
 ---
 # <a name="database-dimensions---create-a-currency-type-dimension"></a>Datenbankdimensionen – Erstellen einer währungstypdimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34027087"
   
 ## <a name="see-also"></a>Siehe auch  
  [Attribute und Attributhierarchien](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Business Intelligence-Assistent F1-Hilfe](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
+ [Business Intelligence-Assistent (F1-Hilfe)](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [Dimensionstypen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

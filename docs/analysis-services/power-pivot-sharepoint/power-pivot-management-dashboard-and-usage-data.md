@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208106"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "55087749"
 ##  <a name="items"></a> Übersicht über die Abschnitte des Dashboards  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard enthält Webparts und eingebettete Berichte, die einen Drilldown in bestimmte Informationskategorien ermöglichen. In der folgenden Liste werden die einzelnen Bestandteile des Dashboards beschrieben:  
   
-|Dashboard|Description|  
+|Dashboard|Beschreibung|  
 |---------------|-----------------|  
 |Infrastruktur - Serverintegrität|Zeigt Trends zur CPU-Verwendung, Arbeitsspeichernutzung sowie zu Abfrageantwortzeiten im zeitlichen Verlauf an, damit Sie beurteilen können, ob die maximale Kapazität der Systemressourcen bald erreicht ist oder ob diese unterausgelastet sind.|  
 |Aktionen|Enthält Links zu anderen Seiten in der Zentraladministration, darunter die aktuelle Dienstanwendung, eine Liste der Dienstanwendungen sowie die Verwendungsprotokollierung.|  
@@ -70,7 +70,7 @@ ms.locfileid: "55087749"
   
 -   [Konfigurieren der Sammlung von Verwendungsdaten für &#40;PowerPivot für SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis**: Wenn Sie Ereignismeldungen oder Verwendungsverläufe deaktivieren, enthalten die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
+ Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis**: Wenn Sie ereignismeldungen oder verwendungsverläufe deaktivieren, werden die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
   
 ##  <a name="edit"></a> Bearbeiten eines PowerPivot-Dashboards  
  Wenn Sie erfahren in der Dashboardentwicklung oder -anpassung sind, können Sie das Dashboard bearbeiten, um neue Webparts aufzunehmen. Sie können auch die Webparteigenschaften bearbeiten, die im Dashboard enthalten sind.  
@@ -81,7 +81,7 @@ ms.locfileid: "55087749"
  Um Ihnen den Einstieg in die benutzerdefinierte Berichterstellung zu erleichtern, bietet das [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Management-Dashboard eine ODC-Datei (Office Data Connection), über die eine Verbindung mit der Quellarbeitsmappe hergestellt werden kann. Beispielsweise können Sie die ODC-Datei in Excel verwenden, um zusätzliche Berichte zu erstellen.  
   
 > [!NOTE]  
->  Bearbeiten Sie die Datei, um beim Verwenden der ODC-Datei in Excel folgenden Fehler zu vermeiden: "Fehler bei der Initialisierung der Datenquelle". Die automatisch generierte ODC-Datei enthält einen Parameter, der vom MSOLAP-OLE DB-Anbieter nicht unterstützt wird. Die folgenden Anweisungen stellen eine Problemumgehung zum Entfernen der Parameter bereit.  
+>  Bearbeiten Sie die Datei, um die folgenden Fehler zu vermeiden, beim Versuch die ODC-Datei in Excel zu verwenden: "Fehler bei der Initialisierung der Datenquelle". Die automatisch generierte ODC-Datei enthält einen Parameter, der vom MSOLAP-OLE DB-Anbieter nicht unterstützt wird. Die folgenden Anweisungen stellen eine Problemumgehung zum Entfernen der Parameter bereit.  
   
  Sie müssen ein Farm- oder Dienstadministrator sein, um Berichte zu erstellen, die auf der [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] -Arbeitsmappe der Zentraladministration basieren.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920389"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF- und EOF-Eigenschaften (ADO)
 -   **BOF** gibt an, der die Position des aktuelle Datensatzes vor dem ersten Datensatz in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
@@ -50,10 +49,10 @@ ms.locfileid: "66696289"
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Verschieben Sie die < 0|Verschieben von 0|MoveNext,<br /><br /> Verschieben Sie die > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|Zulässig|Fehler|Fehler|Zulässig|  
-|**BOF**=**False**, **EOF**=**True**|Zulässig|Zulässig|Fehler|Fehler|  
+|**BOF**= **"true"** , **EOF**= **"false"**|Allowed|Fehler|Fehler|Allowed|  
+|**BOF**= **"false"** , **EOF**= **"true"**|Allowed|Allowed|Fehler|Fehler|  
 |Beide **"true"**|Fehler|Fehler|Fehler|Fehler|  
-|Beide **"false"**|Zulässig|Zulässig|Zulässig|Zulässig|  
+|Beide **"false"**|Allowed|Allowed|Allowed|Allowed|  
   
  Ermöglicht einem **verschieben** -Methode garantiert nicht, dass die Methode erfolgreich einen Datensatz findet, sondern bedeutet, dass ein Aufruf der angegebenen **verschieben** Methode generiert keine Fehler.  
   

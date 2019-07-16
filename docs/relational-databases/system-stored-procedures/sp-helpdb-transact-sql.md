@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903020"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +46,11 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Datenbankname.|  
 |**db_size**|**nvarchar(13)**|Gesamtgröße der Datenbank.|  
-|**owner**|**sysname**|Datenbankbesitzer, z. B. **sa**.|  
+|**Besitzer**|**sysname**|Datenbankbesitzer, z. B. **sa**.|  
 |**dbid**|**smallint**|Datenbank-ID|  
 |**created**|**nvarchar(11)**|Erstellungsdatum der Datenbank.|  
 |**status**|**nvarchar(600)**|Eine durch Trennzeichen getrennte Liste mit Werten von Datenbankoptionen, die zurzeit für die Datenbank festgelegt sind.<br /><br /> Optionen mit booleschen Werten werden nur aufgelistet, wenn sie aktiviert sind. Nicht boolesche Optionen werden aufgelistet, durch die entsprechenden Werte in Form von *Optionsname*=*Wert*.<br /><br /> Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
@@ -59,16 +58,16 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
  Wenn *Namen* angegeben wird, gibt es ein zusätzliches Resultset, das die dateizuordnung für die angegebene Datenbank anzeigt.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**name**|**nchar(128)**|Logischer Dateiname der Datei.|  
+|**name**|**NCHAR(128)**|Logischer Dateiname der Datei.|  
 |**fileid**|**smallint**|Die Datei-ID|  
-|**filename**|**nchar(260)**|Betriebssystem-Dateiname (physischer Dateiname).|  
+|**Dateiname**|**NCHAR(260)**|Betriebssystem-Dateiname (physischer Dateiname).|  
 |**filegroup**|**nvarchar(128)**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
 |**size**|**nvarchar(18)**|Dateigröße in MB.|  
 |**maxsize**|**nvarchar(18)**|Maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  
 |**growth**|**nvarchar(18)**|Vergrößerungsinkrement der Datei. Dies gibt an, die Menge des Speicherplatzes der Datei, die jedes Mal neuer Speicherplatz benötigt wird hinzugefügt.|  
-|**usage**|**varchar(9)**|Verwendung der Datei. Für eine Datendatei ist der Wert **'nur Daten'** und der Wert ist für die Protokolldatei **'nur protokollieren'**.|  
+|**Verwendung**|**varchar(9)**|Verwendung der Datei. Für eine Datendatei ist der Wert **'nur Daten'** und der Wert ist für die Protokolldatei **'nur protokollieren'** .|  
   
 ## <a name="remarks"></a>Hinweise  
  Die **Status** Spalte im Resultset Berichte, die die Optionen auf ON wurde, in der Datenbank festgelegt müssen festlegen. Alle Datenbankoptionen werden nicht gemeldet, indem die **Status** Spalte. Um eine vollständige Liste der die aktuellen Einstellungen der Datenbankoptionen anzuzeigen, verwenden die **sys.databases** -Katalogsicht angezeigt.  

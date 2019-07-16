@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Datamining-Objekten | Microsoft Docs
+title: Verarbeiten von Datamining-Objekten | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 017f1d751e81fa80b8a7e4c2655fd1de59459fed
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016837"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209728"
 ---
 # <a name="processing-data-mining-objects"></a>Verarbeiten von Data Mining-Objekten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Ein Data Mining-Objekt ist vor seiner Verarbeitung nur ein leerer Container. Die*Verarbeitung* eines Data Mining-Modells wird auch als *Training*bezeichnet.  
   
- **Verarbeiten von Miningstrukturen:** Eine Miningstruktur ruft Daten von einer externen Datenquelle ab, die über die Spaltenbindungen und Verwendungsmetadaten definiert ist, und liest die Daten. Diese Daten werden vollständig gelesen und anschließend analysiert, um verschiedene statistische Informationen zu extrahieren. Analysis Services speichert eine kurze Darstellung der Daten, die für die Analyse durch Data Mining-Algorithmen geeignet ist, in einem lokalen Cache. Sie können diesen Cache entweder beibehalten oder löschen, nachdem die Modelle verarbeitet wurden. Standardmäßig wird der Cache gespeichert. Weitere Informationen finden Sie unter [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md).  
+ **Verarbeiten von Miningstrukturen:** Eine Miningstruktur Ruft Daten aus einer externen Datenquelle ab, wie die spaltenbindungen und verwendungsmetadaten definiert, und liest die Daten. Diese Daten werden vollständig gelesen und anschließend analysiert, um verschiedene statistische Informationen zu extrahieren. Analysis Services speichert eine kurze Darstellung der Daten, die für die Analyse durch Data Mining-Algorithmen geeignet ist, in einem lokalen Cache. Sie können diesen Cache entweder beibehalten oder löschen, nachdem die Modelle verarbeitet wurden. Standardmäßig wird der Cache gespeichert. Weitere Informationen finden Sie unter [Process a Mining Structure](../../analysis-services/data-mining/process-a-mining-structure.md).  
   
- **Verarbeiten von Miningmodellen:** Bis zu seiner Verarbeitung ist ein Miningmodell leer und enthält nur Definitionen. Um ein Miningmodell verarbeiten zu können, muss zuerst die zugrunde liegende Miningstruktur verarbeitet werden. Das Miningmodell erhält die Daten aus dem Cache der Miningstruktur, wendet die Filter an, die ggf. für das Modell erstellt wurden, und übergibt dann das Dataset über den Algorithmus, um Muster zu ermitteln. Nachdem das Modell verarbeitet wurde, speichert das Modell nur die Ergebnisse der Verarbeitung, nicht die Daten selbst. Weitere Informationen finden Sie unter [Verarbeiten eines Miningmodells](../../analysis-services/data-mining/process-a-mining-model.md).  
+ **Verarbeiten von Miningmodellen:** Ein Miningmodell ist leer und enthält nur Definitionen aus, bis es verarbeitet wird. Um ein Miningmodell verarbeiten zu können, muss zuerst die zugrunde liegende Miningstruktur verarbeitet werden. Das Miningmodell erhält die Daten aus dem Cache der Miningstruktur, wendet die Filter an, die ggf. für das Modell erstellt wurden, und übergibt dann das Dataset über den Algorithmus, um Muster zu ermitteln. Nachdem das Modell verarbeitet wurde, speichert das Modell nur die Ergebnisse der Verarbeitung, nicht die Daten selbst. Weitere Informationen finden Sie unter [Verarbeiten eines Miningmodells](../../analysis-services/data-mining/process-a-mining-model.md).  
   
  In der folgenden Abbildung ist jeweils der Datenfluss für die Verarbeitung einer Miningstruktur und für die Verarbeitung eines Miningmodells dargestellt.  
   
- ![Datenverarbeitung: Quelle Struktur Modell](../../analysis-services/data-mining/media/dmcon-modelarch.gif "Datenverarbeitung: Quelle Struktur Modell")  
+ ![Datenverarbeitung: Quelle Struktur Modell](../../analysis-services/data-mining/media/dmcon-modelarch.gif "Datenverarbeitung: Quelle auf Struktur zum Modell")  
   
 ## <a name="viewing-the-results-of-processing"></a>Anzeigen der Ergebnisse der Verarbeitung  
  Nachdem eine Miningstruktur verarbeitet wurde, enthält sie eine kurze Darstellung der Daten zur Verwendung in statistischen Analysen. Wenn der Cache nicht gelöscht wurde, können Sie wie folgt auf die Daten im Cache zugreifen:  
@@ -49,9 +49,9 @@ ms.locfileid: "34016837"
  Weitere Informationen finden Sie unter [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthroughabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Miningstrukturen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Miningmodelle & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [Logische Architektur & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Logische Architektur &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

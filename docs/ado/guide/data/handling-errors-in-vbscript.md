@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13f769ae3d2b8ddcc720df33596093ff9562af99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99c3d2a615abe64a6ea5fc79cab8fb3dc083178d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925144"
 ---
 # <a name="handling-errors-in-vbscript"></a>Behandeln von Fehlern in VBScript
 Es gibt kaum einen Unterschied zwischen den Methoden, die in Visual Basic verwendet, auch solche, die mit VBScript verwendet. Der Hauptunterschied besteht darin, dass VBScript das Konzept der Fehlerbehandlung durch das Fortsetzen der Ausführung an eine Bezeichnung nicht unterstützt. Das heißt, Sie können keine `On Error GoTo` in VBScript. Verwenden Sie stattdessen `On Error Resume Next` und aktivieren Sie beide **Err.Number** und **Anzahl** Eigenschaft der **Fehler** -Auflistung, wie im folgenden Beispiel gezeigt:  

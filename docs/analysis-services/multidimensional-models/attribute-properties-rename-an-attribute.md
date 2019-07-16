@@ -1,5 +1,5 @@
 ---
-title: Umbenennen eines Attributs | Microsoft Docs
+title: Umbenennen eines Attributs | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 602dd05b4fb33b50de8b58c67f3aa245eee8e24b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024007"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179513"
 ---
-# <a name="attribute-properties---rename-an-attribute"></a>Attributeigenschaften: Umbenennen eines Attributs
+# <a name="attribute-properties---rename-an-attribute"></a>Attributeigenschaften – Umbenennen eines Attributs
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Der Name eines Attributs in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird durch seine **Name** -Eigenschaft definiert. Klicken Sie zum Umbenennen eines Attributs im Bereich **Attribute** auf der Registerkarte **Dimensionsstruktur** des Dimensions-Designers in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf ein Attribut, und klicken Sie anschließend auf **Umbenennen**. Wenn der Bereich **Attribute** sich in der Rasteransicht befindet, klicken Sie auf den Namen des Attributs, und bearbeiten Sie diesen direkt im Raster. Sie können auch ein Attribut auswählen und die **Name** -Eigenschaft im Fenster **Eigenschaften** festlegen.  
   

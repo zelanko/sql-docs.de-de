@@ -1,5 +1,5 @@
 ---
-title: Übersetzungen Cube | Microsoft Docs
+title: Cube-Übersetzungen | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82ded06c9008e4a403e5707a4a0b2fafec261e58
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180974"
 ---
 # <a name="cube-translations"></a>Cubeübersetzungen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "34027532"
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsübersetzungen](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Unterstützung für Übersetzungen in Analysis Services](../../analysis-services/translation-support-in-analysis-services.md)   
- [Globalisierung Tipps und Best Practices & #40; Analysis Services & #41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

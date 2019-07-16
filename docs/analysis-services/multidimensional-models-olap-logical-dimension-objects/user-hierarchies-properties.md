@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften der Benutzerhierarchie | Microsoft Docs
+title: Eigenschaften der Benutzerhierarchie | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8c29e85d684095c57dc3f02caebc9afdd156c0ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180645"
 ---
-# <a name="user-hierarchies---properties"></a>Benutzerhierarchien - Eigenschaften
+# <a name="user-hierarchies---properties"></a>Benutzerhierarchien – Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In der folgenden Tabelle werden die Eigenschaften einer benutzerdefinierten Hierarchie beschrieben.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |AllMemberName|Enthält die Beschriftung in der standardmäßigen Sprache für das Alle-Element der Hierarchie.|  
-|AllowDuplicateNames|Bestimmt, ob doppelte Namen in der Hierarchie zulässig sind. Die Werte sind True und False. Standardwert ist "true".|  
-|Description|Enthält die Beschreibung einer Hierarchie.|  
+|AllowDuplicateNames|Bestimmt, ob doppelte Namen in der Hierarchie zulässig sind. Die Werte sind True und False. Der Standardwert ist TRUE.|  
+|Beschreibung|Enthält die Beschreibung einer Hierarchie.|  
 |DisplayFolder|Gibt den Ordner an, in dem die Hierarchie für Benutzer aufgeführt ist.|  
 |ID|Enthält den eindeutigen Bezeichner (ID) der Hierarchie.|  
 |MemberNamesUnique|Bestimmt, ob Elementnamen in der Hierarchie eindeutig sein müssen. Die Werte sind True und False. Der Standardwert ist False.|  

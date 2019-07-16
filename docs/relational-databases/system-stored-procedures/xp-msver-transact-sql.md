@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8aaa598f5f6477b13a932e8ec2849e36c97b21cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b936f00f449bd57a7a00fa825910a809a1baf225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898364"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ xp_msver [ optname ]
  *optname*  
  Der Name einer Option. Die folgenden Werte sind möglich.  
   
-|Options-/Spaltenname|Description|  
+|Options-/Spaltenname|Beschreibung|  
 |-------------------------|-----------------|  
 |**ProductName**|Der Produktname; z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ProductVersion**|Die Produktversion.|  
@@ -54,7 +53,7 @@ xp_msver [ optname ]
 |**FileDescription**|Das Betriebssystem.|  
 |**FileVersion**|Version der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**InternalName**|Von [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendeter interner Name für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beispiel: SQLSERVR.|  
-|**LegalCopyright**|Urheberrechtliche Informationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beispiel: Copyright© [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
+|**LegalCopyright**|Urheberrechtliche Informationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; Beispiel: Copyright © [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
 |**LegalTrademarks**|Markeninformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist z. B. eine eingetragene Marke der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**Originaldateiname**|Der Name der Datei, die beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Beispiel: Sqlservr.exe.|  
 |**PrivateBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

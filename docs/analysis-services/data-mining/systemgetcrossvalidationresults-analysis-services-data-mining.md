@@ -1,5 +1,5 @@
 ---
-title: SystemGetCrossValidationResults (Analysis Services – Datamining) | Microsoft Docs
+title: SystemGetCrossValidationResults (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2febed19e2bd481a8e442f115f9691e5abb6be4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209774"
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -108,7 +108,7 @@ SystemGetCrossValidationResults(
  Der Standardwert ist **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird kein Fehler ausgelöst, wenn Sie festlegen, *statusschwellenwert* auf 0,0 ist, aber Sie sollten diesen Wert niemals verwenden. Tatsächlich bedeutet eine Schwelle von 0,0, dass Vorhersagen mit einer Wahrscheinlichkeit von 0 (null) Prozent als richtig gewertet werden.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] löst keinen Fehler aus, wenn Sie *state threshold* auf 0,0 setzen; allerdings sollten Sie diesen Wert niemals verwenden. Tatsächlich bedeutet eine Schwelle von 0,0, dass Vorhersagen mit einer Wahrscheinlichkeit von 0 (null) Prozent als richtig gewertet werden.  
   
  (Optional)  
   
@@ -124,7 +124,7 @@ SystemGetCrossValidationResults(
   
  In der folgenden Tabelle werden die Spalten in diesem Rowset beschrieben.  
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |ModelName|Name des Modells, das getestet wurde.|  
 |AttributeName|Der Name der vorhersagbaren Spalte.|  
@@ -184,8 +184,8 @@ NULL
   
 ## <a name="see-also"></a>Siehe auch  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services – Datamining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services – Datamining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

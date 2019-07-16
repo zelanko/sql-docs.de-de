@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207946"
 ---
 # <a name="thread-pool-properties"></a>Threadpooleigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -66,7 +66,7 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
   
  Die Eigenschaften sind in alphabetischer Reihenfolge aufgeführt.  
   
-|Name|Typ|Description|Standard|Anleitung|  
+|Name|Typ|Beschreibung|Default|Anleitung|  
 |----------|----------|-----------------|-------------|--------------|  
 |**IOProcess** \ **Concurrency**|double|Ein Gleitkommawert mit doppelter Genauigkeit, der den Algorithmus zum Festlegen eines Ziels für die Anzahl der Threads bestimmt, die gleichzeitig in eine Warteschlange gestellt werden können.|2.0|Eine erweiterte Eigenschaft, die nur mithilfe der Schritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] geändert werden sollte.<br /><br /> Die Parallelität wird verwendet, um Threadpools zu initialisieren, die mithilfe von E/A-Abschlussports in Windows implementiert werden. Einzelheiten finden Sie unter [I/O Completion Ports](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) (E/A-Abschlussports).<br /><br /> Gilt nur für mehrdimensionale Modelle.|  
 |**IOProcess** \ **GroupAffinity**|String|Ein Array von Hexadezimalwerten, die Prozessorgruppen im System entsprechen. Wird verwendet, um die Affinität von Threads im IOProcess-Threadpool zu logischen Prozessoren in den einzelnen Prozessorgruppen festzulegen.|none|Mit dieser Eigenschaft können Sie benutzerdefinierte Affinitäten erstellen. Die Eigenschaft ist standardmäßig leer.<br /><br /> Details finden Sie unter [Festlegen von GroupAffinity, um Threads Prozessoren in einer Prozessorgruppe zuzuordnen](#bkmk_groupaffinity) .<br /><br /> Gilt nur für mehrdimensionale Modelle.|  
@@ -231,7 +231,7 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- Zur Erinnerung: Der Algorithmus für die Einstellungen **MinThread** und **MaxThread** schließt die Systemkonfiguration ein, insbesondere die Anzahl der Prozessoren. Der folgenden Blogbeitrag bietet Einblicke in die Berechnung der Werte: [Analysis Services 2012-Konfigurationseinstellungen (Wordpress-Blog)](http://go.microsoft.com/fwlink/?LinkId=330387). Beachten Sie, dass diese Einstellungen und Verhaltensweisen in nachfolgenden Versionen geändert werden können.  
+ Zur Erinnerung: Der Algorithmus für die Einstellungen **MinThread** und **MaxThread** schließt die Systemkonfiguration ein, insbesondere die Anzahl der Prozessoren. Im folgenden Blogbeitrag bietet Einblicke in die Berechnung der Werte an: [Analysis Services 2012-Konfigurationseinstellungen (Wordpress-Blog)](http://go.microsoft.com/fwlink/?LinkId=330387). Beachten Sie, dass diese Einstellungen und Verhaltensweisen in nachfolgenden Versionen geändert werden können.  
   
  Die folgende Liste enthält Beispiele für weitere Affinitätsmaskeneinstellungen, die für unterschiedliche Prozessorkombinationen gelten:  
   
@@ -239,7 +239,7 @@ Wir empfehlen das kumulative Update 1 für SQL Server 2016 (CU1) oder höher fü
   
 -   Affinität für die Prozessoren 7-6-5-4 in einem System mit 8 Kernen führt zu dieser Bitmaske: 11110000 und ein hexadezimaler Wert: 0xF0  
   
--   Affinität für die Prozessoren 5-4-3-2 in einem System mit 8 Kernen führt zu dieser Bitmaske: 00111100 und ein hexadezimaler Wert: 0x3C  
+-   Affinität für 5-4-3-2-Prozessoren auf einem System mit 8 Kernen führt zu dieser Bitmaske: 00111100 und ein hexadezimaler Wert: 0x3C  
   
 -   Affinität für die Prozessoren 7-6-1-0 in einem System mit 8 Kernen führt zu dieser Bitmaske: 11000011 und ein hexadezimaler Wert: 0xC3  
   
