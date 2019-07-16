@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920896"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
 
@@ -32,9 +31,9 @@ ms.locfileid: "66696625"
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Gibt die tatsächliche Länge der Wert des Felds an.|  
 |[Attribute](../../../ado/reference/ado-api/attributes-property-ado.md)|Gibt einen oder mehrere Eigenschaften eines Objekts an.|  
 |[BOF- und EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** gibt an, dass die aktuelle Position des Datensatzes vor dem ersten Datensatz in einem Recordset-Objekt.<br /><br /> **EOF** gibt an, dass die Position des aktuelle Datensatzes nach dem letzten Datensatz in einem Recordset-Objekt.|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Gibt an, ein Lesezeichen, das den aktuellen Datensatz in eindeutig identifiziert einen **Recordset** Objekt, oder legt den aktuellen Datensatz einer **Recordset** Objekt, das den Datensatz, der durch ein gültiges Lesezeichen identifiziert wird.|  
+|[Textmarke](../../../ado/reference/ado-api/bookmark-property-ado.md)|Gibt an, ein Lesezeichen, das den aktuellen Datensatz in eindeutig identifiziert einen **Recordset** Objekt, oder legt den aktuellen Datensatz einer **Recordset** Objekt, das den Datensatz, der durch ein gültiges Lesezeichen identifiziert wird.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Gibt die Anzahl der Datensätze aus einer **Recordset** -Objekt, das lokal im Arbeitsspeicher zwischengespeichert werden.|  
-|[Chapter](../../../ado/reference/ado-api/chapter-property-ado.md)|Ruft ab oder legt einen OLE DB **Kapitel** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt.|  
+|[Kapitel](../../../ado/reference/ado-api/chapter-property-ado.md)|Ruft ab oder legt einen OLE DB **Kapitel** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt.|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Gibt den Zeichensatz in den der Inhalt einer **Stream** übersetzt werden soll.|  
 |[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)|Gibt den Datenstrom verwendet als Eingabe für eine **Befehl** Objekt.|  
 |[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)|Gibt den Text eines Befehls für einen Anbieter ausgestellt werden.|  
@@ -58,7 +57,7 @@ ms.locfileid: "66696625"
 |[HelpContext und HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Gibt an, die Hilfedatei und das zugeordnete Thema ein **Fehler** Objekt.<br /><br /> **Hilfekontext-ID** gibt eine Kontext-ID als ein **lange** Wert für ein Thema in einer Hilfedatei.<br /><br /> **HelpFile** gibt eine **Zeichenfolge** Wert, der vollständig aufgelösten Pfad einer Hilfedatei ausgewertet wird.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Gibt den Namen des Indexes derzeit für eine **Recordset** Objekt.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Gibt die Ebene der Isolation für eine **Verbindung** Objekt.|  
-|[Element](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung nach Name oder Ordinalzahl an.|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung nach Name oder Ordinalzahl an.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Gibt das binäre Zeichen als das Zeilentrennzeichen in Text zu verwendende **Stream** Objekte.|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Gibt die Typen von Sperren, die auf Datensätze platziert werden, während der Bearbeitung an.|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Gibt an, welche Datensätze an den Server gemarshallt werden.|  
@@ -83,7 +82,7 @@ ms.locfileid: "66696625"
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Ruft ab oder legt einen OLE DB **RowPosition** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt.|  
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Ruft ab oder legt einen OLE DB **Rowset** Objekt aus, bzw. auf eine **ADORecordsetConstruction** Objekt.|  
 |[Quelle (ADO-Fehler)](../../../ado/reference/ado-api/source-property-ado-error.md)|Gibt den Namen des Objekts oder der Anwendung, die ursprünglich ein Fehler generiert.|  
-|[Source (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)|Gibt an, die Entität, dargestellt durch die **Datensatz** Objekt.|  
+|[Quelle (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)|Gibt an, die Entität, dargestellt durch die **Datensatz** Objekt.|  
 |[Quelle (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Gibt die Quelle für die Daten in einem **Recordset** Objekt|  
 |[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)|Gibt den SQL-Status für einen bestimmten **Fehler** Objekt.|  
 |[Zustand](../../../ado/reference/ado-api/state-property-ado.md)|Gibt für alle entsprechenden Objekte an, ob der Zustand des Objekts offen oder geschlossen ist. Gibt an, für alle entsprechenden Objekte, die Ausführung von einer asynchronen Methode, ob der aktuelle Zustand des Objekts Herstellen einer Verbindung, Ausführen von abrufen oder|  

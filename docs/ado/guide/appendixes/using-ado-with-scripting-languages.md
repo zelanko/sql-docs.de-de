@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926482"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Verwenden von ADO mit Skriptsprachen
 Innerhalb einer skriptumgebung kann ADO Daten über die serverseitige Skripts verfügbar zu machen. In diesem Szenario ADO zugrunde liegenden OLE DB-Anbieter, die sie verwendet und alle anderen Komponenten erforderlich, um einen bestimmten Datenspeicher verweisen auf einem Server mit Internetinformationsdienste (Internet Information Services, IIS) installiert sind. ADO ist mit Active Server Pages (ASP) ist eine Komponente, die auf die verwiesen wird in einem Skript, die HTML-Code, z. B. generieren kann. Diese HTML-Inhalt kann über HTTP auf einen Webbrowser für den Client übergeben werden. Mithilfe von Skripts können die Webseite Aktionen senden, an die serverseitigen Skript, sodass Sie aktualisieren, durchlaufen oder bestimmte Daten anzeigen.  
@@ -32,7 +31,7 @@ Innerhalb einer skriptumgebung kann ADO Daten über die serverseitige Skripts ve
 |ADO-Befehl|Nein|  
 |ADO-Parameter|Nein|  
 |ADO-Recordset|Ja|  
-|ADO Record|Ja|  
+|ADO-Datensatz|Ja|  
 |ADO-Stream|Ja|  
 |ADO-Fehler|Nein|  
 |ADOX-Katalog|Nein|  

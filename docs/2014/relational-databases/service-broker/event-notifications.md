@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197767"
 ---
 # <a name="event-notifications"></a>Ereignisbenachrichtigungen
   Mit Ereignisbenachrichtigungen werden Informationen zu Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet. Ereignisbenachrichtigungen werden als Antwort auf eine Vielzahl von [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und Ereignissen der SQL-Ablaufverfolgung ausgeführt, indem Informationen zu diesen Ereignissen an einen [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst gesendet werden.  
@@ -51,7 +51,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>Konzepte der Ereignisbenachrichtigungen  
  Wenn eine Ereignisbenachrichtigung erstellt wird, werden eine oder mehrere [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konversationen zwischen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem von Ihnen angegebenen Zieldienst geöffnet. Die Konversationen bleiben in der Regel geöffnet, so lange die Ereignisbenachrichtigung als Objekt für die Serverinstanz vorhanden ist. In einigen Fehlerfällen können die Konversationen geschlossen werden, bevor die Ereignisbenachrichtigung gelöscht wird. Diese Konversationen werden niemals für Ereignisbenachrichtigungen freigegeben. Jede Ereignisbenachrichtigung besitzt ihre eigenen, exklusiven Konversationen. Das explizite Beenden einer Konversation verhindert, dass der Zieldienst weitere Nachrichten empfängt, und die Konversation wird bei der nächsten Auslösung der Ereignisbenachrichtigung nicht erneut geöffnet.  
   
- Übermittelt Informationen zu Ereignissen der [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Dienst als Variable des Typs `xml` stellt Informationen zum Auftreten eines Ereignisses, über die betroffenen Datenbankobjekt der [!INCLUDE[tsql](../../includes/tsql-md.md)] Batchanweisung Beteiligten und andere Informationen. Weitere Informationen zum XML-Schema, das von Ereignisbenachrichtigungen erstellt wird, finden Sie unter [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ Ereignisinformationen werden an den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Dienst als Variable des Typs `xml` übermittelt; diese Variable stellt Informationen zum Zeitpunkt des Auftretens eines Ereignisses, zum betroffenen Datenbankobjekt, zur beteiligten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batchanweisung sowie weitere Informationen bereit. Weitere Informationen zum XML-Schema, das von Ereignisbenachrichtigungen erstellt wird, finden Sie unter [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="event-notifications-vs-triggers"></a>Ereignisbenachrichtigungen im Vergleich zur Trigger  
  In der folgenden Tabelle werden Trigger und Ereignisbenachrichtigungen verglichen und Unterschiede aufgezeigt.  
@@ -89,7 +89,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
   
 ## <a name="event-notification-tasks"></a>Tasks der Ereignisbenachrichtigung  
   
-|Task|Thema|  
+|Aufgabe|Thema|  
 |----------|-----------|  
 |Beschreibt, wie Ereignisbenachrichtigungen erstellt und implementiert werden.|[Implementieren von Ereignisbenachrichtigungen](implement-event-notifications.md)|  
 |Beschreibt, wie für Ereignisbenachrichtigungen, die Nachrichten an eine Service Broker-Instanz auf einem Remoteserver senden, die Dialogsicherheit von [!INCLUDE[ssSB](../../includes/sssb-md.md)] konfiguriert wird.|[Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen](configure-dialog-security-for-event-notifications.md)|  

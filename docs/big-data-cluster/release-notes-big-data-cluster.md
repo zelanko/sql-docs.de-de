@@ -5,17 +5,16 @@ description: Dieser Artikel beschreibt die neuesten Updates und bekannte Problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 10ba3b53e32f5809bf8b1bb1cd69266d4d43afd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957873"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Anmerkungen zu dieser Version für big Data-Cluster in SQL Server
 
@@ -228,7 +227,7 @@ Die folgenden Abschnitte beschreiben die neuen Features und bekannten Probleme f
 |:---|:---|
 | Bereitstellungsprofile | Verwenden Sie für die Bereitstellung von Big Data-Clustern standardmäßige und benutzerdefinierte [Konfigurationsdateien für die JSON-Bereitstellung](deployment-guidance.md#configfile) anstelle von Umgebungsvariablen. |
 | Bereitstellungen mit Aufforderung | `mssqlctl cluster create` ruft jetzt zu allen erforderlichen Einstellungen für Standardbereitstellungen auf. |
-| Änderungen bei Dienstendpunkten und Podnamen | Die folgenden externen Endpunkte haben Namen geändert:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| Änderungen bei Dienstendpunkten und Podnamen | Die folgenden externen Endpunkte haben Namen geändert:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Endpunkt-Controller** => **extern-svc-Controller**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpunktsicherheit** => **extern-svc-Gateway**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
 | Verbesserungen bei **mssqlctl** | Verwenden Sie **mssqlctl** zum [Auflisten externer Endpunkte](deployment-guidance.md#endpoints) und zum Überprüfen der Version von **mssqlctl** mithilfe des Parameters `--version`. |
 | Offlineinstallation | Leitfaden für offline big Data-Cluster-Bereitstellungen. |
 | Verbesserungen bei HDFS-Tiering | S3-tiering, Zwischenspeichern bereitstellen und OAuth unterstützt für den ADLS-Gen2. |

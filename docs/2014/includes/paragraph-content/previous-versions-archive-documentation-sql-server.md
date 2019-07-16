@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 7bcf7ac382bb60e1a38b34ac6e3a26c2126e1e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68200854"
 ---
 
 Wir sammeln die Dokumentation und bewahren diese für sehr alte Versionen von SQL Server in eine Reihe von Archivwebseiten auf. Die archivierten Webseiten werden nicht von Suchmaschinen wie z. B. "Bing.com" und also z.B. Google.com verarbeitet. Aber Sie sehen diese Archive auf unsere Dokumentation _-Vorgängerversionen /_ Adresse:

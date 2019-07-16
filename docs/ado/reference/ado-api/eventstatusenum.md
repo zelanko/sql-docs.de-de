@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7ce25eda44c3581362bd145fa13efaa8359f20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932866"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Gibt den aktuellen Status der Ausführung eines Ereignisses an.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|Fordert das Abbrechen des Vorgangs, der das Ereignis ausgelöst hat.|  
 |**adStatusCantDeny**|3|Gibt an, dass der Vorgang nicht Abbrechen des ausstehenden Vorgangs anfordern kann.|  
