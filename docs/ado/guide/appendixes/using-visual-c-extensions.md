@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926455"
 ---
 # <a name="visual-c-extensions"></a>Visual C++-Erweiterungen
 ## <a name="the-iadorecordbinding-interface"></a>Die IADORecordBinding-Schnittstelle
@@ -90,7 +89,7 @@ Update(CADORecordBinding *binding)
  **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>Daten fester Länge
- **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY**(*Ordinalzahl "," DataType "," Puffer "," Status ändern*)
 
  **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
 
@@ -100,11 +99,11 @@ Update(CADORecordBinding *binding)
  **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>Daten mit variabler Länge
- **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Size, Status, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*Ordnungszahl, Datentyp, Puffer, Größe, Status, Länge ändern*)
 
  **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordnungszahl, Datentyp, Puffer, Größe, Länge ändern*)
 
  **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
 
@@ -129,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  Beim Festlegen der Daten, *Status* kann festgelegt werden, um **AdFldNull** an, dass die **Recordset** Feld auf Null.
 
-|Konstante|Wert|Description|
+|Konstante|Wert|Beschreibung|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Es wurde ein Feldwert ungleich Null-zurückgegeben.|
 |**adFldBadAccessor**|1|Bindung war ungültig.|
