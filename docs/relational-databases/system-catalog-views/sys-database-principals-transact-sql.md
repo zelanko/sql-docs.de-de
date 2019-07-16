@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c369bfe81a86af7a11a370a4d827440cd4544a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022685"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine Zeile für jeden Sicherheitsprinzipal in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des Prinzipals, der innerhalb der Datenbank eindeutig ist.|  
 |**principal_id**|**int**|Die ID des Prinzipals, die innerhalb der Datenbank eindeutig ist.|  
@@ -45,7 +44,7 @@ ms.locfileid: "62632680"
 |**owning_principal_id**|**int**|ID des Prinzipals, der der Besitzer dieses Prinzipals ist. Alle Prinzipale außer Datenbankrollen müssen im Besitz **Dbo**.|  
 |**sid**|**varbinary(85)**|Sicherheits-ID (SID) des Prinzipals.  NULL für SYS und INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Falls 1, stellt diese Zeile einen Eintrag für eine der festen Datenbankrollen dar: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader oder db_denydatawriter.|  
-|**authentication_type**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Authentifizierungstyp an. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0 : Keine Authentifizierung<br />1 : Instanzauthentifizierung<br />2 : Datenbankauthentifizierung<br />3 : Windows-Authentifizierung|  
+|**authentication_type**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Authentifizierungstyp an. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 0: Keine Authentifizierung<br />1: Instanzauthentifizierung<br />2: Datenbankauthentifizierung<br />3: Windows-Authentifizierung|  
 |**authentication_type_desc**|**nvarchar(60)**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Beschreibung des Authentifizierungstyps. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> NICHTS: Keine Authentifizierung<br />INSTANZ: Instanzauthentifizierung<br />DATENBANK: Datenbankauthentifizierung<br />FENSTER: Windows-Authentifizierung|  
 |**default_language_name**|**sysname**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt die Standardsprache für diesen Prinzipal an.|  
 |**default_language_lcid**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt die Standard-LCID für diesen Prinzipal an.|  

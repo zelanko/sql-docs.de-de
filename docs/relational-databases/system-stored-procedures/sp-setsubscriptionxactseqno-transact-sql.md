@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021083"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn der Verteilungs-Agent von mehreren Veröffentlichungen gemeinsam verwendet wird, müssen Sie angeben, dass einen Wert, der alle für *Veröffentlichung*.  
   
-`[ @xact_seqno = ] xact_seqno` Ist die LSN der nächsten Transaktion auf dem Verteiler, auf dem Abonnenten angewendet werden. *Xact_seqno* ist **varbinary(16)**, hat keinen Standardwert.  
+`[ @xact_seqno = ] xact_seqno` Ist die LSN der nächsten Transaktion auf dem Verteiler, auf dem Abonnenten angewendet werden. *Xact_seqno* ist **varbinary(16)** , hat keinen Standardwert.  
   
 ## <a name="result-set"></a>Resultset  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|Die ursprüngliche LSN der nächsten Transaktion, die auf dem Abonnenten angewendet werden soll.|  
+|**URSPRÜNGLICHE XACT_SEQNO**|**varbinary(16)**|Die ursprüngliche LSN der nächsten Transaktion, die auf dem Abonnenten angewendet werden soll.|  
 |**AKTUALISIERTE XACT_SEQNO**|**varbinary(16)**|Die aktualisierte LSN der nächsten Transaktion, die auf dem Abonnenten angewendet werden soll.|  
 |**STREAM-ANZAHL FÜR ABONNEMENT**|**int**|Die Anzahl der bei der letzten Synchronisierung verwendeten Abonnementdatenströme.|  
   

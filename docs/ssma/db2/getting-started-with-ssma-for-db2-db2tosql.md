@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989641"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Erste Schritte mit SSMA für DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für DB2 können Sie schnell, konvertieren Sie DB2-Datenbankschemas, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schemas, Hochladen der resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Migrieren von Daten aus DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,7 +53,7 @@ DB2-Metadaten-Explorer zeigt Informationen zu DB2-Schemas. Mithilfe von DB2-Meta
   
 -   Wählen Sie die Tabellen für die Datenmigration aus, und klicken Sie dann die Daten aus diesen Tabellen zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [DB2-Datenbanken zu SQL Server Migration &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
-#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
+#### <a name="sql-server-metadata-explorer"></a>SQL Server-Metadaten-Explorer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer zeigt Informationen zu einer Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie die Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA Ruft Metadaten zu dieser Instanz ab und speichert sie in der Projektdatei.  
   
 Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer, wählen die konvertierte DB2-Datenbankobjekte aus, und klicken Sie dann die Objekte zu synchronisieren, mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -89,7 +88,7 @@ Die folgende Tabelle zeigt die Migration der Symbolleistenbefehle:
 ### <a name="menus"></a>Menüs  
 Die folgende Tabelle zeigt die SSMA-Menüs.  
   
-|Menü "|Description|  
+|Menü|Beschreibung|  
 |----|-----------|  
 |**File**|Enthält Befehle zum Arbeiten mit Projekten, eine Verbindung mit DB2 und Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Bearbeiten**|Enthält Befehle zum Suchen von und Arbeiten mit Text in der Seiten, z. B. das Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] aus dem Bereich SQL-Details. Enthält auch die **Lesezeichen verwalten** Option, in dem Sie werden eine Liste der vorhandenen Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialogfelds verwenden, um Lesezeichen zu verwalten.|  

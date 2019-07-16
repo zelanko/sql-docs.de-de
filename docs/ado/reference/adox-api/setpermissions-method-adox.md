@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcc44037ac746621c044bca755fd9b957356dc38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965229"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions-Methode (ADOX)
 Gibt an, die Berechtigungen für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) oder [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) für ein Objekt.  

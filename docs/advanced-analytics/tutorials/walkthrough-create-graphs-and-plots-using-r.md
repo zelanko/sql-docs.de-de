@@ -7,20 +7,19 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 542e36e01565ab454cce8beae9a4fa65279d8fa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961786"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Erstellen von Graphen und Diagrammen mit SQL und R (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Teil der exemplarischen Vorgehensweise erfahren Sie, Verfahren zum Erstellen von Diagrammen und Karten, die mithilfe von R mit SQL Server-Daten. Sie erstellen ein einfaches Histogramm, und klicken Sie dann eine komplexere kartenzeichnung zu entwickeln.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Dieser Schritt setzt voraus, eine laufende R-Sitzung basierend auf den vorherigen Schritten in dieser exemplarischen Vorgehensweise. Er verwendet die Zeichenfolgen und Data Source Verbindungsobjekte in diesen Schritten erstellt haben. Die folgenden Tools und Pakete werden verwendet, um das Skript auszuführen.
 

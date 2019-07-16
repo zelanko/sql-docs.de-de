@@ -2,24 +2,23 @@
 title: Überwachen aktive Abfragen – Parallel Data Warehouse | Microsoft-Dokumentation
 description: Verwenden Sie die Verwaltungskonsole und Parallel Data Warehouse-Systemsichten, um aktive Abfragen in Analytics Platform System überwachen.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960493"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Überwachen aktiver Abfragen – Parallel Data Warehouse
 In diesem Artikel zeigt, wie Sie mit der Verwaltungskonsole und die SQL Server-PDW-Systemsichten zum Überwachen von aktiven Abfragen. Finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole](monitor-the-appliance-by-using-the-admin-console.md) und [Systemsichten](tsql-system-views.md) für Informationen zu diesen Tools.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 Unabhängig von der Methode, die zum Überwachen von aktiven Abfragen verwendet wird, muss die Anmeldung in in "Verwenden alle von der Verwaltungskonsole" beschriebenen Berechtigungen besitzen [Erteilen von Berechtigungen zum Verwenden der Verwaltungskonsole](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
 ## <a name="PermsAdminConsole"></a>Überwachen aktiver Abfragen  

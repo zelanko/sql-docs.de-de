@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019323"
 ---
 # <a name="c-to-sql-guid"></a>C in SQL: GUID
 Der Bezeichner für den GUID-ODBC-C-Datentyp ist:  
@@ -31,13 +30,13 @@ Der Bezeichner für den GUID-ODBC-C-Datentyp ist:
   
 |SQL-Typ-ID|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR|Spalte-Byte-Länge > = 36|–|  
+|SQL_CHAR|Spalte-Byte-Länge > = 36|n/v|  
 |SQL_VARCHAR|Spalte Byte Länge < 36|22001|  
 |SQL_LONGVARCHAR|Wert ist keine gültige GUID|22018|  
-|SQL_WCHAR|Spalte Zeichenlänge > = 36|–|  
+|SQL_WCHAR|Spalte Zeichenlänge > = 36|n/v|  
 |SQL_WVARCHAR|Spalte Zeichen Länge < 36|22001|  
 |SQL_WLONGVARCHAR|Wert ist keine gültige GUID|22018|  
-|SQL_GUID|Keine [a]|–|  
+|SQL_GUID|Keine [a]|n/v|  
   
  [a] alle Hexadezimalwerte sind gültig, als GUID.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8e83341a72e6864b6545a4ccbbc2262403f9b06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963494"
 ---
 # <a name="reset-method-rds"></a>Reset-Methode (RDS)
 Führt Sie die Sortierung und Filterung für eine clientseitige **Recordset** basierend auf den angegebenen Eigenschaften der sortieren und filtern.  
@@ -39,7 +38,7 @@ DataControl.Reset(value)
  Eine Objektvariable, steht ein [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt.  
   
  *value*  
- Optional. Ein **booleschen** Wert, der **"true"** (Standard), wenn Sie für das aktuelle "gefiltert" Rowset filtern möchten. **"False"** gibt an, dass Sie auf das ursprüngliche Rowset filtern, entfernen alle vorherigen Filteroptionen.  
+ Dies ist optional. Ein **booleschen** Wert, der **"true"** (Standard), wenn Sie für das aktuelle "gefiltert" Rowset filtern möchten. **"False"** gibt an, dass Sie auf das ursprüngliche Rowset filtern, entfernen alle vorherigen Filteroptionen.  
   
 ## <a name="remarks"></a>Hinweise  
  Die [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [Sortierreihenfolge](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), und [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)Eigenschaften bereitstellen, Sortier- und Filterfunktionen für den clientseitigen Cache. Die Funktion zum Sortieren sortiert die Datensätze durch Werte aus einer Spalte. Die Funktion zum Filtern wird eine Teilmenge der Datensätze auf Grundlage einer Suchkriterien angezeigt, während das vollständige [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wird im Cache beibehalten. Die **zurücksetzen** Methode führen Sie die Kriterien und Ersetzen Sie die aktuelle **Recordset** mit einen aktualisierbaren **Recordset**.  

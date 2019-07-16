@@ -2,19 +2,18 @@
 title: Master-Datenbank – Parallel Data Warehouse | Microsoft-Dokumentation
 description: Erfahren Sie, bis der master-Datenbank in Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960653"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master-Datenbank – Parallel Data Warehouse
 Der SQL Server-PDW-master-Datenbank speichert die Anmeldeinformationen der Appliance auf Serverebene sowie der Datenbankkatalog. Es ist eine SQL Server-master-Datenbank, die sich auf dem steuerknoten befindet. Daher wird eine ähnliche Funktionalität in SQL Server PDW als Master für SQL Server bereitstellt.  
@@ -42,7 +41,7 @@ Sie *nicht möglich:*
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Aufgabe|Description|  
+|Aufgabe|Beschreibung|  
 |--------|---------------|  
 |Erstellen Sie eine vollständige Sicherung der Master.|Beispiel:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Weitere Informationen finden Sie unter [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
 |Wiederherstellen der Masterdatenbank|Verwenden Sie zum Wiederherstellen des master-Datenbank die [Wiederherstellen der Master-Datenbank](restore-the-master-database.md) Seite im Konfigurations-Manager.|  

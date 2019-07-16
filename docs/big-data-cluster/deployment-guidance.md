@@ -5,17 +5,16 @@ description: Erfahren Sie, wie Sie SQL Server-2019 big Data-Clustern (Vorschau) 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0f2993d15cecd87879cabc50918d784a16750b30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958415"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
 
@@ -82,9 +81,9 @@ Big Data-Clusterbereitstellung, die Optionen in der JSON-Konfigurationsdateien d
 
 | Bereitstellungsprofil | Kubernetes-Umgebung |
 |---|---|
-| **aks-dev-test** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test** | Mehrere Computer (Kubeadm) |
-| **minikube-dev-test** | minikube |
+| **AKS-Dev-test** | Azure Kubernetes Service (AKS) |
+| **Kubeadm-Dev-test** | Mehrere Computer (Kubeadm) |
+| **minikube-dev-test** | Minikube |
 
 Sie können einen big Data-Cluster bereitstellen, mit **Mssqlctl Bdc erstellen**. Dies fordert Sie auf eine der Standardkonfigurationen und führt Sie durch die Bereitstellung.
 

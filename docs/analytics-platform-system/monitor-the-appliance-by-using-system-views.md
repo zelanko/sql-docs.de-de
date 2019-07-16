@@ -2,19 +2,18 @@
 title: Überwachen mit Systemsichten – Analytics Platform System | Microsoft-Dokumentation
 description: Dieser Artikel listet die Sichten, die Sie zum Überwachen der Analytics Platform System Appliance verwenden können.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 954b65a1882e47ff931800854bdd5f273d4c3392
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960525"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>Überwachen der Appliance mit Systemsichten – Analytics Platform System
 Dieser Artikel listet die Sichten, die Sie verwenden können, für die Überwachung von SQL Server PDW.  

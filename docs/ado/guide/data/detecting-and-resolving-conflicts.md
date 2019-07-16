@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88d3900417bfbdaec6d2408d503b1537b8dff2da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925563"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Erkennen und Lösen von Konflikten
 Wenn Sie das Recordset im unmittelbaren Modus arbeiten, ist viel weniger wahrscheinlich für Parallelitätsprobleme auftreten. Andererseits, wenn Ihre Anwendung Mode BatchUpdates verwendet, liegt möglicherweise eine gute chance, dass ein Benutzer ändert einen Datensatz, bevor von einem anderen Benutzer, die den gleichen Datensatz bearbeiten vorgenommenen Änderungen gespeichert werden. In diesem Fall sollten Sie Ihre Anwendung den Konflikt ordnungsgemäß zu verarbeiten. Es kann Ihr Wunsch sein, die letzte Person, die ein Update an den Server senden "gewinnt". Oder Sie können, damit der letzten Benutzer, um zu entscheiden, welche Updates Vorrang haben soll, stellen Sie ihm eine Wahl zwischen den beiden in Konflikt stehenden Werten.  

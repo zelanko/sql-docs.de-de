@@ -2,19 +2,18 @@
 title: Nachverfolgen von appliancewarnungen - Analytics Platform System | Microsoft-Dokumentation
 description: Nachverfolgen von appliancewarnungen in Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62f116b8e45512d5a6fc5ce50c0fbc76344103be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960026"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Nachverfolgen von appliancewarnungen in Analytics Platform System
 In diesem Thema wird erläutert, wie Sie mit der Verwaltungskonsole und Systemsichten zum Nachverfolgen von Warnungen in einer SQL Server-PDW-Appliance.  
@@ -27,7 +26,7 @@ SQL Server PDW protokolliert Warnungen in der [sys.dm_pdw_component_health_alert
 ### <a name="view-alerts-by-using-the-admin-console"></a>Anzeigen von Warnungen mithilfe der Verwaltungskonsole  
 Es gibt eine **Warnungen** Registerkarte für die PDW-Region und für den Fabric-Bereich des Geräts. Nach dem Failover auftritt, ist das failoverereignis in die Anzahl der Warnungen auf der Seite enthalten. Eine Seite, die für die PDW-Region und für den Fabric-Bereich des Geräts ist vorhanden. Jede Seite "Integrität" verfügt über eine Registerkarte. Weitere Informationen zu einer Warnung, klicken Sie auf die **Integrität** Seite die **Warnungen** Registerkarte, und klicken Sie dann auf eine Warnung.  
   
-![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![PDW-Verwaltungskonsole, Warnungen](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 Auf der **Warnungen** Seite:  
   

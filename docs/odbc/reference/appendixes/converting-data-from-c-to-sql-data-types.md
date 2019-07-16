@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019120"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Konvertieren von Daten von C- zu SQL-Datentypen
 Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber die Daten für alle Parameter gebunden **SQLBindParameter** von Speicherorten die Anwendung. Wenn eine Anwendung ruft **SQLSetPos**, der Treiber Ruft ab, die Daten für ein Update oder Hinzufügen von Spalten mit gebunden **SQLBindCol**. Für Data-at-Execution-Parameter, die Anwendung sendet die Parameterdaten mit **SQLPutData**. Wenn erforderlich, der Treiber die Daten aus den angegebenen Datentyp konvertiert die *ValueType* -Argument in **SQLBindParameter** in den Datentyp, der gemäß der *ParameterType*-Argument in **SQLBindParameter**, und klicken Sie dann die Daten an die Datenquelle sendet.  
@@ -64,7 +63,7 @@ Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber
   
 -   [C to SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C to SQL: Binary](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C to SQL: Binärdatei](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
 -   [C to SQL: Datum](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
@@ -72,7 +71,7 @@ Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber
   
 -   [C to SQL: Zeit](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C to SQL: Timestamp](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C to SQL: Zeitstempel](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
 -   [C to SQL: Jahr-Monat-Intervalle](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   

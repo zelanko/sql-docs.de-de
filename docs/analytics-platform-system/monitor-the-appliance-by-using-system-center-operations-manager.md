@@ -2,26 +2,25 @@
 title: Überwachen mit SCOM - Analytics Platform System | Microsoft-Dokumentation
 description: Verwenden Sie System Center Operations Manager (SCOM), um das Analytics Platform System (APS)-Gerät zu überwachen.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960540"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Überwachung mit System Center Operationsmanager – Analytics Platform System
 Verwenden Sie System Center Operations Manager (SCOM), um das Analytics Platform System (APS)-Gerät zu überwachen.
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Vorraussetzungen  
   
 1.  System Center Operationsmanager 2007 R2, 2012 oder 2012 SP1 muss installiert und ausgeführt werden.  
   
@@ -44,7 +43,7 @@ Klicken Sie nach dem Konfigurieren der SCOM-Management Packs, klicken Sie auf di
 ### <a name="alerts"></a>Benachrichtigungen  
 Warnungen sind, finden Sie auf die aktuelle Warnungen verwalten.  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Warnungen](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Appliances  
 Geräte sind, in dem Sie die aktuell ermittelte und überwachte SQL Server PDW-Geräte in Ihrer Umgebung finden. Wenn ein Gerät sich hier nicht angezeigt, und Sie die ODBC-Verbindung für sie erstellt haben, klicken Sie dann möglicherweise ein Problem mit Ihrem Konto von PDWWatcher. Wenn sie als "nicht überwacht" angezeigt, liegt möglicherweise ein Problem mit Ihrem Konto PDWMonitor. Seien Sie geduldig, da in SCOM werden keine Änderungen in Echtzeit vornehmen, aber überprüft in regelmäßigen Abständen auf neue Geräte überwachen und sendet in regelmäßigen Abständen Abfragen an die Geräte für die Überwachung.  

@@ -5,17 +5,16 @@ description: Der Referenzartikel für die Mssqlctl Hdfs-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957917"
 ---
 # <a name="mssqlctl-hdfs"></a>Mssqlctl hdfs
 
@@ -27,15 +26,15 @@ Der folgende Artikel bietet Referenz für die **Hdfs** Befehle in der **Mssqlctl
 |     |     |
 | --- | --- |
 [Mssqlctl Hdfs-shell](#mssqlctl-hdfs-shell) | Die HDFS-Shell ist eine einfache interaktive Befehlsshell für HDFS-Dateisystem.
-[mssqlctl hdfs ls](#mssqlctl-hdfs-ls) | Listet den Status der angegebenen Datei bzw. des Verzeichnisses.
+[Mssqlctl Hdfs ls](#mssqlctl-hdfs-ls) | Listet den Status der angegebenen Datei bzw. des Verzeichnisses.
 [Mssqlctl Hdfs vorhanden ist.](#mssqlctl-hdfs-exists) | Bestimmt, ob eine Datei oder ein Verzeichnis vorhanden ist.  Gibt True, wenn vorhanden ist und "false" andernfalls.
-[mssqlctl hdfs mkdir](#mssqlctl-hdfs-mkdir) | Erstellen Sie ein Verzeichnis unter dem angegebenen Pfad.
-[mssqlctl hdfs mv](#mssqlctl-hdfs-mv) | Verschieben Sie die angegebene Datei oder Pfad zu einem angegebenen Speicherort.
+[Mssqlctl Hdfs mkdir](#mssqlctl-hdfs-mkdir) | Erstellen Sie ein Verzeichnis unter dem angegebenen Pfad.
+[Mssqlctl Hdfs mv](#mssqlctl-hdfs-mv) | Verschieben Sie die angegebene Datei oder Pfad zu einem angegebenen Speicherort.
 [Mssqlctl Hdfs zu erstellen.](#mssqlctl-hdfs-create) | Erstellen Sie die Textdatei, an der angegebenen Position.  Einfache Textinhalt kann über Data-Parameter hinzugefügt werden.
 [Mssqlctl Hdfs lesen](#mssqlctl-hdfs-read) | Lesen von Inhalt einer Datei.  Offset und Länge in Bytes sind optionale Parameter.
-[mssqlctl hdfs rm](#mssqlctl-hdfs-rm) | Entfernen Sie eine Datei oder ein Verzeichnis an.
+[Hdfs-Rm mssqlctl](#mssqlctl-hdfs-rm) | Entfernen Sie eine Datei oder ein Verzeichnis an.
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | Eine Datei oder ein Verzeichnis rekursiv zu entfernen.
-[mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | Ändern Sie die Berechtigung für die angegebene Datei oder das Verzeichnis an.
+[Mssqlctl Hdfs chmod](#mssqlctl-hdfs-chmod) | Ändern Sie die Berechtigung für die angegebene Datei oder das Verzeichnis an.
 [Mssqlctl Hdfs chown](#mssqlctl-hdfs-chown) | Ändern Sie den Besitzer oder die Gruppe der angegebenen Datei.
 ## <a name="mssqlctl-hdfs-shell"></a>Mssqlctl Hdfs-shell
 Die HDFS-Shell ist eine einfache interaktive Befehlsshell für HDFS-Dateisystem.
@@ -108,7 +107,7 @@ Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
 JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
 #### `--verbose`
 Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
-## <a name="mssqlctl-hdfs-mkdir"></a>mssqlctl hdfs mkdir
+## <a name="mssqlctl-hdfs-mkdir"></a>Mssqlctl Hdfs mkdir
 Erstellen Sie ein Verzeichnis unter dem angegebenen Pfad.
 ```bash
 mssqlctl hdfs mkdir --path -p 
@@ -217,7 +216,7 @@ Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
 JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
 #### `--verbose`
 Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
-## <a name="mssqlctl-hdfs-rm"></a>mssqlctl hdfs rm
+## <a name="mssqlctl-hdfs-rm"></a>Hdfs-Rm mssqlctl
 Entfernen Sie eine Datei oder ein Verzeichnis an.
 ```bash
 mssqlctl hdfs rm --path -p 
@@ -242,7 +241,7 @@ Ausgabeformat.  Zulässige Werte: Json, Jsonc, Table, Tsv.  Standardwert: Json.
 JMESPath-Abfragezeichenfolge. Finden Sie unter [ http://jmespath.org/ ](http://jmespath.org/]) für Weitere Informationen und Beispiele.
 #### `--verbose`
 Erhöht die protokollierungsausführlichkeit. Verwenden Sie--Debug, wenn Sie vollständige Debugprotokolle wünschen.
-## <a name="mssqlctl-hdfs-rmr"></a>mssqlctl hdfs rmr
+## <a name="mssqlctl-hdfs-rmr"></a>Mssqlctl Hdfs rmr
 Eine Datei oder ein Verzeichnis rekursiv zu entfernen.
 ```bash
 mssqlctl hdfs rmr --path -p 

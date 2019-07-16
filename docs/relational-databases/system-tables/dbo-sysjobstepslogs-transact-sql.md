@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 537f40f96b70478833105d84960830469703565b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fec1b43f3e129a752e79024f3800d6f4fb3fb60a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984929"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält das Auftragsschrittprotokoll für alle Auftragsschritte des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die konfiguriert werden, um die Ausgabe der Auftragsschritte in eine Tabelle zu schreiben. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|ID des Auftragsschrittprotokolls.|  
 |**log**|**nvarchar(max)**|Inhalt des Auftragsschrittprotokolls.|  

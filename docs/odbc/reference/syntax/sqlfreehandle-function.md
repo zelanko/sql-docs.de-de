@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0ddaae66e60f77156b2d7c7e975875bb78d56cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d853d843e7b2cf168516fa4007883f280029e53b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006231"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  **SQLFreeHandle** gibt ein bestimmtes Umgebung, Verbindung, Anweisung oder Deskriptor Handle zugeordneten Ressourcen frei.  
@@ -75,7 +74,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLFreeHandle** gibt SQL_ERROR zurück, die einen zugeordneten SQLSTATE-Wert aus der Struktur diagnostische Daten für das Handle abgerufen werden können, die **SQLFreeHandle** hat versucht, eine kostenlose konnte aber nicht. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLFreeHandle** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Es wurde der Treiber kann kein Arbeitsspeicher belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  

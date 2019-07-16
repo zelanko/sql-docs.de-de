@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946285"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType-Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "54255125"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Beachten Sie, dass die `instance of` -Operator, der `Occurrence indicator`, gibt die Kardinalität, die Anzahl der Elemente in der resultierenden Sequenz. Wenn dieser Operator nicht angegeben wird, wird eine Kardinalität von 1 verwendet. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nur das Fragezeichen (**?)**  häufigkeitsindikator unterstützt. Die **?** -häufigkeitsindikator zeigt an, dass `Expression` kann NULL oder ein Element(e) zurückgeben. Wenn die **?** -häufigkeitsindikator angegeben ist, `instance of` true zurück, wenn die `Expression` Typ entspricht dem angegebenen `SequenceType`, unabhängig davon, ob `Expression` gibt ein Singleton oder eine leere Sequenz zurück.  
+ Beachten Sie, dass die `instance of` -Operator, der `Occurrence indicator`, gibt die Kardinalität, die Anzahl der Elemente in der resultierenden Sequenz. Wenn dieser Operator nicht angegeben wird, wird eine Kardinalität von 1 verwendet. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], nur das Fragezeichen ( **?)**  häufigkeitsindikator unterstützt. Die **?** -häufigkeitsindikator zeigt an, dass `Expression` kann NULL oder ein Element(e) zurückgeben. Wenn die **?** -häufigkeitsindikator angegeben ist, `instance of` true zurück, wenn die `Expression` Typ entspricht dem angegebenen `SequenceType`, unabhängig davon, ob `Expression` gibt ein Singleton oder eine leere Sequenz zurück.  
   
  Wenn die **?** -häufigkeitsindikator nicht angegeben ist, `sequence of` gibt "true" nur, wenn die `Expression` Übereinstimmungen geben die `Type` angegebenen und `Expression` ein Singleton zurückgibt.  
   
- **Beachten Sie** das Pluszeichen (**+**) und das Sternchen (**&#42;**) werden in nicht häufigkeitsindikatoren unterstützt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Beachten Sie** das Pluszeichen ( **+** ) und das Sternchen ( **&#42;** ) werden in nicht häufigkeitsindikatoren unterstützt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Die folgenden Beispiele veranschaulichen die Verwendung der**Instanz** -Operators in XQuery.  
   
@@ -164,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- Die folgende Abfrage gibt False zurück, da der in dem `instance of`-Ausdruck angegebene Sequenztyp nicht das höchste übergeordnete Element des aktuellen Typs des angegebenen Ausdrucks ist. Das heißt, der Wert von <`TestElement`> ist ein ganzzahliger Typ. das höchste übergeordnete Element ist xs:decimal. Es ist jedoch nicht als der zweite Operand des `instance of`-Operators angegeben.  
+ Die folgende Abfrage gibt False zurück, da der in dem `instance of`-Ausdruck angegebene Sequenztyp nicht das höchste übergeordnete Element des aktuellen Typs des angegebenen Ausdrucks ist. D. h., der Wert von der <`TestElement`> ist ein ganzzahliger Typ. das höchste übergeordnete Element ist xs:decimal. Es ist jedoch nicht als der zweite Operand des `instance of`-Operators angegeben.  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -191,7 +190,7 @@ go
 ### <a name="example-d"></a>Beispiel D  
  In diesem Beispiel Sie zuerst eine XML-schemaauflistung erstellen und verwenden, um geben eine **Xml** Variable. Das typisierte **Xml** Variable wird dann abgefragt, um zu veranschaulichen die `instance of` Funktionalität.  
   
- Die folgende XML-Schemaauflistung definiert den einfachen Typ myType sowie das Element <`root`> vom gleichen Typ:  
+ Die folgende XML-schemaauflistung definiert einen einfachen Typ MyType und ein Element, <`root`>, vom gleichen Typ:  
   
 ```  
 drop xml schema collection SC  
@@ -239,7 +238,7 @@ go
   
 -   Erstellt eine typisierte **Xml** -Variable und weist dieser eine XML-Beispielinstanz zuzuweisen.  
   
--   Gibt eine Abfrage für die Variable an. Der Abfrageausdruck ruft den ersten Wert für die Bestell-ID vom OrderList-Attribut des Typs IDRERS für den ersten <`Customer`> ab. Der abgerufene Wert ist vom Typ IDREF. Folglich gibt `instance of` True zurück.  
+-   Gibt eine Abfrage für die Variable an. Der Abfrageausdruck Ruft den ersten Auftrags-ID-Wert aus dem OrderList idrers für Typ-Attribut des ersten <`Customer`>. Der abgerufene Wert ist vom Typ IDREF. Folglich gibt `instance of` True zurück.  
   
 ```  
 create xml schema collection SC as  
@@ -315,7 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Wenn Sie eine Form der verwenden die **element()** -Sequenztyp, der angibt, wie z. B. einen Typnamen `element(ElementName, TypeName)`, der Typ muss mit einem Fragezeichen (?) qualifiziert werden. `element(Title, xs:string?)` gibt beispielsweise an, dass für das Element NULL-Werte zulässig sind. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt keine Erkennung zur Laufzeit von der **xsi: nil** Eigenschaft mithilfe von `instance of`.  
   
--   Wenn der Wert in `Expression` aus einem als UNION typisierten Element oder Attribut stammt, identifiziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nur den Grundtyp, nicht aber den Typ, aus dem der Typ des Werts abgeleitet wurde. Wenn <`e1`> beispielsweise mit dem statischen Typ (xs:integer | xs:string) definiert wurde, gibt Folgendes den Wert False zurück.  
+-   Wenn der Wert in `Expression` aus einem als UNION typisierten Element oder Attribut stammt, identifiziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nur den Grundtyp, nicht aber den Typ, aus dem der Typ des Werts abgeleitet wurde. Z. B. wenn <`e1`> wird definiert, um einen statischen Typ (xs: Integer | xs: String), die folgenden gibt "false" zurück.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  

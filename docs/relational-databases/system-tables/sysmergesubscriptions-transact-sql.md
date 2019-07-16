@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: baea56d983ac1c2fff9016d1a385c8b4d918fb7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029771"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jeden bekannten Abonnenten und stellt eine lokale Tabelle auf dem Verleger dar. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |subscriber_server|**sysname**|Die ID des Servers. Diese wird verwendet, um das Feld srvid dem serverspezifischen Wert zuzuordnen, wenn eine Kopie der Abonnementdatenbank auf einen anderen Server migriert wird.|  
 |db_name|**sysname**|Der Name der abonnierenden Datenbank.|  

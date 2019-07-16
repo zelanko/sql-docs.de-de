@@ -10,18 +10,17 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959467"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Eine Verbindung herzustellen und Abfragen mit PostgreSQL [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] Postgres herstellen, und klicken Sie dann mithilfe von SQL-Anweisungen zum Erstellen der Datenbank *"tutorialdb"* und diese abzufragen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], die PostgreSQL-Erweiterung für [!INCLUDE[Name-sos](../includes/name-sos-short.md), und den Zugriff auf einen PostgreSQL-Server.
 
@@ -44,7 +43,7 @@ Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includ
 
    ![Neuen Bildschirm "Flowverbindung"](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | Einstellung       | Beispielwert | Description |
+   | Einstellung       | Beispielwert | Beschreibung |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Servername** | localhost | Der vollqualifizierte Servername |
    | **Benutzername** | postgres | Der Benutzername, die für die Anmeldung verwendet werden sollen. |
@@ -52,7 +51,7 @@ Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includ
    | **Kennwort** | *Check* | Aktivieren Sie dieses Kontrollkästchen, wenn Sie nicht jedes Mal das Kennwort eingeben, die Sie eine Verbindung herstellen möchten. |
    | **Datenbankname** | \<Default\> | Füllen Sie dieses aus, wenn Sie die Verbindung mit eine Datenbank angeben möchten. |
    | **Servergruppe** | \<Default\> | Dieser Option können Sie diese Verbindung mit einer bestimmten Servergruppe zuweisen, die Sie erstellen. | 
-   | **Name (optional)** | *Leer lassen* | Dieser Option können Sie einen Anzeigenamen für den Server angeben. | 
+   | **Ein (optional)** | *Leer lassen* | Dieser Option können Sie einen Anzeigenamen für den Server angeben. | 
 
 5. Wählen Sie **Verbinden**. 
 

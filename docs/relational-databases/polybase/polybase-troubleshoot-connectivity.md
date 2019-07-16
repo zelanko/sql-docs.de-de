@@ -2,22 +2,21 @@
 title: 'Problembehandlung: PolyBase-Kerberos-Konnektivität | Microsoft-Dokumentation'
 author: alazad-msft
 ms.author: alazad
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 ms.technology: polybase
-ms.custom: ''
 ms.devlang: ''
 ms.topic: conceptual
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 58725a5f0ebf3038bd95be410ae6b1db8de01845
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581218"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860555"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Problembehandlung: PolyBase-Kerberos-Konnektivität
 
@@ -106,7 +105,7 @@ Das Tool wird unabhängig von SQL Server ausgeführt. Dies bedeutet, dass es wed
 | *Namenknotenport* | Der Port des Namensknotens. Verweist auf das „LOCATION“-Argument Ihrer T-SQL „CREATE EXTERNAL DATA SOURCE“. Zum Beispiel „8020“. |
 | *Dienstprinzipal* | Der Administratordienstprinzipal Ihres KDC. Entspricht dem „IDENTITY“-Argument in Ihrer T-SQL-Klausel „`CREATE DATABASE SCOPED CREDENTIAL`“.|
 | *Dienstkennwort* | Statt Ihr Kennwort in der Konsole einzugeben, speichern Sie dieses in einer Datei und geben Sie hier den Dateipfad ein. Die Inhalte Ihrer Datei sollten dem „SECRET“-Argument in Ihrer T-SQL-Klausel „`CREATE DATABASE SCOPED CREDENTIAL`“ entsprechen. |
-| *Remoter HDFS-Dateipfad (optional)* | Der Pfad einer vorhandenen Datei, auf die zugegriffen werden soll. Wenn nicht angegeben, wird der Stamm „/“ verwendet. |
+| *Remoter HDFS-Dateipfad (Hadoop Distributed File System) (optional)* | Der Pfad einer vorhandenen Datei, auf die zugegriffen werden soll. Wenn nicht angegeben, wird der Stamm „/“ verwendet. |
 
 ## <a name="example"></a>Beispiel
 

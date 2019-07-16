@@ -5,17 +5,16 @@ description: Informationen Sie zum Installieren von Tools, die mit SQL Server-20
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1862c6c16aaecca7888f00cb6ca5deeb7138ea03
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a23d2859221242e6978790a838a135ccf1375283
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958586"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installieren von SQL Server-2019 big datatools
 
@@ -32,7 +31,7 @@ Die folgende Tabelle enthält allgemeine big Data-Cluster-Tools und deren Instal
 | Tool | Erforderlich | Beschreibung | Installation |
 |---|---|---|---|
 | **mssqlctl** | Ja | Befehlszeilenprogramm zum Installieren und Verwalten von big Data-Cluster. | [Installieren](deploy-install-mssqlctl.md) |
-| **kubectl**<sup>1</sup> | Ja | Befehlszeilentool für die Überwachung der zugrunde liegenden Clusters Kuberentes ([Informationen](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **"kubectl"** <sup>1</sup> | Ja | Befehlszeilentool für die Überwachung der zugrunde liegenden Clusters Kuberentes ([Informationen](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
 | **Azure Data Studio (Insider)** | Ja | Plattformübergreifende grafisches Tool zum Abfragen von SQL Server ([Informationen](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installieren](https://aka.ms/azdata-insiders) |
 | **SQL Server-2019-Erweiterung** | Ja | Erweiterung für Azure Data Studio, das die Verbindung mit dem big Data-Cluster unterstützt. Stellt auch einen Assistenten Datenvirtualisierung bereit. | [Installieren](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure-Befehlszeilenschnittstelle**<sup>2</sup> | Für AKS | Moderne Befehlszeilenschnittstelle zum Verwalten von Azure-Dienste. Mit AKS big Data-Cluster-Bereitstellungen verwendet ([Informationen](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installieren](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |

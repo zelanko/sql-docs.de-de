@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936659"
 ---
 # <a name="type-property-example-field-vc"></a>Type-Eigenschaft – Beispiel (Field) (VC++)
 In diesem Beispiel wird veranschaulicht, die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Anzeigen des Namens der Konstante, die entspricht dem Wert der Eigenschaft der **Typ** -Eigenschaft aller der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Mitarbeiter*** Tabelle. Die Feldtyp-Funktion ist zum Ausführen dieser Prozedur erforderlich.  
@@ -155,21 +154,21 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Felder in der Employee-Tabelle:**  
- **Name: emp_id**  
- **Type: adChar**  
+ **Name: Emp_id**  
+ **Typ: AdChar**  
  **Name: Fname**  
  **Type: adVarChar**  
  **Name: Minit**  
- **Type: adChar**  
+ **Typ: AdChar**  
  **Name: Lname**  
  **Type: adVarChar**  
  **Name: dem job_id-Wert**  
  **Type: adSmallInt**  
- **Name: job_lvl**  
+ **Name: Job_lvl**  
  **Type: adUnsignedTinyInt**  
- **Name: pub_id**  
- **Type: adChar**  
- **Name: hire_date**  
+ **Name: Pub_id**  
+ **Typ: AdChar**  
+ **Name: Hire_date**  
  **Type: adDBTimeStamp**   
 ## <a name="see-also"></a>Siehe auch  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   

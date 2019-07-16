@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529c503bc10d3ed0b69a4c280c7fa63e72893f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018963"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Übereinstimmung mit Standards**  
@@ -43,7 +42,7 @@ BOOL SQLManageDataSources(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *hwnd*  
+ *HWND*  
  [Eingabe] Handle des übergeordneten Fensters.  
   
 ## <a name="returns"></a>Rückgabewert  
@@ -52,7 +51,7 @@ BOOL SQLManageDataSources(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLManageDataSources** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
 |ODBC_ERROR_REQUEST_FAILED|*Anforderung* Fehler|Der Aufruf von **ConfigDSN** ist fehlgeschlagen.|  
@@ -94,7 +93,7 @@ BOOL SQLManageDataSources(
   
  System-DSN wird in der HKEY_LOCAL_MACHINE-Eintrag in die Systeminformationen und nicht in der HKEY_CURRENT_USER-Eintrag registriert. Es ist nicht an ein Benutzer meldet sich mit seinem bestimmten Benutzernamen und Kennwort kann jedoch verwendet werden von jedem Benutzer des Computers oder von einem Dienst für automatische systemweiten gebunden. System-DSN ist, jedoch an einem Computer gebunden. Die Möglichkeit der Verwendung von remote-DSNs zwischen Computern wird nicht unterstützt. System-DSNs werden in den Systeminformationen wie folgt registriert:  
   
- HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
+ HKEY_LOCAL_MACHINE SOFTWARE ODBC Odbc.ini  
   
 ## <a name="file-dsns"></a>Datei-DSNs  
  Eine Datenquelle einen Datenquellennamen ein, keinen ist eine Datenquelle für den Computer, und nicht auf einen Benutzer oder Computer registriert ist. Die Verbindungsinformationen für diese Datenquelle ist in einer DSN-Datei enthalten, die auf einem beliebigen Computer kopiert werden können. Eine Dateidatenquelle möglich freigegeben ist, befindet sich in diesem Fall die DSN-Datei in einem Netzwerk, und gleichzeitig verwendet werden kann von mehreren Benutzern im Netzwerk als der Benutzer den entsprechenden Treiber installiert wurde. Eine Datenquelle kann auch Dateidatenquelle, werden in diesem Fall können sie nur auf einem einzelnen Computer verwendet werden.  

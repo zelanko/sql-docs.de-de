@@ -7,13 +7,12 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4af5fff7581ae2ae8f74e09603b75bca620ca775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962636"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Gewusst wie: Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modelle in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,10 +23,10 @@ Mithilfe der internen Verarbeitung-Infrastruktur (Echtzeit- oder nativen Bewertu
 
 Die folgende Tabelle enthält die bewertungs-Frameworks für Vorhersagen und Vorhersagen. 
 
-| Methodik           | Schnittstelle         | Anforderungen an | Mindestgeschwindigkeiten für die Verarbeitung |
+| Methodik           | Interface         | Anforderungen an | Mindestgeschwindigkeiten für die Verarbeitung |
 |-----------------------|-------------------|----------------------|----------------------|
-| Erweiterbarkeitsframework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[Rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Keine. Modelle können auf eine beliebige R oder Python-Funktion basieren | Hunderte von Millisekunden. <br/>Laden eine Laufzeitumgebung hat eine feste Kosten, dreihundert auf sechs Millisekunden, Durchschnitt, bevor neuen Daten bewertet werden. |
-| [Real-Time scoring CLR-Erweiterung](../real-time-scoring.md) | [Sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Um Dutzende Millisekunden verlängert, durchschnittlich. |
+| Erweiterbarkeitsframework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[Rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Keine Modelle können auf eine beliebige R oder Python-Funktion basieren | Hunderte von Millisekunden. <br/>Laden eine Laufzeitumgebung hat eine feste Kosten, dreihundert auf sechs Millisekunden, Durchschnitt, bevor neuen Daten bewertet werden. |
+| [Real-Time scoring CLR-Erweiterung](../real-time-scoring.md) | [Sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR, MicrosoftML <br/>Python: Revoscalepy, microsoftml | Um Dutzende Millisekunden verlängert, durchschnittlich. |
 | [Native Bewertung C++-Erweiterung](../sql-native-scoring.md) | [VORHERSAGEN für T-SQL-Funktion](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR <br/>Python: Revoscalepy | Weniger als 20 Millisekunden im Durchschnitt. | 
 
 Hohe Geschwindigkeit und nicht die Substanz der Ausgabe ist die unterscheidenden-Funktion. Wenn die gleichen Funktionen und die Eingaben, sollte der erzielten Ausgabe nicht basierend auf den Ansatz abhängt.
@@ -36,7 +35,7 @@ Das Modell muss mit der eine unterstützte Funktion erstellt und dann serialisie
 
 Die Bedeutung der CLR und C++-Erweiterungen ist die Nähe zu den Datenbank-Engine. Die systemeigene Sprache von der Datenbank-Engine ist C++, das bedeutet, Erweiterungen geschrieben in C++ mit weniger Abhängigkeiten führen dass. Im Gegensatz dazu Sie .NET Core CLR-Erweiterungen abhängig. 
 
-Wie zu erwarten, wird die Unterstützung für durch diese Umgebungen zur Laufzeit beeinträchtigt. Führen Sie systemeigenen Datenbank-Engine-Erweiterungen an jeder Stelle, die relationale Datenbank unterstützt wird: Windows, Linux, Azure. CLR-Erweiterungen mit der .NET Core-Anforderung ist derzeit nur Windows.
+Wie zu erwarten, wird die Unterstützung für durch diese Umgebungen zur Laufzeit beeinträchtigt. Führen Sie systemeigenen Datenbank-Engine-Erweiterungen an jeder Stelle, die relationale Datenbank unterstützt wird: Windows, Linux-Azure. CLR-Erweiterungen mit der .NET Core-Anforderung ist derzeit nur Windows.
 
 ## <a name="scoring-overview"></a>Übersicht über die Bewertung
 

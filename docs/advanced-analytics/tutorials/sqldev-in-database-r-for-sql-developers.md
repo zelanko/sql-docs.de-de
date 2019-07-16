@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 8bf0485b63e341dbeff24a1974df840b0a28dfef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961890"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: R-Data-Analysen für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +46,7 @@ Der Zweck dieses mehrteilige Tutorial bietet eine Einführung in ein typischer W
 
 Nachdem das Modell in der Datenbank gespeichert wurde, rufen Sie das Modell für Vorhersagen [!INCLUDE[tsql](../../includes/tsql-md.md)] mit gespeicherten Prozeduren.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Alle Vorgänge erfolgen mit [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozeduren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

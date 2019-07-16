@@ -2,19 +2,18 @@
 title: Legen Sie Active Directory-Kennwort - Analytics Platform System | Microsoft-Dokumentation
 description: Legen Sie Active Directory-Knoten-Administrator-Anmeldekennwort, in den Wiederherstellungsmodus für Verzeichnisdienste in Analytics Platform System (APS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3df6203a4d98bace5d23a92e70a596a34dedb60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e0b197a044f2f008b886d5f2ff39b603821fd29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960066"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Festlegen des Administratorkennworts für die Anmeldung bei AD-Knoten im Verzeichnisdienste-Wiederherstellungsmodus (DSRM) - Analytics Platform System
 Directory Verzeichnisdienst-Wiederherstellungsmodus (DSRM) ist eine Startmodus zum Reparieren oder Wiederherstellen von Active Directory Domain Services (AD DS). Es wird verwendet, mit der AD-applianceknoten anmelden können, nach einem Fehler bei AD DS oder AD DS muss wiederhergestellt werden. Das Kennwort für den Verzeichnisdienst-Wiederherstellungsmodus wurde während des Setups Appliance am Standort Hardware-Hersteller initialisiert und sollte durch den Administrator der Anwendung geändert werden. Analytics Platform System verfügt über zwei AD DS (Domänencontroller);  **_Appliance_domain_-AD01** und  **_Appliance_domain_-AD02**. Ändern Sie das DSRM-Kennwort mithilfe der folgenden Schritte für jeden Knoten Appliance AD.  

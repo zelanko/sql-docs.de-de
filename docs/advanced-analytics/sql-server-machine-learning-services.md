@@ -7,14 +7,13 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cbe617ea7732468732555bf6f0bba8ebaec2c17a
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962306"
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server-Machine Learning-Dienste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +53,7 @@ Erfahren Sie anhand unserer Schnellstarts, Tutorials und Artikel, wie Sie die ex
 
 ## <a name="reference"></a>Referenz
 
-| Package | Sprache | Description |
+| Package | Sprache | Beschreibung |
 |:--------|:---------|:------------|
 | [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | R | Verteilte und Parallelverarbeitung für R-Aufgaben: Datentransformation, -exploration und -visualisierung, statistische Analysen und Predictive Analytics |
 | [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | Für R angepasste Funktionen, die auf den KI-Algorithmen von Microsoft basieren |

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925364"
 ---
 # <a name="event-parameters"></a>Ereignisparameter
 Jeder Ereignishandler verfügt über eine Status-Parameter, der steuert, den Ereignishandler. Für Ereignisse zum Abschluss wird auch dieser Parameter verwendet, um anzugeben, den Erfolg oder Misserfolg des Vorgangs, der das Ereignis generiert hat. Umfassendste Ereignisse haben auch einen Fehlerparameter, um Aufschluss über alle Fehler, die aufgetreten sind, und einen oder mehrere Objektparameter, die auf die ADO-Objekte, die zum Ausführen des Vorgangs zu verweisen. Z. B. die [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) Ereignis enthält die Objektparameter, für die **Befehl**, **Recordset**, und **Verbindung** Objekte mit dem Ereignis verknüpft ist. Im folgenden Microsoft® Visual Basic® Beispiel sehen Sie die pCommand pRecordset und pConnection-Objekten, die darstellen der **Befehl**, **Recordset**, und **Verbindung** Objekte, mit denen, die **Execute** Methode.  
@@ -44,7 +43,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Status-Parameter  
  Wenn die Ereignishandler-Routine aufgerufen wird, die *Status* Parameter auf einen der folgenden Werte festgelegt ist.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**adStatusOK**|Übergeben sowohl die wird als auch die Ereignisse zum Abschluss. Dieser Wert bedeutet, dass den Vorgang, der das Ereignis wurde erfolgreich abgeschlossen verursacht hat.|  
 |**adStatusErrorsOccurred**|Um nur Ereignisse zum Abschluss übergeben. Dieser Wert bedeutet, dass der Vorgang, der das Ereignis ausgelöst wurde nicht erfolgreich war, oder ein Ereignis wird der Vorgang wurde abgebrochen. Überprüfen Sie die *Fehler* -Parameter für weitere Details.|  

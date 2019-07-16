@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 18fbf279a4d32121f552fda345d8024d1d408e31
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 1dd66b432ff489b5576b9ce7f69c1860cb9240d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958932"
 ---
 # <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
@@ -79,7 +78,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension author
 
 ### <a name="shell"></a>Shell
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure-Anmeldung|Ja|Ja|
 |Dashboard|Ja||
@@ -102,7 +101,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension author
 
 ### <a name="query-editor"></a>Abfrage-Editor
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Diagramm-Viewer|Ja||
 |Exportieren Sie Ergebnisse in CSV, JSON, XLSX|Ja||
@@ -119,7 +118,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension author
 
 ### <a name="operating-system-support"></a>Betriebssystemunterstützung
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Linux|Ja||
 |macOS|Ja||
@@ -127,7 +126,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension author
 
 ### <a name="data-engineering"></a>Datentechnik
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Erstellen externer Tabellen-Assistent|Vorschau||
 |HDFS-Integration|Vorschau||
@@ -135,7 +134,7 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension author
 
 ### <a name="database-administration"></a>Datenbankverwaltung
 
-|Funktion|Azure Data Studio|SSMS|
+|Feature|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Sicherung / Wiederherstellung|Ja|Ja|
 |Flatfile-Datei importieren|Vorschau|Ja|

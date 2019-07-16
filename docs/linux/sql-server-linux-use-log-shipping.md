@@ -3,17 +3,16 @@ title: Konfigurieren des Protokollversands für SQL Server unter Linux
 description: Dieses Lernprogramm zeigt ein einfaches Beispiel dafür, wie zum Replizieren von SQL Server-Instanz unter Linux in einer sekundären Instanz mithilfe des Protokollversands.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0bbe4e8076578afd3addb9521a60bc72b5be9a06
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032197"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit Protokollversand unter Linux
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cc89f54dd030604e5d5d842aabb68713e46fd4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924183"
 ---
 # <a name="shape-append-clause"></a>SHAPE APPEND-Klausel
 Die APPEND-Klausel in Shape-Befehl fügt eine oder mehrere Spalten zu einer **Recordset**. Diese Spalten sind in vielen Fällen Kapitelspalten, die auf ein untergeordnetes Element verweisen **Recordset**.  
@@ -31,7 +30,7 @@ Die APPEND-Klausel in Shape-Befehl fügt eine oder mehrere Spalten zu einer **Re
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Beschreibung  
  Die Teile des diese Klausel lauten wie folgt aus:  
   
  *parent-command*  

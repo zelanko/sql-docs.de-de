@@ -2,19 +2,18 @@
 title: Sicherung und-Wiederherstellung – Parallel Data Warehouse | Microsoft-Dokumentation
 description: Beschreibt, wie Sie Daten zum Sichern und Wiederherstellen für Parallel Data Warehouse (PDW). Sicherungs-und Wiederherstellungsvorgänge werden für die notfallwiederherstellung verwendet. Sicherung und Wiederherstellung können auch zum Kopieren einer Datenbank von einer Appliance in einer anderen Anwendung verwendet werden.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961401"
 ---
 # <a name="backup-and-restore"></a>Sichern und Wiederherstellen
 
@@ -130,7 +129,7 @@ Nach der Umverteilung enthält jeder Computeknoten weniger tatsächliche Daten u
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Backup- und Restore-Aufgabe|Description|  
+|Backup- und Restore-Aufgabe|Beschreibung|  
 |---------------------------|---------------|  
 |Bereiten Sie einen Server als Sicherungsserver.|[Erwerb und Konfiguration eines Sicherungsservers](acquire-and-configure-backup-server.md)|  
 |Sichern einer Datenbank.|[DATENBANK SICHERN](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  

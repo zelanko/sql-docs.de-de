@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 26c1220a2c8a2db89cd0b70e08df959270f5d839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967046"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -42,7 +41,7 @@ ms.locfileid: "66708087"
  [SetObjectOwner-Methode](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)

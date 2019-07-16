@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62518620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927026"
 ---
 # <a name="ado-programming-task-table"></a>ADO-Programmierung Task-Tabelle
 Die folgende Tabelle enthält Programmieraufgaben, die innerhalb der *ADO Programmer's Guide* und Verweise für jeden Vorgang. Diese Verweise können textbeschreibungen oder Codebeispiele, die in denen Sie Informationen zur ADO-Funktion finden können, die vom Task ausgeführten sein.

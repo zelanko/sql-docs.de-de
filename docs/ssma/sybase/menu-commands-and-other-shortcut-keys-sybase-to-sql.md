@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ad27017466429bba36b062a86ed4c39ff1293885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028884"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Menübefehle und andere Tastenkombinationen (SybaseToSQL)
 Den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen, die in verschiedenen Dialogfeldern von SSMA für Sybase-Anwendung verwendet.  
@@ -66,11 +65,11 @@ Menü "Ansicht" für den Zugriff auf wird die entsprechende Tastenkombination AL
 |Zeigen Sie Zielpart.|ALT + V, T|  
 |Zeigen Sie Fehler im Listenbereich an.|ALT + V + E oder STRG + E|  
 |Ausgabebereich einblenden.|ALT + V + O oder STRG + O|  
-|Untermenü der Access-Layouts.|ALT + V + L|  
-|Fügen Sie die aktuellen Layout hinzu.|ALT + V + L + A|  
+|Untermenü der Access-Layouts.|ALT + V, L|  
+|Fügen Sie die aktuellen Layout hinzu.|ALT + V, L + A|  
 |Wählen Sie die Standard-Layout.|ALT + V + L + D oder STRG + ALT + 1|  
 |Wählen Sie aus, ohne Layout des Explorers.|ALT + V + L + W oder STRG + ALT + 2|  
-|Zeigt das Dialogfeld Layouts verwalten.|ALT + V + L + M|  
+|Zeigt das Dialogfeld Layouts verwalten.|ALT + V, L + M|  
   
 ## <a name="tools-menu-commands"></a>Befehle im Menü Extras  
 Menü "Extras" für den Zugriff auf wird die entsprechende Tastenkombination ALT + T. Die folgende Tabelle beschreibt die Verknüpfungen verwendet werden, Menüelemente im Menü "Tools" den Zugriff auf Tastatur.  
@@ -147,8 +146,8 @@ Kontextmenü für das ausgewählte Objekt im Objekt-Explorer für den Zugriff au
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Wählen Sie den gesamten Text für den Endbenutzer-Lizenzvertrag.|CTRL + A|  
-|Kopieren Sie den gesamten Text für den Endbenutzer-Lizenzvertrag in die Zwischenablage.|CTRL + C|  
+|Wählen Sie den gesamten Text für den Endbenutzer-Lizenzvertrag.|STRG + A|  
+|Kopieren Sie den gesamten Text für den Endbenutzer-Lizenzvertrag in die Zwischenablage.|STRG + C|  
 |Endbenutzer-Lizenzvertrag zu drucken.|ALT + P|  
   
 ## <a name="advanced-search-dialog-box"></a>Erweiterte Meldungssuche (Dialogfeld)  
@@ -172,28 +171,28 @@ Kontextmenü für das ausgewählte Objekt im Objekt-Explorer für den Zugriff au
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
 |Öffnen Sie im Popupmenü.|UMSCHALT + F10|  
-|Ausschneiden des markierten Texts in die Zwischenablage.|CTRL + X|  
-|Kopieren Sie ausgewählten Text in die Zwischenablage.|CTRL + C|  
+|Ausschneiden des markierten Texts in die Zwischenablage.|STRG + X|  
+|Kopieren Sie ausgewählten Text in die Zwischenablage.|STRG + C|  
 |Fügen Sie den zuletzt hinzugefügten Text aus der Zwischenablage ein.|STRG + V|  
-|Markiert den gesamten Text.|CTRL + A|  
+|Markiert den gesamten Text.|STRG + A|  
   
 ## <a name="error-list-pane"></a>Fehler im Listenbereich  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Kopieren Sie die ausgewählten Elemente.|CTRL + C|  
-|Wählen Sie alle Elemente an.|CTRL + A|  
+|Kopieren Sie die ausgewählten Elemente.|STRG + C|  
+|Wählen Sie alle Elemente an.|STRG + A|  
 |Ein Element, das nach oben oder unten zu verschieben.|Nach oben oder unten-Tasten|  
   
 ## <a name="sql-tab-page"></a>SQL-Registerkarte  
   
 |ZU DIESEM ZWECK|DRÜCKEN SIE|  
 |--------------|---------|  
-|Konvertieren Sie Schema.|CTRL + R|  
-|Ausschneiden des markierten Texts in die Zwischenablage.|CTRL + X|  
-|Kopieren Sie ausgewählten Text in die Zwischenablage.|CTRL + C|  
+|Konvertieren Sie Schema.|STRG + R|  
+|Ausschneiden des markierten Texts in die Zwischenablage.|STRG + X|  
+|Kopieren Sie ausgewählten Text in die Zwischenablage.|STRG + C|  
 |Fügen Sie den zuletzt hinzugefügten Text aus der Zwischenablage ein.|STRG + V|  
-|Starten Sie die Schnellsuche|CTRL + F|  
+|Starten Sie die Schnellsuche|STRG + F|  
 |Starten Sie die QuickInfo.|STRG + UMSCHALT + LEERTASTE|  
 |Gehe zu Deklaration.|F12|  
   

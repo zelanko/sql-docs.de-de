@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63142312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961623"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Erweiterte Ereignisse für die Überwachung von PREDICT-Anweisungen
 
@@ -20,7 +19,7 @@ Dieser Artikel beschreibt die erweiterten Ereignisse, bereitgestellt in SQL Serv
 
 Echtzeitbewertung generiert Ergebnisse von einem Machine learning-Modell, das in SQL Server gespeichert wurde. Die PREDICT-Funktion erfordert keine externe Laufzeit wie R oder Python, nur ein Modell, das mit einem bestimmten binären Format erstellt wurde. Weitere Informationen finden Sie unter [in Echtzeit bewerten](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Allgemeine Informationen zu erweiterten Ereignissen (XEvents bezeichnet) und wie Sie Ereignisse in einer Sitzung zu überwachen finden Sie in diesen Artikeln:
 

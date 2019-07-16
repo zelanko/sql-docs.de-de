@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bdb60a6d174ab82df7529b6e26d8d5b2c031107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966840"
 ---
 # <a name="columns-collection-adox"></a>Columns-Collection (ADOX)
 Enthält alle [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekte von einer Tabelle, Index oder Schlüssel.  
   
 ## <a name="remarks"></a>Hinweise  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) -Methode für eine **Spalten** Auflistung für ADOX eindeutig ist. Folgende Aktionen sind möglich:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) -Methode für eine **Spalten** Auflistung für ADOX eindeutig ist. Sie haben folgende Möglichkeiten:  
   
 -   Fügen Sie eine neue Spalte in der Auflistung der **Append** Methode.  
   
- Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Folgende Aktionen sind möglich:  
+ Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Sie haben folgende Möglichkeiten:  
   
 -   Zugriff auf eine Spalte in der Auflistung mit den [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a52a8482f56bb81f6d4436d8196a39e9e277ea7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059224"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>Argumente  
  "*Filename*"  
- Gibt die erste Ablaufverfolgungsdatei an, die gelesen werden soll. *FileName* ist **nvarchar(256)**, hat keinen Standardwert.  
+ Gibt die erste Ablaufverfolgungsdatei an, die gelesen werden soll. *FileName* ist **nvarchar(256)** , hat keinen Standardwert.  
   
  *number_files*  
  Gibt die Anzahl der zu lesenden Rolloverdateien an. Diese Zahl umfasst auch die erste Datei im angegebenen *Filename*. *Number_files* ist ein **Int**.  
@@ -53,7 +52,7 @@ fn_trace_gettable ( 'filename' , number_files )
 ## <a name="remarks"></a>Hinweise  
  Wenn *Number_files* angegeben ist, als **Standard**, **Fn_trace_gettable** liest alle Rolloverdateien, bis das Ende der Ablaufverfolgung erreicht. **' fn_trace_gettable '** gibt eine Tabelle mit allen Spalten für die angegebene Ablaufverfolgung gültigen. Weitere Informationen finden Sie unter [Sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- Beachten Sie, dass die Fn_trace_gettable-Funktion keine Rolloverdateien lädt (Wenn diese Option angegeben wird, mithilfe der *Number_files* Argument), wenn der ursprüngliche Name der Ablaufverfolgungsdatei, die mit einem Unterstrich und einem numerischen Wert endet. (Dies gilt nicht für den Unterstrich und die Zahl, die beim Rollover automatisch angehängt werden.) Um das Problem zu umgehen, können Sie die Ablaufverfolgungsdateien umbenennen, um die Unterstriche im ursprünglichen Dateinamen zu entfernen. Wenn die ursprüngliche Datei heißt beispielsweise **Trace_Oct_5.trc** und die Rolloverdatei heißt **Trace_Oct_5_1.trc**, können Sie die Dateien umbenennen **TraceOct5.trc** und  **TraceOct5_1.trc**.  
+ Beachten Sie, dass die Fn_trace_gettable-Funktion keine Rolloverdateien lädt (Wenn diese Option angegeben wird, mithilfe der *Number_files* Argument), wenn der ursprüngliche Name der Ablaufverfolgungsdatei, die mit einem Unterstrich und einem numerischen Wert endet. (Dies gilt nicht für den Unterstrich und die Zahl, die beim Rollover automatisch angehängt werden.) Dieses Problem zu umgehen können Sie die Ablaufverfolgungsdateien, um die Unterstriche im ursprünglichen Dateinamen entfernen, umbenennen. Wenn die ursprüngliche Datei heißt beispielsweise **Trace_Oct_5.trc** und die Rolloverdatei heißt **Trace_Oct_5_1.trc**, können Sie die Dateien umbenennen **TraceOct5.trc** und  **TraceOct5_1.trc**.  
   
  Diese Funktion kann eine Ablaufverfolgung lesen, die noch auf der Instanz aktiv ist, auf der sie ausgeführt wird.  
   

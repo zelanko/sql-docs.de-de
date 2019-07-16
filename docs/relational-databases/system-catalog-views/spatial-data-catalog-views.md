@@ -12,23 +12,22 @@ dev_langs:
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f230620d20dc01c327b47717e03de6e40851896
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6558e944df0107eb13abb4658ebefe048af33da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018252"
 ---
 # <a name="spatial-data-catalog-views"></a>Katalogsichten für räumliche Daten
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In diesem Abschnitt werden die Katalogsichten beschrieben, die Informationen zu räumlichen Daten liefern.  
   
- [Sys. spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
+ [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  Stellt die Informationen zum Mosaikschema und zu den Parametern jedes räumlichen Indexes dar.  
   
- [Sys. spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
+ [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  Stellt die wichtigsten Indexinformationen der räumlichen Indizes dar.  
   
  [spatial_reference_systems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b69d1ae90224b94d5db5f9658942e1beed0b61d1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a80ff5308edee02d24d214a6520a090750600edc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950579"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +58,13 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|ID der Replikationsleistungsmetrik. Folgende Werte sind möglich.<br /><br /> **1expiration** -überwacht den bevorstehenden Ablauf von Abonnements für transaktionsveröffentlichungen.<br /><br /> **2latency** -überwacht die Leistung von Abonnements für transaktionsveröffentlichungen.<br /><br /> **4mergeexpiration** -überwacht den bevorstehenden Ablauf von Abonnements für mergeveröffentlichungen.<br /><br /> **5mergeslowrunduration** -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).<br /><br /> **6mergefastrunduration** -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN).<br /><br /> **7mergefastrunspeed** -überwacht die synchronisierungsgeschwindigkeit von mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN).<br /><br /> **8mergeslowrunspeed** -überwacht die synchronisierungsgeschwindigkeit von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).|  
 |**title**|**sysname**|Der Name der Replikationsleistungsmetrik.|  
 |**value**|**int**|Der Schwellenwert der Leistungsmetrik.|  
 |**shouldalert**|**bit**|Ist eine Warnung generiert werden soll, wenn die Metrik den definierten Schwellenwert für diese Veröffentlichung überschreitet. der Wert **1** gibt an, dass eine Warnung ausgelöst werden soll.|  
-|**isenabled**|**bit**|Ist, wenn die Überwachung für die replikationsleistungsmetrik für diese Veröffentlichung aktiviert ist. der Wert **1** gibt an, dass die Überwachung aktiviert ist.|  
+|**IsEnabled**|**bit**|Ist, wenn die Überwachung für die replikationsleistungsmetrik für diese Veröffentlichung aktiviert ist. der Wert **1** gibt an, dass die Überwachung aktiviert ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

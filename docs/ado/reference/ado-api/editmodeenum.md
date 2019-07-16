@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d98e6d27de571bc799cc8442fbe6ef9debc0beaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a8c4ddb27bbc6831095062af5491fb501b6d5b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933045"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Gibt den Bearbeitungsstatus eines Datensatzes an.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|Gibt an, dass keine Bearbeitungsvorgang ausgeführt wird.|  
 |**adEditInProgress**|1|Gibt an, dass die Daten im aktuellen Datensatz geändert, aber nicht gespeichert wurde.|  

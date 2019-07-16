@@ -1,10 +1,10 @@
 ---
 title: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio (SSMS)
-description: Dies ist ein Schnellstart-Tutorial für das Herstellen einer Verbindung mit einer SQL Server-Instanz durch Verwendung von SQL Server Management Studio und Ausführen grundlegender T-SQL-Abfragen.
+description: Ein Tutorial für die Herstellung einer Verbindung zu einer SQL Server-Instanz durch Verwendung von SQL Server Management Studio und Ausführen grundlegender T-SQL-Abfragen
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 62646a7e2b09c4a733dde0ddff9d078cb0a3c958
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469230"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834962"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Lernprogramm: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio (SSMS) 
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Lernprogramm: Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz über SQL Server Management Studio (SSMS)
 
-In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. In diesem Artikel erhalten Sie Informationen zu folgenden Themen:
+In diesem Tutorial erfahren Sie, wie Sie mit SQL Server Management Studio (SSMS) eine Verbindung mit einer SQL Server-Instanz herstellen und grundlegende T-SQL-Befehle (Transact-SQL) ausführen. Dieser Artikel zeigt, wie die folgenden Schritte ausgeführt werden:
 
 > [!div class="checklist"]
 > * Eine Verbindung mit einer SQL Server-Instanz herstellen
@@ -54,9 +54,9 @@ Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie
     * Wählen Sie für **Servertyp** die Option **Datenbank-Engine** (normalerweise die Standardoption) aus.
     * Geben Sie für **Servername** den Namen Ihrer SQL Server-Instanz ein. (In diesem Artikel wird der Instanzname „SQL2016ST“ auf dem Hostnamen „NODE5“ [NODE5\SQL2016ST] verwendet.) Wenn Sie nicht genau wissen, wie Sie Ihren SQL Server-Instanznamen bestimmen sollen, erhalten Sie hier [zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md#determine-sql-server-name).
 
-    ![Feld „Servername“ mit der Option zur Verwendung der SQL Server-Instanz](media/connect-query-sql-server/connection2.png)
-
     * Wählen Sie für **Authentifizierung** die Option **Windows-Authentifizierung** aus. In diesem Artikel wird die Windows-Authentifizierung verwendet, jedoch wird ebenso die SQL Server-Anmeldung unterstützt. Wenn Sie **SQL-Anmeldung** auswählen, werden Sie aufgefordert, einen Benutzernamen und ein Kennwort einzugeben. Weitere Informationen zu Authentifizierungstypen finden Sie unter [Verbindung mit Server herstellen (Datenbank-Engine)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+
+    ![Feld „Servername“ mit der Option zur Verwendung der SQL Server-Instanz](media/connect-query-sql-server/connection2.png)
 
     Sie können auch zusätzliche Verbindungsoptionen ändern, indem Sie **Optionen** auswählen. Beispiele für Verbindungsoptionen sind die Datenbank, mit der Sie sich verbinden, der Verbindungstimeoutwert und das Netzwerkprotokoll. In diesem Artikel werden die Standardwerte für alle Optionen verwendet.
 
@@ -129,7 +129,7 @@ In diesem Abschnitt erstellen Sie nun eine Tabelle in der neuen Datenbank „Tut
    GO
    ```
 
-Nachdem die Abfrage abgeschlossen ist, wird die neue Tabelle „Customers“ in der Tabellenliste im Objekt-Explorer angezeigt. Wenn die Tabelle nicht angezeigt wird, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten **TutorialDB** > **Tabellen** und anschließend mit der linken Maustaste auf **Aktualisieren**.
+Nachdem die Abfrage abgeschlossen ist, wird die neue Tabelle „Customers“ in der Tabellenliste im Objekt-Explorer angezeigt. Wenn die Tabelle nicht angezeigt wird, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten **TutorialDB** > **Tabellen**, und wählen Sie dann **Aktualisieren** aus.
 
 ## <a name="insert-rows-into-the-new-table"></a>Einfügen von Zeilen in die neue Tabelle
 
@@ -188,7 +188,7 @@ Mit den nachfolgenden Schritten können Sie die Serververbindung für das aktuel
 
 1. Klicken Sie mit der rechten Maustaste in das Abfragefenster, und wählen Sie dann **Verbindung** > **Verbindung ändern** aus. Das Fenster **Mit Server verbinden** wird erneut geöffnet.
 
-2. Ändern Sie den von Ihrer Abfrage verwendeten Server. 
+2. Ändern Sie den von Ihrer Abfrage verwendeten Server.
 
    ![Der Befehl „Verbindung ändern“](media/connect-query-sql-server/changeconnection.png)
 
@@ -197,8 +197,9 @@ Mit den nachfolgenden Schritten können Sie die Serververbindung für das aktuel
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im nächsten Artikel erfahren Sie, wie Sie Skripts für mehrere Objekte in SQL Server Management Studio erstellen.
+Am besten machen Sie sich mit SSMS vertraut, indem Sie einige praktische Aufgaben durchführen. Diese Artikel unterstützen Sie bei der Verwendung der verschiedenen Features, die in SSMS verfügbar sind.  In diesen Artikeln erfahren Sie, wie Sie die Komponenten von SSMS verwalten und wie Sie die Funktionen finden, die Sie regelmäßig verwenden.
 
-Zum nächsten Artikel wechseln, um mehr zu erfahren:
-> [!div class="nextstepaction"]
-> [Nächste Schritte](scripting-ssms.md)
+* [Skripterstellung](scripting-ssms.md)
+* [Verwenden von Vorlagen in SSMS](../template/templates-ssms.md)
+* [SSMS-Konfiguration](ssms-configuration.md)
+* [Zusätzliche Tipps und Tricks für die Verwendung von SSMS](ssms-tricks.md)

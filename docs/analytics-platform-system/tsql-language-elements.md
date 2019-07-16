@@ -2,19 +2,18 @@
 title: T-SQL-Sprachelemente – Parallel Data Warehouse | Microsoft-Dokumentation
 description: T-SQL-Sprachelemente für Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f019599e5dde2759da9f1e8f94e71b2fe2b9c9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959950"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>T-SQL-Sprachelemente für Parallel Data Warehouse
 T-SQL-Sprachelemente für Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -23,12 +22,12 @@ T-SQL-Sprachelemente für Analytics Platform System (APS) SQL Server Parallel Da
 * [Syntaxkonventionen](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [Benennungsregeln für Objekte](../relational-databases/databases/database-identifiers.md)
 * [Reservierte Schlüsselwörter](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
-* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [Sortierungen](https://msdn.microsoft.com/library/ff848763.aspx)
+* [Kommentare](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Datentypen](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
+* [Ausdrücke](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Problemumgehung für IDENTITY-Eigenschaft](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -225,7 +224,7 @@ T-SQL-Sprachelemente für Analytics Platform System (APS) SQL Server Parallel Da
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transaktionen
-* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [Transaktionen](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Diagnosesitzungen
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99dc3aa20bd3f31766ed66a6cdabea5cf38553f6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 467c9320880f1b113cecd36101345f6ee99f7b75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961934"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Tutorials für SQL Server R-Sprache
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +28,7 @@ Dieser Artikel beschreibt die R-Sprache-Tutorials für in-Database-Analyse auf [
 
 ## <a name="r-quickstarts-and-tutorials"></a>R-Schnellstarts und tutorials
 
-| Link | Description |
+| Link | Beschreibung |
 |------|-------------|
 | [Schnellstart: Verwenden von R in T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | Die erste von mehreren Schnellstarts, mit der in diesem Beispiel veranschaulicht die grundlegende Syntax zum Aufrufen einer R-Funktion, die mit einem T-SQL-Abfrage-Editor wie z. B. SQL Server Management Studio. |
 | [Tutorial: Erfahren Sie in der Datenbank-R-Analysen für Datenanalysten](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Für R-Entwickler mit Erfahrung mit SQL Server, in diesem Tutorial wird erläutert, wie Sie führen allgemeine Data Science-Aufgaben in SQL Server. Laden und Visualisieren von Daten, Trainieren und Speichern eines Modells zu SQL Server, und verwenden Sie das Modell für predictive Analytics. |
@@ -40,7 +39,7 @@ Dieser Artikel beschreibt die R-Sprache-Tutorials für in-Database-Analyse auf [
 
 ## <a name="code-samples"></a>Codebeispiele
 
-| Link | Description |
+| Link | Beschreibung |
 |------|-------------|
 | [Erstellen eines Vorhersagemodells mit R und SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Erfahren Sie, wie ein skiverleih Machine learning, um zukünftige verleihe vorherzusagen, wodurch die Business-Plan und die Mitarbeiter, von der zukünftigen Nachfrage zu begegnen verwenden kann. |
 | [Führen Sie Kunden mit R und SQL Server-clustering](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Verwenden Sie unbeaufsichtigtes lernen zum Segmentieren von Kunden anhand der Umsatzdaten. |

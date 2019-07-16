@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 496148e51e56ebbeea239101660b37e45cfa7eba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036169"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ODBC  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ODBC  
   
  **Zusammenfassung**  
  **SQLBulkOperations** führt Bulk einfügungen und Bulk-Lesezeichen Vorgänge, einschließlich aktualisieren, löschen und durch Lesezeichen abrufen.  
@@ -55,7 +54,7 @@ SQLRETURN SQLBulkOperations(
  Weitere Informationen finden Sie unter "Kommentare".  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLBulkOperations** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLBulkOperations** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben . Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -221,7 +220,7 @@ SQLRETURN SQLBulkOperations(
     > [!NOTE]  
     >  Die Größe des Arrays zeigt das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR sollte gleich SQL_ATTR_ROW_ARRAY_SIZE oder SQL_ATTR_ROW_STATUS_PTR sollte ein null-Zeiger sein.  
   
-6.  Calls **SQLBulkOperations**(*StatementHandle,* SQL_DELETE_BY_BOOKMARK).  
+6.  Aufrufe **SQLBulkOperations**(*StatementHandle,* SQL_DELETE_BY_BOOKMARK).  
   
 7.  Wenn die Anwendung das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR festgelegt wurde, können sie dieses Array aus, um das Ergebnis des Vorgangs finden Sie unter überprüfen.  
   

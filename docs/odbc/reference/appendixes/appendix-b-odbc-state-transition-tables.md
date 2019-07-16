@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996250"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Statusübergangstabellen
 Die Tabellen in diesem Anhang zeigen, wie Funktionen mit ODBC-Übergang von der Umgebung, Verbindung, -Anweisung und Deskriptor Status führen. Der Status der Umgebung, die Verbindung, die Anweisung oder die Sicherheitsbeschreibung schreibt in der Regel vor, wenn Funktionen, mit denen den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Descriptor) aufgerufen werden kann. Die Status-Umgebung, Verbindung, anweisungs- und Deskriptorstatuswerte überlappen ungefähr wie in den folgenden Abbildungen dargestellt. Z. B. die genaue Überlappung der Verbindung gibt C5 und C6 und Anweisung gibt an, dass S1 bis S12 ist datenquellenabhängig, da Transaktionen, die zu unterschiedlichen Zeiten in verschiedenen Datenquellen beginnt und Deskriptor Zustand D1i (implizit Deskriptor zugeordnet) abhängig ist. auf den Zustand der Anweisung, die der Deskriptor zugeordnet ist, ist beim Status D1e (explizit Deskriptor zugeordnet) zum unabhängig vom Status-Anweisungen. Eine Beschreibung der einzelnen Status, finden Sie unter [Umgebungsübergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindungsübergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md), und [Deskriptor Übergänge ](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
@@ -64,10 +63,10 @@ Die Tabellen in diesem Anhang zeigen, wie Funktionen mit ODBC-Übergang von der 
 |--------------|-------------|  
 |b|Vor oder nach. Der Cursor wurde vor dem Start des Resultsets oder nach dem Ende des Resultsets positioniert.|  
 |c|Aktuelle Funktion. Die aktuelle Funktion wurde asynchron ausgeführt.|  
-|d|Benötigen Sie Daten an. Der Funktion zurückgegebene SQL_NEED_DATA zurück.|  
+|T|Benötigen Sie Daten an. Der Funktion zurückgegebene SQL_NEED_DATA zurück.|  
 |e|Error (Fehler). Der Funktion zurückgegebene SQL_ERROR zurück.|  
 |i|Ungültige Zeile. Der Cursor positioniert wurde in einer Zeile im Resultset Satz und die Zeile hatte wurde gelöscht oder in einem Vorgang in der Zeile ist ein Fehler aufgetreten. Wenn die zeilenstatusarray vorhanden war, wurde der Wert in der zeilenstatusarray für die Zeile SQL_ROW_DELETED oder SQL_ROW_ERROR. (Die zeilenstatusarray wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen.)|  
-|nf|Nicht gefunden. Der Funktion zurückgegebene SQL_NO_DATA zurückgibt. Dies gilt nicht beim **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** gibt SQL_NO_DATA nach der Ausführung einer gesuchten update oder delete-Anweisung.|  
+|Nf|Nicht gefunden. Der Funktion zurückgegebene SQL_NO_DATA zurückgibt. Dies gilt nicht beim **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** gibt SQL_NO_DATA nach der Ausführung einer gesuchten update oder delete-Anweisung.|  
 |np|Nicht vorbereitet. Die Anweisung wurde nicht vorbereitet.|  
 |Nr.|Keine Ergebnisse. Die Anweisung nicht der Fall ist, oder ein Resultset nicht erstellt wurde.|  
 |o|Andere Funktion. Eine andere Funktion wurde asynchron ausgeführt.|  
@@ -75,7 +74,7 @@ Die Tabellen in diesem Anhang zeigen, wie Funktionen mit ODBC-Übergang von der 
 |r|Ergebnisse. Die Anweisung oder hat ein Resultset für die (möglicherweise leere) erstellt wird.|  
 |s|Erfolg. Die Funktion hat SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben.|  
 |v|Gültige Zeile. Der Cursor wurde in einer Zeile im Resultset positioniert und die Zeile mussten erfolgreich eingefügt wurde, wurde erfolgreich aktualisiert wurde, oder ein anderer Vorgang in der Zeile mussten erfolgreich ausgeführt wurden. Wenn die zeilenstatusarray vorhanden war, war der Wert in der zeilenstatusarray für die Zeile SQL_ROW_ADDED, SQL_ROW_SUCCESS oder SQL_ROW_UPDATED. (Die zeilenstatusarray wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen.)|  
-|x|Wird ausgeführt. Der Funktion zurückgegebene SQL_STILL_EXECUTING.|  
+|w|Wird ausgeführt. Der Funktion zurückgegebene SQL_STILL_EXECUTING.|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
  In diesem Beispiel wird die Zeile in der Umgebung Statusübergang für Tabelle **SQLFreeHandle** beim *HandleType* SQL_HANDLE_ENV ist wie folgt.  

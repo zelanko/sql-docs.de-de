@@ -2,19 +2,18 @@
 title: Verwaltungskonsolenwarnungen - Analytics Platform System | Microsoft-Dokumentation
 description: Administratorkonsolenwarnungen in Analytics Platform System (APS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72b07062f5eafab160abbe75e664fe1df7418584
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959917"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Administratorkonsolenwarnungen in Analytics Platform System
 Warnungen werden angezeigt, in der Appliance **Verwaltungskonsole** und **System Center Operations Manager** (SCOM). Verwenden Sie diese Liste der Warnungen, um zu identifizieren, welche Warnungen zusätzlichen untersucht werden müssen.  
@@ -66,7 +65,7 @@ Warnungen von alphabetisch aufgeführt sind die **Warnungsname**. Alle mögliche
 |Datenträgerarray hat nicht BEHEBBARE Gesamtstatus.|Ja|Fehler|Fehler|Dem Datenträgerarray Gesamtstatus ist nicht wiederherstellbar.|Das Datenträgerarray ist nicht mehr funktionsfähig. Zur Problembehandlung erforderlich. Überprüfen Sie den Knoten des Windows-Ereignisprotokoll auf Details.|  
 |Datenträgerarray hat es sich um normale Gesamtstatus.|Nein|Operational|Information|Dem Datenträgerarray Gesamtstatus ist normal.|Gibt an, dass die Komponente bereits einen anderen Status gemeldet, aber da normal zurückgegeben hat.|  
 |Festplatten-Array enthält einen unbekannten Gesamtstatus.|Ja|Heruntergestuft|Warnung|Allgemeine konnte Status des dem Datenträgerarray nicht bestimmt werden.|Das System kann nicht den Integritätsstatus des lokalen Datenträgerarrays abgerufen werden. Zur Problembehandlung erforderlich. Überprüfen Sie den Knoten des Windows-Ereignisprotokoll auf Details.|  
-|Externen Speicher-Array hat KRITISCHEN Status.|Ja|Fehler|Fehler|Externen Speicher-Array ist, der angibt, ein Fehler auftritt (Hersteller OperationalStatus lautet: 6, 16)! Hersteller-Status wird in der Eigenschaft der Komponente "Storage_global_status" gemeldet. Werte:  6-Fehler, die 16-Unterstützung von Entität Fehler.|Überprüfen des Knotens mit dem Windows-Ereignisprotokoll Details oder Gerätehersteller wenden Sie sich an.|  
+|Externen Speicher-Array hat KRITISCHEN Status.|Ja|Fehler|Fehler|Externen Speicher-Array ist, der angibt, ein Fehler auftritt (Hersteller OperationalStatus lautet: 6, 16). Hersteller-Status wird in der Eigenschaft der Komponente "Storage_global_status" gemeldet. Werte:  6-Fehler, die 16-Unterstützung von Entität Fehler.|Überprüfen des Knotens mit dem Windows-Ereignisprotokoll Details oder Gerätehersteller wenden Sie sich an.|  
 |Externen Speicher-Array hat, nicht KRITISCHEN Status.|Ja|Heruntergestuft|Warnung|Externen Speicher-Array hat nicht kritische Warnung gemeldet. (Anbieter OperationalStatus lautet: 3,4,5,11,14,15,17). Hersteller-Status wird in der Eigenschaft der Komponente "Storage_global_status" gemeldet. Werte:  3-beeinträchtigt, 4-betont, 5-Predictive-Fehler, 11 - In-Dienst, 14: abgebrochen, 15 ruhenden, 17-Completed-Vorgang.|Überprüfen des Knotens mit dem Windows-Ereignisprotokoll Details oder Gerätehersteller wenden Sie sich an.|  
 |Externen Speicher-Array hat, nicht WIEDERHERSTELLBAREN Status.|Ja|Fehler|Fehler|Externen Speicher-Array ist, dass das Speicherarray nach unten, und nicht wiederherstellbar ist, der angibt, (Hersteller OperationalStatus lautet: 7). Hersteller-Status wird in der Eigenschaft der Komponente "Storage_global_status" gemeldet.|Überprüfen des Knotens mit dem Windows-Ereignisprotokoll Details oder Gerätehersteller wenden Sie sich an.|  
 |Externen Speicher-Array hat normalen Status an.|Nein|Operational|Information|Das Array von externen Speicher ordnungsgemäß funktioniert (Vendor-Status: ok). Hersteller-Status wird in der Eigenschaft der Komponente "Storage_global_status" gemeldet.||  

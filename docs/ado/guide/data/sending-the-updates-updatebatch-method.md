@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6759f007e652a6a52a1633b021553faa2978f6b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924255"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Senden von Updates: UpdateBatch-Methode
 Der folgende Code wird ein Recordset im Modus "Batch" durch Festlegen der LockType-Eigenschaft auf AdLockBatchOptimistic und CursorLocation auf AdUseClient geöffnet. Es fügt zwei neue Datensätze und ändert den Wert eines Felds in einem vorhandenen Datensatz, und speichern die ursprünglichen Werte und ruft dann UpdateBatch zum Senden, dass die Änderungen an die Datenquelle zurück.  

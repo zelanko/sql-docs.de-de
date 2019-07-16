@@ -5,17 +5,16 @@ description: Erfahren Sie, wie Sie eine offline-Bereitstellung von einer SQL Ser
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1300c375903eb8692b8da6dce4e74a41e91d80c0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 25145a7278f5b0feb85641d8798a34e4258f6b3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958513"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Führen Sie eine offline-Bereitstellung von einer SQL Server-big Data-cluster
 
@@ -136,7 +135,7 @@ Big Data-Cluster-Bereitstellungen müssen mehrere Tools, einschließlich **Pytho
    |---|---|
    | Windows | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |
-   | OSX     | [https://go.microsoft.com/fwlink/?linkid=2065976](https://go.microsoft.com/fwlink/?linkid=2065976) |
+   | OS X     | [https://go.microsoft.com/fwlink/?linkid=2065976](https://go.microsoft.com/fwlink/?linkid=2065976) |
 
 1. Kopieren Sie die komprimierte Datei auf den Zielcomputer und extrahieren Sie es in einen Ordner Ihrer Wahl.
 

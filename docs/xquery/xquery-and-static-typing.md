@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946081"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery und statische Typisierung
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +36,9 @@ ms.locfileid: "54226587"
   
  Für nicht typisierte XML-Instanzen gibt es spezielle Typen, mit deren Hilfe angegeben wird, dass die Daten nicht typisiert sind. Diese Information wird bei der Überprüfung des statischen Typs und zur Durchführung bestimmter impliziter Datentypkonvertierungen verwendet.  
   
- Bei typisierten Daten wird der Eingabetyp aus der XML-Schemaauflistung abgeleitet, die die XML-Datentypinstanz einschränkt. Wenn das Schema nur Elemente vom Typ ermöglicht z. B. **xs: Integer**, die Ergebnisse eines pfadausdrucks, der dieses Element wird auf NULL oder mehr Elemente des Typs **xs: Integer**. Dies wird derzeit durch einen Ausdruck wie z. B. ausgedrückt `element(age,xs:integer)*` , in dem das Sternchen (\*) die Kardinalität des resultierenden Typs angibt. In diesem Beispiel ist der Ausdruck möglicherweise NULL oder mehr Elemente des Namens "Age" und Typ **xs: Integer**. Weitere Kardinalitäten sind genau 1 und werden mit den Typnamen alone, NULL oder einem ausgedrückt und mit einem Fragezeichen (**?**), und 1 oder mehr und durch ein Pluszeichen (**+**) .  
+ Bei typisierten Daten wird der Eingabetyp aus der XML-Schemaauflistung abgeleitet, die die XML-Datentypinstanz einschränkt. Wenn das Schema nur Elemente vom Typ ermöglicht z. B. **xs: Integer**, die Ergebnisse eines pfadausdrucks, der dieses Element wird auf NULL oder mehr Elemente des Typs **xs: Integer**. Dies wird derzeit durch einen Ausdruck wie z. B. ausgedrückt `element(age,xs:integer)*` , in dem das Sternchen (\*) die Kardinalität des resultierenden Typs angibt. In diesem Beispiel ist der Ausdruck möglicherweise NULL oder mehr Elemente des Namens "Age" und Typ **xs: Integer**. Weitere Kardinalitäten sind genau 1 und werden mit den Typnamen alone, NULL oder einem ausgedrückt und mit einem Fragezeichen ( **?** ), und 1 oder mehr und durch ein Pluszeichen ( **+** ) .  
   
- In manchen Fällen kann die Inferenz des statischen Typs ableiten, dass ein Ausdruck immer eine leere Zeichenfolge zurückliefert. Z. B. wenn ein Pfadausdruck in ein typisierter XML-Datentyp sucht nach einer \<Name > Element in eine \<Kunden >-Element (/ Customer/Name), aber das Schema ist nicht zulässig. eine \<Name > in eine \<Kunden >, inferenz des statischen Typs folgert, dass das Ergebnis leer sein wird. Dies wird verwendet, um fehlerhafte Abfragen erkannt und wird als ein statischer Fehler, gemeldet werden, es sei denn, der Ausdruck wurde () oder **Daten (())**.  
+ In manchen Fällen kann die Inferenz des statischen Typs ableiten, dass ein Ausdruck immer eine leere Zeichenfolge zurückliefert. Z. B. wenn ein Pfadausdruck in ein typisierter XML-Datentyp sucht nach einer \<Name > Element in eine \<Kunden >-Element (/ Customer/Name), aber das Schema ist nicht zulässig. eine \<Name > in eine \<Kunden >, inferenz des statischen Typs folgert, dass das Ergebnis leer sein wird. Dies wird verwendet, um fehlerhafte Abfragen erkannt und wird als ein statischer Fehler, gemeldet werden, es sei denn, der Ausdruck wurde () oder **Daten (())** .  
   
  Die detaillierten Inferenzregeln werden in der formalen Semantik der XQuery-Spezifikation angegeben. Microsoft hat diese nur geringfügig für typisierte XML-Datentypinstanzen angepasst. Die wichtigste Änderung zum Standard besteht darin, dass der implizite Dokumentknoten den Typ der XML-Datentypinstanz kennt. Aus diesem Grund wird ein Pfadausdruck der Form /age auf der Grundlage dieser Information exakt typisiert.  
   
@@ -56,11 +55,11 @@ ms.locfileid: "54226587"
   
  Untertypen werden auf der Grundlage der Untertypisierungsregeln definiert, um Ableitungen durch Beschränkung oder Erweiterung des XML-Schemas zu verwenden. Ein Typ S ist beispielsweise ein Untertyp von T, wenn alle Werte, die den Typ S besitzen, auch Instanzen des Typs T sind.  
   
- Darüber hinaus sind alle Ganzzahlwerte auf der Grundlage der Typhierarchie des XML-Schemas auch Dezimalwerte. Nicht alle Dezimalwerte sind allerdings ganze Zahlen. Aus diesem Grund ist eine ganze Zahl ein Untertyp einer Dezimalzahl, aber nicht umgekehrt. Z. B. die **+** Vorgang lässt nur die Werte bestimmter Typen, z. B. die numerischen Typen **xs: Integer**, **xs: decimal**, **Xs: "float"**, und **xs: double**. Wenn Werte anderer Typen, z. B. **xs: String**, werden übergeben, die Operation einen Typfehler. Dies wird als strenge Typisierung bezeichnet. Werte anderer Typen, wie der Typ atomic, der untypisiertes XML kennzeichnet, können implizit in einen Wert eines Typs konvertiert werden, den die Operation zulässt. Dies wird als schwache Typisierung bezeichnet.  
+ Darüber hinaus sind alle Ganzzahlwerte auf der Grundlage der Typhierarchie des XML-Schemas auch Dezimalwerte. Nicht alle Dezimalwerte sind allerdings ganze Zahlen. Aus diesem Grund ist eine ganze Zahl ein Untertyp einer Dezimalzahl, aber nicht umgekehrt. Z. B. die **+** Vorgang lässt nur die Werte bestimmter Typen, z. B. die numerischen Typen **xs: Integer**, **xs: decimal**, **Xs: "float"** , und **xs: double**. Wenn Werte anderer Typen, z. B. **xs: String**, werden übergeben, die Operation einen Typfehler. Dies wird als strenge Typisierung bezeichnet. Werte anderer Typen, wie der Typ atomic, der untypisiertes XML kennzeichnet, können implizit in einen Wert eines Typs konvertiert werden, den die Operation zulässt. Dies wird als schwache Typisierung bezeichnet.  
   
  Wenn eine implizite Konvertierung notwendig ist, stellt eine anschließende Überprüfung des statischen Typs sicher, dass an eine Operation nur Werte des zugelassenen Typs mit der richtigen Kardinalität übergeben werden. Für "String" + 1 erkennt, dass der statische Typ von "String" **xs: String**. Da dies nicht für einen zulässigen Typ ist der **+** Vorgang ein Typfehler ausgelöst wird.  
   
- Wenn das Ergebnis eines beliebigen Ausdrucks E1 zu einem beliebigen Ausdruck E2 addiert wird (E1 + E2), bestimmt die Inferenz des statischen Typs zuerst die statischen Typen von E1 und E2 und prüft diese dann gegen die für den Vorgang zulässigen statischen Typen. Angenommen, der statische Typ von E1 entweder als eine **xs: String** oder **xs: Integer**, Überprüfung des statischen Typs einen Typfehler, auch wenn einige Werte zur möglicherweise zur Laufzeit ganze Zahlen sein. Die gleiche wäre der Fall, wenn der statische von E1 Typ **xs: Integer&#42;**. Da die **+** Vorgang akzeptiert nur genau einen Ganzzahlwert und E1 kann 0 (null) zurückgeben, oder mehr als 1, Überprüfung des statischen Typs ein Fehler ausgelöst.  
+ Wenn das Ergebnis eines beliebigen Ausdrucks E1 zu einem beliebigen Ausdruck E2 addiert wird (E1 + E2), bestimmt die Inferenz des statischen Typs zuerst die statischen Typen von E1 und E2 und prüft diese dann gegen die für den Vorgang zulässigen statischen Typen. Angenommen, der statische Typ von E1 entweder als eine **xs: String** oder **xs: Integer**, Überprüfung des statischen Typs einen Typfehler, auch wenn einige Werte zur möglicherweise zur Laufzeit ganze Zahlen sein. Die gleiche wäre der Fall, wenn der statische von E1 Typ **xs: Integer&#42;** . Da die **+** Vorgang akzeptiert nur genau einen Ganzzahlwert und E1 kann 0 (null) zurückgeben, oder mehr als 1, Überprüfung des statischen Typs ein Fehler ausgelöst.  
   
  Wie zuvor erwähnt, ermittelt die Typinferenz häufig einen Typ, der breiter angelegt ist, als dies dem Benutzer hinsichtlich des zu übergebenden Datentyps bekannt ist. In diesen Fällen muss der Benutzer die Abfrage neu schreiben. Die folgenden: Einige typische Fälle  
   
@@ -74,7 +73,7 @@ ms.locfileid: "54226587"
  Union-Typen erfordern aufgrund der Typüberprüfung eine sorgfältige Handhabung. In den folgenden Beispielen sind zwei der Probleme dargestellt.  
   
 ### <a name="example-function-over-union-type"></a>Beispiel: Funktion für Union-Typ  
- Betrachten Sie eine Elementdefinition für <`r`> von einem Vereinigungstyp:  
+ Betrachten Sie eine Elementdefinition für <`r`> eines union-Typs:  
   
 ```  
 <xs:element name="r">  
@@ -84,10 +83,10 @@ ms.locfileid: "54226587"
 </xs:element>  
 ```  
   
- XQuery-Kontext, die average-Funktion `fn:avg (//r)` einen statischen Fehler zurück, da der XQuery-Compiler Werte verschiedener Typen hinzugefügt werden kann (**xs: int**, **xs: float** oder **Xs: doppelte**) für die <`r`>-Elemente im Argument von **Fn:avg()**. Um dieses Problem zu beheben, müssen Sie den Funktionsaufruf als `fn:avg(for $r in //r return $r cast as xs:double ?)` umschreiben.  
+ XQuery-Kontext, die average-Funktion `fn:avg (//r)` einen statischen Fehler zurück, da der XQuery-Compiler Werte verschiedener Typen hinzugefügt werden kann (**xs: int**, **xs: float** oder **Xs: doppelte**) für die <`r`>-Elemente im Argument von **Fn:avg()** . Um dieses Problem zu beheben, müssen Sie den Funktionsaufruf als `fn:avg(for $r in //r return $r cast as xs:double ?)` umschreiben.  
   
 ### <a name="example-operator-over-union-type"></a>Beispiel: Operator für Union-Typ  
- Die Additionsoperation ('+') erfordert präzise Typen der Operanden. Daher gibt der Ausdruck `(//r)[1] + 1` einen statischen Fehler mit der zuvor beschriebenen Typdefinition für das <`r`>-Element zurück. Eine mögliche Lösung besteht im Umschreiben des Ausdrucks als as `(//r)[1] cast as xs:int? +1`, wobei das "?" das Auftreten von 0 oder 1 anzeigt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erfordert "cast as" mit "?", weil jede Umwandlung die leere Sequenz als ein Ergebnis von Laufzeitfehlern verursachen kann.  
+ Die Additionsoperation ('+') erfordert präzise Typen der Operanden. Als Ergebnis des Ausdrucks `(//r)[1] + 1` gibt einen statischen Fehler, die die zuvor beschriebenen Typdefinition für das Element <`r`>. Eine mögliche Lösung besteht im Umschreiben des Ausdrucks als as `(//r)[1] cast as xs:int? +1`, wobei das "?" das Auftreten von 0 oder 1 anzeigt. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erfordert "cast as" mit "?", weil jede Umwandlung die leere Sequenz als ein Ergebnis von Laufzeitfehlern verursachen kann.  
   
 ## <a name="see-also"></a>Siehe auch  
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

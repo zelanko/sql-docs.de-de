@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7fc3da1474546f0719af20c52f44248baa8ce5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028259"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Erstellen benutzerdefinierter Typen: Anforderungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "49119748"
   
 -   Es darf nur eine Serialisierung eines UDT-Objekts geben. Die Überprüfung schlägt fehl, wenn die Serialisierungs- oder Deserialisierungsroutinen mehr als eine Darstellung eines bestimmten Objekts erkennen.  
   
--   **SqlUserDefinedTypeAttribute.IsByteOrdered** muss **"true"** , Daten in Bytereihenfolge zu vergleichen. Wenn die IComparable-Schnittstelle nicht implementiert ist und **SqlUserDefinedTypeAttribute.IsByteOrdered** ist **"false"**, Vergleiche in Bytereihenfolge fehl.  
+-   **SqlUserDefinedTypeAttribute.IsByteOrdered** muss **"true"** , Daten in Bytereihenfolge zu vergleichen. Wenn die IComparable-Schnittstelle nicht implementiert ist und **SqlUserDefinedTypeAttribute.IsByteOrdered** ist **"false"** , Vergleiche in Bytereihenfolge fehl.  
   
 -   Ein in einer Klasse definierter UDT muss über einen öffentlichen Konstruktor verfügen, der keine Argumente verwendet. Sie können optional zusätzliche überladene Klassenkonstruktoren erstellen.  
   
@@ -65,12 +64,12 @@ ms.locfileid: "49119748"
 -   Wenn die **SqlUserDefinedTypeAttribute.MaxByteSize** -Feld auf-1 festgelegt ist, die serialisierte UDT so groß wie die größenbeschränkung für große Objekte (LOB) (zurzeit 2 GB) möglich ist. Die Größe des UDT kann nicht den im angegebenen Wert überschreitet den **MaxByteSized** Feld.  
   
 > [!NOTE]  
->  Obwohl es vom Server zum Durchführen von Vergleichen nicht verwendet wird, können Sie optional implementieren die **System.IComparable** -Schnittstelle, die eine einzelne Methode verfügbar macht, **"CompareTo"**. Diese Methode wird auf Clientseite in Situationen verwendet, in denen UDT-Werte präzise verglichen oder geordnet werden sollen.  
+>  Obwohl es vom Server zum Durchführen von Vergleichen nicht verwendet wird, können Sie optional implementieren die **System.IComparable** -Schnittstelle, die eine einzelne Methode verfügbar macht, **"CompareTo"** . Diese Methode wird auf Clientseite in Situationen verwendet, in denen UDT-Werte präzise verglichen oder geordnet werden sollen.  
   
 ## <a name="native-serialization"></a>Systemeigene Serialisierung  
  Die Auswahl der richtigen Serialisierungsattribute für den UDT hängt vom Typ des UDTs ab, den Sie erstellen möchten. Die **Native** Serialisierungsformat nutzt eine sehr einfache Struktur, die es ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine effiziente systemeigene Darstellung des UDTS auf dem Datenträger zu speichern. Die **Native** Format wird empfohlen, wenn der UDT einfach ist, und enthält nur die Felder der folgenden Typen:  
   
- **"bool"**, **Byte**, **Sbyte**, **kurze**, **Ushort**, **Int**,  **Uint**, **lange**, **Ulong**, **"float"**, **doppelte**, **Value**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
+ **"bool"** , **Byte**, **Sbyte**, **kurze**, **Ushort**, **Int**,  **Uint**, **lange**, **Ulong**, **"float"** , **doppelte**, **Value**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**,  **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
  Werttypen, die zusammengesetzt sind Felder, die oben genannten Typen eignen sich gut für **Native** format, z. B. **Strukturen** in Visual c# (oder **Strukturen** wie in der sie bekannt sind Visual Basic). Ein UDT beispielsweise angegeben, mit der **Native** Serialisierungsformat darf auf ein Feld eines anderen UDTS, die auch mit angegeben wurde der **Native** Format. Wenn die UDT-Definition komplexer ist und Datentypen, die nicht in der obigen Liste enthält, geben Sie die **UserDefined** Serialisierungsformat stattdessen.  
   
@@ -113,13 +112,13 @@ ms.locfileid: "49119748"
  Gibt an, ob alle Instanzen dieses UDTs dieselbe Länge haben.  
   
  **MaxByteSize**  
- Die maximale Größe der Instanz in Byte. Sie müssen angeben, **MaxByteSize** mit der **UserDefined** Serialisierungsformat. Für einen UDT mit der eine benutzerdefinierte Serialisierung festgelegt ist **MaxByteSize** bezieht sich auf die Gesamtgröße des UDTS in seiner serialisierten Form, wie vom Benutzer definiert. Der Wert des **MaxByteSize** muss zwischen 1 und 8000 liegen oder auf-1 festgelegt wird, um anzugeben, dass der UDT größer als 8000 Bytes (die Gesamtgröße darf nicht die maximale LOB-Größe nicht überschreiten). Angenommen, ein UDT mit einer Eigenschaft eine Zeichenfolge von 10 Zeichen (**System.Char**). Wenn der UDT anhand eines BinaryWriter serialisiert wird, beträgt die Gesamtgröße der serialisierten Zeichenfolge 22 Byte: 2 Byte pro Unicode-UTF-16-Zeichen, multipliziert mit der maximalen Anzahl von Zeichen, plus 2 Kontrollzeichen, die beim Serialisieren eines binären Datenstroms zusätzlich anfallen. Aus diesem Grund beim Bestimmen des Werts des **MaxByteSize**, beträgt die Gesamtgröße der serialisierten UDT berücksichtigt werden muss: die Größe der ins Binärformat serialisierten Daten plus der anfallenden für die Serialisierung.  
+ Die maximale Größe der Instanz in Byte. Sie müssen angeben, **MaxByteSize** mit der **UserDefined** Serialisierungsformat. Für einen UDT mit der eine benutzerdefinierte Serialisierung festgelegt ist **MaxByteSize** bezieht sich auf die Gesamtgröße des UDTS in seiner serialisierten Form, wie vom Benutzer definiert. Der Wert des **MaxByteSize** muss zwischen 1 und 8000 liegen oder auf-1 festgelegt wird, um anzugeben, dass der UDT größer als 8000 Bytes (die Gesamtgröße darf nicht die maximale LOB-Größe nicht überschreiten). Angenommen, ein UDT mit einer Eigenschaft eine Zeichenfolge von 10 Zeichen (**System.Char**). Wenn der UDT anhand ein BinaryWriter serialisiert wird, ist die Gesamtgröße der serialisierten Zeichenfolge 22 Bytes: 2 Bytes pro Unicode UTF-16-Zeichen, multipliziert die maximale Anzahl von Zeichen, plus 2 muss das Steuerelement Bytes Kontrollzeichen Serialisieren eines binären Datenstroms zusätzlich anfallen. Aus diesem Grund beim Bestimmen des Werts des **MaxByteSize**, beträgt die Gesamtgröße der serialisierten UDT berücksichtigt werden muss: die Größe der ins Binärformat serialisierten Daten plus der anfallenden für die Serialisierung.  
   
  **ValidationMethodName**  
  Der Name der Methode, mit der Instanzen des UDTs überprüft werden.  
   
 ### <a name="setting-isbyteordered"></a>Einstellung 'IsByteOrdered'  
- Wenn die **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered** -Eigenschaftensatz auf **"true"**, Sie sind sicher, dass die serialisierten Binärdaten für verwendet werden können semantische Sortierung der Informationen. So kann jede Instanz eines UDT-Objekts mit Bytereihenfolge nur eine einzige serialisierte Darstellung haben. Die Ausführung eines Vergleichsvorgangs für die serialisierten Bytes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte zu denselben Resultaten führen wie der entsprechende Vergleichsvorgang für verwalteten Code. Die folgenden Funktionen werden ebenfalls unterstützt, wenn **IsByteOrdered** nastaven NA hodnotu **"true"**:  
+ Wenn die **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered** -Eigenschaftensatz auf **"true"** , Sie sind sicher, dass die serialisierten Binärdaten für verwendet werden können semantische Sortierung der Informationen. So kann jede Instanz eines UDT-Objekts mit Bytereihenfolge nur eine einzige serialisierte Darstellung haben. Die Ausführung eines Vergleichsvorgangs für die serialisierten Bytes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollte zu denselben Resultaten führen wie der entsprechende Vergleichsvorgang für verwalteten Code. Die folgenden Funktionen werden ebenfalls unterstützt, wenn **IsByteOrdered** nastaven NA hodnotu **"true"** :  
   
 -   Die Fähigkeit zum Erstellen von Indizes für Spalten dieses Typs  
   
@@ -143,7 +142,7 @@ ms.locfileid: "49119748"
   
 -   Größer als oder gleich (> =)  
   
--   Kleiner als oder gleich (<=)  
+-   Kleiner als oder gleich (< =)  
   
 ### <a name="implementing-nullability"></a>Implementieren von NULL-Zulässigkeit  
  Zusätzlich zum ordnungsgemäßen Angeben der Attribute für die Assemblys muss die Klasse auch NULL-Zulässigkeit unterstützen. UDTs, die geladenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Nullwerte, aber in der Reihenfolge der UDT einen Nullwert erkennt, muss die Klasse implementieren die **INullable** Schnittstelle. Weitere Informationen und ein Beispiel dafür, wie NULL-Zulässigkeit in einem UDT zu implementieren, finden Sie unter [Codieren benutzerdefinierter Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  

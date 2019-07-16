@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7cb3e56d0219973be97b694ee2b22dbbb58eb0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933225"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Gibt an, der den Datentyp des einen [Feld](../../../ado/reference/ado-api/field-object.md), [Parameter](../../../ado/reference/ado-api/parameter-object.md), oder [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md). Der entsprechende OLE DB-Typindikator wird in Klammern in der Spalte "Beschreibung" in der folgenden Tabelle dargestellt.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Immer ein Flagwert, kombiniert mit einer anderen Data Type Konstanten, die ein Array von den anderen Datentyp angibt. Gilt nicht für ADOX.|  
 |**adBigInt**|20|Gibt eine 8-Byte-Ganzzahl mit Vorzeichen (DBTYPE_I8) an.|  

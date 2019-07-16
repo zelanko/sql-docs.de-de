@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984534"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Erste Schritte mit SSMA für MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL können Sie schnell Konvertieren von MySQL-Datenbankschemas in SQL Server oder Azure SQL-Datenbank-Schemas, die resultierenden Schemas in SQL Server oder Azure SQL-Datenbank hochzuladen und Migrieren von Daten aus MySQL nach SQL Server oder Azure SQL-Datenbank.  

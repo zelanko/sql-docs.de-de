@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7adc7ed5677fdc511f0c8801a5ab56b55d4b9cde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950407"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Räumlicher Index gespeicherte Prozeduren – Argumente und Eigenschaften
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "58528812"
 ## <a name="syntax"></a>Syntax  
  Die Syntax bestimmter gespeicherter Prozeduren für Räumlichkeitsindizes finden Sie in den folgenden Themen:  
   
--   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [Sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [Sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
 -   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
@@ -65,17 +64,17 @@ ms.locfileid: "58528812"
  **Base_Table_Rows**  
  Anzahl der Zeilen in der Basistabelle. Wert ist **Bigint**.  
   
- **Bounding_Box_xmin**  
- X-Minimum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography**Typ. Wert ist **"float"**.  
+ **Spalten Bounding_Box_xmin**  
+ X-Minimum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography**Typ. Wert ist **"float"** .  
   
  **Bounding_Box_ymin**  
- Y-Minimum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography** Typ. Wert ist **"float"**.  
+ Y-Minimum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography** Typ. Wert ist **"float"** .  
   
  **Bounding_Box_xmax**  
- X-Maximum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography** Typ. Wert ist **"float"**.  
+ X-Maximum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography** Typ. Wert ist **"float"** .  
   
  **Bounding_Box_ymax**  
- Y-Maximum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography** Typ. Wert ist **"float"**.  
+ Y-Maximum-Eigenschaften des räumlichen Index für umgebenden Felds **Geometrie** Typ. Wert dieser Eigenschaft ist NULL für **Geography** Typ. Wert ist **"float"** .  
   
  **Grid_Size_Level_1**  
  Ebene 1 die Dichte des Rasters des räumlichen Indexes:  
@@ -205,19 +204,19 @@ ms.locfileid: "58528812"
   
  Beispiel: Ein Objekt wird dem Mosaikprozess unterzogen und in zehn Zellen auf vier verschiedenen Rasterebenen zerlegt, die einen Bereich abdecken, der insgesamt 100 Blattzellen entspricht. Angenommen, es gibt drei innere Zellen, die vollständig durch das Objekt abgedeckt werden. Der durch die drei inneren Zellen abgedeckte Bereich entspricht 42 Blattzellen. Somit liegt der Prozentsatz an abgedecktem Bereich bei 42 Prozent. Dies ist ein gutes Maß dafür, wie gut die Objekte im Index aufgeteilt sind.  
   
- Wert ist **"float"**.  
+ Wert ist **"float"** .  
   
  **Intersecting_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Identisch mit **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, außer dass diese teilweise abgedeckte Zellen handelt. Wert ist **"float"**.  
+ Identisch mit **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, außer dass diese teilweise abgedeckte Zellen handelt. Wert ist **"float"** .  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Identisch mit **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** mit dem Unterschied, dass rahmenzellen handelt. Wert ist **"float"**.  
+ Identisch mit **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** mit dem Unterschied, dass rahmenzellen handelt. Wert ist **"float"** .  
   
  **Average_Cells_Per_Object_Normalized_To_Leaf_Grid**  
- Durchschnittliche Anzahl der Zellen pro Objekt, die auf das Blattraster normalisiert sind. Damit erhalten wir einen Anhaltspunkt zur räumlichen Größe des Objekts oder zur Größe der Objekte. Wert ist **"float"**.  
+ Durchschnittliche Anzahl der Zellen pro Objekt, die auf das Blattraster normalisiert sind. Damit erhalten wir einen Anhaltspunkt zur räumlichen Größe des Objekts oder zur Größe der Objekte. Wert ist **"float"** .  
   
  **Average_Objects_PerLeaf_GridCell**  
- Geringe Dichte des Index. Durchschnittliche Anzahl der Objekte pro Blattzelle. Wert ist **"float"**.  
+ Geringe Dichte des Index. Durchschnittliche Anzahl der Objekte pro Blattzelle. Wert ist **"float"** .  
   
  **Number_Of_SRIDs_Found**  
  Anzahl der eindeutigen SRIDs im Index und in der Spalte. Wert ist **Int**.  
@@ -225,52 +224,52 @@ ms.locfileid: "58528812"
  Da eine Spalte mehrere SRIDs enthalten kann und sich Objekte mit unterschiedlichen SRIDs niemals schneiden, gibt die Anzahl der SRIDs die Selektivität des Indexes an.  
   
  **Width_Of_Cell_In_Level1**  
- Breiteneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Breiteneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Width_Of_Cell_In_Level2**  
- Breiteneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Breiteneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Width_Of_Cell_In_Level3**  
- Breiteneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Breiteneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Width_Of_Cell_In_Level4**  
- Breiteneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index vorgegeben und hängt von der SRID der indizierten Daten ab. Wert ist **"float"**.  
+ Breiteneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index vorgegeben und hängt von der SRID der indizierten Daten ab. Wert ist **"float"** .  
   
  **Height_Of_Cell_In_Level1**  
- Höheneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Höheneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Height_Of_Cell_In_Level2**  
- Höheneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Höheneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Height_Of_Cell_In_Level3**  
- Höheneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Höheneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Height_Of_Cell_In_Level4**  
- Höheneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Höheneigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Area_Of_Cell_In_Level1**  
- Bereichseigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Bereichseigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Area_Of_Cell_In_Level2**  
- Bereichseigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Bereichseigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Area_Of_Cell_In_Level3**  
- Bereichseigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Bereichseigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **Area_Of_Cell_In_Level4**  
- Bereichseigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"**.  
+ Bereichseigenschaft der Zelle im Indizierungsraster. Die Maßeinheit wird durch den Index bereitgestellt, und abhängig vom SRID der indizierten Daten. Wert ist **"float"** .  
   
  **CellArea_To_BoundingBoxArea_Percentage_In_Level1**  
- Der Prozentsatz der Abdeckung des umgebenden Felds durch eine Zelle der Ebene 1. Wert ist **"float"**.  
+ Der Prozentsatz der Abdeckung des umgebenden Felds durch eine Zelle der Ebene 1. Wert ist **"float"** .  
   
  **CellArea_To_BoundingBoxArea_Percentage_In_Level2**  
- Der Prozentsatz der Abdeckung des umgebenden Felds durch eine Zelle der Ebene 2. Wert ist **"float"**.  
+ Der Prozentsatz der Abdeckung des umgebenden Felds durch eine Zelle der Ebene 2. Wert ist **"float"** .  
   
  **CellArea_To_BoundingBoxArea_Percentage_In_Level3**  
- Der Prozentsatz der Abdeckung des umgebenden Felds durch eine Zelle auf Ebene 3. Wert ist **"float"**.  
+ Der Prozentsatz der Abdeckung des umgebenden Felds durch eine Zelle auf Ebene 3. Wert ist **"float"** .  
   
  **CellArea_To_BoundingBoxArea_Percentage_In_Level4**  
- Der Prozentsatz der Abdeckung des umgebenden Felds durch eine Zelle der Ebene 4. Wert ist **"float"**.  
+ Der Prozentsatz der Abdeckung des umgebenden Felds durch eine Zelle der Ebene 4. Wert ist **"float"** .  
   
  **Number_Of_Rows_Selected_By_Primary_Filter**  
  Anzahl der durch den primären Filter ausgewählten Zeilen. Dies ist eine Haupteigenschaft. Wert ist **Bigint.**  
@@ -307,9 +306,9 @@ ms.locfileid: "58528812"
 ## <a name="examples"></a>Beispiele  
  Beispiele finden Sie in den folgenden Themen:  
   
--   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [Sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [Sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
 -   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
@@ -319,7 +318,7 @@ ms.locfileid: "58528812"
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren für Räumlichkeitsindizes &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+ [Sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery-Grundlagen](../../xquery/xquery-basics.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f88eb65e036bd164202d6e8edcf765a16a89c8da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52008fa75b70bfb4c4b3ea3d25ef1d6fe6977142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949616"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Level-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -37,10 +36,10 @@ ms.locfileid: "66709088"
  [UniqueName-Eigenschaft](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

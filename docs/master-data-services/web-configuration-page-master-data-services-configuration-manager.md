@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8e9036bbff7302a0580bcbc5370ba8c6e9f7835a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc98260f9887652717edd4c67787089844826ad4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017277"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Webkonfiguration (Seite im Konfigurations-Manager für Master Data Sevices)
 
@@ -44,7 +43,7 @@ ms.locfileid: "65485526"
   
 ## <a name="enable-dqs-integration"></a>Aktivieren der DQS-Integration  
   
-|Steuerelementname|Description|  
+|Steuerelementname|Beschreibung|  
 |------------------|-----------------|  
 |**Integration in Data Quality Services aktivieren**|Aktivieren Sie diese Option, um die in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Weitere Informationen finden Sie unter [Aktivieren der Data Quality Services-Integration in Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   

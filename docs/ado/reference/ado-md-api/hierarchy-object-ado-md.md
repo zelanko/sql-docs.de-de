@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5915102164afccd8e2055e14d0ef9d63b2cf5937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949695"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy-Objekt (ADO MD)
 Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) aggregiert werden können oder die "wird durchgeführt." Eine Dimension kann entlang einer oder mehreren Hierarchien aggregiert werden.  
@@ -39,7 +38,7 @@ Stellt eine Möglichkeit dar, in dem die Mitglieder einer [Dimension](../../../a
   
  Die **Eigenschaften** Auflistung enthält die Eigenschaften vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise verfügbar sind. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Finden Sie unter der Dokumentation für Ihren Anbieter, um eine vollständige Liste der verfügbaren Eigenschaften.  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |AllMember|Das Element auf der höchsten Ebene des Rollups in der Hierarchie.|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  

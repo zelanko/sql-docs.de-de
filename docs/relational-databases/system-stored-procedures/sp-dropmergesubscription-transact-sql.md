@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933870"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *subscription_database eingestellt wird*ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)**, und kann einen der folgenden Werte sein.  
+`[ @subscription_type = ] 'subscription_type'` Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)** , und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**all**|Push-, Pull- und anonyme Abonnements.|  
-|**anonymous**|Anonymes Abonnement.|  
-|**push**|Pushabonnement.|  
-|**pull**|Pullabonnement.|  
+|**Alle**|Push-, Pull- und anonyme Abonnements.|  
+|**Anonyme**|Anonymes Abonnement.|  
+|**Pushbenachrichtigungen**|Pushabonnement.|  
+|**Pull**|Pullabonnement.|  
 |**both** (Standard)|Sowohl Push- als auch Pullabonnements.|  
   
 `[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Mit diesem Parameter kann ein Abonnement gelöscht werden, ohne Cleanuptasks auf dem Verteiler auszuführen. Er erweist sich auch bei einer etwaigen Neuinstallation des Verteilers als hilfreich.  

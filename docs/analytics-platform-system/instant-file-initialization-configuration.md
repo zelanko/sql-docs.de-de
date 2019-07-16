@@ -2,19 +2,18 @@
 title: Konfigurieren Sie sofortige Dateiinitialisierung - Analytics Platform System | Microsoft-Dokumentation
 description: Sofortige Dateiinitialisierung in Analytics Platform System zu konfigurieren. Sofortige dateiinitialisierung ist eine SQL Server-Funktion, mit dem Daten-Dateivorgänge, schneller ausgeführt werden kann.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960734"
 ---
 # <a name="instant-file-initialization-configuration"></a>Instant File Initialization-Konfiguration
 Sofortige dateiinitialisierung ist eine SQL Server-Funktion, mit dem Daten-Dateivorgänge, schneller ausgeführt werden kann. Überprüfen das Kontrollkästchen, um die sofortige Dateiinitialisierung einschalten steigert die Leistung von SQL Server PDW. Aber wenn dies ein Sicherheitsrisiko Business für Sie darstellt, dann lassen Sie das Kontrollkästchen deaktiviert.  
@@ -48,7 +47,7 @@ Der Sicherungsvorgang ist erforderlich, einen Netzwerkanmeldeinformationen (Wind
     > [!WARNING]  
     > Wenn Sie sofortige dateiinitialisierung deaktivieren, gelten die Sicherheitsaspekte machen, die weiter oben erläuterten, für die Funktion möglicherweise immer noch für Dateien gelöscht werden, während die sofortige dateiinitialisierung aktiviert wurde.  
   
-4.  Klicken Sie auf **Anwenden**. Die Änderung wird das nächste Mal über die SQL Server-Instanzen für SQL Server PDW weitergegeben, das die Anwendung Dienste neu gestartet werden. Um die Anwendung Dienste neu zu starten, finden Sie unter [PDW-Dienststatus &#40;Analytics Platform System&#41;](pdw-services-status.md).  
+4.  Klicken Sie auf **Übernehmen**. Die Änderung wird das nächste Mal über die SQL Server-Instanzen für SQL Server PDW weitergegeben, das die Anwendung Dienste neu gestartet werden. Um die Anwendung Dienste neu zu starten, finden Sie unter [PDW-Dienststatus &#40;Analytics Platform System&#41;](pdw-services-status.md).  
   
 5.  Möglicherweise möchten Sie die oben erläuterten Schritte wiederholen **Berechtigung hinzufügen, für das Konto für die Sicherung** So entfernen Sie die **Durchführen von Volumewartungsaufgaben** Berechtigung.  
   

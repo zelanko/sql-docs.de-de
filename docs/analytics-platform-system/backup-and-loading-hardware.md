@@ -2,19 +2,18 @@
 title: Sicherung und Laden von Hardware – Parallel Data Warehouse
 description: Um Ihre End-to-End Data warehousing-Lösung für Analytics Platform System (APS) mit Parallel Data Warehouse (PDW) bereitzustellen, müssen Sie einen Plan aus, um das Datawarehouse zu sichern, und Laden von Daten erstellen. Verwenden Sie diese Anleitung zum Abrufen und Konfigurieren von Sicherung und Laden von Servern, die Ihren geschäftlichen Anforderungen erfüllt.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4d7f7b6b4edea9dacab7287a7936b7fd87fd7973
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90f142a8bb86f99ed5cf5d9ff926bdf849060324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63065127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961418"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Sicherung und Laden von Hardwareübersicht: Parallel Data Warehouse
 Um Ihre End-to-End Data warehousing-Lösung für Analytics Platform System (APS) mit Parallel Data Warehouse (PDW) bereitzustellen, müssen Sie einen Plan aus, um das Datawarehouse zu sichern, und Laden von Daten erstellen. Verwenden Sie diese Anleitung zum Abrufen und Konfigurieren von Sicherung und Laden von Servern, die Ihren geschäftlichen Anforderungen erfüllt.  

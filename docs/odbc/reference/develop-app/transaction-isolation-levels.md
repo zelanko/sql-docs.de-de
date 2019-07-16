@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63e08aa2e75d560ce73c549d307418432ffe16af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83197b1b487db6c52a8fe9b7a57dd6af55c33571
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985107"
 ---
 # <a name="transaction-isolation-levels"></a>Transaktionsisolationsstufen
 *Transaktionsisolationsstufen von Cursorn* sind eine Maßeinheit für den Umfang für die Transaktion isoliert ist erfolgreich. Insbesondere werden die Isolationsstufen von Transaktionen durch das Vorhandensein oder fehlen, der die folgende Phänomene definiert:  

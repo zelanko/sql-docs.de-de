@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61e55bec7a35009f0d83a43550a434e0966559b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019470"
 ---
 # <a name="index-command"></a>INDEX-Befehl
 Erstellt eine Indexdatei zum Anzeigen und Zugreifen auf Tabellendatensätze in einer logischen Reihenfolge.  
@@ -62,7 +61,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  Wenn eine Datei zusammengesetzten Index bereits erstellt und geöffnet wurde, ausgeben INDEX mit TAG *TagName* der zusammengesetzten Index-Datei ein Tag hinzugefügt.  
   
- FOR *lExpression*  
+ FÜR *lExpression*  
  Gibt eine Bedingung, bei dem nur die Datensätze, die den Filterausdruck erfüllen *lExpression* stehen für Sie Anzeige- und Zugriff Indexschlüssel werden in der Indexdatei für nur die Datensätze, die mit dem Filterausdruck erstellt.  
   
  Visual FoxPro-Rushmore Technologie optimiert einen INDEX... FÜR *lExpression* -Befehl, wenn *lExpression* ist ein optimierbarer Ausdruck. Verwenden Sie für eine optimale Leistung einen optimierbaren Ausdruck in der FOR-Klausel.  

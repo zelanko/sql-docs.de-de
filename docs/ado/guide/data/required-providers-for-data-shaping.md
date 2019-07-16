@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b825139c99fe97cfce27d03e65429bb076558413
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 98b34b985650f92fb840b14daba8d5bf16d8454a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924367"
 ---
 # <a name="required-providers-for-data-shaping"></a>Erforderliche Anbieter für die Datenstrukturierung
 Strukturieren von Daten erfordert in der Regel zwei Anbieter. Der Dienstanbieter [Data Shaping Service für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), der die Daten strukturieren, Funktionalität und einen Datenanbieter, wie z. B. der OLE DB-Anbieter für SQL Server bereitstellt, Zeilen mit Daten zum Auffüllen des geformten [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4239cd2e62db43b4316bad5edbf989f29709213a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965651"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Gibt den Typ des Datenbankobjekts für das Berechtigungen oder Besitzer festgelegt.  
   
-|Konstante|Wert|Description|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|Das Objekt ist eine Spalte an.|  
 |**adPermObjDatabase**|3|Das Objekt ist eine Datenbank.|  

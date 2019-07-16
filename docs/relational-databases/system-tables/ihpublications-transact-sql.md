@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990332"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **IHpublications** -Systemtabelle enthält eine Zeile für jede nicht - SQL Server-Veröffentlichung mithilfe des aktuellen Verteilers. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**int**|Die Identitätsspalte mit einer eindeutigen ID für die Veröffentlichung.|  
 |**name**|**sysname**|Der eindeutige der Veröffentlichung zugeordnete Name.|  
@@ -58,18 +57,18 @@ ms.locfileid: "52802782"
 |**centralized_conflicts**|**bit**|Gibt an, ob Konfliktdatensätze auf dem Verleger gespeichert werden:<br /><br /> **0** = die Konfliktdatensätze gespeichert werden, auf dem Verleger und auf dem Abonnenten, die den Konflikt verursacht hat.<br /><br /> **1** = die Konfliktdatensätze auf dem Verleger gespeichert werden.<br /><br /> *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**conflict_retention**|**int**|Gibt die Konfliktaufbewahrungsdauer in Tagen an. *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**conflict_policy**|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = der Abonnent gewinnt den Konflikt.<br /><br /> **3** = Abonnement wird erneut initialisiert.<br /><br /> *Nicht unterstützt für nicht - SQL-Verleger.*|  
-|**queue_type**|**int**|Gibt an, welcher Wartenschlangentyp verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **1** = Msmq; es wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing zum Speichern von Transaktionen.<br /><br /> **2** = Sql; es wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.<br /><br /> Diese Spalte wird nicht verwendet, von nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.<br /><br /> Hinweis: Die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.<br /><br /> *Diese Spalte wird für nicht - SQL-Verleger nicht unterstützt.*|  
-|**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Ein gültiger globally unique Identifier (GUID) gibt an, dass die Veröffentlichung, in veröffentlicht wird der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory und die GUID ist das entsprechende Active Directory-Veröffentlichungsobjekt **"objectGUID"**. Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht. *Nicht unterstützt für nicht - SQL-Verleger.*|  
+|**queue_type**|**int**|Gibt an, welcher Wartenschlangentyp verwendet wird. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **1** = Msmq; es wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing zum Speichern von Transaktionen.<br /><br /> **2** = Sql; es wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.<br /><br /> Diese Spalte wird nicht verwendet, von nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.<br /><br /> Hinweis: Mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.<br /><br /> *Diese Spalte wird für nicht - SQL-Verleger nicht unterstützt.*|  
+|**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Ein gültiger globally unique Identifier (GUID) gibt an, dass die Veröffentlichung, in veröffentlicht wird der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory und die GUID ist das entsprechende Active Directory-Veröffentlichungsobjekt **"objectGUID"** . Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht. *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad, der einen der folgenden Werte annehmen kann:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**description**|**nvarchar(255)**|Beschreibender Eintrag für die Veröffentlichung.|  
 |**independent_agent**|**bit**|Gibt an, ob ein eigenständiger Verteilungs-Agent für diese Veröffentlichung vorhanden ist.<br /><br /> **0** = die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Verlegerdatenbank und Abonnentendatenbank-Paar besitzt einen einzelnen freigegebenen Agent.<br /><br /> **1** = es ist ein eigenständiger Verteilungs-Agent für diese Veröffentlichung.|  
 |**immediate_sync**|**bit**|Gibt an, ob die Synchronisierungsdateien erstellt oder jedes Mal, die der Momentaufnahme-Agent ausgeführt wird, neu erstellt werden, in denen **1** bedeutet, dass sie jedes Mal, wenn der Agent ausgeführt wird, erstellt werden.|  
 |**allow_push**|**bit**|Gibt an, ob Pushabonnements in der Veröffentlichung zulässig sind, in denen **1** bedeutet, dass sie zulässig sind.|  
 |**allow_pull**|**bit**|Gibt an, ob Pullabonnements für die Veröffentlichung zulässig sind, in denen **1** bedeutet, dass sie zulässig sind.|  
-|**Beibehaltungsdauer**|**int**|Der Änderungsumfang in Stunden, der für die angegebene Veröffentlichung eingespart werden soll.|  
+|**retention**|**int**|Der Änderungsumfang in Stunden, der für die angegebene Veröffentlichung eingespart werden soll.|  
 |**allow_subscription_copy**|**bit**|Gibt an, ob die Möglichkeit zum Kopieren der Abonnementdatenbanken aktiviert wurde, die diese Veröffentlichung abonniert haben. **1** bedeutet, dass das Kopieren zulässig ist.|  
 |**allow_initialize_from_backup**|**bit**|Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung über eine Sicherung anstelle einer Anfangsmomentaufnahme initialisieren können. **1** bedeutet, dass Abonnements aus einer Sicherung initialisiert werden können und **0** bedeutet, die sie nicht. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird. *Nicht unterstützt für nicht - SQL-Verleger.*|  
-|**min_autonosync_lsn**|**Binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Gibt an, ob es sich bei der Schemareplikation für die Veröffentlichung unterstützt wird. **1** gibt an, dass auf dem Verleger ausgeführte DDL-Anweisungen repliziert werden, und **0** gibt an, dass DDL-Anweisungen nicht repliziert werden. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Nicht unterstützt für nicht - SQL-Verleger.*|  
 |**options**|**int**|Bitmuster, mit dem zusätzliche Veröffentlichungsoptionen angegeben werden, mit den folgenden bitweisen Optionswerten:<br /><br /> **0 x 1** – für die Peer-zu-Peer-Replikation aktiviert.<br /><br /> **0 x 2** -nur lokale Änderungen veröffentlichen.<br /><br /> **0 x 4** – für nicht - SQL Server-Abonnenten aktiviert.|  
   

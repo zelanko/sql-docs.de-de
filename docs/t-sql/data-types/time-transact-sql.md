@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 88eb2923a9037ad0e4ad07f2f560b85b45260cd2
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079456"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866255"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "56079456"
   
 ## <a name="time-description"></a>Beschreibung des time-Datentyps  
   
-|Eigenschaft|Wert|  
+|Eigenschaft|value|  
 |--------------|-----------|  
 |Syntax|**time** [ (*Sekundenbruchteil-Genauigkeit*) ]|  
 |Verwendung|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
@@ -72,13 +72,13 @@ ms.locfileid: "56079456"
 ## <a name="supported-string-literal-formats-for-time"></a>Unterstützte Formate der Zeichenfolgenliterale für time  
  In der folgenden Tabelle werden die gültigen Formate der Zeichenfolgenliterale für den **time**-Datentyp aufgeführt.  
   
-|SQL Server|Beschreibung|  
+|SQL Server|und Beschreibung|  
 |----------------|-----------------|  
 |hh:mm[:ss][:Sekundenbruchteile][AM][PM]<br /><br /> hh:mm[:ss][.Sekundenbruchteile][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|Der Stundenwert von 0 stellt die Stunde nach Mitternacht (AM) dar, unabhängig davon, ob AM angegeben ist. Wenn für die Stunde der Wert 0 festgelegt ist, kann PM nicht angegeben werden.<br /><br /> Stundenwerte von 01 bis 11 stellen die Stunden vor 12 Uhr mittags dar, wenn weder AM noch PM angegeben wurde. Die Werte stellen die Stunden vor 12 Uhr mittags dar, wenn AM angegeben wurde. Sie stellen die Stunden nach 12 Uhr mittags dar, wenn PM angegeben wurde.<br /><br /> Der Stundenwert 12 stellt die Stunde, beginnend mit 12 Uhr mittags, dar, wenn weder AM noch PM angegeben wurde. Wurde AM angegeben, stellt der Wert die Stunde dar, die um Mitternacht beginnt. Wurde PM angegeben, stellt der Wert die Stunde dar, die um 12 Uhr mittags beginnt. Beispiel: 12:01 ist eine Minute nach 12 Uhr mittags, genauso wie 12:01 PM, während 12:01 AM eine Minute nach Mitternacht ist. Die Angabe 12:01 AM ist identisch mit der Angabe 00:01 oder 00:01 AM.<br /><br /> Stundenwerte von 13 bis 23 stellen die Stunden nach 12 Uhr mittags dar, wenn weder AM noch PM angegeben wurde. Die Werte stellen darüber hinaus die Stunden nach 12 Uhr mittags dar, wenn PM angegeben wurde. AM kann nicht angegeben werden, wenn der Stundenwert zwischen 13 und 23 liegt.<br /><br /> Ein Stundenwert von 24 ist ungültig. Um Mitternacht darzustellen, verwenden Sie 12:00 AM oder 00:00.<br /><br /> Vor Millisekundenangaben kann entweder ein Doppelpunkt (:) oder ein Punkt (.) stehen. Wenn ein Doppelpunkt verwendet wird, bedeutet das, dass die folgende Zahl Tausendstelsekunden darstellt. Wenn ein Punkt verwendet wird, bedeutet das, dass eine einzelne folgende Ziffer Zehntelsekunden, zwei Folgeziffern Hundertstelsekunden und drei Folgeziffern Tausendstelsekunden darstellen. Beispielsweise zeigt 12:30:20:1 zwanzig Sekunden und eine Tausendstelsekunde nach 12:30 an, während 12:30:20.1 zwanzig Sekunden und eine Zehntelsekunde nach 12:30 anzeigt.|  
   
 |ISO 8601|Hinweise|  
 |--------------|-----------|  
-|hh:mm:ss<br /><br /> hh:mm[:ss][.Sekundenbruchteile]|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.|  
+|hh:mm:ss<br /><br /> hh:mm[:ss][.Sekundenbruchteile]|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.|  
   
 |ODBC|Hinweise|  
 |----------|-----------|  
@@ -94,7 +94,7 @@ ms.locfileid: "56079456"
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
-|**Uhrzeit**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**Datum**|JJJJ-MM-TT|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
@@ -123,7 +123,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  Beim Konvertieren in **date** schlägt die Konvertierung fehl, und die Fehlermeldung 206 wird ausgegeben: „Operandentypkollision: date ist inkompatibel mit time.“  
   
- Wenn eine Konvertierung in **datetime** vorgenommen wird, werden die Werte für Stunden, Minuten und Sekunden kopiert, und die Datumskomponente wird auf 1900-01-01 festgelegt. Wenn die Genauigkeit des **time(n)**-Werts größer ist als drei Sekundenbruchteile, wird das **datetime**-Ergebnis gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
+ Wenn eine Konvertierung in **datetime** vorgenommen wird, werden die Werte für Stunden, Minuten und Sekunden kopiert, und die Datumskomponente wird auf 1900-01-01 festgelegt. Wenn die Genauigkeit des **time(n)** -Werts größer ist als drei Sekundenbruchteile, wird das **datetime**-Ergebnis gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -166,7 +166,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Wenn eine Konvertierung in **datetimeoffset(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt und die Uhrzeit kopiert. Der Zeitzonenoffset wird auf +00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **time(n)**-Werts größer ist als die Genauigkeit des **datetimeoffset(n)**-Werts, wird der Wert entsprechend aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetimeoffset(3)`-Typ.  
+ Wenn eine Konvertierung in **datetimeoffset(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt und die Uhrzeit kopiert. Der Zeitzonenoffset wird auf +00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **time(n)** -Werts größer ist als die Genauigkeit des **datetimeoffset(n)** -Werts, wird der Wert entsprechend aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetimeoffset(3)`-Typ.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -183,7 +183,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Wenn eine Konvertierung in **datetime2(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt, die Zeitkomponente wird kopiert, und der Zeitzonenoffset wird auf 00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **datetime2(n)**-Werts größer ist als die Genauigkeit des **time(n)**-Werts, wird der Wert entsprechend aufgerundet.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime2(2)`-Wert.  
+ Wenn eine Konvertierung in **datetime2(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt, die Zeitkomponente wird kopiert, und der Zeitzonenoffset wird auf 00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **datetime2(n)** -Werts größer ist als die Genauigkeit des **time(n)** -Werts, wird der Wert entsprechend aufgerundet.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime2(2)`-Wert.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -235,7 +235,7 @@ SELECT
   
 |Datentyp|Ausgabe|  
 |---------------|------------|  
-|**Uhrzeit**|12:35:29. 1234567|  
+|**time**|12:35:29. 1234567|  
 |**Datum**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
@@ -245,14 +245,14 @@ SELECT
 ###  <a name="ExampleB"></a> B. Einfügen von gültigen Zeitzeichenfolgenliteralen in eine time(7)-Spalte  
  In der folgenden Tabelle werden neben den unterschiedlichen Zeichenfolgenliteralen, die in eine Spalte des Datentyps **time(7)** eingefügt werden können, auch die Werte aufgelistet, die anschließend in der entsprechenden Spalte gespeichert werden.  
   
-|Formattyp des Zeichenfolgenliterals|Eingefügtes Zeichenfolgenliteral|Gespeicherter time(7)-Wert|Beschreibung|  
+|Formattyp des Zeichenfolgenliterals|Eingefügtes Zeichenfolgenliteral|Gespeicherter time(7)-Wert|und Beschreibung|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|Wenn vor der Genauigkeit der Sekundenbruchteile ein Doppelpunkt (:) steht, können die Dezimalstellen mit maximal 3 Positionen angegeben werden. Andernfalls wird ein Fehler ausgegeben.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|Wenn AM oder PM angegeben ist, wird die Uhrzeit im 24-Stunden-Format ohne das Literal AM oder PM gespeichert.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 PM'|13:01:01.1234567|Wenn AM oder PM angegeben ist, wird die Uhrzeit im 24-Stunden-Format ohne das Literal AM oder PM gespeichert.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567PM'|13:01:01.1234567|Ein Leerzeichen vor AM oder PM ist optional.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01AM'|01:00:00.0000000|Wenn nur die Stunde angegeben wird, sind alle anderen Werte 0.|  
-|SQL Server|'01 AM'|01:00:00.0000000|Ein Leerzeichen vor AM oder PM ist optional.|  
+|SQL Server|'01 AM'|01:00:00.0000000|Ein Leerzeichen vor AM oder PM ist optional.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01'|01:01:01.0000000|Wenn keine Genauigkeit der Sekundenbruchteile angegeben wird, wird jede Position, die durch den Datentyp definiert ist, auf 0 festgelegt.|  
 |ISO 8601|'01:01:01.1234567'|01:01:01.1234567|Zur Erfüllung des ISO 8601-Standards verwenden Sie das 24-Stunden-Format ohne Angabe von AM oder PM.|  
 |ISO 8601|'01:01:01.1234567 +01:01'|01:01:01.1234567|Der optionale Zeitzonenunterschied (TZD) ist bei der Eingabe zugelassen, wird aber nicht gespeichert.|  
@@ -260,7 +260,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. Einfügen von time-Zeichenfolgenliteralen in die Spalten der einzelnen date-Datentypen und time-Datentypen  
  Die folgende Tabelle zeigt in der ersten Spalte ein time-Zeichenfolgenliteral, das in eine Datenbanktabellen-Spalte des Datentyps date oder time (wird in der zweiten Spalte angezeigt) eingefügt werden soll. Die dritte Spalte zeigt den Wert, der in der Datenbanktabellen-Spalte gespeichert wird.  
   
-|Eingefügtes Zeichenfolgenliteral|Spaltendatentyp|Wert, der in der Spalte gespeichert wird|Beschreibung|  
+|Eingefügtes Zeichenfolgenliteral|Spaltendatentyp|Wert, der in der Spalte gespeichert wird|und Beschreibung|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
 |'2007-05-07'|**Datum**|NULL|Uhrzeitangaben führen zu einem Fehlschlagen der INSERT-Anweisung.|  

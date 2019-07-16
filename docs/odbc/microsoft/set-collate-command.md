@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a7701edd4c1902399f1d040ae9027365bdf04ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997749"
 ---
 # <a name="set-collate-command"></a>SET COLLATE-Befehl
 Gibt eine Sortierreihenfolge für Zeichenfelder in nachfolgenden indizierungs- und Sortiervorgänge an.  
@@ -36,9 +35,9 @@ SET COLLATE TO cSequenceName
   
 |Optionen|Sprache|  
 |-------------|--------------|  
-|DUTCH|Niederländisch|  
+|HOLLÄNDISCH|Niederländisch|  
 |GENERAL|Englisch, Französisch, Deutsch, moderne Spanisch, Portugiesisch und andere westeuropäischen Sprachen|  
-|GERMAN|Reihenfolge der deutschen Telefonbuch (DIN)|  
+|DEUTSCH|Reihenfolge der deutschen Telefonbuch (DIN)|  
 |ISLAND|Isländisch|  
 |COMPUTER|Computer (die Standardsortierreihenfolge für frühere Versionen von FoxPro)|  
 |NORDAN|Norwegisch, Dänisch|  

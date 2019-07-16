@@ -21,19 +21,19 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-manager: craigg
+manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e7fb5ecb66552ef4d061c36326788f4be51255bb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399652"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680383"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 SQL Server Management Studio (SSMS) ist eine integrierte Umgebung zum Verwalten jeder beliebigen SQL-Infrastruktur, von SQL Server bis hin zur Azure SQL-Datenbank. SSMS stellt Tools zum Konfigurieren, Überwachen und Verwalten von Instanzen von SQL Server und Datenbanken zur Verfügung. Verwenden Sie SSMS, um Abfragen und Skripts zu erstellen sowie die Datenebenenkomponenten bereitzustellen, zu überwachen und zu aktualisieren, die von Ihren Anwendungen verwendet werden.
 
@@ -45,7 +45,7 @@ SSMS ist kostenlos!
 
 **SSMS 18.1 ist jetzt verfügbar und ist die neueste Version mit der allgemeinen Verfügbarkeit (GA) von *SQL Server Management Studio* mit Unterstützung für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![Download](../ssdt/media/download.png) SQL Server Management Studio 18.1 herunterladen ](https://go.microsoft.com/fwlink/?linkid=2094583)**
+**[![Download](../ssdt/media/download.png) SQL Server Management Studio 18.1 herunterladen](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
 SSMS 18.1 ist die aktuelle Version von SSMS mit allgemeiner Verfügbarkeit (GA, General Availability). Wenn Sie SSMS 18.0 (GA) installiert haben, wird durch die Installation von SSMS 18.1 ein Upgrade auf Version 18.1 durchgeführt. Wenn eine ältere *Vorschauversion* von SSMS 18.0 installiert ist, müssen Sie diese vor der Installation von SSMS 18.1 deinstallieren.
 

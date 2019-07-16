@@ -7,16 +7,15 @@ ms.date: 09/10/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bc506d245878d459a3c4639ff4e5a6c2f2a9f8f6
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: efc1b939f3231aeca18e0b6547970af6b8eb39cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962425"
 ---
-# <a name="r-services-in-sql-server-2016"></a>R Services in SQL Server 2016
+# <a name="r-services-in-sql-server-2016"></a>R Services in SQLServer 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 R Services ist ein Add-on in eine SQL Server 2016-Datenbank-Engine-Instanz, für die Ausführung von R-Code und Funktionen in SQL Server verwendet. Code wird in einem Erweiterbarkeitsframework,, ausgeführt, von der Kern-Engine-Prozesse isoliert, jedoch vollständig auf relationale Daten als gespeicherte Prozeduren, wie T-SQL-Skript, die R-Anweisungen enthält oder als R-Code mit T-SQL verfügbar. 
@@ -32,7 +31,7 @@ R-Bibliotheken enthalten [ **RevoScaleR**](ref-r-revoscaler.md), [ **MicrosoftML
 
 R wird nur von SQL Server 2016 ist. Die folgende Tabelle beschreibt die Funktionen in SQL Server 2016.
 
-| Komponente | Description |
+| Komponente | Beschreibung |
 |-----------|-------------|
 | SQL Server Launchpad-Dienst | Ein Dienst, der Kommunikation zwischen der externen R-Laufzeiten und SQL Server-Instanz verwaltet. |
 | R-Pakete | [**RevoScaleR** ](ref-r-revoscaler.md) ist die primäre Bibliothek für skalierbare r-Funktionen in dieser Bibliothek auf die am häufigsten verwendeten sind. Datentransformationen und Manipulation, statistische Zusammenfassung, Visualisierung und viele Formen der Modellierung und Analysen werden in diesen Bibliotheken gefunden. Darüber hinaus verteilen Funktionen in diesen Bibliotheken automatisch Workloads auf verfügbaren Kerne für die parallele Verarbeitung, mit der Möglichkeit, die für Segmente der Daten zu arbeiten, die koordiniert und verwaltet werden, indem die berechnungs-Engine.  <br/>[**MicrosoftML (R)** ](ref-r-microsoftml.md) fügt Machine Learning-Algorithmen, um benutzerdefinierte Modelle für die Textanalyse, Bildanalyse und stimmungsanalysen zu erstellen. <br/>[**SqlRUtils** ](ref-r-sqlrutils.md) Stellt Hilfsfunktionen für das Einfügen von R-Skripts in einer gespeicherten T-SQL-Prozedur, eine gespeicherte Prozedur mit einer Datenbank registrieren und Ausführen der gespeicherten Prozedur aus einer R-Entwicklungsumgebung.<br/>[**OlapR** ](ref-r-olapr.md) dient zum Angeben von MDX-Abfragen in r|

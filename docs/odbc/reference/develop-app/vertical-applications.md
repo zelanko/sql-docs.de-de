@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022101"
 ---
 # <a name="vertical-applications"></a>Vertikale Anwendungen
 Vertikale Anwendungen führen in der Regel eine klar definierte Aufgabe für eine einzelne DBMS. Auftragserfassungsanwendung verfolgt z. B. die Bestellungen in einem Unternehmen. Was diese Arten von Anwendungen gemeinsam haben ist, dass das Datenbankschema in der Regel durch Anwendungsentwickler vorgesehen, während die Anwendung mit einer Reihe von verschiedenen DBMS arbeiten kann, es mit einer einzelnen DBMS für einen einzelnen Kunden funktioniert.  

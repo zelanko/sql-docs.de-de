@@ -7,13 +7,12 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3c5c27186969db01cc90fa43a6cf4ec2774ab051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12659f7ea5df9ab364be44d98a8037c54b3ba2cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962864"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-downloads für kumulative Updates Analysefunktionen von SQL Server in der Datenbank-Instanzen
 
@@ -21,7 +20,7 @@ SQL Server-Instanzen, die für in-Database-Analyse konfiguriert sind, enthalten 
 
 Dieser Artikel enthält Links zum Herunterladen der CAB-Dateien für die kumulativen Updates. Links werden für sowohl SQL Server 2017 Machine Learning Services (R- und Python) als auch SQL Server 2016 R Services bereitgestellt. Weitere Informationen zu Offlineinstallationen, finden Sie unter [Installieren von SQL Server-Machine learning-Komponenten ohne Internetzugang](sql-ml-component-install-without-internet-access.md#apply-cu).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Beginnen Sie mit einer Basisinstallation.
 

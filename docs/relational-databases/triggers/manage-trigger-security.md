@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e400ada65efa69dd1b3e5ccc7dbdc21f67e3674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edc81e7f148a2d0c2572da4902a90499baf9db7e
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690788"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866283"
 ---
 # <a name="manage-trigger-security"></a>Verwalten der Triggersicherheit
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,31 @@ ms.locfileid: "47690788"
 ## <a name="trigger-security-best-practices"></a>Bewährte Methoden für die Triggersicherheit  
  Sie können folgende Maßnahmen ergreifen, um zu vermeiden, dass Triggercode mit ausgeweiteten Privilegien ausgeführt wird:  
   
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 -   Eruieren Sie die in der Datenbank und der Serverinstanz vorhandenen DML- und DDL-Trigger, indem Sie die Katalogsichten [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) und [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) abfragen. Die folgende Abfrage gibt alle DML-Trigger und DDL-Trigger auf Datenbankebene der aktuellen Datenbank zurück, sowie alle DDL-Trigger auf Serverebene der Serverinstanz:  
   
-    ```  
+    ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers  
     UNION  
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
+
+   > [!NOTE]
+   > Nur **sys.triggers** ist für Azure SQL-Datenbank verfügbar, wenn Sie keine verwaltete Instanz verwenden.
+
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+-   Beachten Sie die in der Datenbank vorhandenen DML- und DDL-Trigger, indem Sie die Katalogsicht [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) abfragen. Die folgende Abfrage gibt alle DML-Trigger und DDL-Trigger auf Datenbankebene in der aktuellen Datenbank zurück:  
   
+    ```sql
+    SELECT type, name, parent_class_desc FROM sys.triggers ; 
+    ```  
+  
+::: moniker-end
+
 -   Verwenden Sie [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) , um die Trigger zu deaktivieren, die die Integrität der Datenbank oder des Servers beeinträchtigen können, falls sie mit ausgeweiteten Privilegien ausgeführt werden. Die folgende Anweisung deaktiviert alle DDL-Trigger auf Datenbankebene in der aktuellen Datenbank:  
   
     ```  
@@ -94,7 +111,7 @@ ms.locfileid: "47690788"
     DEALLOCATE trig_cur;  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)   
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)  

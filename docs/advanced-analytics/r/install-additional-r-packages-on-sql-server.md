@@ -7,20 +7,19 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 218003efa75ead5ab795fa5ef10ac09c4d97a6a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962625"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installieren Sie neuer R-Pakete unter SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel beschreibt, wie Sie neue R-Pakete mit einer Instanz von SQL Server installieren, Machine Learning aktiviert ist. Es gibt mehrere Methoden zum Installieren neuer R-Pakete, je nachdem, welche Version von SQL Server haben und gibt an, ob der Server über eine Internetverbindung verfügt. Die folgenden Methoden zum neuen Paketinstallation sind möglich.
 
-| Vorgehensweise                           | Berechtigungen               | Remote/lokale |
+| Ansatz                           | Berechtigungen               | Remote/lokale |
 |------------------------------------|---------------------------|--------------|
 | [Verwenden von herkömmlichen R-Paket-Manager](use-r-package-managers-on-sql-server.md)  | Admin | Lokal |
 | [Verwenden von RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Danach Datenbankrollen Admin-aktiviert | both|

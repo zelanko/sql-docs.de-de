@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961850"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Trainieren und Speichern eines Python-Modells mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -116,12 +115,12 @@ Zum erneuten Trainieren des Modells auf neue Daten zu erleichtern, stellen Sie d
 
     Die Verarbeitung der Daten und Anpassung des Modells können ein paar Minuten dauern. Nachrichten, die auf Python weitergeleitet werden würden **"stdout"** Stream werden angezeigt, der **Nachrichten** Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Zum Beispiel:
 
-    *Stdout-Meldung(en) aus dem externen Skript:*
+    *Stdout-Meldung(en) aus dem externen Skript:* 
   *c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Öffnen Sie die Tabelle *nyc\_Taxi_models*. Sie können sehen, dass eine neue Zeile hinzugefügt wurde, die das serialisierte Modell in der Spalte _model_enthält.
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -180,12 +179,12 @@ Mithilfe von **Revoscalepy**, können Sie remotecomputekontexte erstellen, Versc
 
     Die Verarbeitung der Daten und Anpassung des Modells können eine Weile dauern. Nachrichten, die auf Python weitergeleitet werden würden **"stdout"** Stream werden angezeigt, der **Nachrichten** Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Zum Beispiel:
 
-    *Stdout-Meldung(en) aus dem externen Skript:*
+    *Stdout-Meldung(en) aus dem externen Skript:* 
   *c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Öffnen Sie die Tabelle *nyc_taxi_models*. Sie können sehen, dass eine neue Zeile hinzugefügt wurde, die das serialisierte Modell in der Spalte _model_enthält.
 
-    *revoscalepy_model* *0x8003637265766F7363616c....*
+    *Revoscalepy_model* *0x8003637265766F7363616c...*
 
 Im nächsten Schritt verwenden Sie die trainierten Modelle zum Erstellen von Vorhersagen.
 

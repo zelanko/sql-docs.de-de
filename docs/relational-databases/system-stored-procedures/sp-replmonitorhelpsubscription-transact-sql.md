@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92cd44dcc30a0843409c908cb3cc3a76276519aa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8e8f76699e35c71e7bbf85b972cd76eb0cb3c289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950543"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode` Der Filterungsmodus, verwenden Sie bei der Rückgabe von Abonnements, die Informationen überwachen. *Modus* ist **Int**, und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0** (Standardwert)|Gibt alle Abonnements zurück.|  
 |**1**|Gibt nur Abonnements mit Fehlern zurück.|  
@@ -81,18 +80,18 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|Überprüft den Status aller Replikations-Agents, die der Veröffentlichung zugeordnet sind, und gibt den höchsten gefundenen Status in der folgenden Reihenfolge zurück:<br /><br /> **6** = Fehler<br /><br /> **5** = wird wiederholt<br /><br /> **2** = beendet<br /><br /> **4** = im Leerlauf<br /><br /> **3** = wird ausgeführt<br /><br /> **1** = gestartet|  
-|**warning**|**int**|Warnung bezüglich des maximalen Schwellenwerts, die von einem zur Veröffentlichung gehörenden Abonnement generiert wird. Dies kann das Ergebnis des logischen OR-Vorgangs mit mindestens einem der folgenden Werte sein.<br /><br /> **1** = Expiration - ein Abonnement für eine transaktionsveröffentlichung wurde nicht innerhalb der Schwellenwerts für die Beibehaltungsdauer synchronisiert.<br /><br /> **2** = Latency - die Zeitdauer für die Replikation von Daten von einem Transaktionsverleger auf den Abonnenten überschreitet den Schwellenwert in Sekunden.<br /><br /> **4** = Mergeexpiration - ein Abonnement für eine Mergeveröffentlichung wurde nicht innerhalb der Schwellenwerts für die Beibehaltungsdauer synchronisiert.<br /><br /> **8** = Mergefastrunduration - die Zeit zum Abschließen der Synchronisierung eines Mergeabonnements überschreitet den Schwellenwert in Sekunden an, über eine schnelle Netzwerkverbindung.<br /><br /> **16** = Mergeslowrunduration – die Zeit zum Abschließen der Synchronisierung eines Mergeabonnements überschreitet den Schwellenwert in Sekunden an, über eine langsame oder DFÜ Netzwerkverbindung.<br /><br /> **32** = Mergefastrunspeed - die Übermittlungsrate für Zeilen während der Synchronisierung eines Mergeabonnements konnte die Rate Schwellenwert in Zeilen pro Sekunde, über eine schnelle Netzwerkverbindung zu verwalten.<br /><br /> **64** = Mergeslowrunspeed - die Übermittlungsrate für Zeilen während der Synchronisierung eines Mergeabonnements konnte die Rate Schwellenwert in Zeilen pro Sekunde, über eine langsame oder DFÜ Netzwerkverbindung zu verwalten.|  
+|**Warnung**|**int**|Warnung bezüglich des maximalen Schwellenwerts, die von einem zur Veröffentlichung gehörenden Abonnement generiert wird. Dies kann das Ergebnis des logischen OR-Vorgangs mit mindestens einem der folgenden Werte sein.<br /><br /> **1** = Expiration - ein Abonnement für eine transaktionsveröffentlichung wurde nicht innerhalb der Schwellenwerts für die Beibehaltungsdauer synchronisiert.<br /><br /> **2** = Latency - die Zeitdauer für die Replikation von Daten von einem Transaktionsverleger auf den Abonnenten überschreitet den Schwellenwert in Sekunden.<br /><br /> **4** = Mergeexpiration - ein Abonnement für eine Mergeveröffentlichung wurde nicht innerhalb der Schwellenwerts für die Beibehaltungsdauer synchronisiert.<br /><br /> **8** = Mergefastrunduration - die Zeit zum Abschließen der Synchronisierung eines Mergeabonnements überschreitet den Schwellenwert in Sekunden an, über eine schnelle Netzwerkverbindung.<br /><br /> **16** = Mergeslowrunduration – die Zeit zum Abschließen der Synchronisierung eines Mergeabonnements überschreitet den Schwellenwert in Sekunden an, über eine langsame oder DFÜ Netzwerkverbindung.<br /><br /> **32** = Mergefastrunspeed - die Übermittlungsrate für Zeilen während der Synchronisierung eines Mergeabonnements konnte die Rate Schwellenwert in Zeilen pro Sekunde, über eine schnelle Netzwerkverbindung zu verwalten.<br /><br /> **64** = Mergeslowrunspeed - die Übermittlungsrate für Zeilen während der Synchronisierung eines Mergeabonnements konnte die Rate Schwellenwert in Zeilen pro Sekunde, über eine langsame oder DFÜ Netzwerkverbindung zu verwalten.|  
 |**subscriber**|**sysname**|Der Name des Abonnenten.|  
 |**subscriber_db**|**sysname**|Der Name der für das Abonnement verwendeten Datenbank.|  
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungsdatenbank.|  
 |**publication**|**sysname**|Ist der Name einer Veröffentlichung.|  
 |**publication_type**|**int**|Ist der Typ der Veröffentlichung, die der folgenden Werte sind möglich:<br /><br /> **0** = transaktionsveröffentlichung<br /><br /> **1** = momentaufnahmeveröffentlichung<br /><br /> **2** = Mergeveröffentlichung|  
-|**subtype**|**int**|Der Abonnementtyp, der einen der folgenden Werte haben kann:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
+|**subtype**|**int**|Der Abonnementtyp, der einen der folgenden Werte haben kann:<br /><br /> **0** = Push<br /><br /> **1** = Pullabonnement<br /><br /> **2** = anonym|  
 |**latency**|**int**|Die längste Latenzzeit (in Sekunden) für Datenänderungen, die vom Protokolllese-Agent oder vom Verteilungs-Agent für eine Transaktionsveröffentlichung weitergegeben werden.|  
-|**latencythreshold**|**int**|Die maximale Latenzzeit für die Transaktionsveröffentlichung, bei deren Überschreiten eine Warnung ausgegeben wird.|  
+|**"LatencyThreshold"**|**int**|Die maximale Latenzzeit für die Transaktionsveröffentlichung, bei deren Überschreiten eine Warnung ausgegeben wird.|  
 |**agentnotrunning**|**int**|Der Zeitraum (in Stunden), während dem der Agent nicht ausgeführt wird.|  
 |**agentnotrunningthreshold**|**int**|Der Zeitraum (in Stunden), während dem der Agent nicht ausgeführt und bei dessen Erreichen eine Warnung ausgegeben wird.|  
 |**timetoexpiration**|**int**|Der Zeitraum (in Stunden), an dessen Ende ein Abonnement abläuft, falls es nicht synchronisiert wird.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aac31af80ff5774d464f76f130d2d113002e60a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001396"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Auswählen einer Datenquelle oder eines Treibers
 Die Datenquelle oder von einer Anwendung verwendeten Treiber ist manchmal in der Anwendung hartcodiert. Z. B. eine benutzerdefinierte Anwendung geschrieben von der Abteilung MIS zum Übertragen von Daten aus einer Datenquelle in eine andere enthält die Namen dieser Daten Quellen: die Anwendung einfach funktioniert nicht mit allen anderen Datenquellen. Ein weiteres Beispiel ist eine vertikale Anwendung verwendet werden, z. B. für Bestellungen eingeben. Eine solche Anwendung immer verwendet die gleiche Datenquelle, mit einem vordefinierten Schema, das von der Anwendung bezeichnet.  

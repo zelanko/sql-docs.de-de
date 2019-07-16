@@ -2,19 +2,18 @@
 title: Checklisten für die Konfigurationen – Analytics Platform System | Microsoft-Dokumentation
 description: Bietet Checklisten für die Aufgaben zum Konfigurieren von Analytics Platform System für Ihre eigene Umgebung erforderlich. Diese Aufgaben sind erforderlich, bevor Sie das Gerät verwenden können.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9977ac8ea73e37afef85a46d6794ea5136357b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961595"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Checklisten für die Appliance Konfigurationen für Analytics Platform System
 Bietet Checklisten für die Aufgaben zum Konfigurieren von Analytics Platform System für Ihre eigene Umgebung erforderlich. Diese Aufgaben sind erforderlich, bevor Sie das Gerät verwenden können.  
@@ -24,7 +23,7 @@ Bietet Checklisten für die Aufgaben zum Konfigurieren von Analytics Platform Sy
   
 ## <a name="BeforeTasks"></a>Vorbereitungen  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Vorraussetzungen  
   
 1.  Das Gerät im Rechenzentrum installiert, und eingeschaltet werden muss.  
   
@@ -52,7 +51,7 @@ Verwendung **Configuration Manager** die folgenden Konfigurationsaufgaben ausfü
 |Konfigurationstask|Beschreibung|  
 |----------------------|---------------|  
 |Mit dem Namen der physischen Komponenten vertraut zu machen|[Physische Komponenten von PDW und Appliance Fabric &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
-|Launch SQL Server PDW Configuration Manager|[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)|  
+|Starten Sie SQL Server PDW-Konfigurations-Manager|[Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)|  
 |Das Administratorkennwort für die Domäne ändern|Das Gerät verfügt über einen privaten Windows Active Directory Domain Services, die verwendet wird, um Knoten in der Anwendung zu authentifizieren.<br /><br />Ihrem unabhängigen Hardwarehersteller richten Sie das Gerät mit einem Standardadministratorkennwort für die Domäne ein. Dies muss in ein Kennwort geändert werden, die sicher ist.<br /><br />Die **Configuration Manager** ist die einzige unterstützte Weg, um das Administratorkennwort für die Domäne ändern.<br /><br />Weitere Informationen finden Sie unter [Zurücksetzen des Kennworts &#40;Analytics Platform System&#41;](password-reset.md).|  
 |Ändern des Kennworts für die **sa** Anmeldung|SQL Server PDW ist eine System-administratoranmeldung, die mit dem Namen **sa**. Die **sa** Anmeldung verfügt über alle Berechtigungen. Sie können zu gewähren, verweigern oder widerrufen keine Berechtigung. Sie können auch alle Systemsichten finden Sie unter.<br /><br />Weitere Informationen finden Sie unter [Zurücksetzen des Kennworts &#40;Analytics Platform System&#41;](password-reset.md).|  
 |Festlegen der Zeitzone der appliance|Legen Sie die Uhrzeit (lokal oder andere gewünschte) für alle applianceknoten an.<br /><br />Weitere Informationen finden Sie unter [Zeitzone Anwendungskonfiguration &#40;Analytics Platform System&#41;](appliance-time-zone-configuration.md).|  
@@ -67,7 +66,7 @@ Verwendung **Configuration Manager** die folgenden Konfigurationsaufgaben ausfü
 ## <a name="AddTasks"></a>Weitere Konfigurationsaufgaben  
 Nach dem Ausführen der **Configuration Manager** Aufgaben, die folgende Liste von zusätzlichen Konfigurationsaufwand. Einige dieser Aufgaben sind optional.  
   
-|Konfigurationstask|Description|  
+|Konfigurationstask|Beschreibung|  
 |----------------------|---------------|  
 |Antivirus-Software von Drittanbietern kann auf die SQL Server PDW Appliance für extern ausgerichtete Knoten konfiguriert und installiert werden.<br /><br />(Optional)|Weitere Informationen finden Sie unter [Antivirusprogrammen &#40;Analytics Platform System&#41;](antivirus-software.md).|  
 |Das Kennwort für den Verzeichnisdienst-Wiederherstellungsmodus kann geändert werden.<br /><br />(Optional)|Weitere Informationen finden Sie unter [Admin-Kennwort festlegen, für die Anmeldung bei AD-Knoten im Wiederherstellungsmodus für Verzeichnisdienste &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  

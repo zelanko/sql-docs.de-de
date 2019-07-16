@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: f3dca7f9498ae10d67fd804d6ce0e4a33f99584e
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583221"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860721"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
 
@@ -92,7 +92,7 @@ ms.locfileid: "67583221"
     
  Nicht alle Abfrageausführungsoperatoren können im Batchmodus ausgeführt werden. DML-Vorgänge, wie z. B. Einfügen, Löschen oder Aktualisieren, werden z. B. Zeile für Zeile ausgeführt. Batchmodusoperatoren richten sich an Operatoren, um die Abfrageleistung wie Scan, Join, Aggregate, Sort und so weiter zu beschleunigen. Da der Columnstore-Index in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt wurde, gibt es eine nachhaltige Initiative, um die Operatoren zu erweitern, die im Batchmodus ausgeführt werden können. Die folgende Tabelle führt die Operatoren auf, die im Batchmodus gemäß der Produktversion ausgeführt werden.    
     
-|Batchmodusoperatoren|Einsatz|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|Kommentare|    
+|Batchmodusoperatoren|Einsatz|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Kommentare|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML-Vorgänge (Insert, Delete, Update, Merge)||nein|nein|nein|DML ist kein Batchmodusvorgang, da es nicht parallel ist. Auch wenn die serielle Batchmodusverarbeitung aktiviert wird, kommt es zu keiner maßgeblichen Leistungssteigerung, wenn DML im Batchmodus verarbeitet wird.|    
 |Columnstore Index Scan|SCAN|NA|ja|ja|Bei Columnstore-Indizes kann das Prädikat mittels Push an den SCAN-Knoten übertragen werden.|    
@@ -111,7 +111,7 @@ ms.locfileid: "67583221"
 |Top Sort||nein|nein|ja||    
 |Window Aggregates||NA|NA|ja|Neuer Operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Tarife Premium, Standard (S3 und höher) und alle virtuelle Kern-Tarife sowie [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup>Gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarife, Standardtarife (S3 und höher) und alle V-Kern-Tarife sowie [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Aggregatweitergabe    
  Ein normaler Ausführungspfad zur Aggregatberechnung, um die qualifizierenden Zeilen aus dem SCAN-Knoten abzurufen und die Werte im Batchmodus zu aggregieren. Dadurch wird eine gute Leistung bereitgestellt. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann der Aggregatvorgang jedoch mittels Push an den SCAN-Knoten weitergegeben werden, um die Leistung der Aggregatberechnung in erheblichem Maße zusätzlich zur Ausführung im Batchmodus zu verbessern, sofern folgende Bedingungen erfüllt sind: 
@@ -146,7 +146,7 @@ Beim Entwurf eines Data Warehouse-Schemas besteht die empfohlene Schemamodellier
     
 Bei einem Fakt kann es sich beispielsweise um einen Datensatz für den Verkauf eines bestimmten Produkts in einer bestimmten Region handeln, während die Dimension eine Reihe von Regionen, Produkten usw. darstellt. Die Fakten- und Dimensionstabellen sind über eine Primär-/Fremdschlüsselbeziehung miteinander verbunden. Die am häufigsten verwendeten Abfragen verbinden eine oder mehrere Dimensionstabellen mit der Faktentabelle.    
     
-Betrachten Sie z.B. eine Dimensionstabelle namens `Products`. Ein typischer Primärschlüssel wäre `ProductCode`, der in der Regel als Zeichenfolgendatentyp dargestellt wird. Für die Abfrageleistung hat es sich bewährt, einen Ersatzschlüssel zu erstellen (in der Regel eine Spalte mit ganzen Zahlen), um aus der Faktentabelle auf die Zeile in der Dimensionstabelle zu verweisen. ? ?
+Betrachten Sie z.B. eine Dimensionstabelle namens `Products`. Ein typischer Primärschlüssel wäre `ProductCode`, der in der Regel als Zeichenfolgendatentyp dargestellt wird. Für die Abfrageleistung hat es sich bewährt, einen Ersatzschlüssel zu erstellen (in der Regel eine Spalte mit ganzen Zahlen), um aus der Faktentabelle auf die Zeile in der Dimensionstabelle zu verweisen. 
     
 Der Columnstore-Index führt die Analyseabfragen mit Joins/Prädikaten mit Schlüsseln auf numerischer Basis bzw. Ganzzahlbasis sehr effizient aus. Bei vielen Kundenworkloads wurden jedoch zeichenfolgenbasierte Spalten verwendet, die Fakt-/Dimensionstabellen verknüpfen. Dies führte dazu, dass die Abfrageleistung mit Columnstore-Indizes nicht gut war. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] verbessert die Leistung von Analyseabfragen mit zeichenfolgenbasierten Spalten erheblich, indem die Prädikate mit Zeichenfolgenspalten an den SCAN-Knoten weitergegeben werden.    
     

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a9ecac73840636e1ddf089f53ead61504767a61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029745"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "52808692"
 |**status**|**int**|Der benutzerdefinierte Wert:<br /><br /> **0** = nicht bedient.<br /><br /> **1** = bedient.|  
 |**agent_type**|**int**|Typ der Momentaufnahme:<br /><br /> **1** = Momentaufnahme-Agent.<br /><br /> **2** = Protokolllese-Agent.<br /><br /> **3** = Verteilungs-Agent.<br /><br /> **4** = Merge-Agent.|  
 |**agent_id**|**int**|Die Agent-ID aus den Tabellen **MSsnapshot_agents**, **MSlogreader_agents**, **MSdistribution_agents**, oder **MSmerge_agents**.|  
-|**Fehler-ID**|**int**|Die ID des Fehlers in gespeicherten **MSrepl_errors**.|  
+|**error_id**|**int**|Die ID des Fehlers in gespeicherten **MSrepl_errors**.|  
 |**alert_error_code**|**int**|Die Meldungs-ID der bei der Protokollierung dieses Datensatzes ausgelösten Warnung.|  
-|**Uhrzeit**|**datetime**|Der Zeitpunkt, zu dem der Datensatz eingefügt wurde.|  
+|**time**|**datetime**|Der Zeitpunkt, zu dem der Datensatz eingefügt wurde.|  
 |**publisher**|**sysname**|Der Name des Verlegers, der dem Agent zugeordnet ist, der diese Warnung ausgelöst hat.|  
 |**publisher_db**|**sysname**|Die Verlegerdatenbank, die dem Agent zugeordnet ist, der diese Warnung ausgelöst hat.|  
-|**Veröffentlichung**|**sysname**|Die Veröffentlichung, die dem Agent zugeordnet ist, der diese Warnung ausgelöst hat.|  
+|**publication**|**sysname**|Die Veröffentlichung, die dem Agent zugeordnet ist, der diese Warnung ausgelöst hat.|  
 |**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = Momentaufnahme.<br /><br /> **1** = transaktionsveröffentlichung.<br /><br /> **2** = Merge.|  
 |**subscriber**|**sysname**|Der Name des Abonnenten, der dem Agent zugeordnet ist, der diese Warnung ausgelöst hat.|  
 |**subscriber_db**|**sysname**|Der Name der Abonnentendatenbank, die dem Agent zugeordnet ist, der diese Warnung ausgelöst hat.|  

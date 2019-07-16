@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f860306c721bba75a9d5fc9af63ddbe0c6fc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002650"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,11 +50,11 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|ID der Spalte.|  
 |**column_name**|**sysname**|Name der Tabellenspalte.|  
-|**column_usage**|**varchar(20)**|Art der Verwendung der Spalte durch die Abfrage. Die möglichen Werte und deren Beschreibungen sind:<br /><br /> Gleichheit: Spalte unterstützt ein Prädikat, das Gleichheit, von dem Formular drückt aus: <br />                        *table.column* = *constant_value*<br /><br /> UNGLEICHHEIT: Spalte trägt in ein Prädikat, das Ungleichheit, z. B. ausdrückt ein Prädikat im Format: *table.column* > *Constant_value*. Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.<br /><br /> INCLUDE: Spalte wird nicht verwendet werden, um die Auswertung eines Prädikats, aber er ist einem anderen Grund verwendet, z. B. zum Abdecken einer Abfrage.|  
+|**column_usage**|**varchar(20)**|Art der Verwendung der Spalte durch die Abfrage. Die möglichen Werte und deren Beschreibungen sind:<br /><br /> GLEICHHEIT: Die Spalte wird in ein Prädikat, die auf Gleichheit, des Formulars ausdrückt einbezogen werden: <br />                        *table.column* = *constant_value*<br /><br /> UNGLEICHHEIT: Die Spalte, die in ein Prädikat, das Ungleichheit, z. B. ausdrückt ein Prädikat des Formulars wird einbezogen: *table.column* > *Constant_value*. Jeder Vergleichsoperator außer "=" drückt Ungleichheit aus.<br /><br /> UMFASSEN: Spalte wird nicht verwendet werden, um die Auswertung eines Prädikats, aber Sie ist einem anderen Grund verwendet, z. B. zum Abdecken einer Abfrage.|  
   
 ## <a name="remarks"></a>Hinweise  
  Informationen, die vom **Sys. dm_db_missing_index_columns** wird aktualisiert, wenn eine Abfrage vom Abfrageoptimierer optimiert wird, und wird nicht beibehalten. Informationen zu fehlenden Indizes werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufbewahrt. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie sie nach dem Wiederverwenden des Servers beibehalten möchten.  

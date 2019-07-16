@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8bfe338c128ce301e98346d17ce00b973912ffd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a8cde296fd0a47c407752977f5e41269a05354e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020971"
 ---
 # <a name="save-metadata--sybasetosql"></a>Speichern von Metadaten (SybaseToSQL)
 Die **speichern Metadaten** Dialogfeld fordert Sie zum Laden von Metadaten in der SSMA-Projekt, vor dem Speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden und an andere Personen ein, z. B. Mitarbeiter des technischen Supports senden können.  

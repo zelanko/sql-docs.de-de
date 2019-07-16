@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c74a80bb38c406acb50e5e275f658a5f1d2b30d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93d23216db950ed861449061f3e35e5e88a637fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058788"
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Jet 4.0 verwendet die Liste reservierter Wörter von SQL-92 für ExtendedAnsiSQL_Set
 Wenn das Flag ExtendedAnsiSQL aktiviert ist, verwendet Jet 4.0 die Liste der SQL-92-reservierte Wörter. Versuch, eine SQL-92 verwenden reserviertes Wort wie ein ohne Anführungszeichen ein Syntaxfehler führt. Wenn das Flag ExtendedAnsiSQL deaktiviert ist, können die neuen reservierten Wörter als Objektnamen wie vor verwendet werden.

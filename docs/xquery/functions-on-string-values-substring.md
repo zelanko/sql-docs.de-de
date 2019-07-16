@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3185da6f25f0e224240ad0891ad448267b26465c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004639"
 ---
 # <a name="functions-on-string-values---substring"></a>Funktionen für Zeichenfolgenwerte – substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ fn:substring($sourceString as xs:string?,
  In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** -Typspalten in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Verwenden der substring()-Funktion von XQuery zum Abrufen von Teilzusammenfassungsbeschreibungen der Produktmodelle  
- Die Abfrage ruft die ersten 50 Zeichen vom Text ab, in dem das Produktmodell beschrieben wird, das <`Summary`>-Element im Dokument.  
+ Die Abfrage ruft die ersten 50 Zeichen des Texts, der das Produktmodell beschreibt die <`Summary`>-Element im Dokument.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,9 +85,9 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **string()** Funktion gibt den String-Wert, der die <`Summary`> Element. Diese Funktion wird verwendet, da das <`Summary`>-Element sowohl den Text als auch die Unterelemente (HTML-Formatierungselemente) enthält, und da Sie diese Elemente überspringen und den gesamten Text abrufen.  
+-   Die **string()** Funktion gibt den String-Wert, der die <`Summary`> Element. Diese Funktion wird verwendet, da die <`Summary`>-Element enthält sowohl das Text-als auch die Unterelemente (html-Formatierungselemente), und da Sie diese Elemente überspringen und den gesamten Text abrufen.  
   
--   Die **substring()** Funktion ruft die ersten 50 Zeichen ab, aus dem String-Wert abgerufen, indem die **string()**.  
+-   Die **substring()** Funktion ruft die ersten 50 Zeichen ab, aus dem String-Wert abgerufen, indem die **string()** .  
   
  Dies ist ein Teilergebnis gezeigt:  
   

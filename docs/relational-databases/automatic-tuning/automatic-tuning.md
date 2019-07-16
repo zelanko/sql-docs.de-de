@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934557"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Automatische Optimierung in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md
 
 Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verbessert die Leistung der Workload, überwacht die Abfragen, die in der Datenbank und automatisch ausgeführt werden. Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verfügt über einen integrierten intelligenten Funktionen Mechanismus, der automatisch optimiert werden kann, und Verbessern der Leistung Ihrer Abfragen durch die dynamische Anpassung der Datenbank an Ihre Workload. Es gibt zwei Automatische Optimierung Features, die verfügbar sind:
 
- -  **Automatische plankorrektur** problematische Abfragen, Pläne und korrigiert abfrageausführung Leistungsprobleme Plänen identifiziert. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **Automatische plankorrektur** problematische Abfragen, Pläne und korrigiert abfrageausführung Leistungsprobleme Plänen identifiziert. **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **Automatische indexverwaltung** identifiziert Indizes, die in der Datenbank hinzugefügt werden soll, und solche, die entfernt werden soll. **Gilt für:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>Warum die automatische Optimierung?
@@ -184,7 +183,7 @@ Ohne automatische indexverwaltung, Benutzer manuell Abfragen müssten [Sys. dm_d
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)     
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)           
- [database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON-Funktionen](../../relational-databases/json/index.md)    
  [Ausführungspläne](../../relational-databases/performance/execution-plans.md)    
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88fcf471b2f853a5e1a874c29d2192c17d23b113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924917"
 ---
 # <a name="more-about-recordset-persistence"></a>Weitere Informationen zur Beibehaltung von Recordsets
 Das ADO-Recordset-Objekt unterstützt das Speichern von einem **Recordset** Objekt in einer Datei mithilfe der [speichern](../../../ado/reference/ado-api/save-method.md) Methode. Möglicherweise existiert, die dauerhaft gespeicherte Datei auf einem lokalen Laufwerk, Server oder als URL für eine Web site. Später kann die Datei wiederhergestellt werden, entweder mit der [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode der der **Recordset** Objekt oder die [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) -Methode der der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt.  
@@ -81,5 +80,5 @@ dc.Refresh
 ## <a name="see-also"></a>Siehe auch  
  [GetString-Methode (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Microsoft OLE DB-Persistenz-Provider (ADO-Dienstanbieter)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md)

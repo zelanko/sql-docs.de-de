@@ -2,19 +2,18 @@
 title: Tempdb-Datenbank – Parallel Data Warehouse | Microsoft-Dokumentation
 description: Tempdb-Datenbank in Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1790ae3bc63a379c1bcf143655f10829db60a339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960010"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>Tempdb-Datenbank in Parallel Data Warehouse
 **Tempdb** ist eine SQL Server-PDW-Systemdatenbank, in der lokale temporäre Tabellen für die Benutzerdatenbanken gespeichert. Temporäre Tabellen werden häufig verwendet, um die abfrageleistung zu verbessern. Sie können beispielsweise eine temporäre Tabelle verwenden, um ein Skript zu modularisieren und berechnete Daten wiederverwenden.  
@@ -84,7 +83,7 @@ Jeder Benutzer ist berechtigt, temporäre Objekte in tempdb zu erstellen. Benutz
   
 ## <a name="RelatedTasks"></a>Verwandte Aufgaben  
   
-|Richtlinienübersicht|Description|  
+|Richtlinienübersicht|Beschreibung|  
 |---------|---------------|  
 |Erstellen Sie eine Tabelle in **Tempdb**.|Sie können eine temporäre Tabelle für Benutzer mit der CREATE TABLE- und CREATE TABLE AS SELECT-Anweisungen erstellen. Weitere Informationen finden Sie unter [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) und [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |Anzeigen einer Liste vorhandener Tabellen in **Tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  

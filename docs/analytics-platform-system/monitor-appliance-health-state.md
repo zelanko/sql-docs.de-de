@@ -2,19 +2,18 @@
 title: Überwachen der Integrität der Appliance – Analytics Platform System
 description: Informationen zum Überwachen des Zustands einer Analytics Platform System Appliance mithilfe der Verwaltungskonsole oder durch direkte Abfrage der dynamischen Verwaltungssichten von Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960615"
 ---
 # <a name="monitor-appliance-health-state"></a>Integritätsstatus des Monitors Appliance
 In diesem Artikel wird erläutert, wie den Status des Analytics Platform System Appliance mithilfe der Verwaltungskonsole oder durch direkte Abfrage der dynamischen Verwaltungssichten von Parallel Data Warehouse überwacht wird. 
@@ -31,7 +30,7 @@ Komponentenstatus abrufen, indem Sie mit der Verwaltungskonsole:
   
 2.  Klicken Sie auf auf einem bestimmten Knoten zum Anzeigen der knotendetails, auf der Seite Status des Geräts.  
   
-    ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+    ![PDW-Verwaltungskonsole, Status](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ### <a name="monitor-component-status-by-using-system-views"></a>Überwachungsstatus von Komponenten mithilfe von Systemansichten  
 Verwenden Sie zum Abrufen mithilfe von Systemansichten Komponentenstatus [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Die folgende Abfrage ruft z. B. den Status für alle Komponenten ab.  
@@ -75,7 +74,7 @@ Mögliche Werte für die Status-Eigenschaft zurückgegeben werden:
   
 -   Kritisch  
   
--   Unknown  
+-   Unbekannt  
   
 -   Nicht unterstützt  
   

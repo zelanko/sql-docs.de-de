@@ -2,19 +2,18 @@
 title: Workload-Verwaltungsaufgaben – Analytics Platform System | Microsoft-Dokumentation
 description: Workload-Verwaltungsaufgaben in Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea6b3785914781e73a8570c1282741f7c4b56298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959759"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Workload von Verwaltungsaufgaben in Analytics Platform System
 Workload-Verwaltungsaufgaben in Analytics Platform System.
@@ -48,7 +47,7 @@ In der Ressourcenzuordnung aufgelisteten [Workloadverwaltung](workload-managemen
 Beschreibt, wie Sie herausfinden, welche Ressource Klasse, die eine SQL Server-PDW-Anforderung unter ausgeführt wird, und dann auf die Systemressourcen für diese Anforderung zu ändern. Ändern die Ressourcen aus, für eine Anforderung erfordert eine Änderung der Ressource Mitgliedschaft des Anmeldenamens übermitteln der Anforderung, mit der [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) Anweisung.  
   
 ### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Schritt 1: Bestimmen Sie die Ressourcenklasse für die Anmeldung, die Anforderung wird ausgeführt.  
-Diese Abfrage zeigt die Anmeldungen, die Elemente der serverrollenmitgliedschaften Resource-Klasse. Es gibt drei Ressourcenklassen, **"mediumrc"**, **"largerc"**, und **"xlargerc"**.  
+Diese Abfrage zeigt die Anmeldungen, die Elemente der serverrollenmitgliedschaften Resource-Klasse. Es gibt drei Ressourcenklassen, **"mediumrc"** , **"largerc"** , und **"xlargerc"** .  
   
 > [!IMPORTANT]  
 > Diese Abfrage muss ausgeführt werden, indem Sie eine Anmeldung **CONTROL SERVER** Berechtigung. Wenn durch eine Anmeldung ohne ausgeführt **CONTROL SERVER** -Berechtigung, diese Abfrage nur die Rollenmitgliedschaften für den aktuellen Anmeldenamen zurückgegeben.  

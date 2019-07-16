@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041714"
 ---
 # <a name="like-escape-sequence"></a>LIKE-Escapesequenz
 ODBC verwendet Escape-Sequenzen, für die LIKE-Klausel. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
@@ -32,14 +31,14 @@ ODBC verwendet Escape-Sequenzen, für die LIKE-Klausel. Die Syntax dieser Escape
 ## <a name="remarks"></a>Hinweise  
  In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-like-escape* ::=  
+ *ODBC-ähnliche-Escapesequenz* :: =  
   
  *Initiator der ODBC-esc* Escape "*Escapezeichen*" *ODBC-esc-Terminator*  
   
- *escape-character* ::= *character*  
+ *Escape-Zeichen* :: = *Zeichen*  
   
- *ODBC-esc-initiator* ::= {  
+ *Initiator der ODBC-esc* :: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC-esc-Terminator* :: =}  
   
  Um festzustellen, ob der Treiber die LIKE Escape unterstützt Sequenz, die eine Anwendung aufrufen kann **SQLGetInfo** mit dem Typ der SQL_LIKE_ESCAPE_CLAUSE-Informationen.

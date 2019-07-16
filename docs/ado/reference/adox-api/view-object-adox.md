@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d87b56716ed1876acc6ac139e7804036d5cdfb86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964845"
 ---
 # <a name="view-object-adox"></a>View-Objekt (ADOX)
 Stellt einen gefilterten Satz von Datensätzen oder eine virtuelle Tabelle dar. Bei der Verwendung in Verbindung mit dem ADO [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das **Ansicht** Objekt kann zum Hinzufügen, löschen oder Ändern von Sichten verwendet werden.  

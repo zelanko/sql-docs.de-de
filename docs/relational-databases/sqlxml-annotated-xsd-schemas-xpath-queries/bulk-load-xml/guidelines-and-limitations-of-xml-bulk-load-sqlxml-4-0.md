@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5a003abd67746da4ab62996311ed98594e2f403
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1eea06d8be4d826315235836d2a1d47846381caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005345"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Massenladen (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -174,6 +173,6 @@ ms.locfileid: "56016491"
   
 -   Wenn Sie Datenwerte mithilfe von XML-Massenladen einfügen, müssen die Werte im Format (-)CCYY-MM-DD((+-)TZ) angegeben werden. Dies ist das XSD-Standardformat für das Datum.  
   
--   Einige Eigenschaftenflags sind mit anderen Eigenschaftenflags nicht kompatibel. Massenladen unterstützt beispielsweise keine **Ignoreduplicatekeys = True** zusammen mit **Keepidentity = False**. Wenn **Keepidentity = False**, Massenladen erwartet, dass den Server die Schlüsselwerte zu generieren. Tabellen müssen einen **Identität** Einschränkung für den Schlüssel. Der Server generiert keine doppelten Schlüssel, was bedeutet, dass keine Notwendigkeit für **Ignoreduplicatekeys** festgelegt werden, um **"true"**. **IgnoreDuplicateKeys** sollte festgelegt werden, um **"true"** nur beim Hochladen der Primärschlüsselwerte aus den eingehenden Daten in eine Tabelle mit Zeilen und es besteht die Gefahr Konflikte im Zusammenhang mit Primärschlüsselwerten.  
+-   Einige Eigenschaftenflags sind mit anderen Eigenschaftenflags nicht kompatibel. Massenladen unterstützt beispielsweise keine **Ignoreduplicatekeys = True** zusammen mit **Keepidentity = False**. Wenn **Keepidentity = False**, Massenladen erwartet, dass den Server die Schlüsselwerte zu generieren. Tabellen müssen einen **Identität** Einschränkung für den Schlüssel. Der Server generiert keine doppelten Schlüssel, was bedeutet, dass keine Notwendigkeit für **Ignoreduplicatekeys** festgelegt werden, um **"true"** . **IgnoreDuplicateKeys** sollte festgelegt werden, um **"true"** nur beim Hochladen der Primärschlüsselwerte aus den eingehenden Daten in eine Tabelle mit Zeilen und es besteht die Gefahr Konflikte im Zusammenhang mit Primärschlüsselwerten.  
   
   

@@ -2,19 +2,18 @@
 title: Anwenden von Hotfixes für Analytics Platform System | Microsoft-Dokumentation
 description: Dieser Artikel beschreibt, wie Sie die Hotfixes für Analytics Platform System-Software gelten.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6af4a1eaf1e9891356fae40a3d3bb7f11e41dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961427"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Anwenden von Hotfixes für Analytics Platform System
 Dieser Artikel beschreibt, wie Sie die Hotfixes für Analytics Platform System-Software gelten.  
@@ -27,7 +26,7 @@ Dieser Artikel beschreibt, wie Sie die Hotfixes für Analytics Platform System-S
 > [!WARNING]  
 > Einen Hotfix für Analytics Platform System werden nicht angewendet werden, während das Gerät verwendet wird. Anwendung eines Hotfixes kann dazu führen, dass applianceknoten neu starten. Der Hotfix sollte während eines Wartungsfensters übernommen werden, wenn das Gerät nicht verwendet wird.  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Vorraussetzungen  
 Diese Schritte ausführen zu können, benötigen Sie:  
   
 -   Eine Analytics Platform System Anmeldenamen mit Berechtigungen für die Verwaltungskonsole zum Überwachen des Status des Geräts zugreifen. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

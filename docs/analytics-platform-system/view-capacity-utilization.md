@@ -2,19 +2,18 @@
 title: Anzeigen von Ausnutzung der Speicherkapazität in Analytics Platform System | Microsoft-Dokumentation
 description: Ansicht der kapazitätsnutzung in Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ac9347c9f5ec31c5f4f41228b1ef14119257751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959785"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Anzeigen der Kapazitätsauslastung in Analytics Platform System
 In diesem Thema erläutert die Ausnutzung der Speicherkapazität in der SQL Server-PDW-Appliance an.  
@@ -22,7 +21,7 @@ In diesem Thema erläutert die Ausnutzung der Speicherkapazität in der SQL Serv
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Kapazitätsauslastung mithilfe der Verwaltungskonsole anzeigen  
 Um den belegten Speicherplatz anzuzeigen, öffnen Sie die Verwaltungskonsole, und klicken Sie auf die **Storage** Registerkarte. Es gibt eine **Storage** Registerkarte für die PDW-Region.  
   
-![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![PDW-Verwaltungskonsole, Speicher](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>So zeigen Sie mithilfe von Abfragen zur Kapazitätsauslastung  
 Um zu verstehen, ob ein Knoten auf dem Speicherplatz knapp wird, überwacht der SQL Server-PDW-Health-Überwachungssystem bereits den freien Speicherplatz für alle Volumes innerhalb eines jeden Knotens.  

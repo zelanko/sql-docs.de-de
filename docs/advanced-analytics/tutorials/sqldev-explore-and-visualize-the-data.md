@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99c96c860d2862b059077326be4f4fe313491cd3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 07a0ce0688e56f0d7b2edac5cdbc87116c75d5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961915"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +33,7 @@ Eine wichtige Ziel in dieser Lektion wird das Aufrufen von R-Funktionen aus ange
 
 Das Entwickeln einer Data Science-Lösung bringt normalerweise die intensive Untersuchung und Visualisierung von Daten mit sich. Zuerst kurz, überprüfen die Beispieldaten, sofern Sie noch nicht geschehen.
 
-Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die fahrtendatensätze in separaten Dateien bereitgestellt. Aber damit wird die Beispieldaten einfacher zu verwenden, die beiden ursprünglichen Datasets verknüpft wurde für die Spalten _"medallion"_, _hack\_Lizenz_, und _Pickup\_ "DateTime"_.  Die Datensätze wurden ebenso auf Stichproben reduziert, um nur 1 % der ursprünglichen Anzahl der Datensätze zu erhalten. Der auf Stichproben reduzierte Datensatz hat 1.703.957 Zeilen und 23 Spalten.
+Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die fahrtendatensätze in separaten Dateien bereitgestellt. Aber damit wird die Beispieldaten einfacher zu verwenden, die beiden ursprünglichen Datasets verknüpft wurde für die Spalten _"medallion"_ , _hack\_Lizenz_, und _Pickup\_ "DateTime"_ .  Die Datensätze wurden ebenso auf Stichproben reduziert, um nur 1 % der ursprünglichen Anzahl der Datensätze zu erhalten. Der auf Stichproben reduzierte Datensatz hat 1.703.957 Zeilen und 23 Spalten.
 
 **Taxi-IDs**
   
@@ -54,7 +53,7 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die fahrtendate
   
 -   Die Werte für die Bezeichnungsspalten basieren alle auf die _Tipp\_Menge_ Spalte verwenden folgende Geschäftsregeln:
   
-    |Name der abgeleiteten Spalte|Rule|
+    |Name der abgeleiteten Spalte|Regel|
     |-|-|
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|
@@ -278,7 +277,7 @@ Um die Grafik anzuzeigen, öffnen Sie den Zielordner aus, und überprüfen Sie d
 
 ## <a name="next-lesson"></a>Nächste Lektion
 
-[Lektion 2: Erstellen von Datenfunktionen mit T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Lektion 2: Erstellen von Datenfunktionen mit T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 

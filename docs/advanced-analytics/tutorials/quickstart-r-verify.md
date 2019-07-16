@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f294f5f12e3efd734d1e54ace3041702c39d390a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961967"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>Schnellstart: Überprüfen der Verfügbarkeit von R in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +26,7 @@ Ausführung des Skripts wird mithilfe von gespeicherten Prozeduren, die mit eine
 
 In diesem Schnellstart werden Sie sicherstellen, dass [SQL Server 2017-Machine Learning Services](../what-is-sql-server-machine-learning.md) oder [SQL Server 2016 R Services](../r/sql-server-r-services.md) installiert und konfiguriert ist.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 In dieser Übung erfordert Zugriff auf eine Instanz von SQL Server mit einem der folgenden bereits installiert:
 

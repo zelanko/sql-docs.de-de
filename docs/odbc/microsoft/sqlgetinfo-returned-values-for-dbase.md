@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7440c46a8dea10096efc66b4680a2b6c8536695a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd6b25ebc06df82fa9974b3274ae527e6f6fa347
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003161"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Von SQLGetInfo zurückgegebenen Werte für dBASE
 Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoType* Argument und die entsprechenden Werte, die vom **SQLGetInfo**. Diese Informationen abgerufen werden, indem Sie die Übergabe der aufgelisteten Programmiersprache C# defines für **SQLGetInfo** in die *fInfoType* Argument. Weitere Informationen zu den Werten, die vom **SQLGetInfo**, finden Sie unter den *ODBC Programmer's Reference*.  
@@ -30,7 +29,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoT
 > [!NOTE]  
 >  In denen **SQLGetInfo** gibt eine 32-Bit-Bitmaske, ein senkrechter Strich (&#124;) stellt ein bitweises OR.  
   
-|InfoType|Rückgabewert|  
+|Informationsart|Rückgabewert|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -142,7 +141,7 @@ Die folgende Tabelle enthält die Programmiersprache C# defines für das *fInfoT
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Mehrere Werte|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ ÜBEREINSTIMMUNG MIT STANDARDS|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Treiber-Manager aus|  
 |SQL_OJ_CAPABILITIES|Mehrere Werte|  

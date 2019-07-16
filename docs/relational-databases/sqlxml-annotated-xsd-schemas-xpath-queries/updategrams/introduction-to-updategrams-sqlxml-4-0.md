@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf5835e513b1d03ac1065ae039c989c6f80a659f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018542"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Einführung in Updategrams (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "56026881"
 >  Diese Dokumentation setzt voraus, dass Sie mit Vorlagen und der Unterstützung von Zuordnungsschemas in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vertraut sind. Weitere Informationen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen versehen &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Für ältere Anwendungen, die XDR verwenden, finden Sie unter [XDR-Schemas mit Anmerkungen versehen &#40;in SQLXML 4.0 veraltet&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Erforderliche Namespaces im Updategram  
- Die Schlüsselwörter in einem Updategram, wie z. B.  **\<Sync >**,  **\<vor >**, und  **\<nach >**, vorhanden sind, in der **Urn: Schemas-Microsoft-com: XML-Updategrams** Namespace. Sie können ein beliebiges Namespacepräfix verwenden. In dieser Dokumentation wird die **Updg** Präfix bezeichnet das **Updategram** Namespace.  
+ Die Schlüsselwörter in einem Updategram, wie z. B.  **\<Sync >** ,  **\<vor >** , und  **\<nach >** , vorhanden sind, in der **Urn: Schemas-Microsoft-com: XML-Updategrams** Namespace. Sie können ein beliebiges Namespacepräfix verwenden. In dieser Dokumentation wird die **Updg** Präfix bezeichnet das **Updategram** Namespace.  
   
 ## <a name="reviewing-syntax"></a>Überprüfen der Syntax  
- Ein Updategram ist eine Vorlage mit  **\<Sync >**,  **\<vor >**, und  **\<nach >** Blöcke, die die Syntax der bilden die Updategram. Der folgende Code zeigt diese Syntax in ihrer einfachsten Form:  
+ Ein Updategram ist eine Vorlage mit  **\<Sync >** ,  **\<vor >** , und  **\<nach >** Blöcke, die die Syntax der bilden die Updategram. Der folgende Code zeigt diese Syntax in ihrer einfachsten Form:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

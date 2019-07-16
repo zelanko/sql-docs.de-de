@@ -2,19 +2,18 @@
 title: 'Verwenden eine Stagingdatenbank: Parallel Data Warehouse | Microsoft-Dokumentation'
 description: SQL Server Parallel Data Warehouse (PDW) verwendet eine Stagingdatenbank, um Daten während des Ladevorgangs vorübergehend zu speichern.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 824ad4dedee0224023f50b6855b2de1e53581304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960035"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Verwendung einer Stagingdatenbank in Parallel Data Warehouse (PDW)
 SQL Server Parallel Data Warehouse (PDW) verwendet eine Stagingdatenbank, um Daten während des Ladevorgangs vorübergehend zu speichern. Standardmäßig verwendet SQL Server PDW die Zieldatenbank als die staging-Datenbank, die Tabellenfragmentierung verursachen kann. Um die Tabellenfragmentierung zu reduzieren, können Sie eine benutzerdefinierte Stagingdatenbank erstellen. Beim Rollback von einem Fehler beim Laden des nicht relevant ist, Sie können auch den Fastappend-Lademodus zur Verbesserung der Leistung durch die temporäre Tabelle überspringen und direkt in die Zieltabelle geladen.  

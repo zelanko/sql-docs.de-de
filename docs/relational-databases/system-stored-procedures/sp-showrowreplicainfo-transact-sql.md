@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032893"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,26 +50,26 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>Resultsets für Zeileninformationen  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Name des Servers mit der Datenbank, in der der Eintrag der Zeilenversion vorgenommen wurde.|  
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  
 |**current_state**|**nvarchar(9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Daten der Zeile den aktuellen Zustand der Zeile darstellt.<br /><br /> **n** -Zeilendaten stellt nicht den aktuellen Zustand der Zeile dar.<br /><br /> **\<n/a >** - nicht anwendbar.<br /><br /> **\<Unbekannter >** -aktuellen Zustand nicht bestimmt werden kann.|  
-|**rowversion_table**|**nchar(17)**|Gibt an, ob die Zeilenversionen im rowsetcache der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder die [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle.|  
-|**comment**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
+|**rowversion_table**|**NCHAR(17)**|Gibt an, ob die Zeilenversionen im rowsetcache der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder die [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle.|  
+|**Kommentar**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
 ## <a name="result-sets-for-column-information"></a>Resultsets für Spalteninformationen  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Name des Servers mit der Datenbank, in der Eintrag der Spaltenversion vorgenommen wurde.|  
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**binary(6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  
 |**colname**|**sysname**|Name der Artikelspalte, die der Eintrag der Spaltenversion darstellt.|  
-|**comment**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Spaltenversionseintrag. Normalerweise ist dieses Feld leer.|  
+|**Kommentar**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Spaltenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
 ## <a name="result-set-for-both"></a>Resultset für beide  
  Wenn der Wert **sowohl** wird ausgewählt, für die *anzeigen*, wird sowohl die Zeilen- und Resultsets zurückgegeben.  

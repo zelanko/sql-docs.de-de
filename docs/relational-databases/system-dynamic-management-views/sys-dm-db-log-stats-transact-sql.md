@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43e5b145122f5b2586d8eb976162afb0615f89d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004835"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ Gibt zurück, zusammenfassende Ebenenattribute und Informationen für Transaktio
 
 *Database_id* | NULL | **Standard**
 
-Ist die ID der Datenbank. `database_id` ist `int`. Gültige Eingaben sind die ID einer Datenbank `NULL`, oder `DEFAULT`. Der Standardwert ist `NULL`. `NULL` und `DEFAULT` sind gleichwertig im Kontext der aktuellen Datenbank.  
+Ist die ID der Datenbank. `database_id` ist `int` Gültige Eingaben sind die ID einer Datenbank `NULL`, oder `DEFAULT`. Die Standardeinstellung ist `NULL`. `NULL` und `DEFAULT` sind gleichwertig im Kontext der aktuellen Datenbank.  
 Die integrierte Funktion [DB_ID](../../t-sql/functions/db-id-transact-sql.md) kann angegeben werden. Bei Verwendung `DB_ID` ohne Angabe eines Datenbanknamens, muss der Kompatibilitätsgrad der aktuellen Datenbank 90 oder höher sein.
 
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |Datenbank-ID |  
 |recovery_model |**nvarchar(60)**   |   Das Wiederherstellungsmodell der Datenbank. Zulässige Werte: <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  

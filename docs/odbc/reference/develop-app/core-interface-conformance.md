@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002116"
 ---
 # <a name="core-interface-conformance"></a>Schnittstellenübereinstimmung auf Kernebene
 Alle ODBC-Treiber müssen mindestens ein Kernebenen-aufweisen schnittstellenübereinstimmung. Da die Funktionen der Kernebene diejenigen, die durch die meisten generischen interoperablen Anwendungen erforderlich sind, kann solche Anwendungen der Treiber verwenden. Die Funktionen der Kernebene entsprechen auch auf die Funktionen, die in der ISO-CLI-Spezifikation definiert und auf die nonoptional Funktionen, die in der Open Group-CLI-Spezifikation definiert. Ein Kernebenen-Schnittstelle-konformen ODBC-Treiber kann die Anwendung Folgendes tun:  

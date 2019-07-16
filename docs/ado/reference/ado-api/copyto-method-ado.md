@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbfdff7c22152acfd0deb97a6e278bd5fd3f553f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933375"
 ---
 # <a name="copyto-method-ado"></a>CopyTo-Methode (ADO)
 Kopiert die angegebene Anzahl von Bytes oder Zeichen (je [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) in der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in ein anderes **Stream** Objekt.  
@@ -41,7 +40,7 @@ Stream.CopyTo DestStream, NumChars
 > [!NOTE]
 >  Die *DestStream* Parameter möglicherweise keinen Proxy **Stream** Objekt, da dies für den Zugriff auf eine private Schnittstelle erfordert die **Stream** -Objekt, das kann nicht remote auf werden die -Client.  
   
- *NumChars*  
+ *"NUMCHARS"*  
  Optional. Ein **Ganzzahl** Wert, der angibt, die Anzahl von Bytes oder Zeichen aus der aktuellen Position in der Quelle kopiert werden **Stream** an das Ziel **Stream**. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes, aus der aktuellen Position bis kopiert werden [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Hinweise  

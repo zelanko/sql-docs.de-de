@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7bf0269c76be272b30e055ae11e53940fc4873f1
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 92d3689c91d301a95427862f464738090c430619
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039724"
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  **SQLSetEnvAttr** legt diese fest, die Aspekte der Umgebungen zu steuern.  
@@ -61,7 +60,7 @@ SQLRETURN SQLSetEnvAttr(
  Wenn *ValuePtr* ist eine ganze Zahl, *StringLength* wird ignoriert.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetEnvAttr** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_ENV und *behandeln* von *EnvironmentHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLSetEnvAttr** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben. Wenn ein Umgebungsattribut mit ein Treiber nicht unterstützt wird, kann der Fehler nur während der Dauer der Verbindung zurückgegeben werden.  

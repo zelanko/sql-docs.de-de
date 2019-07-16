@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997505"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +39,17 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>Argumente  
 `[ @optname = ] 'option_name'` Ist der Name der Replikationsoption, die für Abfragen. *Option_name* ist **Sysname**, hat den Standardwert NULL.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**transactional**|Ein Resultset wird zurückgegeben, wenn die Transaktionsreplikation aktiviert ist.|  
-|**merge**|Ein Resultset wird zurückgegeben, wenn die Mergereplikation aktiviert ist.|  
+|**Zusammenführen**|Ein Resultset wird zurückgegeben, wenn die Mergereplikation aktiviert ist.|  
 |NULL (Standard)|Es wird kein Resultset zurückgegeben.|  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Name der Replikationsoption. Die folgenden Werte sind möglich:<br /><br /> **transactional**<br /><br /> **merge**|  
+|**optname**|**sysname**|Name der Replikationsoption. Die folgenden Werte sind möglich:<br /><br /> **transactional**<br /><br /> **Zusammenführen**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

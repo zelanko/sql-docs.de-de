@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 731877fced1d14e385f8681d4a436269e518595a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946608"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Module und Prologe – XQuery-Prolog
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ WHERE ProductModelID=7
 ## <a name="namespace-declarations"></a>Namespacedeklarationen  
  Eine Namespacedeklaration definiert ein Präfix und ordnet dieses einem Namespace-URI zu, was in der folgenden Abfrage dargestellt ist. In der Abfrage `CatalogDescription` ist ein **Xml** Type-Spalte.  
   
- Indem die XQuery-Abfrage für die Spalte angegeben wird, gibt der Abfrageprolog mit der `declare namespace`-Deklaration an, dass das Präfix `PD`, die Produktbeschreibung, dem Namespace-URI zugeordnet wird. Dieses Präfix wird dann im Hauptteil der Abfrage anstelle der Namespace-URI verwendet.  Die Knoten des daraus resultierenden XML befinden sich in dem dem Namespace-URI zugeordneten Namespace.  
+ Indem die XQuery-Abfrage für die Spalte angegeben wird, gibt der Abfrageprolog mit der `declare namespace`-Deklaration an, dass das Präfix `PD`, die Produktbeschreibung, dem Namespace-URI zugeordnet wird. Dieses Präfix wird dann im Hauptteil der Abfrage anstelle der Namespace-URI verwendet. Die Knoten des daraus resultierenden XML befinden sich in dem dem Namespace-URI zugeordneten Namespace.  
   
 ```  
 SELECT CatalogDescription.query('  

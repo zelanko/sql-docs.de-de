@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b402c71a2501fa15f98ccaf1b0d89d2c3dac40ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a21e2145e10c5ed9364a392f6cb888b676ec18e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002248"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Ebene 2  
   

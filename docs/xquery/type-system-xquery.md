@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946201"
 ---
 # <a name="type-system-xquery"></a>Typensystem (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   Die [string-Funktion &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) gibt den Zeichenfolgenwert des Knotens zurück.  
   
- In der folgenden XML-Schemaauflistung wird das <`root`>-Element des ganzzahligen Typs definiert:  
+ In der folgenden XML-schemaauflistung die <`root`>-Element des ganzzahligen Typs definiert wird:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  

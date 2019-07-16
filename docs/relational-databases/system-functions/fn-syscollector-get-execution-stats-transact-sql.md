@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042743"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt ausführliche Statistiken zum Sammlungssatz oder Paket zurück, einschließlich der vom Datenflusstask eines Pakets protokollierten Anzahl der Fehlerzeilen. Wird von ein Datenflusstask eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Komponente, die Daten verarbeitet. Diese Daten befinden sich in relationalem Format, wodurch sie über ein Eingabe- und ein Ausgabedataset verfügen, die aus Zeilen bestehen.  
+  Gibt ausführliche Statistiken zum Sammlungssatz oder Paket zurück, einschließlich der vom Datenflusstask eines Pakets protokollierten Anzahl der Fehlerzeilen. Bei einem Datenflusstask handelt es sich um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente, die Daten verarbeitet. Diese Daten befinden sich in relationalem Format, wodurch sie über ein Eingabe- und ein Ausgabedataset verfügen, die aus Zeilen bestehen.  
   
  Die Statistik wird auf Grundlage von Einträgen in der syscollector_execution_stats-Sicht berechnet.  
   
@@ -47,9 +46,9 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|Durchschnittliche Anzahl von Zeilen, die in die Datenflusstasks des Pakets eingetreten sind.<br /><br /> Hinweis: Mit ein Datenflusstask ist ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Komponente, die Daten verarbeitet. Diese Daten befinden sich in relationalem Format, wodurch sie über ein Eingabedataset verfügen, das aus Zeilen besteht. Anzahl der Zeilen, die in den Task eingetreten sind. Nachdem die Daten umgewandelt wurden, werden sie als ein Resultset ausgegeben, das aus Zeilen besteht. Der Datenflusstask wandelt die Daten um und gibt ein Resultset aus, das aus Zeilen besteht. Diese Ausgabe entspricht der Anzahl der Zeilen, die den Task verlassen haben.|  
+|avg_row_count_in|**int**|Durchschnittliche Anzahl von Zeilen, die in die Datenflusstasks des Pakets eingetreten sind.<br /><br /> Hinweis: Bei einem Datenflusstask handelt es sich um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente, die Daten verarbeitet. Diese Daten befinden sich in relationalem Format, wodurch sie über ein Eingabedataset verfügen, das aus Zeilen besteht. Anzahl der Zeilen, die in den Task eingetreten sind. Nachdem die Daten umgewandelt wurden, werden sie als ein Resultset ausgegeben, das aus Zeilen besteht. Der Datenflusstask wandelt die Daten um und gibt ein Resultset aus, das aus Zeilen besteht. Diese Ausgabe entspricht der Anzahl der Zeilen, die den Task verlassen haben.|  
 |min_row_count_in|**int**|Minimale Anzahl von Zeilen, die in die Datenflusstasks des Pakets eingetreten sind.|  
 |max_row_count_in|**int**|Maximale Anzahl von Zeilen, die in die Datenflusstasks des Pakets eingetreten sind.|  
 |avg_row_count_out|**int**|Durchschnittliche Anzahl von Zeilen, die die Datenflusstasks des Pakets verlassen haben.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b784553302bf9df30750f239291ca179ecf6cf74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924344"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Datenströme
 Anstatt die Ergebnisse der herkömmlichen empfängt **Recordset** Objekt ADO kann stattdessen die Abfrageergebnisse abzurufen, in einen Stream. Das ADO **Stream** Objekt (oder andere Objekte, die die COM unterstützt **IStream** Schnittstelle, z. B. die ASP **anfordern** und **Antwort** Objekte ) kann verwendet werden, um diese Ergebnisse enthalten. Eine Verwendung für diese Funktion ist zum Abrufen von Ergebnissen im XML-Format. Mit SQL Server können z. B. XML-Ergebnisse auf verschiedene Weise, wie z. B. mithilfe der FOR XML-Klausel mit einer SQL-SELECT-Abfrage oder eine XPath-Abfrage zurückgegeben.  
@@ -157,7 +156,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- Der Befehl kann in eine Zeichenfolge angegeben werden, wie zuvor, zugewiesen an gezeigt **CommandText**, oder in Form einer XML-Vorlage Abfrage zugewiesen **' CommandStream '**. Weitere Informationen zu Abfragen von XML-Vorlage finden Sie unter [Befehl Streams](../../../ado/guide/data/command-streams.md) in ADO oder Using-Streams für die Eingabe des Befehls in der SQL Server-Onlinedokumentation.  
+ Der Befehl kann in eine Zeichenfolge angegeben werden, wie zuvor, zugewiesen an gezeigt **CommandText**, oder in Form einer XML-Vorlage Abfrage zugewiesen **' CommandStream '** . Weitere Informationen zu Abfragen von XML-Vorlage finden Sie unter [Befehl Streams](../../../ado/guide/data/command-streams.md) in ADO oder Using-Streams für die Eingabe des Befehls in der SQL Server-Onlinedokumentation.  
   
  Als XML-Vorlage-Abfrage folgt die FOR XML-Abfrage wie:  
   

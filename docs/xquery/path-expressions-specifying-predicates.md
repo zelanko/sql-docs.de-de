@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7502cef1a02ff580b16b8df0d6f1c2c6c54fb8ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946425"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Pfadausdrücke – Angeben von Prädikaten
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +70,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- Beachten Sie, dass in jedem Fall das Prädikat an den Knoten im Pfadausdruck gebunden wird, für den es angewendet wird. Beispielsweise wählt der erste Pfadausdruck jeweils das erste <`Name`>-Element im entsprechenden /People/Person-Knoten aus und gibt mit der bereitgestellten XML-Instanz Folgendes zurück:  
+ Beachten Sie, dass in jedem Fall das Prädikat an den Knoten im Pfadausdruck gebunden wird, für den es angewendet wird. Der erste Pfadausdruck wählt z. B. das erste <`Name`>-Element innerhalb jeder/People/Person-Knoten und mit der bereitgestellten XML-Instanz gibt Folgendes zurück:  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- Der zweite Pfadausdruck wählt alle <`Name`>-Elemente unter dem /People/Person-Knoten aus. Deshalb gibt er das folgende Ergebnis zurück:  
+ Aber der zweite Pfadausdruck wählt alle <`Name`>-Elemente, die unter den ersten/People/Person-Knoten befinden. Deshalb gibt er das folgende Ergebnis zurück:  
   
 ```  
 <Name>John</Name>  
@@ -106,7 +105,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
 /child::root/child::Location[attribute::LocationID=10]  
 ```  
   
- Die von diesem Prädikat angegebene Bedingung wird auf alle untergeordneten Elemente des <`Location`>-Knotens angewendet. Das führt dazu, dass als Ergebnis nur solche Arbeitsplatzstandorte zurückgegeben werden, bei denen der Attributwert der Standortkennung (LocationID) 10 ist.  
+ Die von diesem Prädikat angegebene Bedingung gilt für alle die <`Location`> untergeordneten Elementknoten. Das führt dazu, dass als Ergebnis nur solche Arbeitsplatzstandorte zurückgegeben werden, bei denen der Attributwert der Standortkennung (LocationID) 10 ist.  
   
  Der vorige Pfadausdruck wird in der folgenden SELECT-Anweisung ausgeführt:  
   
@@ -135,11 +134,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     Der Pfadausdruck in dieser Abfrage gibt nur die <`Location`>-Elementknoten zurück, die über ein LotSize-Attribut verfügen. Wenn das Prädikat für einen bestimmten <`Location`> eine leere Sequenz zurückgibt, wird dieser Arbeitsplatzstandort nicht im Ergebnis zurückgegeben.  
+     Der Pfadausdruck in dieser Abfrage gibt nur die <`Location`> Element-Knoten, die über ein LotSize-Attribut verfügen. Wenn das Prädikat für eine bestimmte eine leere Sequenz zurückgibt <`Location`>, dass arbeitsplatzstandort nicht im Ergebnis zurückgegeben wird.  
   
 2.  Werte können nur xs: Integer, xs: Boolean oder ein Knoten sein.-Prädikat\*. Für Knoten\*, das Prädikat "true", wenn alle Knoten vorhanden sind, und "false" für eine leere Sequenz ergibt. Alle anderen numerischen Typen wie z. B. double und float generieren einen statischen Typisierungsfehler. Der Prädikatwahrheitswert eines Ausdrucks ist ausschließlich dann True, wenn die resultierende ganze Zahl gleich dem Wert der Kontextposition ist. Darüber hinaus nur Integer-Literalwerte und die **last()** -Funktion verringern die Kardinalität des gefilterten schrittausdrucks auf 1.  
   
-     Beispielsweise ruft die folgende Abfrage den dritten untergeordneten Elementknoten des <`Features`>-Elements ab.  
+     Die folgende Abfrage ruft beispielsweise den dritten untergeordneten Elementknoten, von der <`Features`> Element.  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -157,7 +156,7 @@ WHERE ProductModelID=7
   
     -   Der dritte Schritt gibt auch ein Platzhalterzeichen (*) an, das alle Knoten im Knotentest anzeigt. Das Prädikat filtert jedoch die Knoten und gibt nur den Knoten in der dritten Position zurück.  
   
-    -   Die Abfrage gibt den dritten untergeordneten Knoten der untergeordneten <`Features`>-Elemente für die untergeordneten <`ProductDescription`>-Elemente des Dokumentenstamms zurück.  
+    -   Die Abfrage gibt den dritten untergeordneten Elementknoten des der <`Features`> untergeordnete Elemente des der <`ProductDescription`>-Elemente für den Dokumentenstamm.  
   
 3.  Wenn der Wert des Prädikatausdrucks ein einfacher Werttyp des booleschen Datentyps ist, entspricht der Prädikatwahrheitswert dem Wert des Prädikatausdrucks.  
   

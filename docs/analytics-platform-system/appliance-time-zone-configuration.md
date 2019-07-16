@@ -2,19 +2,18 @@
 title: Konfigurieren der Zeitzone - Analytics Platform System | Microsoft-Dokumentation
 description: Die Seite "Zeitzone" können Sie die Zeitzone für alle Knoten auf Ihrem Gerät Analytics Platform System (APS) festgelegt.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6a17ef4e77f9703a285f1e232077582e4441f293
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9997ed26cea5c63d69a7be84b25c247add9b692
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961441"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Konfiguration der Zeitzone der Appliance - Analytics Platform System
 Die **Zeitzone** auf der Seite können Sie die Zeitzone für alle Knoten auf Ihrem Gerät Analytics Platform System (APS) festlegen.  
@@ -31,7 +30,7 @@ Die **Zeitzone** auf der Seite können Sie die Zeitzone für alle Knoten auf Ihr
   
 5.  Die Appliance-Dienste neu starten, mit der **Dienststatus** Seite im Konfigurations-Manager. Wenn Sie auch die Berechtigungen ändern möchten, können Sie dies tun, bevor die Anwendung neu starten.  
   
-![DWConfig Appliance Time](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
+![DWConfig, Anwendungszeit](./media/appliance-time-zone-configuration/SQL_Server_PDW_DWConfig_ApplTopTime.png "SQL_Server_PDW_DWConfig_ApplTopTime")  
   
 ## <a name="see-also"></a>Siehe auch  
 [Starten Sie den Konfigurations-Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  

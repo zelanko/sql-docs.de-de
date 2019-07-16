@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8e5f874e43e70ce1bddfe21b745199fef44aa04a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3d4d8108fda500d48425abfb52fd9f72c6faa147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963059"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architektur der Erweiterbarkeit in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +55,7 @@ Die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] ist ein D
 
 | Vertrauenswürdige Startprogramme | Erweiterung | SQL Server-Versionen |
 |-------------------|-----------|---------------------|
-| Datei "rlauncher.dll" für die Sprache R | [R-Erweiterung](extension-r.md) | SQL Server 2016, SQL Server 2017 |
+| Datei "rlauncher.dll" für die Sprache R | [R-Erweiterung](extension-r.md) | SQLServer 2016, SqlServer 2017 |
 | PythonLauncher.dll für Python 3.5 | [Python-Erweiterung](extension-python.md) | SQL Server 2017 |
 
 Der [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienst wird unter dem eigenen Benutzerkonto ausgeführt. Wenn Sie das Konto, das Launchpad ausgeführt wird ändern, achten Sie darauf, dass Sie zu diesem Zweck verwenden SQL Server-Konfigurations-Manager, um sicherzustellen, dass Änderungen in geschrieben werden Dateien im Zusammenhang.

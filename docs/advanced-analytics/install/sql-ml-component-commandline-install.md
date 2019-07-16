@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ffd4b13d5ab92187ac998fd983e8fa8416e4401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962895"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installieren von SQL Server-Machine learning-R und Python-Komponenten über die Befehlszeile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +45,7 @@ Das Argument Funktionen ist es erforderlich, Begriff Vereinbarungen lizenzieren.
 
 Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des /Q-Parameters den vollständigen stillen Modus oder mithilfe des /QS-Parameters den einfachen stillen Modus. Mithilfe des /QS-Schalters wird nur der Fortschritt angezeigt, es sind jedoch keine Eingaben möglich. Außerdem werden beim Auftreten von Fehlern keine Fehlermeldungen angezeigt. Der /QS-Parameter wird nur unterstützt, wenn /Action=install angegeben wurde.
 
-| Argumente | Description |
+| Argumente | Beschreibung |
 |-----------|-------------|
 | / FEATURES = AdvancedAnalytics | Die in der Datenbank-Version installiert: SQL Server 2017-Machine-Learning-Services (Datenbankintern) oder SQL Server 2016 R Services (Datenbankintern).  |
 | /FEATURES = SQL_INST_MR | Gilt nur für SQLServer 2017. Koppeln Sie dies mit AdvancedAnalytics. Installiert die (In-Database) R-Funktion, einschließlich Microsoft R Open und proprietären R-Pakete. Das SQL Server 2016 R Services-Feature ist R nur, damit kein Parameter für diese Version vorhanden ist.|
@@ -56,7 +55,7 @@ Wenn Sie über die Eingabeaufforderung installieren, unterstützt [!INCLUDE[ssNo
 | /IACCEPTROPENLICENSETERMS  | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der open-Source-R-Komponenten akzeptiert haben. |
 | /IACCEPTPYTHONLICENSETERMS | Gibt an, dass Sie die Lizenzbedingungen für die Verwendung der Python-Komponenten akzeptiert haben. |
 | /IACCEPTSQLSERVERLICENSETERMS | Gibt an, dass Sie die für die Verwendung von SQL Server-Lizenzbedingungen akzeptiert haben.|
-| /MRCACHEDIRECTORY | Für offline-Setup festgelegt den, enthält die CAB-Dateien der R-Komponenten. |
+| / MRCACHEDIRECTORY | Für offline-Setup festgelegt den, enthält die CAB-Dateien der R-Komponenten. |
 | /MPYCACHEDIRECTORY | Zur künftigen Verwendung reserviert. Verwenden Sie % Temp%, um die CAB-Dateien der Python-Komponenten für die Installation auf Computern zu speichern, die nicht über eine Internetverbindung verfügen. |
 
 
@@ -179,7 +178,7 @@ Versuchen Sie diese benutzerdefinierten Berichte, um den Installationsstatus der
 
 R-Entwickler können mit einigen einfachen Beispielen beginnen, und die Grundlagen der Funktionsweise von R mit SQL Server. Der nächste Schritt ist finden Sie in den folgenden Links:
 
-+ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Führen Sie R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python-Entwickler erfahren, wie Python mit SQL Server verwenden, indem Sie die folgenden in diesen Tutorials:

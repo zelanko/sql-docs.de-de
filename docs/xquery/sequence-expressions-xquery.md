@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946309"
 ---
 # <a name="sequence-expressions-xquery"></a>Sequenzausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Filtern von Sequenzen  
- Sie können die durch einen Ausdruck zurückgegebene Sequenz filtern, indem Sie dem Ausdruck ein Prädikat hinzufügen. Weitere Informationen finden Sie unter [Pfadausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Beispielsweise gibt die folgende Abfrage eine Sequenz von drei <`a`>-Elementknoten zurück:  
+ Sie können die durch einen Ausdruck zurückgegebene Sequenz filtern, indem Sie dem Ausdruck ein Prädikat hinzufügen. Weitere Informationen finden Sie unter [Pfadausdrücke &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Die folgende Abfrage gibt z. B. eine Sequenz von drei <`a`> Element-Knoten:  
   
 ```  
 declare @x xml  
@@ -152,7 +151,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Um nur <`a`>-Elemente abzurufen, die über das attrA-Attribut verfügen, können Sie einen Filter im Prädikat angeben. Die resultierende Sequenz verfügt nur über ein <`a`>-Element.  
+ Nur abrufen <`a`>-Elemente, die über das attra-Attribut verfügen, können Sie einen Filter im Prädikat angeben. Die resultierende Sequenz müssen nur eine <`a`> Element.  
   
 ```  
 declare @x xml  
@@ -203,7 +202,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- Das folgende Beispiel wendet einen Prädikatfilter an. Der Ausdruck findet <`a`>- und <`b`>-Elemente, die das <`c`>-Element enthalten.  
+ Das folgende Beispiel wendet einen Prädikatfilter an. Der Ausdruck sucht nach Elementen <`a`> und <`b`>-Element enthalten <`c`>.  
   
 ```  
 declare @x xml  

@@ -2,19 +2,18 @@
 title: PDW-Firewallkonfiguration - Analytics Platform System | Microsoft-Dokumentation
 description: Auf der Seite Firewall der SQL Server PDW-Konfigurations-Manager können Sie Firewallregeln, die zulassen oder verhindern den Zugriff auf bestimmte Ports auf dem Gerät Analytics Platform System aktivieren oder deaktivieren.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f650aac34e3a5299cabae500a8ee73250c3974d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960411"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Parallel Data Warehouse-Firewall-Konfiguration in Analytics Platform System
 
@@ -40,8 +39,8 @@ Die folgenden Ports werden für Clientverbindungen stammen, die außerhalb von P
 |SQL-Client-Zugriff für PDW (TDS)|17001|CTL|  
 |Ladeprogramm-Clientzugriff (Dwloader und SSIS)|8001|CTL|  
 |Remotedesktopzugriff|3389|CTL, CMP|  
-|SSIS BinaryLoaderDataChannel|16551|CTL|  
-|dwloader BinaryLoaderDataChannel|16551|CMP|  
+|SSIS-BinaryLoaderDataChannel|16551|CTL|  
+|Dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL verschlüsselte Verbindungen (für die interne Kommunikation, um die Verwaltungskonsole zugreifen)|443|Alle Knoten|  
 |SQL Server PDW Load Ablaufsteuerung - Windows-Anmeldeinformationen|8002|CTL|  
 |_Kerberos|88|AD01 und AD02,|  

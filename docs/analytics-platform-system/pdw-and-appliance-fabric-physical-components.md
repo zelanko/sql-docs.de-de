@@ -2,19 +2,18 @@
 title: Physische Komponenten der Appliance - Analytics Platform System | Microsoft-Dokumentation
 description: Namen und Beschreibungen für die PDW und, physischen Fabric-Komponenten.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7ad8715d3f7a885bc48f6bdcc7f1ec2842f269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960429"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Physische Komponenten der Appliance - Analytics Platform System
 Namen und Beschreibungen für die PDW und, physischen Fabric-Komponenten. 
@@ -68,7 +67,7 @@ Ein iSCSI-virtueller Computer wird auf jedem Host mit dem Speicher verbunden ist
 *Appliance_domain*-HST01 über *Appliance_domain*-HST06  
 Die Hosts für die PDW-Knoten und Appliance Fabric von virtuellen Maschinen. HST03 handelt es sich um eine optionale passiven-Host.  
   
-*appliance_domain*-HSA01 through *appliance_domain*-HSA08  
+*Appliance_domain*-HSA01 über *Appliance_domain*-HSA08  
 Die Hosts mit Speicher verbunden ist (HSA). Jeder HAS Host führt eine Compute-Knoten virtuelle Computer und eine ISCSI-VM.  
   
 ### <a name="cluster-for-pdw"></a>Cluster für PDW  
@@ -76,7 +75,7 @@ Die Hosts mit Speicher verbunden ist (HSA). Jeder HAS Host führt eine Compute-K
 Der PDW-Cluster wird WFOHST01 benannt. Er verwaltet alle physischen Hosts und virtuellen Computern, die PDW angehören.  
   
 ### <a name="direct-attached-storage"></a>Direkt angeschlossener Speicher  
-*appliance_domain*-DAS01 through *appliance_domain*-DAS03  
+*Appliance_domain*-DAS01 über *Appliance_domain*-DAS03  
 Dies ist das direkt angeschlossenen Speicher, der auf den Computeknoten verbunden ist. HP hat eine DAS für jede zwei Computeknoten. Dell und Quanten haben eine DAS für alle drei Compute-Knoten.  
   
 ## <a name="see-also"></a>Siehe auch  

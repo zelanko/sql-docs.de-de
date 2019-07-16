@@ -2,26 +2,25 @@
 title: Starten der Konfigurations-Manager - Analytics Platform System | Microsoft-Dokumentation
 description: Anweisungen zum Starten des Konfigurations-Manager-Tools für die Analytics Platform System Appliance.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960727"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Starten Sie den Konfigurations-Manager in Analytics Platform System
 Dieses Thema enthält Anweisungen zum Starten der **Configuration Manager** für die Analytics Platform System Appliance.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Vorraussetzungen  
 Das Analytics Platform System**Configuration Manager** kann nur vom Domänenadministrator Appliance ausgeführt werden. Um dieses Tool ausführen zu können, benötigen Sie das Kennwort für den Domänenadministrator Appliance an. Um zusätzliche APS-Administratoren zu erstellen, finden Sie unter [erstellen Sie einen Domänenadministrator APS &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Starten des Konfigurations-Manager  

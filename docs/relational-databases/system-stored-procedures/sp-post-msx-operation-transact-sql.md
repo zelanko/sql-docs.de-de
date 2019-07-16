@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056370"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @operation = ] 'operation'` Der Typ des Vorgangs für den gesendeten Vorgang. *Vorgang*ist **varchar(64)**, hat keinen Standardwert. Gültigen Operationen hängen von *Object_type*.  
+`[ @operation = ] 'operation'` Der Typ des Vorgangs für den gesendeten Vorgang. *Vorgang*ist **varchar(64)** , hat keinen Standardwert. Gültigen Operationen hängen von *Object_type*.  
   
 |Objekttyp|Vorgang|  
 |-----------------|---------------|  
@@ -54,11 +53,11 @@ sp_post_msx_operation
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**ZEITPLAN**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` Der Typ des Objekts, für das eine Operation bereitgestellt. Gültige Typen sind **Auftrag**, **SERVER**, und **Zeitplan**. *Objekt* ist **varchar(64)**, hat den Standardwert **Auftrag**.  
+`[ @object_type = ] 'object'` Der Typ des Objekts, für das eine Operation bereitgestellt. Gültige Typen sind **Auftrag**, **SERVER**, und **Zeitplan**. *Objekt* ist **varchar(64)** , hat den Standardwert **Auftrag**.  
   
 `[ @job_id = ] job_id` Die Auftrags-ID des Auftrags für den die Operation zutrifft. *Job_id* ist **Uniqueidentifier**, hat keinen Standardwert. **0 x 00** zeigt alle Aufträge. Wenn *Objekt* ist **SERVER**, klicken Sie dann *Job_id*ist nicht erforderlich.  
   
-`[ @specific_target_server = ] 'target_server'` Der Name des Zielservers für die die angegebene Operation zutrifft. Wenn *Job_id* angegeben ist, aber *Target_server* nicht angegeben ist, die Vorgänge werden für alle Auftragsserver des Auftrags bereitgestellt. *Target_server* ist **nvarchar(30)**, hat den Standardwert NULL.  
+`[ @specific_target_server = ] 'target_server'` Der Name des Zielservers für die die angegebene Operation zutrifft. Wenn *Job_id* angegeben ist, aber *Target_server* nicht angegeben ist, die Vorgänge werden für alle Auftragsserver des Auftrags bereitgestellt. *Target_server* ist **nvarchar(30)** , hat den Standardwert NULL.  
   
 `[ @value = ] value` Das Abrufintervall in Sekunden. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Geben Sie diesen Parameter nur, wenn *Vorgang* ist **SET-POLL**.  
   

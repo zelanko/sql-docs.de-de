@@ -2,19 +2,18 @@
 title: Konfigurieren von InfiniBand - Analytics Platform System | Microsoft-Dokumentation
 description: Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem Clientserver nicht zur Appliance gehört-für die Verbindung mit dem Steuerungsknoten auf Parallel Data Warehouse (PDW) zu konfigurieren. Verwenden Sie diese Anweisungen für eine hohe Verfügbarkeit und Konnektivität, sodass laden, Sicherung und andere Prozesse automatisch mit dem aktiven InfiniBand-Netzwerk zu verbinden.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4739a79989321c215819bab90da1d1831764f820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961246"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Konfigurieren von InfiniBand-Netzwerkadapter für Analytics Platform System
 Beschreibt, wie die InfiniBand-Netzwerkadapter auf einem Clientserver nicht zur Appliance gehört-für die Verbindung mit dem Steuerungsknoten auf Parallel Data Warehouse (PDW) zu konfigurieren. Verwenden Sie diese Anweisungen für eine hohe Verfügbarkeit und Konnektivität, sodass laden, Sicherung und andere Prozesse automatisch mit dem aktiven InfiniBand-Netzwerk zu verbinden.  
@@ -53,7 +52,7 @@ Sie benötigen ein APS-Appliance-Domänenkonto auf den Knoten AD01 anmelden. Z. 
   
 Sie benötigen ein Windows-Konto auf dem Clientserver, der Berechtigung zum Konfigurieren der Netzwerkadapter hat.  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Vorraussetzungen  
 Diese Anweisungen setzen voraus, der Clientserver ist bereits installiert und mit dem Gerät InfiniBand-Netzwerk installiert. Rer-nachverfolgung und Verkabelung Anweisungen finden Sie [abrufen und Konfigurieren eines Servers geladen](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Allgemeine Hinweise  

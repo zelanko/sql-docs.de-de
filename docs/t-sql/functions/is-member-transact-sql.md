@@ -28,17 +28,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d45b1d74242476da155e387f8ec00f8e4e23278f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94ccde1511dc2084574127190dc6f830bfd0a995
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946978"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716584"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Zeigt an, ob der aktuelle Benutzer ein Mitglied der angegebenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gruppe oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrolle ist.  
+  Zeigt an, ob der aktuelle Benutzer ein Mitglied der angegebenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gruppe oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrolle ist. Die IS_MEMBER-Funktion wird für Azure Active Directory-Gruppen nicht unterstützt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ IS_MEMBER ( { 'group' | 'role' } )
  Der Name der zu überprüfenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rolle. *role* ist vom Datentyp **sysname** und kann feste Datenbankrollen oder benutzerdefinierte Rollen, nicht jedoch Serverrollen einschließen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  IS_MEMBER gibt folgende Werte zurück.  

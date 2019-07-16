@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029628"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **IHsyscolumns** -Sicht macht Spalteninformationen für die von einer nicht - SQL Server-Verleger veröffentlichten Artikeln verfügbar. In dieser Ansicht wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Spalte oder des Prozedurparameters.|  
 |**id**|**int**|Die Objekt-ID der Tabelle, zu der diese Spalte gehört, oder die ID der gespeicherten Prozedur, der dieser Parameter zugeordnet ist.|  
@@ -46,13 +45,13 @@ ms.locfileid: "52747885"
 |**Reserviert**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Die ID des Standards für diese Spalte.|  
-|**Domäne**|**int**|Die ID der Regel oder der CHECK-Einschränkung für diese Spalte.|  
+|**domain**|**int**|Die ID der Regel oder der CHECK-Einschränkung für diese Spalte.|  
 |**number**|**int**|Die Nummer der Unterprozedur, wenn die Prozedur gruppiert ist (**0** für Einträge).|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Der Offset in die Zeile, in der diese Spalte angezeigt wird.|  
 |**collationid**|**int**|Die ID der Spaltensortierung. Ist für nicht zeichenbasierte Spalten NULL.|  
-|**Sprache**|**int**|Die Sprachen-ID für die Spalte.|  
+|**language**|**int**|Die Sprachen-ID für die Spalte.|  
 |**status**|**int**|Das Bitmuster, das zum Beschreiben einer Eigenschaft der Spalte oder des Parameters verwendet wird:<br /><br /> **0 x 08** = Spalte lässt null-Werte.<br /><br /> **0 x 10** = ANSI-Auffüllung war aktiviert **Varchar** oder **Varbinary** wurden Spalten hinzugefügt. Nachfolgende Leerzeichen werden bei **varchar** -Spalten beibehalten, nachfolgende Nullen werden bei **varbinary** -Spalten beibehalten.<br /><br /> **0 x 40** = Parameter ist ein OUTPUT-Parameter.<br /><br /> **0 x 80** = Spalte eine Identitätsspalte ist.|  
 |**type**|**int**|Der Typ des physischen Speichers aus [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**usertype**|**tinyint**|Die ID des benutzerdefinierten Datentyps aus [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019408"
 ---
 # <a name="c-to-sql-date"></a>C in SQL: date
 Der Bezeichner für die Date-ODBC-C-Datentyp ist:  
@@ -31,10 +30,10 @@ Der Bezeichner für die Date-ODBC-C-Datentyp ist:
   
 |SQL-Typ-ID|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = 10<br /><br /> Spalte Byte Länge < 10<br /><br /> Datenwert ist kein gültiges Datum|–<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = 10<br /><br /> Spalte Zeichen Länge < 10<br /><br /> Datenwert ist kein gültiges Datum|–<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Datenwert ist ein gültiges Datum<br /><br /> Datenwert ist kein gültiges Datum|–<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Datenwert ist ein gültiges Datum [a]<br /><br /> Datenwert ist kein gültiges Datum|–<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = 10<br /><br /> Spalte Byte Länge < 10<br /><br /> Datenwert ist kein gültiges Datum|n/v<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = 10<br /><br /> Spalte Zeichen Länge < 10<br /><br /> Datenwert ist kein gültiges Datum|n/v<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Datenwert ist ein gültiges Datum<br /><br /> Datenwert ist kein gültiges Datum|n/v<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Datenwert ist ein gültiges Datum [a]<br /><br /> Datenwert ist kein gültiges Datum|n/v<br /><br /> 22007|  
   
  [a] der Uhrzeitteil des Zeitstempels auf 0 (null) festgelegt ist.  
   

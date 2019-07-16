@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e22ab07f40ad6b4ef916d950909957b04c9d5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949386"
 ---
 # <a name="open-method-ado-md"></a>Open-Methode (ADO MD)
 Ruft die Ergebnisse von einer mehrdimensionalen Abfrage ab und gibt die Ergebnisse in einem [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -36,7 +35,7 @@ Cellset.Open Source, ActiveConnection
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Variant** , die an einen gültigen MDX-Abfrage, z. B. eine Abfrage (Multidimensional Expressions) ausgewertet wird. Die *Quelle* Argument entspricht der [Quelle](../../../ado/reference/ado-md-api/source-property-ado-md.md) Eigenschaft. Weitere Informationen zu MDX finden Sie unter den [OLE DB für Online Analytical Processing (OLAP)](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) Dokumentation in der Microsoft Data Access Components SDK.  
+ Dies ist optional. Ein **Variant** , die an einen gültigen MDX-Abfrage, z. B. eine Abfrage (Multidimensional Expressions) ausgewertet wird. Die *Quelle* Argument entspricht der [Quelle](../../../ado/reference/ado-md-api/source-property-ado-md.md) Eigenschaft. Weitere Informationen zu MDX finden Sie unter den [OLE DB für Online Analytical Processing (OLAP)](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) Dokumentation in der Microsoft Data Access Components SDK.  
   
  *ActiveConnection*  
  Optional. Ein **Variant** , ausgewertet wird, in eine Zeichenfolge, die dabei wird entweder ein gültige ADO [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt Variablenname oder eine Definition für eine Verbindung. Die *ActiveConnection* Argument gibt an, die Verbindung für das Öffnen der [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Objekt. Wenn Sie eine Definition der Serververbindung für dieses Argument übergeben, wird von ADO mit den angegebenen Parametern eine neue Verbindung geöffnet. Die *ActiveConnection* Argument entspricht der [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) Eigenschaft.  

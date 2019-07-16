@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c69113e4bb5457cb997f832179e5c1aab2841d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4f336a7ebfaf5e76ac464944900231c452809f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020549"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Abrufen von Datentypinformationen mit SQLGetTypeInfo
 Da die Zuordnungen von zugrunde liegenden SQL-Datentypen zu ODBC-Typ-IDs ungefähre sind, handelt es sich bei ODBC bietet eine Funktion (**SQLGetTypeInfo**) beschrieben, über die ein Treiber vollständig kann jeder SQL-Datentyp in der Datenquelle. Diese Funktion gibt ein Resultset, das jeder Zeile die Eigenschaften eines einzelnen Datentyps, wie z. B. Name, Typ-ID, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit beschreibt.  

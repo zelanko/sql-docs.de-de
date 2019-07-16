@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa470b663a28a69014a7884b30fb384fe62276a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943645"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793638"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwende
 Weitere Informationen finden Sie unter *startdate*.
   
 ## <a name="return-type"></a>Rückgabetyp  
- **ssNoversion**  
+ **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
   
@@ -99,7 +99,7 @@ Bei einem Rückgabewert, der sich außerhalb des gültigen Bereichs für **int**
   
 Wenn *startdate* und *enddate* jeweils nur ein Uhrzeitwert zugewiesen ist und *datepart* kein Zeit-*datepart* ist, gibt `DATEDIFF` 0 (null) zurück.
   
-Beim Berechnen des Rückgabewerts verwendet `DATEDIFF` keine Komponente von *startdate* oder *enddate* für den Zeitzonenoffset.
+`DATEDIFF` verwendet die Zeitzonen-Offsetkomponente von *startdate* oder *enddate*, um den Rückgabewert zu berechnen.
   
 Da [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) nur auf die Minute genaue Werte zurückgibt, werden im Rückgabewert die Sekunden und Millisekunden immer auf 0 (null) festgelegt, wenn *startdate* oder *enddate* einen **smalldatetime**-Wert aufweist.
   

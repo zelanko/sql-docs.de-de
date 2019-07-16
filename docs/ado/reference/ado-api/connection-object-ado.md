@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 701ced4f5e0ad511f4a1c5b39c9775e285d1f751
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933564"
 ---
 # <a name="connection-object-ado"></a>Connection-Objekt (ADO)
 Stellt eine offene Verbindung mit einer Datenquelle dar.  
@@ -99,5 +98,5 @@ cnn. "parameter"
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Errors-Auflistung (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

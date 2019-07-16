@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a945eef43a1fc12689853c3fa209f6126df4f0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951871"
 ---
 # <a name="considering-database-features-to-use"></a>Erwägen der zu verwendenden Datenbankfunktionen
 Nachdem das grundlegende Maß an Interoperabilität bekannt ist, müssen die von der Anwendung verwendeten Funktionen der Datenbank berücksichtigt werden. Werden die Anwendung wird z. B. welche SQL-Anweisungen ausgeführt? Verwendet die Anwendung scrollfähige Cursor? Transaktionen? Verfahren? Long-Daten? Weitere Ideen darüber, welche Funktionen möglicherweise nicht von allen DBMS unterstützt wird, finden Sie unter den [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), und [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) Beschreibungen der Funktionen und [ Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Die Funktionen, die von einer Anwendung benötigt möglicherweise einige DBMS-Systeme in der Liste der Ziel-DBMS vermieden. Sie können auch zeigen, dass die Anwendung viele Datenbankmanagementsysteme problemlos ausgeführt werden kann.  

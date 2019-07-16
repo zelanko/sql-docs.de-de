@@ -10,19 +10,18 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959437"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden und Abfragen von Azure SQL-Datenbank
 
 In diesem Schnellstart verwenden Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] für die Verbindung mit einem Azure SQL-Datenbank-Server. Führen Sie anschließend Transact-SQL (T-SQL)-Anweisungen zum Erstellen und Abfragen der Datenbank "tutorialdb", die in anderen dient [!INCLUDE[name-sos](../includes/name-sos-short.md)] Tutorials.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], und eine Azure SQL-Datenbank-Server.
 

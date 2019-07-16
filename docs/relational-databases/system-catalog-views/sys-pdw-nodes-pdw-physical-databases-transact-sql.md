@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e01ca29eec9062f6dd7592e4c3b1d4bb2125d999
-ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
+ms.openlocfilehash: 3dd4551d2dac629912eb4fe799d6a9e58ec1792b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56893440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001130"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Enthält eine Zeile für jede physische Datenbank auf einem Computeknoten. Aggregieren Sie physische Datenbankinformationen, um ausführliche Informationen zu Datenbanken abzurufen. Informationen zu kombinieren, verknüpfen die `sys.pdw_nodes_pdw_physical_databases` auf die `sys.pdw_database_mappings` und `sys.databases` Tabellen.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Die Objekt-ID für die Datenbank. Beachten Sie, dass dieser Wert nicht identisch mit einer Database_id in ist die [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) anzeigen.|  
 |physical_name|**sysname**|Der physische Name für die Datenbank auf den Shell/Compute-Knoten. Dieser Wert ist identisch mit einem Wert in der Spalte Physical_name der [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) anzeigen.|  
@@ -87,7 +86,7 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

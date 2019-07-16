@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b6850f15718cb810b5428f75980983fc4a8a0a88
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946226"
 ---
 # <a name="type-system---sequence-type-matching"></a>Typensystem – Zuordnen des Sequenztyps
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "54255245"
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>Beispiel: Bestimmt, ob eine Sequenz leer ist.  
  Die **empty()** Sequenztyp kann in einem sequenztypausdruck verwendet werden, um festzustellen, ob die Sequenz, die zurückgegeben werden, durch den angegebenen Ausdruck eine leere Sequenz ist.  
   
- Im folgenden Beispiel ermöglicht das XML-Schema, dass für das <`root`>-Element NULL-Werte zulässig sind:  
+ Im folgenden Beispiel, das XML-Schema ermöglicht die <`root`>-Element NULL-Werte zulässig sein:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -52,7 +51,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Wenn eine typisierte XML-Instanz nun einen Wert für das <`root`>-Element angibt, wird von `instance of empty()` der Wert False zurückgegeben.  
+ Nun, wenn eine typisierte XML-Instanz gibt an, einen Wert für die <`root`>-Element `instance of empty()` gibt False zurück.  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -62,7 +61,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- Wenn das <`root`>-Element in der Instanz NULL-Werte enthält, stellt sein Wert eine leere Sequenz dar, und von `instance of empty()` wird der Wert True zurückgegeben.  
+ Wenn die <`root`>-Element in der Instanz NULL ist, der Wert ist eine leere Sequenz und die `instance of empty()` gibt True zurück.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -113,7 +112,7 @@ GO
 ```  
   
 ### <a name="example-cardinality-in-sequence-expressions"></a>Beispiel: Kardinalität in Sequenzausdrücken  
- Dieses Beispiel veranschaulicht die Auswirkung einer Kardinalität in einem Sequenzausdruck. Das folgende XML-Schema definiert ein <`root`>-Element mit dem Typ Byte, für das NULL-Werte zulässig sind.  
+ Dieses Beispiel veranschaulicht die Auswirkung einer Kardinalität in einem Sequenzausdruck. Das folgende XML-Schema definiert ein <`root`> Element, das der Byte-Typ und NULL-Werte zulässig.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +131,7 @@ SELECT @var.query('data(/root[1]) instance of  xs:byte ')
 GO  
 ```  
   
- Wenn das <`root`>-Element gleich NULL ist, stellt sein Wert eine leere Sequenz dar. Das heißt, der Ausdruck (`/root[1]`) gibt eine leere Sequenz zurück. Deshalb gibt `instance of xs:byte` den Wert False zurück. Beachten Sie, dass die Standardkardinalität in diesem Fall 1 ist.  
+ Wenn Sie stellen die <`root`> Element NULL ist, wird der Wert ist eine leere Sequenz. Das heißt, der Ausdruck (`/root[1]`) gibt eine leere Sequenz zurück. Deshalb gibt `instance of xs:byte` den Wert False zurück. Beachten Sie, dass die Standardkardinalität in diesem Fall 1 ist.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -199,14 +198,14 @@ SET @var = '<?xml-stylesheet href="someValue" type="text/xsl" ?>
 </root>'  
 ```  
   
- In der ersten Abfrage gibt der Ausdruck den typisierten Wert des <`a`>-Elements zurück. In der zweiten Abfrage gibt der Ausdruck das <`a`>-Element zurück. Beides sind Items. Deshalb geben beide Abfragen den Wert True zurück.  
+ In der ersten Abfrage gibt der Ausdruck den typisierten Wert des Elements <`a`>. In der zweiten Abfrage gibt der Ausdruck Element zurück, mit denen <`a`>. Beides sind Items. Deshalb geben beide Abfragen den Wert True zurück.  
   
 ```  
 SELECT @var.query('data(/root[1]/a[1]) instance of item()')  
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- Alle XQuery-Ausdrücke in den folgenden drei Abfragen geben das untergeordnete Element des Elementknotens für das <`root`>-Element zurück. Deshalb gibt der Sequenztypausdruck (`instance of node()`) den Wert True zurück, und die anderen beiden Ausdrücke (`instance of text()` und `instance of document-node()`) geben den Wert False zurück.  
+ Die XQuery-Ausdrücke in den folgenden drei Abfragen zurück, dem untergeordneten Element-Knoten, der die <`root`> Element. Deshalb gibt der Sequenztypausdruck (`instance of node()`) den Wert True zurück, und die anderen beiden Ausdrücke (`instance of text()` und `instance of document-node()`) geben den Wert False zurück.  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -214,7 +213,7 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- In der folgenden Abfrage gibt der `instance of document-node()`-Ausdruck den Wert True zurück, wenn das übergeordnete Element des <`root`>-Elements ein Dokumentknoten ist.  
+ In der folgenden Abfrage wird die `instance of document-node()` Ausdruck gibt "true" zurück, da das übergeordnete Element der <`root`> Elements ein Dokumentknoten ist.  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
@@ -256,7 +255,7 @@ element(*, ElementType?)
  Die folgenden Beispiele veranschaulichen Szenarios, in denen Element- und Attributtests hilfreich sind.  
   
 ### <a name="example-a"></a>Beispiel A  
- Das folgende XML-Schema definiert den komplexen `CustomerType`; das <`firstName`>-Element und das <`lastName`>-Element sind dabei optional. Für eine angegebene XML-Instanz müssen Sie eventuell ermitteln, ob der Vorname für einen bestimmten Kunden vorhanden ist.  
+ Das folgende XML-Schema definiert die `CustomerType` komplexer Typ, in dem <`firstName`> und <`lastName`> Elemente sind optional. Für eine angegebene XML-Instanz müssen Sie eventuell ermitteln, ob der Vorname für einen bestimmten Kunden vorhanden ist.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -280,7 +279,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- Die folgende Abfrage bestimmt mit einem `instance of element (firstName)`-Ausdruck, ob das erste untergeordnete Element von <`customer`> ein Element mit dem Namen <`firstName`> ist. In diesem Fall gibt die Abfrage den Wert True zurück.  
+ Die folgende Abfrage verwendet eine `instance of element (firstName)` -Ausdruck zum bestimmen, ob das erste untergeordnete Element des <`customer`> ist ein Element, dessen Name <`firstName`>. In diesem Fall gibt die Abfrage den Wert True zurück.  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -288,7 +287,7 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- Wenn Sie das <`firstName`>-Element aus der Instanz entfernen, wird der Wert False von der Abfrage zurückgegeben.  
+ Wenn Sie entfernen die <`firstName`>-Element aus der Instanz, die Abfrage gibt "false" zurück.  
   
  Sie können auch Folgendes verwenden:  
   
@@ -309,7 +308,7 @@ GO
 ### <a name="example-b"></a>Beispiel B  
  Das folgende Beispiel zeigt, wie ermittelt wird, ob der von einem Ausdruck zurückgegebene Knoten ein Elementknoten mit einem bestimmten Namen ist. Er verwendet den **element()** testen.  
   
- Im folgenden Beispiel weisen die beiden abgefragten <`Customer`>-Elemente in der XML-Instanz zwei unterschiedliche Typen auf: `CustomerType` und `SpecialCustomerType`. Angenommen, Sie möchten den Typ des <`Customer`>-Elements ermitteln, das von dem Ausdruck zurückgegeben wird. Die folgende XML-Schemaauflistung definiert die Typen `CustomerType` und `SpecialCustomerType`.  
+ Im folgenden Beispiel die beiden <`Customer`>-Elemente in der XML-Instanz, die abgefragt werden zwei unterschiedliche Typen sind `CustomerType` und `SpecialCustomerType`. Angenommen, Sie wissen, welche möchten die <`Customer`> durch den Ausdruck zurückgegebene Element. Die folgende XML-Schemaauflistung definiert die Typen `CustomerType` und `SpecialCustomerType`.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -336,7 +335,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Diese XML-schemaauflistung wird verwendet, um eine typisierte erstellen **Xml** Variable. Die XML-Instanz, die dieser Variablen zugewiesen wurde, weist zwei <`customer`>-Elemente mit unterschiedlichen Typen auf. Das erste Element weist den `CustomerType`-Typ auf und das zweite Element den `SpecialCustomerType`-Typ.  
+ Diese XML-schemaauflistung wird verwendet, um eine typisierte erstellen **Xml** Variable. Die XML-Instanz, dieser Variablen zugewiesene verfügt über zwei <`customer`> Elemente der zwei verschiedene Arten. Das erste Element weist den `CustomerType`-Typ auf und das zweite Element den `SpecialCustomerType`-Typ.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -359,10 +358,10 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- Wenn Sie den Ausdruck der vorherigen Abfrage ändern und das zweite <`customer`>-Element (`/x:customer)[2]`) abrufen, gibt der `instance of`-Ausdruck den Wert <localizedText>True</localizedText> zurück.  
+ Wenn Sie den Ausdruck der vorherigen Abfrage ändern, und rufen das zweite <`customer`>-Element (`/x:customer)[2]`), die `instance of` gibt "true" zurück.  
   
 ### <a name="example-c"></a>Beispiel C  
- Dieses Beispiel verwendet den Attributtest. Das folgende XML-Schema definiert den komplexen CustomerType-Typ mit den Attributen CustomerID und Age. Das Age-Attribut ist optional. Sie können für eine bestimmte XML-Instanz ermitteln, ob das Age-Attribut im <`customer`>-Element vorhanden ist.  
+ Dieses Beispiel verwendet den Attributtest. Das folgende XML-Schema definiert den komplexen CustomerType-Typ mit den Attributen CustomerID und Age. Das Age-Attribut ist optional. Für eine bestimmte XML-Instanz, Sie möchten zu bestimmen, ob das Age-Attribut vorhanden ist, in der <`customer`> Element.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -421,7 +420,7 @@ RETURN
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Es gelten die folgenden speziellen Einschränkungen:  
   
--   Im elementtest muss der Typnamen der auftrittsindikator folgen (**?**).  
+-   Im elementtest muss der Typnamen der auftrittsindikator folgen ( **?** ).  
   
 -   **Element (ElementName, TypeName)** wird nicht unterstützt.  
   

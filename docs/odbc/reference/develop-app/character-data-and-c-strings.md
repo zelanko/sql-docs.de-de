@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00daac655f0c435c1ee22239d3d4aafa23065997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed99ab72e3d5112588a0b1c93df34b01aff7acdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044922"
 ---
 # <a name="character-data-and-c-strings"></a>Zeichendaten und C-Zeichenfolgen
 Eingabeparameter, die in Zeichendaten mit variabler Länge (z. B. Spaltennamen, dynamische Parameter und zeichenfolgenattributwerten) finden Sie haben einen zugeordnete Length-Parameter. Wenn die Anwendung die Zeichenfolgen mit Null-Zeichen wie üblich in C beendet wird, wird als Argument entweder die Länge in Bytes der Zeichenfolge (mit der Null-Terminator) oder SQL_NTS (Null-Terminated Zeichenfolge). Eine nicht Negative Length-Argument gibt an, die tatsächliche Länge der Zeichenfolge zugeordnet werden. Das Längenargument möglicherweise 0, um eine Zeichenfolge der Länge 0 (null), geben Sie die von einer NULL-Wert unterscheidet. Der negative Wert SQL_NTS weist den Treiber die Länge der Zeichenfolge zu bestimmen, indem Sie die Null-Terminierungszeichen suchen.  

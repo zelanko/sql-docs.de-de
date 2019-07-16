@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0fad1db10e40c71d22dd75417420c54cefa7803
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09b29277d74383abff1510ca7394aecad036fc7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036441"
 ---
 # <a name="connection-attributes"></a>Verbindungsattribute
 Verbindungsattribute sind Eigenschaften der Verbindung. Da Transaktionen auf Verbindungsebene auftreten, handelt es sich bei der Transaktionsisolationsstufe beispielsweise um ein Verbindungsattribut. Ebenso ist das Anmeldungstimeout oder Anzahl von Sekunden zu warten, bevor ein Timeout, eine Verbindung herstellen möchten, ein Verbindungsattribut.  

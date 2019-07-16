@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6c302f7cc9830b15ed058c160618ea0e40705444
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962733"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Richten Sie eine Data Science-Client für die Python-Entwicklung für SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -284,9 +283,9 @@ Wenn man [Python in Visual Studio](https://code.visualstudio.com/docs/languages/
 
 | Konfigurationseinstellung | Wert |
 |-----------------------|-------|
-| **Präfixpfad** | C:\Program Files\Microsoft\PyForMLS |
-| **Cesta k interpretu** | C:\Program Files\Microsoft\PyForMLS\python.exe |
-| **Fenstermodus-interpreter** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
+| **Präfixpfad** | C:\Programme\Microsoft Files\Microsoft\PyForMLS |
+| **Cesta k interpretu** | C:\Programme\Microsoft Files\Microsoft\PyForMLS\python.exe |
+| **Fenstermodus-interpreter** | C:\Programme\Microsoft Files\Microsoft\PyForMLS\pythonw.exe |
 
 Hilfe zum Konfigurieren einer Python-Umgebung finden Sie [Verwalten von Python-Umgebungen in Visual Studio](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio).
 

@@ -5,17 +5,16 @@ description: In diesem Artikel wird erläutert, wie zum Ausführen von Jupyter-N
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958296"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Verwendung von Notebooks in der Vorschau von SQL Server-2019
 
@@ -52,7 +51,7 @@ Der SQL-Kernel kann auch verwendet werden, für die Verbindung mit PostgreSQL-Se
 
 ![Verbindung mit PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
-### <a name="sql-kernel"></a>SQL Kernel
+### <a name="sql-kernel"></a>SQL-Kernel
 
 In den codezellen im Notebook, ähnlich wie der Abfrage-Editor unterstützt moderne SQL codierumgebung, der Ihre alltäglichen Aufgaben mit integrierten Features wie z. B. einen umfangreichen SQL-Editor, IntelliSense und integrierten Codeausschnitte einfacher macht. Codeausschnitte können Sie die richtige SQL-Syntax zum Erstellen von Datenbanken, Tabellen, Sichten, gespeicherte Prozeduren usw., und klicken Sie zum Aktualisieren vorhandener Datenbankobjekte generiert wird. Verwenden von Codeausschnitten schnell Kopien einer Datenbank für Entwicklungs- oder Testzwecke erstellen und zu generieren und Ausführen von Skripts.
 
@@ -60,7 +59,7 @@ Klicken Sie auf **ausführen** um jede Zelle auszuführen.
 
 SQL-Kernel, um die Verbindung mit SQL Server-Instanz
 
-![SQL Kernel](media/notebooks-guidance/intellisense-code-cell.png)
+![SQL-Kernel](media/notebooks-guidance/intellisense-code-cell.png)
 
 Abfrageergebnisse
 
@@ -99,10 +98,10 @@ Wenn die Installation erfolgreich war, finden Sie eine Benachrichtigung in der G
 
 |Kernel|Beschreibung
 |:-----|:-----
-| SQL Kernel | Schreiben Sie SQL-Code an Ihre relationale Datenbank gerichtet sind.
+| SQL-Kernel | Schreiben Sie SQL-Code an Ihre relationale Datenbank gerichtet sind.
 |PySpark3 und PySpark-Kernel| Schreiben Sie Python-Code, die mit Spark Compute aus dem Cluster.
 |Spark-Kernel|Schreiben von Scala und R-Code, die mit Spark Compute aus dem Cluster.
-|Python Kernel|Schreiben Sie Python-Code für die lokale Entwicklung.
+|Python-Kernel|Schreiben Sie Python-Code für die lokale Entwicklung.
 
 `Attach to` Liefert den Kontext für den Kernel anfügen. Wenn Sie SQL-Kernel verwenden, können Sie `Attach to` eines SQL Server-Instanzen.
 
@@ -154,7 +153,7 @@ Um das Notebook führen Sie einen der folgenden zu speichern.
 - Klicken Sie auf **Datei** > **alle speichern** 
 - Geben Sie in der befehlspalette **Datei: Speichern** 
 
-### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark kernel
+### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark-kernel
 
 Wählen Sie die `PySpark Kernel` und in den Zellentyp in den folgenden Code.
 

@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959012"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwendung der Transact-SQL-Editor, um Datenbankobjekte zu erstellen: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -68,7 +67,7 @@ In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"* .
 
 2. Typ **Sql** im Editor, Pfeil nach unten bis zum **SqlCreateStoredProcedure**, und drücken Sie die *Registerkarte* Schlüssel (oder *EINGABETASTE*) beim Laden des gespeicherten erstellen Ausschnitt einer Prozedur.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![Codeausschnitt-Liste](./media/tutorial-sql-editor/snippet-list.png)
 
 3. Der Codeausschnitt der erstellen-gespeicherte Prozedur enthält zwei Felder, die richten Sie für schnelle Bearbeitung *StoredProcedureName* und *SchemaName*. Wählen Sie *StoredProcedureName*, mit der rechten Maustaste, und wählen **ändern alle Vorkommen**. Geben Sie nun *GetCustomer* und alle *StoredProcedureName* Einträge zu ändern, um *GetCustomer*.
 

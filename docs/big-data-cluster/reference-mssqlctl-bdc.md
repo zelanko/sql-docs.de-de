@@ -5,17 +5,16 @@ description: Der Referenzartikel für die Mssqlctl BDC-Befehle.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96ecf1c987baffec0ff71b8b6ef5eccb204b3108
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a9da2de60248246bee3daeeaee40d3071da69c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957957"
 ---
 # <a name="mssqlctl-bdc"></a>Mssqlctl bdc
 
@@ -27,8 +26,8 @@ Der folgende Artikel bietet Referenz für die **Bdc** Befehle in der **Mssqlctl*
 |     |     |
 | --- | --- |
 [Mssqlctl Bdc erstellen](#mssqlctl-bdc-create) | Big Data-Cluster zu erstellen.
-[mssqlctl bdc delete](#mssqlctl-bdc-delete) | Big Data-Cluster zu löschen.
-[mssqlctl bdc config](reference-mssqlctl-bdc-config.md) | Konfigurationsbefehle.
+[Mssqlctl BDC-löschen](#mssqlctl-bdc-delete) | Big Data-Cluster zu löschen.
+[Mssqlctl BDC-Konfiguration](reference-mssqlctl-bdc-config.md) | Konfigurationsbefehle.
 [Mssqlctl BDC-Endpunkt](reference-mssqlctl-bdc-endpoint.md) | Endpunktbefehle.
 [Mssqlctl BDC-status](reference-mssqlctl-bdc-status.md) | Status-Befehle.
 [Mssqlctl BDC-debug](reference-mssqlctl-bdc-debug.md) | Debug-Befehle.

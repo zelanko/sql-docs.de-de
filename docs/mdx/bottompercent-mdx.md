@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2a627ea8e5dd7a8f8266fcf0ea374e6abcde4bdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbcf9086cedc9221c39832bd0b7d55e5f0814c7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016913"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
 
@@ -35,7 +34,7 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  *Prozentwert*  
  Ein gültiger numerischer Ausdruck, der den Prozentsatz der zurückzugebenden Tupel angibt.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
 ## <a name="remarks"></a>Hinweise  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925348"
 ---
 # <a name="formal-shape-grammar"></a>Formale Grammatik für Strukturen
 Dies ist die formale Grammatik für die Erstellung von Shape-Befehlen:  
@@ -43,7 +42,7 @@ Dies ist die formale Grammatik für die Erstellung von Shape-Befehlen:
 |Begriff|Definition|  
 |----------|----------------|  
 |\<shape-command>|Form vom Typ [\<Tabelle-"exp" > [[AS] \<Alias >]] [\<Form Action->]|  
-|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> Tabelle \<in Anführungszeichen-Name >&#124;<br /><br /> \<quoted-name>|  
+|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> Tabelle \<in Anführungszeichen-Name >&#124;<br /><br /> \<in Anführungszeichen-Name >|  
 |\<shape-action>|APPEND \<Alias-Feld-List >&#124;<br /><br /> COMPUTE- \<Alias-Feld-List > [BY \<Feldliste >]|  
 |\<aliased-field-list>|\<Alias-Feld > [, \<Alias-Feld >]|  
 |\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
@@ -52,17 +51,17 @@ Dies ist die formale Grammatik für die Erstellung von Shape-Befehlen:
 |\<relation-cond-list>|\<Relation-Cond-> [, \<Beziehung Cond >...]|  
 |\<relation-cond>|\<Feld-Name > für \<untergeordnete-Ref->|  
 |\<child-ref>|\<field-name> &#124;<br /><br /> PARAMETER \<Param-Ref->|  
-|\<param-ref>|\<number>|  
+|\<param-ref>|\<Anzahl >|  
 |\<field-list>|\<Feld-Name > [, \<Feld-Name >]|  
-|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<aggregate-exp>|SUM (\<qualifizierten-Feld-Name >)&#124;<br /><br /> AVG (\<qualifizierten-Feld-Name >)&#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX (\<qualifizierten-Feld-Name >)&#124;<br /><br /> COUNT (\<qualifizierten-Alias > &#124; \<qualifizierte Name >)&#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> Alle (\<qualifizierten-Feld-Name >)|  
 |\<calculated-exp>|CALC (\<Ausdruck >)|  
-|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias>|\<quoted-name>|  
-|\<field-name>|\<in Anführungszeichen-Name > [[AS] \<Alias >]|  
-|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
-|\<qualified-name>|Alias [.alias...]|  
-|\<name>|Alpha [Alpha &#124; Ziffer &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<number>|Ziffer [Ziffer...]|  
+|\<qualifizierte-Feld-Name >|\<Alias >. [\<Alias >...] \<Feldnamen >|  
+|\<alias>|\<in Anführungszeichen-Name >|  
+|\<Feld-Name >|\<in Anführungszeichen-Name > [[AS] \<Alias >]|  
+|\<in Anführungszeichen-Name >|"\<string>" &#124;<br /><br /> "\<String >"&#124;<br /><br /> [\<Zeichenfolge >]&#124;<br /><br /> \<Name >|  
+|\<Vollständiger Name >|Alias [.alias...]|  
+|\<Name >|Alpha [Alpha &#124; Ziffer &#124; _ &#124; # &#124; : &#124; ...]|  
+|\<Anzahl >|Ziffer [Ziffer...]|  
 |\<new-exp>|NEUE \<Feldtyp > [(\<Anzahl > [, \<Anzahl >])]|  
 |\<field-type>|Ein OLE DB oder ADO-Datentyp.|  
 |\<string>|Unicode-Zeichen [Unicode-Zeichen...]|  

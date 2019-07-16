@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ba9e1f0757f23072b5e4f18f73fb5f7c69a005a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037361"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +56,13 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @account_name = ] 'account_name'` Der Name des zu aktualisierenden Kontos. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Mindestens eine der *Account_id* oder *Account_name* muss angegeben werden. Wenn beide Argumente angegeben werden, ändert die Prozedur den Namen des Kontos.  
   
-`[ @email_address = ] 'email_address'` Die neue e-Mail-Adresse zum Senden der Nachricht aus. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. Der Servername ist die Adresse des Servers, der von Datenbank-E-Mail zum Senden von E-Mails von diesem Konto verwendet wird. *Email_address* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL.  
+`[ @email_address = ] 'email_address'` Die neue e-Mail-Adresse zum Senden der Nachricht aus. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. Der Servername ist die Adresse des Servers, der von Datenbank-E-Mail zum Senden von E-Mails von diesem Konto verwendet wird. *Email_address* ist **vom Datentyp nvarchar(128)** , hat den Standardwert NULL.  
   
-`[ @display_name = ] 'display_name'` Der neue Anzeigename, e-Mail-Nachrichten von diesem Konto verwendet wird. *Display_name* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+`[ @display_name = ] 'display_name'` Der neue Anzeigename, e-Mail-Nachrichten von diesem Konto verwendet wird. *Display_name* ist **vom Datentyp nvarchar(128)** , hat keinen Standardwert.  
   
-`[ @replyto_address = ] 'replyto_address'` Die neue Adresse in der Antwortheader von e-Mail-Nachrichten von diesem Konto verwendet werden soll. *Replyto_address* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+`[ @replyto_address = ] 'replyto_address'` Die neue Adresse in der Antwortheader von e-Mail-Nachrichten von diesem Konto verwendet werden soll. *Replyto_address* ist **vom Datentyp nvarchar(128)** , hat keinen Standardwert.  
   
-`[ @description = ] 'description'` Die neue Beschreibung für das Konto. *Beschreibung* ist **nvarchar(256)**, hat den Standardwert NULL.  
+`[ @description = ] 'description'` Die neue Beschreibung für das Konto. *Beschreibung* ist **nvarchar(256)** , hat den Standardwert NULL.  
   
 `[ @mailserver_name = ] 'server_name'` Der neue Name des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen aufgelöst werden können die *Server_name* einer IP-Adresse. *Server_name* ist **Sysname**, hat keinen Standardwert.  
   

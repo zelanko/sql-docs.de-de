@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d602faed36d2348652aa8fd026f0c0810928b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931836"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel zeigt die [Feld](../../../ado/reference/ado-api/field-object.md) Objekt dynamisch **optimieren** Eigenschaft. Die **Zip** Feld der **Autoren** -Tabelle in der **Pubs** Datenbank ist nicht indiziert. Festlegen der [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) Eigenschaft **"true"** auf die **Zip** Feld autorisiert, ADO, zum Erstellen eines Indexes, die die Leistung verbessert die [finden](../../../ado/reference/ado-api/find-method-ado.md)Methode.  

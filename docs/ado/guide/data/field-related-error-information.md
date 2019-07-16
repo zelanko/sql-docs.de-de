@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925314"
 ---
 # <a name="field-related-error-information"></a>Fehlerinformationen im Zusammenhang mit Feldern
 Wenn der Fehler direkt auf ein Feld - bezieht Sie z. B., wenn die Daten nicht vorhanden ist oder wenn es sich um den falschen Typ für das Feld - ist können abrufen Weitere Informationen zur Ursache des Problems anhand der **Feld** des Objekts **Status**  Eigenschaft. Diese Eigenschaft wurde verbessert, um bestimmte Informationen über das Problem bereitzustellen. Dies der Fall ist, z. B. wenn ein Aufruf von **UpdateBatch** ein Fehler auftritt, die Ursache des Problems können ermittelt werden die **Status** Eigenschaft der **Felder** in jedem der betroffenen Datensätze. Die Eigenschaft enthält einen der Werte in der **FieldStatusEnum** Konstanten. Die folgende Tabelle enthält die Werte, die von besonderem Interesse sind, wenn ein Fehler auftritt.  

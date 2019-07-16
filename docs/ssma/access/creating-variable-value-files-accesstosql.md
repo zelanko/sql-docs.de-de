@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006594"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Erstellen die Variable Value Files (AccessToSQL)
 Eine Variable-Datei ist eine XML-Datei mit die Werte der Parameter der Befehle (z. B. die Quelle oder Ziel-Servername), die häufig in Server-Migrationen zu ändern. Wenn eine große Anzahl von datenbankmigrationen auftreten, mehrere Dateien zum Speichern von den Wert der einzelnen Quellserver erstellt und auf die verwiesen wird in einer master-Skript-Datei mit den **- V** -Schalter an der Befehlszeile. Dies hilft bei der Verwaltung von statische Werte in ein paar Skriptdateien mit der Variablenwerte in mehrere Dateien.  

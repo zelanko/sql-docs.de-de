@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 618c4b127c42aae6a5b8d7570f1962f8c8e38e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4c0eb20b0e0cd64065c7db0687b1dc36b2dbe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962757"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>Microsoftml (Python-Modul in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,14 +51,14 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ## <a name="1-training-functions"></a>1 – Training-Funktionen
 
-| Funktion | Description |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | Eine Ensemble-Modelle zu trainieren. |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | Random Forest. |
 |[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | Lineares Modell. mit dem stochastischen Dual-Koordinate Versalhöhe. |
 |[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | -Boosted-Strukturen. |
 |[microsoftml.rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression) | Logistische Regression. |
-|[microsoftml.rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network) | Neural Network. |
+|[microsoftml.rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network) | Neuronale Netzwerke. |
 |[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | Erkennung von Anomalien. |
 
 <a name="ml-transforms"></a>
@@ -68,7 +67,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ### <a name="categorical-variable-handling"></a>Behandlung von kategorischen Variablen
 
-| Funktion | Description |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | Konvertiert eine Textspalte in Kategorien. |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | Erstellt einen Hashwert und konvertiert eine Textspalte in Kategorien. |
@@ -84,7 +83,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ### <a name="variable-selection"></a>Variablenauswahl
 
-| Funktion | Description |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |Die Funktionsauswahl basierend auf der Menge. |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | Die Funktionsauswahl basierend auf transinformation. |
@@ -92,7 +91,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ### <a name="text-analytics"></a>Textanalyse
 
-| Funktion | Description |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | In den Spalten der konvertiert in numerischen Features. |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | Standpunktanalyse. |
@@ -100,7 +99,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ### <a name="image-analytics"></a>Bildanalyse 
 
-| Funktion | Description |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | Lädt ein Bild. |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | Ändert die Größe ein Bild. |
@@ -117,7 +116,7 @@ Dieser Abschnitt listet die Funktionen nach Kategorie, erhalten Sie einen Überb
 
 ## <a name="3-scoring-functions"></a>3-Bewertung-Funktionen
 
-| Funktion | Description |
+| Funktion | Beschreibung |
 |----------|-------------|
 |[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Bewertungen mithilfe von Microsoft Machine Learning-Modellen |
 

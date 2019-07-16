@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.custom: seodec18
 ms.date: 07/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 741c36331e6c0c8827e34517dd7ee4e5d04abf93
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: a2a4d4e755908d544e79b751d64ee99cad6fc96c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959691"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Herunterladen und Installieren von Azure Data Studio
 
@@ -190,7 +189,7 @@ Wenn Sie Ihre benutzerdefinierten Einstellungen, Tastenkombinationen in Visual S
 
 1. Öffnen Sie Einstellungen, indem Sie auf das Zahnradsymbol auf der linken unteren und auf **Einstellungen.**
 
-   ![open-settings](./media/download/open-settings.png)
+   ![Open-Einstellungen](./media/download/open-settings.png)
 
 2. Mit der rechten Maustaste die **Benutzereinstellungen** Registerkarte im Vordergrund, und klicken Sie auf **im Explorer anzeigen**
 

@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c007beeab554486fe490a0d2f6bfc335e1a50cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009754"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>Benutzerdefinierte CLR-Aggregate: Anforderungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Ein Typ in einer CLR-Assembly (Common Language Runtime) kann als benutzerdefinierte Aggregatfunktion registriert werden, solange der erforderliche Aggregationsvertrag implementiert wird. Dieser Vertrag besteht aus den **SqlUserDefinedAggregate** -Attribut und die Aggregation Vertrag Methoden. Der Aggregationsvertrag beinhaltet den Mechanismus, um den Zwischenstatus der Aggregation zu speichern, und der Mechanismus zum Sammeln neuer Werte, die aus vier Methoden besteht: **Init**, **Accumulate**,  **Merge**, und **beenden**. Wenn Sie diese Anforderungen erfüllt haben, Sie werden in der Lage, benutzerdefinierte Aggregate in vollem Umfang nutzen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die folgenden Abschnitte zu diesem Thema enthalten zusätzliche Details zum Erstellen von benutzerdefinierten Aggregaten und ihrer Verwendungsweise. Ein Beispiel finden Sie unter [Invoking CLR User-Defined Aggregatfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
+  Ein Typ in einer CLR-Assembly (Common Language Runtime) kann als benutzerdefinierte Aggregatfunktion registriert werden, solange der erforderliche Aggregationsvertrag implementiert wird. Dieser Vertrag besteht aus den **SqlUserDefinedAggregate** -Attribut und die Aggregation Vertrag Methoden. Der Aggregationsvertrag beinhaltet den Mechanismus, um den Zwischenstatus der Aggregation zu speichern, und der Mechanismus zum Sammeln neuer Werte, die aus vier Methoden besteht: **Init**, **sammeln**, **Merge**, und **beenden**. Wenn Sie diese Anforderungen erfüllt haben, Sie werden in der Lage, benutzerdefinierte Aggregate in vollem Umfang nutzen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die folgenden Abschnitte zu diesem Thema enthalten zusätzliche Details zum Erstellen von benutzerdefinierten Aggregaten und ihrer Verwendungsweise. Ein Beispiel finden Sie unter [Invoking CLR User-Defined Aggregatfunktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  Weitere Informationen finden Sie unter [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
@@ -37,7 +36,7 @@ ms.locfileid: "51662469"
 ## <a name="aggregation-methods"></a>Aggregationsmethoden  
  Die als benutzerdefiniertes Aggregat registrierte Klasse muss die folgenden Instanzmethoden unterstützen. Diese Methoden werden vom Abfrageprozessor verwendet, um die Aggregation zu berechnen:  
   
-|Methode|Syntax|Description|  
+|Methode|Syntax|Beschreibung|  
 |------------|------------|-----------------|  
 |**Init**|`public void Init();`|Der Abfrageprozessor verwendet diese Methode, um die Berechnung der Aggregation zu initialisieren. Diese Methode wird einmal für jede Gruppe aufgerufen, die der Abfrageprozessor aggregiert. Der Abfrageprozessor verwendet möglicherweise dieselbe Instanz der Aggregatklasse mehrfach, um Aggregate für mehrere Gruppen zu berechnen. Die **Init** Methode führen Sie ggf. eine Bereinigung bei Bedarf nach der vorherigen Verwendung dieser Instanz, und aktivieren Sie ihn, eine weiteren aggregatberechnung neu zu starten.|  
 |**Sammeln**|`public void Accumulate ( input-type value[, input-type value, ...]);`|Ein oder mehrere Parameter, die die Parameter der Funktion darstellen. *INPUT_TYPE* sollten die verwaltete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem systemeigenen Datentyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angegebenen Datentyp *Input_sqltype* in die **CREATE AGGREGATE** Anweisung. Weitere Informationen finden Sie unter [Zuordnen von CLR-Parameterdaten](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> Für benutzerdefinierte Typen (User-Defined Types, UDTs) entspricht der Eingabetyp dem UDT-Typ. Der Abfrageprozessor verwendet diese Methode, um die Aggregatwerte zu sammeln. Sie wird einmal für jeden Wert in der zu aggregierenden Gruppe aufgerufen. Der Abfrageprozessor ruft diese immer nur nach dem Aufruf der **Init** Methode für die jeweilige Instanz der Aggregatklasse. Durch die Implementierung dieser Methode wird der Instanzstatus auf den momentanen Stand der übergebenen Argumentwertansammlung aktualisiert.|  

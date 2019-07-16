@@ -2,19 +2,18 @@
 title: Laden die Serverkapazität Planung - Analytics Platform System | Microsoft-Dokumentation
 description: Dieses Arbeitsblatt für die Planung der Kapazität können Sie bestimmen die Anforderungen für einen Server laden, für das Laden von Daten in Analytics Platform System Parallel Data Warehouse."
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb15fdd3b20c538237b3e012df4217ad5568bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960664"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Laden Server Worksheet zur kapazitätsplanung eines für Analytics Platform System
 Dieses Arbeitsblatt für die Planung der Kapazität können Sie die Anforderungen für einen Server laden, für das Laden von Daten in SQL Server PDW zu bestimmen. Hiermit können Sie um Ihren Plan erwerben oder vorhandene Laden von Server-Bereitstellung zu erstellen.  

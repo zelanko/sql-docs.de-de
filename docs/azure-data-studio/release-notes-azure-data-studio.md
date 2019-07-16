@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959387"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Anmerkungen zu dieser Version für Azure Data Studio
 
@@ -112,14 +111,14 @@ ms.locfileid: "67826518"
 
 ## <a name="march-2019"></a>März 2019
 
-18 März 2019 &nbsp;  /  &nbsp; Version: 1.5.1
+18 März 2019 &nbsp;  /  &nbsp; Version: Wert "1.5.1"
 
 &nbsp;
 
 | Ändern | Details |
 | :----- | :------ |
 | Hinzugefügt [PostgreSQL-Erweiterung für Azure Data Studio](postgres-extension.md) | Unterstützte Funktionen: <br/>&bull; &nbsp; Dialogfeld "Verbindung" <br/>&bull; &nbsp; Objekt-Explorer <br/>&bull; &nbsp; Abfrage-Editor <br/>&bull; &nbsp; Diagrammerstellung <br/>&bull; &nbsp; Dashboards <br/>&bull; &nbsp; Codeausschnitte <br/>&bull; &nbsp; Bearbeiten von Daten <br/>&bull; &nbsp; Notebooks |
-| Zusätzliche SQL-Notebooks | SQL-Kernel-Unterstützung für integrierte Notebook Anzeige hinzugefügt: <br/>&bull; &nbsp; Unterstützt die T-SQL <br/>&bull; &nbsp; Support PGSQL |
+| Zusätzliche SQL-Notebooks | SQL-Kernel-Unterstützung für integrierte Notebook Anzeige hinzugefügt: <br/>&bull; &nbsp; Unterstützt die T-SQL <br/>&bull; &nbsp; Unterstützung PGSQL |
 | Zusätzliche PowerShell-Erweiterung  | Bietet über die [PowerShell-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) von Visual Studio Code auftreten.  |
 | Hinzugefügte SQL Server-Erweiterung DACPAC-Datei  | Entfernt Datenebenen-Anwendungs-Assistent von SQL Server-Import-Erweiterung in eine neue Erweiterung an.  |
 | Hinzugefügte Community Extensions QueryPlan.show | Integration unterstützt, um Abfragepläne zu visualisieren.  |
@@ -358,7 +357,7 @@ Die *Public Preview von Juli* konzentriert sich auf die folgenden Elemente:
 - Beheben Sie [ausgeben 1718](https://github.com/Microsoft/azuredatastudio/issues/1718): Es konnte keine Verbindung mit jeder Datenquelle
 - Beheben Sie [ausgeben 1719](https://github.com/Microsoft/azuredatastudio/issues/1719): TypeError Herstellen der Verbindung mit Server
 - Beheben Sie [ausgeben 1724](https://github.com/Microsoft/azuredatastudio/issues/1724): Erweiterung Dialogfelder beendet haben
-- Beheben Sie [ausgeben 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): BUG: HTML-Daten in einer Spalte ruft interpretiert.
+- Beheben Sie [ausgeben 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): FEHLER: HTML-Daten in einer Spalte ruft interpretiert.
 - Beheben Sie [ausgeben 1789](https://github.com/Microsoft/azuredatastudio/issues/1789): Erweiterbarkeit: Wenn Sie über einen Verbindungsanbieter hinzufügen wird deinstallieren nie es aus der Liste entfernen
 - Beheben Sie [ausgeben 1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Sqlops Erweiterungen: queryeditor.connect() verbinden, in die Zieldatenbank jedoch Benutzeroberfläche wird nicht angezeigt, ob der Editor verbunden ist.
 - Beheben Sie [ausgeben 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): Diagramm der obersten 10 DB funktioniert nicht auf Instanzen von Groß-/Kleinschreibung beachten

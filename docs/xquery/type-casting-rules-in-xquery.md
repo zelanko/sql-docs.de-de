@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946214"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Typumwandlungsregeln in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- Die folgende Abfrage gibt einen statischen Fehler zurück, da nicht bekannt ist, wie viele <`root`>-Elemente der obersten Ebene in der Dokumentinstanz vorhanden sind.  
+ Die folgende Abfrage einen statischen Fehler zurück, da Sie nicht, wie viele auf oberster Ebene wissen <`root`> Elemente sind in der Dokumentinstanz.  
   
 ```  
 declare @x xml(myCollection)  
@@ -106,7 +105,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- Die Abfrage ist erfolgreich, wenn ein <`root`>-Singleton-Element im Ausdruck angegeben wird. Die Abfrage gibt eine Sequenz eines Werts vom simple-Typ zurück, der als xs:string typisiert ist.  
+ Durch Angabe eines Singleton <`root`>-Element in den Ausdruck, die Abfrage erfolgreich ist. Die Abfrage gibt eine Sequenz eines Werts vom simple-Typ zurück, der als xs:string typisiert ist.  
   
 ```  
 declare @x xml(myCollection)  
@@ -116,7 +115,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- Im folgenden Beispiel enthält die Variable vom Typ xml ein document-Schlüsselwort, das die XML-Schemaauflistung angibt. Dies zeigt an, dass es sich bei der XML-Instanz um ein Dokument handeln muss, das ein einziges Element der obersten Ebene besitzt. Wenn Sie zwei <`root`>-Elemente in der XML-Instanz erstellen, wird ein Fehler zurückgegeben.  
+ Im folgenden Beispiel enthält die Variable vom Typ xml ein document-Schlüsselwort, das die XML-Schemaauflistung angibt. Dies zeigt an, dass es sich bei der XML-Instanz um ein Dokument handeln muss, das ein einziges Element der obersten Ebene besitzt. Bei der Erstellung von zwei <`root`>-Elemente in der XML-Instanz, es wird ein Fehler zurückgegeben.  
   
 ```  
 declare @x xml(document myCollection)  

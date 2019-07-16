@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946484"
 ---
 # <a name="path-expressions---specifying-axis"></a>Pfadausdrücke – Angeben der Achse
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ ms.locfileid: "51670328"
   
  Die XQuery-Implementierung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt folgende Achsenschritte:  
   
-|Axis|Description|  
+|Axis|Beschreibung|  
 |----------|-----------------|  
 |**child**|Gibt die untergeordneten Elemente des Kontextknotens zurück.|  
 |**descendant**|Gibt alle nachfolgenden Elemente des Kontextknotens zurück.|  
 |**parent**|Gibt das übergeordnete Element des Kontextknotens zurück.|  
 |**attribute**|Gibt die Attribute des Kontextknotens zurück.|  
-|**Self-Service**|Gibt den Kontextknoten selbst zurück.|  
+|**self**|Gibt den Kontextknoten selbst zurück.|  
 |**descendant-or-self**|Gibt den Kontextknoten und alle nachfolgenden Elemente des Kontextknotens zurück.|  
   
  Alle diese Achsen, mit Ausnahme der **übergeordneten** Achse sind vorwärts gerichtete Achsen. Die **übergeordneten** Achse ist eine rückwärtsgerichtete Achse, da diese in der Dokumenthierarchie nach hinten, durchsucht. Beispiel: Der relative Pfadausdruck `child::ProductDescription/child::Summary` enthält zwei Schritte, von denen jeder eine `child`-Achse angibt. Ruft ab, der erste Schritt der \<ProductDescription >-Elemente des Kontextknotens aus. Für jede \<ProductDescription > Elementknoten, der zweite Schritt Ruft die \<Zusammenfassung > untergeordneten Elementknoten.  
@@ -109,11 +108,11 @@ select @y
   
  Wenn Sie in diesem Ausdruck eine descendant-Achse für den Pfadausdruck angeben,  
   
- `/child::a/child::b/descendant::*`, rufen Sie damit alle nachfolgenden Elemente des <`b`>-Elementknotens ab.  
+ `/child::a/child::b/descendant::*`, Fragen Sie für alle Nachfolgerelemente von der <`b`> Elementknoten.  
   
  Das Sternchen (*) im Knotentest stellt den Knotennamen als Knotentest dar. Folglich bestimmt der Typ des Primärknotens der descendant-Achse (der Elementknoten) den Typ der zurückgegebenen Knoten, d. h. in diesem Fall, dass der Ausdruck alle Elementknoten zurückgibt. Es werden keine Textknoten zurückgegeben. Weitere Informationen zu den primären Knotentyp und dessen Beziehung zum Knotentest finden Sie unter [angeben von Knoten in einem Schritt eines Pfadausdrucks testen](../xquery/path-expressions-specifying-node-test.md) Thema.  
   
- Wie im folgenden Ergebnis gezeigt, werden die Elementknoten <`c`> und <`d`> zurückgegeben:  
+ Die Elementknoten <`c`> und <`d`> zurückgegeben, wie im folgenden Ergebnis gezeigt:  
   
 ```  
 <c>text2  
@@ -122,7 +121,7 @@ select @y
 <d>text3</d>  
 ```  
   
- Wenn Sie eine descendant-or-self-Achse statt einer descendant-Achse angeben, gibt `/child::a/child::b/descendant-or-self::*` den Kontextknoten, das Element <`b`>, und seine Nachfolger zurück:  
+ Wenn Sie eine Descendant-or-Self-Achse statt die descendant-Achse angeben `/child::a/child::b/descendant-or-self::*` gibt den Kontextknoten, Element <`b`>, und seine Nachfolger.  
   
  Dies ist das Ergebnis:  
   
@@ -152,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. Angeben einer übergeordneten Achse  
- Die folgende Abfrage gibt das untergeordnete <`Summary`>-Element des <`ProductDescription`>-Elements aus dem Produktkatalog-XML-Dokument zurück, das in der `Production.ProductModel`-Tabelle gespeichert ist:  
+ Die folgende Abfrage gibt die <`Summary`> des untergeordneten Elements die <`ProductDescription`>-Element in dem Produktkatalog XML-Dokument gespeichert, der `Production.ProductModel` Tabelle.  
   
- In diesem Beispiel wird die parent-Achse verwendet, um zu dem übergeordneten Element von <`Feature`> zurückzukehren und das untergeordnete <`Summary`>-Element des <`ProductDescription`>-Elements abzurufen.  
+ In diesem Beispiel verwendet die Parent-Achse, um das dem übergeordneten zurückzugeben die <`Feature`>-Element und das Abrufen der <`Summary`> des untergeordneten Elements die <`ProductDescription`> Element.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Um die `ProductModelID` für jedes `<Feature`>-Element hinzuzufügen, wird die `parent`-Achse angegeben:  
+ Hinzufügen der `ProductModelID` für jede `<Feature`>-Element der `parent` -Achse angegeben:  
   
 ```  
 SELECT CatalogDescription.query('  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31d83b00fd70cd54587a19ebfea7310154167493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 997604b4376656d36d2bc4bc31f1959aa6c8a229
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987826"
 ---
 # <a name="ordinary-arguments"></a>Normale Argumente
 Wenn ein Zeichenfolgenargument für Katalog-Funktion ein normales Argument ist, wird es als Zeichenfolgenliteral behandelt. Ein normales Argument akzeptiert, weder ein Zeichenfolgenmuster für die Suche als auch eine Liste von Werten. Ein normales Argument die Groß-/Kleinschreibung spielt und Anführungszeichen in der Zeichenfolge wörtlich genommen werden. Diese Argumente werden als normale Argumente behandelt, wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_FALSE festgelegt ist; Sie werden stattdessen als bezeichnerargumente behandelt, wenn dieses Attribut auf SQL_TRUE festgelegt ist.  

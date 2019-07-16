@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006963"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_remove_job_from_targets [ @job_id = ] job_id
   
 `[ @job_name = ] 'job_name'` Der Name des Auftrags, aus der die angegebenen Zielserver oder Zielservergruppen entfernt werden sollen. Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich. *Job_name* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielservergruppen, die aus dem angegebenen Auftrag entfernt werden. *Target_server_groups* ist **nvarchar(1024)**, hat den Standardwert NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielservergruppen, die aus dem angegebenen Auftrag entfernt werden. *Target_server_groups* ist **nvarchar(1024)** , hat den Standardwert NULL.  
   
-`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Zielservern aus dem angegebenen Auftrag entfernt werden soll. *target_server* ist **nvarchar(1024)**, hat den Standardwert NULL.  
+`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Zielservern aus dem angegebenen Auftrag entfernt werden soll. *target_server* ist **nvarchar(1024)** , hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

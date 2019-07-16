@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946111"
 ---
 # <a name="xqueries-involving-order"></a>XQuery-Abfragen, die die Reihenfolge berücksichtigen
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** Ruft alle Attribute des zweiten arbeitsplatzstandort ab.  
   
--   Die FLWOR-Iteration (FOR ... EINGABETASTE) ruft alle untergeordneten <`step`>-Elemente am zweiten Arbeitsplatzstandort ab.  
+-   Die FLWOR-Iteration (für... RÜCKGABE) Ruft alle ab, der <`step`> untergeordnete-Elemente am zweiten arbeitsplatzstandort.  
   
 -   Die [SQL:Column()-Funktion (XQuery)](../xquery/xquery-extension-functions-sql-column.md) enthält den relationalen Wert in der XML, das erstellt wird.  
   
@@ -116,7 +115,7 @@ where ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die Abfrage erstellt das <Loca`tion`>-Element und ruft seine Attributwerte aus der Datenbank ab.  
+-   Die Abfrage konstruiert das < Loca`tion`>-Element und ruft seine aus der Datenbank Attributwerte.  
   
 -   Sie verwendet zwei FLWOR (for...return)-Iterationen: eine Iteration zum Abrufen der Werkzeuge und eine zweite Iteration zum Abrufen der verwendeten Materialien.  
   
@@ -138,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Abrufen der ersten beiden Produktfunktionsbeschreibungen aus dem Produktkatalog  
- Die Abfrage ruft die ersten beiden Funktionsbeschreibungen für ein bestimmtes Produktmodell aus dem <`Features`>-Element im Produktmodellkatalog ab.  
+ Für ein bestimmtes Produktmodell, die Abfrage ruft die ersten beiden funktionsbeschreibungen aus der <`Features`>-Element im produktmodellkatalog.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,9 +157,9 @@ where ProductModelID=19
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
- Der Abfragetext erstellt XML mit dem <`ProductModel`>-Element, das das ProductModelID-Attribut und das ProductModelName-Attribut enthält.  
+ Der Abfragetext erstellt XML mit der <`ProductModel`> Element, das das ProductModelID und ProductModelName-Attribut verfügt.  
   
--   Die Abfrage verwendet eine FOR ... RETURN-Schleife zum Abrufen der Produktmodell-Funktionsbeschreibungen. Die **position()** Funktion dient zum Abrufen der ersten beiden Funktionen.  
+-   Die Abfrage verwendet eine FOR... RETURN Sie-Schleife zum Abrufen der Produktmodell-funktionsbeschreibungen. Die **position()** Funktion dient zum Abrufen der ersten beiden Funktionen.  
   
  Dies ist das Ergebnis:  
   

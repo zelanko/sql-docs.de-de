@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94bec3334bb637bf27189d35194fccd605931789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936678"
 ---
 # <a name="type-property-example-field-vb"></a>Type-Eigenschaft – Beispiel (Field) (VB)
 In diesem Beispiel wird veranschaulicht, die [Typ](../../../ado/reference/ado-api/type-property-ado.md) Anzeigen des Namens der Konstante, die entspricht dem Wert der Eigenschaft der [Typ](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft aller der [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Mitarbeiter*** Tabelle. Die Feldtyp-Funktion ist zum Ausführen dieser Prozedur erforderlich.  

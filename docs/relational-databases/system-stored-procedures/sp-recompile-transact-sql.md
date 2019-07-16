@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67b4523b871e386fed62388a464a42ee6e9e10bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002564"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Argumente  
  [ @objname=] '*Objekt*"  
- Der qualifizierte oder nicht qualifizierte Name einer gespeicherten Prozedur, eines Triggers, einer Tabelle, einer Sicht oder einer benutzerdefinierten Funktion in der aktuellen Datenbank. *Objekt* ist **nvarchar(776)**, hat keinen Standardwert. Wenn *Objekt* ist der Name der eine gespeicherte Prozedur, Trigger oder eine benutzerdefinierte Funktion, die gespeicherte Prozedur, Trigger und Funktion werden neu kompiliert. das nächste Mal, die es ausgeführt wird. Wenn *Objekt* ist der Name der Tabelle oder Sicht, die alle gespeicherten Prozeduren, Trigger und benutzerdefinierte Funktionen, die auf die Tabelle oder Sicht verweisen werden neu kompiliert. das nächste Mal, die sie ausgeführt werden.  
+ Der qualifizierte oder nicht qualifizierte Name einer gespeicherten Prozedur, eines Triggers, einer Tabelle, einer Sicht oder einer benutzerdefinierten Funktion in der aktuellen Datenbank. *Objekt* ist **nvarchar(776)** , hat keinen Standardwert. Wenn *Objekt* ist der Name der eine gespeicherte Prozedur, Trigger oder eine benutzerdefinierte Funktion, die gespeicherte Prozedur, Trigger und Funktion werden neu kompiliert. das nächste Mal, die es ausgeführt wird. Wenn *Objekt* ist der Name der Tabelle oder Sicht, die alle gespeicherten Prozeduren, Trigger und benutzerdefinierte Funktionen, die auf die Tabelle oder Sicht verweisen werden neu kompiliert. das nächste Mal, die sie ausgeführt werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  

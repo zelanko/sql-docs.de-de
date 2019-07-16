@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c39d19807cfe01ca9c96b47de020abb9227c43a0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4092de07d19d4d33bd56025076e606269c2b04e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962154"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualisieren von SQL Server-Daten mithilfe von R (SQL Server und die RevoScaleR-Lernprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -79,7 +78,7 @@ Basierend auf der berechneten zusammenfassungsstatistiken aus der vorherigen Lek
 An diesem Punkt beeinflussen die Änderungen nur das Datenquellenobjekt in R; keine neuen Daten wurde noch in die Datenbanktabelle geschrieben. Jedoch können Sie in der Variablen SumOut die aufgezeichneten Daten, um Visualisierungen und Zusammenfassungen zu erstellen. 
 
 > [!TIP]
-> Wenn Sie vergessen Sie welchen computekontext Sie verwenden, führen Sie **rxGetComputeContext()**. Ein Rückgabewert von "RxLocalSeq Compute Context" gibt an, dass Sie in den lokalen computekontext ausgeführt werden.
+> Wenn Sie vergessen Sie welchen computekontext Sie verwenden, führen Sie **rxGetComputeContext()** . Ein Rückgabewert von "RxLocalSeq Compute Context" gibt an, dass Sie in den lokalen computekontext ausgeführt werden.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualisieren von Daten mit rxHistogram
 
@@ -123,7 +122,7 @@ Punktdiagrammen werden häufig beim Durchsuchen von Daten verwendet, um die Bezi
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    Die **RxCube** Funktion schließt ein optionales Argument, *ReturnDataFrame* = **"true"**, das Sie verwenden können, um die Ergebnisse direkt in einen Datenrahmen zu konvertieren. Zum Beispiel:
+    Die **RxCube** Funktion schließt ein optionales Argument, *ReturnDataFrame* =  **"true"** , das Sie verwenden können, um die Ergebnisse direkt in einen Datenrahmen zu konvertieren. Zum Beispiel:
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        

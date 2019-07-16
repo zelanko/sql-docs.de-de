@@ -8,13 +8,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
-ms.openlocfilehash: 69cc0c84d06c1be4065c7419b3eb35c6c30e0592
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996433"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hohe Verfügbarkeit und Datenschutz für die Konfigurationen von Verfügbarkeitsgruppen
 
@@ -58,7 +57,7 @@ Diese Konfiguration besteht aus drei synchronen Replikaten. Standardmäßig wird
 
 Eine verfügbarkeitsgruppe mit drei synchrone Replikate kann schreibgeschützte horizontale Skalierung, hohe Verfügbarkeit und Schutz von Daten bereitstellen. In der folgende Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
 
-| |read-scale|Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten|
+| |schreibgeschützte horizontale Skalierung|Hohe Verfügbarkeit & </br> Datenschutz | Schutz von Daten|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Ausfall des primären Replikats |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neues primäres Replikat ist R / w. |Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär. |
@@ -76,7 +75,7 @@ Diese Konfiguration ermöglicht den Schutz von Daten. Wie die anderen Konfigurat
 
 Eine verfügbarkeitsgruppe mit zwei synchronen Replikaten enthält die schreibgeschützte horizontale Skalierung und den Datenschutz. In der folgende Tabelle wird die Verfügbarkeit Verhalten beschrieben. 
 
-| |read-scale |Schutz von Daten|
+| |schreibgeschützte horizontale Skalierung |Schutz von Daten|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Neues primäres Replikat ist R / w.| Automatisches Failover. Neue primäre Replikat ist nicht verfügbar für Transaktionen, bis die vorherigen primären wiederhergestellt und verknüpft die verfügbarkeitsgruppe als sekundär.|

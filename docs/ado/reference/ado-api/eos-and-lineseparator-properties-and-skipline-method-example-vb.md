@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 644e9adf4537b3ac9b852131e010e4be9bfaa3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933061"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS- und LineSeparator-Eigenschaft und SkipLine-Methode – Beispiel (VB)
 Dieses Beispiel zeigt, wie Sie eine Textzeile für Streams gleichzeitig zu bearbeiten. Die Auswirkungen der Änderung des Zeilentrennzeichen in der Standardeinstellung Wagenrücklauf/Zeilenvorschub (**AdCRLF**), einfach Zeilenvorschub (**AdLF**) oder Carriage return, Wagenrücklauf (**AdCR**) wird angezeigt.  
