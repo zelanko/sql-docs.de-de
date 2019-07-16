@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181311"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "52505222"
 |Erstellt in|\<|Unterstützung und Verhalten|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für Excel 2010**|Alle Funktionen|**Benutzerfreundlichkeit:** Benutzer können im Browser mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden.<br /><br /> **Upgrade:** Arbeitsmappen werden automatisch in der Dokumentbibliothek upgegradet, wenn für die automatische Upgrades aktiviert sind die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Systemdienst in der SharePoint-Farm<br /><br /> **Planmäßige datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|**Benutzerfreundlichkeit:** Benutzer können mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden.<br /><br /> **Upgrade:** Es wird kein automatisches Upgrade unterstützt. Benutzer müssen 2008 R2-Arbeitsmappen manuell auf die 2012-Version oder die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|  
-|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für Excel**|Nicht unterstützt|Alle Funktionen|**Benutzerfreundlichkeit:** Benutzer können im Browser mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden. Planmäßige Datenaktualisierung ist verfügbar.<br /><br /> **Upgrade:** Es wird kein automatisches Upgrade unterstützt. Benutzer können Arbeitsmappen manuell auf die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige Datenaktualisierung:** unterstützt.|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für Excel 2010**|Alle Funktionen|**Benutzerfreundlichkeit:** Benutzer können mit der Arbeitsmappe im Browser interagieren und sie als Datenquelle für andere Lösungen.<br /><br /> **Upgrade:** Arbeitsmappen werden automatisch in der Dokumentbibliothek upgegradet, wenn für die automatische Upgrades aktiviert sind die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Systemdienst in der SharePoint-Farm<br /><br /> **Planmäßige datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|**Benutzerfreundlichkeit:** Benutzer können mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen.<br /><br /> **Upgrade:** Automatisches Upgrade ist nicht verfügbar. Benutzer müssen 2008 R2-Arbeitsmappen manuell auf die 2012-Version oder die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|  
+|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für Excel**|Nicht unterstützt|Alle Funktionen|**Benutzerfreundlichkeit:** Benutzer können mit der Arbeitsmappe im Browser interagieren und sie als Datenquelle für andere Lösungen. Planmäßige Datenaktualisierung ist verfügbar.<br /><br /> **Upgrade:** Automatisches Upgrade wird nicht unterstützt. Benutzer können Arbeitsmappen manuell auf die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige Datenaktualisierung:** unterstützt.|  
 |**Excel 2013**|Nicht unterstützt|Nicht unterstützt|Alle Funktionen|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Aktualisieren von Arbeitsmappen der Version 2008 R2 auf SQL Server 2012 Service Pack 1 (SP1)-Arbeitsmappen  
@@ -58,7 +58,7 @@ ms.locfileid: "52505222"
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für Excel 2013.  
   
- **Wie Sie eine Arbeitsmappe zu aktualisieren:** Die planmäßigen Datenaktualisierungen funktionieren erst, nachdem die Arbeitsmappe auf eine Arbeitsmappe der Version 2012 aktualisiert wurde. Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, führen Sie eines der folgenden Verfahren aus:  
+ **Wie Sie eine Arbeitsmappe zu aktualisieren:** Die planmäßigen datenaktualisierungen funktionieren erst, nachdem Sie die Arbeitsmappe auf eine Arbeitsmappe 2012 aktualisiert. Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, führen Sie eines der folgenden Verfahren aus:  
   
 -   Laden Sie die Arbeitsmappe herunter, und öffnen Sie sie in einer Microsoft Excel 2010-Version, für die das SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Add-In für Excel installiert wurde.  
   

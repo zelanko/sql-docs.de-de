@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408558"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208021"
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Planen der Datenaktualisierung mit Datenquellen – keine Windows-Authentifizierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,15 +28,15 @@ ms.locfileid: "52408558"
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** Eine Secure Store-Zielanwendungs-ID, für die im SET-Befehl die Windows-Authentifizierung angegeben ist.  
+-   **(1) PowerPivotDatarefresh:** Eine Secure Store Zielanwendungs-ID, die mit Windows-Authentifizierung festgelegt ist.  
   
--   **(2) OracleAuthentication:** Eine Secure Store-Zielanwendungs-ID, für die im SET-Befehl Oracle-Anmeldeinformationen angegeben sind.  
+-   **(2) OracleAuthentication:** Eine Secure Store Zielanwendungs-ID, die Oracle-Anmeldeinformationen festgelegt ist.  
   
 -   **(3)**  Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -dienstanwendung wird so konfiguriert, die Zielanwendung "PowerPivotDataRefresh" für die **unbeaufsichtigte Datenaktualisierungskonto**.  
   
 -   **(4)** Die PowerPivot-Arbeitsmappe verwendet Oracle-Daten. In den Aktualisierungseinstellungen der Arbeitsmappe ist angegeben, dass die Anmeldeinformationen von Zielanwendung **(2)** für die Datenquellenverbindung verwendet werden.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
   
 -   Eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung ist vorhanden.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52408558"
   
     -   **Zielanwendungstyp:** Gruppe.  
   
-    -   **Zielanwendungsseiten-URL:** Keine.  
+    -   **Zielanwendungsseiten-URL:** Keine  
   
 5.  Klicken Sie auf **Weiter**.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52408558"
   
     -   **Zielanwendungstyp:** Gruppe.  
   
-    -   **Zielanwendungsseiten-URL:** Keine.  
+    -   **Zielanwendungsseiten-URL:** Keine  
   
 5.  Klicken Sie auf **Weiter**.  
   
