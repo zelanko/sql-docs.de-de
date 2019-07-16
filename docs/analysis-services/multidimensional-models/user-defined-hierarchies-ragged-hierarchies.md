@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164853"
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Benutzerdefinierte Hierarchien – unregelmäßige Hierarchien
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52529339"
   
 2.  Klicken Sie mit der rechten Maustaste auf ein Element innerhalb der Hierarchie, und wählen Sie **Eigenschaften**aus. Legen Sie **HideMemberIf** auf einen der unten beschriebenen Werte fest.  
   
-    |HideMemberIf-Einstellung|Description|  
+    |HideMemberIf-Einstellung|Beschreibung|  
     |--------------------------|-----------------|  
     |**Never**|Ebenenelemente werden nie ausgeblendet. Dies ist der Standardwert.|  
     |**OnlyChildWithNoName**|Ein Ebenenelement wird ausgeblendet, wenn es das einzige untergeordnete Element eines übergeordneten Elements und der Name NULL oder eine leere Zeichenfolge ist.|  
@@ -63,7 +63,7 @@ ms.locfileid: "52529339"
 ##  <a name="bkmk_Mdx"></a> Festlegen der MDX-Kompatibilität, um zu bestimmen, wie Platzhalter in Clientanwendungen dargestellt werden  
  Nachdem Sie **HideMemberIf** für eine Hierarchieebene festgelegt haben, sollten Sie auch die **MDX Compatibility** -Eigenschaft in der von der Clientanwendung gesendeten Verbindungszeichenfolge festlegen. Die **MDX Compatibility** -Einstellung bestimmt, ob **HideMemberIf** verwendet wird.  
   
-|Einstellung für die MDX-Kompatibilität|Description|Verwendung|  
+|Einstellung für die MDX-Kompatibilität|Beschreibung|Verwendung|  
 |-------------------------------|-----------------|-----------|  
 |**1**|Zeigt einen Platzhalterwert an.|Dies ist der von Excel, SSDT und SSMS verwendete Standardwert. Er weist den Server an, beim Drilldown auf leere Ebenen einer unregelmäßigen Hierarchie Platzhalterwerte zurückzugeben. Wenn Sie auf den Platzhalterwert klicken, können Sie einen Drilldown bis auf die untergeordneten Knoten (des Blatts) ausführen.<br /><br /> Die Verbindungszeichenfolge zur Verbindung mit Analysis Services ist im Besitz von Excel, und **MDX Compatibility** wird bei jeder neuen Verbindung grundsätzlich auf 1 festgelegt. Bei diesem Verhalten wird die Abwärtskompatibilität beibehalten.|  
 |**2**|Blendet einen Platzhalterwert (entweder ein NULL-Wert oder ein Duplikat der übergeordneten Ebene) aus, wobei andere Ebenen und Knoten mit relevanten Werten jedoch eingeblendet bleiben.|**MDX Compatibility**= 2 ist in der Regel die bevorzugte Einstellung für unregelmäßige Hierarchien. Diese Einstellung kann von einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht und einigen Clientanwendungen von Drittanbietern beibehalten werden.|  

@@ -1,5 +1,5 @@
 ---
-title: SystemGetAccuracyResults (Analysis Services – Datamining) | Microsoft Docs
+title: SystemGetAccuracyResults (Analysis Services – Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54fc91b67a695110383c19422befab0d7b0f7a9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017797"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209664"
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,13 +97,13 @@ SystemGetAccuracyResults(<mining structure>,
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die von **GetValidationResults**zurückgegeben werden.  
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
-|Model|Name des Modells, das getestet wurde. **Alles** gibt an, dass das Ergebnis ein Aggregat für alle Modelle ist.|  
+|Modell|Name des Modells, das getestet wurde. **Alles** gibt an, dass das Ergebnis ein Aggregat für alle Modelle ist.|  
 |AttributeName|Der Name der vorhersagbaren Spalte.|  
 |AttributeState|Ein Zielwert in der vorhersagbaren Spalte.<br /><br /> Wenn diese Spalte einen Wert enthält, werden Metriken nur für den angegebenen Status aufgelistet.<br /><br /> Wenn kein Wert oder Null angegeben ist, werden die Metriken für den wahrscheinlichsten Status der einzelnen Vorhersagen berechnet.|  
 |PartitionIndex|Bezeichnet die Partition, für die das Ergebnis gilt.<br /><br /> Bei dieser Prozedur ist das immer 0.|  
-|PartitionCases|Eine ganze Zahl, die die Anzahl der Zeilen in der Groß-/Kleinschreibung auf Grundlage der  *\<DataSet >* Parameter.|  
+|PartitionCases|Eine ganze Zahl, die gibt die Anzahl der Zeilen in der Groß-/Kleinschreibung auf Grundlage der  *\<DataSet >* Parameter.|  
 |Test|Der Typ von Test, der ausgeführt wurde.|  
 |Measure|Der Name des Measures, der vom Test zurückgegeben wurde. Measures für die einzelnen Modelle richten sich nach dem Modelltyp und dem Typ des vorhersagbaren Werts.<br /><br /> Eine Liste der für die einzelnen vorhersagbaren Typen zurückgegebenen Measures finden Sie unter [Measures im Kreuzvalidierungsbericht](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Definitionen für die einzelnen Measures finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Wert|Der Wert für das angegebene Measure.|  
@@ -111,7 +111,7 @@ SystemGetAccuracyResults(<mining structure>,
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle enthält Beispiele für die Werte, mit denen Sie die Daten in der für die Kreuzvalidierung verwendeten Miningstruktur angeben können. Wenn Sie Testfälle für die Kreuzvalidierung verwenden möchten, muss die Miningstruktur bereits ein Testdataset enthalten. Informationen zum Definieren eines Testdatasets bei der Erstellung einer Miningstruktur finden Sie unter [Trainings- und Testdatasets](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Ganzzahliger Wert|Description|  
+|Ganzzahliger Wert|Beschreibung|  
 |-------------------|-----------------|  
 |1|Nur Trainingsfälle werden verwendet.|  
 |2|Nur Testfälle werden verwendet.|  
@@ -157,7 +157,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>Siehe auch  
  [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services – Datamining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

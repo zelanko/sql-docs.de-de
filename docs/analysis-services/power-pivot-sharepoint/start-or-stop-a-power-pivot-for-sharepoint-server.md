@@ -1,5 +1,5 @@
 ---
-title: Starten oder Beenden eines PowerPivot für SharePoint-Server | Microsoft Docs
+title: Starten oder Beenden eines PowerPivot für SharePoint-Server | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b53cc7730f962d790ebdb9a0373bf98e9bf32bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208088"
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Starten oder Beenden eines Power Pivot für SharePoint-Servers
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34037404"
 ##  <a name="effects"></a> Welche Auswirkungen hat das Beenden eines Power Pivot-Servers?  
  In der folgenden Tabelle werden die Auswirkungen beschrieben, die das Beenden des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdiensts und des Analysis Services-Diensts auf einem SharePoint-Server hat.  
   
-|Auswirkungen auf|Description|  
+|Auswirkungen auf|Beschreibung|  
 |---------------|-----------------|  
 |Vorhandene Abfragen|Auf einem Analysis Services-Server ausgeführte Abfragen werden sofort beendet. Der Benutzer erhält eine Fehlermeldung, dass keine Daten oder keine Datenquellenverbindung gefunden wurde.|  
 |Vorhandene Datenaktualisierungsaufträge, die gerade verarbeitet werden|Auf dem aktuellen Analysis Services-Server ausgeführte Aufträge werden sofort beendet. Die Datenaktualisierung schlägt fehl, und im Datenaktualisierungsverlauf wird ein Fehler protokolliert.<br /><br /> Sie können den Status der aktuellen Aufträge anzeigen, bevor Sie den Dienst mithilfe der Seite Auftragsstatus überprüfen in der SharePoint-Zentraladministration beenden.<br /><br /> Obwohl die derzeit verarbeiteten Aufträge ermittelt werden können, gibt es keine Möglichkeit, die Warteschlange selbst anzuzeigen, um festzustellen, ob andere Aufträge gerade gestartet werden.|  

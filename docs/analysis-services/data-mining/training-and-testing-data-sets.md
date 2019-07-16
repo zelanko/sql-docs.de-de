@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209604"
 ---
 # <a name="training-and-testing-data-sets"></a>Trainings- und Testdatasets
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "50145615"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Ändern von Struktureigenschaften zum Erstellen eines Testdatasets  
  Wenn Sie eine Miningstruktur erstellen und verarbeiten und zu einem späteren Zeitpunkt ein Testdataset separieren möchten, können Sie die Eigenschaften der Miningstruktur ändern. Um die Methode zu ändern, mit der die Daten partitioniert werden, bearbeiten Sie die folgenden Eigenschaften:  
   
-|Eigenschaft|Description|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|Gibt die maximale Anzahl der Fälle an, die in dem Testsatz enthalten sein soll.|  
 |**HoldoutMaxPercent**|Gibt die Anzahl der Fälle, die in dem Testsatz enthalten sein soll, als Prozentsatz des gesamten Datasets an. Um kein Dataset zu verwenden, geben Sie 0 an.|  
