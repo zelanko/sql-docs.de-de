@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189506"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Erstellen eines Proxys für den SQL Server-Agent
   In diesem Thema wird beschrieben, wie SQL Server-Agent-Proxys in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden.  
@@ -56,7 +56,7 @@ ms.locfileid: "52784422"
   
 ####  <a name="Permissions"></a> Berechtigungen  
   
--   Nur Mitglieder der festen Serverrolle **sysadmin** haben die Berechtigung zum Erstellen, Ändern oder Löschen von Proxykonten. Benutzer, die keine Mitglieder sind von der **Sysadmin** Serverrolle muss hinzugefügt werden, um einen der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **Msdb** Datenbank zur Verwendung von Proxys: **SQLAgentUserRole**, **SQLAgentReaderRole**, oder **SQLAgentOperatorRole**.  
+-   Nur Mitglieder der festen Serverrolle **sysadmin** haben die Berechtigung zum Erstellen, Ändern oder Löschen von Proxykonten. Benutzer, die nicht Mitglied der festen Serverrolle **sysadmin** sind, müssen zur Verwendung von Proxys einer der folgenden festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents in der **msdb**-Datenbank hinzugefügt werden: **SQLAgentUserRole**, **SQLAgentReaderRole** oder **SQLAgentOperatorRole**.  
   
 -   Erfordert die `ALTER ANY CREDENTIAL`-Berechtigung, wenn für den Proxy zusätzlich eine Anmeldeinformation erstellt wird.  
   
