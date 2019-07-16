@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084843"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_update_operator
  Eine Zahl, aktuellen Status des Operators verweist (**1** Wenn derzeit aktiviert, **0** Falls nicht). *aktiviert* ist **Tinyint**, hat den Standardwert NULL. Bei deaktivierter Option empfängt der Operator keine Warnbenachrichtigungen.  
   
  [ @email_address=] '*email_address*'  
- Die E-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Email_address* ist **nvarchar(100)**, hat den Standardwert NULL.  
+ Die E-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Email_address* ist **nvarchar(100)** , hat den Standardwert NULL.  
   
  [ @pager_address=] '*pager_number*'  
- Gibt die Pageradresse des Operators an. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *pager_address* ist **nvarchar(100)**, hat den Standardwert NULL.  
+ Gibt die Pageradresse des Operators an. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *pager_address* ist **nvarchar(100)** , hat den Standardwert NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung an diesen Operator gesendet werden kann. *Weekday_pager_start_time*ist **Int**, hat den Standardwert NULL. der Wert muss im Format HHMMSS für die Verwendung mit 24-Stunden-Format eingegeben werden.  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|Samstag|  
   
  [ @netsend_address=] '*netsend_address*'  
- Die Netzwerkadresse des Operators, an die die Netzwerknachricht gesendet wird. *Netsend_address*ist **nvarchar(100)**, hat den Standardwert NULL.  
+ Die Netzwerkadresse des Operators, an die die Netzwerknachricht gesendet wird. *Netsend_address*ist **nvarchar(100)** , hat den Standardwert NULL.  
   
  [ @category_name=] '*category*'  
  Der Name der Kategorie für diese Warnung. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  

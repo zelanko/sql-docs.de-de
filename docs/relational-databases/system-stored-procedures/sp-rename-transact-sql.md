@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006940"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname =] '*Object_name*"  
  Der aktuelle qualifizierte oder nicht qualifizierte Name des Benutzerobjekts oder Datentyps. Wenn es sich bei das umzubenennenden Objekt um eine Spalte in einer Tabelle ist *Object_name* muss im Format *table.column* oder *schema.table.column*. Wenn es sich bei das umzubenennenden Objekt um einen Index, muss *Object_name* muss im Format *table.index* oder *schema.table.index*. Wenn das Objekt, das umbenannt werden soll, eine Einschränkung ist *Object_name* muss im Format *schema.constraint*.  
   
- Anführungszeichen sind nur dann notwendig, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Object_name* ist **nvarchar(776)**, hat keinen Standardwert.  
+ Anführungszeichen sind nur dann notwendig, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *Object_name* ist **nvarchar(776)** , hat keinen Standardwert.  
   
  [ @newname =] '*New_name*"  
  Der neue Name für das angegebene Objekt. *New_name* muss ein einteiliger Name sein und müssen den Regeln für Bezeichner entsprechen. *Newname* ist **Sysname**, hat keinen Standardwert.  
@@ -60,7 +59,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 >  Namen von Triggern können nicht mit # oder ## beginnen.  
   
  [ @objtype =] '*Object_type*"  
- Der Typ des Objekts, das umbenannt wird. *Object_type* ist **varchar(13)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+ Der Typ des Objekts, das umbenannt wird. *Object_type* ist **varchar(13)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
 |Wert|Description|  
 |-----------|-----------------|  

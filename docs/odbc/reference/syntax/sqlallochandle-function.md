@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8bcf70823401f60efc316caabe283f5be59f48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f4f82a24e594a25b0b1ec9bbeab2256624ae6e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036252"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  **SQLAllocHandle** reserviert ein Handle-Umgebung, Verbindung, Anweisung oder -Deskriptor.  
@@ -70,7 +69,7 @@ SQLRETURN SQLAllocHandle(
  [Ausgabe] Zeiger auf einen Puffer, in dem das Handle zu der neu zugewiesenen Datenstruktur zurückgegeben.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_INVALID_HANDLE, or SQL_ERROR.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_INVALID_HANDLE oder SQL_ERROR zurück.  
   
  Wenn ein Handle als ein Umgebungshandle zuordnen, wenn **SQLAllocHandle** gibt SQL_ERROR zurück, wird *OutputHandlePtr* SQL_NULL_HDBC, SQL_NULL_HSTMT oder SQL_NULL_HDESC, je nach den Wert des *HandleType*, es sei denn, das ausgabeargument ein null-Zeiger ist. Die Anwendung kann zusätzliche Informationen aus der Diagnosedaten-Struktur, die das Handle im zugeordneten erhalten die *InputHandle* Argument.  
   
@@ -86,7 +85,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLAllocHandle** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit dem entsprechenden *HandleType* und *behandeln* legen Sie auf den Wert der *InputHandle*. SQL_SUCCESS_WITH_INFO (aber nicht als SQL_ERROR) zurückgegeben werden kann, für die *OutputHandle* Argument. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLAllocHandle** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08003|Verbindung nicht geöffnet|(DM) die *HandleType* Argument war SQL_HANDLE_STMT auf oder SQL_HANDLE_DESC, aber die Verbindung angegeben wird, durch die *InputHandle* Argument konnte nicht geöffnet werden. Der Verbindungsprozess erfolgreich abgeschlossen werden muss (und die Verbindung muss geöffnet sein) für den Treiber an, ordnen eine Anweisung oder der Deskriptor behandelt.|  

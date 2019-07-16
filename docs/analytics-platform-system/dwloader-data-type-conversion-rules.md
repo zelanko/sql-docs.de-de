@@ -2,19 +2,18 @@
 title: 'Dwloader Datentyp Konvertierungsregeln: Parallel Data Warehouse | Microsoft-Dokumentation'
 description: Dieses Thema beschreibt die Eingabedaten-Formate und die implizite datentypkonvertierungen, Dwloader, die Command-Line-Ladeprogramm unterstützt, wenn Daten in Parallel Data Warehouse (PDW) geladen."
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a15e129ad1cbf52a3daab5459e9ca7d06d195b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961039"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Konvertierungsregeln für Dwloader – Parallel Data Warehouse-Datentyp
 In diesem Thema wird beschrieben, die Eingabedaten-Formate und die implizite datentypkonvertierungen, [Dwloader Command-Line-Ladeprogramm](dwloader.md) unterstützt Sie beim Laden von Daten in PDW. Die implizite datenkonvertierungen auftreten, wenn die Eingabedaten nicht den Datentyp in der SQL Server-PDW-Zieltabelle übereinstimmt. Verwenden Sie diese Informationen beim Entwerfen Ihres Ladeprozesses, um sicherzustellen, dass Ihre Daten erfolgreich in SQL Server PDW geladen wird.  
@@ -35,10 +34,10 @@ In der folgende Tabelle definiert, das Standardformat und die Regeln zum Laden v
   
 |Eingabe-Datentyp|Beispiele für die Eingabedaten|Die Konvertierung in Datetime-Datentyp|  
 |-------------------|-----------------------|------------------------------------|  
-|Zeichenfolgenliteral in **"DateTime"** Format|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />Beispiel: '2007-05-08 12:35:29.123'|Fehlende Dezimalstellen werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B. das Literal "2007-05-08 12:35 ' wird als eingefügt" 2007-05-08-12:35:00.000 ".|  
-|Zeichenfolgenliteral in **Smalldatetime** Format|'yyyy-MM-dd hh:mm'<br /><br />Beispiel: '2007-05-08 12:35'|Sekunden und die restlichen Dezimalstellen werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
-|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: '2007-05-08'|Time-Werten (Stunden, Minuten, Sekunden und Sekundenbruchteile) werden auf 12:00:00.000 festgelegt, wenn der Wert eingefügt wird.|  
-|Zeichenfolgenliteral in **datetime2** Format|'yyyy-MM-dd hh:mm:ss.fffffff'<br /><br />Beispiel: '2007-05-08 12:35:29.1234567'|Die Quelldaten können drei Dezimalstellen nicht überschreiten. Z. B. das Literal "2007-05-08-12:35:29.123' eingefügt werden soll, aber der Wert ' 2007-05-8-12:35:29.1234567" wird ein Fehler generiert.|  
+|Zeichenfolgenliteral in **"DateTime"** Format|"Yyyy-MM-Dd hh: mm: [: ss. fff]"<br /><br />Beispiel: '2007-05-08 12:35:29.123'|Fehlende Dezimalstellen werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B. das Literal "2007-05-08 12:35 ' wird als eingefügt" 2007-05-08-12:35:00.000 ".|  
+|Zeichenfolgenliteral in **Smalldatetime** Format|"Yyyy-MM-Dd hh: mm"<br /><br />Beispiel: "2007-05-08 12:35"|Sekunden und die restlichen Dezimalstellen werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
+|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: "2007-05-08"|Time-Werten (Stunden, Minuten, Sekunden und Sekundenbruchteile) werden auf 12:00:00.000 festgelegt, wenn der Wert eingefügt wird.|  
+|Zeichenfolgenliteral in **datetime2** Format|"JJJJ-MM-TT ss.fffffff"<br /><br />Beispiel: '2007-05-08 12:35:29.1234567'|Die Quelldaten können drei Dezimalstellen nicht überschreiten. Z. B. das Literal "2007-05-08-12:35:29.123' eingefügt werden soll, aber der Wert ' 2007-05-8-12:35:29.1234567" wird ein Fehler generiert.|  
   
 ### <a name="smalldatetime-data-type"></a>smalldatetime-Datentyp  
 In der folgende Tabelle definiert, das Standardformat und die Regeln zum Laden von literalen Werten in einer Spalte vom Typ **Smalldatetime**. Eine leere Zeichenfolge (") konvertiert wird, auf den Standardwert" 1900-01-01 12:00 ". Zeichenfolgen, die nur Leerzeichen enthalten ("") ein Fehler generiert.  
@@ -46,14 +45,14 @@ In der folgende Tabelle definiert, das Standardformat und die Regeln zum Laden v
 |Eingabe-Datentyp|Beispiele für die Eingabedaten|Die Konvertierung in den Smalldatetime-Datentyp|  
 |-------------------|-----------------------|-----------------------------------------|  
 |Zeichenfolgenliteral in **Smalldatetime** Format|"Yyyy-MM-Dd hh: mm" oder "Yyyy-MM-Dd hh: mm:"<br /><br />Beispiel: "2007-05-08 12:00 ' oder ' 2007-05-08 12:00:15"|Die Quelldaten müssen Werte für Jahr, Monat, Datum, Stunde und Minute. Sekunden sind optional und, falls vorhanden, müssen auf den Wert 00 festgelegt werden. Ein anderer Wert erzeugt einen Fehler.<br /><br />Sekunden sind optional. Beim Laden in einen Smalldatetime-Spalte rundet Dwloader Sekunden und Bruchteilen von Sekunden. Zum Beispiel lädt die 1999-01-05-20:10:35.123 als 01-05-20:11.|  
-|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: '2007-05-08'|Time-Werten (Stunden, Minuten, Sekunden und Sekundenbruchteile) werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
+|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: "2007-05-08"|Time-Werten (Stunden, Minuten, Sekunden und Sekundenbruchteile) werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
   
 ### <a name="date-data-type"></a>date-Datumstyp  
 In der folgende Tabelle definiert, das Standardformat und die Regeln zum Laden von literalen Werten in einer Spalte vom Typ **Datum**. Eine leere Zeichenfolge (") konvertiert wird, auf den Standardwert" 1900-01-01 ". Zeichenfolgen, die nur Leerzeichen enthalten ("") ein Fehler generiert.  
   
 |Eingabe-Datentyp|Beispiele für die Eingabedaten|Konvertierung in Date-Datentyp|  
 |-------------------|-----------------------|--------------------------------|  
-|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: '2007-05-08'||  
+|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: "2007-05-08"||  
   
 ### <a name="time-data-type"></a>Time-Datentyp  
 In der folgende Tabelle definiert, das Standardformat und die Regeln zum Laden von literalen Werten in einer Spalte vom Typ **Zeit**. Eine leere Zeichenfolge (") wird auf den Standardwert"00:00:00.0000"konvertiert. Zeichenfolgen, die nur Leerzeichen enthalten ("") ein Fehler generiert.  
@@ -67,10 +66,10 @@ In der folgende Tabelle definiert, das Standardformat und die Regeln zum Laden v
   
 |Eingabe-Datentyp|Beispiele für die Eingabedaten|Die Konvertierung in Datetimeoffset-Datentyp|  
 |-------------------|-----------------------|------------------------------------------|  
-|Zeichenfolgenliteral in **"DateTime"** Format|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />Beispiel: '2007-05-08 12:35:29.123'|Fehlende Dezimalstellen und Offset-Werte werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B. das Literal "2007-05-08-12:35:29.123" eingefügt wird, als "2007-05-08-12:35:29.1230000 + 00:00".|  
-|Zeichenfolgenliteral in **Smalldatetime** Format|'yyyy-MM-dd hh:mm'<br /><br />Beispiel: '2007-05-08 12:35'|Sekunden, die restlichen Dezimalstellen und die Offset-Werte werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
-|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: '2007-05-08'|Time-Werten (Stunden, Minuten, Sekunden und Sekundenbruchteile) werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B. literal ' 2007-05-08' wird als eingefügt "2007-05-08-00:00:00.0000000 + 00:00".|  
-|Zeichenfolgenliteral in **datetime2** Format|'yyyy-MM-dd hh:mm:ss.fffffff'<br /><br />Beispiel: '2007-05-08 12:35:29.1234567'|Die Quelldaten darf die angegebene Anzahl von Sekundenbruchteilen in der Spalte "DateTimeOffset" nicht überschreiten. Wenn die Datenquelle eine Zahl kleinere oder gleich der Bruchteile von Sekunden aufweist, werden die Daten auf der rechten Seite mit Nullen aufgefüllt. Wenn der Datentyp "DateTimeOffset" (5), der literale Wert ist z. B. ' 2007-05-08-12:35:29.123 + 12:15 ' wird als eingefügt "12:35:29.12300 + 12:15 '.|  
+|Zeichenfolgenliteral in **"DateTime"** Format|"Yyyy-MM-Dd hh: mm: [: ss. fff]"<br /><br />Beispiel: '2007-05-08 12:35:29.123'|Fehlende Dezimalstellen und Offset-Werte werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B. das Literal "2007-05-08-12:35:29.123" eingefügt wird, als "2007-05-08-12:35:29.1230000 + 00:00".|  
+|Zeichenfolgenliteral in **Smalldatetime** Format|"Yyyy-MM-Dd hh: mm"<br /><br />Beispiel: "2007-05-08 12:35"|Sekunden, die restlichen Dezimalstellen und die Offset-Werte werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
+|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: "2007-05-08"|Time-Werten (Stunden, Minuten, Sekunden und Sekundenbruchteile) werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B. literal ' 2007-05-08' wird als eingefügt "2007-05-08-00:00:00.0000000 + 00:00".|  
+|Zeichenfolgenliteral in **datetime2** Format|"JJJJ-MM-TT ss.fffffff"<br /><br />Beispiel: '2007-05-08 12:35:29.1234567'|Die Quelldaten darf die angegebene Anzahl von Sekundenbruchteilen in der Spalte "DateTimeOffset" nicht überschreiten. Wenn die Datenquelle eine Zahl kleinere oder gleich der Bruchteile von Sekunden aufweist, werden die Daten auf der rechten Seite mit Nullen aufgefüllt. Wenn der Datentyp "DateTimeOffset" (5), der literale Wert ist z. B. ' 2007-05-08-12:35:29.123 + 12:15 ' wird als eingefügt "12:35:29.12300 + 12:15 '.|  
 |Zeichenfolgenliteral in **Datetimeoffset** Format|'yyyy-MM-dd hh:mm:ss.fffffff {+&#124;-} hh:mm'<br /><br />Beispiel: '2007-05-08 12:35:29.1234567 +12:15'|Die Quelldaten darf die angegebene Anzahl von Sekundenbruchteilen in der Spalte "DateTimeOffset" nicht überschreiten. Wenn die Datenquelle eine Zahl kleinere oder gleich der Bruchteile von Sekunden aufweist, werden die Daten auf der rechten Seite mit Nullen aufgefüllt. Wenn der Datentyp "DateTimeOffset" (5), der literale Wert ist z. B. ' 2007-05-08-12:35:29.123 + 12:15 ' wird als eingefügt "12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>datetime2-Datentyp  
@@ -78,10 +77,10 @@ In der folgende Tabelle definiert, das Standardformat und die Regeln zum Laden v
   
 |Eingabe-Datentyp|Beispiele für die Eingabedaten|Konvertierung in datetime2-Datentyp|  
 |-------------------|-----------------------|-------------------------------------|  
-|Zeichenfolgenliteral in **"DateTime"** Format|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />Beispiel: '2007-05-08 12:35:29.123'|Bruchteile von Sekunden sind optional und werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
-|Zeichenfolgenliteral in **Smalldatetime** Format|'yyyy-MM-dd hh:mm'<br /><br />Beispiel: '2007-05-08 12'|Sekunden (optional) und die restlichen Dezimalstellen werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
-|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: '2007-05-08'|Time-Werten (Stunden, Minuten, Sekunden und Sekundenbruchteile) werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B. literal ' 2007-05-08' wird als eingefügt "2007-05-08-12:00:00.0000000".|  
-|Zeichenfolgenliteral in **datetime2** Format|'yyyy-MM-dd hh:mm:ss:fffffff'<br /><br />Beispiel: '2007-05-08 12:35:29.1234567'|Wenn die Datenquelle und der Zeitpunkt der Komponenten enthält, die kleiner oder gleich dem im angegebenen Wert sind **datetime2**(*n*), die Daten eingefügt; andernfalls wird ein Fehler generiert.|  
+|Zeichenfolgenliteral in **"DateTime"** Format|"Yyyy-MM-Dd hh: mm: [: ss. fff]"<br /><br />Beispiel: '2007-05-08 12:35:29.123'|Bruchteile von Sekunden sind optional und werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
+|Zeichenfolgenliteral in **Smalldatetime** Format|"Yyyy-MM-Dd hh: mm"<br /><br />Beispiel: "2007-05-08-12"|Sekunden (optional) und die restlichen Dezimalstellen werden auf 0 festgelegt, wenn der Wert eingefügt wird.|  
+|Zeichenfolgenliteral in **Datum** Format|'yyyy-MM-dd'<br /><br />Beispiel: "2007-05-08"|Time-Werten (Stunden, Minuten, Sekunden und Sekundenbruchteile) werden auf 0 festgelegt, wenn der Wert eingefügt wird. Z. B. literal ' 2007-05-08' wird als eingefügt "2007-05-08-12:00:00.0000000".|  
+|Zeichenfolgenliteral in **datetime2** Format|"JJJJ-MM-tt Hh:mm:ss:fffffff"<br /><br />Beispiel: '2007-05-08 12:35:29.1234567'|Wenn die Datenquelle und der Zeitpunkt der Komponenten enthält, die kleiner oder gleich dem im angegebenen Wert sind **datetime2**(*n*), die Daten eingefügt; andernfalls wird ein Fehler generiert.|  
   
 ### <a name="DateFormats"></a>DateTime-Formate  
 Dwloader unterstützt die folgenden Formate für die Eingabedaten, die beim Laden in SQL Server PDW. Weitere Details werden nach der Tabelle aufgeführt.  
@@ -123,7 +122,7 @@ In der folgende Tabelle definiert, das Standardformat und die Regeln zum Laden v
   
 |Eingabe-Datentyp|Beispiele für die Eingabedaten|Die Konvertierung in die vom Datentyp bit|  
 |-------------------|-----------------------|-------------------------------|  
-|Zeichenfolgenliteral in **Ganzzahl** Format|'ffffffffff'<br /><br />Beispiel: '1' oder "321"|Ein ganzzahliger Wert formatiert als Zeichenfolgenliteral kann nicht auf einen negativen Wert enthalten. Der Wert "-123" generiert z. B. einen Fehler.<br /><br />Ein Wert größer als 1 wird in 1 konvertiert. Beispielsweise wird der Wert "123" in 1 konvertiert.|  
+|Zeichenfolgenliteral in **Ganzzahl** Format|"Ffffffffff"<br /><br />Beispiel: '1' oder "321"|Ein ganzzahliger Wert formatiert als Zeichenfolgenliteral kann nicht auf einen negativen Wert enthalten. Der Wert "-123" generiert z. B. einen Fehler.<br /><br />Ein Wert größer als 1 wird in 1 konvertiert. Beispielsweise wird der Wert "123" in 1 konvertiert.|  
 |Zeichenfolgenliteral|'TRUE' oder 'FALSE'<br /><br />Beispiel: 'true'|Der Wert 'TRUE' wird in 1 konvertiert. der Wert 'FALSE' wird in 0 konvertiert.|  
 |Integer-literal|fffffffn<br /><br />Beispiel: 1 oder 321|Ein Wert größer als 1 oder kleiner als 0 ist, wird in 1 konvertiert. Beispielsweise werden die Werte, 123 "und"-123 in 1 konvertiert.|  
 |Dezimales literal|fffnn.fffn<br /><br />Beispiel: 1234.5678|Ein Wert größer als 1 oder kleiner als 0 ist, wird in 1 konvertiert. Beispielsweise werden die Werte 123,45 und-123.45 in 1 konvertiert.|  

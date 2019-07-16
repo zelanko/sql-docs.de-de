@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e29fac8b9cdb955ddaff6643eacae352e9c39bf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63214320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020916"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Testen von migrierten Datenbankobjekten (SybaseToSQL)
 Microsoft SQL Server Migration Assistant für Sybase-Tester (SSMA Tester) überprüft automatisch die Konvertierung der Datenbank-Objekt und die Datenmigration von SSMA vorgenommen. Können Sie SSMA-Tester, nachdem alle Schritte zur Datenmigration SSMA abgeschlossen sind, stellen Sie sicher, dass die konvertierten Objekte die gleiche Weise funktioniert und alle Daten ordnungsgemäß übertragen wurde.  
@@ -46,7 +45,7 @@ SSMA-Tester führt Tests auf Sybase und ihren äquivalenten in SQL Server für d
 > [!NOTE]  
 > Achtung! Verwenden Sie niemals SSMA Tester auf die Produktionssysteme statt. Während der Ausführung der Tester werden dem Quellschema und die Daten geändert. In der Zwischenzeit kann das vollständige Wiederherstellen des ursprünglichen Zustands für einige Typen von getesteten Codes unmöglich sein.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 Wenn Sie SSMA Tester verwenden möchten, installieren Sie SSMA Sybase-Erweiterungspaket mit der **Tester-Datenbank installieren** Option auf ON festgelegt.  
   
 Darüber hinaus überprüfen Sie Folgendes aus:  

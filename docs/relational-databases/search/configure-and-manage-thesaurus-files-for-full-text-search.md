@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586177"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860519"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Ein Thesaurus der Volltextsuche ist eine XML-Textdatei.
 
 -   Einstellung für diakritische Zeichen  
   
-     Bei einem Thesaurus werden bei allen Suchmustern diakritische Zeichen – beispielsweise Tilde ( **~** ), Akut-Akzentzeichen ( **?** ) oder Umlaut ( **?** ) – entweder berücksichtigt oder nicht berücksichtigt (d.h., es erfolgt eine *Unterscheidung nach Akzent*, oder es erfolgt *keine Unterscheidung nach Akzent*). Angenommen, Sie geben das Muster „caf?“ an, das in einer Volltextabfrage durch andere Muster ersetzt werden soll. Wenn im Thesaurus nicht nach Akzent unterschieden wird, ersetzt die Volltextsuche die Muster „caf?“ und „cafe“. Wenn im Thesaurus nach Akzent unterschieden wird, ersetzt die Volltextsuche nur das Muster „caf?“. Standardmäßig wird bei einem Thesaurus nicht nach Akzent unterschieden.  
+     Bei einem Thesaurus werden bei allen Suchmustern diakritische Zeichen – beispielsweise Tilde ( **~** ), Akut-Akzentzeichen ( **&acute;** ) oder Umlaut ( **&uml;** ) – entweder berücksichtigt oder nicht berücksichtigt (d.h., es erfolgt eine *Unterscheidung nach Akzent*, oder es erfolgt *keine Unterscheidung nach Akzent*). Angenommen, Sie haben in einer Volltextsuchabfrage angegeben, dass das Suchmuster „caf&eacute;“ durch ein anderes Muster ersetzt werden soll. Wenn im Thesaurus nicht nach Akzent unterschieden wird, ersetzt die Volltextsuche die Muster „caf&eacute;“ und „cafe“. Wenn im Thesaurus nach Akzent unterschieden wird, ersetzt die Volltextsuche nur das Muster „caf&eacute;“. Standardmäßig wird bei einem Thesaurus nicht nach Akzent unterschieden.  
   
 ##  <a name="initial_thesaurus_files"></a> Thesaurus-Standarddateien
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von XML-Thesaurusdateien bereit, und zwar eine für jede unterstützte Sprache. Diese Dateien sind im Wesentlichen leer. Sie enthalten nur die XML-Hauptstruktur, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Thesaurusdateien aufweisen, sowie einen auskommentierten Beispielthesaurus.  

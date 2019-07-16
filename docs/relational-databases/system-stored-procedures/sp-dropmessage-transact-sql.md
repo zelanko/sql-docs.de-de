@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b36c576fb5bb3bb3cc168430902223802ca937a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933868"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sp_dropmessage [ @msgnum = ] message_number
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine.  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in den festen Serverrollen **sysadmin** und **serveradmin** .  
   
 ## <a name="remarks"></a>Hinweise  
- Es sei denn, **alle** für angegeben *Sprache*alle lokalisierten Versionen einer Meldung müssen gelöscht werden, bevor der USA bevor die englische Version (USA) der Nachricht gelöscht werden kann.  
+ Es sei denn, **alle** für angegeben *Sprache*alle lokalisierten Versionen einer Meldung müssen gelöscht werden, bevor der USA Englische Version der Nachricht kann gelöscht werden.  
   
 ## <a name="examples"></a>Beispiele  
   

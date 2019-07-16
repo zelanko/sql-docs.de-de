@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100591"
 ---
 # <a name="procedure-call-escape-sequence"></a>Prozeduraufruf-Escapesequenz
 ODBC verwendet Escapesequenzen für Prozeduraufrufe an. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
@@ -29,17 +28,17 @@ ODBC verwendet Escapesequenzen für Prozeduraufrufe an. Die Syntax dieser Escape
   
  In BNF-Schreibweise lautet die Syntax:  
   
- *ODBC-procedure-escape* ::=  
+ *ODBC-Prozedur-Escapesequenz* :: =  
   
  &#124;*Initiator der ODBC-esc* [? =] aufrufen *Prozedur ODBC-esc-Terminator*  
   
- *procedure* ::= *procedure-name* &#124; *procedure-name* (*procedure-parameter-list*)  
+ *Prozedur* :: = *Prozedurname* &#124; *Prozedurname* (*Prozedurparameterliste*)  
   
- *procedure-identifier* ::= *user-defined-name*  
+ *Prozedur-ID* :: = *definiert-Benutzername*  
   
- *procedure-name* ::= *procedure-identifier*  
+ *Name der Prozedur* :: = *Prozedur-ID*  
   
- &#124; *owner-name*.*procedure-identifier*  
+ &#124;*Besitzernamen*. *Prozedur-ID*  
   
  &#124;*Katalognamen Katalogtrennzeichen* *Prozedur-ID*  
   
@@ -47,25 +46,25 @@ ODBC verwendet Escapesequenzen für Prozeduraufrufe an. Die Syntax dieser Escape
   
  (Die dritte Syntax ist nur gültig, wenn die Datenquelle Besitzer nicht unterstützt.)  
   
- *owner-name* ::= *user-defined-name*  
+ *Besitzername* :: = *definiert-Benutzername*  
   
- *catalog-name* ::= *user-defined-name*  
+ *Katalogname* :: = *definiert-Benutzername*  
   
- *catalog-separator* ::= {*implementation-defined*}  
+ *Katalogtrennzeichen* :: = {*implementierungsdefinierte*}  
   
  (Das Katalogtrennzeichen zurückgegeben wurde **SQLGetInfo** mit der Option SQL_CATALOG_NAME_SEPARATOR Informationen.)  
   
- *procedure-parameter-list* ::= *procedure-parameter*  
+ *Prozedur-Parameter-List* :: = *-Parameter der Prozedur*  
   
- &#124; *procedure-parameter*, *procedure-parameter-list*  
+ &#124;*Prozedurparameter*, *Prozedurparameterliste*  
   
- *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
+ *Prozedurparameter* :: = *dynamische Parameter* &#124; *literal* &#124; *leeren Zeichenfolge*  
   
- *empty-string* ::=  
+ *leeren Zeichenfolge* :: =  
   
- *ODBC-esc-initiator* ::= {  
+ *Initiator der ODBC-esc* :: = {  
   
- *ODBC-esc-terminator* ::= }  
+ *ODBC-esc-Terminator* :: =}  
   
  (Wenn Parameter einer Prozedur eine leere Zeichenfolge ist, verwendet die Prozedur den Standardwert für diesen Parameter.)  
   

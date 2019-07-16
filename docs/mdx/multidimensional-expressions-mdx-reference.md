@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: efed0e6e396e83ba13aa058639e47e37dd376dde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fce73abd82afe64c5ecc971e13ba161b880e6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088414"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Multidimensional Expressions (MDX) - Referenz
 
@@ -22,7 +21,7 @@ ms.locfileid: "63278023"
     
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|Beschreibt die verschiedenen Syntaxelemente, die in der MDX-Sprache für MDX-Ausdrücke, -Anweisungen und -Skripts verfügbar sind.|  
 |[MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|Beschreibt die Anweisungen, Operatoren und Funktionen, die die MDX-Sprache definieren.|  

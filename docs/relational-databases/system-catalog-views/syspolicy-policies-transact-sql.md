@@ -17,27 +17,26 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: aec3b91a52667e0ef0801bd2532689e39ebf9ccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121161"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt eine Zeile für jede Richtlinie der richtlinienbasierten Verwaltung in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Syspolicy_policies gehört zum Dbo-Schema in der Msdb-Datenbank. In der folgenden Tabelle werden die Spalten in der syspolicy_policies-Sicht beschrieben.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|Bezeichner der Richtlinie.|  
 |NAME|**sysname**|Name der Richtlinie.|  
 |condition_id|**int**|ID der Bedingung, die durch diese Richtlinie erzwungen oder getestet wird.|  
 |root_condition_id|**int**|Nur zur internen Verwendung.|  
 |date_created|**datetime**|Datum und Uhrzeit der Erstellung der Richtlinie.|  
-|execution_mode|**int**|Auswertungsmodus für die Richtlinie. Mögliche Werte sind wie folgt aus:<br /><br /> 0 = Bedarfsgesteuert<br /><br /> Dieser Modus wertet die Richtlinie aus, wenn sie vom Benutzer direkt angegeben wird.<br /><br /> 1 = Bei Änderung: Verhindern<br /><br /> Dieser automatisierte Modus verwendet DDL-Trigger, um Richtlinienverstöße zu verhindern.<br /><br /> 2 = Bei Änderung: Nur protokollieren<br /><br /> Dieser automatisierte Modus verwendet die Ereignisbenachrichtigung, um eine Richtlinie dann auszuwerten, wenn eine relevante Änderung auftritt. Die Richtlinienverstöße werden protokolliert.<br /><br /> 4 = Nach Zeitplan<br /><br /> Dieser automatisierte Modus verwendet einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag, um eine Richtlinie in regelmäßigen Abständen auszuwerten. In diesem Modus werden Richtlinienverstöße protokolliert.<br /><br /> Hinweis: Der Wert 3 ist kein möglicher Wert.|  
+|execution_mode|**int**|Auswertungsmodus für die Richtlinie. Folgende Werte sind möglich:<br /><br /> 0 = Bedarfsgesteuert<br /><br /> Dieser Modus wertet die Richtlinie aus, wenn sie vom Benutzer direkt angegeben wird.<br /><br /> 1 = Bei Änderung: Verhindern<br /><br /> Dieser automatisierte Modus verwendet DDL-Trigger, um Richtlinienverstöße zu verhindern.<br /><br /> 2 = Bei Änderung: Nur protokollieren<br /><br /> Dieser automatisierte Modus verwendet die Ereignisbenachrichtigung, um eine Richtlinie dann auszuwerten, wenn eine relevante Änderung auftritt. Die Richtlinienverstöße werden protokolliert.<br /><br /> 4 = Nach Zeitplan<br /><br /> Dieser automatisierte Modus verwendet einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag, um eine Richtlinie in regelmäßigen Abständen auszuwerten. In diesem Modus werden Richtlinienverstöße protokolliert.<br /><br /> Hinweis: Der Wert 3 ist ein möglicher Wert.|  
 |policy_category|**int**|ID der Richtlinienkategorie der richtlinienbasierten Verwaltung, zu der diese Richtlinie gehört. Ist NULL, wenn sie sich in der Standardrichtliniengruppe befindet.|  
 |schedule_uid|**uniqueidentifier**|Enthält die ID des Zeitplans, wenn execution_mode den Wert Nach Zeitplan aufweist. Ist andernfalls NULL.|  
 |description|**nvarchar(max)**|Beschreibung der Richtlinie. Die Beschreibungsspalte ist optional und kann NULL sein.|  

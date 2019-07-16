@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016532"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +56,11 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` Ist der Name der Abonnementdatenbank. *Destination_db* ist **Sysname**, hat keinen Standardwert.  
   
-`[ @property = ] 'property'` Ist die Eigenschaft, die für das angegebene Abonnement geändert. *Eigenschaft* ist **nvarchar(30)**, und kann einen der Werte in der Tabelle.  
+`[ @property = ] 'property'` Ist die Eigenschaft, die für das angegebene Abonnement geändert. *Eigenschaft* ist **nvarchar(30)** , und kann einen der Werte in der Tabelle.  
   
-`[ @value = ] 'value'` Der neue Wert für den angegebenen *Eigenschaft*. *Wert* ist **nvarchar(4000)**, und kann einen der Werte in der Tabelle.  
+`[ @value = ] 'value'` Der neue Wert für den angegebenen *Eigenschaft*. *Wert* ist **nvarchar(4000)** , und kann einen der Werte in der Tabelle.  
   
-|Eigenschaft|Wert|Description|  
+|Eigenschaft|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**distrib_job_password**||Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird.|  

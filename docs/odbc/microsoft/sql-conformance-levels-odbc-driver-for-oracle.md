@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063349"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL-Konformitätsgrad (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -39,8 +38,8 @@ ms.locfileid: "63313388"
     |Abs|Log|round|tan|  
     |Obergrenze|Log10|second|truncate|  
     |Cos|Mod|Anmelden||  
-    |Exponential|Pi|sin||  
-    |Floor|Power|sqrt||  
+    |Exponential|PI|sin||  
+    |Floor|Power|"SQRT"||  
   
 -   Datumsfunktionen:  
   
@@ -55,8 +54,8 @@ ms.locfileid: "63313388"
   
     |||||  
     |-|-|-|-|  
-    |Ascii|Left|Richting|UCase|  
-    |Char|Länge|rtrim||  
+    |ASCII|Links|Richting|UCase|  
+    |Char|Länge|RTrim||  
     |Concat|Ltrim|SOUNDEX||  
     |Lcase|Ersetzen|substring||  
   

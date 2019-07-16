@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62910186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072647"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSmerge_identity_range_allocations** Tabelle wird verwendet, um den Verlauf von identitätsbereichszuweisungen, identitätsbereichszuweisungen zu Verlegern und Abonnenten für veröffentlichte Artikel nachverfolgt. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
 |**publisher_db**|**nvarchar(128)**|Der Name der Veröffentlichungsdatenbank.|  
@@ -41,7 +40,7 @@ ms.locfileid: "62910186"
 |**is_pub_range**|**bit**|Zeigt an, ob der Identitätsbereich einem Verleger zugewiesen ist.|  
 |**ranges_allocated**|**tinyint**|Die Anzahl zugewiesener Identitätsbereiche.|  
 |**range_begin**|**numeric(38)**|Der Anfangswert des Bereichs.|  
-|**range_end**|**numeric(38)**|Der letzte Wert des Bereichs.|  
+|**' range_end '**|**numeric(38)**|Der letzte Wert des Bereichs.|  
 |**next_range_begin**|**numeric(38)**|Der Anfangswert des nächsten zuzuweisenden Bereichs.|  
 |**next_range_end**|**numeric(38)**|Der letzte Wert des nächsten zuzuweisenden Bereichs.|  
 |**max_used**|**numeric(38)**|Der höchste verwendete Identitätswert.|  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede7e1a97ca121073760eaa0c5dcd309b5e3e412
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03875d828940a2baa5d9f30f7beb58adb77abf07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018114"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47608076"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**srvid**|**smallint**|ID (nur für lokale Verwendung) des Remoteservers.|  
 |**srvstatus**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**mit srvname**|**sysname**|Name des Servers.|  
+|**srvname**|**sysname**|Name des Servers.|  
 |**srvproduct**|**sysname**|Produktname für den Remoteserver.|  
 |**providername**|**nvarchar(128)**|Name des OLE DB-Anbieters für den Zugriff auf diesen Server.|  
 |**datasource**|**nvarchar(4000)**|OLE DB-Datenquellenwert.|  
@@ -63,7 +62,7 @@ ms.locfileid: "47608076"
 |**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@rpc out** festgelegt **"false"** oder **aus**.|  
 |**dataaccess**|**bit**|1 =  **sp_serveroption@data Zugriff** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@data Zugriff** festgelegt **"false"** oder **aus**.|  
 |**collationcompatible**|**bit**|1 =  **sp_serveroption@collation kompatibel** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@collation kompatibel** festgelegt **"false"** oder **aus**.|  
-|**System**|**bit**|1 = **sp_serveroption@system** festgelegt **"true"** oder **auf**.<br /><br /> 0 = **sp_serveroption@system** festgelegt **"false"** oder **aus**.|  
+|**system**|**bit**|1 = **sp_serveroption@system** festgelegt **"true"** oder **auf**.<br /><br /> 0 = **sp_serveroption@system** festgelegt **"false"** oder **aus**.|  
 |**useremotecollation**|**bit**|1 =  **sp_serveroption@remote Sortierreihenfolge** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@remote Sortierreihenfolge** festgelegt **"false"** oder **aus**.|  
 |**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy -Schema-Validation** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@lazy -Schema-Validation** festgelegt **"false"** oder **aus**.|  
 |**Sortierung**|**sysname**|Server-Sortierung mit  **sp_serveroption@collation Namen**.|  

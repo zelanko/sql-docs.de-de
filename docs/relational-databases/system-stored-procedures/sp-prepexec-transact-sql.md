@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16bb6074bbc241febe5811c823429b599c7c6511
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 163bbe741b09ffe9163b124c4223a845b8b8cd8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056359"
 ---
 # <a name="spprepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Bereitet und führt eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung. Sp_prepexec vereint die Funktionen von Sp_prepare und Sp_execute. Sie wird aufgerufen, indem ID = 13 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
+  Bereitet eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung vor und führt sie aus. Sp_prepexec vereint die Funktionen von Sp_prepare und Sp_execute. Sie wird aufgerufen, indem ID = 13 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +41,7 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>Argumente  
  *Handle*  
- Ist die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-generiert *behandeln* Bezeichner. *handle* ist ein erforderlicher Parameter mit einem **int** -Rückgabewert.  
+ Der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]generierte *Handlebezeichner* . *handle* ist ein erforderlicher Parameter mit einem **int** -Rückgabewert.  
   
  *params*  
  Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. *params* ist ein erforderlicher Parameter, der einen Eingabewert vom Typ **ntext**, **nchar**,oder **nvarchar** erfordert. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  

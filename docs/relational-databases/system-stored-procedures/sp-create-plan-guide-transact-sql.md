@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108630"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  Gibt an, die Planhinweisliste angewendet wird, um jede Abfrage, die auf die im angegebenen Format parametrisiert *Statement_text*. Wenn TEMPLATE angegeben ist, nur der PARAMETERIZATION {FORCED | EINFACHE}-Abfragehinweis kann angegeben werden, der \@Hinweise Parameter. Weitere Informationen zu TEMPLATE-Planhinweislisten, finden Sie unter [angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [\@module_or_batch =]{ N'[ *schema_name*. ] *Object_name*"| N'*Batch_text*"| NULL}  
+ [\@Module_or_batch =] {N'[ *Schema_name*. ] *Object_name*"| N'*Batch_text*"| NULL}  
  Gibt entweder den Namen des Objekts an, in dem *Statement_text* angezeigt wird, oder den Batchtext, in dem *Statement_text* angezeigt wird. Der Batchtext darf keine Verwendung enthalten*Datenbank* Anweisung.  
   
  Damit eine Planhinweisliste entsprechend einen Batch zugeordnet, die aus einer Anwendung übermittelt *Batch_tex*t muss angegeben werden, im gleichen Format, Zeichen für Zeichen, wie beim Übermitteln [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  

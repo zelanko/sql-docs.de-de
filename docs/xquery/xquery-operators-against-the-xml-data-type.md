@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945956"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>XQuery-Operatoren für den xml-Datentyp
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "56038891"
 ### <a name="a-using-general-operators"></a>A. Verwenden von allgemeinen Operatoren  
  Die folgende Abfrage zeigt die Verwendung allgemeiner Operatoren, die für Sequenzen gelten, sowie das Vergleichen von Sequenzen. Die Abfrage ruft eine Sequenz von Rufnummern für jeden Kunden aus der **AdditionalContactInfo** Spalte die **wenden Sie sich an** Tabelle. Diese Sequenz wird dann mit der Sequenz von zwei Rufnummern ("111-111-1111", "222-2222") verglichen.  
   
- Die Abfrage verwendet die **=** Vergleichsoperator. Jeder Knoten in der Sequenz auf der rechten Seite des der **=** Operator wird verglichen, wobei jeder Knoten in der Sequenz auf der linken Seite. Wenn die Knoten entsprechen ergibt, der knotenvergleich **"true"**. Der Wert wird anschließend in einen int-Wert konvertiert und mit 1 verglichen; die Abfrage gibt dann die Kunden-ID zurück.  
+ Die Abfrage verwendet die **=** Vergleichsoperator. Jeder Knoten in der Sequenz auf der rechten Seite des der **=** Operator wird verglichen, wobei jeder Knoten in der Sequenz auf der linken Seite. Wenn die Knoten entsprechen ergibt, der knotenvergleich **"true"** . Der Wert wird anschließend in einen int-Wert konvertiert und mit 1 verglichen; die Abfrage gibt dann die Kunden-ID zurück.  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -79,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. Verwenden eines Wertoperators  
- Die folgende Abfrage ruft die <`Picture`>-Elemente für ein Produktmodell ab, wobei die Bildgröße "small" ist:  
+ Die folgende Abfrage ruft die <`Picture`>-Elemente für ein Produktmodell, wobei die Bildgröße "small" ist:  
   
 ```sql
 SELECT CatalogDescription.query('  

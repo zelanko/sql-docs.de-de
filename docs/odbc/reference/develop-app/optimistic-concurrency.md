@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5f4b7101718ea8372c9635a064dc81e1d8f6c1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023390"
 ---
 # <a name="optimistic-concurrency"></a>Optimistische Nebenläufigkeit
 *Vollständige Parallelität* Name abgeleitet wird, von der optimistischen Annahme, dass Konflikte zwischen Transaktionen nur selten auftreten werden, als ein Konflikt aufgetreten sind wird, wenn eine andere Transaktion aktualisiert oder eine Zeile von Daten zwischen dem Zeitpunkt löscht, er wird gelesen, nach der aktuellen Transaktion und der Uhrzeit wird aktualisiert oder gelöscht. Dies ist das Gegenteil von *pessimistische Parallelität* oder Sperren in der Entwickler der Anwendung ist der Auffassung, dass solche Konflikte üblich sind.  

@@ -6,19 +6,18 @@ author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: jroth
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: b99d4a7f6b246db75caf1d394d9a4670a574d6af
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027329"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Verwenden Sie Active Directory-Authentifizierung mit SQL Server unter Linux
 
@@ -108,7 +107,7 @@ So konfigurieren Sie die SQL Server-Dienst Keytab-Datei:
    > [!NOTE]
    > SPNs dauert einige Minuten, durchlaufen Ihre Domäne aus, insbesondere dann, wenn die Domäne groß ist. Wenn Sie die Fehlermeldung `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, bitte warten Sie einige Minuten, und versuchen Sie es erneut.  
 
-1. Start **ktutil**:
+1. Starten Sie **Ktutil**:
 
    ```bash
    sudo ktutil
@@ -176,7 +175,7 @@ Das Computerkonto hinzufügen, um Ihre Keytab-Datei mit **Ktutil**. Das Computer
    wkt /var/opt/mssql/secrets/mssql.keytab
    ```
 
-1. Quit **ktutil**.
+1. Beenden Sie **Ktutil**.
 
    ```bash
    quit
@@ -196,7 +195,7 @@ Für die MSA-Option verwenden müssen Sie SQL Server Kerberos-schlüsseltabellen
 
    Dieser Schritt zeigt das KVNO für das Benutzerkonto, das der SPN den Besitz zuweisen. Für diesen Schritt funktioniert muss der SPN das MSA-Konto bei der Erstellung zugewiesen wurden. Wenn der SPN nicht MSA zugewiesen wurde, wird die KVNO angezeigt des aktuellen SPN-Kontos werden und werden nicht korrekt, verwenden für die Konfiguration.  
 
-1. Start **ktutil**:
+1. Starten Sie **Ktutil**:
 
    ```bash
    sudo ktutil

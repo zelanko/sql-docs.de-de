@@ -3,18 +3,17 @@ title: DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux
 description: In diesem Artikel wird beschrieben, wie Sie DB E-Mails und e-Mail-Benachrichtigungen mit SQL Server unter Linux verwenden
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: 031fdff258e6dba4976fec4e0b1c5ed10aa48f47
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077451"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB-E-Mails und e-Mail-Benachrichtigungen mit SQL-Agent für Linux
 

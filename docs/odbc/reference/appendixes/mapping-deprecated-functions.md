@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990712"
 ---
 # <a name="mapping-deprecated-functions"></a>Zuordnen veralteter Funktionen
 In diesem Abschnitt wird beschrieben, wie als veraltet markierte Funktionen zugeordnet sind, indem Sie die ODBC *3.x* gewährleisten der Abwärtskompatibilität von ODBC-Treiber-Manager *3.x* Treiber, die verwendet werden, mit dem ODBC- *2.x* Anwendungen. Der Treiber-Manager führt diese Zuordnung unabhängig von der Version der Anwendung. Da jede der ODBC- *2.x* Funktionen in der folgenden Liste wird an die entsprechenden ODBC zugeordnet *3.x* bei Aufruf in einer ODBC-Funktion *3.x* ODBC-Treiber*3.x* Treiber keine Implementierung die ODBC *2.x* Funktionen.  

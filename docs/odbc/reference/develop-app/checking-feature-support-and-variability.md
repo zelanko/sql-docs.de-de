@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21495e538a554a477336d1a92926c11fe762c5af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062665"
 ---
 # <a name="checking-feature-support-and-variability"></a>Überprüfung der Funktionsunterstützung und Variabilität
 Um Unterstützung von Funktionen und Variabilität zu überprüfen, rufen Anwendungen im allgemeinen **SQLGetInfo**, **SQLGetFunctions**, und **SQLGetTypeInfo**. Ein guter Ausgangspunkt ist die vom Treiber-API und SQL-Grammatik-Konformitätsgrad. Diese werden umfassende Maß an Unterstützung von Funktionen beschrieben. Die Anwendung kann dann aufrufen **SQLGetInfo** mit anderen Optionen, um zu bestimmen, die Unterstützung oder die Variabilität der Funktionen, die es benötigt, **SQLGetFunctions** bestimmen muss, ob die Funktionen über die zurückgegebene Konformitätsgrad werden unterstützt, und **SQLGetTypeInfo** zu bestimmen, welche SQL-Datentypen unterstützt werden.  

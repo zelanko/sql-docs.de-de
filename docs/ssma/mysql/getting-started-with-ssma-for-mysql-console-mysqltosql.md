@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 07c1c226d33a213dd9bd071c59d9771a0e0ca736
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075417"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Erste Schritte mit der SSMA-Konsole für MySQL (MySqlToSql)
 Dieser Abschnitt beschreibt die Vorgehensweise zum Starten, und beginnen Sie mit der MySQL-Konsolenanwendung. Auch aufgeführt ist, werden die Konventionen in diesem Dokument, in einer typischen Ausgabefenster von SSMA-Konsole verwendet.  

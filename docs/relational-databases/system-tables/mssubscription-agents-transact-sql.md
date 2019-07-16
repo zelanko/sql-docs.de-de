@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b1b8680343f233c35b704f3805b06ea9dc47c12
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139786"
 ---
 # <a name="mssubscriptionagents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSsubscription_agents** -Tabelle wird vom Verteilungs-Agent und Triggern aktualisierbarer Abonnements verwendet, um Abonnementeigenschaften nachzuverfolgen. Diese Tabelle wird in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Die ID der Zeile.|  
 |**publisher**|**sysname**|Der Name des Verlegers.|  
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungsdatenbank.|  
-|**Veröffentlichung**|**sysname**|Der Name der Veröffentlichung.|  
+|**publication**|**sysname**|Der Name der Veröffentlichung.|  
 |**subscription_type**|**int**|Der Abonnementtyp:<br /><br /> 0 = Push.<br /><br /> 1 = Pullabonnement.<br /><br /> 2 = Anonymes Pullabonnement.|  
 |**queue_id**|**sysname**|Die ID des dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Warteschlangen auf dem Verleger. *Queue_id* nastaven NA hodnotu **SQL** für SQL-basierte verzögerte Update.|  
 |**update_mode**|**tinyint**|Typ des Aktualisierens:<br /><br /> **0** = schreibgeschützt.<br /><br /> **1** = sofortiges Update.<br /><br /> **2** = verzögertes Update über Message Queuing.<br /><br /> **3** = sofortiges Aktualisieren mit verzögertem Aktualisieren mithilfe von Message Queuing.<br /><br /> **4** = verzögertes Update über eine SQL Server-Warteschlange.<br /><br /> **5** = sofortiges Aktualisieren mit Failover Update über eine Warteschlange mithilfe von SQL Server-Warteschlange.|  
@@ -44,7 +43,7 @@ ms.locfileid: "52808502"
 |**login_time**|**datetime**|Das Datum und die Uhrzeit der Verbindung des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde.|  
 |**allow_subscription_copy**|**bit**|Gibt an, ob die Abonnementdatenbank kopiert werden darf oder nicht.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**attach_version**|**'binary(16)'**|Der eindeutige Bezeichner, der die Version eines angefügten Abonnements darstellt.|  
+|**attach_version**|**binary(16)**|Der eindeutige Bezeichner, der die Version eines angefügten Abonnements darstellt.|  
 |**last_sync_status**|**int**|Der letzte Ausführungsstatus des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde. Der Status kann Folgendes sein:<br /><br /> **1** = gestartet.<br /><br /> **2** = war erfolgreich.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = wiederholen.<br /><br /> **6** = Fehler.|  
 |**last_sync_summary**|**sysname**|Die letzte Meldung des Verteilungs-Agents, der derzeit ausgeführt wird oder gerade ausgeführt wurde. Der Status kann Folgendes sein:<br /><br /> **Gestartet.**<br /><br /> **War erfolgreich.**<br /><br /> **In Bearbeitung.**<br /><br /> **Im Leerlauf.**<br /><br /> **Versuchen Sie erneut.**<br /><br /> **Ein Fehler auf.**|  
 |**last_sync_time**|**datetime**|Das Datum und Uhrzeit der Erstellung der *Last_sync_summary* und *Last_sync_status* Spalten aktualisiert wurden. Verteilungs-Agents für Pull- oder anonyme Abonnements, die als Aufträge des SQL Server-Agent-Diensts ausgeführt werden, aktualisieren diese Spalten nicht. Die Verlaufsinformationen werden in diesem Fall stattdessen in der Auftragsverlaufstabelle protokolliert.|  

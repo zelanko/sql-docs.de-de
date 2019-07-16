@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024753"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Find Databases Wizard suchen (Option Speicherorte) (AccessToSQL)
 Geben Sie auf der Seite Standorte auswählen des Assistenten für Datenbanken finden Sie die Suchparameter für die Suche nach den Zugriff auf Datenbanken fest.  

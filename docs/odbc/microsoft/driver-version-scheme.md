@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a155f5d76e8a250c64d3d59e160fbb5863414f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071847"
 ---
 # <a name="driver-version-scheme"></a>Treiberversionsschema
 > [!IMPORTANT]  
@@ -32,9 +31,9 @@ ms.locfileid: "63128047"
 |2.0|2.73.7269|Visual Studio 97 und MDAC 1,5 a|  
 |2.0 aktualisiert|2.73.7283.01|IIS 4.0|  
 |2.0 aktualisiert|2.73.7283.03|MDAC 1.5b und 1.5-c|  
-|2.0 aktualisiert|2.73.7356|ODBC 3.5 SDK|  
+|2.0 aktualisiert|2.73.7356|ODBC 3.5-SDK|  
 |2.5|2.573.2927|MDAC 2.0 und Visual Studio 6.0|  
-|2.5 aktualisiert|2.573.3513|SQL Server 7.0<br /><br /> SQL Server 6.5 SP5|  
+|2.5 aktualisiert|2.573.3513|SQLServer 7.0<br /><br /> SQL Server 6.5 SP5|  
   
  Build 2.00.6235 (Version 1) war die erste Version von Microsoft ODBC-Treiber für Oracle. Nach der Veröffentlichung der ersten Version wurde eine neue Namenskonvention übernommen.  
   

@@ -2,19 +2,18 @@
 title: Neuerungen in Analytics Platform System - ein horizontaler Datawarehouse
 description: Neuigkeiten in Microsoft Analytics Platform System, die beim horizontalen hochskalieren auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959806"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neuerungen in Analytics Platform System, das ein horizontales MPP Datawarehouse
 Finden Sie unter Neues in den neuesten Appliance Updates für Microsoft Analytics Platform System (APS). APS ist es sich um eine horizontale Skalierung auf lokale Anwendung, die MPP SQL Server Parallel Data Warehouse hostet. 
@@ -115,7 +114,7 @@ Mithilfe von Katalogobjekten für Metadaten-Aufrufe anstelle von SMO verfügt ü
 ### <a name="bug-fixes"></a>Behebung von Programmfehlern
 Wir haben auf SQL Server 2016 SP2 CU2 mit APS CU7.1 aktualisiert. Das Upgrade behebt einige Probleme, die unten beschrieben.
 
-| Titel | Description |
+| Titel | Beschreibung |
 |:---|:---|
 | **Potenzielle Tuple Mover Deadlocks** |Das Upgrade behebt eine lange bestehendes Möglichkeit eines Deadlocks in einem verteilten Transaktion und Tuple Mover-Hintergrundthread. Nach der Installation CU7.1 können Kunden, die TF634 zum Beenden der tupelverschiebungsvorgang als SQL Server-Startparameter oder das globale Ablaufverfolgungsflag verwendet es deinstallieren. | 
 | **Bestimmte-Lag/Lead-Abfrage ein Fehler auftritt** |Bestimmte Abfragen in CCI-Tabellen mit geschachtelten-Lag/Lead-Funktionen, die Fehler würden wurde jetzt behoben, das Upgrade. | 
@@ -161,7 +160,7 @@ APS-AU6 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus�
 
 - [SQL-Sortierungen auf Spaltenebene][] werden jetzt unterstützt, zusätzlich zu Windows-Sortierungen.
 - [Nicht gruppierte Indizes für gruppierte columnstore-Indizes][] Verbessern der Leistung von Abfragen, die in den gruppierten columnstore-Index nach bestimmten Werten suchen. 
-- [SELECT...INTO][] 
+- [AUSWÄHLEN... IN][] 
 - [sp_spaceused()][] zeigt, wie viel Speicherplatz verwendet oder in einer Tabelle oder Datenbank reserviert.
 - [Breite Tabellen][] Unterstützung entspricht dem SQL Server 2016. Der vorherige Grenzwert von 32 KB für die Zeilengröße ist nicht mehr vorhanden. 
 
@@ -188,7 +187,7 @@ APS-AU6 unterstützt diese Verbesserungen der T-SQL-Kompatibilität.  Diese zus�
 **Zusätzliche Funktionen**
 
 - [NEWID()][]
-- [RAND()][]
+- [ZUFALLSZAHL)][]
 
 ### <a name="polybasehadoop-enhancements"></a>PolyBase/Hadoop-Verbesserungen
 
@@ -233,7 +232,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[AUSWÄHLEN... IN]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Breite Tabellen]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
@@ -249,7 +248,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
 [HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
 [NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND()]:/sql/t-sql/functions/rand-transact-sql
+[ZUFALLSZAHL)]:/sql/t-sql/functions/rand-transact-sql
 
 
   

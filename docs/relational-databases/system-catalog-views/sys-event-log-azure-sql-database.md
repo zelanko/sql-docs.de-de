@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: afef7b79c10b3d7f72d69dbe9bfca8721f6d13ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061377"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 
@@ -39,15 +38,15 @@ ms.locfileid: "56041531"
   
  Die `sys.event_log`-Sicht enthält die folgenden Spalten.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Der Name der Datenbank. Wenn die Verbindung nicht hergestellt werden kann und der Benutzer keinen Datenbanknamen angegeben hat, ist diese Spalte leer.|  
 |**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Für aggregierte Ereignisse ist die Zeit immer ein Vielfaches von 5 Minuten. Zum Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|UTC-Datum und -Zeit des Endes des Aggregationsintervalls. Für aggregierte Ereignisse ist **End_time** liegt immer genau 5 Minuten später als die entsprechende **Start_time** in derselben Zeile. Für Ereignisse, die nicht aggregiert werden, **Start_time** und **End_time** gleich der tatsächlichen UTC-Datum und Uhrzeit des Ereignisses.|  
-|**event_category**|**nvarchar(64)**|Die Komponente auf hoher Ebene, die dieses Ereignis generiert hat.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
-|**event_type**|**nvarchar(64)**|Der Typ des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
+|**event_category**|**Nvarchar(64)**|Die Komponente auf hoher Ebene, die dieses Ereignis generiert hat.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
+|**event_type**|**Nvarchar(64)**|Der Typ des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
 |**event_subtype**|**int**|Der Untertyp des eintretenden Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
-|**event_subtype_desc**|**nvarchar(64)**|Die Beschreibung des Ereignisuntertyps.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
+|**event_subtype_desc**|**Nvarchar(64)**|Die Beschreibung des Ereignisuntertyps.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
 |**severity**|**int**|Der Schweregrad des Fehlers. Dabei sind folgende Werte möglich:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
 |**event_count**|**int**|Die Anzahl der Versuche, die dieses Ereignis aufgetreten ist für die angegebene Datenbank innerhalb des angegebenen Zeitintervalls (**Start_time** und **End_time**).|  
 |**description**|**nvarchar(max)**|Detaillierte Beschreibung des Ereignisses.<br /><br /> Finden Sie unter [Ereignistypen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) eine Liste von möglichen Werten.|  
@@ -77,13 +76,13 @@ ms.locfileid: "56041531"
 |**connectivity**|**connection_failed**|9|**reconfiguration**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Verbindungsfehler, da die Datenbank zu diesem Zeitpunkt eine Neukonfiguration durchlaufen hat.|  
 |**connectivity**|**connection_terminated**|0|**idle_connection_timeout**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Verbindung ist länger im Leerlauf, als der vom System definierte Schwellenwert angibt.|  
 |**connectivity**|**connection_terminated**|1|**reconfiguration**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund einer Neukonfiguration der Datenbank beendet.|  
-|**connectivity**|**throttling**|*\<Ursachencode: >*|**reason_code**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Anforderung wird gedrosselt.  Ursachencode für Drosselung:  *\<Ursachencode >*. Weitere Informationen finden Sie unter [Moduleinschränkung](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**connectivity**|**throttling**|*\<Ursachencode: >*|**reason_code**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Anforderung wird gedrosselt.  Ursachencode für Drosselung:  *\<Ursachencode >* . Weitere Informationen finden Sie unter [Moduleinschränkung](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wird aufgrund einer Transaktion mit langer Laufzeit beendet. Verkürzen Sie die Transaktion. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde beendet, da zu viele Sperren abgerufen wurden. Reduzieren Sie die Anzahl der in einer einzelnen Transaktion gelesenen oder geänderten Zeilen. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger TEMPDB-Auslastung beendet. Ändern Sie die Abfrage, um die Verwendung des temporären Tabellenbereichs zu verringern. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger Verwendung des Speicherplatzes für das Transaktionsprotokoll beendet. Reduzieren Sie die Anzahl der in einer einzelnen Transaktion geänderten Zeilen. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Hinweis: Gilt nur für Azure SQL-Datenbank V11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger Speicherauslastung beendet. Ändern Sie die Abfrage, damit weniger Zeilen verarbeitet werden. Weitere Informationen finden Sie unter [Ressourceneinschränkungen](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**engine**|**deadlock**|0|**deadlock**|2|Deadlock ist aufgetreten.|  
+|**Engine**|**Deadlock**|0|**Deadlock**|2|Deadlock ist aufgetreten.|  
   
 ## <a name="permissions"></a>Berechtigungen
 

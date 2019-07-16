@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 442212b30f220960f86481f0638c6c12c17da270
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62504078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028714"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Projekteinstellungen (Migration) (SybaseToSQL)
 Der Seite für die Migration von der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA Daten aus Sybase Adaptive Server Enterprise (ASE) migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,12 +49,12 @@ Im Bereich für die Migration steht in der **Projekteinstellungen** und **Projek
 |**Data Migration-Timeout**|Gibt das Timeout verwendet wird, während der Datenmigration<br /><br />**Im Modus Standard**:  15<br /><br />**Vollständige**:  15<br /><br />**Vollständiger Modus**:  15|  
 |**Erweiterte Daten Migrationsoptionen**|Zeigt zusätzliche Daten Migrationsoptionen für jede Tabelle in separate detailregisterkarte.<br /><br />**Im Modus Standard**:  Ausblenden<br /><br />**Vollständige**:  Ausblenden<br /><br />**Vollständiger Modus**:  Ausblenden|  
 |**Trigger auslösen**|Gibt an, ob SSMA einfügen Trigger ausgelöst werden soll, wenn sie Daten in SQL Server-Tabellen hinzufügt.<br /><br />**Im Modus Standard**:  False<br /><br />**Vollständige**:  False<br /><br />**Vollständiger Modus**:  False|  
-|**Identität beibehalten**|Gibt an, ob SSMA Sybase-Identity-Werte beibehält, wenn Daten mit SQL Server hinzugefügt. Der Wert "false" bewirkt, dass Identitätswerte vom Ziel zugewiesen werden soll.<br /><br />**Im Modus Standard**:  Wahr<br /><br />**Vollständige**:  Wahr<br /><br />**Vollständiger Modus**:  Wahr|  
-|**NULL-Werte beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  Wahr<br /><br />**Vollständige**:  Wahr<br /><br />**Vollständiger Modus**:  Wahr|  
+|**Identität beibehalten**|Gibt an, ob SSMA Sybase-Identity-Werte beibehält, wenn Daten mit SQL Server hinzugefügt. Der Wert "false" bewirkt, dass Identitätswerte vom Ziel zugewiesen werden soll.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
+|**NULL-Werte beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
 |**On Error**|Die Datenmigration beendet, wenn ein Fehler auftritt. Es gibt drei Optionen:<br /><br />**Beenden Sie Migration:** Daten-Migrationsvorgang beendet<br /><br />**Gehen Sie zur nächsten Tabelle:** Beendet die Datenmigration für die aktuelle Tabelle und geht zur nächsten<br /><br />**Fahren Sie mit dem nächsten Batch fort:** Migration von Daten zu den aktuellen Batch beendet und geht zur nächsten<br /><br />**Im Modus Standard**: Fahren Sie mit dem nächsten Batch fort<br /><br />**Vollständige**: Fahren Sie mit dem nächsten Batch fort<br /><br />**Vollständiger Modus**: Fahren Sie mit dem nächsten Batch fort|  
 |**Round Bruchteil von Zahlen**|Gibt an, ob kürzen die Sekundenbruchteile von decimal- und numeric-Daten während der Migration zu Integer-Typen oder Fehlermeldung angezeigt, wenn Teil mit Bruchzahlen nicht trivialen ist<br /><br />**Im Modus Standard**:  Nein<br /><br />**Vollständige**:  Nein<br /><br />**Vollständiger Modus**:  Nein|  
 |**Sybase-Unicode-Endian**|Gibt den endian Typ für die Sybase-Unicode-Zeichenfolgen. Die folgenden Optionen können für diese Einstellung festgelegt werden:<br /><br />Little-Endian-<br /><br />Big-endian<br /><br />**Im Modus Standard**:  Little-Endian-<br /><br />**Vollständige**:  Little-Endian-<br /><br />**Vollständiger Modus**:  Little-Endian-|  
-|**Tabellensperre**|Gibt an, ob es sich bei SSMA Tabellen sperrt, wenn sie Daten in Tabellen während der Datenmigration hinzufügt. Ruft eine Massenaktualisierungssperre für die Dauer des Massenkopiervorgangs ab. Wenn der Wert "false" ist, wird eine Sperre auf Zeilenebene festgelegt.<br /><br />**Im Modus Standard**:  Wahr<br /><br />**Vollständige**:  Wahr<br /><br />**Vollständiger Modus**:  Wahr|  
+|**Tabellensperre**|Gibt an, ob es sich bei SSMA Tabellen sperrt, wenn sie Daten in Tabellen während der Datenmigration hinzufügt. Ruft eine Massenaktualisierungssperre für die Dauer des Massenkopiervorgangs ab. Wenn der Wert "false" ist, wird eine Sperre auf Zeilenebene festgelegt.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
 |**Verwenden von Cursorn**|Die Daten werden abgerufen, aus der Quelldatenbank Cursor verwenden, wenn diese Option festgelegt ist.<br /><br />**Im Modus Standard**:  False<br /><br />**Vollständige**:  False<br /><br />**Vollständiger Modus**:  False|  
   
 ## <a name="parallel-data-migration"></a>Parallele Datenmigration  

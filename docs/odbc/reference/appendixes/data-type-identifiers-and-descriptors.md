@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1d8f0a79f9bcd08fc74bc9d5e7fd52da4a2709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019047"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Datentypbezeichner und Deskriptoren
 Die Datentypen aufgelistet, der [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md) und [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) Abschnitten weiter oben in diesem Anhang werden "präzise"-Datentypen: Jeder Bezeichner verweist auf einen single-Datentyp. Es ist zwischen den Bezeichner und den Datentyp aus. Deskriptoren, jedoch implementieren das Automatisierungsmodell nicht in allen Fällen einen einzelnen Wert verwenden, um die Identifizierung von Datentypen. In einigen Fällen verwenden sie einen Datentyp für die "verbose" und ein Untercode Typ. Für alle Datentypen mit Ausnahme von "DateTime" "und" Interval-Datentypen entspricht der ausführlichen Typbezeichner der präzise Typ-ID, und der Wert in SQL_DESC_DATETIME_INTERVAL_CODE gleich 0 ist. Für Datetime "und" Interval-Datentypen jedoch ein ausführlichen Typ (SQL_DATETIME oder SQL_INTERVAL) befindet sich in SQL_DESC_TYPE, ein präziser in SQL_DESC_CONCISE_TYPE gespeichert ist und ein Untercode für jeden präzise in SQL_DESC_DATETIME_INTERVAL_CODE gespeichert. Eines dieser Felder wirkt sich auf die anderen. Weitere Informationen zu diesen Feldern finden Sie unter den [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) funktionsbeschreibung.  

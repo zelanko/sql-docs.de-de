@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94dc9ca5d83530db97607bd21e9fee4a2dc3dbf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cce3b4f08fcb55530ffd7abf6da3011c325478f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055379"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine Zeile für jede Benutzertabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |\<geerbte Spalten >||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|lob_data_space_id|**int**|Ein Wert ungleich 0 (null) ist die ID des Datenbereichs (Dateigruppe oder Partitionsschema), der die LOB-Binärdaten (Large Object) für diese Tabelle enthält. Beispiele für LOB-Datentypen **'varbinary(max)'**, **varchar(max)**, **Geography**, oder **Xml**.<br /><br /> 0 = Die Tabelle enthält keine LOB-Daten.|  
+|lob_data_space_id|**int**|Ein Wert ungleich 0 (null) ist die ID des Datenbereichs (Dateigruppe oder Partitionsschema), der die LOB-Binärdaten (Large Object) für diese Tabelle enthält. Beispiele für LOB-Datentypen **'varbinary(max)'** , **varchar(max)** , **Geography**, oder **Xml**.<br /><br /> 0 = Die Tabelle enthält keine LOB-Daten.|  
 |filestream_data_space_id|**int**|Die ID des Datenbereichs für eine FILESTREAM-Dateigruppe oder ein Partitionsschema, das aus FILESTREAM-Dateigruppen besteht.<br /><br /> Führen Sie die Abfrage, um den Namen einer FILESTREAM-Dateigruppe zu melden, `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`.<br /><br /> sys.tables kann zu den folgenden Sichten über filestream_data_space_id = data_space_id verknüpft werden.<br /><br /> -"Sys.FileGroups"<br /><br /> -sys.partition_schemes<br /><br /> -sys.indexes<br /><br /> -Sys. allocation_units<br /><br /> -Sys. fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -Sys. destination_data_spaces<br /><br /> -Sys. master_files<br /><br /> -Sys. database_files<br /><br /> -Backupfilegroup (Join über Filegroup_id)|  
 |max_column_id_used|**int**|Höchste Spalten-ID, die von dieser Tabelle je verwendet wurde|  
 |lock_on_bulk_load|**bit**|Die Tabelle wird bei Massenladevorgängen gesperrt. Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
@@ -50,7 +49,7 @@ ms.locfileid: "47618018"
 |large_value_types_out_of_row|**bit**|1 = Umfangreiche Werttypen werden außerhalb der Zeile gespeichert. Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |is_tracked_by_cdc|**bit**|1 = Tabelle wird für Change Data Capture aktiviert. Weitere Informationen finden Sie unter [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
 |lock_escalation|**tinyint**|Der Wert der LOCK_ESCALATION-Option für die Tabelle:<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
-|lock_escalation_desc|**nvarchar(60)**|Eine Textbeschreibung der lock_escalation-Option für die Tabelle. Mögliche Werte sind TABLE, AUTO und DISABLE.|  
+|lock_escalation_desc|**nvarchar(60)**|Eine Textbeschreibung der lock_escalation-Option für die Tabelle. Dabei sind folgende Werte möglich: TABLE, AUTO und DISABLE.|  
 |is_filetable|**bit**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = Tabelle ist eine FileTable.<br /><br /> Weitere Informationen zu FileTables finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).|  
 |durability|**tinyint**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Folgende Werte sind möglich:<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 0 ist der Standardwert.|  
 |durability_desc|**nvarchar(60)**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Folgende Werte sind möglich:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> Der Wert von SCHEMA_AND_DATA gibt an, dass die Tabelle eine dauerhafte speicherinterne Tabelle ist. SCHEMA_AND_DATA ist der Standardwert für Speicheroptimierte Tabellen. Der Wert von SCHEMA_ONLY gibt an, dass die Tabellendaten nicht nach dem Neustart der Datenbank mit speicheroptimierten Objekten beibehalten werden.|  
@@ -61,7 +60,7 @@ ms.locfileid: "47618018"
 |is_remote_data_archive_enabled|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Gibt an, ob die Tabelle für Stretch aktiviert ist.<br /><br /> 0 = die Tabelle kann nicht für die Stretch-aktivierten.<br /><br /> 1 = die Tabelle ist Stretch-aktivierten.<br /><br /> Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |is_external|**bit**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] über [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], und [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)].<br /><br /> Gibt an, dass die Tabelle eine externe Tabelle ist.<br /><br /> 0 = die Tabelle ist keine externe Tabelle.<br /><br /> 1 = die Tabelle ist eine externe Tabelle.| 
 |history_retention_period|**int**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Der numerische Wert, der die Beibehaltungsdauer von temporaler Verlaufsdaten in Einheiten, die mit History_retention_period_unit angegeben darstellt. |  
-|history_retention_period_unit|**int**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Der numerische Wert, der Typ der temporalen Einheit für die verlaufsbeibehaltungsdauer darstellt. <br /><br />-1: UNENDLICH <br /><br />3: TAGE <br /><br />4: WOCHE <br /><br />5: MONAT <br /><br />6: JAHR |  
+|history_retention_period_unit|**int**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Der numerische Wert, der Typ der temporalen Einheit für die verlaufsbeibehaltungsdauer darstellt. <br /><br />-1: UNENDLICH <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6: YEAR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**Gilt für**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Die textbeschreibung des Typs der temporalen Einheit für die verlaufsbeibehaltungsdauer. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**Gilt für**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = Dies ist eine Tabelle der Graph-Knoten. <br /><br />0 = Dies ist dabei nicht um eine Knotentabelle Graph. |  
 |is_edge|**bit**|**Gilt für**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] und [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = Dies ist eine Graph-Edge-Tabelle. <br /><br />0 = Dies ist dabei nicht um eine Graph-Edge-Tabelle. |  

@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580749"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860708"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -44,7 +44,7 @@ In der folgenden Tabelle sind Details zu allen Features der intelligenten Abfrag
 | [Verschachtelte Ausführung](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Verwendet die tatsächliche Kardinalität der Tabellenwertfunktion mit mehreren Anweisungen, die bei der ersten Kompilierung aufgetreten ist, anstatt einer festgelegten Schätzung.|
 | [Feedback zur Speicherzuweisung (Batchmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Wenn es für eine Abfrage im Batchmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des zugewiesenen Speichers belegt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
 | [Feedback zur Speicherzuweisung (Zeilenmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Wenn es für eine Abfrage im Zeilenmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des zugewiesenen Speichers belegt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
-| [Inlining benutzerdefinierter Skalarfunktionen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Nein | Ja,ab SQL Server 2019 CTP 2.1 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Benutzerdefinierte Skalarfunktionen werden in äquivalente relationale Ausdrücke transformiert, die per Inlining durch die aufrufende Abfrage ersetzt werden, was oft zu erheblichen Leistungssteigerungen führt.|
+| [Inlining benutzerdefinierter Skalarfunktionen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Nein | Ja,ab SQL Server 2019 CTP 2.1 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Benutzerdefinierte Skalarfunktionen werden in äquivalente relationale Ausdrücke transformiert, für die „Inlining“ in die aufrufende Abfrage ausgeführt wird, was häufig zu erheblichen Leistungssteigerungen führt.|
 | [Verzögerte Kompilierung von Tabellenvariablen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Verwendet die tatsächliche Kardinalität der Tabellenvariable, die bei der ersten Kompilierung aufgetreten ist, anstatt einer festgelegten Schätzung.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus

@@ -1,6 +1,6 @@
 ---
-title: Häufige Fehler und deren Lösungen für Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln im Azure Key Vault (AKV) | Microsoft-Dokumentation
-description: Problembehandlung für Transparent Data Encryption (TDE) mit Azure Key Vault-Konfiguration
+title: Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault | Microsoft-Dokumentation
+description: Problembehandlung von Transparent Data Encryption (TDE) einer mit Azure Key Vault-Konfiguration.
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
@@ -14,114 +14,159 @@ ms.topic: conceptual
 ms.date: 04/26/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1366d0a20ed39b466d1a2f6cb3e84f0f30e17f9f
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.openlocfilehash: f963e15d674115029fce78b98ba280fe75da2cd1
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66718087"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716668"
 ---
-# <a name="common-errors-and-resolutions-with-transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv"></a>Häufige Fehler und deren Lösungen für Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln im Azure Key Vault (AKV)
+# <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Häufige Fehler bei Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-In diesem Thema finden Sie Informationen zu den folgenden Punkten:  
-  
-- Anforderungen  
-- Identifizieren und Beheben der häufigsten Fehler
+Dieser Artikel beschreibt die Anforderungen für die Verwendung von Transparent Data Encryption (TDE) mit vom Kunden verwalteten Schlüsseln in Azure Key Vault und zeigt, wie häufige Fehler identifiziert und behoben werden können.
 
 ## <a name="requirements"></a>Anforderungen
-Lesen Sie die folgenden Anforderungen, bevor Sie mit der Problembehandlung für [TDE mit einer vom Kunden verwalteten TDE-Schutzvorrichtung mit AKV-Konfiguration](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault) beginnen:
-- Der logische SQL Server und der Schlüsseltresor müssen sich in derselben Region befinden.
-- Die von Azure Active Directory bereitgestellte Identität des logischen SQL Servers (APPID im Azure Key Vault) ist auf einen Mandanten im ursprünglichen Abonnement beschränkt.  Wird der Server in ein anderes Abonnement verschoben, muss die Serveridentität (APPID) neu erstellt werden.
-- Der Schlüsseltresor muss einsatzbereit sein. Informationen zum Überprüfen des Key Vault-Status finden Sie unter [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview) und zum Registrieren für Benachrichtigungen unter [Aktionsgruppen](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
-- Im georedundanten Notfallwiederherstellungsszenario müssen beide Schlüsseltresore dasselbe Schlüsselmaterial für ein Failover enthalten.
-- Der logische Server muss über eine Azure Active Directory-Identität (APPID) verfügen, um sich beim Schlüsseltresor authentifizieren zu können.
-- Die APPID muss auf den Schlüsseltresor zugreifen und Berechtigungen für die als TDE-Schutzvorrichtung ausgewählten Schlüssel packen, entpacken und abrufen können.
 
-Die meisten Probleme, die bei der Verwendung von TDE mit AKV auftreten, sind die Folge eines der folgenden Konfigurationsfehler:
+Um die Problembehandlung von TDE mit einem vom Kunden verwalteten TDE-Schutz in Key Vault durchzuführen, müssen die folgenden Anforderungen erfüllt sein:
 
-### <a name="key-vault-unavailable-or-doesnt-exist"></a>Der Schlüsseltresor ist nicht verfügbar oder nicht vorhanden
+- Die logische SQL Server-Instanz und der Schlüsseltresor müssen sich in der gleichen Region befinden.
+- Die Identität der logischen SQL Server-Instanz, die von Azure Active Directory (Azure AD) bereitgestellt wird (die AppId in Azure Key Vault), muss ein Mandant im ursprünglichen Abonnement sein. Wenn der Server in ein anderes Abonnement verschoben wurde, in dem er nicht erstellt wurde, muss die Serveridentität (die AppId) erneut erstellt werden.
+- Der Schlüsseltresor muss aktiv sein und ausgeführt werden. Weitere Informationen zum Überprüfen des Status des Schlüsseltresors finden Sie unter [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview). Um sich für Benachrichtigungen zu registrieren, lesen Sie mehr über [ Aktionsgruppen](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
+- Im georedundanten Notfallwiederherstellungsszenario müssen beide Schlüsseltresore dasselbe Schlüsselmaterial enthalten, damit ein Failover funktioniert.
+- Der logische Server muss über eine Azure AD-Identität (eine AppId) verfügen, um die Authentifizierung beim Schlüsseltresor auszuführen.
+- Die AppId muss Zugriff auf den Schlüsseltresor besitzen, und sie muss über die Berechtigungen Get, Wrap und Unwrap für die Schlüssel verfügen, die als TDE-Schutz ausgewählt wurden.
+
+Weitere Informationen finden Sie unter [Richtlinien zum Konfigurieren von TDE mit Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+
+## <a name="common-misconfigurations"></a>Häufige Konfigurationsfehler
+
+Die meisten Probleme, die auftreten, wenn Sie TDE mit Key Vault verwenden, werden durch einen der folgenden Konfigurationsfehler verursacht:
+
+### <a name="the-key-vault-is-unavailable-or-doesnt-exist"></a>Der Schlüsseltresor ist nicht verfügbar oder nicht vorhanden.
+
 - Der Schlüsseltresor wurde versehentlich gelöscht.
-- Die Firewall wurde für den Azure Key Vault konfiguriert, ohne den Zugriff auf Microsoft-Dienste zuzulassen.
+- Die Firewall wurde für Azure Key Vault konfiguriert, ohne den Zugriff auf Microsoft-Dienste zuzulassen.
 
-### <a name="no-permissions-to-access-the-key-vault-or-key-doesnt-exist"></a>Die Zugriffsberechtigungen für den Schlüsseltresor oder der Schlüssel sind nicht vorhanden
+### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>Es liegen keine Berechtigungen für den Zugriff auf den Schlüsseltresor vor, oder der Schlüssel ist nicht vorhanden.
+
 - Der Schlüssel wurde versehentlich gelöscht.
-- Die APPID von SQL wurde versehentlich gelöscht.
-- SQL wurde in ein anderes Abonnement verschoben, wodurch eine neue APPID erforderlich ist.
-- Die der APPID gewährten Berechtigungen für Schlüssel sind nicht ausreichend (Packen, Entpacken, Abrufen).
-- Die Berechtigungen für die APPID von SQL wurden widerrufen.
+- Der AppId der logischen SQL Server-Instanz wurde versehentlich gelöscht.
+- Die logische SQL Server-Instanz wurde in ein anderes Abonnement verschoben. Es muss eine neue AppId erstellt werden, wenn der logische Server in ein anderes Abonnement verschoben wird.
+- Die der AppId für die Schlüssel erteilten Berechtigungen sind nicht ausreichend (sie beinhalten nicht Get, Wrap und Unwrap).
+- Die Berechtigungen für die AppId der logischen SQL Server-Instanz wurden widerrufen.
 
+## <a name="identify-and-resolve-common-errors"></a>Identifizieren und Beheben von häufigen Fehlern
 
-Im nächsten Abschnitt werden die Schritte zur Problembehandlung für die häufigsten Fehler aufgelistet.
+Im diesem Abschnitt werden die Schritte zur Problembehandlung für die häufigsten Fehler aufgelistet.
 
+### <a name="missing-server-identity"></a>Serveridentität fehlt
 
-## <a name="how-to-identify-and-resolve-the-most-common-errors"></a>Identifizieren und Beheben der häufigsten Fehler
+**Fehlermeldung**
 
-## <a name="missing-server-identity"></a>Serveridentität fehlt
-Fehlermeldung: „401 AzureKeyVaultNoServerIdentity: Die Serveridentität ist auf dem Server nicht korrekt konfiguriert. Wenden Sie sich an den Support.“
+_401 AzureKeyVaultNoServerIdentity: Die Serveridentität ist auf dem Server nicht korrekt konfiguriert. Wenden Sie sich an den Support._
 
-Erkennung: Verwenden Sie den folgenden Befehl, um sicherzustellen, dass dem logischen SQL Server eine Identität zugewiesen wurde:
+**Erkennung**
 
-- [Get-AzureRMSqlServer in Azure PowerShell](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
-- [az-sql-server-show in der Azure CLI](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+Verwenden Sie das folgende Cmdlet oder den folgenden Befehl, um sicherzustellen, dass der logischen SQL Server-Instanz eine Identität zugewiesen wurde:
 
-Abhilfe: Konfigurieren Sie eine Azure Active Directory-Identität (APPID) für den logischen SQL Server.
+- Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-Mit PowerShell: Verwenden Sie den Befehl „Set-AzureRmSqlServer“ mit der Option [- AssignIdentity](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0). 
+- Azure CLI: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
-Über die CLI: Verwenden Sie den Befehl „az sql server update“ mit der Option [--assign_identity](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update). 
+**Abhilfe**
 
-Navigieren Sie im Azure-Portal zum Schlüsseltresor und anschließend auf die Zugriffsrichtlinien:  
- - Verwenden Sie die Schaltfläche „Neues Element hinzufügen“, um die im vorherigen Schritt erstellte APPID für den Server hinzuzufügen. 
- - Weisen Sie die folgenden Schlüsselberechtigungen zu: „Get (Abrufen)“, „Wrap (Packen)“ und „Unwrap (Entpacken)“. 
+Verwenden Sie das folgende Cmdlet oder den folgenden Befehl, um eine Azure AD-Identität (eine AppId) für die logische SQL Server-Instanz zu konfigurieren:
 
-[Weitere Informationen](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)
+- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) mit der Option `-AssignIdentity`.
+
+- Azure CLI: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) mit der Option `--assign_identity`.
+
+Navigieren Sie im Azure-Portal zum Schlüsseltresor und anschließend zu **Zugriffsrichtlinien**. Führen Sie die folgenden Schritte aus: 
+
+ 1. Verwenden Sie die Schaltfläche **Neues Element hinzufügen**, um die im vorherigen Schritt erstellte AppId für den Server hinzuzufügen. 
+ 1. Weisen Sie die folgenden Schlüsselberechtigungen zu: „Get (Abrufen)“, „Wrap (Packen)“ und „Unwrap (Entpacken)“. 
+
+Weitere Informationen finden Sie unter [Zuweisen einer Azure AD-Identität zu einem Server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> Wurde der logische SQL Server nach der TDE-Erstkonfiguration mit AKV in ein neues Abonnement verschoben, muss die AAD-Identität erneut konfiguriert werden, um eine neue APPID zu erstellen.  Die neue APPID muss anschließend dem Schlüsseltresor hinzugefügt werden, und die korrekten Berechtigungen müssen erneut zugewiesen werden. 
+> Wurde die logische SQL Server-Instanz nach der TDE-Erstkonfiguration mit Key Vault in ein neues Abonnement verschoben, wiederholen Sie den Schritt zum Konfigurieren der Azure AD-Identität, um eine neue AppId zu erstellen. Fügen Sie die AppId dann dem Schlüsseltresor hinzu, und weisen Sie dem Schlüssel die richtigen Berechtigungen zu. 
 >
 
-## <a name="missing-key-vault"></a>Schlüsseltresor fehlt
-Fehlermeldung: „503 AzureKeyVaultConnectionFailed: Der Vorgang konnte auf dem Server nicht ausgeführt werden, weil beim Versuch der Verbindungsherstellung mit dem Azure Key Vault Fehler aufgetreten sind.“
+### <a name="missing-key-vault"></a>Schlüsseltresor fehlt
 
-Erkennung: Ermitteln Sie die Schlüssel-URI und den Schlüsseltresor. 
+**Fehlermeldung**
 
-Schritt 1: Verwenden Sie den folgenden Befehl, um die Schlüssel-URI eines bestimmten logischen SQL Servers abzurufen:
+_503 AzureKeyVaultConnectionFailed: Der Vorgang konnte auf dem Server nicht ausgeführt werden, weil beim Versuch der Verbindungsherstellung mit Azure Key Vault Fehler aufgetreten sind._
 
--[get-azurermsqlserverkeyvaultkey in Azure PowerShell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+**Erkennung**
 
--[az-sql-server-tde-key-show in der Azure CLI](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+So ermitteln Sie den Schlüssel-URI und den Schlüsseltresor:
 
-Schritt 2: Verwenden Sie die Schlüssel-URI, um den Schlüsseltresor zu ermitteln.
+1. Verwenden Sie das folgende Cmdlet oder den folgenden Befehl, um den Schlüssel-URI einer bestimmten logischen SQL Server-Instanz abzurufen:
 
-Mit PowerShell: Überprüfen Sie die Eigenschaften von „$MyServerKeyVaultKey“, um die Details zum Schlüsseltresor abzurufen.
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-Über die CLI: Überprüfen Sie den zurückgegebenen Serververschlüsselungsschutz, um die Details zum Schlüsseltresor abzurufen.
+    - Azure CLI: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
-Abhilfe: Vergewissern Sie sich, dass der Schlüsseltresor verfügbar ist.
-- Stellen Sie sicher, dass der Schlüsseltresor verfügbar ist und der logische SQL Server darauf zugreifen kann.
-- Befindet sich der Schlüsseltresor hinter eine Firewall, stellen Sie sicher, dass das Kontrollkästchen aktiviert ist, mit dem Microsoft-Diensten der Zugriff auf den Schlüsseltresor erlaubt wird.
-- Wurde der Schlüsseltresor versehentlich gelöscht, muss die komplette Konfiguration erneut ausgeführt werden.
+1. Verwenden Sie den Schlüssel-URI, um den Schlüsseltresor zu identifizieren.
+
+    - Azure PowerShell: Sie können die Eigenschaften von $MyServerKeyVaultKey untersuchen, um die Details zum Schlüsseltresor abzurufen.
+
+    - Azure CLI: Untersuchen Sie den zurückgegebenen Serververschlüsselungsschutz, um die Details zum Schlüsseltresor abzurufen.
+
+**Abhilfe**
+
+Vergewissern Sie sich, dass der Schlüsseltresor verfügbar ist.
+
+- Stellen Sie sicher, dass der Schlüsseltresor verfügbar ist und die logische SQL Server-Instanz darauf zugreifen kann.
+- Befindet sich der Schlüsseltresor hinter einer Firewall, stellen Sie sicher, dass das Kontrollkästchen aktiviert ist, mit dem Microsoft-Diensten der Zugriff auf den Schlüsseltresor erlaubt wird.
+- Wurde der Schlüsseltresor versehentlich gelöscht, muss die vollständige Konfiguration erneut ausgeführt werden.
 
 
-## <a name="missing-key"></a>Schlüssel fehlt 
-Fehlermeldung: „404 ServerKeyNotFound - The requested server key was not found on the current subscription.“ (404 ServerKeyNotFound: Der angeforderte Serverschlüssel wurde im aktuellen Abonnement nicht gefunden.)
-„409 ServerKeyDoesNotExists - The server key does not exist.“ (409 ServerKeyDoesNotExists: Der Serverschlüssel ist nicht vorhanden.)
+### <a name="missing-key"></a>Schlüssel fehlt
 
-Erkennung: Ermitteln Sie die Schlüssel-URI und den Schlüsseltresor.
-- Ermitteln Sie mithilfe der Cmdlets aus dem Abschnitt „Schlüsseltresor fehlt“ weiter oben die Schlüssel-URI, die dem logischen SQL Server hinzugefügt wurde, um die Liste mit Schlüsseln zurückzugeben.
+**Fehlermeldungen**
 
-Abhilfe: Vergewissern Sie sich, dass die TDE-Schutzvorrichtung in AKV vorhanden ist.
-- Ermitteln Sie den Schlüsseltresor, und suchen Sie ihn im Azure-Portal.
-- Stellen Sie sicher, dass der durch die Schlüssel-URI identifizierte Schlüssel vorhanden ist.
+_404 ServerKeyNotFound: Der angeforderte Serverschlüssel wurde im aktuellen Abonnement nicht gefunden._ 
 
-## <a name="missing-permissions"></a>Berechtigungen fehlen 
-Fehlermeldung: „"401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault. (401 AzureKeyVaultMissingPermissions: Erforderliche Serverberechtigungen für den Azure Key Vault fehlen.)
+_409 ServerKeyDoesNotExists: Der Serverschlüssel ist nicht vorhanden._
 
-Erkennung: Ermitteln Sie die Schlüssel-URI und den Schlüsseltresor.
-- Ermitteln Sie mithilfe der Cmdlets aus dem Abschnitt „Schlüsseltresor fehlt“ weiter oben den Schlüsseltresor, der vom logischen SQL Server verwendet wird.
+**Erkennung**
 
-Abhilfe: Vergewissern Sie sich, dass der logische SQL Server über Berechtigungen für den Schlüsseltresor und über die korrekten Zugriffsberechtigungen für den Schlüssel verfügt.
-- Navigieren Sie im Azure-Portal zum Schlüsseltresor, anschließend auf die Zugriffsrichtlinien, und suchen Sie nach der SQL Server-APPID:  
-  - Fehlt die APPID, fügen Sie sie über die Schaltfläche „Neues Element hinzufügen“ hinzu. 
-  - Ist die APPID vorhanden, vergewissern Sie sich, dass sie über die folgenden Schlüsselberechtigungen verfügt: „Get (Abrufen)“, „Wrap (Packen)“ und „Unwrap (Entpacken)“.
+So ermitteln Sie den Schlüssel-URI und den Schlüsseltresor:
+
+- Verwenden Sie das Cmdlet oder die Befehle unter [Schlüsseltresor fehlt](#missing-key-vault), um den Schlüssel-URI zu identifizieren, der der logischen SQL Server-Instanz hinzugefügt wird. Die Ausführung der Befehle gibt die Liste der Schlüssel zurück.
+
+**Abhilfe**
+
+Bestätigen Sie, dass der TDE-Schutz in Key Vault vorhanden ist:
+
+1. Identifizieren Sie den Schlüsseltresor, und navigieren Sie dann im Azure-Portal zum Schlüsseltresor.
+1. Stellen Sie sicher, dass der durch den Schlüssel-URI identifizierte Schlüssel vorhanden ist.
+
+### <a name="missing-permissions"></a>Berechtigungen fehlen
+
+**Fehlermeldung**
+
+_401 AzureKeyVaultMissingPermissions: Erforderliche Serverberechtigungen für Azure Key Vault fehlen._
+
+**Erkennung**
+
+So identifizieren Sie den Schlüssel-URI und den Schlüsseltresor: 
+
+- Verwenden Sie das Cmdlet oder die Befehle unter [Schlüsseltresor fehlt](#missing-key-vault), um den Schlüsseltresor zu identifizieren, den die logische SQL Server-Instanz verwendet.
+
+**Abhilfe**
+
+Vergewissern Sie sich, dass die logische SQL Server-Instanz über Berechtigungen für den Schlüsseltresor und über die richtigen Zugriffsberechtigungen für den Schlüssel verfügt:
+
+- Navigieren Sie im Azure-Portal zum Schlüsseltresor und dann zu **Zugriffsrichtlinien**. Suchen Sie nach der AppId der logischen SQL Server-Instanz.  
+- Ist die AppId vorhanden, vergewissern Sie sich, dass sie über die folgenden Schlüsselberechtigungen verfügt: „Get (Abrufen)“, „Wrap (Packen)“ und „Unwrap (Entpacken)“.
+- Fehlt die AppId, fügen Sie sie über die Schaltfläche **Neues Element hinzufügen** hinzu. 
+
+## <a name="next-steps"></a>Nächste Schritte
+
+- Lesen Sie die [Richtlinien zum Konfigurieren von TDE mit Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+- Erfahren Sie mehr über [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
+- Frischen Sie Ihre Kenntnisse zum [Zuweisen einer Azure AD-Identität zu einem Server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server) auf.

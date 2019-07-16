@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e134b2870c4506e725f2900b83d1118e42b55d15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22e5f34a6accac3a2bb0d1ecefe7c1d5431cb562
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63219121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949008"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Support: Vollständig  
+ Unterstützung: Vollständig  
   
  ODBC-API-Übereinstimmung: Ebene 1  
   

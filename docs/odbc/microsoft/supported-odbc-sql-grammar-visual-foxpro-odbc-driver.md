@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080055"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Unterstützte ODBC-SQL-Grammatik (Visual FoxPro-ODBC-Treiber)
 Die Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:  
@@ -35,7 +34,7 @@ Die Microsoft Visual FoxPro-ODBC-Treiber unterstützt Folgendes:
   
  Die folgende Tabelle enthält die Elemente, die vom Treiber, nach der Ebene der ODBC-SQL-Grammatik unterstützt wird.  
   
-|Ebene|Elemente|Element|  
+|Ebene|Elements|Element|  
 |-----------|--------------|----------|  
 |Minimum|Datendefinitionssprache (DDL)|CREATE TABLE und DROP TABLE|  
 ||Datenbearbeitungssprache (DML)|AUSWÄHLEN, einfügen, aktualisieren und löschen|  

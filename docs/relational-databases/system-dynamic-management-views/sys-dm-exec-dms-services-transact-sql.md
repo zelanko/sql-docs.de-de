@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b649696a21fac7ba789f5d02ba6929c989c036bb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14abc2b77a042b104e47ff6cc578a7ba64cac44e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097770"
 ---
 # <a name="sysdmexecdmsservices-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen über alle DMS-Dienste, die auf der PolyBase-Computeknoten ausgeführt. Sie enthält eine Zeile für jede Instanz des Diensts.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|Eindeutige numerische Id der DMS-Kern zugeordnet. Der Schlüssel für diese Sicht.|Eindeutige ID auf.|  
 |compute_node_id|**int**|ID des Knotens, auf dem diese DMS-Dienst ausgeführt wird|Finden Sie unter *Compute_node_id* in [dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  

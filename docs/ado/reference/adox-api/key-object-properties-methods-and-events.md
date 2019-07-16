@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0363b31c9effcd66dcef1840a92683baa36ef528
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b6f683685c4d961ccf63cecde71b6f37e7675d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965855"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Key-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -35,10 +34,10 @@ ms.locfileid: "66706561"
  [UpdateRule-Eigenschaft](../../../ado/reference/adox-api/updaterule-property-adox.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

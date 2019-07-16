@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032927"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,14 +43,14 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` Der Name des Triggers und das Schema zu der er, sofern zutreffend, gehört, deren Reihenfolge festgelegt oder geändert wird. [_Triggerschema_**.**] *Triggername* ist **Sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *Triggerschema* kann nicht für DDL- oder Logon-Trigger angegeben werden.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Der Name des Triggers und das Schema zu der er, sofern zutreffend, gehört, deren Reihenfolge festgelegt oder geändert wird. [_Triggerschema_ **.** ] *Triggername* ist **Sysname**. Wenn der Name keinem Trigger entspricht oder wenn der Name dem INSTEAD OF-Trigger entspricht, gibt die Prozedur einen Fehler zurück. *Triggerschema* kann nicht für DDL- oder Logon-Trigger angegeben werden.  
   
 `[ @order = ] 'value'` Ist die Einstellung für die neue Reihenfolge des Triggers. *Wert* ist **varchar(10)** und eine der folgenden Werte sind möglich.  
   
 > [!IMPORTANT]  
 >  Die **erste** und **letzten** Trigger müssen zwei unterschiedliche Trigger sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**First**|Trigger wird zuerst ausgelöst|  
 |**Last**|Trigger wird zuletzt ausgelöst|  
@@ -61,7 +60,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Ein Trigger kann gekennzeichnet werden, als die **erste** oder **letzten** Trigger für einen Anweisungstyp erst nach diesen Trigger als Trigger für diesen Anweisungstyp definiert wurde. Beispielsweise auslösen **TR1** kann festgelegt werden, **erste** Einfügung in Tabelle **T1** Wenn **TR1** als einen INSERT-Trigger definiert ist. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt einen Fehler zurück, wenn **TR1**, die nur als INSERT-Trigger definiert wurde, wird als festgelegt ein **erste**, oder **letzten**,-Trigger für eine UPDATE-Anweisung. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL}  
+ **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL}  
  Wenn *Triggername* ein DDL-Triggers ist **@namespace** gibt an, ob *Triggername* mit Datenbankbereich oder dem Serverbereich erstellt wurde. Wenn *Triggername* ist ein Logon-Trigger muss SERVER angegeben werden. Weitere Informationen zu DDL-Triggerbereich, finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben ist, oder wenn NULL angegeben wird, *Triggername* ein DML-Trigger.  
   
 ||  

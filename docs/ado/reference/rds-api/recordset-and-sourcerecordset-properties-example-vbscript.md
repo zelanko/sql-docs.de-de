@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9cff6233f73cf2e49ff90b7e888d6f85155187b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30b5a463c2180a4cc39ac1a0d2333b8b75d02bab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963588"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset- und SourceRecordse-Eigenschaften – Beispiel (VBScript)
 > [!IMPORTANT]
@@ -129,7 +128,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
+ [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Recordset, SourceRecordset-Eigenschaft (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
 
 

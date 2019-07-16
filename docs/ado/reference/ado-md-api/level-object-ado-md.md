@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949601"
 ---
 # <a name="level-object-ado-md"></a>Level-Objekt (ADO MD)
 Enthält eine Menge von Elementen, von die jede den gleichen Rang innerhalb einer Hierarchie hat.  
@@ -43,11 +42,11 @@ Enthält eine Menge von Elementen, von die jede den gleichen Rang innerhalb eine
   
  Die **Eigenschaften** Auflistung enthält die Eigenschaften vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise verfügbar sind. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Finden Sie unter der Dokumentation für Ihren Anbieter, um eine vollständige Liste der verfügbaren Eigenschaften.  
   
-|Name|Description|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|Description|Eine aussagekräftige Beschreibung der Ebene.|  
+|Beschreibung|Eine aussagekräftige Beschreibung der Ebene.|  
 |DimensionUniqueName|Der eindeutige Name des der [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|Der eindeutige Name der Hierarchie.|  
 |LevelCaption|Eine Bezeichnung oder Beschriftung, die der Ebene zugeordnet werden soll.|  

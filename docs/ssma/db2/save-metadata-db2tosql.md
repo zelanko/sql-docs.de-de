@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d12ff5f349d5b7328af7e47dbfc7724420d6fb15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060098"
 ---
 # <a name="save-metadata-db2tosql"></a>Speichern von Metadaten (DB2ToSQL)
 Die **speichern Metadaten** Dialogfeld fordert Sie zum Laden von Metadaten in der SSMA-Projekt, vor dem Speichern. Mit diesem können Sie eine vollständige Projektdatei verfügen, die Sie offline verwenden und an andere Personen ein, z. B. Mitarbeiter des technischen Supports senden können.  

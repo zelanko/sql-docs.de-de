@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 93384c8152109b01720ae7e861731638316d4966
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6210cfe67b4c360f14fc3e68929a5ac4f5f5d570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962822"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Aktualisieren von Machine learning (R- und Python) Komponenten in SQL Server-Instanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +50,7 @@ Beachten Sie, dass die Bindung nicht mit die neueste Version von R oder Anaconda
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-Komponente |Erste Version | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
+Komponente |Erste Version | [R Server 9.0.1 herunter](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) über R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
@@ -187,7 +186,7 @@ Die folgenden Anweisungen wird erläutert, wie die Dateien für eine Offlineinst
 
 1. Laden Sie die CAB-Dateien herunter. Die folgenden Links sind für die Version 9.3. Wenn Sie frühere Versionen benötigen, weitere Links befinden sich [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Denken Sie daran, dass Python/Anaconda kann nur mit einer SQL Server 2017-Machine Learning Services-Instanz hinzugefügt werden. Vortrainierte Modelle vorhanden für R und Python. die CAB-Datei enthält Modelle, die in den Sprachen, die Sie verwenden.
 
-    | Funktion | Herunterladen |
+    | Feature | Herunterladen |
     |---------|----------|
     | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
@@ -265,7 +264,7 @@ Sie können auch dies mehr Arbeit ist, aber Sie könnten auch vollständig deins
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>Schritt 3: Fügen Sie alle Pakete von Drittanbietern
+### <a name="step-3-add-any-third-party-packages"></a>Schritt 3: Fügen Sie alle Pakete von Drittanbietern
 
 Sie können andere Pakete Open Source- oder von Drittanbietern Ihre paketbibliothek hinzugefügt haben. Da die Bindung umkehren den Speicherort des Standard-paketbibliothek wechselt, müssen Sie die Pakete in der Bibliothek neu installieren, die R- und Python jetzt verwenden. Weitere Informationen finden Sie unter [Pakete standardmäßig](../package-management/default-packages.md), [Installieren neuer R-Pakete](../r/install-additional-r-packages-on-sql-server.md), und [Installieren neuer Python-Pakete](../python/install-additional-python-packages-on-sql-server.md).
 
@@ -289,7 +288,7 @@ Sie können andere Pakete Open Source- oder von Drittanbietern Ihre paketbibliot
 
 MLS Installer und SqlBindR Geben Sie die folgenden Fehlercodes und Meldungen zurück.
 
-|Fehlercode  | MessageBox           | Details               |
+|Fehlercode  | Meldung           | Details               |
 |------------|-------------------|-----------------------|
 |Fehler: 0 binden | OK (Erfolg) | Bindung übergeben, ohne Fehler. |
 |Fehler 1 binden | Ungültige Argumente. | Syntaxfehler. |

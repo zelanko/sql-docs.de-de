@@ -2,19 +2,18 @@
 title: Konfigurieren Sie WSUS - Analytics Platform System | Microsoft-Dokumentation
 description: Diese Anweisungen führen Sie durch die Schritte zur Verwendung der Windows Server Update Services (WSUS)-Konfigurations-Assistent zum Konfigurieren von WSUS für Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961125"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Konfigurieren von Windows Server Update Services (WSUS) in Analytics Platform System
 Diese Anweisungen führen Sie durch die Schritte zur Verwendung der Windows Server Update Services (WSUS)-Konfigurations-Assistent zum Konfigurieren von WSUS für Analytics Platform System. Sie müssen zum Konfigurieren von WSUS, bevor Sie Softwareupdates auf das Gerät anwenden können. WSUS ist bereits auf dem VMM-virtuellen Computer des Geräts installiert.  
@@ -63,7 +62,7 @@ Um WSUS konfigurieren zu können, müssen Sie:
   
     4.  Wenn das erste Mal haben Sie den WSUS-Konfigurationsassistenten ausführen, werden Sie möglicherweise aufgefordert, ein Verzeichnis zum Speichern der Updates konfigurieren. `C:\wsus` ist Sie ein geeigneten Speicherort. Sie können jedoch einen anderen Pfad bereitstellen.  
   
-        ![WSUS path](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
+        ![WSUS-Pfad](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
     5.  Überprüfen Sie die **Vorbemerkungen** Liste von Elementen, die abgeschlossen werden, bevor Sie den Assistenten abzuschließen.  
   
@@ -133,7 +132,7 @@ Um WSUS konfigurieren zu können, müssen Sie:
   
     Wählen Sie **Englisch**, und klicken Sie dann auf **Weiter**.  
   
-    ![Choose languages](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
+    ![Wählen Sie die Sprachen](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
 8.  Wählen Sie die Produkte.  
   

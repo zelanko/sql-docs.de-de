@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bdcb3a3f5106a3a674ba8247b0315cf5461c3881
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 702f7b5ec8ea1fc5eeea7ce95fae84bdcb17418a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62734801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075430"
 ---
-# <a name="global-settings-dialogs-mysqltosql"></a>Global Settings (Dialogs) (MySQLToSQL)
+# <a name="global-settings-dialogs-mysqltosql"></a>Globale Einstellungen (Dialogfelder) (MySQLToSQL))
 Mithilfe der Dialogfelder-Seite des der **globale Einstellungen** Dialogfeld zum Angeben der Standardaktion für Benutzer und die Einstellungen für die Warnung für SSMA.  
   
 Um die Einstellungen des Dialogfelds auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand der linken Seite, und wählen Sie dann **-Dialogfelder**.  

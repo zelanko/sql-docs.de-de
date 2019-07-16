@@ -2,19 +2,18 @@
 title: Überwachen von Lasten für Parallel Data Warehouse | Microsoft-Dokumentation
 description: Überwachen Sie aktive und kürzlich vorgenommene lädt mithilfe der Analytics Platform System (APS)-Verwaltungskonsole oder Parallel Data Warehouse (PDW)-Systemsichten."
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960607"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitor wird in Parallel Data Warehouse geladen.
 Überwachen Sie aktive und kürzlich vorgenommene [Dwloader](dwloader.md) lädt mithilfe der Verwaltungskonsole für Analytics Platform System (APS) oder Parallel Data Warehouse (PDW) [Systemsichten](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
@@ -26,7 +25,7 @@ ms.locfileid: "62639963"
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 Unabhängig von der Methode, die zum Überwachen der Auslastung verwendet wird muss die Anmeldung den Zugriff auf die zugrunde liegenden Datenquellen Berechtigung. 
 
 <!-- MISSING LINKS

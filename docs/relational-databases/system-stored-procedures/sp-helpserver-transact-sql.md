@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997436"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**dist**|Der Verteiler.|  
 |**dpub**|Der Remoteverleger zu diesem Verteiler.|  
 |**Verzögerte schemaüberprüfung**|Lässt die Schemaüberprüfung von Remotetabellen zu Beginn der Abfrage aus.|  
-|**pub**|Publisher.|  
+|**pub**|Herausgeber.|  
 |**rpc**|Aktiviert RPC (Remote Procedure Call, Remoteprozeduraufruf) von dem angegebenen Server.|  
 |**RPC-Ausgabe**|Aktiviert RPC zu dem angegebenen Server.|  
 |**sub**|Der Abonnent ist.|  
@@ -72,7 +71,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**name**|**sysname**|Servername.|  
 |**network_name**|**sysname**|Netzwerkname des Servers.|  
 |**status**|**Varchar (** 70 **)**|Status des Servers.|  
-|**id**|**char(** 4 **)**|ID des Servers.|  
+|**id**|**Char (** 4 **)**|ID des Servers.|  
 |**collation_name**|**sysname**|Sortierung des Servers.|  
 |**connect_timeout**|**int**|Der Timeoutwert für die Verbindung mit dem Verbindungsserver.|  
 |**query_timeout**|**int**|Timeoutwert für Abfragen auf einem Verbindungsserver.|  

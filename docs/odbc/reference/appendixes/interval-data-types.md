@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947557"
 ---
 # <a name="interval-data-types"></a>Intervalldatentypen
 Ein Intervall wird als die Differenz zwischen zwei Datumsangaben und Uhrzeiten definiert. Intervalle werden in zwei unterschiedliche Arten ausgedrückt werden. Eine ist ein *Jahr-Monat* Intervall, die Intervalle in Jahren und eine ganzzahlige Anzahl von Monaten ausdrückt. Die andere ist eine *Day-Time-* Intervall, die Intervalle in Tagen, Minuten und Sekunden ausdrückt. Diese beiden Arten von Intervallen zielteilmengen verschieden und können nicht kombiniert werden, da Monate unterschiedliche Anzahl von Tagen haben können.  
@@ -42,7 +41,7 @@ Ein Intervall wird als die Differenz zwischen zwei Datumsangaben und Uhrzeiten d
   
  Es gibt 13 Interval SQL-Datentypen und 13 Interval C-Datentypen. Jede der Intervalldatentypen C verwendet die gleiche Struktur SQL_INTERVAL_STRUCT, die Intervalldaten enthalten. (Weitere Informationen finden Sie im nächsten Abschnitt [C-Intervall-Struktur](../../../odbc/reference/appendixes/c-interval-structure.md).) Weitere Informationen zu den SQL-Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md); Weitere Informationen zu den C-Datentypen finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Typ-ID|Class|Beschreibung|  
+|Typ-ID|Klasse|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |MONTH|Jahr-Monat|Anzahl der Monate zwischen zwei Datumsangaben.|  
 |YEAR|Jahr-Monat|Anzahl der Jahre zwischen zwei Datumsangaben.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39d0c2f6e17f51928de561820f33bc0c34d89a62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055243"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="result-sets"></a>Resultsets  
  Wenn **@legacy_format** ist **0**, **Sp_help_alert** erzeugt das folgende Resultset.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
 |**name**|**sysname**|Name der Warnung (z. B. Demo: Vollständige **Msdb** Log).|  
@@ -69,7 +68,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Fehlernummer der Meldung, die die Warnung definiert. (Entspricht normalerweise einer Fehlernummer in der **Sysmessages** Tabelle). Wenn der Schweregrad, zur Definition der Warnung verwendet wird **Message_id** ist **0** oder NULL.|  
 |**severity**|**int**|Schweregrad (von **9** über **25**, **110**, **120**, **130**, oder **140**) der die Warnung definiert.|  
-|**enabled**|**tinyint**|Status Gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
+|**aktiviert**|**tinyint**|Status Gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen Antworten auf die Warnung.|  
 |**last_occurrence_date**|**int**|Datum, an dem die Warnung zuletzt aufgetreten ist.|  
 |**last_occurrence_time**|**int**|Uhrzeit, zu der die Warnung zuletzt aufgetreten ist.|  
@@ -94,7 +93,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
  Wenn **@legacy_format** ist **1**, **Sp_help_alert** erzeugt das folgende Resultset.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
 |**name**|**sysname**|Name der Warnung (z. B. Demo: Vollständige **Msdb** Log).|  
@@ -103,7 +102,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Fehlernummer der Meldung, die die Warnung definiert. (Entspricht normalerweise einer Fehlernummer in der **Sysmessages** Tabelle). Wenn der Schweregrad, zur Definition der Warnung verwendet wird **Message_id** ist **0** oder NULL.|  
 |**severity**|**int**|Schweregrad (von **9** über **25**, **110**, **120**, **130**, oder 1**40**) der die Warnung definiert.|  
-|**enabled**|**tinyint**|Status Gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
+|**aktiviert**|**tinyint**|Status Gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen Antworten auf die Warnung.|  
 |**last_occurrence_date**|**int**|Datum, an dem die Warnung zuletzt aufgetreten ist.|  
 |**last_occurrence_time**|**int**|Uhrzeit, zu der die Warnung zuletzt aufgetreten ist.|  
@@ -119,7 +118,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|ID des Auftrags.|  
 |**job_name**|**sysname**|Ein bedarfsgesteuerter Auftrag, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**has_notification**|**int**|Ungleich 0, wenn einer oder mehrere Operatoren für diese Warnung benachrichtigt werden. Einer oder mehrere der folgenden Werte sind möglich (mit OR verknüpft):<br /><br /> **1**= e-Mail-Benachrichtigung<br /><br /> **2**= Pagerbenachrichtigung<br /><br /> **4**= hat **net Send** Benachrichtigung.|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]. installiert haben.|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Wenn **Typ** ist **2**, diese Spalte die Definition des Leistungsstatus angezeigt. Wenn **Typ** ist **3**, in dieser Spalte wird die Abfrage für das WMI-Ereignis. Andernfalls weist die Spalte den Wert NULL auf.|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Immer " **[nicht kategorisiert]** " für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**type**|**int**|Warnungstyp:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ereigniswarnung<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] leistungswarnung<br /><br /> **3** = WMI-ereigniswarnung|  

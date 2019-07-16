@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 93ddc3881796aee3194ec5268afc68ecbab1a487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081908"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX-Anweisung
 Die Syntax der CREATE INDEX-Anweisung ist:  
   
  Erstellen [UNIQUE] INDEX *Indexname* ON *Tabellenname* (*Spaltenbezeichner* [ASC] [DESC] [, *Spaltenbezeichner* [ASC][DESC]...]) MIT \< *Optionsliste für Index*>  
   
- in denen \< *Index Optionsliste*> kann sein: PRIMÄRE &AMP;#124; DISALLOW NULL &AMP;#124; IGNORIEREN NULL  
+ in denen \< *Index Optionsliste*> kann sein: PRIMÄRE &#124; DISALLOW NULL &#124; IGNORIEREN NULL  
   
  Nur der Microsoft Access-Treiber verwendet die Optionen für die NULL nicht zulassen und ignorieren NULL-Index. Die Access und Paradox-Treiber die Syntax akzeptiert, aber ignorieren das Vorhandensein der beiden Optionen.  
   

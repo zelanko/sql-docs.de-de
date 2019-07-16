@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055229"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,18 +44,18 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argumente  
 `[ @class = ] 'class'` Die Klasse, die Informationen angefordert wird. *Klasse* ist **varchar(8)** , hat den Standardwert des **Auftrag**. *Klasse* kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**JOB**|Stellt Informationen zu einer Auftragskategorie bereit.|  
-|**ALERT**|Stellt Informationen zu einer Warnungskategorie bereit.|  
+|**WARNUNG**|Stellt Informationen zu einer Warnungskategorie bereit.|  
 |**OPERATOR**|Stellt Informationen zu einer Operatorkategorie bereit.|  
   
 `[ @type = ] 'type'` Der Typ der Kategorie für die Informationen angefordert werden. *Typ* ist **varchar(12)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**LOCAL**|Lokale Auftragskategorie|  
-|**MULTI -SERVER**|Multiserver-Auftragskategorie|  
+|**MULTI-SERVER**|Multiserver-Auftragskategorie|  
 |**NONE**|Kategorie für eine andere Klasse als **Auftrag**.|  
   
 `[ @name = ] 'name'` Der Name der Kategorie für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
@@ -69,15 +68,15 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>Resultsets  
  Wenn **@suffix** ist **0**, **Sp_help_category** gibt das folgende Resultset zurück:  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
-|**category_type**|**tinyint**|Der Typ der Kategorie:<br /><br /> **1** = Local<br /><br /> **2** = Multiserver<br /><br /> **3** = keine|  
+|**category_type**|**tinyint**|Der Typ der Kategorie:<br /><br /> **1** = lokal<br /><br /> **2** = Multiserver<br /><br /> **3** = keine|  
 |**name**|**sysname**|Kategoriename|  
   
  Wenn **@suffix** ist **1**, **Sp_help_category** gibt das folgende Resultset zurück:  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
 |**category_type**|**sysname**|Art der Kategorie: Einer der **lokalen**, **mit mehreren Servern**, oder **NONE**|  

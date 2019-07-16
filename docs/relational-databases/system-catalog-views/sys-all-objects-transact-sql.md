@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd6ff24e8b201ade8a17c92225858ae4c4bf6c2b
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 499b1ddeeafbc21a923f15102a67d9c0a332f069
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018163"
 ---
 # <a name="sysallobjects-transact-sql"></a>sys.all_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Zeigt UNION für alle benutzerdefinierten Objekte und Systemobjekte mit Schemabereich an.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |NAME|**sysname**|Objektname.|  
 |object_id|**int**|Objekt-ID. Ist innerhalb einer Datenbank eindeutig.|  
@@ -43,7 +42,7 @@ ms.locfileid: "44089966"
 |type_desc|**nvarchar(60)**|Beschreibung des Objekttyps. AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> DEFAULT_CONSTRAINT<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> INTERNAL_TABLE<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> RULE<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> SYSTEM_TABLE<br /><br /> SYNONYM<br /><br /> SERVICE_QUEUE<br /><br /> CLR_TRIGGER<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> TABLE_TYPE<br /><br /> USER_TABLE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> VIEW<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |create_date|**datetime**|Datum, an dem das Objekt erstellt wurde.|  
 |modify_date|**datetime**|Das Datum, an dem das Objekt zuletzt mithilfe einer ALTER-Anweisung geändert wurde. Handelt es sich bei dem Objekt um eine Tabelle oder Sicht, wird modify_date auch geändert, wenn ein gruppierter Index in der Tabelle oder Sicht erstellt oder geändert wird.|  
-|is_ms_shipped|**bit**|Objekt erstellt, die von einer internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponente.|  
+|is_ms_shipped|**bit**|Das Objekt wird von einer internen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponente erstellt.|  
 |is_published|**bit**|Objekt wurde veröffentlicht.|  
 |is_schema_published|**bit**|Nur das Schema des Objekts wird veröffentlicht.|  
   

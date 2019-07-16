@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e9dd0a0884c96a8f5b17948c21b7f891a2e997ab
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 879b3e3d4a213c4b6f1ae1fd2c8e6f8f302a4eda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961884"
 ---
 # <a name="explore-and-visualize-the-data"></a>Untersuchen und Visualisieren von Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ In diesem Schritt Untersuchen der Beispieldaten und generieren einige Diagramme.
 
 Nehmen Sie sich zunächst eine Minute Zeit, die das Datenschema zu durchsuchen, wie wir vereinfachen die NYC Taxi-Daten verwenden, einige Änderungen vorgenommen haben
 
-+ Das ursprüngliche Dataset werden separate Dateien für die Taxi-IDs und die fahrtendatensätze verwendet. Wir haben die beiden ursprünglichen Datasets verknüpft, für die Spalten _"medallion"_, _"hack_license"_, und _Pickup_datetime_.  
++ Das ursprüngliche Dataset werden separate Dateien für die Taxi-IDs und die fahrtendatensätze verwendet. Wir haben die beiden ursprünglichen Datasets verknüpft, für die Spalten _"medallion"_ , _"hack_license"_ , und _Pickup_datetime_.  
 + Das ursprüngliche Dataset umfasst viele Dateien und war sehr groß. Wir haben Downsampled, um nur 1 % der ursprünglichen Anzahl von Datensätzen zu erhalten. Die aktuellen Datentabelle hat 1.703.957 Zeilen und 23 Spalten.
 
 **Taxi-IDs**

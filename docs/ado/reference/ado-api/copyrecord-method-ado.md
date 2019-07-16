@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d11a8d5d775499246bd8af709764dec3f2ad61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933415"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord-Methode (ADO)
 Kopiert eine Entität, dargestellt durch eine [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) an einen anderen Speicherort.  
@@ -39,7 +38,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  Optional. Ein **Zeichenfolge** -Wert, der eine URL, die Entität, die kopiert werden (z. B. eine Datei oder Verzeichnis) enthält. Wenn *Quelle* ausgelassen wird, oder gibt eine leere Zeichenfolge, die Datei oder das Verzeichnis, die vom aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) kopiert werden.  
   
  *Ziel*  
- Optional. Ein **Zeichenfolge** -Wert, der eine URL, geben Sie den Speicherort enthält, in denen *Quelle* kopiert werden.  
+ Dies ist optional. Ein **Zeichenfolge** -Wert, der eine URL, geben Sie den Speicherort enthält, in denen *Quelle* kopiert werden.  
   
  *UserName*  
  Optional. Ein **Zeichenfolge** Wert, der die Benutzer-ID, die enthält bei Bedarf den Zugriff auf gewährt *Ziel*.  
@@ -48,7 +47,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  Optional. Ein **Zeichenfolge** Wert, der das Kennwort, die enthält bei Bedarf überprüft *Benutzername*.  
   
  *Options*  
- Optional. Ein [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) Wert mit Standardwert **AdCopyUnspecified**. Gibt das Verhalten dieser Methode.  
+ Dies ist optional. Ein [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) Wert mit Standardwert **AdCopyUnspecified**. Gibt das Verhalten dieser Methode.  
   
  *Async*  
  Optional. Ein **booleschen** -Wert, wenn **"true"** , gibt an, dass dieser Vorgang asynchron sein sollte.  

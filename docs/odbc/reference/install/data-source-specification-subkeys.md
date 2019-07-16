@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068565"
 ---
 # <a name="data-source-specification-subkeys"></a>Unterschlüssel für Datenquellenspezifikationen
 Jede Datenquelle, die in der ODBC-Datenquellen-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel hat den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel für ODBC-Datenquellen. Die Werte unter diesem Unterschlüssel müssen die Treiber-DLL "auflisten" und listet möglicherweise eine Beschreibung der Datenquelle. Der Treiber Übersetzer unterstützt, können die Werte der Name der standardmäßigen Übersetzer, die Standard-Konvertierungs-DLL und die Standardoption für die Übersetzung auflisten. Die Werteliste möglicherweise auch andere Informationen, die vom Treiber bei der Herstellung einer Verbindung mit der Datenquelle erforderlich sind. Der Treiber möglicherweise z. B. einen Servernamen, Datenbanknamen oder Schemaname.  
@@ -29,7 +28,7 @@ Jede Datenquelle, die in der ODBC-Datenquellen-Unterschlüssel aufgeführt verf�
   
 |Name|Datentyp|Daten|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*description*|  
+|Beschreibung|REG_SZ|*description*|  
 |Treiber|REG_SZ|*driver-DLL-path*|  
 |TranslationDLL|REG_SZ|*translator-DLL-path*|  
 |TranslationName|REG_SZ|*translator-name*|  

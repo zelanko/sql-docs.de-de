@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122567"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_net_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,11 +93,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Spaltentyp|Description|  
+|Spaltenname|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|-----------------|  
 |\<Spalten aus @column_list>|**variiert nach**|Die Spalten, die im angegebenen die **Column_list** Argument für die sp_cdc_generate_wrapper_function angegebenen, wenn sie aufgerufen wird, um das Skript zur Erstellung des Wrappers zu generieren. Wenn *Column_list* NULL ist, alle verfolgten Quellspalten werden im Resultset angezeigt.|  
 |__CDC_OPERATION|**nvarchar(2)**|Ein Vorgangscode, der angibt, welcher Vorgang auf die Zeile der Zielumgebung angewendet werden muss. Der Vorgang variiert basierend auf den Wert des Arguments *Row_filter_option* , die in den folgenden Aufruf bereitgestellt wird:<br /><br /> *Row_filter_option* = 'all', 'all with Mask'<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Aktualisierungsvorgang<br /><br /> *Row_filter_option* = 'all with Merge'<br /><br /> 'D' - Löschvorgang<br /><br /> 'M' - Einfüge- oder Aktualisierungsvorgang|  
-|\<Spalten aus @update_flag_list>|**bit**|Ein Bitflag, das durch Anfügen von _uflag an den Spaltennamen benannt wird. Das Flag nimmt einen Wert ungleich NULL nur dann, wenn *Row_filter_option* **= 'all with Mask'** und \__CDC_OPERATION **= un '**. Es wird auf 1 eingestellt, wenn die entsprechende Spalte innerhalb des Abfragefensters geändert wurde. Andernfalls ist es 0.|  
+|\<Spalten aus @update_flag_list>|**bit**|Ein Bitflag, das durch Anfügen von _uflag an den Spaltennamen benannt wird. Das Flag nimmt einen Wert ungleich NULL nur dann, wenn *Row_filter_option* **= 'all with Mask'** und \__CDC_OPERATION **= un '** . Es wird auf 1 eingestellt, wenn die entsprechende Spalte innerhalb des Abfragefensters geändert wurde. Andernfalls ist es 0.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Funktion "fn_net_changes_" < Capture_instance > dient als Wrapper für die Abfragefunktion CDC. fn_cdc_get_net_changes_ < Capture_instance >. Die sp_cdc_generate_wrapper, die gespeicherte Prozedur wird verwendet, um das Skript für den Wrapper zu erstellen.  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055376"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ sys.fn_translate_permissions ( level , perms )
   
 ## <a name="arguments"></a>Argumente  
  *level*  
- Die Art eines sicherungsfähigen Elements, für die die Berechtigung übernommen wird. *Ebene* ist **nvarchar(60)**.  
+ Die Art eines sicherungsfähigen Elements, für die die Berechtigung übernommen wird. *Ebene* ist **nvarchar(60)** .  
   
  *perms*  
- Eine Bitmaske, die in der Berechtigungsspalte zurückgegeben wird. *Perms* ist **varbinary(16)**.  
+ Eine Bitmaske, die in der Berechtigungsspalte zurückgegeben wird. *Perms* ist **varbinary(16)** .  
   
 ## <a name="returns"></a>Rückgabewert  
  **table**  
@@ -70,7 +69,7 @@ SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011)
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037703"
 ---
 # <a name="c-to-sql-timestamp"></a>C in SQL: Timestamp
 Der Bezeichner für den Timestamp ODBC C-Datentyp ist:  
@@ -31,11 +30,11 @@ Der Bezeichner für den Timestamp ODBC C-Datentyp ist:
   
 |SQL-Typ-ID|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = Zeichen-Byte-Länge<br /><br /> 19 < Byte Spaltenlänge = < Zeichen Länge in Byte<br /><br /> Spalte Byte Länge < 19<br /><br /> Wert ist kein gültiger timestamp|–<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = Zeichenlänge der Daten<br /><br /> 19 < = Spaltenlänge für die Zeichen < Zeichen Länge der Daten<br /><br /> Spalte Zeichen Länge < 19<br /><br /> Wert ist kein gültiger timestamp|–<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Time-Felder sind 0 (null)<br /><br /> Time-Felder sind ungleich NULL.<br /><br /> Datenwert enthält kein gültiges Datum|–<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIME|Felder für Sekundenbruchteile sind 0 (null) [a]<br /><br /> Felder für Sekundenbruchteile werden ungleich Null [a]<br /><br /> Datenwert enthält keine gültige Uhrzeit|–<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Felder für Sekundenbruchteile werden nicht abgeschnitten.<br /><br /> Felder für Sekundenbruchteile werden abgeschnitten.<br /><br /> Wert ist kein gültiger timestamp|–<br /><br /> 22008<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = Zeichen-Byte-Länge<br /><br /> 19 < Byte Spaltenlänge = < Zeichen Länge in Byte<br /><br /> Spalte Byte Länge < 19<br /><br /> Wert ist kein gültiger timestamp|n/v<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = Zeichenlänge der Daten<br /><br /> 19 < = Spaltenlänge für die Zeichen < Zeichen Länge der Daten<br /><br /> Spalte Zeichen Länge < 19<br /><br /> Wert ist kein gültiger timestamp|n/v<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Time-Felder sind 0 (null)<br /><br /> Time-Felder sind ungleich NULL.<br /><br /> Datenwert enthält kein gültiges Datum|n/v<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIME|Felder für Sekundenbruchteile sind 0 (null) [a]<br /><br /> Felder für Sekundenbruchteile werden ungleich Null [a]<br /><br /> Datenwert enthält keine gültige Uhrzeit|n/v<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Felder für Sekundenbruchteile werden nicht abgeschnitten.<br /><br /> Felder für Sekundenbruchteile werden abgeschnitten.<br /><br /> Wert ist kein gültiger timestamp|n/v<br /><br /> 22008<br /><br /> 22007|  
   
  [a] das Datum, die Felder der Struktur Zeitstempel ignoriert werden.  
   

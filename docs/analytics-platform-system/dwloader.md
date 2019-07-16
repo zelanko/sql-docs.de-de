@@ -2,19 +2,18 @@
 title: Dwloader Command-Line-Ladeprogramm – Parallel Data Warehouse | Microsoft-Dokumentation
 description: Dwloader ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Tabellenzeilen in einem in einer vorhandenen Tabelle lädt.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961028"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Dwloader Command-Line-Ladeprogramm für Parallel Data Warehouse
 **Dwloader** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Tabellenzeilen in einem in einer vorhandenen Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen am Ende der Tabelle hinzufügen (*append-Modus* oder *Fastappend-Modus*), neue Zeilen angefügt, und Aktualisieren von vorhandenen Zeilen (*Upsert-Modus*), oder löschen Sie alle vorhandene Zeilen vor dem Laden, und klicken Sie dann alle Zeilen in eine leere Tabelle einfügen (*laden Modus*).  
@@ -120,7 +119,7 @@ dwloader.exe
 **-h**  
 Zeigt die einfache Hilfe-Informationen zur Verwendung von des Ladeprogramms. Hilfe wird nur angezeigt, wenn keine anderen Befehlszeilenparametern angegeben werden.  
   
-**-U** *login_name*  
+**-U** *Login_name*  
 Eine gültige SQL Server-authentifizierungsanmeldung mit entsprechenden Berechtigungen, um den Ladevorgang durchzuführen.  
   
 **-P** *password*  
@@ -144,7 +143,7 @@ Beispiele:
   
 `rv=25`  
   
-* *-S***target_appliance*  
+* *-S *** Target_appliance*  
 Gibt an, die SQL Server-PDW-Appliance, die die geladenen Daten erhält.  
   
 *Infiniband-Verbindungen*, *Target_appliance* als < Appliance-Name > angegeben wird – SQLCTL01. Verbindung mit dem Namen für diese Konfiguration finden Sie unter [InfiniBand-Netzwerkadapter konfigurieren](configure-infiniband-network-adapters.md).  
@@ -157,7 +156,7 @@ Wenn nicht angegeben, wird standardmäßig Dwloader auf den Wert, der bei der In
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*].*table_name*  
+**-T** *Target_database_name.* [*Schema*]. *Table_name*  
 Der dreiteilige Name für die Zieltabelle.  
   
 * *-I***source_data_location*  
@@ -205,10 +204,10 @@ Beispiele:
   
 -   -i \\\loadserver\loads\daily\\*  
   
-**-R** *load_failure_file_name*  
+**-R** *Load_failure_file_name*  
 Treten Fehler beim Laden von **Dwloader** speichert die Zeile, die geladen und die Beschreibung des Fehlers die Fehlerinformationen in einer Datei namens Fehler *Load_failure_file_name*. Wenn diese Datei bereits vorhanden ist, wird die Dwloader die vorhandene Datei überschrieben. *Load_failure_file_name* wird erstellt, wenn der erste Fehler auftritt. Wenn alle Zeilen erfolgreich laden *Load_failure_file_name* wird nicht erstellt.  
   
-**-fh** *number_header_rows*  
+**-Fh** *Number_header_rows*  
 Die Anzahl der Zeilen (Reihen), um am Anfang des ignorieren *Source_data_file_name*. Die Standardeinstellung ist 0.  
   
 <variable_length_column_options>  
@@ -230,7 +229,7 @@ Das Trennzeichen für jedes Feld (Spalte) in der Zeile. Das Feldtrennzeichen ist
 |CRLF|\r\n|0x0d0x0a|  
 |Komma|','|0x2c|  
 |Doppeltes Anführungszeichen|\\"|0x22|  
-|einfaches Anführungszeichen|\\'|0x27|  
+|Einfaches Anführungszeichen|\\'|0x27|  
   
 Um den senkrechten Strich in der Befehlszeile angeben, müssen Sie ihn in doppelte Anführungszeichen "|". Dies wird vom Befehlszeilenparser zu Fehlinterpretation vermeiden. Andere Zeichen sind einfache Anführungszeichen eingeschlossen.  
   
@@ -244,7 +243,7 @@ Beispiele:
   
 -t \t  
   
--t '~|~'  
+-t ' ~ | ~'  
   
 **-r** *row_delimiter*  
 Das Trennzeichen für jede Zeile der Datendatei der Quelle. Das Zeilentrennzeichen ist mindestens eine ASCII-Werten.  
@@ -253,13 +252,13 @@ Um ein Wagenrücklauf (CR), Zeilenvorschubzeichen (LF) oder Tabstoppzeichen als 
   
 Beispiele für CR -LF:  
   
--r \r\n  
+-R-\r\n  
   
 -R-0x0d0x0a  
   
 Beispiele für CR:  
   
--r \r  
+-R-\r  
   
 -R 0x0d  
   
@@ -278,7 +277,7 @@ Beispiele:
   
 -s *  
   
--s 0x22  
+-s 0 x 22  
   
 < Fixed_width_column_options >  
 Die Optionen für eine Quelldatei für die Daten, die Spalten fester Länge aufweist. In der Standardeinstellung *Source_data_file_name* ASCII-Zeichen in Spalten variabler Länge enthält.  
@@ -290,9 +289,9 @@ Pfad und Name der Konfigurationsdatei, die die Anzahl der Zeichen in jeder Spalt
   
 Diese Datei muss auf dem Server laden befinden. Der Pfad kann es sich um einen UNC-relativer oder absoluter Pfad sein. Jede Zeile in *Fixed_width_config_file* enthält den Namen einer Spalte und die Anzahl der Zeichen für diese Spalte. Ist es eine Zeile pro Spalte wie folgt, und die Reihenfolge, in die Datei muss die Reihenfolge, in der Zieltabelle übereinstimmen:  
   
-*column_name*=*num_chars*  
+*Column_name*=*Num_chars*  
   
-*column_name*=*num_chars*  
+*Column_name*=*Num_chars*  
   
 Beispiel für feste Breite Config-Datei:  
   
@@ -322,13 +321,13 @@ Um ein Wagenrücklauf (CR), Zeilenvorschubzeichen (LF) oder Tabstoppzeichen als 
   
 Beispiele für CR -LF:  
   
--r \r\n  
+-R-\r\n  
   
 -R-0x0d0x0a  
   
 Beispiele für CR:  
   
--r \r  
+-R-\r  
   
 -R 0x0d  
   
@@ -346,7 +345,7 @@ Gibt die Reihenfolge der Monat (m), (d) Tag und Jahr (y) für alle Datetime-Feld
 YMD | DMY  
 Das Ydm und Dmy können die gleichen Eingabeformate. Beide ermöglichen das Jahr am Anfang oder Ende des Datums sein. Z. B. für beide **Ydm** und **Dmy** Datumsformate, Sie können die 2013-02-03 oder 02-03-2013 haben, in der Eingabedatei.  
   
-ydm  
+Das ydm  
 Sie können nur als Ydm in Spalten vom Datentyp Datetime und Smalldatetime formatierte Eingabe laden. Sie können nicht das Ydm-Werte in eine Spalte mit dem datetime2, Datums- oder Datetimeoffset-Datentyp laden.  
   
 dmy  
@@ -375,7 +374,7 @@ Wenn Sie den -D MM/TT/JJJJ angeben, erwartet Dwloader z. B. alle Geben Sie zunä
   
 Eine umfassendere Formatierungsinformationen, finden Sie unter [Datentyp Konvertierungsregeln für Dwloader](dwloader-data-type-conversion-rules.md).  
   
-**-dt** *datetime_format_file*  
+**-dt** *Datetime_format_file*  
 Jede Datetime-Format wird angegeben, in einer Datei namens *Datetime_format_file*. Im Gegensatz zu den Befehlszeilenparametern benötigen müssen die Parameter der Datei, die Leerzeichen enthalten nicht in doppelte Anführungszeichen eingeschlossen werden. Sie können das Datetime-Format nicht ändern, wie Sie Daten laden. Die Quelldatei und der entsprechenden Spalte in die Zieltabelle müssen das gleiche Format aufweisen.  
   
 Jede Zeile enthält den Namen einer Spalte in der Zieltabelle und das Datetime-Format.  
@@ -392,7 +391,7 @@ Der Name der Datenbank, die die Stagingtabelle enthalten soll. Der Standardwert 
 **-M** *Load_mode_option*  
 Gibt an, ob anzufügen, "Upsert", oder die Daten erneut zu laden. Der Standardmodus ist angefügt.  
   
-Anfügen  
+append  
 Das Ladeprogramm Zeilen am Ende der vorhandenen Zeilen in der Zieltabelle eingefügt.  
   
 fastappend  
@@ -433,7 +432,7 @@ Die Prozentsatz-Option ist eine Echtzeit-Berechnung, die in Abständen gemäß d
   
 Beispielsweise ist, wenn der Loader beim Laden von 100 Zeilen und 25 Beschaffung und 75 erfolgreich ist, klicken Sie dann die Fehlerrate 25 %.  
   
-**-rv** *reject_value*  
+**-rv** *Reject_value*  
 Gibt an, die Anzahl oder den Prozentsatz der ablehnungen der Zeile, um vor dem Anhalten der Last zu ermöglichen. Die **-rt** Option bestimmt, ob *Reject_value* bezieht sich auf die Anzahl der Zeilen oder den Prozentsatz der Zeilen.  
   
 Der Standardwert *Reject_value* ist 0.  
@@ -452,7 +451,7 @@ Beispiele:
   
 "" Ruft auf gekürzt. "  
   
-'    abc     ' gets truncated to 'abc'  
+auf 'Abc' Ruft 'Abc' gekürzt.  
   
 Bei der -c mit -E, wird zuerst die -E-Operation. Felder, die nur Leerzeichen enthalten, werden auf eine leere Zeichenfolge und nicht auf NULL konvertiert.  
   
@@ -481,7 +480,7 @@ Es wird empfohlen, **-m** nur, wenn in eine leere Tabelle, geladen, sodass Sie o
 **-N**  
 Stellen Sie sicher, dass die zielappliance ein gültiges SQL Server-PDW-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle verfügt. Verwenden Sie diese, um sicherzustellen, Ihre Daten wird nicht von einem Angreifer übernommen und an einen nicht autorisierten Speicherort gesendet. Das Zertifikat muss bereits auf dem Gerät installiert werden. Die einzige unterstützte Methode zum Installieren des Zertifikats ist für die applianceadministrator ihn mithilfe des Konfigurations-Manager installieren. Bitten Sie Ihren applianceadministrator, wenn Sie nicht sicher sind, gibt an, ob das Gerät ein vertrauenswürdiges Zertifikat installiert wurde.  
   
-**-se**  
+**Se-**  
 Überspringen Sie das leere Dateien werden geladen. Dies lässt auch leere Gzip Dekomprimieren von Dateien.
 
 **-l**  
@@ -558,10 +557,10 @@ Die Append-Modus lädt Daten in zwei Phasen. Phase 1 lädt Daten aus der Quellda
 |Heap|Ja|Nein|Ja|Minimale|  
 |Heap|Nein|Ja|Nein|Minimale|  
 |Heap|Nein|Nein|Nein|Minimale|  
-|Cl|Ja|Ja|Nein|Minimale|  
-|Cl|Ja|Nein|Ja|Vollständig|  
-|Cl|Nein|Ja|Nein|Minimale|  
-|Cl|Nein|Nein|Ja|Vollständig|  
+|CL|Ja|Ja|Nein|Minimale|  
+|CL|Ja|Nein|Ja|Vollständig|  
+|CL|Nein|Ja|Nein|Minimale|  
+|CL|Nein|Nein|Ja|Vollständig|  
   
 Die obige Tabelle zeigt **Dwloader** im Append-Modus Laden in einen Heap oder gruppierten Index (CI) Table mit oder ohne das Flag mit mehreren Transaktionen und das Laden in eine leere Tabelle oder eine nicht leere Tabelle. Der Sperr- und Protokollierungsverhaltens Verhalten jeden solchen Kombination aus laden wird in der Tabelle angezeigt. Z. B., (2.) Phase mit der Append-Modus Laden in einen gruppierten Index ohne Multi-Transaktionsmodus ausgeführt wird und in eine leere Tabelle weist PDW eine exklusive Sperre für die Tabelle zu erstellen und Protokollierung ist minimal. Dies bedeutet, dass ein Kunde nicht (2.) Phase und die Abfrage in eine leere Tabelle gleichzeitig laden können. Jedoch wenn Sie mit der gleichen Konfiguration in eine nicht leere Tabelle zu laden, PDW keine exklusive Sperre für die Tabelle ausgeben und Parallelität möglich ist. Unpraktischerweise erfolgt vollständige Protokollierung, den Prozess verlangsamen.  
   

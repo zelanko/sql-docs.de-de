@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94cb0913e8122997652786cd4bf09ddccf7fa433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079151"
 ---
 # <a name="msreplversion-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSrepl_version** -Tabelle enthält eine Zeile mit der aktuellen Version der installierten Replikation. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**Hauptversion**|**int**|Die Hauptversionsnummer der Verteilungsdatenbank.|  
+|**major_version**|**int**|Die Hauptversionsnummer der Verteilungsdatenbank.|  
 |**minor_version**|**int**|Die Nebenversionsnummer der Verteilungsdatenbank.|  
-|**Revision**|**int**|Die Revisionsnummer.|  
+|**revision**|**int**|Die Revisionsnummer.|  
 |**db_existed**|**bit**|Gibt an, ob die Verteilungsdatenbank vorhanden, bevor ist **Sp_adddistributiondb** aufgerufen wird.|  
   
 ## <a name="see-also"></a>Siehe auch  

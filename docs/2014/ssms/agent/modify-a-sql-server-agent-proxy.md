@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131211"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211360"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
   In diesem Thema wird beschrieben, wie Sie ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern können.  
@@ -66,7 +66,7 @@ ms.locfileid: "54131211"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Proxykonto, das Sie ändern möchten, und wählen Sie **Eigenschaften**aus.  
   
-6.  Nehmen Sie die erforderlichen Änderungen am Proxykonto im Dialogfeld _Eigenschaften von Proxyname-_**Proxykonto** vor. Weitere Informationen über die Optionen in diesem Dialogfeld finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](create-a-sql-server-agent-proxy.md).  
+6.  Nehmen Sie die erforderlichen Änderungen am Proxykonto im Dialogfeld _Eigenschaften von Proxyname-_ **Proxykonto** vor. Weitere Informationen über die Optionen in diesem Dialogfeld finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](create-a-sql-server-agent-proxy.md).  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

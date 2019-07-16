@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 126cfdf6ef690a48d0b9ff17a6963ba37d3ade82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084133"
 ---
 # <a name="functions-mdx-syntax"></a>Funktionen (MDX-Syntax)
 
@@ -24,7 +23,7 @@ ms.locfileid: "62690167"
 > [!NOTE]  
 >  Weitere Informationen zu einzelnen Funktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md).  
   
-|Funktionskategorie|Description|  
+|Funktionskategorie|Beschreibung|  
 |-----------------------|-----------------|  
 |Arrayfunktionen|Stellen Arrays bereit, die in gespeicherten Prozeduren verwendet werden können.<br /><br /> Weitere Informationen finden Sie unter [Verwendung von gespeicherten Prozeduren &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md).|  
 |Dimensionsfunktionen|Geben einen Verweis auf eine Dimension aus einer Hierarchie, einer Ebene oder einem Element zurück.<br /><br /> Weitere Informationen finden Sie unter [mithilfe von Dimensions-, Hierarchie- und Funktionen der Ebene](../mdx/using-dimension-hierarchy-and-level-functions.md).|  

@@ -5,17 +5,16 @@ description: Der Referenzartikel für die Mssqlctl BDC-Befehle.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958177"
 ---
 # <a name="mssqlctl-bdc-config"></a>Mssqlctl BDC-Konfiguration
 
@@ -26,10 +25,10 @@ Der folgende Artikel bietet Referenz für die **BDC-Config** Befehle in der **Ms
 ## <a name="commands"></a>Befehle
 |     |     |
 | --- | --- |
-[mssqlctl bdc config show](#mssqlctl-bdc-config-show) | Ruft die aktuelle Konfiguration für die Big Data-Cluster ab.
-[mssqlctl bdc config init](#mssqlctl-bdc-config-init) | Initialisiert eine Big Data-Cluster erstellen Konfigurationsprofil, die mit dem Cluster verwendet werden kann.
-[mssqlctl bdc config list](#mssqlctl-bdc-config-list) | Listet die verfügbaren Konfigurationsoptionen-Profil.
-[mssqlctl bdc config section](reference-mssqlctl-bdc-config-section.md) | Befehle für die Arbeit mit einzelnen Abschnitte des Profils Big Data-Cluster.
+[Mssqlctl Bdc-Konfiguration anzeigen](#mssqlctl-bdc-config-show) | Ruft die aktuelle Konfiguration für die Big Data-Cluster ab.
+[Mssqlctl BDC-Config-init](#mssqlctl-bdc-config-init) | Initialisiert eine Big Data-Cluster erstellen Konfigurationsprofil, die mit dem Cluster verwendet werden kann.
+[Mssqlctl BDC-Config-Liste](#mssqlctl-bdc-config-list) | Listet die verfügbaren Konfigurationsoptionen-Profil.
+[Mssqlctl Bdc-Abschnitt "Config"](reference-mssqlctl-bdc-config-section.md) | Befehle für die Arbeit mit einzelnen Abschnitte des Profils Big Data-Cluster.
 ## <a name="mssqlctl-bdc-config-show"></a>Mssqlctl Bdc-Konfiguration anzeigen
 Ruft ab, der Big Data-Cluster des aktuellen Profils und gibt diesen in das Zielverzeichnis, oder gibt es ziemlich an der Konsole.
 ```bash

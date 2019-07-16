@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946170"
 ---
 # <a name="xml-construction-xquery"></a>XML-Konstruktion (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Wie in diesem Beispiel gezeigt, erweist sich das Konstruieren von Elementen aus konstanten Ausdrücken zwar als nützlich; die wahre Stärke dieser Funktion der XQuery-Sprache liegt jedoch in der Möglichkeit, XML-Code zu konstruieren, mit dem Daten dynamisch aus einer Datenbank extrahiert werden können. Verwenden Sie zum Angeben von Abfrageausdrücken geschweifte Klammern. Im XML-Ergebnis wird der Ausdruck dann durch seinen Wert ersetzt. Die folgende Abfrage konstruiert beispielsweise ein <`NewRoot`>-Element mit einem untergeordneten <`e`>-Element. Der Wert des Elements <`e`> wird berechnet, indem Sie die Angabe eines pfadausdrucks in geschweiften Klammern ("{...}").  
+ Wie in diesem Beispiel gezeigt, erweist sich das Konstruieren von Elementen aus konstanten Ausdrücken zwar als nützlich; die wahre Stärke dieser Funktion der XQuery-Sprache liegt jedoch in der Möglichkeit, XML-Code zu konstruieren, mit dem Daten dynamisch aus einer Datenbank extrahiert werden können. Verwenden Sie zum Angeben von Abfrageausdrücken geschweifte Klammern. Im XML-Ergebnis wird der Ausdruck dann durch seinen Wert ersetzt. Z. B. die folgende Abfrage konstruiert eine <`NewRoot`>-Element mit einem untergeordneten Element (<`e`>). Der Wert des Elements <`e`> wird berechnet, indem Sie die Angabe eines pfadausdrucks in geschweiften Klammern ("{...}").  
   
 ```sql
 DECLARE @x xml;  
@@ -137,7 +136,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- Die folgende Abfrage ist ein weiteres Beispiel für die Konstruktion von Elementen mithilfe des direkten Elementkonstruktors. Dabei wird der Wert des <`FirstLocation`>-Elements durch Ausführen des Ausdrucks in geschweiften Klammern erhalten. Der Abfrageausdruck gibt die Fertigungsschritte am ersten Arbeitsplatzstandort aus der Instructions-Spalte der Production.ProductModel-Tabelle zurück.  
+ Die folgende Abfrage ist ein weiteres Beispiel für die Konstruktion von Elementen mithilfe des direkten Elementkonstruktors. Außerdem muss der Wert von der <`FirstLocation`>-Element wird abgerufen, indem Sie Ausführung des Ausdrucks in geschweiften Klammern. Der Abfrageausdruck gibt die Fertigungsschritte am ersten Arbeitsplatzstandort aus der Instructions-Spalte der Production.ProductModel-Tabelle zurück.  
   
 ```sql
 SELECT Instructions.query('  
@@ -235,11 +234,11 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Das erstellte Element <`ProductModel`> besitzt ein ProductModelID-Attribut und folgende untergeordnete Knoten:  
+ Das konstruierte Element <`ProductModel`> verfügt über eine ProductModelID-Attribut und folgende untergeordnete Knoten:  
   
 -   Einen Textknoten, `This is product model catalog description.`.  
   
--   Einen Elementknoten, <`Summary`>. Dieser Knoten besitzt einen untergeordneten Textknoten, `Some description`.  
+-   Ein Elementknoten, <`Summary`>. Dieser Knoten besitzt einen untergeordneten Textknoten, `Some description`.  
   
  Beim Konstruieren eines Attributs können Sie dessen Wert durch einen Ausdruck in geschweiften Klammern angeben. In diesem Fall wird das Ergebnis des Ausdrucks als der Attributwert zurückgegeben.  
   
@@ -337,7 +336,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
     ```  
   
--   Heterogene Sequenzen werden nicht unterstützt. Der Versuch, eine heterogene Sequenz als Attributwert zuzuweisen, gibt einen Fehler zurück, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird eine heterogene Sequenz, nämlich die Zeichenfolge "Item" und ein Element <`x`> als Attributwert angegeben:  
+-   Heterogene Sequenzen werden nicht unterstützt. Der Versuch, eine heterogene Sequenz als Attributwert zuzuweisen, gibt einen Fehler zurück, wie im folgenden Beispiel gezeigt. In diesem Beispiel, eine heterogene Sequenz, eine Zeichenfolge "Item" und ein Element <`x`>, als Wert des Attributs angegeben wird:  
   
     ```sql
     DECLARE @x xml  
@@ -382,7 +381,7 @@ where ProductModelID=7;
 -   Im XQuery-Prolog.  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Verwenden eines Namespacedeklarationsattributs zum Hinzufügen von Namespaces  
- Im folgenden Beispiel wird ein Namespacedeklarationsattribut in der Konstruktion des <`a`>-Elements verwendet, um einen Standardnamespace zu deklarieren. Durch die Konstruktion des untergeordneten <`b`>-Elements wird die Deklaration des Standardnamespace im übergeordneten Element rückgängig gemacht.  
+ Im folgenden Beispiel wird ein namespacedeklarationsattribut in der Konstruktion des Elements <`a`> um einen Standardnamespace zu deklarieren. Die Konstruktion des untergeordneten Elements <`b`> macht die Deklaration des Standardnamespace im übergeordneten Element.  
   
 ```sql
 declare @x xml  
@@ -401,7 +400,7 @@ select @x.query( '
 </a>  
 ```  
   
- Sie können dem Namespace ein Präfix zuweisen. Das Präfix wird in der Konstruktion des <`a`>-Elements angegeben.  
+ Sie können dem Namespace ein Präfix zuweisen. Das Präfix wird angegeben, bei der Erstellung des Elements <`a`>.  
   
 ```sql
 declare @x xml  
@@ -420,7 +419,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- Sie können die Deklaration eines Standardnamespace in der XML-Konstruktion rückgängig machen, nicht jedoch die Deklaration eines Namespacepräfixes. Die folgende Abfrage gibt einen Fehler zurück, da Sie die Deklaration des in der Konstruktion des <`b`>-Elements angegebenen Präfixes nicht rückgängig machen können.  
+ Sie können die Deklaration eines Standardnamespace in der XML-Konstruktion rückgängig machen, nicht jedoch die Deklaration eines Namespacepräfixes. Die folgende Abfrage ein Fehler zurückgegeben, da Sie aufheben können nicht-Präfixes wie angegeben, bei der Erstellung des Elements <`b`>.  
   
 ```sql
 declare @x xml  
@@ -431,7 +430,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- Der neu konstruierte Namespace steht zum Verwenden innerhalb der Abfrage zur Verfügung. Die folgende Abfrage deklariert beispielsweise einen Namespace für die Konstruktion des <`FirstLocation`>-Elements und gibt das Präfix in den Ausdrücken für die LocationID- und SetupHrs-Attributwerte an.  
+ Der neu konstruierte Namespace steht zum Verwenden innerhalb der Abfrage zur Verfügung. Die folgende Abfrage deklariert beispielsweise einen Namespace erstellen Sie das Element <`FirstLocation`>, und gibt das Präfix in den Ausdrücken für die LocationId- und SetupHrs-Attributwerte.  
   
 ```sql
 SELECT Instructions.query('  
@@ -445,7 +444,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Beachten Sie, dass das Erstellen eines neuen Namespacepräfixes in dieser Weise alle eventuell bereits vorhandenen Namespacedeklarationen für dieses Präfix überschreibt. Beispielsweise wird die Namespacedeklaration `AWMI="https://someURI"` im Prolog der Abfrage durch die Namespacedeklaration im <`FirstLocation`>-Element überschrieben.  
+ Beachten Sie, dass das Erstellen eines neuen Namespacepräfixes in dieser Weise alle eventuell bereits vorhandenen Namespacedeklarationen für dieses Präfix überschreibt. Z. B. die Namespacedeklaration `AWMI="https://someURI"`, in der Abfrage Prolog überschrieben wird, indem Sie die Namespacedeklaration in der <`FirstLocation`> Element.  
   
 ```sql
 SELECT Instructions.query('  
@@ -471,7 +470,7 @@ select @x.query( '
             <a><b xmlns=""/></a>' )  
 ```  
   
- Beachten Sie, dass das Namespacedeklarationsattribut in der Konstruktion des <`b`>-Elements mit einer leeren Zeichenfolge als Wert angegeben ist. Dies macht die Deklaration des Standardnamespace des übergeordneten Elements rückgängig.  
+ Beachten Sie, dass bei der Erstellung des Elements <`b`>, Attribut der Namespacedeklaration mit einer leeren Zeichenfolge als Wert angegeben ist. Dies macht die Deklaration des Standardnamespace des übergeordneten Elements rückgängig.  
   
 
 Dies ist das Ergebnis:  
@@ -549,7 +548,7 @@ test
   
  **Beachten Sie** ein Beispiel der Verwendung einer expliziten textknotenkonstruktors finden Sie unter dem Beispiel in [einfügen &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
- In der folgenden Abfrage enthält der konstruierte XML-Code ein Element, zwei Attribute, einen Kommentar und eine Verarbeitungsanweisung. Beachten Sie, dass vor <`FirstLocation`> ein Komma steht, da eine Sequenz konstruiert wird.  
+ In der folgenden Abfrage enthält der konstruierte XML-Code ein Element, zwei Attribute, einen Kommentar und eine Verarbeitungsanweisung. Beachten Sie, die ein Komma verwendet wird, bevor Sie die <`FirstLocation`>, da eine Sequenz erstellt wird.  
   
 ```sql
 SELECT Instructions.query('  

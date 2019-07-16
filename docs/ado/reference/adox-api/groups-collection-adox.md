@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0fe23c41f6a22a05e6a4c1d61f94a357f3c28c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966188"
 ---
 # <a name="groups-collection-adox"></a>Groups-Collection (ADOX)
 Enthält alle gespeicherten [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) Objekte eines Katalogs oder Benutzer.  
@@ -31,11 +30,11 @@ Enthält alle gespeicherten [Gruppe](../../../ado/reference/adox-api/group-objec
 ## <a name="remarks"></a>Hinweise  
  Die **Gruppen** Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) aller Gruppenkonten des Katalogs darstellt. Die **Gruppen** Sammlung für einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) stellt nur die Gruppe, zu denen der Benutzer gehört.  
   
- Die [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) -Methode für eine **Gruppen** Auflistung für ADOX eindeutig ist. Folgende Aktionen sind möglich:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) -Methode für eine **Gruppen** Auflistung für ADOX eindeutig ist. Sie haben folgende Möglichkeiten:  
   
 -   Fügen Sie eine neue Sicherheitsgruppe in der Auflistung der **Append** Methode.  
   
- Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Folgende Aktionen sind möglich:  
+ Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Sie haben folgende Möglichkeiten:  
   
 -   Zugreifen auf eine Gruppe in der Auflistung mit den [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
   

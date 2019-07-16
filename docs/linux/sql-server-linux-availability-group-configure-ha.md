@@ -5,18 +5,17 @@ description: Informationen Sie zum Erstellen einer SQL Server immer auf Availabi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a8e367bdf33b22f3e2a122c31bcdfb8b5d65e648
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027255"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configure SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux
 
@@ -30,7 +29,7 @@ Konfigurationen, die hohe Verfügbarkeit und Datenschutz zu gewährleisten müss
 
 Alle Server müssen entweder physisch oder virtuell sein, und virtuelle Server muss auf die gleiche Virtualisierungsplattform. Diese Anforderung ist, da die Agents Umgrenzung plattformspezifisch sind. Finden Sie unter [Richtlinien für Gastcluster](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Roadmap für die
 
 Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für hochverfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
 

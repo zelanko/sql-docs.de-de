@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e208fbfe1205c09b51796628610f2def8798fea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3989c7543361be8dfc6807d11ccdc3e97b78e46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129192"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -188,7 +187,7 @@ from @Items
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt, dass Sie zeilenstreaming, eine Zeile pro Aufruf von SQLPutData, mit ODBC TVP auf ähnliche, wie Sie BCP.exe zum Laden von Daten in einer Datenbank verwenden ggf. verwenden können.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
@@ -376,7 +375,7 @@ EXIT:
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt, dass Sie zeilenstreaming, mehrere Zeilen pro Aufruf von SQLPutData, mit ODBC TVP auf ähnliche, wie Sie BCP.exe zum Laden von Daten in einer Datenbank verwenden ggf. verwenden können.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  

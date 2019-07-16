@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 688716e9b7ba89500a4d2e8a579da42972e43d0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063553"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Programmgesteuertes Festlegen von Optionen für die Access-Treiber
 
-|Option|Description|Methode|  
+|Option|Beschreibung|Methode|  
 |------------|-----------------|------------|  
 |Puffergröße|Die Größe des internen Puffers, in Kilobyte, die von Microsoft Access verwendet wird, um Daten zu und vom Datenträger übertragen werden soll. Die Standardpuffergröße beträgt 2048 KB, die (angezeigt als 2048). Jeder ganzzahlige Wert von 256 geteilt werden kann, kann eingegeben werden.|Um diese Option dynamisch festzulegen, verwenden Sie das MAXBUFFERSIZE-Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Datenquellenname|Ein Name, der die Datenquelle, z. B. Gehaltsabrechnungen oder Mitarbeiter identifiziert.|Um diese Option dynamisch festzulegen, verwenden die **DSN** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Datenbank|Eine Microsoft Access-Datenquelle kann ohne auswählen oder Erstellen einer Datenbank eingerichtet werden. Wenn beim Setup keine Datenbank angegeben ist, wird der Benutzer aufgefordert werden, um eine Datei auszuwählen, Herstellen der Verbindung mit der Datenquelle.|Um diese Option dynamisch festzulegen, verwenden die **DBQ** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
-|Description|Eine optionale Beschreibung der Daten in der Datenquelle; z. B. "Hire Date, Gehaltsverlauf und aktuelle Überprüfung aller Mitarbeiter."|Um diese Option dynamisch festzulegen, verwenden die **Beschreibung** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
+|Beschreibung|Eine optionale Beschreibung der Daten in der Datenquelle; z. B. "Hire Date, Gehaltsverlauf und aktuelle Überprüfung aller Mitarbeiter."|Um diese Option dynamisch festzulegen, verwenden die **Beschreibung** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Exclusive|Wenn die **exklusive** aktiviert ist, wird die Datenbank wird im exklusiven Modus geöffnet und kann jeweils nur ein einziger Benutzer zugegriffen werden. Leistung wird verbessert, wenn im exklusiven Modus ausgeführt wird.|Um diese Option dynamisch festzulegen, verwenden die **exklusive** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |ImplicitCommitSync|Bestimmt, wie die Änderungen, die außerhalb einer Transaktion an die Datenbank geschrieben werden. Dieser Wert wird anfangs festgelegt, auf "Ja", was bedeutet, dass die Microsoft Access-Treiber für Commits in einer internen/implizite Transaktion abgeschlossen werden gewartet wird.|Diese Option befindet sich auf die **erweiterte Optionen festlegen** im Dialogfeld für die Microsoft Access-Treiber.|  
 |Timeout der Seite|Gibt die Zeitspanne in Millisekunden, die eine Seite (sofern nicht verwendet wird) im Puffer bleibt, bevor Sie entfernt werden. Microsoft Access-Treiber ist der Standardwert 500 Millisekunden (0,5 Sekunden). Diese Option gilt für alle Datenquellen, die den ODBC-Treiber verwenden.<br /><br /> Das Timeout der Seite darf nicht 0 aufgrund einer inhärenten Verzögerung sein. Das Timeout der Seite darf nicht kleiner als die inhärenten Verzögerung sein, auch wenn die Seite Timeoutoption unter diesen Wert festgelegt ist.|Um diese Option dynamisch festzulegen, verwenden die **des Werts PAGETIMEOUT** Schlüsselwort in einem Aufruf von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9a80167d00a76f667132647b3d152dda5c1a4b3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5f27efed55a2ae63b8c3726263077441bdacc49b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135722"
 ---
 # <a name="what-the-driver-does"></a>Funktionen des Treibers
 Die folgende Tabelle fasst zusammen, welche Funktionen und Anweisungsattribute ODBC *3.x* -Treiber für Blockierung und scrollfähige Cursor implementieren soll.  
@@ -32,7 +31,7 @@ Die folgende Tabelle fasst zusammen, welche Funktionen und Anweisungsattribute O
 |SQL_ATTR_ROW_STATUS_PTR|Legt die Adresse der zeilenstatusarray, indem ausgefüllt **SQLFetch** und **SQLFetchScroll**. Dieses Array wird auch durch gefüllt **SQLSetPos** Wenn **SQLSetPos** Anweisung Status S6 aufgerufen wird. Wenn **SQLSetPos** heißt S7 Status dieses Array nicht ausgefüllt ist, aber das Array verweist die *RowStatusArray* Argument **SQLExtendedFetch** gefüllt wird. Weitere Informationen finden Sie unter [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md) in Anhang B: ODBC-Übergang Statustabellen.|  
 |SQL_ATTR_ROWS_FETCHED_PTR|Legt die Adresse des Puffers, in dem **SQLFetch** und **SQLFetchScroll** geben die Anzahl der abgerufenen Zeilen zurück. Wenn **SQLExtendedFetch** wird aufgerufen, diesen Puffer nicht ausgefüllt ist aber die *RowCountPtr* -Argument zeigt auf die Anzahl der abgerufenen Zeilen.|  
 |SQL_ATTR_ROW_ARRAY_SIZE|Legt die Größe des Rowsets, die von verwendet **SQLFetch** und **SQLFetchScroll**.|  
-|SQL_ROWSET_SIZE|Legt die Größe des Rowsets, die von verwendet **SQLExtendedFetch**. ODBC *3.x* Treiber implementieren diese bei Bedarf zum Arbeiten mit ODBC *2.x* Anwendungen, die Aufrufen **SQLExtendedFetch** oder **SQLSetPos**.|  
+|SQL_ROWSET_SIZE SETZEN|Legt die Größe des Rowsets, die von verwendet **SQLExtendedFetch**. ODBC *3.x* Treiber implementieren diese bei Bedarf zum Arbeiten mit ODBC *2.x* Anwendungen, die Aufrufen **SQLExtendedFetch** oder **SQLSetPos**.|  
 |**SQLBulkOperations**|Wenn eine ODBC *3.x* Treiber sollte funktionieren, mit dem ODBC- *2.x* Anwendungen, die **SQLSetPos** mit einer *Vorgang* von SQL_ADD, muss der Treiber unterstützt **SQLSetPos** mit einer *Vorgang* von SQL_ADD zusätzlich zu **SQLBulkOperations** mit einer *Vorgang* von SQL _MIT.|  
 |**SQLExtendedFetch**|Gibt den angegebene Rowset zurück. ODBC *3.x* Treiber implementieren diese bei Bedarf zum Arbeiten mit ODBC *2.x* Anwendungen, die Aufrufen **SQLExtendedFetch** oder **SQLSetPos**. Im folgenden finden Details zur Implementierung:<br /><br /> -Der Treiber Ruft die Größe des Rowsets ab, aus dem Wert des Attributs Anweisung SQL_ROWSET_SIZE setzen.<br />-Der Treiber Ruft die Adresse der zeilenstatusarray aus der *RowStatusArray* Argument, das nicht das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR. Die *RowStatusArray* Argument in einem Aufruf von **SQLExtendedFetch** darf nicht null-Zeiger sein. (Beachten Sie, dass in ODBC *3.x*, das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR kann ein null-Zeiger sein.)<br />-Der Treiber Ruft die Adresse des Puffers abgerufenen Zeilen aus der *RowCountPtr* Argument, das nicht das SQL_ATTR_ROWS_FETCHED_PTR-Anweisungsattribut.<br />-Der Treiber gibt SQLSTATE 01 s 01 (Fehler in Zeile), um anzugeben, dass ein Fehler aufgetreten ist, während die Zeilen, durch einen Aufruf von abgerufen wurden **SQLExtendedFetch**. ODBC *3.x* Treiber SQLSTATE 01 s 01 sollte zurückgegeben werden (Fehler in Zeile) nur, wenn **SQLExtendedFetch** aufgerufen wird, nicht wenn **SQLFetch** oder **SQLFetchScroll** aufgerufen wird. Abwärtskompatibilität beibehalten. bei der SQLSTATE 01 s 01 (Fehler in Zeile) wird zurückgegeben, indem **SQLExtendedFetch**, sortiert der Treiber-Manager Statusdatensätze nicht in der Fehlerwarteschlange gemäß den Regeln in der "Reihenfolge der Status des angegebenen Zeichnet"im Abschnitt [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).|  
 |**SQLFetch**|Gibt das nächste Rowset zurück. Im folgenden finden Details zur Implementierung:<br /><br /> -Der Treiber Ruft die Größe des Rowsets ab, aus dem Wert des Attributs SQL_ATTR_ROW_ARRAY_SIZE-Anweisung.<br />-Der Treiber Ruft die Adresse der zeilenstatusarray aus das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR ab.<br />-Der Treiber Ruft die Adresse der Puffer aus das SQL_ATTR_ROWS_FETCHED_PTR-Anweisungsattribut abgerufenen Zeilen ab.<br />– Die Anwendung kann Aufrufe zwischen mischen **SQLFetchScroll** und **SQLFetch**.<br />-   **SQLFetch** Lesezeichen gibt zurück, wenn die Spalte 0 gebunden ist.<br />-   **SQLFetch** aufgerufen werden, um mehr als eine Zeile zurückgegeben.<br />-Der Treiber keinen SQLSTATE 01 s 01 zurückgibt (Fehler in Zeile), um anzugeben, dass ein Fehler aufgetreten ist, während die Zeilen, durch einen Aufruf von abgerufen wurden **SQLFetch**.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046942"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Treiber-Manager&#39;s-Rolle in der Verbindungsprozess
 Denken Sie daran, dass Anwendungen Treiberfunktionen nicht direkt aufrufen. Stattdessen rufen Sie diese Treiber-Manager-Funktionen, mit dem gleichen Namen und der Treiber-Manager ruft der Treiberfunktionen. Dies geschieht normalerweise fast unmittelbar. Die Anwendung beispielsweise Aufrufe **SQLExecute** im Treiber-Manager und nach ein paar Überprüfungen auf Fehler aus, ruft der Treiber-Manager **SQLExecute** im Treiber.  

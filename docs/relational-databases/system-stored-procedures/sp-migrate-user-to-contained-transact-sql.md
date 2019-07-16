@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bdab8cd50a16913f37115f0d38c00c5c699bc0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022333"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@username =** ] **N'***user***'**  
+ [ **@username =** ] **N'***Benutzer***"**  
  Der Name eines Benutzers in der aktuellen eigenständigen Datenbank, der mit einem authentifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft ist. Der Wert ist **Sysname**, hat den Standardwert **NULL**.  
   
- [ **@rename =** ] **N'***copy_login_name***'**  | **N'***keep_name***'**  
+ [ **@rename =** ] **N'***Copy_login_name***"**  | **N'***Keep_name***"**  
  Wenn Sie ein Datenbankbenutzer basierend auf einer Anmeldung auf einen anderen Benutzernamen als den Anmeldenamen verfügt, verwenden Sie *Keep_name* Datenbank während der Migration beibehalten werden sollen. Verwendung *Copy_login_name* auf den neuen eigenständigen Datenbankbenutzer mit dem Namen der Anmeldung, anstelle des Benutzers zu erstellen. Wenn der Benutzername eines Datenbankbenutzers dem Anmeldenamen entspricht, wird mit beiden Optionen der Benutzer der enthaltenen Datenbank erstellt, ohne den Namen zu ändern.  
   
  [ **@disablelogin =** ] **N'***disable_login***'**  | **N'***do_not_disable_login***'**  

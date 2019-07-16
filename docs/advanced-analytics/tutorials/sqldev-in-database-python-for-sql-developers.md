@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e036aa2a4c104eaf92e3e9aaf4513f2542bf23b4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: cf64f8ad137f8dea94bbc08d4a72981393de44ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961909"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Tutorial: Python-Data-Analysen für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +41,7 @@ Ob Sie eine SQL-Programmierer noch nicht mit Python oder ein Python-Entwickler, 
 
 + [Lektion 1: Untersuchen und Visualisieren von Daten mithilfe von Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [Lektion 2: Erstellen von Datenfunktionen mit benutzerdefinierten SQL-Funktionen](sqldev-py4-create-data-features-using-t-sql.md)
++ [Lektion 2: Erstellen von Datenfunktionen mit benutzerdefinierten SQL-Funktionen](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [Lektion 3: Trainieren und Speichern eines Python-Modells mit T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
@@ -50,7 +49,7 @@ Ob Sie eine SQL-Programmierer noch nicht mit Python oder ein Python-Entwickler, 
 
 Nachdem das Modell in der Datenbank gespeichert wurde, können Sie das Modell für Vorhersagen Aufrufen [!INCLUDE[tsql](../../includes/tsql-md.md)] mit gespeicherten Prozeduren.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 + [SQL Server 2017-Machine-Learning-Dienste mit Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 

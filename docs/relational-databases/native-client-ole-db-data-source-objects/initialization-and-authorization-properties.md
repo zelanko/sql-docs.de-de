@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e49f9b2bcd4784c76f693863c7837dd827ba2924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07e487201b34b165304d946161e93ed28cd09612
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128578"
 ---
 # <a name="initialization-and-authorization-properties"></a>Initialisierungs- und Autorisierungseigenschaften
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "62806043"
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter interpretiert OLE DB-Initialisierung und Autorisierungseigenschaften wie folgt:  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter speichert keine Authentifizierungsinformationen im Cache.<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt bei einem Versuch, den Eigenschaftswert festzulegen, DB_S_ERRORSOCCURRED zurück. Das *dwStatus*-Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet Standard- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheitsmechanismen, um Kennwörter zu verbergen.<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt bei einem Versuch, den Eigenschaftswert festzulegen, DB_S_ERRORSOCCURRED zurück. Das *dwStatus*-Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
@@ -44,7 +43,7 @@ ms.locfileid: "62806043"
 |DBPROP_INIT_ASYNCH|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die asynchrone Aktivierung.<br /><br /> Das Festlegen des DBPROPVAL_ASYNCH_INITIALIZE-Bits in der DBPROP_INIT_ASYNCH-Eigenschaft führt dazu, dass **IDBInitialize::Initialize** ein nicht blockierender Aufruf wird. Weitere Informationen finden Sie unter [durchführen asynchroner Vorgänge](../../relational-databases/native-client/features/performing-asynchronous-operations.md).|  
 |DBPROP_INIT_CATALOG|Name einer vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, zu der eine Verbindung hergestellt werden soll.|  
 |DBPROP_INIT_DATASOURCE|Netzwerkname eines Servers, auf dem eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Wenn mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer ausgeführt werden, wird der Wert DBPROP_INIT_DATASOURCE als *\\\ServerName\InstanceName* angegeben, um eine Verbindung mit einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen. Die Escapesequenz \\\ wird für den umgekehrten Schrägstrich selbst verwendet.|  
-|DBPROP_INIT_GENERALTIMEOUT|Gibt die Anzahl der Sekunden, bevor eine Anforderung, außer datenquelleninitialisierung und befehlsausführung die Datenquelle, ein Timeout auftritt. Der Wert 0 steht für ein unbegrenztes Timeout. Anbieter, die über Netzwerkverbindungen oder in verteilten oder transaktiven Szenarien arbeiten, können diese Eigenschaft zum Timeout eine gelisteten Komponente bei einer lang andauernden Anforderung mitteilen unterstützen. Timeouts für die Datenquelleninitialisierung und die Befehlsausführung werden weiterhin von DBPROP_INIT_TIMEOUT bzw. DBPROP_COMMANDTIMEOUT gesteuert.<br /><br /> DBPROP_INIT_GENERALTIMEOUT ist schreibgeschützt. Wenn versucht wird, diese Eigenschaft festzulegen, wird der *dwstatus*-Fehler DBPROPSTATUS_NOTSETTABLE zurückgegeben.|  
+|DBPROP_INIT_GENERALTIMEOUT|Gibt die Anzahl der Sekunden an, nach der eine Anforderung (außer Datenquelleninitialisierung und Befehlsausführung) wegen des angegebenen Timeouts abgebrochen wird. Der Wert 0 steht für ein unbegrenztes Timeout. Anbieter, die über Netzwerkverbindungen oder in verteilten oder transaktiven Szenarien arbeiten, können diese Eigenschaft unterstützen, um das Timeout einer gelisteten Komponente bei zeitaufwändigen Anforderungen zu vermeiden. Timeouts für die Datenquelleninitialisierung und die Befehlsausführung werden weiterhin von DBPROP_INIT_TIMEOUT bzw. DBPROP_COMMANDTIMEOUT gesteuert.<br /><br /> DBPROP_INIT_GENERALTIMEOUT ist schreibgeschützt. Wenn versucht wird, diese Eigenschaft festzulegen, wird der *dwstatus*-Fehler DBPROPSTATUS_NOTSETTABLE zurückgegeben.|  
 |DBPROP_INIT_HWND|Das Fensterhandle der aufrufenden Anwendung. Es ist ein gültiges Fensterhandle für das angezeigte Initialisierungsdialogfeld erforderlich, wenn die Aufforderung für Initialisierungseigenschaften zugelassen ist.|  
 |DBPROP_INIT_IMPERSONATION_LEVEL|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt keine Ebenenanpassung des Identitätswechsels.<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt bei einem Versuch, den Eigenschaftswert festzulegen, DB_S_ERRORSOCCURRED zurück. Das *dwStatus*-Element der DBPROP-Struktur gibt DBPROPSTATUS_NOTSUPPORTED an.|  
 |DBPROP_INIT_LCID|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft die Gebietsschema-ID und gibt einen Fehler zurück, wenn die Gebietsschema-ID nicht unterstützt wird oder auf dem Client nicht installiert ist.|  
@@ -57,7 +56,7 @@ ms.locfileid: "62806043"
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERDBINIT der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter definiert diese zusätzlichen Initialisierungseigenschaften.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|Beschreibung|  
 |-----------------|-----------------|  
 |SSPROP_AUTH_OLD_PASSWORD|Typ: VT_BSTR<br /><br /> R/W: Schreiben<br /><br /> Standard: VT_EMPTY<br /><br /> Beschreibung: Das aktuelle oder abgelaufene Kennwort. Weitere Informationen finden Sie unter [programmgesteuert ändern von Kennwörtern](../../relational-databases/native-client/features/changing-passwords-programmatically.md).|  
 |SSPROP_INIT_APPNAME|Typ: VT_BSTR<br /><br /> R/W: Lese-/Schreibzugriff<br /><br /> Beschreibung: Der Name der Clientanwendung.|  

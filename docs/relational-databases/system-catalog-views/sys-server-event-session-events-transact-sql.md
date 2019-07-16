@@ -20,26 +20,25 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 766d614db7d07c8db5305c32a5e84d71dac53dca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133228"
 ---
 # <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt für jedes Ereignis in einer Ereignissitzung eine Zeile zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Die ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |event_id|**int**|Die ID des Ereignisses. Diese ID ist innerhalb eines Ereignissitzungsobjekts eindeutig. Lässt keine NULL-Werte zu.|  
 |NAME|**sysname**|Der Name des Ereignisses. Lässt keine NULL-Werte zu.|  
 |Paket|**sysname**|Der Name des Pakets, welches das Ereignis enthält. Lässt keine NULL-Werte zu.|  
-|Modul|**sysname**|Der Name des Moduls, welches das Ereignis enthält. Lässt keine NULL-Werte zu.|  
+|module|**sysname**|Der Name des Moduls, welches das Ereignis enthält. Lässt keine NULL-Werte zu.|  
 |predicate|**nvarchar(3000)**|Der Prädikatausdruck, der auf das Ereignis angewendet wird. Lässt NULL-Werte zu.|  
 |predicate_xml|**nvarchar(3000)**|Der XML-Prädikatausdruck, der auf das Ereignis angewendet wird. Lässt NULL-Werte zu.|  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47681278"
   
 ||||  
 |-|-|-|  
-|Von|Aktion|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |sys.server_event_session_events.event_session_id|Sys.server_event_sessions.event_session_id|n:1|  
   
 ## <a name="see-also"></a>Siehe auch  

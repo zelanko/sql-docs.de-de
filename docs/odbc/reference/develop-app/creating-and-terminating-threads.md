@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a2cf98ef-1c71-4742-8ee2-b53fd8e04333
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9d6d15c449d88043e844addd12ac10a98d5c4a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b97f29ad06c4ed961f3cee571b0ca7b8d9c0b774
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002085"
 ---
 # <a name="creating-and-terminating-threads"></a>Erstellen und Beenden von Threads
 Multithread-Anwendungen, die ODBC verwenden, sollten die Microsoft® Visual Aufrufen C++®-Laufzeitbibliotheksfunktionen **_beginthread** und **_endthread** (oder **_beginthreadex**und **_endthreadex**) erstellen und Beenden von Threads, die den ODBC-Treiber-Manager aufrufen. Wenn Anwendungen die Microsoft Windows NT®-Funktionen aufrufen **CreateThread** und **EndThread** stattdessen Speicher Speicherverluste tritt auf, da der Treiber-Manager und einige ODBC-Treiber Aufrufen von C-Laufzeit-Funktionen, funktioniert nicht in einem Thread durch Aufrufen von erstellt **CreateThread**. Weitere Informationen finden Sie unter der Microsoft Windows®-Dokumentation.

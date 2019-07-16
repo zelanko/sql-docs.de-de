@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 256f1add5399d3e9c5795440d80670f66a096cb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053075"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +51,18 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und muss an den Aufruf von Sp_describe_cursor keinem Cursor zugeordnet sein. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
  [ @cursor_source=] {N'local "| N'global "| N'variable'}  
- Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)**.  
+ Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)** .  
   
  [ @cursor_identity=] N'*Local_cursor_name*']  
- Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *Local_cursor_name* ist **vom Datentyp nvarchar(128)**.  
+ Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *Local_cursor_name* ist **vom Datentyp nvarchar(128)** .  
   
  [ @cursor_identity=] N'*Global_cursor_name*']  
- Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* ist **vom Datentyp nvarchar(128)**.  
+ Der Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* ist **vom Datentyp nvarchar(128)** .  
   
  *Global_cursor_name* können auch werden der Name eines API-Servercursors, die von einer ODBC-Anwendung geöffnet ist, die dann durch Aufrufen von SQLSetCursorName.  
   
  [ @cursor_identity=] N'*Input_cursor_variable*']  
- Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)**.  
+ Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)** .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
@@ -73,14 +72,14 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
  In der folgenden Tabelle wird das Format des Cursors dargestellt, der mithilfe von sp_describe_cursor zurückgegeben wird. Das Format des Cursors ist mit dem mithilfe von sp_cursor_list zurückgegebenen Format identisch.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Name, der zum Verweisen auf den Cursor verwendet wird. Wenn der Verweis auf den Cursor über den Namen in einer DECLARE CURSOR-Anweisung erfolgte, ist der Name des Verweises mit dem Cursornamen identisch. Wenn der Verweis auf den Cursor über eine Variable erfolgte, ist der Variablenname der Name des Verweises.|  
 |cursor_name|**sysname**|Der Name des Cursors aus einer DECLARE CURSOR-Anweisung. Wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Cursor erstellt wurde, indem eine Cursorvariable auf einen Cursor festgelegt wurde, gibt cursor_name den Namen der Cursorvariablen zurück. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt diese Ausgabespalte einen systemgenerierten Namen zurück.|  
 |cursor_scope|**tinyint**|1 = LOKAL<br /><br /> 2 = GLOBAL|  
 |status|**int**|Einige Werte, die von der CURSOR_STATUS-Systemfunktion gemeldet werden:<br /><br /> 1 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geöffnet. Ein statischer, Keyset- oder Insensitivcursor weist mindestens eine Zeile auf. Bei einem dynamischen Cursor weist das Resultset keine oder mehr Zeilen auf.<br /><br /> 0 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geöffnet, weist aber keine Zeilen auf. Dynamische Cursor geben diesen Wert nie zurück.<br /><br /> -1 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geschlossen.<br /><br /> -2 = Gilt nur für Cursorvariablen. Der Variablen ist kein Cursor zugewiesen. Möglicherweise hat ein OUTPUT-Parameter der Variablen einen Cursor zugewiesen, aber die gespeicherte Prozedur hat den Cursor vor der Rückgabe geschlossen.<br /><br /> -3 = Ein Cursor oder eine Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder für die Cursorvariable wurde kein Cursor reserviert.|  
 |model|**tinyint**|1 = Insensitiv (oder statisch)<br /><br /> 2 = Keyset<br /><br /> 3 = dynamisch<br /><br /> 4 = Schneller Vorwärtscursor|  
-|Parallelität (concurrency)|**tinyint**|1 = schreibgeschützt<br /><br /> 2 = Scrollsperre<br /><br /> 3 = Vollständig|  
+|Parallelität|**tinyint**|1 = schreibgeschützt<br /><br /> 2 = Scrollsperre<br /><br /> 3 = Vollständig|  
 |scrollable|**tinyint**|0 = Vorwärts<br /><br /> 1 = Scrollfähig|  
 |open_status|**tinyint**|0 = Geschlossen<br /><br /> 1 = Geöffnet|  
 |cursor_rows|**decimal(10,0)**|Die Anzahl der kennzeichnenden Zeilen im Resultset. Weitere Informationen finden Sie unter [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md).|  

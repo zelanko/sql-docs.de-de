@@ -17,28 +17,27 @@ helpviewer_keywords:
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e79b997540ecf8dbe95b3bb0423c3524b941c433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 70d737e8c73d3e5b6876c2669fbafbc71bea66e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986468"
 ---
 # <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSrepl_errors** -Tabelle enthält Zeilen mit erweiterten Fehlerinformationen für Verteilungs-Agent und Merge-Agent. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Die ID des Fehlers.|  
-|**Uhrzeit**|**datetime**|Zeitpunkt des Auftretens des Fehlers.|  
+|**time**|**datetime**|Zeitpunkt des Auftretens des Fehlers.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Die Typ-ID der Fehlerquelle.|  
 |**source_name**|**nvarchar(100)**|Der Name der Fehlerquelle.|  
 |**error_code**|**sysname**|Der Fehlercode.|  
-|**Fehlertext**|**ntext**|Die Fehlermeldung.|  
+|**error_text**|**ntext**|Die Fehlermeldung.|  
 |**xact_seqno**|**varbinary(16)**|Die Protokollsequenznummer der ersten Transaktion des Batches, der bei der Ausführung einen Fehler erzeugt hat. Wird nur von Verteilungs-Agents verwendet und ist die Transaktions-Protokollfolgenummer der ersten Transaktion des bei der Ausführung fehlerhaften Batches.|  
 |**command_id**|**int**|Die Befehls-ID des Batches, der bei der Ausführung einen Fehler erzeugt hat. Wird nur von Verteilungs-Agents verwendet und ist die Befehls-ID des ersten Befehls des Batches, der bei der Ausführung einen Fehler erzeugt hat.|  
 |**session_id**|**int**|Die ID der Agentsitzung, in der der Fehler auftrat.|  

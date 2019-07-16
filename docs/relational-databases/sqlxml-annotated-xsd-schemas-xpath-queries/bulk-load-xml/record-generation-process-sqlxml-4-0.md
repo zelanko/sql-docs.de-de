@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89d3859ad7f9f8f32dfc1cddd1ed805aa466867
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 73b7a8b42832c2d0a6c8c6d9589f953a93f39ce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005295"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Datensatzgenerierungsprozess (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ms.locfileid: "56038421"
 >  Da in diesem Modell ein Datensatz eingefügt wird, wenn das Endtag erreicht ist (oder der Knoten den Bereich verlässt), müssen Sie alle mit dem Datensatz verknüpften Daten innerhalb des Knotenbereichs definieren.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>Datensatzteilmenge und den Schlüssel, die Reihenfolge der Regel  
- Wenn Sie ein Zuordnungsschema, das verwendet angeben  **\<SQL: Relationship >**, die Teilmenge Begriff bezieht sich auf die Gruppe von Datensätzen, die auf der Fremdschlüsselseite der Beziehung generiert wird. Im folgenden Beispiel wird die CustOrder-Datensätze auf der Fremdschlüsselseite, sind  **\<SQL: Relationship >**.  
+ Wenn Sie ein Zuordnungsschema, das verwendet angeben  **\<SQL: Relationship >** , die Teilmenge Begriff bezieht sich auf die Gruppe von Datensätzen, die auf der Fremdschlüsselseite der Beziehung generiert wird. Im folgenden Beispiel wird die CustOrder-Datensätze auf der Fremdschlüsselseite, sind  **\<SQL: Relationship >** .  
   
  Nehmen Sie z. B. an, dass eine Datenbank die folgenden Tabellen enthält:  
   
@@ -149,9 +148,9 @@ ms.locfileid: "56038421"
   
  Die XML-Beispieldaten und die Schritte zum Erstellen eines funktionierenden Beispiels sind unten aufgeführt.  
   
--   Wenn eine  **\<Kunden >** Elementknoten in das XML-Datendatei in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die Cust-Tabelle. XML-Massenladen kopiert dann die erforderlichen Spaltenwerte (CustomerID, CompanyName und City) aus der  **\<"CustomerID" >**,  **\<CompanyName >**, und die  **\<City >** untergeordneten Elemente wie diese Elemente in den Bereich gelangen.  
+-   Wenn eine  **\<Kunden >** Elementknoten in das XML-Datendatei in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die Cust-Tabelle. XML-Massenladen kopiert dann die erforderlichen Spaltenwerte (CustomerID, CompanyName und City) aus der  **\<"CustomerID" >** ,  **\<CompanyName >** , und die  **\<City >** untergeordneten Elemente wie diese Elemente in den Bereich gelangen.  
   
--   Wenn ein  **\<Reihenfolge >** Elementknoten in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die CustOrder-Tabelle. XML-Massenladen kopiert den Wert der **"OrderID"** -Attributs in diesen Datensatz. Der erforderliche Wert für die Spalte "CustomerID" aus erfolgt die  **\<"CustomerID" >** untergeordnetes Element von der  **\<Kunden >** Element. XML-Massenladen verwendet die Informationen, die im angegebenen  **\<SQL: Relationship >** die CustomerID Fremdschlüsselwerts für diesen Datensatz abrufen, es sei denn, die **"CustomerID"** Attribut wurde Angabe in der  **\<Reihenfolge >** Element. Als allgemeine Regel gilt, wenn das untergeordnete Element explizit einen Wert für die foreign Key-Attribut angegeben ist, diesen Wert verwendet und den Wert nicht vom übergeordneten Element ausgegeben werden, wird mit dem angegebenen XML-Massenladen **\<SQL: Relationship >**. Wie diese  **\<Reihenfolge >** Elementknoten den Gültigkeitsbereich verlässt, XML-Massenladen der Datensatz an gesendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und verarbeitet anschließend alle nachfolgenden  **\<Reihenfolge >** Elementknoten auf die gleiche Weise.  
+-   Wenn ein  **\<Reihenfolge >** Elementknoten in den Bereich gelangt, XML-Massenladen generiert einen Datensatz für die CustOrder-Tabelle. XML-Massenladen kopiert den Wert der **"OrderID"** -Attributs in diesen Datensatz. Der erforderliche Wert für die Spalte "CustomerID" aus erfolgt die  **\<"CustomerID" >** untergeordnetes Element von der  **\<Kunden >** Element. XML-Massenladen verwendet die Informationen, die im angegebenen  **\<SQL: Relationship >** die CustomerID Fremdschlüsselwerts für diesen Datensatz abrufen, es sei denn, die **"CustomerID"** Attribut wurde Angabe in der  **\<Reihenfolge >** Element. Als allgemeine Regel gilt, wenn das untergeordnete Element explizit einen Wert für die foreign Key-Attribut angegeben ist, diesen Wert verwendet und den Wert nicht vom übergeordneten Element ausgegeben werden, wird mit dem angegebenen XML-Massenladen **\<SQL: Relationship >** . Wie diese  **\<Reihenfolge >** Elementknoten den Gültigkeitsbereich verlässt, XML-Massenladen der Datensatz an gesendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und verarbeitet anschließend alle nachfolgenden  **\<Reihenfolge >** Elementknoten auf die gleiche Weise.  
   
 -   Zum Schluss die  **\<Kunden >** Elementknoten den Gültigkeitsbereich verlässt. Der Kundendatensatz wird daraufhin an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendet. Bei allen nachfolgenden Kunden im XML-Datenstrom wird nach demselben Prozess vorgegangen.  
   

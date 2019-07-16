@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fabfac2d228be78efb2fc728d1b405ec7edce035
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085043"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,22 +54,22 @@ sp_help [ [ @objname = ] 'name' ]
   
     |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar(** 128 **)**|Objektname|  
-    |**Besitzer**|**nvarchar(** 128 **)**|Objektbesitzer (Dies ist der Datenbankprinzipal, der das Objekt besitzt. Wird standardmäßig auf den Besitzer des Schemas festgelegt, das das Objekt enthält.)|  
-    |**Object_type**|**nvarchar(** 31 **)**|Objekttyp|  
+    |**Name**|**Nvarchar (** 128 **)**|Objektname|  
+    |**Besitzer**|**Nvarchar (** 128 **)**|Objektbesitzer (Dies ist der Datenbankprinzipal, der das Objekt besitzt. Wird standardmäßig auf den Besitzer des Schemas festgelegt, das das Objekt enthält.)|  
+    |**Object_type**|**Nvarchar (** 31 **)**|Objekttyp|  
   
 2.  Wenn *Namen* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp oder den benutzerdefinierten Datentyp **Sp_help** gibt dieses Resultset zurück.  
   
     |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
-    |**Type_name**|**nvarchar(** 128 **)**|Name des Datentyps.|  
-    |**Storage_type**|**nvarchar(** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
+    |**Type_name**|**Nvarchar (** 128 **)**|Name des Datentyps.|  
+    |**Storage_type**|**Nvarchar (** 128 **)**|Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs|  
     |**Länge**|**smallint**|Physische Länge des Datentyps (in Bytes)|  
     |**prec**|**int**|Genauigkeit (Gesamtzahl der Ziffern)|  
     |**Dezimalstellen**|**int**|Anzahl der Stellen nach dem Dezimaltrennzeichen|  
-    |**NULL zulassen**|**varchar(** 35 **)**|Gibt an, ob NULL-Werte zulässig sind: Ja oder nein.|  
-    |**Default_name**|**nvarchar(** 128 **)**|Name eines an diesen Typ gebundenen Standards.<br /><br /> NULL = Es ist kein Standard gebunden.|  
-    |**Rule_name**|**nvarchar(** 128 **)**|Name einer an diesen Typ gebundenen Regel.<br /><br /> NULL = Es ist kein Standard gebunden.|  
+    |**NULL zulassen**|**Varchar (** 35 **)**|Gibt an, ob NULL-Werte zulässig sind: Ja oder nein.|  
+    |**Default_name**|**Nvarchar (** 128 **)**|Name eines an diesen Typ gebundenen Standards.<br /><br /> NULL = Es ist kein Standard gebunden.|  
+    |**Rule_name**|**Nvarchar (** 128 **)**|Name einer an diesen Typ gebundenen Regel.<br /><br /> NULL = Es ist kein Standard gebunden.|  
     |**Sortierung**|**sysname**|Sortierung des Datentyps. NULL für Nicht-Zeichen-Datentypen|  
   
 3.  Wenn *Namen* beliebiges Datenbankobjekt außer einem Datentyp **Sp_help** dieses Ergebnis und zusätzliche Resultsets, basierend auf dem Typ des angegebenen Objekts zurück.  
@@ -79,9 +78,9 @@ sp_help [ [ @objname = ] 'name' ]
 
     |Spaltenname|Datentyp|Beschreibung|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar(** 128 **)**|Tabellenname|  
-    |**Besitzer**|**nvarchar(** 128 **)**|Tabellenbesitzer|  
-    |**Typ**|**nvarchar(** 31 **)**|Tabellentyp|  
+    |**Name**|**Nvarchar (** 128 **)**|Tabellenname|  
+    |**Besitzer**|**Nvarchar (** 128 **)**|Tabellenbesitzer|  
+    |**Typ**|**Nvarchar (** 31 **)**|Tabellentyp|  
     |**Created_datetime**|**datetime**|Erstellungsdatum der Tabelle|  
   
      Depending on the database object specified, **sp_help** returns additional result sets.  
@@ -92,22 +91,22 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
-        |**Spaltenname**|**nvarchar(** 128 **)**|Name der Spalte.|  
-        |**Typ**|**nvarchar(** 128 **)**|Datentyp der Spalte.|  
-        |**Computed**|**varchar(** 35 **)**|Gibt an, ob die Werte in der Spalte berechnet werden: Ja oder nein.|  
+        |**Spaltenname**|**Nvarchar (** 128 **)**|Name der Spalte.|  
+        |**Typ**|**Nvarchar (** 128 **)**|Datentyp der Spalte.|  
+        |**Berechnet**|**Varchar (** 35 **)**|Gibt an, ob die Werte in der Spalte berechnet werden: Ja oder nein.|  
         |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Datentyp der Spalte einen Typ mit umfangreichen Werten ist (**varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , oder **Xml**), wird der Wert als-1 angezeigt.|  
-        |**prec**|**char(** 5 **)**|Spaltengenauigkeit|  
-        |**Dezimalstellen**|**char(** 5 **)**|Dezimalstellen einer Spalte|  
-        |**NULL zulassen**|**varchar(** 35 **)**|Gibt an, ob NULL-Werte in der Spalte zulässig sind: Ja oder nein.|  
-        |**TrimTrailingBlanks**|**varchar(** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
-        |**FixedLenNullInSource**|**varchar(** 35 **)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
+        |**prec**|**Char (** 5 **)**|Spaltengenauigkeit|  
+        |**Dezimalstellen**|**Char (** 5 **)**|Dezimalstellen einer Spalte|  
+        |**NULL zulassen**|**Varchar (** 35 **)**|Gibt an, ob NULL-Werte in der Spalte zulässig sind: Ja oder nein.|  
+        |**TrimTrailingBlanks**|**Varchar (** 35 **)**|Nachfolgende Leerzeichen entfernen. Gibt Yes oder No zurück.|  
+        |**FixedLenNullInSource**|**Varchar (** 35 **)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
         |**Sortierung**|**sysname**|Sortierung der Spalte. NULL für Nicht-Zeichen-Datentypen.|  
   
     -   Zusätzliches Resultset, das für Identitätsspalten zurückgegeben wird:  
   
         |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
-        |**Identität**|**nvarchar(** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
+        |**Identität**|**Nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
         |**Startwert**|**numeric**|Startwert für die Identitätsspalte|  
         |**Increment**|**numeric**|Schrittweite für Werte in dieser Spalte|  
         |**Not For Replication**|**int**|IDENTITY-Eigenschaft wird nicht erzwungen, wenn eine replikationsanmeldung wie z. B. **Sqlrepl**, fügt Daten in der Tabelle:<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -122,7 +121,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Dateigruppe, in dem die Daten gespeichert sind: Primär, sekundär oder Transaktionsprotokoll.|  
+        |**Data_located_on_filegroup**|**Nvarchar (** 128 **)**|Dateigruppe, in dem die Daten gespeichert sind: Primär, sekundär oder Transaktionsprotokoll.|  
   
     -   Zusätzliches Resultset, das für Indizes zurückgegeben wird:  
   
@@ -130,32 +129,32 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Name des Indexes.|  
         |**Index_description**|**Varchar (** 210 **)**|Beschreibung des Index.|  
-        |**index_keys**|**nvarchar(** 2078 **)**|Namen der Spalten, die für den Index verwendet werden. Gibt für speicheroptimierte xVelocity-columnstore-Indizes NULL zurück.|  
+        |**index_keys**|**Nvarchar (** 2078 **)**|Namen der Spalten, die für den Index verwendet werden. Gibt für speicheroptimierte xVelocity-columnstore-Indizes NULL zurück.|  
   
     -   Zusätzliches Resultset, das für Einschränkungen zurückgegeben wird:  
   
         |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
-        |**constraint_type**|**nvarchar(** 146 **)**|Einschränkungstyp|  
-        |**constraint_name**|**nvarchar(** 128 **)**|Der Name der Einschränkung.|  
-        |**delete_action**|**nvarchar(** 9 **)**|Gibt an, ob die DELETE-Aktion: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT oder n/v.<br /><br /> Gilt nur für FOREIGN KEY-Einschränkungen.|  
-        |**update_action**|**nvarchar(** 9 **)**|Gibt an, ob die UPDATE-Aktion: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT oder n/v.<br /><br /> Gilt nur für FOREIGN KEY-Einschränkungen.|  
-        |**status_enabled**|**varchar(** 8 **)**|Gibt an, ob die Einschränkung aktiviert ist: Aktiviert, deaktiviert oder n/v.<br /><br /> Gilt nur für CHECK- und FOREIGN KEY-Einschränkungen.|  
+        |**constraint_type**|**Nvarchar (** 146 **)**|Einschränkungstyp|  
+        |**constraint_name**|**Nvarchar (** 128 **)**|Der Name der Einschränkung.|  
+        |**delete_action**|**Nvarchar (** 9 **)**|Gibt an, ob die DELETE-Aktion: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT oder n/v.<br /><br /> Gilt nur für FOREIGN KEY-Einschränkungen.|  
+        |**update_action**|**Nvarchar (** 9 **)**|Gibt an, ob die UPDATE-Aktion: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT oder n/v.<br /><br /> Gilt nur für FOREIGN KEY-Einschränkungen.|  
+        |**status_enabled**|**Varchar (** 8 **)**|Gibt an, ob die Einschränkung aktiviert ist: Aktiviert, deaktiviert oder n/v.<br /><br /> Gilt nur für CHECK- und FOREIGN KEY-Einschränkungen.|  
         |**status_for_replication**|**Varchar (** 19 **)**|Zeigt an, ob die Einschränkung für die Replikation gilt.<br /><br /> Gilt nur für CHECK- und FOREIGN KEY-Einschränkungen.|  
-        |**constraint_keys**|**nvarchar(** 2078 **)**|Die Namen der Spalten für die Einschränkung oder bei Standards und Regeln der Text, der den Standard oder die Regel definiert.|  
+        |**constraint_keys**|**Nvarchar (** 2078 **)**|Die Namen der Spalten für die Einschränkung oder bei Standards und Regeln der Text, der den Standard oder die Regel definiert.|  
   
     -   Zusätzliches Resultset, das für verweisende Objekte zurückgegeben wird:  
   
         |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
-        |**Die Tabelle wird durch verwiesen.**|**nvarchar(** 516 **)**|Identifiziert andere Datenbankobjekte, die auf die Tabelle verweisen.|  
+        |**Die Tabelle wird durch verwiesen.**|**Nvarchar (** 516 **)**|Identifiziert andere Datenbankobjekte, die auf die Tabelle verweisen.|  
   
     -   Zusätzliches Resultset, das für gespeicherte Prozeduren, Funktionen oder erweiterte gespeicherte Prozeduren zurückgegeben wird.  
   
         |Spaltenname|Datentyp|Beschreibung|  
         |-----------------|---------------|-----------------|  
-        |**Parameter_name**|**nvarchar(** 128 **)**|Name des Parameters der gespeicherten Prozedur|  
-        |**Typ**|**nvarchar(** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
+        |**Parametername**|**Nvarchar (** 128 **)**|Name des Parameters der gespeicherten Prozedur|  
+        |**Typ**|**Nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
         |**Länge**|**smallint**|Maximale physische Speicherlänge in Bytes|  
         |**prec**|**int**|Genauigkeit oder Gesamtzahl der Ziffern|  
         |**Dezimalstellen**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  

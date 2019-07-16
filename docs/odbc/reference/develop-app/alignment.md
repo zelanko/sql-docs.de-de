@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8b5a107f5ed8cd1c6c45317e60cc515a2601316
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077270"
 ---
 # <a name="alignment"></a>Ausrichtung
 Die Ausrichtungsprobleme in einer ODBC-Anwendung unterscheiden sich in der Regel nicht als sie in jeder anderen Anwendung sind. Die meisten ODBC-Anwendungen verfügen, also nur wenige oder gar keine Probleme mit der Ausrichtung. Die Strafen für nicht Ausrichten von Adressen mit der Hardware und Betriebssystem variieren und als eine leichte Leistungseinbuße wie Haupt- oder als als ein schwerwiegender Laufzeitfehler sein. Aus diesem Grund sollten ODBC-Anwendungen und portable ODBC-Anwendungen insbesondere sein darauf achten, dass Daten richtig ausgerichtet.  

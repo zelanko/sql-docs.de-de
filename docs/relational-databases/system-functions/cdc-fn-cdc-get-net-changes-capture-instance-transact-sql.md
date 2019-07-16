@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d60f772d7848d0e207f83b5c7a1a10da4b43b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043046"
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>CDC. fn_cdc_get_net_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs, in das Resultset aufgenommen darstellt. *From_lsn* ist **("Binary(10)")**.  
+ Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs, in das Resultset aufgenommen darstellt. *From_lsn* ist **("Binary(10)")** .  
   
  Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn größer als oder gleich *From_lsn* in das Resultset enthalten sind.  
   
  *to_lsn*  
- Legen Sie die LSN, die den oberen Endpunkt des LSN-Bereichs, in das Resultset aufgenommen darstellt. *To_lsn* ist **("Binary(10)")**.  
+ Legen Sie die LSN, die den oberen Endpunkt des LSN-Bereichs, in das Resultset aufgenommen darstellt. *To_lsn* ist **("Binary(10)")** .  
   
  Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn kleiner als oder gleich *From_lsn* gleich *To_lsn* in das Resultset enthalten sind.  
   
@@ -73,13 +72,13 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Gibt die LSN der letzten zeilenänderung sowie den Vorgang zum Anwenden der Zeile in den Metadatenspalten __ $Start_lsn und \_ \_$operation. Darüber hinaus, wenn ein Update-Vorgang zurückgegeben (\_\_$operation = 4) im Update geänderten aufgezeichneten Spalten werden in den zurückgegebenen Wert markiert \_ \_$Update_mask.  
   
  all with merge  
- Gibt die LSN der letzten Zeilenänderung in den Metadatenspalten __$start_lsn zurück. Die Spalte \_ \_$operation werden zwei Werte: 1 für löschen oder 5 als Hinweis dafür, dass der Vorgang erforderlich, um die Änderung zu übernehmen, entweder ein Einfügevorgang oder ein Update ist. Die Spalte \_ \_$Update_mask ist immer NULL.  
+ Gibt die LSN der letzten Zeilenänderung in den Metadatenspalten __$start_lsn zurück. Die Spalte \_ \_$operation werden einen von zwei Werten: 1 für löschen oder 5 als Hinweis dafür, dass der Vorgang erforderlich, um die Änderung zu übernehmen, entweder ein Einfügevorgang oder ein Update ist. Die Spalte \_ \_$Update_mask ist immer NULL.  
   
  Da die Bestimmung des präzisen Vorgangs für eine bestimmte Änderung die Logik der Abfragekomplexität erhöht, soll diese Option die Abfrageleistung in den Fällen verbessern, in denen zur Angabe des für die Änderungsanwendung notwendigen Vorgangs nur darauf hingewiesen werden muss, dass es sich entweder um einen Einfügevorgang oder um einen Updatevorgang handelt, und die explizite Unterscheidung der beiden Vorgänge nicht notwendig ist. Diese Option eignet sich besonders für Zielumgebungen, in denen Mergevorgänge direkt verfügbar sind, z. B. in einer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Umgebung.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |__$start_lsn|**binary(10)**|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Z. B. bei einem Updatevorgang in der Quelltabelle zwei Spalten in zwei Zeilen geändert werden, enthält die Änderungstabelle vier Zeilen, die jeweils mit der gleichen __ $Start_lsnvalue.|  
 |__$operation|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der erforderlich ist, um die Zeile der Änderungsdaten auf die Zieldatenquelle anzuwenden.<br /><br /> Wenn der Wert des row_filter_option-Parameters 'all' oder 'all with mask' ist, kann der Wert in dieser Spalte einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 4 = Aktualisieren<br /><br /> Wenn der Wert des row_filter_option-Parameters 'all with merge' ist, kann der Wert in dieser Spalte einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen|  

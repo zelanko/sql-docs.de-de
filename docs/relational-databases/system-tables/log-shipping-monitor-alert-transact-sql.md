@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e5bdee7bfd46e99424169e0890c6aa6bf4d4187
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a97fe48c710fb2945cd377da92808404addd094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990075"
 ---
 # <a name="logshippingmonitoralert-transact-sql"></a>log_shipping_monitor_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Speichert die Warnungsauftrags-ID für den Protokollversand. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.   
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**alert_job_id**|**uniqueidentifier**|Die Auftrags-ID des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für den Warnungsauftrag des Protokollversands.|  
   

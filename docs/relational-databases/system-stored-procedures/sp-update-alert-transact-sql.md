@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084942"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` Die neue Wartezeit zwischen Antworten auf die Warnung in Sekunden. *Delay_between_responses* ist **Int**, hat den Standardwert NULL.  
   
-`[ @notification_message = ] 'notification_message'` Der überarbeitete Text einer zusätzlichen Nachricht, die an den Operator gesendet werden, als Teil der e-Mail- **net Send**,- oder Pagerbenachrichtigung. *Notification_message* ist **nvarchar(512)**, hat den Standardwert NULL.  
+`[ @notification_message = ] 'notification_message'` Der überarbeitete Text einer zusätzlichen Nachricht, die an den Operator gesendet werden, als Teil der e-Mail- **net Send**,- oder Pagerbenachrichtigung. *Notification_message* ist **nvarchar(512)** , hat den Standardwert NULL.  
   
 `[ @include_event_description_in = ] include_event_description_in` Gibt an, ob die Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlers aus dem Windows-Anwendungsprotokoll, die in die benachrichtigungsmeldung eingeschlossen werden soll. *Include_event_description_in* ist **Tinyint**, hat den Standardwert NULL. der Wert und eine oder mehrere der folgenden Werte sind möglich.  
   
@@ -89,7 +88,7 @@ sp_update_alert
   
 `[ @database_name = ] 'database'` Der Name der Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst, werden soll. *Datenbank* ist **Sysname.** In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` Eine Sequenz von Zeichen, die in der Beschreibung des Fehlers im Fehlermeldungsprotokoll enthalten sein muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *Event_description_keyword* ist **nvarchar(100)**, hat den Standardwert NULL. Dieser Parameter ist hilfreich beim Filtern von Objektnamen (z. B. **%customer_table%**).  
+`[ @event_description_keyword = ] 'event_description_keyword'` Eine Sequenz von Zeichen, die in der Beschreibung des Fehlers im Fehlermeldungsprotokoll enthalten sein muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *Event_description_keyword* ist **nvarchar(100)** , hat den Standardwert NULL. Dieser Parameter ist hilfreich beim Filtern von Objektnamen (z. B. **%customer_table%** ).  
   
 `[ @job_id = ] job_id` ID des Auftrags. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL. Wenn *Job_id* angegeben wird, *Job_name* muss ausgelassen werden.  
   
@@ -111,19 +110,19 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` Reserviert.  
   
-`[ @performance_condition = ] 'performance_condition'` Ein Wert im Format **"***Itemcomparatorvalue***"**. *Performance_condition* ist **nvarchar(512)**, hat den Standardwert NULL und besteht aus folgenden Elementen.  
+`[ @performance_condition = ] 'performance_condition'` Ein Wert im Format **"***Itemcomparatorvalue***"** . *Performance_condition* ist **nvarchar(512)** , hat den Standardwert NULL und besteht aus folgenden Elementen.  
   
-|Format-Element|Description|  
+|Format-Element|Beschreibung|  
 |--------------------|-----------------|  
-|*Element*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
-|*Comparator*|Einer dieser Operatoren: **>**, **<**, **=**|  
+|*Item*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
+|*Comparator*|Einer dieser Operatoren: **>** , **<** , **=**|  
 |*Wert*|Numerischer Wert des Indikators|  
   
 `[ @category_name = ] 'category'` Der Name der Warnungskategorie. *Kategorie* ist **Sysname** hat den Standardwert NULL.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` Der WMI-Namespace zum Abfragen von Ereignissen. *Wmi_namespace* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @wmi_query = ] 'wmi_query'` Die Abfrage, die das WMI-Ereignis für die Warnung angibt. *Wmi_query* ist **nvarchar(512)**, hat den Standardwert NULL.  
+`[ @wmi_query = ] 'wmi_query'` Die Abfrage, die das WMI-Ereignis für die Warnung angibt. *Wmi_query* ist **nvarchar(512)** , hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

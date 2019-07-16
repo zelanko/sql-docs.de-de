@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987944"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Datei „Schema.ini“ (Textdateitreiber)
 Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Schemadatei für die Informationen bestimmt. Die Schema-Informationsdatei ist immer mit dem Namen Schema.ini und immer im gleichen Verzeichnis wie die Text-Datenquelle gespeichert. Die Schemadatei für die Informationen enthält die IISAM mit Informationen über das allgemeine Format der Datei, den Namen der Spalte und Datentypinformationen und mehrere andere Datenmerkmale. Eine Schema.ini-Datei ist immer erforderlich, für den Zugriff auf Daten fester Länge. Sie sollten eine Schema.ini-Datei verwenden, wenn die Texttabelle enthält, DateTime, Währung oder Dezimaldaten oder jedes Mal, wenn Sie mehr Kontrolle über die Behandlung der Daten in der Tabelle möchten.  
@@ -54,9 +53,9 @@ Wenn der Text-Treiber verwendet wird, wird das Format der Textdatei mit einer Sc
   
 |Formatbezeichner|Tabellenformat|"Schema.ini" Format-Anweisung|  
 |----------------------|------------------|---------------------------------|  
-|**Tabstopp-getrennt**|Felder in der Datei werden durch Tabulatoren getrennt.|Format=TabDelimited|  
+|**Tabstopp-getrennt**|Felder in der Datei werden durch Tabulatoren getrennt.|Format = TabDelimited|  
 |**CSV-Trennzeichen**|Felder in der Datei werden durch Kommas (durch Trennzeichen getrennte Werte) getrennt.|Format = CSVDelimited|  
-|**Mit benutzerdefiniertem Trennzeichen**|Felder in der Datei von einem anderen Zeichen als Trennzeichen, die Sie in das Dialogfeld Eingabe auf. Alles außer das doppelte Anführungszeichen (") sind zulässig, einschließlich leer.|Format = mit Trennzeichen (*benutzerdefiniertes Zeichen*)<br /><br /> -oder-<br /><br /> Kein Trennzeichen angegeben:<br /><br /> Format=Delimited( )|  
+|**Mit benutzerdefiniertem Trennzeichen**|Felder in der Datei von einem anderen Zeichen als Trennzeichen, die Sie in das Dialogfeld Eingabe auf. Alles außer das doppelte Anführungszeichen (") sind zulässig, einschließlich leer.|Format = mit Trennzeichen (*benutzerdefiniertes Zeichen*)<br /><br /> -oder-<br /><br /> Kein Trennzeichen angegeben:<br /><br /> Format = mit Trennzeichen)|  
 |**Fester Länge**|Felder in der Datei sind eine feste Länge auf.|Format = FixedLength|  
   
 ## <a name="specifying-the-fields"></a>Die Felder angeben  
@@ -97,10 +96,10 @@ n=ColumnNametype [#]
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle beschreibt die einzelnen Teile der **Col**_n_ Eintrag.  
   
-|Parameter|Description|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*ColumnName*|Der Textname der Spalte. Wenn der Spaltenname Leerzeichen enthält, müssen Sie ihn in doppelte Anführungszeichen setzen.|  
-|*type*|Datentypen sind wie folgt aus:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> datetime<br /><br /> Textmodus<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> "Float" (identisch mit Double)<br /><br /> Ganze Zahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datum *Datumsformat*|  
+|*type*|Datentypen sind wie folgt aus:<br /><br /> **Microsoft Jet-Datentypen**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Währung<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memo<br /><br /> **ODBC-Datentypen** Char (identisch mit Text)<br /><br /> "Float" (identisch mit Double)<br /><br /> Ganze Zahl (identisch mit Short)<br /><br /> LongChar (identisch mit Memo)<br /><br /> Datum *Datumsformat*|  
 |**Width**|Der Wert der literalen Zeichenfolge `Width`. Gibt an, dass die folgende Anzahl die Breite der Spalte bestimmt (optional für Zeichen getrennten Dateien; für Dateien mit fester Länge erforderlich).|  
 |*#*|Der ganzzahlige Wert, der die Breite der Spalte bestimmt (erforderlich, wenn **Breite** angegeben ist).|  
   
@@ -123,7 +122,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|Gibt an, das Währungssymbol ein, das für die Currency-Werte in der Textdatei verwendet werden kann. Beispiele sind das Dollarzeichen ($) und Dm.|  
 |**CurrencyPosFormat**|Kann auf eines der folgenden Werte festgelegt werden:<br /><br /> -Currency Symbol Präfix ohne Trennung ($1)<br />-Currency Symbol-Suffix ohne Trennung (1$)<br />-Currency Symbol-Präfix mit einem Zeichen getrenntem ($ 1)<br />-Currency Symbol-Suffix mit einem Trennung (1 $)|  
 |**CurrencyDigits**|Gibt die Anzahl von Ziffern für den Bruchteil einen Währungsbetrag.|  
-|**CurrencyNegFormat**|Kann einer der folgenden Werte sein:<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-   $1-<br />-   (1$)<br />-   -1$<br />-   1-$<br />-   1$-<br />-   -1 $<br />-   -$ 1<br />-   1 $-<br />-   $ 1-<br />-   $ -1<br />-   1- $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Dieses Beispiel zeigt das Dollarzeichen, aber ersetzen Sie es mit dem entsprechenden **CurrencySymbol** Wert im wirklichen Programm.|  
+|**CurrencyNegFormat**|Kann einer der folgenden Werte sein:<br /><br /> -   ($1)<br />--$1<br />-$-1<br />-$1:<br />-   (1$)<br />-1 $<br />-1-$<br />-1-<br />-1 $<br />--$ 1<br />-1-<br />-$ 1:<br />-$-1<br />-1-$<br />-   ($ 1)<br />-   (1 $)<br /><br /> Dieses Beispiel zeigt das Dollarzeichen, aber ersetzen Sie es mit dem entsprechenden **CurrencySymbol** Wert im wirklichen Programm.|  
 |**CurrencyThousandSymbol**|Gibt an, das einzelne Zeichen-Symbol, das für die Trennung von Währungswerten in der Textdatei von Tausenden verwendet werden kann.|  
 |**CurrencyDecimalSymbol**|Kann auf jedem beliebigen einzelnen Zeichen festgelegt werden, die verwendet wird, um die gesamte von den Bruchteil einen Währungsbetrag zu trennen.|  
   

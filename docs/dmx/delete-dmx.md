@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070764"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,9 +42,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |-Anweisung.|Ergebnis|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<Struktur >*<br /><br /> oder<br /><br /> DELETE FROM MINING STRUCTURE*\<Struktur >*. INHALT|Führt ProcessClear für die Miningstruktur an. Der gesamte Inhalt wird aus der Miningstruktur sowie aus den dieser zugeordneten Miningmodellen gelöscht.|  
-|DELETE FROM MINING STRUCTURE*\<Struktur >*. FÄLLEN|Die Miningstruktur führt ' ProcessClearStructureOnly '. Der gesamte Inhalt wird aus der Miningstruktur gelöscht, wogegen die der Struktur zugeordneten Miningmodelle erhalten bleiben. Drillthrough für die zugeordneten Miningmodelle erzeugt einen Fehler, nachdem der Inhalt der Miningstruktur gelöscht wurde.|  
-|Löschen von MINING MODEL*\<Modell >*<br /><br /> oder<br /><br /> Löschen von MINING MODEL*\<Modell >*. INHALT|Führt ProcessClear für das Miningmodell, bleiben jedoch intakt die Statuswerte. Statuswerte sind die möglichen Status einer Spalte. Beispielsweise sind die Statuswerte für eine Geschlecht-Spalte die Werte männlich und weiblich.|  
+|DELETE FROM MINING STRUCTURE *\<Struktur >*<br /><br /> oder<br /><br /> DELETE FROM MINING STRUCTURE *\<Struktur >* . INHALT|Führt ProcessClear für die Miningstruktur an. Der gesamte Inhalt wird aus der Miningstruktur sowie aus den dieser zugeordneten Miningmodellen gelöscht.|  
+|DELETE FROM MINING STRUCTURE *\<Struktur >* . FÄLLEN|Die Miningstruktur führt ' ProcessClearStructureOnly '. Der gesamte Inhalt wird aus der Miningstruktur gelöscht, wogegen die der Struktur zugeordneten Miningmodelle erhalten bleiben. Drillthrough für die zugeordneten Miningmodelle erzeugt einen Fehler, nachdem der Inhalt der Miningstruktur gelöscht wurde.|  
+|Löschen von MINING MODEL *\<Modell >*<br /><br /> oder<br /><br /> Löschen von MINING MODEL *\<Modell >* . INHALT|Führt ProcessClear für das Miningmodell, bleiben jedoch intakt die Statuswerte. Statuswerte sind die möglichen Status einer Spalte. Beispielsweise sind die Statuswerte für eine Geschlecht-Spalte die Werte männlich und weiblich.|  
   
  Weitere Informationen zur Verarbeitung von Typen finden Sie unter [Typelement &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   

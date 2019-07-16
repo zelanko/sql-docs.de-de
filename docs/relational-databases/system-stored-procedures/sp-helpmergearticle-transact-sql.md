@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122344"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, zu dem Informationen abgerufen werden soll. *Veröffentlichung*ist **Sysname**, hat den Standardwert **%**, womit Informationen zu allen Mergeartikeln in allen Veröffentlichungen in der aktuellen Datenbank zurückgegeben.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, zu dem Informationen abgerufen werden soll. *Veröffentlichung*ist **Sysname**, hat den Standardwert **%** , womit Informationen zu allen Mergeartikeln in allen Veröffentlichungen in der aktuellen Datenbank zurückgegeben.  
   
-`[ @article = ] 'article'` Ist der Name des Artikels für den Informationen zurückgegeben werden sollen. *Artikel*ist **Sysname**, hat den Standardwert **%**, Informationen zu allen Mergeartikeln in einer bestimmten Veröffentlichung zurückgegeben.  
+`[ @article = ] 'article'` Ist der Name des Artikels für den Informationen zurückgegeben werden sollen. *Artikel*ist **Sysname**, hat den Standardwert **%** , Informationen zu allen Mergeartikeln in einer bestimmten Veröffentlichung zurückgegeben.  
   
 ## <a name="result-set"></a>Resultset  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Artikelbezeichner|  
 |**name**|**sysname**|Der Name des Artikels.|  

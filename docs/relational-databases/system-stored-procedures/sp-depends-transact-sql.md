@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053105"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,19 +65,19 @@ sp_depends [ @objname = ] '<object>'
   
  Das folgende Resultset zeigt die Objekte, auf dem  *\<Objekt >* abhängig ist.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
+|**name**|**Nvarchar (257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
 |**type**|**nvarchar(16)**|Der Elementtyp.|  
-|**updated**|**nvarchar(7)**|Gibt an, ob das Element aktualisiert ist.|  
-|**selected**|**nvarchar(8)**|Gibt an, ob das Element in einer SELECT-Anweisung verwendet wird.|  
+|**aktualisiert**|**nvarchar(7)**|Gibt an, ob das Element aktualisiert ist.|  
+|**ausgewählt**|**nvarchar(8)**|Gibt an, ob das Element in einer SELECT-Anweisung verwendet wird.|  
 |**column**|**sysname**|Spalte oder Parameter, für die bzw. den die Abhängigkeit vorhanden ist.|  
   
  Das folgende Resultset zeigt die Objekte, die von abhängen  *\<Objekt >* .  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
+|**name**|**Nvarchar (257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
 |**type**|**nvarchar(16)**|Der Elementtyp.|  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 716471786400c030febb62ebf41c8422770a8c09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14715e40cd99f3f1a03c2ae19e825705a8376e30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040003"
 ---
 # <a name="determining-cursor-capabilities"></a>Festlegen der Cursorfähigkeiten
 Die folgenden vier Optionen im **SQLGetInfo** wird beschrieben, welche Arten von Cursorn unterstützt werden und was ihre Funktionen sind:  
   
--   SQL_CURSOR_SENSITIVITY. Gibt an, ob ein Cursor empfindlich gegenüber Änderungen, die von einem anderen Cursor vorgenommen wird.  
+-   SQL_CURSOR_SENSITIVITY FEST. Gibt an, ob ein Cursor empfindlich gegenüber Änderungen, die von einem anderen Cursor vorgenommen wird.  
   
 -   SQL_SCROLL_OPTIONS. Listet die unterstützten Cursortypen (Vorwärtscursor, statische, keysetgesteuerte, dynamische oder gemischten). Alle Datenquellen müssen Vorwärtscursor unterstützen.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91765f0572d8c880f7505948f7756b373fe28f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c9179506ac96c1902c40de271f6024ed7e5c54d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002005"
 ---
 # <a name="cursors"></a>Cursor
 Eine Anwendung ruft Daten mit einem *Cursor*. Ein Cursor unterscheidet sich aus einem Resultset: Ein Resultset ist die Menge der Zeilen, die bestimmten Suchkriterien entspricht, während ein Cursor, die Software ist, die diese Zeilen an die Anwendung zurückgibt. Der Name *Cursor* angewendet auf Datenbanken, wahrscheinlich des blinkenden Cursors auf einem Terminalserver Computer stammt. Genau wie dem Cursor gibt an, die aktuelle Position auf dem Bildschirm und, wo die eingegebene Wörter weiter angezeigt wird, gibt einen Cursor in einem Resultset die aktuelle Position im Resultset und welche Zeile neben zurückgegeben werden soll an.  

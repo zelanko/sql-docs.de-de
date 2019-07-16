@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: Dieser Artikel beschreibt, wie Sie die SQL Server-Tools unter Linux zu installieren.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 9b93530b54f2f51f2c00b9d651fcae970507a4cf
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085722"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren von Sqlcmd und Bcp die SQL Server-Befehlszeilenprogramme unter Linux
 
@@ -25,7 +24,7 @@ ms.locfileid: "67834663"
 Die folgenden Schritte installieren Sie die Befehlszeilentools, Microsoft ODBC-Treiber und deren Abhängigkeiten. Die **Mssql-Tools** Paket enthält:
 
 - **sqlcmd**: Befehlszeilen-Abfrage-Hilfsprogramm.
-- **bcp**: BULK Import / Export-Dienstprogramm.
+- **BCP**: BULK Import / Export-Dienstprogramm.
 
 Installieren der Tools für Ihre Plattform:
 
@@ -78,7 +77,7 @@ Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools*
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Optional**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
+1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
 
    Zu **Sqlcmd/Bcp** zugegriffen werden kann, in der Bash-Shell für und-anmeldesitzungen, ändern Ihre **Pfad** in die **~/.bash_profile** -Datei mit den folgenden Befehl aus:
 
@@ -123,7 +122,7 @@ Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools*
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Optional**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
+1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
 
    Zu **Sqlcmd/Bcp** zugegriffen werden kann, in der Bash-Shell für und-anmeldesitzungen, ändern Ihre **Pfad** in die **~/.bash_profile** -Datei mit den folgenden Befehl aus:
 
@@ -162,7 +161,7 @@ Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools*
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Optional**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
+1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
 
    Zu **Sqlcmd/Bcp** zugegriffen werden kann, in der Bash-Shell für und-anmeldesitzungen, ändern Ihre **Pfad** in die **~/.bash_profile** -Datei mit den folgenden Befehl aus:
 

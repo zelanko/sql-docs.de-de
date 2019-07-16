@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 42c350876037c83505860c65b26f4302d75b6eed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122558"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @distributor = ] 'distributor' OUTPUT` Ist der Name des Verteilers. Verteiler **Sysname**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @distributor = ] 'distributor' OUTPUT` Ist der Name des Verteilers. Verteiler **Sysname**, hat den Standardwert **%** , dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` Ist der Name der Verteilungsdatenbank. *Distribdb* ist **Sysname**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @distribdb = ] 'distribdb' OUTPUT` Ist der Name der Verteilungsdatenbank. *Distribdb* ist **Sysname**, hat den Standardwert **%** , dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @directory = ] 'directory' OUTPUT` Ist das Arbeitsverzeichnis an. *Directory* ist **nvarchar(255)**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @directory = ] 'directory' OUTPUT` Ist das Arbeitsverzeichnis an. *Directory* ist **nvarchar(255)** , hat den Standardwert **%** , dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @account = ] 'account' OUTPUT` Ist die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto. *Konto*ist **nvarchar(255)**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @account = ] 'account' OUTPUT` Ist die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto. *Konto*ist **nvarchar(255)** , hat den Standardwert **%** , dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT` Ist die minimale Beibehaltungsdauer in Stunden an. *Min_distretention* ist **Int**, hat den Standardwert **-1**.  
   
@@ -64,25 +63,25 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT` Ist die verlaufsbeibehaltungsdauer in Stunden an. *History_retention* ist **Int**, hat den Standardwert **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Ist der Name des Verlaufscleanup-Agents. *History_cleanupagent* ist **nvarchar(100)**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Ist der Name des Verlaufscleanup-Agents. *History_cleanupagent* ist **nvarchar(100)** , hat den Standardwert **%** , dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Ist der Name des der Verteilungscleanup-Agent. *Distrib_cleanupagent* ist **nvarchar(100)**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Ist der Name des der Verteilungscleanup-Agent. *Distrib_cleanupagent* ist **nvarchar(100)** , hat den Standardwert **%** , dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
 `[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
-`[ @local = ] 'local'` Ist, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollten lokale Serverwerte abruft. *lokale* ist **nvarchar(5)**, hat den Standardwert NULL.  
+`[ @local = ] 'local'` Ist, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollten lokale Serverwerte abruft. *lokale* ist **nvarchar(5)** , hat den Standardwert NULL.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Ist der Name des Servers, der Remoteprozeduraufrufe ausgibt. *Rpcsrvname* ist **Sysname**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Ist der Name des Servers, der Remoteprozeduraufrufe ausgibt. *Rpcsrvname* ist **Sysname**, hat den Standardwert **%** , dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` Ist der verlegertyp des Verlegers an. *Publisher_type* ist **Sysname**, hat den Standardwert **%**, dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` Ist der verlegertyp des Verlegers an. *Publisher_type* ist **Sysname**, hat den Standardwert **%** , dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**distributor**|**sysname**|Name des Verteilers.|  
 |**Verteilungsdatenbank**|**sysname**|Der Name der Verteilungsdatenbank.|  
-|**directory**|**nvarchar(255)**|Name des Arbeitsverzeichnisses.|  
+|**Verzeichnis**|**nvarchar(255)**|Name des Arbeitsverzeichnisses.|  
 |**account**|**nvarchar(255)**|Name des Windows-Benutzerkontos.|  
 |**Min. verteilungspriori Aufbewahrung**|**int**|Minimale Beibehaltungsdauer für die Verteilung.|  
 |**Max. verteilungspriori Aufbewahrung**|**int**|Maximale Beibehaltungsdauer für die Verteilung.|  
