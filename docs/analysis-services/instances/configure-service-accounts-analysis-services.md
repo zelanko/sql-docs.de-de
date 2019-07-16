@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc968281f9aec0cc86f7b5f8f92fb035d9854af9
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47443144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209541"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Konfigurieren von Dienstkonten (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,18 +33,18 @@ ms.locfileid: "47443144"
 ## <a name="logon-account-recommendations"></a>Kontoempfehlungen für die Anmeldung  
  In einem Failovercluster sollten alle Instanzen von Analysis Services so konfiguriert werden, dass sie ein Windows-Domänenbenutzerkonto verwenden. Weisen Sie dasselbe Konto für alle Instanzen zu. Weitere Informationen finden Sie unter [Clustern von Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Eigenständige Instanzen sollten das virtuelle Standardkonto verwenden: **NT Service\MSSQLServerOLAPService** für die Standardinstanz oder **NT Service\MSOLAP$**_Instanzname_ für eine benannte Instanz. Diese Empfehlung gilt für Analysis Services-Instanzen in allen Servermodi, Windows Server 2008 R2 und höher für das Betriebssystem und SQL Server 2012 und höher für Analysis Services vorausgesetzt.  
+ Eigenständige Instanzen sollten das virtuelle Standardkonto verwenden: **NT Service\MSSQLServerOLAPService** für die Standardinstanz oder **NT Service\MSOLAP$** _Instanzname_ für eine benannte Instanz. Diese Empfehlung gilt für Analysis Services-Instanzen in allen Servermodi, Windows Server 2008 R2 und höher für das Betriebssystem und SQL Server 2012 und höher für Analysis Services vorausgesetzt.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Erteilen von Berechtigungen für Analysis Services  
  Dieser Abschnitt erläutert die Berechtigungen, die Analysis Services für lokale, interne Vorgänge wie das Starten der ausführbaren Datei, das Lesen der Konfigurationsdatei und das Laden von Datenbanken aus dem Datenverzeichnis benötigt. Wenn Sie stattdessen Anleitungen zum Festlegen von Berechtigungen für den Zugriff auf externe Daten und Interoperabilität mit anderen Diensten und Anwendungen suchen, finden Sie weitere Informationen unter [Erteilen zusätzlicher Berechtigungen für bestimmte Servervorgänge](#bkmk_tasks) weiter unten in diesem Thema.  
   
  Für die internen Vorgänge ist der Berechtigungsinhaber in Analysis Services nicht das Anmeldekonto, sondern eine lokale Windows-Sicherheitsgruppe, die bei der Einrichtung erstellt wird und die Pro-Dienst-SID enthält. Das Zuweisen von Berechtigungen für die Sicherheitsgruppe deckt sich mit früheren Versionen von Analysis Services. Darüber hinaus können sich Anmeldekonten mit der Zeit ändern, aber die Pro-Dienst-SID und die lokale Sicherheitsgruppe bleiben für die Lebensdauer der Serverinstallation gleich. Für Analysis Services macht dies die Sicherheitsgruppe statt des Anmeldekontos die bessere Wahl für die Aufnahme von Berechtigungen. Wenn Sie manuell Berechtigungen für die Dienstinstanz erteilen, egal ob Dateisystemberechtigungen oder Windows-Berechtigungen, erteilen Sie der für die Serverinstanz erstellten lokalen Sicherheitsgruppe die Berechtigungen.  
   
- Der Name der Sicherheitsgruppe folgt einem Muster. Das Präfix ist immer **SQLServerMSASUser$**, gefolgt vom Computernamen, und endet mit dem Instanznamen. Die Standardinstanz ist **MSSQLSERVER**. Eine benannte Instanz ist der Name, der während des Einrichtens festgelegt wurde.  
+ Der Name der Sicherheitsgruppe folgt einem Muster. Das Präfix ist immer **SQLServerMSASUser$** , gefolgt vom Computernamen, und endet mit dem Instanznamen. Die Standardinstanz ist **MSSQLSERVER**. Eine benannte Instanz ist der Name, der während des Einrichtens festgelegt wurde.  
   
  Sie finden diese Sicherheitsgruppe in den lokalen Sicherheitseinstellungen:  
   
--   Führen Sie compmgmt.msc | **Lokale Benutzer und Gruppen** | **Gruppen** | **SQLServerMSASUser$**\<Servername >**$MSSQLSERVER**  (für eine Standardinstanz).  
+-   Führen Sie compmgmt.msc | **Lokale Benutzer und Gruppen** | **Gruppen** | **SQLServerMSASUser$** \<Servername > **$MSSQLSERVER**  (für eine Standardinstanz).  
   
 -   Doppelklicken Sie auf die Sicherheitsgruppe, um deren Mitglieder anzuzeigen.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47443144"
   
 |||  
 |-|-|  
-|**Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)|Dieses Privileg ist standardmäßig für alle Benutzer über die **Benutzer** -Sicherheitsgruppe verfügbar. Wenn Sie einen Server sperren, indem Sie Berechtigungen für diese Gruppe entfernen, kann Analysis Services unter Umständen nicht gestartet werden. Es wird dann folgende Fehlermeldung ausgegeben: „Dem Client fehlt ein erforderliches Recht“. Stellen Sie bei Auftreten dieses Fehlers die Berechtigung für Analysis Services wieder her, indem Sie sie der entsprechenden Analysis Services-Sicherheitsgruppe gewähren.|  
+|**Arbeitssatz eines Prozesses vergrößern** (SeIncreaseWorkingSetPrivilege)|Dieses Privileg ist standardmäßig für alle Benutzer über die **Benutzer** -Sicherheitsgruppe verfügbar. Wenn Sie einen Server sperren, indem Sie Berechtigungen für diese Gruppe entfernen, kann Analysis Services nicht gestartet, folgende Fehlermeldung ausgegeben: "Fehlt ein erforderliches Privileg ist nicht vom Client." Stellen Sie bei Auftreten dieses Fehlers die Berechtigung für Analysis Services wieder her, indem Sie sie der entsprechenden Analysis Services-Sicherheitsgruppe gewähren.|  
 |**Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)|Diese Berechtigung wird verwendet, um mehr Speicherplatz anzufordern, wenn ein Prozess nicht über ausreichende Ressourcen verfügt, um die Ausführung abschließen zu können, in Abhängigkeit von den für die Instanz festgelegten Arbeitsspeicherschwellenwerten.|  
 |**Sperren von Seiten im Speicher** (SeLockMemoryPrivilege)|Diese Berechtigung ist nur erforderlich, wenn die Auslagerung vollständig ausgeschaltet wird. Standardmäßig verwendet eine tabellarische Serverinstanz die Windows-Auslagerungsdatei. Sie können dieses Verhalten jedoch ändern, indem Sie **VertiPaqPagingPolicy** auf 0 einstellen.<br /><br /> **VertiPaqPagingPolicy** auf 1 (Standard) weist die tabellarische Serverinstanz an, die Windows-Auslagerungsdatei zu verwenden. Belegungen sind nicht gesperrt, sodass Windows erforderliche Auslagerungen vornehmen kann. Da die Auslagerung verwendet wird, ist das Sperren von Seiten im Speicher nicht erforderlich. Daher ist es bei der Standardkonfiguration ( **VertiPaqPagingPolicy** = 1) nicht erforderlich, einer tabellarischen Instanz die Berechtigung **Sperren von Seiten im Speicher** zu gewähren.<br /><br /> **VertiPaqPagingPolicy** auf 0. Wenn Sie die Auslagerung für Analysis Services ausschalten, werden Belegungen gesperrt, wenn die Berechtigung **Sperren von Seiten im Speicher** gewährt wurde. Bei dieser Einstellungen und mit der Berechtigung **Sperren von Seiten im Speicher** kann Windows keine Speicherbelegungen für Analysis Services auslagern, wenn im System nicht genügend Arbeitsspeicher vorhanden ist. Analysis Services greift auf die Berechtigung **Sperren von Seiten im Speicher** zurück, um **VertiPaqPagingPolicy** = 0 zu erzwingen. Beachten Sie, dass das Ausschalten der Windows-Auslagerung nicht empfohlen wird. Dadurch treten mehr Fehler aufgrund von nicht ausreichendem Arbeitsspeicher bei Vorgängen auf, die mit Auslagerung erfolgreich ausgeführt worden wären. Unter [Memory Properties](../../analysis-services/server-properties/memory-properties.md) finden Sie weitere Details zu **VertiPaqPagingPolicy**.|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47443144"
   
  Der Berechtigungsinhaber für Datendateien, ausführbare Programmdateien, Konfigurationsdateien, Protokolldateien und temporäre Dateien ist eine lokale Sicherheitsgruppe, die von SQL Server Setup erstellt wurde.  
   
- Für jede installierte Instanz gibt es nur eine Sicherheitsgruppe. Die Sicherheitsgruppe ist nach der Instanz benannt – entweder **SQLServerMSASUser$ MSSQLSERVER** für die Standardinstanz oder **SQLServerMSASUser$**\<Servername >$\< Instanzname > für eine benannte Instanz. Diese Sicherheitsgruppe erhält von Setup die Dateiberechtigungen, die zum Ausführen von Servervorgängen erforderlich sind. An den Sicherheitsberechtigungen für das Verzeichnis \MSAS13.MSSQLSERVER\OLAP\BIN erkennen Sie, dass die Sicherheitsgruppe (und nicht das Dienstkonto oder dessen Pro-Dienst-SID (Sicherheits-ID)) die Berechtigungen für dieses Verzeichnis besitzt.  
+ Für jede installierte Instanz gibt es nur eine Sicherheitsgruppe. Die Sicherheitsgruppe ist nach der Instanz benannt – entweder **SQLServerMSASUser$ MSSQLSERVER** für die Standardinstanz oder **SQLServerMSASUser$** \<Servername >$\< Instanzname > für eine benannte Instanz. Diese Sicherheitsgruppe erhält von Setup die Dateiberechtigungen, die zum Ausführen von Servervorgängen erforderlich sind. An den Sicherheitsberechtigungen für das Verzeichnis \MSAS13.MSSQLSERVER\OLAP\BIN erkennen Sie, dass die Sicherheitsgruppe (und nicht das Dienstkonto oder dessen Pro-Dienst-SID (Sicherheits-ID)) die Berechtigungen für dieses Verzeichnis besitzt.  
   
  Die Sicherheitsgruppe enthält nur ein Mitglied: die Pro-Dienst-SID des Startkontos für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz. Setup fügt die Pro-Dienst-SID zur lokalen Sicherheitsgruppe hinzu. Die Verwendung einer Sicherheitsgruppe mit SID-Mitgliedschaft macht einen kleinen, aber wichtigen Unterschied dabei aus, wie SQL Server Setup im Vergleich mit der Datenbank-Engine Analysis Services bereitstellt.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "47443144"
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server-Dienstkonto und pro-Dienst-SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server-Dienstkonto und pro Dienst-SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server verwendet eine Dienst-SID, um die Dienstisolation bereitzustellen (KB-Artikel)](http://support.microsoft.com/kb/2620201)   
  [Zugriffstoken (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
  [Sicherheits-IDs (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
